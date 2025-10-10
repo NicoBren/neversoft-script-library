@@ -11,11 +11,11 @@ battle_explanation_color_yellow = [
 	255
 ]
 battle_explanation_bullet_materials = [
-	sys_battlegem_green01_sys_battlegem_green01
-	sys_battlegem_red01_sys_battlegem_red01
-	sys_battlegem_yellow01_sys_battlegem_yellow01
-	sys_battlegem_blue01_sys_battlegem_blue01
-	sys_battlegem_orange01_sys_battlegem_orange01
+	sys_BattleGEM_Green01_sys_BattleGEM_Green01
+	sys_BattleGEM_RED01_sys_BattleGEM_RED01
+	sys_BattleGEM_Yellow01_sys_BattleGEM_Yellow01
+	sys_BattleGEM_Blue01_sys_BattleGEM_Blue01
+	sys_BattleGEM_Orange01_sys_BattleGEM_Orange01
 ]
 battle_explanation_text = {
 	bossslash = {
@@ -109,24 +109,24 @@ battle_explanation_text = {
 
 script create_battle_helper_menu \{device_num = 0
 		popup = 0}
-	if gameispaused
-		unpausegame
+	if GameIsPaused
+		UnPauseGame
 	endif
-	if gotparam \{boss}
+	if GotParam \{boss}
 		if ($game_mode = p2_battle)
 			<boss_structure> = ($battle_explanation_text.generic)
 		else
 			<boss_structure> = ($battle_explanation_text.<boss>)
 		endif
 	else
-		getglobaltags \{progression}
+		GetGlobalTags \{Progression}
 		<boss_structure> = ($battle_explanation_text.<boss_song>)
 	endif
 	menu_z = 10
-	createscreenelement \{type = containerelement
+	CreateScreenElement \{type = ContainerElement
 		parent = root_window
 		id = battle_explanation_container}
-	createscreenelement \{type = spriteelement
+	CreateScreenElement \{type = SpriteElement
 		parent = battle_explanation_container
 		id = battle_explanation_screen
 		pos = (640.0, 360.0)
@@ -143,8 +143,8 @@ script create_battle_helper_menu \{device_num = 0
 		]
 		dims = (1280.0, 720.0)
 		z_priority = 0}
-	createscreenelement \{parent = battle_explanation_container
-		type = vmenu
+	CreateScreenElement \{parent = battle_explanation_container
+		type = VMenu
 		id = bullet_spacer
 		pos = (545.0, 205.0)
 		just = [
@@ -155,23 +155,23 @@ script create_battle_helper_menu \{device_num = 0
 			left
 			top
 		]}
-	getarraysize \{$battle_explanation_bullet_materials}
+	GetArraySize \{$battle_explanation_bullet_materials}
 	<num_materials> = <array_size>
-	getarraysize (<boss_structure>.bullets)
+	GetArraySize (<boss_structure>.bullets)
 	<num_bullets> = <array_size>
 	<i> = 0
 	begin
-	createscreenelement \{parent = bullet_spacer
-		type = containerelement
+	CreateScreenElement \{parent = bullet_spacer
+		type = ContainerElement
 		dims = (100.0, 100.0)
 		just = [
 			left
 			top
 		]}
 	<container_id> = <id>
-	createscreenelement {
+	CreateScreenElement {
 		parent = <container_id>
-		type = textblockelement
+		type = TextBlockElement
 		text = (<boss_structure>.bullets [<i>].text)
 		local_id = text
 		dims = (480.0, 0.0)
@@ -189,11 +189,11 @@ script create_battle_helper_menu \{device_num = 0
 		shadow_offs = (3.0, 3.0)
 		alpha = 0
 	}
-	getscreenelementdims id = <id>
-	<container_id> :setprops dims = ((1.0, 0.0) * <width> + (0.0, 1.0) * <height> + (0.0, 20.0))
-	mod a = <i> b = <num_materials>
-	createscreenelement {
-		type = spriteelement
+	GetScreenElementDims id = <id>
+	<container_id> :SetProps dims = ((1.0, 0.0) * <width> + (0.0, 1.0) * <Height> + (0.0, 20.0))
+	Mod a = <i> b = <num_materials>
+	CreateScreenElement {
+		type = SpriteElement
 		parent = <container_id>
 		rgba = [255 255 255 255]
 		just = [right top]
@@ -201,38 +201,38 @@ script create_battle_helper_menu \{device_num = 0
 		local_id = gem
 		pos = (12.0, 7.0)
 		scale = 0.5
-		material = ($battle_explanation_bullet_materials [<mod>])
+		material = ($battle_explanation_bullet_materials [<Mod>])
 		alpha = 0
-		materialprops = [
+		MaterialProps = [
 			{
-				name = m_startfade
-				property = 1.0
+				name = m_startFade
+				Property = 1.0
 			}
 			{
-				name = m_endfade
-				property = 1.0
+				name = m_endFade
+				Property = 1.0
 			}
 			{
-				name = m_playerindex
-				property = 1.0
+				name = m_playerIndex
+				Property = 1.0
 			}
 		]
 	}
-	runscriptonscreenelement id = <container_id> battle_fly_in_anim params = {idx = <i> container_id = <container_id>}
+	RunScriptOnScreenElement id = <container_id> battle_fly_in_anim params = {idx = <i> container_id = <container_id>}
 	<i> = (<i> + 1)
 	repeat <num_bullets>
-	if isps3
-		change \{ghighwaystartfade = 1.0}
-		change \{ghighwayendfade = 1.0}
+	if IsPs3
+		change \{gHighwayStartFade = 1.0}
+		change \{gHighwayEndFade = 1.0}
 	endif
-	if iswinport
-		change \{ghighwaystartfade = 1.0}
-		change \{ghighwayendfade = 1.0}
+	if IsWinPort
+		change \{gHighwayStartFade = 1.0}
+		change \{gHighwayEndFade = 1.0}
 	endif
-	if structurecontains \{structure = boss_structure
+	if StructureContains \{Structure = boss_structure
 			image}
-		createscreenelement {
-			type = spriteelement
+		CreateScreenElement {
+			type = SpriteElement
 			id = who_wants_to_battle_image
 			parent = battle_explanation_container
 			rgba = [255 255 255 255]
@@ -245,7 +245,7 @@ script create_battle_helper_menu \{device_num = 0
 		}
 	endif
 	<title_offset> = (-10.0, -20.0)
-	displaysprite {
+	displaySprite {
 		parent = battle_explanation_container
 		tex = battle_help_flourish
 		pos = ((770.0, 165.0) + <title_offset>)
@@ -253,8 +253,8 @@ script create_battle_helper_menu \{device_num = 0
 		just = [center bottom]
 		z = 50
 	}
-	<id> :domorph alpha = 0.5
-	displaysprite {
+	<id> :DoMorph alpha = 0.5
+	displaySprite {
 		parent = battle_explanation_container
 		tex = battle_help_flourish
 		pos = ((770.0, 145.0) + <title_offset>)
@@ -263,9 +263,9 @@ script create_battle_helper_menu \{device_num = 0
 		z = 50
 		flip_h
 	}
-	<id> :domorph alpha = 0.5
-	createscreenelement {
-		type = textelement
+	<id> :DoMorph alpha = 0.5
+	CreateScreenElement {
+		type = TextElement
 		parent = battle_explanation_container
 		id = who_wants_to_battle_text
 		text = (<boss_structure>.title)
@@ -285,7 +285,7 @@ script create_battle_helper_menu \{device_num = 0
 		]
 		exclusive_device = ($primary_controller)
 	}
-	displaytext {
+	displayText {
 		parent = bullet_spacer
 		text = (<boss_structure>.prompt)
 		font = text_a4
@@ -295,8 +295,8 @@ script create_battle_helper_menu \{device_num = 0
 		just = [left top]
 		z = 50
 	}
-	runscriptonscreenelement id = <id> wait_and_show_ready
-	launchevent \{type = focus
+	RunScriptOnScreenElement id = <id> wait_and_show_ready
+	LaunchEvent \{type = focus
 		target = who_wants_to_battle_text}
 	change \{user_control_pill_text_color = [
 			0
@@ -324,7 +324,7 @@ endscript
 
 script battle_helper_back 
 	if ($game_mode = p1_career)
-		writeachievements \{achievement = wuss_out}
+		WriteAchievements \{achievement = wuss_out}
 	endif
 	ui_flow_manager_respond_to_action \{action = go_back}
 endscript
@@ -335,27 +335,27 @@ script destroy_battle_helper_menu
 endscript
 
 script battle_fly_in_anim 
-	resolvescreenelementid id = {<container_id> child = text}
+	ResolveScreenElementId id = {<container_id> child = text}
 	<text_id> = <resolved_id>
-	resolvescreenelementid id = {<container_id> child = gem}
+	ResolveScreenElementId id = {<container_id> child = gem}
 	<gem_id> = <resolved_id>
-	wait \{0.15
+	Wait \{0.15
 		seconds}
-	wait (<idx> * 0.4) seconds
-	<gem_id> :getprops
+	Wait (<idx> * 0.4) seconds
+	<gem_id> :GetProps
 	<gem_final_pos> = <pos>
-	soundevent \{event = gh3_star_flyin}
-	<gem_id> :domorph pos = (<gem_final_pos> + (-600.0, 0.0)) alpha = 1
-	<gem_id> :domorph pos = <gem_final_pos> time = 0.35000002 motion = ease_in
-	<text_id> :domorph time = 0.2 motion = ease_in rgba = [255 255 255 255] alpha = 1
-	<text_id> :domorph time = 0.1 motion = ease_out rgba = $battle_explanation_color_white
+	SoundEvent \{event = GH3_Star_FlyIn}
+	<gem_id> :DoMorph pos = (<gem_final_pos> + (-600.0, 0.0)) alpha = 1
+	<gem_id> :DoMorph pos = <gem_final_pos> time = 0.35000002 motion = ease_in
+	<text_id> :DoMorph time = 0.2 motion = ease_in rgba = [255 255 255 255] alpha = 1
+	<text_id> :DoMorph time = 0.1 motion = ease_out rgba = $battle_explanation_color_white
 endscript
 
 script wait_and_show_ready 
-	domorph \{alpha = 0}
-	wait \{2.8
+	DoMorph \{alpha = 0}
+	Wait \{2.8
 		seconds}
-	domorph \{time = 0.2
+	DoMorph \{time = 0.2
 		motion = ease_in
 		rgba = [
 			255
@@ -364,7 +364,7 @@ script wait_and_show_ready
 			255
 		]
 		alpha = 1}
-	domorph \{time = 0.1
+	DoMorph \{time = 0.1
 		motion = ease_in
 		rgba = $battle_explanation_color_yellow}
 endscript

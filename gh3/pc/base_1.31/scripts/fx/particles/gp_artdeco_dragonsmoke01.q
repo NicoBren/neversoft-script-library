@@ -1,57 +1,57 @@
-gp_artdeco_dragonsmoke01 = {
+GP_ArtDeco_DragonSmoke01 = {
 	pos = (0.003022, 0.80188, -0.7862879)
 	angles = (0.0, 0.0, 0.0)
-	class = particleobject
-	particletype = flexparticle
+	Class = ParticleObject
+	ParticleType = FlexParticle
 	type = flat
 	active
-	createdatstart
+	CreatedAtStart
 	attach
-	align
-	applypositionoffset
-	attachobject = z_artdeco_trg_geo_dragon
-	bone = bone_dragon_jaw
-	emitrangedims = (0.0, 0.0, 0.0)
-	emit_target = (0.0, 0.0, -1.0)
-	enablerotate
-	emitangle = (40.0, 0.0, 0.0)
+	Align
+	ApplyPositionOffset
+	AttachObject = Z_ArtDeco_TRG_Geo_Dragon
+	bone = Bone_Dragon_Jaw
+	EmitRangeDims = (0.0, 0.0, 0.0)
+	emit_Target = (0.0, 0.0, -1.0)
+	EnableRotate
+	EmitAngle = (40.0, 0.0, 0.0)
 	force = (0.0, 3.0, 0.0)
-	windcoeff = 0.0
-	localwindcoeff = 0.0
-	emittervelocityweight = 0.0
-	anglespread = 10.0
-	liferange = (0.6, 0.9)
+	WindCoeff = 0.0
+	LocalWindCoeff = 0.0
+	EmitterVelocityWeight = 0.0
+	AngleSpread = 10.0
+	LifeRange = (0.6, 0.9)
 	emit_rate = 24.0
 	max = 0
-	timeseed = 0.0
-	lifetime = 0.0
-	emitnum = 0
-	followemitter = 0.0
-	emitfunction = constant
-	emitperiod = 1.0
-	sizerange = [
+	TimeSeed = 0.0
+	lifeTime = 0.0
+	emitNum = 0
+	FollowEmitter = 0.0
+	EmitFunction = constant
+	EmitPeriod = 1.0
+	SizeRange = [
 		(0.5, 0.5)
 		(2.5, 2.5)
 	]
-	speedrange = (4.0, 6.0)
-	rotvel = (-0.5, 0.5)
-	rotveltimescale = 1.0
-	emitdelaystart = 0.0
-	pathfollowtime = 0.2
-	history = 2
-	historylistcoordinatespace = world
+	SpeedRange = (4.0, 6.0)
+	RotVel = (-0.5, 0.5)
+	RotVelTimeScale = 1.0
+	EmitDelayStart = 0.0
+	PathFollowTime = 0.2
+	History = 2
+	HistoryListCoordinateSpace = world
 	color = -1
-	lod_default
-	quickmaterial = {
-		texturelayout = layout2x2
-		diffusetextureenabled
-		diffusetexture = jow_steam02
-		specularpower = 0
+	LOD_Default
+	QuickMaterial = {
+		TextureLayout = Layout2x2
+		DiffuseTextureEnabled
+		DiffuseTexture = JOW_Steam02
+		SpecularPower = 0
 		alphacutoff = 16
-		blendmode = blend
-		quadanimationfps = 0
+		blendMode = blend
+		QuadAnimationFPS = 0
 	}
-	knot = [
+	Knot = [
 		(-0.48496202, 0.0, -0.0)
 		(-0.48496202, 0.0, -0.0)
 		(-0.46225402, 0.0, -0.0)
@@ -65,7 +65,7 @@ gp_artdeco_dragonsmoke01 = {
 		(1.051219, 0.0, -0.0)
 		(1.051219, 0.0, -0.0)
 	]
-	particlecolor = [
+	ParticleColor = [
 		1917271552
 		1730948096
 		1580798719
@@ -75,7 +75,7 @@ gp_artdeco_dragonsmoke01 = {
 		488447232
 		623191296
 	]
-	vertexweight = [
+	VertexWeight = [
 		0.314324
 		0.67167693
 		1.0

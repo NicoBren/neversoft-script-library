@@ -1,93 +1,93 @@
-practice_notemapping = [
+Practice_NoteMapping = [
 	{
-		midinote = 60
-		scr = soundevent
+		MidiNote = 60
+		Scr = SoundEvent
 		params = {
-			event = practice_mode_kick
+			event = Practice_Mode_Kick
 		}
 	}
 	{
-		midinote = 61
-		scr = soundevent
+		MidiNote = 61
+		Scr = SoundEvent
 		params = {
-			event = practice_mode_tom3
+			event = Practice_Mode_Tom3
 		}
 	}
 	{
-		midinote = 62
-		scr = soundevent
+		MidiNote = 62
+		Scr = SoundEvent
 		params = {
-			event = practice_mode_tom2
+			event = Practice_Mode_Tom2
 		}
 	}
 	{
-		midinote = 63
-		scr = soundevent
+		MidiNote = 63
+		Scr = SoundEvent
 		params = {
-			event = practice_mode_tom1
+			event = Practice_Mode_Tom1
 		}
 	}
 	{
-		midinote = 64
-		scr = soundevent
+		MidiNote = 64
+		Scr = SoundEvent
 		params = {
-			event = practice_mode_snare
+			event = Practice_Mode_Snare
 		}
 	}
 	{
-		midinote = 65
-		scr = soundevent
+		MidiNote = 65
+		Scr = SoundEvent
 		params = {
-			event = practice_mode_hihatclosed
+			event = Practice_Mode_HiHatClosed
 		}
 	}
 	{
-		midinote = 66
-		scr = soundevent
+		MidiNote = 66
+		Scr = SoundEvent
 		params = {
-			event = practice_mode_hihatopen
+			event = Practice_Mode_HiHatOpen
 		}
 	}
 	{
-		midinote = 67
-		scr = soundevent
+		MidiNote = 67
+		Scr = SoundEvent
 		params = {
-			event = practice_mode_ride
+			event = Practice_Mode_Ride
 		}
 	}
 	{
-		midinote = 68
-		scr = soundevent
+		MidiNote = 68
+		Scr = SoundEvent
 		params = {
-			event = practice_mode_crash1
+			event = Practice_Mode_Crash1
 		}
 	}
 	{
-		midinote = 69
-		scr = soundevent
+		MidiNote = 69
+		Scr = SoundEvent
 		params = {
-			event = practice_mode_crash2
+			event = Practice_Mode_Crash2
 		}
 	}
 ]
 
-script practice_dummyfunction 
+script Practice_DummyFunction 
 	printf \{"Practice_DummyFunction"}
 endscript
 practice_font = fontgrid_title_gh3
 
 script practicemode_init 
 	if NOT ($current_speedfactor = 1.0)
-		setnotemappings \{section = drums
-			mapping = $practice_notemapping}
+		SetNoteMappings \{section = Drums
+			mapping = $Practice_NoteMapping}
 	endif
 	hide_band
-	createscreenelement \{type = containerelement
+	CreateScreenElement \{type = ContainerElement
 		parent = root_window
 		id = practice_container
 		pos = (0.0, 0.0)}
-	createscreenelement {
-		type = textelement
+	CreateScreenElement {
+		type = TextElement
 		parent = practice_container
 		id = practice_sectiontext
 		scale = (1.1, 0.9)
@@ -104,42 +104,42 @@ endscript
 script practicemode_section 
 	current_section_index = 0
 	begin
-	getsongtimems
+	GetSongTimeMs
 	if (<time> > $current_starttime)
-		practice_sectiontext :setprops text = ($current_section_array [($current_section_array_entry)].marker)
-		practice_sectiontext :domorph \{alpha = 1.0
+		practice_sectiontext :SetProps text = ($current_section_array [($current_section_array_entry)].marker)
+		practice_sectiontext :DoMorph \{alpha = 1.0
 			time = 0.5}
 		current_section_index = ($current_section_array_entry)
 		break
 	endif
-	wait \{1
+	Wait \{1
 		gameframe}
 	repeat
 	begin
-	getsongtimems
+	GetSongTimeMs
 	if (<time> > $current_endtime)
-		practice_sectiontext :domorph \{alpha = 0.0
+		practice_sectiontext :DoMorph \{alpha = 0.0
 			time = 0.5}
 		break
 	elseif NOT (<current_section_index> = ($current_section_array_entry))
-		practice_sectiontext :domorph \{alpha = 0.0
+		practice_sectiontext :DoMorph \{alpha = 0.0
 			time = 0.5}
-		wait \{0.5
+		Wait \{0.5
 			second}
-		practice_sectiontext :setprops text = ($current_section_array [($current_section_array_entry)].marker)
-		practice_sectiontext :domorph \{alpha = 1.0
+		practice_sectiontext :SetProps text = ($current_section_array [($current_section_array_entry)].marker)
+		practice_sectiontext :DoMorph \{alpha = 1.0
 			time = 0.5}
 		current_section_index = ($current_section_array_entry)
 	endif
-	wait \{1
+	Wait \{1
 		gameframe}
 	repeat
 endscript
 
 script practicemode_deinit 
-	clearnotemappings \{section = practice}
-	killspawnedscript \{name = practicemode_section}
-	if screenelementexists \{id = practice_container}
-		destroyscreenelement \{id = practice_container}
+	ClearNoteMappings \{section = practice}
+	KillSpawnedScript \{name = practicemode_section}
+	if ScreenElementExists \{id = practice_container}
+		DestroyScreenElement \{id = practice_container}
 	endif
 endscript

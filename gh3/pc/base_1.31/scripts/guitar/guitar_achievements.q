@@ -1,216 +1,216 @@
-gstar_power_triggered = 0
-achievement_atoms = [
+gStar_Power_Triggered = 0
+Achievement_Atoms = [
 	{
-		name = perfectionist
-		type = scr
-		atom_script = achievements_dummyscript
+		name = PERFECTIONIST
+		type = Scr
+		atom_script = Achievements_DummyScript
 		atom_params = {
 			achievement
 		}
 		depends_on = [
 			{
-				type = scr
-				scr = achievements_perfectionist
+				type = Scr
+				Scr = Achievements_PERFECTIONIST
 				permanent = false
 			}
 			{
-				type = scr
-				scr = achievements_issongwon
-				permanent = false
-			}
-		]
-	}
-	{
-		name = who_needs_the_power
-		type = scr
-		atom_script = achievements_dummyscript
-		atom_params = {
-			achievement
-		}
-		depends_on = [
-			{
-				type = scr
-				scr = achievements_whoneedsthepower
-			}
-		]
-	}
-	{
-		name = tone_deaf
-		type = scr
-		atom_script = achievements_dummyscript
-		atom_params = {
-			achievement
-		}
-		depends_on = [
-			{
-				type = scr
-				scr = achievements_tone_deaf
-				permanent = false
-			}
-			{
-				type = scr
-				scr = achievements_issongwon
+				type = Scr
+				Scr = Achievements_IsSongWon
 				permanent = false
 			}
 		]
 	}
 	{
-		name = star_mania
-		type = scr
-		atom_script = achievements_dummyscript
+		name = WHO_NEEDS_THE_POWER
+		type = Scr
+		atom_script = Achievements_DummyScript
 		atom_params = {
 			achievement
 		}
 		depends_on = [
 			{
-				type = scr
-				scr = achievements_star_mania
+				type = Scr
+				Scr = Achievements_WhoNeedsThePower
 			}
 		]
 	}
 	{
-		name = life_of_the_party
-		type = scr
-		atom_script = achievements_dummyscript
+		name = TONE_DEAF
+		type = Scr
+		atom_script = Achievements_DummyScript
 		atom_params = {
 			achievement
 		}
 		depends_on = [
 			{
-				type = scr
-				scr = achievements_life_of_the_party
-			}
-		]
-	}
-	{
-		name = search_and_destroy
-		type = scr
-		atom_script = achievements_dummyscript
-		atom_params = {
-			achievement
-		}
-		depends_on = [
-			{
-				type = scr
-				scr = achievements_search_and_destroy
-			}
-		]
-	}
-	{
-		name = button_masher
-		type = scr
-		atom_script = achievements_dummyscript
-		atom_params = {
-			achievement
-		}
-		depends_on = [
-			{
-				type = scr
-				scr = achievements_button_masher
-			}
-		]
-	}
-	{
-		name = big_ol_pile_of_wins
-		type = scr
-		atom_script = achievements_dummyscript
-		atom_params = {
-			achievement
-		}
-		depends_on = [
-			{
-				type = scr
-				scr = achievements_big_ol_pile_of_wins
-			}
-		]
-	}
-	{
-		name = half_mill_club
-		type = scr
-		atom_script = achievements_dummyscript
-		atom_params = {
-			achievement
-		}
-		depends_on = [
-			{
-				type = scr
-				scr = achievements_half_mill_club
-			}
-		]
-	}
-	{
-		name = millionaire_club
-		type = scr
-		atom_script = achievements_dummyscript
-		atom_params = {
-			achievement
-		}
-		depends_on = [
-			{
-				type = scr
-				scr = achievements_millionaire_club
-			}
-		]
-	}
-	{
-		name = higher_than_most
-		type = scr
-		atom_script = achievements_dummyscript
-		atom_params = {
-			achievement
-		}
-		depends_on = [
-			{
-				type = scr
-				scr = achievements_higher_than_most
-			}
-		]
-	}
-	{
-		name = leaders_of_the_pack
-		type = scr
-		atom_script = achievements_dummyscript
-		atom_params = {
-			achievement
-		}
-		depends_on = [
-			{
-				type = scr
-				scr = achievements_leaders_of_the_pack
+				type = Scr
+				Scr = Achievements_TONE_DEAF
 				permanent = false
 			}
 			{
-				type = scr
-				scr = achievements_issongwon
+				type = Scr
+				Scr = Achievements_IsSongWon
 				permanent = false
 			}
 		]
 	}
 	{
-		name = enlightened_guitarist
-		type = scr
-		atom_script = achievements_dummyscript
+		name = STAR_MANIA
+		type = Scr
+		atom_script = Achievements_DummyScript
 		atom_params = {
 			achievement
 		}
 		depends_on = [
 			{
-				type = scr
-				scr = achievements_enlightened_guitarist
+				type = Scr
+				Scr = Achievements_STAR_MANIA
 			}
 		]
 	}
 	{
-		name = thats_what_friends_are_for
-		type = scr
-		atom_script = achievements_dummyscript
+		name = LIFE_OF_THE_PARTY
+		type = Scr
+		atom_script = Achievements_DummyScript
 		atom_params = {
 			achievement
 		}
 		depends_on = [
 			{
-				type = scr
-				scr = achievements_isgamefinished
+				type = Scr
+				Scr = Achievements_LIFE_OF_THE_PARTY
+			}
+		]
+	}
+	{
+		name = SEARCH_AND_DESTROY
+		type = Scr
+		atom_script = Achievements_DummyScript
+		atom_params = {
+			achievement
+		}
+		depends_on = [
+			{
+				type = Scr
+				Scr = Achievements_SEARCH_AND_DESTROY
+			}
+		]
+	}
+	{
+		name = BUTTON_MASHER
+		type = Scr
+		atom_script = Achievements_DummyScript
+		atom_params = {
+			achievement
+		}
+		depends_on = [
+			{
+				type = Scr
+				Scr = Achievements_BUTTON_MASHER
+			}
+		]
+	}
+	{
+		name = BIG_OL_PILE_OF_WINS
+		type = Scr
+		atom_script = Achievements_DummyScript
+		atom_params = {
+			achievement
+		}
+		depends_on = [
+			{
+				type = Scr
+				Scr = Achievements_BIG_OL_PILE_OF_WINS
+			}
+		]
+	}
+	{
+		name = HALF_MILL_CLUB
+		type = Scr
+		atom_script = Achievements_DummyScript
+		atom_params = {
+			achievement
+		}
+		depends_on = [
+			{
+				type = Scr
+				Scr = Achievements_HALF_MILL_CLUB
+			}
+		]
+	}
+	{
+		name = MILLIONAIRE_CLUB
+		type = Scr
+		atom_script = Achievements_DummyScript
+		atom_params = {
+			achievement
+		}
+		depends_on = [
+			{
+				type = Scr
+				Scr = Achievements_MILLIONAIRE_CLUB
+			}
+		]
+	}
+	{
+		name = HIGHER_THAN_MOST
+		type = Scr
+		atom_script = Achievements_DummyScript
+		atom_params = {
+			achievement
+		}
+		depends_on = [
+			{
+				type = Scr
+				Scr = Achievements_HIGHER_THAN_MOST
+			}
+		]
+	}
+	{
+		name = LEADERS_OF_THE_PACK
+		type = Scr
+		atom_script = Achievements_DummyScript
+		atom_params = {
+			achievement
+		}
+		depends_on = [
+			{
+				type = Scr
+				Scr = Achievements_LEADERS_OF_THE_PACK
+				permanent = false
+			}
+			{
+				type = Scr
+				Scr = Achievements_IsSongWon
+				permanent = false
+			}
+		]
+	}
+	{
+		name = ENLIGHTENED_GUITARIST
+		type = Scr
+		atom_script = Achievements_DummyScript
+		atom_params = {
+			achievement
+		}
+		depends_on = [
+			{
+				type = Scr
+				Scr = Achievements_ENLIGHTENED_GUITARIST
+			}
+		]
+	}
+	{
+		name = THATS_WHAT_FRIENDS_ARE_FOR
+		type = Scr
+		atom_script = Achievements_DummyScript
+		atom_params = {
+			achievement
+		}
+		depends_on = [
+			{
+				type = Scr
+				Scr = Achievements_IsGameFinished
 				params = {
 					game_mode = p2_career
 					difficulty = any
@@ -219,16 +219,16 @@ achievement_atoms = [
 		]
 	}
 	{
-		name = easy_rider
-		type = scr
-		atom_script = achievements_dummyscript
+		name = EASY_RIDER
+		type = Scr
+		atom_script = Achievements_DummyScript
 		atom_params = {
 			achievement
 		}
 		depends_on = [
 			{
-				type = scr
-				scr = achievements_isgamefinished
+				type = Scr
+				Scr = Achievements_IsGameFinished
 				params = {
 					game_mode = p1_career
 					difficulty = easy
@@ -237,16 +237,16 @@ achievement_atoms = [
 		]
 	}
 	{
-		name = medium_rare
-		type = scr
-		atom_script = achievements_dummyscript
+		name = MEDIUM_RARE
+		type = Scr
+		atom_script = Achievements_DummyScript
 		atom_params = {
 			achievement
 		}
 		depends_on = [
 			{
-				type = scr
-				scr = achievements_isgamefinished
+				type = Scr
+				Scr = Achievements_IsGameFinished
 				params = {
 					game_mode = p1_career
 					difficulty = medium
@@ -255,16 +255,16 @@ achievement_atoms = [
 		]
 	}
 	{
-		name = always_hard
-		type = scr
-		atom_script = achievements_dummyscript
+		name = ALWAYS_HARD
+		type = Scr
+		atom_script = Achievements_DummyScript
 		atom_params = {
 			achievement
 		}
 		depends_on = [
 			{
-				type = scr
-				scr = achievements_isgamefinished
+				type = Scr
+				Scr = Achievements_IsGameFinished
 				params = {
 					game_mode = p1_career
 					difficulty = hard
@@ -273,16 +273,16 @@ achievement_atoms = [
 		]
 	}
 	{
-		name = right_hand_of_god
-		type = scr
-		atom_script = achievements_dummyscript
+		name = RIGHT_HAND_OF_GOD
+		type = Scr
+		atom_script = Achievements_DummyScript
 		atom_params = {
 			achievement
 		}
 		depends_on = [
 			{
-				type = scr
-				scr = achievements_isgamefinished
+				type = Scr
+				Scr = Achievements_IsGameFinished
 				params = {
 					game_mode = p1_career
 					difficulty = expert
@@ -291,16 +291,16 @@ achievement_atoms = [
 		]
 	}
 	{
-		name = solo_career
-		type = scr
-		atom_script = achievements_dummyscript
+		name = SOLO_CAREER
+		type = Scr
+		atom_script = Achievements_DummyScript
 		atom_params = {
 			achievement
 		}
 		depends_on = [
 			{
-				type = scr
-				scr = achievements_isgamefinished
+				type = Scr
+				Scr = Achievements_IsGameFinished
 				params = {
 					game_mode = p1_career
 					difficulty = all
@@ -309,16 +309,16 @@ achievement_atoms = [
 		]
 	}
 	{
-		name = axe_grinder
-		type = scr
-		atom_script = achievements_dummyscript
+		name = AXE_GRINDER
+		type = Scr
+		atom_script = Achievements_DummyScript
 		atom_params = {
 			achievement
 		}
 		depends_on = [
 			{
-				type = scr
-				scr = progression_checkdiff
+				type = Scr
+				Scr = Progression_CheckDiff
 				params = {
 					diff = easy
 					mode = p1_career
@@ -326,8 +326,8 @@ achievement_atoms = [
 				permanent = false
 			}
 			{
-				type = scr
-				scr = progression_checksong5star
+				type = Scr
+				Scr = Progression_CheckSong5Star
 				params = {
 				}
 				permanent = false
@@ -335,16 +335,16 @@ achievement_atoms = [
 		]
 	}
 	{
-		name = rock_guru
-		type = scr
-		atom_script = achievements_dummyscript
+		name = ROCK_GURU
+		type = Scr
+		atom_script = Achievements_DummyScript
 		atom_params = {
 			achievement
 		}
 		depends_on = [
 			{
-				type = scr
-				scr = progression_checkdiff
+				type = Scr
+				Scr = Progression_CheckDiff
 				params = {
 					diff = medium
 					mode = p1_career
@@ -352,8 +352,8 @@ achievement_atoms = [
 				permanent = false
 			}
 			{
-				type = scr
-				scr = progression_checksong5star
+				type = Scr
+				Scr = Progression_CheckSong5Star
 				params = {
 				}
 				permanent = false
@@ -361,16 +361,16 @@ achievement_atoms = [
 		]
 	}
 	{
-		name = shredder
-		type = scr
-		atom_script = achievements_dummyscript
+		name = SHREDDER
+		type = Scr
+		atom_script = Achievements_DummyScript
 		atom_params = {
 			achievement
 		}
 		depends_on = [
 			{
-				type = scr
-				scr = progression_checkdiff
+				type = Scr
+				Scr = Progression_CheckDiff
 				params = {
 					diff = hard
 					mode = p1_career
@@ -378,8 +378,8 @@ achievement_atoms = [
 				permanent = false
 			}
 			{
-				type = scr
-				scr = progression_checksong5star
+				type = Scr
+				Scr = Progression_CheckSong5Star
 				params = {
 				}
 				permanent = false
@@ -387,16 +387,16 @@ achievement_atoms = [
 		]
 	}
 	{
-		name = guitar_hero
-		type = scr
-		atom_script = achievements_dummyscript
+		name = GUITAR_HERO
+		type = Scr
+		atom_script = Achievements_DummyScript
 		atom_params = {
 			achievement
 		}
 		depends_on = [
 			{
-				type = scr
-				scr = progression_checkdiff
+				type = Scr
+				Scr = Progression_CheckDiff
 				params = {
 					diff = expert
 					mode = p1_career
@@ -404,8 +404,8 @@ achievement_atoms = [
 				permanent = false
 			}
 			{
-				type = scr
-				scr = progression_checksong5star
+				type = Scr
+				Scr = Progression_CheckSong5Star
 				params = {
 				}
 				permanent = false
@@ -413,16 +413,16 @@ achievement_atoms = [
 		]
 	}
 	{
-		name = easy_duo
-		type = scr
-		atom_script = achievements_dummyscript
+		name = EASY_DUO
+		type = Scr
+		atom_script = Achievements_DummyScript
 		atom_params = {
 			achievement
 		}
 		depends_on = [
 			{
-				type = scr
-				scr = progression_checkdiff
+				type = Scr
+				Scr = Progression_CheckDiff
 				params = {
 					diff = easy
 					mode = p2_career
@@ -430,8 +430,8 @@ achievement_atoms = [
 				permanent = false
 			}
 			{
-				type = scr
-				scr = progression_checksong5star
+				type = Scr
+				Scr = Progression_CheckSong5Star
 				params = {
 				}
 				permanent = false
@@ -439,16 +439,16 @@ achievement_atoms = [
 		]
 	}
 	{
-		name = medium_duo
-		type = scr
-		atom_script = achievements_dummyscript
+		name = MEDIUM_DUO
+		type = Scr
+		atom_script = Achievements_DummyScript
 		atom_params = {
 			achievement
 		}
 		depends_on = [
 			{
-				type = scr
-				scr = progression_checkdiff
+				type = Scr
+				Scr = Progression_CheckDiff
 				params = {
 					diff = medium
 					mode = p2_career
@@ -456,8 +456,8 @@ achievement_atoms = [
 				permanent = false
 			}
 			{
-				type = scr
-				scr = progression_checksong5star
+				type = Scr
+				Scr = Progression_CheckSong5Star
 				params = {
 				}
 				permanent = false
@@ -465,16 +465,16 @@ achievement_atoms = [
 		]
 	}
 	{
-		name = hard_duo
-		type = scr
-		atom_script = achievements_dummyscript
+		name = HARD_DUO
+		type = Scr
+		atom_script = Achievements_DummyScript
 		atom_params = {
 			achievement
 		}
 		depends_on = [
 			{
-				type = scr
-				scr = progression_checkdiff
+				type = Scr
+				Scr = Progression_CheckDiff
 				params = {
 					diff = hard
 					mode = p2_career
@@ -482,8 +482,8 @@ achievement_atoms = [
 				permanent = false
 			}
 			{
-				type = scr
-				scr = progression_checksong5star
+				type = Scr
+				Scr = Progression_CheckSong5Star
 				params = {
 				}
 				permanent = false
@@ -491,16 +491,16 @@ achievement_atoms = [
 		]
 	}
 	{
-		name = living_legends
-		type = scr
-		atom_script = achievements_dummyscript
+		name = LIVING_LEGENDS
+		type = Scr
+		atom_script = Achievements_DummyScript
 		atom_params = {
 			achievement
 		}
 		depends_on = [
 			{
-				type = scr
-				scr = progression_checkdiff
+				type = Scr
+				Scr = Progression_CheckDiff
 				params = {
 					diff = expert
 					mode = p2_career
@@ -508,8 +508,8 @@ achievement_atoms = [
 				permanent = false
 			}
 			{
-				type = scr
-				scr = progression_checksong5star
+				type = Scr
+				Scr = Progression_CheckSong5Star
 				params = {
 				}
 				permanent = false
@@ -517,72 +517,72 @@ achievement_atoms = [
 		]
 	}
 	{
-		name = smokin_aces
-		type = scr
-		atom_script = achievements_dummyscript
+		name = SMOKIN_ACES
+		type = Scr
+		atom_script = Achievements_DummyScript
 		atom_params = {
 			achievement
 		}
 		depends_on = [
 			{
-				type = scr
-				scr = achievements_smokin_aces
+				type = Scr
+				Scr = Achievements_SMOKIN_ACES
 			}
 		]
 	}
 	{
-		name = first_big_score
-		type = scr
-		atom_script = achievements_dummyscript
+		name = FIRST_BIG_SCORE
+		type = Scr
+		atom_script = Achievements_DummyScript
 		atom_params = {
 			achievement
 		}
 		depends_on = [
 			{
-				type = scr
-				scr = achievements_first_big_score
+				type = Scr
+				Scr = Achievements_FIRST_BIG_SCORE
 			}
 		]
 	}
 	{
-		name = half_a_mill
-		type = scr
-		atom_script = achievements_dummyscript
+		name = HALF_A_MILL
+		type = Scr
+		atom_script = Achievements_DummyScript
 		atom_params = {
 			achievement
 		}
 		depends_on = [
 			{
-				type = scr
-				scr = achievements_half_a_mill
+				type = Scr
+				Scr = Achievements_HALF_A_MILL
 			}
 		]
 	}
 	{
-		name = first_mill
-		type = scr
-		atom_script = achievements_dummyscript
+		name = FIRST_MILL
+		type = Scr
+		atom_script = Achievements_DummyScript
 		atom_params = {
 			achievement
 		}
 		depends_on = [
 			{
-				type = scr
-				scr = achievements_first_mill
+				type = Scr
+				Scr = Achievements_FIRST_MILL
 			}
 		]
 	}
 	{
-		name = guitar_wizard
-		type = scr
-		atom_script = achievements_dummyscript
+		name = GUITAR_WIZARD
+		type = Scr
+		atom_script = Achievements_DummyScript
 		atom_params = {
 			achievement
 		}
 		depends_on = [
 			{
-				type = scr
-				scr = achievements_coopbeatenpart
+				type = Scr
+				Scr = Achievements_CoopBeatenPart
 				params = {
 					part = guitar
 				}
@@ -590,16 +590,16 @@ achievement_atoms = [
 		]
 	}
 	{
-		name = back_up_hero
-		type = scr
-		atom_script = achievements_dummyscript
+		name = BACK_UP_HERO
+		type = Scr
+		atom_script = Achievements_DummyScript
 		atom_params = {
 			achievement
 		}
 		depends_on = [
 			{
-				type = scr
-				scr = achievements_coopbeatenpart
+				type = Scr
+				Scr = Achievements_CoopBeatenPart
 				params = {
 					part = rhythm
 				}
@@ -607,139 +607,139 @@ achievement_atoms = [
 		]
 	}
 	{
-		name = welcome_to_hell
-		type = scr
-		atom_script = achievements_dummyscript
+		name = WELCOME_TO_HELL
+		type = Scr
+		atom_script = Achievements_DummyScript
 		atom_params = {
 			achievement
 		}
 		depends_on = [
 			{
-				type = scr
-				scr = achievements_welcome_to_hell
+				type = Scr
+				Scr = Achievements_WELCOME_TO_HELL
 			}
 		]
 	}
 	{
-		name = hendrix_reborn
-		type = scr
-		atom_script = achievements_dummyscript
+		name = HENDRIX_REBORN
+		type = Scr
+		atom_script = Achievements_DummyScript
 		atom_params = {
 			achievement
 		}
 		depends_on = [
 			{
-				type = scr
-				scr = achievements_hendrix_reborn
+				type = Scr
+				Scr = Achievements_HENDRIX_REBORN
 			}
 		]
 	}
 	{
-		name = whammy_mania
-		type = scr
-		atom_script = achievements_dummyscript
+		name = WHAMMY_MANIA
+		type = Scr
+		atom_script = Achievements_DummyScript
 		atom_params = {
 			achievement
 		}
 		depends_on = [
 			{
-				type = scr
-				scr = achievements_whammy_mania
+				type = Scr
+				Scr = Achievements_WHAMMY_MANIA
 				permanent = false
 			}
 			{
-				type = scr
-				scr = achievements_issongwon
+				type = Scr
+				Scr = Achievements_IsSongWon
 				permanent = false
 			}
 		]
 	}
 ]
-achievements_songwonflag = 0
+Achievements_SongWonFlag = 0
 
-script achievements_issongwon 
-	if ($achievements_songwonflag = 1)
+script Achievements_IsSongWon 
+	if ($Achievements_SongWonFlag = 1)
 		return \{true}
 	endif
 	return \{false}
 endscript
 
-script achievements_dummyscript 
+script Achievements_DummyScript 
 endscript
 
-script achievements_songwon 
+script Achievements_SongWon 
 	if ($game_mode = p1_career)
-		getglobaltags \{achievement_info}
+		GetGlobalTags \{achievement_info}
 		total_cash_in_career_mode = (<total_cash_in_career_mode> + <additional_cash>)
 		total_notes_in_career_mode = (<total_notes_in_career_mode> + $player1_status.notes_hit)
 		total_points_in_career_mode = (<total_points_in_career_mode> + $player1_status.score)
-		setglobaltags achievement_info params = {total_cash_in_career_mode = <total_cash_in_career_mode>
+		SetGlobalTags achievement_info params = {total_cash_in_career_mode = <total_cash_in_career_mode>
 			total_notes_in_career_mode = <total_notes_in_career_mode>
 			total_points_in_career_mode = <total_points_in_career_mode>}
 		if ($current_difficulty = easy)
 			total_points_in_career_mode_easy = (<total_points_in_career_mode_easy> + $player1_status.score)
-			setglobaltags achievement_info params = {total_points_in_career_mode_easy = <total_points_in_career_mode_easy>}
+			SetGlobalTags achievement_info params = {total_points_in_career_mode_easy = <total_points_in_career_mode_easy>}
 		endif
 		if ($current_difficulty = medium)
 			total_points_in_career_mode_medium = (<total_points_in_career_mode_medium> + $player1_status.score)
-			setglobaltags achievement_info params = {total_points_in_career_mode_medium = <total_points_in_career_mode_medium>}
+			SetGlobalTags achievement_info params = {total_points_in_career_mode_medium = <total_points_in_career_mode_medium>}
 		endif
 		if ($current_difficulty = hard)
 			total_points_in_career_mode_hard = (<total_points_in_career_mode_hard> + $player1_status.score)
-			setglobaltags achievement_info params = {total_points_in_career_mode_hard = <total_points_in_career_mode_hard>}
+			SetGlobalTags achievement_info params = {total_points_in_career_mode_hard = <total_points_in_career_mode_hard>}
 		endif
 		if ($current_difficulty = expert)
 			total_points_in_career_mode_expert = (<total_points_in_career_mode_expert> + $player1_status.score)
-			setglobaltags achievement_info params = {total_points_in_career_mode_expert = <total_points_in_career_mode_expert>}
+			SetGlobalTags achievement_info params = {total_points_in_career_mode_expert = <total_points_in_career_mode_expert>}
 		endif
-		achievements_checkcareertotals
+		Achievements_CheckCareerTotals
 	endif
 	if ($game_mode = p2_career)
 		if ($player1_status.controller = ($primary_controller))
 			if ($player1_status.part = rhythm)
-				setglobaltags ($current_song) params = {beaten_coop_as_rhythm = 1}
+				SetGlobalTags ($current_song) params = {beaten_coop_as_rhythm = 1}
 			else
-				setglobaltags ($current_song) params = {beaten_coop_as_lead = 1}
+				SetGlobalTags ($current_song) params = {beaten_coop_as_lead = 1}
 			endif
 		elseif ($player2_status.controller = ($primary_controller))
 			if ($player2_status.part = rhythm)
-				setglobaltags ($current_song) params = {beaten_coop_as_rhythm = 1}
+				SetGlobalTags ($current_song) params = {beaten_coop_as_rhythm = 1}
 			else
-				setglobaltags ($current_song) params = {beaten_coop_as_lead = 1}
+				SetGlobalTags ($current_song) params = {beaten_coop_as_lead = 1}
 			endif
 		endif
 	endif
 	if ($game_mode = p2_coop)
 		if ($player1_status.part = rhythm)
-			setglobaltags ($current_song) params = {beaten_coop_as_rhythm = 1}
+			SetGlobalTags ($current_song) params = {beaten_coop_as_rhythm = 1}
 		else
-			setglobaltags ($current_song) params = {beaten_coop_as_lead = 1}
+			SetGlobalTags ($current_song) params = {beaten_coop_as_lead = 1}
 		endif
 	endif
 	if ($game_mode = p1_career)
 		get_difficulty_text_nl difficulty = ($current_difficulty)
-		formattext checksumname = bandname_id 'band%i_info_%g' i = ($current_band) g = 'p1_career'
-		formattext checksumname = hendrix_checksum 'hendrix_achievement_%s' s = <difficulty_text_nl>
-		getglobaltags <bandname_id> param = <hendrix_checksum>
-		getglobaltags \{user_options
+		FormatText checksumname = bandname_id 'band%i_info_%g' i = ($current_band) g = 'p1_career'
+		FormatText checksumname = hendrix_checksum 'hendrix_achievement_%s' s = <difficulty_text_nl>
+		GetGlobalTags <bandname_id> param = <hendrix_checksum>
+		GetGlobalTags \{user_options
 			params = lefty_flip_p1}
 		if ((<...>.<hendrix_checksum>) = 2)
 		elseif ((<...>.<hendrix_checksum>) = -1)
-			addparam name = <hendrix_checksum> structure_name = new_params value = <lefty_flip_p1>
-			setglobaltags <bandname_id> params = <new_params>
+			AddParam name = <hendrix_checksum> structure_name = new_params value = <lefty_flip_p1>
+			SetGlobalTags <bandname_id> params = <new_params>
 		elseif NOT ((<...>.<hendrix_checksum>) = <lefty_flip_p1>)
-			addparam name = <hendrix_checksum> structure_name = new_params value = 2
-			setglobaltags <bandname_id> params = <new_params>
+			AddParam name = <hendrix_checksum> structure_name = new_params value = 2
+			SetGlobalTags <bandname_id> params = <new_params>
 		endif
 	endif
 	if ($game_mode = p1_career || $game_mode = p1_quickplay)
 		if ($current_song = thrufireandflames && $current_difficulty = expert && $boss_battle = 0 && $end_credits = 0)
-			writeachievements \{achievement = only_the_l33t}
+			WriteAchievements \{achievement = ONLY_THE_L33T}
 		endif
 	endif
 endscript
 
-script achievements_perfectionist 
+script Achievements_PERFECTIONIST 
 	printf \{"Achievements_PERFECTIONIST"}
 	if ($is_attract_mode = 0 &&
 			($game_mode = p1_career ||
@@ -752,7 +752,7 @@ script achievements_perfectionist
 	return \{false}
 endscript
 
-script achievements_whoneedsthepower 
+script Achievements_WhoNeedsThePower 
 	printf \{"Achievements_WhoNeedsThePower"}
 	if ($game_mode = training ||
 			$game_mode = practice ||
@@ -770,20 +770,20 @@ script achievements_whoneedsthepower
 		return \{false}
 	endif
 	printf \{"star power trigged  = %d"
-		d = $gstar_power_triggered}
+		d = $gStar_Power_Triggered}
 	if ($player1_status.score > 199999 &&
-			$gstar_power_triggered = 0 &&
+			$gStar_Power_Triggered = 0 &&
 			$current_song = cultofpersonality)
 		return \{true}
 	endif
 	return \{false}
 endscript
 
-script achievements_tone_deaf 
+script Achievements_TONE_DEAF 
 	printf \{"Achievements_TONE_DEAF"}
 	if ($game_mode = p1_quickplay ||
 			($game_mode = p1_career && $boss_battle = 0))
-		getglobaltags \{user_options}
+		GetGlobalTags \{user_options}
 		if ($current_difficulty = expert)
 			if (<guitar_volume> = 0)
 				return \{true}
@@ -793,7 +793,7 @@ script achievements_tone_deaf
 	return \{false}
 endscript
 
-script achievements_star_mania 
+script Achievements_STAR_MANIA 
 	printf \{"Achievements_STAR_MANIA"}
 	if ($game_mode = training ||
 			$game_mode = practice ||
@@ -804,8 +804,8 @@ script achievements_star_mania
 		return \{false}
 	endif
 	printf \{"star power trigged  = %d"
-		d = $gstar_power_triggered}
-	if ($gstar_power_triggered > 2)
+		d = $gStar_Power_Triggered}
+	if ($gStar_Power_Triggered > 2)
 		if ($current_song = thrufireandflames && $current_difficulty = expert)
 			return \{true}
 		endif
@@ -813,10 +813,10 @@ script achievements_star_mania
 	return \{false}
 endscript
 
-script achievements_life_of_the_party 
+script Achievements_LIFE_OF_THE_PARTY 
 	printf \{"Achievements_LIFE_OF_THE_PARTY"}
 	if ($is_network_game = 1)
-		getglobaltags \{achievement_info}
+		GetGlobalTags \{achievement_info}
 		if (<ranked_consecutive_won_as_host> > 14)
 			return \{true}
 		endif
@@ -824,10 +824,10 @@ script achievements_life_of_the_party
 	return \{false}
 endscript
 
-script achievements_search_and_destroy 
+script Achievements_SEARCH_AND_DESTROY 
 	printf \{"Achievements_SEARCH_AND_DESTROY"}
 	if ($is_network_game = 1)
-		getglobaltags \{achievement_info}
+		GetGlobalTags \{achievement_info}
 		if (<ranked_consecutive_won_as_client> > 14)
 			return \{true}
 		endif
@@ -835,10 +835,10 @@ script achievements_search_and_destroy
 	return \{false}
 endscript
 
-script achievements_button_masher 
+script Achievements_BUTTON_MASHER 
 	printf \{"Achievements_BUTTON_MASHER"}
 	if ($is_network_game = 1)
-		getglobaltags \{achievement_info}
+		GetGlobalTags \{achievement_info}
 		if (<ranked_matches_won_with_standard_controller> > 14)
 			return \{true}
 		endif
@@ -846,10 +846,10 @@ script achievements_button_masher
 	return \{false}
 endscript
 
-script achievements_big_ol_pile_of_wins 
+script Achievements_BIG_OL_PILE_OF_WINS 
 	printf \{"Achievements_BIG_OL_PILE_OF_WINS"}
 	if ($is_network_game = 1)
-		getglobaltags \{achievement_info}
+		GetGlobalTags \{achievement_info}
 		if (<ranked_matches_won> > 499)
 			return \{true}
 		endif
@@ -857,7 +857,7 @@ script achievements_big_ol_pile_of_wins
 	return \{false}
 endscript
 
-script achievements_half_mill_club 
+script Achievements_HALF_MILL_CLUB 
 	printf \{"Achievements_HALF_MILL_CLUB"}
 	if ($game_mode = p2_career || $game_mode = p2_coop)
 		if (($player1_status.score + $player2_status.score) > 499999)
@@ -867,7 +867,7 @@ script achievements_half_mill_club
 	return \{false}
 endscript
 
-script achievements_millionaire_club 
+script Achievements_MILLIONAIRE_CLUB 
 	printf \{"Achievements_MILLIONAIRE_CLUB"}
 	if ($game_mode = p2_career || $game_mode = p2_coop)
 		if (($player1_status.score + $player2_status.score) > 999999)
@@ -877,7 +877,7 @@ script achievements_millionaire_club
 	return \{false}
 endscript
 
-script achievements_higher_than_most 
+script Achievements_HIGHER_THAN_MOST 
 	printf \{"Achievements_HIGHER_THAN_MOST"}
 	if ($game_mode = p2_career || $game_mode = p2_coop)
 		if (($player1_status.score + $player2_status.score) > 699999)
@@ -887,7 +887,7 @@ script achievements_higher_than_most
 	return \{false}
 endscript
 
-script achievements_leaders_of_the_pack 
+script Achievements_LEADERS_OF_THE_PACK 
 	printf \{"Achievements_LEADERS_OF_THE_PACK"}
 	if ($game_mode = p2_career || $game_mode = p2_coop)
 		if ($player1_status.total_notes = $player1_status.notes_hit)
@@ -899,7 +899,7 @@ script achievements_leaders_of_the_pack
 	return \{false}
 endscript
 
-script achievements_enlightened_guitarist 
+script Achievements_ENLIGHTENED_GUITARIST 
 	array_entry = 0
 	get_songlist_size
 	num_gold_star_games = 0
@@ -907,8 +907,8 @@ script achievements_enlightened_guitarist
 	get_songlist_checksum index = <array_entry>
 	get_difficulty_text_nl \{difficulty = expert}
 	get_song_prefix song = <song_checksum>
-	formattext checksumname = songname '%s_%d' s = <song_prefix> d = <difficulty_text_nl>
-	getglobaltags <songname>
+	FormatText checksumname = songname '%s_%d' s = <song_prefix> d = <difficulty_text_nl>
+	GetGlobalTags <songname>
 	if (<achievement_gold_star> = 1)
 		num_gold_star_games = (<num_gold_star_games> + 1)
 	endif
@@ -920,68 +920,68 @@ script achievements_enlightened_guitarist
 	return \{false}
 endscript
 
-script achievement_axe_collector 
-	guitar_array = ($bonus_guitars)
-	getarraysize <guitar_array>
+script Achievement_AXE_COLLECTOR 
+	guitar_array = ($Bonus_Guitars)
+	GetArraySize <guitar_array>
 	index = 0
 	begin
 	guitar_id = (<guitar_array> [<index>].id)
-	getglobaltags <guitar_id>
+	GetGlobalTags <guitar_id>
 	if (<unlocked> = 0)
 		return \{false}
 	endif
 	<index> = (<index> + 1)
 	repeat <array_size>
-	guitar_array = ($secret_guitars)
-	getarraysize <guitar_array>
+	guitar_array = ($Secret_Guitars)
+	GetArraySize <guitar_array>
 	index = 0
 	begin
 	guitar_id = (<guitar_array> [<index>].id)
-	getglobaltags <guitar_id>
+	GetGlobalTags <guitar_id>
 	if (<unlocked> = 0)
 		return \{false}
 	endif
 	<index> = (<index> + 1)
 	repeat <array_size>
-	guitar_array = ($bonus_basses)
-	getarraysize <guitar_array>
+	guitar_array = ($Bonus_Basses)
+	GetArraySize <guitar_array>
 	index = 0
 	begin
 	guitar_id = (<guitar_array> [<index>].id)
-	getglobaltags <guitar_id>
+	GetGlobalTags <guitar_id>
 	if (<unlocked> = 0)
 		return \{false}
 	endif
 	<index> = (<index> + 1)
 	repeat <array_size>
-	guitar_array = ($secret_basses)
-	getarraysize <guitar_array>
+	guitar_array = ($Secret_Basses)
+	GetArraySize <guitar_array>
 	index = 0
 	begin
 	guitar_id = (<guitar_array> [<index>].id)
-	getglobaltags <guitar_id>
+	GetGlobalTags <guitar_id>
 	if (<unlocked> = 0)
 		return \{false}
 	endif
 	<index> = (<index> + 1)
 	repeat <array_size>
-	guitar_array = ($bonus_guitar_finishes)
-	getarraysize <guitar_array>
+	guitar_array = ($Bonus_Guitar_Finishes)
+	GetArraySize <guitar_array>
 	index = 0
 	begin
 	guitar_id = (<guitar_array> [<index>].id)
-	getglobaltags <guitar_id>
+	GetGlobalTags <guitar_id>
 	if (<unlocked> = 0)
 		return \{false}
 	endif
 	<index> = (<index> + 1)
 	repeat <array_size>
-	guitar_array = ($bonus_bass_finishes)
-	getarraysize <guitar_array>
+	guitar_array = ($Bonus_Bass_Finishes)
+	GetArraySize <guitar_array>
 	index = 0
 	begin
 	guitar_id = (<guitar_array> [<index>].id)
-	getglobaltags <guitar_id>
+	GetGlobalTags <guitar_id>
 	if (<unlocked> = 0)
 		return \{false}
 	endif
@@ -990,11 +990,11 @@ script achievement_axe_collector
 	return \{true}
 endscript
 
-script achievement_track_master 
-	getarraysize ($bonus_songs_info)
+script Achievement_TRACK_MASTER 
+	GetArraySize ($Bonus_Songs_Info)
 	index = 0
 	begin
-	getglobaltags ($bonus_songs_info [<index>].item)
+	GetGlobalTags ($Bonus_Songs_Info [<index>].item)
 	if (<unlocked> = 0)
 		return \{false}
 	endif
@@ -1003,13 +1003,13 @@ script achievement_track_master
 	return \{true}
 endscript
 
-script achievement_got_em_all 
-	character_array = ($secret_characters)
-	getarraysize <character_array>
+script Achievement_GOT_EM_ALL 
+	character_array = ($Secret_Characters)
+	GetArraySize <character_array>
 	index = 0
 	begin
 	character_id = (<character_array> [<index>].id)
-	getglobaltags <character_id>
+	GetGlobalTags <character_id>
 	if (<unlocked> = 0)
 		return \{false}
 	endif
@@ -1018,43 +1018,43 @@ script achievement_got_em_all
 	return \{true}
 endscript
 
-script achievement_burning_a_hole_in_your_pocket 
-	getarraysize ($bonus_videos)
+script Achievement_BURNING_A_HOLE_IN_YOUR_POCKET 
+	GetArraySize ($Bonus_Videos)
 	index = 0
 	begin
-	video_checksum = ($bonus_videos [<index>].id)
-	getglobaltags <video_checksum>
+	video_checksum = ($Bonus_Videos [<index>].id)
+	GetGlobalTags <video_checksum>
 	if (<unlocked> = 0)
 		return \{false}
 	endif
 	<index> = (<index> + 1)
 	repeat <array_size>
-	if NOT achievement_track_master
+	if NOT Achievement_TRACK_MASTER
 		return \{false}
 	endif
-	if NOT achievement_axe_collector
+	if NOT Achievement_AXE_COLLECTOR
 		return \{false}
 	endif
-	if NOT achievement_got_em_all
+	if NOT Achievement_GOT_EM_ALL
 		return \{false}
 	endif
-	character_array = ($bonus_outfits)
-	getarraysize <character_array>
+	character_array = ($Bonus_Outfits)
+	GetArraySize <character_array>
 	index = 0
 	begin
 	character_id = (<character_array> [<index>].id)
-	getglobaltags <character_id>
+	GetGlobalTags <character_id>
 	if (<unlocked> = 0)
 		return \{false}
 	endif
 	<index> = (<index> + 1)
 	repeat <array_size>
-	character_array = ($bonus_styles)
-	getarraysize <character_array>
+	character_array = ($Bonus_Styles)
+	GetArraySize <character_array>
 	index = 0
 	begin
 	character_id = (<character_array> [<index>].id)
-	getglobaltags <character_id>
+	GetGlobalTags <character_id>
 	if (<unlocked> = 0)
 		return \{false}
 	endif
@@ -1063,39 +1063,39 @@ script achievement_burning_a_hole_in_your_pocket
 	return \{true}
 endscript
 
-script achievement_checkbuyachievements 
-	if achievement_axe_collector
-		writeachievements \{achievement = axe_collector}
+script Achievement_CheckBuyAchievements 
+	if Achievement_AXE_COLLECTOR
+		WriteAchievements \{achievement = AXE_COLLECTOR}
 	endif
-	if achievement_track_master
-		writeachievements \{achievement = track_master}
+	if Achievement_TRACK_MASTER
+		WriteAchievements \{achievement = TRACK_MASTER}
 	endif
-	if achievement_got_em_all
-		writeachievements \{achievement = got_em_all}
+	if Achievement_GOT_EM_ALL
+		WriteAchievements \{achievement = GOT_EM_ALL}
 	endif
-	if achievement_burning_a_hole_in_your_pocket
-		writeachievements \{achievement = burning_a_hole_in_your_pocket}
+	if Achievement_BURNING_A_HOLE_IN_YOUR_POCKET
+		WriteAchievements \{achievement = BURNING_A_HOLE_IN_YOUR_POCKET}
 	endif
-	if achievements_welcome_to_hell
-		writeachievements \{achievement = welcome_to_hell}
+	if Achievements_WELCOME_TO_HELL
+		WriteAchievements \{achievement = WELCOME_TO_HELL}
 	endif
 endscript
 
-script achievements_isgamefinished 
-	if NOT gotparam \{difficulty}
-		scriptassert \{"No difficulty"}
+script Achievements_IsGameFinished 
+	if NOT GotParam \{difficulty}
+		ScriptAssert \{"No difficulty"}
 	endif
-	if NOT gotparam \{game_mode}
-		scriptassert \{"No game mode"}
+	if NOT GotParam \{game_mode}
+		ScriptAssert \{"No game mode"}
 	endif
-	getarraysize ($difficulty_list)
+	GetArraySize ($difficulty_list)
 	array_count = 0
 	begin
 	get_difficulty_text_nl difficulty = ($difficulty_list [<array_count>])
 	get_progression_globals game_mode = <game_mode>
 	setlist_prefix = ($<tier_global>.prefix)
-	formattext checksumname = gametype_checksum '%p_%s' p = <setlist_prefix> s = <difficulty_text_nl>
-	getglobaltags <gametype_checksum>
+	FormatText checksumname = gametype_checksum '%p_%s' p = <setlist_prefix> s = <difficulty_text_nl>
+	GetGlobalTags <gametype_checksum>
 	if (<difficulty> = any)
 		if (<complete> = 1)
 			return \{true}
@@ -1122,7 +1122,7 @@ script achievements_isgamefinished
 	endif
 endscript
 
-script achievements_smokin_aces 
+script Achievements_SMOKIN_ACES 
 	printf \{"Achievements_SMOKIN_ACES"}
 	if ($game_mode = p2_career)
 		if ($player1_status.score > 1000000)
@@ -1132,7 +1132,7 @@ script achievements_smokin_aces
 	return \{false}
 endscript
 
-script achievements_first_big_score 
+script Achievements_FIRST_BIG_SCORE 
 	printf \{"Achievements_FIRST_BIG_SCORE"}
 	if ($game_mode = p1_quickplay || $game_mode = p1_career)
 		if ($player1_status.score > 250000)
@@ -1142,7 +1142,7 @@ script achievements_first_big_score
 	return \{false}
 endscript
 
-script achievements_half_a_mill 
+script Achievements_HALF_A_MILL 
 	printf \{"Achievements_HALF_A_MILL"}
 	if ($game_mode = p1_quickplay || $game_mode = p1_career)
 		if ($player1_status.score > 500000)
@@ -1152,7 +1152,7 @@ script achievements_half_a_mill
 	return \{false}
 endscript
 
-script achievements_first_mill 
+script Achievements_FIRST_MILL 
 	printf \{"Achievements_FIRST_MILL"}
 	if ($game_mode = p1_quickplay || $game_mode = p1_career)
 		if ($player1_status.score > 750000)
@@ -1162,30 +1162,30 @@ script achievements_first_mill
 	return \{false}
 endscript
 
-script achievements_checkcareertotals 
-	getglobaltags \{achievement_info}
+script Achievements_CheckCareerTotals 
+	GetGlobalTags \{achievement_info}
 	if (<total_cash_in_career_mode> > 350000)
-		writeachievements \{achievement = never_gonna_spend_it_all}
+		WriteAchievements \{achievement = NEVER_GONNA_SPEND_IT_ALL}
 	endif
 	if (<total_notes_in_career_mode> > 250000)
-		writeachievements \{achievement = notes_from_hell}
+		WriteAchievements \{achievement = NOTES_FROM_HELL}
 	endif
 	if (<total_points_in_career_mode> > 100000000)
-		writeachievements \{achievement = billion_gulp}
+		WriteAchievements \{achievement = BILLION_GULP}
 	endif
 endscript
 
-script achievements_coopbeatenpart 
+script Achievements_CoopBeatenPart 
 	get_progression_globals \{game_mode = p2_coop}
 	setlist_prefix = ($<tier_global>.prefix)
 	tier = 1
 	begin
-	formattext checksumname = tiername '%ptier%i' p = <setlist_prefix> i = <tier>
-	formattext checksumname = tier_checksum 'tier%s' s = <tier>
-	getarraysize ($<tier_global>.<tier_checksum>.songs)
+	FormatText checksumname = tiername '%ptier%i' p = <setlist_prefix> i = <tier>
+	FormatText checksumname = tier_checksum 'tier%s' s = <tier>
+	GetArraySize ($<tier_global>.<tier_checksum>.songs)
 	array_count = 0
 	begin
-	getglobaltags ($<tier_global>.<tier_checksum>.songs [<array_count>])
+	GetGlobalTags ($<tier_global>.<tier_checksum>.songs [<array_count>])
 	if (<part> = rhythm)
 		if (<beaten_coop_as_rhythm> = 0)
 			return \{false}
@@ -1202,24 +1202,24 @@ script achievements_coopbeatenpart
 	return \{true}
 endscript
 
-script achievements_welcome_to_hell 
-	getglobaltags \{achievement_info
+script Achievements_WELCOME_TO_HELL 
+	GetGlobalTags \{achievement_info
 		param = ranked_matches_played}
 	if (<ranked_matches_played> < 100)
 		return \{false}
 	endif
-	if NOT achievement_burning_a_hole_in_your_pocket
+	if NOT Achievement_BURNING_A_HOLE_IN_YOUR_POCKET
 		return \{false}
 	endif
-	if NOT achievements_isgamefinished \{game_mode = p1_career
+	if NOT Achievements_IsGameFinished \{game_mode = p1_career
 			difficulty = all}
 		return \{false}
 	endif
 	return \{true}
 endscript
 
-script achievements_hendrix_reborn 
-	getglobaltags \{achievement_info}
+script Achievements_HENDRIX_REBORN 
+	GetGlobalTags \{achievement_info}
 	if (<hendrix_achievement_lefty_off> = 1 &&
 			<hendrix_achievement_lefty_on> = 1)
 		return \{true}
@@ -1227,7 +1227,7 @@ script achievements_hendrix_reborn
 	return \{false}
 endscript
 
-script achievements_whammy_mania 
+script Achievements_WHAMMY_MANIA 
 	if ($current_song = numberofthebeast)
 		if ($game_mode = p1_career || $game_mode = p1_quickplay)
 			if ($whammy_mania_achievement_invalidated = 0)
@@ -1238,47 +1238,47 @@ script achievements_whammy_mania
 	return \{false}
 endscript
 
-script achievements_songfailed 
+script Achievements_SongFailed 
 	completion = 0
 	get_song_end_time song = ($current_song)
 	if (<total_end_time> > 0)
 		completion = (100 * $failed_song_time / <total_end_time>)
 	endif
-	casttointeger \{completion}
+	CastToInteger \{completion}
 	if ($game_mode = p1_career || $game_mode = p1_quickplay)
 		if NOT ($boss_battle = 1)
 			if (<completion> > 89)
-				writeachievements \{achievement = almost_got_it}
+				WriteAchievements \{achievement = ALMOST_GOT_IT}
 			endif
 		endif
 		get_difficulty_text_nl difficulty = ($current_difficulty)
 		get_song_prefix song = ($current_song)
-		formattext checksumname = songname '%s_%d' s = <song_prefix> d = <difficulty_text_nl>
-		getglobaltags <songname> param = failedtimes
+		FormatText checksumname = songname '%s_%d' s = <song_prefix> d = <difficulty_text_nl>
+		GetGlobalTags <songname> param = failedtimes
 		failedtimes = (<failedtimes> + 1)
-		setglobaltags <songname> params = {failedtimes = <failedtimes>}
-		getarraysize \{$difficulty_list}
+		SetGlobalTags <songname> params = {failedtimes = <failedtimes>}
+		GetArraySize \{$difficulty_list}
 		array_count = 0
 		total_failedtimes = 0
 		begin
 		get_difficulty_text_nl difficulty = ($difficulty_list [<array_count>])
 		get_song_prefix song = ($current_song)
-		formattext checksumname = songname '%s_%d' s = <song_prefix> d = <difficulty_text_nl>
-		getglobaltags <songname> param = failedtimes
+		FormatText checksumname = songname '%s_%d' s = <song_prefix> d = <difficulty_text_nl>
+		GetGlobalTags <songname> param = failedtimes
 		total_failedtimes = (<total_failedtimes> + <failedtimes>)
 		printstruct <...>
 		array_count = (<array_count> + 1)
 		repeat <array_size>
 		if (<total_failedtimes> > 9)
-			writeachievements \{achievement = blowin_it}
+			WriteAchievements \{achievement = BLOWIN_IT}
 		endif
 	endif
 	if ($game_mode = p1_career)
-		getglobaltags \{achievement_info}
+		GetGlobalTags \{achievement_info}
 		total_notes_in_career_mode = (<total_notes_in_career_mode> + $player1_status.notes_hit)
 		total_points_in_career_mode = (<total_points_in_career_mode> + $player1_status.score)
-		setglobaltags achievement_info params = {total_notes_in_career_mode = <total_notes_in_career_mode>
+		SetGlobalTags achievement_info params = {total_notes_in_career_mode = <total_notes_in_career_mode>
 			total_points_in_career_mode = <total_points_in_career_mode>}
-		achievements_checkcareertotals
+		Achievements_CheckCareerTotals
 	endif
 endscript

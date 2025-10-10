@@ -1,56 +1,56 @@
-gp_artdeco_dragonflames01 = {
+GP_ArtDeco_DragonFlames01 = {
 	pos = (0.003022, 0.656982, -0.78917795)
 	angles = (0.0, 0.0, 0.0)
-	class = particleobject
-	particletype = flexparticle
+	Class = ParticleObject
+	ParticleType = FlexParticle
 	type = flat
 	active
-	createdatstart
+	CreatedAtStart
 	attach
-	emitrangedims = (0.120000005, 0.120000005, 0.120000005)
-	emit_target = (0.0, 0.0, -1.0)
-	enablerotate
-	emitangle = (40.0, 0.0, 0.0)
+	EmitRangeDims = (0.120000005, 0.120000005, 0.120000005)
+	emit_Target = (0.0, 0.0, -1.0)
+	EnableRotate
+	EmitAngle = (40.0, 0.0, 0.0)
 	force = (0.0, 3.0, 0.0)
-	windcoeff = 0.0
-	localwindcoeff = 0.0
-	emittervelocityweight = 0.0
-	anglespread = 25.0
-	liferange = (0.5, 0.7)
+	WindCoeff = 0.0
+	LocalWindCoeff = 0.0
+	EmitterVelocityWeight = 0.0
+	AngleSpread = 25.0
+	LifeRange = (0.5, 0.7)
 	emit_rate = 96.0
 	max = 0
-	timeseed = 0.0
-	lifetime = 0.0
-	emitnum = 0
-	followemitter = 0.0
-	emitfunction = constant
-	emitperiod = 1.0
-	sizerange = [
+	TimeSeed = 0.0
+	lifeTime = 0.0
+	emitNum = 0
+	FollowEmitter = 0.0
+	EmitFunction = constant
+	EmitPeriod = 1.0
+	SizeRange = [
 		(0.5, 3.0)
 		(0.7, 4.0)
 	]
-	speedrange = (4.0, 6.0)
-	rotvel = (0.0, 0.0)
-	rotveltimescale = 0.0
-	emitdelaystart = 0.0
-	alignwithpath
-	pathfollowtime = 0.2
-	history = 2
-	historylistcoordinatespace = world
+	SpeedRange = (4.0, 6.0)
+	RotVel = (0.0, 0.0)
+	RotVelTimeScale = 0.0
+	EmitDelayStart = 0.0
+	AlignWithPath
+	PathFollowTime = 0.2
+	History = 2
+	HistoryListCoordinateSpace = world
 	color = -6749953
-	lod_default
-	quickmaterial = {
-		texturelayout = layout2x2
-		diffusetextureenabled
-		diffusetexture = jow_statueflames01
-		specularpower = 0
+	LOD_Default
+	QuickMaterial = {
+		TextureLayout = Layout2x2
+		DiffuseTextureEnabled
+		DiffuseTexture = jow_statueflames01
+		SpecularPower = 0
 		alphacutoff = 96
-		blendmode = add
-		sortgroup = 3
-		draworder = 15.0
-		quadanimationfps = 8
+		blendMode = Add
+		SortGroup = 3
+		DrawOrder = 15.0
+		QuadAnimationFPS = 8
 	}
-	knot = [
+	Knot = [
 		(-0.48496202, 0.0, -0.0)
 		(-0.48496202, 0.0, -0.0)
 		(-0.441017, 0.0, -0.0)
@@ -61,7 +61,7 @@ gp_artdeco_dragonflames01 = {
 		(1.051219, 0.0, -0.0)
 		(1.051219, 0.0, -0.0)
 	]
-	particlecolor = [
+	ParticleColor = [
 		960051711
 		926365695
 		-1791288065
@@ -69,7 +69,7 @@ gp_artdeco_dragonflames01 = {
 		-16777216
 		-600834048
 	]
-	vertexweight = [
+	VertexWeight = [
 		0.585781
 		1.0
 	]

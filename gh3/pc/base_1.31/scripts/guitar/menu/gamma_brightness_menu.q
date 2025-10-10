@@ -4,7 +4,7 @@ script create_gamma_brightness_menu \{popup = 0}
 	menu_font = fontgrid_title_gh3
 	menu_pos = (0.0, 340.0)
 	z = 100.0
-	createscreenelement \{type = containerelement
+	CreateScreenElement \{type = ContainerElement
 		parent = root_window
 		id = gamma_warning_container
 		pos = (0.0, 0.0)}
@@ -17,7 +17,7 @@ script create_gamma_brightness_menu \{popup = 0}
 	if (<popup> = 1)
 		create_pause_menu_frame z = (<z> - 10)
 	else
-		createscreenelement \{type = spriteelement
+		CreateScreenElement \{type = SpriteElement
 			parent = gamma_warning_container
 			pos = (640.0, 360.0)
 			just = [
@@ -38,14 +38,14 @@ script create_gamma_brightness_menu \{popup = 0}
 			button = strumbar
 			z = 100}
 	endif
-	setscreenelementprops \{id = vmenu_gamma_warning
+	SetScreenElementProps \{id = vmenu_gamma_warning
 		dims = (1280.0, 720.0)
 		internal_just = [
 			center
 			top
 		]}
-	createscreenelement {
-		type = textelement
+	CreateScreenElement {
+		type = TextElement
 		parent = gamma_warning_container
 		text = "BRIGHTNESS"
 		font = <header_font>
@@ -55,9 +55,9 @@ script create_gamma_brightness_menu \{popup = 0}
 		rgba = ($menu_unfocus_color)
 		z_priority = <z>
 	}
-	formattext textname = brightness_text "Brightness: %d" d = ($se_brightness)
-	createscreenelement {
-		type = textelement
+	FormatText TextName = brightness_text "Brightness: %d" d = ($SE_Brightness)
+	CreateScreenElement {
+		type = TextElement
 		parent = vmenu_gamma_warning
 		text = <brightness_text>
 		id = gamma_brightness_text
@@ -80,27 +80,27 @@ endscript
 
 script gamma_brightness_menu_change 
 	printf \{"gamma_brightness_menu_change"}
-	if gotparam \{up}
-		change se_brightness = ($se_brightness + 1)
-		if ($se_brightness > 10)
-			change \{se_brightness = 10}
+	if GotParam \{up}
+		change SE_Brightness = ($SE_Brightness + 1)
+		if ($SE_Brightness > 10)
+			change \{SE_Brightness = 10}
 		endif
-	elseif gotparam \{down}
-		change se_brightness = ($se_brightness - 1)
-		if ($se_brightness < 0)
-			change \{se_brightness = 0}
+	elseif GotParam \{down}
+		change SE_Brightness = ($SE_Brightness - 1)
+		if ($SE_Brightness < 0)
+			change \{SE_Brightness = 0}
 		endif
 	endif
-	setglobaltags \{user_options
+	SetGlobalTags \{user_options
 		params = {
-			gamma_brightness = $se_brightness
+			gamma_brightness = $SE_Brightness
 		}}
-	if viewportexists \{id = bg_viewport}
-		tod_proxim_update_global_brightness \{viewport = bg_viewport}
+	if ViewportExists \{id = bg_viewport}
+		TOD_Proxim_Update_Global_Brightness \{viewport = bg_viewport}
 	endif
-	if screenelementexists \{id = gamma_brightness_text}
-		formattext textname = brightness_text "Brightness: %d" d = ($se_brightness)
+	if ScreenElementExists \{id = gamma_brightness_text}
+		FormatText TextName = brightness_text "Brightness: %d" d = ($SE_Brightness)
 		printf <brightness_text>
-		setscreenelementprops id = gamma_brightness_text text = <brightness_text>
+		SetScreenElementProps id = gamma_brightness_text text = <brightness_text>
 	endif
 endscript

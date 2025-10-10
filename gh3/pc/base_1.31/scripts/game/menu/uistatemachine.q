@@ -1,27 +1,27 @@
 
-script ui_initialize 
-	if objectexists \{id = ui}
+script UI_Initialize 
+	if ObjectExists \{id = ui}
 		return
 	endif
 	<com_disabled> = 0
-	if NOT iscompositeobjectmanagerenabled
+	if NOT IsCompositeObjectManagerEnabled
 		<com_disabled> = 1
-		compositeobjectmanagersetenable \{on}
+		CompositeObjectManagerSetEnable \{on}
 	endif
-	createcompositeobject \{params = {
+	CreateCompositeObject \{params = {
 			name = ui
 			permanent
 		}
-		components = [
+		Components = [
 			{
-				component = eventcache
+				Component = EventCache
 			}
 			{
-				component = statemachinemanager
+				Component = StateMachineManager
 			}
 		]
-		heap = frontend}
+		heap = FrontEnd}
 	if (<com_disabled> = 1)
-		compositeobjectmanagersetenable \{off}
+		CompositeObjectManagerSetEnable \{off}
 	endif
 endscript

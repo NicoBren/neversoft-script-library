@@ -43,7 +43,7 @@ gh3_songlist = [
 	mynameisjonas
 	nothingformehere
 	numberofthebeast
-	one
+	ONE
 	paintitblack
 	paranoid
 	prayeroftherefugee
@@ -63,7 +63,7 @@ gh3_songlist = [
 	storyofmylife
 	suckmykiss
 	sunshineofyourlove
-	talkdirtytome
+	TalkDirtyToMe
 	takethislife
 	themetal
 	theseeker
@@ -75,19 +75,19 @@ gh3_songlist = [
 	synctest
 	synctestplaytoaudio
 	synctestaudioandvisual
-	tutorial_1b
-	tutorial_1c
-	tutorial_1d
-	tutorial_1e
-	tutorial_2a
-	tutorial_2b
-	tutorial_2c
-	tutorial_3a
-	tutorial_3b
-	tutorial_3c
-	tutorial_3d
-	tutorial_4c
-	tutorial_4e
+	Tutorial_1B
+	Tutorial_1C
+	Tutorial_1D
+	Tutorial_1E
+	Tutorial_2A
+	Tutorial_2B
+	Tutorial_2C
+	Tutorial_3A
+	Tutorial_3B
+	Tutorial_3C
+	Tutorial_3D
+	Tutorial_4C
+	Tutorial_4E
 ]
 download_songlist = [
 ]
@@ -112,7 +112,7 @@ permanent_songlist_props = {
 		leaderboard = 1
 		gem_offset = 0
 		input_offset = 0
-		singer = male
+		singer = Male
 		keyboard = false
 		countoff = 'sticks_normal'
 		rhythm_track = 1
@@ -131,7 +131,7 @@ permanent_songlist_props = {
 		leaderboard = 1
 		gem_offset = 0
 		input_offset = 0
-		singer = male
+		singer = Male
 		keyboard = false
 		countoff = 'sticks_huge'
 		band_playback_volume = 0.0
@@ -150,7 +150,7 @@ permanent_songlist_props = {
 		leaderboard = 1
 		gem_offset = 0
 		input_offset = 0
-		singer = female
+		singer = Female
 		keyboard = false
 		band_playback_volume = 0.0
 		guitar_playback_volume = 0.5
@@ -169,7 +169,7 @@ permanent_songlist_props = {
 		leaderboard = 1
 		gem_offset = 0
 		input_offset = 0
-		singer = male
+		singer = Male
 		keyboard = false
 		band_playback_volume = 0.5
 		guitar_playback_volume = 0.0
@@ -188,7 +188,7 @@ permanent_songlist_props = {
 		leaderboard = 1
 		gem_offset = 0
 		input_offset = 0
-		singer = male
+		singer = Male
 		keyboard = false
 		band_playback_volume = 1.0
 		guitar_playback_volume = 1.0
@@ -207,7 +207,7 @@ permanent_songlist_props = {
 		leaderboard = 1
 		gem_offset = 0
 		input_offset = 0
-		singer = male
+		singer = Male
 		keyboard = false
 		countoff = 'sticks_normal'
 		rhythm_track = 0
@@ -226,7 +226,7 @@ permanent_songlist_props = {
 		leaderboard = 1
 		gem_offset = 0
 		input_offset = 0
-		singer = male
+		singer = Male
 		keyboard = false
 		countoff = 'sticks_normal'
 		rhythm_track = 0
@@ -245,7 +245,7 @@ permanent_songlist_props = {
 		leaderboard = 0
 		gem_offset = 0
 		input_offset = 0
-		boss = boss_slash_props
+		boss = Boss_Slash_Props
 		band_playback_volume = 0.0
 		guitar_playback_volume = 1.0
 		countoff = 'sticks_normal'
@@ -263,7 +263,7 @@ permanent_songlist_props = {
 		leaderboard = 0
 		gem_offset = 0
 		input_offset = 0
-		boss = boss_tommorello_props
+		boss = Boss_TomMorello_Props
 		countoff = 'sticks_normal'
 		rhythm_track = 0
 	}
@@ -279,8 +279,8 @@ permanent_songlist_props = {
 		leaderboard = 0
 		gem_offset = 0
 		input_offset = 0
-		boss = boss_devil_props
-		singer = male
+		boss = Boss_Devil_Props
+		singer = Male
 		keyboard = false
 		bassist = "slash"
 		countoff = 'sticks_normal'
@@ -300,7 +300,7 @@ permanent_songlist_props = {
 		leaderboard = 1
 		gem_offset = 0
 		input_offset = 0
-		singer = male
+		singer = Male
 		keyboard = false
 		bassist = "Morello"
 		countoff = 'HiHat02'
@@ -318,7 +318,7 @@ permanent_songlist_props = {
 		leaderboard = 1
 		gem_offset = 0
 		input_offset = 0
-		singer = male
+		singer = Male
 		keyboard = false
 		countoff = 'sticks_normal'
 		rhythm_track = 0
@@ -337,7 +337,7 @@ permanent_songlist_props = {
 		leaderboard = 1
 		gem_offset = 0
 		input_offset = 0
-		singer = male
+		singer = Male
 		keyboard = false
 		countoff = 'sticks_normal'
 		rhythm_track = 0
@@ -356,7 +356,7 @@ permanent_songlist_props = {
 		leaderboard = 1
 		gem_offset = 0
 		input_offset = 0
-		singer = male
+		singer = Male
 		keyboard = false
 		countoff = 'HiHat01'
 		rhythm_track = 0
@@ -392,7 +392,7 @@ permanent_songlist_props = {
 		leaderboard = 1
 		gem_offset = 0
 		input_offset = 0
-		singer = female
+		singer = Female
 		keyboard = false
 		countoff = 'sticks_tiny'
 		rhythm_track = 0
@@ -409,7 +409,7 @@ permanent_songlist_props = {
 		leaderboard = 0
 		gem_offset = 0
 		input_offset = 0
-		singer = male
+		singer = Male
 		keyboard = false
 		countoff = 'sticks_normal'
 		rhythm_track = 0
@@ -426,7 +426,7 @@ permanent_songlist_props = {
 		leaderboard = 1
 		gem_offset = 0
 		input_offset = 0
-		singer = male
+		singer = Male
 		keyboard = false
 		band_playback_volume = 0.0
 		guitar_playback_volume = 0.0
@@ -445,7 +445,7 @@ permanent_songlist_props = {
 		leaderboard = 1
 		gem_offset = 0
 		input_offset = 0
-		singer = male
+		singer = Male
 		keyboard = false
 		countoff = 'HiHat01'
 		rhythm_track = 0
@@ -464,7 +464,7 @@ permanent_songlist_props = {
 		leaderboard = 1
 		gem_offset = 0
 		input_offset = 0
-		singer = female
+		singer = Female
 		keyboard = false
 		countoff = 'HiHat02'
 		rhythm_track = 0
@@ -483,7 +483,7 @@ permanent_songlist_props = {
 		leaderboard = 1
 		gem_offset = 0
 		input_offset = 0
-		singer = male
+		singer = Male
 		keyboard = false
 		band_playback_volume = 0.0
 		guitar_playback_volume = 1.0
@@ -502,7 +502,7 @@ permanent_songlist_props = {
 		leaderboard = 1
 		gem_offset = 0
 		input_offset = 0
-		singer = male
+		singer = Male
 		keyboard = false
 		countoff = 'HiHat03'
 		rhythm_track = 0
@@ -521,7 +521,7 @@ permanent_songlist_props = {
 		leaderboard = 1
 		gem_offset = 0
 		input_offset = 0
-		singer = male
+		singer = Male
 		keyboard = false
 		countoff = 'HiHat01'
 		rhythm_track = 0
@@ -559,7 +559,7 @@ permanent_songlist_props = {
 		leaderboard = 1
 		gem_offset = 0
 		input_offset = 0
-		singer = male
+		singer = Male
 		keyboard = false
 		countoff = 'sticks_tiny'
 		rhythm_track = 1
@@ -578,7 +578,7 @@ permanent_songlist_props = {
 		leaderboard = 1
 		gem_offset = 0
 		input_offset = 0
-		singer = male
+		singer = Male
 		keyboard = false
 		band_playback_volume = -0.5
 		guitar_playback_volume = -0.5
@@ -597,7 +597,7 @@ permanent_songlist_props = {
 		leaderboard = 1
 		gem_offset = 0
 		input_offset = 0
-		singer = female
+		singer = Female
 		keyboard = false
 		band_playback_volume = 0.0
 		guitar_playback_volume = -1.0
@@ -616,7 +616,7 @@ permanent_songlist_props = {
 		leaderboard = 1
 		gem_offset = 0
 		input_offset = 0
-		singer = male
+		singer = Male
 		keyboard = false
 		countoff = 'sticks_normal'
 		rhythm_track = 0
@@ -636,7 +636,7 @@ permanent_songlist_props = {
 		leaderboard = 1
 		gem_offset = 0
 		input_offset = 0
-		singer = male
+		singer = Male
 		keyboard = false
 		countoff = 'sticks_normal'
 		rhythm_track = 0
@@ -674,7 +674,7 @@ permanent_songlist_props = {
 		leaderboard = 1
 		gem_offset = 0
 		input_offset = 0
-		singer = female
+		singer = Female
 		keyboard = false
 		countoff = 'HiHat01'
 		rhythm_track = 0
@@ -691,7 +691,7 @@ permanent_songlist_props = {
 		leaderboard = 1
 		gem_offset = 0
 		input_offset = 0
-		singer = female
+		singer = Female
 		keyboard = false
 		countoff = 'HiHat01'
 		rhythm_track = 0
@@ -710,7 +710,7 @@ permanent_songlist_props = {
 		leaderboard = 1
 		gem_offset = 0
 		input_offset = 0
-		singer = male
+		singer = Male
 		keyboard = false
 		countoff = 'HiHat01'
 		rhythm_track = 0
@@ -729,7 +729,7 @@ permanent_songlist_props = {
 		leaderboard = 1
 		gem_offset = 0
 		input_offset = 0
-		singer = male
+		singer = Male
 		keyboard = false
 		countoff = 'sticks_tiny'
 		rhythm_track = 0
@@ -748,7 +748,7 @@ permanent_songlist_props = {
 		leaderboard = 1
 		gem_offset = 0
 		input_offset = 0
-		singer = male
+		singer = Male
 		keyboard = false
 		band_playback_volume = 1.5
 		guitar_playback_volume = 1.0
@@ -767,7 +767,7 @@ permanent_songlist_props = {
 		leaderboard = 1
 		gem_offset = 0
 		input_offset = 0
-		singer = male
+		singer = Male
 		keyboard = false
 		countoff = 'HiHat02'
 		rhythm_track = 0
@@ -786,7 +786,7 @@ permanent_songlist_props = {
 		leaderboard = 1
 		gem_offset = 0
 		input_offset = 0
-		singer = male
+		singer = Male
 		keyboard = false
 		countoff = 'sticks_normal'
 		rhythm_track = 0
@@ -805,7 +805,7 @@ permanent_songlist_props = {
 		leaderboard = 1
 		gem_offset = 0
 		input_offset = 0
-		singer = male
+		singer = Male
 		keyboard = false
 		band_playback_volume = -1.75
 		guitar_playback_volume = -1.75
@@ -824,7 +824,7 @@ permanent_songlist_props = {
 		leaderboard = 1
 		gem_offset = 0
 		input_offset = 0
-		singer = male
+		singer = Male
 		keyboard = false
 		band_playback_volume = 0.0
 		guitar_playback_volume = 0.0
@@ -843,7 +843,7 @@ permanent_songlist_props = {
 		leaderboard = 1
 		gem_offset = 0
 		input_offset = 0
-		singer = male
+		singer = Male
 		keyboard = false
 		countoff = 'sticks_normal'
 		rhythm_track = 0
@@ -862,7 +862,7 @@ permanent_songlist_props = {
 		leaderboard = 1
 		gem_offset = 0
 		input_offset = 0
-		singer = male
+		singer = Male
 		keyboard = false
 		countoff = 'HiHat01'
 		rhythm_track = 0
@@ -881,7 +881,7 @@ permanent_songlist_props = {
 		leaderboard = 1
 		gem_offset = 0
 		input_offset = 0
-		singer = male
+		singer = Male
 		keyboard = false
 		countoff = 'HiHat01'
 		rhythm_track = 0
@@ -902,7 +902,7 @@ permanent_songlist_props = {
 		input_offset = 0
 		band_playback_volume = 0.0
 		guitar_playback_volume = 0.0
-		singer = male
+		singer = Male
 		keyboard = false
 		countoff = 'HiHat01'
 		rhythm_track = 0
@@ -919,7 +919,7 @@ permanent_songlist_props = {
 		leaderboard = 1
 		gem_offset = 0
 		input_offset = 0
-		singer = male
+		singer = Male
 		keyboard = false
 		countoff = 'sticks_normal'
 		rhythm_track = 0
@@ -938,15 +938,15 @@ permanent_songlist_props = {
 		leaderboard = 1
 		gem_offset = 0
 		input_offset = 0
-		singer = male
+		singer = Male
 		keyboard = false
 		countoff = 'HiHat01'
 		rhythm_track = 0
 		band_playback_volume = -0.5
 		guitar_playback_volume = 0.0
 	}
-	one = {
-		checksum = one
+	ONE = {
+		checksum = ONE
 		name = 'one'
 		title = "One"
 		artist = "Metallica"
@@ -957,7 +957,7 @@ permanent_songlist_props = {
 		leaderboard = 1
 		gem_offset = 0
 		input_offset = 0
-		singer = male
+		singer = Male
 		keyboard = false
 		use_coop_notetracks
 		countoff = 'sticks_normal'
@@ -977,7 +977,7 @@ permanent_songlist_props = {
 		leaderboard = 1
 		gem_offset = 0
 		input_offset = 0
-		singer = male
+		singer = Male
 		keyboard = false
 		band_playback_volume = 2.0
 		guitar_playback_volume = 1.0
@@ -997,7 +997,7 @@ permanent_songlist_props = {
 		leaderboard = 1
 		gem_offset = 0
 		input_offset = 0
-		singer = male
+		singer = Male
 		keyboard = false
 		countoff = 'sticks_huge'
 		rhythm_track = 0
@@ -1016,7 +1016,7 @@ permanent_songlist_props = {
 		leaderboard = 1
 		gem_offset = 0
 		input_offset = 0
-		singer = male
+		singer = Male
 		keyboard = false
 		band_playback_volume = 1.5
 		guitar_playback_volume = 1.0
@@ -1035,7 +1035,7 @@ permanent_songlist_props = {
 		leaderboard = 1
 		gem_offset = 0
 		input_offset = 0
-		singer = male
+		singer = Male
 		keyboard = false
 		countoff = 'HiHat01'
 		rhythm_track = 0
@@ -1054,7 +1054,7 @@ permanent_songlist_props = {
 		leaderboard = 1
 		gem_offset = 0
 		input_offset = 0
-		singer = male
+		singer = Male
 		keyboard = false
 		countoff = 'sticks_normal'
 		rhythm_track = 0
@@ -1073,7 +1073,7 @@ permanent_songlist_props = {
 		leaderboard = 1
 		gem_offset = 0
 		input_offset = 0
-		singer = female
+		singer = Female
 		keyboard = false
 		countoff = 'sticks_normal'
 		rhythm_track = 0
@@ -1109,7 +1109,7 @@ permanent_songlist_props = {
 		leaderboard = 1
 		gem_offset = 0
 		input_offset = 0
-		singer = male
+		singer = Male
 		keyboard = false
 		band_playback_volume = 0.0
 		guitar_playback_volume = -0.5
@@ -1128,7 +1128,7 @@ permanent_songlist_props = {
 		leaderboard = 1
 		gem_offset = 0
 		input_offset = 0
-		singer = male
+		singer = Male
 		keyboard = false
 		band_playback_volume = 2.5
 		guitar_playback_volume = 3.0
@@ -1147,7 +1147,7 @@ permanent_songlist_props = {
 		leaderboard = 1
 		gem_offset = 0
 		input_offset = 0
-		singer = male
+		singer = Male
 		keyboard = false
 		band_playback_volume = -0.75
 		guitar_playback_volume = -0.75
@@ -1166,7 +1166,7 @@ permanent_songlist_props = {
 		leaderboard = 1
 		gem_offset = 0
 		input_offset = 0
-		singer = male
+		singer = Male
 		keyboard = false
 		band_playback_volume = 0.0
 		guitar_playback_volume = 2.0
@@ -1185,7 +1185,7 @@ permanent_songlist_props = {
 		leaderboard = 1
 		gem_offset = 0
 		input_offset = 0
-		singer = male
+		singer = Male
 		keyboard = false
 		countoff = 'HiHat01'
 		rhythm_track = 1
@@ -1204,7 +1204,7 @@ permanent_songlist_props = {
 		leaderboard = 1
 		gem_offset = 0
 		input_offset = 0
-		singer = male
+		singer = Male
 		keyboard = false
 		band_playback_volume = 1.0
 		guitar_playback_volume = 0.25
@@ -1223,7 +1223,7 @@ permanent_songlist_props = {
 		leaderboard = 1
 		gem_offset = 0
 		input_offset = 0
-		singer = male
+		singer = Male
 		keyboard = false
 		band_playback_volume = 2.5
 		guitar_playback_volume = 0.5
@@ -1242,7 +1242,7 @@ permanent_songlist_props = {
 		leaderboard = 1
 		gem_offset = 0
 		input_offset = 0
-		singer = male
+		singer = Male
 		keyboard = false
 		band_playback_volume = -3.0
 		guitar_playback_volume = -4.0
@@ -1261,7 +1261,7 @@ permanent_songlist_props = {
 		leaderboard = 1
 		gem_offset = 0
 		input_offset = 0
-		singer = male
+		singer = Male
 		keyboard = false
 		countoff = 'sticks_normal'
 		rhythm_track = 0
@@ -1280,7 +1280,7 @@ permanent_songlist_props = {
 		leaderboard = 1
 		gem_offset = 0
 		input_offset = 0
-		singer = male
+		singer = Male
 		keyboard = false
 		countoff = 'HiHat02'
 		rhythm_track = 0
@@ -1299,7 +1299,7 @@ permanent_songlist_props = {
 		leaderboard = 1
 		gem_offset = 0
 		input_offset = 0
-		singer = male
+		singer = Male
 		keyboard = false
 		countoff = 'HiHat01'
 		rhythm_track = 0
@@ -1350,7 +1350,7 @@ permanent_songlist_props = {
 		leaderboard = 0
 		gem_offset = 0
 		input_offset = 0
-		exit_script = audio_sync_test_enable_highway
+		exit_script = Audio_Sync_Test_Enable_Highway
 		countoff = 'sticks_normal'
 		rhythm_track = 0
 	}
@@ -1381,15 +1381,15 @@ permanent_songlist_props = {
 		leaderboard = 1
 		gem_offset = 0
 		input_offset = 0
-		singer = male
+		singer = Male
 		keyboard = false
 		countoff = 'sticks_normal'
 		rhythm_track = 0
 		band_playback_volume = 3.0
 		guitar_playback_volume = 1.75
 	}
-	talkdirtytome = {
-		checksum = talkdirtytome
+	TalkDirtyToMe = {
+		checksum = TalkDirtyToMe
 		name = 'talkdirtytome'
 		title = "Talk Dirty to Me"
 		artist = "Poison"
@@ -1419,7 +1419,7 @@ permanent_songlist_props = {
 		leaderboard = 1
 		gem_offset = 0
 		input_offset = 0
-		singer = male
+		singer = Male
 		keyboard = false
 		countoff = 'HiHat01'
 		rhythm_track = 0
@@ -1438,7 +1438,7 @@ permanent_songlist_props = {
 		leaderboard = 1
 		gem_offset = 0
 		input_offset = 0
-		singer = male
+		singer = Male
 		keyboard = false
 		countoff = 'HiHat01'
 		rhythm_track = 0
@@ -1457,7 +1457,7 @@ permanent_songlist_props = {
 		leaderboard = 1
 		gem_offset = 0
 		input_offset = 0
-		singer = male
+		singer = Male
 		keyboard = false
 		countoff = 'HiHat02'
 		rhythm_track = 0
@@ -1476,7 +1476,7 @@ permanent_songlist_props = {
 		leaderboard = 1
 		gem_offset = 0
 		input_offset = 0
-		singer = male
+		singer = Male
 		keyboard = false
 		countoff = 'HiHat01'
 		rhythm_track = 0
@@ -1495,7 +1495,7 @@ permanent_songlist_props = {
 		leaderboard = 1
 		gem_offset = 0
 		input_offset = 0
-		singer = male
+		singer = Male
 		keyboard = false
 		use_coop_notetracks
 		countoff = 'HiHat01'
@@ -1511,12 +1511,12 @@ permanent_songlist_props = {
 		year = ", 1987"
 		artist_text = $artist_text_by
 		original_artist = 1
-		startup_script = ls_setupvenuelights
+		startup_script = LS_SetupVenueLights
 		version = gh3
 		leaderboard = 1
 		gem_offset = 0
 		input_offset = 0
-		singer = male
+		singer = Male
 		keyboard = false
 		bassist = "slash"
 		countoff = 'HiHat01'
@@ -1536,15 +1536,15 @@ permanent_songlist_props = {
 		leaderboard = 1
 		gem_offset = 0
 		input_offset = 0
-		singer = male
+		singer = Male
 		keyboard = false
 		countoff = 'hihat01'
 		rhythm_track = 0
 		band_playback_volume = 1.0
 		guitar_playback_volume = 0.0
 	}
-	tutorial_1b = {
-		checksum = tutorial_1b
+	Tutorial_1B = {
+		checksum = Tutorial_1B
 		name = 'Tutorial_1B'
 		title = "Tutorial_1B"
 		artist = ""
@@ -1553,12 +1553,12 @@ permanent_songlist_props = {
 		gem_offset = 0
 		fretbar_offset = 0
 		input_offset = 0
-		singer = male
+		singer = Male
 		keyboard = false
 		rhythm_track = 0
 	}
-	tutorial_1c = {
-		checksum = tutorial_1c
+	Tutorial_1C = {
+		checksum = Tutorial_1C
 		name = 'Tutorial_1C'
 		title = "Tutorial_1C"
 		artist = ""
@@ -1567,12 +1567,12 @@ permanent_songlist_props = {
 		gem_offset = 0
 		fretbar_offset = 0
 		input_offset = 0
-		singer = male
+		singer = Male
 		keyboard = false
 		rhythm_track = 0
 	}
-	tutorial_1d = {
-		checksum = tutorial_1d
+	Tutorial_1D = {
+		checksum = Tutorial_1D
 		name = 'Tutorial_1D'
 		title = "Tutorial_1D"
 		artist = ""
@@ -1581,12 +1581,12 @@ permanent_songlist_props = {
 		gem_offset = 0
 		fretbar_offset = 0
 		input_offset = 0
-		singer = male
+		singer = Male
 		keyboard = false
 		rhythm_track = 0
 	}
-	tutorial_1e = {
-		checksum = tutorial_1e
+	Tutorial_1E = {
+		checksum = Tutorial_1E
 		name = 'Tutorial_1E'
 		title = "Tutorial_1E"
 		artist = ""
@@ -1595,12 +1595,12 @@ permanent_songlist_props = {
 		gem_offset = 0
 		fretbar_offset = 0
 		input_offset = 0
-		singer = male
+		singer = Male
 		keyboard = false
 		rhythm_track = 0
 	}
-	tutorial_2a = {
-		checksum = tutorial_2a
+	Tutorial_2A = {
+		checksum = Tutorial_2A
 		name = 'Tutorial_2A'
 		title = "Tutorial_2A"
 		artist = ""
@@ -1609,12 +1609,12 @@ permanent_songlist_props = {
 		gem_offset = 0
 		fretbar_offset = 0
 		input_offset = 0
-		singer = male
+		singer = Male
 		keyboard = false
 		rhythm_track = 0
 	}
-	tutorial_2b = {
-		checksum = tutorial_2b
+	Tutorial_2B = {
+		checksum = Tutorial_2B
 		name = 'Tutorial_2B'
 		title = "Tutorial_2B"
 		artist = ""
@@ -1623,12 +1623,12 @@ permanent_songlist_props = {
 		gem_offset = 0
 		fretbar_offset = 0
 		input_offset = 0
-		singer = male
+		singer = Male
 		keyboard = false
 		rhythm_track = 0
 	}
-	tutorial_2c = {
-		checksum = tutorial_2c
+	Tutorial_2C = {
+		checksum = Tutorial_2C
 		name = 'Tutorial_2C'
 		title = "Tutorial_2C"
 		artist = ""
@@ -1637,12 +1637,12 @@ permanent_songlist_props = {
 		gem_offset = 0
 		fretbar_offset = 0
 		input_offset = 0
-		singer = male
+		singer = Male
 		keyboard = false
 		rhythm_track = 0
 	}
-	tutorial_3a = {
-		checksum = tutorial_3a
+	Tutorial_3A = {
+		checksum = Tutorial_3A
 		name = 'Tutorial_3A'
 		title = "Tutorial_3A"
 		artist = ""
@@ -1651,13 +1651,13 @@ permanent_songlist_props = {
 		gem_offset = 0
 		fretbar_offset = 0
 		input_offset = 0
-		singer = male
+		singer = Male
 		keyboard = false
-		boss = boss_tommorello_props
+		boss = Boss_TomMorello_Props
 		rhythm_track = 0
 	}
-	tutorial_3b = {
-		checksum = tutorial_3b
+	Tutorial_3B = {
+		checksum = Tutorial_3B
 		name = 'Tutorial_3B'
 		title = "Tutorial_3B"
 		artist = ""
@@ -1666,13 +1666,13 @@ permanent_songlist_props = {
 		gem_offset = 0
 		fretbar_offset = 0
 		input_offset = 0
-		singer = male
+		singer = Male
 		keyboard = false
-		boss = boss_tommorello_props
+		boss = Boss_TomMorello_Props
 		rhythm_track = 0
 	}
-	tutorial_3c = {
-		checksum = tutorial_3c
+	Tutorial_3C = {
+		checksum = Tutorial_3C
 		name = 'Tutorial_3C'
 		title = "Tutorial_3C"
 		artist = ""
@@ -1681,13 +1681,13 @@ permanent_songlist_props = {
 		gem_offset = 0
 		fretbar_offset = 0
 		input_offset = 0
-		singer = male
+		singer = Male
 		keyboard = false
-		boss = boss_tommorello_props
+		boss = Boss_TomMorello_Props
 		rhythm_track = 0
 	}
-	tutorial_3d = {
-		checksum = tutorial_3d
+	Tutorial_3D = {
+		checksum = Tutorial_3D
 		name = 'Tutorial_3D'
 		title = "Tutorial_3D"
 		artist = ""
@@ -1696,13 +1696,13 @@ permanent_songlist_props = {
 		gem_offset = 0
 		fretbar_offset = 0
 		input_offset = 0
-		singer = male
+		singer = Male
 		keyboard = false
-		boss = boss_tommorello_props
+		boss = Boss_TomMorello_Props
 		rhythm_track = 0
 	}
-	tutorial_4c = {
-		checksum = tutorial_4c
+	Tutorial_4C = {
+		checksum = Tutorial_4C
 		name = 'Tutorial_4C'
 		title = "Tutorial_4C"
 		artist = ""
@@ -1711,12 +1711,12 @@ permanent_songlist_props = {
 		gem_offset = 0
 		fretbar_offset = 0
 		input_offset = 0
-		singer = male
+		singer = Male
 		keyboard = false
 		rhythm_track = 0
 	}
-	tutorial_4e = {
-		checksum = tutorial_4e
+	Tutorial_4E = {
+		checksum = Tutorial_4E
 		name = 'Tutorial_4E'
 		title = "Tutorial_4E"
 		artist = ""
@@ -1725,39 +1725,39 @@ permanent_songlist_props = {
 		gem_offset = 0
 		fretbar_offset = 0
 		input_offset = 0
-		singer = male
+		singer = Male
 		keyboard = false
 		rhythm_track = 0
 	}
 }
 
 script get_song_original_artist \{song = invalid}
-	if structurecontains structure = $gh3_songlist_props <song>
+	if StructureContains Structure = $gh3_songlist_props <song>
 		return original_artist = ($gh3_songlist_props.<song>.original_artist)
 	endif
 	printstruct <...>
-	scriptassert \{"Song not found"}
+	ScriptAssert \{"Song not found"}
 endscript
 
 script get_song_title \{song = invalid}
-	if structurecontains structure = $gh3_songlist_props <song>
+	if StructureContains Structure = $gh3_songlist_props <song>
 		return song_title = ($gh3_songlist_props.<song>.title)
 	endif
 	printstruct <...>
-	scriptassert \{"Song not found"}
+	ScriptAssert \{"Song not found"}
 endscript
 
 script get_song_prefix \{song = invalid}
-	if structurecontains structure = $gh3_songlist_props <song>
+	if StructureContains Structure = $gh3_songlist_props <song>
 		return song_prefix = ($gh3_songlist_props.<song>.name)
 	endif
 	printstruct <...>
-	scriptassert \{"Song not found"}
+	ScriptAssert \{"Song not found"}
 endscript
 
 script get_song_artist \{song = invalid
 		with_year = 1}
-	if structurecontains structure = $gh3_songlist_props <song>
+	if StructureContains Structure = $gh3_songlist_props <song>
 		if (<with_year>)
 			return song_artist = (($gh3_songlist_props.<song>.artist) + ($gh3_songlist_props.<song>.year))
 		else
@@ -1765,38 +1765,38 @@ script get_song_artist \{song = invalid
 		endif
 	endif
 	printstruct <...>
-	scriptassert \{"Song not found"}
+	ScriptAssert \{"Song not found"}
 endscript
 
 script get_song_artist_text \{song = invalid}
-	if structurecontains structure = $gh3_songlist_props <song>
+	if StructureContains Structure = $gh3_songlist_props <song>
 		return song_artist_text = ($gh3_songlist_props.<song>.artist_text)
 	endif
 	printstruct <...>
-	scriptassert \{"Song not found"}
+	ScriptAssert \{"Song not found"}
 endscript
 
 script get_song_struct \{song = invalid}
-	if structurecontains structure = $gh3_songlist_props <song>
+	if StructureContains Structure = $gh3_songlist_props <song>
 		return song_struct = ($gh3_songlist_props.<song>)
 	endif
 	printstruct <...>
-	scriptassert \{"Song not found"}
+	ScriptAssert \{"Song not found"}
 endscript
 
 script get_songlist_size 
-	getarraysize \{$gh3_songlist}
+	GetArraySize \{$gh3_songlist}
 	size = (<array_size>)
-	if globalexists \{name = download_songlist
+	if GlobalExists \{name = download_songlist
 			type = array}
-		getarraysize \{$download_songlist}
+		GetArraySize \{$download_songlist}
 		size = (<array_size> + <size>)
 	endif
 	return array_size = <size>
 endscript
 
 script get_songlist_checksum 
-	getarraysize \{$gh3_songlist}
+	GetArraySize \{$gh3_songlist}
 	if (<index> < <array_size>)
 		return song_checksum = ($gh3_songlist [<index>])
 	else
@@ -1805,9 +1805,9 @@ script get_songlist_checksum
 endscript
 
 script is_song_downloaded \{song_checksum = schoolsout}
-	if structurecontains structure = ($download_songlist_props) <song_checksum>
-		formattext textname = filename '%s_song.pak' s = (($download_songlist_props.<song_checksum>).name)
-		getcontentfolderindexfromfile <filename>
+	if StructureContains Structure = ($download_songlist_props) <song_checksum>
+		FormatText TextName = filename '%s_song.pak' s = (($download_songlist_props.<song_checksum>).name)
+		GetContentFolderIndexFromFile <filename>
 		if (<device> = content)
 			return \{download = 1
 				true}
@@ -1822,9 +1822,9 @@ script is_song_downloaded \{song_checksum = schoolsout}
 endscript
 
 script get_song_rhythm_track \{song = invalid}
-	if structurecontains structure = $gh3_songlist_props <song>
+	if StructureContains Structure = $gh3_songlist_props <song>
 		return rhythm_track = ($gh3_songlist_props.<song>.rhythm_track)
 	endif
 	printstruct <...>
-	scriptassert \{"Song not found"}
+	ScriptAssert \{"Song not found"}
 endscript

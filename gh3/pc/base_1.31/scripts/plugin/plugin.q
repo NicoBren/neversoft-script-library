@@ -1,61 +1,61 @@
 
-script plugin_quickview 
-	spawnscriptnow plugin_quickview_spawned params = <...>
+script Plugin_Quickview 
+	spawnscriptnow Plugin_Quickview_Spawned params = <...>
 endscript
 
-script plugin_quickview_spawned 
+script Plugin_Quickview_Spawned 
 	printstruct <...>
 	stoprendering
-	finishrendering
-	wait \{3
+	FinishRendering
+	Wait \{3
 		gameframes}
-	killtexturesplats \{all}
-	preallocsplats
+	KillTextureSplats \{all}
+	PreAllocSplats
 	switch <export_type>
 		case scene
-		scriptassert \{"Scene type exports are no longer supported. Use Zone type instead"}
-		case sky
+		ScriptAssert \{"Scene type exports are no longer supported. Use Zone type instead"}
+		case Sky
 		switch <project>
 			case gun2
-			tod_change_sky sky = <sky>
+			TOD_Change_Sky Sky = <Sky>
 			default
-			change_sky sky = <sky>
+			Change_Sky Sky = <Sky>
 		endswitch
 		case zone
 		switch <project>
 			case gun2
-			getpakmancurrentname \{map = zones}
+			GetPakManCurrentName \{map = zones}
 			zone_name = <pakname>
-			formattext textname = zone "%z" z = <zone> dontassertforchecksums
+			FormatText TextName = zone "%z" z = <zone> DontAssertForChecksums
 			if NOT (<zone_name> = <zone>)
-				jumptozone zone = <zone>
+				JumpToZone zone = <zone>
 			else
-				blockpendingpakmanloads \{map = zones}
-				refreshcurrentzones
+				BlockPendingPakManLoads \{map = zones}
+				RefreshCurrentZones
 			endif
 			default
 			if NOT (<zone> = viewer)
-				formattext checksumname = zone 'load_%z' z = <zone> dontassertforchecksums
+				FormatText checksumname = zone 'load_%z' z = <zone> DontAssertForChecksums
 			endif
-			getcurrentlevel
+			GetCurrentLevel
 			if NOT (<level> = <zone>)
-				setpakmancurrentblock \{map = zones
+				SetPakManCurrentBlock \{map = zones
 					pak = none}
 				change_level level = <zone>
 			else
-				blockpendingpakmanloads \{map = zones}
-				refreshcurrentzones
+				BlockPendingPakManLoads \{map = zones}
+				RefreshCurrentZones
 			endif
 		endswitch
 		case viewer
 		switch <project>
 			case gun2
-			getmissionname
+			GetMissionName
 			if NOT (<mission> = viewer)
 				load_new_mission mission_pak = <viewer> reload_zones
 			else
-				blockpendingpakmanloads \{map = zones}
-				refreshcurrentzones
+				BlockPendingPakManLoads \{map = zones}
+				RefreshCurrentZones
 			endif
 			case gh3
 			printf \{"Gh3 viewer refresh"}
@@ -70,14 +70,14 @@ script plugin_quickview_spawned
 			select_venue \{norestart}
 			printf \{"Gh4 viewer refresh done"}
 			default
-			getcurrentlevel
+			GetCurrentLevel
 			if NOT (<level> = viewer)
-				setpakmancurrentblock \{map = zones
+				SetPakManCurrentBlock \{map = zones
 					pak = none}
 				change_level \{level = viewer}
 			else
-				blockpendingpakmanloads \{map = zones}
-				refreshcurrentzones
+				BlockPendingPakManLoads \{map = zones}
+				RefreshCurrentZones
 			endif
 		endswitch
 		case mission
@@ -86,35 +86,35 @@ script plugin_quickview_spawned
 			printf \{"######################### loading new mission"}
 			load_new_mission mission_pak = <mission> reload_zones
 			default
-			blockpendingpakmanloads \{map = zones}
-			refreshcurrentzones
+			BlockPendingPakManLoads \{map = zones}
+			RefreshCurrentZones
 		endswitch
-		case model
+		case Model
 		change \{view_mode = 0}
-		toggleviewmode
-		toggleviewmode
-		toggleviewmode
+		ToggleViewMode
+		ToggleViewMode
+		ToggleViewMode
 		exit_view_models_menu
 		toggle_model_viewer
-		view_model modelname = <model>
+		view_model modelName = <Model>
 		case skin
 		change \{view_mode = 0}
-		toggleviewmode
-		toggleviewmode
-		toggleviewmode
+		ToggleViewMode
+		ToggleViewMode
+		ToggleViewMode
 		exit_view_models_menu
 		toggle_model_viewer
-		view_model \{profile = ped_batmasterson
-			animloadscript = animload_ped_male
-			extraanim = animload_ped_male
-			defaultanim = mv_idle_denton
-			skeletonname = gun}
+		view_model \{profile = Ped_BatMasterson
+			animLoadScript = animload_ped_male
+			extraAnim = animload_ped_male
+			defaultAnim = MV_Idle_Denton
+			SkeletonName = gun}
 		default
 	endswitch
-	if nodeflagexists \{nodeflag_viewerlights}
-		changenodeflag \{nodeflag_viewerlights
+	if NodeFlagExists \{NODEFLAG_VIEWERLIGHTS}
+		ChangeNodeFlag \{NODEFLAG_VIEWERLIGHTS
 			0}
-		changenodeflag \{nodeflag_viewerlights
+		ChangeNodeFlag \{NODEFLAG_VIEWERLIGHTS
 			1}
 	endif
 	startrendering

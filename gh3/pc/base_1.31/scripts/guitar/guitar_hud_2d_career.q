@@ -25,13 +25,13 @@ career_hud_2d_elements = {
 	elements = [
 		{
 			parent_container
-			element_id = hud2d_rock_container
+			element_id = HUD2D_rock_container
 			pos_type = offscreen_rock_pos
 		}
 		{
-			element_id = hud2d_rock_glow
-			element_parent = hud2d_rock_container
-			texture = char_select_hilite1
+			element_id = HUD2D_rock_glow
+			element_parent = HUD2D_rock_container
+			texture = Char_Select_Hilite1
 			pos_off = (-50.0, -100.0)
 			dims = (350.0, 350.0)
 			rgba = [
@@ -44,44 +44,44 @@ career_hud_2d_elements = {
 			zoff = -10
 		}
 		{
-			element_id = hud2d_rock_body
-			element_parent = hud2d_rock_container
-			texture = hud_rock_body
+			element_id = HUD2D_rock_body
+			element_parent = HUD2D_rock_container
+			texture = HUD_rock_body
 			pos_off = (0.0, 0.0)
 			zoff = 20
 		}
 		{
-			element_id = hud2d_rock_bg_green
-			element_parent = hud2d_rock_body
-			texture = hud_rock_bg_green
+			element_id = HUD2D_rock_BG_green
+			element_parent = HUD2D_rock_body
+			texture = HUD_rock_BG_green
 			pos_off = (0.0, 0.0)
 			zoff = 16
 		}
 		{
-			element_id = hud2d_rock_bg_red
-			element_parent = hud2d_rock_body
-			texture = hud_rock_bg_red
+			element_id = HUD2D_rock_BG_red
+			element_parent = HUD2D_rock_body
+			texture = HUD_rock_BG_red
 			pos_off = (0.0, 0.0)
 			zoff = 14
 		}
 		{
-			element_id = hud2d_rock_bg_yellow
-			element_parent = hud2d_rock_body
-			texture = hud_rock_bg_yellow
+			element_id = HUD2D_rock_BG_yellow
+			element_parent = HUD2D_rock_body
+			texture = HUD_rock_BG_yellow
 			pos_off = (0.0, 0.0)
 			zoff = 15
 		}
 		{
-			element_id = hud2d_rock_lights_all
-			element_parent = hud2d_rock_body
-			texture = hud_rock_lights_all
+			element_id = HUD2D_rock_lights_all
+			element_parent = HUD2D_rock_body
+			texture = HUD_rock_lights_all
 			pos_off = (0.0, 0.0)
 			zoff = 17
 		}
 		{
-			element_id = hud2d_rock_lights_green
-			element_parent = hud2d_rock_body
-			texture = hud_rock_lights_green
+			element_id = HUD2D_rock_lights_green
+			element_parent = HUD2D_rock_body
+			texture = HUD_rock_lights_green
 			pos_off = (128.0, 0.0)
 			zoff = 18
 			just = [
@@ -91,9 +91,9 @@ career_hud_2d_elements = {
 			alpha = 0
 		}
 		{
-			element_id = hud2d_rock_lights_red
-			element_parent = hud2d_rock_body
-			texture = hud_rock_lights_red
+			element_id = HUD2D_rock_lights_red
+			element_parent = HUD2D_rock_body
+			texture = HUD_rock_lights_red
 			pos_off = (0.0, 0.0)
 			zoff = 18
 			just = [
@@ -103,9 +103,9 @@ career_hud_2d_elements = {
 			alpha = 0
 		}
 		{
-			element_id = hud2d_rock_lights_yellow
-			element_parent = hud2d_rock_body
-			texture = hud_rock_lights_yellow
+			element_id = HUD2D_rock_lights_yellow
+			element_parent = HUD2D_rock_body
+			texture = HUD_rock_lights_yellow
 			pos_off = (128.0, 0.0)
 			zoff = 18
 			just = [
@@ -115,9 +115,9 @@ career_hud_2d_elements = {
 			alpha = 0
 		}
 		{
-			element_id = hud2d_rock_needle
-			element_parent = hud2d_rock_body
-			texture = hud_rock_needle
+			element_id = HUD2D_rock_needle
+			element_parent = HUD2D_rock_body
+			texture = HUD_rock_needle
 			pos_off = (132.0, 165.0)
 			zoff = 19
 			just = [
@@ -127,15 +127,15 @@ career_hud_2d_elements = {
 		}
 		{
 			parent_container
-			element_id = hud2d_bulb_container_1
-			element_parent = hud2d_rock_container
+			element_id = HUD2D_bulb_container_1
+			element_parent = HUD2D_rock_container
 			pos_off = (128.0, 128.0)
 			rot = -47.5
 		}
 		{
-			element_id = hud2d_rock_tube_1
-			element_parent = hud2d_bulb_container_1
-			texture = hud_rock_tube
+			element_id = HUD2D_rock_tube_1
+			element_parent = HUD2D_bulb_container_1
+			texture = HUD_rock_tube
 			pos_off = (0.0, -160.0)
 			element_dims = (64.0, 128.0)
 			small_bulb
@@ -146,31 +146,31 @@ career_hud_2d_elements = {
 			]
 			container
 			tube = {
-				texture = hud_rock_tube_glow_fill
-				star_texture = hud_rock_tube_glow_fill_b
+				texture = HUD_rock_tube_glow_fill
+				star_texture = HUD_rock_tube_glow_fill_b
 				element_dims = (64.0, 16.0)
 				pos_off = (0.0, 40.0)
 				zoff = 0.1
 				alpha = 1
 			}
 			full = {
-				texture = hud_rock_tube_glow_full
-				star_texture = hud_rock_tube_glow_full_b
+				texture = HUD_rock_tube_glow_full
+				star_texture = HUD_rock_tube_glow_full_b
 				zoff = 0.2
 				alpha = 0
 			}
 		}
 		{
 			parent_container
-			element_id = hud2d_bulb_container_2
-			element_parent = hud2d_rock_container
+			element_id = HUD2D_bulb_container_2
+			element_parent = HUD2D_rock_container
 			pos_off = (128.0, 128.0)
 			rot = -33
 		}
 		{
-			element_id = hud2d_rock_tube_2
-			element_parent = hud2d_bulb_container_2
-			texture = hud_rock_tube
+			element_id = HUD2D_rock_tube_2
+			element_parent = HUD2D_bulb_container_2
+			texture = HUD_rock_tube
 			pos_off = (0.0, -160.0)
 			element_dims = (64.0, 128.0)
 			small_bulb
@@ -181,31 +181,31 @@ career_hud_2d_elements = {
 			]
 			container
 			tube = {
-				texture = hud_rock_tube_glow_fill
-				star_texture = hud_rock_tube_glow_fill_b
+				texture = HUD_rock_tube_glow_fill
+				star_texture = HUD_rock_tube_glow_fill_b
 				element_dims = (64.0, 16.0)
 				pos_off = (0.0, 40.0)
 				zoff = 0.1
 				alpha = 1
 			}
 			full = {
-				texture = hud_rock_tube_glow_full
-				star_texture = hud_rock_tube_glow_full_b
+				texture = HUD_rock_tube_glow_full
+				star_texture = HUD_rock_tube_glow_full_b
 				zoff = 0.2
 				alpha = 0
 			}
 		}
 		{
 			parent_container
-			element_id = hud2d_bulb_container_3
-			element_parent = hud2d_rock_container
+			element_id = HUD2D_bulb_container_3
+			element_parent = HUD2D_rock_container
 			pos_off = (128.0, 128.0)
 			rot = -18.5
 		}
 		{
-			element_id = hud2d_rock_tube_3
-			element_parent = hud2d_bulb_container_3
-			texture = hud_rock_tube
+			element_id = HUD2D_rock_tube_3
+			element_parent = HUD2D_bulb_container_3
+			texture = HUD_rock_tube
 			pos_off = (0.0, -160.0)
 			element_dims = (64.0, 128.0)
 			small_bulb
@@ -216,31 +216,31 @@ career_hud_2d_elements = {
 			]
 			container
 			tube = {
-				texture = hud_rock_tube_glow_fill
-				star_texture = hud_rock_tube_glow_fill_b
+				texture = HUD_rock_tube_glow_fill
+				star_texture = HUD_rock_tube_glow_fill_b
 				element_dims = (64.0, 16.0)
 				pos_off = (0.0, 40.0)
 				zoff = 0.1
 				alpha = 1
 			}
 			full = {
-				texture = hud_rock_tube_glow_full
-				star_texture = hud_rock_tube_glow_full_b
+				texture = HUD_rock_tube_glow_full
+				star_texture = HUD_rock_tube_glow_full_b
 				zoff = 0.2
 				alpha = 0
 			}
 		}
 		{
 			parent_container
-			element_id = hud2d_bulb_container_4
-			element_parent = hud2d_rock_container
+			element_id = HUD2D_bulb_container_4
+			element_parent = HUD2D_rock_container
 			pos_off = (128.0, 128.0)
 			rot = 0
 		}
 		{
-			element_id = hud2d_rock_tube_4
-			element_parent = hud2d_bulb_container_4
-			texture = hud_rock_tube
+			element_id = HUD2D_rock_tube_4
+			element_parent = HUD2D_bulb_container_4
+			texture = HUD_rock_tube
 			pos_off = (0.0, -170.0)
 			initial_pos = (0.0, 0.0)
 			element_dims = (64.0, 128.0)
@@ -252,31 +252,31 @@ career_hud_2d_elements = {
 			]
 			container
 			tube = {
-				texture = hud_rock_tube_glow_fill
-				star_texture = hud_rock_tube_glow_fill_b
+				texture = HUD_rock_tube_glow_fill
+				star_texture = HUD_rock_tube_glow_fill_b
 				element_dims = (64.0, 16.0)
 				pos_off = (0.0, 32.0)
 				zoff = 0.1
 				alpha = 1
 			}
 			full = {
-				texture = hud_rock_tube_glow_full
-				star_texture = hud_rock_tube_glow_full_b
+				texture = HUD_rock_tube_glow_full
+				star_texture = HUD_rock_tube_glow_full_b
 				zoff = 0.2
 				alpha = 1
 			}
 		}
 		{
 			parent_container
-			element_id = hud2d_bulb_container_5
-			element_parent = hud2d_rock_container
+			element_id = HUD2D_bulb_container_5
+			element_parent = HUD2D_rock_container
 			pos_off = (128.0, 128.0)
 			rot = 21
 		}
 		{
-			element_id = hud2d_rock_tube_5
-			element_parent = hud2d_bulb_container_5
-			texture = hud_rock_tube
+			element_id = HUD2D_rock_tube_5
+			element_parent = HUD2D_bulb_container_5
+			texture = HUD_rock_tube
 			pos_off = (0.0, -170.0)
 			initial_pos = (0.0, 0.0)
 			element_dims = (64.0, 128.0)
@@ -288,31 +288,31 @@ career_hud_2d_elements = {
 			]
 			container
 			tube = {
-				texture = hud_rock_tube_glow_fill
-				star_texture = hud_rock_tube_glow_fill_b
+				texture = HUD_rock_tube_glow_fill
+				star_texture = HUD_rock_tube_glow_fill_b
 				element_dims = (64.0, 16.0)
 				pos_off = (0.0, 32.0)
 				zoff = 0.1
 				alpha = 1
 			}
 			full = {
-				texture = hud_rock_tube_glow_full
-				star_texture = hud_rock_tube_glow_full_b
+				texture = HUD_rock_tube_glow_full
+				star_texture = HUD_rock_tube_glow_full_b
 				zoff = 0.2
 				alpha = 1
 			}
 		}
 		{
 			parent_container
-			element_id = hud2d_bulb_container_6
-			element_parent = hud2d_rock_container
+			element_id = HUD2D_bulb_container_6
+			element_parent = HUD2D_rock_container
 			pos_off = (128.0, 128.0)
 			rot = 42
 		}
 		{
-			element_id = hud2d_rock_tube_6
-			element_parent = hud2d_bulb_container_6
-			texture = hud_rock_tube
+			element_id = HUD2D_rock_tube_6
+			element_parent = HUD2D_bulb_container_6
+			texture = HUD_rock_tube
 			pos_off = (0.0, -170.0)
 			initial_pos = (0.0, 0.0)
 			element_dims = (64.0, 128.0)
@@ -324,244 +324,244 @@ career_hud_2d_elements = {
 			]
 			container
 			tube = {
-				texture = hud_rock_tube_glow_fill
-				star_texture = hud_rock_tube_glow_fill_b
+				texture = HUD_rock_tube_glow_fill
+				star_texture = HUD_rock_tube_glow_fill_b
 				element_dims = (64.0, 16.0)
 				pos_off = (0.0, 32.0)
 				zoff = 0.1
 				alpha = 1
 			}
 			full = {
-				texture = hud_rock_tube_glow_full
-				star_texture = hud_rock_tube_glow_full_b
+				texture = HUD_rock_tube_glow_full
+				star_texture = HUD_rock_tube_glow_full_b
 				zoff = 0.2
 				alpha = 1
 			}
 		}
 		{
 			parent_container
-			element_id = hud2d_score_container
+			element_id = HUD2D_score_container
 			pos_type = offscreen_score_pos
 		}
 		{
-			element_id = hud2d_score_body
-			element_parent = hud2d_score_container
-			texture = hud_score_body
+			element_id = HUD2D_score_body
+			element_parent = HUD2D_score_container
+			texture = HUD_score_body
 			pos_type = score_pos
 			pos_off = (0.0, 0.0)
 			zoff = 5
 		}
 		{
 			parent_container
-			element_id = hud2d_note_container
+			element_id = HUD2D_note_container
 			pos_type = counter_pos
 			note_streak_bar
 			pos_off = (0.0, 0.0)
 		}
 		{
-			element_id = hud2d_counter_body
-			element_parent = hud2d_note_container
-			texture = hud_counter_body
+			element_id = HUD2D_counter_body
+			element_parent = HUD2D_note_container
+			texture = HUD_counter_body
 			pos_off = (0.0, 0.0)
 			zoff = 9
 		}
 		{
-			element_id = hud_counter_drum
-			element_parent = hud2d_note_container
-			texture = hud_counter_drum
+			element_id = HUD_counter_drum
+			element_parent = HUD2D_note_container
+			texture = HUD_counter_drum
 			pos_off = (4.0, 40.0)
 			zoff = 8
 		}
 		{
-			element_id = hud2d_counter_drum_icon
-			element_parent = hud2d_note_container
-			texture = hud_counter_drum_icon
+			element_id = HUD2D_counter_drum_icon
+			element_parent = HUD2D_note_container
+			texture = HUD_counter_drum_icon
 			pos_off = (44.0, 40.0)
 			zoff = 26
 		}
 		{
-			element_id = hud2d_score_light_unlit_1
-			element_parent = hud2d_score_container
-			texture = hud_score_light_0
+			element_id = HUD2D_score_light_unlit_1
+			element_parent = HUD2D_score_container
+			texture = HUD_score_light_0
 			pos_off = (0.0, 200.0)
 			zoff = 5
 		}
 		{
-			element_id = hud2d_score_light_unlit_2
-			element_parent = hud2d_score_container
-			texture = hud_score_light_0
+			element_id = HUD2D_score_light_unlit_2
+			element_parent = HUD2D_score_container
+			texture = HUD_score_light_0
 			pos_off = (0.0, 170.0)
 			zoff = 5
 		}
 		{
-			element_id = hud2d_score_light_unlit_3
-			element_parent = hud2d_score_container
-			texture = hud_score_light_0
+			element_id = HUD2D_score_light_unlit_3
+			element_parent = HUD2D_score_container
+			texture = HUD_score_light_0
 			pos_off = (0.0, 140.0)
 			zoff = 5
 		}
 		{
-			element_id = hud2d_score_light_unlit_4
-			element_parent = hud2d_score_container
-			texture = hud_score_light_0
+			element_id = HUD2D_score_light_unlit_4
+			element_parent = HUD2D_score_container
+			texture = HUD_score_light_0
 			pos_off = (0.0, 110.0)
 			zoff = 5
 		}
 		{
-			element_id = hud2d_score_light_unlit_5
-			element_parent = hud2d_score_container
-			texture = hud_score_light_0
+			element_id = HUD2D_score_light_unlit_5
+			element_parent = HUD2D_score_container
+			texture = HUD_score_light_0
 			pos_off = (0.0, 80.0)
 			zoff = 5
 		}
 		{
-			element_id = hud2d_score_light_halflit_1
-			element_parent = hud2d_score_container
-			texture = hud_score_light_1
+			element_id = HUD2D_score_light_halflit_1
+			element_parent = HUD2D_score_container
+			texture = HUD_score_light_1
 			pos_off = (0.0, 200.0)
 			zoff = 5.1
 			alpha = 0
 		}
 		{
-			element_id = hud2d_score_light_halflit_2
-			element_parent = hud2d_score_container
-			texture = hud_score_light_1
+			element_id = HUD2D_score_light_halflit_2
+			element_parent = HUD2D_score_container
+			texture = HUD_score_light_1
 			pos_off = (0.0, 170.0)
 			zoff = 5.1
 			alpha = 0
 		}
 		{
-			element_id = hud2d_score_light_halflit_3
-			element_parent = hud2d_score_container
-			texture = hud_score_light_1
+			element_id = HUD2D_score_light_halflit_3
+			element_parent = HUD2D_score_container
+			texture = HUD_score_light_1
 			pos_off = (0.0, 140.0)
 			zoff = 5.1
 			alpha = 0
 		}
 		{
-			element_id = hud2d_score_light_halflit_4
-			element_parent = hud2d_score_container
-			texture = hud_score_light_1
+			element_id = HUD2D_score_light_halflit_4
+			element_parent = HUD2D_score_container
+			texture = HUD_score_light_1
 			pos_off = (0.0, 110.0)
 			zoff = 5.1
 			alpha = 0
 		}
 		{
-			element_id = hud2d_score_light_halflit_5
-			element_parent = hud2d_score_container
-			texture = hud_score_light_1
+			element_id = HUD2D_score_light_halflit_5
+			element_parent = HUD2D_score_container
+			texture = HUD_score_light_1
 			pos_off = (0.0, 80.0)
 			zoff = 5.1
 			alpha = 0
 		}
 		{
-			element_id = hud2d_score_light_allwaylit_1
-			element_parent = hud2d_score_container
-			texture = hud_score_light_2
+			element_id = HUD2D_score_light_allwaylit_1
+			element_parent = HUD2D_score_container
+			texture = HUD_score_light_2
 			pos_off = (0.0, 200.0)
 			zoff = 5.2
 			alpha = 0
 		}
 		{
-			element_id = hud2d_score_light_allwaylit_2
-			element_parent = hud2d_score_container
-			texture = hud_score_light_2
+			element_id = HUD2D_score_light_allwaylit_2
+			element_parent = HUD2D_score_container
+			texture = HUD_score_light_2
 			pos_off = (0.0, 170.0)
 			zoff = 5.2
 			alpha = 0
 		}
 		{
-			element_id = hud2d_score_light_allwaylit_3
-			element_parent = hud2d_score_container
-			texture = hud_score_light_2
+			element_id = HUD2D_score_light_allwaylit_3
+			element_parent = HUD2D_score_container
+			texture = HUD_score_light_2
 			pos_off = (0.0, 140.0)
 			zoff = 5.2
 			alpha = 0
 		}
 		{
-			element_id = hud2d_score_light_allwaylit_4
-			element_parent = hud2d_score_container
-			texture = hud_score_light_2
+			element_id = HUD2D_score_light_allwaylit_4
+			element_parent = HUD2D_score_container
+			texture = HUD_score_light_2
 			pos_off = (0.0, 110.0)
 			zoff = 5.2
 			alpha = 0
 		}
 		{
-			element_id = hud2d_score_light_allwaylit_5
-			element_parent = hud2d_score_container
-			texture = hud_score_light_2
+			element_id = HUD2D_score_light_allwaylit_5
+			element_parent = HUD2D_score_container
+			texture = HUD_score_light_2
 			pos_off = (0.0, 80.0)
 			zoff = 5.2
 			alpha = 0
 		}
 		{
-			element_id = hud2d_score_nixie_1a
-			element_parent = hud2d_score_container
-			texture = hud_score_nixie_1a
+			element_id = HUD2D_score_nixie_1a
+			element_parent = HUD2D_score_container
+			texture = HUD_score_nixie_1a
 			pos_off = (70.0, 90.0)
 			zoff = 4
 			alpha = 0
 		}
 		{
-			element_id = hud2d_score_nixie_2a
-			element_parent = hud2d_score_container
-			texture = hud_score_nixie_2a
+			element_id = HUD2D_score_nixie_2a
+			element_parent = HUD2D_score_container
+			texture = HUD_score_nixie_2a
 			pos_off = (70.0, 90.0)
 			zoff = 4
 			alpha = 0
 		}
 		{
-			element_id = hud2d_score_nixie_2b
-			element_parent = hud2d_score_container
-			texture = hud_score_nixie_2b
+			element_id = HUD2D_score_nixie_2b
+			element_parent = HUD2D_score_container
+			texture = HUD_score_nixie_2b
 			pos_off = (70.0, 90.0)
 			zoff = 4
 			alpha = 0
 		}
 		{
-			element_id = hud2d_score_nixie_3a
-			element_parent = hud2d_score_container
-			texture = hud_score_nixie_3a
+			element_id = HUD2D_score_nixie_3a
+			element_parent = HUD2D_score_container
+			texture = HUD_score_nixie_3a
 			pos_off = (70.0, 90.0)
 			zoff = 4
 			alpha = 0
 		}
 		{
-			element_id = hud2d_score_nixie_4a
-			element_parent = hud2d_score_container
-			texture = hud_score_nixie_4a
+			element_id = HUD2D_score_nixie_4a
+			element_parent = HUD2D_score_container
+			texture = HUD_score_nixie_4a
 			pos_off = (70.0, 90.0)
 			zoff = 4
 			alpha = 0
 		}
 		{
-			element_id = hud2d_score_nixie_4b
-			element_parent = hud2d_score_container
-			texture = hud_score_nixie_4b
+			element_id = HUD2D_score_nixie_4b
+			element_parent = HUD2D_score_container
+			texture = HUD_score_nixie_4b
 			pos_off = (70.0, 90.0)
 			zoff = 4
 			alpha = 0
 		}
 		{
-			element_id = hud2d_score_nixie_6b
-			element_parent = hud2d_score_container
-			texture = hud_score_nixie_6b
+			element_id = HUD2D_score_nixie_6b
+			element_parent = HUD2D_score_container
+			texture = HUD_score_nixie_6b
 			pos_off = (70.0, 90.0)
 			zoff = 4
 			alpha = 0
 		}
 		{
-			element_id = hud2d_score_nixie_8b
-			element_parent = hud2d_score_container
-			texture = hud_score_nixie_8b
+			element_id = HUD2D_score_nixie_8b
+			element_parent = HUD2D_score_container
+			texture = HUD_score_nixie_8b
 			pos_off = (70.0, 90.0)
 			zoff = 4
 			alpha = 0
 		}
 		{
-			element_id = hud2d_score_flash
-			element_parent = hud2d_score_container
-			texture = hud_score_flash
+			element_id = HUD2D_score_flash
+			element_parent = HUD2D_score_container
+			texture = HUD_score_flash
 			just = [
 				center
 				center

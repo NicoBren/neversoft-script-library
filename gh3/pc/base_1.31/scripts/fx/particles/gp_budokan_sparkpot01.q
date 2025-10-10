@@ -1,55 +1,55 @@
-gp_budokan_sparkpot01 = {
+GP_Budokan_SparkPot01 = {
 	pos = (-8.607917, 0.009163, 2.157681)
 	angles = (0.0, 0.0, 0.0)
-	class = particleobject
-	particletype = flexparticle
+	Class = ParticleObject
+	ParticleType = FlexParticle
 	type = flat
 	active
-	createdatstart
-	emitrangedims = (0.05, 0.0, 0.05)
-	emit_target = (0.0, 1.0, 0.0)
-	emitangle = (0.0, 0.0, 0.0)
+	CreatedAtStart
+	EmitRangeDims = (0.05, 0.0, 0.05)
+	emit_Target = (0.0, 1.0, 0.0)
+	EmitAngle = (0.0, 0.0, 0.0)
 	force = (0.0, -4.0, 0.0)
-	windcoeff = 0.0
-	localwindcoeff = 0.0
-	emittervelocityweight = 0.0
-	anglespread = 8.0
-	bounceheight = 0.0
-	bouncecoeff = 0.2
-	bouncecallbackrate = 0.0
-	liferange = (3.0, 4.0)
+	WindCoeff = 0.0
+	LocalWindCoeff = 0.0
+	EmitterVelocityWeight = 0.0
+	AngleSpread = 8.0
+	BounceHeight = 0.0
+	BounceCoeff = 0.2
+	BounceCallbackRate = 0.0
+	LifeRange = (3.0, 4.0)
 	emit_rate = 150.0
 	max = 0
-	timeseed = 0.5
-	lifetime = 1.0
-	emitnum = 0
-	followemitter = 0.0
-	emitfunction = constant
-	emitperiod = 1.0
-	sizerange = [
+	TimeSeed = 0.5
+	lifeTime = 1.0
+	emitNum = 0
+	FollowEmitter = 0.0
+	EmitFunction = constant
+	EmitPeriod = 1.0
+	SizeRange = [
 		(0.1, 0.15)
 		(0.02, 0.15)
 	]
-	speedrange = (6.0, 7.0)
-	rotvel = (0.0, 0.0)
-	rotveltimescale = 0.0
-	emitdelaystart = 0.0
-	alignwithpath
-	pathfollowtime = 0.1
-	history = 2
-	historylistcoordinatespace = world
+	SpeedRange = (6.0, 7.0)
+	RotVel = (0.0, 0.0)
+	RotVelTimeScale = 0.0
+	EmitDelayStart = 0.0
+	AlignWithPath
+	PathFollowTime = 0.1
+	History = 2
+	HistoryListCoordinateSpace = world
 	color = -9559553
-	lod_distances = (20.0, 30.0)
-	novisibilitytest
-	quickmaterial = {
-		diffusetextureenabled
-		diffusetexture = jow_spark01
-		specularpower = 0
+	LOD_Distances = (20.0, 30.0)
+	NoVisibilityTest
+	QuickMaterial = {
+		DiffuseTextureEnabled
+		DiffuseTexture = JOW_Spark01
+		SpecularPower = 0
 		alphacutoff = 16
-		blendmode = add
-		quadanimationfps = 0
+		blendMode = Add
+		QuadAnimationFPS = 0
 	}
-	knot = [
+	Knot = [
 		(-0.46765104, 0.0, -0.0)
 		(-0.46765104, 0.0, -0.0)
 		(-0.245908, 0.0, -0.0)
@@ -60,7 +60,7 @@ gp_budokan_sparkpot01 = {
 		(0.46765104, 0.0, -0.0)
 		(0.46765104, 0.0, -0.0)
 	]
-	particlecolor = [
+	ParticleColor = [
 		-1
 		-1
 		-1
@@ -68,7 +68,7 @@ gp_budokan_sparkpot01 = {
 		-256
 		-256
 	]
-	vertexweight = [
+	VertexWeight = [
 		0.71124494
 		1.0
 	]

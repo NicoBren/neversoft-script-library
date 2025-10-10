@@ -1,4 +1,4 @@
-gh3_bonus_songs = {
+GH3_Bonus_Songs = {
 	prefix = 'bonus'
 	num_tiers = 1
 	tier1 = {
@@ -34,7 +34,7 @@ gh3_bonus_songs = {
 		defaultunlocked = 0
 	}
 }
-bonus_videos = [
+Bonus_Videos = [
 	{
 		id = sexpistols
 		name = "The Sex Pistols"
@@ -134,844 +134,844 @@ store_song_data = {
 		price = 500
 	}
 }
-free_guitars = [
-	instrument_explorer_white
-	instrument_sg_worn_red
-	instrument_les_paul_black
+Free_Guitars = [
+	Instrument_Explorer_White
+	Instrument_SG_Worn_Red
+	Instrument_Les_Paul_Black
 ]
-bonus_guitars = [
+Bonus_Guitars = [
 	{
-		id = instrument_focus01
+		id = Instrument_focus01
 		price = 200
 	}
 	{
-		id = instrument_epipaul02
+		id = Instrument_EpiPaul02
 		price = 300
 	}
 	{
-		id = instrument_epiexplor01
+		id = Instrument_EpiExplor01
 		price = 300
 	}
 	{
-		id = instrument_episg01
+		id = Instrument_EpiSG01
 		price = 300
 	}
 	{
-		id = instrument_corvus_nato
+		id = Instrument_Corvus_NATO
 		price = 500
 	}
 	{
-		id = instrument_marauder_nato
+		id = Instrument_Marauder_NATO
 		price = 1000
 	}
 	{
-		id = instrument_dmz6000g
+		id = Instrument_DMZ6000G
 		price = 1000
 	}
 	{
-		id = instrument_synaps
+		id = Instrument_synaps
 		price = 1000
 	}
 	{
-		id = instrument_ebony_vee
+		id = Instrument_Ebony_Vee
 		price = 1500
 	}
 	{
-		id = instrument_firebird_cherry
+		id = Instrument_Firebird_Cherry
 		price = 2000
 	}
 	{
-		id = instrument_lpj01
+		id = Instrument_LPJ01
 		price = 2000
 	}
 	{
-		id = instrument_les_paul_white
+		id = Instrument_Les_Paul_White
 		price = 4000
 	}
 	{
-		id = instrument_es335_red
+		id = Instrument_ES335_Red
 		price = 3000
 	}
 	{
-		id = instrument_lp_pro6x
+		id = Instrument_LP_Pro6X
 		price = 4500
 	}
 	{
-		id = instrument_es400
+		id = Instrument_ES400
 		price = 10000
 	}
 	{
-		id = instrument_axe
+		id = Instrument_Axe
 		price = 1000
 	}
 	{
-		id = instrument_star_guitar_red
+		id = Instrument_Star_Guitar_Red
 		price = 2000
 	}
 	{
-		id = instrument_guitar_messenger
+		id = Instrument_Guitar_Messenger
 		price = 2000
 	}
 	{
-		id = instrument_guitar_fury
+		id = Instrument_Guitar_Fury
 		price = 2000
 	}
 	{
-		id = instrument_guitar_rattus
+		id = Instrument_Guitar_Rattus
 		price = 2000
 	}
 	{
-		id = instrument_guitar_theleg
+		id = Instrument_Guitar_TheLeg
 		price = 2000
 	}
 	{
-		id = instrument_guitar_king
+		id = Instrument_Guitar_King
 		price = 2000
 	}
 	{
-		id = instrument_mako
+		id = Instrument_Mako
 		price = 2000
 	}
 ]
-bonus_guitar_finishes = [
+Bonus_Guitar_Finishes = [
 	{
-		id = instrument_explorer_black
+		id = Instrument_Explorer_Black
 		price = 500
 	}
 	{
-		id = instrument_explorer_red
+		id = Instrument_Explorer_Red
 		price = 500
 	}
 	{
-		id = instrument_explorer_nato
+		id = Instrument_Explorer_NATO
 		price = 500
 	}
 	{
-		id = instrument_explorer_cream
+		id = Instrument_Explorer_Cream
 		price = 500
 	}
 	{
-		id = instrument_epiexplor02
+		id = Instrument_EpiExplor02
 		price = 250
 	}
 	{
-		id = instrument_sg_worn_brown
+		id = Instrument_SG_Worn_Brown
 		price = 500
 	}
 	{
-		id = instrument_sg_black
+		id = Instrument_SG_Black
 		price = 500
 	}
 	{
-		id = instrument_sg_goddess_blue
+		id = Instrument_SG_Goddess_Blue
 		price = 500
 	}
 	{
-		id = instrument_episg02
+		id = Instrument_EpiSG02
 		price = 250
 	}
 	{
-		id = instrument_les_paul
+		id = Instrument_Les_Paul
 		price = 500
 	}
 	{
-		id = instrument_les_paul_red
+		id = Instrument_Les_Paul_Red
 		price = 500
 	}
 	{
-		id = instrument_les_paul_goldtop
+		id = Instrument_Les_Paul_Goldtop
 		price = 500
 	}
 	{
-		id = instrument_les_paul_gecko
+		id = Instrument_Les_Paul_Gecko
 		price = 500
 	}
 	{
-		id = instrument_wylde
+		id = Instrument_wylde
 		price = 500
 	}
 	{
-		id = instrument_wyldeb
+		id = Instrument_wyldeb
 		price = 500
 	}
 	{
-		id = instrument_epipaul01
+		id = Instrument_EpiPaul01
 		price = 250
 	}
 	{
-		id = instrument_es335_nato
+		id = Instrument_ES335_NATO
 		price = 500
 	}
 	{
-		id = instrument_es335_black
+		id = Instrument_ES335_Black
 		price = 500
 	}
 	{
-		id = instrument_es335_sunburst
+		id = Instrument_ES335_Sunburst
 		price = 500
 	}
 	{
-		id = instrument_es335_triburst
+		id = Instrument_ES335_Triburst
 		price = 500
 	}
 	{
-		id = instrument_firebird_white
+		id = Instrument_Firebird_White
 		price = 500
 	}
 	{
-		id = instrument_firebird_ebony
+		id = Instrument_Firebird_Ebony
 		price = 500
 	}
 	{
-		id = instrument_firebird_blue
+		id = Instrument_Firebird_Blue
 		price = 500
 	}
 	{
-		id = instrument_firebird_sburst
+		id = Instrument_Firebird_SBurst
 		price = 500
 	}
 	{
-		id = instrument_white_vee
+		id = Instrument_White_Vee
 		price = 500
 	}
 	{
-		id = instrument_cherry_vee
+		id = Instrument_Cherry_Vee
 		price = 500
 	}
 	{
-		id = instrument_natural_vee
+		id = Instrument_Natural_Vee
 		price = 500
 	}
 	{
-		id = instrument_silver_vee
+		id = Instrument_Silver_Vee
 		price = 500
 	}
 	{
-		id = instrument_ladyland_vee
+		id = Instrument_Ladyland_Vee
 		price = 500
 	}
 	{
-		id = instrument_lpj02
+		id = Instrument_LPJ02
 		price = 500
 	}
 	{
-		id = instrument_lpj03
+		id = Instrument_LPJ03
 		price = 500
 	}
 	{
-		id = instrument_lpj04
+		id = Instrument_LPJ04
 		price = 500
 	}
 	{
-		id = instrument_marauder_red
+		id = Instrument_Marauder_Red
 		price = 500
 	}
 	{
-		id = instrument_marauder_blk
+		id = Instrument_Marauder_BLK
 		price = 500
 	}
 	{
-		id = instrument_corvus_black
+		id = Instrument_Corvus_Black
 		price = 500
 	}
 	{
-		id = instrument_corvus_wht
+		id = Instrument_Corvus_WHT
 		price = 500
 	}
 	{
-		id = instrument_es400_tburst
+		id = Instrument_ES400_TBURST
 		price = 500
 	}
 	{
-		id = instrument_es400_blnd
+		id = Instrument_ES400_BLND
 		price = 500
 	}
 	{
-		id = instrument_es400_red
+		id = Instrument_ES400_Red
 		price = 500
 	}
 	{
-		id = instrument_es400_blk
+		id = Instrument_ES400_BLK
 		price = 500
 	}
 	{
-		id = instrument_es400_wht
+		id = Instrument_ES400_Wht
 		price = 500
 	}
 	{
-		id = instrument_focus02
+		id = Instrument_focus02
 		price = 500
 	}
 	{
-		id = instrument_star_guitar_skyblue
+		id = Instrument_Star_Guitar_SkyBlue
 		price = 500
 	}
 	{
-		id = instrument_star_guitar_black
+		id = Instrument_Star_Guitar_Black
 		price = 500
 	}
 	{
-		id = instrument_star_guitar_usa
+		id = Instrument_Star_Guitar_USA
 		price = 500
 	}
 	{
-		id = instrument_pentacle
+		id = Instrument_Pentacle
 		price = 500
 	}
 	{
-		id = instrument_star_england
+		id = Instrument_Star_England
 		price = 500
 	}
 	{
-		id = instrument_guitar_queen
+		id = Instrument_Guitar_Queen
 		price = 500
 	}
 	{
-		id = instrument_enforcer
+		id = Instrument_Enforcer
 		price = 500
 	}
 ]
-free_basses = [
-	instrument_lp_vbrst
+Free_Basses = [
+	Instrument_LP_VBRST
 ]
-bonus_basses = [
+Bonus_Basses = [
 	{
-		id = instrument_axebass
+		id = Instrument_Axebass
 		price = 1000
 	}
 	{
-		id = instrument_elp01
+		id = Instrument_ELP01
 		price = 1000
 	}
 	{
-		id = instrument_tobias_b4
+		id = Instrument_Tobias_B4
 		price = 1000
 	}
 	{
-		id = instrument_dogbites
+		id = Instrument_Dogbites
 		price = 1000
 	}
 	{
-		id = instrument_axegirl
+		id = Instrument_Axegirl
 		price = 1000
 	}
 ]
-bonus_bass_finishes = [
+Bonus_Bass_Finishes = [
 	{
-		id = instrument_lp_sbrst
+		id = Instrument_LP_SBRST
 		price = 2000
 	}
 	{
-		id = instrument_lp_hbrst
+		id = Instrument_LP_HBRST
 		price = 2000
 	}
 	{
-		id = instrument_elp02
+		id = Instrument_ELP02
 		price = 1000
 	}
 	{
-		id = instrument_elp32
+		id = Instrument_ELP32
 		price = 1000
 	}
 	{
-		id = instrument_tobias_5
+		id = Instrument_Tobias_5
 		price = 1000
 	}
 	{
-		id = instrument_tobias_6
+		id = Instrument_Tobias_6
 		price = 1000
 	}
 ]
-secret_guitars = [
+Secret_Guitars = [
 	{
-		id = instrument_guitar_razer
+		id = Instrument_Guitar_Razer
 		price = 2000
 		icon_texture = unlock_moon
 	}
 	{
-		id = instrument_bat
+		id = Instrument_Bat
 		price = 2000
 		icon_texture = unlock_bat
 	}
 	{
-		id = instrument_guitar_dragon
+		id = Instrument_Guitar_Dragon
 		price = 2000
 		icon_texture = unlock_dragon
 	}
 	{
-		id = instrument_jolly
+		id = Instrument_Jolly
 		price = 2000
 		icon_texture = unlock_jolly
 	}
 	{
-		id = instrument_guitar_rojimbo
+		id = Instrument_Guitar_Rojimbo
 		price = 2000
 		icon_texture = unlock_rojimbo
 	}
 	{
-		id = instrument_guitar_fortune
+		id = Instrument_Guitar_Fortune
 		price = 2000
 		icon_texture = unlock_fortune
 	}
 	{
-		id = instrument_guitar_ababy
+		id = Instrument_Guitar_ABaby
 		price = 2000
 		icon_texture = unlock_distant
 	}
 	{
-		id = instrument_guitar_pharaoh
+		id = Instrument_Guitar_Pharaoh
 		price = 2000
 		icon_texture = unlock_jefe
 	}
 	{
-		id = instrument_morello
+		id = Instrument_Morello
 		price = 2000
 	}
 	{
-		id = instrument_guitar_slash01
+		id = Instrument_Guitar_Slash01
 		price = 2000
 	}
 	{
-		id = instrument_guitar_demonik
+		id = Instrument_Guitar_Demonik
 		price = 2000
 	}
 	{
-		id = instrument_guitar_godrock
+		id = Instrument_Guitar_GodRock
 		price = 2000
 	}
 	{
-		id = instrument_guitar_ripper
+		id = Instrument_Guitar_Ripper
 		price = 2000
 	}
 ]
-secret_basses = [
+Secret_Basses = [
 	{
-		id = instrument_mm_blk
+		id = Instrument_MM_BLK
 		price = 2000
 		info_name = les_paul
 		icon_texture = unlock_fortune4
 	}
 	{
-		id = instrument_twinangels
+		id = Instrument_TwinAngels
 		price = 2000
 		info_name = les_paul
 		icon_texture = unlock_truthangels
 	}
 	{
-		id = instrument_nemesis
+		id = Instrument_Nemesis
 		price = 2000
 		info_name = les_paul
 		icon_texture = unlock_nemesis
 	}
 	{
-		id = instrument_disposed
+		id = Instrument_Disposed
 		price = 2000
 		info_name = les_paul
 		icon_texture = unlock_disposed
 	}
 	{
-		id = instrument_beach
+		id = Instrument_Beach
 		price = 2000
-		info_name = special_01
+		info_name = Special_01
 		icon_texture = unlock_beach
 	}
 	{
-		id = instrument_eyeball
+		id = Instrument_Eyeball
 		price = 2000
-		info_name = special_01
+		info_name = Special_01
 		icon_texture = unlock_neversoft
 	}
 	{
-		id = instrument_pend
+		id = Instrument_Pend
 		price = 2000
-		info_name = special_01
+		info_name = Special_01
 		icon_texture = unlock_pendulaxe
 	}
 	{
-		id = instrument_assassin
+		id = Instrument_Assassin
 		price = 2000
-		info_name = special_01
+		info_name = Special_01
 		icon_texture = unlock_assassin
 	}
 ]
-secret_characters = [
+Secret_Characters = [
 	{
-		id = guitarist_slash_outfit1_style1
+		id = Guitarist_Slash_Outfit1_Style1
 		price = 10000
 		info_name = slash
 	}
 	{
-		id = guitarist_morello_outfit1_style1
+		id = Guitarist_Morello_Outfit1_Style1
 		price = 10000
 		info_name = morello
 	}
 	{
-		id = guitarist_satan_outfit1_style1
+		id = Guitarist_Satan_Outfit1_Style1
 		price = 15000
 		info_name = satan
 	}
 	{
-		id = guitarist_rockgod_outfit1_style1
+		id = Guitarist_RockGod_Outfit1_Style1
 		price = 20000
-		info_name = rockgod
+		info_name = RockGod
 	}
 	{
-		id = guitarist_ripper_outfit1_style1
+		id = Guitarist_Ripper_Outfit1_Style1
 		price = 10000
-		info_name = ripper
+		info_name = RIPPER
 	}
 ]
-bonus_outfits = [
+Bonus_Outfits = [
 	{
-		id = guitarist_axel_outfit2_style1
+		id = Guitarist_Axel_Outfit2_Style1
 		price = 2000
 		profile_name = 'Axel'
 		info_name = axel
 	}
 	{
-		id = guitarist_casey_outfit2_style1
+		id = Guitarist_Casey_Outfit2_Style1
 		price = 2000
 		profile_name = 'Casey'
-		info_name = casey
+		info_name = Casey
 	}
 	{
-		id = guitarist_izzy_outfit2_style1
+		id = Guitarist_Izzy_Outfit2_Style1
 		price = 2000
 		profile_name = 'Izzy'
-		info_name = izzy
+		info_name = Izzy
 	}
 	{
-		id = guitarist_judy_outfit2_style1
+		id = Guitarist_Judy_Outfit2_Style1
 		price = 2000
 		profile_name = 'Judy'
 		info_name = judy
 	}
 	{
-		id = guitarist_johnny_outfit2_style1
+		id = Guitarist_johnny_Outfit2_Style1
 		price = 2000
 		profile_name = 'Johnny'
-		info_name = johnny
+		info_name = Johnny
 	}
 	{
-		id = guitarist_lars_outfit2_style1
+		id = Guitarist_Lars_Outfit2_Style1
 		price = 2000
 		profile_name = 'Lars'
-		info_name = lars
+		info_name = Lars
 	}
 	{
-		id = guitarist_midori_outfit2_style1
+		id = Guitarist_Midori_Outfit2_Style1
 		price = 2000
 		profile_name = 'Midori'
-		info_name = midori
+		info_name = Midori
 	}
 	{
-		id = guitarist_xavier_outfit2_style1
+		id = Guitarist_Xavier_Outfit2_Style1
 		price = 2000
 		profile_name = 'Xavier'
-		info_name = xavier
+		info_name = Xavier
 	}
 	{
-		id = guitarist_satan_outfit2_style1
+		id = Guitarist_Satan_Outfit2_Style1
 		price = 2000
 		profile_name = 'Satan'
 		info_name = satan
 	}
 ]
-bonus_styles = [
+Bonus_Styles = [
 	{
-		id = guitarist_axel_outfit1_style2
+		id = Guitarist_Axel_Outfit1_Style2
 		price = 250
 		profile_name = 'Axel'
 		info_name = axel
 	}
 	{
-		id = guitarist_axel_outfit1_style3
+		id = Guitarist_Axel_Outfit1_Style3
 		price = 250
 		profile_name = 'Axel'
 		info_name = axel
 	}
 	{
-		id = guitarist_axel_outfit1_style4
+		id = Guitarist_Axel_Outfit1_Style4
 		price = 250
 		profile_name = 'Axel'
 		info_name = axel
 	}
 	{
-		id = guitarist_axel_outfit2_style2
+		id = Guitarist_Axel_Outfit2_Style2
 		price = 250
 		profile_name = 'Axel'
 		info_name = axel
 	}
 	{
-		id = guitarist_axel_outfit2_style3
+		id = Guitarist_Axel_Outfit2_Style3
 		price = 250
 		profile_name = 'Axel'
 		info_name = axel
 	}
 	{
-		id = guitarist_axel_outfit2_style4
+		id = Guitarist_Axel_Outfit2_Style4
 		price = 250
 		profile_name = 'Axel'
 		info_name = axel
 	}
 	{
-		id = guitarist_casey_outfit1_style2
+		id = Guitarist_Casey_Outfit1_Style2
 		price = 250
 		profile_name = 'Casey'
-		info_name = casey
+		info_name = Casey
 	}
 	{
-		id = guitarist_casey_outfit1_style3
+		id = Guitarist_Casey_Outfit1_Style3
 		price = 250
 		profile_name = 'Casey'
-		info_name = casey
+		info_name = Casey
 	}
 	{
-		id = guitarist_casey_outfit1_style4
+		id = Guitarist_Casey_Outfit1_Style4
 		price = 250
 		profile_name = 'Casey'
-		info_name = casey
+		info_name = Casey
 	}
 	{
-		id = guitarist_casey_outfit2_style2
+		id = Guitarist_Casey_Outfit2_Style2
 		price = 250
 		profile_name = 'Casey'
-		info_name = casey
+		info_name = Casey
 	}
 	{
-		id = guitarist_casey_outfit2_style3
+		id = Guitarist_Casey_Outfit2_Style3
 		price = 250
 		profile_name = 'Casey'
-		info_name = casey
+		info_name = Casey
 	}
 	{
-		id = guitarist_casey_outfit2_style4
+		id = Guitarist_Casey_Outfit2_Style4
 		price = 250
 		profile_name = 'Casey'
-		info_name = casey
+		info_name = Casey
 	}
 	{
-		id = guitarist_izzy_outfit1_style2
+		id = Guitarist_Izzy_Outfit1_Style2
 		price = 250
 		profile_name = 'Izzy'
-		info_name = izzy
+		info_name = Izzy
 	}
 	{
-		id = guitarist_izzy_outfit1_style3
+		id = Guitarist_Izzy_Outfit1_Style3
 		price = 250
 		profile_name = 'Izzy'
-		info_name = izzy
+		info_name = Izzy
 	}
 	{
-		id = guitarist_izzy_outfit1_style4
+		id = Guitarist_Izzy_Outfit1_Style4
 		price = 250
 		profile_name = 'Izzy'
-		info_name = izzy
+		info_name = Izzy
 	}
 	{
-		id = guitarist_izzy_outfit2_style2
+		id = Guitarist_Izzy_Outfit2_Style2
 		price = 250
 		profile_name = 'Izzy'
-		info_name = izzy
+		info_name = Izzy
 	}
 	{
-		id = guitarist_izzy_outfit2_style3
+		id = Guitarist_Izzy_Outfit2_Style3
 		price = 250
 		profile_name = 'Izzy'
-		info_name = izzy
+		info_name = Izzy
 	}
 	{
-		id = guitarist_izzy_outfit2_style4
+		id = Guitarist_Izzy_Outfit2_Style4
 		price = 250
 		profile_name = 'Izzy'
-		info_name = izzy
+		info_name = Izzy
 	}
 	{
-		id = guitarist_judy_outfit1_style2
+		id = Guitarist_Judy_Outfit1_Style2
 		price = 250
 		profile_name = 'Judy'
 		info_name = judy
 	}
 	{
-		id = guitarist_judy_outfit1_style3
+		id = Guitarist_Judy_Outfit1_Style3
 		price = 250
 		profile_name = 'Judy'
 		info_name = judy
 	}
 	{
-		id = guitarist_judy_outfit1_style4
+		id = Guitarist_Judy_Outfit1_Style4
 		price = 250
 		profile_name = 'Judy'
 		info_name = judy
 	}
 	{
-		id = guitarist_judy_outfit2_style2
+		id = Guitarist_Judy_Outfit2_Style2
 		price = 250
 		profile_name = 'Judy'
 		info_name = judy
 	}
 	{
-		id = guitarist_judy_outfit2_style3
+		id = Guitarist_Judy_Outfit2_Style3
 		price = 250
 		profile_name = 'Judy'
 		info_name = judy
 	}
 	{
-		id = guitarist_judy_outfit2_style4
+		id = Guitarist_Judy_Outfit2_Style4
 		price = 250
 		profile_name = 'Judy'
 		info_name = judy
 	}
 	{
-		id = guitarist_johnny_outfit1_style2
+		id = Guitarist_Johnny_Outfit1_Style2
 		price = 250
 		profile_name = 'Johnny'
-		info_name = johnny
+		info_name = Johnny
 	}
 	{
-		id = guitarist_johnny_outfit1_style3
+		id = Guitarist_Johnny_Outfit1_Style3
 		price = 250
 		profile_name = 'Johnny'
-		info_name = johnny
+		info_name = Johnny
 	}
 	{
-		id = guitarist_johnny_outfit1_style4
+		id = Guitarist_Johnny_Outfit1_Style4
 		price = 250
 		profile_name = 'Johnny'
-		info_name = johnny
+		info_name = Johnny
 	}
 	{
-		id = guitarist_johnny_outfit2_style2
+		id = Guitarist_Johnny_Outfit2_Style2
 		price = 250
 		profile_name = 'Johnny'
-		info_name = johnny
+		info_name = Johnny
 	}
 	{
-		id = guitarist_johnny_outfit2_style3
+		id = Guitarist_Johnny_Outfit2_Style3
 		price = 250
 		profile_name = 'Johnny'
-		info_name = johnny
+		info_name = Johnny
 	}
 	{
-		id = guitarist_johnny_outfit2_style4
+		id = Guitarist_Johnny_Outfit2_Style4
 		price = 250
 		profile_name = 'Johnny'
-		info_name = johnny
+		info_name = Johnny
 	}
 	{
-		id = guitarist_lars_outfit1_style2
+		id = Guitarist_Lars_Outfit1_Style2
 		price = 250
 		profile_name = 'Lars'
-		info_name = lars
+		info_name = Lars
 	}
 	{
-		id = guitarist_lars_outfit1_style3
+		id = Guitarist_Lars_Outfit1_Style3
 		price = 250
 		profile_name = 'Lars'
-		info_name = lars
+		info_name = Lars
 	}
 	{
-		id = guitarist_lars_outfit1_style4
+		id = Guitarist_Lars_Outfit1_Style4
 		price = 250
 		profile_name = 'Lars'
-		info_name = lars
+		info_name = Lars
 	}
 	{
-		id = guitarist_lars_outfit2_style2
+		id = Guitarist_Lars_Outfit2_Style2
 		price = 250
 		profile_name = 'Lars'
-		info_name = lars
+		info_name = Lars
 	}
 	{
-		id = guitarist_lars_outfit2_style3
+		id = Guitarist_Lars_Outfit2_Style3
 		price = 250
 		profile_name = 'Lars'
-		info_name = lars
+		info_name = Lars
 	}
 	{
-		id = guitarist_lars_outfit2_style4
+		id = Guitarist_Lars_Outfit2_Style4
 		price = 250
 		profile_name = 'Lars'
-		info_name = lars
+		info_name = Lars
 	}
 	{
-		id = guitarist_midori_outfit1_style2
+		id = Guitarist_Midori_Outfit1_Style2
 		price = 250
 		profile_name = 'Midori'
-		info_name = midori
+		info_name = Midori
 	}
 	{
-		id = guitarist_midori_outfit1_style3
+		id = Guitarist_Midori_Outfit1_Style3
 		price = 250
 		profile_name = 'Midori'
-		info_name = midori
+		info_name = Midori
 	}
 	{
-		id = guitarist_midori_outfit1_style4
+		id = Guitarist_Midori_Outfit1_Style4
 		price = 250
 		profile_name = 'Midori'
-		info_name = midori
+		info_name = Midori
 	}
 	{
-		id = guitarist_midori_outfit2_style2
+		id = Guitarist_Midori_Outfit2_Style2
 		price = 250
 		profile_name = 'Midori'
-		info_name = midori
+		info_name = Midori
 	}
 	{
-		id = guitarist_midori_outfit2_style3
+		id = Guitarist_Midori_Outfit2_Style3
 		price = 250
 		profile_name = 'Midori'
-		info_name = midori
+		info_name = Midori
 	}
 	{
-		id = guitarist_midori_outfit2_style4
+		id = Guitarist_Midori_Outfit2_Style4
 		price = 250
 		profile_name = 'Midori'
-		info_name = midori
+		info_name = Midori
 	}
 	{
-		id = guitarist_xavier_outfit1_style2
+		id = Guitarist_Xavier_Outfit1_Style2
 		price = 250
 		profile_name = 'Xavier'
-		info_name = xavier
+		info_name = Xavier
 	}
 	{
-		id = guitarist_xavier_outfit1_style3
+		id = Guitarist_Xavier_Outfit1_Style3
 		price = 250
 		profile_name = 'Xavier'
-		info_name = xavier
+		info_name = Xavier
 	}
 	{
-		id = guitarist_xavier_outfit1_style4
+		id = Guitarist_Xavier_Outfit1_Style4
 		price = 250
 		profile_name = 'Xavier'
-		info_name = xavier
+		info_name = Xavier
 	}
 	{
-		id = guitarist_xavier_outfit2_style2
+		id = Guitarist_Xavier_Outfit2_Style2
 		price = 250
 		profile_name = 'Xavier'
-		info_name = xavier
+		info_name = Xavier
 	}
 	{
-		id = guitarist_xavier_outfit2_style3
+		id = Guitarist_Xavier_Outfit2_Style3
 		price = 250
 		profile_name = 'Xavier'
-		info_name = xavier
+		info_name = Xavier
 	}
 	{
-		id = guitarist_xavier_outfit2_style4
+		id = Guitarist_Xavier_Outfit2_Style4
 		price = 250
 		profile_name = 'Xavier'
-		info_name = xavier
+		info_name = Xavier
 	}
 ]
-bonus_songs_info = [
+Bonus_Songs_Info = [
 	{
 		item = avalancha
 		text = "Heroes del Silencio is a rock band from Zaragoza Spain.  After 10 years and numerous albums, the band broke up in 1997.  In 2007, as part of a 20-year anniversary celebration and 10 years after their break-up they are participating in a 10 concert world tour."
-		album_cover = heroesdelsilencioavalancha
+		album_cover = HeroesDelSilencioAvalancha
 	}
 	{
 		item = bellyofashark
@@ -981,17 +981,17 @@ bonus_songs_info = [
 	{
 		item = cantbesaved
 		text = "Taken from Senses Fail's second full length album Still Searching.  The album's story is from the point of view of a character's stress and anxiety, including his battles with faith, alcohol, and depression."
-		album_cover = sensesfailstillsearching
+		album_cover = SensesFailStillSearching
 	}
 	{
 		item = closer
 		text = "Lacuna Coil was formed in Milan Italy, and were originally called Sleep of Right.  They changed their name to Ethereal and signed to Century Media records in 1997.  They changed their name to Lacuna Coil when they discovered Ethereal was already taken."
-		album_cover = lacunacoilkarmacode
+		album_cover = LacunaCoilKarmaCode
 	}
 	{
 		item = dontholdback
 		text = "This song is from The Sleeping's second studio album Questions and Answers on Victory Records.  The Sleeping formed in 2003 from the remains of Skycamefalling."
-		album_cover = thesleepingquestionsandanswers
+		album_cover = TheSleepingQuestionsAndAnswers
 	}
 	{
 		item = downndirty
@@ -1001,17 +1001,17 @@ bonus_songs_info = [
 	{
 		item = fcpremix
 		text = "This song is a remake of the song F.C.P.S.I.T.S.G. E.P.G.E.P.G.E.P. which originally appeared on their self-titled album."
-		album_cover = falloftroydoppelganger
+		album_cover = FallofTroyDoppelganger
 	}
 	{
 		item = generationrock
 		text = "Revolverheld is a rock band from Hamburg, Germany.  This song was their first single and released in June 2005, 3 months before the bands self-titled album."
-		album_cover = revolverheldrevolverheld
+		album_cover = RevolverheldRevolverheld
 	}
 	{
 		item = gothatfar
 		text = "Bret Michaels, the former lead singer of the notorious glam metal band Poison is back with his own band.  Bret also did the animation performances of the lead vocalist in the game."
-		album_cover = bretmichealsbandgothatfar
+		album_cover = BretMichealsBandGoThatFar
 	}
 	{
 		item = hierkommtalex
@@ -1031,7 +1031,7 @@ bonus_songs_info = [
 	{
 		item = inlove
 		text = "Scouts of St. Sebastian guitarist/vocalist Judita Wignall (formerly of The Halo Friendlies) performed motion capture performance for many of the female characters in the game and was the inspiration for Judy Nails."
-		album_cover = store_song_scoutsstsebastian
+		album_cover = store_song_ScoutsStSebastian
 	}
 	{
 		item = mauvaisgarcon
@@ -1041,7 +1041,7 @@ bonus_songs_info = [
 	{
 		item = metalheavylady
 		text = "Lions are an Austin, TX based band that formed in August 2005.  Their music is influenced by 60's and 70's era hard rock with 90's era fever.  Lions create a blend of retro riffage, artful noise, melodic interludes and revolutionary attitude with a live show that has been described as 'furious' with a 'full-frontal assault' that will leave you half-deaf and disoriented."
-		album_cover = lionslions
+		album_cover = LionsLions
 	}
 	{
 		item = minuscelsius
@@ -1051,12 +1051,12 @@ bonus_songs_info = [
 	{
 		item = mycurse
 		text = "The first single off the album 'As Daylight Dies', this song went to number 21 on the mainstream rock chart.  In 2004, Killswitch Engage was nominated for a Best Metal Performance Grammy."
-		album_cover = killswitchengageasdaylightdies
+		album_cover = KillswitchEngageAsDaylightDies
 	}
 	{
 		item = nothingformehere
 		text = "Dope was formed in 1997 by brothers Simon and Edsel Dope.  This song is from their much anticipated fifth studio album."
-		album_cover = dope_postercover_edsel
+		album_cover = Dope_PosterCover_edsel
 	}
 	{
 		item = prayeroftherefugee
@@ -1071,12 +1071,12 @@ bonus_songs_info = [
 	{
 		item = ruby
 		text = "Kaiser Chiefs were the most successful act at the 2006 Brit awards - winning 'Best Group', 'Best British Rock Act', and 'Best Live Act'"
-		album_cover = kaiserchiefsyourstrulyangry_mob
+		album_cover = KaiserChiefsYoursTrulyAngry_Mob
 	}
 	{
 		item = shebangsadrum
 		text = "Taken from the 1989 self-titled debut by The Stone Roses.  The album is regarded by many as one of the greatest British albums ever released and was a huge influence on the Britpop movement that followed in the 1990's."
-		album_cover = stonerosesstoneroses
+		album_cover = StoneRosesStoneRoses
 	}
 	{
 		item = takethislife
@@ -1089,7 +1089,7 @@ bonus_songs_info = [
 		album_cover = prototype_continuum_cover
 	}
 ]
-bonus_characters_info = [
+Bonus_Characters_Info = [
 	{
 		item = axel
 		text = "For when Axel needs a bit more mobility. Like playing a 4 hour set to 20,000 people in 115 degree weather at an all day festival in Brazil."
@@ -1099,27 +1099,27 @@ bonus_characters_info = [
 		text = "The exact same outfit that Judy was wearing when she was kicked out of Catholic high school at age 15."
 	}
 	{
-		item = lars
+		item = Lars
 		text = "Lars dons a traditional outfit straight from his Norse forefathers.  The perfect outfit for Rockin' and Pillagin'"
 	}
 	{
-		item = xavier
+		item = Xavier
 		text = "Check out Xavier's official uniform from back when he flew a spaceship through the Crab Nebula in '68.  Outta sight!"
 	}
 	{
-		item = johnny
+		item = Johnny
 		text = "Johnny's leather jacket served as his only shelter when he was living on the street in '82.  But it was cool.  He was able to save money to buy enough hair products to maintain a killer sky-high mohawk."
 	}
 	{
-		item = midori
+		item = Midori
 		text = "Midori pays homage to her country's heritage with this Mount Fuji inspired get-up.  Oh yeah, and she thought big green hair is cool too."
 	}
 	{
-		item = casey
+		item = Casey
 		text = "Casey attempts to show her softer side the only way she knows... by putting on more leather."
 	}
 	{
-		item = izzy
+		item = Izzy
 		text = "In case you thought Izzy's other outfit was a bit too subtle, Izzy puffs himself up with an ensemble inspired by one of the most beautiful creatures in the animal kingdom."
 	}
 	{
@@ -1135,11 +1135,11 @@ bonus_characters_info = [
 		text = "Described by Lou as 'This really awesome sculpture I found at a garage sale.'  This puppet was given life and now serves as a mindless rhythm guitarist and bouncer for the underworld."
 	}
 	{
-		item = rockgod
+		item = RockGod
 		text = "Once human, the God of Rock has ascended to the highest level of rocking and plays nightly in a small pub on Mount Olympus.  Occasionally, he finds time to guitar battle with mere humans.  He also is credited with inventing the lute."
 	}
 	{
-		item = ripper
+		item = RIPPER
 		text = "When not scouring the bowels of Hades to sign the next big act, The Grim Ripper makes earthly summer tours part of his M.O.  He also enjoys canoe trips."
 	}
 ]

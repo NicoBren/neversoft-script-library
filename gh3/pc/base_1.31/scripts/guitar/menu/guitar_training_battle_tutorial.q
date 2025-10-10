@@ -64,7 +64,7 @@ training_battle_tutorial_script = [
 
 script training_battle_tutorial_startup 
 	training_init_session
-	launchevent \{type = unfocus
+	LaunchEvent \{type = unfocus
 		target = root_window}
 	change \{structurename = player2_status
 		character_id = axel}
@@ -79,13 +79,13 @@ script training_3_show_title
 	if ($transitions_locked = 0)
 		break
 	endif
-	wait \{1
+	Wait \{1
 		gameframe}
 	repeat
 	create_training_pause_handler
 	safe_show \{id = god_icon}
-	training_play_sound \{sound = 'Tutorial_3_Intro_01_God'
-		wait}
+	training_play_sound \{Sound = 'Tutorial_3_Intro_01_God'
+		Wait}
 	training_destroy_title
 endscript
 
@@ -94,14 +94,14 @@ script training_3_1_start_gem_scroller
 	change \{game_mode = tutorial}
 	change \{boss_battle = 1}
 	change \{tutorial_disable_hud = 1}
-	training_start_gem_scroller \{song = tutorial_3a
+	training_start_gem_scroller \{song = Tutorial_3A
 		no_score_update}
-	killspawnedscript \{name = update_score_fast}
+	KillSpawnedScript \{name = update_score_fast}
 	training_wait_for_gem_scroller_startup
 endscript
 
 script training_3_1_show_lesson 
-	wait \{1
+	Wait \{1
 		seconds
 		ignoreslomo}
 	training_pause_gem_scroller
@@ -109,19 +109,19 @@ script training_3_1_show_lesson
 	training_set_lesson_header_body \{text = "1. Complete a Battle Power sequence to receive a Guitar Battle power-up"}
 	training_show_lesson_header
 	safe_show \{id = god_icon}
-	training_play_sound \{sound = 'Tutorial_3A_01_God'
-		wait}
+	training_play_sound \{Sound = 'Tutorial_3A_01_God'
+		Wait}
 	training_set_task_header_body \{text = "Hit star sequence to continue"}
 	training_show_task_header
-	wait \{2
+	Wait \{2
 		seconds
 		ignoreslomo}
 	training_resume_gem_scroller
 endscript
 
 script training_3_1_wait_for_star_power 
-	if screenelementexists \{id = menu_tutorial}
-		launchevent \{type = unfocus
+	if ScreenElementExists \{id = menu_tutorial}
+		LaunchEvent \{type = unfocus
 			target = menu_tutorial}
 		destroy_menu \{menu_id = menu_tutorial}
 	endif
@@ -146,24 +146,24 @@ script training_3_1_wait_for_star_power
 	if (<current_num_powerups> > 0)
 		break
 	endif
-	wait \{1
+	Wait \{1
 		gameframe}
 	repeat
-	enableinput off controller = ($player1_status.controller)
+	EnableInput off controller = ($player1_status.controller)
 	change \{structurename = player1_status
 		star_power_usable = 0}
-	wait \{1.0
+	Wait \{1.0
 		seconds
 		ignoreslomo}
 endscript
 
 script training_3_1_show_complete_message 
-	soundevent \{event = tutorial_mode_finish_chord}
+	SoundEvent \{event = Tutorial_Mode_Finish_Chord}
 	safe_destroy \{id = notes_hit_text}
 	training_hide_lesson_header
 	training_hide_task_header
-	createscreenelement {
-		type = textelement
+	CreateScreenElement {
+		type = TextElement
 		parent = training_container
 		id = tuning_complete_text
 		just = [center center]
@@ -173,20 +173,20 @@ script training_3_1_show_complete_message
 		scale = 1.0
 		rgba = ($training_text_color)
 	}
-	wait \{2
+	Wait \{2
 		seconds
 		ignoreslomo}
 	safe_destroy \{id = tuning_complete_text}
 endscript
 
 script training_3_2_show_lesson 
-	enableinput off controller = ($player1_status.controller)
+	EnableInput off controller = ($player1_status.controller)
 	training_pause_gem_scroller
 	if ($player1_status.current_num_powerups = 0)
 		bossbattle_ready \{battle_gem = 0
 			player_status = player1_status}
 	endif
-	enableinput off controller = ($player1_status.controller)
+	EnableInput off controller = ($player1_status.controller)
 	change \{structurename = player1_status
 		star_power_usable = 0}
 	training_set_lesson_header_text \{text = "LESSON 2: USING POWERUPS"}
@@ -197,12 +197,12 @@ script training_3_2_show_lesson
 	safe_show \{id = lou_icon}
 	change \{structurename = player1_status
 		last_selected_attack = -1}
-	training_play_sound \{sound = 'Tutorial_3B_01_Lou'}
-	wait \{25.5
+	training_play_sound \{Sound = 'Tutorial_3B_01_Lou'}
+	Wait \{25.5
 		seconds
 		ignoreslomo}
-	createscreenelement \{parent = training_container
-		type = spriteelement
+	CreateScreenElement \{parent = training_container
+		type = SpriteElement
 		id = guitar_sprite
 		just = [
 			center
@@ -219,27 +219,27 @@ script training_3_2_show_lesson
 		]
 		scale = (0.8, 0.8)
 		z_priority = 50}
-	wait \{2.5
+	Wait \{2.5
 		seconds
 		ignoreslomo}
-	doscreenelementmorph \{id = guitar_sprite
+	doScreenElementMorph \{id = guitar_sprite
 		rot_angle = 0
 		time = 1.0}
-	wait \{3.5
+	Wait \{3.5
 		seconds
 		ignoreslomo}
 	safe_hide \{id = guitar_sprite}
-	doscreenelementmorph \{id = guitar_sprite
+	doScreenElementMorph \{id = guitar_sprite
 		rot_angle = 45
 		time = 0.0}
-	training_wait_for_sound \{sound = 'Tutorial_3B_01_Lou'}
+	training_wait_for_sound \{Sound = 'Tutorial_3B_01_Lou'}
 	training_set_task_header_body \{text = "Tilt guitar upward to unleash attack"}
 	training_show_task_header
-	wait \{2
+	Wait \{2
 		seconds
 		ignoreslomo}
 	training_resume_gem_scroller
-	enableinput controller = ($player1_status.controller)
+	EnableInput controller = ($player1_status.controller)
 	change \{structurename = player1_status
 		star_power_usable = 1}
 endscript
@@ -252,45 +252,45 @@ script training_3_2_wait_for_attack
 	if ($player2_status.shake_notes != -1)
 		break
 	endif
-	wait \{1
+	Wait \{1
 		gameframe}
 	repeat
-	wait \{1.5
+	Wait \{1.5
 		seconds
 		ignoreslomo}
 endscript
 
 script training_3_2_show_complete_message 
-	soundevent \{event = tutorial_mode_finish_chord}
-	if screenelementexists \{id = menu_tutorial}
+	SoundEvent \{event = Tutorial_Mode_Finish_Chord}
+	if ScreenElementExists \{id = menu_tutorial}
 		destroy_menu \{menu_id = menu_tutorial}
 	endif
 	create_training_pause_handler
 	safe_destroy \{id = notes_hit_text}
 	training_hide_lesson_header
 	training_hide_task_header
-	pausegame
-	pausegh3sounds
-	wait \{0.5
+	PauseGame
+	PauseGh3Sounds
+	Wait \{0.5
 		seconds
 		ignoreslomo}
-	killcamanim \{name = ch_view_cam}
+	KillCamAnim \{name = ch_view_cam}
 	kill_gem_scroller
 	destroy_bg_viewport
 	setup_bg_viewport
-	playigccam \{id = cs_view_cam_id
+	PlayIGCCam \{id = cs_view_cam_id
 		name = ch_view_cam
 		viewport = bg_viewport
-		lockto = world
+		LockTo = world
 		pos = (-0.068807, 1.5990009, 5.7975965)
-		quat = (0.000506, 0.99942994, -0.017537998)
-		fov = 72.0
-		play_hold = 1
+		Quat = (0.000506, 0.99942994, -0.017537998)
+		FOV = 72.0
+		Play_hold = 1
 		interrupt_current}
-	unpausegh3sounds
-	unpausegame
-	createscreenelement {
-		type = textelement
+	UnpauseGh3Sounds
+	UnPauseGame
+	CreateScreenElement {
+		type = TextElement
 		parent = training_container
 		id = tuning_complete_text
 		just = [center center]
@@ -300,7 +300,7 @@ script training_3_2_show_complete_message
 		scale = 1.0
 		rgba = ($training_text_color)
 	}
-	wait \{2
+	Wait \{2
 		seconds
 		ignoreslomo}
 	safe_hide \{id = lou_icon}
@@ -312,22 +312,22 @@ script training_3_3_start_gem_scroller
 	change \{game_mode = tutorial}
 	change \{boss_battle = 1}
 	change \{tutorial_disable_hud = 1}
-	training_start_gem_scroller \{song = tutorial_3c
+	training_start_gem_scroller \{song = Tutorial_3C
 		disable_hud
 		no_score_update}
-	killspawnedscript \{name = update_score_fast}
+	KillSpawnedScript \{name = update_score_fast}
 	training_wait_for_gem_scroller_startup
 endscript
 
 script training_3_3_show_lesson 
-	wait \{1
+	Wait \{1
 		seconds
 		ignoreslomo}
 	change \{structurename = player1_status
 		current_num_powerups = 0}
 	bossbattle_ready \{battle_gem = 5
 		player_status = player2_status}
-	wait \{1.0
+	Wait \{1.0
 		seconds
 		ignoreslomo}
 	training_pause_gem_scroller
@@ -336,23 +336,23 @@ script training_3_3_show_lesson
 	training_show_lesson_header
 	training_hide_task_header
 	safe_show \{id = god_icon}
-	training_play_sound \{sound = 'Tutorial_3C_01_God'
-		wait}
+	training_play_sound \{Sound = 'Tutorial_3C_01_God'
+		Wait}
 	training_set_task_header_body \{text = "Quickly tap the button of the broken string"}
 	training_show_task_header
-	wait \{1
+	Wait \{1
 		seconds
 		ignoreslomo}
 	training_resume_gem_scroller
-	wait \{1
+	Wait \{1
 		seconds
 		ignoreslomo}
 	bossbattle_trigger_on \{player_status = player2_status}
-	wait \{1
+	Wait \{1
 		seconds
 		ignoreslomo}
-	if screenelementexists \{id = menu_tutorial}
-		launchevent \{type = unfocus
+	if ScreenElementExists \{id = menu_tutorial}
+		LaunchEvent \{type = unfocus
 			target = menu_tutorial}
 		destroy_menu \{menu_id = menu_tutorial}
 	endif
@@ -378,46 +378,46 @@ script training_3_3_wait_for_attack
 	if ($player1_status.broken_string_mask = 0)
 		break
 	endif
-	wait \{1
+	Wait \{1
 		gameframe}
 	repeat
 endscript
 
 script training_3_3_show_complete_message 
-	if screenelementexists \{id = menu_tutorial}
+	if ScreenElementExists \{id = menu_tutorial}
 		destroy_menu \{menu_id = menu_tutorial}
 	endif
 	create_training_pause_handler
-	wait \{0.75
+	Wait \{0.75
 		seconds
 		ignoreslomo}
-	soundevent \{event = tutorial_mode_finish_chord_03}
+	SoundEvent \{event = Tutorial_Mode_Finish_Chord_03}
 	safe_destroy \{id = notes_hit_text}
 	training_hide_lesson_header
 	training_hide_task_header
-	pausegame
-	pausegh3sounds
-	stopallsounds
-	wait \{0.5
+	PauseGame
+	PauseGh3Sounds
+	StopAllSounds
+	Wait \{0.5
 		seconds
 		ignoreslomo}
-	killcamanim \{name = ch_view_cam}
+	KillCamAnim \{name = ch_view_cam}
 	kill_gem_scroller
 	destroy_bg_viewport
 	setup_bg_viewport
-	playigccam \{id = cs_view_cam_id
+	PlayIGCCam \{id = cs_view_cam_id
 		name = ch_view_cam
 		viewport = bg_viewport
-		lockto = world
+		LockTo = world
 		pos = (-0.068807, 1.5990009, 5.7975965)
-		quat = (0.000506, 0.99942994, -0.017537998)
-		fov = 72.0
-		play_hold = 1
+		Quat = (0.000506, 0.99942994, -0.017537998)
+		FOV = 72.0
+		Play_hold = 1
 		interrupt_current}
-	unpausegh3sounds
-	unpausegame
-	createscreenelement {
-		type = textelement
+	UnpauseGh3Sounds
+	UnPauseGame
+	CreateScreenElement {
+		type = TextElement
 		parent = training_container
 		id = tuning_complete_text
 		just = [center center]
@@ -427,7 +427,7 @@ script training_3_3_show_complete_message
 		scale = 1.0
 		rgba = ($training_text_color)
 	}
-	wait \{2.0
+	Wait \{2.0
 		seconds
 		ignoreslomo}
 	safe_hide \{id = god_icon}
@@ -439,15 +439,15 @@ script training_3_4_start_gem_scroller
 	change \{game_mode = tutorial}
 	change \{boss_battle = 1}
 	change \{tutorial_disable_hud = 1}
-	training_start_gem_scroller \{song = tutorial_3d
+	training_start_gem_scroller \{song = Tutorial_3D
 		disable_hud
 		no_score_update}
-	killspawnedscript \{name = update_score_fast}
+	KillSpawnedScript \{name = update_score_fast}
 	training_wait_for_gem_scroller_startup
 endscript
 
 script training_3_4_show_lesson 
-	wait \{1
+	Wait \{1
 		seconds
 		ignoreslomo}
 	training_pause_gem_scroller
@@ -458,8 +458,8 @@ script training_3_4_show_lesson
 	safe_show \{id = lou_icon}
 	change \{structurename = player1_status
 		last_selected_attack = -1}
-	training_play_sound \{sound = 'Tutorial_3D_01_Lou'
-		wait}
+	training_play_sound \{Sound = 'Tutorial_3D_01_Lou'
+		Wait}
 	training_set_task_header_body \{text = "Use both attacks to damage opponent"}
 	training_show_task_header
 	change \{structurename = player1_status
@@ -468,15 +468,15 @@ script training_3_4_show_lesson
 		player_status = player1_status}
 	bossbattle_ready \{battle_gem = 2
 		player_status = player1_status}
-	enableinput off controller = ($player1_status.controller)
+	EnableInput off controller = ($player1_status.controller)
 	change \{structurename = player1_status
 		star_power_usable = 0}
-	wait \{2
+	Wait \{2
 		seconds
 		ignoreslomo}
 	training_resume_gem_scroller
-	if screenelementexists \{id = menu_tutorial}
-		launchevent \{type = unfocus
+	if ScreenElementExists \{id = menu_tutorial}
+		LaunchEvent \{type = unfocus
 			target = menu_tutorial}
 		destroy_menu \{menu_id = menu_tutorial}
 	endif
@@ -492,7 +492,7 @@ script training_3_4_show_lesson
 		use_backdrop = 0
 		event_handlers = <event_handlers>
 	}
-	enableinput controller = ($player1_status.controller)
+	EnableInput controller = ($player1_status.controller)
 	change \{structurename = player1_status
 		star_power_usable = 1}
 endscript
@@ -510,46 +510,46 @@ script training_3_4_wait_for_attack
 	if (<num_attacks> > <old_num_attacks>)
 		old_num_attacks = <num_attacks>
 	endif
-	wait \{1
+	Wait \{1
 		gameframe}
 	repeat
 endscript
 
 script training_3_4_show_complete_message 
-	if screenelementexists \{id = menu_tutorial}
+	if ScreenElementExists \{id = menu_tutorial}
 		destroy_menu \{menu_id = menu_tutorial}
 	endif
 	create_training_pause_handler
-	wait \{0.75
+	Wait \{0.75
 		seconds
 		ignoreslomo}
-	soundevent \{event = tutorial_mode_finish_chord_03}
+	SoundEvent \{event = Tutorial_Mode_Finish_Chord_03}
 	safe_destroy \{id = notes_hit_text}
 	training_hide_lesson_header
 	training_hide_task_header
-	pausegame
-	pausegh3sounds
-	stopallsounds
-	wait \{0.5
+	PauseGame
+	PauseGh3Sounds
+	StopAllSounds
+	Wait \{0.5
 		seconds
 		ignoreslomo}
-	killcamanim \{name = ch_view_cam}
+	KillCamAnim \{name = ch_view_cam}
 	kill_gem_scroller
 	destroy_bg_viewport
 	setup_bg_viewport
-	playigccam \{id = cs_view_cam_id
+	PlayIGCCam \{id = cs_view_cam_id
 		name = ch_view_cam
 		viewport = bg_viewport
-		lockto = world
+		LockTo = world
 		pos = (-0.068807, 1.5990009, 5.7975965)
-		quat = (0.000506, 0.99942994, -0.017537998)
-		fov = 72.0
-		play_hold = 1
+		Quat = (0.000506, 0.99942994, -0.017537998)
+		FOV = 72.0
+		Play_hold = 1
 		interrupt_current}
-	unpausegh3sounds
-	unpausegame
-	createscreenelement {
-		type = textelement
+	UnpauseGh3Sounds
+	UnPauseGame
+	CreateScreenElement {
+		type = TextElement
 		parent = training_container
 		id = tuning_complete_text
 		just = [center center]
@@ -559,11 +559,11 @@ script training_3_4_show_complete_message
 		scale = 1.0
 		rgba = ($training_text_color)
 	}
-	wait \{0.5
+	Wait \{0.5
 		seconds
 		ignoreslomo}
-	training_play_sound \{sound = 'Tutorial_3_outro'
-		wait}
+	training_play_sound \{Sound = 'Tutorial_3_outro'
+		Wait}
 	safe_hide \{id = lou_icon}
 	safe_destroy \{id = tuning_complete_text}
 endscript
@@ -571,16 +571,16 @@ endscript
 script training_basic_tutorial_3_end 
 	training_kill_session
 	change \{tutorial_disable_hud = 0}
-	if screenelementexists \{id = training_container}
-		destroyscreenelement \{id = training_container}
+	if ScreenElementExists \{id = training_container}
+		DestroyScreenElement \{id = training_container}
 	endif
-	if screenelementexists \{id = menu_tutorial}
-		launchevent \{type = unfocus
+	if ScreenElementExists \{id = menu_tutorial}
+		LaunchEvent \{type = unfocus
 			target = menu_tutorial}
 		destroy_menu \{menu_id = menu_tutorial}
 	endif
 	training_destroy_narrator_icons
-	setscreenelementprops \{id = root_window
+	SetScreenElementProps \{id = root_window
 		event_handlers = [
 			{
 				pad_start
@@ -588,7 +588,7 @@ script training_basic_tutorial_3_end
 			}
 		]
 		replace_handlers}
-	setglobaltags \{training
+	SetGlobalTags \{training
 		params = {
 			guitar_battle_lesson = complete
 		}}

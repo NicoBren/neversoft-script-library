@@ -1,63 +1,63 @@
-gp_artdeco_postencore_necksparks01 = {
+GP_ArtDeco_PostEncore_NeckSparks01 = {
 	pos = (0.0, 0.77766997, -0.779315)
 	angles = (0.0, 0.0, 0.0)
-	class = particleobject
-	particletype = flexparticle
+	Class = ParticleObject
+	ParticleType = FlexParticle
 	type = flat
 	active
-	createdatstart
+	CreatedAtStart
 	attach
-	align
-	applypositionoffset
-	attachobject = z_artdeco_trg_geo_dragon
-	bone = bone_dragon_neck02
-	emitrangedims = (0.3, 0.3, 0.3)
-	docircularemit
-	emit_target = (0.0, 1.0, -1.0)
-	enablerotate
-	emitangle = (0.0, 0.0, 0.0)
+	Align
+	ApplyPositionOffset
+	AttachObject = Z_ArtDeco_TRG_Geo_Dragon
+	bone = Bone_Dragon_Neck02
+	EmitRangeDims = (0.3, 0.3, 0.3)
+	DoCircularEmit
+	emit_Target = (0.0, 1.0, -1.0)
+	EnableRotate
+	EmitAngle = (0.0, 0.0, 0.0)
 	force = (0.0, -7.0, 0.0)
-	windcoeff = 0.0
-	localwindcoeff = 0.0
-	emittervelocityweight = 0.0
-	anglespread = 90.0
-	bounceheight = 0.0
-	bouncecoeff = 0.2
-	bouncecallbackrate = 0.0
-	liferange = (2.0, 3.0)
+	WindCoeff = 0.0
+	LocalWindCoeff = 0.0
+	EmitterVelocityWeight = 0.0
+	AngleSpread = 90.0
+	BounceHeight = 0.0
+	BounceCoeff = 0.2
+	BounceCallbackRate = 0.0
+	LifeRange = (2.0, 3.0)
 	emit_rate = 12.0
 	max = 0
-	timeseed = 0.0
-	lifetime = 0.0
-	emitnum = 0
-	followemitter = 0.0
-	emitfunction = onoff
-	emitperiod = 2.5
-	sizerange = [
+	TimeSeed = 0.0
+	lifeTime = 0.0
+	emitNum = 0
+	FollowEmitter = 0.0
+	EmitFunction = onoff
+	EmitPeriod = 2.5
+	SizeRange = [
 		(0.07, 3.0)
 		(0.0, 4.0)
 	]
-	speedrange = (3.0, 5.0)
-	rotvel = (0.0, 0.0)
-	rotveltimescale = 0.0
-	emitdelaystart = 0.0
-	alignwithpath
-	pathfollowtime = 0.04
-	history = 2
-	historylistcoordinatespace = world
+	SpeedRange = (3.0, 5.0)
+	RotVel = (0.0, 0.0)
+	RotVelTimeScale = 0.0
+	EmitDelayStart = 0.0
+	AlignWithPath
+	PathFollowTime = 0.04
+	History = 2
+	HistoryListCoordinateSpace = world
 	color = -9568001
-	lod_default
-	quickmaterial = {
-		diffusetextureenabled
-		diffusetexture = jow_spark01
-		specularpower = 0
+	LOD_Default
+	QuickMaterial = {
+		DiffuseTextureEnabled
+		DiffuseTexture = JOW_Spark01
+		SpecularPower = 0
 		alphacutoff = 96
-		blendmode = add
-		burn
-		burnvalue = 0.7
-		quadanimationfps = 8
+		blendMode = Add
+		Burn
+		BurnValue = 0.7
+		QuadAnimationFPS = 8
 	}
-	knot = [
+	Knot = [
 		(-0.48496202, 0.0, -0.0)
 		(-0.48496202, 0.0, -0.0)
 		(-0.441017, 0.0, -0.0)
@@ -68,7 +68,7 @@ gp_artdeco_postencore_necksparks01 = {
 		(1.051219, 0.0, -0.0)
 		(1.051219, 0.0, -0.0)
 	]
-	particlecolor = [
+	ParticleColor = [
 		-1
 		-1
 		-1
@@ -76,7 +76,7 @@ gp_artdeco_postencore_necksparks01 = {
 		-1
 		-1
 	]
-	vertexweight = [
+	VertexWeight = [
 		0.585781
 		1.0
 	]

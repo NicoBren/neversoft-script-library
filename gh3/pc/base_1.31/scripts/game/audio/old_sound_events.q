@@ -1,653 +1,653 @@
-improv_pentatonic_single_note_e5_struct = {
-	default_priority = 90
-	default_buss = `default`
-	norepeatfor = 0.02
-	instancemanagement = stop_oldest
-	instancelimit = 6
+Improv_Pentatonic_Single_Note_E5_struct = {
+	Default_Priority = 90
+	Default_Buss = `default`
+	NoRepeatFor = 0.02
+	InstanceManagement = stop_oldest
+	InstanceLimit = 6
 }
-improv_pentatonic_single_note_e8_struct = {
-	default_priority = 90
-	default_buss = `default`
-	norepeatfor = 0.02
-	instancemanagement = stop_oldest
-	instancelimit = 6
+Improv_Pentatonic_Single_Note_E8_struct = {
+	Default_Priority = 90
+	Default_Buss = `default`
+	NoRepeatFor = 0.02
+	InstanceManagement = stop_oldest
+	InstanceLimit = 6
 }
-improv_pentatonic_single_note_a5_struct = {
-	default_priority = 90
-	default_buss = `default`
-	norepeatfor = 0.02
-	instancemanagement = stop_oldest
-	instancelimit = 6
+Improv_Pentatonic_Single_Note_A5_struct = {
+	Default_Priority = 90
+	Default_Buss = `default`
+	NoRepeatFor = 0.02
+	InstanceManagement = stop_oldest
+	InstanceLimit = 6
 }
-improv_pentatonic_single_note_a7_struct = {
-	default_priority = 90
-	default_buss = `default`
-	norepeatfor = 0.02
-	instancemanagement = stop_oldest
-	instancelimit = 6
+Improv_Pentatonic_Single_Note_A7_struct = {
+	Default_Priority = 90
+	Default_Buss = `default`
+	NoRepeatFor = 0.02
+	InstanceManagement = stop_oldest
+	InstanceLimit = 6
 }
-improv_pentatonic_single_note_d5_struct = {
-	default_priority = 90
-	default_buss = `default`
-	norepeatfor = 0.02
-	instancemanagement = stop_oldest
-	instancelimit = 6
+Improv_Pentatonic_Single_Note_D5_struct = {
+	Default_Priority = 90
+	Default_Buss = `default`
+	NoRepeatFor = 0.02
+	InstanceManagement = stop_oldest
+	InstanceLimit = 6
 }
-improv_pentatonic_single_note_d7_struct = {
-	default_priority = 90
-	default_buss = `default`
-	norepeatfor = 0.02
-	instancemanagement = stop_oldest
-	instancelimit = 6
+Improv_Pentatonic_Single_Note_D7_struct = {
+	Default_Priority = 90
+	Default_Buss = `default`
+	NoRepeatFor = 0.02
+	InstanceManagement = stop_oldest
+	InstanceLimit = 6
 }
-improv_pentatonic_single_note_g5_struct = {
-	default_priority = 90
-	default_buss = `default`
-	norepeatfor = 0.02
-	instancemanagement = stop_oldest
-	instancelimit = 6
+Improv_Pentatonic_Single_Note_G5_struct = {
+	Default_Priority = 90
+	Default_Buss = `default`
+	NoRepeatFor = 0.02
+	InstanceManagement = stop_oldest
+	InstanceLimit = 6
 }
-improv_pentatonic_single_note_g7_struct = {
-	default_priority = 90
-	default_buss = `default`
-	norepeatfor = 0.02
-	instancemanagement = stop_oldest
-	instancelimit = 6
+Improv_Pentatonic_Single_Note_G7_struct = {
+	Default_Priority = 90
+	Default_Buss = `default`
+	NoRepeatFor = 0.02
+	InstanceManagement = stop_oldest
+	InstanceLimit = 6
 }
-improv_pentatonic_single_note_b5_struct = {
-	default_priority = 90
-	default_buss = `default`
-	norepeatfor = 0.02
-	instancemanagement = stop_oldest
-	instancelimit = 6
+Improv_Pentatonic_Single_Note_B5_struct = {
+	Default_Priority = 90
+	Default_Buss = `default`
+	NoRepeatFor = 0.02
+	InstanceManagement = stop_oldest
+	InstanceLimit = 6
 }
-improv_pentatonic_single_note_b8_struct = {
-	default_priority = 90
-	default_buss = `default`
-	norepeatfor = 0.02
-	instancemanagement = stop_oldest
-	instancelimit = 6
+Improv_Pentatonic_Single_Note_B8_struct = {
+	Default_Priority = 90
+	Default_Buss = `default`
+	NoRepeatFor = 0.02
+	InstanceManagement = stop_oldest
+	InstanceLimit = 6
 }
-improv_pentatonic_single_note_ee5_struct = {
-	default_priority = 90
-	default_buss = `default`
-	norepeatfor = 0.02
-	instancemanagement = stop_oldest
-	instancelimit = 6
+Improv_Pentatonic_Single_Note_EE5_struct = {
+	Default_Priority = 90
+	Default_Buss = `default`
+	NoRepeatFor = 0.02
+	InstanceManagement = stop_oldest
+	InstanceLimit = 6
 }
-improv_pentatonic_single_note_ee8_struct = {
-	default_priority = 90
-	default_buss = `default`
-	norepeatfor = 0.02
-	instancemanagement = stop_oldest
-	instancelimit = 6
+Improv_Pentatonic_Single_Note_EE8_struct = {
+	Default_Priority = 90
+	Default_Buss = `default`
+	NoRepeatFor = 0.02
+	InstanceManagement = stop_oldest
+	InstanceLimit = 6
 }
-improv_pentatonic_chord_a5_d5_struct = {
-	default_priority = 90
-	default_buss = `default`
-	norepeatfor = 0.02
-	instancemanagement = stop_oldest
-	instancelimit = 6
+Improv_Pentatonic_Chord_A5_D5_struct = {
+	Default_Priority = 90
+	Default_Buss = `default`
+	NoRepeatFor = 0.02
+	InstanceManagement = stop_oldest
+	InstanceLimit = 6
 }
-improv_pentatonic_chord_a7_d7_struct = {
-	default_priority = 90
-	default_buss = `default`
-	norepeatfor = 0.02
-	instancemanagement = stop_oldest
-	instancelimit = 6
+Improv_Pentatonic_Chord_A7_D7_struct = {
+	Default_Priority = 90
+	Default_Buss = `default`
+	NoRepeatFor = 0.02
+	InstanceManagement = stop_oldest
+	InstanceLimit = 6
 }
-improv_pentatonic_chord_d5_g5_struct = {
-	default_priority = 90
-	default_buss = `default`
-	norepeatfor = 0.02
-	instancemanagement = stop_oldest
-	instancelimit = 6
+Improv_Pentatonic_Chord_D5_G5_struct = {
+	Default_Priority = 90
+	Default_Buss = `default`
+	NoRepeatFor = 0.02
+	InstanceManagement = stop_oldest
+	InstanceLimit = 6
 }
-improv_pentatonic_chord_d7_g7_struct = {
-	default_priority = 90
-	default_buss = `default`
-	norepeatfor = 0.02
-	instancemanagement = stop_oldest
-	instancelimit = 6
+Improv_Pentatonic_Chord_D7_G7_struct = {
+	Default_Priority = 90
+	Default_Buss = `default`
+	NoRepeatFor = 0.02
+	InstanceManagement = stop_oldest
+	InstanceLimit = 6
 }
-improv_pentatonic_chord_e5_d7_struct = {
-	default_priority = 90
-	default_buss = `default`
-	norepeatfor = 0.02
-	instancemanagement = stop_oldest
-	instancelimit = 6
+Improv_Pentatonic_Chord_E5_D7_struct = {
+	Default_Priority = 90
+	Default_Buss = `default`
+	NoRepeatFor = 0.02
+	InstanceManagement = stop_oldest
+	InstanceLimit = 6
 }
-improv_pentatonic_chord_a5_g7_struct = {
-	default_priority = 90
-	default_buss = `default`
-	norepeatfor = 0.02
-	instancemanagement = stop_oldest
-	instancelimit = 6
+Improv_Pentatonic_Chord_A5_G7_struct = {
+	Default_Priority = 90
+	Default_Buss = `default`
+	NoRepeatFor = 0.02
+	InstanceManagement = stop_oldest
+	InstanceLimit = 6
 }
-improv_pentatonic_chord_d7_g5_struct = {
-	default_priority = 90
-	default_buss = `default`
-	norepeatfor = 0.02
-	instancemanagement = stop_oldest
-	instancelimit = 6
+Improv_Pentatonic_Chord_D7_G5_struct = {
+	Default_Priority = 90
+	Default_Buss = `default`
+	NoRepeatFor = 0.02
+	InstanceManagement = stop_oldest
+	InstanceLimit = 6
 }
-improv_pentatonic_chord_g5_b5_struct = {
-	default_priority = 90
-	default_buss = `default`
-	norepeatfor = 0.02
-	instancemanagement = stop_oldest
-	instancelimit = 6
+Improv_Pentatonic_Chord_G5_B5_struct = {
+	Default_Priority = 90
+	Default_Buss = `default`
+	NoRepeatFor = 0.02
+	InstanceManagement = stop_oldest
+	InstanceLimit = 6
 }
-improv_pentatonic_chord_g7_b7_struct = {
-	default_priority = 90
-	default_buss = `default`
-	norepeatfor = 0.02
-	instancemanagement = stop_oldest
-	instancelimit = 6
+Improv_Pentatonic_Chord_G7_B7_struct = {
+	Default_Priority = 90
+	Default_Buss = `default`
+	NoRepeatFor = 0.02
+	InstanceManagement = stop_oldest
+	InstanceLimit = 6
 }
-improv_pentatonic_chord_b5_ee5_struct = {
-	default_priority = 90
-	default_buss = `default`
-	norepeatfor = 0.02
-	instancemanagement = stop_oldest
-	instancelimit = 6
+Improv_Pentatonic_Chord_B5_EE5_struct = {
+	Default_Priority = 90
+	Default_Buss = `default`
+	NoRepeatFor = 0.02
+	InstanceManagement = stop_oldest
+	InstanceLimit = 6
 }
-improv_pentatonic_chord_b8_ee8_struct = {
-	default_priority = 90
-	default_buss = `default`
-	norepeatfor = 0.02
-	instancemanagement = stop_oldest
-	instancelimit = 6
+Improv_Pentatonic_Chord_B8_EE8_struct = {
+	Default_Priority = 90
+	Default_Buss = `default`
+	NoRepeatFor = 0.02
+	InstanceManagement = stop_oldest
+	InstanceLimit = 6
 }
-improv_pentatonic_chord_g7_ee5_struct = {
-	default_priority = 90
-	default_buss = `default`
-	norepeatfor = 0.02
-	instancemanagement = stop_oldest
-	instancelimit = 6
+Improv_Pentatonic_Chord_G7_EE5_struct = {
+	Default_Priority = 90
+	Default_Buss = `default`
+	NoRepeatFor = 0.02
+	InstanceManagement = stop_oldest
+	InstanceLimit = 6
 }
-improv_pentatonic_chord_b5_ee8_struct = {
-	default_priority = 90
-	default_buss = `default`
-	norepeatfor = 0.02
-	instancemanagement = stop_oldest
-	instancelimit = 6
+Improv_Pentatonic_Chord_B5_EE8_struct = {
+	Default_Priority = 90
+	Default_Buss = `default`
+	NoRepeatFor = 0.02
+	InstanceManagement = stop_oldest
+	InstanceLimit = 6
 }
-improv_pentatonic_chord_g5_ee8_struct = {
-	default_priority = 90
-	default_buss = `default`
-	norepeatfor = 0.02
-	instancemanagement = stop_oldest
-	instancelimit = 6
+Improv_Pentatonic_Chord_G5_EE8_struct = {
+	Default_Priority = 90
+	Default_Buss = `default`
+	NoRepeatFor = 0.02
+	InstanceManagement = stop_oldest
+	InstanceLimit = 6
 }
-improv_lead_bend1_struct = {
-	default_priority = 90
-	default_buss = `default`
-	norepeatfor = 0.02
-	instancemanagement = stop_oldest
-	instancelimit = 6
+Improv_Lead_Bend1_struct = {
+	Default_Priority = 90
+	Default_Buss = `default`
+	NoRepeatFor = 0.02
+	InstanceManagement = stop_oldest
+	InstanceLimit = 6
 }
-improv_lead_bend2_struct = {
-	default_priority = 90
-	default_buss = `default`
-	norepeatfor = 0.02
-	instancemanagement = stop_oldest
-	instancelimit = 6
+Improv_Lead_Bend2_struct = {
+	Default_Priority = 90
+	Default_Buss = `default`
+	NoRepeatFor = 0.02
+	InstanceManagement = stop_oldest
+	InstanceLimit = 6
 }
-lead_bend_long_struct = {
-	default_priority = 90
-	default_buss = `default`
-	norepeatfor = 0.02
-	instancemanagement = stop_oldest
-	instancelimit = 6
+Lead_Bend_Long_struct = {
+	Default_Priority = 90
+	Default_Buss = `default`
+	NoRepeatFor = 0.02
+	InstanceManagement = stop_oldest
+	InstanceLimit = 6
 }
-lead_lick_struct = {
-	default_priority = 90
-	default_buss = `default`
-	norepeatfor = 0.02
-	instancemanagement = stop_oldest
-	instancelimit = 6
+Lead_Lick_struct = {
+	Default_Priority = 90
+	Default_Buss = `default`
+	NoRepeatFor = 0.02
+	InstanceManagement = stop_oldest
+	InstanceLimit = 6
 }
-lead_resolve1_struct = {
-	default_priority = 90
-	default_buss = `default`
-	norepeatfor = 0.02
-	instancemanagement = stop_oldest
-	instancelimit = 6
+Lead_Resolve1_struct = {
+	Default_Priority = 90
+	Default_Buss = `default`
+	NoRepeatFor = 0.02
+	InstanceManagement = stop_oldest
+	InstanceLimit = 6
 }
-lead_resolve2_struct = {
-	default_priority = 90
-	default_buss = `default`
-	norepeatfor = 0.02
-	instancemanagement = stop_oldest
-	instancelimit = 6
+Lead_Resolve2_struct = {
+	Default_Priority = 90
+	Default_Buss = `default`
+	NoRepeatFor = 0.02
+	InstanceManagement = stop_oldest
+	InstanceLimit = 6
 }
-lead_resolve_short_struct = {
-	default_priority = 90
-	default_buss = `default`
-	norepeatfor = 0.02
-	instancemanagement = stop_oldest
-	instancelimit = 6
+Lead_Resolve_Short_struct = {
+	Default_Priority = 90
+	Default_Buss = `default`
+	NoRepeatFor = 0.02
+	InstanceManagement = stop_oldest
+	InstanceLimit = 6
 }
-lead_sliding_lick_struct = {
-	default_priority = 90
-	default_buss = `default`
-	norepeatfor = 0.02
-	instancemanagement = stop_oldest
-	instancelimit = 6
+Lead_Sliding_Lick_struct = {
+	Default_Priority = 90
+	Default_Buss = `default`
+	NoRepeatFor = 0.02
+	InstanceManagement = stop_oldest
+	InstanceLimit = 6
 }
-lead_resolve1_short_struct = {
-	default_priority = 90
-	default_buss = `default`
-	norepeatfor = 0.02
-	instancemanagement = stop_oldest
-	instancelimit = 6
+Lead_Resolve1_Short_struct = {
+	Default_Priority = 90
+	Default_Buss = `default`
+	NoRepeatFor = 0.02
+	InstanceManagement = stop_oldest
+	InstanceLimit = 6
 }
-lead_resolve1_short2_struct = {
-	default_priority = 90
-	default_buss = `default`
-	norepeatfor = 0.02
-	instancemanagement = stop_oldest
-	instancelimit = 6
+Lead_Resolve1_Short2_struct = {
+	Default_Priority = 90
+	Default_Buss = `default`
+	NoRepeatFor = 0.02
+	InstanceManagement = stop_oldest
+	InstanceLimit = 6
 }
-lead_real_short1_struct = {
-	default_priority = 90
-	default_buss = `default`
-	norepeatfor = 0.02
-	instancemanagement = stop_oldest
-	instancelimit = 6
+Lead_Real_Short1_struct = {
+	Default_Priority = 90
+	Default_Buss = `default`
+	NoRepeatFor = 0.02
+	InstanceManagement = stop_oldest
+	InstanceLimit = 6
 }
-lead_real_short2_struct = {
-	default_priority = 90
-	default_buss = `default`
-	norepeatfor = 0.02
-	instancemanagement = stop_oldest
-	instancelimit = 6
+Lead_Real_Short2_struct = {
+	Default_Priority = 90
+	Default_Buss = `default`
+	NoRepeatFor = 0.02
+	InstanceManagement = stop_oldest
+	InstanceLimit = 6
 }
-lead_real_short3_struct = {
-	default_priority = 90
-	default_buss = `default`
-	norepeatfor = 0.02
-	instancemanagement = stop_oldest
-	instancelimit = 6
+Lead_Real_Short3_struct = {
+	Default_Priority = 90
+	Default_Buss = `default`
+	NoRepeatFor = 0.02
+	InstanceManagement = stop_oldest
+	InstanceLimit = 6
 }
-lead_real_short4_struct = {
-	default_priority = 90
-	default_buss = `default`
-	norepeatfor = 0.02
-	instancemanagement = stop_oldest
-	instancelimit = 6
+Lead_Real_Short4_struct = {
+	Default_Priority = 90
+	Default_Buss = `default`
+	NoRepeatFor = 0.02
+	InstanceManagement = stop_oldest
+	InstanceLimit = 6
 }
-lead_real_short5_struct = {
-	default_priority = 90
-	default_buss = `default`
-	norepeatfor = 0.02
-	instancemanagement = stop_oldest
-	instancelimit = 6
+Lead_Real_Short5_struct = {
+	Default_Priority = 90
+	Default_Buss = `default`
+	NoRepeatFor = 0.02
+	InstanceManagement = stop_oldest
+	InstanceLimit = 6
 }
-improv_lead_hold1_struct = {
-	default_priority = 90
-	default_buss = `default`
-	norepeatfor = 0.02
-	instancemanagement = stop_oldest
-	instancelimit = 6
+Improv_Lead_Hold1_struct = {
+	Default_Priority = 90
+	Default_Buss = `default`
+	NoRepeatFor = 0.02
+	InstanceManagement = stop_oldest
+	InstanceLimit = 6
 }
-improv_lead_hold2_struct = {
-	default_priority = 90
-	default_buss = `default`
-	norepeatfor = 0.02
-	instancemanagement = stop_oldest
-	instancelimit = 6
+Improv_Lead_Hold2_struct = {
+	Default_Priority = 90
+	Default_Buss = `default`
+	NoRepeatFor = 0.02
+	InstanceManagement = stop_oldest
+	InstanceLimit = 6
 }
-improv_lead_hold3_struct = {
-	default_priority = 90
-	default_buss = `default`
-	norepeatfor = 0.02
-	instancemanagement = stop_oldest
-	instancelimit = 6
+Improv_Lead_Hold3_struct = {
+	Default_Priority = 90
+	Default_Buss = `default`
+	NoRepeatFor = 0.02
+	InstanceManagement = stop_oldest
+	InstanceLimit = 6
 }
-improv_lead_hold4_struct = {
-	default_priority = 90
-	default_buss = `default`
-	norepeatfor = 0.02
-	instancemanagement = stop_oldest
-	instancelimit = 6
+Improv_Lead_Hold4_struct = {
+	Default_Priority = 90
+	Default_Buss = `default`
+	NoRepeatFor = 0.02
+	InstanceManagement = stop_oldest
+	InstanceLimit = 6
 }
-improv_leadb_1beat_struct = {
-	default_priority = 90
-	default_buss = `default`
-	norepeatfor = 0.02
-	instancemanagement = stop_oldest
-	instancelimit = 6
+Improv_LeadB_1beat_struct = {
+	Default_Priority = 90
+	Default_Buss = `default`
+	NoRepeatFor = 0.02
+	InstanceManagement = stop_oldest
+	InstanceLimit = 6
 }
-improv_leadb_2beat1_struct = {
-	default_priority = 90
-	default_buss = `default`
-	norepeatfor = 0.02
-	instancemanagement = stop_oldest
-	instancelimit = 6
+Improv_LeadB_2beat1_struct = {
+	Default_Priority = 90
+	Default_Buss = `default`
+	NoRepeatFor = 0.02
+	InstanceManagement = stop_oldest
+	InstanceLimit = 6
 }
-improv_leadb_2beat2_struct = {
-	default_priority = 90
-	default_buss = `default`
-	norepeatfor = 0.02
-	instancemanagement = stop_oldest
-	instancelimit = 6
+Improv_LeadB_2beat2_struct = {
+	Default_Priority = 90
+	Default_Buss = `default`
+	NoRepeatFor = 0.02
+	InstanceManagement = stop_oldest
+	InstanceLimit = 6
 }
-improv_leadb_8th1_struct = {
-	default_priority = 90
-	default_buss = `default`
-	norepeatfor = 0.02
-	instancemanagement = stop_oldest
-	instancelimit = 6
+Improv_LeadB_8th1_struct = {
+	Default_Priority = 90
+	Default_Buss = `default`
+	NoRepeatFor = 0.02
+	InstanceManagement = stop_oldest
+	InstanceLimit = 6
 }
-improv_leadb_8th2_struct = {
-	default_priority = 90
-	default_buss = `default`
-	norepeatfor = 0.02
-	instancemanagement = stop_oldest
-	instancelimit = 6
+Improv_LeadB_8th2_struct = {
+	Default_Priority = 90
+	Default_Buss = `default`
+	NoRepeatFor = 0.02
+	InstanceManagement = stop_oldest
+	InstanceLimit = 6
 }
 
-script improv_pentatonic_single_note_e5 
-	playsound \{e5
+script Improv_Pentatonic_Single_Note_E5 
+	PlaySound \{E5
 		vol = 100}
 endscript
 
-script improv_pentatonic_single_note_e8 
-	playsound \{e8
+script Improv_Pentatonic_Single_Note_E8 
+	PlaySound \{E8
 		vol = 100}
 endscript
 
-script improv_pentatonic_single_note_a5 
-	playsound \{a5
+script Improv_Pentatonic_Single_Note_A5 
+	PlaySound \{A5
 		vol = 100}
 endscript
 
-script improv_pentatonic_single_note_a7 
-	playsound \{a7
+script Improv_Pentatonic_Single_Note_A7 
+	PlaySound \{A7
 		vol = 100}
 endscript
 
-script improv_pentatonic_single_note_d5 
-	playsound \{d5
+script Improv_Pentatonic_Single_Note_D5 
+	PlaySound \{D5
 		vol = 100}
 endscript
 
-script improv_pentatonic_single_note_d7 
-	playsound \{d7
+script Improv_Pentatonic_Single_Note_D7 
+	PlaySound \{D7
 		vol = 100}
 endscript
 
-script improv_pentatonic_single_note_g5 
-	playsound \{g5
+script Improv_Pentatonic_Single_Note_G5 
+	PlaySound \{G5
 		vol = 100}
 endscript
 
-script improv_pentatonic_single_note_g7 
-	playsound \{g7
+script Improv_Pentatonic_Single_Note_G7 
+	PlaySound \{G7
 		vol = 100}
 endscript
 
-script improv_pentatonic_single_note_b5 
-	playsound \{b5
+script Improv_Pentatonic_Single_Note_B5 
+	PlaySound \{B5
 		vol = 100}
 endscript
 
-script improv_pentatonic_single_note_b8 
-	playsound \{b8
+script Improv_Pentatonic_Single_Note_B8 
+	PlaySound \{B8
 		vol = 100}
 endscript
 
-script improv_pentatonic_single_note_ee5 
-	playsound \{ee5
+script Improv_Pentatonic_Single_Note_EE5 
+	PlaySound \{EE5
 		vol = 100}
 endscript
 
-script improv_pentatonic_single_note_ee8 
-	playsound \{ee8
+script Improv_Pentatonic_Single_Note_EE8 
+	PlaySound \{EE8
 		vol = 100}
 endscript
 
-script improv_pentatonic_chord_a5_d5 
-	playsound \{a5_d5
+script Improv_Pentatonic_Chord_A5_D5 
+	PlaySound \{A5_D5
 		vol = 100}
 endscript
 
-script improv_pentatonic_chord_a7_d7 
-	playsound \{a7_d7
+script Improv_Pentatonic_Chord_A7_D7 
+	PlaySound \{A7_D7
 		vol = 100}
 endscript
 
-script improv_pentatonic_chord_d5_g5 
-	playsound \{d5_g5
+script Improv_Pentatonic_Chord_D5_G5 
+	PlaySound \{D5_G5
 		vol = 100}
 endscript
 
-script improv_pentatonic_chord_d7_g7 
-	playsound \{d7_g7
+script Improv_Pentatonic_Chord_D7_G7 
+	PlaySound \{D7_G7
 		vol = 100}
 endscript
 
-script improv_pentatonic_chord_e5_d7 
-	playsound \{e5_d7
+script Improv_Pentatonic_Chord_E5_D7 
+	PlaySound \{E5_D7
 		vol = 100}
 endscript
 
-script improv_pentatonic_chord_a5_g7 
-	playsound \{a5_g7
+script Improv_Pentatonic_Chord_A5_G7 
+	PlaySound \{A5_G7
 		vol = 100}
 endscript
 
-script improv_pentatonic_chord_d7_g5 
-	playsound \{d7_g5
+script Improv_Pentatonic_Chord_D7_G5 
+	PlaySound \{D7_G5
 		vol = 100}
 endscript
 
-script improv_pentatonic_chord_g5_b5 
-	playsound \{g5_b5
+script Improv_Pentatonic_Chord_G5_B5 
+	PlaySound \{G5_B5
 		vol = 100}
 endscript
 
-script improv_pentatonic_chord_g7_b7 
-	playsound \{g7_b7
+script Improv_Pentatonic_Chord_G7_B7 
+	PlaySound \{G7_B7
 		vol = 100}
 endscript
 
-script improv_pentatonic_chord_b5_ee5 
-	playsound \{b5_ee5
+script Improv_Pentatonic_Chord_B5_EE5 
+	PlaySound \{B5_EE5
 		vol = 100}
 endscript
 
-script improv_pentatonic_chord_b8_ee8 
-	playsound \{b8_ee8
+script Improv_Pentatonic_Chord_B8_EE8 
+	PlaySound \{B8_EE8
 		vol = 100}
 endscript
 
-script improv_pentatonic_chord_g7_ee5 
-	playsound \{g7_ee5
+script Improv_Pentatonic_Chord_G7_EE5 
+	PlaySound \{G7_EE5
 		vol = 100}
 endscript
 
-script improv_pentatonic_chord_b5_ee8 
-	playsound \{b5_ee8
+script Improv_Pentatonic_Chord_B5_EE8 
+	PlaySound \{B5_EE8
 		vol = 100}
 endscript
 
-script improv_pentatonic_chord_g5_ee8 
-	playsound \{g5_ee8
+script Improv_Pentatonic_Chord_G5_EE8 
+	PlaySound \{G5_EE8
 		vol = 100}
 endscript
 
-script improv_lead_bend1 
-	playsound \{lead_bend1
+script Improv_Lead_Bend1 
+	PlaySound \{Lead_Bend1
 		vol = 100}
 endscript
 
-script improv_lead_bend2 
-	playsound \{lead_bend2
+script Improv_Lead_Bend2 
+	PlaySound \{Lead_Bend2
 		vol = 100}
 endscript
 
-script lead_bend_long 
-	playsound \{lead_bend_long
+script Lead_Bend_Long 
+	PlaySound \{Lead_Bend_Long
 		vol = 100}
 endscript
 
-script lead_lick 
-	playsound \{lead_lick
+script Lead_Lick 
+	PlaySound \{Lead_Lick
 		vol = 100}
 endscript
 
-script lead_resolve1 
-	playsound \{lead_resolve1
+script Lead_Resolve1 
+	PlaySound \{Lead_Resolve1
 		vol = 100}
 endscript
 
-script lead_resolve2 
-	playsound \{lead_resolve2
+script Lead_Resolve2 
+	PlaySound \{Lead_Resolve2
 		vol = 100}
 endscript
 
-script lead_resolve_short 
-	playsound \{lead_resolve_short
+script Lead_Resolve_Short 
+	PlaySound \{Lead_Resolve_Short
 		vol = 100}
 endscript
 
-script lead_sliding_lick 
-	playsound \{lead_sliding_lick
+script Lead_Sliding_Lick 
+	PlaySound \{Lead_Sliding_Lick
 		vol = 100}
 endscript
 
-script lead_resolve1_short 
-	playsound \{lead_resolve1_short
+script Lead_Resolve1_Short 
+	PlaySound \{Lead_Resolve1_Short
 		vol = 100}
 endscript
 
-script lead_resolve1_short2 
-	playsound \{lead_resolve1_short2
+script Lead_Resolve1_Short2 
+	PlaySound \{Lead_Resolve1_Short2
 		vol = 100}
 endscript
 
-script lead_real_short1 
-	playsound \{lead_real_short1
+script Lead_Real_Short1 
+	PlaySound \{Lead_Real_Short1
 		vol = 100}
 endscript
 
-script lead_real_short2 
-	playsound \{lead_real_short2
+script Lead_Real_Short2 
+	PlaySound \{Lead_Real_Short2
 		vol = 100}
 endscript
 
-script lead_real_short3 
-	playsound \{lead_real_short3
+script Lead_Real_Short3 
+	PlaySound \{Lead_Real_Short3
 		vol = 100}
 endscript
 
-script lead_real_short4 
-	playsound \{lead_real_short4
+script Lead_Real_Short4 
+	PlaySound \{Lead_Real_Short4
 		vol = 100}
 endscript
 
-script lead_real_short5 
-	playsound \{lead_real_short5
+script Lead_Real_Short5 
+	PlaySound \{Lead_Real_Short5
 		vol = 100}
 endscript
 
-script improv_lead_hold1 
-	playsound \{lead_hold1
+script Improv_Lead_Hold1 
+	PlaySound \{Lead_hold1
 		vol = 100}
 endscript
 
-script improv_lead_hold2 
-	playsound \{lead_hold2
+script Improv_Lead_Hold2 
+	PlaySound \{Lead_hold2
 		vol = 100}
 endscript
 
-script improv_lead_hold3 
-	playsound \{lead_hold3
+script Improv_Lead_Hold3 
+	PlaySound \{Lead_hold3
 		vol = 100}
 endscript
 
-script improv_lead_hold4 
-	playsound \{lead_hold4
+script Improv_Lead_Hold4 
+	PlaySound \{Lead_hold4
 		vol = 100}
 endscript
 
-script improv_leadb_1beat 
-	playsound \{leadb_1beat
+script Improv_LeadB_1beat 
+	PlaySound \{LeadB_1beat
 		vol = 100}
 endscript
 
-script improv_leadb_2beat1 
-	playsound \{leadb_2beat1
+script Improv_LeadB_2beat1 
+	PlaySound \{LeadB_2beat1
 		vol = 100}
 endscript
 
-script improv_leadb_2beat2 
-	playsound \{leadb_2beat2
+script Improv_LeadB_2beat2 
+	PlaySound \{LeadB_2beat2
 		vol = 100}
 endscript
 
-script improv_leadb_8th1 
-	playsound \{leadb_8th1
+script Improv_LeadB_8th1 
+	PlaySound \{LeadB_8th1
 		vol = 100}
 endscript
 
-script improv_leadb_8th2 
-	playsound \{leadb_8th2
+script Improv_LeadB_8th2 
+	PlaySound \{LeadB_8th2
 		vol = 100}
 endscript
-test_tone_impulse_response_struct = {
-	default_priority = 90
-	default_buss = test_tones
-	norepeatfor = 0.02
-	instancemanagement = stop_oldest
-	instancelimit = 6
+Test_Tone_Impulse_Response_struct = {
+	Default_Priority = 90
+	Default_Buss = Test_Tones
+	NoRepeatFor = 0.02
+	InstanceManagement = stop_oldest
+	InstanceLimit = 6
 }
-test_tone_guitar_clean_struct = {
-	default_priority = 90
-	default_buss = test_tones_dsp
-	norepeatfor = 0.02
-	instancemanagement = stop_oldest
-	instancelimit = 6
+Test_Tone_Guitar_Clean_struct = {
+	Default_Priority = 90
+	Default_Buss = Test_Tones_DSP
+	NoRepeatFor = 0.02
+	InstanceManagement = stop_oldest
+	InstanceLimit = 6
 }
-test_tone_guitar_distortion_struct = {
-	default_priority = 90
-	default_buss = test_tones_dsp
-	norepeatfor = 0.02
-	instancemanagement = stop_oldest
-	instancelimit = 6
+Test_Tone_Guitar_Distortion_struct = {
+	Default_Priority = 90
+	Default_Buss = Test_Tones_DSP
+	NoRepeatFor = 0.02
+	InstanceManagement = stop_oldest
+	InstanceLimit = 6
 }
-test_beat_playback_struct = {
-	default_priority = 90
-	default_buss = test_tones_dsp
-	norepeatfor = 0.02
-	instancemanagement = stop_oldest
-	instancelimit = 6
+Test_Beat_Playback_struct = {
+	Default_Priority = 90
+	Default_Buss = Test_Tones_DSP
+	NoRepeatFor = 0.02
+	InstanceManagement = stop_oldest
+	InstanceLimit = 6
 }
 
-script test_tone_impulse_response 
-	playsound \{impulse
+script Test_Tone_Impulse_Response 
+	PlaySound \{impulse
 		pan1x = -1
 		pan1y = 1}
-	playsound \{impulse
+	PlaySound \{impulse
 		pan1x = 1
 		pan1y = 1
-		buss = test_tones_dsp}
+		buss = Test_Tones_DSP}
 endscript
 
-script test_tone_guitar_clean 
-	playsound \{clean_guitar_test_01
+script Test_Tone_Guitar_Clean 
+	PlaySound \{Clean_Guitar_Test_01
 		vol = 70}
 endscript
 
-script test_tone_guitar_distortion 
-	playsound \{distorted_guitar_test_01
+script Test_Tone_Guitar_Distortion 
+	PlaySound \{Distorted_Guitar_Test_01
 		vol = 70}
 endscript
 
-script test_beat_playback 
-	playsound \{gh3_beat_sound
+script Test_Beat_Playback 
+	PlaySound \{GH3_Beat_Sound
 		vol = 400}
 endscript

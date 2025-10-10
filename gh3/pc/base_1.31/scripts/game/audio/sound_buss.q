@@ -1,79 +1,79 @@
-busstree = {
-	master = {
-		user_sfx = {
+BussTree = {
+	Master = {
+		User_Sfx = {
 			ui = {
-				leafnodes = [
+				LeafNodes = [
 					front_end
-					pause_menu
-					ui_star_power
-					ui_battle_mode
-					wrong_notes_player1
-					wrong_notes_player2
+					Pause_Menu
+					UI_Star_Power
+					UI_Battle_Mode
+					Wrong_Notes_Player1
+					Wrong_Notes_Player2
 				]
 			}
-			crowd = {
-				crowd_w_reverb = {
-					leafnodes = [
-						crowd_singalong
-						crowd_one_shots
+			Crowd = {
+				Crowd_W_Reverb = {
+					LeafNodes = [
+						Crowd_Singalong
+						Crowd_One_Shots
 					]
 				}
-				leafnodes = [
-					crowd_beds
-					crowd_cheers
-					crowd_boos
-					crowd_nuetral
-					crowd_star_power
-					crowd_preencore_building
-					crowd_presong_intro
-					crowd_applause
-					crowd_transitions
+				LeafNodes = [
+					Crowd_Beds
+					Crowd_Cheers
+					Crowd_Boos
+					Crowd_Nuetral
+					Crowd_Star_Power
+					Crowd_PreEncore_Building
+					Crowd_PreSong_Intro
+					Crowd_Applause
+					Crowd_Transitions
 				]
 			}
-			leafnodes = [
+			LeafNodes = [
 				`default`
-				test_tones
-				encore_events
+				Test_Tones
+				Encore_Events
 				binkcutscenes
-				practice_band_playback
-				training_vo
+				Practice_Band_Playback
+				Training_VO
 			]
 		}
-		user_band = {
-			band_balance = {
-				leafnodes = [
-					band_playback
-					single_player_rhythm_playback
-					music_frontend
-					music_setlist
-					countoffs
+		User_Band = {
+			Band_Balance = {
+				LeafNodes = [
+					Band_Playback
+					Single_Player_Rhythm_Playback
+					Music_FrontEnd
+					Music_Setlist
+					Countoffs
 				]
 			}
 		}
-		user_guitar = {
-			guitar_balance = {
-				guitar_balance_first_player = {
-					leafnodes = [
-						first_player_lead_playback
+		User_Guitar = {
+			Guitar_Balance = {
+				Guitar_Balance_First_Player = {
+					LeafNodes = [
+						First_Player_Lead_Playback
 					]
 				}
-				guitar_balance_second_player = {
-					leafnodes = [
-						second_player_lead_playback
-						second_player_rhythm_playback
+				Guitar_Balance_Second_Player = {
+					LeafNodes = [
+						Second_Player_Lead_Playback
+						Second_Player_Rhythm_Playback
 					]
 				}
 			}
-			leafnodes = [
-				test_tones_dsp
-				right_notes_player1
-				right_notes_player2
+			LeafNodes = [
+				Test_Tones_DSP
+				Right_Notes_Player1
+				Right_Notes_Player2
 			]
 		}
 	}
 }
-default_bussset = {
-	master = {
+Default_BussSet = {
+	Master = {
 		priority = 5
 		vol = -2.5
 		pitch = 0
@@ -85,12 +85,12 @@ default_bussset = {
 		vol = -4
 		pitch = 0
 	}
-	test_tones = {
+	Test_Tones = {
 		priority = 5
 		vol = 0
 		pitch = 0
 	}
-	user_sfx = {
+	User_Sfx = {
 		priority = 1
 		vol = 0
 		pitch = 0
@@ -102,87 +102,87 @@ default_bussset = {
 		vol = 0
 		pitch = 0
 	}
-	user_band = {
+	User_Band = {
 		priority = 1
 		vol = 0
 		pitch = 0
 	}
-	band_balance = {
+	Band_Balance = {
 		priority = 1
 		vol = 0
 		pitch = 0
 	}
-	user_guitar = {
+	User_Guitar = {
 		priority = 1
 		vol = 0
 		pitch = 0
 	}
-	guitar_balance = {
+	Guitar_Balance = {
 		priority = 1
 		vol = 0
 		pitch = 0
 	}
-	guitar_balance_first_player = {
+	Guitar_Balance_First_Player = {
 		priority = 1
 		vol = 0
 		pitch = 0
 	}
-	guitar_balance_second_player = {
+	Guitar_Balance_Second_Player = {
 		priority = 1
 		vol = 0
 		pitch = 0
 	}
-	right_notes_player1 = {
+	Right_Notes_Player1 = {
 		priority = 1
 		vol = -4
 		pitch = 0
 	}
-	first_player_lead_playback = {
+	First_Player_Lead_Playback = {
 		priority = 1
 		vol = 0
 		pitch = 0
 	}
-	second_player_lead_playback = {
+	Second_Player_Lead_Playback = {
 		priority = 1
 		vol = 0
 		pitch = 0
 	}
-	second_player_rhythm_playback = {
+	Second_Player_Rhythm_Playback = {
 		priority = 1
 		vol = 0
 		pitch = 0
 	}
-	single_player_rhythm_playback = {
+	Single_Player_Rhythm_Playback = {
 		priority = 1
 		vol = 0
 		pitch = 0
 	}
-	wrong_notes_player1 = {
+	Wrong_Notes_Player1 = {
 		priority = 1
 		vol = -3.5
 		pitch = 0
 	}
-	right_notes_player2 = {
+	Right_Notes_Player2 = {
 		priority = 1
 		vol = -4
 		pitch = 0
 	}
-	wrong_notes_player2 = {
+	Wrong_Notes_Player2 = {
 		priority = 1
 		vol = -3.5
 		pitch = 0
 	}
-	band_playback = {
+	Band_Playback = {
 		priority = 1
 		vol = 0
 		pitch = 0
 	}
-	countoffs = {
+	Countoffs = {
 		priority = 1
 		vol = -7
 		pitch = 0
 	}
-	practice_band_playback = {
+	Practice_Band_Playback = {
 		priority = 1
 		vol = -3.0
 		pitch = 0
@@ -192,102 +192,102 @@ default_bussset = {
 		vol = -6
 		pitch = 0
 	}
-	pause_menu = {
+	Pause_Menu = {
 		priority = 1
 		vol = 0
 		pitch = 0
 	}
-	ui_star_power = {
+	UI_Star_Power = {
 		priority = 1
 		vol = -6
 		pitch = 0
 	}
-	ui_battle_mode = {
+	UI_Battle_Mode = {
 		priority = 1
 		vol = 0
 		pitch = 0
 	}
-	crowd = {
+	Crowd = {
 		priority = 1
 		vol = -1
 		pitch = 0
 	}
-	crowd_beds = {
+	Crowd_Beds = {
 		priority = 1
 		vol = -7
 		pitch = 0
 	}
-	crowd_cheers = {
+	Crowd_Cheers = {
 		priority = 1
 		vol = -6
 		pitch = 0
 	}
-	crowd_boos = {
+	Crowd_Boos = {
 		priority = 1
 		vol = -6
 		pitch = 0
 	}
-	crowd_nuetral = {
+	Crowd_Nuetral = {
 		priority = 1
 		vol = -6
 		pitch = 0
 	}
-	crowd_star_power = {
+	Crowd_Star_Power = {
 		priority = 1
 		vol = 0
 		pitch = 0
 	}
-	crowd_preencore_building = {
+	Crowd_PreEncore_Building = {
 		priority = 1
 		vol = 0
 		pitch = 0
 	}
-	crowd_presong_intro = {
+	Crowd_PreSong_Intro = {
 		priority = 1
 		vol = -6
 		pitch = 0
 	}
-	crowd_applause = {
+	Crowd_Applause = {
 		priority = 1
 		vol = 0
 		pitch = 0
 	}
-	crowd_transitions = {
+	Crowd_Transitions = {
 		priority = 1
 		vol = -8
 		pitch = 0
 	}
-	crowd_singalong = {
+	Crowd_Singalong = {
 		priority = 1
 		vol = -100
 		pitch = 0
 	}
-	crowd_w_reverb = {
+	Crowd_W_Reverb = {
 		priority = 1
 		vol = 0
 		pitch = 0
 	}
-	crowd_one_shots = {
+	Crowd_One_Shots = {
 		priority = 1
 		vol = -7.58
 		pitch = 0
 	}
-	music_frontend = {
+	Music_FrontEnd = {
 		priority = 1
 		vol = -11
 		pitch = 0
 	}
-	music_setlist = {
+	Music_Setlist = {
 		priority = 1
 		vol = -2
 		pitch = 0
 	}
-	test_tones_dsp = {
+	Test_Tones_DSP = {
 		priority = 1
 		vol = 0
 		pitch = 0
 	}
-	encore_events = {
+	Encore_Events = {
 		priority = 1
 		vol = 0
 		pitch = 0
@@ -297,100 +297,100 @@ default_bussset = {
 		vol = -5
 		pitch = 0
 	}
-	training_vo = {
+	Training_VO = {
 		priority = 1
 		vol = 0
 		pitch = 0
 	}
 }
-star_power_bussset = {
-	right_notes_player1 = {
+Star_Power_BussSet = {
+	Right_Notes_Player1 = {
 		priority = 1
 		vol = -2.0
 		pitch = 0
 	}
-	right_notes_player2 = {
+	Right_Notes_Player2 = {
 		priority = 1
 		vol = -2.0
 		pitch = 0
 	}
 }
-battlemode_thin_bussset = {
-	right_notes_player1 = {
+BattleMode_Thin_BussSet = {
+	Right_Notes_Player1 = {
 		priority = 1
 		vol = 0
 		pitch = 0
 	}
-	first_player_lead_playback = {
+	First_Player_Lead_Playback = {
 		priority = 1
 		vol = 0
 		pitch = 0
 	}
-	second_player_lead_playback = {
+	Second_Player_Lead_Playback = {
 		priority = 1
 		vol = 0
 		pitch = 0
 	}
-	second_player_rhythm_playback = {
+	Second_Player_Rhythm_Playback = {
 		priority = 1
 		vol = 0
 		pitch = 0
 	}
-	single_player_rhythm_playback = {
+	Single_Player_Rhythm_Playback = {
 		priority = 1
 		vol = 0
 		pitch = 0
 	}
 }
-autowah_bussset = {
-	right_notes_player1 = {
+AutoWah_BussSet = {
+	Right_Notes_Player1 = {
 		priority = 1
 		vol = -10
 		pitch = 0
 	}
 }
-crowdsurgebig_bussset = {
-	crowd_beds = {
+CrowdSurgeBig_BussSet = {
+	Crowd_Beds = {
 		priority = 1
 		vol = 3.0
 		pitch = 0
 	}
 }
-crowdsurgesmall_bussset = {
-	crowd_beds = {
+CrowdSurgeSmall_BussSet = {
+	Crowd_Beds = {
 		priority = 1
 		vol = 1.0
 		pitch = 0
 	}
 }
-crowdnormal_bussset = {
-	crowd_beds = {
+CrowdNormal_BussSet = {
+	Crowd_Beds = {
 		priority = 1
 		vol = -6
 		pitch = 0
 	}
 }
-crowdsingingvolup_bussset = {
-	crowd_singalong = {
+CrowdSingingVolUp_BussSet = {
+	Crowd_Singalong = {
 		priority = 1
 		vol = -8
 		pitch = 0
 	}
 }
-crowdsingingvoldown_bussset = {
-	crowd_singalong = {
+CrowdSingingVolDown_BussSet = {
+	Crowd_Singalong = {
 		priority = 1
 		vol = -100
 		pitch = 0
 	}
 }
-failed_song_pitching_down_bussset = {
-	band_balance = {
+Failed_Song_Pitching_Down_BussSet = {
+	Band_Balance = {
 		priority = 1
 		vol = -10
 		pitch = -8
 	}
-	guitar_balance = {
+	Guitar_Balance = {
 		priority = 1
 		vol = -10
 		pitch = -8

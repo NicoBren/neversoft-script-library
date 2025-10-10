@@ -1,21 +1,21 @@
 
 script create_press_any_button_menu 
-	reacquirecontrollers
+	ReAcquireControllers
 	change \{primary_controller_assigned = 0}
 	change \{main_menu_movie_first_time = 0}
-	soundevent \{event = menu_guitar_lick_sfx}
+	SoundEvent \{event = Menu_Guitar_Lick_SFX}
 	spawnscriptnow \{menu_music_on
 		params = {
 			waitforguitarlick = 1
 		}}
 	create_menu_backdrop \{texture = bootup_copyright_bg}
-	createscreenelement \{type = containerelement
+	CreateScreenElement \{type = ContainerElement
 		parent = root_window
 		id = pab_container
 		pos = (0.0, 0.0)}
 	menu_press_any_button_create_obvious_text
 	spawnscriptnow \{check_for_any_input}
-	if notcd
+	if NotCD
 		if ($show_movies = 0)
 			return
 		endif
@@ -26,12 +26,12 @@ endscript
 script destroy_press_any_button_menu 
 	destroy_menu \{menu_id = pab_container}
 	destroy_menu_backdrop
-	killspawnedscript \{name = check_for_any_input}
-	killspawnedscript \{name = attract_mode_spawner}
+	KillSpawnedScript \{name = check_for_any_input}
+	KillSpawnedScript \{name = attract_mode_spawner}
 endscript
 
 script attract_mode_spawner 
-	if notcd
+	if NotCD
 		wait_time = 5
 	else
 		wait_time = 110
@@ -41,7 +41,7 @@ script attract_mode_spawner
 	if (<wait_time> = 0)
 		break
 	endif
-	wait \{1
+	Wait \{1
 		second}
 	wait_time = (<wait_time> - 1)
 	repeat
@@ -50,7 +50,7 @@ script attract_mode_spawner
 		if ($invalid_controller_lock = 0)
 			break
 		endif
-		wait \{1
+		Wait \{1
 			gameframe}
 		repeat
 	endif
@@ -60,15 +60,15 @@ script attract_mode_spawner
 			play_sound = 0
 		}}
 endscript
-attract_mode_info = [
+Attract_Mode_Info = [
 	{
 		level = load_z_budokan
 		song = cherubrock
 		mode = p1_quickplay
-		p1_character_id = midori
+		p1_character_id = Midori
 		p2_character_id = judy
-		p1_instrument_id = instrument_sg_goddess_blue
-		p2_instrument_id = instrument_les_paul_black
+		p1_instrument_id = Instrument_SG_Goddess_Blue
+		p2_instrument_id = Instrument_Les_Paul_Black
 		p1_difficulty = easy
 		p2_difficulty = easy
 		p1_outfit = 2
@@ -81,9 +81,9 @@ attract_mode_info = [
 		song = evenflow
 		mode = p1_quickplay
 		p1_character_id = judy
-		p2_character_id = casey
-		p1_instrument_id = instrument_firebird_blue
-		p2_instrument_id = instrument_les_paul_black
+		p2_character_id = Casey
+		p1_instrument_id = Instrument_Firebird_Blue
+		p2_instrument_id = Instrument_Les_Paul_Black
 		p1_difficulty = easy
 		p2_difficulty = easy
 		p1_outfit = 2
@@ -95,10 +95,10 @@ attract_mode_info = [
 		level = load_z_wikker
 		song = cultofpersonality
 		mode = p1_quickplay
-		p1_character_id = xavier
+		p1_character_id = Xavier
 		p2_character_id = judy
-		p1_instrument_id = instrument_focus01
-		p2_instrument_id = instrument_les_paul_black
+		p1_instrument_id = Instrument_focus01
+		p2_instrument_id = Instrument_Les_Paul_Black
 		p1_difficulty = easy
 		p2_difficulty = easy
 		p1_outfit = 1
@@ -110,10 +110,10 @@ attract_mode_info = [
 		level = load_z_dive
 		song = anarchyintheuk
 		mode = p1_quickplay
-		p1_character_id = johnny
+		p1_character_id = Johnny
 		p2_character_id = judy
-		p1_instrument_id = instrument_white_vee
-		p2_instrument_id = instrument_les_paul_black
+		p1_instrument_id = Instrument_White_Vee
+		p2_instrument_id = Instrument_Les_Paul_Black
 		p1_difficulty = easy
 		p2_difficulty = easy
 		p1_outfit = 2
@@ -125,10 +125,10 @@ attract_mode_info = [
 		level = load_z_artdeco
 		song = knightsofcydonia
 		mode = p1_quickplay
-		p1_character_id = casey
+		p1_character_id = Casey
 		p2_character_id = judy
-		p1_instrument_id = instrument_focus01
-		p2_instrument_id = instrument_les_paul_black
+		p1_instrument_id = Instrument_focus01
+		p2_instrument_id = Instrument_Les_Paul_Black
 		p1_difficulty = easy
 		p2_difficulty = easy
 		p1_outfit = 1
@@ -142,8 +142,8 @@ attract_mode_info = [
 		mode = p1_quickplay
 		p1_character_id = judy
 		p2_character_id = judy
-		p1_instrument_id = instrument_epipaul01
-		p2_instrument_id = instrument_les_paul_black
+		p1_instrument_id = Instrument_EpiPaul01
+		p2_instrument_id = Instrument_Les_Paul_Black
 		p1_difficulty = easy
 		p2_difficulty = easy
 		p1_outfit = 1
@@ -155,10 +155,10 @@ attract_mode_info = [
 		level = load_z_prison
 		song = mississippiqueen
 		mode = p1_quickplay
-		p1_character_id = casey
+		p1_character_id = Casey
 		p2_character_id = judy
-		p1_instrument_id = instrument_wylde
-		p2_instrument_id = instrument_les_paul_black
+		p1_instrument_id = Instrument_wylde
+		p2_instrument_id = Instrument_Les_Paul_Black
 		p1_difficulty = easy
 		p2_difficulty = easy
 		p1_outfit = 2
@@ -170,10 +170,10 @@ attract_mode_info = [
 		level = load_z_wikker
 		song = paintitblack
 		mode = p1_quickplay
-		p1_character_id = johnny
+		p1_character_id = Johnny
 		p2_character_id = judy
-		p1_instrument_id = instrument_es400_red
-		p2_instrument_id = instrument_les_paul_black
+		p1_instrument_id = Instrument_ES400_Red
+		p2_instrument_id = Instrument_Les_Paul_Black
 		p1_difficulty = easy
 		p2_difficulty = easy
 		p1_outfit = 1
@@ -185,10 +185,10 @@ attract_mode_info = [
 		level = load_z_party
 		song = missmurder
 		mode = p1_quickplay
-		p1_character_id = lars
+		p1_character_id = Lars
 		p2_character_id = judy
-		p1_instrument_id = instrument_silver_vee
-		p2_instrument_id = instrument_les_paul_black
+		p1_instrument_id = Instrument_Silver_Vee
+		p2_instrument_id = Instrument_Les_Paul_Black
 		p1_difficulty = easy
 		p2_difficulty = easy
 		p1_outfit = 2
@@ -200,10 +200,10 @@ attract_mode_info = [
 		level = load_z_budokan
 		song = sabotage
 		mode = p1_quickplay
-		p1_character_id = casey
+		p1_character_id = Casey
 		p2_character_id = judy
-		p1_instrument_id = instrument_focus02
-		p2_instrument_id = instrument_les_paul_black
+		p1_instrument_id = Instrument_focus02
+		p2_instrument_id = Instrument_Les_Paul_Black
 		p1_difficulty = easy
 		p2_difficulty = easy
 		p1_outfit = 1
@@ -215,10 +215,10 @@ attract_mode_info = [
 		level = load_z_artdeco
 		song = theseeker
 		mode = p1_quickplay
-		p1_character_id = xavier
+		p1_character_id = Xavier
 		p2_character_id = judy
-		p1_instrument_id = instrument_marauder_nato
-		p2_instrument_id = instrument_les_paul_black
+		p1_instrument_id = Instrument_Marauder_NATO
+		p2_instrument_id = Instrument_Les_Paul_Black
 		p1_difficulty = easy
 		p2_difficulty = easy
 		p1_outfit = 1
@@ -230,10 +230,10 @@ attract_mode_info = [
 		level = load_z_dive
 		song = pridenjoy
 		mode = p1_quickplay
-		p1_character_id = xavier
+		p1_character_id = Xavier
 		p2_character_id = judy
-		p1_instrument_id = instrument_focus02
-		p2_instrument_id = instrument_les_paul_black
+		p1_instrument_id = Instrument_focus02
+		p2_instrument_id = Instrument_Les_Paul_Black
 		p1_difficulty = easy
 		p2_difficulty = easy
 		p1_outfit = 1
@@ -247,8 +247,8 @@ attract_mode_info = [
 		mode = p1_quickplay
 		p1_character_id = judy
 		p2_character_id = judy
-		p1_instrument_id = instrument_les_paul_black
-		p2_instrument_id = instrument_les_paul_black
+		p1_instrument_id = Instrument_Les_Paul_Black
+		p2_instrument_id = Instrument_Les_Paul_Black
 		p1_difficulty = easy
 		p2_difficulty = easy
 		p1_outfit = 2
@@ -260,10 +260,10 @@ attract_mode_info = [
 		level = load_z_dive
 		song = bullsonparade
 		mode = p1_quickplay
-		p1_character_id = casey
+		p1_character_id = Casey
 		p2_character_id = judy
-		p1_instrument_id = instrument_focus01
-		p2_instrument_id = instrument_les_paul_black
+		p1_instrument_id = Instrument_focus01
+		p2_instrument_id = Instrument_Les_Paul_Black
 		p1_difficulty = easy
 		p2_difficulty = easy
 		p1_outfit = 1
@@ -275,10 +275,10 @@ attract_mode_info = [
 		level = load_z_party
 		song = prayeroftherefugee
 		mode = p1_quickplay
-		p1_character_id = johnny
+		p1_character_id = Johnny
 		p2_character_id = judy
-		p1_instrument_id = instrument_les_paul_red
-		p2_instrument_id = instrument_les_paul_black
+		p1_instrument_id = Instrument_Les_Paul_Red
+		p2_instrument_id = Instrument_Les_Paul_Black
 		p1_difficulty = easy
 		p2_difficulty = easy
 		p1_outfit = 1
@@ -292,8 +292,8 @@ attract_mode_info = [
 		mode = p1_quickplay
 		p1_character_id = axel
 		p2_character_id = judy
-		p1_instrument_id = instrument_focus01
-		p2_instrument_id = instrument_les_paul_black
+		p1_instrument_id = Instrument_focus01
+		p2_instrument_id = Instrument_Les_Paul_Black
 		p1_difficulty = easy
 		p2_difficulty = easy
 		p1_outfit = 2
@@ -307,8 +307,8 @@ attract_mode_info = [
 		mode = p1_quickplay
 		p1_character_id = judy
 		p2_character_id = judy
-		p1_instrument_id = instrument_explorer_black
-		p2_instrument_id = instrument_les_paul_black
+		p1_instrument_id = Instrument_Explorer_Black
+		p2_instrument_id = Instrument_Les_Paul_Black
 		p1_difficulty = easy
 		p2_difficulty = easy
 		p1_outfit = 1
@@ -322,8 +322,8 @@ attract_mode_info = [
 		mode = p1_quickplay
 		p1_character_id = axel
 		p2_character_id = judy
-		p1_instrument_id = instrument_wyldeb
-		p2_instrument_id = instrument_les_paul_black
+		p1_instrument_id = Instrument_wyldeb
+		p2_instrument_id = Instrument_Les_Paul_Black
 		p1_difficulty = easy
 		p2_difficulty = easy
 		p1_outfit = 1
@@ -335,10 +335,10 @@ attract_mode_info = [
 		level = load_z_prison
 		song = paranoid
 		mode = p1_quickplay
-		p1_character_id = lars
+		p1_character_id = Lars
 		p2_character_id = judy
-		p1_instrument_id = instrument_ebony_vee
-		p2_instrument_id = instrument_les_paul_black
+		p1_instrument_id = Instrument_Ebony_Vee
+		p2_instrument_id = Instrument_Les_Paul_Black
 		p1_difficulty = easy
 		p2_difficulty = easy
 		p1_outfit = 2
@@ -348,12 +348,12 @@ attract_mode_info = [
 	}
 	{
 		level = load_z_prison
-		song = talkdirtytome
+		song = TalkDirtyToMe
 		mode = p1_quickplay
-		p1_character_id = izzy
+		p1_character_id = Izzy
 		p2_character_id = judy
-		p1_instrument_id = instrument_firebird_cherry
-		p2_instrument_id = instrument_les_paul_black
+		p1_instrument_id = Instrument_Firebird_Cherry
+		p2_instrument_id = Instrument_Les_Paul_Black
 		p1_difficulty = easy
 		p2_difficulty = easy
 		p1_outfit = 1
@@ -368,30 +368,30 @@ is_attract_mode = 0
 script create_attract_mode 
 	change \{is_attract_mode = 1}
 	create_loading_screen
-	soundbussunlock \{guitar_balance}
-	soundbussunlock \{band_balance}
-	setsoundbussparams \{guitar_balance = {
+	SoundBussUnlock \{Guitar_Balance}
+	SoundBussUnlock \{Band_Balance}
+	SetSoundBussParams \{Guitar_Balance = {
 			vol = -100.0
 		}
 		time = 1.5}
-	setsoundbussparams \{band_balance = {
+	SetSoundBussParams \{Band_Balance = {
 			vol = -100.0
 		}
 		time = 1.5}
-	soundbusslock \{guitar_balance}
-	soundbusslock \{band_balance}
+	SoundBussLock \{Guitar_Balance}
+	SoundBussLock \{Band_Balance}
 	kill_start_key_binding
-	getarraysize \{$attract_mode_info}
+	GetArraySize \{$Attract_Mode_Info}
 	if (<array_size> = 1)
 		attract_mode_index = 0
 	else
 		if ($last_attract_mode >= 0)
-			getrandomvalue name = attract_mode_index integer a = 0 b = (<array_size> - 2)
+			GetRandomValue name = attract_mode_index Integer a = 0 b = (<array_size> - 2)
 			if (<attract_mode_index> >= $last_attract_mode)
 				attract_mode_index = (<attract_mode_index> + 1)
 			endif
 		else
-			getrandomvalue name = attract_mode_index integer a = 0 b = (<array_size> - 1)
+			GetRandomValue name = attract_mode_index Integer a = 0 b = (<array_size> - 1)
 		endif
 		change last_attract_mode = <attract_mode_index>
 	endif
@@ -399,7 +399,7 @@ script create_attract_mode
 	p2_outfit = 1
 	p1_style = 1
 	p2_style = 1
-	addparams ($attract_mode_info [<attract_mode_index>])
+	AddParams ($Attract_Mode_Info [<attract_mode_index>])
 	change \{structurename = player1_status
 		bot_play = 1}
 	change \{structurename = player2_status
@@ -419,37 +419,37 @@ script create_attract_mode
 	change structurename = player2_status outfit = <p2_outfit>
 	change structurename = player1_status style = <p1_style>
 	change structurename = player2_status style = <p2_style>
-	soundbussunlock \{master}
-	setsoundbussparams \{master = {
+	SoundBussUnlock \{Master}
+	SetSoundBussParams \{Master = {
 			vol = -11.0
 		}
 		time = 0.5}
-	soundbusslock \{master}
+	SoundBussLock \{Master}
 	mark_unsafe_for_shutdown
-	unpausegame
-	load_venue
-	start_gem_scroller song_name = <song> difficulty = <p1_difficulty> difficulty2 = <p2_difficulty> starttime = 0 device_num = ($player1_status.controller)
+	UnPauseGame
+	Load_Venue
+	start_gem_scroller song_name = <song> difficulty = <p1_difficulty> difficulty2 = <p2_difficulty> StartTime = 0 device_num = ($player1_status.controller)
 	create_attract_mode_text
 	stoprendering
 	destroy_loading_screen
-	soundbussunlock \{guitar_balance}
-	soundbussunlock \{band_balance}
-	setsoundbussparams {guitar_balance = {vol = (($default_bussset.guitar_balance.vol) - 1.5)}}
-	setsoundbussparams {band_balance = {vol = (($default_bussset.band_balance.vol) - 1.5)}}
-	soundbusslock \{guitar_balance}
-	soundbusslock \{band_balance}
+	SoundBussUnlock \{Guitar_Balance}
+	SoundBussUnlock \{Band_Balance}
+	SetSoundBussParams {Guitar_Balance = {vol = (($Default_BussSet.Guitar_Balance.vol) - 1.5)}}
+	SetSoundBussParams {Band_Balance = {vol = (($Default_BussSet.Band_Balance.vol) - 1.5)}}
+	SoundBussLock \{Guitar_Balance}
+	SoundBussLock \{Band_Balance}
 	spawnscriptnow \{check_for_attract_mode_input}
 endscript
 
 script create_attract_mode_text 
-	createscreenelement \{type = containerelement
+	CreateScreenElement \{type = ContainerElement
 		parent = root_window
 		id = am_container
 		pos = (0.0, 0.0)}
 	text = "PRESS ANY BUTTON TO ROCK..."
 	text_pos = (640.0, 637.0)
-	createscreenelement {
-		type = textelement
+	CreateScreenElement {
+		type = TextElement
 		text = <text>
 		pos = <text_pos>
 		parent = am_container
@@ -461,9 +461,9 @@ script create_attract_mode_text
 		shadow_offs = (3.0, 3.0)
 		shadow_rgba = [110 20 80 250]
 	}
-	createscreenelement \{type = spriteelement
+	CreateScreenElement \{type = SpriteElement
 		parent = am_container
-		texture = logo_gh3_lor_256
+		texture = logo_GH3_LoR_256
 		dims = (225.0, 225.0)
 		pos = (640.0, 490.0)
 		just = [
@@ -474,22 +474,22 @@ endscript
 
 script destroy_attract_mode_text 
 	destroy_menu \{menu_id = am_container}
-	stopallsounds
-	soundbussunlock \{master}
-	setsoundbussparams {master = {vol = ($default_bussset.master.vol)}}
-	soundbusslock \{master}
+	StopAllSounds
+	SoundBussUnlock \{Master}
+	SetSoundBussParams {Master = {vol = ($Default_BussSet.Master.vol)}}
+	SoundBussLock \{Master}
 endscript
 
 script check_for_attract_mode_input 
 	begin
-	getbuttonspressed
+	GetButtonsPressed
 	if NOT (<makes> = 0)
 		break
 	endif
 	if NOT ($invite_controller = -1)
 		break
 	endif
-	wait \{1
+	Wait \{1
 		gameframe}
 	repeat
 	wait_for_safe_shutdown
@@ -500,15 +500,15 @@ script check_for_attract_mode_input
 endscript
 
 script destroy_attract_mode 
-	pausegame
+	PauseGame
 	destroy_attract_mode_text
-	killspawnedscript \{name = check_for_attract_mode_input}
+	KillSpawnedScript \{name = check_for_attract_mode_input}
 	kill_gem_scroller
 	change \{structurename = player1_status
 		bot_play = 0}
 	change \{structurename = player2_status
 		bot_play = 0}
-	unpausegame
+	UnPauseGame
 	kill_start_key_binding
 	change \{is_attract_mode = 0}
 endscript
@@ -519,19 +519,19 @@ script check_for_any_input \{button1 = {
 		button2 = {
 		}}
 	begin
-	getbuttonspressed
+	GetButtonsPressed
 	if (<makes> = 0)
 		break
 	endif
-	wait \{1
+	Wait \{1
 		gameframe}
 	repeat
 	begin
-	if NOT iswinport
-		if isstandardguitarcontrollerpluggedin
-			if english
-				notify_box scale1 = (0.6, 0.75) scale2 = (0.5, 0.6) container_pos = (0.0, 350.0) container_id = notify_invalid_device line1 = "An unsupported guitar peripheral has been detected." line2 = "Connect either a Guitar Hero guitar or" line3 = "Xbox 360 controller and press START to continue." menu_z = 510000 formattext textname = pakname '%s_text.pak' s = <stem>
-			elseif french
+	if NOT IsWinPort
+		if IsStandardGuitarControllerPluggedIn
+			if English
+				notify_box scale1 = (0.6, 0.75) scale2 = (0.5, 0.6) container_pos = (0.0, 350.0) container_id = notify_invalid_device line1 = "An unsupported guitar peripheral has been detected." line2 = "Connect either a Guitar Hero guitar or" line3 = "Xbox 360 controller and press START to continue." menu_z = 510000 FormatText TextName = pakname '%s_text.pak' s = <stem>
+			elseif French
 				notify_box \{scale1 = (0.6, 0.75)
 					scale2 = (0.5, 0.6)
 					container_pos = (0.0, 350.0)
@@ -540,7 +540,7 @@ script check_for_any_input \{button1 = {
 					line2 = "Veuillez connecter une manette guitare Guitar Hero ou une"
 					line3 = "manette Xbox 360, et appuyez sur Start pour continuer."
 					menu_z = 510000}
-			elseif italian
+			elseif Italian
 				notify_box \{scale1 = (0.6, 0.75)
 					scale2 = (0.5, 0.6)
 					container_pos = (0.0, 350.0)
@@ -549,7 +549,7 @@ script check_for_any_input \{button1 = {
 					line2 = "Connettere una chitarra di Guitar Hero o"
 					line3 = "un Controller Xbox 360 e premere START per continuare."
 					menu_z = 510000}
-			elseif german
+			elseif German
 				notify_box \{scale1 = (0.38000003, 0.75)
 					scale2 = (0.5, 0.6)
 					container_pos = (0.0, 350.0)
@@ -558,7 +558,7 @@ script check_for_any_input \{button1 = {
 					line2 = "Schließen Sie entweder eine Guitar Hero-Gitarre oder einen"
 					line3 = "Xbox 360 Controller an und drücken Sie START, um fortzufahren."
 					menu_z = 510000}
-			elseif spanish
+			elseif Spanish
 				notify_box \{scale1 = (0.45000002, 0.75)
 					scale2 = (0.5, 0.6)
 					container_pos = (0.0, 350.0)
@@ -568,7 +568,7 @@ script check_for_any_input \{button1 = {
 					line3 = "el Mando Xbox 360 y pulsa START para continuar."
 					menu_z = 510000}
 			endif
-			createscreenelement \{type = spriteelement
+			CreateScreenElement \{type = SpriteElement
 				id = controller_fader
 				parent = root_window
 				texture = black
@@ -588,14 +588,14 @@ script check_for_any_input \{button1 = {
 				alpha = 0.7}
 			change \{invalid_controller_lock = 1}
 			begin
-			if NOT isstandardguitarcontrollerpluggedin
+			if NOT IsStandardGuitarControllerPluggedIn
 				break
 			endif
-			wait \{1
+			Wait \{1
 				gameframe}
 			repeat
 			kill_notify_box \{container_id = notify_invalid_device}
-			destroyscreenelement \{id = controller_fader}
+			DestroyScreenElement \{id = controller_fader}
 			change \{invalid_controller_lock = 0}
 		endif
 	endif
@@ -604,14 +604,14 @@ script check_for_any_input \{button1 = {
 		break
 	endif
 	continue = 0
-	if gotparam \{use_primary_controller}
-		if guitarcontrollermake <button1> ($primary_controller)
+	if GotParam \{use_primary_controller}
+		if GuitarControllerMake <button1> ($primary_controller)
 			<continue> = 1
-		elseif guitarcontrollermake <button2> ($primary_controller)
+		elseif GuitarControllerMake <button2> ($primary_controller)
 			<continue> = 1
 		endif
 	else
-		getbuttonspressed <button1>
+		GetButtonsPressed <button1>
 		if NOT (<makes> = 0)
 			<continue> = 1
 		endif
@@ -620,7 +620,7 @@ script check_for_any_input \{button1 = {
 		spawnscriptnow ui_flow_manager_respond_to_action params = {action = continue flow_state_func_params = {device_num = <device_num>}}
 		break
 	endif
-	wait \{1
+	Wait \{1
 		gameframe}
 	repeat
 endscript
@@ -628,8 +628,8 @@ endscript
 script menu_press_any_button_create_obvious_text 
 	text = "PRESS ANY BUTTON TO ROCK..."
 	text_pos = (670.0, 425.0)
-	createscreenelement {
-		type = textblockelement
+	CreateScreenElement {
+		type = TextBlockElement
 		parent = pab_container
 		font = text_a6
 		text = <text>

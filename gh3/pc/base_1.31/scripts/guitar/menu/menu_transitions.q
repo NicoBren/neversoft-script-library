@@ -1,15 +1,15 @@
 transitions_locked = 0
 
 script destroy_menu_transition 
-	if screenelementexists \{id = transition_container}
-		root_window :setprops \{just = [
+	if ScreenElementExists \{id = transition_container}
+		root_window :SetProps \{just = [
 				left
 				top
 			]}
-		root_window :setprops \{alpha = 1
+		root_window :SetProps \{alpha = 1
 			scale = (1.0, 1.0)
 			pos = (0.0, 0.0)}
-		destroyscreenelement \{id = transition_container}
+		DestroyScreenElement \{id = transition_container}
 		change \{transitions_locked = 0}
 	endif
 endscript
@@ -17,12 +17,12 @@ endscript
 script menu_transition_out_right \{transition_time = 0.125}
 	destroy_menu_transition
 	change \{transitions_locked = 1}
-	createscreenelement \{id = transition_container
-		type = containerelement
+	CreateScreenElement \{id = transition_container
+		type = ContainerElement
 		parent = root_window
 		pos = (0.0, 0.0)
 		alpha = 0}
-	createscreenelement \{type = spriteelement
+	CreateScreenElement \{type = SpriteElement
 		parent = transition_container
 		texture = white
 		just = [
@@ -38,30 +38,30 @@ script menu_transition_out_right \{transition_time = 0.125}
 		]
 		dims = (1280.0, 720.0)
 		z_priority = 5000}
-	if iswinport
+	if IsWinPort
 	else
-		root_window :setprops \{just = [
+		root_window :SetProps \{just = [
 				right
 				top
 			]}
-		runscriptonscreenelement id = root_window fade_element params = {pos = (1280.0, 0.0) alpha = 1 time = <transition_time> scale = (2.0, 1.0)}
-		transition_container :domorph alpha = 1 time = <transition_time>
+		RunScriptOnScreenElement id = root_window fade_element params = {pos = (1280.0, 0.0) alpha = 1 time = <transition_time> scale = (2.0, 1.0)}
+		transition_container :DoMorph alpha = 1 time = <transition_time>
 	endif
 endscript
 
 script menu_transition_in_right \{transition_time = 0.125}
-	root_window :setprops \{just = [
+	root_window :SetProps \{just = [
 			left
 			top
 		]}
-	root_window :setprops \{alpha = 1
+	root_window :SetProps \{alpha = 1
 		scale = (2.0, 1.0)
 		pos = (0.0, 0.0)}
-	runscriptonscreenelement id = transition_container fade_element params = {pos = (0.0, 0.0) alpha = 0 time = <transition_time>}
-	if iswinport
-		root_window :domorph alpha = 1 scale = 1 pos = (0.0, 0.0) time = <transition_time>
+	RunScriptOnScreenElement id = transition_container fade_element params = {pos = (0.0, 0.0) alpha = 0 time = <transition_time>}
+	if IsWinPort
+		root_window :DoMorph alpha = 1 scale = 1 pos = (0.0, 0.0) time = <transition_time>
 	else
-		root_window :domorph alpha = 1 scale = 1 time = <transition_time>
+		root_window :DoMorph alpha = 1 scale = 1 time = <transition_time>
 	endif
 	change \{transitions_locked = 0}
 	destroy_menu_transition
@@ -70,12 +70,12 @@ endscript
 script menu_transition_out_left \{transition_time = 0.125}
 	destroy_menu_transition
 	change \{transitions_locked = 1}
-	createscreenelement \{id = transition_container
-		type = containerelement
+	CreateScreenElement \{id = transition_container
+		type = ContainerElement
 		parent = root_window
 		pos = (0.0, 0.0)
 		alpha = 0}
-	createscreenelement \{type = spriteelement
+	CreateScreenElement \{type = SpriteElement
 		parent = transition_container
 		texture = white
 		just = [
@@ -91,31 +91,31 @@ script menu_transition_out_left \{transition_time = 0.125}
 		]
 		dims = (1280.0, 720.0)
 		z_priority = 5000}
-	root_window :setprops \{just = [
+	root_window :SetProps \{just = [
 			left
 			top
 		]}
-	if iswinport
-		runscriptonscreenelement id = root_window fade_element params = {pos = (0.0, 0.0) alpha = 1 time = <transition_time> scale = (2.0, 1.0)}
-		transition_container :domorph pos = (0.0, 0.0) alpha = 1 time = <transition_time>
+	if IsWinPort
+		RunScriptOnScreenElement id = root_window fade_element params = {pos = (0.0, 0.0) alpha = 1 time = <transition_time> scale = (2.0, 1.0)}
+		transition_container :DoMorph pos = (0.0, 0.0) alpha = 1 time = <transition_time>
 	else
-		runscriptonscreenelement id = root_window fade_element params = {alpha = 1 time = <transition_time> scale = (2.0, 1.0)}
-		transition_container :domorph alpha = 1 time = <transition_time>
+		RunScriptOnScreenElement id = root_window fade_element params = {alpha = 1 time = <transition_time> scale = (2.0, 1.0)}
+		transition_container :DoMorph alpha = 1 time = <transition_time>
 	endif
 endscript
 
 script menu_transition_in_left \{transition_time = 0.125}
-	if iswinport
+	if IsWinPort
 	else
-		root_window :setprops \{just = [
+		root_window :SetProps \{just = [
 				right
 				top
 			]}
-		root_window :setprops \{pos = (1280.0, 0.0)
+		root_window :SetProps \{pos = (1280.0, 0.0)
 			alpha = 1
 			scale = (2.0, 1.0)}
-		runscriptonscreenelement id = transition_container fade_element params = {pos = (0.0, 0.0) alpha = 0 time = <transition_time>}
-		root_window :domorph alpha = 1 scale = 1 pos = (1280.0, 0.0) time = <transition_time>
+		RunScriptOnScreenElement id = transition_container fade_element params = {pos = (0.0, 0.0) alpha = 0 time = <transition_time>}
+		root_window :DoMorph alpha = 1 scale = 1 pos = (1280.0, 0.0) time = <transition_time>
 	endif
 	destroy_menu_transition
 	change \{transitions_locked = 0}
@@ -125,5 +125,5 @@ script fade_element \{time = 0
 		pos = (0.0, 0.0)
 		alpha = 0
 		scale = 1}
-	domorph id = <id> alpha = <alpha> time = <time> pos = <pos> scale = <scale>
+	DoMorph id = <id> alpha = <alpha> time = <time> pos = <pos> scale = <scale>
 endscript

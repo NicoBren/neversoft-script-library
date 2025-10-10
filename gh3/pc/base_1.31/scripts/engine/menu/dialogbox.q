@@ -42,17 +42,17 @@ script create_snazzy_dialog_box \{title = "Title"
 		z_priority = 40
 		no_bg
 		destroy_on_event = 1}
-	if screenelementexists id = <anchor_id>
+	if ScreenElementExists id = <anchor_id>
 		dialog_box_exit anchor_id = <anchor_id>
 	endif
-	if NOT innetgame
-		if NOT infrontend
+	if NOT InNetGame
+		if NOT InFrontend
 		endif
 	endif
-	setscreenelementlock \{id = root_window
+	SetScreenElementLock \{id = root_window
 		off}
-	createscreenelement {
-		type = containerelement
+	CreateScreenElement {
+		type = ContainerElement
 		parent = root_window
 		id = <anchor_id>
 		dims = (640.0, 480.0)
@@ -62,8 +62,8 @@ script create_snazzy_dialog_box \{title = "Title"
 		priority = <priority>
 		exclusive_device = <exclusive_device>
 	}
-	createscreenelement {
-		type = containerelement
+	CreateScreenElement {
+		type = ContainerElement
 		id = <container_id>
 		parent = <anchor_id>
 		dims = (640.0, 480.0)
@@ -72,8 +72,8 @@ script create_snazzy_dialog_box \{title = "Title"
 		z_priority = <z_priority>
 		priority = <priority>
 	}
-	createscreenelement {
-		type = containerelement
+	CreateScreenElement {
+		type = ContainerElement
 		parent = <anchor_id>
 		dims = (640.0, 480.0)
 		pos = (320.0, 240.0)
@@ -81,19 +81,19 @@ script create_snazzy_dialog_box \{title = "Title"
 		z_priority = <z_priority>
 	}
 	<bg_anchor_id> = <id>
-	if gotparam \{from_cas}
+	if GotParam \{from_cas}
 		make_cas_bg_elements parent = <bg_anchor_id>
 	else
-		if infrontend
-			if NOT gotparam \{no_bg}
+		if InFrontend
+			if NOT GotParam \{no_bg}
 			endif
 		endif
 	endif
-	if gotparam \{forced_pos}
+	if GotParam \{forced_pos}
 		pos = <forced_pos>
 	endif
-	createscreenelement {
-		type = vmenu
+	CreateScreenElement {
+		type = VMenu
 		parent = <container_id>
 		id = <vmenu_id>
 		pos = <pos>
@@ -104,10 +104,10 @@ script create_snazzy_dialog_box \{title = "Title"
 		padding_scale = 0.8
 		exclusive_device = <exclusive_device>
 	}
-	if NOT gotparam \{no_helper_text}
-		if gotparam \{buttons}
-			getarraysize <buttons>
-			if gotparam \{pad_back_script}
+	if NOT GotParam \{no_helper_text}
+		if GotParam \{buttons}
+			GetArraySize <buttons>
+			if GotParam \{pad_back_script}
 				if (<array_size> = 1)
 					create_helper_text {anchor_id = <helper_text_anchor_id>
 						parent = <bg_anchor_id>
@@ -142,8 +142,8 @@ script create_snazzy_dialog_box \{title = "Title"
 			endif
 		endif
 	endif
-	createscreenelement {
-		type = textelement
+	CreateScreenElement {
+		type = TextElement
 		parent = <vmenu_id>
 		local_id = dbox_title
 		font = <title_font>
@@ -156,11 +156,11 @@ script create_snazzy_dialog_box \{title = "Title"
 		padding_scale = 0.55
 	}
 	<title_id> = <id>
-	getscreenelementdims id = <title_id>
-	if gotparam \{use_goalmenu_bg}
+	GetScreenElementDims id = <title_id>
+	if GotParam \{use_goalmenu_bg}
 		bg_rgba = [20 30 40 80]
-		createscreenelement {
-			type = spriteelement
+		CreateScreenElement {
+			type = SpriteElement
 			parent = {<vmenu_id> child = dbox_title}
 			texture = dialog_frame
 			just = [center top]
@@ -170,8 +170,8 @@ script create_snazzy_dialog_box \{title = "Title"
 			z_priority = (<z_priority> -1)
 			flip_v
 		}
-		createscreenelement {
-			type = spriteelement
+		CreateScreenElement {
+			type = SpriteElement
 			parent = {<vmenu_id> child = dbox_title}
 			texture = dialog_middle
 			just = [center top]
@@ -181,8 +181,8 @@ script create_snazzy_dialog_box \{title = "Title"
 			z_priority = (<z_priority> -1)
 			flip_v
 		}
-		createscreenelement {
-			type = spriteelement
+		CreateScreenElement {
+			type = SpriteElement
 			parent = {<vmenu_id> child = dbox_title}
 			texture = dialog_frame_b
 			just = [center top]
@@ -192,8 +192,8 @@ script create_snazzy_dialog_box \{title = "Title"
 			z_priority = (<z_priority> -1)
 			flip_v
 		}
-		createscreenelement {
-			type = spriteelement
+		CreateScreenElement {
+			type = SpriteElement
 			parent = {<vmenu_id> child = dbox_title}
 			texture = menu_selection_white_02
 			just = [center top]
@@ -202,8 +202,8 @@ script create_snazzy_dialog_box \{title = "Title"
 			scale = (1.5, 1.0)
 			z_priority = (<z_priority> -1)
 		}
-		createscreenelement {
-			type = spriteelement
+		CreateScreenElement {
+			type = SpriteElement
 			parent = {<vmenu_id> child = dbox_title}
 			texture = dialog_frame_b
 			just = [center top]
@@ -213,8 +213,8 @@ script create_snazzy_dialog_box \{title = "Title"
 			z_priority = (<z_priority> -1)
 		}
 	endif
-	createscreenelement {
-		type = textblockelement
+	CreateScreenElement {
+		type = TextBlockElement
 		parent = <vmenu_id>
 		font = <text_font>
 		text = <text>
@@ -228,24 +228,24 @@ script create_snazzy_dialog_box \{title = "Title"
 		padding_scale = 0.65000004
 	}
 	<text_id> = <id>
-	getscreenelementdims id = <text_id>
-	if gotparam \{buttons}
-		createscreenelement {
-			type = containerelement
+	GetScreenElementDims id = <text_id>
+	if GotParam \{buttons}
+		CreateScreenElement {
+			type = ContainerElement
 			parent = <vmenu_id>
 			dims = (<text_dims> + (50.0, 40.0))
 			not_focusable
 		}
 	endif
-	if gotparam \{logo}
-		createscreenelement {
-			type = containerelement
+	if GotParam \{logo}
+		CreateScreenElement {
+			type = ContainerElement
 			parent = <vmenu_id>
 			just = [center center]
 			dims = (0.0, 88.0)
 		}
-		createscreenelement {
-			type = spriteelement
+		CreateScreenElement {
+			type = SpriteElement
 			parent = <id>
 			texture = <logo>
 			just = [center top]
@@ -254,19 +254,19 @@ script create_snazzy_dialog_box \{title = "Title"
 		}
 		no_icon = no_icon
 	endif
-	if gotparam \{pad_back_script}
-		setscreenelementprops {
+	if GotParam \{pad_back_script}
+		SetScreenElementProps {
 			id = <vmenu_id>
 			event_handlers = [{pad_back <pad_back_script> params = <pad_back_params>}]
 			replace_handlers
 		}
 	endif
-	setscreenelementlock id = <vmenu_id> on
-	setscreenelementlock id = <vmenu_id> off
-	getscreenelementdims id = <vmenu_id>
+	SetScreenElementLock id = <vmenu_id> on
+	SetScreenElementLock id = <vmenu_id> off
+	GetScreenElementDims id = <vmenu_id>
 	section_width = ((<width> / 100.0) + 0.0)
-	if gotparam \{buttons}
-		foreachin <buttons> do = create_dialog_button params = {
+	if GotParam \{buttons}
+		ForEachIn <buttons> do = create_dialog_button params = {
 			font = <font>
 			parent = <vmenu_id>
 			z_priority = (<z_priority> + 4)
@@ -274,9 +274,9 @@ script create_snazzy_dialog_box \{title = "Title"
 			pad_focus_script = <pad_focus_script>
 			destroy_on_event = <destroy_on_event>
 		}
-		getarraysize <buttons>
+		GetArraySize <buttons>
 		if (<array_size> > 1)
-			setscreenelementprops {
+			SetScreenElementProps {
 				id = <vmenu_id>
 				event_handlers = [
 					{pad_up generic_menu_up_or_down_sound params = {up}}
@@ -285,9 +285,9 @@ script create_snazzy_dialog_box \{title = "Title"
 			}
 		endif
 	endif
-	if gotparam \{sub_logo}
-		createscreenelement {
-			type = spriteelement
+	if GotParam \{sub_logo}
+		CreateScreenElement {
+			type = SpriteElement
 			parent = <vmenu_id>
 			texture = <sub_logo>
 			just = [center center]
@@ -297,21 +297,21 @@ script create_snazzy_dialog_box \{title = "Title"
 		}
 		no_icon = no_icon
 	endif
-	setscreenelementlock id = <vmenu_id> on
-	setscreenelementlock id = <vmenu_id> off
-	getscreenelementdims id = <vmenu_id>
+	SetScreenElementLock id = <vmenu_id> on
+	SetScreenElementLock id = <vmenu_id> off
+	GetScreenElementDims id = <vmenu_id>
 	section_width = ((<width> / 100.0) + 0.0)
 	section_height = 32
-	num_parts = (((<height> * 1.0) / (<section_height> * 1.0)) -1.0)
-	if NOT gotparam \{forced_pos}
-		centered_pos = ((320.0, 0.0) + ((0.0, 1.0) * (480 - <height>) / 2) + <pos_tweak>)
-		setscreenelementprops id = <vmenu_id> pos = <centered_pos>
+	num_parts = (((<Height> * 1.0) / (<section_height> * 1.0)) -1.0)
+	if NOT GotParam \{forced_pos}
+		centered_pos = ((320.0, 0.0) + ((0.0, 1.0) * (480 - <Height>) / 2) + <pos_tweak>)
+		SetScreenElementProps id = <vmenu_id> pos = <centered_pos>
 	else
 		centered_pos = <forced_pos>
 	endif
 	<bg_x_scale> = 1.2
-	createscreenelement {
-		type = spriteelement
+	CreateScreenElement {
+		type = SpriteElement
 		parent = <anchor_id>
 		pos = <centered_pos>
 		just = [center bottom]
@@ -320,20 +320,20 @@ script create_snazzy_dialog_box \{title = "Title"
 		rgba = <bg_rgba>
 		z_priority = 38
 	}
-	createscreenelement {
-		type = spriteelement
+	CreateScreenElement {
+		type = SpriteElement
 		parent = <anchor_id>
 		texture = dialog_middle
 		pos = (<centered_pos> - (0.0, 16.0))
-		scale = (((1.0, 0.0) * <bg_x_scale>) + (0.0, 1.0) * (<height> / 16.0))
+		scale = (((1.0, 0.0) * <bg_x_scale>) + (0.0, 1.0) * (<Height> / 16.0))
 		just = [center top]
 		rgba = <bg_rgba>
 		z_priority = 38
 	}
-	createscreenelement {
-		type = spriteelement
+	CreateScreenElement {
+		type = SpriteElement
 		parent = <anchor_id>
-		pos = (<centered_pos> + (0.0, 1.0) * (<height>) + (0.0, 15.0))
+		pos = (<centered_pos> + (0.0, 1.0) * (<Height>) + (0.0, 15.0))
 		just = [center bottom]
 		texture = dialog_frame_b
 		scale = ((1.0, 0.0) * <bg_x_scale> + (0.0, 1.0))
@@ -341,72 +341,72 @@ script create_snazzy_dialog_box \{title = "Title"
 		z_priority = 38
 	}
 	kill_start_key_binding
-	if objectexists \{id = no_button}
-		launchevent type = focus target = <vmenu_id> data = {child_id = no_button}
+	if ObjectExists \{id = no_button}
+		LaunchEvent type = focus target = <vmenu_id> data = {child_id = no_button}
 	else
-		launchevent type = focus target = <vmenu_id>
+		LaunchEvent type = focus target = <vmenu_id>
 	endif
-	if gotparam \{delay_input}
-		runscriptonscreenelement id = <anchor_id> dialog_box_delay_input params = {delay_input_time = <delay_input_time>}
+	if GotParam \{delay_input}
+		RunScriptOnScreenElement id = <anchor_id> dialog_box_delay_input params = {delay_input_time = <delay_input_time>}
 	endif
-	if NOT gotparam \{no_animate}
-		if gotparam \{style}
-			runscriptonscreenelement id = <anchor_id> <style> params = <...>
+	if NOT GotParam \{no_animate}
+		if GotParam \{style}
+			RunScriptOnScreenElement id = <anchor_id> <style> params = <...>
 		else
-			if NOT gotparam \{full_animate}
-				runscriptonscreenelement id = <container_id> animate_dialog_box_in params = <...>
+			if NOT GotParam \{full_animate}
+				RunScriptOnScreenElement id = <container_id> animate_dialog_box_in params = <...>
 			else
-				runscriptonscreenelement id = <anchor_id> animate_dialog_box_in params = <...>
+				RunScriptOnScreenElement id = <anchor_id> animate_dialog_box_in params = <...>
 			endif
 		endif
 	endif
-	if objectexists \{id = current_menu_anchor}
-		launchevent \{type = unfocus
+	if ObjectExists \{id = current_menu_anchor}
+		LaunchEvent \{type = unfocus
 			target = current_menu_anchor}
 	endif
-	if objectexists \{id = current_menu}
-		launchevent \{type = unfocus
+	if ObjectExists \{id = current_menu}
+		LaunchEvent \{type = unfocus
 			target = current_menu}
 	endif
 endscript
 
 script special_dialog_style 
-	getscreenelementdims id = <vmenu_id>
-	getscreenelementposition id = <vmenu_id>
-	createscreenelement {
-		type = spriteelement
+	GetScreenElementDims id = <vmenu_id>
+	GetScreenElementPosition id = <vmenu_id>
+	CreateScreenElement {
+		type = SpriteElement
 		parent = dialog_box_container
 		id = left_star
 		pos = (<screenelementpos> + (40.0, 12.0))
-		texture = pa_goals
+		texture = PA_goals
 		scale = 1.8
 		flip_v
 		rgba = [128 128 128 128]
 	}
-	createscreenelement {
-		type = spriteelement
+	CreateScreenElement {
+		type = SpriteElement
 		parent = dialog_box_container
 		id = right_star
 		pos = ((1.0, 0.0) * <width> + <screenelementpos> + (-30.0, 12.0))
-		texture = pa_goals
+		texture = PA_goals
 		scale = 1.8
 		flip_v
 		rot_angle = -10
 		rgba = [100 100 100 255]
 	}
-	createscreenelement {
-		type = spriteelement
+	CreateScreenElement {
+		type = SpriteElement
 		parent = dialog_box_container
 		id = flash3
 		pos = ((1.0, 0.0) * <width> + <screenelementpos> + (-275.0, 130.0))
-		texture = spec_b_m
+		texture = spec_B_M
 		scale = (7.3, 6.0)
 		flip_v
 		rgba = [126 2 84 58]
 		z_priority = 11
 	}
-	createscreenelement {
-		type = spriteelement
+	CreateScreenElement {
+		type = SpriteElement
 		parent = dialog_box_container
 		id = topline
 		pos = ((1.0, 0.0) * <width> + <screenelementpos> + (-275.0, 22.0))
@@ -416,8 +416,8 @@ script special_dialog_style
 		rgba = [13 121 4 128]
 		z_priority = 11
 	}
-	createscreenelement {
-		type = spriteelement
+	CreateScreenElement {
+		type = SpriteElement
 		parent = dialog_box_container
 		id = topline2
 		pos = ((1.0, 0.0) * <width> + <screenelementpos> + (-275.0, -5.0))
@@ -427,27 +427,27 @@ script special_dialog_style
 		rgba = [13 121 4 128]
 		z_priority = 11
 	}
-	runscriptonscreenelement \{id = left_star
+	RunScriptOnScreenElement \{id = left_star
 		spin_star
 		params = {
 			dir = cw
 		}}
-	runscriptonscreenelement \{id = right_star
+	RunScriptOnScreenElement \{id = right_star
 		spin_star
 		params = {
 			dir = ccw
 		}}
-	<title_id> :obj_spawnscriptlater pulse_dialog_title params = {id = <title_id>}
-	runscriptonscreenelement id = dialog_box_container animate_special_dialog_box_in params = <...>
+	<title_id> :Obj_SpawnScriptLater pulse_dialog_title params = {id = <title_id>}
+	RunScriptOnScreenElement id = dialog_box_container animate_special_dialog_box_in params = <...>
 endscript
 
 script animate_special_dialog_box_in 
-	domorph \{pos = (1000.0, 260.0)
+	DoMorph \{pos = (1000.0, 260.0)
 		alpha = 0
 		time = 0
 		scale = 0
 		rot_angle = -220}
-	domorph \{pos = (320.0, 260.0)
+	DoMorph \{pos = (320.0, 260.0)
 		alpha = 1
 		time = 0.3
 		scale = 1.0
@@ -459,26 +459,26 @@ script spin_star \{dir = cw}
 endscript
 
 script burst_star 
-	domorph \{time = 0
+	DoMorph \{time = 0
 		scale = 0
 		alpha = 0}
-	domorph \{time = 0.4
+	DoMorph \{time = 0.4
 		scale = (7.5, 3.8)
 		alpha = 0.6}
 endscript
 
 script pulse_dialog_title 
 	begin
-	if objectexists id = <id>
-		doscreenelementmorph id = <id> time = 0.2 scale = (1.8, 2.0) rgba = [13 121 4 128]
-		wait \{0.2
+	if ObjectExists id = <id>
+		doScreenElementMorph id = <id> time = 0.2 scale = (1.8, 2.0) rgba = [13 121 4 128]
+		Wait \{0.2
 			seconds}
 	else
 		break
 	endif
-	if objectexists id = <id>
-		doscreenelementmorph id = <id> time = 0.2 scale = (1.5, 1.5) rgba = [13 121 4 128]
-		wait \{0.2
+	if ObjectExists id = <id>
+		doScreenElementMorph id = <id> time = 0.2 scale = (1.5, 1.5) rgba = [13 121 4 128]
+		Wait \{0.2
 			seconds}
 	else
 		break
@@ -491,13 +491,13 @@ script theme_dialog_background \{parent = current_menu_anchor
 		pos = (320.0, 120.0)
 		num_parts = 2
 		top_height = 1}
-	if screenelementexists \{id = dialog_box_bg_vmenu}
-		destroyscreenelement \{id = dialog_box_bg_vmenu}
+	if ScreenElementExists \{id = dialog_box_bg_vmenu}
+		DestroyScreenElement \{id = dialog_box_bg_vmenu}
 	endif
 	dialog_bg_rgba = [30 30 35 216]
-	setscreenelementlock id = <parent> off
-	createscreenelement {
-		type = vmenu
+	SetScreenElementLock id = <parent> off
+	CreateScreenElement {
+		type = VMenu
 		parent = <parent>
 		id = dialog_box_bg_vmenu
 		font = text_a1
@@ -508,10 +508,10 @@ script theme_dialog_background \{parent = current_menu_anchor
 		internal_just = [center center]
 	}
 	middle_parts = <num_parts>
-	casttointeger \{middle_parts}
+	CastToInteger \{middle_parts}
 	partial_scale = (<num_parts> - <middle_parts>)
 	printf "partial_scale = %p" p = <partial_scale>
-	build_theme_dialog_top parent = dialog_box_bg_vmenu width = <width> dialog_bg_rgba = <dialog_bg_rgba> z_priority = <z_priority> height = <top_height>
+	build_theme_dialog_top parent = dialog_box_bg_vmenu width = <width> dialog_bg_rgba = <dialog_bg_rgba> z_priority = <z_priority> Height = <top_height>
 	if (<middle_parts> > 0)
 		begin
 		build_theme_dialog_middle parent = dialog_box_bg_vmenu width = <width> dialog_bg_rgba = <dialog_bg_rgba> z_priority = <z_priority>
@@ -522,40 +522,40 @@ script theme_dialog_background \{parent = current_menu_anchor
 endscript
 
 script build_theme_dialog_top 
-	createscreenelement {
-		type = containerelement
+	CreateScreenElement {
+		type = ContainerElement
 		dims = (0.0, 32.0)
 		parent = <parent>
 	}
 	anchor_id = <id>
-	createscreenelement {
-		type = spriteelement
+	CreateScreenElement {
+		type = SpriteElement
 		parent = <anchor_id>
-		texture = snaz_t_m
+		texture = snaz_T_M
 		pos = (0.0, 0.0)
 		just = [center top]
 		rgba = <dialog_bg_rgba>
-		scale = ((1.0, 0.0) * <width> + (0.0, 1.0) * <height>)
+		scale = ((1.0, 0.0) * <width> + (0.0, 1.0) * <Height>)
 		z_priority = <z_priority>
 	}
-	<top_height> = <height>
-	getscreenelementdims id = <id>
+	<top_height> = <Height>
+	GetScreenElementDims id = <id>
 	right_pos = ((0.5, 0.0) * <width>)
 	left_pos = ((-0.5, 0.0) * <width>)
-	createscreenelement {
-		type = spriteelement
+	CreateScreenElement {
+		type = SpriteElement
 		parent = <anchor_id>
-		texture = snaz_t_l
+		texture = snaz_T_L
 		pos = <left_pos>
 		just = [right top]
 		rgba = <dialog_bg_rgba>
 		scale = ((1.0, 0.0) + (0.0, 1.0) * <top_height>)
 		z_priority = <z_priority>
 	}
-	createscreenelement {
-		type = spriteelement
+	CreateScreenElement {
+		type = SpriteElement
 		parent = <anchor_id>
-		texture = snaz_t_r
+		texture = snaz_T_R
 		pos = <right_pos>
 		just = [left top]
 		rgba = <dialog_bg_rgba>
@@ -565,40 +565,40 @@ script build_theme_dialog_top
 endscript
 
 script build_theme_dialog_middle \{scale_height = 1}
-	createscreenelement {
-		type = containerelement
+	CreateScreenElement {
+		type = ContainerElement
 		parent = <parent>
 		dims = (0.0, 32.0)
 	}
 	anchor_id = <id>
-	createscreenelement {
-		type = spriteelement
+	CreateScreenElement {
+		type = SpriteElement
 		parent = <anchor_id>
-		texture = snaz_m_m
+		texture = snaz_M_M
 		pos = (0.0, 0.0)
 		just = [center top]
 		rgba = <dialog_bg_rgba>
 		scale = ((1.0, 0.0) * <width> + <scale_height> * (0.0, 1.0))
 		z_priority = <z_priority>
 	}
-	getscreenelementdims id = <id>
+	GetScreenElementDims id = <id>
 	right_pos = ((0.5, 0.0) * <width>)
 	left_pos = ((-0.5, 0.0) * <width>)
 	side_scale = ((1.0, 0.0) * 1 + <scale_height> * (0.0, 1.0))
-	createscreenelement {
-		type = spriteelement
+	CreateScreenElement {
+		type = SpriteElement
 		parent = <anchor_id>
-		texture = snaz_m_l
+		texture = snaz_M_L
 		pos = <left_pos>
 		just = [right top]
 		rgba = <dialog_bg_rgba>
 		scale = <side_scale>
 		z_priority = <z_priority>
 	}
-	createscreenelement {
-		type = spriteelement
+	CreateScreenElement {
+		type = SpriteElement
 		parent = <anchor_id>
-		texture = snaz_m_r
+		texture = snaz_M_R
 		pos = <right_pos>
 		just = [left top]
 		rgba = <dialog_bg_rgba>
@@ -608,55 +608,55 @@ script build_theme_dialog_middle \{scale_height = 1}
 endscript
 
 script build_theme_dialog_bottom 
-	createscreenelement {
-		type = containerelement
+	CreateScreenElement {
+		type = ContainerElement
 		parent = <parent>
 		dims = (0.0, 32.0)
 	}
 	anchor_id = <id>
 	pos = ((0.0, -1.0) * (32 - (<scale_height> * 32)))
-	createscreenelement {
-		type = spriteelement
+	CreateScreenElement {
+		type = SpriteElement
 		parent = <anchor_id>
-		texture = snaz_b_m
+		texture = snaz_B_M
 		pos = <pos>
 		just = [center top]
 		rgba = <dialog_bg_rgba>
 		scale = ((1.0, 0.0) * <width> + (0.0, 1.0))
 		z_priority = <z_priority>
 	}
-	getscreenelementdims id = <id>
+	GetScreenElementDims id = <id>
 	right_pos = ((0.5, 0.0) * <width> + <pos>)
 	left_pos = ((-0.5, 0.0) * <width> + <pos>)
-	createscreenelement {
-		type = spriteelement
+	CreateScreenElement {
+		type = SpriteElement
 		parent = <anchor_id>
-		texture = snaz_b_l
+		texture = snaz_B_L
 		pos = <left_pos>
 		just = [right top]
 		rgba = <dialog_bg_rgba>
 		scale = (1.0, 1.0)
 		z_priority = <z_priority>
 	}
-	createscreenelement {
-		type = spriteelement
+	CreateScreenElement {
+		type = SpriteElement
 		parent = <anchor_id>
-		texture = snaz_b_r
+		texture = snaz_B_R
 		pos = <right_pos>
 		just = [left top]
 		rgba = <dialog_bg_rgba>
 		scale = (1.0, 1.0)
 		z_priority = <z_priority>
 	}
-	if NOT gotparam \{no_icon}
-		formattext checksumname = theme_icon '%i_snaz_icon' i = (theme_prefixes [$current_theme_prefix])
-		if gotparam \{add_loading_anim}
+	if NOT GotParam \{no_icon}
+		FormatText checksumname = theme_icon '%i_snaz_icon' i = (THEME_PREFIXES [$current_theme_prefix])
+		if GotParam \{add_loading_anim}
 			loading_color = [128 123 20 255]
 		else
 			<loading_color> = [90 90 90 70]
 		endif
-		createscreenelement {
-			type = spriteelement
+		CreateScreenElement {
+			type = SpriteElement
 			parent = <anchor_id>
 			texture = <theme_icon>
 			pos = ((0.0, 10.0) + <pos>)
@@ -666,8 +666,8 @@ script build_theme_dialog_bottom
 			z_priority = (<z_priority> + 1)
 			alpha = 0.7
 		}
-		if gotparam \{add_loading_anim}
-			runscriptonscreenelement id = <id> spin_dialog_icon
+		if GotParam \{add_loading_anim}
+			RunScriptOnScreenElement id = <id> spin_dialog_icon
 		endif
 	endif
 endscript
@@ -675,12 +675,12 @@ endscript
 script spin_dialog_icon 
 	<rot_angle> = 0
 	begin
-	domorph rot_angle = <rot_angle>
+	DoMorph rot_angle = <rot_angle>
 	<rot_angle> = (<rot_angle> + 6)
 	if (<rot_angle> > 360)
 		<rot_angle> = (<rot_angle> - 360)
 	endif
-	wait \{1
+	Wait \{1
 		gameframes}
 	repeat
 endscript
@@ -695,7 +695,7 @@ endscript
 
 script button_choose_script 
 	destroy_dialog_box
-	<callback_script> <callback_params>
+	<callBack_Script> <callback_params>
 endscript
 
 script create_dialog_button \{focus_script = main_theme_focus
@@ -730,21 +730,21 @@ script create_dialog_button \{focus_script = main_theme_focus
 			255
 		]
 		destroy_on_event = 1}
-	setscreenelementlock \{id = root_window
+	SetScreenElementLock \{id = root_window
 		off}
-	setscreenelementlock id = <parent> off
-	if NOT gotparam \{ignore_default_option}
+	SetScreenElementLock id = <parent> off
+	if NOT GotParam \{ignore_default_option}
 		if (<text> = "No")
 			id = no_button
 		endif
 	endif
 	if (<destroy_on_event> = 1)
-		<pad_choose_params> = {callback_script = <pad_choose_script> callback_params = <pad_choose_params>}
+		<pad_choose_params> = {callBack_Script = <pad_choose_script> callback_params = <pad_choose_params>}
 		<pad_choose_script> = button_choose_script
 	else
 	endif
-	createscreenelement {
-		type = containerelement
+	CreateScreenElement {
+		type = ContainerElement
 		parent = <parent>
 		id = <id>
 		dims = <button_dims>
@@ -761,8 +761,8 @@ script create_dialog_button \{focus_script = main_theme_focus
 		<not_focusable>
 	}
 	anchor_id = <id>
-	createscreenelement {
-		type = textelement
+	CreateScreenElement {
+		type = TextElement
 		parent = <anchor_id>
 		pos = (0.0, 0.0)
 		font = <font>
@@ -772,8 +772,8 @@ script create_dialog_button \{focus_script = main_theme_focus
 		rgba = <text_color>
 		z_priority = <z_priority>
 	}
-	createscreenelement {
-		type = spriteelement
+	CreateScreenElement {
+		type = SpriteElement
 		parent = <anchor_id>
 		texture = menu_selection_white_01
 		scale = (0.6, 0.5)
@@ -789,17 +789,17 @@ script create_dialog_button \{focus_script = main_theme_focus
 endscript
 
 script destroy_dialog_box \{anchor_id = dialog_box_anchor}
-	if NOT gotparam \{dont_restore_input}
-		setbuttoneventmappings \{unblock_menu_input}
+	if NOT GotParam \{dont_restore_input}
+		SetButtonEventMappings \{unblock_menu_input}
 	endif
-	debounce \{x
+	Debounce \{x
 		time = 0.3}
-	if objectexists id = <anchor_id>
-		destroyscreenelement id = <anchor_id>
+	if ObjectExists id = <anchor_id>
+		DestroyScreenElement id = <anchor_id>
 	endif
-	if NOT gotparam \{dont_focus}
-		if objectexists \{id = current_menu_anchor}
-			launchevent \{type = focus
+	if NOT GotParam \{dont_focus}
+		if ObjectExists \{id = current_menu_anchor}
+			LaunchEvent \{type = focus
 				target = current_menu_anchor}
 		endif
 	endif
@@ -807,28 +807,28 @@ endscript
 
 script dialog_box_exit \{anchor_id = dialog_box_anchor}
 	destroy_dialog_box <...>
-	if NOT gotparam \{dont_restore_input}
-		setbuttoneventmappings \{unblock_menu_input}
+	if NOT GotParam \{dont_restore_input}
+		SetButtonEventMappings \{unblock_menu_input}
 	endif
-	debounce \{x
+	Debounce \{x
 		time = 0.3}
-	if objectexists id = <anchor_id>
-		destroyscreenelement id = <anchor_id>
+	if ObjectExists id = <anchor_id>
+		DestroyScreenElement id = <anchor_id>
 	endif
-	if NOT gotparam \{no_pad_start}
-		if NOT infrontend
+	if NOT GotParam \{no_pad_start}
+		if NOT InFrontend
 			restore_start_key_binding
 		endif
 	endif
 endscript
 
 script dialog_box_delay_input \{delay_input_time = 2000}
-	temporarilydisableinput time = <delay_input_time>
+	TemporarilyDisableInput time = <delay_input_time>
 endscript
 dont_create_speech_boxes = 0
 
 script create_speech_box 
-	killspawnedscript \{id = create_speech_box_guts}
+	KillSpawnedScript \{id = create_speech_box_guts}
 	spawnscriptnow create_speech_box_guts params = {<...>}
 endscript
 
@@ -854,13 +854,13 @@ script create_speech_box_guts \{pos = (640.0, 560.0)
 		bg_x_scale = 1.12
 		pause_input_time = 1000}
 	font = text_a1
-	if objectexists id = <anchor_id>
-		destroyscreenelement id = <anchor_id>
+	if ObjectExists id = <anchor_id>
+		DestroyScreenElement id = <anchor_id>
 	endif
-	setscreenelementlock \{id = root_window
+	SetScreenElementLock \{id = root_window
 		off}
-	createscreenelement {
-		type = containerelement
+	CreateScreenElement {
+		type = ContainerElement
 		parent = <parent>
 		id = <anchor_id>
 		pos = <pos>
@@ -868,75 +868,75 @@ script create_speech_box_guts \{pos = (640.0, 560.0)
 		scale = <scale>
 		z_priority = <z_priority>
 	}
-	if NOT gotparam \{no_pad_choose}
-		setscreenelementprops {
+	if NOT GotParam \{no_pad_choose}
+		SetScreenElementProps {
 			id = <anchor_id>
 			event_handlers = [{pad_choose speech_box_input_debounce}
 				{pad_choose <pad_choose_script> params = <pad_choose_params>}]
 			replace_handlers
 		}
 	endif
-	if gotparam \{pad_back_script}
-		setscreenelementprops {
+	if GotParam \{pad_back_script}
+		SetScreenElementProps {
 			id = <anchor_id>
 			event_handlers = [{pad_back speech_box_input_debounce}
 				{pad_back <pad_back_script> params = <pad_back_params>}]
 			replace_handlers
 		}
 	endif
-	if gotparam \{pad_option_script}
-		setscreenelementprops {
+	if GotParam \{pad_option_script}
+		SetScreenElementProps {
 			id = <anchor_id>
 			event_handlers = [
 				{pad_option <pad_option_script> params = <pad_option_params>}]
 			replace_handlers
 		}
 	endif
-	if gotparam \{pad_option2_script}
-		setscreenelementprops {
+	if GotParam \{pad_option2_script}
+		SetScreenElementProps {
 			id = <anchor_id>
 			event_handlers = [{pad_option2 speech_box_input_debounce}
 				{pad_option2 <pad_option2_script> params = <pad_option2_params>}]
 			replace_handlers
 		}
 	endif
-	if gotparam \{pad_up_script}
-		setscreenelementprops {
+	if GotParam \{pad_up_script}
+		SetScreenElementProps {
 			id = <anchor_id>
 			event_handlers = [{pad_up <pad_up_script> params = <pad_up_params>}]
 			replace_handlers
 		}
 	endif
-	if gotparam \{pad_down_script}
-		setscreenelementprops {
+	if GotParam \{pad_down_script}
+		SetScreenElementProps {
 			id = <anchor_id>
 			event_handlers = [{pad_down <pad_down_script> params = <pad_down_params>}]
 			replace_handlers
 		}
 	endif
-	if gotparam \{pad_left_script}
-		setscreenelementprops {
+	if GotParam \{pad_left_script}
+		SetScreenElementProps {
 			id = <anchor_id>
 			event_handlers = [{pad_left <pad_left_script> params = <pad_left_params>}]
 			replace_handlers
 		}
 	endif
-	if gotparam \{pad_right_script}
-		setscreenelementprops {
+	if GotParam \{pad_right_script}
+		SetScreenElementProps {
 			id = <anchor_id>
 			event_handlers = [{pad_right <pad_right_script> params = <pad_right_params>}]
 			replace_handlers
 		}
 	endif
-	if NOT gotparam \{no_pad_start}
-		setscreenelementprops {
+	if NOT GotParam \{no_pad_start}
+		SetScreenElementProps {
 			id = root_window
 			event_handlers = [{pad_start <pad_choose_script> params = <pad_choose_params>}]
 			replace_handlers
 		}
 	endif
-	createscreenelement {
-		type = textblockelement
+	CreateScreenElement {
+		type = TextBlockElement
 		parent = <anchor_id>
 		font = <font>
 		dims = (540.0, 0.0)
@@ -947,18 +947,18 @@ script create_speech_box_guts \{pos = (640.0, 560.0)
 		allow_expansion
 	}
 	<speech_text> = <id>
-	getscreenelementdims id = <speech_text>
-	speech_text_height = <height>
-	createscreenelement {
-		type = spriteelement
+	GetScreenElementDims id = <speech_text>
+	speech_text_height = <Height>
+	CreateScreenElement {
+		type = SpriteElement
 		parent = <anchor_id>
 		just = [center top]
 		texture = dialog_frame_b
 		scale = ((1.0, 0.0) * <bg_x_scale> + (0.0, 1.0))
 		rgba = <bg_rgba>
 	}
-	createscreenelement {
-		type = spriteelement
+	CreateScreenElement {
+		type = SpriteElement
 		parent = <anchor_id>
 		pos = ((0.0, -1.0) * <speech_text_height>)
 		just = [center bottom]
@@ -966,105 +966,105 @@ script create_speech_box_guts \{pos = (640.0, 560.0)
 		scale = ((1.0, 0.0) * <bg_x_scale> + (0.0, 1.0))
 		rgba = <bg_rgba>
 	}
-	createscreenelement {
-		type = spriteelement
+	CreateScreenElement {
+		type = SpriteElement
 		parent = <anchor_id>
 		texture = dialog_middle
 		scale = (((1.0, 0.0) * <bg_x_scale>) + ((0.0, 1.0) * (<speech_text_height> / 16.0)))
 		just = [center bottom]
 		rgba = <bg_rgba>
 	}
-	getscreenelementprops id = <id>
+	GetScreenElementProps id = <id>
 	pos_top = (<pos> [1])
-	if gotparam \{style}
-		runscriptonscreenelement id = <anchor_id> <style> params = <...>
+	if GotParam \{style}
+		RunScriptOnScreenElement id = <anchor_id> <style> params = <...>
 	endif
-	launchevent type = focus target = <anchor_id>
-	if gotparam \{pause_input}
-		spawnscriptlater temporarilydisableinput params = {time = <pause_input_time>}
+	LaunchEvent type = focus target = <anchor_id>
+	if GotParam \{pause_input}
+		SpawnScriptLater TemporarilyDisableInput params = {time = <pause_input_time>}
 	endif
 endscript
 
 script speech_box_exit \{anchor_id = speech_box_anchor}
-	if objectexists id = <anchor_id>
-		destroyscreenelement id = <anchor_id>
+	if ObjectExists id = <anchor_id>
+		DestroyScreenElement id = <anchor_id>
 	endif
-	debounce \{x
+	Debounce \{x
 		time = 0.3}
-	debounce \{circle
+	Debounce \{circle
 		time = 0.3}
-	if NOT gotparam \{no_pad_start}
+	if NOT GotParam \{no_pad_start}
 		restore_start_key_binding
 	endif
-	launchevent \{type = speech_box_destroyed}
+	LaunchEvent \{type = speech_box_destroyed}
 endscript
 
 script speech_box_input_debounce 
-	debounce \{x
+	Debounce \{x
 		time = 0.3
-		clear = 1}
-	debounce \{circle
+		Clear = 1}
+	Debounce \{circle
 		time = 0.3
-		clear = 1}
-	debounce \{square
+		Clear = 1}
+	Debounce \{square
 		time = 0.3
-		clear = 1}
-	debounce \{triangle
+		Clear = 1}
+	Debounce \{triangle
 		time = 0.3
-		clear = 1}
+		Clear = 1}
 endscript
 
 script speech_box_style 
-	runscriptonscreenelement id = <speech_text> hide_speech_text params = <...>
-	domorph \{time = 0
+	RunScriptOnScreenElement id = <speech_text> hide_speech_text params = <...>
+	DoMorph \{time = 0
 		scale = (1.0, 1.0)
 		alpha = 1}
-	wait \{4
+	Wait \{4
 		frame}
-	domorph \{time = 0.2
+	DoMorph \{time = 0.2
 		scale = (1.0, 1.0)
 		alpha = 1}
-	runscriptonscreenelement id = <speech_text> speech_box_style_scale_text params = <...>
+	RunScriptOnScreenElement id = <speech_text> speech_box_style_scale_text params = <...>
 endscript
 
 script hide_speech_text 
-	domorph \{time = 0
+	DoMorph \{time = 0
 		scale = 0}
 endscript
 
 script speech_box_style_scale_text 
-	wait \{0.05
+	Wait \{0.05
 		second}
-	domorph \{time = 0
+	DoMorph \{time = 0
 		scale = (1.0, 1.0)
 		alpha = 0}
-	domorph \{time = 0.5
+	DoMorph \{time = 0.5
 		scale = (1.0, 1.0)
 		alpha = 1}
-	launchevent type = focus target = <anchor_id>
+	LaunchEvent type = focus target = <anchor_id>
 endscript
 
 script animate_dialog_box_in 
-	if gotparam \{full_animate}
-		setscreenelementprops {
+	if GotParam \{full_animate}
+		SetScreenElementProps {
 			id = <bg_anchor_id>
 			hide
 		}
 	endif
-	if NOT gotparam \{delay_input}
-		<bg_anchor_id> :obj_spawnscriptlater dialog_box_delay_input params = {delay_input_time = 300}
+	if NOT GotParam \{delay_input}
+		<bg_anchor_id> :Obj_SpawnScriptLater dialog_box_delay_input params = {delay_input_time = 300}
 	endif
-	domorph \{time = 0
+	DoMorph \{time = 0
 		scale = (0.0, 0.0)
 		alpha = 0.1}
-	domorph \{time = 0.15
+	DoMorph \{time = 0.15
 		scale = (1.0, 0.0)
 		alpha = 0.4}
-	domorph \{time = 0.15
+	DoMorph \{time = 0.15
 		scale = (1.0, 1.0)
 		alpha = 1.0}
-	if gotparam \{full_animate}
-		setscreenelementprops {
+	if GotParam \{full_animate}
+		SetScreenElementProps {
 			id = <bg_anchor_id>
 			unhide
 		}
@@ -1072,8 +1072,8 @@ script animate_dialog_box_in
 endscript
 
 script create_test_dialog 
-	if screenelementexists \{id = current_menu_anchor}
-		destroyscreenelement \{id = current_menu_anchor}
+	if ScreenElementExists \{id = current_menu_anchor}
+		DestroyScreenElement \{id = current_menu_anchor}
 	endif
 	create_dialog_box \{pad_back_script = create_test_menu
 		buttons = [
@@ -1092,5 +1092,5 @@ endscript
 
 script dialog_box_accept 
 	dialog_box_exit
-	launchevent \{type = message_accept}
+	LaunchEvent \{type = message_accept}
 endscript

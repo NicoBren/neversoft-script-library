@@ -2,7 +2,7 @@ video_settings_menu_font = text_a5
 
 script create_video_settings_menu \{popup = 0}
 	kill_start_key_binding
-	createscreenelement \{type = containerelement
+	CreateScreenElement \{type = ContainerElement
 		parent = root_window
 		id = vom_container
 		pos = (0.0, 0.0)}
@@ -25,7 +25,7 @@ script create_video_settings_menu \{popup = 0}
 				135
 				255
 			]}
-		displaytext \{parent = vom_container
+		displayText \{parent = vom_container
 			pos = (800.0, 550.0)
 			just = [
 				center
@@ -41,8 +41,8 @@ script create_video_settings_menu \{popup = 0}
 			]
 			font = $video_settings_menu_font
 			noshadow}
-		create_menu_backdrop \{texture = venue_bg}
-		displaysprite \{parent = vom_container
+		create_menu_backdrop \{texture = Venue_BG}
+		displaySprite \{parent = vom_container
 			tex = options_video_poster
 			pos = (640.0, 360.0)
 			dims = (1024.0, 512.0)
@@ -52,8 +52,8 @@ script create_video_settings_menu \{popup = 0}
 			]
 			z = 1
 			font = $video_settings_menu_font}
-		getglobaltags \{user_options}
-		displaysprite \{parent = vom_container
+		GetGlobalTags \{user_options}
+		displaySprite \{parent = vom_container
 			id = vom_hilite
 			tex = white
 			pos = (285.0, 415.0)
@@ -76,7 +76,7 @@ script create_video_settings_menu \{popup = 0}
 			z = 100}
 		text_params = {
 			parent = vs_vmenu
-			type = textelement
+			type = TextElement
 			font = $video_settings_menu_font
 			rgba = ($menu_unfocus_color)
 			scale = 0.75
@@ -86,14 +86,14 @@ script create_video_settings_menu \{popup = 0}
 	else
 		z = 100
 		new_menu scrollid = vs_scroll vmenuid = vs_vmenu menu_pos = (0.0, 340.0) exclusive_device = ($last_start_pressed_device)
-		setscreenelementprops \{id = vs_vmenu
+		SetScreenElementProps \{id = vs_vmenu
 			dims = (1280.0, 720.0)
 			internal_just = [
 				center
 				top
 			]}
-		createscreenelement {
-			type = textelement
+		CreateScreenElement {
+			type = TextElement
 			font = ($video_settings_menu_font)
 			parent = vs_scroll
 			pos = (640.0, -90.0)
@@ -105,18 +105,18 @@ script create_video_settings_menu \{popup = 0}
 		}
 		create_pause_menu_frame z = (<z> - 10)
 		calibrate_text = "CALIBRATE LAG"
-		text_params = {parent = vs_vmenu type = textelement font = ($audio_settings_menu_font) rgba = ($menu_unfocus_color) scale = 1 z_priority = <z>}
+		text_params = {parent = vs_vmenu type = TextElement font = ($audio_settings_menu_font) rgba = ($menu_unfocus_color) scale = 1 z_priority = <z>}
 		<exclusive_params> = {exclusive_device = ($last_start_pressed_device)}
-		createscreenelement {
-			type = spriteelement
+		CreateScreenElement {
+			type = SpriteElement
 			parent = vom_container
 			texture = menu_pause_frame_banner
 			pos = (640.0, 540.0)
 			just = [center center]
 			z_priority = (<z> + 100)
 		}
-		createscreenelement {
-			type = textelement
+		CreateScreenElement {
+			type = TextElement
 			parent = <id>
 			text = "PAUSED"
 			font = text_a6
@@ -125,7 +125,7 @@ script create_video_settings_menu \{popup = 0}
 			scale = 0.8
 		}
 	endif
-	createscreenelement {
+	CreateScreenElement {
 		<text_params>
 		text = "Calibrate Lag"
 		event_handlers = [
@@ -135,7 +135,7 @@ script create_video_settings_menu \{popup = 0}
 		]
 		<exclusive_params>
 	}
-	<id> :settags hilite_pos = (285.0, 420.0)
+	<id> :SetTags hilite_pos = (285.0, 420.0)
 endscript
 
 script destroy_video_settings_menu 
@@ -150,10 +150,10 @@ endscript
 script vom_focus 
 	retail_menu_focus
 	if (<popup> = 0)
-		gettags
-		<id> :gettags
-		if screenelementexists \{id = vom_hilite}
-			vom_hilite :setprops pos = <hilite_pos>
+		GetTags
+		<id> :GetTags
+		if ScreenElementExists \{id = vom_hilite}
+			vom_hilite :SetProps pos = <hilite_pos>
 		endif
 	endif
 endscript

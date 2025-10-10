@@ -6,7 +6,7 @@ progression_completion_tier = 1
 progression_unlocked_guitar = -1
 progression_unlocked_guitar2 = -1
 progression_unlocked_type = guitar
-gh3_career_songs = {
+GH3_Career_Songs = {
 	prefix = 'career'
 	num_tiers = 8
 	initial_movie = 'singleplayer_01'
@@ -14,7 +14,7 @@ gh3_career_songs = {
 		title = "1. Starting out small"
 		songs = [
 			slowride
-			talkdirtytome
+			TalkDirtyToMe
 			hitmewithyourbestshot
 			storyofmylife
 			rocknrollallnite
@@ -23,7 +23,7 @@ gh3_career_songs = {
 		level = load_z_party
 		defaultunlocked = 4
 		completion_movie = 'singleplayer_02'
-		setlist_icon = setlist_icon_backyard
+		setlist_icon = setlist_icon_BACKYARD
 	}
 	tier2 = {
 		title = "2. Your first real gig"
@@ -39,7 +39,7 @@ gh3_career_songs = {
 		boss
 		level = load_z_dive
 		completion_movie = 'singleplayer_03'
-		setlist_icon = setlist_icon_bar
+		setlist_icon = setlist_icon_BAR
 	}
 	tier3 = {
 		title = "3. Making the video"
@@ -53,7 +53,7 @@ gh3_career_songs = {
 		encorep1
 		level = load_z_video
 		completion_movie = 'singleplayer_04'
-		setlist_icon = setlist_icon_videoshoot
+		setlist_icon = setlist_icon_VIDEOSHOOT
 	}
 	tier4 = {
 		title = "4. European Invasion"
@@ -67,7 +67,7 @@ gh3_career_songs = {
 		encorep1
 		level = load_z_artdeco
 		completion_movie = 'singleplayer_05'
-		setlist_icon = setlist_icon_odeon
+		setlist_icon = setlist_icon_ODEON
 	}
 	tier5 = {
 		title = "5. Bighouse blues"
@@ -83,7 +83,7 @@ gh3_career_songs = {
 		boss
 		level = load_z_prison
 		completion_movie = 'singleplayer_06'
-		setlist_icon = setlist_icon_prison
+		setlist_icon = setlist_icon_PRISON
 	}
 	tier6 = {
 		title = "6. The Hottest band on Earth"
@@ -97,7 +97,7 @@ gh3_career_songs = {
 		encorep1
 		level = load_z_wikker
 		completion_movie = 'singleplayer_07'
-		setlist_icon = setlist_icon_desert
+		setlist_icon = setlist_icon_DESERT
 	}
 	tier7 = {
 		title = "7. Live in Japan"
@@ -111,7 +111,7 @@ gh3_career_songs = {
 		encorep1
 		level = load_z_budokan
 		completion_movie = 'singleplayer_08'
-		setlist_icon = setlist_icon_megadome
+		setlist_icon = setlist_icon_MEGADOME
 	}
 	tier8 = {
 		title = "8. Battle for your soul"
@@ -119,23 +119,23 @@ gh3_career_songs = {
 			rainingblood
 			cliffsofdover
 			numberofthebeast
-			one
+			ONE
 			bossdevil
 		]
 		boss
 		level = load_z_hell
 		completion_movie = 'singleplayer_end'
-		setlist_icon = setlist_icon_hell
+		setlist_icon = setlist_icon_HELL
 	}
 }
-gh3_general_songs = {
+GH3_General_Songs = {
 	prefix = 'general'
 	num_tiers = 8
 	tier1 = {
 		title = "1. Starting out small"
 		songs = [
 			slowride
-			talkdirtytome
+			TalkDirtyToMe
 			hitmewithyourbestshot
 			storyofmylife
 			rocknrollallnite
@@ -145,7 +145,7 @@ gh3_general_songs = {
 		encorep2
 		level = load_z_party
 		defaultunlocked = 4
-		setlist_icon = setlist_icon_backyard
+		setlist_icon = setlist_icon_BACKYARD
 	}
 	tier2 = {
 		title = "2. Your first real gig"
@@ -161,7 +161,7 @@ gh3_general_songs = {
 		encorep2
 		level = load_z_dive
 		defaultunlocked = 4
-		setlist_icon = setlist_icon_bar
+		setlist_icon = setlist_icon_BAR
 	}
 	tier3 = {
 		title = "3. Making the video"
@@ -176,7 +176,7 @@ gh3_general_songs = {
 		encorep1
 		encorep2
 		level = load_z_video
-		setlist_icon = setlist_icon_videoshoot
+		setlist_icon = setlist_icon_VIDEOSHOOT
 	}
 	tier4 = {
 		title = "4. European Invasion"
@@ -191,7 +191,7 @@ gh3_general_songs = {
 		encorep1
 		encorep2
 		level = load_z_artdeco
-		setlist_icon = setlist_icon_odeon
+		setlist_icon = setlist_icon_ODEON
 	}
 	tier5 = {
 		title = "5. Bighouse Blues"
@@ -206,7 +206,7 @@ gh3_general_songs = {
 		encorep1
 		encorep2
 		level = load_z_prison
-		setlist_icon = setlist_icon_prison
+		setlist_icon = setlist_icon_PRISON
 	}
 	tier6 = {
 		title = "6. The Hottest band on Earth"
@@ -221,7 +221,7 @@ gh3_general_songs = {
 		encorep1
 		encorep2
 		level = load_z_wikker
-		setlist_icon = setlist_icon_desert
+		setlist_icon = setlist_icon_DESERT
 	}
 	tier7 = {
 		title = "7. Live in Japan"
@@ -234,7 +234,7 @@ gh3_general_songs = {
 		]
 		encorep1
 		level = load_z_budokan
-		setlist_icon = setlist_icon_megadome
+		setlist_icon = setlist_icon_MEGADOME
 	}
 	tier8 = {
 		title = "8. Battle for your Soul"
@@ -242,20 +242,20 @@ gh3_general_songs = {
 			rainingblood
 			cliffsofdover
 			numberofthebeast
-			one
+			ONE
 		]
 		level = load_z_hell
-		setlist_icon = setlist_icon_hell
+		setlist_icon = setlist_icon_HELL
 	}
 }
-gh3_generalp2_songs = {
+GH3_GeneralP2_Songs = {
 	prefix = 'general'
 	num_tiers = 8
 	tier1 = {
 		title = "1. Starting out small"
 		songs = [
 			slowride
-			talkdirtytome
+			TalkDirtyToMe
 			hitmewithyourbestshot
 			storyofmylife
 			rocknrollallnite
@@ -265,7 +265,7 @@ gh3_generalp2_songs = {
 		encorep2
 		level = load_z_party
 		defaultunlocked = 4
-		setlist_icon = setlist_icon_backyard
+		setlist_icon = setlist_icon_BACKYARD
 	}
 	tier2 = {
 		title = "2. Your first real gig"
@@ -281,7 +281,7 @@ gh3_generalp2_songs = {
 		encorep2
 		level = load_z_dive
 		defaultunlocked = 4
-		setlist_icon = setlist_icon_bar
+		setlist_icon = setlist_icon_BAR
 	}
 	tier3 = {
 		title = "3. Making the video"
@@ -296,7 +296,7 @@ gh3_generalp2_songs = {
 		encorep1
 		encorep2
 		level = load_z_video
-		setlist_icon = setlist_icon_videoshoot
+		setlist_icon = setlist_icon_VIDEOSHOOT
 	}
 	tier4 = {
 		title = "4. European Invasion"
@@ -311,7 +311,7 @@ gh3_generalp2_songs = {
 		encorep1
 		encorep2
 		level = load_z_artdeco
-		setlist_icon = setlist_icon_odeon
+		setlist_icon = setlist_icon_ODEON
 	}
 	tier5 = {
 		title = "5. Bighouse Blues"
@@ -326,7 +326,7 @@ gh3_generalp2_songs = {
 		encorep1
 		encorep2
 		level = load_z_prison
-		setlist_icon = setlist_icon_prison
+		setlist_icon = setlist_icon_PRISON
 	}
 	tier6 = {
 		title = "6. The Hottest band on Earth"
@@ -341,7 +341,7 @@ gh3_generalp2_songs = {
 		encorep1
 		encorep2
 		level = load_z_wikker
-		setlist_icon = setlist_icon_desert
+		setlist_icon = setlist_icon_DESERT
 	}
 	tier7 = {
 		title = "7. Live in Japan"
@@ -354,7 +354,7 @@ gh3_generalp2_songs = {
 		]
 		encorep1
 		level = load_z_budokan
-		setlist_icon = setlist_icon_megadome
+		setlist_icon = setlist_icon_MEGADOME
 	}
 	tier8 = {
 		title = "8. Battle for your Soul"
@@ -362,20 +362,20 @@ gh3_generalp2_songs = {
 			rainingblood
 			cliffsofdover
 			numberofthebeast
-			one
+			ONE
 		]
 		level = load_z_hell
-		setlist_icon = setlist_icon_hell
+		setlist_icon = setlist_icon_HELL
 	}
 }
-gh3_generalp2_songs_coop = {
+GH3_GeneralP2_Songs_Coop = {
 	prefix = 'general'
 	num_tiers = 8
 	tier1 = {
 		title = "1. Starting out small"
 		songs = [
 			slowride
-			talkdirtytome
+			TalkDirtyToMe
 			hitmewithyourbestshot
 			storyofmylife
 			rocknrollallnite
@@ -385,7 +385,7 @@ gh3_generalp2_songs_coop = {
 		encorep2
 		level = load_z_party
 		defaultunlocked = 4
-		setlist_icon = setlist_icon_backyard
+		setlist_icon = setlist_icon_BACKYARD
 	}
 	tier2 = {
 		title = "2. Your first real gig"
@@ -401,7 +401,7 @@ gh3_generalp2_songs_coop = {
 		encorep2
 		level = load_z_dive
 		defaultunlocked = 4
-		setlist_icon = setlist_icon_bar
+		setlist_icon = setlist_icon_BAR
 	}
 	tier3 = {
 		title = "3. Making the video"
@@ -415,7 +415,7 @@ gh3_generalp2_songs_coop = {
 		encorep1
 		encorep2
 		level = load_z_video
-		setlist_icon = setlist_icon_videoshoot
+		setlist_icon = setlist_icon_VIDEOSHOOT
 	}
 	tier4 = {
 		title = "4. European Invasion"
@@ -430,7 +430,7 @@ gh3_generalp2_songs_coop = {
 		encorep1
 		encorep2
 		level = load_z_artdeco
-		setlist_icon = setlist_icon_odeon
+		setlist_icon = setlist_icon_ODEON
 	}
 	tier5 = {
 		title = "5. Bighouse Blues"
@@ -445,7 +445,7 @@ gh3_generalp2_songs_coop = {
 		encorep1
 		encorep2
 		level = load_z_prison
-		setlist_icon = setlist_icon_prison
+		setlist_icon = setlist_icon_PRISON
 	}
 	tier6 = {
 		title = "6. The Hottest band on Earth"
@@ -460,7 +460,7 @@ gh3_generalp2_songs_coop = {
 		encorep1
 		encorep2
 		level = load_z_wikker
-		setlist_icon = setlist_icon_desert
+		setlist_icon = setlist_icon_DESERT
 	}
 	tier7 = {
 		title = "7. Live in Japan"
@@ -473,7 +473,7 @@ gh3_generalp2_songs_coop = {
 		]
 		encorep1
 		level = load_z_budokan
-		setlist_icon = setlist_icon_megadome
+		setlist_icon = setlist_icon_MEGADOME
 	}
 	tier8 = {
 		title = "8. Battle for your Soul"
@@ -481,48 +481,48 @@ gh3_generalp2_songs_coop = {
 			rainingblood
 			cliffsofdover
 			numberofthebeast
-			one
+			ONE
 		]
 		level = load_z_hell
-		setlist_icon = setlist_icon_hell
+		setlist_icon = setlist_icon_HELL
 	}
 }
-gh3_career_numsongtoprogress = {
+GH3_Career_NumSongToProgress = {
 	easy = 3
 	medium = 3
 	hard = 4
 	expert = 4
 }
-gh3_career_progression = [
+GH3_Career_Progression = [
 	{
 		name = set_initial_states
-		type = scr
-		atom_script = progression_init
+		type = Scr
+		atom_script = Progression_Init
 		atom_params = {
 		}
 	}
 	{
 		name = career_tier1_songscomplete
-		type = scr
-		atom_script = progression_tiersongscomplete
+		type = Scr
+		atom_script = Progression_TierSongsComplete
 		atom_params = {
 			tier = 1
 		}
 		depends_on = [
 			{
-				type = scr
-				scr = progression_checksongcomplete
+				type = Scr
+				Scr = Progression_CheckSongComplete
 				params = {
 					tier = 1
-					numsongstoprogress = $gh3_career_numsongtoprogress
+					numsongstoprogress = $GH3_Career_NumSongToProgress
 				}
 			}
 		]
 	}
 	{
 		name = career_tier1_encoreunlock
-		type = scr
-		atom_script = progression_tierencoreunlock
+		type = Scr
+		atom_script = Progression_TierEncoreUnlock
 		atom_params = {
 			tier = 1
 		}
@@ -532,8 +532,8 @@ gh3_career_progression = [
 				atom = career_tier1_songscomplete
 			}
 			{
-				type = scr
-				scr = progression_alwaysblock
+				type = Scr
+				Scr = Progression_AlwaysBlock
 				required = [
 					0
 					0
@@ -545,8 +545,8 @@ gh3_career_progression = [
 	}
 	{
 		name = career_tier1_encorecomplete
-		type = scr
-		atom_script = progression_tierencorecomplete
+		type = Scr
+		atom_script = Progression_TierEncoreComplete
 		atom_params = {
 			tier = 1
 		}
@@ -556,8 +556,8 @@ gh3_career_progression = [
 				atom = career_tier1_encoreunlock
 			}
 			{
-				type = scr
-				scr = progression_checkencorecomplete
+				type = Scr
+				Scr = Progression_CheckEncoreComplete
 				params = {
 					tier = 1
 				}
@@ -566,8 +566,8 @@ gh3_career_progression = [
 	}
 	{
 		name = career_tier1_complete
-		type = scr
-		atom_script = progression_tiercomplete
+		type = Scr
+		atom_script = Progression_TierComplete
 		atom_params = {
 			tier = 1
 		}
@@ -590,8 +590,8 @@ gh3_career_progression = [
 	}
 	{
 		name = career_tier2_songscomplete
-		type = scr
-		atom_script = progression_tiersongscomplete
+		type = Scr
+		atom_script = Progression_TierSongsComplete
 		atom_params = {
 			tier = 2
 		}
@@ -601,19 +601,19 @@ gh3_career_progression = [
 				atom = career_tier1_complete
 			}
 			{
-				type = scr
-				scr = progression_checksongcomplete
+				type = Scr
+				Scr = Progression_CheckSongComplete
 				params = {
 					tier = 2
-					numsongstoprogress = $gh3_career_numsongtoprogress
+					numsongstoprogress = $GH3_Career_NumSongToProgress
 				}
 			}
 		]
 	}
 	{
 		name = career_tier2_bossunlock
-		type = scr
-		atom_script = progression_tierbossunlock
+		type = Scr
+		atom_script = Progression_TierBossUnlock
 		atom_params = {
 			tier = 2
 		}
@@ -623,8 +623,8 @@ gh3_career_progression = [
 				atom = career_tier2_songscomplete
 			}
 			{
-				type = scr
-				scr = progression_alwaysblock
+				type = Scr
+				Scr = Progression_AlwaysBlock
 				required = [
 					0
 					0
@@ -636,8 +636,8 @@ gh3_career_progression = [
 	}
 	{
 		name = career_tier2_bosscomplete
-		type = scr
-		atom_script = progression_tierbosscomplete
+		type = Scr
+		atom_script = Progression_TierBossComplete
 		atom_params = {
 			tier = 2
 		}
@@ -647,8 +647,8 @@ gh3_career_progression = [
 				atom = career_tier2_bossunlock
 			}
 			{
-				type = scr
-				scr = progression_checkbosscomplete
+				type = Scr
+				Scr = Progression_CheckBossComplete
 				params = {
 					tier = 2
 				}
@@ -657,8 +657,8 @@ gh3_career_progression = [
 	}
 	{
 		name = career_tier2_encoreunlock
-		type = scr
-		atom_script = progression_tierencoreunlock
+		type = Scr
+		atom_script = Progression_TierEncoreUnlock
 		atom_params = {
 			tier = 2
 		}
@@ -681,8 +681,8 @@ gh3_career_progression = [
 	}
 	{
 		name = career_tier2_encorecomplete
-		type = scr
-		atom_script = progression_tierencorecomplete
+		type = Scr
+		atom_script = Progression_TierEncoreComplete
 		atom_params = {
 			tier = 2
 		}
@@ -692,8 +692,8 @@ gh3_career_progression = [
 				atom = career_tier2_encoreunlock
 			}
 			{
-				type = scr
-				scr = progression_checkencorecomplete
+				type = Scr
+				Scr = Progression_CheckEncoreComplete
 				params = {
 					tier = 2
 				}
@@ -702,8 +702,8 @@ gh3_career_progression = [
 	}
 	{
 		name = career_tier2_complete
-		type = scr
-		atom_script = progression_tiercomplete
+		type = Scr
+		atom_script = Progression_TierComplete
 		atom_params = {
 			tier = 2
 		}
@@ -736,8 +736,8 @@ gh3_career_progression = [
 	}
 	{
 		name = career_tier3_songscomplete
-		type = scr
-		atom_script = progression_tiersongscomplete
+		type = Scr
+		atom_script = Progression_TierSongsComplete
 		atom_params = {
 			tier = 3
 		}
@@ -747,19 +747,19 @@ gh3_career_progression = [
 				atom = career_tier2_complete
 			}
 			{
-				type = scr
-				scr = progression_checksongcomplete
+				type = Scr
+				Scr = Progression_CheckSongComplete
 				params = {
 					tier = 3
-					numsongstoprogress = $gh3_career_numsongtoprogress
+					numsongstoprogress = $GH3_Career_NumSongToProgress
 				}
 			}
 		]
 	}
 	{
 		name = career_tier3_encoreunlock
-		type = scr
-		atom_script = progression_tierencoreunlock
+		type = Scr
+		atom_script = Progression_TierEncoreUnlock
 		atom_params = {
 			tier = 3
 		}
@@ -769,8 +769,8 @@ gh3_career_progression = [
 				atom = career_tier3_songscomplete
 			}
 			{
-				type = scr
-				scr = progression_alwaysblock
+				type = Scr
+				Scr = Progression_AlwaysBlock
 				required = [
 					0
 					0
@@ -782,8 +782,8 @@ gh3_career_progression = [
 	}
 	{
 		name = career_tier3_encorecomplete
-		type = scr
-		atom_script = progression_tierencorecomplete
+		type = Scr
+		atom_script = Progression_TierEncoreComplete
 		atom_params = {
 			tier = 3
 		}
@@ -793,8 +793,8 @@ gh3_career_progression = [
 				atom = career_tier3_encoreunlock
 			}
 			{
-				type = scr
-				scr = progression_checkencorecomplete
+				type = Scr
+				Scr = Progression_CheckEncoreComplete
 				params = {
 					tier = 3
 				}
@@ -803,8 +803,8 @@ gh3_career_progression = [
 	}
 	{
 		name = career_tier3_complete
-		type = scr
-		atom_script = progression_tiercomplete
+		type = Scr
+		atom_script = Progression_TierComplete
 		atom_params = {
 			tier = 3
 		}
@@ -827,8 +827,8 @@ gh3_career_progression = [
 	}
 	{
 		name = career_tier4_songscomplete
-		type = scr
-		atom_script = progression_tiersongscomplete
+		type = Scr
+		atom_script = Progression_TierSongsComplete
 		atom_params = {
 			tier = 4
 		}
@@ -838,19 +838,19 @@ gh3_career_progression = [
 				atom = career_tier3_complete
 			}
 			{
-				type = scr
-				scr = progression_checksongcomplete
+				type = Scr
+				Scr = Progression_CheckSongComplete
 				params = {
 					tier = 4
-					numsongstoprogress = $gh3_career_numsongtoprogress
+					numsongstoprogress = $GH3_Career_NumSongToProgress
 				}
 			}
 		]
 	}
 	{
 		name = career_tier4_encoreunlock
-		type = scr
-		atom_script = progression_tierencoreunlock
+		type = Scr
+		atom_script = Progression_TierEncoreUnlock
 		atom_params = {
 			tier = 4
 		}
@@ -860,8 +860,8 @@ gh3_career_progression = [
 				atom = career_tier4_songscomplete
 			}
 			{
-				type = scr
-				scr = progression_alwaysblock
+				type = Scr
+				Scr = Progression_AlwaysBlock
 				required = [
 					0
 					0
@@ -873,8 +873,8 @@ gh3_career_progression = [
 	}
 	{
 		name = career_tier4_encorecomplete
-		type = scr
-		atom_script = progression_tierencorecomplete
+		type = Scr
+		atom_script = Progression_TierEncoreComplete
 		atom_params = {
 			tier = 4
 		}
@@ -884,8 +884,8 @@ gh3_career_progression = [
 				atom = career_tier4_encoreunlock
 			}
 			{
-				type = scr
-				scr = progression_checkencorecomplete
+				type = Scr
+				Scr = Progression_CheckEncoreComplete
 				params = {
 					tier = 4
 				}
@@ -894,8 +894,8 @@ gh3_career_progression = [
 	}
 	{
 		name = career_tier4_complete
-		type = scr
-		atom_script = progression_tiercomplete
+		type = Scr
+		atom_script = Progression_TierComplete
 		atom_params = {
 			tier = 4
 		}
@@ -918,8 +918,8 @@ gh3_career_progression = [
 	}
 	{
 		name = career_tier5_songscomplete
-		type = scr
-		atom_script = progression_tiersongscomplete
+		type = Scr
+		atom_script = Progression_TierSongsComplete
 		atom_params = {
 			tier = 5
 		}
@@ -929,19 +929,19 @@ gh3_career_progression = [
 				atom = career_tier4_complete
 			}
 			{
-				type = scr
-				scr = progression_checksongcomplete
+				type = Scr
+				Scr = Progression_CheckSongComplete
 				params = {
 					tier = 5
-					numsongstoprogress = $gh3_career_numsongtoprogress
+					numsongstoprogress = $GH3_Career_NumSongToProgress
 				}
 			}
 		]
 	}
 	{
 		name = career_tier5_bossunlock
-		type = scr
-		atom_script = progression_tierbossunlock
+		type = Scr
+		atom_script = Progression_TierBossUnlock
 		atom_params = {
 			tier = 5
 		}
@@ -951,8 +951,8 @@ gh3_career_progression = [
 				atom = career_tier5_songscomplete
 			}
 			{
-				type = scr
-				scr = progression_alwaysblock
+				type = Scr
+				Scr = Progression_AlwaysBlock
 				required = [
 					0
 					0
@@ -964,8 +964,8 @@ gh3_career_progression = [
 	}
 	{
 		name = career_tier5_bosscomplete
-		type = scr
-		atom_script = progression_tierbosscomplete
+		type = Scr
+		atom_script = Progression_TierBossComplete
 		atom_params = {
 			tier = 5
 		}
@@ -975,8 +975,8 @@ gh3_career_progression = [
 				atom = career_tier5_bossunlock
 			}
 			{
-				type = scr
-				scr = progression_checkbosscomplete
+				type = Scr
+				Scr = Progression_CheckBossComplete
 				params = {
 					tier = 5
 				}
@@ -985,8 +985,8 @@ gh3_career_progression = [
 	}
 	{
 		name = career_tier5_encoreunlock
-		type = scr
-		atom_script = progression_tierencoreunlock
+		type = Scr
+		atom_script = Progression_TierEncoreUnlock
 		atom_params = {
 			tier = 5
 		}
@@ -1009,8 +1009,8 @@ gh3_career_progression = [
 	}
 	{
 		name = career_tier5_encorecomplete
-		type = scr
-		atom_script = progression_tierencorecomplete
+		type = Scr
+		atom_script = Progression_TierEncoreComplete
 		atom_params = {
 			tier = 5
 		}
@@ -1020,8 +1020,8 @@ gh3_career_progression = [
 				atom = career_tier5_encoreunlock
 			}
 			{
-				type = scr
-				scr = progression_checkencorecomplete
+				type = Scr
+				Scr = Progression_CheckEncoreComplete
 				params = {
 					tier = 5
 				}
@@ -1030,8 +1030,8 @@ gh3_career_progression = [
 	}
 	{
 		name = career_tier5_complete
-		type = scr
-		atom_script = progression_tiercomplete
+		type = Scr
+		atom_script = Progression_TierComplete
 		atom_params = {
 			tier = 5
 		}
@@ -1064,8 +1064,8 @@ gh3_career_progression = [
 	}
 	{
 		name = career_tier6_songscomplete
-		type = scr
-		atom_script = progression_tiersongscomplete
+		type = Scr
+		atom_script = Progression_TierSongsComplete
 		atom_params = {
 			tier = 6
 		}
@@ -1075,19 +1075,19 @@ gh3_career_progression = [
 				atom = career_tier5_complete
 			}
 			{
-				type = scr
-				scr = progression_checksongcomplete
+				type = Scr
+				Scr = Progression_CheckSongComplete
 				params = {
 					tier = 6
-					numsongstoprogress = $gh3_career_numsongtoprogress
+					numsongstoprogress = $GH3_Career_NumSongToProgress
 				}
 			}
 		]
 	}
 	{
 		name = career_tier6_encoreunlock
-		type = scr
-		atom_script = progression_tierencoreunlock
+		type = Scr
+		atom_script = Progression_TierEncoreUnlock
 		atom_params = {
 			tier = 6
 		}
@@ -1097,8 +1097,8 @@ gh3_career_progression = [
 				atom = career_tier6_songscomplete
 			}
 			{
-				type = scr
-				scr = progression_alwaysblock
+				type = Scr
+				Scr = Progression_AlwaysBlock
 				required = [
 					0
 					0
@@ -1110,8 +1110,8 @@ gh3_career_progression = [
 	}
 	{
 		name = career_tier6_encorecomplete
-		type = scr
-		atom_script = progression_tierencorecomplete
+		type = Scr
+		atom_script = Progression_TierEncoreComplete
 		atom_params = {
 			tier = 6
 		}
@@ -1121,8 +1121,8 @@ gh3_career_progression = [
 				atom = career_tier6_encoreunlock
 			}
 			{
-				type = scr
-				scr = progression_checkencorecomplete
+				type = Scr
+				Scr = Progression_CheckEncoreComplete
 				params = {
 					tier = 6
 				}
@@ -1131,8 +1131,8 @@ gh3_career_progression = [
 	}
 	{
 		name = career_tier6_complete
-		type = scr
-		atom_script = progression_tiercomplete
+		type = Scr
+		atom_script = Progression_TierComplete
 		atom_params = {
 			tier = 6
 		}
@@ -1155,8 +1155,8 @@ gh3_career_progression = [
 	}
 	{
 		name = career_tier7_songscomplete
-		type = scr
-		atom_script = progression_tiersongscomplete
+		type = Scr
+		atom_script = Progression_TierSongsComplete
 		atom_params = {
 			tier = 7
 		}
@@ -1166,19 +1166,19 @@ gh3_career_progression = [
 				atom = career_tier6_complete
 			}
 			{
-				type = scr
-				scr = progression_checksongcomplete
+				type = Scr
+				Scr = Progression_CheckSongComplete
 				params = {
 					tier = 7
-					numsongstoprogress = $gh3_career_numsongtoprogress
+					numsongstoprogress = $GH3_Career_NumSongToProgress
 				}
 			}
 		]
 	}
 	{
 		name = career_tier7_encoreunlock
-		type = scr
-		atom_script = progression_tierencoreunlock
+		type = Scr
+		atom_script = Progression_TierEncoreUnlock
 		atom_params = {
 			tier = 7
 		}
@@ -1188,8 +1188,8 @@ gh3_career_progression = [
 				atom = career_tier7_songscomplete
 			}
 			{
-				type = scr
-				scr = progression_alwaysblock
+				type = Scr
+				Scr = Progression_AlwaysBlock
 				required = [
 					0
 					0
@@ -1201,8 +1201,8 @@ gh3_career_progression = [
 	}
 	{
 		name = career_tier7_encorecomplete
-		type = scr
-		atom_script = progression_tierencorecomplete
+		type = Scr
+		atom_script = Progression_TierEncoreComplete
 		atom_params = {
 			tier = 7
 		}
@@ -1212,8 +1212,8 @@ gh3_career_progression = [
 				atom = career_tier7_encoreunlock
 			}
 			{
-				type = scr
-				scr = progression_checkencorecomplete
+				type = Scr
+				Scr = Progression_CheckEncoreComplete
 				params = {
 					tier = 7
 				}
@@ -1222,8 +1222,8 @@ gh3_career_progression = [
 	}
 	{
 		name = career_tier7_complete
-		type = scr
-		atom_script = progression_tiercomplete
+		type = Scr
+		atom_script = Progression_TierComplete
 		atom_params = {
 			tier = 7
 		}
@@ -1246,8 +1246,8 @@ gh3_career_progression = [
 	}
 	{
 		name = career_tier8_songscomplete
-		type = scr
-		atom_script = progression_tiersongscomplete
+		type = Scr
+		atom_script = Progression_TierSongsComplete
 		atom_params = {
 			tier = 8
 		}
@@ -1257,19 +1257,19 @@ gh3_career_progression = [
 				atom = career_tier7_complete
 			}
 			{
-				type = scr
-				scr = progression_checksongcomplete
+				type = Scr
+				Scr = Progression_CheckSongComplete
 				params = {
 					tier = 8
-					numsongstoprogress = $gh3_career_numsongtoprogress
+					numsongstoprogress = $GH3_Career_NumSongToProgress
 				}
 			}
 		]
 	}
 	{
 		name = career_tier8_bossunlock
-		type = scr
-		atom_script = progression_tierbossunlock
+		type = Scr
+		atom_script = Progression_TierBossUnlock
 		atom_params = {
 			tier = 8
 		}
@@ -1279,8 +1279,8 @@ gh3_career_progression = [
 				atom = career_tier8_songscomplete
 			}
 			{
-				type = scr
-				scr = progression_alwaysblock
+				type = Scr
+				Scr = Progression_AlwaysBlock
 				required = [
 					0
 					0
@@ -1292,8 +1292,8 @@ gh3_career_progression = [
 	}
 	{
 		name = career_tier8_bosscomplete
-		type = scr
-		atom_script = progression_tierbosscomplete
+		type = Scr
+		atom_script = Progression_TierBossComplete
 		atom_params = {
 			tier = 8
 		}
@@ -1303,8 +1303,8 @@ gh3_career_progression = [
 				atom = career_tier8_bossunlock
 			}
 			{
-				type = scr
-				scr = progression_checkbosscomplete
+				type = Scr
+				Scr = Progression_CheckBossComplete
 				params = {
 					tier = 8
 				}
@@ -1313,8 +1313,8 @@ gh3_career_progression = [
 	}
 	{
 		name = career_tier8_complete
-		type = scr
-		atom_script = progression_tiercomplete
+		type = Scr
+		atom_script = Progression_TierComplete
 		atom_params = {
 			tier = 8
 			finished_game
@@ -1338,8 +1338,8 @@ gh3_career_progression = [
 	}
 	{
 		name = unlock_guitar1
-		type = scr
-		atom_script = progression_unlockguitar
+		type = Scr
+		atom_script = Progression_UnlockGuitar
 		atom_params = {
 			guitar = 1
 			for_difficulty
@@ -1350,8 +1350,8 @@ gh3_career_progression = [
 				atom = career_tier8_complete
 			}
 			{
-				type = scr
-				scr = progression_checkdiff
+				type = Scr
+				Scr = Progression_CheckDiff
 				params = {
 					diff = easy
 					mode = p1_career
@@ -1361,24 +1361,24 @@ gh3_career_progression = [
 	}
 	{
 		name = unlock_guitar2
-		type = scr
-		atom_script = progression_unlockguitar
+		type = Scr
+		atom_script = Progression_UnlockGuitar
 		atom_params = {
 			guitar = 2
 			for_stars
 		}
 		depends_on = [
 			{
-				type = scr
-				scr = progression_checkdiff
+				type = Scr
+				Scr = Progression_CheckDiff
 				params = {
 					diff = easy
 					mode = p1_career
 				}
 			}
 			{
-				type = scr
-				scr = progression_checksong5star
+				type = Scr
+				Scr = Progression_CheckSong5Star
 				params = {
 				}
 			}
@@ -1386,8 +1386,8 @@ gh3_career_progression = [
 	}
 	{
 		name = unlock_guitar3
-		type = scr
-		atom_script = progression_unlockguitar
+		type = Scr
+		atom_script = Progression_UnlockGuitar
 		atom_params = {
 			guitar = 3
 			for_difficulty
@@ -1398,8 +1398,8 @@ gh3_career_progression = [
 				atom = career_tier8_complete
 			}
 			{
-				type = scr
-				scr = progression_checkdiff
+				type = Scr
+				Scr = Progression_CheckDiff
 				params = {
 					diff = medium
 					mode = p1_career
@@ -1409,24 +1409,24 @@ gh3_career_progression = [
 	}
 	{
 		name = unlock_guitar4
-		type = scr
-		atom_script = progression_unlockguitar
+		type = Scr
+		atom_script = Progression_UnlockGuitar
 		atom_params = {
 			guitar = 4
 			for_stars
 		}
 		depends_on = [
 			{
-				type = scr
-				scr = progression_checkdiff
+				type = Scr
+				Scr = Progression_CheckDiff
 				params = {
 					diff = medium
 					mode = p1_career
 				}
 			}
 			{
-				type = scr
-				scr = progression_checksong5star
+				type = Scr
+				Scr = Progression_CheckSong5Star
 				params = {
 				}
 			}
@@ -1434,8 +1434,8 @@ gh3_career_progression = [
 	}
 	{
 		name = unlock_guitar5
-		type = scr
-		atom_script = progression_unlockguitar
+		type = Scr
+		atom_script = Progression_UnlockGuitar
 		atom_params = {
 			guitar = 5
 			for_difficulty
@@ -1446,8 +1446,8 @@ gh3_career_progression = [
 				atom = career_tier8_complete
 			}
 			{
-				type = scr
-				scr = progression_checkdiff
+				type = Scr
+				Scr = Progression_CheckDiff
 				params = {
 					diff = hard
 					mode = p1_career
@@ -1457,24 +1457,24 @@ gh3_career_progression = [
 	}
 	{
 		name = unlock_guitar6
-		type = scr
-		atom_script = progression_unlockguitar
+		type = Scr
+		atom_script = Progression_UnlockGuitar
 		atom_params = {
 			guitar = 6
 			for_stars
 		}
 		depends_on = [
 			{
-				type = scr
-				scr = progression_checkdiff
+				type = Scr
+				Scr = Progression_CheckDiff
 				params = {
 					diff = hard
 					mode = p1_career
 				}
 			}
 			{
-				type = scr
-				scr = progression_checksong5star
+				type = Scr
+				Scr = Progression_CheckSong5Star
 				params = {
 				}
 			}
@@ -1482,8 +1482,8 @@ gh3_career_progression = [
 	}
 	{
 		name = unlock_guitar7
-		type = scr
-		atom_script = progression_unlockguitar
+		type = Scr
+		atom_script = Progression_UnlockGuitar
 		atom_params = {
 			guitar = 7
 			for_difficulty
@@ -1494,8 +1494,8 @@ gh3_career_progression = [
 				atom = career_tier8_complete
 			}
 			{
-				type = scr
-				scr = progression_checkdiff
+				type = Scr
+				Scr = Progression_CheckDiff
 				params = {
 					diff = expert
 					mode = p1_career
@@ -1505,24 +1505,24 @@ gh3_career_progression = [
 	}
 	{
 		name = unlock_guitar8
-		type = scr
-		atom_script = progression_unlockguitar
+		type = Scr
+		atom_script = Progression_UnlockGuitar
 		atom_params = {
 			guitar = 8
 			for_stars
 		}
 		depends_on = [
 			{
-				type = scr
-				scr = progression_checkdiff
+				type = Scr
+				Scr = Progression_CheckDiff
 				params = {
 					diff = expert
 					mode = p1_career
 				}
 			}
 			{
-				type = scr
-				scr = progression_checksong5star
+				type = Scr
+				Scr = Progression_CheckSong5Star
 				params = {
 				}
 			}
@@ -1530,165 +1530,165 @@ gh3_career_progression = [
 	}
 	{
 		name = end_of_first_update
-		type = scr
-		atom_script = progression_endoffirstupdate
+		type = Scr
+		atom_script = Progression_EndOfFirstUpdate
 		atom_params = {
 		}
 	}
 ]
-cash_system_rules = [
+Cash_System_rules = [
 	{
 		diff = easy
 		newstars = 3
 		oldstars = 0
-		cash = 75
+		Cash = 75
 	}
 	{
 		diff = easy
 		newstars = 4
 		oldstars = 0
-		cash = 175
+		Cash = 175
 	}
 	{
 		diff = easy
 		newstars = 5
 		oldstars = 0
-		cash = 300
+		Cash = 300
 	}
 	{
 		diff = easy
 		newstars = 4
 		oldstars = 3
-		cash = 100
+		Cash = 100
 	}
 	{
 		diff = easy
 		newstars = 5
 		oldstars = 3
-		cash = 225
+		Cash = 225
 	}
 	{
 		diff = easy
 		newstars = 5
 		oldstars = 4
-		cash = 125
+		Cash = 125
 	}
 	{
 		diff = medium
 		newstars = 3
 		oldstars = 0
-		cash = 150
+		Cash = 150
 	}
 	{
 		diff = medium
 		newstars = 4
 		oldstars = 0
-		cash = 350
+		Cash = 350
 	}
 	{
 		diff = medium
 		newstars = 5
 		oldstars = 0
-		cash = 600
+		Cash = 600
 	}
 	{
 		diff = medium
 		newstars = 4
 		oldstars = 3
-		cash = 200
+		Cash = 200
 	}
 	{
 		diff = medium
 		newstars = 5
 		oldstars = 3
-		cash = 450
+		Cash = 450
 	}
 	{
 		diff = medium
 		newstars = 5
 		oldstars = 4
-		cash = 250
+		Cash = 250
 	}
 	{
 		diff = hard
 		newstars = 3
 		oldstars = 0
-		cash = 300
+		Cash = 300
 	}
 	{
 		diff = hard
 		newstars = 4
 		oldstars = 0
-		cash = 700
+		Cash = 700
 	}
 	{
 		diff = hard
 		newstars = 5
 		oldstars = 0
-		cash = 1200
+		Cash = 1200
 	}
 	{
 		diff = hard
 		newstars = 4
 		oldstars = 3
-		cash = 400
+		Cash = 400
 	}
 	{
 		diff = hard
 		newstars = 5
 		oldstars = 3
-		cash = 900
+		Cash = 900
 	}
 	{
 		diff = hard
 		newstars = 5
 		oldstars = 4
-		cash = 500
+		Cash = 500
 	}
 	{
 		diff = expert
 		newstars = 3
 		oldstars = 0
-		cash = 450
+		Cash = 450
 	}
 	{
 		diff = expert
 		newstars = 4
 		oldstars = 0
-		cash = 1050
+		Cash = 1050
 	}
 	{
 		diff = expert
 		newstars = 5
 		oldstars = 0
-		cash = 1800
+		Cash = 1800
 	}
 	{
 		diff = expert
 		newstars = 4
 		oldstars = 3
-		cash = 600
+		Cash = 600
 	}
 	{
 		diff = expert
 		newstars = 5
 		oldstars = 3
-		cash = 1350
+		Cash = 1350
 	}
 	{
 		diff = expert
 		newstars = 5
 		oldstars = 4
-		cash = 750
+		Cash = 750
 	}
 ]
 
-script progression_init 
+script Progression_Init 
 	printf \{"Progression_Init"}
 	tier = 0
 	get_progression_globals game_mode = ($game_mode)
 	if ($game_mode = p1_career || $game_mode = p2_career)
-		formattext checksumname = tiername 'tier%i' i = (<tier> + 1)
+		FormatText checksumname = tiername 'tier%i' i = (<tier> + 1)
 		change current_level = ($<tier_global>.<tiername>.level)
 	endif
 	change \{setlist_previous_tier = 1}
@@ -1696,7 +1696,7 @@ script progression_init
 	change \{setlist_previous_tab = tab_setlist}
 endscript
 
-script progression_endoffirstupdate 
+script Progression_EndOfFirstUpdate 
 	change \{end_credits = 0}
 	change \{progression_beat_game_last_song = 0}
 	change \{progression_unlock_tier_last_song = 0}
@@ -1707,163 +1707,163 @@ script progression_endoffirstupdate
 	change \{progression_unlocked_type = guitar}
 endscript
 
-script progression_tiersongscomplete 
+script Progression_TierSongsComplete 
 	printf \{"Progression_TierSongsComplete"}
 endscript
 
-script progression_tierencoreunlock 
+script Progression_TierEncoreUnlock 
 	printf \{"Progression_TierEncoreUnlock"}
 	get_progression_globals game_mode = ($game_mode)
-	progression_getencoresong tier_global = <tier_global> tier = <tier>
-	setglobaltags progression params = {encore_song = <song>}
-	setglobaltags progression params = {next_tier = <tier>}
-	setglobaltags progression params = {next_song_count = <song_count>}
+	Progression_GetEncoreSong tier_global = <tier_global> tier = <tier>
+	SetGlobalTags Progression params = {encore_song = <song>}
+	SetGlobalTags Progression params = {next_tier = <tier>}
+	SetGlobalTags Progression params = {next_song_count = <song_count>}
 	change setlist_previous_tier = <tier>
 	change setlist_previous_song = <song_count>
 	change \{current_transition = preencore}
-	progression_unlocksong tier_global = <tier_global> song = <song> encore = 1
+	Progression_UnlockSong tier_global = <tier_global> song = <song> encore = 1
 	get_progression_globals \{game_mode = p1_quickplay}
-	progression_unlocksong tier_global = <tier_global> song = <song>
+	Progression_UnlockSong tier_global = <tier_global> song = <song>
 	get_progression_globals \{game_mode = p2_battle}
-	progression_unlocksong tier_global = <tier_global> song = <song>
+	Progression_UnlockSong tier_global = <tier_global> song = <song>
 endscript
 
-script progression_tierencorecomplete 
+script Progression_TierEncoreComplete 
 	printf \{"Progression_TierEncoreComplete"}
 	change \{progression_got_sponsored_last_song = 1}
 	change \{progression_play_completion_movie = 1}
 	change progression_completion_tier = <tier>
 endscript
 
-script progression_tierbossunlock 
+script Progression_TierBossUnlock 
 	printf \{"Progression_TierBossUnlock"}
 	get_progression_globals game_mode = ($game_mode)
-	progression_getbosssong tier_global = <tier_global> tier = <tier>
-	setglobaltags progression params = {boss_song = <song>}
-	setglobaltags progression params = {next_tier = <tier>}
-	setglobaltags progression params = {next_song_count = <song_count>}
+	Progression_GetBossSong tier_global = <tier_global> tier = <tier>
+	SetGlobalTags Progression params = {boss_song = <song>}
+	SetGlobalTags Progression params = {next_tier = <tier>}
+	SetGlobalTags Progression params = {next_song_count = <song_count>}
 	change setlist_previous_tier = <tier>
 	change setlist_previous_song = <song_count>
 	change \{current_transition = preboss}
-	progression_unlocksong tier_global = <tier_global> song = <song> boss = 1
+	Progression_UnlockSong tier_global = <tier_global> song = <song> boss = 1
 endscript
 
-script progression_tierbosscomplete 
+script Progression_TierBossComplete 
 	printf \{"Progression_TierBossComplete"}
 endscript
 
-script progression_tiercomplete 
+script Progression_TierComplete 
 	printf \{"Progression_TierComplete"}
 	get_progression_globals game_mode = ($game_mode)
 	setlist_prefix = ($<tier_global>.prefix)
-	formattext checksumname = tiername '%ptier%i' p = <setlist_prefix> i = <tier>
-	setglobaltags <tiername> params = {complete = 1}
-	if gotparam \{finished_game}
+	FormatText checksumname = tiername '%ptier%i' p = <setlist_prefix> i = <tier>
+	SetGlobalTags <tiername> params = {complete = 1}
+	if GotParam \{finished_game}
 		if ($devil_finish = 0)
 			printf \{"FINISHED GAME"}
 			change \{end_credits = 0}
 			if NOT ($progression_beat_game_last_song = 1)
 				if ($current_song = bossdevil)
 					change \{end_credits = 1}
-					formattext \{checksumname = bonus_song_checksum
+					FormatText \{checksumname = bonus_song_checksum
 						'%p_song%i_tier%s'
 						p = 'bonus'
 						i = 25
 						s = 1}
-					setglobaltags <bonus_song_checksum> params = {unlocked = 1}
-					setglobaltags ($gh3_bonus_songs.tier1.songs [24]) params = {unlocked = 1}
+					SetGlobalTags <bonus_song_checksum> params = {unlocked = 1}
+					SetGlobalTags ($GH3_Bonus_Songs.tier1.songs [24]) params = {unlocked = 1}
 				endif
 			endif
 			change \{progression_beat_game_last_song = 1}
 		endif
 		get_difficulty_text_nl difficulty = ($current_difficulty)
-		formattext checksumname = gametype_checksum '%p_%s' p = <setlist_prefix> s = <difficulty_text_nl>
-		setglobaltags <gametype_checksum> params = {complete = 1}
+		FormatText checksumname = gametype_checksum '%p_%s' p = <setlist_prefix> s = <difficulty_text_nl>
+		SetGlobalTags <gametype_checksum> params = {complete = 1}
 		if ($game_mode = p1_career)
-			formattext checksumname = bandname_id 'band%i_info_%g' i = ($current_band) g = 'p1_career'
-			formattext checksumname = hendrix_checksum 'hendrix_achievement_%s' s = <difficulty_text_nl>
-			getglobaltags <bandname_id> param = <hendrix_checksum>
+			FormatText checksumname = bandname_id 'band%i_info_%g' i = ($current_band) g = 'p1_career'
+			FormatText checksumname = hendrix_checksum 'hendrix_achievement_%s' s = <difficulty_text_nl>
+			GetGlobalTags <bandname_id> param = <hendrix_checksum>
 			if ((<...>.<hendrix_checksum>) = 0)
-				setglobaltags \{achievement_info
+				SetGlobalTags \{achievement_info
 					params = {
 						hendrix_achievement_lefty_off = 1
 					}}
 			elseif ((<...>.<hendrix_checksum>) = 1)
-				setglobaltags \{achievement_info
+				SetGlobalTags \{achievement_info
 					params = {
 						hendrix_achievement_lefty_on = 1
 					}}
 			endif
 			if ($current_difficulty = hard || $current_difficulty = expert)
-				if NOT isguitarcontroller controller = ($player1_status.controller)
-					writeachievements \{achievement = buy_a_guitar_already}
+				if NOT IsGuitarController controller = ($player1_status.controller)
+					WriteAchievements \{achievement = buy_a_guitar_already}
 				endif
 			endif
 		endif
 	else
 		tier = (<tier> + 1)
-		progression_unlocktier tier = <tier>
-		formattext checksumname = tiername 'tier%i' i = <tier>
-		progression_unlockvenue level_checksum = ($<tier_global>.<tiername>.level)
+		Progression_UnlockTier tier = <tier>
+		FormatText checksumname = tiername 'tier%i' i = <tier>
+		Progression_UnlockVenue level_checksum = ($<tier_global>.<tiername>.level)
 	endif
 endscript
 
-script progression_unlockvenue 
+script Progression_UnlockVenue 
 	get_current_band_checksum
 	final_checksum = <band_checksum>
-	extendcrc <final_checksum> ($levelzones.<level_checksum>.name) out = final_checksum
-	setglobaltags <final_checksum> params = {unlocked = 1}
-	formattext checksumname = venue_checksum 'venue_%s' s = ($levelzones.<level_checksum>.name)
-	setglobaltags <venue_checksum> params = {unlocked = 1}
+	ExtendCRC <final_checksum> ($LevelZones.<level_checksum>.name) out = final_checksum
+	SetGlobalTags <final_checksum> params = {unlocked = 1}
+	FormatText checksumname = venue_checksum 'venue_%s' s = ($LevelZones.<level_checksum>.name)
+	SetGlobalTags <venue_checksum> params = {unlocked = 1}
 endscript
 
-script progression_unlocktier 
+script Progression_UnlockTier 
 	get_progression_globals game_mode = ($game_mode)
-	formattext checksumname = tier_checksum 'tier%s' s = <tier>
+	FormatText checksumname = tier_checksum 'tier%s' s = <tier>
 	change \{progression_unlock_tier_last_song = 1}
 	change current_level = ($<tier_global>.<tier_checksum>.level)
 	change setlist_previous_tier = <tier>
 	change \{setlist_previous_song = 0}
-	progression_getnumtiersong tier_global = <tier_global> tier = <tier>
+	Progression_GetNumTierSong tier_global = <tier_global> tier = <tier>
 	song_count = 0
 	current_tier_global = <tier_global>
 	begin
-	progression_gettiersong tier_global = <current_tier_global> tier = <tier> song_count = <song_count>
-	progression_unlocksong tier_global = <current_tier_global> song = <song>
+	Progression_GetTierSong tier_global = <current_tier_global> tier = <tier> song_count = <song_count>
+	Progression_UnlockSong tier_global = <current_tier_global> song = <song>
 	get_progression_globals \{game_mode = p1_quickplay}
-	progression_unlocksong tier_global = <tier_global> song = <song>
+	Progression_UnlockSong tier_global = <tier_global> song = <song>
 	get_progression_globals \{game_mode = p2_battle}
-	progression_unlocksong tier_global = <tier_global> song = <song>
+	Progression_UnlockSong tier_global = <tier_global> song = <song>
 	song_count = (<song_count> + 1)
 	repeat <tier_size>
-	if gotparam \{complete}
+	if GotParam \{complete}
 		get_progression_globals game_mode = ($game_mode)
 		setlist_prefix = ($<tier_global>.prefix)
-		formattext checksumname = tiername '%ptier%i' p = <setlist_prefix> i = <tier>
-		setglobaltags <tiername> params = {complete = 1}
+		FormatText checksumname = tiername '%ptier%i' p = <setlist_prefix> i = <tier>
+		SetGlobalTags <tiername> params = {complete = 1}
 	endif
 endscript
 
-script progression_checksongcomplete 
+script Progression_CheckSongComplete 
 	printf \{"Progression_CheckSongComplete"}
 	get_progression_globals game_mode = ($game_mode)
 	songlist = <tier_global>
-	progression_getdifficulty
+	Progression_GetDifficulty
 	songs_required = (<numsongstoprogress>.<difficulty>)
 	setlist_prefix = (<songlist>.prefix)
-	formattext checksumname = tiername '%ptier%i' p = <setlist_prefix> i = <tier>
-	formattext checksumname = tier_checksum 'tier%s' s = <tier>
-	getarraysize (<songlist>.<tier_checksum>.songs)
+	FormatText checksumname = tiername '%ptier%i' p = <setlist_prefix> i = <tier>
+	FormatText checksumname = tier_checksum 'tier%s' s = <tier>
+	GetArraySize (<songlist>.<tier_checksum>.songs)
 	array_count = 0
 	begin
-	formattext checksumname = song_checksum '%p_song%i_tier%s' p = <setlist_prefix> i = (<array_count> + 1) s = <tier> addtostringlookup = true
-	getglobaltags <song_checksum> param = stars
+	FormatText checksumname = song_checksum '%p_song%i_tier%s' p = <setlist_prefix> i = (<array_count> + 1) s = <tier> AddToStringLookup = true
+	GetGlobalTags <song_checksum> param = stars
 	if (<stars> > 2)
 		songs_required = (<songs_required> - 1)
 	endif
 	array_count = (<array_count> + 1)
 	repeat <array_size>
-	setglobaltags <tiername> params = {num_songs_to_progress = <songs_required>}
+	SetGlobalTags <tiername> params = {num_songs_to_progress = <songs_required>}
 	if (<songs_required> > 0)
 		return \{false}
 	else
@@ -1871,48 +1871,48 @@ script progression_checksongcomplete
 	endif
 endscript
 
-script progression_checkencorecomplete 
+script Progression_CheckEncoreComplete 
 	printf \{"Progression_CheckEncoreComplete"}
 	get_progression_globals game_mode = ($game_mode)
-	progression_getencoresong tier_global = <tier_global> tier = <tier>
-	getglobaltags <song_checksum> param = stars
+	Progression_GetEncoreSong tier_global = <tier_global> tier = <tier>
+	GetGlobalTags <song_checksum> param = stars
 	if (<stars> > 2)
 		return \{true}
 	endif
 	return \{false}
 endscript
 
-script progression_checkbosscomplete 
+script Progression_CheckBossComplete 
 	printf \{"Progression_CheckBossComplete"}
 	get_progression_globals game_mode = ($game_mode)
-	progression_getbosssong tier_global = <tier_global> tier = <tier>
-	getglobaltags <song_checksum> param = stars
+	Progression_GetBossSong tier_global = <tier_global> tier = <tier>
+	GetGlobalTags <song_checksum> param = stars
 	if (<stars> > 2)
 		return \{true}
 	endif
 	return \{false}
 endscript
 
-script progression_checksong5star 
+script Progression_CheckSong5Star 
 	printf \{"Progression_CheckSong5Star"}
 	get_progression_globals game_mode = ($game_mode)
 	songlist = <tier_global>
 	tier = 1
 	begin
 	setlist_prefix = (<songlist>.prefix)
-	formattext checksumname = tiername '%ptier%i' p = <setlist_prefix> i = <tier>
-	formattext checksumname = tier_checksum 'tier%s' s = <tier>
-	getarraysize (<songlist>.<tier_checksum>.songs)
-	getglobaltags <tiername> param = unlocked
+	FormatText checksumname = tiername '%ptier%i' p = <setlist_prefix> i = <tier>
+	FormatText checksumname = tier_checksum 'tier%s' s = <tier>
+	GetArraySize (<songlist>.<tier_checksum>.songs)
+	GetGlobalTags <tiername> param = unlocked
 	if (<unlocked> = 0)
 		return \{false}
 	endif
 	array_count = 0
 	begin
-	formattext checksumname = song_checksum '%p_song%i_tier%s' p = <setlist_prefix> i = (<array_count> + 1) s = <tier> addtostringlookup = true
-	getglobaltags <song_checksum> param = unlocked
-	getglobaltags <song_checksum> param = stars
-	if NOT progression_isbosssong tier_global = <tier_global> tier = <tier> song = (<songlist>.<tier_checksum>.songs [<array_count>])
+	FormatText checksumname = song_checksum '%p_song%i_tier%s' p = <setlist_prefix> i = (<array_count> + 1) s = <tier> AddToStringLookup = true
+	GetGlobalTags <song_checksum> param = unlocked
+	GetGlobalTags <song_checksum> param = stars
+	if NOT Progression_IsBossSong tier_global = <tier_global> tier = <tier> song = (<songlist>.<tier_checksum>.songs [<array_count>])
 		if NOT (<stars> = 5)
 			return \{false}
 		endif
@@ -1924,25 +1924,25 @@ script progression_checksong5star
 	return \{true}
 endscript
 
-script progression_checkallsongscompleted 
+script Progression_CheckAllSongsCompleted 
 	printf \{"Progression_CheckAllSongsCompleted"}
 	get_progression_globals game_mode = ($game_mode)
 	songlist = <tier_global>
 	tier = 1
 	begin
 	setlist_prefix = (<songlist>.prefix)
-	formattext checksumname = tiername '%ptier%i' p = <setlist_prefix> i = <tier>
-	formattext checksumname = tier_checksum 'tier%s' s = <tier>
-	getarraysize (<songlist>.<tier_checksum>.songs)
-	getglobaltags <tiername> param = unlocked
+	FormatText checksumname = tiername '%ptier%i' p = <setlist_prefix> i = <tier>
+	FormatText checksumname = tier_checksum 'tier%s' s = <tier>
+	GetArraySize (<songlist>.<tier_checksum>.songs)
+	GetGlobalTags <tiername> param = unlocked
 	if (<unlocked> = 0)
 		return \{false}
 	endif
 	array_count = 0
 	begin
-	formattext checksumname = song_checksum '%p_song%i_tier%s' p = <setlist_prefix> i = (<array_count> + 1) s = <tier> addtostringlookup = true
-	getglobaltags <song_checksum> param = unlocked
-	getglobaltags <song_checksum> param = stars
+	FormatText checksumname = song_checksum '%p_song%i_tier%s' p = <setlist_prefix> i = (<array_count> + 1) s = <tier> AddToStringLookup = true
+	GetGlobalTags <song_checksum> param = unlocked
+	GetGlobalTags <song_checksum> param = stars
 	if NOT (<stars> > 2)
 		return \{false}
 	endif
@@ -1953,18 +1953,18 @@ script progression_checkallsongscompleted
 	return \{true}
 endscript
 
-script progression_alwaysblock 
+script Progression_AlwaysBlock 
 	printf \{"Progression_AlwaysBlock"}
 	return \{false}
 endscript
 
-script progression_checkdiff 
+script Progression_CheckDiff 
 	printf \{"Progression_CheckDiff"}
-	progression_getdifficulty
+	Progression_GetDifficulty
 	if NOT (<diff> = <difficulty>)
 		return \{false}
 	endif
-	if gotparam \{mode}
+	if GotParam \{mode}
 		if NOT ($game_mode = <mode>)
 			return \{false}
 		endif
@@ -1972,41 +1972,41 @@ script progression_checkdiff
 	return \{true}
 endscript
 
-script progression_unlockguitar 
+script Progression_UnlockGuitar 
 	printf \{"Progression_UnlockGuitar"}
-	if gotparam \{guitar}
-		setglobaltags ($secret_guitars [(<guitar> - 1)].id) params = {unlocked_for_purchase = 1}
+	if GotParam \{guitar}
+		SetGlobalTags ($Secret_Guitars [(<guitar> - 1)].id) params = {unlocked_for_purchase = 1}
 		if ($progression_unlocked_guitar = -1)
-			change progression_unlocked_guitar = ($secret_guitars [(<guitar> - 1)].id)
+			change progression_unlocked_guitar = ($Secret_Guitars [(<guitar> - 1)].id)
 		else
-			change progression_unlocked_guitar2 = ($secret_guitars [(<guitar> - 1)].id)
+			change progression_unlocked_guitar2 = ($Secret_Guitars [(<guitar> - 1)].id)
 		endif
 		change \{progression_unlocked_type = guitar}
 	else
-		setglobaltags ($secret_basses [(<bass> - 1)].id) params = {unlocked_for_purchase = 1}
+		SetGlobalTags ($Secret_Basses [(<Bass> - 1)].id) params = {unlocked_for_purchase = 1}
 		if ($progression_unlocked_guitar = -1)
-			change progression_unlocked_guitar = ($secret_basses [(<bass> - 1)].id)
+			change progression_unlocked_guitar = ($Secret_Basses [(<Bass> - 1)].id)
 		else
-			change progression_unlocked_guitar2 = ($secret_basses [(<bass> - 1)].id)
+			change progression_unlocked_guitar2 = ($Secret_Basses [(<Bass> - 1)].id)
 		endif
-		change \{progression_unlocked_type = bass}
+		change \{progression_unlocked_type = Bass}
 	endif
 endscript
 
-script progression_songfailed 
+script Progression_SongFailed 
 	printf \{"Progression_SongFailed"}
 	if ($coop_dlc_active = 1)
 		return
 	endif
 	if ($game_mode = p1_career ||
 			$game_mode = p2_career)
-		updateatoms \{name = progression}
+		UpdateAtoms \{name = Progression}
 	endif
-	change \{achievements_songwonflag = 0}
-	updateatoms \{name = achievement}
+	change \{Achievements_SongWonFlag = 0}
+	UpdateAtoms \{name = achievement}
 endscript
 
-script progression_songwon 
+script Progression_SongWon 
 	printf \{"Progression_SongWon"}
 	additional_cash = 0
 	change \{progression_beat_game_last_song = 0}
@@ -2015,7 +2015,7 @@ script progression_songwon
 	change \{progression_play_completion_movie = 0}
 	player = 1
 	begin
-	formattext checksumname = player_status 'player%i_status' i = <player>
+	FormatText checksumname = player_status 'player%i_status' i = <player>
 	new_stars = 3
 	if ($<player_status>.score >= $<player_status>.base_score * 2.8)
 		new_stars = 5
@@ -2028,23 +2028,23 @@ script progression_songwon
 	if ($coop_dlc_active = 1)
 		if ($player1_status.total_notes = $player1_status.notes_hit)
 			if NOT ($player1_status.total_notes = 0)
-				writeachievements \{achievement = leaders_of_the_pack}
+				WriteAchievements \{achievement = LEADERS_OF_THE_PACK}
 			endif
 		endif
 		return
 	endif
 	get_difficulty_text_nl difficulty = ($current_difficulty)
 	get_song_prefix song = ($current_song)
-	formattext checksumname = songname '%s_%d' s = <song_prefix> d = <difficulty_text_nl>
+	FormatText checksumname = songname '%s_%d' s = <song_prefix> d = <difficulty_text_nl>
 	if ($player1_status.total_notes > 0)
 		p1_percent_complete = (100 * $player1_status.notes_hit / $player1_status.total_notes)
 		if (<p1_percent_complete> = 100)
 			if ($game_mode = p1_quickplay)
-				setglobaltags <songname> params = {percent100 = 1}
+				SetGlobalTags <songname> params = {percent100 = 1}
 			endif
 			if ($game_mode = p1_quickplay ||
 					$game_mode = p1_career)
-				setglobaltags <songname> params = {achievement_gold_star = 1}
+				SetGlobalTags <songname> params = {achievement_gold_star = 1}
 			endif
 		endif
 	endif
@@ -2053,23 +2053,23 @@ script progression_songwon
 		get_progression_globals game_mode = ($game_mode) use_current_tab = 1
 		songlist = <tier_global>
 		get_band_game_mode_name
-		formattext checksumname = bandname_id 'band%i_info_%g' i = ($current_band) g = <game_mode_name>
-		setglobaltags <bandname_id> params = {first_play = 0}
-		getglobaltags \{progression
+		FormatText checksumname = bandname_id 'band%i_info_%g' i = ($current_band) g = <game_mode_name>
+		SetGlobalTags <bandname_id> params = {first_play = 0}
+		GetGlobalTags \{Progression
 			params = current_tier}
-		getglobaltags \{progression
+		GetGlobalTags \{Progression
 			params = current_song_count}
 		song_count = <current_song_count>
-		if gotparam \{current_tier}
+		if GotParam \{current_tier}
 			setlist_prefix = ($<songlist>.prefix)
-			formattext checksumname = song_checksum '%p_song%i_tier%s' p = <setlist_prefix> i = (<song_count> + 1) s = <current_tier> addtostringlookup = true
-			formattext checksumname = tier_checksum 'tier%s' s = <current_tier>
-			if progression_isbosssong tier_global = <tier_global> tier = <current_tier> song = (<tier_global>.<tier_checksum>.songs [<song_count>])
+			FormatText checksumname = song_checksum '%p_song%i_tier%s' p = <setlist_prefix> i = (<song_count> + 1) s = <current_tier> AddToStringLookup = true
+			FormatText checksumname = tier_checksum 'tier%s' s = <current_tier>
+			if Progression_IsBossSong tier_global = <tier_global> tier = <current_tier> song = (<tier_global>.<tier_checksum>.songs [<song_count>])
 				change \{structurename = player1_status
 					stars = 5}
 			endif
-			getglobaltags <song_checksum> param = stars
-			getglobaltags <song_checksum> param = score
+			GetGlobalTags <song_checksum> param = stars
+			GetGlobalTags <song_checksum> param = score
 			if ($game_mode = p1_career)
 				new_score = ($player1_status.score)
 				new_stars = ($player1_status.stars)
@@ -2080,49 +2080,49 @@ script progression_songwon
 			if ($player1_status.total_notes > 0)
 				p1_percent_complete = (100 * $player1_status.notes_hit / $player1_status.total_notes)
 				if (<p1_percent_complete> = 100)
-					setglobaltags <song_checksum> params = {percent100 = 1}
+					SetGlobalTags <song_checksum> params = {percent100 = 1}
 				endif
 			endif
 			if (<new_stars> > <stars>)
-				setglobaltags <song_checksum> params = {stars = <new_stars>}
+				SetGlobalTags <song_checksum> params = {stars = <new_stars>}
 				if ($current_tab = tab_setlist)
-					if NOT structurecontains structure = (<tier_global>.<tier_checksum>) nocash
-						progression_awardcash old_stars = <stars> new_stars = <new_stars>
+					if NOT StructureContains Structure = (<tier_global>.<tier_checksum>) nocash
+						Progression_AwardCash old_stars = <stars> new_stars = <new_stars>
 					endif
 				endif
 			endif
 			if (<new_score> > <score>)
-				casttointeger \{new_score}
-				setglobaltags <song_checksum> params = {score = <new_score>}
+				CastToInteger \{new_score}
+				SetGlobalTags <song_checksum> params = {score = <new_score>}
 			endif
-			progression_calcsetlistnextsong tier_global = <tier_global>
+			Progression_CalcSetlistNextSong tier_global = <tier_global>
 		endif
 	endif
-	achievements_songwon additional_cash = <additional_cash>
+	Achievements_SongWon additional_cash = <additional_cash>
 	if ($game_mode = p1_career || $game_mode = p2_career)
-		updateatoms \{name = progression}
+		UpdateAtoms \{name = Progression}
 	endif
-	change \{achievements_songwonflag = 1}
-	updateatoms \{name = achievement}
+	change \{Achievements_SongWonFlag = 1}
+	UpdateAtoms \{name = achievement}
 endscript
 end_credits = 0
 boss_devil_score = 0
 
-script progression_endcredits 
+script Progression_EndCredits 
 	printf \{"CREDITS BEGIN"}
 	change boss_devil_score = ($player1_status.score)
 	change \{current_level = load_z_credits}
 	ui_flow_manager_respond_to_action \{action = select_retry}
 	change \{current_song = thrufireandflames}
 	create_loading_screen
-	load_venue
-	restart_gem_scroller song_name = ($current_song) difficulty = ($current_difficulty) difficulty2 = ($current_difficulty2) starttime = 0 end_credits_restart = 1
+	Load_Venue
+	restart_gem_scroller song_name = ($current_song) difficulty = ($current_difficulty) difficulty2 = ($current_difficulty2) StartTime = 0 end_credits_restart = 1
 	destroy_loading_screen
 	start_flow_manager \{flow_state = career_play_song_fs}
 	spawnscriptnow \{scrolling_list_begin}
 endscript
 
-script progression_endcredits_done 
+script Progression_EndCredits_Done 
 	if ($end_credits = 1)
 		change structurename = player1_status score = ($boss_devil_score)
 		change \{boss_devil_score = 0}
@@ -2130,31 +2130,31 @@ script progression_endcredits_done
 	destroy_credits_menu
 endscript
 
-script playmovie_endcredits 
-	killmovie \{textureslot = 1}
-	preloadmovie \{movie = 'Fret_Flames'
-		textureslot = 1
-		texturepri = -2
+script PlayMovie_EndCredits 
+	KillMovie \{TextureSlot = 1}
+	PreLoadMovie \{movie = 'Fret_Flames'
+		TextureSlot = 1
+		TexturePri = -2
 		no_loop
 		no_hold}
 	begin
-	if (ismoviepreloaded textureslot = 1)
-		startpreloadedmovie \{textureslot = 1}
+	if (isMoviePreLoaded TextureSlot = 1)
+		StartPreLoadedMovie \{TextureSlot = 1}
 		return
 	endif
-	wait \{1
+	Wait \{1
 		gameframe}
 	repeat
 endscript
 
-script progression_calcsetlistnextsong 
+script Progression_CalcSetlistNextSong 
 	if ($current_tab = tab_setlist)
 		setlist_prefix = ($<tier_global>.prefix)
 		num_tiers = ($<tier_global>.num_tiers)
 		tier = 1
 		begin
-		formattext checksumname = tiername '%ptier%i' p = <setlist_prefix> i = <tier>
-		getglobaltags <tiername> param = unlocked
+		FormatText checksumname = tiername '%ptier%i' p = <setlist_prefix> i = <tier>
+		GetGlobalTags <tiername> param = unlocked
 		if (<unlocked> = 0)
 			tier = (<tier> - 1)
 			break
@@ -2165,30 +2165,30 @@ script progression_calcsetlistnextsong
 			tier = <num_tiers>
 		endif
 		found = 0
-		progression_getbosssong tier_global = <tier_global> tier = <tier>
+		Progression_GetBossSong tier_global = <tier_global> tier = <tier>
 		if (<song_count> = -1 && found = 0)
-			formattext checksumname = song_checksum '%p_song%i_tier%s' p = <setlist_prefix> i = (<song_count> + 1) s = <tier> addtostringlookup = true
-			getglobaltags <song_checksum> param = unlocked
+			FormatText checksumname = song_checksum '%p_song%i_tier%s' p = <setlist_prefix> i = (<song_count> + 1) s = <tier> AddToStringLookup = true
+			GetGlobalTags <song_checksum> param = unlocked
 			if (<unlocked> = 1)
 				found = 1
 			endif
 		endif
-		progression_getencoresong tier_global = <tier_global> tier = <tier>
+		Progression_GetEncoreSong tier_global = <tier_global> tier = <tier>
 		if (<song_count> = -1 && found = 0)
-			formattext checksumname = song_checksum '%p_song%i_tier%s' p = <setlist_prefix> i = (<song_count> + 1) s = <tier> addtostringlookup = true
-			getglobaltags <song_checksum> param = unlocked
+			FormatText checksumname = song_checksum '%p_song%i_tier%s' p = <setlist_prefix> i = (<song_count> + 1) s = <tier> AddToStringLookup = true
+			GetGlobalTags <song_checksum> param = unlocked
 			if (<unlocked> = 1)
 				found = 1
 			endif
 		endif
 		if (<found> = 0)
-			formattext checksumname = tier_checksum 'tier%s' s = <tier>
-			getarraysize (<tier_global>.<tier_checksum>.songs)
+			FormatText checksumname = tier_checksum 'tier%s' s = <tier>
+			GetArraySize (<tier_global>.<tier_checksum>.songs)
 			song_count = 0
 			begin
-			formattext checksumname = song_checksum '%p_song%i_tier%s' p = <setlist_prefix> i = (<song_count> + 1) s = <tier> addtostringlookup = true
-			getglobaltags <song_checksum> param = stars
-			getglobaltags <song_checksum> param = unlocked
+			FormatText checksumname = song_checksum '%p_song%i_tier%s' p = <setlist_prefix> i = (<song_count> + 1) s = <tier> AddToStringLookup = true
+			GetGlobalTags <song_checksum> param = stars
+			GetGlobalTags <song_checksum> param = unlocked
 			if (<stars> < 3 && <unlocked> = 1)
 				found = 1
 				break
@@ -2203,48 +2203,48 @@ script progression_calcsetlistnextsong
 	endif
 endscript
 
-script progression_awardcash 
+script Progression_AwardCash 
 	printf \{"Progression_AwardCash"}
-	cash = -1
-	getarraysize \{$cash_system_rules}
+	Cash = -1
+	GetArraySize \{$Cash_System_rules}
 	array_count = 0
 	begin
-	progression_getdifficulty
-	if (<difficulty> = $cash_system_rules [<array_count>].diff)
-		if (<new_stars> = $cash_system_rules [<array_count>].newstars)
-			if (<old_stars> = $cash_system_rules [<array_count>].oldstars)
-				cash = ($cash_system_rules [<array_count>].cash)
+	Progression_GetDifficulty
+	if (<difficulty> = $Cash_System_rules [<array_count>].diff)
+		if (<new_stars> = $Cash_System_rules [<array_count>].newstars)
+			if (<old_stars> = $Cash_System_rules [<array_count>].oldstars)
+				Cash = ($Cash_System_rules [<array_count>].Cash)
 			endif
 		endif
 	endif
 	array_count = (<array_count> + 1)
 	repeat <array_size>
 	if (<new_stars> = <old_stars>)
-		cash = 0
+		Cash = 0
 	endif
-	if (<cash> = -1)
+	if (<Cash> = -1)
 		printstruct <...>
-		scriptassert \{"Cash Rules not found"}
+		ScriptAssert \{"Cash Rules not found"}
 	endif
-	change structurename = player1_status new_cash = (<cash> + $player1_status.new_cash)
-	additional_cash = <cash>
+	change structurename = player1_status new_cash = (<Cash> + $player1_status.new_cash)
+	additional_cash = <Cash>
 	get_current_band_info
-	getglobaltags <band_info>
-	<cash> = (<cash> + <additional_cash>)
-	setglobaltags <band_info> params = {cash = <cash>}
-	printf "cash = %d" d = <cash>
+	GetGlobalTags <band_info>
+	<Cash> = (<Cash> + <additional_cash>)
+	SetGlobalTags <band_info> params = {Cash = <Cash>}
+	printf "cash = %d" d = <Cash>
 	return additional_cash = <additional_cash>
 endscript
 
-script progression_countcompletedsongsincurrenttier 
+script Progression_CountCompletedSongsInCurrentTier 
 	completed_songs = 0
 	get_progression_globals game_mode = ($game_mode)
 	if NOT (<tier_global> = 0 || $setlist_selection_tier = 0)
-		progression_getnumtiersong tier_global = <tier_global> tier = ($setlist_selection_tier) all
+		Progression_GetNumTierSong tier_global = <tier_global> tier = ($setlist_selection_tier) all
 		song_count = 0
 		begin
-		progression_gettiersong tier_global = <tier_global> tier = ($setlist_selection_tier) song_count = <song_count>
-		getglobaltags <song_checksum> param = stars
+		Progression_GetTierSong tier_global = <tier_global> tier = ($setlist_selection_tier) song_count = <song_count>
+		GetGlobalTags <song_checksum> param = stars
 		if NOT (<stars> = 0)
 			completed_songs = (<completed_songs> + 1)
 		endif
@@ -2254,56 +2254,56 @@ script progression_countcompletedsongsincurrenttier
 	return {completed_songs = <completed_songs>}
 endscript
 
-script progression_getnumtiersong 
-	formattext checksumname = tier_checksum 'tier%s' s = <tier>
-	getarraysize ($<tier_global>.<tier_checksum>.songs)
-	if gotparam \{all}
+script Progression_GetNumTierSong 
+	FormatText checksumname = tier_checksum 'tier%s' s = <tier>
+	GetArraySize ($<tier_global>.<tier_checksum>.songs)
+	if GotParam \{all}
 		return tier_size = <array_size>
 	endif
-	if structurecontains structure = ($<tier_global>.<tier_checksum>) encorep1
+	if StructureContains Structure = ($<tier_global>.<tier_checksum>) encorep1
 		array_size = (<array_size> - 1)
 	endif
-	if structurecontains structure = ($<tier_global>.<tier_checksum>) encorep2
+	if StructureContains Structure = ($<tier_global>.<tier_checksum>) encorep2
 		array_size = (<array_size> - 1)
 	endif
-	if structurecontains structure = ($<tier_global>.<tier_checksum>) boss
+	if StructureContains Structure = ($<tier_global>.<tier_checksum>) boss
 		array_size = (<array_size> - 1)
 	endif
 	return tier_size = <array_size>
 endscript
 
-script progression_gettiersong 
+script Progression_GetTierSong 
 	setlist_prefix = ($<tier_global>.prefix)
-	formattext checksumname = tier_checksum 'tier%s' s = <tier>
-	formattext checksumname = song_checksum '%p_song%i_tier%s' p = <setlist_prefix> i = (<song_count> + 1) s = <tier>
+	FormatText checksumname = tier_checksum 'tier%s' s = <tier>
+	FormatText checksumname = song_checksum '%p_song%i_tier%s' p = <setlist_prefix> i = (<song_count> + 1) s = <tier>
 	song = ($<tier_global>.<tier_checksum>.songs [<song_count>])
 	return song = <song> song_checksum = <song_checksum>
 endscript
 
-script progression_getbosssong 
+script Progression_GetBossSong 
 	setlist_prefix = ($<tier_global>.prefix)
-	formattext checksumname = tier_checksum 'tier%s' s = <tier>
-	if NOT structurecontains structure = ($<tier_global>.<tier_checksum>) boss
+	FormatText checksumname = tier_checksum 'tier%s' s = <tier>
+	if NOT StructureContains Structure = ($<tier_global>.<tier_checksum>) boss
 		return \{song_count = -1
 			song = none
 			song_checksum = none}
 	endif
-	getarraysize ($<tier_global>.<tier_checksum>.songs)
+	GetArraySize ($<tier_global>.<tier_checksum>.songs)
 	array_count = (<array_size> - 1)
-	if structurecontains structure = ($<tier_global>.<tier_checksum>) encorep1
+	if StructureContains Structure = ($<tier_global>.<tier_checksum>) encorep1
 		array_count = (<array_count> - 1)
 	endif
-	formattext checksumname = song_checksum '%p_song%i_tier%s' p = <setlist_prefix> i = (<array_count> + 1) s = <tier>
+	FormatText checksumname = song_checksum '%p_song%i_tier%s' p = <setlist_prefix> i = (<array_count> + 1) s = <tier>
 	song = ($<tier_global>.<tier_checksum>.songs [<array_count>])
 	return song_count = <array_count> song = <song> song_checksum = <song_checksum>
 endscript
 
-script progression_getencoresong \{type = any}
+script Progression_GetEncoreSong \{type = any}
 	setlist_prefix = ($<tier_global>.prefix)
-	formattext checksumname = tier_checksum 'tier%s' s = <tier>
+	FormatText checksumname = tier_checksum 'tier%s' s = <tier>
 	if (<type> = any)
-		if NOT structurecontains structure = ($<tier_global>.<tier_checksum>) encorep1
-			if NOT structurecontains structure = ($<tier_global>.<tier_checksum>) encorep2
+		if NOT StructureContains Structure = ($<tier_global>.<tier_checksum>) encorep1
+			if NOT StructureContains Structure = ($<tier_global>.<tier_checksum>) encorep2
 				return \{song_count = -1
 					song = none
 					song_checksum = none}
@@ -2311,51 +2311,51 @@ script progression_getencoresong \{type = any}
 		endif
 	endif
 	if (<type> = p1)
-		if NOT structurecontains structure = ($<tier_global>.<tier_checksum>) encorep1
+		if NOT StructureContains Structure = ($<tier_global>.<tier_checksum>) encorep1
 			return \{song_count = -1
 				song = none
 				song_checksum = none}
 		endif
 	endif
 	if (<type> = p2)
-		if NOT structurecontains structure = ($<tier_global>.<tier_checksum>) encorep2
+		if NOT StructureContains Structure = ($<tier_global>.<tier_checksum>) encorep2
 			return \{song_count = -1
 				song = none
 				song_checksum = none}
 		endif
 	endif
-	getarraysize ($<tier_global>.<tier_checksum>.songs)
+	GetArraySize ($<tier_global>.<tier_checksum>.songs)
 	array_count = (<array_size> - 1)
 	if (<type> = p1)
-		if structurecontains structure = ($<tier_global>.<tier_checksum>) encorep2
+		if StructureContains Structure = ($<tier_global>.<tier_checksum>) encorep2
 			array_count = (<array_count> - 1)
 		endif
 	endif
-	formattext checksumname = song_checksum '%p_song%i_tier%s' p = <setlist_prefix> i = (<array_count> + 1) s = <tier>
+	FormatText checksumname = song_checksum '%p_song%i_tier%s' p = <setlist_prefix> i = (<array_count> + 1) s = <tier>
 	song = ($<tier_global>.<tier_checksum>.songs [<array_count>])
 	return song_count = <array_count> song = <song> song_checksum = <song_checksum>
 endscript
 
-script progression_isbosssong 
-	if NOT gotparam \{tier}
+script Progression_IsBossSong 
+	if NOT GotParam \{tier}
 		return \{false}
 	endif
 	query_song = <song>
-	progression_getbosssong <...>
+	Progression_GetBossSong <...>
 	if (<song> = <query_song>)
 		return \{true}
 	endif
 	return \{false}
 endscript
 
-script progression_isencoresong 
+script Progression_IsEncoreSong 
 	query_song = <song>
-	progression_getencoresong <...> type = p1
+	Progression_GetEncoreSong <...> type = p1
 	printstruct <...>
 	if (<song> = <query_song>)
 		return \{true}
 	endif
-	progression_getencoresong <...> type = p2
+	Progression_GetEncoreSong <...> type = p2
 	printstruct <...>
 	if (<song> = <query_song>)
 		return \{true}
@@ -2363,26 +2363,26 @@ script progression_isencoresong
 	return \{false}
 endscript
 
-script progression_unlocksong \{encore = 0
+script Progression_UnlockSong \{encore = 0
 		boss = 0
 		unlocked = 0}
 	setlist_prefix = ($<tier_global>.prefix)
 	tier = 1
 	begin
-	formattext checksumname = tiername '%ptier%i' p = <setlist_prefix> i = <tier>
-	formattext checksumname = tier_checksum 'tier%s' s = <tier>
-	getarraysize ($<tier_global>.<tier_checksum>.songs)
+	FormatText checksumname = tiername '%ptier%i' p = <setlist_prefix> i = <tier>
+	FormatText checksumname = tier_checksum 'tier%s' s = <tier>
+	GetArraySize ($<tier_global>.<tier_checksum>.songs)
 	array_count = 0
 	begin
 	if ($<tier_global>.<tier_checksum>.songs [<array_count>] = <song>)
-		formattext checksumname = song_checksum '%p_song%i_tier%s' p = <setlist_prefix> i = (<array_count> + 1) s = <tier>
-		setglobaltags <song_checksum> params = {unlocked = 1}
+		FormatText checksumname = song_checksum '%p_song%i_tier%s' p = <setlist_prefix> i = (<array_count> + 1) s = <tier>
+		SetGlobalTags <song_checksum> params = {unlocked = 1}
 		if (<encore> = 1)
-			setglobaltags <tiername> params = {encore_unlocked = 1}
+			SetGlobalTags <tiername> params = {encore_unlocked = 1}
 		elseif (<boss> = 1)
-			setglobaltags <tiername> params = {boss_unlocked = 1}
+			SetGlobalTags <tiername> params = {boss_unlocked = 1}
 		endif
-		setglobaltags <tiername> params = {unlocked = 1}
+		SetGlobalTags <tiername> params = {unlocked = 1}
 	endif
 	array_count = (<array_count> + 1)
 	repeat <array_size>
@@ -2390,7 +2390,7 @@ script progression_unlocksong \{encore = 0
 	repeat ($<tier_global>.num_tiers)
 endscript
 
-script progression_getdifficulty 
+script Progression_GetDifficulty 
 	difficulty = ($current_difficulty)
 	if ($game_mode = p2_career)
 		get_minimum_difficulty difficulty1 = ($current_difficulty) difficulty2 = ($current_difficulty2)
@@ -2399,11 +2399,11 @@ script progression_getdifficulty
 	return difficulty = <difficulty>
 endscript
 
-script progression_setprogressionnodeflags 
+script Progression_SetProgressionNodeFlags 
 	if ($coop_dlc_active = 1)
 		change \{game_mode = p2_career}
 	endif
-	changenodeflag \{ls_always
+	ChangeNodeFlag \{LS_ALWAYS
 		1}
 	ls_encore = 0
 	ls_3_5 = 0
@@ -2412,11 +2412,11 @@ script progression_setprogressionnodeflags
 	if ($coop_dlc_active = 0)
 		if ($game_mode = p1_career ||
 				$game_mode = p2_career)
-			if progression_isencoresong tier_global = <tier_global> tier = <tier> song = ($current_song)
+			if Progression_IsEncoreSong tier_global = <tier_global> tier = <tier> song = ($current_song)
 				ls_encore = 1
 			endif
-			progression_getdifficulty
-			progression_countcompletedsongsincurrenttier
+			Progression_GetDifficulty
+			Progression_CountCompletedSongsInCurrentTier
 			if (<difficulty> = easy || <difficulty> = medium)
 				if (<completed_songs> >= 2)
 					ls_3_5 = 1
@@ -2430,117 +2430,117 @@ script progression_setprogressionnodeflags
 	endif
 	printf "Progression_SetProgressionNodeFlags encore = %d 3_5 = %i" d = <ls_encore> i = <ls_3_5>
 	if (<ls_encore> = 1)
-		changenodeflag \{ls_3_5_pre
+		ChangeNodeFlag \{LS_3_5_PRE
 			0}
-		changenodeflag \{ls_3_5_post
+		ChangeNodeFlag \{LS_3_5_POST
 			1}
-		changenodeflag \{ls_encore_pre
+		ChangeNodeFlag \{LS_ENCORE_PRE
 			0}
-		changenodeflag \{ls_encore_post
+		ChangeNodeFlag \{LS_ENCORE_POST
 			1}
 	elseif (<ls_3_5> = 1)
-		changenodeflag \{ls_3_5_pre
+		ChangeNodeFlag \{LS_3_5_PRE
 			0}
-		changenodeflag \{ls_3_5_post
+		ChangeNodeFlag \{LS_3_5_POST
 			1}
-		changenodeflag \{ls_encore_pre
+		ChangeNodeFlag \{LS_ENCORE_PRE
 			1}
-		changenodeflag \{ls_encore_post
+		ChangeNodeFlag \{LS_ENCORE_POST
 			0}
 	else
-		changenodeflag \{ls_3_5_pre
+		ChangeNodeFlag \{LS_3_5_PRE
 			1}
-		changenodeflag \{ls_3_5_post
+		ChangeNodeFlag \{LS_3_5_POST
 			0}
-		changenodeflag \{ls_encore_pre
+		ChangeNodeFlag \{LS_ENCORE_PRE
 			1}
-		changenodeflag \{ls_encore_post
+		ChangeNodeFlag \{LS_ENCORE_POST
 			0}
 	endif
 endscript
-p1_career_progression = {
-	tier_global = gh3_career_songs
-	progression_global = gh3_career_progression
+P1_career_progression = {
+	tier_global = GH3_Career_Songs
+	progression_global = GH3_Career_Progression
 }
-p2_career_progression = {
-	tier_global = gh3_coopcareer_songs
-	progression_global = gh3_coopcareer_progression
+P2_career_progression = {
+	tier_global = GH3_CoopCareer_Songs
+	progression_global = GH3_CoopCareer_Progression
 }
-bonus_progression = {
-	tier_global = gh3_bonus_songs
+Bonus_progression = {
+	tier_global = GH3_Bonus_Songs
 	progression_global = none
 }
-download_progression = {
-	tier_global = gh3_download_songs
+Download_progression = {
+	tier_global = GH3_Download_Songs
 	progression_global = none
 }
-general_progression = {
-	tier_global = gh3_general_songs
+General_progression = {
+	tier_global = GH3_General_Songs
 	progression_global = none
 }
-generalp2_progression = {
-	tier_global = gh3_generalp2_songs
+GeneralP2_progression = {
+	tier_global = GH3_GeneralP2_Songs
 	progression_global = none
 }
-p2_coop_progression = {
-	tier_global = gh3_generalp2_songs_coop
+P2_coop_progression = {
+	tier_global = GH3_GeneralP2_Songs_Coop
 	progression_global = none
 }
-demo_progression_career = {
-	tier_global = gh3_demo_songs_career
+Demo_progression_Career = {
+	tier_global = GH3_Demo_Songs_Career
 	progression_global = none
 }
-demo_progression_coop = {
-	tier_global = gh3_demo_songs_coop
+Demo_progression_Coop = {
+	tier_global = GH3_Demo_Songs_Coop
 	progression_global = none
 }
-demo_progression_multiplayer = {
-	tier_global = gh3_demo_songs_multiplayer
+Demo_progression_Multiplayer = {
+	tier_global = GH3_Demo_Songs_Multiplayer
 	progression_global = none
 }
-demo_progression_quickplay = {
-	tier_global = gh3_demo_songs_quickplay
+Demo_progression_Quickplay = {
+	tier_global = GH3_Demo_Songs_Quickplay
 	progression_global = none
 }
 
 script get_progression_globals game_mode = <game_mode> use_current_tab = 0
 	if (<use_current_tab> = 1)
 		if ($current_tab = tab_bonus)
-			bonus = 1
+			Bonus = 1
 		elseif ($current_tab = tab_downloads)
 			download = 1
 		endif
 	endif
 	if ($is_demo_mode = 1)
-		if gotparam \{bonus}
-			addparams ($bonus_progression)
-		elseif gotparam \{download}
-			addparams ($download_progression)
+		if GotParam \{Bonus}
+			AddParams ($Bonus_progression)
+		elseif GotParam \{download}
+			AddParams ($Download_progression)
 		elseif (<game_mode> = p1_career)
-			addparams ($demo_progression_career)
+			AddParams ($Demo_progression_Career)
 		elseif (<game_mode> = p2_career)
-			addparams ($demo_progression_coop)
+			AddParams ($Demo_progression_Coop)
 		elseif (<game_mode> = p1_quickplay)
-			addparams ($demo_progression_quickplay)
+			AddParams ($Demo_progression_Quickplay)
 		else
-			addparams ($demo_progression_multiplayer)
+			AddParams ($Demo_progression_Multiplayer)
 		endif
 		return tier_global = <tier_global> progression_global = <progression_global>
 	endif
-	if gotparam \{bonus}
-		addparams ($bonus_progression)
-	elseif gotparam \{download}
-		addparams ($download_progression)
+	if GotParam \{Bonus}
+		AddParams ($Bonus_progression)
+	elseif GotParam \{download}
+		AddParams ($Download_progression)
 	elseif (<game_mode> = p1_career)
-		addparams ($p1_career_progression)
+		AddParams ($P1_career_progression)
 	elseif (<game_mode> = p2_career)
-		addparams ($p2_career_progression)
+		AddParams ($P2_career_progression)
 	elseif (<game_mode> = p1_quickplay)
-		addparams ($general_progression)
+		AddParams ($General_progression)
 	elseif (<game_mode> = p2_coop)
-		addparams ($p2_coop_progression)
+		AddParams ($P2_coop_progression)
 	else
-		addparams ($generalp2_progression)
+		AddParams ($GeneralP2_progression)
 	endif
 	return tier_global = <tier_global> progression_global = <progression_global>
 endscript

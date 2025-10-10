@@ -11,11 +11,11 @@ script create_helper_text \{anchor_id = helper_text_anchor
 		]
 		z_priority = 1000
 		font = text_a1}
-	if objectexists id = <anchor_id>
-		destroyscreenelement id = <anchor_id>
+	if ObjectExists id = <anchor_id>
+		DestroyScreenElement id = <anchor_id>
 	endif
-	createscreenelement {
-		type = containerelement
+	CreateScreenElement {
+		type = ContainerElement
 		parent = <parent>
 		id = <anchor_id>
 		just = [center center]
@@ -23,9 +23,9 @@ script create_helper_text \{anchor_id = helper_text_anchor
 		dims = (1280.0, 720.0)
 		rot_angle = 0
 	}
-	if NOT gotparam \{no_bar}
-		createscreenelement {
-			type = spriteelement
+	if NOT GotParam \{no_bar}
+		CreateScreenElement {
+			type = SpriteElement
 			parent = <anchor_id>
 			texture = white2
 			pos = <helper_pos>
@@ -36,8 +36,8 @@ script create_helper_text \{anchor_id = helper_text_anchor
 			rot_angle = -0.125
 		}
 	endif
-	createscreenelement {
-		type = hmenu
+	CreateScreenElement {
+		type = HMenu
 		parent = <anchor_id>
 		pos = (<helper_pos> - (0.0, 4.0))
 		just = [center bottom]
@@ -47,28 +47,28 @@ script create_helper_text \{anchor_id = helper_text_anchor
 		scale = <scale>
 	}
 	<menu_id> = <id>
-	if gotparam \{helper_text_elements}
-		foreachin <helper_text_elements> do = helper_text_update_element params = {font = <font> menu_id = <menu_id> z_priority = <z_priority>}
+	if GotParam \{helper_text_elements}
+		ForEachIn <helper_text_elements> do = helper_text_update_element params = {font = <font> menu_id = <menu_id> z_priority = <z_priority>}
 	endif
 endscript
 
 script helper_text_update_element 
-	if gotparam \{id}
-		if objectexists <id>
-			setscreenelementprops {
+	if GotParam \{id}
+		if ObjectExists <id>
+			SetScreenElementProps {
 				id = <id>
 				text = <text>
 			}
 			return
 		endif
 	endif
-	getuppercasestring <text>
-	createscreenelement {
-		type = textelement
+	GetUpperCaseString <text>
+	CreateScreenElement {
+		type = TextElement
 		parent = <menu_id>
 		id = <id>
 		font = <font>
-		text = <uppercasestring>
+		text = <UpperCaseString>
 		rgba = [90 90 90 255]
 		scale = 0.4
 		z_priority = <z_priority>

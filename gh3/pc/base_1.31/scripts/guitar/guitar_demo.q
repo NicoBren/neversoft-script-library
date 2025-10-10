@@ -1,4 +1,4 @@
-gh3_demo_songs_career = {
+GH3_Demo_Songs_Career = {
 	prefix = 'demo1'
 	num_tiers = 1
 	tier1 = {
@@ -24,7 +24,7 @@ gh3_demo_songs_career = {
 		defaultunlocked = 15
 	}
 }
-gh3_demo_songs_multiplayer = {
+GH3_Demo_Songs_Multiplayer = {
 	prefix = 'demo2'
 	num_tiers = 1
 	tier1 = {
@@ -50,7 +50,7 @@ gh3_demo_songs_multiplayer = {
 		defaultunlocked = 14
 	}
 }
-gh3_demo_songs_coop = {
+GH3_Demo_Songs_Coop = {
 	prefix = 'demo3'
 	num_tiers = 1
 	tier1 = {
@@ -76,7 +76,7 @@ gh3_demo_songs_coop = {
 		defaultunlocked = 14
 	}
 }
-gh3_demo_songs_quickplay = {
+GH3_Demo_Songs_Quickplay = {
 	prefix = 'demo4'
 	num_tiers = 1
 	tier1 = {

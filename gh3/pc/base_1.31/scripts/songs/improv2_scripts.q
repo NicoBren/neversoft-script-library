@@ -3,16 +3,16 @@ improv2_solo_part = 1
 script improv2mode_startup 
 	player_status = player1_status
 	change \{game_mode = improv}
-	change \{clean_note_multiplier = 1.0}
+	change \{Clean_Note_Multiplier = 1.0}
 	change \{improv2_solo_part = 1}
-	l2_counter = 0
-	l1_counter = 0
-	r2_counter = 0
-	r1_counter = 0
-	x_counter = 0
-	solo_score = 0
-	if NOT screenelementexists \{id = solo_text}
-		createscreenelement \{type = textelement
+	L2_Counter = 0
+	L1_Counter = 0
+	R2_Counter = 0
+	R1_Counter = 0
+	X_Counter = 0
+	Solo_Score = 0
+	if NOT ScreenElementExists \{id = solo_text}
+		CreateScreenElement \{type = TextElement
 			parent = hud_window
 			id = solo_text
 			font = text_a1
@@ -31,116 +31,116 @@ script improv2mode_startup
 			text = "Solo Score: 0"
 			z_priority = 100.0}
 	endif
-	formattext textname = run "Solo Score: %b" b = <solo_score>
-	setscreenelementprops id = solo_text text = <run>
+	FormatText TextName = run "Solo Score: %b" b = <Solo_Score>
+	SetScreenElementProps id = solo_text text = <run>
 	begin
-	block \{anytypes = [
+	Block \{anytypes = [
 			{
 				type = hit_notesp1
 			}
 		]}
-	getheldpattern controller = ($<player_status>.controller) player_status = <player_status>
+	GetHeldPattern controller = ($<player_status>.controller) player_status = <player_status>
 	if (<hold_pattern> && 65536)
 		if ($improv2_solo_part = 1)
-			soundevent \{event = improv_lead_bend1}
+			SoundEvent \{event = Improv_Lead_Bend1}
 		else
-			soundevent \{event = improv_leadb_2beat1}
+			SoundEvent \{event = Improv_LeadB_2beat1}
 		endif
-		l2_counter = (<l2_counter> + 1)
-		if (<l2_counter> > 10)
-			solo_score = (<solo_score> + 1 * $clean_note_multiplier)
+		L2_Counter = (<L2_Counter> + 1)
+		if (<L2_Counter> > 10)
+			Solo_Score = (<Solo_Score> + 1 * $Clean_Note_Multiplier)
 		else
-			if (<l2_counter> > 5)
-				solo_score = (<solo_score> + 5 * $clean_note_multiplier)
+			if (<L2_Counter> > 5)
+				Solo_Score = (<Solo_Score> + 5 * $Clean_Note_Multiplier)
 			else
-				solo_score = (<solo_score> + 10 * $clean_note_multiplier)
+				Solo_Score = (<Solo_Score> + 10 * $Clean_Note_Multiplier)
 			endif
 		endif
 	endif
 	if (<hold_pattern> && 4096)
 		if ($improv2_solo_part = 1)
-			soundevent \{event = lead_sliding_lick}
+			SoundEvent \{event = Lead_Sliding_Lick}
 		else
-			soundevent \{event = improv_leadb_2beat2}
+			SoundEvent \{event = Improv_LeadB_2beat2}
 		endif
-		l1_counter = (<l1_counter> + 1)
-		printf 'L1 %a' a = <l1_counter>
-		if (<l1_counter> > 10)
-			solo_score = (<solo_score> + 1 * $clean_note_multiplier)
+		L1_Counter = (<L1_Counter> + 1)
+		printf 'L1 %a' a = <L1_Counter>
+		if (<L1_Counter> > 10)
+			Solo_Score = (<Solo_Score> + 1 * $Clean_Note_Multiplier)
 		else
-			if (<l1_counter> > 5)
-				solo_score = (<solo_score> + 5 * $clean_note_multiplier)
+			if (<L1_Counter> > 5)
+				Solo_Score = (<Solo_Score> + 5 * $Clean_Note_Multiplier)
 			else
-				solo_score = (<solo_score> + 10 * $clean_note_multiplier)
+				Solo_Score = (<Solo_Score> + 10 * $Clean_Note_Multiplier)
 			endif
 		endif
 	endif
 	if (<hold_pattern> && 256)
-		stopsoundevent \{improv_lead_hold3}
-		killspawnedscript name = improv2_check_held_r1 <...>
+		StopSoundEvent \{Improv_Lead_Hold3}
+		KillSpawnedScript name = improv2_check_held_r1 <...>
 		if ($improv2_solo_part = 1)
-			soundevent \{event = lead_real_short5}
+			SoundEvent \{event = Lead_Real_Short5}
 			spawnscriptnow improv2_check_held_r1 params = {<...>}
 		else
-			soundevent \{event = improv_leadb_1beat}
+			SoundEvent \{event = Improv_LeadB_1beat}
 		endif
-		r1_counter = (<r1_counter> + 1)
-		printf 'R1 %a' a = <r1_counter>
-		if (<r1_counter> > 10)
-			solo_score = (<solo_score> + 1 * $clean_note_multiplier)
+		R1_Counter = (<R1_Counter> + 1)
+		printf 'R1 %a' a = <R1_Counter>
+		if (<R1_Counter> > 10)
+			Solo_Score = (<Solo_Score> + 1 * $Clean_Note_Multiplier)
 		else
-			if (<r1_counter> > 5)
-				solo_score = (<solo_score> + 5 * $clean_note_multiplier)
+			if (<R1_Counter> > 5)
+				Solo_Score = (<Solo_Score> + 5 * $Clean_Note_Multiplier)
 			else
-				solo_score = (<solo_score> + 10 * $clean_note_multiplier)
+				Solo_Score = (<Solo_Score> + 10 * $Clean_Note_Multiplier)
 			endif
 		endif
 	endif
 	if (<hold_pattern> && 16)
-		stopsoundevent \{improv_lead_hold1}
-		killspawnedscript name = improv2_check_held_r2 <...>
+		StopSoundEvent \{Improv_Lead_Hold1}
+		KillSpawnedScript name = improv2_check_held_r2 <...>
 		if ($improv2_solo_part = 1)
-			soundevent \{event = lead_real_short4}
+			SoundEvent \{event = Lead_Real_Short4}
 			spawnscriptnow improv2_check_held_r2 params = {<...>}
 		else
-			soundevent \{event = improv_leadb_8th2}
+			SoundEvent \{event = Improv_LeadB_8th2}
 		endif
-		r2_counter = (<r2_counter> + 1)
-		printf 'R2 %a' a = <r2_counter>
-		if (<r2_counter> > 10)
-			solo_score = (<solo_score> + 1 * $clean_note_multiplier)
+		R2_Counter = (<R2_Counter> + 1)
+		printf 'R2 %a' a = <R2_Counter>
+		if (<R2_Counter> > 10)
+			Solo_Score = (<Solo_Score> + 1 * $Clean_Note_Multiplier)
 		else
-			if (<r2_counter> > 5)
-				solo_score = (<solo_score> + 5 * $clean_note_multiplier)
+			if (<R2_Counter> > 5)
+				Solo_Score = (<Solo_Score> + 5 * $Clean_Note_Multiplier)
 			else
-				solo_score = (<solo_score> + 10 * $clean_note_multiplier)
+				Solo_Score = (<Solo_Score> + 10 * $Clean_Note_Multiplier)
 			endif
 		endif
 	endif
 	if (<hold_pattern> && 1)
-		stopsoundevent \{improv_lead_hold2}
-		killspawnedscript name = improv2_check_held_x <...>
+		StopSoundEvent \{Improv_Lead_Hold2}
+		KillSpawnedScript name = improv2_check_held_X <...>
 		if ($improv2_solo_part = 1)
-			soundevent \{event = lead_real_short3}
-			spawnscriptnow improv2_check_held_x params = {<...>}
+			SoundEvent \{event = Lead_Real_Short3}
+			spawnscriptnow improv2_check_held_X params = {<...>}
 		else
-			soundevent \{event = improv_leadb_8th1}
+			SoundEvent \{event = Improv_LeadB_8th1}
 		endif
-		x_counter = (<x_counter> + 1)
-		printf 'X %a' a = <x_counter>
-		if (<x_counter> > 10)
-			solo_score = (<solo_score> + 1 * $clean_note_multiplier)
+		X_Counter = (<X_Counter> + 1)
+		printf 'X %a' a = <X_Counter>
+		if (<X_Counter> > 10)
+			Solo_Score = (<Solo_Score> + 1 * $Clean_Note_Multiplier)
 		else
-			if (<x_counter> > 5)
-				solo_score = (<solo_score> + 5 * $clean_note_multiplier)
+			if (<X_Counter> > 5)
+				Solo_Score = (<Solo_Score> + 5 * $Clean_Note_Multiplier)
 			else
-				solo_score = (<solo_score> + 10 * $clean_note_multiplier)
+				Solo_Score = (<Solo_Score> + 10 * $Clean_Note_Multiplier)
 			endif
 		endif
 	endif
-	formattext textname = run "Solo Score: %b" b = <solo_score>
-	setscreenelementprops id = solo_text text = <run>
-	wait \{1
+	FormatText TextName = run "Solo Score: %b" b = <Solo_Score>
+	SetScreenElementProps id = solo_text text = <run>
+	Wait \{1
 		frame}
 	repeat
 endscript
@@ -156,33 +156,33 @@ endscript
 
 script improv2_check_held_r1 
 	printf \{'!!!!!!!!!!!!!!!!!!!!!!! improv2_check_hold_note !!!!!!!!!!!!!!'}
-	wait \{20
+	Wait \{20
 		frames}
-	getheldpattern controller = ($<player_status>.controller) player_status = <player_status>
+	GetHeldPattern controller = ($<player_status>.controller) player_status = <player_status>
 	if (<hold_pattern> && 256)
-		stopsoundevent \{lead_real_short5}
-		soundevent \{event = improv_lead_hold3}
+		StopSoundEvent \{Lead_Real_Short5}
+		SoundEvent \{event = Improv_Lead_Hold3}
 	endif
 endscript
 
 script improv2_check_held_r2 
 	printf \{'!!!!!!!!!!!!!!!!!!!!!!! improv2_check_hold_note !!!!!!!!!!!!!!'}
-	wait \{20
+	Wait \{20
 		frames}
-	getheldpattern controller = ($<player_status>.controller) player_status = <player_status>
+	GetHeldPattern controller = ($<player_status>.controller) player_status = <player_status>
 	if (<hold_pattern> && 16)
-		stopsoundevent \{lead_real_short4}
-		soundevent \{event = improv_lead_hold1}
+		StopSoundEvent \{Lead_Real_Short4}
+		SoundEvent \{event = Improv_Lead_Hold1}
 	endif
 endscript
 
-script improv2_check_held_x 
+script improv2_check_held_X 
 	printf \{'!!!!!!!!!!!!!!!!!!!!!!! improv2_check_hold_note !!!!!!!!!!!!!!'}
-	wait \{20
+	Wait \{20
 		frames}
-	getheldpattern controller = ($<player_status>.controller) player_status = <player_status>
+	GetHeldPattern controller = ($<player_status>.controller) player_status = <player_status>
 	if (<hold_pattern> && 1)
-		stopsoundevent \{lead_real_short3}
-		soundevent \{event = improv_lead_hold2}
+		StopSoundEvent \{Lead_Real_Short3}
+		SoundEvent \{event = Improv_Lead_Hold2}
 	endif
 endscript

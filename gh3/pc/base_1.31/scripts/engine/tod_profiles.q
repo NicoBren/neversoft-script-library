@@ -1,4 +1,4 @@
-default_tod_manager = {
+Default_tod_manager = {
 	tod = {
 		sun_on = 1
 		sun_theta = 330.0
@@ -11,12 +11,12 @@ default_tod_manager = {
 		lev_blue = 125
 	}
 	atmosphere = {
-		smallparticlesrgb = [
+		SmallParticlesRGB = [
 			128
 			128
 			128
 		]
-		largeparticlesrgb = [
+		LargeParticlesRGB = [
 			128
 			128
 			128
@@ -24,12 +24,12 @@ default_tod_manager = {
 		phase = 0
 		strength = 0
 		atmosphere = s_default
-		smallscale = 10
-		largescale = 10
+		SmallScale = 10
+		LargeScale = 10
 	}
 	screen_fx = [
 		{
-			scefname = bns
+			scefName = BnS
 			type = bright_sat
 			on = 1
 			contrast = 1
@@ -53,14 +53,14 @@ default_tod_manager = {
 			hue = 1
 		}
 		{
-			scefname = sbloom
-			type = simple_bloom
+			scefName = sbloom
+			type = Simple_Bloom
 			on = 1
-			bloom1 = 0.35000002
+			Bloom1 = 0.35000002
 			materialfilter = 1
 			bloom2 = 0.0
-			autoluminancemod = 0
-			distancemod = 0.0
+			AutoLuminanceMod = 0
+			DistanceMod = 0.0
 			strength = [
 				255
 				255
@@ -71,12 +71,12 @@ default_tod_manager = {
 				68
 				68
 			]
-			falloff1 = 5
-			falloff2 = 0.0
+			FallOff1 = 5
+			FallOff2 = 0.0
 		}
 	]
 }
-dof_closeup01_tod_manager = {
+DOF_CloseUp01_tod_manager = {
 	tod = {
 		sun_on = 0
 		sun_theta = 0.0
@@ -89,12 +89,12 @@ dof_closeup01_tod_manager = {
 		lev_blue = 0
 	}
 	atmosphere = {
-		smallparticlesrgb = [
+		SmallParticlesRGB = [
 			128
 			128
 			128
 		]
-		largeparticlesrgb = [
+		LargeParticlesRGB = [
 			128
 			128
 			128
@@ -102,23 +102,23 @@ dof_closeup01_tod_manager = {
 		phase = 0
 		strength = 0
 		atmosphere = s_default
-		smallscale = 10
-		largescale = 10
+		SmallScale = 10
+		LargeScale = 10
 	}
 	screen_fx = [
 		{
-			scefname = dof
+			scefName = dof
 			type = dof
 			on = 1
-			backdist = 0.02
-			frontdist = 0
+			BackDist = 0.02
+			FrontDist = 0
 			strength = 0.6
-			blurradius = 6
-			blurresolution = quarter
+			BlurRadius = 6
+			BlurResolution = quarter
 		}
 	]
 }
-dof_closeup02_tod_manager = {
+DOF_CloseUp02_tod_manager = {
 	tod = {
 		sun_on = 0
 		sun_theta = 0.0
@@ -131,12 +131,12 @@ dof_closeup02_tod_manager = {
 		lev_blue = 0
 	}
 	atmosphere = {
-		smallparticlesrgb = [
+		SmallParticlesRGB = [
 			128
 			128
 			128
 		]
-		largeparticlesrgb = [
+		LargeParticlesRGB = [
 			128
 			128
 			128
@@ -144,23 +144,23 @@ dof_closeup02_tod_manager = {
 		phase = 0
 		strength = 0
 		atmosphere = s_default
-		smallscale = 10
-		largescale = 10
+		SmallScale = 10
+		LargeScale = 10
 	}
 	screen_fx = [
 		{
-			scefname = dof
+			scefName = dof
 			type = dof
 			on = 1
-			backdist = 0.012
-			frontdist = 0
+			BackDist = 0.012
+			FrontDist = 0
 			strength = 0.8
-			blurradius = 6
-			blurresolution = quarter
+			BlurRadius = 6
+			BlurResolution = quarter
 		}
 	]
 }
-dof_closeup03_tod_manager = {
+DOF_CloseUp03_tod_manager = {
 	tod = {
 		sun_on = 0
 		sun_theta = 0.0
@@ -173,12 +173,12 @@ dof_closeup03_tod_manager = {
 		lev_blue = 0
 	}
 	atmosphere = {
-		smallparticlesrgb = [
+		SmallParticlesRGB = [
 			128
 			128
 			128
 		]
-		largeparticlesrgb = [
+		LargeParticlesRGB = [
 			128
 			128
 			128
@@ -186,23 +186,23 @@ dof_closeup03_tod_manager = {
 		phase = 0
 		strength = 0
 		atmosphere = s_default
-		smallscale = 10
-		largescale = 10
+		SmallScale = 10
+		LargeScale = 10
 	}
 	screen_fx = [
 		{
-			scefname = dof
+			scefName = dof
 			type = dof
 			on = 1
-			backdist = 0.012
-			frontdist = 0
+			BackDist = 0.012
+			FrontDist = 0
 			strength = 1
-			blurradius = 6
-			blurresolution = quarter
+			BlurRadius = 6
+			BlurResolution = quarter
 		}
 	]
 }
-dof_medium01_tod_manager = {
+DOF_Medium01_tod_manager = {
 	tod = {
 		sun_on = 0
 		sun_theta = 0.0
@@ -215,12 +215,12 @@ dof_medium01_tod_manager = {
 		lev_blue = 0
 	}
 	atmosphere = {
-		smallparticlesrgb = [
+		SmallParticlesRGB = [
 			128
 			128
 			128
 		]
-		largeparticlesrgb = [
+		LargeParticlesRGB = [
 			128
 			128
 			128
@@ -228,23 +228,23 @@ dof_medium01_tod_manager = {
 		phase = 0
 		strength = 0
 		atmosphere = s_default
-		smallscale = 10
-		largescale = 10
+		SmallScale = 10
+		LargeScale = 10
 	}
 	screen_fx = [
 		{
-			scefname = dof
+			scefName = dof
 			type = dof
 			on = 1
-			backdist = 0.1
-			frontdist = 0
+			BackDist = 0.1
+			FrontDist = 0
 			strength = 0.7
-			blurradius = 6
-			blurresolution = quarter
+			BlurRadius = 6
+			BlurResolution = quarter
 		}
 	]
 }
-dof_medium02_tod_manager = {
+DOF_Medium02_tod_manager = {
 	tod = {
 		sun_on = 0
 		sun_theta = 0.0
@@ -257,12 +257,12 @@ dof_medium02_tod_manager = {
 		lev_blue = 0
 	}
 	atmosphere = {
-		smallparticlesrgb = [
+		SmallParticlesRGB = [
 			128
 			128
 			128
 		]
-		largeparticlesrgb = [
+		LargeParticlesRGB = [
 			128
 			128
 			128
@@ -270,23 +270,23 @@ dof_medium02_tod_manager = {
 		phase = 0
 		strength = 0
 		atmosphere = s_default
-		smallscale = 10
-		largescale = 10
+		SmallScale = 10
+		LargeScale = 10
 	}
 	screen_fx = [
 		{
-			scefname = dof
+			scefName = dof
 			type = dof
 			on = 1
-			backdist = 0.55
-			frontdist = 0
+			BackDist = 0.55
+			FrontDist = 0
 			strength = 0.8
-			blurradius = 6
-			blurresolution = quarter
+			BlurRadius = 6
+			BlurResolution = quarter
 		}
 	]
 }
-dof_medium03_tod_manager = {
+DOF_Medium03_TOD_Manager = {
 	tod = {
 		sun_on = 0
 		sun_theta = 0.0
@@ -299,12 +299,12 @@ dof_medium03_tod_manager = {
 		lev_blue = 0
 	}
 	atmosphere = {
-		smallparticlesrgb = [
+		SmallParticlesRGB = [
 			128
 			128
 			128
 		]
-		largeparticlesrgb = [
+		LargeParticlesRGB = [
 			128
 			128
 			128
@@ -312,23 +312,23 @@ dof_medium03_tod_manager = {
 		phase = 0
 		strength = 0
 		atmosphere = s_default
-		smallscale = 10
-		largescale = 10
+		SmallScale = 10
+		LargeScale = 10
 	}
 	screen_fx = [
 		{
-			scefname = dof
+			scefName = dof
 			type = dof
 			on = 1
-			backdist = 0.05
-			frontdist = 0
+			BackDist = 0.05
+			FrontDist = 0
 			strength = 0.8
-			blurradius = 6
-			blurresolution = quarter
+			BlurRadius = 6
+			BlurResolution = quarter
 		}
 	]
 }
-dof_medium04_tod_manager = {
+DOF_Medium04_TOD_Manager = {
 	tod = {
 		sun_on = 0
 		sun_theta = 0.0
@@ -341,12 +341,12 @@ dof_medium04_tod_manager = {
 		lev_blue = 0
 	}
 	atmosphere = {
-		smallparticlesrgb = [
+		SmallParticlesRGB = [
 			128
 			128
 			128
 		]
-		largeparticlesrgb = [
+		LargeParticlesRGB = [
 			128
 			128
 			128
@@ -354,23 +354,23 @@ dof_medium04_tod_manager = {
 		phase = 0
 		strength = 0
 		atmosphere = s_default
-		smallscale = 10
-		largescale = 10
+		SmallScale = 10
+		LargeScale = 10
 	}
 	screen_fx = [
 		{
-			scefname = dof
+			scefName = dof
 			type = dof
 			on = 1
-			backdist = 0.07
-			frontdist = 0
+			BackDist = 0.07
+			FrontDist = 0
 			strength = 1
-			blurradius = 6
-			blurresolution = quarter
+			BlurRadius = 6
+			BlurResolution = quarter
 		}
 	]
 }
-dof_off_tod_manager = {
+DOF_Off_tod_manager = {
 	tod = {
 		sun_on = 0
 		sun_theta = 0.0
@@ -383,12 +383,12 @@ dof_off_tod_manager = {
 		lev_blue = 0
 	}
 	atmosphere = {
-		smallparticlesrgb = [
+		SmallParticlesRGB = [
 			128
 			128
 			128
 		]
-		largeparticlesrgb = [
+		LargeParticlesRGB = [
 			128
 			128
 			128
@@ -396,23 +396,23 @@ dof_off_tod_manager = {
 		phase = 0
 		strength = 0
 		atmosphere = s_default
-		smallscale = 10
-		largescale = 10
+		SmallScale = 10
+		LargeScale = 10
 	}
 	screen_fx = [
 		{
-			scefname = dof
+			scefName = dof
 			type = dof
 			on = 1
-			backdist = 1
-			frontdist = 0
+			BackDist = 1
+			FrontDist = 0
 			strength = 0
-			blurradius = 0
-			blurresolution = quarter
+			BlurRadius = 0
+			BlurResolution = quarter
 		}
 	]
 }
-dof_temp_tod_manager = {
+DOF_Temp_tod_manager = {
 	tod = {
 		sun_on = 0
 		sun_theta = 0.0
@@ -425,12 +425,12 @@ dof_temp_tod_manager = {
 		lev_blue = 0
 	}
 	atmosphere = {
-		smallparticlesrgb = [
+		SmallParticlesRGB = [
 			128
 			128
 			128
 		]
-		largeparticlesrgb = [
+		LargeParticlesRGB = [
 			128
 			128
 			128
@@ -438,23 +438,23 @@ dof_temp_tod_manager = {
 		phase = 0
 		strength = 0
 		atmosphere = s_default
-		smallscale = 10
-		largescale = 10
+		SmallScale = 10
+		LargeScale = 10
 	}
 	screen_fx = [
 		{
-			scefname = dof
+			scefName = dof
 			type = dof
 			on = 1
-			backdist = 0.1
-			frontdist = 0
+			BackDist = 0.1
+			FrontDist = 0
 			strength = 0.3
-			blurradius = 3
-			blurresolution = half
+			BlurRadius = 3
+			BlurResolution = half
 		}
 	]
 }
-screenflash_tod_manager = {
+ScreenFlash_TOD_Manager = {
 	tod = {
 		sun_on = 1
 		sun_theta = 330.0
@@ -467,12 +467,12 @@ screenflash_tod_manager = {
 		lev_blue = 125
 	}
 	atmosphere = {
-		smallparticlesrgb = [
+		SmallParticlesRGB = [
 			27
 			51
 			255
 		]
-		largeparticlesrgb = [
+		LargeParticlesRGB = [
 			187
 			153
 			137
@@ -480,12 +480,12 @@ screenflash_tod_manager = {
 		phase = 1.05
 		strength = 0.45000002
 		atmosphere = ph_dome
-		smallscale = 55
-		largescale = 1
+		SmallScale = 55
+		LargeScale = 1
 	}
 	screen_fx = [
 		{
-			scefname = bs
+			scefName = BS
 			type = bright_sat
 			on = 1
 			contrast = 0.6
@@ -510,7 +510,7 @@ screenflash_tod_manager = {
 		}
 	]
 }
-screentoblack_tod_manager = {
+ScreenToBlack_TOD_Manager = {
 	tod = {
 		sun_on = 0
 		sun_theta = 0.0
@@ -523,12 +523,12 @@ screentoblack_tod_manager = {
 		lev_blue = 0
 	}
 	atmosphere = {
-		smallparticlesrgb = [
+		SmallParticlesRGB = [
 			128
 			128
 			128
 		]
-		largeparticlesrgb = [
+		LargeParticlesRGB = [
 			128
 			128
 			128
@@ -536,13 +536,13 @@ screentoblack_tod_manager = {
 		phase = 0
 		strength = 0
 		atmosphere = ph_dome
-		smallscale = 10
-		largescale = 10
+		SmallScale = 10
+		LargeScale = 10
 	}
 	screen_fx = [
 		{
-			scefname = vg
-			type = vignette
+			scefName = VG
+			type = Vignette
 			on = 1
 			inner_radius = 1.0
 			outer_radius = 1.5

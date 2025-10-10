@@ -1,4 +1,4 @@
-gh3_download_songs = {
+GH3_Download_Songs = {
 	prefix = 'download'
 	num_tiers = 1
 	tier1 = {
@@ -11,8 +11,8 @@ gh3_download_songs = {
 }
 
 script scan_globaltag_downloads 
-	printstruct ($gh3_download_songs)
-	setup_setlisttags \{setlist_songs = gh3_download_songs
+	printstruct ($GH3_Download_Songs)
+	setup_setlisttags \{SetList_Songs = GH3_Download_Songs
 		force = 1}
 	setup_songtags
 	setup_generalvenuetags
@@ -21,27 +21,27 @@ endscript
 global_content_index_pak = 'none'
 global_content_index_pak_language = 'none'
 
-script downloads_enumcontent 
+script Downloads_EnumContent 
 	mark_unsafe_for_shutdown
-	if enumcontentfiles \{download
+	if EnumContentFiles \{download
 			dofiles}
 		begin
-		if enumcontentfilesfinished
+		if EnumContentFilesFinished
 			break
 		else
 			printf \{"Waiting for Download Contend Enumeration"}
-			wait \{1
+			Wait \{1
 				gameframe}
 		endif
 		repeat
 	endif
 	mark_safe_for_shutdown
-	if isenumcontentfilesdamaged
+	if IsEnumContentFilesDamaged
 		destroy_popup_warning_menu
 		create_popup_warning_menu \{create_popup_warning_menu
 			textblock = {
 				text = "A content package appears damaged or unreadable. Please re-download the content package."
-				wait
+				Wait
 				3
 				seconds
 			}
@@ -50,75 +50,75 @@ script downloads_enumcontent
 			options = [
 				{
 					func = {
-						downloads_enumcontentfiles_continue
+						Downloads_Enumcontentfiles_Continue
 					}
 					text = "CONTINUE"
 					scale = (1.0, 1.0)
 				}
 			]}
-		change \{downloads_enumcontentfiles_continue_flag = 0}
+		change \{Downloads_Enumcontentfiles_Continue_Flag = 0}
 		begin
-		if ($downloads_enumcontentfiles_continue_flag = 1)
+		if ($Downloads_Enumcontentfiles_Continue_Flag = 1)
 			break
 		endif
-		wait \{1
+		Wait \{1
 			gameframe}
 		repeat
 	endif
-	if getlatestcontentindexfile
+	if GetLatestContentIndexFile
 		printf \{"Found latest content index file:"}
 		printstruct <...>
 		mark_unsafe_for_shutdown
-		enableduplicatesymbolwarning \{off}
-		if NOT loadpakasync pak_name = <filename> heap = heap_downloads async = 1
-			enableduplicatesymbolwarning
+		EnableDuplicateSymbolWarning \{off}
+		if NOT LoadPakAsync pak_name = <filename> heap = heap_downloads async = 1
+			EnableDuplicateSymbolWarning
 			mark_safe_for_shutdown
-			downloadcontentlost
+			DownloadContentLost
 			return
 		endif
-		enableduplicatesymbolwarning
+		EnableDuplicateSymbolWarning
 		change global_content_index_pak = <filename>
 		mark_safe_for_shutdown
-		downloads_loadlanguagecontent <...>
+		Downloads_LoadLanguageContent <...>
 	else
 		printf \{"Found no latest content index file"}
 	endif
-	if scriptexists \{downloads_startup}
-		downloads_startup
+	if ScriptExists \{Downloads_Startup}
+		Downloads_Startup
 	endif
-	downloads_postenumcontent
+	Downloads_PostEnumContent
 endscript
 
-script destroy_downloads_enumcontent 
-	killspawnedscript \{name = downloads_enumcontent}
-	downloads_closecontentfolder \{force = 1}
+script destroy_downloads_EnumContent 
+	KillSpawnedScript \{name = Downloads_EnumContent}
+	Downloads_CloseContentFolder \{force = 1}
 endscript
 
-script downloads_loadlanguagecontent 
-	formattext textname = pakname '%s_text.pak' s = <stem>
-	if english
-		formattext textname = pakname '%s_text.pak' s = <stem>
-	elseif french
-		formattext textname = pakname '%s_text_f.pak' s = <stem>
-	elseif italian
-		formattext textname = pakname '%s_text_i.pak' s = <stem>
-	elseif german
-		formattext textname = pakname '%s_text_g.pak' s = <stem>
-	elseif spanish
-		formattext textname = pakname '%s_text_s.pak' s = <stem>
+script Downloads_LoadLanguageContent 
+	FormatText TextName = pakname '%s_text.pak' s = <stem>
+	if English
+		FormatText TextName = pakname '%s_text.pak' s = <stem>
+	elseif French
+		FormatText TextName = pakname '%s_text_f.pak' s = <stem>
+	elseif Italian
+		FormatText TextName = pakname '%s_text_i.pak' s = <stem>
+	elseif German
+		FormatText TextName = pakname '%s_text_g.pak' s = <stem>
+	elseif Spanish
+		FormatText TextName = pakname '%s_text_s.pak' s = <stem>
 	endif
-	getcontentfolderindexfromfile <pakname>
+	GetContentFolderIndexFromFile <pakname>
 	if (<device> = content)
 		printf "Download Language Content found %s" s = <pakname>
 		mark_unsafe_for_shutdown
-		enableduplicatesymbolwarning \{off}
-		if NOT loadpakasync pak_name = <pakname> heap = heap_downloads async = 1
-			enableduplicatesymbolwarning
+		EnableDuplicateSymbolWarning \{off}
+		if NOT LoadPakAsync pak_name = <pakname> heap = heap_downloads async = 1
+			EnableDuplicateSymbolWarning
 			mark_safe_for_shutdown
-			downloadcontentlost
+			DownloadContentLost
 			return
 		endif
-		enableduplicatesymbolwarning
+		EnableDuplicateSymbolWarning
 		change global_content_index_pak_language = <pakname>
 		mark_safe_for_shutdown
 	else
@@ -126,42 +126,42 @@ script downloads_loadlanguagecontent
 	endif
 endscript
 
-script downloads_postenumcontent 
-	download_recreatezones
+script Downloads_PostEnumContent 
+	Download_RecreateZones
 	scan_globaltag_downloads
 endscript
-downloads_enumcontentfiles_continue_flag = 0
+Downloads_Enumcontentfiles_Continue_Flag = 0
 
-script downloads_enumcontentfiles_continue 
-	change \{downloads_enumcontentfiles_continue_flag = 1}
+script Downloads_Enumcontentfiles_Continue 
+	change \{Downloads_Enumcontentfiles_Continue_Flag = 1}
 endscript
 
-script downloads_unloadcontent 
-	killspawnedscript \{name = downloads_opencontentfolder}
+script Downloads_UnloadContent 
+	KillSpawnedScript \{name = Downloads_OpenContentFolder}
 	change \{downloadcontentfolder_lock = 0}
 	if NOT ($global_content_index_pak = 'none')
-		unloadpak ($global_content_index_pak)
+		UnloadPak ($global_content_index_pak)
 		change \{global_content_index_pak = 'none'}
 	endif
 	if NOT ($global_content_index_pak_language = 'none')
-		unloadpak ($global_content_index_pak_language)
+		UnloadPak ($global_content_index_pak_language)
 		change \{global_content_index_pak_language = 'none'}
 	endif
 endscript
 
-script download_recreatezones 
+script Download_RecreateZones 
 	mark_unsafe_for_shutdown
 	printf \{"Loading Zone"}
-	setpakmancurrentblock \{map = zones
+	SetPakManCurrentBlock \{map = zones
 		pak = none}
-	destroypakmanmap \{map = zones}
-	mempushcontext \{heap_zones}
-	createpakmanmap \{map = zones
-		links = gh3zones
+	DestroyPakManMap \{map = zones}
+	MemPushContext \{heap_zones}
+	CreatePakManMap \{map = zones
+		links = GH3Zones
 		folder = 'zones/'
 		uselinkslots}
-	mempopcontext
-	setpakmancurrentblock \{map = zones
+	MemPopContext
+	SetPakManCurrentBlock \{map = zones
 		pak = z_soundcheck}
 	mark_safe_for_shutdown
 endscript
@@ -169,7 +169,7 @@ downloadcontentfolder_lock = 0
 downloadcontentfolder_index = -1
 downloadcontentfolder_count = 0
 
-script downloads_opencontentfolder 
+script Downloads_OpenContentFolder 
 	mark_unsafe_for_shutdown
 	begin
 	if ($downloadcontentfolder_lock = 0)
@@ -180,16 +180,16 @@ script downloads_opencontentfolder
 		mark_safe_for_shutdown
 		return \{true}
 	endif
-	wait \{1
+	Wait \{1
 		gameframe}
 	repeat
 	change \{downloadcontentfolder_lock = 1}
-	if NOT opencontentfolder content_index = <content_index>
+	if NOT OpenContentFolder content_index = <content_index>
 		mark_safe_for_shutdown
 		return \{false}
 	endif
 	begin
-	getcontentfolderstate
+	GetContentFolderState
 	if (<contentfolderstate> = failed)
 		change \{downloadcontentfolder_lock = 0}
 		mark_safe_for_shutdown
@@ -198,7 +198,7 @@ script downloads_opencontentfolder
 	if (<contentfolderstate> = opened)
 		break
 	endif
-	wait \{1
+	Wait \{1
 		gameframe}
 	repeat
 	change downloadcontentfolder_count = ($downloadcontentfolder_count + 1)
@@ -207,7 +207,7 @@ script downloads_opencontentfolder
 	return \{true}
 endscript
 
-script downloads_closecontentfolder \{force = 0}
+script Downloads_CloseContentFolder \{force = 0}
 	mark_unsafe_for_shutdown
 	if (<force> = 1)
 		if ($downloadcontentfolder_index = -1)
@@ -230,17 +230,17 @@ script downloads_closecontentfolder \{force = 0}
 	else
 		change \{downloadcontentfolder_index = -1}
 	endif
-	if NOT closecontentfolder content_index = <content_index>
+	if NOT CloseContentFolder content_index = <content_index>
 		change \{downloadcontentfolder_lock = 0}
 		mark_safe_for_shutdown
 		return \{false}
 	endif
 	begin
-	getcontentfolderstate
+	GetContentFolderState
 	if (<contentfolderstate> = free)
 		break
 	endif
-	wait \{1
+	Wait \{1
 		gameframe}
 	repeat
 	change \{downloadcontentfolder_lock = 0}
@@ -254,20 +254,20 @@ script create_download_scan_menu
 		ui_flow_manager_respond_to_action \{action = continue}
 		return
 	endif
-	getplatform
+	GetPlatform
 	switch <platform>
 		case ps3
 		create_popup_warning_menu \{textblock = {
 				text = "Checking the HDD. Do not switch off your system."
 			}}
-		wait \{1
+		Wait \{1
 			gameframes}
 		case xenon
 		create_popup_warning_menu \{textblock = {
 				text = "Checking for downloadable content."
 			}}
 	endswitch
-	downloads_enumcontent
+	Downloads_EnumContent
 	ui_flow_manager_respond_to_action \{action = continue}
 endscript
 
@@ -276,14 +276,14 @@ script destroy_download_scan_menu
 endscript
 
 script is_musician_profile_downloaded 
-	getarraysize \{$musician_profiles}
+	GetArraySize \{$Musician_Profiles}
 	if (<index> < <array_size>)
 		return \{download = 0
 			true}
 	else
 		profile_struct = ($download_musician_profiles [(<index> - <array_size>)])
-		get_pak_filename desc_id = (<profile_struct>.musician_body.desc_id) type = body
-		getcontentfolderindexfromfile <pak_name>
+		get_pak_filename desc_id = (<profile_struct>.musician_body.desc_id) type = Body
+		GetContentFolderIndexFromFile <pak_name>
 		if (<device> = content)
 			return \{download = 1
 				true}
@@ -295,14 +295,14 @@ script is_musician_profile_downloaded
 endscript
 
 script is_musician_instrument_downloaded 
-	getarraysize \{$musician_instrument}
+	GetArraySize \{$musician_instrument}
 	if (<index> < <array_size>)
 		return \{download = 0
 			true}
 	else
 		profile_struct = ($download_musician_instrument [(<index> - <array_size>)])
 		get_pak_filename desc_id = (<profile_struct>.desc_id) type = instrument
-		getcontentfolderindexfromfile <pak_name>
+		GetContentFolderIndexFromFile <pak_name>
 		if (<device> = content)
 			return \{download = 1
 				true}
@@ -327,29 +327,29 @@ script find_instrument_index
 endscript
 
 script store_select_downloads 
-	netsessionfunc \{func = showmarketplaceui}
+	NetSessionFunc \{func = ShowMarketPlaceUI}
 	wait_for_blade_complete
-	setpakmancurrentblock \{map = zones
+	SetPakManCurrentBlock \{map = zones
 		pak = none
 		block_scripts = 1}
 	destroy_band
-	downloads_unloadcontent
+	Downloads_UnloadContent
 endscript
 
 script fmod_diskejected_event 
 	printf \{"fmod_diskejected_event"}
-	downloadcontentlost
+	DownloadContentLost
 endscript
 
-script downloadcontentlost 
+script DownloadContentLost 
 	change \{is_changing_levels = 0}
 	printscriptinfo \{"DownloadContentLost"}
 	spawnscriptnow \{noqbid
-		downloadcontentlost_spawned}
-	killspawnedscript \{name = downloadcontentlost}
+		DownloadContentLost_Spawned}
+	KillSpawnedScript \{name = DownloadContentLost}
 endscript
 
-script downloadcontentlost_spawned 
+script DownloadContentLost_Spawned 
 	if ($respond_to_signin_changed = 0)
 		return
 	endif
@@ -358,7 +358,7 @@ script downloadcontentlost_spawned
 	disable_pause
 	stoprendering
 	shutdown_game_for_signin_change
-	launchevent \{type = unfocus
+	LaunchEvent \{type = unfocus
 		target = root_window}
 	create_downloadcontentlost_menu
 	startrendering
@@ -392,7 +392,7 @@ script downloadcontentlost_reboot
 	printf \{"downloadcontentlost_reboot"}
 	destroy_downloadcontentlost_menu
 	enable_pause
-	wait \{5
+	Wait \{5
 		gameframes}
 	start_flow_manager \{flow_state = bootup_press_any_button_fs}
 	printf \{"downloadcontentlost_reboot end"}
@@ -440,7 +440,7 @@ script net_match_send_available_items
 		return
 	endif
 	change \{net_match_send_available_items_dirty = 0}
-	if NOT ishost
+	if NOT IsHost
 		destroy_popup_warning_menu
 		create_popup_warning_menu \{title = "ONLINE"
 			title_props = {
@@ -453,7 +453,7 @@ script net_match_send_available_items
 	endif
 	net_match_clear_available_items
 	change \{net_match_available_items_request_finished = 0}
-	sendstructure \{callback = net_match_available_items_send
+	SendStructure \{callback = net_match_available_items_send
 		data_to_send = {
 			none
 		}}
@@ -467,35 +467,35 @@ script net_match_clear_available_items
 	song_count = 0
 	begin
 	get_songlist_checksum index = <song_count>
-	setglobaltags <song_checksum> params = {available_on_other_client = 0}
+	SetGlobalTags <song_checksum> params = {available_on_other_client = 0}
 	song_count = (<song_count> + 1)
 	repeat <array_size>
 	printf "Local total songs = %i" i = <array_size>
-	guitar_array = ($bonus_guitars)
+	guitar_array = ($Bonus_Guitars)
 	store_add_secret_guitars_and_basses guitar_array = (<guitar_array>)
-	getarraysize <guitar_array>
+	GetArraySize <guitar_array>
 	index = 0
 	begin
 	guitar_id = (<guitar_array> [<index>].id)
-	setglobaltags <guitar_id> params = {unlocked_on_other_client = 0
+	SetGlobalTags <guitar_id> params = {unlocked_on_other_client = 0
 		available_on_other_client = 0}
 	<index> = (<index> + 1)
 	repeat <array_size>
-	guitar_array = ($bonus_guitar_finishes)
-	getarraysize <guitar_array>
+	guitar_array = ($Bonus_Guitar_Finishes)
+	GetArraySize <guitar_array>
 	index = 0
 	begin
 	guitar_id = (<guitar_array> [<index>].id)
-	setglobaltags <guitar_id> params = {unlocked_on_other_client = 0
+	SetGlobalTags <guitar_id> params = {unlocked_on_other_client = 0
 		available_on_other_client = 0}
 	<index> = (<index> + 1)
 	repeat <array_size>
-	character_array = ($secret_characters)
-	getarraysize <character_array>
+	character_array = ($Secret_Characters)
+	GetArraySize <character_array>
 	index = 0
 	begin
 	character_id = (<character_array> [<index>].id)
-	setglobaltags <character_id> params = {unlocked_on_other_client = 0}
+	SetGlobalTags <character_id> params = {unlocked_on_other_client = 0}
 	<index> = (<index> + 1)
 	repeat <array_size>
 	get_musician_profile_size
@@ -503,24 +503,24 @@ script net_match_clear_available_items
 	begin
 	get_musician_profile_struct index = <index>
 	character_id = (<profile_struct>.musician_body.desc_id)
-	setglobaltags <character_id> params = {available_on_other_client = 0}
+	SetGlobalTags <character_id> params = {available_on_other_client = 0}
 	<index> = (<index> + 1)
 	repeat <array_size>
-	character_array = ($bonus_outfits)
-	getarraysize <character_array>
+	character_array = ($Bonus_Outfits)
+	GetArraySize <character_array>
 	index = 0
 	begin
 	character_id = (<character_array> [<index>].id)
-	setglobaltags <character_id> params = {unlocked_on_other_client = 0
+	SetGlobalTags <character_id> params = {unlocked_on_other_client = 0
 		available_on_other_client = 0}
 	<index> = (<index> + 1)
 	repeat <array_size>
-	character_array = ($bonus_styles)
-	getarraysize <character_array>
+	character_array = ($Bonus_Styles)
+	GetArraySize <character_array>
 	index = 0
 	begin
 	character_id = (<character_array> [<index>].id)
-	setglobaltags <character_id> params = {unlocked_on_other_client = 0
+	SetGlobalTags <character_id> params = {unlocked_on_other_client = 0
 		available_on_other_client = 0}
 	<index> = (<index> + 1)
 	repeat <array_size>
@@ -532,7 +532,7 @@ script wait_for_net_match_available_items
 	if ($net_match_available_items_request_finished = 1)
 		break
 	endif
-	wait \{1
+	Wait \{1
 		gameframe}
 	repeat
 	change \{net_match_available_items_request_finished = 0}
@@ -552,13 +552,13 @@ script net_match_available_items_send
 	repeat <array_size>
 	net_match_send_items <...>
 	net_match_init_items
-	guitar_array = ($bonus_guitars)
+	guitar_array = ($Bonus_Guitars)
 	store_add_secret_guitars_and_basses guitar_array = (<guitar_array>)
-	getarraysize <guitar_array>
+	GetArraySize <guitar_array>
 	index = 0
 	begin
 	guitar_id = (<guitar_array> [<index>].id)
-	getglobaltags <guitar_id>
+	GetGlobalTags <guitar_id>
 	if (<unlocked> = 1)
 		net_match_add_item <...> item = <guitar_id>
 	endif
@@ -567,12 +567,12 @@ script net_match_available_items_send
 	repeat <array_size>
 	net_match_send_items <...> for_unlock = 1
 	net_match_init_items
-	guitar_array = ($bonus_guitar_finishes)
-	getarraysize <guitar_array>
+	guitar_array = ($Bonus_Guitar_Finishes)
+	GetArraySize <guitar_array>
 	index = 0
 	begin
 	guitar_id = (<guitar_array> [<index>].id)
-	getglobaltags <guitar_id>
+	GetGlobalTags <guitar_id>
 	if (<unlocked> = 1)
 		net_match_add_item <...> item = <guitar_id>
 	endif
@@ -580,46 +580,46 @@ script net_match_available_items_send
 	repeat <array_size>
 	net_match_send_items <...> for_unlock = 1
 	net_match_init_items
-	character_array = ($secret_characters)
-	getarraysize <character_array>
+	character_array = ($Secret_Characters)
+	GetArraySize <character_array>
 	index = 0
 	begin
 	character_id = (<character_array> [<index>].id)
-	getglobaltags <character_id>
+	GetGlobalTags <character_id>
 	if (<unlocked> = 1)
 		net_match_add_item <...> item = <character_id>
 	endif
 	<index> = (<index> + 1)
 	repeat <array_size>
 	net_match_send_items <...> for_unlock = 1
-	character_array = ($bonus_outfits)
-	getarraysize <character_array>
+	character_array = ($Bonus_Outfits)
+	GetArraySize <character_array>
 	index = 0
 	begin
 	character_id = (<character_array> [<index>].id)
-	getglobaltags <character_id>
+	GetGlobalTags <character_id>
 	if (<unlocked> = 1)
 		net_match_add_item <...> item = <character_id>
 	endif
 	<index> = (<index> + 1)
 	repeat <array_size>
 	net_match_send_items <...> for_unlock = 1
-	character_array = ($bonus_styles)
-	getarraysize <character_array>
+	character_array = ($Bonus_Styles)
+	GetArraySize <character_array>
 	index = 0
 	begin
 	character_id = (<character_array> [<index>].id)
-	getglobaltags <character_id>
+	GetGlobalTags <character_id>
 	if (<unlocked> = 1)
 		net_match_add_item <...> item = <character_id>
 	endif
 	<index> = (<index> + 1)
 	repeat <array_size>
 	net_match_send_items <...> for_unlock = 1
-	net_match_init_items \{type = download_guitars}
-	if globalexists \{name = download_guitars}
-		guitar_array = ($download_guitars)
-		getarraysize <guitar_array>
+	net_match_init_items \{type = Download_Guitars}
+	if GlobalExists \{name = Download_Guitars}
+		guitar_array = ($Download_Guitars)
+		GetArraySize <guitar_array>
 		index2 = 0
 		begin
 		find_instrument_index desc_id = (<guitar_array> [<index2>])
@@ -633,10 +633,10 @@ script net_match_available_items_send
 		repeat <array_size>
 	endif
 	net_match_send_items <...>
-	net_match_init_items \{type = download_basses}
-	if globalexists \{name = download_basses}
-		guitar_array = ($download_basses)
-		getarraysize <guitar_array>
+	net_match_init_items \{type = Download_Basses}
+	if GlobalExists \{name = Download_Basses}
+		guitar_array = ($Download_Basses)
+		GetArraySize <guitar_array>
 		index2 = 0
 		begin
 		find_instrument_index desc_id = (<guitar_array> [<index2>])
@@ -663,7 +663,7 @@ script net_match_available_items_send
 	<index> = (<index> + 1)
 	repeat <array_size>
 	net_match_send_items <...>
-	wait \{1
+	Wait \{1
 		gameframe}
 	net_match_init_items \{final = 1}
 	net_match_send_items <...>
@@ -680,7 +680,7 @@ endscript
 script net_match_add_item \{message_struct = {
 			final = 0
 		}}
-	setarrayelement arrayname = net_checksum_packet globalarray index = ($num_net_checksum_packet) newvalue = <item>
+	SetArrayElement ArrayName = net_checksum_packet GlobalArray index = ($num_net_checksum_packet) newvalue = <item>
 	change num_net_checksum_packet = ($num_net_checksum_packet + 1)
 	change total_num_net_checksum_packet = ($total_num_net_checksum_packet + 1)
 	if ($num_net_checksum_packet = 20)
@@ -694,7 +694,7 @@ script net_match_send_items \{for_unlock = 0
 		additional_info = {
 		}}
 	message_struct = {message_link = <message_struct> net_items = ($net_checksum_packet) num_valid = ($num_net_checksum_packet)}
-	sendstructure callback = net_match_download_items_send_callback data_to_send = {message_struct = <message_struct> for_unlock = <for_unlock> total_items = ($total_num_net_checksum_packet) additional_info = <additional_info>}
+	SendStructure callback = net_match_download_items_send_callback data_to_send = {message_struct = <message_struct> for_unlock = <for_unlock> total_items = ($total_num_net_checksum_packet) additional_info = <additional_info>}
 endscript
 download_characters_on_other_client = 0
 download_basses_on_other_client = 0
@@ -704,7 +704,7 @@ script net_match_download_items_send_callback
 	printf \{"net_match_download_items_send_callback"}
 	printstruct <...>
 	begin
-	if NOT structurecontains structure = <message_struct> num_valid
+	if NOT StructureContains Structure = <message_struct> num_valid
 		if (<message_struct>.final = 1)
 			change \{net_match_available_items_request_finished = 1}
 		endif
@@ -714,9 +714,9 @@ script net_match_download_items_send_callback
 	if ((<message_struct>.num_valid) > 0)
 		begin
 		if (<for_unlock> = 1)
-			setglobaltags (<message_struct>.net_items [<index>]) params = {unlocked_on_other_client = 1}
+			SetGlobalTags (<message_struct>.net_items [<index>]) params = {unlocked_on_other_client = 1}
 		else
-			setglobaltags (<message_struct>.net_items [<index>]) params = {available_on_other_client = 1}
+			SetGlobalTags (<message_struct>.net_items [<index>]) params = {available_on_other_client = 1}
 		endif
 		index = (<index> + 1)
 		repeat (<message_struct>.num_valid)
@@ -726,10 +726,10 @@ script net_match_download_items_send_callback
 	if (<message_struct>.type = download_characters)
 		change download_characters_on_other_client = <total_items>
 	endif
-	if (<message_struct>.type = download_guitars)
+	if (<message_struct>.type = Download_Guitars)
 		change download_guitars_on_other_client = <total_items>
 	endif
-	if (<message_struct>.type = download_basses)
+	if (<message_struct>.type = Download_Basses)
 		change download_basses_on_other_client = <total_items>
 	endif
 endscript

@@ -1,223 +1,223 @@
-skate8_sfx_background_areas_and_states = {
-	frontend = {
-		`default` = silence_front_end_crowd_loop
-		volume_params = {
-			silence_front_end_crowd_loop = 10
+Skate8_SFX_Background_Areas_And_States = {
+	FrontEnd = {
+		`default` = Silence_Front_End_Crowd_Loop
+		Volume_Params = {
+			Silence_Front_End_Crowd_Loop = 10
 		}
-		fade_from = {
-		}
-	}
-	crowd_stadium_good = {
-		`default` = heavy_crowd_loop_good_02
-		volume_params = {
-			heavy_crowd_loop_good_02 = 40
-		}
-		fade_from = {
+		Fade_From = {
 		}
 	}
-	crowd_stadium_nuetral = {
-		`default` = heavy_crowd_loop_nuetral_02
-		volume_params = {
-			heavy_crowd_loop_nuetral_02 = 160
+	Crowd_Stadium_Good = {
+		`default` = Heavy_Crowd_Loop_Good_02
+		Volume_Params = {
+			Heavy_Crowd_Loop_Good_02 = 40
 		}
-		fade_from = {
-		}
-	}
-	crowd_stadium_bad = {
-		`default` = heavy_crowd_loop_bad_01
-		volume_params = {
-			heavy_crowd_loop_bad_01 = 135
-		}
-		fade_from = {
+		Fade_From = {
 		}
 	}
-	crowd_medium_good1 = {
-		`default` = medium_crowd_loop_good_02
-		volume_params = {
-			medium_crowd_loop_good_02 = 70
+	Crowd_Stadium_Nuetral = {
+		`default` = Heavy_Crowd_Loop_Nuetral_02
+		Volume_Params = {
+			Heavy_Crowd_Loop_Nuetral_02 = 160
 		}
-		fade_from = {
-		}
-	}
-	crowd_medium_neutral = {
-		`default` = medium_crowd_loop_neutral_01
-		volume_params = {
-			medium_crowd_loop_neutral_01 = 100
-		}
-		fade_from = {
+		Fade_From = {
 		}
 	}
-	crowd_medium_bad = {
-		`default` = medium_crowd_loop_bad_01
-		volume_params = {
-			medium_crowd_loop_bad_01 = 140
+	Crowd_Stadium_Bad = {
+		`default` = Heavy_Crowd_Loop_Bad_01
+		Volume_Params = {
+			Heavy_Crowd_Loop_Bad_01 = 135
 		}
-		fade_from = {
-		}
-	}
-	crowd_small_bad = {
-		`default` = small_crowd_loop_bad
-		volume_params = {
-			small_crowd_loop_bad = 60
-		}
-		fade_from = {
+		Fade_From = {
 		}
 	}
-	crowd_small_good = {
-		`default` = small_crowd_loop_good
-		volume_params = {
-			small_crowd_loop_good = 88
+	Crowd_Medium_Good1 = {
+		`default` = Medium_Crowd_Loop_Good_02
+		Volume_Params = {
+			Medium_Crowd_Loop_Good_02 = 70
 		}
-		fade_from = {
-		}
-	}
-	crowd_small_neutral = {
-		`default` = small_crowd_loop_neutral
-		volume_params = {
-			small_crowd_loop_neutral = 16
-		}
-		fade_from = {
+		Fade_From = {
 		}
 	}
-	crowd_hell_bad = {
-		`default` = hell_crowd_loop_bad
-		volume_params = {
-			hell_crowd_loop_bad = 250
+	Crowd_Medium_Neutral = {
+		`default` = Medium_Crowd_Loop_Neutral_01
+		Volume_Params = {
+			Medium_Crowd_Loop_Neutral_01 = 100
 		}
-		fade_from = {
-		}
-	}
-	crowd_hell_neutral = {
-		`default` = hell_crowd_loop_neutral
-		volume_params = {
-			hell_crowd_loop_neutral = 150
-		}
-		fade_from = {
+		Fade_From = {
 		}
 	}
-	crowd_hell_good = {
-		`default` = hell_crowd_loop_good
-		volume_params = {
-			hell_crowd_loop_good = 150
+	Crowd_Medium_Bad = {
+		`default` = Medium_Crowd_Loop_Bad_01
+		Volume_Params = {
+			Medium_Crowd_Loop_Bad_01 = 140
 		}
-		fade_from = {
-		}
-	}
-	crowd_outdoor_neutral = {
-		`default` = outdoor_crowd_loop_neutral
-		volume_params = {
-			outdoor_crowd_loop_neutral = 150
-		}
-		fade_from = {
+		Fade_From = {
 		}
 	}
-	crowd_outdoor_good = {
-		`default` = outdoor_crowd_loop_good
-		volume_params = {
-			outdoor_crowd_loop_good = 250
+	Crowd_Small_Bad = {
+		`default` = Small_Crowd_Loop_Bad
+		Volume_Params = {
+			Small_Crowd_Loop_Bad = 60
 		}
-		fade_from = {
+		Fade_From = {
 		}
 	}
-	crowd_outdoor_bad = {
-		`default` = outdoor_crowd_loop_bad
-		volume_params = {
-			outdoor_crowd_loop_bad = 300
+	Crowd_Small_Good = {
+		`default` = Small_Crowd_Loop_Good
+		Volume_Params = {
+			Small_Crowd_Loop_Good = 88
 		}
-		fade_from = {
+		Fade_From = {
+		}
+	}
+	Crowd_Small_Neutral = {
+		`default` = Small_Crowd_Loop_Neutral
+		Volume_Params = {
+			Small_Crowd_Loop_Neutral = 16
+		}
+		Fade_From = {
+		}
+	}
+	Crowd_Hell_Bad = {
+		`default` = Hell_Crowd_Loop_Bad
+		Volume_Params = {
+			Hell_Crowd_Loop_Bad = 250
+		}
+		Fade_From = {
+		}
+	}
+	Crowd_Hell_Neutral = {
+		`default` = Hell_Crowd_Loop_Neutral
+		Volume_Params = {
+			Hell_Crowd_Loop_Neutral = 150
+		}
+		Fade_From = {
+		}
+	}
+	Crowd_Hell_Good = {
+		`default` = Hell_Crowd_Loop_Good
+		Volume_Params = {
+			Hell_Crowd_Loop_Good = 150
+		}
+		Fade_From = {
+		}
+	}
+	Crowd_Outdoor_Neutral = {
+		`default` = Outdoor_Crowd_Loop_Neutral
+		Volume_Params = {
+			Outdoor_Crowd_Loop_Neutral = 150
+		}
+		Fade_From = {
+		}
+	}
+	Crowd_Outdoor_Good = {
+		`default` = Outdoor_Crowd_Loop_Good
+		Volume_Params = {
+			Outdoor_Crowd_Loop_Good = 250
+		}
+		Fade_From = {
+		}
+	}
+	Crowd_Outdoor_Bad = {
+		`default` = Outdoor_Crowd_Loop_Bad
+		Volume_Params = {
+			Outdoor_Crowd_Loop_Bad = 300
+		}
+		Fade_From = {
 		}
 	}
 }
 
-script bg_crowd_large_neutral 
-	skate8_sfx_backgrounds_new_area \{bg_sfx_area = crowd_stadium_nuetral}
-	one_shot_soundevent \{soundevent = donothing_oneshot}
+script BG_Crowd_Large_Neutral 
+	Skate8_SFX_Backgrounds_New_Area \{BG_SFX_Area = Crowd_Stadium_Nuetral}
+	One_Shot_SoundEvent \{SoundEvent = DoNothing_OneShot}
 endscript
 
-script bg_crowd_large_good 
-	skate8_sfx_backgrounds_new_area \{bg_sfx_area = crowd_stadium_good}
-	one_shot_soundevent \{soundevent = crowd_oneshots_cheer_close
+script BG_Crowd_Large_Good 
+	Skate8_SFX_Backgrounds_New_Area \{BG_SFX_Area = Crowd_Stadium_Good}
+	One_Shot_SoundEvent \{SoundEvent = Crowd_OneShots_Cheer_Close
 		waittime = 5}
 endscript
 
-script bg_crowd_large_bad 
-	skate8_sfx_backgrounds_new_area \{bg_sfx_area = crowd_stadium_bad}
-	one_shot_soundevent \{soundevent = crowd_oneshots_boo_close
+script BG_Crowd_Large_Bad 
+	Skate8_SFX_Backgrounds_New_Area \{BG_SFX_Area = Crowd_Stadium_Bad}
+	One_Shot_SoundEvent \{SoundEvent = Crowd_OneShots_Boo_Close
 		waittime = 5}
 endscript
 
-script bg_crowd_medium_neutral 
-	skate8_sfx_backgrounds_new_area \{bg_sfx_area = crowd_medium_neutral}
-	one_shot_soundevent \{soundevent = donothing_oneshot}
+script BG_Crowd_Medium_Neutral 
+	Skate8_SFX_Backgrounds_New_Area \{BG_SFX_Area = Crowd_Medium_Neutral}
+	One_Shot_SoundEvent \{SoundEvent = DoNothing_OneShot}
 endscript
 
-script bg_crowd_medium_good 
-	skate8_sfx_backgrounds_new_area \{bg_sfx_area = crowd_medium_good1}
-	one_shot_soundevent \{soundevent = crowd_oneshots_cheer_close
+script BG_Crowd_Medium_Good 
+	Skate8_SFX_Backgrounds_New_Area \{BG_SFX_Area = Crowd_Medium_Good1}
+	One_Shot_SoundEvent \{SoundEvent = Crowd_OneShots_Cheer_Close
 		waittime = 5}
 endscript
 
-script bg_crowd_medium_bad 
-	skate8_sfx_backgrounds_new_area \{bg_sfx_area = crowd_medium_bad}
-	one_shot_soundevent \{soundevent = crowd_oneshots_boo_close
+script BG_Crowd_Medium_Bad 
+	Skate8_SFX_Backgrounds_New_Area \{BG_SFX_Area = Crowd_Medium_Bad}
+	One_Shot_SoundEvent \{SoundEvent = Crowd_OneShots_Boo_Close
 		waittime = 5}
 endscript
 
-script bg_crowd_small_bad 
-	skate8_sfx_backgrounds_new_area \{bg_sfx_area = crowd_small_bad}
-	one_shot_soundevent \{soundevent = crowd_oneshots_boo_close
+script BG_Crowd_Small_Bad 
+	Skate8_SFX_Backgrounds_New_Area \{BG_SFX_Area = Crowd_Small_Bad}
+	One_Shot_SoundEvent \{SoundEvent = Crowd_OneShots_Boo_Close
 		waittime = 5}
 endscript
 
-script bg_crowd_small_good 
-	skate8_sfx_backgrounds_new_area \{bg_sfx_area = crowd_small_good}
-	one_shot_soundevent \{soundevent = crowd_oneshots_cheer_close
+script BG_Crowd_Small_Good 
+	Skate8_SFX_Backgrounds_New_Area \{BG_SFX_Area = Crowd_Small_Good}
+	One_Shot_SoundEvent \{SoundEvent = Crowd_OneShots_Cheer_Close
 		waittime = 5}
 endscript
 
-script bg_crowd_small_neutral 
-	skate8_sfx_backgrounds_new_area \{bg_sfx_area = crowd_small_neutral}
-	one_shot_soundevent \{soundevent = donothing_oneshot
+script BG_Crowd_Small_Neutral 
+	Skate8_SFX_Backgrounds_New_Area \{BG_SFX_Area = Crowd_Small_Neutral}
+	One_Shot_SoundEvent \{SoundEvent = DoNothing_OneShot
 		waittime = 5}
 endscript
 
-script bg_crowd_hell_bad 
-	skate8_sfx_backgrounds_new_area \{bg_sfx_area = crowd_hell_bad}
-	one_shot_soundevent \{soundevent = crowd_oneshots_boo_close
+script BG_Crowd_Hell_Bad 
+	Skate8_SFX_Backgrounds_New_Area \{BG_SFX_Area = Crowd_Hell_Bad}
+	One_Shot_SoundEvent \{SoundEvent = Crowd_OneShots_Boo_Close
 		waittime = 5}
 endscript
 
-script bg_crowd_hell_neutral 
-	skate8_sfx_backgrounds_new_area \{bg_sfx_area = crowd_hell_neutral}
-	one_shot_soundevent \{soundevent = donothing_oneshot
+script BG_Crowd_Hell_Neutral 
+	Skate8_SFX_Backgrounds_New_Area \{BG_SFX_Area = Crowd_Hell_Neutral}
+	One_Shot_SoundEvent \{SoundEvent = DoNothing_OneShot
 		waittime = 5}
 endscript
 
-script bg_crowd_hell_good 
-	skate8_sfx_backgrounds_new_area \{bg_sfx_area = crowd_hell_good}
-	one_shot_soundevent \{soundevent = crowd_oneshots_cheer_close
+script BG_Crowd_Hell_Good 
+	Skate8_SFX_Backgrounds_New_Area \{BG_SFX_Area = Crowd_Hell_Good}
+	One_Shot_SoundEvent \{SoundEvent = Crowd_OneShots_Cheer_Close
 		waittime = 2}
 endscript
 
-script bg_crowd_front_end_silence \{immediate = 0}
-	skate8_sfx_backgrounds_new_area bg_sfx_area = frontend immediate = <immediate>
-	one_shot_soundevent soundevent = donothing_oneshot waittime = 5 immediate = <immediate>
+script BG_Crowd_Front_End_Silence \{immediate = 0}
+	Skate8_SFX_Backgrounds_New_Area BG_SFX_Area = FrontEnd immediate = <immediate>
+	One_Shot_SoundEvent SoundEvent = DoNothing_OneShot waittime = 5 immediate = <immediate>
 endscript
 
-script bg_crowd_outdoor_neutral 
-	skate8_sfx_backgrounds_new_area \{bg_sfx_area = crowd_outdoor_neutral}
-	one_shot_soundevent \{soundevent = donothing_oneshot
+script BG_Crowd_Outdoor_Neutral 
+	Skate8_SFX_Backgrounds_New_Area \{BG_SFX_Area = Crowd_Outdoor_Neutral}
+	One_Shot_SoundEvent \{SoundEvent = DoNothing_OneShot
 		waittime = 5}
 endscript
 
-script bg_crowd_outdoor_good 
-	skate8_sfx_backgrounds_new_area \{bg_sfx_area = crowd_outdoor_good}
-	one_shot_soundevent \{soundevent = crowd_oneshots_cheer_close
+script BG_Crowd_Outdoor_Good 
+	Skate8_SFX_Backgrounds_New_Area \{BG_SFX_Area = Crowd_Outdoor_Good}
+	One_Shot_SoundEvent \{SoundEvent = Crowd_OneShots_Cheer_Close
 		waittime = 5}
 endscript
 
-script bg_crowd_outdoor_bad 
-	skate8_sfx_backgrounds_new_area \{bg_sfx_area = crowd_outdoor_bad}
-	one_shot_soundevent \{soundevent = crowd_oneshots_boo_close
+script BG_Crowd_Outdoor_Bad 
+	Skate8_SFX_Backgrounds_New_Area \{BG_SFX_Area = Crowd_Outdoor_Bad}
+	One_Shot_SoundEvent \{SoundEvent = Crowd_OneShots_Boo_Close
 		waittime = 5}
 endscript

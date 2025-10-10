@@ -44,7 +44,7 @@ script create_net_detailed_stats_menu
 	p2_stat_internal_just = [right top]
 	p2_stat_x_offset = <right_margin>
 	detailed_stats_create_container
-	if (netsessionfunc obj = match func = get_gamertag)
+	if (NetSessionFunc obj = match func = get_gamertag)
 		add_text_to_column column = 'left' text = <name> rgba = ($player1_color) dont_force_caps
 	endif
 	add_text_to_column \{column = 'center'
@@ -136,15 +136,15 @@ script net_add_basic_stats
 	score_color = $detailed_stats_text_color
 	if (<player> = 0)
 		stat_column = 'left'
-		formattext textname = wins_text "%d" d = <p1_wins>
+		FormatText TextName = wins_text "%d" d = <p1_wins>
 		color = $player1_color
 	else
 		stat_column = 'right'
-		formattext textname = wins_text "%d" d = <p2_wins>
+		FormatText TextName = wins_text "%d" d = <p2_wins>
 		color = $player2_color
 	endif
-	formattext textname = streak_text "%d" d = ($g_best_streaks [<player>])
-	formattext textname = score_text "%d" d = ($g_high_scores [<player>])
+	FormatText TextName = streak_text "%d" d = ($g_best_streaks [<player>])
+	FormatText TextName = score_text "%d" d = ($g_high_scores [<player>])
 	if ($game_mode = p2_coop)
 		add_text_to_column column = <stat_column> text = "" rgba = <color>
 	else
@@ -197,7 +197,7 @@ script net_add_stats_and_desc_row \{set_index = 0
 		endif
 		color = ($player2_color)
 	endif
-	formattext textname = score_text "%d" d = <score>
+	FormatText TextName = score_text "%d" d = <score>
 	add_text_to_column column = <stat_column> text = <score_text> rgba = <color> highlight = <highlight>
 	<player> = (<player> + 1)
 	repeat 2
@@ -223,7 +223,7 @@ script net_stats_calculate_wins
 endscript
 
 script print_scores 
-	getarraysize \{$g_p1_scores}
+	GetArraySize \{$g_p1_scores}
 	printf \{"===1=== ===2==="}
 	index = 0
 	begin
@@ -251,12 +251,12 @@ script reset_net_stats_menu
 	begin
 	array_count = 0
 	begin
-	formattext checksumname = scores_array 'g_p%p_scores' p = (<player> + 1)
-	setarrayelement arrayname = <scores_array> globalarray index = <array_count> newvalue = 0
+	FormatText checksumname = scores_array 'g_p%p_scores' p = (<player> + 1)
+	SetArrayElement ArrayName = <scores_array> GlobalArray index = <array_count> newvalue = 0
 	<array_count> = (<array_count> + 1)
 	repeat <num_songs>
-	setarrayelement arrayname = g_best_streaks globalarray index = <player> newvalue = 0
-	setarrayelement arrayname = g_high_scores globalarray index = <player> newvalue = 0
+	SetArrayElement ArrayName = g_best_streaks GlobalArray index = <player> newvalue = 0
+	SetArrayElement ArrayName = g_high_scores GlobalArray index = <player> newvalue = 0
 	<player> = (<player> + 1)
 	repeat 2
 endscript
@@ -266,33 +266,33 @@ script record_net_statistics
 	if ($game_mode = p2_battle)
 		if (($player1_status.current_health) > ($player2_status.current_health))
 			if NOT ($player1_status.final_blow_powerup = -1)
-				setarrayelement arrayname = g_p1_scores globalarray index = ($net_song_num) newvalue = ($player1_status.final_blow_powerup)
+				SetArrayElement ArrayName = g_p1_scores GlobalArray index = ($net_song_num) newvalue = ($player1_status.final_blow_powerup)
 			else
-				setarrayelement arrayname = g_p1_scores globalarray index = ($net_song_num) newvalue = 8
+				SetArrayElement ArrayName = g_p1_scores GlobalArray index = ($net_song_num) newvalue = 8
 			endif
-			setarrayelement arrayname = g_p2_scores globalarray index = ($net_song_num) newvalue = -1
+			SetArrayElement ArrayName = g_p2_scores GlobalArray index = ($net_song_num) newvalue = -1
 		else
 			if NOT ($player2_status.final_blow_powerup = -1)
-				setarrayelement arrayname = g_p2_scores globalarray index = ($net_song_num) newvalue = ($player2_status.final_blow_powerup)
+				SetArrayElement ArrayName = g_p2_scores GlobalArray index = ($net_song_num) newvalue = ($player2_status.final_blow_powerup)
 			else
-				setarrayelement arrayname = g_p2_scores globalarray index = ($net_song_num) newvalue = 8
+				SetArrayElement ArrayName = g_p2_scores GlobalArray index = ($net_song_num) newvalue = 8
 			endif
-			setarrayelement arrayname = g_p1_scores globalarray index = ($net_song_num) newvalue = -1
+			SetArrayElement ArrayName = g_p1_scores GlobalArray index = ($net_song_num) newvalue = -1
 		endif
 	endif
 	begin
-	formattext checksumname = player_status 'player%p_status' p = (<player> + 1)
+	FormatText checksumname = player_status 'player%p_status' p = (<player> + 1)
 	player_score = ($<player_status>.score)
-	casttointeger \{player_score}
+	CastToInteger \{player_score}
 	if NOT ($game_mode = p2_battle)
-		formattext checksumname = scores_array 'g_p%p_scores' p = (<player> + 1)
-		setarrayelement arrayname = <scores_array> globalarray index = ($net_song_num) newvalue = <player_score>
+		FormatText checksumname = scores_array 'g_p%p_scores' p = (<player> + 1)
+		SetArrayElement ArrayName = <scores_array> GlobalArray index = ($net_song_num) newvalue = <player_score>
 	endif
 	if ($<player_status>.best_run > $g_best_streaks [<player>])
-		setarrayelement arrayname = g_best_streaks globalarray index = <player> newvalue = ($<player_status>.best_run)
+		SetArrayElement ArrayName = g_best_streaks GlobalArray index = <player> newvalue = ($<player_status>.best_run)
 	endif
 	if ($<player_status>.score > $g_high_scores [<player>])
-		setarrayelement arrayname = g_high_scores globalarray index = <player> newvalue = <player_score>
+		SetArrayElement ArrayName = g_high_scores GlobalArray index = <player> newvalue = <player_score>
 	endif
 	<player> = (<player> + 1)
 	repeat 2

@@ -101,38 +101,38 @@ default_network_preferences = {
 }
 
 script launch_network_options_menu 
-	runscriptonscreenelement \{id = current_menu_anchor
+	RunScriptOnScreenElement \{id = current_menu_anchor
 		menu_offscreen
 		callback = create_network_options_menu}
 endscript
 
 script back_from_net_options_menu 
 	go_to_sub_menu = 0
-	pausemusicandstreams
-	if istrue \{$innetoptionsfromnetplay}
+	PauseMusicAndStreams
+	if IsTrue \{$InNetOptionsFromNetPlay}
 		printf \{"********************* InNetOptionsFromNetPlay *******************"}
 		go_to_sub_menu = 1
 	else
-		if istrue \{$innetoptionsfromfacedownload}
+		if IsTrue \{$InNetOptionsFromFaceDownload}
 			printf \{"********************* InNetOptionsFromFaceDownload *******************"}
 			go_to_sub_menu = 1
 		endif
 	endif
 	if (<go_to_sub_menu> = 1)
-		getpreferencechecksum \{pref_type = network
+		GetPreferenceChecksum \{pref_type = network
 			device_type}
 		switch <checksum>
 			case device_none
-			if istrue \{$innetoptionsfromnetplay}
+			if IsTrue \{$InNetOptionsFromNetPlay}
 				create_ss_menu
 			else
 				face_back_from_net_setup
 			endif
 			default
-			if objectexists \{id = current_menu_anchor}
-				destroyscreenelement \{id = current_menu_anchor}
+			if ObjectExists \{id = current_menu_anchor}
+				DestroyScreenElement \{id = current_menu_anchor}
 			endif
-			if istrue \{$innetoptionsfromnetplay}
+			if IsTrue \{$InNetOptionsFromNetPlay}
 				do_network_setup \{error_script = back_from_startup_error_dialog
 					success_script = net_setup_from_net_play_successful
 					need_setup_script = create_net_startup_need_setup_dialog}
@@ -142,11 +142,11 @@ script back_from_net_options_menu
 					need_setup_script = face_create_net_startup_need_setup_dialog}
 			endif
 		endswitch
-		change \{innetoptionsfromnetplay = 0}
-		change \{innetoptionsfromfacedownload = 0}
-		unpausemusicandstreams
+		change \{InNetOptionsFromNetPlay = 0}
+		change \{InNetOptionsFromFaceDownload = 0}
+		UnpauseMusicAndStreams
 	else
-		unpausemusicandstreams
+		UnpauseMusicAndStreams
 	endif
 endscript
 
@@ -161,9 +161,9 @@ script maybe_load_net_settings
 endscript
 
 script launch_load_net_config 
-	runscriptonscreenelement \{id = current_menu_anchor
+	RunScriptOnScreenElement \{id = current_menu_anchor
 		menu_offscreen
-		callback = _creationoptionsloadnetconfig}
+		callback = _CreationOptionsLoadNetConfig}
 endscript
 
 script back_from_hardware_setup_refused_dialog 
@@ -177,7 +177,7 @@ script back_from_load_refused_dialog
 endscript
 
 script launch_hardware_setup_refused_dialog 
-	runscriptonscreenelement \{id = current_menu_anchor
+	RunScriptOnScreenElement \{id = current_menu_anchor
 		menu_offscreen
 		callback = create_hardware_setup_refused_dialog}
 endscript
@@ -209,14 +209,14 @@ script create_net_load_refused_dialog
 endscript
 
 script launch_hardware_setup 
-	runscriptonscreenelement \{id = current_menu_anchor
+	RunScriptOnScreenElement \{id = current_menu_anchor
 		menu_offscreen
 		callback = create_hardware_setup_menu}
 endscript
 
 script launch_connection_settings 
-	if objectexists \{id = current_menu_anchor}
-		runscriptonscreenelement \{id = current_menu_anchor
+	if ObjectExists \{id = current_menu_anchor}
+		RunScriptOnScreenElement \{id = current_menu_anchor
 			menu_offscreen
 			callback = create_connection_settings}
 	else
@@ -227,17 +227,17 @@ endscript
 
 script back_from_startup_error_dialog 
 	printf \{"**** in back_from_startup_error_dialog"}
-	netsessionfunc \{func = match_uninit}
-	netsessionfunc \{func = content_uninit}
-	netsessionfunc \{func = presence_uninit}
-	change \{needstodownloadstats = 1}
-	unpausemusicandstreams
+	NetSessionFunc \{func = match_uninit}
+	NetSessionFunc \{func = content_uninit}
+	NetSessionFunc \{func = presence_uninit}
+	change \{NeedsToDownloadStats = 1}
+	UnpauseMusicAndStreams
 	dialog_box_exit
-	if objectexists \{id = select_skater_anchor}
-		destroyscreenelement \{id = select_skater_anchor}
+	if ObjectExists \{id = select_skater_anchor}
+		DestroyScreenElement \{id = select_skater_anchor}
 		restore_start_key_binding
 	endif
-	skater :cancelrotatedisplay
+	skater :CancelRotateDisplay
 	create_main_menu
 endscript
 

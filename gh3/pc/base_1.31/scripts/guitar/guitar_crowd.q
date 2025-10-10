@@ -11,7 +11,7 @@ script crowd_reset
 	if ($game_mode = tutorial)
 		return
 	endif
-	if getnodeflag \{ls_encore_post}
+	if GetNodeFlag \{LS_ENCORE_POST}
 		change \{current_crowd = 1.6666}
 		change \{average_crowd = 1.6666}
 	else
@@ -23,21 +23,21 @@ script crowd_reset
 	change \{last_time_in_lead = 0.0}
 	change \{last_time_in_lead_player = -1}
 	if (<player> = 1)
-		stopsoundevent \{$currentlyplayingoneshotsoundevent}
+		StopSoundEvent \{$CurrentlyPlayingOneShotSoundEvent}
 		if ($game_mode = training)
-			bg_crowd_front_end_silence \{immediate = 1}
+			BG_Crowd_Front_End_Silence \{immediate = 1}
 		elseif ($end_credits = 1 ||
-				getnodeflag ls_encore_post)
+				GetNodeFlag LS_ENCORE_POST)
 			printf \{channel = sfx
 				"crowd_reset LS_ENCORE_POST"}
-			change_crowd_looping_sfx \{crowd_looping_state = good}
+			Change_Crowd_Looping_SFX \{crowd_looping_state = good}
 		else
 			printf \{channel = sfx
 				"NOT - crowd_reset LS_ENCORE_POST"}
-			change_crowd_looping_sfx \{crowd_looping_state = neutral}
+			Change_Crowd_Looping_SFX \{crowd_looping_state = neutral}
 		endif
 	endif
-	if getnodeflag \{ls_encore_post}
+	if GetNodeFlag \{LS_ENCORE_POST}
 		if NOT ($game_mode = p2_battle)
 			change structurename = <player_status> current_health = 1.6666
 		else
@@ -49,7 +49,7 @@ script crowd_reset
 	if ($game_mode = p2_battle && $battle_sudden_death = 1)
 		change structurename = <player_status> current_health = ($<player_status>.save_health)
 	endif
-	crowdreset
+	CrowdReset
 endscript
 
 script forcescore 
@@ -70,13 +70,13 @@ z_wikker_crowd_models = [
 	{
 		name = crowd1
 		camera = crowd1_cam
-		model = 'Real_Crowd\\Crowd_Ped_01.skin'
+		Model = 'Real_Crowd\\Crowd_Ped_01.skin'
 		id = crowd1_cam_viewport
 		texture = viewport1
-		textureasset = `tex/zones/demo/tw_billboard01.dds`
+		textureasset = `tex/zones/Demo/tw_billboard01.dds`
 		texdict = `zones/z_wikker/z_wikker.tex`
 		assetcontext = z_wikker
-		triggerscript = z_wikker_crowd_peds
+		TriggerScript = Z_Wikker_Crowd_Peds
 		params = {
 			name = crowd1
 		}
@@ -84,13 +84,13 @@ z_wikker_crowd_models = [
 	{
 		name = crowd2
 		camera = crowd2_cam
-		model = 'Real_Crowd\\Crowd_Ped_02.skin'
+		Model = 'Real_Crowd\\Crowd_Ped_02.skin'
 		id = crowd2_cam_viewport
 		texture = viewport2
-		textureasset = `tex/zones/demo/tw_billboard02.dds`
+		textureasset = `tex/zones/Demo/tw_billboard02.dds`
 		texdict = `zones/z_wikker/z_wikker.tex`
 		assetcontext = z_wikker
-		triggerscript = z_wikker_crowd_peds
+		TriggerScript = Z_Wikker_Crowd_Peds
 		params = {
 			name = crowd2
 		}
@@ -98,13 +98,13 @@ z_wikker_crowd_models = [
 	{
 		name = crowd3
 		camera = crowd3_cam
-		model = 'Real_Crowd\\Crowd_Ped_03.skin'
+		Model = 'Real_Crowd\\Crowd_Ped_03.skin'
 		id = crowd3_cam_viewport
 		texture = viewport3
-		textureasset = `tex/zones/demo/tw_billboard03.dds`
+		textureasset = `tex/zones/Demo/tw_billboard03.dds`
 		texdict = `zones/z_wikker/z_wikker.tex`
 		assetcontext = z_wikker
-		triggerscript = z_wikker_crowd_peds
+		TriggerScript = Z_Wikker_Crowd_Peds
 		params = {
 			name = crowd3
 		}
@@ -112,13 +112,13 @@ z_wikker_crowd_models = [
 	{
 		name = crowd4
 		camera = crowd4_cam
-		model = 'Real_Crowd\\Crowd_Ped_04.skin'
+		Model = 'Real_Crowd\\Crowd_Ped_04.skin'
 		id = crowd4_cam_viewport
 		texture = viewport4
-		textureasset = `tex/zones/demo/tw_billboard04.dds`
+		textureasset = `tex/zones/Demo/tw_billboard04.dds`
 		texdict = `zones/z_wikker/z_wikker.tex`
 		assetcontext = z_wikker
-		triggerscript = z_wikker_crowd_peds
+		TriggerScript = Z_Wikker_Crowd_Peds
 		params = {
 			name = crowd4
 		}
@@ -126,13 +126,13 @@ z_wikker_crowd_models = [
 	{
 		name = crowd5
 		camera = crowd5_cam
-		model = 'Real_Crowd\\crowd_pedF_1.skin'
+		Model = 'Real_Crowd\\crowd_pedF_1.skin'
 		id = crowd5_cam_viewport
 		texture = viewport5
-		textureasset = `tex/zones/demo/tw_billboard05.dds`
+		textureasset = `tex/zones/Demo/tw_billboard05.dds`
 		texdict = `zones/z_wikker/z_wikker.tex`
 		assetcontext = z_wikker
-		triggerscript = z_wikker_crowd_peds
+		TriggerScript = Z_Wikker_Crowd_Peds
 		params = {
 			name = crowd5
 		}
@@ -140,13 +140,13 @@ z_wikker_crowd_models = [
 	{
 		name = crowd6
 		camera = crowd6_cam
-		model = 'Real_Crowd\\crowd_pedF_2.skin'
+		Model = 'Real_Crowd\\crowd_pedF_2.skin'
 		id = crowd6_cam_viewport
 		texture = viewport6
-		textureasset = `tex/zones/demo/tw_billboard06.dds`
+		textureasset = `tex/zones/Demo/tw_billboard06.dds`
 		texdict = `zones/z_wikker/z_wikker.tex`
 		assetcontext = z_wikker
-		triggerscript = z_wikker_crowd_peds
+		TriggerScript = Z_Wikker_Crowd_Peds
 		params = {
 			name = crowd6
 		}
@@ -156,13 +156,13 @@ z_dive_crowd_models = [
 	{
 		name = crowd1
 		camera = crowd1_cam
-		model = 'Real_Crowd\\Crowd_Ped_01.skin'
+		Model = 'Real_Crowd\\Crowd_Ped_01.skin'
 		id = crowd1_cam_viewport
 		texture = viewport1
-		textureasset = `tex/zones/demo/tw_billboard01.dds`
+		textureasset = `tex/zones/Demo/tw_billboard01.dds`
 		texdict = `zones/z_dive/z_dive.tex`
 		assetcontext = z_dive
-		triggerscript = z_dive_crowd_peds
+		TriggerScript = Z_Dive_Crowd_Peds
 		params = {
 			name = crowd1
 		}
@@ -170,13 +170,13 @@ z_dive_crowd_models = [
 	{
 		name = crowd2
 		camera = crowd2_cam
-		model = 'Real_Crowd\\Crowd_Ped_02.skin'
+		Model = 'Real_Crowd\\Crowd_Ped_02.skin'
 		id = crowd2_cam_viewport
 		texture = viewport2
-		textureasset = `tex/zones/demo/tw_billboard02.dds`
+		textureasset = `tex/zones/Demo/tw_billboard02.dds`
 		texdict = `zones/z_dive/z_dive.tex`
 		assetcontext = z_dive
-		triggerscript = z_dive_crowd_peds
+		TriggerScript = Z_Dive_Crowd_Peds
 		params = {
 			name = crowd2
 		}
@@ -184,13 +184,13 @@ z_dive_crowd_models = [
 	{
 		name = crowd3
 		camera = crowd3_cam
-		model = 'Real_Crowd\\Crowd_Ped_03.skin'
+		Model = 'Real_Crowd\\Crowd_Ped_03.skin'
 		id = crowd3_cam_viewport
 		texture = viewport3
-		textureasset = `tex/zones/demo/tw_billboard03.dds`
+		textureasset = `tex/zones/Demo/tw_billboard03.dds`
 		texdict = `zones/z_dive/z_dive.tex`
 		assetcontext = z_dive
-		triggerscript = z_dive_crowd_peds
+		TriggerScript = Z_Dive_Crowd_Peds
 		params = {
 			name = crowd3
 		}
@@ -198,13 +198,13 @@ z_dive_crowd_models = [
 	{
 		name = crowd4
 		camera = crowd4_cam
-		model = 'Real_Crowd\\Crowd_Ped_04.skin'
+		Model = 'Real_Crowd\\Crowd_Ped_04.skin'
 		id = crowd4_cam_viewport
 		texture = viewport4
-		textureasset = `tex/zones/demo/tw_billboard04.dds`
+		textureasset = `tex/zones/Demo/tw_billboard04.dds`
 		texdict = `zones/z_dive/z_dive.tex`
 		assetcontext = z_dive
-		triggerscript = z_dive_crowd_peds
+		TriggerScript = Z_Dive_Crowd_Peds
 		params = {
 			name = crowd4
 		}
@@ -212,13 +212,13 @@ z_dive_crowd_models = [
 	{
 		name = crowd5
 		camera = crowd5_cam
-		model = 'Real_Crowd\\crowd_pedF_1.skin'
+		Model = 'Real_Crowd\\crowd_pedF_1.skin'
 		id = crowd5_cam_viewport
 		texture = viewport5
-		textureasset = `tex/zones/demo/tw_billboard05.dds`
+		textureasset = `tex/zones/Demo/tw_billboard05.dds`
 		texdict = `zones/z_dive/z_dive.tex`
 		assetcontext = z_dive
-		triggerscript = z_dive_crowd_peds
+		TriggerScript = Z_Dive_Crowd_Peds
 		params = {
 			name = crowd5
 		}
@@ -226,13 +226,13 @@ z_dive_crowd_models = [
 	{
 		name = crowd6
 		camera = crowd6_cam
-		model = 'Real_Crowd\\crowd_pedF_2.skin'
+		Model = 'Real_Crowd\\crowd_pedF_2.skin'
 		id = crowd6_cam_viewport
 		texture = viewport6
-		textureasset = `tex/zones/demo/tw_billboard06.dds`
+		textureasset = `tex/zones/Demo/tw_billboard06.dds`
 		texdict = `zones/z_dive/z_dive.tex`
 		assetcontext = z_dive
-		triggerscript = z_dive_crowd_peds
+		TriggerScript = Z_Dive_Crowd_Peds
 		params = {
 			name = crowd6
 		}
@@ -242,13 +242,13 @@ z_artdeco_crowd_models = [
 	{
 		name = crowd1
 		camera = crowd1_cam
-		model = 'Real_Crowd\\Crowd_Ped_01.skin'
+		Model = 'Real_Crowd\\Crowd_Ped_01.skin'
 		id = crowd1_cam_viewport
 		texture = viewport1
-		textureasset = `tex/zones/demo/tw_billboard01.dds`
+		textureasset = `tex/zones/Demo/tw_billboard01.dds`
 		texdict = `zones/z_artdeco/z_artdeco.tex`
 		assetcontext = z_artdeco
-		triggerscript = z_artdeco_crowd_peds
+		TriggerScript = Z_ArtDeco_Crowd_Peds
 		params = {
 			name = crowd1
 		}
@@ -256,13 +256,13 @@ z_artdeco_crowd_models = [
 	{
 		name = crowd2
 		camera = crowd2_cam
-		model = 'Real_Crowd\\Crowd_Ped_02.skin'
+		Model = 'Real_Crowd\\Crowd_Ped_02.skin'
 		id = crowd2_cam_viewport
 		texture = viewport2
-		textureasset = `tex/zones/demo/tw_billboard02.dds`
+		textureasset = `tex/zones/Demo/tw_billboard02.dds`
 		texdict = `zones/z_artdeco/z_artdeco.tex`
 		assetcontext = z_artdeco
-		triggerscript = z_artdeco_crowd_peds
+		TriggerScript = Z_ArtDeco_Crowd_Peds
 		params = {
 			name = crowd2
 		}
@@ -270,13 +270,13 @@ z_artdeco_crowd_models = [
 	{
 		name = crowd3
 		camera = crowd3_cam
-		model = 'Real_Crowd\\Crowd_Ped_03.skin'
+		Model = 'Real_Crowd\\Crowd_Ped_03.skin'
 		id = crowd3_cam_viewport
 		texture = viewport3
-		textureasset = `tex/zones/demo/tw_billboard03.dds`
+		textureasset = `tex/zones/Demo/tw_billboard03.dds`
 		texdict = `zones/z_artdeco/z_artdeco.tex`
 		assetcontext = z_artdeco
-		triggerscript = z_artdeco_crowd_peds
+		TriggerScript = Z_ArtDeco_Crowd_Peds
 		params = {
 			name = crowd3
 		}
@@ -284,13 +284,13 @@ z_artdeco_crowd_models = [
 	{
 		name = crowd4
 		camera = crowd4_cam
-		model = 'Real_Crowd\\Crowd_Ped_04.skin'
+		Model = 'Real_Crowd\\Crowd_Ped_04.skin'
 		id = crowd4_cam_viewport
 		texture = viewport4
-		textureasset = `tex/zones/demo/tw_billboard04.dds`
+		textureasset = `tex/zones/Demo/tw_billboard04.dds`
 		texdict = `zones/z_artdeco/z_artdeco.tex`
 		assetcontext = z_artdeco
-		triggerscript = z_artdeco_crowd_peds
+		TriggerScript = Z_ArtDeco_Crowd_Peds
 		params = {
 			name = crowd4
 		}
@@ -298,13 +298,13 @@ z_artdeco_crowd_models = [
 	{
 		name = crowd5
 		camera = crowd5_cam
-		model = 'Real_Crowd\\crowd_pedF_1.skin'
+		Model = 'Real_Crowd\\crowd_pedF_1.skin'
 		id = crowd5_cam_viewport
 		texture = viewport5
-		textureasset = `tex/zones/demo/tw_billboard05.dds`
+		textureasset = `tex/zones/Demo/tw_billboard05.dds`
 		texdict = `zones/z_artdeco/z_artdeco.tex`
 		assetcontext = z_artdeco
-		triggerscript = z_artdeco_crowd_peds
+		TriggerScript = Z_ArtDeco_Crowd_Peds
 		params = {
 			name = crowd5
 		}
@@ -312,13 +312,13 @@ z_artdeco_crowd_models = [
 	{
 		name = crowd6
 		camera = crowd6_cam
-		model = 'Real_Crowd\\crowd_pedF_2.skin'
+		Model = 'Real_Crowd\\crowd_pedF_2.skin'
 		id = crowd6_cam_viewport
 		texture = viewport6
-		textureasset = `tex/zones/demo/tw_billboard06.dds`
+		textureasset = `tex/zones/Demo/tw_billboard06.dds`
 		texdict = `zones/z_artdeco/z_artdeco.tex`
 		assetcontext = z_artdeco
-		triggerscript = z_artdeco_crowd_peds
+		TriggerScript = Z_ArtDeco_Crowd_Peds
 		params = {
 			name = crowd6
 		}
@@ -328,13 +328,13 @@ z_prison_crowd_models = [
 	{
 		name = crowd1
 		camera = crowd1_cam
-		model = 'Real_Crowd\\Crowd_Prison_01.skin'
+		Model = 'Real_Crowd\\Crowd_Prison_01.skin'
 		id = crowd1_cam_viewport
 		texture = viewport1
-		textureasset = `tex/zones/demo/tw_billboard01.dds`
+		textureasset = `tex/zones/Demo/tw_billboard01.dds`
 		texdict = `zones/z_prison/z_prison.tex`
 		assetcontext = z_prison
-		triggerscript = z_prison_crowd_peds
+		TriggerScript = Z_Prison_Crowd_Peds
 		params = {
 			name = crowd1
 		}
@@ -342,13 +342,13 @@ z_prison_crowd_models = [
 	{
 		name = crowd2
 		camera = crowd2_cam
-		model = 'Real_Crowd\\Crowd_Prison_02.skin'
+		Model = 'Real_Crowd\\Crowd_Prison_02.skin'
 		id = crowd2_cam_viewport
 		texture = viewport2
-		textureasset = `tex/zones/demo/tw_billboard02.dds`
+		textureasset = `tex/zones/Demo/tw_billboard02.dds`
 		texdict = `zones/z_prison/z_prison.tex`
 		assetcontext = z_prison
-		triggerscript = z_prison_crowd_peds
+		TriggerScript = Z_Prison_Crowd_Peds
 		params = {
 			name = crowd2
 		}
@@ -356,13 +356,13 @@ z_prison_crowd_models = [
 	{
 		name = crowd3
 		camera = crowd3_cam
-		model = 'Real_Crowd\\Crowd_Prison_01.skin'
+		Model = 'Real_Crowd\\Crowd_Prison_01.skin'
 		id = crowd3_cam_viewport
 		texture = viewport3
-		textureasset = `tex/zones/demo/tw_billboard03.dds`
+		textureasset = `tex/zones/Demo/tw_billboard03.dds`
 		texdict = `zones/z_prison/z_prison.tex`
 		assetcontext = z_prison
-		triggerscript = z_prison_crowd_peds
+		TriggerScript = Z_Prison_Crowd_Peds
 		params = {
 			name = crowd3
 		}
@@ -370,13 +370,13 @@ z_prison_crowd_models = [
 	{
 		name = crowd4
 		camera = crowd4_cam
-		model = 'Real_Crowd\\Crowd_Prison_02.skin'
+		Model = 'Real_Crowd\\Crowd_Prison_02.skin'
 		id = crowd4_cam_viewport
 		texture = viewport4
-		textureasset = `tex/zones/demo/tw_billboard04.dds`
+		textureasset = `tex/zones/Demo/tw_billboard04.dds`
 		texdict = `zones/z_prison/z_prison.tex`
 		assetcontext = z_prison
-		triggerscript = z_prison_crowd_peds
+		TriggerScript = Z_Prison_Crowd_Peds
 		params = {
 			name = crowd4
 		}
@@ -384,13 +384,13 @@ z_prison_crowd_models = [
 	{
 		name = crowd5
 		camera = crowd5_cam
-		model = 'Real_Crowd\\Crowd_Prison_01.skin'
+		Model = 'Real_Crowd\\Crowd_Prison_01.skin'
 		id = crowd5_cam_viewport
 		texture = viewport5
-		textureasset = `tex/zones/demo/tw_billboard05.dds`
+		textureasset = `tex/zones/Demo/tw_billboard05.dds`
 		texdict = `zones/z_prison/z_prison.tex`
 		assetcontext = z_prison
-		triggerscript = z_prison_crowd_peds
+		TriggerScript = Z_Prison_Crowd_Peds
 		params = {
 			name = crowd5
 		}
@@ -398,13 +398,13 @@ z_prison_crowd_models = [
 	{
 		name = crowd6
 		camera = crowd6_cam
-		model = 'Real_Crowd\\Crowd_Prison_02.skin'
+		Model = 'Real_Crowd\\Crowd_Prison_02.skin'
 		id = crowd6_cam_viewport
 		texture = viewport6
-		textureasset = `tex/zones/demo/tw_billboard06.dds`
+		textureasset = `tex/zones/Demo/tw_billboard06.dds`
 		texdict = `zones/z_prison/z_prison.tex`
 		assetcontext = z_prison
-		triggerscript = z_prison_crowd_peds
+		TriggerScript = Z_Prison_Crowd_Peds
 		params = {
 			name = crowd6
 		}
@@ -414,13 +414,13 @@ z_party_crowd_models = [
 	{
 		name = crowd1
 		camera = crowd1_cam
-		model = 'Real_Crowd\\Crowd_Ped_01.skin'
+		Model = 'Real_Crowd\\Crowd_Ped_01.skin'
 		id = crowd1_cam_viewport
 		texture = viewport1
-		textureasset = `tex/zones/demo/tw_billboard01.dds`
+		textureasset = `tex/zones/Demo/tw_billboard01.dds`
 		texdict = `zones/z_party/z_party.tex`
 		assetcontext = z_party
-		triggerscript = z_party_crowd_peds
+		TriggerScript = Z_Party_Crowd_Peds
 		params = {
 			name = crowd1
 		}
@@ -428,13 +428,13 @@ z_party_crowd_models = [
 	{
 		name = crowd2
 		camera = crowd2_cam
-		model = 'Real_Crowd\\Crowd_Ped_02.skin'
+		Model = 'Real_Crowd\\Crowd_Ped_02.skin'
 		id = crowd2_cam_viewport
 		texture = viewport2
-		textureasset = `tex/zones/demo/tw_billboard02.dds`
+		textureasset = `tex/zones/Demo/tw_billboard02.dds`
 		texdict = `zones/z_party/z_party.tex`
 		assetcontext = z_party
-		triggerscript = z_party_crowd_peds
+		TriggerScript = Z_Party_Crowd_Peds
 		params = {
 			name = crowd2
 		}
@@ -442,13 +442,13 @@ z_party_crowd_models = [
 	{
 		name = crowd3
 		camera = crowd3_cam
-		model = 'Real_Crowd\\Crowd_Ped_03.skin'
+		Model = 'Real_Crowd\\Crowd_Ped_03.skin'
 		id = crowd3_cam_viewport
 		texture = viewport3
-		textureasset = `tex/zones/demo/tw_billboard03.dds`
+		textureasset = `tex/zones/Demo/tw_billboard03.dds`
 		texdict = `zones/z_party/z_party.tex`
 		assetcontext = z_party
-		triggerscript = z_party_crowd_peds
+		TriggerScript = Z_Party_Crowd_Peds
 		params = {
 			name = crowd3
 		}
@@ -456,13 +456,13 @@ z_party_crowd_models = [
 	{
 		name = crowd4
 		camera = crowd4_cam
-		model = 'Real_Crowd\\Crowd_Ped_04.skin'
+		Model = 'Real_Crowd\\Crowd_Ped_04.skin'
 		id = crowd4_cam_viewport
 		texture = viewport4
-		textureasset = `tex/zones/demo/tw_billboard04.dds`
+		textureasset = `tex/zones/Demo/tw_billboard04.dds`
 		texdict = `zones/z_party/z_party.tex`
 		assetcontext = z_party
-		triggerscript = z_party_crowd_peds
+		TriggerScript = Z_Party_Crowd_Peds
 		params = {
 			name = crowd4
 		}
@@ -470,13 +470,13 @@ z_party_crowd_models = [
 	{
 		name = crowd5
 		camera = crowd5_cam
-		model = 'Real_Crowd\\crowd_pedF_1.skin'
+		Model = 'Real_Crowd\\crowd_pedF_1.skin'
 		id = crowd5_cam_viewport
 		texture = viewport5
-		textureasset = `tex/zones/demo/tw_billboard05.dds`
+		textureasset = `tex/zones/Demo/tw_billboard05.dds`
 		texdict = `zones/z_party/z_party.tex`
 		assetcontext = z_party
-		triggerscript = z_party_crowd_peds
+		TriggerScript = Z_Party_Crowd_Peds
 		params = {
 			name = crowd5
 		}
@@ -484,13 +484,13 @@ z_party_crowd_models = [
 	{
 		name = crowd6
 		camera = crowd6_cam
-		model = 'Real_Crowd\\crowd_pedF_2.skin'
+		Model = 'Real_Crowd\\crowd_pedF_2.skin'
 		id = crowd6_cam_viewport
 		texture = viewport6
-		textureasset = `tex/zones/demo/tw_billboard06.dds`
+		textureasset = `tex/zones/Demo/tw_billboard06.dds`
 		texdict = `zones/z_party/z_party.tex`
 		assetcontext = z_party
-		triggerscript = z_party_crowd_peds
+		TriggerScript = Z_Party_Crowd_Peds
 		params = {
 			name = crowd6
 		}
@@ -500,13 +500,13 @@ z_hell_crowd_models = [
 	{
 		name = crowd1
 		camera = crowd1_cam
-		model = 'Real_Crowd\\Crowd_Biker_01.skin'
+		Model = 'Real_Crowd\\Crowd_Biker_01.skin'
 		id = crowd1_cam_viewport
 		texture = viewport1
-		textureasset = `tex/zones/demo/tw_billboard01.dds`
+		textureasset = `tex/zones/Demo/tw_billboard01.dds`
 		texdict = `zones/z_hell/z_hell.tex`
 		assetcontext = z_hell
-		triggerscript = z_hell_crowd_peds
+		TriggerScript = Z_Hell_Crowd_Peds
 		params = {
 			name = crowd1
 		}
@@ -514,13 +514,13 @@ z_hell_crowd_models = [
 	{
 		name = crowd2
 		camera = crowd2_cam
-		model = 'Real_Crowd\\Crowd_Biker_02.skin'
+		Model = 'Real_Crowd\\Crowd_Biker_02.skin'
 		id = crowd2_cam_viewport
 		texture = viewport2
-		textureasset = `tex/zones/demo/tw_billboard02.dds`
+		textureasset = `tex/zones/Demo/tw_billboard02.dds`
 		texdict = `zones/z_hell/z_hell.tex`
 		assetcontext = z_hell
-		triggerscript = z_hell_crowd_peds
+		TriggerScript = Z_Hell_Crowd_Peds
 		params = {
 			name = crowd2
 		}
@@ -528,13 +528,13 @@ z_hell_crowd_models = [
 	{
 		name = crowd3
 		camera = crowd3_cam
-		model = 'Real_Crowd\\Crowd_Biker_01.skin'
+		Model = 'Real_Crowd\\Crowd_Biker_01.skin'
 		id = crowd3_cam_viewport
 		texture = viewport3
-		textureasset = `tex/zones/demo/tw_billboard03.dds`
+		textureasset = `tex/zones/Demo/tw_billboard03.dds`
 		texdict = `zones/z_hell/z_hell.tex`
 		assetcontext = z_hell
-		triggerscript = z_hell_crowd_peds
+		TriggerScript = Z_Hell_Crowd_Peds
 		params = {
 			name = crowd3
 		}
@@ -542,13 +542,13 @@ z_hell_crowd_models = [
 	{
 		name = crowd4
 		camera = crowd4_cam
-		model = 'Real_Crowd\\Crowd_Biker_02.skin'
+		Model = 'Real_Crowd\\Crowd_Biker_02.skin'
 		id = crowd4_cam_viewport
 		texture = viewport4
-		textureasset = `tex/zones/demo/tw_billboard04.dds`
+		textureasset = `tex/zones/Demo/tw_billboard04.dds`
 		texdict = `zones/z_hell/z_hell.tex`
 		assetcontext = z_hell
-		triggerscript = z_hell_crowd_peds
+		TriggerScript = Z_Hell_Crowd_Peds
 		params = {
 			name = crowd4
 		}
@@ -556,13 +556,13 @@ z_hell_crowd_models = [
 	{
 		name = crowd5
 		camera = crowd5_cam
-		model = 'Real_Crowd\\crowd_Biker_01.skin'
+		Model = 'Real_Crowd\\crowd_Biker_01.skin'
 		id = crowd5_cam_viewport
 		texture = viewport5
-		textureasset = `tex/zones/demo/tw_billboard05.dds`
+		textureasset = `tex/zones/Demo/tw_billboard05.dds`
 		texdict = `zones/z_hell/z_hell.tex`
 		assetcontext = z_hell
-		triggerscript = z_hell_crowd_peds
+		TriggerScript = Z_Hell_Crowd_Peds
 		params = {
 			name = crowd5
 		}
@@ -570,13 +570,13 @@ z_hell_crowd_models = [
 	{
 		name = crowd6
 		camera = crowd6_cam
-		model = 'Real_Crowd\\crowd_biker_02.skin'
+		Model = 'Real_Crowd\\crowd_biker_02.skin'
 		id = crowd6_cam_viewport
 		texture = viewport6
-		textureasset = `tex/zones/demo/tw_billboard06.dds`
+		textureasset = `tex/zones/Demo/tw_billboard06.dds`
 		texdict = `zones/z_hell/z_hell.tex`
 		assetcontext = z_hell
-		triggerscript = z_hell_crowd_peds
+		TriggerScript = Z_Hell_Crowd_Peds
 		params = {
 			name = crowd6
 		}
@@ -586,48 +586,48 @@ z_training_crowd_models = [
 	{
 		name = crowd1
 		camera = crowd1_cam
-		model = 'Characters\\Musicians\\Sec_Barker.skin'
+		Model = 'Characters\\Musicians\\Sec_Barker.skin'
 		id = crowd1_cam_viewport
 		texture = viewport1
-		textureasset = `tex/zones/demo/tw_billboard01.dds`
+		textureasset = `tex/zones/Demo/tw_billboard01.dds`
 		texdict = `zones/z_training/z_training.tex`
 		assetcontext = z_training
-		triggerscript = z_training_crowd_peds
+		TriggerScript = Z_Training_Crowd_Peds
 	}
 	{
 		name = crowd2
 		camera = crowd2_cam
-		model = 'Characters\\Musicians\\Sec_Punk.skin'
+		Model = 'Characters\\Musicians\\Sec_Punk.skin'
 		id = crowd2_cam_viewport
 		texture = viewport2
-		textureasset = `tex/zones/demo/tw_billboard02.dds`
+		textureasset = `tex/zones/Demo/tw_billboard02.dds`
 		texdict = `zones/z_training/z_training.tex`
 		assetcontext = z_training
-		triggerscript = z_training_crowd_peds
+		TriggerScript = Z_Training_Crowd_Peds
 	}
 	{
 		name = crowd3
 		camera = crowd3_cam
-		model = 'Characters\\Musicians\\Sec_Pro_Stabb.skin'
+		Model = 'Characters\\Musicians\\Sec_Pro_Stabb.skin'
 		id = crowd3_cam_viewport
 		texture = viewport3
-		textureasset = `tex/zones/demo/tw_billboard03.dds`
+		textureasset = `tex/zones/Demo/tw_billboard03.dds`
 		texdict = `zones/z_training/z_training.tex`
 		assetcontext = z_training
-		triggerscript = z_training_crowd_peds
+		TriggerScript = Z_Training_Crowd_Peds
 	}
 ]
-z_budokan_crowd_models = [
+z_Budokan_crowd_models = [
 	{
 		name = crowd1
 		camera = crowd1_cam
-		model = 'Real_Crowd\\Crowd_Ped_01.skin'
+		Model = 'Real_Crowd\\Crowd_Ped_01.skin'
 		id = crowd1_cam_viewport
 		texture = viewport1
-		textureasset = `tex/zones/demo/tw_billboard01.dds`
-		texdict = `zones/z_budokan/z_budokan.tex`
+		textureasset = `tex/zones/Demo/tw_billboard01.dds`
+		texdict = `zones/z_Budokan/z_Budokan.tex`
 		assetcontext = z_budokan
-		triggerscript = z_budokan_crowd_peds
+		TriggerScript = Z_Budokan_Crowd_Peds
 		params = {
 			name = crowd1
 		}
@@ -635,13 +635,13 @@ z_budokan_crowd_models = [
 	{
 		name = crowd2
 		camera = crowd2_cam
-		model = 'Real_Crowd\\Crowd_Ped_02.skin'
+		Model = 'Real_Crowd\\Crowd_Ped_02.skin'
 		id = crowd2_cam_viewport
 		texture = viewport2
-		textureasset = `tex/zones/demo/tw_billboard02.dds`
-		texdict = `zones/z_budokan/z_budokan.tex`
+		textureasset = `tex/zones/Demo/tw_billboard02.dds`
+		texdict = `zones/z_Budokan/z_Budokan.tex`
 		assetcontext = z_budokan
-		triggerscript = z_budokan_crowd_peds
+		TriggerScript = Z_Budokan_Crowd_Peds
 		params = {
 			name = crowd2
 		}
@@ -649,13 +649,13 @@ z_budokan_crowd_models = [
 	{
 		name = crowd3
 		camera = crowd3_cam
-		model = 'Real_Crowd\\Crowd_Ped_03.skin'
+		Model = 'Real_Crowd\\Crowd_Ped_03.skin'
 		id = crowd3_cam_viewport
 		texture = viewport3
-		textureasset = `tex/zones/demo/tw_billboard03.dds`
-		texdict = `zones/z_budokan/z_budokan.tex`
+		textureasset = `tex/zones/Demo/tw_billboard03.dds`
+		texdict = `zones/z_Budokan/z_Budokan.tex`
 		assetcontext = z_budokan
-		triggerscript = z_budokan_crowd_peds
+		TriggerScript = Z_Budokan_Crowd_Peds
 		params = {
 			name = crowd3
 		}
@@ -663,13 +663,13 @@ z_budokan_crowd_models = [
 	{
 		name = crowd4
 		camera = crowd4_cam
-		model = 'Real_Crowd\\Crowd_Ped_04.skin'
+		Model = 'Real_Crowd\\Crowd_Ped_04.skin'
 		id = crowd4_cam_viewport
 		texture = viewport4
-		textureasset = `tex/zones/demo/tw_billboard04.dds`
-		texdict = `zones/z_budokan/z_budokan.tex`
+		textureasset = `tex/zones/Demo/tw_billboard04.dds`
+		texdict = `zones/z_Budokan/z_Budokan.tex`
 		assetcontext = z_budokan
-		triggerscript = z_budokan_crowd_peds
+		TriggerScript = Z_Budokan_Crowd_Peds
 		params = {
 			name = crowd4
 		}
@@ -677,13 +677,13 @@ z_budokan_crowd_models = [
 	{
 		name = crowd5
 		camera = crowd5_cam
-		model = 'Real_Crowd\\crowd_pedF_1.skin'
+		Model = 'Real_Crowd\\crowd_pedF_1.skin'
 		id = crowd5_cam_viewport
 		texture = viewport5
-		textureasset = `tex/zones/demo/tw_billboard05.dds`
-		texdict = `zones/z_budokan/z_budokan.tex`
+		textureasset = `tex/zones/Demo/tw_billboard05.dds`
+		texdict = `zones/z_Budokan/z_Budokan.tex`
 		assetcontext = z_budokan
-		triggerscript = z_budokan_crowd_peds
+		TriggerScript = Z_Budokan_Crowd_Peds
 		params = {
 			name = crowd5
 		}
@@ -691,13 +691,13 @@ z_budokan_crowd_models = [
 	{
 		name = crowd6
 		camera = crowd6_cam
-		model = 'Real_Crowd\\crowd_pedF_2.skin'
+		Model = 'Real_Crowd\\crowd_pedF_2.skin'
 		id = crowd6_cam_viewport
 		texture = viewport6
-		textureasset = `tex/zones/demo/tw_billboard06.dds`
-		texdict = `zones/z_budokan/z_budokan.tex`
+		textureasset = `tex/zones/Demo/tw_billboard06.dds`
+		texdict = `zones/z_Budokan/z_Budokan.tex`
 		assetcontext = z_budokan
-		triggerscript = z_budokan_crowd_peds
+		TriggerScript = Z_Budokan_Crowd_Peds
 		params = {
 			name = crowd6
 		}
@@ -707,13 +707,13 @@ z_video_crowd_models = [
 	{
 		name = crowd1
 		camera = crowd1_cam
-		model = 'Real_Crowd\\Crowd_Ped_01.skin'
+		Model = 'Real_Crowd\\Crowd_Ped_01.skin'
 		id = crowd1_cam_viewport
 		texture = viewport1
-		textureasset = `tex/zones/demo/tw_billboard01.dds`
+		textureasset = `tex/zones/Demo/tw_billboard01.dds`
 		texdict = `zones/z_video/z_video.tex`
 		assetcontext = z_video
-		triggerscript = z_video_crowd_peds
+		TriggerScript = Z_Video_Crowd_Peds
 		params = {
 			name = crowd1
 		}
@@ -722,13 +722,13 @@ z_video_crowd_models = [
 	{
 		name = crowd2
 		camera = crowd2_cam
-		model = 'Real_Crowd\\Crowd_Ped_02.skin'
+		Model = 'Real_Crowd\\Crowd_Ped_02.skin'
 		id = crowd2_cam_viewport
 		texture = viewport2
-		textureasset = `tex/zones/demo/tw_billboard02.dds`
+		textureasset = `tex/zones/Demo/tw_billboard02.dds`
 		texdict = `zones/z_video/z_video.tex`
 		assetcontext = z_video
-		triggerscript = z_video_crowd_peds
+		TriggerScript = Z_Video_Crowd_Peds
 		params = {
 			name = crowd2
 		}
@@ -737,13 +737,13 @@ z_video_crowd_models = [
 	{
 		name = crowd3
 		camera = crowd3_cam
-		model = 'Real_Crowd\\Crowd_Ped_03.skin'
+		Model = 'Real_Crowd\\Crowd_Ped_03.skin'
 		id = crowd3_cam_viewport
 		texture = viewport3
-		textureasset = `tex/zones/demo/tw_billboard03.dds`
+		textureasset = `tex/zones/Demo/tw_billboard03.dds`
 		texdict = `zones/z_video/z_video.tex`
 		assetcontext = z_video
-		triggerscript = z_video_crowd_peds
+		TriggerScript = Z_Video_Crowd_Peds
 		params = {
 			name = crowd3
 		}
@@ -752,13 +752,13 @@ z_video_crowd_models = [
 	{
 		name = crowd4
 		camera = crowd4_cam
-		model = 'Real_Crowd\\Crowd_Ped_04.skin'
+		Model = 'Real_Crowd\\Crowd_Ped_04.skin'
 		id = crowd4_cam_viewport
 		texture = viewport4
-		textureasset = `tex/zones/demo/tw_billboard04.dds`
+		textureasset = `tex/zones/Demo/tw_billboard04.dds`
 		texdict = `zones/z_video/z_video.tex`
 		assetcontext = z_video
-		triggerscript = z_video_crowd_peds
+		TriggerScript = Z_Video_Crowd_Peds
 		params = {
 			name = crowd4
 		}
@@ -766,13 +766,13 @@ z_video_crowd_models = [
 	{
 		name = crowd5
 		camera = crowd5_cam
-		model = 'Real_Crowd\\crowd_pedF_1.skin'
+		Model = 'Real_Crowd\\crowd_pedF_1.skin'
 		id = crowd5_cam_viewport
 		texture = viewport5
-		textureasset = `tex/zones/demo/tw_billboard05.dds`
+		textureasset = `tex/zones/Demo/tw_billboard05.dds`
 		texdict = `zones/z_video/z_video.tex`
 		assetcontext = z_video
-		triggerscript = z_video_crowd_peds
+		TriggerScript = Z_Video_Crowd_Peds
 		params = {
 			name = crowd5
 		}
@@ -780,13 +780,13 @@ z_video_crowd_models = [
 	{
 		name = crowd6
 		camera = crowd6_cam
-		model = 'Real_Crowd\\crowd_pedF_2.skin'
+		Model = 'Real_Crowd\\crowd_pedF_2.skin'
 		id = crowd6_cam_viewport
 		texture = viewport6
-		textureasset = `tex/zones/demo/tw_billboard06.dds`
+		textureasset = `tex/zones/Demo/tw_billboard06.dds`
 		texdict = `zones/z_video/z_video.tex`
 		assetcontext = z_video
-		triggerscript = z_video_crowd_peds
+		TriggerScript = Z_Video_Crowd_Peds
 		params = {
 			name = crowd6
 		}
@@ -794,13 +794,13 @@ z_video_crowd_models = [
 	{
 		name = crowd7
 		camera = crowd7_cam
-		model = 'Real_Crowd\\Crowd_Ped_03.skin'
+		Model = 'Real_Crowd\\Crowd_Ped_03.skin'
 		id = crowd7_cam_viewport
 		texture = viewport7
-		textureasset = `tex/zones/demo/tw_billboard07.dds`
+		textureasset = `tex/zones/Demo/tw_billboard07.dds`
 		texdict = `zones/z_video/z_video.tex`
 		assetcontext = z_video
-		triggerscript = z_video_crowd_peds
+		TriggerScript = Z_Video_Crowd_Peds
 		params = {
 			name = crowd7
 		}
@@ -809,13 +809,13 @@ z_video_crowd_models = [
 	{
 		name = crowd8
 		camera = crowd8_cam
-		model = 'Real_Crowd\\Crowd_Ped_04.skin'
+		Model = 'Real_Crowd\\Crowd_Ped_04.skin'
 		id = crowd8_cam_viewport
 		texture = viewport8
-		textureasset = `tex/zones/demo/tw_billboard08.dds`
+		textureasset = `tex/zones/Demo/tw_billboard08.dds`
 		texdict = `zones/z_video/z_video.tex`
 		assetcontext = z_video
-		triggerscript = z_video_crowd_peds
+		TriggerScript = Z_Video_Crowd_Peds
 		params = {
 			name = crowd8
 		}
@@ -824,25 +824,25 @@ z_video_crowd_models = [
 ]
 
 script create_crowd_models 
-	if iswinport
-		winportgfxgetoptionvalue \{option = 2}
+	if IsWinPort
+		WinPortGfxGetOptionValue \{option = 2}
 		if (<value> = 0)
 			return
 		endif
-		crowdoption = <value>
+		crowdOption = <value>
 	endif
 	if ($disable_crowd = 1)
 		return
 	endif
-	getpakmancurrentname \{map = zones}
-	formattext checksumname = crowd_models '%s_crowd_models' s = <pakname>
-	if NOT globalexists name = <crowd_models>
+	GetPakManCurrentName \{map = zones}
+	FormatText checksumname = crowd_models '%s_crowd_models' s = <pakname>
+	if NOT GlobalExists name = <crowd_models>
 		return
 	endif
 	change crowd_model_array = <crowd_models>
-	getarraysize $<crowd_models>
-	if iswinport
-		if (<crowdoption> = 1)
+	GetArraySize $<crowd_models>
+	if IsWinPort
+		if (<crowdOption> = 1)
 			<array_size> = (<array_size> / 2)
 		endif
 	endif
@@ -851,67 +851,67 @@ script create_crowd_models
 	pos = ((-500.0, -200.0, 0.0) + (0.0, -100.0, 0.0) * <array_count>)
 	viewport = ($<crowd_models> [<array_count>].id)
 	camera = ($<crowd_models> [<array_count>].camera)
-	if NOT structurecontains structure = ($<crowd_models> [<array_count>]) remap_only
-		mempushcontext \{bottomupheap}
-		createfromstructure {
+	if NOT StructureContains Structure = ($<crowd_models> [<array_count>]) remap_only
+		MemPushContext \{BottomUpHeap}
+		CreateFromStructure {
 			pos = <pos>
-			quat = (0.0, 1.0, 0.0)
-			class = gameobject
-			type = ghost
-			createdatstart
+			Quat = (0.0, 1.0, 0.0)
+			Class = GameObject
+			type = Ghost
+			CreatedAtStart
 			($<crowd_models> [<array_count>])
-			suspenddistance = 0
+			SuspendDistance = 0
 			lod_dist1 = 400
 			lod_dist2 = 401
-			profile = $profile_ped_crowd_obj
-			lightgroup = crowd
-			object_type = crowd
-			profilecolor = 49344
+			profile = $Profile_Ped_Crowd_Obj
+			lightgroup = Crowd
+			object_type = Crowd
+			ProfileColor = 49344
 			profilebudget = 200
 			use_jq
 		}
 		model_id = ($<crowd_models> [<array_count>].name)
 		extra_model = 'Real_Crowd\\Crowd_HandL_Lighter.skin'
-		<model_id> :addgeom lhand_lighter model = <extra_model> lightgroup = crowd
+		<model_id> :AddGeom lhand_lighter Model = <extra_model> lightgroup = Crowd
 		extra_model = 'Real_Crowd\\Crowd_HandL_Rock.skin'
-		<model_id> :addgeom lhand_rock model = <extra_model> lightgroup = crowd
+		<model_id> :AddGeom lhand_rock Model = <extra_model> lightgroup = Crowd
 		extra_model = 'Real_Crowd\\Crowd_HandL_Clap.skin'
-		<model_id> :addgeom lhand_clap model = <extra_model> lightgroup = crowd
+		<model_id> :AddGeom lhand_clap Model = <extra_model> lightgroup = Crowd
 		extra_model = 'Real_Crowd\\Crowd_HandL_Fist.skin'
-		<model_id> :addgeom lhand_fist model = <extra_model> lightgroup = crowd
+		<model_id> :AddGeom lhand_fist Model = <extra_model> lightgroup = Crowd
 		extra_model = 'Real_Crowd\\Crowd_HandR_Lighter.skin'
-		<model_id> :addgeom rhand_lighter model = <extra_model> lightgroup = crowd
+		<model_id> :AddGeom rhand_lighter Model = <extra_model> lightgroup = Crowd
 		extra_model = 'Real_Crowd\\Crowd_HandR_Rock.skin'
-		<model_id> :addgeom rhand_rock model = <extra_model> lightgroup = crowd
+		<model_id> :AddGeom rhand_rock Model = <extra_model> lightgroup = Crowd
 		extra_model = 'Real_Crowd\\Crowd_HandR_Clap.skin'
-		<model_id> :addgeom rhand_clap model = <extra_model> lightgroup = crowd
+		<model_id> :AddGeom rhand_clap Model = <extra_model> lightgroup = Crowd
 		extra_model = 'Real_Crowd\\Crowd_HandR_Fist.skin'
-		<model_id> :addgeom rhand_fist model = <extra_model> lightgroup = crowd
-		<model_id> :switchoffatomic lhand_lighter
-		<model_id> :switchoffatomic lhand_rock
-		<model_id> :switchoffatomic lhand_fist
-		<model_id> :switchonatomic lhand_clap
-		<model_id> :switchoffatomic rhand_lighter
-		<model_id> :switchoffatomic rhand_rock
-		<model_id> :switchoffatomic rhand_fist
-		<model_id> :switchonatomic rhand_clap
-		if structurecontains structure = ($<crowd_models> [<array_count>]) roty
-			($<crowd_models> [<array_count>].name) :obj_setorientation y = ($<crowd_models> [<array_count>].roty)
+		<model_id> :AddGeom rhand_fist Model = <extra_model> lightgroup = Crowd
+		<model_id> :SwitchOffAtomic lhand_lighter
+		<model_id> :SwitchOffAtomic lhand_rock
+		<model_id> :SwitchOffAtomic lhand_fist
+		<model_id> :SwitchOnAtomic lhand_clap
+		<model_id> :SwitchOffAtomic rhand_lighter
+		<model_id> :SwitchOffAtomic rhand_rock
+		<model_id> :SwitchOffAtomic rhand_fist
+		<model_id> :SwitchOnAtomic rhand_clap
+		if StructureContains Structure = ($<crowd_models> [<array_count>]) roty
+			($<crowd_models> [<array_count>].name) :Obj_SetOrientation y = ($<crowd_models> [<array_count>].roty)
 			apply_correction = 0
 		else
 			apply_correction = 1
 		endif
-		mempopcontext \{bottomupheap}
+		MemPopContext \{BottomUpHeap}
 		style = imposter_rendering
 		if (<array_size> <= 6)
-			if isxenon
+			if isXenon
 				style = imposter_rendering_highres
 			endif
 		endif
-		createscreenelement {
+		CreateScreenElement {
 			parent = root_window
 			just = [center center]
-			type = viewportelement
+			type = ViewportElement
 			id = <viewport>
 			texture = ($<crowd_models> [<array_count>].texture)
 			pos = (2000.0, 200.0)
@@ -919,35 +919,35 @@ script create_crowd_models
 			alpha = 1
 			style = <style>
 		}
-		createcompositeobjectinstance {
-			priority = $coim_priority_permanent
+		CreateCompositeObjectInstance {
+			priority = $COIM_Priority_Permanent
 			heap = generic
-			components = [
-				{component = camera}
+			Components = [
+				{Component = camera}
 			]
 			params = {
 				name = <camera>
 				viewport = <viewport>
-				object_type = crowd
-				profilecolor = 12632064
+				object_type = Crowd
+				ProfileColor = 12632064
 				profilebudget = 10
 				use_jq
 				far_clip = 20
 			}
 		}
-		setactivecamera viewport = <viewport> id = <camera>
-		<camera> :sethfov hfov = 20.0
-		setviewportproperties viewport = <viewport> no_resolve_depthstencilbuffer = true
-		addcrowdmodelcam camera = <camera> pos = <pos> viewport = <viewport> apply_correction = <apply_correction>
+		SetActiveCamera viewport = <viewport> id = <camera>
+		<camera> :SetHFov hfov = 20.0
+		SetViewportProperties viewport = <viewport> no_resolve_depthstencilbuffer = true
+		AddCrowdModelCam camera = <camera> pos = <pos> viewport = <viewport> apply_correction = <apply_correction>
 	endif
-	setsearchallassetcontexts
-	createviewporttextureoverride {
+	SetSearchAllAssetContexts
+	CreateViewportTextureOverride {
 		id = <viewport>
 		viewportid = <viewport>
 		texture = ($<crowd_models> [<array_count>].textureasset)
 		texdict = ($<crowd_models> [<array_count>].texdict)
 	}
-	setsearchallassetcontexts \{off}
+	SetSearchAllAssetContexts \{off}
 	<array_count> = (<array_count> + 1)
 	repeat <array_size>
 endscript
@@ -955,47 +955,47 @@ endscript
 script update_crowd_model_cam 
 	crowd_scaler = 25
 	begin
-	getviewportcameraorient \{viewport = bg_viewport}
-	getvectorcomponents <at>
-	angle = (<x> * <crowd_scaler>)
-	rotatevector vector = <at> ry = <angle>
+	GetViewportCameraOrient \{viewport = bg_viewport}
+	GetVectorComponents <at>
+	Angle = (<x> * <crowd_scaler>)
+	RotateVector vector = <at> ry = <Angle>
 	at = <result_vector>
-	rotatevector vector = <left> ry = <angle>
+	RotateVector vector = <left> ry = <Angle>
 	left = <result_vector>
-	rotatevector vector = <up> ry = <angle>
+	RotateVector vector = <up> ry = <Angle>
 	up = <result_vector>
 	posdir = (<model_pos> + (0.0, 1.0, 0.0) + (<at> * 3.5))
-	<camera> :obj_setposition position = <posdir>
-	<camera> :obj_setorientation dir = <at> only handles upright cameras
-	setviewportcameraorient viewport = <viewport> at = <at> left = <left> up = <up>
-	<camera> :unpause
-	wait \{1
+	<camera> :Obj_SetPosition position = <posdir>
+	<camera> :Obj_SetOrientation dir = <at> Only handles upright cameras
+	SetViewportCameraOrient viewport = <viewport> at = <at> left = <left> up = <up>
+	<camera> :UnPause
+	Wait \{1
 		gameframe}
 	repeat
 endscript
 
 script destroy_crowd_models 
-	clearcrowdmodelcams
+	ClearCrowdModelCams
 	crowd_models = $crowd_model_array
 	if (<crowd_models> = none)
 		return
 	endif
-	getarraysize <crowd_models>
+	GetArraySize <crowd_models>
 	array_count = 0
 	begin
-	if NOT structurecontains structure = (<crowd_models> [<array_count>]) remap_only
-		killspawnedscript \{name = update_crowd_model_cam}
-		if compositeobjectexists name = (<crowd_models> [<array_count>].camera)
-			(<crowd_models> [<array_count>].camera) :die
+	if NOT StructureContains Structure = (<crowd_models> [<array_count>]) remap_only
+		KillSpawnedScript \{name = update_crowd_model_cam}
+		if CompositeObjectExists name = (<crowd_models> [<array_count>].camera)
+			(<crowd_models> [<array_count>].camera) :Die
 		endif
-		if screenelementexists id = (<crowd_models> [<array_count>].id)
-			setsearchallassetcontexts
-			destroyviewporttextureoverride id = (<crowd_models> [<array_count>].id)
-			setsearchallassetcontexts \{off}
-			destroyscreenelement id = (<crowd_models> [<array_count>].id)
+		if ScreenElementExists id = (<crowd_models> [<array_count>].id)
+			SetSearchAllAssetContexts
+			DestroyViewportTextureOverride id = (<crowd_models> [<array_count>].id)
+			SetSearchAllAssetContexts \{off}
+			DestroyScreenElement id = (<crowd_models> [<array_count>].id)
 		endif
-		if compositeobjectexists name = (<crowd_models> [<array_count>].name)
-			(<crowd_models> [<array_count>].name) :die
+		if CompositeObjectExists name = (<crowd_models> [<array_count>].name)
+			(<crowd_models> [<array_count>].name) :Die
 		endif
 	endif
 	<array_count> = (<array_count> + 1)
@@ -1003,55 +1003,55 @@ script destroy_crowd_models
 	change \{crowd_model_array = none}
 endscript
 
-script set_crowd_hand \{hand = left
+script set_crowd_hand \{Hand = left
 		type = clap}
-	obj_getid
-	name = <objid>
-	if (<hand> = left)
+	Obj_GetID
+	name = <ObjID>
+	if (<Hand> = left)
 		switch (<type>)
 			case lighter
 			part = lhand_lighter
-			case rock
+			case Rock
 			part = lhand_rock
 			case clap
 			part = lhand_clap
 			case fist
 			part = lhand_fist
 		endswitch
-		<name> :switchoffatomic lhand_lighter
-		<name> :switchoffatomic lhand_rock
-		<name> :switchoffatomic lhand_clap
-		<name> :switchoffatomic lhand_fist
-		<name> :switchonatomic <part>
+		<name> :SwitchOffAtomic lhand_lighter
+		<name> :SwitchOffAtomic lhand_rock
+		<name> :SwitchOffAtomic lhand_clap
+		<name> :SwitchOffAtomic lhand_fist
+		<name> :SwitchOnAtomic <part>
 	else
 		switch (<type>)
 			case lighter
 			part = rhand_lighter
-			case rock
+			case Rock
 			part = rhand_rock
 			case clap
 			part = rhand_clap
 			case fist
 			part = rhand_fist
 		endswitch
-		<name> :switchoffatomic rhand_lighter
-		<name> :switchoffatomic rhand_rock
-		<name> :switchoffatomic rhand_clap
-		<name> :switchoffatomic rhand_fist
-		<name> :switchonatomic <part>
+		<name> :SwitchOffAtomic rhand_lighter
+		<name> :SwitchOffAtomic rhand_rock
+		<name> :SwitchOffAtomic rhand_clap
+		<name> :SwitchOffAtomic rhand_fist
+		<name> :SwitchOnAtomic <part>
 	endif
 endscript
 
-script crowd_sethand \{name = crowd1
-		hand = left
+script Crowd_SetHand \{name = crowd1
+		Hand = left
 		type = clap}
-	if compositeobjectexists <name>
-		<name> :set_crowd_hand hand = <hand> type = <type>
+	if CompositeObjectExists <name>
+		<name> :set_crowd_hand Hand = <Hand> type = <type>
 	endif
 endscript
 
-script crowd_startlighters 
-	killspawnedscript \{name = crowd_monitor_performance}
+script Crowd_StartLighters 
+	KillSpawnedScript \{name = crowd_monitor_performance}
 	spawnscriptnow \{crowd_monitor_performance}
 endscript
 
@@ -1059,114 +1059,114 @@ script crowd_monitor_performance
 	lighters_on = false
 	begin
 	get_skill_level
-	if (<skill> != bad)
+	if (<skill> != Bad)
 		if (<lighters_on> = false)
-			crowd_allsethand \{hand = right
+			Crowd_AllSetHand \{Hand = right
 				type = lighter}
-			crowd_allplayanim \{anim = special}
+			Crowd_AllPlayAnim \{Anim = special}
 			lighters_on = true
-			crowd_togglelighters \{on}
+			Crowd_ToggleLighters \{on}
 		endif
 	else
 		if (<lighters_on> = true)
-			crowd_allsethand \{hand = right
+			Crowd_AllSetHand \{Hand = right
 				type = clap}
-			crowd_allplayanim \{anim = idle}
+			Crowd_AllPlayAnim \{Anim = Idle}
 			lighters_on = false
-			crowd_togglelighters \{off}
+			Crowd_ToggleLighters \{off}
 		endif
 	endif
-	wait \{1
+	Wait \{1
 		gameframe}
 	repeat
 endscript
 
-script crowd_stoplighters 
-	killspawnedscript \{name = crowd_monitor_performance}
-	crowd_allsethand \{hand = right
+script Crowd_StopLighters 
+	KillSpawnedScript \{name = crowd_monitor_performance}
+	Crowd_AllSetHand \{Hand = right
 		type = clap}
-	crowd_allplayanim \{anim = idle}
-	crowd_togglelighters \{off}
+	Crowd_AllPlayAnim \{Anim = Idle}
+	Crowd_ToggleLighters \{off}
 endscript
 
-script crowd_allsethand 
-	crowd_sethand name = crowd1 hand = <hand> type = <type>
-	crowd_sethand name = crowd2 hand = <hand> type = <type>
-	crowd_sethand name = crowd3 hand = <hand> type = <type>
-	crowd_sethand name = crowd4 hand = <hand> type = <type>
-	crowd_sethand name = crowd5 hand = <hand> type = <type>
-	crowd_sethand name = crowd6 hand = <hand> type = <type>
-	crowd_sethand name = crowd7 hand = <hand> type = <type>
-	crowd_sethand name = crowd8 hand = <hand> type = <type>
+script Crowd_AllSetHand 
+	Crowd_SetHand name = crowd1 Hand = <Hand> type = <type>
+	Crowd_SetHand name = crowd2 Hand = <Hand> type = <type>
+	Crowd_SetHand name = crowd3 Hand = <Hand> type = <type>
+	Crowd_SetHand name = crowd4 Hand = <Hand> type = <type>
+	Crowd_SetHand name = crowd5 Hand = <Hand> type = <type>
+	Crowd_SetHand name = crowd6 Hand = <Hand> type = <type>
+	Crowd_SetHand name = crowd7 Hand = <Hand> type = <type>
+	Crowd_SetHand name = crowd8 Hand = <Hand> type = <type>
 endscript
 
-script crowd_allplayanim 
-	wait \{1
+script Crowd_AllPlayAnim 
+	Wait \{1
 		gameframe}
-	crowd_playanim name = crowd1 anim = <anim>
-	wait \{1
+	Crowd_PlayAnim name = crowd1 Anim = <Anim>
+	Wait \{1
 		gameframe}
-	crowd_playanim name = crowd2 anim = <anim>
-	wait \{1
+	Crowd_PlayAnim name = crowd2 Anim = <Anim>
+	Wait \{1
 		gameframe}
-	crowd_playanim name = crowd3 anim = <anim>
-	wait \{1
+	Crowd_PlayAnim name = crowd3 Anim = <Anim>
+	Wait \{1
 		gameframe}
-	crowd_playanim name = crowd4 anim = <anim>
-	wait \{1
+	Crowd_PlayAnim name = crowd4 Anim = <Anim>
+	Wait \{1
 		gameframe}
-	crowd_playanim name = crowd5 anim = <anim>
-	wait \{1
+	Crowd_PlayAnim name = crowd5 Anim = <Anim>
+	Wait \{1
 		gameframe}
-	crowd_playanim name = crowd6 anim = <anim>
-	wait \{1
+	Crowd_PlayAnim name = crowd6 Anim = <Anim>
+	Wait \{1
 		gameframe}
-	crowd_playanim name = crowd7 anim = <anim>
-	wait \{1
+	Crowd_PlayAnim name = crowd7 Anim = <Anim>
+	Wait \{1
 		gameframe}
-	crowd_playanim name = crowd8 anim = <anim>
+	Crowd_PlayAnim name = crowd8 Anim = <Anim>
 endscript
 
-script crowd_playanim \{name = crowd1
-		anim = idle}
-	if NOT compositeobjectexists <name>
+script Crowd_PlayAnim \{name = crowd1
+		Anim = Idle}
+	if NOT CompositeObjectExists <name>
 		return
 	endif
-	if structurecontains structure = ($crowd_profiles) name = <name>
-		anim_set = ($crowd_profiles.<name>.anim_set)
-		<name> :obj_killspawnedscript name = crowd_play_adjusting_random_anims
-		<name> :obj_spawnscriptnow crowd_play_adjusting_random_anims params = {anim_set = <anim_set> anim = <anim>}
+	if StructureContains Structure = ($Crowd_Profiles) name = <name>
+		anim_set = ($Crowd_Profiles.<name>.anim_set)
+		<name> :Obj_KillSpawnedScript name = crowd_play_adjusting_random_anims
+		<name> :Obj_SpawnScriptNow crowd_play_adjusting_random_anims params = {anim_set = <anim_set> Anim = <Anim>}
 	else
-		printf channel = crowd "animset not found for %a......" a = <name>
+		printf channel = Crowd "animset not found for %a......" a = <name>
 	endif
 endscript
 
 script crowd_create_lighters 
-	if iswinport
-		winportgfxgetoptionvalue \{option = 2}
+	if IsWinPort
+		WinPortGfxGetOptionValue \{option = 2}
 		if (<value> = 0)
 			return
 		endif
 	endif
-	getpakmancurrent \{map = zones}
+	GetPakManCurrent \{map = zones}
 	if (<pak> = z_artdeco)
 		return
 	endif
-	getpakmancurrentname \{map = zones}
+	GetPakManCurrentName \{map = zones}
 	index = 0
 	begin
 	if (<index> < 10)
-		formattext checksumname = crowd_lighter '%s_LIGHTER_Geo0%a' s = <pakname> a = <index>
+		FormatText checksumname = crowd_lighter '%s_LIGHTER_Geo0%a' s = <pakname> a = <index>
 	else
-		formattext checksumname = crowd_lighter '%s_LIGHTER_Geo%a' s = <pakname> a = <index>
+		FormatText checksumname = crowd_lighter '%s_LIGHTER_Geo%a' s = <pakname> a = <index>
 	endif
-	if compositeobjectexists name = <crowd_lighter>
+	if CompositeObjectExists name = <crowd_lighter>
 		<crowd_lighter> :hide
 	else
-		if isinnodearray <crowd_lighter>
-			if NOT iscreated <crowd_lighter>
+		if IsInNodeArray <crowd_lighter>
+			if NOT IsCreated <crowd_lighter>
 				create name = <crowd_lighter>
-				if compositeobjectexists name = <crowd_lighter>
+				if CompositeObjectExists name = <crowd_lighter>
 					<crowd_lighter> :hide
 				else
 					printf "failed to create lighter object %a! ...." a = <crowd_lighter>
@@ -1183,19 +1183,19 @@ script crowd_create_lighters
 	repeat
 endscript
 
-script crowd_togglelighters 
-	getpakmancurrentname \{map = zones}
+script Crowd_ToggleLighters 
+	GetPakManCurrentName \{map = zones}
 	index = 0
 	begin
 	if (<index> < 10)
-		formattext checksumname = crowd_lighter '%s_LIGHTER_Geo0%a' s = <pakname> a = <index>
+		FormatText checksumname = crowd_lighter '%s_LIGHTER_Geo0%a' s = <pakname> a = <index>
 	else
-		formattext checksumname = crowd_lighter '%s_LIGHTER_Geo%a' s = <pakname> a = <index>
+		FormatText checksumname = crowd_lighter '%s_LIGHTER_Geo%a' s = <pakname> a = <index>
 	endif
-	if compositeobjectexists name = <crowd_lighter>
-		if gotparam \{on}
+	if CompositeObjectExists name = <crowd_lighter>
+		if GotParam \{on}
 			<crowd_lighter> :unhide
-		elseif gotparam \{off}
+		elseif GotParam \{off}
 			<crowd_lighter> :hide
 		endif
 	endif
@@ -1206,34 +1206,34 @@ script crowd_togglelighters
 	repeat
 endscript
 
-script crowd_stagediver_hide \{index = 1}
-	getpakmancurrentname \{map = zones}
-	formattext checksumname = stagediver '%s_TRG_Ped_StageDive0%a' s = <pakname> a = <index>
-	if compositeobjectexists name = <stagediver>
+script Crowd_StageDiver_Hide \{index = 1}
+	GetPakManCurrentName \{map = zones}
+	FormatText checksumname = stagediver '%s_TRG_Ped_StageDive0%a' s = <pakname> a = <index>
+	if CompositeObjectExists name = <stagediver>
 		<stagediver> :hide
 	endif
 endscript
 
-script crowd_stagediver_jump \{index = 1}
-	getpakmancurrentname \{map = zones}
-	formattext checksumname = stagediver '%s_TRG_Ped_StageDive0%a' s = <pakname> a = <index>
-	if compositeobjectexists name = <stagediver>
+script Crowd_StageDiver_Jump \{index = 1}
+	GetPakManCurrentName \{map = zones}
+	FormatText checksumname = stagediver '%s_TRG_Ped_StageDive0%a' s = <pakname> a = <index>
+	if CompositeObjectExists name = <stagediver>
 		<stagediver> :unhide
-		getpakmancurrent \{map = zones}
-		if structurecontains structure = ($stagediver_anims) name = <pak>
+		GetPakManCurrent \{map = zones}
+		if StructureContains Structure = ($stagediver_anims) name = <pak>
 			anims = ($stagediver_anims.<pak>)
 		else
 			anims = ($stagediver_anims.`default`)
 		endif
-		getarraysize <anims>
-		getrandomvalue name = anim_index integer a = 0 b = (<array_size> - 1)
+		GetArraySize <anims>
+		GetRandomValue name = anim_index Integer a = 0 b = (<array_size> - 1)
 		anim_name = (<anims> [<anim_index>])
-		printf channel = crowd "Playing stagedive anim %a ....." a = <anim_name>
-		<stagediver> :gameobj_playanim anim = <anim_name>
-		<stagediver> :gameobj_waitanimfinished
+		printf channel = Crowd "Playing stagedive anim %a ....." a = <anim_name>
+		<stagediver> :GameObj_PlayAnim Anim = <anim_name>
+		<stagediver> :GameObj_WaitAnimFinished
 		<stagediver> :hide
 	else
-		printf \{channel = crowd
+		printf \{channel = Crowd
 			"Stagediver not found........."}
 	endif
 endscript

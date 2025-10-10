@@ -15,7 +15,7 @@ crowd_stream_id = null
 crowd_unique_id = null
 song_paused = 0
 
-script preload_song \{starttime = 0
+script preload_song \{StartTime = 0
 		fadeintime = 0.0}
 	printf "song %s" s = <song_name>
 	change \{song_stream_id = null}
@@ -32,111 +32,111 @@ script preload_song \{starttime = 0
 	change \{crowd_unique_id = null}
 	get_song_prefix song = <song_name>
 	get_song_struct song = <song_name>
-	if structurecontains structure = <song_struct> streamname
+	if StructureContains Structure = <song_struct> streamname
 		song_prefix = (<song_struct>.streamname)
 	endif
-	if NOT songloadfsb song_prefix = <song_prefix>
-		downloadcontentlost
+	if NOT SongLoadFSB song_prefix = <song_prefix>
+		DownloadContentLost
 		return
 	endif
 	stream_config = gh1
 	get_song_struct song = <song_name>
-	if structurecontains structure = <song_struct> name = version
+	if StructureContains Structure = <song_struct> name = version
 		stream_config = (<song_struct>.version)
 	endif
-	soundbussunlock \{band_balance}
-	soundbussunlock \{guitar_balance}
-	if structurecontains structure = <song_struct> name = band_playback_volume
-		setsoundbussparams {band_balance = {vol = ((<song_struct>.band_playback_volume) - 1.5)}} time = <fadeintime>
+	SoundBussUnlock \{Band_Balance}
+	SoundBussUnlock \{Guitar_Balance}
+	if StructureContains Structure = <song_struct> name = band_playback_volume
+		SetSoundBussParams {Band_Balance = {vol = ((<song_struct>.band_playback_volume) - 1.5)}} time = <fadeintime>
 	else
-		setsoundbussparams {band_balance = {vol = -1.5}} time = <fadeinttime>
+		SetSoundBussParams {Band_Balance = {vol = -1.5}} time = <fadeinttime>
 	endif
-	if structurecontains structure = <song_struct> name = guitar_playback_volume
-		setsoundbussparams {guitar_balance = {vol = ((<song_struct>.guitar_playback_volume) - 1.5)}} time = <fadeintime>
+	if StructureContains Structure = <song_struct> name = guitar_playback_volume
+		SetSoundBussParams {Guitar_Balance = {vol = ((<song_struct>.guitar_playback_volume) - 1.5)}} time = <fadeintime>
 	else
-		setsoundbussparams {guitar_balance = {vol = -1.5}} time = <fadeintime>
+		SetSoundBussParams {Guitar_Balance = {vol = -1.5}} time = <fadeintime>
 	endif
-	soundbusslock \{band_balance}
-	soundbusslock \{guitar_balance}
+	SoundBussLock \{Band_Balance}
+	SoundBussLock \{Guitar_Balance}
 	change stream_config = <stream_config>
-	formattext checksumname = song_stream '%s_song' s = <song_prefix> addtostringlookup
-	formattext checksumname = guitar_stream '%s_guitar' s = <song_prefix> addtostringlookup
-	formattext checksumname = rhythm_stream '%s_rhythm' s = <song_prefix> addtostringlookup
-	formattext checksumname = crowd_stream '%s_crowd' s = <song_prefix> addtostringlookup
+	FormatText checksumname = song_stream '%s_song' s = <song_prefix> AddToStringLookup
+	FormatText checksumname = guitar_stream '%s_guitar' s = <song_prefix> AddToStringLookup
+	FormatText checksumname = rhythm_stream '%s_rhythm' s = <song_prefix> AddToStringLookup
+	FormatText checksumname = crowd_stream '%s_crowd' s = <song_prefix> AddToStringLookup
 	if ($game_mode = p2_career || $game_mode = p2_coop ||
 			($game_mode = training && ($player1_status.part = rhythm)))
-		if structurecontains structure = <song_struct> use_coop_notetracks
-			formattext checksumname = song_stream '%s_coop_song' s = <song_prefix> addtostringlookup
-			formattext checksumname = guitar_stream '%s_coop_guitar' s = <song_prefix> addtostringlookup
-			formattext checksumname = rhythm_stream '%s_coop_rhythm' s = <song_prefix> addtostringlookup
+		if StructureContains Structure = <song_struct> use_coop_notetracks
+			FormatText checksumname = song_stream '%s_coop_song' s = <song_prefix> AddToStringLookup
+			FormatText checksumname = guitar_stream '%s_coop_guitar' s = <song_prefix> AddToStringLookup
+			FormatText checksumname = rhythm_stream '%s_coop_rhythm' s = <song_prefix> AddToStringLookup
 		endif
 	endif
 	change song_stream_id = <song_stream>
-	if preloadstream <song_stream> buss = master useforsongtimesync = 1
+	if PreloadStream <song_stream> buss = Master useForSongTimeSync = 1
 		change song_unique_id = <unique_id>
 	else
-		scriptassert "Could not load song track for %s" s = <song_prefix>
+		ScriptAssert "Could not load song track for %s" s = <song_prefix>
 	endif
 	extra_stream = null
 	if (<stream_config> = gh3)
 		change crowd_stream_id = <crowd_stream>
-		if preloadstream <crowd_stream> buss = master
+		if PreloadStream <crowd_stream> buss = Master
 			change crowd_unique_id = <unique_id>
 		endif
 		<extra_stream> = <rhythm_stream>
 	endif
-	if structurecontains structure = <song_struct> name = extra_stream
-		formattext checksumname = extra_stream '%s_%t' s = <song_prefix> t = (<song_struct>.extra_stream) addtostringlookup
+	if StructureContains Structure = <song_struct> name = extra_stream
+		FormatText checksumname = extra_stream '%s_%t' s = <song_prefix> t = (<song_struct>.extra_stream) AddToStringLookup
 	endif
 	if ($current_num_players = 1)
 		if (($player1_status.part) = rhythm && (<stream_config> != gh1))
-			if NOT preloadstream <extra_stream> buss = master
-				scriptassert "Could not load player1 guitar track for %s" s = <song_prefix>
+			if NOT PreloadStream <extra_stream> buss = Master
+				ScriptAssert "Could not load player1 guitar track for %s" s = <song_prefix>
 			endif
 			change guitar_player1_unique_id = <unique_id>
 			<extra_stream> = <guitar_stream>
 		else
-			if NOT preloadstream <guitar_stream> buss = master
-				scriptassert "Could not load player1 guitar track for %s" s = <song_prefix>
+			if NOT PreloadStream <guitar_stream> buss = Master
+				ScriptAssert "Could not load player1 guitar track for %s" s = <song_prefix>
 			endif
 			change guitar_player1_unique_id = <unique_id>
 			<extra_stream> = <rhythm_stream>
 		endif
 		if NOT (<extra_stream> = null)
 			change extra_stream_id = <extra_stream>
-			if preloadstream <extra_stream> buss = master
+			if PreloadStream <extra_stream> buss = Master
 				change extra_unique_id = <unique_id>
 			endif
 		endif
 	else
 		if (($player1_status.part) = rhythm && (<stream_config> != gh1))
 			change guitar_player1_stream_id = <extra_stream>
-			if NOT preloadstream <extra_stream> buss = master
-				scriptassert "Could not load player1 guitar track for %s" s = <song_prefix>
+			if NOT PreloadStream <extra_stream> buss = Master
+				ScriptAssert "Could not load player1 guitar track for %s" s = <song_prefix>
 			endif
 		else
 			change guitar_player1_stream_id = <guitar_stream>
-			if NOT preloadstream <guitar_stream> buss = master
-				scriptassert "Could not load player1 guitar track for %s" s = <song_prefix>
+			if NOT PreloadStream <guitar_stream> buss = Master
+				ScriptAssert "Could not load player1 guitar track for %s" s = <song_prefix>
 			endif
 		endif
 		change guitar_player1_unique_id = <unique_id>
 		if (($player2_status.part) = rhythm && (<stream_config> != gh1))
 			change guitar_player2_stream_id = <extra_stream>
-			if NOT preloadstream <extra_stream> buss = master
-				scriptassert "Could not load player2 guitar track for %s" s = <song_prefix>
+			if NOT PreloadStream <extra_stream> buss = Master
+				ScriptAssert "Could not load player2 guitar track for %s" s = <song_prefix>
 			endif
 		else
 			change guitar_player2_stream_id = <guitar_stream>
-			if NOT preloadstream <guitar_stream> buss = master
-				scriptassert "Could not load player2 guitar track for %s" s = <song_prefix>
+			if NOT PreloadStream <guitar_stream> buss = Master
+				ScriptAssert "Could not load player2 guitar track for %s" s = <song_prefix>
 			endif
 		endif
 		change guitar_player2_unique_id = <unique_id>
 		if (<stream_config> != gh1)
 			if NOT ((($player1_status.part) = rhythm) || (($player2_status.part) = rhythm))
 				change extra_stream_id = <extra_stream>
-				if preloadstream <extra_stream> buss = master
+				if PreloadStream <extra_stream> buss = Master
 					change extra_unique_id = <unique_id>
 				endif
 			endif
@@ -144,57 +144,57 @@ script preload_song \{starttime = 0
 	endif
 	waitforpreload_song <...>
 	change \{song_paused = 1}
-	setlastguitarvolume \{player = 1
+	SetLastGuitarVolume \{player = 1
 		last_guitar_volume = 100}
-	setlastguitarvolume \{player = 2
+	SetLastGuitarVolume \{player = 2
 		last_guitar_volume = 100}
 	startpreloadpaused_song
-	setseekposition_song position = <starttime>
+	SetSeekPosition_Song position = <StartTime>
 endscript
 
-script songunloadfsbifdownloaded 
-	getcontentfolderindexfromfile ($song_fsb_name)
+script SongUnLoadFSBIfDownloaded 
+	GetContentFolderIndexFromFile ($song_fsb_name)
 	if NOT ($song_fsb_id = -1)
 		if (<device> = content)
-			unloadfsb \{fsb_index = $song_fsb_id}
-			downloads_closecontentfolder content_index = <content_index>
+			UnLoadFSB \{fsb_index = $song_fsb_id}
+			Downloads_CloseContentFolder content_index = <content_index>
 			change \{song_fsb_id = -1}
 			change \{song_fsb_name = 'none'}
 		endif
 	endif
 endscript
 
-script songunloadfsb 
-	songunloadfsbifdownloaded
+script SongUnLoadFSB 
+	SongUnLoadFSBIfDownloaded
 	if NOT ($song_fsb_id = -1)
-		unloadfsb \{fsb_index = $song_fsb_id}
+		UnLoadFSB \{fsb_index = $song_fsb_id}
 		change \{song_fsb_id = -1}
 		change \{song_fsb_name = 'none'}
 	endif
 endscript
 
-script songloadfsb 
-	formattext keep_case textname = filename '%n.fsb' n = <song_prefix>
+script SongLoadFSB 
+	FormatText keep_case TextName = filename '%n.fsb' n = <song_prefix>
 	if ($song_fsb_name = <filename>)
 		return \{true}
 	endif
-	songunloadfsb
-	formattext keep_case textname = fsbfilename '%n' n = <song_prefix>
-	getcontentfolderindexfromfile <filename>
+	SongUnLoadFSB
+	FormatText keep_case TextName = fsbfilename '%n' n = <song_prefix>
+	GetContentFolderIndexFromFile <filename>
 	if (<device> = content)
-		if NOT downloads_opencontentfolder content_index = <content_index>
+		if NOT Downloads_OpenContentFolder content_index = <content_index>
 			return \{false}
 		endif
 	else
-		formattext keep_case textname = fsbfilename 'music/%n' n = <song_prefix>
+		FormatText keep_case TextName = fsbfilename 'music/%n' n = <song_prefix>
 	endif
-	if NOT loadfsb filename = <fsbfilename> numstreams = 5 encryptionkey = '5atu6w4zaw' device = <device>
+	if NOT LoadFSB filename = <fsbfilename> numstreams = 5 encryptionkey = '5atu6w4zaw' device = <device>
 		return \{false}
 	endif
 	if (<fsb_index> = -1)
 		change \{song_fsb_id = -1}
 		change \{song_fsb_name = 'none'}
-		scriptassert "could not load FSB for: %s" s = <song_prefix>
+		ScriptAssert "could not load FSB for: %s" s = <song_prefix>
 	else
 		change song_fsb_id = <fsb_index>
 		change song_fsb_name = <filename>
@@ -213,10 +213,10 @@ endscript
 script waitforpreload_stream \{stream = none}
 	if NOT ($<stream> = null)
 		begin
-		if preloadstreamdone $<stream>
+		if PreLoadStreamDone $<stream>
 			break
 		endif
-		wait \{1
+		Wait \{1
 			gameframe}
 		printf "Waiting for preload %s" s = <stream>
 		repeat
@@ -224,65 +224,65 @@ script waitforpreload_stream \{stream = none}
 endscript
 
 script waitforseek_song 
-	wait \{15
+	Wait \{15
 		gameframe}
 	return
 endscript
 
 script setslomo_song 
 	if NOT ($song_unique_id = null)
-		setsoundparams unique_id = $song_unique_id pitch = (<slomo> * 100)
+		SetSoundParams unique_id = $song_unique_id pitch = (<slomo> * 100)
 	endif
 	if NOT ($guitar_player1_unique_id = null)
-		setsoundparams unique_id = $guitar_player1_unique_id pitch = (<slomo> * 100)
+		SetSoundParams unique_id = $guitar_player1_unique_id pitch = (<slomo> * 100)
 	endif
 	if NOT ($extra_unique_id = null)
-		setsoundparams unique_id = $extra_unique_id pitch = (<slomo> * 100)
+		SetSoundParams unique_id = $extra_unique_id pitch = (<slomo> * 100)
 	endif
 	if NOT ($crowd_unique_id = null)
-		setsoundparams unique_id = $crowd_unique_id pitch = (<slomo> * 100)
+		SetSoundParams unique_id = $crowd_unique_id pitch = (<slomo> * 100)
 	endif
 	if NOT ($guitar_player2_unique_id = null)
-		setsoundparams unique_id = $guitar_player2_unique_id pitch = (<slomo> * 100)
+		SetSoundParams unique_id = $guitar_player2_unique_id pitch = (<slomo> * 100)
 	endif
 endscript
-player1effects = {
-	effect = $pitchshifteffect1
-	effect2 = $flange_default1
-	effect3 = $chorus_default1
-	effect4 = $echo_default1
-	effect5 = $highpass_default1
-	effect6 = $lowpass_default1
-	effect7 = $eq_default1
+Player1Effects = {
+	effect = $PitchShiftEffect1
+	effect2 = $Flange_Default1
+	effect3 = $Chorus_Default1
+	effect4 = $Echo_Default1
+	effect5 = $HighPass_Default1
+	effect6 = $LowPass_Default1
+	effect7 = $EQ_Default1
 }
-player2effects = {
-	effect = $pitchshifteffect2
-	effect2 = $flange_default2
-	effect3 = $chorus_default2
-	effect4 = $echo_default2
-	effect5 = $highpass_default2
-	effect6 = $lowpass_default2
-	effect7 = $eq_default2
+Player2Effects = {
+	effect = $PitchShiftEffect2
+	effect2 = $Flange_Default2
+	effect3 = $Chorus_Default2
+	effect4 = $Echo_Default2
+	effect5 = $HighPass_Default2
+	effect6 = $LowPass_Default2
+	effect7 = $EQ_Default2
 }
-pitchshifteffect1 = {
-	effect = fastpitchshift
-	name = guitar1pitchshift
+PitchShiftEffect1 = {
+	effect = FastPitchshift
+	name = Guitar1PitchShift
 	pitch = 1.0
 	maxchannels = 0
 }
-pitchshifteffect2 = {
-	effect = fastpitchshift
-	name = guitar2pitchshift
+PitchShiftEffect2 = {
+	effect = FastPitchshift
+	name = Guitar2PitchShift
 	pitch = 1.0
 	maxchannels = 0
 }
-player1practiceeffects = {
-	effect = $pitchshiftslow1
-	effect2 = $pitchshifteffect1
+Player1PracticeEffects = {
+	effect = $PitchShiftSlow1
+	effect2 = $PitchShiftEffect1
 }
-pitchshiftslow1 = {
-	effect = pitchshift
-	name = slowguitar1pitchshift
+PitchShiftSlow1 = {
+	effect = PitchShift
+	name = SlowGuitar1PitchShift
 	pitch = 1.0
 	maxchannels = 2
 	fftsize = 4096
@@ -295,119 +295,119 @@ script startpreloadpaused_song
 	endif
 	if ($current_num_players = 1)
 		if ($game_mode = training && $in_menu_choose_practice_section = 0)
-			startpreloadedstream $guitar_player1_unique_id startpaused = 1 buss = first_player_lead_playback pitch = ($current_speedfactor * 100) $player1practiceeffects
+			StartPreloadedStream $guitar_player1_unique_id startpaused = 1 buss = First_Player_Lead_Playback pitch = ($current_speedfactor * 100) $Player1PracticeEffects
 		else
-			startpreloadedstream $guitar_player1_unique_id startpaused = 1 buss = first_player_lead_playback pitch = ($current_speedfactor * 100) $player1effects
+			StartPreloadedStream $guitar_player1_unique_id startpaused = 1 buss = First_Player_Lead_Playback pitch = ($current_speedfactor * 100) $Player1Effects
 		endif
 	else
 		if (<both_players_lead> = 1)
-			startpreloadedstream $guitar_player1_unique_id startpaused = 1 buss = first_player_lead_playback pitch = ($current_speedfactor * 100) $player1effects $player1pan voll = 100 volr = 0
-			startpreloadedstream $guitar_player2_unique_id startpaused = 1 buss = second_player_lead_playback pitch = ($current_speedfactor * 100) $player2effects $player2pan voll = 0 volr = 100
+			StartPreloadedStream $guitar_player1_unique_id startpaused = 1 buss = First_Player_Lead_Playback pitch = ($current_speedfactor * 100) $Player1Effects $Player1Pan volL = 100 volR = 0
+			StartPreloadedStream $guitar_player2_unique_id startpaused = 1 buss = Second_Player_Lead_Playback pitch = ($current_speedfactor * 100) $Player2Effects $Player2Pan volL = 0 volR = 100
 		else
-			startpreloadedstream $guitar_player1_unique_id startpaused = 1 buss = first_player_lead_playback pitch = ($current_speedfactor * 100) $player1effects
-			startpreloadedstream $guitar_player2_unique_id startpaused = 1 buss = second_player_rhythm_playback pitch = ($current_speedfactor * 100) $player2effects
+			StartPreloadedStream $guitar_player1_unique_id startpaused = 1 buss = First_Player_Lead_Playback pitch = ($current_speedfactor * 100) $Player1Effects
+			StartPreloadedStream $guitar_player2_unique_id startpaused = 1 buss = Second_Player_Rhythm_Playback pitch = ($current_speedfactor * 100) $Player2Effects
 		endif
 	endif
-	startpreloadedstream $song_unique_id startpaused = 1 buss = band_playback pitch = ($current_speedfactor * 100)
+	StartPreloadedStream $song_unique_id startpaused = 1 buss = Band_Playback pitch = ($current_speedfactor * 100)
 	if NOT ($extra_stream_id = null)
-		startpreloadedstream $extra_unique_id startpaused = 1 buss = single_player_rhythm_playback pitch = ($current_speedfactor * 100)
+		StartPreloadedStream $extra_unique_id startpaused = 1 buss = Single_Player_Rhythm_Playback pitch = ($current_speedfactor * 100)
 	endif
 	if NOT ($crowd_unique_id = null)
-		startpreloadedstream $crowd_unique_id startpaused = 1 buss = crowd_singalong pan1x = -1 pan1y = -0.5 pan2x = 1 pan2y = -0.5 pitch = ($current_speedfactor * 100)
+		StartPreloadedStream $crowd_unique_id startpaused = 1 buss = Crowd_Singalong pan1x = -1 pan1y = -0.5 pan2x = 1 pan2y = -0.5 pitch = ($current_speedfactor * 100)
 	endif
 endscript
 
-script begin_song \{pause = 0}
+script begin_song \{Pause = 0}
 	lockdsp
-	pausesound unique_id = $song_unique_id pause = <pause>
-	pausesound unique_id = $guitar_player1_unique_id pause = <pause>
+	PauseSound unique_id = $song_unique_id Pause = <Pause>
+	PauseSound unique_id = $guitar_player1_unique_id Pause = <Pause>
 	if NOT ($extra_stream_id = null)
-		pausesound unique_id = $extra_unique_id pause = <pause>
+		PauseSound unique_id = $extra_unique_id Pause = <Pause>
 	endif
 	if NOT ($crowd_stream_id = null)
-		pausesound unique_id = $crowd_unique_id pause = <pause>
+		PauseSound unique_id = $crowd_unique_id Pause = <Pause>
 	endif
 	if NOT ($guitar_player2_stream_id = null)
-		pausesound unique_id = $guitar_player2_unique_id pause = <pause>
+		PauseSound unique_id = $guitar_player2_unique_id Pause = <Pause>
 	endif
 	unlockdsp
 	change \{song_paused = 0}
 endscript
 
-script setseekposition_song \{position = 0}
+script SetSeekPosition_Song \{position = 0}
 	if NOT ($song_unique_id = null)
-		setsoundseekposition unique_id = $song_unique_id position = <position>
+		SetSoundSeekPosition unique_id = $song_unique_id position = <position>
 	endif
 	if NOT ($guitar_player1_unique_id = null)
 		if ($game_mode = training && $in_menu_choose_practice_section = 0)
-			setsoundseekposition unique_id = $guitar_player1_unique_id position = (<position> - ($default_practice_mode_pitchshift_offset_song))
+			SetSoundSeekPosition unique_id = $guitar_player1_unique_id position = (<position> - ($default_practice_mode_pitchshift_offset_song))
 		else
-			setsoundseekposition unique_id = $guitar_player1_unique_id position = <position>
+			SetSoundSeekPosition unique_id = $guitar_player1_unique_id position = <position>
 		endif
 	endif
 	if NOT ($extra_unique_id = null)
-		setsoundseekposition unique_id = $extra_unique_id position = <position>
+		SetSoundSeekPosition unique_id = $extra_unique_id position = <position>
 	endif
 	if NOT ($crowd_unique_id = null)
-		setsoundseekposition unique_id = $crowd_unique_id position = <position>
+		SetSoundSeekPosition unique_id = $crowd_unique_id position = <position>
 	endif
 	if NOT ($guitar_player2_unique_id = null)
-		setsoundseekposition unique_id = $guitar_player2_unique_id position = <position>
+		SetSoundSeekPosition unique_id = $guitar_player2_unique_id position = <position>
 	endif
 endscript
-waiting_for_pitching = 0
+Waiting_For_Pitching = 0
 
-script failed_song_pitch_down 
-	soundbussunlock \{guitar_balance}
-	soundbussunlock \{band_balance}
-	setsoundbussparams \{band_balance = {
+script Failed_Song_Pitch_Down 
+	SoundBussUnlock \{Guitar_Balance}
+	SoundBussUnlock \{Band_Balance}
+	SetSoundBussParams \{Band_Balance = {
 			vol = -20
 			pitch = -8
 		}
 		time = 3}
-	setsoundbussparams \{guitar_balance = {
+	SetSoundBussParams \{Guitar_Balance = {
 			vol = -20
 			pitch = -8
 		}
 		time = 3}
-	change \{waiting_for_pitching = 1}
-	soundbusslock \{band_balance}
-	soundbusslock \{guitar_balance}
-	wait \{3
+	change \{Waiting_For_Pitching = 1}
+	SoundBussLock \{Band_Balance}
+	SoundBussLock \{Guitar_Balance}
+	Wait \{3
 		seconds}
 	spawnscriptnow \{end_song}
 endscript
 
 script end_song \{song_failed_pitch_streams = 0}
-	if iswinport
-		winportsonghighwaysync \{sync = 0}
+	if IsWinPort
+		WinPortSongHighwaySync \{sync = 0}
 	endif
 	if NOT (<song_failed_pitch_streams> = 1)
-		killspawnedscript \{name = failed_song_pitch_down}
-		if ($waiting_for_pitching = 1)
-			change \{waiting_for_pitching = 0}
-			soundbussunlock \{guitar_balance}
-			soundbussunlock \{band_balance}
-			setsoundbussparams {band_balance = {vol = (($default_bussset.band_balance.vol) - 2.5) pitch = ($default_bussset.band_balance.pitch)}}
-			setsoundbussparams {guitar_balance = {vol = (($default_bussset.guitar_balance.vol) - 2.5) pitch = ($default_bussset.guitar_balance.pitch)}}
-			soundbusslock \{band_balance}
-			soundbusslock \{guitar_balance}
+		KillSpawnedScript \{name = Failed_Song_Pitch_Down}
+		if ($Waiting_For_Pitching = 1)
+			change \{Waiting_For_Pitching = 0}
+			SoundBussUnlock \{Guitar_Balance}
+			SoundBussUnlock \{Band_Balance}
+			SetSoundBussParams {Band_Balance = {vol = (($Default_BussSet.Band_Balance.vol) - 2.5) pitch = ($Default_BussSet.Band_Balance.pitch)}}
+			SetSoundBussParams {Guitar_Balance = {vol = (($Default_BussSet.Guitar_Balance.vol) - 2.5) pitch = ($Default_BussSet.Guitar_Balance.pitch)}}
+			SoundBussLock \{Band_Balance}
+			SoundBussLock \{Guitar_Balance}
 		endif
-		stopstream \{unique_id = $song_unique_id}
-		stopstream \{unique_id = $guitar_player1_unique_id}
+		StopStream \{unique_id = $song_unique_id}
+		StopStream \{unique_id = $guitar_player1_unique_id}
 	else
 		printf \{channel = sfx
 			"We are pitching the stream down because we failed"}
-		spawnscriptnow \{failed_song_pitch_down}
+		spawnscriptnow \{Failed_Song_Pitch_Down}
 	endif
 	if NOT ($extra_unique_id = null)
-		stopstream \{unique_id = $extra_unique_id}
+		StopStream \{unique_id = $extra_unique_id}
 	endif
 	if NOT ($crowd_unique_id = null)
-		stopstream \{unique_id = $crowd_unique_id}
+		StopStream \{unique_id = $crowd_unique_id}
 	endif
 	if NOT ($guitar_player2_unique_id = null)
-		stopstream \{unique_id = $guitar_player2_unique_id}
+		StopStream \{unique_id = $guitar_player2_unique_id}
 	endif
 	change \{song_paused = 0}
 endscript
@@ -415,58 +415,58 @@ p1_whammy_control = 0.0
 
 script set_whammy_pitchshift 
 	if ($<player_status>.player = 1)
-		setsoundbusseffects effect = {effect = pitchshift name = guitar1pitchshift pitch = (1 - (<control> * 0.057))}
+		setsoundbusseffects effect = {effect = PitchShift name = Guitar1PitchShift pitch = (1 - (<control> * 0.057))}
 		change p1_whammy_control = <control>
 	else
-		setsoundbusseffects effect = {effect = pitchshift name = guitar2pitchshift pitch = (1 - (<control> * 0.057))}
+		setsoundbusseffects effect = {effect = PitchShift name = Guitar2PitchShift pitch = (1 - (<control> * 0.057))}
 	endif
 endscript
 
-script pausegh3sounds 
+script PauseGh3Sounds 
 	lockdsp
-	pausesoundsbybuss \{master}
+	PauseSoundsByBuss \{Master}
 	unlockdsp
-	if NOT gotparam \{no_seek}
-		getsongtimems
-		casttointeger \{time}
+	if NOT GotParam \{no_seek}
+		GetSongTimeMs
+		CastToInteger \{time}
 		if (<time> > $current_starttime)
-			if NOT gotparam \{seek_on_unpause}
-				setseekposition_song position = <time>
+			if NOT GotParam \{seek_on_unpause}
+				SetSeekPosition_Song position = <time>
 			endif
 		endif
 	endif
 endscript
 
-script unpausegh3sounds 
-	if gotparam \{seek_on_unpause}
-		getsongtimems
-		casttointeger \{time}
+script UnpauseGh3Sounds 
+	if GotParam \{seek_on_unpause}
+		GetSongTimeMs
+		CastToInteger \{time}
 		if (<time> > $current_starttime)
-			setseekposition_song position = <time>
+			SetSeekPosition_Song position = <time>
 		endif
 	endif
 	lockdsp
 	if ($song_paused = 0)
-		unpausesoundsbybuss \{master}
+		UnpauseSoundsByBuss \{Master}
 	else
-		unpausesoundsbybuss \{ui}
-		unpausesoundsbybuss \{crowd_one_shots}
-		unpausesoundsbybuss \{crowd_one_shots_negative}
-		unpausesoundsbybuss \{crowd_beds}
-		unpausesoundsbybuss \{crowd_cheers}
-		unpausesoundsbybuss \{crowd_boos}
-		unpausesoundsbybuss \{crowd_nuetral}
-		unpausesoundsbybuss \{`default`}
-		unpausesoundsbybuss \{test_tones}
-		unpausesoundsbybuss \{practice_band_playback}
-		unpausesoundsbybuss \{test_tones_dsp}
-		unpausesoundsbybuss \{right_notes_player2}
-		unpausesoundsbybuss \{wrong_notes_player1}
-		unpausesoundsbybuss \{wrong_notes_player2}
-		unpausesoundsbybuss \{user_vocal}
-		unpausesoundsbybuss \{user_music}
-		unpausesoundsbybuss \{encore_events}
-		unpausesoundsbybuss \{binkcutscenes}
+		UnpauseSoundsByBuss \{ui}
+		UnpauseSoundsByBuss \{Crowd_One_Shots}
+		UnpauseSoundsByBuss \{Crowd_One_Shots_Negative}
+		UnpauseSoundsByBuss \{Crowd_Beds}
+		UnpauseSoundsByBuss \{Crowd_Cheers}
+		UnpauseSoundsByBuss \{Crowd_Boos}
+		UnpauseSoundsByBuss \{Crowd_Nuetral}
+		UnpauseSoundsByBuss \{`default`}
+		UnpauseSoundsByBuss \{Test_Tones}
+		UnpauseSoundsByBuss \{Practice_Band_Playback}
+		UnpauseSoundsByBuss \{Test_Tones_DSP}
+		UnpauseSoundsByBuss \{Right_Notes_Player2}
+		UnpauseSoundsByBuss \{Wrong_Notes_Player1}
+		UnpauseSoundsByBuss \{Wrong_Notes_Player2}
+		UnpauseSoundsByBuss \{User_Vocal}
+		UnpauseSoundsByBuss \{User_Music}
+		UnpauseSoundsByBuss \{Encore_Events}
+		UnpauseSoundsByBuss \{binkcutscenes}
 	endif
 	unlockdsp
 endscript

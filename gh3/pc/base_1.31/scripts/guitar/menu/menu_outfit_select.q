@@ -11,7 +11,7 @@ os_selected_style_old_p2 = 0
 os_menu_start_pos_p1 = (0.0, 110.0)
 
 script create_select_outfit_menu \{player = 1}
-	formattext checksumname = player_status 'player%i_status' i = <player>
+	FormatText checksumname = player_status 'player%i_status' i = <player>
 	if (<player> = 1)
 		change \{os_made_first_selection_bool_p1 = 0}
 	else
@@ -82,32 +82,32 @@ script create_select_outfit_menu \{player = 1}
 			exclusive_device = <exclusive_dev>
 		}
 		if ($is_network_game = 1)
-			vmenu_select_outfit_p2 :setprops \{disable_pad_handling}
-			launchevent \{type = unfocus
+			vmenu_select_outfit_p2 :SetProps \{disable_pad_handling}
+			LaunchEvent \{type = unfocus
 				target = vmenu_select_outfit_p2}
 		endif
 		vparent = vmenu_select_outfit_p2
 	endif
 	if ($current_num_players = 1)
-		formattext checksumname = player_status 'player%i_status' i = <player>
+		FormatText checksumname = player_status 'player%i_status' i = <player>
 		if find_profile_by_id id = ($<player_status>.character_id)
 			get_musician_profile_struct index = <index>
-			formattext checksumname = default_characterguitartag 'character_%c_player_%p_guitar_tags' c = (<profile_struct>.name) p = <player>
-			if getglobaltags <default_characterguitartag> noassert = 1
+			FormatText checksumname = default_characterguitartag 'character_%c_player_%p_guitar_tags' c = (<profile_struct>.name) p = <player>
+			if GetGlobalTags <default_characterguitartag> noassert = 1
 				change os_selected_outfit_p1 = (<current_outfit>)
 				change os_selected_outfit_old_p1 = (<current_outfit>)
 				change os_selected_style_p1 = (<current_style> - 1)
 				change os_selected_style_old_p1 = (<current_style> - 1)
 			endif
 		endif
-		createscreenelement \{type = containerelement
+		CreateScreenElement \{type = ContainerElement
 			id = select_outfit_container_p1
 			parent = root_window
 			pos = (386.0, 0.0)}
 		<brown_window_color> = [120 60 10 255]
 		<window_fill_color> = [0 0 0 200]
 		<os_menu_starting_pos> = $os_menu_start_pos_p1
-		displaysprite {
+		displaySprite {
 			parent = select_outfit_container_p1
 			tex = window_frame_cap
 			pos = <os_menu_starting_pos>
@@ -116,7 +116,7 @@ script create_select_outfit_menu \{player = 1}
 			rgba = <brown_window_color>
 			z = 0
 		}
-		displaysprite {
+		displaySprite {
 			parent = select_outfit_container_p1
 			tex = window_fill_cap
 			pos = <os_menu_starting_pos>
@@ -125,7 +125,7 @@ script create_select_outfit_menu \{player = 1}
 			rgba = <window_fill_color>
 			z = 0
 		}
-		displaysprite {
+		displaySprite {
 			parent = select_outfit_container_p1
 			tex = window_header_01
 			pos = (<os_menu_starting_pos> + (0.0, -40.0))
@@ -134,8 +134,8 @@ script create_select_outfit_menu \{player = 1}
 			rgba = [200 200 200 255]
 			z = 1
 		}
-		displaysprite {
-			id = os_mid_frame_id
+		displaySprite {
+			id = os_mid_frame_ID
 			parent = select_outfit_container_p1
 			tex = window_frame_body_tall
 			pos = (<os_menu_starting_pos> + (0.0, 32.0))
@@ -144,8 +144,8 @@ script create_select_outfit_menu \{player = 1}
 			rgba = <brown_window_color>
 			z = 0
 		}
-		displaysprite {
-			id = os_mid_fill_id
+		displaySprite {
+			id = os_mid_fill_ID
 			parent = select_outfit_container_p1
 			tex = window_fill_body_large
 			pos = (<os_menu_starting_pos> + (0.0, 32.0))
@@ -154,8 +154,8 @@ script create_select_outfit_menu \{player = 1}
 			rgba = <window_fill_color>
 			z = 0
 		}
-		displaysprite {
-			id = os_bottom_cap_id
+		displaySprite {
+			id = os_bottom_cap_ID
 			parent = select_outfit_container_p1
 			tex = window_frame_cap
 			pos = (<os_menu_starting_pos> + (0.0, 144.0))
@@ -165,8 +165,8 @@ script create_select_outfit_menu \{player = 1}
 			z = 0
 			flip_h
 		}
-		displaysprite {
-			id = os_bottom_fill_id
+		displaySprite {
+			id = os_bottom_fill_ID
 			parent = select_outfit_container_p1
 			tex = window_fill_cap
 			pos = (<os_menu_starting_pos> + (0.0, 144.0))
@@ -176,7 +176,7 @@ script create_select_outfit_menu \{player = 1}
 			z = 0
 			flip_h
 		}
-		displaytext {
+		displayText {
 			parent = select_outfit_container_p1
 			text = "SELECT OUTFIT"
 			pos = ($gs_element_offsets [0])
@@ -186,10 +186,10 @@ script create_select_outfit_menu \{player = 1}
 			rgba = [185 100 60 255]
 			z = 1
 		}
-		displaysprite {
+		displaySprite {
 			id = os_name_background
 			parent = select_outfit_container_p1
-			tex = char_select_frame_bg
+			tex = Char_Select_Frame_BG
 			pos = ($gs_element_offsets [2])
 			dims = (266.0, 128.0)
 			just = [center center]
@@ -200,11 +200,11 @@ script create_select_outfit_menu \{player = 1}
 		<curr_outfit> = $os_selected_outfit_p1
 		styles = (<character_outfits> [(<curr_outfit> - 1)].styles)
 		curr_style = (<styles> [($os_selected_style_p1)])
-		getuppercasestring (<character_outfits> [(<curr_outfit> - 1)].name)
-		displaytext {
-			id = os_outfit_name_id_p1
+		GetUpperCaseString (<character_outfits> [(<curr_outfit> - 1)].name)
+		displayText {
+			id = os_outfit_name_ID_p1
 			parent = select_outfit_container_p1
-			text = <uppercasestring>
+			text = <UpperCaseString>
 			pos = (($gs_element_offsets [2]) + (-2.0, 8.0))
 			scale = 1
 			font = fontgrid_title_gh3
@@ -212,16 +212,16 @@ script create_select_outfit_menu \{player = 1}
 			rgba = [160 80 30 255]
 			z = 2
 		}
-		getscreenelementdims \{id = os_outfit_name_id_p1}
+		GetScreenElementDims \{id = os_outfit_name_ID_p1}
 		if (<width> > 260)
-			fit_text_in_rectangle id = os_outfit_name_id_p1 dims = ((255.0, 0.0) + (<height> * (0.0, 1.0))) pos = (($gs_element_offsets [2]) + (-2.0, 8.0))
+			fit_text_in_rectangle id = os_outfit_name_ID_p1 dims = ((255.0, 0.0) + (<Height> * (0.0, 1.0))) pos = (($gs_element_offsets [2]) + (-2.0, 8.0))
 		endif
-		getuppercasestring <curr_style>
-		createscreenelement {
-			id = os_outfit_style_id_p1
-			type = textblockelement
+		GetUpperCaseString <curr_style>
+		CreateScreenElement {
+			id = os_outfit_style_ID_p1
+			type = TextBlockElement
 			parent = select_outfit_container_p1
-			text = <uppercasestring>
+			text = <UpperCaseString>
 			pos = ($gs_element_offsets [3])
 			scale = (0.55, 0.55)
 			dims = (440.0, 300.0)
@@ -230,34 +230,34 @@ script create_select_outfit_menu \{player = 1}
 			rgba = [255 255 200 255]
 			z = 2
 		}
-		getscreenelementdims \{id = os_outfit_style_id_p1}
+		GetScreenElementDims \{id = os_outfit_style_ID_p1}
 		if (<width> > 256)
-			fit_text_in_rectangle id = os_outfit_style_id_p1 dims = ((255.0, 0.0) + (<height> * (0.0, 1.0))) pos = ($gs_element_offsets [3]) start_x_scale = 0.55 start_y_scale = 0.55
+			fit_text_in_rectangle id = os_outfit_style_ID_p1 dims = ((255.0, 0.0) + (<Height> * (0.0, 1.0))) pos = ($gs_element_offsets [3]) start_x_scale = 0.55 start_y_scale = 0.55
 		endif
 		get_character_name \{player = 1}
-		formattext checksumname = outfit_2_checksum 'Guitarist_%n_Outfit2_Style1' n = <character_name>
-		getglobaltags <outfit_2_checksum>
+		FormatText checksumname = outfit_2_checksum 'Guitarist_%n_Outfit2_Style1' n = <character_name>
+		GetGlobalTags <outfit_2_checksum>
 		if NOT (<unlocked>)
 			select_outfit_choose \{player = 1}
 		endif
 	else
 		if (<player> = 1)
-			formattext checksumname = player_status 'player%i_status' i = <player>
+			FormatText checksumname = player_status 'player%i_status' i = <player>
 			if find_profile_by_id id = ($<player_status>.character_id)
 				get_musician_profile_struct index = <index>
-				formattext checksumname = default_characterguitartag 'character_%c_player_%p_guitar_tags' c = (<profile_struct>.name) p = <player>
-				if getglobaltags <default_characterguitartag> noassert = 1
+				FormatText checksumname = default_characterguitartag 'character_%c_player_%p_guitar_tags' c = (<profile_struct>.name) p = <player>
+				if GetGlobalTags <default_characterguitartag> noassert = 1
 					change os_selected_outfit_p1 = (<current_outfit>)
 					change os_selected_outfit_old_p1 = (<current_outfit>)
 					change os_selected_style_p1 = (<current_style> - 1)
 					change os_selected_style_old_p1 = (<current_style> - 1)
 				endif
 			endif
-			createscreenelement \{type = containerelement
+			CreateScreenElement \{type = ContainerElement
 				id = select_outfit_container_p1
 				parent = root_window
 				pos = (460.0, 500.0)}
-			displaysprite \{parent = select_outfit_container_p1
+			displaySprite \{parent = select_outfit_container_p1
 				tex = guitar_select_2p_frame
 				just = [
 					center
@@ -266,7 +266,7 @@ script create_select_outfit_menu \{player = 1}
 				dims = (256.0, 432.0)
 				pos = (0.0, 40.0)
 				z = 0}
-			displaysprite \{parent = select_outfit_container_p1
+			displaySprite \{parent = select_outfit_container_p1
 				tex = guitar_select_2p_wing
 				just = [
 					center
@@ -274,7 +274,7 @@ script create_select_outfit_menu \{player = 1}
 				]
 				pos = (140.0, -24.0)
 				z = 0}
-			displaysprite \{parent = select_outfit_container_p1
+			displaySprite \{parent = select_outfit_container_p1
 				tex = guitar_select_2p_wing
 				just = [
 					center
@@ -283,7 +283,7 @@ script create_select_outfit_menu \{player = 1}
 				pos = (-140.0, -24.0)
 				z = 0
 				flip_v}
-			displaytext \{id = os_select_outfit_text_p1
+			displayText \{id = os_select_outfit_text_p1
 				parent = select_outfit_container_p1
 				text = "SELECT OUTFIT"
 				pos = (0.0, -30.0)
@@ -300,9 +300,9 @@ script create_select_outfit_menu \{player = 1}
 					255
 				]
 				z = 1}
-			displaysprite \{id = os_name_background_p1
+			displaySprite \{id = os_name_background_p1
 				parent = select_outfit_container_p1
-				tex = char_select_frame_bg
+				tex = Char_Select_Frame_BG
 				pos = (0.0, 30.0)
 				dims = (266.0, 128.0)
 				just = [
@@ -316,7 +316,7 @@ script create_select_outfit_menu \{player = 1}
 					255
 				]
 				z = 1}
-			displaysprite \{id = os_style_background_p1
+			displaySprite \{id = os_style_background_p1
 				parent = select_outfit_container_p1
 				tex = white
 				pos = (0.0, 88.0)
@@ -336,11 +336,11 @@ script create_select_outfit_menu \{player = 1}
 			<curr_outfit> = $os_selected_outfit_p1
 			styles = (<character_outfits> [(<curr_outfit> - 1)].styles)
 			curr_style = (<styles> [($os_selected_style_p1)])
-			getuppercasestring (<character_outfits> [(<curr_outfit> - 1)].name)
-			displaytext {
-				id = os_outfit_name_id_p1
+			GetUpperCaseString (<character_outfits> [(<curr_outfit> - 1)].name)
+			displayText {
+				id = os_outfit_name_ID_p1
 				parent = select_outfit_container_p1
-				text = <uppercasestring>
+				text = <UpperCaseString>
 				pos = (0.0, 20.0)
 				scale = 1
 				font = text_a4
@@ -349,15 +349,15 @@ script create_select_outfit_menu \{player = 1}
 				z = 2
 				noshadow
 			}
-			getscreenelementdims \{id = os_outfit_name_id_p1}
+			GetScreenElementDims \{id = os_outfit_name_ID_p1}
 			if (<width> > 260)
-				fit_text_in_rectangle id = os_outfit_name_id_p1 dims = ((255.0, 0.0) + (<height> * (0.0, 1.0))) pos = (0.0, 20.0)
+				fit_text_in_rectangle id = os_outfit_name_ID_p1 dims = ((255.0, 0.0) + (<Height> * (0.0, 1.0))) pos = (0.0, 20.0)
 			endif
-			getuppercasestring <curr_style>
-			displaytext {
-				id = os_outfit_style_id_p1
+			GetUpperCaseString <curr_style>
+			displayText {
+				id = os_outfit_style_ID_p1
 				parent = select_outfit_container_p1
-				text = <uppercasestring>
+				text = <UpperCaseString>
 				pos = (0.0, 83.0)
 				scale = (0.75, 0.5)
 				font = text_a4
@@ -366,23 +366,23 @@ script create_select_outfit_menu \{player = 1}
 				z = 2
 				noshadow
 			}
-			getscreenelementdims \{id = os_outfit_style_id_p1}
+			GetScreenElementDims \{id = os_outfit_style_ID_p1}
 			if (<width> > 256)
-				fit_text_in_rectangle id = os_outfit_style_id_p1 dims = ((255.0, 0.0) + (<height> * (0.0, 1.0))) pos = (0.0, 83.0) start_x_scale = 0.75 start_y_scale = 0.5
+				fit_text_in_rectangle id = os_outfit_style_ID_p1 dims = ((255.0, 0.0) + (<Height> * (0.0, 1.0))) pos = (0.0, 83.0) start_x_scale = 0.75 start_y_scale = 0.5
 			endif
 			get_character_name \{player = 1}
-			formattext checksumname = outfit_2_checksum 'Guitarist_%n_Outfit2_Style1' n = <character_name>
-			getglobaltags <outfit_2_checksum>
+			FormatText checksumname = outfit_2_checksum 'Guitarist_%n_Outfit2_Style1' n = <character_name>
+			GetGlobalTags <outfit_2_checksum>
 			if NOT (<unlocked>)
 				select_outfit_choose \{player = 1}
 			endif
 		else
 			if NOT ($is_network_game)
-				formattext checksumname = player_status 'player%i_status' i = <player>
+				FormatText checksumname = player_status 'player%i_status' i = <player>
 				if find_profile_by_id id = ($<player_status>.character_id)
 					get_musician_profile_struct index = <index>
-					formattext checksumname = default_characterguitartag 'character_%c_player_%p_guitar_tags' c = (<profile_struct>.name) p = <player>
-					if getglobaltags <default_characterguitartag> noassert = 1
+					FormatText checksumname = default_characterguitartag 'character_%c_player_%p_guitar_tags' c = (<profile_struct>.name) p = <player>
+					if GetGlobalTags <default_characterguitartag> noassert = 1
 						change os_selected_outfit_p2 = (<current_outfit>)
 						change os_selected_outfit_old_p2 = (<current_outfit>)
 						change os_selected_style_p2 = (<current_style> - 1)
@@ -390,11 +390,11 @@ script create_select_outfit_menu \{player = 1}
 					endif
 				endif
 			endif
-			createscreenelement \{type = containerelement
+			CreateScreenElement \{type = ContainerElement
 				id = select_outfit_container_p2
 				parent = root_window
 				pos = (810.0, 500.0)}
-			displaysprite \{parent = select_outfit_container_p2
+			displaySprite \{parent = select_outfit_container_p2
 				tex = guitar_select_2p_frame
 				just = [
 					center
@@ -403,7 +403,7 @@ script create_select_outfit_menu \{player = 1}
 				dims = (256.0, 432.0)
 				pos = (0.0, 40.0)
 				z = 0}
-			displaysprite \{parent = select_outfit_container_p2
+			displaySprite \{parent = select_outfit_container_p2
 				tex = guitar_select_2p_wing
 				just = [
 					center
@@ -411,7 +411,7 @@ script create_select_outfit_menu \{player = 1}
 				]
 				pos = (140.0, -24.0)
 				z = 0}
-			displaysprite \{parent = select_outfit_container_p2
+			displaySprite \{parent = select_outfit_container_p2
 				tex = guitar_select_2p_wing
 				just = [
 					center
@@ -420,7 +420,7 @@ script create_select_outfit_menu \{player = 1}
 				pos = (-140.0, -24.0)
 				z = 0
 				flip_v}
-			displaytext \{id = os_select_outfit_text_p2
+			displayText \{id = os_select_outfit_text_p2
 				parent = select_outfit_container_p2
 				text = "SELECT OUTFIT"
 				pos = (0.0, -30.0)
@@ -437,9 +437,9 @@ script create_select_outfit_menu \{player = 1}
 					255
 				]
 				z = 1}
-			displaysprite \{id = os_name_background_p2
+			displaySprite \{id = os_name_background_p2
 				parent = select_outfit_container_p2
-				tex = char_select_frame_bg
+				tex = Char_Select_Frame_BG
 				pos = (0.0, 30.0)
 				dims = (266.0, 128.0)
 				just = [
@@ -453,7 +453,7 @@ script create_select_outfit_menu \{player = 1}
 					255
 				]
 				z = 1}
-			displaysprite \{id = os_style_background_p2
+			displaySprite \{id = os_style_background_p2
 				parent = select_outfit_container_p2
 				tex = white
 				pos = (0.0, 88.0)
@@ -473,11 +473,11 @@ script create_select_outfit_menu \{player = 1}
 			<curr_outfit> = $os_selected_outfit_p2
 			styles = (<character_outfits> [(<curr_outfit> - 1)].styles)
 			curr_style = (<styles> [($os_selected_style_p2)])
-			getuppercasestring (<character_outfits> [(<curr_outfit> - 1)].name)
-			displaytext {
-				id = os_outfit_name_id_p2
+			GetUpperCaseString (<character_outfits> [(<curr_outfit> - 1)].name)
+			displayText {
+				id = os_outfit_name_ID_p2
 				parent = select_outfit_container_p2
-				text = <uppercasestring>
+				text = <UpperCaseString>
 				pos = (0.0, 20.0)
 				scale = 1
 				font = text_a4
@@ -486,15 +486,15 @@ script create_select_outfit_menu \{player = 1}
 				z = 2
 				noshadow
 			}
-			getscreenelementdims \{id = os_outfit_name_id_p2}
+			GetScreenElementDims \{id = os_outfit_name_ID_p2}
 			if (<width> > 260)
-				fit_text_in_rectangle id = os_outfit_name_id_p2 dims = ((255.0, 0.0) + (<height> * (0.0, 1.0))) pos = (0.0, 20.0)
+				fit_text_in_rectangle id = os_outfit_name_ID_p2 dims = ((255.0, 0.0) + (<Height> * (0.0, 1.0))) pos = (0.0, 20.0)
 			endif
-			getuppercasestring <curr_style>
-			displaytext {
-				id = os_outfit_style_id_p2
+			GetUpperCaseString <curr_style>
+			displayText {
+				id = os_outfit_style_ID_p2
 				parent = select_outfit_container_p2
-				text = <uppercasestring>
+				text = <UpperCaseString>
 				pos = (0.0, 83.0)
 				scale = (0.75, 0.5)
 				font = text_a4
@@ -503,13 +503,13 @@ script create_select_outfit_menu \{player = 1}
 				z = 2
 				noshadow
 			}
-			getscreenelementdims \{id = os_outfit_style_id_p2}
+			GetScreenElementDims \{id = os_outfit_style_ID_p2}
 			if (<width> > 256)
-				fit_text_in_rectangle id = os_outfit_style_id_p2 dims = ((255.0, 0.0) + (<height> * (0.0, 1.0))) pos = (0.0, 83.0) start_x_scale = 0.75 start_y_scale = 0.5
+				fit_text_in_rectangle id = os_outfit_style_ID_p2 dims = ((255.0, 0.0) + (<Height> * (0.0, 1.0))) pos = (0.0, 83.0) start_x_scale = 0.75 start_y_scale = 0.5
 			endif
 			get_character_name \{player = 2}
-			formattext checksumname = outfit_2_checksum 'Guitarist_%n_Outfit2_Style1' n = <character_name>
-			getglobaltags <outfit_2_checksum>
+			FormatText checksumname = outfit_2_checksum 'Guitarist_%n_Outfit2_Style1' n = <character_name>
+			GetGlobalTags <outfit_2_checksum>
 			if NOT (<unlocked>)
 				select_outfit_choose \{player = 2}
 			endif
@@ -518,28 +518,28 @@ script create_select_outfit_menu \{player = 1}
 endscript
 
 script scale_outfit_select_menu 
-	if gotparam \{make_big}
-		setscreenelementprops \{id = os_mid_frame_id
+	if GotParam \{make_big}
+		SetScreenElementProps \{id = os_mid_frame_ID
 			dims = (256.0, 300.0)}
-		setscreenelementprops \{id = os_mid_fill_id
+		SetScreenElementProps \{id = os_mid_fill_ID
 			dims = (256.0, 300.0)}
-		setscreenelementprops id = os_bottom_cap_id pos = ($os_menu_start_pos_p1 + (0.0, 332.0)) flip_h
-		setscreenelementprops id = os_bottom_fill_id pos = ($os_menu_start_pos_p1 + (0.0, 332.0)) flip_h
-	elseif gotparam \{make_small}
-		setscreenelementprops \{id = os_mid_frame_id
+		SetScreenElementProps id = os_bottom_cap_ID pos = ($os_menu_start_pos_p1 + (0.0, 332.0)) flip_h
+		SetScreenElementProps id = os_bottom_fill_ID pos = ($os_menu_start_pos_p1 + (0.0, 332.0)) flip_h
+	elseif GotParam \{make_small}
+		SetScreenElementProps \{id = os_mid_frame_ID
 			dims = (256.0, 144.0)}
-		setscreenelementprops \{id = os_mid_fill_id
+		SetScreenElementProps \{id = os_mid_fill_ID
 			dims = (256.0, 144.0)}
-		setscreenelementprops id = os_bottom_cap_id pos = ($os_menu_start_pos_p1 + (0.0, 144.0)) flip_h
-		setscreenelementprops id = os_bottom_fill_id pos = ($os_menu_start_pos_p1 + (0.0, 144.0)) flip_h
+		SetScreenElementProps id = os_bottom_cap_ID pos = ($os_menu_start_pos_p1 + (0.0, 144.0)) flip_h
+		SetScreenElementProps id = os_bottom_fill_ID pos = ($os_menu_start_pos_p1 + (0.0, 144.0)) flip_h
 	endif
 endscript
 
 script destroy_select_outfit_menu \{player = 1}
-	formattext checksumname = scrolling_select_outfit 'scrolling_select_outfit_p%i' i = <player>
-	formattext checksumname = select_outfit_container 'select_outfit_container_p%i' i = <player>
-	formattext checksumname = scrolling_select_style 'scrolling_outfit_style_menu_p%i' i = <player>
-	formattext checksumname = select_style_container 'select_style_container_p%i' i = <player>
+	FormatText checksumname = scrolling_select_outfit 'scrolling_select_outfit_p%i' i = <player>
+	FormatText checksumname = select_outfit_container 'select_outfit_container_p%i' i = <player>
+	FormatText checksumname = scrolling_select_style 'scrolling_outfit_style_menu_p%i' i = <player>
+	FormatText checksumname = select_style_container 'select_style_container_p%i' i = <player>
 	destroy_menu menu_id = <scrolling_select_outfit>
 	destroy_menu menu_id = <select_outfit_container>
 	destroy_menu menu_id = <scrolling_select_style>
@@ -551,14 +551,14 @@ script select_outfit_go_back \{player = 1}
 		network_player_lobby_message \{type = outfit_select
 			action = deselect}
 	endif
-	formattext checksumname = player_status 'player%i_status' i = <player>
-	formattext checksumname = this_outfit 'os_selected_outfit_p%i' i = <player>
-	formattext checksumname = old_outfit 'os_selected_outfit_old_p%i' i = <player>
-	formattext checksumname = old_style 'os_selected_style_old_p%i' i = <player>
+	FormatText checksumname = player_status 'player%i_status' i = <player>
+	FormatText checksumname = this_outfit 'os_selected_outfit_p%i' i = <player>
+	FormatText checksumname = old_outfit 'os_selected_outfit_old_p%i' i = <player>
+	FormatText checksumname = old_style 'os_selected_style_old_p%i' i = <player>
 	if NOT ($<old_outfit> = ($<player_status>.outfit) && ($<old_style> + 1) = ($<player_status>.style))
 		change structurename = <player_status> outfit = $<old_outfit>
 		change structurename = <player_status> style = ($<old_style> + 1)
-		formattext checksumname = change_flag 'generic_select_monitor_p%i_changed' i = <player>
+		FormatText checksumname = change_flag 'generic_select_monitor_p%i_changed' i = <player>
 		change globalname = <change_flag> newvalue = 1
 	endif
 	if (<player> = 1)
@@ -569,8 +569,8 @@ script select_outfit_go_back \{player = 1}
 	if (($is_network_game = 0) || (<player> = 1))
 		if find_profile_by_id id = ($<player_status>.character_id)
 			get_musician_profile_struct index = <index>
-			formattext checksumname = default_characterguitartag 'character_%c_player_%p_guitar_tags' c = (<profile_struct>.name) p = <player>
-			setglobaltags <default_characterguitartag> params = {current_outfit = ($<old_outfit>)}
+			FormatText checksumname = default_characterguitartag 'character_%c_player_%p_guitar_tags' c = (<profile_struct>.name) p = <player>
+			SetGlobalTags <default_characterguitartag> params = {current_outfit = ($<old_outfit>)}
 		endif
 	endif
 	ui_flow_manager_respond_to_action action = go_back player = <player>
@@ -583,8 +583,8 @@ script os_scroll_up_or_down \{player = 1
 		if ($os_made_first_selection_bool_p1 = 0)
 			if ($os_selected_outfit_p1 = 1)
 				get_character_name player = <player>
-				formattext checksumname = outfit_2_checksum 'Guitarist_%n_Outfit2_Style1' n = <character_name>
-				getglobaltags <outfit_2_checksum>
+				FormatText checksumname = outfit_2_checksum 'Guitarist_%n_Outfit2_Style1' n = <character_name>
+				GetGlobalTags <outfit_2_checksum>
 				if (<unlocked>)
 					change \{os_selected_outfit_p1 = 2}
 				endif
@@ -601,37 +601,37 @@ script os_scroll_up_or_down \{player = 1
 					outfit = $os_selected_outfit_p1}
 				change \{structurename = player1_status
 					style = 1}
-				formattext checksumname = change_flag 'generic_select_monitor_p%i_changed' i = <player>
+				FormatText checksumname = change_flag 'generic_select_monitor_p%i_changed' i = <player>
 				change globalname = <change_flag> newvalue = 1
 				get_character_outfits player = <player>
 				<curr_outfit> = ($player1_status.outfit)
 				styles = (<character_outfits> [(<curr_outfit> - 1)].styles)
 				curr_style = (<styles> [0])
-				getuppercasestring (<character_outfits> [(<curr_outfit> - 1)].name)
-				setscreenelementprops id = os_outfit_name_id_p1 text = <uppercasestring>
-				getuppercasestring <curr_style>
-				setscreenelementprops id = os_outfit_style_id_p1 text = <uppercasestring>
+				GetUpperCaseString (<character_outfits> [(<curr_outfit> - 1)].name)
+				SetScreenElementProps id = os_outfit_name_ID_p1 text = <UpperCaseString>
+				GetUpperCaseString <curr_style>
+				SetScreenElementProps id = os_outfit_style_ID_p1 text = <UpperCaseString>
 				if ($current_num_players = 1)
-					setscreenelementprops \{id = os_outfit_name_id_p1
+					SetScreenElementProps \{id = os_outfit_name_ID_p1
 						scale = 1}
-					getscreenelementdims \{id = os_outfit_name_id_p1}
+					GetScreenElementDims \{id = os_outfit_name_ID_p1}
 					if (<width> > 260)
-						fit_text_in_rectangle id = os_outfit_name_id_p1 dims = ((255.0, 0.0) + (<height> * (0.0, 1.0))) pos = (($gs_element_offsets [2]) + (-2.0, 8.0))
+						fit_text_in_rectangle id = os_outfit_name_ID_p1 dims = ((255.0, 0.0) + (<Height> * (0.0, 1.0))) pos = (($gs_element_offsets [2]) + (-2.0, 8.0))
 					endif
-					getscreenelementdims \{id = os_outfit_style_id_p1}
+					GetScreenElementDims \{id = os_outfit_style_ID_p1}
 					if (<width> > 256)
-						fit_text_in_rectangle id = os_outfit_style_id_p1 dims = ((220.0, 0.0) + (<height> * (0.0, 1.0))) pos = ($gs_element_offsets [3]) start_x_scale = 0.55 start_y_scale = 0.55
+						fit_text_in_rectangle id = os_outfit_style_ID_p1 dims = ((220.0, 0.0) + (<Height> * (0.0, 1.0))) pos = ($gs_element_offsets [3]) start_x_scale = 0.55 start_y_scale = 0.55
 					endif
 				else
-					setscreenelementprops \{id = os_outfit_name_id_p1
+					SetScreenElementProps \{id = os_outfit_name_ID_p1
 						scale = 1}
-					getscreenelementdims \{id = os_outfit_name_id_p1}
+					GetScreenElementDims \{id = os_outfit_name_ID_p1}
 					if (<width> > 260)
-						fit_text_in_rectangle id = os_outfit_name_id_p1 dims = ((255.0, 0.0) + (<height> * (0.0, 1.0))) pos = (0.0, 20.0)
+						fit_text_in_rectangle id = os_outfit_name_ID_p1 dims = ((255.0, 0.0) + (<Height> * (0.0, 1.0))) pos = (0.0, 20.0)
 					endif
-					getscreenelementdims \{id = os_outfit_style_id_p1}
+					GetScreenElementDims \{id = os_outfit_style_ID_p1}
 					if (<width> > 256)
-						fit_text_in_rectangle id = os_outfit_style_id_p1 dims = ((255.0, 0.0) + (<height> * (0.0, 1.0))) pos = (0.0, 83.0) start_x_scale = 0.75 start_y_scale = 0.5
+						fit_text_in_rectangle id = os_outfit_style_ID_p1 dims = ((255.0, 0.0) + (<Height> * (0.0, 1.0))) pos = (0.0, 83.0) start_x_scale = 0.75 start_y_scale = 0.5
 					endif
 				endif
 			endif
@@ -640,8 +640,8 @@ script os_scroll_up_or_down \{player = 1
 		if ($os_made_first_selection_bool_p2 = 0)
 			if ($os_selected_outfit_p2 = 1)
 				get_character_name player = <player>
-				formattext checksumname = outfit_2_checksum 'Guitarist_%n_Outfit2_Style1' n = <character_name>
-				getglobaltags <outfit_2_checksum>
+				FormatText checksumname = outfit_2_checksum 'Guitarist_%n_Outfit2_Style1' n = <character_name>
+				GetGlobalTags <outfit_2_checksum>
 				if (<unlocked>)
 					change \{os_selected_outfit_p2 = 2}
 				endif
@@ -653,25 +653,25 @@ script os_scroll_up_or_down \{player = 1
 					outfit = $os_selected_outfit_p2}
 				change \{structurename = player2_status
 					style = 1}
-				formattext checksumname = change_flag 'generic_select_monitor_p%i_changed' i = <player>
+				FormatText checksumname = change_flag 'generic_select_monitor_p%i_changed' i = <player>
 				change globalname = <change_flag> newvalue = 1
 				get_character_outfits player = <player>
 				<curr_outfit> = ($player2_status.outfit)
 				styles = (<character_outfits> [(<curr_outfit> - 1)].styles)
 				curr_style = (<styles> [0])
-				getuppercasestring (<character_outfits> [(<curr_outfit> - 1)].name)
-				setscreenelementprops id = os_outfit_name_id_p2 text = <uppercasestring>
-				getuppercasestring <curr_style>
-				setscreenelementprops id = os_outfit_style_id_p2 text = <uppercasestring>
-				getscreenelementdims \{id = os_outfit_name_id_p2}
-				setscreenelementprops \{id = os_outfit_name_id_p2
+				GetUpperCaseString (<character_outfits> [(<curr_outfit> - 1)].name)
+				SetScreenElementProps id = os_outfit_name_ID_p2 text = <UpperCaseString>
+				GetUpperCaseString <curr_style>
+				SetScreenElementProps id = os_outfit_style_ID_p2 text = <UpperCaseString>
+				GetScreenElementDims \{id = os_outfit_name_ID_p2}
+				SetScreenElementProps \{id = os_outfit_name_ID_p2
 					scale = 1}
 				if (<width> > 260)
-					fit_text_in_rectangle id = os_outfit_name_id_p2 dims = ((255.0, 0.0) + (<height> * (0.0, 1.0))) pos = (0.0, 20.0)
+					fit_text_in_rectangle id = os_outfit_name_ID_p2 dims = ((255.0, 0.0) + (<Height> * (0.0, 1.0))) pos = (0.0, 20.0)
 				endif
-				getscreenelementdims \{id = os_outfit_style_id_p2}
+				GetScreenElementDims \{id = os_outfit_style_ID_p2}
 				if (<width> > 256)
-					fit_text_in_rectangle id = os_outfit_style_id_p2 dims = ((255.0, 0.0) + (<height> * (0.0, 1.0))) pos = (0.0, 83.0) start_x_scale = 0.75 start_y_scale = 0.5
+					fit_text_in_rectangle id = os_outfit_style_ID_p2 dims = ((255.0, 0.0) + (<Height> * (0.0, 1.0))) pos = (0.0, 83.0) start_x_scale = 0.75 start_y_scale = 0.5
 				endif
 			endif
 		endif
@@ -680,7 +680,7 @@ endscript
 
 script select_outfit_choose \{player = 1
 		needs_net_message = 1}
-	soundevent \{event = ui_sfx_select}
+	SoundEvent \{event = ui_sfx_select}
 	if (<player> = 1)
 		if ($os_made_first_selection_bool_p1 = 1)
 			change \{structurename = player1_status
@@ -688,8 +688,8 @@ script select_outfit_choose \{player = 1
 			change structurename = player1_status style = ($os_selected_style_p1 + 1)
 			if find_profile_by_id id = ($player1_status.character_id)
 				get_musician_profile_struct index = <index>
-				formattext checksumname = default_characterguitartag 'character_%c_player_%p_guitar_tags' c = (<profile_struct>.name) p = <player>
-				setglobaltags <default_characterguitartag> params = {current_outfit = ($os_selected_outfit_p1) current_style = ($os_selected_style_p1 + 1)}
+				FormatText checksumname = default_characterguitartag 'character_%c_player_%p_guitar_tags' c = (<profile_struct>.name) p = <player>
+				SetGlobalTags <default_characterguitartag> params = {current_outfit = ($os_selected_outfit_p1) current_style = ($os_selected_style_p1 + 1)}
 			endif
 			change \{os_selected_outfit_old_p1 = $os_selected_outfit_p1}
 			change \{os_selected_style_old_p1 = $os_selected_style_p1}
@@ -716,8 +716,8 @@ script select_outfit_choose \{player = 1
 			if NOT ($is_network_game)
 				if find_profile_by_id id = ($player2_status.character_id)
 					get_musician_profile_struct index = <index>
-					formattext checksumname = default_characterguitartag 'character_%c_player_%p_guitar_tags' c = (<profile_struct>.name) p = <player>
-					setglobaltags <default_characterguitartag> params = {current_outfit = $os_selected_outfit_p2 current_style = ($os_selected_style_p2 + 1)}
+					FormatText checksumname = default_characterguitartag 'character_%c_player_%p_guitar_tags' c = (<profile_struct>.name) p = <player>
+					SetGlobalTags <default_characterguitartag> params = {current_outfit = $os_selected_outfit_p2 current_style = ($os_selected_style_p2 + 1)}
 				endif
 			endif
 			change \{os_selected_outfit_old_p2 = $os_selected_outfit_p2}
@@ -731,7 +731,7 @@ script select_outfit_choose \{player = 1
 endscript
 
 script select_outfit_create_style_menu \{player = 1}
-	formattext checksumname = player_status 'player%i_status' i = <player>
+	FormatText checksumname = player_status 'player%i_status' i = <player>
 	font = text_a4
 	exclusive_dev = $player1_device
 	if (($is_network_game) = 1)
@@ -789,22 +789,22 @@ script select_outfit_create_style_menu \{player = 1}
 			internal_just = [center top]
 		}
 		if ($is_network_game = 1)
-			vmenu_outfit_style_menu_p2 :setprops \{disable_pad_handling}
-			launchevent \{type = unfocus
+			vmenu_outfit_style_menu_p2 :SetProps \{disable_pad_handling}
+			LaunchEvent \{type = unfocus
 				target = vmenu_outfit_style_menu_p2}
 		endif
 		vparent = vmenu_outfit_style_menu_p2
 	endif
 	if (<player> = 1)
-		launchevent \{type = unfocus
+		LaunchEvent \{type = unfocus
 			target = scrolling_select_outfit_p1}
 	else
-		launchevent \{type = unfocus
+		LaunchEvent \{type = unfocus
 			target = scrolling_select_outfit_p2}
 	endif
 	if ($current_num_players = 1)
-		createscreenelement {
-			type = containerelement
+		CreateScreenElement {
+			type = ContainerElement
 			id = select_style_container
 			parent = root_window
 			pos = (<p1_menu_pos> + <menu_offset>)
@@ -812,13 +812,13 @@ script select_outfit_create_style_menu \{player = 1}
 		}
 		scale_outfit_select_menu \{make_big}
 		<brown_window_color> = [120 60 10 255]
-		setscreenelementprops {
+		SetScreenElementProps {
 			id = os_name_background
 			texture = store_frame_bottom_bg
 			dims = (242.0, 128.0)
 			rgba = <brown_window_color>
 		}
-		setscreenelementprops \{id = os_outfit_name_id_p1
+		SetScreenElementProps \{id = os_outfit_name_ID_p1
 			rgba = [
 				250
 				250
@@ -826,11 +826,11 @@ script select_outfit_create_style_menu \{player = 1}
 				255
 			]
 			scale = 0.8}
-		getscreenelementdims \{id = os_outfit_name_id_p1}
+		GetScreenElementDims \{id = os_outfit_name_ID_p1}
 		if (<width> > 240)
-			fit_text_in_rectangle id = os_outfit_name_id_p1 dims = ((215.0, 0.0) + (<height> * (0.0, 1.0))) pos = (($gs_element_offsets [2]) + (-2.0, 8.0)) start_x_scale = 0.8 start_y_scale = 0.8
+			fit_text_in_rectangle id = os_outfit_name_ID_p1 dims = ((215.0, 0.0) + (<Height> * (0.0, 1.0))) pos = (($gs_element_offsets [2]) + (-2.0, 8.0)) start_x_scale = 0.8 start_y_scale = 0.8
 		endif
-		displaysprite \{id = os_bookend1_id
+		displaySprite \{id = os_bookend1_ID
 			parent = select_style_container
 			tex = character_hub_hilite_bookend
 			dims = (24.0, 24.0)
@@ -846,7 +846,7 @@ script select_outfit_create_style_menu \{player = 1}
 			]
 			pos = (-64.0, 11.0)
 			z = 4}
-		displaysprite \{id = os_bookend2_id
+		displaySprite \{id = os_bookend2_ID
 			parent = select_style_container
 			tex = character_hub_hilite_bookend
 			dims = (24.0, 24.0)
@@ -862,7 +862,7 @@ script select_outfit_create_style_menu \{player = 1}
 			]
 			pos = (238.0, 11.0)
 			z = 4}
-		displaysprite \{id = os_whitetexhighlight_id
+		displaySprite \{id = os_whiteTexHighlight_ID
 			parent = select_style_container
 			tex = white
 			just = [
@@ -893,32 +893,32 @@ script select_outfit_create_style_menu \{player = 1}
 		get_character_outfits player = <player>
 		outfit = ($player1_status.outfit)
 		styles = (<character_outfits> [(<outfit> - 1)].styles)
-		getarraysize <styles>
+		GetArraySize <styles>
 		<num_in_list> = 0
 		<i> = 0
 		begin
 		<add_style> = 1
 		if NOT (<i> = 0)
 			get_character_name player = <player>
-			formattext checksumname = outfit_style_cs 'Guitarist_%n_Outfit%o_Style%s' n = <character_name> o = <outfit> s = (<i> + 1)
-			getglobaltags <outfit_style_cs>
+			FormatText checksumname = outfit_style_cs 'Guitarist_%n_Outfit%o_Style%s' n = <character_name> o = <outfit> s = (<i> + 1)
+			GetGlobalTags <outfit_style_cs>
 			if (<unlocked> = 0)
 				<add_style> = 0
 			endif
 		endif
 		if (<add_style>)
 			<num_in_list> = (<num_in_list> + 1)
-			formattext checksumname = os_style_menu_item_id 'os_style_menu_item_%n' n = <i>
-			getuppercasestring (<styles> [<i>])
-			createscreenelement {
+			FormatText checksumname = os_style_menu_item_id 'os_style_menu_item_%n' n = <i>
+			GetUpperCaseString (<styles> [<i>])
+			CreateScreenElement {
 				id = <os_style_menu_item_id>
-				type = textelement
+				type = TextElement
 				parent = <vparent>
 				font = text_a4
 				scale = (0.7, 0.7)
 				rgba = ($menu_unfocus_color)
 				just = [center top]
-				text = <uppercasestring>
+				text = <UpperCaseString>
 				event_handlers = [
 					{focus retail_menu_focus}
 					{focus select_outfit_style_highlight params = {player = <player>
@@ -929,14 +929,14 @@ script select_outfit_create_style_menu \{player = 1}
 					{pad_choose select_outfit_style_choose params = {player = <player>}}
 				]
 			}
-			getscreenelementdims id = <id>
+			GetScreenElementDims id = <id>
 			if (<width> > 180)
-				setscreenelementprops id = <id> scale = 1
+				SetScreenElementProps id = <id> scale = 1
 				fit_text_in_rectangle id = <id> dims = ((180.0, 34.0))
 			endif
 		else
-			createscreenelement {
-				type = textelement
+			CreateScreenElement {
+				type = TextElement
 				parent = <vparent>
 				font = text_a4
 				scale = (0.7, 0.7)
@@ -959,67 +959,67 @@ script select_outfit_create_style_menu \{player = 1}
 		endif
 	else
 		if (<player> = 1)
-			launchevent \{type = unfocus
+			LaunchEvent \{type = unfocus
 				target = scrolling_select_outfit_p1}
-			launchevent type = focus target = <vparent>
-			setscreenelementprops \{id = os_select_outfit_text_p1
+			LaunchEvent type = focus target = <vparent>
+			SetScreenElementProps \{id = os_select_outfit_text_p1
 				text = "SELECT STYLE"}
-			setscreenelementprops \{id = os_name_background_p1
+			SetScreenElementProps \{id = os_name_background_p1
 				pos = (0.0, 58.0)}
-			setscreenelementprops \{id = os_style_background_p1
+			SetScreenElementProps \{id = os_style_background_p1
 				pos = (0.0, 0.0)}
 			get_character_outfits player = <player>
 			<curr_outfit> = ($player1_status.outfit)
 			styles = (<character_outfits> [(<curr_outfit> - 1)].styles)
 			curr_style = (<styles> [(($player1_status.style) - 1)])
-			getuppercasestring (<character_outfits> [(<curr_outfit> - 1)].name)
-			setscreenelementprops {
-				id = os_outfit_name_id_p1
-				text = <uppercasestring>
+			GetUpperCaseString (<character_outfits> [(<curr_outfit> - 1)].name)
+			SetScreenElementProps {
+				id = os_outfit_name_ID_p1
+				text = <UpperCaseString>
 				scale = (0.75, 0.5)
 				pos = (0.0, -6.0)
 				rgba = [250 250 200 255]
 			}
-			getscreenelementdims \{id = os_outfit_name_id_p1}
+			GetScreenElementDims \{id = os_outfit_name_ID_p1}
 			if (<width> > 260)
-				fit_text_in_rectangle id = os_outfit_name_id_p1 dims = ((255.0, 0.0) + ((<height>) * (0.0, 1.0))) pos = (0.0, -6.0) start_x_scale = 0.75 start_y_scale = 0.5
+				fit_text_in_rectangle id = os_outfit_name_ID_p1 dims = ((255.0, 0.0) + ((<Height>) * (0.0, 1.0))) pos = (0.0, -6.0) start_x_scale = 0.75 start_y_scale = 0.5
 			endif
-			getuppercasestring <curr_style>
-			setscreenelementprops {
-				id = os_outfit_style_id_p1
-				text = <uppercasestring>
+			GetUpperCaseString <curr_style>
+			SetScreenElementProps {
+				id = os_outfit_style_ID_p1
+				text = <UpperCaseString>
 				scale = 1
 				pos = (0.0, 48.0)
 				rgba = [80 0 10 255]
 			}
-			getscreenelementdims \{id = os_outfit_style_id_p1}
+			GetScreenElementDims \{id = os_outfit_style_ID_p1}
 			if (<width> > 260)
-				fit_text_in_rectangle id = os_outfit_style_id_p1 dims = ((255.0, 0.0) + ((<height>) * (0.0, 1.0))) pos = (0.0, 48.0)
+				fit_text_in_rectangle id = os_outfit_style_ID_p1 dims = ((255.0, 0.0) + ((<Height>) * (0.0, 1.0))) pos = (0.0, 48.0)
 			endif
-			getarraysize <styles>
+			GetArraySize <styles>
 			<num_in_list> = 0
 			<i> = 0
 			begin
 			<add_style> = 1
 			if NOT (<i> = 0)
 				get_character_name player = <player>
-				formattext checksumname = outfit_style_cs 'Guitarist_%n_Outfit%o_Style%s' n = <character_name> o = <curr_outfit> s = (<i> + 1)
-				getglobaltags <outfit_style_cs>
+				FormatText checksumname = outfit_style_cs 'Guitarist_%n_Outfit%o_Style%s' n = <character_name> o = <curr_outfit> s = (<i> + 1)
+				GetGlobalTags <outfit_style_cs>
 				if (<unlocked> = 0)
 					<add_style> = 0
 				endif
 			endif
 			if (<add_style>)
 				<num_in_list> = (<num_in_list> + 1)
-				getuppercasestring (<styles> [<i>])
-				createscreenelement {
-					type = textelement
+				GetUpperCaseString (<styles> [<i>])
+				CreateScreenElement {
+					type = TextElement
 					parent = <vparent>
 					font = text_a4
 					scale = (0.7, 0.7)
 					rgba = ($menu_unfocus_color)
 					just = [center top]
-					text = <uppercasestring>
+					text = <UpperCaseString>
 					event_handlers = [
 						{focus retail_menu_focus}
 						{focus select_outfit_style_highlight params = {player = <player>
@@ -1035,9 +1035,9 @@ script select_outfit_create_style_menu \{player = 1}
 					exclusive_device = <exclusive_dev>
 					hide
 				}
-				getscreenelementdims id = <id>
+				GetScreenElementDims id = <id>
 				if (<width> > 180)
-					fit_text_in_rectangle id = <id> dims = (0.7 * ((160.0, 0.0) + (<height> * (0.0, 1.0)))) pos = (<p1_menu_pos> + <menu_offset>)
+					fit_text_in_rectangle id = <id> dims = (0.7 * ((160.0, 0.0) + (<Height> * (0.0, 1.0)))) pos = (<p1_menu_pos> + <menu_offset>)
 				endif
 			endif
 			<i> = (<i> + 1)
@@ -1054,69 +1054,69 @@ script select_outfit_create_style_menu \{player = 1}
 				}
 			endif
 		else
-			launchevent \{type = unfocus
+			LaunchEvent \{type = unfocus
 				target = scrolling_select_outfit_p2}
 			if ($is_network_game = 0)
-				launchevent type = focus target = <vparent>
+				LaunchEvent type = focus target = <vparent>
 			endif
-			setscreenelementprops \{id = os_select_outfit_text_p2
+			SetScreenElementProps \{id = os_select_outfit_text_p2
 				text = "SELECT STYLE"}
-			setscreenelementprops \{id = os_name_background_p2
+			SetScreenElementProps \{id = os_name_background_p2
 				pos = (0.0, 58.0)}
-			setscreenelementprops \{id = os_style_background_p2
+			SetScreenElementProps \{id = os_style_background_p2
 				pos = (0.0, 0.0)}
 			get_character_outfits player = <player>
 			<curr_outfit> = ($player2_status.outfit)
 			styles = (<character_outfits> [(<curr_outfit> - 1)].styles)
 			curr_style = (<styles> [(($player2_status.style) - 1)])
-			getuppercasestring (<character_outfits> [(<curr_outfit> - 1)].name)
-			setscreenelementprops {
-				id = os_outfit_name_id_p2
-				text = <uppercasestring>
+			GetUpperCaseString (<character_outfits> [(<curr_outfit> - 1)].name)
+			SetScreenElementProps {
+				id = os_outfit_name_ID_p2
+				text = <UpperCaseString>
 				scale = (0.75, 0.5)
 				pos = (0.0, -6.0)
 				rgba = [250 250 200 255]
 			}
-			getscreenelementdims \{id = os_outfit_name_id_p2}
+			GetScreenElementDims \{id = os_outfit_name_ID_p2}
 			if (<width> > 260)
-				fit_text_in_rectangle id = os_outfit_name_id_p2 dims = ((255.0, 0.0) + ((<height>) * (0.0, 1.0))) pos = (0.0, -6.0) start_x_scale = 0.75 start_y_scale = 0.5
+				fit_text_in_rectangle id = os_outfit_name_ID_p2 dims = ((255.0, 0.0) + ((<Height>) * (0.0, 1.0))) pos = (0.0, -6.0) start_x_scale = 0.75 start_y_scale = 0.5
 			endif
-			getuppercasestring <curr_style>
-			setscreenelementprops {
-				id = os_outfit_style_id_p2
-				text = <uppercasestring>
+			GetUpperCaseString <curr_style>
+			SetScreenElementProps {
+				id = os_outfit_style_ID_p2
+				text = <UpperCaseString>
 				scale = 1
 				pos = (0.0, 48.0)
 				rgba = [80 0 10 255]
 			}
-			getscreenelementdims \{id = os_outfit_style_id_p2}
+			GetScreenElementDims \{id = os_outfit_style_ID_p2}
 			if (<width> > 260)
-				fit_text_in_rectangle id = os_outfit_style_id_p2 dims = ((255.0, 0.0) + ((<height>) * (0.0, 1.0))) pos = (0.0, 48.0)
+				fit_text_in_rectangle id = os_outfit_style_ID_p2 dims = ((255.0, 0.0) + ((<Height>) * (0.0, 1.0))) pos = (0.0, 48.0)
 			endif
-			getarraysize <styles>
+			GetArraySize <styles>
 			<num_in_list> = 0
 			<i> = 0
 			begin
 			<add_style> = 1
 			if NOT (<i> = 0)
 				get_character_name player = <player>
-				formattext checksumname = outfit_style_cs 'Guitarist_%n_Outfit%o_Style%s' n = <character_name> o = <curr_outfit> s = (<i> + 1)
-				getglobaltags <outfit_style_cs>
+				FormatText checksumname = outfit_style_cs 'Guitarist_%n_Outfit%o_Style%s' n = <character_name> o = <curr_outfit> s = (<i> + 1)
+				GetGlobalTags <outfit_style_cs>
 				if (<unlocked> = 0)
 					<add_style> = 0
 				endif
 			endif
 			if (<add_style>)
 				<num_in_list> = (<num_in_list> + 1)
-				getuppercasestring (<styles> [<i>])
-				createscreenelement {
-					type = textelement
+				GetUpperCaseString (<styles> [<i>])
+				CreateScreenElement {
+					type = TextElement
 					parent = <vparent>
 					font = text_a4
 					scale = (0.7, 0.7)
 					rgba = ($menu_unfocus_color)
 					just = [center top]
-					text = <uppercasestring>
+					text = <UpperCaseString>
 					event_handlers = [
 						{focus retail_menu_focus}
 						{focus select_outfit_style_highlight params = {player = <player>
@@ -1132,9 +1132,9 @@ script select_outfit_create_style_menu \{player = 1}
 					exclusive_device = <exclusive_dev>
 					hide
 				}
-				getscreenelementdims id = <id>
+				GetScreenElementDims id = <id>
 				if (<width> > 180)
-					fit_text_in_rectangle id = <id> dims = (0.7 * ((160.0, 0.0) + (<height> * (0.0, 1.0)))) pos = (<p2_menu_pos> + <menu_offset>)
+					fit_text_in_rectangle id = <id> dims = (0.7 * ((160.0, 0.0) + (<Height> * (0.0, 1.0)))) pos = (<p2_menu_pos> + <menu_offset>)
 				endif
 			endif
 			<i> = (<i> + 1)
@@ -1161,27 +1161,27 @@ script net_destroy_select_style_menu \{player = 1}
 endscript
 
 script destroy_select_style_menu \{player = 1}
-	soundevent \{event = generic_menu_back_sfx}
+	SoundEvent \{event = Generic_Menu_Back_SFX}
 	if ($current_num_players = 1)
-		launchevent \{type = focus
+		LaunchEvent \{type = focus
 			target = scrolling_select_outfit_p1}
-		launchevent \{type = unfocus
+		LaunchEvent \{type = unfocus
 			target = scrolling_outfit_style_menu_p1}
 		destroy_menu \{menu_id = scrolling_outfit_style_menu_p1}
 		change \{os_made_first_selection_bool_p1 = 0}
 		destroy_menu \{menu_id = select_style_container}
-		formattext checksumname = old_outfit 'os_selected_outfit_old_p%i' i = <player>
-		formattext checksumname = old_style 'os_selected_style_old_p%i' i = <player>
+		FormatText checksumname = old_outfit 'os_selected_outfit_old_p%i' i = <player>
+		FormatText checksumname = old_style 'os_selected_style_old_p%i' i = <player>
 		if NOT ($<old_outfit> = ($player1_status.outfit) && ($<old_style> + 1) = ($player1_status.style))
 			change structurename = player1_status outfit = $<old_outfit>
 			change structurename = player1_status style = ($<old_style> + 1)
-			formattext checksumname = change_flag 'generic_select_monitor_p%i_changed' i = <player>
+			FormatText checksumname = change_flag 'generic_select_monitor_p%i_changed' i = <player>
 			change globalname = <change_flag> newvalue = 1
 		endif
 		change os_selected_outfit_p1 = $<old_outfit>
 		scale_outfit_select_menu \{make_small}
-		setscreenelementprops \{id = os_name_background
-			texture = char_select_frame_bg
+		SetScreenElementProps \{id = os_name_background
+			texture = Char_Select_Frame_BG
 			dims = (266.0, 128.0)
 			rgba = [
 				250
@@ -1189,7 +1189,7 @@ script destroy_select_style_menu \{player = 1}
 				200
 				255
 			]}
-		setscreenelementprops \{id = os_outfit_name_id_p1
+		SetScreenElementProps \{id = os_outfit_name_ID_p1
 			rgba = [
 				160
 				80
@@ -1200,38 +1200,38 @@ script destroy_select_style_menu \{player = 1}
 		<curr_outfit> = ($player1_status.outfit)
 		styles = (<character_outfits> [(<curr_outfit> - 1)].styles)
 		curr_style = (<styles> [(($player1_status.style) - 1)])
-		getuppercasestring (<character_outfits> [(<curr_outfit> - 1)].name)
-		setscreenelementprops id = os_outfit_name_id_p1 text = <uppercasestring>
-		getuppercasestring <curr_style>
-		setscreenelementprops id = os_outfit_style_id_p1 text = <uppercasestring>
-		setscreenelementprops \{id = os_outfit_name_id_p1
+		GetUpperCaseString (<character_outfits> [(<curr_outfit> - 1)].name)
+		SetScreenElementProps id = os_outfit_name_ID_p1 text = <UpperCaseString>
+		GetUpperCaseString <curr_style>
+		SetScreenElementProps id = os_outfit_style_ID_p1 text = <UpperCaseString>
+		SetScreenElementProps \{id = os_outfit_name_ID_p1
 			scale = 1}
-		getscreenelementdims \{id = os_outfit_name_id_p1}
+		GetScreenElementDims \{id = os_outfit_name_ID_p1}
 		if (<width> > 260)
-			fit_text_in_rectangle id = os_outfit_name_id_p1 dims = ((255.0, 0.0) + (<height> * (0.0, 1.0))) pos = (($gs_element_offsets [2]) + (-2.0, 8.0))
+			fit_text_in_rectangle id = os_outfit_name_ID_p1 dims = ((255.0, 0.0) + (<Height> * (0.0, 1.0))) pos = (($gs_element_offsets [2]) + (-2.0, 8.0))
 		endif
 		get_character_name \{player = 1}
-		formattext checksumname = outfit_2_checksum 'Guitarist_%n_Outfit2_Style1' n = <character_name>
-		getglobaltags <outfit_2_checksum>
+		FormatText checksumname = outfit_2_checksum 'Guitarist_%n_Outfit2_Style1' n = <character_name>
+		GetGlobalTags <outfit_2_checksum>
 		if NOT (<unlocked>)
 			select_outfit_go_back \{player = 1}
 		endif
 	else
 		if (<player> = 1)
-			setscreenelementprops \{id = os_select_outfit_text_p1
+			SetScreenElementProps \{id = os_select_outfit_text_p1
 				text = "SELECT OUTFIT"}
-			launchevent \{type = focus
+			LaunchEvent \{type = focus
 				target = scrolling_select_outfit_p1}
-			launchevent \{type = unfocus
+			LaunchEvent \{type = unfocus
 				target = scrolling_outfit_style_menu_p1}
 			destroy_menu \{menu_id = scrolling_outfit_style_menu_p1}
 			change \{os_made_first_selection_bool_p1 = 0}
-			formattext checksumname = old_outfit 'os_selected_outfit_old_p%i' i = <player>
-			formattext checksumname = old_style 'os_selected_style_old_p%i' i = <player>
+			FormatText checksumname = old_outfit 'os_selected_outfit_old_p%i' i = <player>
+			FormatText checksumname = old_style 'os_selected_style_old_p%i' i = <player>
 			if NOT ($<old_outfit> = ($player1_status.outfit) && ($<old_style> + 1) = ($player1_status.style))
 				change structurename = player1_status outfit = $<old_outfit>
 				change structurename = player1_status style = ($<old_style> + 1)
-				formattext checksumname = change_flag 'generic_select_monitor_p%i_changed' i = <player>
+				FormatText checksumname = change_flag 'generic_select_monitor_p%i_changed' i = <player>
 				change globalname = <change_flag> newvalue = 1
 			endif
 			change os_selected_outfit_p1 = $<old_outfit>
@@ -1239,55 +1239,55 @@ script destroy_select_style_menu \{player = 1}
 			<curr_outfit> = ($player1_status.outfit)
 			styles = (<character_outfits> [(<curr_outfit> - 1)].styles)
 			curr_style = (<styles> [(($player1_status.style) - 1)])
-			setscreenelementprops \{id = os_name_background_p1
+			SetScreenElementProps \{id = os_name_background_p1
 				pos = (0.0, 30.0)}
-			setscreenelementprops \{id = os_style_background_p1
+			SetScreenElementProps \{id = os_style_background_p1
 				pos = (0.0, 88.0)}
-			getuppercasestring (<character_outfits> [(<curr_outfit> - 1)].name)
-			setscreenelementprops {
-				id = os_outfit_name_id_p1
-				text = <uppercasestring>
+			GetUpperCaseString (<character_outfits> [(<curr_outfit> - 1)].name)
+			SetScreenElementProps {
+				id = os_outfit_name_ID_p1
+				text = <UpperCaseString>
 				scale = 1
 				pos = (0.0, 20.0)
 				rgba = [80 0 10 255]
 			}
-			getscreenelementdims \{id = os_outfit_name_id_p1}
+			GetScreenElementDims \{id = os_outfit_name_ID_p1}
 			if (<width> > 260)
-				fit_text_in_rectangle id = os_outfit_name_id_p1 dims = ((255.0, 0.0) + ((<height>) * (0.0, 1.0))) pos = (0.0, 20.0)
+				fit_text_in_rectangle id = os_outfit_name_ID_p1 dims = ((255.0, 0.0) + ((<Height>) * (0.0, 1.0))) pos = (0.0, 20.0)
 			endif
-			getuppercasestring <curr_style>
-			setscreenelementprops {
-				id = os_outfit_style_id_p1
-				text = <uppercasestring>
+			GetUpperCaseString <curr_style>
+			SetScreenElementProps {
+				id = os_outfit_style_ID_p1
+				text = <UpperCaseString>
 				scale = (0.75, 0.5)
 				pos = (0.0, 83.0)
 				rgba = [250 250 200 255]
 			}
-			getscreenelementdims \{id = os_outfit_style_id_p1}
+			GetScreenElementDims \{id = os_outfit_style_ID_p1}
 			if (<width> > 260)
-				fit_text_in_rectangle id = os_outfit_style_id_p1 dims = ((255.0, 0.0) + ((<height>) * (0.0, 1.0))) pos = (0.0, 83.0) start_x_scale = 0.75 start_y_scale = 0.5
+				fit_text_in_rectangle id = os_outfit_style_ID_p1 dims = ((255.0, 0.0) + ((<Height>) * (0.0, 1.0))) pos = (0.0, 83.0) start_x_scale = 0.75 start_y_scale = 0.5
 			endif
 			get_character_name \{player = 1}
-			formattext checksumname = outfit_2_checksum 'Guitarist_%n_Outfit2_Style1' n = <character_name>
-			getglobaltags <outfit_2_checksum>
+			FormatText checksumname = outfit_2_checksum 'Guitarist_%n_Outfit2_Style1' n = <character_name>
+			GetGlobalTags <outfit_2_checksum>
 			if NOT (<unlocked>)
 				select_outfit_go_back \{player = 1}
 			endif
 		else
-			setscreenelementprops \{id = os_select_outfit_text_p2
+			SetScreenElementProps \{id = os_select_outfit_text_p2
 				text = "SELECT OUTFIT"}
-			launchevent \{type = focus
+			LaunchEvent \{type = focus
 				target = scrolling_select_outfit_p2}
-			launchevent \{type = unfocus
+			LaunchEvent \{type = unfocus
 				target = scrolling_outfit_style_menu_p2}
 			destroy_menu \{menu_id = scrolling_outfit_style_menu_p2}
 			change \{os_made_first_selection_bool_p2 = 0}
-			formattext checksumname = old_outfit 'os_selected_outfit_old_p%i' i = <player>
-			formattext checksumname = old_style 'os_selected_style_old_p%i' i = <player>
+			FormatText checksumname = old_outfit 'os_selected_outfit_old_p%i' i = <player>
+			FormatText checksumname = old_style 'os_selected_style_old_p%i' i = <player>
 			if NOT ($<old_outfit> = ($player2_status.outfit) && ($<old_style> + 1) = ($player2_status.style))
 				change structurename = player2_status outfit = $<old_outfit>
 				change structurename = player2_status style = ($<old_style> + 1)
-				formattext checksumname = change_flag 'generic_select_monitor_p%i_changed' i = <player>
+				FormatText checksumname = change_flag 'generic_select_monitor_p%i_changed' i = <player>
 				change globalname = <change_flag> newvalue = 1
 			endif
 			change os_selected_outfit_p2 = $<old_outfit>
@@ -1295,37 +1295,37 @@ script destroy_select_style_menu \{player = 1}
 			<curr_outfit> = ($player2_status.outfit)
 			styles = (<character_outfits> [(<curr_outfit> - 1)].styles)
 			curr_style = (<styles> [(($player2_status.style) - 1)])
-			setscreenelementprops \{id = os_name_background_p2
+			SetScreenElementProps \{id = os_name_background_p2
 				pos = (0.0, 30.0)}
-			setscreenelementprops \{id = os_style_background_p2
+			SetScreenElementProps \{id = os_style_background_p2
 				pos = (0.0, 88.0)}
-			getuppercasestring (<character_outfits> [(<curr_outfit> - 1)].name)
-			setscreenelementprops {
-				id = os_outfit_name_id_p2
-				text = <uppercasestring>
+			GetUpperCaseString (<character_outfits> [(<curr_outfit> - 1)].name)
+			SetScreenElementProps {
+				id = os_outfit_name_ID_p2
+				text = <UpperCaseString>
 				scale = 1
 				pos = (0.0, 20.0)
 				rgba = [80 0 10 255]
 			}
-			getscreenelementdims \{id = os_outfit_name_id_p2}
+			GetScreenElementDims \{id = os_outfit_name_ID_p2}
 			if (<width> > 260)
-				fit_text_in_rectangle id = os_outfit_name_id_p2 dims = ((255.0, 0.0) + ((<height>) * (0.0, 1.0))) pos = (0.0, 20.0)
+				fit_text_in_rectangle id = os_outfit_name_ID_p2 dims = ((255.0, 0.0) + ((<Height>) * (0.0, 1.0))) pos = (0.0, 20.0)
 			endif
-			getuppercasestring <curr_style>
-			setscreenelementprops {
-				id = os_outfit_style_id_p2
-				text = <uppercasestring>
+			GetUpperCaseString <curr_style>
+			SetScreenElementProps {
+				id = os_outfit_style_ID_p2
+				text = <UpperCaseString>
 				scale = (0.75, 0.5)
 				pos = (0.0, 83.0)
 				rgba = [250 250 200 255]
 			}
-			getscreenelementdims \{id = os_outfit_style_id_p2}
+			GetScreenElementDims \{id = os_outfit_style_ID_p2}
 			if (<width> > 260)
-				fit_text_in_rectangle id = os_outfit_style_id_p2 dims = ((255.0, 0.0) + ((<height>) * (0.0, 1.0))) pos = (0.0, 83.0) start_x_scale = 0.75 start_y_scale = 0.5
+				fit_text_in_rectangle id = os_outfit_style_ID_p2 dims = ((255.0, 0.0) + ((<Height>) * (0.0, 1.0))) pos = (0.0, 83.0) start_x_scale = 0.75 start_y_scale = 0.5
 			endif
 			get_character_name \{player = 2}
-			formattext checksumname = outfit_2_checksum 'Guitarist_%n_Outfit2_Style1' n = <character_name>
-			getglobaltags <outfit_2_checksum>
+			FormatText checksumname = outfit_2_checksum 'Guitarist_%n_Outfit2_Style1' n = <character_name>
+			GetGlobalTags <outfit_2_checksum>
 			if NOT (<unlocked>)
 				select_outfit_go_back \{player = 2}
 			endif
@@ -1341,11 +1341,11 @@ endscript
 script select_outfit_style_highlight \{player = 1
 		index = 0
 		needs_net_message = 1}
-	formattext checksumname = player_status 'player%i_status' i = <player>
-	formattext checksumname = selected_outfit 'os_selected_outfit_p%i' i = <player>
+	FormatText checksumname = player_status 'player%i_status' i = <player>
+	FormatText checksumname = selected_outfit 'os_selected_outfit_p%i' i = <player>
 	if NOT ($<selected_outfit> = ($<player_status>.outfit) && (<index> + 1) = ($<player_status>.style))
 		change structurename = <player_status> style = (<index> + 1)
-		formattext checksumname = change_flag 'generic_select_monitor_p%i_changed' i = <player>
+		FormatText checksumname = change_flag 'generic_select_monitor_p%i_changed' i = <player>
 		change globalname = <change_flag> newvalue = 1
 	endif
 	if (<player> = 1)
@@ -1362,29 +1362,29 @@ script select_outfit_style_highlight \{player = 1
 	styles = (<character_outfits> [(<curr_outfit> - 1)].styles)
 	curr_style = (<styles> [(<index>)])
 	if ($current_num_players = 1)
-		getuppercasestring (<character_outfits> [(<curr_outfit> - 1)].name)
-		setscreenelementprops id = os_outfit_name_id_p1 text = <uppercasestring>
-		getuppercasestring <curr_style>
-		setscreenelementprops id = os_outfit_style_id_p1 text = <uppercasestring>
+		GetUpperCaseString (<character_outfits> [(<curr_outfit> - 1)].name)
+		SetScreenElementProps id = os_outfit_name_ID_p1 text = <UpperCaseString>
+		GetUpperCaseString <curr_style>
+		SetScreenElementProps id = os_outfit_style_ID_p1 text = <UpperCaseString>
 		<offset> = (<index> * (0.0, 33.5))
 		<l_pos> = ((-64.0, 11.0) + <offset>)
 		<r_pos> = ((238.0, 11.0) + <offset>)
 		<hl_pos> = ((-47.0, 8.0) + <offset>)
-		setscreenelementprops id = os_bookend1_id pos = <l_pos>
-		setscreenelementprops id = os_bookend2_id pos = <r_pos>
-		setscreenelementprops id = os_whitetexhighlight_id pos = <hl_pos>
+		SetScreenElementProps id = os_bookend1_ID pos = <l_pos>
+		SetScreenElementProps id = os_bookend2_ID pos = <r_pos>
+		SetScreenElementProps id = os_whiteTexHighlight_ID pos = <hl_pos>
 	else
 		if (<player> = 1)
-			getuppercasestring <curr_style>
-			setscreenelementprops {
-				id = os_outfit_style_id_p1
-				text = <uppercasestring>
+			GetUpperCaseString <curr_style>
+			SetScreenElementProps {
+				id = os_outfit_style_ID_p1
+				text = <UpperCaseString>
 			}
-			setscreenelementprops \{id = os_outfit_style_id_p1
+			SetScreenElementProps \{id = os_outfit_style_ID_p1
 				scale = 1}
-			getscreenelementdims \{id = os_outfit_style_id_p1}
+			GetScreenElementDims \{id = os_outfit_style_ID_p1}
 			if (<width> > 260)
-				fit_text_in_rectangle id = os_outfit_style_id_p1 dims = ((255.0, 0.0) + ((<height>) * (0.0, 1.0))) pos = (0.0, 48.0)
+				fit_text_in_rectangle id = os_outfit_style_ID_p1 dims = ((255.0, 0.0) + ((<Height>) * (0.0, 1.0))) pos = (0.0, 48.0)
 			endif
 			if (($is_network_game) && (<needs_net_message> = 1))
 				network_player_lobby_message \{type = style_select
@@ -1392,16 +1392,16 @@ script select_outfit_style_highlight \{player = 1
 					value1 = $os_selected_style_p1}
 			endif
 		else
-			getuppercasestring <curr_style>
-			setscreenelementprops {
-				id = os_outfit_style_id_p2
-				text = <uppercasestring>
+			GetUpperCaseString <curr_style>
+			SetScreenElementProps {
+				id = os_outfit_style_ID_p2
+				text = <UpperCaseString>
 			}
-			setscreenelementprops \{id = os_outfit_style_id_p2
+			SetScreenElementProps \{id = os_outfit_style_ID_p2
 				scale = 1}
-			getscreenelementdims \{id = os_outfit_style_id_p2}
+			GetScreenElementDims \{id = os_outfit_style_ID_p2}
 			if (<width> > 260)
-				fit_text_in_rectangle id = os_outfit_style_id_p2 dims = ((255.0, 0.0) + ((<height>) * (0.0, 1.0))) pos = (0.0, 48.0)
+				fit_text_in_rectangle id = os_outfit_style_ID_p2 dims = ((255.0, 0.0) + ((<Height>) * (0.0, 1.0))) pos = (0.0, 48.0)
 			endif
 		endif
 	endif

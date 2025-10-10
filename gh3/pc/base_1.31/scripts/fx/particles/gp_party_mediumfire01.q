@@ -1,60 +1,60 @@
-gp_party_mediumfire01 = {
+GP_Party_MediumFire01 = {
 	pos = (-4.3136373, -1.878418, 8.87644)
 	angles = (0.0, 0.0, 0.0)
-	class = particleobject
-	particletype = flexparticle
+	Class = ParticleObject
+	ParticleType = FlexParticle
 	type = flat
 	active
-	createdatstart
-	emitrangedims = (0.5, 0.0, 0.5)
-	docircularemit
-	emit_target = (0.0, 1.0, 0.0)
-	emitangle = (0.0, 0.0, 0.0)
+	CreatedAtStart
+	EmitRangeDims = (0.5, 0.0, 0.5)
+	DoCircularEmit
+	emit_Target = (0.0, 1.0, 0.0)
+	EmitAngle = (0.0, 0.0, 0.0)
 	force = (0.0, 3.0, 0.0)
-	windcoeff = 0.0
-	localwindcoeff = 0.0
-	targetposition = 1.0
-	emittervelocityweight = 0.0
-	elevspread = (90.0, 270.0)
-	sweepspread = (0.0, 360.0)
-	liferange = (0.5, 1.0)
+	WindCoeff = 0.0
+	LocalWindCoeff = 0.0
+	TargetPosition = 1.0
+	EmitterVelocityWeight = 0.0
+	ElevSpread = (90.0, 270.0)
+	SweepSpread = (0.0, 360.0)
+	LifeRange = (0.5, 1.0)
 	emit_rate = 80.0
 	max = 0
-	timeseed = 0.25
-	lifetime = 0.0
-	emitnum = 0
-	followemitter = 0.0
-	emitfunction = constant
-	emitperiod = 1.0
-	sizerange = [
+	TimeSeed = 0.25
+	lifeTime = 0.0
+	emitNum = 0
+	FollowEmitter = 0.0
+	EmitFunction = constant
+	EmitPeriod = 1.0
+	SizeRange = [
 		(0.7, 1.0)
 		(0.5, 1.0)
 	]
-	speedrange = (0.0, 0.2)
-	rotvel = (0.0, 0.0)
-	rotveltimescale = 0.0
-	emitdelaystart = 0.0
-	pathfollowtime = 0.7
-	history = 2
-	historylistcoordinatespace = world
+	SpeedRange = (0.0, 0.2)
+	RotVel = (0.0, 0.0)
+	RotVelTimeScale = 0.0
+	EmitDelayStart = 0.0
+	PathFollowTime = 0.7
+	History = 2
+	HistoryListCoordinateSpace = world
 	color = -9223425
-	lod_enablelod
-	lod_distances = (20.0, 30.0)
-	novisibilitytest
-	quickmaterial = {
-		texturelayout = layout2x2
-		diffusetextureenabled
-		diffusetexture = jow_statueflames01
-		specularpower = 0
+	LOD_EnableLOD
+	LOD_Distances = (20.0, 30.0)
+	NoVisibilityTest
+	QuickMaterial = {
+		TextureLayout = Layout2x2
+		DiffuseTextureEnabled
+		DiffuseTexture = jow_statueflames01
+		SpecularPower = 0
 		alphacutoff = 16
-		blendmode = add
-		softedge
-		softedgescale = 0.5
-		burn
-		burnvalue = 0.8
-		quadanimationfps = 12
+		blendMode = Add
+		SoftEdge
+		SoftedgeScale = 0.5
+		Burn
+		BurnValue = 0.8
+		QuadAnimationFPS = 12
 	}
-	knot = [
+	Knot = [
 		(-0.46765104, 0.0, -0.0)
 		(-0.46765104, 0.0, -0.0)
 		(-0.24335201, 0.0, -0.0)
@@ -65,7 +65,7 @@ gp_party_mediumfire01 = {
 		(0.46765104, 0.0, -0.0)
 		(0.46765104, 0.0, -0.0)
 	]
-	particlecolor = [
+	ParticleColor = [
 		-1
 		-1
 		-12566273
@@ -73,7 +73,7 @@ gp_party_mediumfire01 = {
 		-5219328
 		-15066624
 	]
-	vertexweight = [
+	VertexWeight = [
 		0.719445
 		1.0
 	]

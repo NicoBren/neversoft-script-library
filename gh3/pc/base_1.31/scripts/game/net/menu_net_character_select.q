@@ -8,20 +8,20 @@ script create_leaving_lobby_dialog \{menu_id = leaving_lobby_dialog_menu
 	if (($ui_flow_manager_state [0]) = online_pause_fs)
 		clean_up_user_control_helpers
 	endif
-	if gotparam \{parent}
+	if GotParam \{parent}
 		parent = <parent>
 	else
 		parent = root_window
 	endif
-	createscreenelement {
-		type = containerelement
+	CreateScreenElement {
+		type = ContainerElement
 		parent = <parent>
 		id = warning_message_container
 		pos = (0.0, 0.0)
 	}
-	createscreenelement {
+	CreateScreenElement {
 		exclusive_device = ($primary_controller)
-		type = vscrollingmenu
+		type = VScrollingMenu
 		parent = warning_message_container
 		id = <menu_id>
 		just = [center top]
@@ -29,9 +29,9 @@ script create_leaving_lobby_dialog \{menu_id = leaving_lobby_dialog_menu
 		pos = (640.0, 465.0)
 		z_priority = 1
 	}
-	createscreenelement {
+	CreateScreenElement {
 		exclusive_device = ($primary_controller)
-		type = vmenu
+		type = VMenu
 		parent = <menu_id>
 		id = <vmenu_id>
 		pos = (298.0, 0.0)
@@ -61,14 +61,14 @@ script create_leaving_lobby_dialog \{menu_id = leaving_lobby_dialog_menu
 			255
 		]}
 	create_pause_menu_frame container_id = net_quit_warning parent = warning_message_container z = <z>
-	displaysprite parent = warning_message_container tex = dialog_title_bg scale = (1.7, 1.7) z = (<z> + 4) pos = (640.0, 100.0) just = [right top] flip_v
-	displaysprite parent = warning_message_container tex = dialog_title_bg scale = (1.7, 1.7) z = (<z> + 4) pos = (640.0, 100.0) just = [left top]
-	displaysprite parent = warning_message_container tex = dialog_frame_joiner pos = (480.0, 510.0) rot_angle = 5 scale = (1.575, 1.5) z = (<z> + 5)
-	displaysprite parent = warning_message_container tex = dialog_frame_joiner pos = (750.0, 514.0) flip_v rot_angle = -5 scale = (1.575, 1.5) z = (<z> + 5)
-	displaysprite parent = warning_message_container tex = dialog_bg pos = (480.0, 500.0) scale = (1.25, 1.0) z = (<z> + 4) just = [left botom]
-	displaysprite parent = warning_message_container tex = dialog_bg pos = (480.0, 530.0) scale = (1.25, 1.0) z = (<z> + 4) just = [left top] flip_h
-	createscreenelement {
-		type = textelement
+	displaySprite parent = warning_message_container tex = Dialog_Title_BG scale = (1.7, 1.7) z = (<z> + 4) pos = (640.0, 100.0) just = [right top] flip_v
+	displaySprite parent = warning_message_container tex = Dialog_Title_BG scale = (1.7, 1.7) z = (<z> + 4) pos = (640.0, 100.0) just = [left top]
+	displaySprite parent = warning_message_container tex = dialog_frame_joiner pos = (480.0, 510.0) rot_angle = 5 scale = (1.575, 1.5) z = (<z> + 5)
+	displaySprite parent = warning_message_container tex = dialog_frame_joiner pos = (750.0, 514.0) flip_v rot_angle = -5 scale = (1.575, 1.5) z = (<z> + 5)
+	displaySprite parent = warning_message_container tex = dialog_bg pos = (480.0, 500.0) scale = (1.25, 1.0) z = (<z> + 4) just = [left botom]
+	displaySprite parent = warning_message_container tex = dialog_bg pos = (480.0, 530.0) scale = (1.25, 1.0) z = (<z> + 4) just = [left top] flip_h
+	CreateScreenElement {
+		type = TextElement
 		parent = warning_message_container
 		font = fontgrid_title_gh3
 		scale = 1.3
@@ -81,8 +81,8 @@ script create_leaving_lobby_dialog \{menu_id = leaving_lobby_dialog_menu
 		shadow_offs = (3.0, 3.0)
 		shadow_rgba = [0 0 0 255]
 	}
-	createscreenelement {
-		type = textblockelement
+	CreateScreenElement {
+		type = TextBlockElement
 		parent = warning_message_container
 		font = fontgrid_title_gh3
 		scale = 0.6
@@ -95,8 +95,8 @@ script create_leaving_lobby_dialog \{menu_id = leaving_lobby_dialog_menu
 		dims = (700.0, 320.0)
 		line_spacing = 1.0
 	}
-	createscreenelement {
-		type = containerelement
+	CreateScreenElement {
+		type = ContainerElement
 		parent = leaving_lobby_dialog_vmenu
 		dims = (100.0, 50.0)
 		event_handlers = [
@@ -106,8 +106,8 @@ script create_leaving_lobby_dialog \{menu_id = leaving_lobby_dialog_menu
 		]
 	}
 	container_id = <id>
-	createscreenelement {
-		type = textelement
+	CreateScreenElement {
+		type = TextElement
 		parent = <container_id>
 		local_id = text
 		font = fontgrid_title_gh3
@@ -118,12 +118,12 @@ script create_leaving_lobby_dialog \{menu_id = leaving_lobby_dialog_menu
 		z_priority = (<z> + 5)
 	}
 	fit_text_into_menu_item id = <id> max_width = 240
-	getscreenelementdims id = <id>
-	createscreenelement {
-		type = spriteelement
+	GetScreenElementDims id = <id>
+	CreateScreenElement {
+		type = SpriteElement
 		parent = <container_id>
 		local_id = bookend_left
-		texture = dialog_highlight
+		texture = Dialog_Highlight
 		alpha = 1.0
 		just = [right center]
 		pos = ((0.0, 20.0) + (1.0, 0.0) * (<width> / (-2)) + (-5.0, 0.0))
@@ -131,19 +131,19 @@ script create_leaving_lobby_dialog \{menu_id = leaving_lobby_dialog_menu
 		scale = (1.0, 1.0)
 		flip_v
 	}
-	createscreenelement {
-		type = spriteelement
+	CreateScreenElement {
+		type = SpriteElement
 		parent = <container_id>
 		local_id = bookend_right
-		texture = dialog_highlight
+		texture = Dialog_Highlight
 		alpha = 1.0
 		just = [left center]
 		pos = ((0.0, 20.0) + (1.0, 0.0) * (<width> / (2)) + (5.0, 0.0))
 		z_priority = (<z> + 6)
 		scale = (1.0, 1.0)
 	}
-	createscreenelement {
-		type = containerelement
+	CreateScreenElement {
+		type = ContainerElement
 		parent = leaving_lobby_dialog_vmenu
 		dims = (100.0, 50.0)
 		event_handlers = [
@@ -153,8 +153,8 @@ script create_leaving_lobby_dialog \{menu_id = leaving_lobby_dialog_menu
 		]
 	}
 	container_id = <id>
-	createscreenelement {
-		type = textelement
+	CreateScreenElement {
+		type = TextElement
 		parent = <container_id>
 		local_id = text
 		font = fontgrid_title_gh3
@@ -165,12 +165,12 @@ script create_leaving_lobby_dialog \{menu_id = leaving_lobby_dialog_menu
 		z_priority = (<z> + 5)
 	}
 	fit_text_into_menu_item id = <id> max_width = 240
-	getscreenelementdims id = <id>
-	createscreenelement {
-		type = spriteelement
+	GetScreenElementDims id = <id>
+	CreateScreenElement {
+		type = SpriteElement
 		parent = <container_id>
 		local_id = bookend_left
-		texture = dialog_highlight
+		texture = Dialog_Highlight
 		just = [right center]
 		pos = ((0.0, 20.0) + (1.0, 0.0) * (<width> / (-2)) + (-5.0, 0.0))
 		alpha = 0.0
@@ -178,11 +178,11 @@ script create_leaving_lobby_dialog \{menu_id = leaving_lobby_dialog_menu
 		scale = (1.0, 1.0)
 		flip_v
 	}
-	createscreenelement {
-		type = spriteelement
+	CreateScreenElement {
+		type = SpriteElement
 		parent = <container_id>
 		local_id = bookend_right
-		texture = dialog_highlight
+		texture = Dialog_Highlight
 		just = [left center]
 		pos = ((0.0, 20.0) + (1.0, 0.0) * (<width> / (2)) + (5.0, 0.0))
 		alpha = 0.0
@@ -210,38 +210,38 @@ script create_leaving_lobby_dialog \{menu_id = leaving_lobby_dialog_menu
 endscript
 
 script net_warning_focus 
-	obj_getid
-	if screenelementexists id = {<objid> child = text}
-		doscreenelementmorph id = {<objid> child = text} rgba = ($menu_focus_color)
+	Obj_GetID
+	if ScreenElementExists id = {<ObjID> child = text}
+		doScreenElementMorph id = {<ObjID> child = text} rgba = ($menu_focus_color)
 	endif
-	if screenelementexists id = {<objid> child = bookend_right}
-		doscreenelementmorph id = {<objid> child = bookend_right} alpha = 1.0 preserve_flip
+	if ScreenElementExists id = {<ObjID> child = bookend_right}
+		doScreenElementMorph id = {<ObjID> child = bookend_right} alpha = 1.0 preserve_flip
 	endif
-	if screenelementexists id = {<objid> child = bookend_left}
-		doscreenelementmorph id = {<objid> child = bookend_left} alpha = 1.0 preserve_flip
+	if ScreenElementExists id = {<ObjID> child = bookend_left}
+		doScreenElementMorph id = {<ObjID> child = bookend_left} alpha = 1.0 preserve_flip
 	endif
 endscript
 
 script net_warning_unfocus 
-	obj_getid
-	if screenelementexists id = {<objid> child = text}
-		doscreenelementmorph id = {<objid> child = text} rgba = ($menu_unfocus_color)
+	Obj_GetID
+	if ScreenElementExists id = {<ObjID> child = text}
+		doScreenElementMorph id = {<ObjID> child = text} rgba = ($menu_unfocus_color)
 	endif
-	if screenelementexists id = {<objid> child = bookend_right}
-		doscreenelementmorph id = {<objid> child = bookend_right} alpha = 0.0 preserve_flip
+	if ScreenElementExists id = {<ObjID> child = bookend_right}
+		doScreenElementMorph id = {<ObjID> child = bookend_right} alpha = 0.0 preserve_flip
 	endif
-	if screenelementexists id = {<objid> child = bookend_left}
-		doscreenelementmorph id = {<objid> child = bookend_left} alpha = 0.0 preserve_flip
+	if ScreenElementExists id = {<ObjID> child = bookend_left}
+		doScreenElementMorph id = {<ObjID> child = bookend_left} alpha = 0.0 preserve_flip
 	endif
 endscript
 
 script net_cs_go_back 
 	if (<player> = 1)
 		create_leaving_lobby_dialog \{z = 300
-			parent = menu_container}
+			parent = Menu_Container}
 	else
 		drop_client_from_character_select
-		if ishost
+		if IsHost
 			net_lobby_state_message \{current_state = character_hub
 				action = request
 				request_state = leaving_lobby}
@@ -251,14 +251,14 @@ endscript
 
 script leaving_lobby_select_yes 
 	leaving_lobby_dialog_unfocus
-	if screenelementexists \{id = vmenu_character_select_p1}
-		launchevent \{type = unfocus
+	if ScreenElementExists \{id = vmenu_character_select_p1}
+		LaunchEvent \{type = unfocus
 			target = vmenu_character_select_p1}
 	endif
 	destroy_leaving_lobby_dialog
 	destroy_net_popup
-	endgamenetscriptpump
-	killspawnedscript \{name = net_hub_stream}
+	EndGameNetScriptPump
+	KillSpawnedScript \{name = net_hub_stream}
 	destroy_ready_icons
 	network_player_lobby_message \{type = character_select
 		action = deselect}
@@ -277,42 +277,42 @@ script destroy_leaving_lobby_dialog
 	if (($ui_flow_manager_state [0]) = online_pause_fs)
 		clean_up_user_control_helpers
 	endif
-	if screenelementexists \{id = warning_message_container}
-		destroyscreenelement \{id = warning_message_container}
+	if ScreenElementExists \{id = warning_message_container}
+		DestroyScreenElement \{id = warning_message_container}
 	endif
-	if screenelementexists \{id = leaving_lobby_dialog_menu}
-		destroyscreenelement \{id = leaving_lobby_dialog_menu}
+	if ScreenElementExists \{id = leaving_lobby_dialog_menu}
+		DestroyScreenElement \{id = leaving_lobby_dialog_menu}
 	endif
 endscript
 
 script leaving_lobby_dialog_focus 
-	if screenelementexists \{id = vmenu_character_select_p1}
-		launchevent \{type = unfocus
+	if ScreenElementExists \{id = vmenu_character_select_p1}
+		LaunchEvent \{type = unfocus
 			target = vmenu_character_select_p1}
 	endif
-	if screenelementexists \{id = leaving_lobby_dialog_vmenu}
-		launchevent \{type = focus
+	if ScreenElementExists \{id = leaving_lobby_dialog_vmenu}
+		LaunchEvent \{type = focus
 			target = leaving_lobby_dialog_vmenu}
 	endif
 endscript
 
 script leaving_lobby_dialog_unfocus 
-	if screenelementexists \{id = leaving_lobby_dialog_vmenu}
-		launchevent \{type = unfocus
+	if ScreenElementExists \{id = leaving_lobby_dialog_vmenu}
+		LaunchEvent \{type = unfocus
 			target = leaving_lobby_dialog_vmenu}
 	endif
-	if screenelementexists \{id = vmenu_character_select_p1}
-		launchevent \{type = focus
+	if ScreenElementExists \{id = vmenu_character_select_p1}
+		LaunchEvent \{type = focus
 			target = vmenu_character_select_p1}
 	endif
 endscript
 
 script go_to_net_warning_from_pause_menu 
-	if screenelementexists \{id = pause_menu_frame_container}
+	if ScreenElementExists \{id = pause_menu_frame_container}
 		destroy_pause_menu_frame \{container_id = net_quit_warning}
 		destroy_menu \{menu_id = scrolling_pause}
 		destroy_menu \{menu_id = pause_menu_frame_container}
-		killspawnedscript \{name = animate_bunny_flame}
+		KillSpawnedScript \{name = animate_bunny_flame}
 	endif
 endscript
 

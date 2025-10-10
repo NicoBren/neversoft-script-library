@@ -1,2505 +1,2505 @@
-morello_animations = {
-	stance_a = {
-		idle = {
+Morello_animations = {
+	Stance_A = {
+		Idle = {
 			good = {
-				slow = [
-					gh3_guit_morello_a_slow_idle1
-					gh3_guit_morello_a_slow_idle2
-					gh3_guit_morello_a_slow_idle3
-					gh3_guit_morello_a_slow_idle4
+				Slow = [
+					GH3_Guit_morello_A_slow_Idle1
+					GH3_Guit_morello_A_slow_Idle2
+					GH3_Guit_morello_A_slow_Idle3
+					GH3_Guit_morello_A_slow_Idle4
 				]
-				med = [
-					gh3_guit_morello_a_med_idle1
-					gh3_guit_morello_a_med_idle2
-					gh3_guit_morello_a_med_idle3
-					gh3_guit_morello_a_med_idle4
+				Med = [
+					GH3_Guit_morello_A_med_Idle1
+					GH3_Guit_morello_A_med_Idle2
+					GH3_Guit_morello_A_med_Idle3
+					GH3_Guit_morello_A_med_Idle4
 				]
-				fast = [
-					gh3_guit_morello_a_fst_idle1
-					gh3_guit_morello_a_fst_idle2
-					gh3_guit_morello_a_fst_idle3
-					gh3_guit_morello_a_fst_idle4
-				]
-			}
-			normal = {
-				slow = [
-					gh3_guit_morello_a_slow_idle1
-					gh3_guit_morello_a_slow_idle2
-					gh3_guit_morello_a_slow_idle3
-					gh3_guit_morello_a_slow_idle4
-				]
-				med = [
-					gh3_guit_morello_a_med_idle1
-					gh3_guit_morello_a_med_idle2
-					gh3_guit_morello_a_med_idle3
-					gh3_guit_morello_a_med_idle4
-				]
-				fast = [
-					gh3_guit_morello_a_fst_idle1
-					gh3_guit_morello_a_fst_idle2
-					gh3_guit_morello_a_fst_idle3
-					gh3_guit_morello_a_fst_idle4
+				Fast = [
+					GH3_Guit_morello_A_Fst_Idle1
+					GH3_Guit_morello_A_Fst_Idle2
+					GH3_Guit_morello_A_Fst_Idle3
+					GH3_Guit_morello_A_Fst_Idle4
 				]
 			}
-			bad = {
-				slow = [
-					gh3_guit_morello_a_slow_idle1
-					gh3_guit_morello_a_slow_idle2
-					gh3_guit_morello_a_slow_idle3
-					gh3_guit_morello_a_slow_idle4
+			Normal = {
+				Slow = [
+					GH3_Guit_morello_A_slow_Idle1
+					GH3_Guit_morello_A_slow_Idle2
+					GH3_Guit_morello_A_slow_Idle3
+					GH3_Guit_morello_A_slow_Idle4
 				]
-				med = [
-					gh3_guit_morello_a_med_idle1
-					gh3_guit_morello_a_med_idle2
-					gh3_guit_morello_a_med_idle3
-					gh3_guit_morello_a_med_idle4
+				Med = [
+					GH3_Guit_morello_A_med_Idle1
+					GH3_Guit_morello_A_med_Idle2
+					GH3_Guit_morello_A_med_Idle3
+					GH3_Guit_morello_A_med_Idle4
 				]
-				fast = [
-					gh3_guit_morello_a_fst_idle1
-					gh3_guit_morello_a_fst_idle2
-					gh3_guit_morello_a_fst_idle3
-					gh3_guit_morello_a_fst_idle4
+				Fast = [
+					GH3_Guit_morello_A_Fst_Idle1
+					GH3_Guit_morello_A_Fst_Idle2
+					GH3_Guit_morello_A_Fst_Idle3
+					GH3_Guit_morello_A_Fst_Idle4
+				]
+			}
+			Bad = {
+				Slow = [
+					GH3_Guit_morello_A_slow_Idle1
+					GH3_Guit_morello_A_slow_Idle2
+					GH3_Guit_morello_A_slow_Idle3
+					GH3_Guit_morello_A_slow_Idle4
+				]
+				Med = [
+					GH3_Guit_morello_A_med_Idle1
+					GH3_Guit_morello_A_med_Idle2
+					GH3_Guit_morello_A_med_Idle3
+					GH3_Guit_morello_A_med_Idle4
+				]
+				Fast = [
+					GH3_Guit_morello_A_Fst_Idle1
+					GH3_Guit_morello_A_Fst_Idle2
+					GH3_Guit_morello_A_Fst_Idle3
+					GH3_Guit_morello_A_Fst_Idle4
 				]
 			}
 		}
-		jump = {
+		Jump = {
 			good = {
-				slow = [
-					gh3_guit_morello_a_slow_special2
+				Slow = [
+					GH3_Guit_morello_A_slow_special2
 				]
-				med = [
-					gh3_guit_morello_a_fast_special2
+				Med = [
+					GH3_Guit_morello_A_fast_special2
 				]
-				fast = [
-					gh3_guit_morello_a_fast_special2
-				]
-			}
-			normal = {
-				slow = [
-					gh3_guit_morello_a_slow_special2
-				]
-				med = [
-					gh3_guit_morello_a_fast_special2
-				]
-				fast = [
-					gh3_guit_morello_a_fast_special2
+				Fast = [
+					GH3_Guit_morello_A_fast_special2
 				]
 			}
-			bad = {
-				slow = [
-					gh3_guit_morello_a_slow_special2
+			Normal = {
+				Slow = [
+					GH3_Guit_morello_A_slow_special2
 				]
-				med = [
-					gh3_guit_morello_a_fast_special2
+				Med = [
+					GH3_Guit_morello_A_fast_special2
 				]
-				fast = [
-					gh3_guit_morello_a_fast_special2
+				Fast = [
+					GH3_Guit_morello_A_fast_special2
+				]
+			}
+			Bad = {
+				Slow = [
+					GH3_Guit_morello_A_slow_special2
+				]
+				Med = [
+					GH3_Guit_morello_A_fast_special2
+				]
+				Fast = [
+					GH3_Guit_morello_A_fast_special2
 				]
 			}
 		}
 		kick = {
 			good = {
-				slow = [
-					gh3_guit_morello_a_slow_idle1
-					gh3_guit_morello_a_slow_idle2
-					gh3_guit_morello_a_slow_idle3
-					gh3_guit_morello_a_slow_idle4
+				Slow = [
+					GH3_Guit_morello_A_slow_Idle1
+					GH3_Guit_morello_A_slow_Idle2
+					GH3_Guit_morello_A_slow_Idle3
+					GH3_Guit_morello_A_slow_Idle4
 				]
-				med = [
-					gh3_guit_morello_a_med_idle1
-					gh3_guit_morello_a_med_idle2
-					gh3_guit_morello_a_med_idle3
-					gh3_guit_morello_a_med_idle4
+				Med = [
+					GH3_Guit_morello_A_med_Idle1
+					GH3_Guit_morello_A_med_Idle2
+					GH3_Guit_morello_A_med_Idle3
+					GH3_Guit_morello_A_med_Idle4
 				]
-				fast = [
-					gh3_guit_morello_a_fst_idle1
-					gh3_guit_morello_a_fst_idle2
-					gh3_guit_morello_a_fst_idle3
-					gh3_guit_morello_a_fst_idle4
-				]
-			}
-			normal = {
-				slow = [
-					gh3_guit_morello_a_slow_idle1
-					gh3_guit_morello_a_slow_idle2
-					gh3_guit_morello_a_slow_idle3
-					gh3_guit_morello_a_slow_idle4
-				]
-				med = [
-					gh3_guit_morello_a_med_idle1
-					gh3_guit_morello_a_med_idle2
-					gh3_guit_morello_a_med_idle3
-					gh3_guit_morello_a_med_idle4
-				]
-				fast = [
-					gh3_guit_morello_a_fst_idle1
-					gh3_guit_morello_a_fst_idle2
-					gh3_guit_morello_a_fst_idle3
-					gh3_guit_morello_a_fst_idle4
+				Fast = [
+					GH3_Guit_morello_A_Fst_Idle1
+					GH3_Guit_morello_A_Fst_Idle2
+					GH3_Guit_morello_A_Fst_Idle3
+					GH3_Guit_morello_A_Fst_Idle4
 				]
 			}
-			bad = {
-				slow = [
-					gh3_guit_morello_a_slow_idle1
-					gh3_guit_morello_a_slow_idle2
-					gh3_guit_morello_a_slow_idle3
-					gh3_guit_morello_a_slow_idle4
+			Normal = {
+				Slow = [
+					GH3_Guit_morello_A_slow_Idle1
+					GH3_Guit_morello_A_slow_Idle2
+					GH3_Guit_morello_A_slow_Idle3
+					GH3_Guit_morello_A_slow_Idle4
 				]
-				med = [
-					gh3_guit_morello_a_med_idle1
-					gh3_guit_morello_a_med_idle2
-					gh3_guit_morello_a_med_idle3
-					gh3_guit_morello_a_med_idle4
+				Med = [
+					GH3_Guit_morello_A_med_Idle1
+					GH3_Guit_morello_A_med_Idle2
+					GH3_Guit_morello_A_med_Idle3
+					GH3_Guit_morello_A_med_Idle4
 				]
-				fast = [
-					gh3_guit_morello_a_fst_idle1
-					gh3_guit_morello_a_fst_idle2
-					gh3_guit_morello_a_fst_idle3
-					gh3_guit_morello_a_fst_idle4
+				Fast = [
+					GH3_Guit_morello_A_Fst_Idle1
+					GH3_Guit_morello_A_Fst_Idle2
+					GH3_Guit_morello_A_Fst_Idle3
+					GH3_Guit_morello_A_Fst_Idle4
+				]
+			}
+			Bad = {
+				Slow = [
+					GH3_Guit_morello_A_slow_Idle1
+					GH3_Guit_morello_A_slow_Idle2
+					GH3_Guit_morello_A_slow_Idle3
+					GH3_Guit_morello_A_slow_Idle4
+				]
+				Med = [
+					GH3_Guit_morello_A_med_Idle1
+					GH3_Guit_morello_A_med_Idle2
+					GH3_Guit_morello_A_med_Idle3
+					GH3_Guit_morello_A_med_Idle4
+				]
+				Fast = [
+					GH3_Guit_morello_A_Fst_Idle1
+					GH3_Guit_morello_A_Fst_Idle2
+					GH3_Guit_morello_A_Fst_Idle3
+					GH3_Guit_morello_A_Fst_Idle4
 				]
 			}
 		}
 		solo = {
 			good = {
-				slow = [
-					gh3_guit_morello_a_slow_solo1
-					gh3_guit_morello_a_slow_solo2
-					gh3_guit_morello_a_slow_solo3
+				Slow = [
+					GH3_Guit_morello_A_slow_solo1
+					GH3_Guit_morello_A_slow_solo2
+					GH3_Guit_morello_A_slow_solo3
 				]
-				med = [
-					gh3_guit_morello_a_med_solo1
-					gh3_guit_morello_a_med_solo2
-					gh3_guit_morello_a_med_solo3
+				Med = [
+					GH3_Guit_morello_A_med_solo1
+					GH3_Guit_morello_A_med_solo2
+					GH3_Guit_morello_A_med_solo3
 				]
-				fast = [
-					gh3_guit_morello_a_fast_solo1
-					gh3_guit_morello_a_fast_solo2
-					gh3_guit_morello_a_fast_solo3
-				]
-			}
-			normal = {
-				slow = [
-					gh3_guit_morello_a_slow_solo1
-					gh3_guit_morello_a_slow_solo2
-					gh3_guit_morello_a_slow_solo3
-				]
-				med = [
-					gh3_guit_morello_a_med_solo1
-					gh3_guit_morello_a_med_solo2
-					gh3_guit_morello_a_med_solo3
-				]
-				fast = [
-					gh3_guit_morello_a_fast_solo1
-					gh3_guit_morello_a_fast_solo2
-					gh3_guit_morello_a_fast_solo3
+				Fast = [
+					GH3_Guit_morello_A_fast_solo1
+					GH3_Guit_morello_A_fast_solo2
+					GH3_Guit_morello_A_fast_solo3
 				]
 			}
-			bad = {
-				slow = [
-					gh3_guit_morello_a_slow_solo1
-					gh3_guit_morello_a_slow_solo2
-					gh3_guit_morello_a_slow_solo3
+			Normal = {
+				Slow = [
+					GH3_Guit_morello_A_slow_solo1
+					GH3_Guit_morello_A_slow_solo2
+					GH3_Guit_morello_A_slow_solo3
 				]
-				med = [
-					gh3_guit_morello_a_med_solo1
-					gh3_guit_morello_a_med_solo2
-					gh3_guit_morello_a_med_solo3
+				Med = [
+					GH3_Guit_morello_A_med_solo1
+					GH3_Guit_morello_A_med_solo2
+					GH3_Guit_morello_A_med_solo3
 				]
-				fast = [
-					gh3_guit_morello_a_fast_solo1
-					gh3_guit_morello_a_fast_solo2
-					gh3_guit_morello_a_fast_solo3
+				Fast = [
+					GH3_Guit_morello_A_fast_solo1
+					GH3_Guit_morello_A_fast_solo2
+					GH3_Guit_morello_A_fast_solo3
+				]
+			}
+			Bad = {
+				Slow = [
+					GH3_Guit_morello_A_slow_solo1
+					GH3_Guit_morello_A_slow_solo2
+					GH3_Guit_morello_A_slow_solo3
+				]
+				Med = [
+					GH3_Guit_morello_A_med_solo1
+					GH3_Guit_morello_A_med_solo2
+					GH3_Guit_morello_A_med_solo3
+				]
+				Fast = [
+					GH3_Guit_morello_A_fast_solo1
+					GH3_Guit_morello_A_fast_solo2
+					GH3_Guit_morello_A_fast_solo3
 				]
 			}
 		}
 		special = {
 			good = {
-				slow = [
-					gh3_guit_morello_a_slow_special1
-					gh3_guit_morello_a_slow_special2
+				Slow = [
+					GH3_Guit_morello_A_slow_special1
+					GH3_Guit_morello_A_slow_special2
 				]
-				med = [
-					gh3_guit_morello_a_fast_special1
-					gh3_guit_morello_a_fast_special2
+				Med = [
+					GH3_Guit_morello_A_fast_special1
+					GH3_Guit_morello_A_fast_special2
 				]
-				fast = [
-					gh3_guit_morello_a_fast_special1
-					gh3_guit_morello_a_fast_special2
-				]
-			}
-			normal = {
-				slow = [
-					gh3_guit_morello_a_slow_special1
-					gh3_guit_morello_a_slow_special2
-				]
-				med = [
-					gh3_guit_morello_a_fast_special1
-					gh3_guit_morello_a_fast_special2
-				]
-				fast = [
-					gh3_guit_morello_a_fast_special1
-					gh3_guit_morello_a_fast_special2
+				Fast = [
+					GH3_Guit_morello_A_fast_special1
+					GH3_Guit_morello_A_fast_special2
 				]
 			}
-			bad = {
-				slow = [
-					gh3_guit_morello_a_slow_special1
-					gh3_guit_morello_a_slow_special2
+			Normal = {
+				Slow = [
+					GH3_Guit_morello_A_slow_special1
+					GH3_Guit_morello_A_slow_special2
 				]
-				med = [
-					gh3_guit_morello_a_fast_special1
-					gh3_guit_morello_a_fast_special2
+				Med = [
+					GH3_Guit_morello_A_fast_special1
+					GH3_Guit_morello_A_fast_special2
 				]
-				fast = [
-					gh3_guit_morello_a_fast_special1
-					gh3_guit_morello_a_fast_special2
+				Fast = [
+					GH3_Guit_morello_A_fast_special1
+					GH3_Guit_morello_A_fast_special2
+				]
+			}
+			Bad = {
+				Slow = [
+					GH3_Guit_morello_A_slow_special1
+					GH3_Guit_morello_A_slow_special2
+				]
+				Med = [
+					GH3_Guit_morello_A_fast_special1
+					GH3_Guit_morello_A_fast_special2
+				]
+				Fast = [
+					GH3_Guit_morello_A_fast_special1
+					GH3_Guit_morello_A_fast_special2
 				]
 			}
 		}
 		starpower = {
 			good = {
-				slow = [
-					gh3_guit_morello_a_slow_special2
+				Slow = [
+					GH3_Guit_morello_A_slow_special2
 				]
-				med = [
-					gh3_guit_morello_a_fast_special2
+				Med = [
+					GH3_Guit_morello_A_fast_special2
 				]
-				fast = [
-					gh3_guit_morello_a_fast_special2
-				]
-			}
-			normal = {
-				slow = [
-					gh3_guit_morello_a_slow_special2
-				]
-				med = [
-					gh3_guit_morello_a_fast_special2
-				]
-				fast = [
-					gh3_guit_morello_a_fast_special2
+				Fast = [
+					GH3_Guit_morello_A_fast_special2
 				]
 			}
-			bad = {
-				slow = [
-					gh3_guit_morello_a_slow_special2
+			Normal = {
+				Slow = [
+					GH3_Guit_morello_A_slow_special2
 				]
-				med = [
-					gh3_guit_morello_a_fast_special2
+				Med = [
+					GH3_Guit_morello_A_fast_special2
 				]
-				fast = [
-					gh3_guit_morello_a_fast_special2
+				Fast = [
+					GH3_Guit_morello_A_fast_special2
+				]
+			}
+			Bad = {
+				Slow = [
+					GH3_Guit_morello_A_slow_special2
+				]
+				Med = [
+					GH3_Guit_morello_A_fast_special2
+				]
+				Fast = [
+					GH3_Guit_morello_A_fast_special2
 				]
 			}
 		}
 		handsoff = {
 			good = {
-				slow = [
-					gh3_guit_morello_intro1
+				Slow = [
+					GH3_Guit_morello_intro1
 				]
-				med = [
-					gh3_guit_morello_intro1
+				Med = [
+					GH3_Guit_morello_intro1
 				]
-				fast = [
-					gh3_guit_morello_intro1
-				]
-			}
-			normal = {
-				slow = [
-					gh3_guit_morello_intro1
-				]
-				med = [
-					gh3_guit_morello_intro1
-				]
-				fast = [
-					gh3_guit_morello_intro1
+				Fast = [
+					GH3_Guit_morello_intro1
 				]
 			}
-			bad = {
-				slow = [
-					gh3_guit_morello_intro1
+			Normal = {
+				Slow = [
+					GH3_Guit_morello_intro1
 				]
-				med = [
-					gh3_guit_morello_intro1
+				Med = [
+					GH3_Guit_morello_intro1
 				]
-				fast = [
-					gh3_guit_morello_intro1
-				]
-			}
-		}
-		endstrum = {
-			good = {
-				slow = [
-					gh3_guit_morello_intro1
-				]
-				med = [
-					gh3_guit_morello_intro1
-				]
-				fast = [
-					gh3_guit_morello_intro1
+				Fast = [
+					GH3_Guit_morello_intro1
 				]
 			}
-			normal = {
-				slow = [
-					gh3_guit_morello_intro1
+			Bad = {
+				Slow = [
+					GH3_Guit_morello_intro1
 				]
-				med = [
-					gh3_guit_morello_intro1
+				Med = [
+					GH3_Guit_morello_intro1
 				]
-				fast = [
-					gh3_guit_morello_intro1
-				]
-			}
-			bad = {
-				slow = [
-					gh3_guit_morello_intro1
-				]
-				med = [
-					gh3_guit_morello_intro1
-				]
-				fast = [
-					gh3_guit_morello_intro1
+				Fast = [
+					GH3_Guit_morello_intro1
 				]
 			}
 		}
-		attack = {
+		endStrum = {
 			good = {
-				slow = [
-					gh3_guit_morello_a_attack_left01
+				Slow = [
+					GH3_Guit_morello_intro1
 				]
-				med = [
-					gh3_guit_morello_a_attack_left01
+				Med = [
+					GH3_Guit_morello_intro1
 				]
-				fast = [
-					gh3_guit_morello_a_attack_left01
-				]
-			}
-			normal = {
-				slow = [
-					gh3_guit_morello_a_attack_left01
-				]
-				med = [
-					gh3_guit_morello_a_attack_left01
-				]
-				fast = [
-					gh3_guit_morello_a_attack_left01
+				Fast = [
+					GH3_Guit_morello_intro1
 				]
 			}
-			bad = {
-				slow = [
-					gh3_guit_morello_a_attack_left01
+			Normal = {
+				Slow = [
+					GH3_Guit_morello_intro1
 				]
-				med = [
-					gh3_guit_morello_a_attack_left01
+				Med = [
+					GH3_Guit_morello_intro1
 				]
-				fast = [
-					gh3_guit_morello_a_attack_left01
+				Fast = [
+					GH3_Guit_morello_intro1
+				]
+			}
+			Bad = {
+				Slow = [
+					GH3_Guit_morello_intro1
+				]
+				Med = [
+					GH3_Guit_morello_intro1
+				]
+				Fast = [
+					GH3_Guit_morello_intro1
 				]
 			}
 		}
-		attack_right = {
+		Attack = {
 			good = {
-				slow = [
-					gh3_guit_morello_a_attack_right01
+				Slow = [
+					GH3_Guit_morello_A_Attack_Left01
 				]
-				med = [
-					gh3_guit_morello_a_attack_right01
+				Med = [
+					GH3_Guit_morello_A_Attack_Left01
 				]
-				fast = [
-					gh3_guit_morello_a_attack_right01
-				]
-			}
-			normal = {
-				slow = [
-					gh3_guit_morello_a_attack_right01
-				]
-				med = [
-					gh3_guit_morello_a_attack_right01
-				]
-				fast = [
-					gh3_guit_morello_a_attack_right01
+				Fast = [
+					GH3_Guit_morello_A_Attack_Left01
 				]
 			}
-			bad = {
-				slow = [
-					gh3_guit_morello_a_attack_right01
+			Normal = {
+				Slow = [
+					GH3_Guit_morello_A_Attack_Left01
 				]
-				med = [
-					gh3_guit_morello_a_attack_right01
+				Med = [
+					GH3_Guit_morello_A_Attack_Left01
 				]
-				fast = [
-					gh3_guit_morello_a_attack_right01
+				Fast = [
+					GH3_Guit_morello_A_Attack_Left01
+				]
+			}
+			Bad = {
+				Slow = [
+					GH3_Guit_morello_A_Attack_Left01
+				]
+				Med = [
+					GH3_Guit_morello_A_Attack_Left01
+				]
+				Fast = [
+					GH3_Guit_morello_A_Attack_Left01
 				]
 			}
 		}
-		react = {
+		Attack_right = {
 			good = {
-				slow = [
-					gh3_guit_morello_a_react_left01
+				Slow = [
+					GH3_Guit_morello_A_Attack_Right01
 				]
-				med = [
-					gh3_guit_morello_a_react_left01
+				Med = [
+					GH3_Guit_morello_A_Attack_Right01
 				]
-				fast = [
-					gh3_guit_morello_a_react_left01
-				]
-			}
-			normal = {
-				slow = [
-					gh3_guit_morello_a_react_left01
-				]
-				med = [
-					gh3_guit_morello_a_react_left01
-				]
-				fast = [
-					gh3_guit_morello_a_react_left01
+				Fast = [
+					GH3_Guit_morello_A_Attack_Right01
 				]
 			}
-			bad = {
-				slow = [
-					gh3_guit_morello_a_react_left01
+			Normal = {
+				Slow = [
+					GH3_Guit_morello_A_Attack_Right01
 				]
-				med = [
-					gh3_guit_morello_a_react_left01
+				Med = [
+					GH3_Guit_morello_A_Attack_Right01
 				]
-				fast = [
-					gh3_guit_morello_a_react_left01
+				Fast = [
+					GH3_Guit_morello_A_Attack_Right01
+				]
+			}
+			Bad = {
+				Slow = [
+					GH3_Guit_morello_A_Attack_Right01
+				]
+				Med = [
+					GH3_Guit_morello_A_Attack_Right01
+				]
+				Fast = [
+					GH3_Guit_morello_A_Attack_Right01
 				]
 			}
 		}
-		react_right = {
+		React = {
 			good = {
-				slow = [
-					gh3_guit_morello_a_react_right01
+				Slow = [
+					GH3_Guit_morello_A_react_Left01
 				]
-				med = [
-					gh3_guit_morello_a_react_right01
+				Med = [
+					GH3_Guit_morello_A_react_Left01
 				]
-				fast = [
-					gh3_guit_morello_a_react_right01
-				]
-			}
-			normal = {
-				slow = [
-					gh3_guit_morello_a_react_right01
-				]
-				med = [
-					gh3_guit_morello_a_react_right01
-				]
-				fast = [
-					gh3_guit_morello_a_react_right01
+				Fast = [
+					GH3_Guit_morello_A_react_Left01
 				]
 			}
-			bad = {
-				slow = [
-					gh3_guit_morello_a_react_right01
+			Normal = {
+				Slow = [
+					GH3_Guit_morello_A_react_Left01
 				]
-				med = [
-					gh3_guit_morello_a_react_right01
+				Med = [
+					GH3_Guit_morello_A_react_Left01
 				]
-				fast = [
-					gh3_guit_morello_a_react_right01
+				Fast = [
+					GH3_Guit_morello_A_react_Left01
+				]
+			}
+			Bad = {
+				Slow = [
+					GH3_Guit_morello_A_react_Left01
+				]
+				Med = [
+					GH3_Guit_morello_A_react_Left01
+				]
+				Fast = [
+					GH3_Guit_morello_A_react_Left01
+				]
+			}
+		}
+		React_right = {
+			good = {
+				Slow = [
+					GH3_Guit_morello_A_react_Right01
+				]
+				Med = [
+					GH3_Guit_morello_A_react_Right01
+				]
+				Fast = [
+					GH3_Guit_morello_A_react_Right01
+				]
+			}
+			Normal = {
+				Slow = [
+					GH3_Guit_morello_A_react_Right01
+				]
+				Med = [
+					GH3_Guit_morello_A_react_Right01
+				]
+				Fast = [
+					GH3_Guit_morello_A_react_Right01
+				]
+			}
+			Bad = {
+				Slow = [
+					GH3_Guit_morello_A_react_Right01
+				]
+				Med = [
+					GH3_Guit_morello_A_react_Right01
+				]
+				Fast = [
+					GH3_Guit_morello_A_react_Right01
 				]
 			}
 		}
 		bulls_on_parade1 = {
 			good = {
-				slow = [
-					gh3_guit_morello_a_bullson_parade1
+				Slow = [
+					GH3_Guit_morello_A_bullson_parade1
 				]
-				med = [
-					gh3_guit_morello_a_bullson_parade1
+				Med = [
+					GH3_Guit_morello_A_bullson_parade1
 				]
-				fast = [
-					gh3_guit_morello_a_bullson_parade1
-				]
-			}
-			normal = {
-				slow = [
-					gh3_guit_morello_a_bullson_parade1
-				]
-				med = [
-					gh3_guit_morello_a_bullson_parade1
-				]
-				fast = [
-					gh3_guit_morello_a_bullson_parade1
+				Fast = [
+					GH3_Guit_morello_A_bullson_parade1
 				]
 			}
-			bad = {
-				slow = [
-					gh3_guit_morello_a_bullson_parade1
+			Normal = {
+				Slow = [
+					GH3_Guit_morello_A_bullson_parade1
 				]
-				med = [
-					gh3_guit_morello_a_bullson_parade1
+				Med = [
+					GH3_Guit_morello_A_bullson_parade1
 				]
-				fast = [
-					gh3_guit_morello_a_bullson_parade1
+				Fast = [
+					GH3_Guit_morello_A_bullson_parade1
+				]
+			}
+			Bad = {
+				Slow = [
+					GH3_Guit_morello_A_bullson_parade1
+				]
+				Med = [
+					GH3_Guit_morello_A_bullson_parade1
+				]
+				Fast = [
+					GH3_Guit_morello_A_bullson_parade1
 				]
 			}
 		}
 		bulls_on_parade2 = {
 			good = {
-				slow = [
-					gh3_guit_morello_a_bullson_parade2
+				Slow = [
+					GH3_Guit_morello_A_bullson_parade2
 				]
-				med = [
-					gh3_guit_morello_a_bullson_parade2
+				Med = [
+					GH3_Guit_morello_A_bullson_parade2
 				]
-				fast = [
-					gh3_guit_morello_a_bullson_parade2
-				]
-			}
-			normal = {
-				slow = [
-					gh3_guit_morello_a_bullson_parade2
-				]
-				med = [
-					gh3_guit_morello_a_bullson_parade2
-				]
-				fast = [
-					gh3_guit_morello_a_bullson_parade2
+				Fast = [
+					GH3_Guit_morello_A_bullson_parade2
 				]
 			}
-			bad = {
-				slow = [
-					gh3_guit_morello_a_bullson_parade2
+			Normal = {
+				Slow = [
+					GH3_Guit_morello_A_bullson_parade2
 				]
-				med = [
-					gh3_guit_morello_a_bullson_parade2
+				Med = [
+					GH3_Guit_morello_A_bullson_parade2
 				]
-				fast = [
-					gh3_guit_morello_a_bullson_parade2
+				Fast = [
+					GH3_Guit_morello_A_bullson_parade2
+				]
+			}
+			Bad = {
+				Slow = [
+					GH3_Guit_morello_A_bullson_parade2
+				]
+				Med = [
+					GH3_Guit_morello_A_bullson_parade2
+				]
+				Fast = [
+					GH3_Guit_morello_A_bullson_parade2
 				]
 			}
 		}
 		bulls_on_parade3 = {
 			good = {
-				slow = [
-					gh3_guit_morello_a_bullson_parade3
+				Slow = [
+					GH3_Guit_morello_A_bullson_parade3
 				]
-				med = [
-					gh3_guit_morello_a_bullson_parade3
+				Med = [
+					GH3_Guit_morello_A_bullson_parade3
 				]
-				fast = [
-					gh3_guit_morello_a_bullson_parade3
-				]
-			}
-			normal = {
-				slow = [
-					gh3_guit_morello_a_bullson_parade3
-				]
-				med = [
-					gh3_guit_morello_a_bullson_parade3
-				]
-				fast = [
-					gh3_guit_morello_a_bullson_parade3
+				Fast = [
+					GH3_Guit_morello_A_bullson_parade3
 				]
 			}
-			bad = {
-				slow = [
-					gh3_guit_morello_a_bullson_parade3
+			Normal = {
+				Slow = [
+					GH3_Guit_morello_A_bullson_parade3
 				]
-				med = [
-					gh3_guit_morello_a_bullson_parade3
+				Med = [
+					GH3_Guit_morello_A_bullson_parade3
 				]
-				fast = [
-					gh3_guit_morello_a_bullson_parade3
+				Fast = [
+					GH3_Guit_morello_A_bullson_parade3
+				]
+			}
+			Bad = {
+				Slow = [
+					GH3_Guit_morello_A_bullson_parade3
+				]
+				Med = [
+					GH3_Guit_morello_A_bullson_parade3
+				]
+				Fast = [
+					GH3_Guit_morello_A_bullson_parade3
 				]
 			}
 		}
 		bulls_on_parade4 = {
 			good = {
-				slow = [
-					gh3_guit_morello_a_bullson_parade4
+				Slow = [
+					GH3_Guit_morello_A_bullson_parade4
 				]
-				med = [
-					gh3_guit_morello_a_bullson_parade4
+				Med = [
+					GH3_Guit_morello_A_bullson_parade4
 				]
-				fast = [
-					gh3_guit_morello_a_bullson_parade4
-				]
-			}
-			normal = {
-				slow = [
-					gh3_guit_morello_a_bullson_parade4
-				]
-				med = [
-					gh3_guit_morello_a_bullson_parade4
-				]
-				fast = [
-					gh3_guit_morello_a_bullson_parade4
+				Fast = [
+					GH3_Guit_morello_A_bullson_parade4
 				]
 			}
-			bad = {
-				slow = [
-					gh3_guit_morello_a_bullson_parade4
+			Normal = {
+				Slow = [
+					GH3_Guit_morello_A_bullson_parade4
 				]
-				med = [
-					gh3_guit_morello_a_bullson_parade4
+				Med = [
+					GH3_Guit_morello_A_bullson_parade4
 				]
-				fast = [
-					gh3_guit_morello_a_bullson_parade4
+				Fast = [
+					GH3_Guit_morello_A_bullson_parade4
+				]
+			}
+			Bad = {
+				Slow = [
+					GH3_Guit_morello_A_bullson_parade4
+				]
+				Med = [
+					GH3_Guit_morello_A_bullson_parade4
+				]
+				Fast = [
+					GH3_Guit_morello_A_bullson_parade4
 				]
 			}
 		}
 		dragon_reaction = {
 			good = {
-				slow = [
+				Slow = [
 					gh3_guitarist_morello_dragon_react
 				]
-				med = [
+				Med = [
 					gh3_guitarist_morello_dragon_react
 				]
-				fast = [
-					gh3_guitarist_morello_dragon_react
-				]
-			}
-			normal = {
-				slow = [
-					gh3_guitarist_morello_dragon_react
-				]
-				med = [
-					gh3_guitarist_morello_dragon_react
-				]
-				fast = [
+				Fast = [
 					gh3_guitarist_morello_dragon_react
 				]
 			}
-			bad = {
-				slow = [
+			Normal = {
+				Slow = [
 					gh3_guitarist_morello_dragon_react
 				]
-				med = [
+				Med = [
 					gh3_guitarist_morello_dragon_react
 				]
-				fast = [
+				Fast = [
+					gh3_guitarist_morello_dragon_react
+				]
+			}
+			Bad = {
+				Slow = [
+					gh3_guitarist_morello_dragon_react
+				]
+				Med = [
+					gh3_guitarist_morello_dragon_react
+				]
+				Fast = [
 					gh3_guitarist_morello_dragon_react
 				]
 			}
 		}
 		dragon_climb = {
 			good = {
-				slow = [
+				Slow = [
 					gh3_guitarist_morello_dragon_climb
 				]
-				med = [
+				Med = [
 					gh3_guitarist_morello_dragon_climb
 				]
-				fast = [
-					gh3_guitarist_morello_dragon_climb
-				]
-			}
-			normal = {
-				slow = [
-					gh3_guitarist_morello_dragon_climb
-				]
-				med = [
-					gh3_guitarist_morello_dragon_climb
-				]
-				fast = [
+				Fast = [
 					gh3_guitarist_morello_dragon_climb
 				]
 			}
-			bad = {
-				slow = [
+			Normal = {
+				Slow = [
 					gh3_guitarist_morello_dragon_climb
 				]
-				med = [
+				Med = [
 					gh3_guitarist_morello_dragon_climb
 				]
-				fast = [
+				Fast = [
+					gh3_guitarist_morello_dragon_climb
+				]
+			}
+			Bad = {
+				Slow = [
+					gh3_guitarist_morello_dragon_climb
+				]
+				Med = [
+					gh3_guitarist_morello_dragon_climb
+				]
+				Fast = [
 					gh3_guitarist_morello_dragon_climb
 				]
 			}
 		}
-		transitions = {
-			stance_b = gh3_guit_morello_a_to_b
-			stance_c = gh3_guit_morello_a_med_idle1
+		Transitions = {
+			stance_b = GH3_Guit_morello_A_to_B
+			stance_c = GH3_Guit_morello_A_med_Idle1
 		}
 	}
 	stance_b = {
-		idle = {
+		Idle = {
 			good = {
-				slow = [
-					gh3_guit_morello_b_slw_idle_01
-					gh3_guit_morello_b_slw_idle_02
-					gh3_guit_morello_b_slw_idle_03
-					gh3_guit_morello_b_slw_idle_04
+				Slow = [
+					GH3_Guit_Morello_B_Slw_Idle_01
+					GH3_Guit_Morello_B_Slw_Idle_02
+					GH3_Guit_Morello_B_Slw_Idle_03
+					GH3_Guit_Morello_B_Slw_Idle_04
 				]
-				med = [
-					gh3_guit_morello_b_med_idle_01
-					gh3_guit_morello_b_med_idle_02
-					gh3_guit_morello_b_med_idle_03
-					gh3_guit_morello_b_med_idle_04
+				Med = [
+					GH3_Guit_Morello_B_Med_Idle_01
+					GH3_Guit_Morello_B_Med_Idle_02
+					GH3_Guit_Morello_B_Med_Idle_03
+					GH3_Guit_Morello_B_Med_Idle_04
 				]
-				fast = [
-					gh3_guit_morello_b_fst_idle_01
-					gh3_guit_morello_b_fst_idle_02
-					gh3_guit_morello_b_fst_idle_03
-				]
-			}
-			normal = {
-				slow = [
-					gh3_guit_morello_b_slw_idle_01
-					gh3_guit_morello_b_slw_idle_02
-					gh3_guit_morello_b_slw_idle_03
-					gh3_guit_morello_b_slw_idle_04
-				]
-				med = [
-					gh3_guit_morello_b_med_idle_01
-					gh3_guit_morello_b_med_idle_02
-					gh3_guit_morello_b_med_idle_03
-					gh3_guit_morello_b_med_idle_04
-				]
-				fast = [
-					gh3_guit_morello_b_fst_idle_01
-					gh3_guit_morello_b_fst_idle_02
-					gh3_guit_morello_b_fst_idle_03
+				Fast = [
+					GH3_Guit_Morello_B_Fst_Idle_01
+					GH3_Guit_Morello_B_Fst_Idle_02
+					GH3_Guit_Morello_B_Fst_Idle_03
 				]
 			}
-			bad = {
-				slow = [
-					gh3_guit_morello_b_slw_idle_01
-					gh3_guit_morello_b_slw_idle_02
-					gh3_guit_morello_b_slw_idle_03
-					gh3_guit_morello_b_slw_idle_04
+			Normal = {
+				Slow = [
+					GH3_Guit_Morello_B_Slw_Idle_01
+					GH3_Guit_Morello_B_Slw_Idle_02
+					GH3_Guit_Morello_B_Slw_Idle_03
+					GH3_Guit_Morello_B_Slw_Idle_04
 				]
-				med = [
-					gh3_guit_morello_b_med_idle_01
-					gh3_guit_morello_b_med_idle_02
-					gh3_guit_morello_b_med_idle_03
-					gh3_guit_morello_b_med_idle_04
+				Med = [
+					GH3_Guit_Morello_B_Med_Idle_01
+					GH3_Guit_Morello_B_Med_Idle_02
+					GH3_Guit_Morello_B_Med_Idle_03
+					GH3_Guit_Morello_B_Med_Idle_04
 				]
-				fast = [
-					gh3_guit_morello_b_fst_idle_01
-					gh3_guit_morello_b_fst_idle_02
-					gh3_guit_morello_b_fst_idle_03
+				Fast = [
+					GH3_Guit_Morello_B_Fst_Idle_01
+					GH3_Guit_Morello_B_Fst_Idle_02
+					GH3_Guit_Morello_B_Fst_Idle_03
+				]
+			}
+			Bad = {
+				Slow = [
+					GH3_Guit_Morello_B_Slw_Idle_01
+					GH3_Guit_Morello_B_Slw_Idle_02
+					GH3_Guit_Morello_B_Slw_Idle_03
+					GH3_Guit_Morello_B_Slw_Idle_04
+				]
+				Med = [
+					GH3_Guit_Morello_B_Med_Idle_01
+					GH3_Guit_Morello_B_Med_Idle_02
+					GH3_Guit_Morello_B_Med_Idle_03
+					GH3_Guit_Morello_B_Med_Idle_04
+				]
+				Fast = [
+					GH3_Guit_Morello_B_Fst_Idle_01
+					GH3_Guit_Morello_B_Fst_Idle_02
+					GH3_Guit_Morello_B_Fst_Idle_03
 				]
 			}
 		}
-		jump = {
+		Jump = {
 			good = {
-				slow = [
-					gh3_guit_morello_b_slow_special2
+				Slow = [
+					GH3_Guit_morello_B_slow_special2
 				]
-				med = [
-					gh3_guit_morello_b_med_special2
+				Med = [
+					GH3_Guit_morello_b_med_special2
 				]
-				fast = [
-					gh3_guit_morello_a_fast_special2
-				]
-			}
-			normal = {
-				slow = [
-					gh3_guit_morello_b_slow_special2
-				]
-				med = [
-					gh3_guit_morello_b_med_special2
-				]
-				fast = [
-					gh3_guit_morello_a_fast_special2
+				Fast = [
+					GH3_Guit_morello_A_fast_special2
 				]
 			}
-			bad = {
-				slow = [
-					gh3_guit_morello_b_slow_special2
+			Normal = {
+				Slow = [
+					GH3_Guit_morello_B_slow_special2
 				]
-				med = [
-					gh3_guit_morello_b_med_special2
+				Med = [
+					GH3_Guit_morello_b_med_special2
 				]
-				fast = [
-					gh3_guit_morello_a_fast_special2
+				Fast = [
+					GH3_Guit_morello_A_fast_special2
+				]
+			}
+			Bad = {
+				Slow = [
+					GH3_Guit_morello_B_slow_special2
+				]
+				Med = [
+					GH3_Guit_morello_b_med_special2
+				]
+				Fast = [
+					GH3_Guit_morello_A_fast_special2
 				]
 			}
 		}
 		kick = {
 			good = {
-				slow = [
-					gh3_guit_morello_b_slw_idle_01
-					gh3_guit_morello_b_slw_idle_02
-					gh3_guit_morello_b_slw_idle_03
-					gh3_guit_morello_b_slw_idle_04
+				Slow = [
+					GH3_Guit_Morello_B_Slw_Idle_01
+					GH3_Guit_Morello_B_Slw_Idle_02
+					GH3_Guit_Morello_B_Slw_Idle_03
+					GH3_Guit_Morello_B_Slw_Idle_04
 				]
-				med = [
-					gh3_guit_morello_b_med_idle_01
-					gh3_guit_morello_b_med_idle_02
-					gh3_guit_morello_b_med_idle_03
-					gh3_guit_morello_b_med_idle_04
+				Med = [
+					GH3_Guit_Morello_B_Med_Idle_01
+					GH3_Guit_Morello_B_Med_Idle_02
+					GH3_Guit_Morello_B_Med_Idle_03
+					GH3_Guit_Morello_B_Med_Idle_04
 				]
-				fast = [
-					gh3_guit_morello_b_fst_idle_01
-					gh3_guit_morello_b_fst_idle_02
-					gh3_guit_morello_b_fst_idle_03
-				]
-			}
-			normal = {
-				slow = [
-					gh3_guit_morello_b_slw_idle_01
-					gh3_guit_morello_b_slw_idle_02
-					gh3_guit_morello_b_slw_idle_03
-					gh3_guit_morello_b_slw_idle_04
-				]
-				med = [
-					gh3_guit_morello_b_med_idle_01
-					gh3_guit_morello_b_med_idle_02
-					gh3_guit_morello_b_med_idle_03
-					gh3_guit_morello_b_med_idle_04
-				]
-				fast = [
-					gh3_guit_morello_b_fst_idle_01
-					gh3_guit_morello_b_fst_idle_02
-					gh3_guit_morello_b_fst_idle_03
+				Fast = [
+					GH3_Guit_Morello_B_Fst_Idle_01
+					GH3_Guit_Morello_B_Fst_Idle_02
+					GH3_Guit_Morello_B_Fst_Idle_03
 				]
 			}
-			bad = {
-				slow = [
-					gh3_guit_morello_b_slw_idle_01
-					gh3_guit_morello_b_slw_idle_02
-					gh3_guit_morello_b_slw_idle_03
-					gh3_guit_morello_b_slw_idle_04
+			Normal = {
+				Slow = [
+					GH3_Guit_Morello_B_Slw_Idle_01
+					GH3_Guit_Morello_B_Slw_Idle_02
+					GH3_Guit_Morello_B_Slw_Idle_03
+					GH3_Guit_Morello_B_Slw_Idle_04
 				]
-				med = [
-					gh3_guit_morello_b_med_idle_01
-					gh3_guit_morello_b_med_idle_02
-					gh3_guit_morello_b_med_idle_03
-					gh3_guit_morello_b_med_idle_04
+				Med = [
+					GH3_Guit_Morello_B_Med_Idle_01
+					GH3_Guit_Morello_B_Med_Idle_02
+					GH3_Guit_Morello_B_Med_Idle_03
+					GH3_Guit_Morello_B_Med_Idle_04
 				]
-				fast = [
-					gh3_guit_morello_b_fst_idle_01
-					gh3_guit_morello_b_fst_idle_02
-					gh3_guit_morello_b_fst_idle_03
+				Fast = [
+					GH3_Guit_Morello_B_Fst_Idle_01
+					GH3_Guit_Morello_B_Fst_Idle_02
+					GH3_Guit_Morello_B_Fst_Idle_03
+				]
+			}
+			Bad = {
+				Slow = [
+					GH3_Guit_Morello_B_Slw_Idle_01
+					GH3_Guit_Morello_B_Slw_Idle_02
+					GH3_Guit_Morello_B_Slw_Idle_03
+					GH3_Guit_Morello_B_Slw_Idle_04
+				]
+				Med = [
+					GH3_Guit_Morello_B_Med_Idle_01
+					GH3_Guit_Morello_B_Med_Idle_02
+					GH3_Guit_Morello_B_Med_Idle_03
+					GH3_Guit_Morello_B_Med_Idle_04
+				]
+				Fast = [
+					GH3_Guit_Morello_B_Fst_Idle_01
+					GH3_Guit_Morello_B_Fst_Idle_02
+					GH3_Guit_Morello_B_Fst_Idle_03
 				]
 			}
 		}
 		solo = {
 			good = {
-				slow = [
-					gh3_guit_morello_b_slow_solo01
-					gh3_guit_morello_b_slow_solo02
-					gh3_guit_morello_b_slow_solo03
+				Slow = [
+					GH3_Guit_Morello_B_slow_Solo01
+					GH3_Guit_Morello_B_slow_Solo02
+					GH3_Guit_Morello_B_slow_Solo03
 				]
-				med = [
-					gh3_guit_morello_b_med_solo01
-					gh3_guit_morello_b_med_solo02
-					gh3_guit_morello_b_med_solo03
+				Med = [
+					GH3_Guit_Morello_B_med_Solo01
+					GH3_Guit_Morello_B_med_Solo02
+					GH3_Guit_Morello_B_med_Solo03
 				]
-				fast = [
-					gh3_guit_morello_b_fst_solo01
-					gh3_guit_morello_b_fst_solo02
-					gh3_guit_morello_b_fst_solo03
-				]
-			}
-			normal = {
-				slow = [
-					gh3_guit_morello_b_slow_solo01
-					gh3_guit_morello_b_slow_solo02
-					gh3_guit_morello_b_slow_solo03
-				]
-				med = [
-					gh3_guit_morello_b_med_solo01
-					gh3_guit_morello_b_med_solo02
-					gh3_guit_morello_b_med_solo03
-				]
-				fast = [
-					gh3_guit_morello_b_fst_solo01
-					gh3_guit_morello_b_fst_solo02
-					gh3_guit_morello_b_fst_solo03
+				Fast = [
+					GH3_Guit_Morello_B_Fst_Solo01
+					GH3_Guit_Morello_B_Fst_Solo02
+					GH3_Guit_Morello_B_Fst_Solo03
 				]
 			}
-			bad = {
-				slow = [
-					gh3_guit_morello_b_slow_solo01
-					gh3_guit_morello_b_slow_solo02
-					gh3_guit_morello_b_slow_solo03
+			Normal = {
+				Slow = [
+					GH3_Guit_Morello_B_slow_Solo01
+					GH3_Guit_Morello_B_slow_Solo02
+					GH3_Guit_Morello_B_slow_Solo03
 				]
-				med = [
-					gh3_guit_morello_b_med_solo01
-					gh3_guit_morello_b_med_solo02
-					gh3_guit_morello_b_med_solo03
+				Med = [
+					GH3_Guit_Morello_B_med_Solo01
+					GH3_Guit_Morello_B_med_Solo02
+					GH3_Guit_Morello_B_med_Solo03
 				]
-				fast = [
-					gh3_guit_morello_b_fst_solo01
-					gh3_guit_morello_b_fst_solo02
-					gh3_guit_morello_b_fst_solo03
+				Fast = [
+					GH3_Guit_Morello_B_Fst_Solo01
+					GH3_Guit_Morello_B_Fst_Solo02
+					GH3_Guit_Morello_B_Fst_Solo03
+				]
+			}
+			Bad = {
+				Slow = [
+					GH3_Guit_Morello_B_slow_Solo01
+					GH3_Guit_Morello_B_slow_Solo02
+					GH3_Guit_Morello_B_slow_Solo03
+				]
+				Med = [
+					GH3_Guit_Morello_B_med_Solo01
+					GH3_Guit_Morello_B_med_Solo02
+					GH3_Guit_Morello_B_med_Solo03
+				]
+				Fast = [
+					GH3_Guit_Morello_B_Fst_Solo01
+					GH3_Guit_Morello_B_Fst_Solo02
+					GH3_Guit_Morello_B_Fst_Solo03
 				]
 			}
 		}
 		special = {
 			good = {
-				slow = [
-					gh3_guit_morello_b_slow_special1
-					gh3_guit_morello_b_slow_special2
+				Slow = [
+					GH3_Guit_morello_B_slow_special1
+					GH3_Guit_morello_B_slow_special2
 				]
-				med = [
-					gh3_guit_morello_b_med_special1
-					gh3_guit_morello_b_med_special2
+				Med = [
+					GH3_Guit_morello_b_med_special1
+					GH3_Guit_morello_b_med_special2
 				]
-				fast = [
-					gh3_guit_morello_b_fast_special1
-					gh3_guit_morello_b_fast_special2
-				]
-			}
-			normal = {
-				slow = [
-					gh3_guit_morello_b_slow_special1
-					gh3_guit_morello_b_slow_special2
-				]
-				med = [
-					gh3_guit_morello_b_med_special1
-					gh3_guit_morello_b_med_special2
-				]
-				fast = [
-					gh3_guit_morello_b_fast_special1
-					gh3_guit_morello_b_fast_special2
+				Fast = [
+					GH3_Guit_morello_b_fast_special1
+					GH3_Guit_morello_b_fast_special2
 				]
 			}
-			bad = {
-				slow = [
-					gh3_guit_morello_b_slow_special1
-					gh3_guit_morello_b_slow_special2
+			Normal = {
+				Slow = [
+					GH3_Guit_morello_B_slow_special1
+					GH3_Guit_morello_B_slow_special2
 				]
-				med = [
-					gh3_guit_morello_b_med_special1
-					gh3_guit_morello_b_med_special2
+				Med = [
+					GH3_Guit_morello_b_med_special1
+					GH3_Guit_morello_b_med_special2
 				]
-				fast = [
-					gh3_guit_morello_b_fast_special1
-					gh3_guit_morello_b_fast_special2
+				Fast = [
+					GH3_Guit_morello_b_fast_special1
+					GH3_Guit_morello_b_fast_special2
+				]
+			}
+			Bad = {
+				Slow = [
+					GH3_Guit_morello_B_slow_special1
+					GH3_Guit_morello_B_slow_special2
+				]
+				Med = [
+					GH3_Guit_morello_b_med_special1
+					GH3_Guit_morello_b_med_special2
+				]
+				Fast = [
+					GH3_Guit_morello_b_fast_special1
+					GH3_Guit_morello_b_fast_special2
 				]
 			}
 		}
 		starpower = {
 			good = {
-				slow = [
-					gh3_guit_morello_b_slow_special2
+				Slow = [
+					GH3_Guit_morello_B_slow_special2
 				]
-				med = [
-					gh3_guit_morello_b_med_special2
+				Med = [
+					GH3_Guit_morello_b_med_special2
 				]
-				fast = [
-					gh3_guit_morello_b_fast_special2
-				]
-			}
-			normal = {
-				slow = [
-					gh3_guit_morello_b_slow_special2
-				]
-				med = [
-					gh3_guit_morello_b_med_special2
-				]
-				fast = [
-					gh3_guit_morello_b_fast_special2
+				Fast = [
+					GH3_Guit_morello_b_fast_special2
 				]
 			}
-			bad = {
-				slow = [
-					gh3_guit_morello_b_slow_special2
+			Normal = {
+				Slow = [
+					GH3_Guit_morello_B_slow_special2
 				]
-				med = [
-					gh3_guit_morello_b_med_special2
+				Med = [
+					GH3_Guit_morello_b_med_special2
 				]
-				fast = [
-					gh3_guit_morello_b_fast_special2
+				Fast = [
+					GH3_Guit_morello_b_fast_special2
+				]
+			}
+			Bad = {
+				Slow = [
+					GH3_Guit_morello_B_slow_special2
+				]
+				Med = [
+					GH3_Guit_morello_b_med_special2
+				]
+				Fast = [
+					GH3_Guit_morello_b_fast_special2
 				]
 			}
 		}
 		handsoff = {
 			good = {
-				slow = [
-					gh3_guit_morello_intro1
+				Slow = [
+					GH3_Guit_morello_intro1
 				]
-				med = [
-					gh3_guit_morello_intro1
+				Med = [
+					GH3_Guit_morello_intro1
 				]
-				fast = [
-					gh3_guit_morello_intro1
-				]
-			}
-			normal = {
-				slow = [
-					gh3_guit_morello_intro1
-				]
-				med = [
-					gh3_guit_morello_intro1
-				]
-				fast = [
-					gh3_guit_morello_intro1
+				Fast = [
+					GH3_Guit_morello_intro1
 				]
 			}
-			bad = {
-				slow = [
-					gh3_guit_morello_intro1
+			Normal = {
+				Slow = [
+					GH3_Guit_morello_intro1
 				]
-				med = [
-					gh3_guit_morello_intro1
+				Med = [
+					GH3_Guit_morello_intro1
 				]
-				fast = [
-					gh3_guit_morello_intro1
-				]
-			}
-		}
-		endstrum = {
-			good = {
-				slow = [
-					gh3_guit_morello_intro1
-				]
-				med = [
-					gh3_guit_morello_intro1
-				]
-				fast = [
-					gh3_guit_morello_intro1
+				Fast = [
+					GH3_Guit_morello_intro1
 				]
 			}
-			normal = {
-				slow = [
-					gh3_guit_morello_intro1
+			Bad = {
+				Slow = [
+					GH3_Guit_morello_intro1
 				]
-				med = [
-					gh3_guit_morello_intro1
+				Med = [
+					GH3_Guit_morello_intro1
 				]
-				fast = [
-					gh3_guit_morello_intro1
-				]
-			}
-			bad = {
-				slow = [
-					gh3_guit_morello_intro1
-				]
-				med = [
-					gh3_guit_morello_intro1
-				]
-				fast = [
-					gh3_guit_morello_intro1
+				Fast = [
+					GH3_Guit_morello_intro1
 				]
 			}
 		}
-		attack = {
+		endStrum = {
 			good = {
-				slow = [
-					gh3_guit_morello_b_attack_left01
+				Slow = [
+					GH3_Guit_morello_intro1
 				]
-				med = [
-					gh3_guit_morello_b_attack_left01
+				Med = [
+					GH3_Guit_morello_intro1
 				]
-				fast = [
-					gh3_guit_morello_b_attack_left01
-				]
-			}
-			normal = {
-				slow = [
-					gh3_guit_morello_b_attack_left01
-				]
-				med = [
-					gh3_guit_morello_b_attack_left01
-				]
-				fast = [
-					gh3_guit_morello_b_attack_left01
+				Fast = [
+					GH3_Guit_morello_intro1
 				]
 			}
-			bad = {
-				slow = [
-					gh3_guit_morello_b_attack_left01
+			Normal = {
+				Slow = [
+					GH3_Guit_morello_intro1
 				]
-				med = [
-					gh3_guit_morello_b_attack_left01
+				Med = [
+					GH3_Guit_morello_intro1
 				]
-				fast = [
-					gh3_guit_morello_b_attack_left01
+				Fast = [
+					GH3_Guit_morello_intro1
+				]
+			}
+			Bad = {
+				Slow = [
+					GH3_Guit_morello_intro1
+				]
+				Med = [
+					GH3_Guit_morello_intro1
+				]
+				Fast = [
+					GH3_Guit_morello_intro1
 				]
 			}
 		}
-		attack_right = {
+		Attack = {
 			good = {
-				slow = [
-					gh3_guit_morello_b_attack_right01
+				Slow = [
+					GH3_Guit_morello_B_Attack_Left01
 				]
-				med = [
-					gh3_guit_morello_b_attack_right01
+				Med = [
+					GH3_Guit_morello_B_Attack_Left01
 				]
-				fast = [
-					gh3_guit_morello_b_attack_right01
-				]
-			}
-			normal = {
-				slow = [
-					gh3_guit_morello_b_attack_right01
-				]
-				med = [
-					gh3_guit_morello_b_attack_right01
-				]
-				fast = [
-					gh3_guit_morello_b_attack_right01
+				Fast = [
+					GH3_Guit_morello_B_Attack_Left01
 				]
 			}
-			bad = {
-				slow = [
-					gh3_guit_morello_b_attack_right01
+			Normal = {
+				Slow = [
+					GH3_Guit_morello_B_Attack_Left01
 				]
-				med = [
-					gh3_guit_morello_b_attack_right01
+				Med = [
+					GH3_Guit_morello_B_Attack_Left01
 				]
-				fast = [
-					gh3_guit_morello_b_attack_right01
+				Fast = [
+					GH3_Guit_morello_B_Attack_Left01
+				]
+			}
+			Bad = {
+				Slow = [
+					GH3_Guit_morello_B_Attack_Left01
+				]
+				Med = [
+					GH3_Guit_morello_B_Attack_Left01
+				]
+				Fast = [
+					GH3_Guit_morello_B_Attack_Left01
 				]
 			}
 		}
-		react = {
+		Attack_right = {
 			good = {
-				slow = [
-					gh3_guit_morello_b_react_left01
+				Slow = [
+					GH3_Guit_morello_B_Attack_Right01
 				]
-				med = [
-					gh3_guit_morello_b_react_left01
+				Med = [
+					GH3_Guit_morello_B_Attack_Right01
 				]
-				fast = [
-					gh3_guit_morello_b_react_left01
-				]
-			}
-			normal = {
-				slow = [
-					gh3_guit_morello_b_react_left01
-				]
-				med = [
-					gh3_guit_morello_b_react_left01
-				]
-				fast = [
-					gh3_guit_morello_b_react_left01
+				Fast = [
+					GH3_Guit_morello_B_Attack_Right01
 				]
 			}
-			bad = {
-				slow = [
-					gh3_guit_morello_b_react_left01
+			Normal = {
+				Slow = [
+					GH3_Guit_morello_B_Attack_Right01
 				]
-				med = [
-					gh3_guit_morello_b_react_left01
+				Med = [
+					GH3_Guit_morello_B_Attack_Right01
 				]
-				fast = [
-					gh3_guit_morello_b_react_left01
+				Fast = [
+					GH3_Guit_morello_B_Attack_Right01
+				]
+			}
+			Bad = {
+				Slow = [
+					GH3_Guit_morello_B_Attack_Right01
+				]
+				Med = [
+					GH3_Guit_morello_B_Attack_Right01
+				]
+				Fast = [
+					GH3_Guit_morello_B_Attack_Right01
 				]
 			}
 		}
-		react_right = {
+		React = {
 			good = {
-				slow = [
-					gh3_guit_morello_b_react_right01
+				Slow = [
+					GH3_Guit_morello_B_react_Left01
 				]
-				med = [
-					gh3_guit_morello_b_react_right01
+				Med = [
+					GH3_Guit_morello_B_react_Left01
 				]
-				fast = [
-					gh3_guit_morello_b_react_right01
-				]
-			}
-			normal = {
-				slow = [
-					gh3_guit_morello_b_react_right01
-				]
-				med = [
-					gh3_guit_morello_b_react_right01
-				]
-				fast = [
-					gh3_guit_morello_b_react_right01
+				Fast = [
+					GH3_Guit_morello_B_react_Left01
 				]
 			}
-			bad = {
-				slow = [
-					gh3_guit_morello_b_react_right01
+			Normal = {
+				Slow = [
+					GH3_Guit_morello_B_react_Left01
 				]
-				med = [
-					gh3_guit_morello_b_react_right01
+				Med = [
+					GH3_Guit_morello_B_react_Left01
 				]
-				fast = [
-					gh3_guit_morello_b_react_right01
+				Fast = [
+					GH3_Guit_morello_B_react_Left01
+				]
+			}
+			Bad = {
+				Slow = [
+					GH3_Guit_morello_B_react_Left01
+				]
+				Med = [
+					GH3_Guit_morello_B_react_Left01
+				]
+				Fast = [
+					GH3_Guit_morello_B_react_Left01
+				]
+			}
+		}
+		React_right = {
+			good = {
+				Slow = [
+					GH3_Guit_morello_B_react_Right01
+				]
+				Med = [
+					GH3_Guit_morello_B_react_Right01
+				]
+				Fast = [
+					GH3_Guit_morello_B_react_Right01
+				]
+			}
+			Normal = {
+				Slow = [
+					GH3_Guit_morello_B_react_Right01
+				]
+				Med = [
+					GH3_Guit_morello_B_react_Right01
+				]
+				Fast = [
+					GH3_Guit_morello_B_react_Right01
+				]
+			}
+			Bad = {
+				Slow = [
+					GH3_Guit_morello_B_react_Right01
+				]
+				Med = [
+					GH3_Guit_morello_B_react_Right01
+				]
+				Fast = [
+					GH3_Guit_morello_B_react_Right01
 				]
 			}
 		}
 		dragon_reaction = {
 			good = {
-				slow = [
+				Slow = [
 					gh3_guitarist_morello_dragon_react
 				]
-				med = [
+				Med = [
 					gh3_guitarist_morello_dragon_react
 				]
-				fast = [
-					gh3_guitarist_morello_dragon_react
-				]
-			}
-			normal = {
-				slow = [
-					gh3_guitarist_morello_dragon_react
-				]
-				med = [
-					gh3_guitarist_morello_dragon_react
-				]
-				fast = [
+				Fast = [
 					gh3_guitarist_morello_dragon_react
 				]
 			}
-			bad = {
-				slow = [
+			Normal = {
+				Slow = [
 					gh3_guitarist_morello_dragon_react
 				]
-				med = [
+				Med = [
 					gh3_guitarist_morello_dragon_react
 				]
-				fast = [
+				Fast = [
+					gh3_guitarist_morello_dragon_react
+				]
+			}
+			Bad = {
+				Slow = [
+					gh3_guitarist_morello_dragon_react
+				]
+				Med = [
+					gh3_guitarist_morello_dragon_react
+				]
+				Fast = [
 					gh3_guitarist_morello_dragon_react
 				]
 			}
 		}
 		dragon_climb = {
 			good = {
-				slow = [
+				Slow = [
 					gh3_guitarist_morello_dragon_climb
 				]
-				med = [
+				Med = [
 					gh3_guitarist_morello_dragon_climb
 				]
-				fast = [
-					gh3_guitarist_morello_dragon_climb
-				]
-			}
-			normal = {
-				slow = [
-					gh3_guitarist_morello_dragon_climb
-				]
-				med = [
-					gh3_guitarist_morello_dragon_climb
-				]
-				fast = [
+				Fast = [
 					gh3_guitarist_morello_dragon_climb
 				]
 			}
-			bad = {
-				slow = [
+			Normal = {
+				Slow = [
 					gh3_guitarist_morello_dragon_climb
 				]
-				med = [
+				Med = [
 					gh3_guitarist_morello_dragon_climb
 				]
-				fast = [
+				Fast = [
+					gh3_guitarist_morello_dragon_climb
+				]
+			}
+			Bad = {
+				Slow = [
+					gh3_guitarist_morello_dragon_climb
+				]
+				Med = [
+					gh3_guitarist_morello_dragon_climb
+				]
+				Fast = [
 					gh3_guitarist_morello_dragon_climb
 				]
 			}
 		}
-		transitions = {
-			stance_a = gh3_guit_morello_b_to_a
-			stance_c = gh3_guit_morello_b_to_a
-			win = gh3_guit_morello_b_to_a
-			lose = gh3_guit_morello_b_to_a
+		Transitions = {
+			Stance_A = GH3_Guit_morello_B_to_A
+			stance_c = GH3_Guit_morello_B_to_A
+			win = GH3_Guit_morello_B_to_A
+			lose = GH3_Guit_morello_B_to_A
 		}
 	}
 	stance_c = {
-		idle = {
+		Idle = {
 			good = {
-				slow = [
-					gh3_guit_morello_a_slow_idle1
-					gh3_guit_morello_a_slow_idle2
-					gh3_guit_morello_a_slow_idle3
-					gh3_guit_morello_a_slow_idle4
+				Slow = [
+					GH3_Guit_morello_A_slow_Idle1
+					GH3_Guit_morello_A_slow_Idle2
+					GH3_Guit_morello_A_slow_Idle3
+					GH3_Guit_morello_A_slow_Idle4
 				]
-				med = [
-					gh3_guit_morello_a_med_idle1
-					gh3_guit_morello_a_med_idle2
-					gh3_guit_morello_a_med_idle3
-					gh3_guit_morello_a_med_idle4
+				Med = [
+					GH3_Guit_morello_A_med_Idle1
+					GH3_Guit_morello_A_med_Idle2
+					GH3_Guit_morello_A_med_Idle3
+					GH3_Guit_morello_A_med_Idle4
 				]
-				fast = [
-					gh3_guit_morello_a_fst_idle1
-					gh3_guit_morello_a_fst_idle2
-					gh3_guit_morello_a_fst_idle3
-					gh3_guit_morello_a_fst_idle4
-				]
-			}
-			normal = {
-				slow = [
-					gh3_guit_morello_a_slow_idle1
-					gh3_guit_morello_a_slow_idle2
-					gh3_guit_morello_a_slow_idle3
-					gh3_guit_morello_a_slow_idle4
-				]
-				med = [
-					gh3_guit_morello_a_med_idle1
-					gh3_guit_morello_a_med_idle2
-					gh3_guit_morello_a_med_idle3
-					gh3_guit_morello_a_med_idle4
-				]
-				fast = [
-					gh3_guit_morello_a_fst_idle1
-					gh3_guit_morello_a_fst_idle2
-					gh3_guit_morello_a_fst_idle3
-					gh3_guit_morello_a_fst_idle4
+				Fast = [
+					GH3_Guit_morello_A_Fst_Idle1
+					GH3_Guit_morello_A_Fst_Idle2
+					GH3_Guit_morello_A_Fst_Idle3
+					GH3_Guit_morello_A_Fst_Idle4
 				]
 			}
-			bad = {
-				slow = [
-					gh3_guit_morello_a_slow_idle1
-					gh3_guit_morello_a_slow_idle2
-					gh3_guit_morello_a_slow_idle3
-					gh3_guit_morello_a_slow_idle4
+			Normal = {
+				Slow = [
+					GH3_Guit_morello_A_slow_Idle1
+					GH3_Guit_morello_A_slow_Idle2
+					GH3_Guit_morello_A_slow_Idle3
+					GH3_Guit_morello_A_slow_Idle4
 				]
-				med = [
-					gh3_guit_morello_a_med_idle1
-					gh3_guit_morello_a_med_idle2
-					gh3_guit_morello_a_med_idle3
-					gh3_guit_morello_a_med_idle4
+				Med = [
+					GH3_Guit_morello_A_med_Idle1
+					GH3_Guit_morello_A_med_Idle2
+					GH3_Guit_morello_A_med_Idle3
+					GH3_Guit_morello_A_med_Idle4
 				]
-				fast = [
-					gh3_guit_morello_a_fst_idle1
-					gh3_guit_morello_a_fst_idle2
-					gh3_guit_morello_a_fst_idle3
-					gh3_guit_morello_a_fst_idle4
+				Fast = [
+					GH3_Guit_morello_A_Fst_Idle1
+					GH3_Guit_morello_A_Fst_Idle2
+					GH3_Guit_morello_A_Fst_Idle3
+					GH3_Guit_morello_A_Fst_Idle4
+				]
+			}
+			Bad = {
+				Slow = [
+					GH3_Guit_morello_A_slow_Idle1
+					GH3_Guit_morello_A_slow_Idle2
+					GH3_Guit_morello_A_slow_Idle3
+					GH3_Guit_morello_A_slow_Idle4
+				]
+				Med = [
+					GH3_Guit_morello_A_med_Idle1
+					GH3_Guit_morello_A_med_Idle2
+					GH3_Guit_morello_A_med_Idle3
+					GH3_Guit_morello_A_med_Idle4
+				]
+				Fast = [
+					GH3_Guit_morello_A_Fst_Idle1
+					GH3_Guit_morello_A_Fst_Idle2
+					GH3_Guit_morello_A_Fst_Idle3
+					GH3_Guit_morello_A_Fst_Idle4
 				]
 			}
 		}
-		jump = {
+		Jump = {
 			good = {
-				slow = [
-					gh3_guit_morello_a_slow_special2
+				Slow = [
+					GH3_Guit_morello_A_slow_special2
 				]
-				med = [
-					gh3_guit_morello_a_fast_special2
+				Med = [
+					GH3_Guit_morello_A_fast_special2
 				]
-				fast = [
-					gh3_guit_morello_a_fast_special2
-				]
-			}
-			normal = {
-				slow = [
-					gh3_guit_morello_a_slow_special2
-				]
-				med = [
-					gh3_guit_morello_a_fast_special2
-				]
-				fast = [
-					gh3_guit_morello_a_fast_special2
+				Fast = [
+					GH3_Guit_morello_A_fast_special2
 				]
 			}
-			bad = {
-				slow = [
-					gh3_guit_morello_a_slow_special2
+			Normal = {
+				Slow = [
+					GH3_Guit_morello_A_slow_special2
 				]
-				med = [
-					gh3_guit_morello_a_fast_special2
+				Med = [
+					GH3_Guit_morello_A_fast_special2
 				]
-				fast = [
-					gh3_guit_morello_a_fast_special2
+				Fast = [
+					GH3_Guit_morello_A_fast_special2
+				]
+			}
+			Bad = {
+				Slow = [
+					GH3_Guit_morello_A_slow_special2
+				]
+				Med = [
+					GH3_Guit_morello_A_fast_special2
+				]
+				Fast = [
+					GH3_Guit_morello_A_fast_special2
 				]
 			}
 		}
 		kick = {
 			good = {
-				slow = [
-					gh3_guit_morello_a_slow_idle1
-					gh3_guit_morello_a_slow_idle2
-					gh3_guit_morello_a_slow_idle3
-					gh3_guit_morello_a_slow_idle4
+				Slow = [
+					GH3_Guit_morello_A_slow_Idle1
+					GH3_Guit_morello_A_slow_Idle2
+					GH3_Guit_morello_A_slow_Idle3
+					GH3_Guit_morello_A_slow_Idle4
 				]
-				med = [
-					gh3_guit_morello_a_med_idle1
-					gh3_guit_morello_a_med_idle2
-					gh3_guit_morello_a_med_idle3
-					gh3_guit_morello_a_med_idle4
+				Med = [
+					GH3_Guit_morello_A_med_Idle1
+					GH3_Guit_morello_A_med_Idle2
+					GH3_Guit_morello_A_med_Idle3
+					GH3_Guit_morello_A_med_Idle4
 				]
-				fast = [
-					gh3_guit_morello_a_fst_idle1
-					gh3_guit_morello_a_fst_idle2
-					gh3_guit_morello_a_fst_idle3
-					gh3_guit_morello_a_fst_idle4
-				]
-			}
-			normal = {
-				slow = [
-					gh3_guit_morello_a_slow_idle1
-					gh3_guit_morello_a_slow_idle2
-					gh3_guit_morello_a_slow_idle3
-					gh3_guit_morello_a_slow_idle4
-				]
-				med = [
-					gh3_guit_morello_a_med_idle1
-					gh3_guit_morello_a_med_idle2
-					gh3_guit_morello_a_med_idle3
-					gh3_guit_morello_a_med_idle4
-				]
-				fast = [
-					gh3_guit_morello_a_fst_idle1
-					gh3_guit_morello_a_fst_idle2
-					gh3_guit_morello_a_fst_idle3
-					gh3_guit_morello_a_fst_idle4
+				Fast = [
+					GH3_Guit_morello_A_Fst_Idle1
+					GH3_Guit_morello_A_Fst_Idle2
+					GH3_Guit_morello_A_Fst_Idle3
+					GH3_Guit_morello_A_Fst_Idle4
 				]
 			}
-			bad = {
-				slow = [
-					gh3_guit_morello_a_slow_idle1
-					gh3_guit_morello_a_slow_idle2
-					gh3_guit_morello_a_slow_idle3
-					gh3_guit_morello_a_slow_idle4
+			Normal = {
+				Slow = [
+					GH3_Guit_morello_A_slow_Idle1
+					GH3_Guit_morello_A_slow_Idle2
+					GH3_Guit_morello_A_slow_Idle3
+					GH3_Guit_morello_A_slow_Idle4
 				]
-				med = [
-					gh3_guit_morello_a_med_idle1
-					gh3_guit_morello_a_med_idle2
-					gh3_guit_morello_a_med_idle3
-					gh3_guit_morello_a_med_idle4
+				Med = [
+					GH3_Guit_morello_A_med_Idle1
+					GH3_Guit_morello_A_med_Idle2
+					GH3_Guit_morello_A_med_Idle3
+					GH3_Guit_morello_A_med_Idle4
 				]
-				fast = [
-					gh3_guit_morello_a_fst_idle1
-					gh3_guit_morello_a_fst_idle2
-					gh3_guit_morello_a_fst_idle3
-					gh3_guit_morello_a_fst_idle4
+				Fast = [
+					GH3_Guit_morello_A_Fst_Idle1
+					GH3_Guit_morello_A_Fst_Idle2
+					GH3_Guit_morello_A_Fst_Idle3
+					GH3_Guit_morello_A_Fst_Idle4
+				]
+			}
+			Bad = {
+				Slow = [
+					GH3_Guit_morello_A_slow_Idle1
+					GH3_Guit_morello_A_slow_Idle2
+					GH3_Guit_morello_A_slow_Idle3
+					GH3_Guit_morello_A_slow_Idle4
+				]
+				Med = [
+					GH3_Guit_morello_A_med_Idle1
+					GH3_Guit_morello_A_med_Idle2
+					GH3_Guit_morello_A_med_Idle3
+					GH3_Guit_morello_A_med_Idle4
+				]
+				Fast = [
+					GH3_Guit_morello_A_Fst_Idle1
+					GH3_Guit_morello_A_Fst_Idle2
+					GH3_Guit_morello_A_Fst_Idle3
+					GH3_Guit_morello_A_Fst_Idle4
 				]
 			}
 		}
 		solo = {
 			good = {
-				slow = [
-					gh3_guit_morello_a_slow_solo1
-					gh3_guit_morello_a_slow_solo2
-					gh3_guit_morello_a_slow_solo3
+				Slow = [
+					GH3_Guit_morello_A_slow_solo1
+					GH3_Guit_morello_A_slow_solo2
+					GH3_Guit_morello_A_slow_solo3
 				]
-				med = [
-					gh3_guit_morello_a_med_solo1
-					gh3_guit_morello_a_med_solo2
-					gh3_guit_morello_a_med_solo3
+				Med = [
+					GH3_Guit_morello_A_med_solo1
+					GH3_Guit_morello_A_med_solo2
+					GH3_Guit_morello_A_med_solo3
 				]
-				fast = [
-					gh3_guit_morello_a_fast_solo1
-					gh3_guit_morello_a_fast_solo2
-					gh3_guit_morello_a_fast_solo3
-				]
-			}
-			normal = {
-				slow = [
-					gh3_guit_morello_a_slow_solo1
-					gh3_guit_morello_a_slow_solo2
-					gh3_guit_morello_a_slow_solo3
-				]
-				med = [
-					gh3_guit_morello_a_med_solo1
-					gh3_guit_morello_a_med_solo2
-					gh3_guit_morello_a_med_solo3
-				]
-				fast = [
-					gh3_guit_morello_a_fast_solo1
-					gh3_guit_morello_a_fast_solo2
-					gh3_guit_morello_a_fast_solo3
+				Fast = [
+					GH3_Guit_morello_A_fast_solo1
+					GH3_Guit_morello_A_fast_solo2
+					GH3_Guit_morello_A_fast_solo3
 				]
 			}
-			bad = {
-				slow = [
-					gh3_guit_morello_a_slow_solo1
-					gh3_guit_morello_a_slow_solo2
-					gh3_guit_morello_a_slow_solo3
+			Normal = {
+				Slow = [
+					GH3_Guit_morello_A_slow_solo1
+					GH3_Guit_morello_A_slow_solo2
+					GH3_Guit_morello_A_slow_solo3
 				]
-				med = [
-					gh3_guit_morello_a_med_solo1
-					gh3_guit_morello_a_med_solo2
-					gh3_guit_morello_a_med_solo3
+				Med = [
+					GH3_Guit_morello_A_med_solo1
+					GH3_Guit_morello_A_med_solo2
+					GH3_Guit_morello_A_med_solo3
 				]
-				fast = [
-					gh3_guit_morello_a_fast_solo1
-					gh3_guit_morello_a_fast_solo2
-					gh3_guit_morello_a_fast_solo3
+				Fast = [
+					GH3_Guit_morello_A_fast_solo1
+					GH3_Guit_morello_A_fast_solo2
+					GH3_Guit_morello_A_fast_solo3
+				]
+			}
+			Bad = {
+				Slow = [
+					GH3_Guit_morello_A_slow_solo1
+					GH3_Guit_morello_A_slow_solo2
+					GH3_Guit_morello_A_slow_solo3
+				]
+				Med = [
+					GH3_Guit_morello_A_med_solo1
+					GH3_Guit_morello_A_med_solo2
+					GH3_Guit_morello_A_med_solo3
+				]
+				Fast = [
+					GH3_Guit_morello_A_fast_solo1
+					GH3_Guit_morello_A_fast_solo2
+					GH3_Guit_morello_A_fast_solo3
 				]
 			}
 		}
 		special = {
 			good = {
-				slow = [
-					gh3_guit_morello_a_slow_special1
-					gh3_guit_morello_a_slow_special2
+				Slow = [
+					GH3_Guit_morello_A_slow_special1
+					GH3_Guit_morello_A_slow_special2
 				]
-				med = [
-					gh3_guit_morello_a_fast_special1
-					gh3_guit_morello_a_fast_special2
+				Med = [
+					GH3_Guit_morello_A_fast_special1
+					GH3_Guit_morello_A_fast_special2
 				]
-				fast = [
-					gh3_guit_morello_a_fast_special1
-					gh3_guit_morello_a_fast_special2
-				]
-			}
-			normal = {
-				slow = [
-					gh3_guit_morello_a_slow_special1
-					gh3_guit_morello_a_slow_special2
-				]
-				med = [
-					gh3_guit_morello_a_fast_special1
-					gh3_guit_morello_a_fast_special2
-				]
-				fast = [
-					gh3_guit_morello_a_fast_special1
-					gh3_guit_morello_a_fast_special2
+				Fast = [
+					GH3_Guit_morello_A_fast_special1
+					GH3_Guit_morello_A_fast_special2
 				]
 			}
-			bad = {
-				slow = [
-					gh3_guit_morello_a_slow_special1
-					gh3_guit_morello_a_slow_special2
+			Normal = {
+				Slow = [
+					GH3_Guit_morello_A_slow_special1
+					GH3_Guit_morello_A_slow_special2
 				]
-				med = [
-					gh3_guit_morello_a_fast_special1
-					gh3_guit_morello_a_fast_special2
+				Med = [
+					GH3_Guit_morello_A_fast_special1
+					GH3_Guit_morello_A_fast_special2
 				]
-				fast = [
-					gh3_guit_morello_a_fast_special1
-					gh3_guit_morello_a_fast_special2
+				Fast = [
+					GH3_Guit_morello_A_fast_special1
+					GH3_Guit_morello_A_fast_special2
+				]
+			}
+			Bad = {
+				Slow = [
+					GH3_Guit_morello_A_slow_special1
+					GH3_Guit_morello_A_slow_special2
+				]
+				Med = [
+					GH3_Guit_morello_A_fast_special1
+					GH3_Guit_morello_A_fast_special2
+				]
+				Fast = [
+					GH3_Guit_morello_A_fast_special1
+					GH3_Guit_morello_A_fast_special2
 				]
 			}
 		}
 		starpower = {
 			good = {
-				slow = [
-					gh3_guit_morello_a_slow_special2
+				Slow = [
+					GH3_Guit_morello_A_slow_special2
 				]
-				med = [
-					gh3_guit_morello_a_fast_special2
+				Med = [
+					GH3_Guit_morello_A_fast_special2
 				]
-				fast = [
-					gh3_guit_morello_a_fast_special2
-				]
-			}
-			normal = {
-				slow = [
-					gh3_guit_morello_a_slow_special2
-				]
-				med = [
-					gh3_guit_morello_a_fast_special2
-				]
-				fast = [
-					gh3_guit_morello_a_fast_special2
+				Fast = [
+					GH3_Guit_morello_A_fast_special2
 				]
 			}
-			bad = {
-				slow = [
-					gh3_guit_morello_a_slow_special2
+			Normal = {
+				Slow = [
+					GH3_Guit_morello_A_slow_special2
 				]
-				med = [
-					gh3_guit_morello_a_fast_special2
+				Med = [
+					GH3_Guit_morello_A_fast_special2
 				]
-				fast = [
-					gh3_guit_morello_a_fast_special2
+				Fast = [
+					GH3_Guit_morello_A_fast_special2
+				]
+			}
+			Bad = {
+				Slow = [
+					GH3_Guit_morello_A_slow_special2
+				]
+				Med = [
+					GH3_Guit_morello_A_fast_special2
+				]
+				Fast = [
+					GH3_Guit_morello_A_fast_special2
 				]
 			}
 		}
 		handsoff = {
 			good = {
-				slow = [
-					gh3_guit_morello_intro1
+				Slow = [
+					GH3_Guit_morello_intro1
 				]
-				med = [
-					gh3_guit_morello_intro1
+				Med = [
+					GH3_Guit_morello_intro1
 				]
-				fast = [
-					gh3_guit_morello_intro1
-				]
-			}
-			normal = {
-				slow = [
-					gh3_guit_morello_intro1
-				]
-				med = [
-					gh3_guit_morello_intro1
-				]
-				fast = [
-					gh3_guit_morello_intro1
+				Fast = [
+					GH3_Guit_morello_intro1
 				]
 			}
-			bad = {
-				slow = [
-					gh3_guit_morello_intro1
+			Normal = {
+				Slow = [
+					GH3_Guit_morello_intro1
 				]
-				med = [
-					gh3_guit_morello_intro1
+				Med = [
+					GH3_Guit_morello_intro1
 				]
-				fast = [
-					gh3_guit_morello_intro1
-				]
-			}
-		}
-		endstrum = {
-			good = {
-				slow = [
-					gh3_guit_morello_intro1
-				]
-				med = [
-					gh3_guit_morello_intro1
-				]
-				fast = [
-					gh3_guit_morello_intro1
+				Fast = [
+					GH3_Guit_morello_intro1
 				]
 			}
-			normal = {
-				slow = [
-					gh3_guit_morello_intro1
+			Bad = {
+				Slow = [
+					GH3_Guit_morello_intro1
 				]
-				med = [
-					gh3_guit_morello_intro1
+				Med = [
+					GH3_Guit_morello_intro1
 				]
-				fast = [
-					gh3_guit_morello_intro1
-				]
-			}
-			bad = {
-				slow = [
-					gh3_guit_morello_intro1
-				]
-				med = [
-					gh3_guit_morello_intro1
-				]
-				fast = [
-					gh3_guit_morello_intro1
+				Fast = [
+					GH3_Guit_morello_intro1
 				]
 			}
 		}
-		attack = {
+		endStrum = {
 			good = {
-				slow = [
-					gh3_guit_morello_a_attack_left01
+				Slow = [
+					GH3_Guit_morello_intro1
 				]
-				med = [
-					gh3_guit_morello_a_attack_left01
+				Med = [
+					GH3_Guit_morello_intro1
 				]
-				fast = [
-					gh3_guit_morello_a_attack_left01
-				]
-			}
-			normal = {
-				slow = [
-					gh3_guit_morello_a_attack_left01
-				]
-				med = [
-					gh3_guit_morello_a_attack_left01
-				]
-				fast = [
-					gh3_guit_morello_a_attack_left01
+				Fast = [
+					GH3_Guit_morello_intro1
 				]
 			}
-			bad = {
-				slow = [
-					gh3_guit_morello_a_attack_left01
+			Normal = {
+				Slow = [
+					GH3_Guit_morello_intro1
 				]
-				med = [
-					gh3_guit_morello_a_attack_left01
+				Med = [
+					GH3_Guit_morello_intro1
 				]
-				fast = [
-					gh3_guit_morello_a_attack_left01
+				Fast = [
+					GH3_Guit_morello_intro1
+				]
+			}
+			Bad = {
+				Slow = [
+					GH3_Guit_morello_intro1
+				]
+				Med = [
+					GH3_Guit_morello_intro1
+				]
+				Fast = [
+					GH3_Guit_morello_intro1
 				]
 			}
 		}
-		attack_right = {
+		Attack = {
 			good = {
-				slow = [
-					gh3_guit_morello_a_attack_right01
+				Slow = [
+					GH3_Guit_morello_A_Attack_Left01
 				]
-				med = [
-					gh3_guit_morello_a_attack_right01
+				Med = [
+					GH3_Guit_morello_A_Attack_Left01
 				]
-				fast = [
-					gh3_guit_morello_a_attack_right01
-				]
-			}
-			normal = {
-				slow = [
-					gh3_guit_morello_a_attack_right01
-				]
-				med = [
-					gh3_guit_morello_a_attack_right01
-				]
-				fast = [
-					gh3_guit_morello_a_attack_right01
+				Fast = [
+					GH3_Guit_morello_A_Attack_Left01
 				]
 			}
-			bad = {
-				slow = [
-					gh3_guit_morello_a_attack_right01
+			Normal = {
+				Slow = [
+					GH3_Guit_morello_A_Attack_Left01
 				]
-				med = [
-					gh3_guit_morello_a_attack_right01
+				Med = [
+					GH3_Guit_morello_A_Attack_Left01
 				]
-				fast = [
-					gh3_guit_morello_a_attack_right01
+				Fast = [
+					GH3_Guit_morello_A_Attack_Left01
+				]
+			}
+			Bad = {
+				Slow = [
+					GH3_Guit_morello_A_Attack_Left01
+				]
+				Med = [
+					GH3_Guit_morello_A_Attack_Left01
+				]
+				Fast = [
+					GH3_Guit_morello_A_Attack_Left01
 				]
 			}
 		}
-		react = {
+		Attack_right = {
 			good = {
-				slow = [
-					gh3_guit_morello_a_react_left01
+				Slow = [
+					GH3_Guit_morello_A_Attack_Right01
 				]
-				med = [
-					gh3_guit_morello_a_react_left01
+				Med = [
+					GH3_Guit_morello_A_Attack_Right01
 				]
-				fast = [
-					gh3_guit_morello_a_react_left01
-				]
-			}
-			normal = {
-				slow = [
-					gh3_guit_morello_a_react_left01
-				]
-				med = [
-					gh3_guit_morello_a_react_left01
-				]
-				fast = [
-					gh3_guit_morello_a_react_left01
+				Fast = [
+					GH3_Guit_morello_A_Attack_Right01
 				]
 			}
-			bad = {
-				slow = [
-					gh3_guit_morello_a_react_left01
+			Normal = {
+				Slow = [
+					GH3_Guit_morello_A_Attack_Right01
 				]
-				med = [
-					gh3_guit_morello_a_react_left01
+				Med = [
+					GH3_Guit_morello_A_Attack_Right01
 				]
-				fast = [
-					gh3_guit_morello_a_react_left01
+				Fast = [
+					GH3_Guit_morello_A_Attack_Right01
+				]
+			}
+			Bad = {
+				Slow = [
+					GH3_Guit_morello_A_Attack_Right01
+				]
+				Med = [
+					GH3_Guit_morello_A_Attack_Right01
+				]
+				Fast = [
+					GH3_Guit_morello_A_Attack_Right01
 				]
 			}
 		}
-		react_right = {
+		React = {
 			good = {
-				slow = [
-					gh3_guit_morello_a_react_right01
+				Slow = [
+					GH3_Guit_morello_A_react_Left01
 				]
-				med = [
-					gh3_guit_morello_a_react_right01
+				Med = [
+					GH3_Guit_morello_A_react_Left01
 				]
-				fast = [
-					gh3_guit_morello_a_react_right01
-				]
-			}
-			normal = {
-				slow = [
-					gh3_guit_morello_a_react_right01
-				]
-				med = [
-					gh3_guit_morello_a_react_right01
-				]
-				fast = [
-					gh3_guit_morello_a_react_right01
+				Fast = [
+					GH3_Guit_morello_A_react_Left01
 				]
 			}
-			bad = {
-				slow = [
-					gh3_guit_morello_a_react_right01
+			Normal = {
+				Slow = [
+					GH3_Guit_morello_A_react_Left01
 				]
-				med = [
-					gh3_guit_morello_a_react_right01
+				Med = [
+					GH3_Guit_morello_A_react_Left01
 				]
-				fast = [
-					gh3_guit_morello_a_react_right01
+				Fast = [
+					GH3_Guit_morello_A_react_Left01
+				]
+			}
+			Bad = {
+				Slow = [
+					GH3_Guit_morello_A_react_Left01
+				]
+				Med = [
+					GH3_Guit_morello_A_react_Left01
+				]
+				Fast = [
+					GH3_Guit_morello_A_react_Left01
+				]
+			}
+		}
+		React_right = {
+			good = {
+				Slow = [
+					GH3_Guit_morello_A_react_Right01
+				]
+				Med = [
+					GH3_Guit_morello_A_react_Right01
+				]
+				Fast = [
+					GH3_Guit_morello_A_react_Right01
+				]
+			}
+			Normal = {
+				Slow = [
+					GH3_Guit_morello_A_react_Right01
+				]
+				Med = [
+					GH3_Guit_morello_A_react_Right01
+				]
+				Fast = [
+					GH3_Guit_morello_A_react_Right01
+				]
+			}
+			Bad = {
+				Slow = [
+					GH3_Guit_morello_A_react_Right01
+				]
+				Med = [
+					GH3_Guit_morello_A_react_Right01
+				]
+				Fast = [
+					GH3_Guit_morello_A_react_Right01
 				]
 			}
 		}
 		bulls_on_parade1 = {
 			good = {
-				slow = [
-					gh3_guit_morello_a_bullson_parade1
+				Slow = [
+					GH3_Guit_morello_A_bullson_parade1
 				]
-				med = [
-					gh3_guit_morello_a_bullson_parade1
+				Med = [
+					GH3_Guit_morello_A_bullson_parade1
 				]
-				fast = [
-					gh3_guit_morello_a_bullson_parade1
-				]
-			}
-			normal = {
-				slow = [
-					gh3_guit_morello_a_bullson_parade1
-				]
-				med = [
-					gh3_guit_morello_a_bullson_parade1
-				]
-				fast = [
-					gh3_guit_morello_a_bullson_parade1
+				Fast = [
+					GH3_Guit_morello_A_bullson_parade1
 				]
 			}
-			bad = {
-				slow = [
-					gh3_guit_morello_a_bullson_parade1
+			Normal = {
+				Slow = [
+					GH3_Guit_morello_A_bullson_parade1
 				]
-				med = [
-					gh3_guit_morello_a_bullson_parade1
+				Med = [
+					GH3_Guit_morello_A_bullson_parade1
 				]
-				fast = [
-					gh3_guit_morello_a_bullson_parade1
+				Fast = [
+					GH3_Guit_morello_A_bullson_parade1
+				]
+			}
+			Bad = {
+				Slow = [
+					GH3_Guit_morello_A_bullson_parade1
+				]
+				Med = [
+					GH3_Guit_morello_A_bullson_parade1
+				]
+				Fast = [
+					GH3_Guit_morello_A_bullson_parade1
 				]
 			}
 		}
 		bulls_on_parade2 = {
 			good = {
-				slow = [
-					gh3_guit_morello_a_bullson_parade2
+				Slow = [
+					GH3_Guit_morello_A_bullson_parade2
 				]
-				med = [
-					gh3_guit_morello_a_bullson_parade2
+				Med = [
+					GH3_Guit_morello_A_bullson_parade2
 				]
-				fast = [
-					gh3_guit_morello_a_bullson_parade2
-				]
-			}
-			normal = {
-				slow = [
-					gh3_guit_morello_a_bullson_parade2
-				]
-				med = [
-					gh3_guit_morello_a_bullson_parade2
-				]
-				fast = [
-					gh3_guit_morello_a_bullson_parade2
+				Fast = [
+					GH3_Guit_morello_A_bullson_parade2
 				]
 			}
-			bad = {
-				slow = [
-					gh3_guit_morello_a_bullson_parade2
+			Normal = {
+				Slow = [
+					GH3_Guit_morello_A_bullson_parade2
 				]
-				med = [
-					gh3_guit_morello_a_bullson_parade2
+				Med = [
+					GH3_Guit_morello_A_bullson_parade2
 				]
-				fast = [
-					gh3_guit_morello_a_bullson_parade2
+				Fast = [
+					GH3_Guit_morello_A_bullson_parade2
+				]
+			}
+			Bad = {
+				Slow = [
+					GH3_Guit_morello_A_bullson_parade2
+				]
+				Med = [
+					GH3_Guit_morello_A_bullson_parade2
+				]
+				Fast = [
+					GH3_Guit_morello_A_bullson_parade2
 				]
 			}
 		}
 		bulls_on_parade3 = {
 			good = {
-				slow = [
-					gh3_guit_morello_a_bullson_parade3
+				Slow = [
+					GH3_Guit_morello_A_bullson_parade3
 				]
-				med = [
-					gh3_guit_morello_a_bullson_parade3
+				Med = [
+					GH3_Guit_morello_A_bullson_parade3
 				]
-				fast = [
-					gh3_guit_morello_a_bullson_parade3
-				]
-			}
-			normal = {
-				slow = [
-					gh3_guit_morello_a_bullson_parade3
-				]
-				med = [
-					gh3_guit_morello_a_bullson_parade3
-				]
-				fast = [
-					gh3_guit_morello_a_bullson_parade3
+				Fast = [
+					GH3_Guit_morello_A_bullson_parade3
 				]
 			}
-			bad = {
-				slow = [
-					gh3_guit_morello_a_bullson_parade3
+			Normal = {
+				Slow = [
+					GH3_Guit_morello_A_bullson_parade3
 				]
-				med = [
-					gh3_guit_morello_a_bullson_parade3
+				Med = [
+					GH3_Guit_morello_A_bullson_parade3
 				]
-				fast = [
-					gh3_guit_morello_a_bullson_parade3
+				Fast = [
+					GH3_Guit_morello_A_bullson_parade3
+				]
+			}
+			Bad = {
+				Slow = [
+					GH3_Guit_morello_A_bullson_parade3
+				]
+				Med = [
+					GH3_Guit_morello_A_bullson_parade3
+				]
+				Fast = [
+					GH3_Guit_morello_A_bullson_parade3
 				]
 			}
 		}
 		bulls_on_parade4 = {
 			good = {
-				slow = [
-					gh3_guit_morello_a_bullson_parade4
+				Slow = [
+					GH3_Guit_morello_A_bullson_parade4
 				]
-				med = [
-					gh3_guit_morello_a_bullson_parade4
+				Med = [
+					GH3_Guit_morello_A_bullson_parade4
 				]
-				fast = [
-					gh3_guit_morello_a_bullson_parade4
-				]
-			}
-			normal = {
-				slow = [
-					gh3_guit_morello_a_bullson_parade4
-				]
-				med = [
-					gh3_guit_morello_a_bullson_parade4
-				]
-				fast = [
-					gh3_guit_morello_a_bullson_parade4
+				Fast = [
+					GH3_Guit_morello_A_bullson_parade4
 				]
 			}
-			bad = {
-				slow = [
-					gh3_guit_morello_a_bullson_parade4
+			Normal = {
+				Slow = [
+					GH3_Guit_morello_A_bullson_parade4
 				]
-				med = [
-					gh3_guit_morello_a_bullson_parade4
+				Med = [
+					GH3_Guit_morello_A_bullson_parade4
 				]
-				fast = [
-					gh3_guit_morello_a_bullson_parade4
+				Fast = [
+					GH3_Guit_morello_A_bullson_parade4
+				]
+			}
+			Bad = {
+				Slow = [
+					GH3_Guit_morello_A_bullson_parade4
+				]
+				Med = [
+					GH3_Guit_morello_A_bullson_parade4
+				]
+				Fast = [
+					GH3_Guit_morello_A_bullson_parade4
 				]
 			}
 		}
 		dragon_reaction = {
 			good = {
-				slow = [
+				Slow = [
 					gh3_guitarist_morello_dragon_react
 				]
-				med = [
+				Med = [
 					gh3_guitarist_morello_dragon_react
 				]
-				fast = [
-					gh3_guitarist_morello_dragon_react
-				]
-			}
-			normal = {
-				slow = [
-					gh3_guitarist_morello_dragon_react
-				]
-				med = [
-					gh3_guitarist_morello_dragon_react
-				]
-				fast = [
+				Fast = [
 					gh3_guitarist_morello_dragon_react
 				]
 			}
-			bad = {
-				slow = [
+			Normal = {
+				Slow = [
 					gh3_guitarist_morello_dragon_react
 				]
-				med = [
+				Med = [
 					gh3_guitarist_morello_dragon_react
 				]
-				fast = [
+				Fast = [
+					gh3_guitarist_morello_dragon_react
+				]
+			}
+			Bad = {
+				Slow = [
+					gh3_guitarist_morello_dragon_react
+				]
+				Med = [
+					gh3_guitarist_morello_dragon_react
+				]
+				Fast = [
 					gh3_guitarist_morello_dragon_react
 				]
 			}
 		}
 		dragon_climb = {
 			good = {
-				slow = [
+				Slow = [
 					gh3_guitarist_morello_dragon_climb
 				]
-				med = [
+				Med = [
 					gh3_guitarist_morello_dragon_climb
 				]
-				fast = [
-					gh3_guitarist_morello_dragon_climb
-				]
-			}
-			normal = {
-				slow = [
-					gh3_guitarist_morello_dragon_climb
-				]
-				med = [
-					gh3_guitarist_morello_dragon_climb
-				]
-				fast = [
+				Fast = [
 					gh3_guitarist_morello_dragon_climb
 				]
 			}
-			bad = {
-				slow = [
+			Normal = {
+				Slow = [
 					gh3_guitarist_morello_dragon_climb
 				]
-				med = [
+				Med = [
 					gh3_guitarist_morello_dragon_climb
 				]
-				fast = [
+				Fast = [
+					gh3_guitarist_morello_dragon_climb
+				]
+			}
+			Bad = {
+				Slow = [
+					gh3_guitarist_morello_dragon_climb
+				]
+				Med = [
+					gh3_guitarist_morello_dragon_climb
+				]
+				Fast = [
 					gh3_guitarist_morello_dragon_climb
 				]
 			}
 		}
-		transitions = {
-			stance_a = gh3_guit_morello_a_slow_idle1
-			stance_b = gh3_guit_morello_a_to_b
-			win = gh3_guit_morello_a_slow_idle1
-			lose = gh3_guit_morello_a_slow_idle1
+		Transitions = {
+			Stance_A = GH3_Guit_morello_A_slow_Idle1
+			stance_b = GH3_Guit_morello_A_to_B
+			win = GH3_Guit_morello_A_slow_Idle1
+			lose = GH3_Guit_morello_A_slow_Idle1
 		}
 	}
 	stance_frontend = {
-		idle = {
+		Idle = {
 			good = {
-				slow = [
-					gh3_guit_morello_intro1
-					gh3_guit_morello_intro2
+				Slow = [
+					GH3_Guit_morello_intro1
+					GH3_Guit_morello_intro2
 				]
-				med = [
-					gh3_guit_morello_intro1
-					gh3_guit_morello_intro2
+				Med = [
+					GH3_Guit_morello_intro1
+					GH3_Guit_morello_intro2
 				]
-				fast = [
-					gh3_guit_morello_intro1
-					gh3_guit_morello_intro2
-				]
-			}
-			normal = {
-				slow = [
-					gh3_guit_morello_intro1
-					gh3_guit_morello_intro2
-				]
-				med = [
-					gh3_guit_morello_intro1
-					gh3_guit_morello_intro2
-				]
-				fast = [
-					gh3_guit_morello_intro1
-					gh3_guit_morello_intro2
+				Fast = [
+					GH3_Guit_morello_intro1
+					GH3_Guit_morello_intro2
 				]
 			}
-			bad = {
-				slow = [
-					gh3_guit_morello_intro1
-					gh3_guit_morello_intro2
+			Normal = {
+				Slow = [
+					GH3_Guit_morello_intro1
+					GH3_Guit_morello_intro2
 				]
-				med = [
-					gh3_guit_morello_intro1
-					gh3_guit_morello_intro2
+				Med = [
+					GH3_Guit_morello_intro1
+					GH3_Guit_morello_intro2
 				]
-				fast = [
-					gh3_guit_morello_intro1
-					gh3_guit_morello_intro2
+				Fast = [
+					GH3_Guit_morello_intro1
+					GH3_Guit_morello_intro2
+				]
+			}
+			Bad = {
+				Slow = [
+					GH3_Guit_morello_intro1
+					GH3_Guit_morello_intro2
+				]
+				Med = [
+					GH3_Guit_morello_intro1
+					GH3_Guit_morello_intro2
+				]
+				Fast = [
+					GH3_Guit_morello_intro1
+					GH3_Guit_morello_intro2
 				]
 			}
 		}
-		transitions = {
-			stance_b = gh3_guit_morello_a_to_b
-			stance_c = gh3_guit_morello_a_slow_idle1
-			stance_frontend = gh3_guit_morello_a_to_guit_select
+		Transitions = {
+			stance_b = GH3_Guit_morello_A_to_B
+			stance_c = GH3_Guit_morello_A_slow_Idle1
+			stance_frontend = gh3_guit_morello_A_to_guit_select
 		}
 	}
 	stance_frontend_guitar = {
-		idle = {
+		Idle = {
 			good = {
-				slow = [
+				Slow = [
 					gh3_guit_morello_guit_select_idle
 				]
-				med = [
+				Med = [
 					gh3_guit_morello_guit_select_idle
 				]
-				fast = [
-					gh3_guit_morello_guit_select_idle
-				]
-			}
-			normal = {
-				slow = [
-					gh3_guit_morello_guit_select_idle
-				]
-				med = [
-					gh3_guit_morello_guit_select_idle
-				]
-				fast = [
+				Fast = [
 					gh3_guit_morello_guit_select_idle
 				]
 			}
-			bad = {
-				slow = [
+			Normal = {
+				Slow = [
 					gh3_guit_morello_guit_select_idle
 				]
-				med = [
+				Med = [
 					gh3_guit_morello_guit_select_idle
 				]
-				fast = [
+				Fast = [
+					gh3_guit_morello_guit_select_idle
+				]
+			}
+			Bad = {
+				Slow = [
+					gh3_guit_morello_guit_select_idle
+				]
+				Med = [
+					gh3_guit_morello_guit_select_idle
+				]
+				Fast = [
 					gh3_guit_morello_guit_select_idle
 				]
 			}
 		}
-		transitions = {
-			stance_b = gh3_guit_morello_a_to_b
-			stance_c = gh3_guit_morello_a_slow_idle1
-			stance_frontend = gh3_guit_morello_guit_select_to_a
+		Transitions = {
+			stance_b = GH3_Guit_morello_A_to_B
+			stance_c = GH3_Guit_morello_A_slow_Idle1
+			stance_frontend = gh3_guit_morello_guit_select_to_A
 		}
 	}
 	intro = {
-		idle = {
+		Idle = {
 			good = {
-				slow = [
-					gh3_guit_morello_intro1
-					gh3_guit_morello_intro2
+				Slow = [
+					GH3_Guit_morello_intro1
+					GH3_Guit_morello_intro2
 				]
-				med = [
-					gh3_guit_morello_intro1
-					gh3_guit_morello_intro2
+				Med = [
+					GH3_Guit_morello_intro1
+					GH3_Guit_morello_intro2
 				]
-				fast = [
-					gh3_guit_morello_intro1
-					gh3_guit_morello_intro2
-				]
-			}
-			normal = {
-				slow = [
-					gh3_guit_morello_intro1
-					gh3_guit_morello_intro2
-				]
-				med = [
-					gh3_guit_morello_intro1
-					gh3_guit_morello_intro2
-				]
-				fast = [
-					gh3_guit_morello_intro1
-					gh3_guit_morello_intro2
+				Fast = [
+					GH3_Guit_morello_intro1
+					GH3_Guit_morello_intro2
 				]
 			}
-			bad = {
-				slow = [
-					gh3_guit_morello_intro1
-					gh3_guit_morello_intro2
+			Normal = {
+				Slow = [
+					GH3_Guit_morello_intro1
+					GH3_Guit_morello_intro2
 				]
-				med = [
-					gh3_guit_morello_intro1
-					gh3_guit_morello_intro2
+				Med = [
+					GH3_Guit_morello_intro1
+					GH3_Guit_morello_intro2
 				]
-				fast = [
-					gh3_guit_morello_intro1
-					gh3_guit_morello_intro2
+				Fast = [
+					GH3_Guit_morello_intro1
+					GH3_Guit_morello_intro2
+				]
+			}
+			Bad = {
+				Slow = [
+					GH3_Guit_morello_intro1
+					GH3_Guit_morello_intro2
+				]
+				Med = [
+					GH3_Guit_morello_intro1
+					GH3_Guit_morello_intro2
+				]
+				Fast = [
+					GH3_Guit_morello_intro1
+					GH3_Guit_morello_intro2
 				]
 			}
 		}
-		transitions = {
-			stance_b = gh3_guit_morello_a_to_b
-			stance_c = gh3_guit_morello_a_med_idle1
+		Transitions = {
+			stance_b = GH3_Guit_morello_A_to_B
+			stance_c = GH3_Guit_morello_A_med_Idle1
 		}
 	}
 	intro_smstg = {
-		idle = {
+		Idle = {
 			good = {
-				slow = [
-					gh3_guit_morello_intro1
-					gh3_guit_morello_intro2
+				Slow = [
+					GH3_Guit_morello_intro1
+					GH3_Guit_morello_intro2
 				]
-				med = [
-					gh3_guit_morello_intro1
-					gh3_guit_morello_intro2
+				Med = [
+					GH3_Guit_morello_intro1
+					GH3_Guit_morello_intro2
 				]
-				fast = [
-					gh3_guit_morello_intro1
-					gh3_guit_morello_intro2
-				]
-			}
-			normal = {
-				slow = [
-					gh3_guit_morello_intro1
-					gh3_guit_morello_intro2
-				]
-				med = [
-					gh3_guit_morello_intro1
-					gh3_guit_morello_intro2
-				]
-				fast = [
-					gh3_guit_morello_intro1
-					gh3_guit_morello_intro2
+				Fast = [
+					GH3_Guit_morello_intro1
+					GH3_Guit_morello_intro2
 				]
 			}
-			bad = {
-				slow = [
-					gh3_guit_morello_intro1
-					gh3_guit_morello_intro2
+			Normal = {
+				Slow = [
+					GH3_Guit_morello_intro1
+					GH3_Guit_morello_intro2
 				]
-				med = [
-					gh3_guit_morello_intro1
-					gh3_guit_morello_intro2
+				Med = [
+					GH3_Guit_morello_intro1
+					GH3_Guit_morello_intro2
 				]
-				fast = [
-					gh3_guit_morello_intro1
-					gh3_guit_morello_intro2
+				Fast = [
+					GH3_Guit_morello_intro1
+					GH3_Guit_morello_intro2
+				]
+			}
+			Bad = {
+				Slow = [
+					GH3_Guit_morello_intro1
+					GH3_Guit_morello_intro2
+				]
+				Med = [
+					GH3_Guit_morello_intro1
+					GH3_Guit_morello_intro2
+				]
+				Fast = [
+					GH3_Guit_morello_intro1
+					GH3_Guit_morello_intro2
 				]
 			}
 		}
-		transitions = {
-			stance_b = gh3_guit_morello_a_to_b
-			stance_c = gh3_guit_morello_a_med_idle1
+		Transitions = {
+			stance_b = GH3_Guit_morello_A_to_B
+			stance_c = GH3_Guit_morello_A_med_Idle1
 		}
 	}
-	intro_walk = {
-		idle = {
+	Intro_walk = {
+		Idle = {
 			good = {
-				slow = [
-					gh3_guit_morello_intro1
-					gh3_guit_morello_intro2
+				Slow = [
+					GH3_Guit_morello_intro1
+					GH3_Guit_morello_intro2
 				]
-				med = [
-					gh3_guit_morello_intro1
-					gh3_guit_morello_intro2
+				Med = [
+					GH3_Guit_morello_intro1
+					GH3_Guit_morello_intro2
 				]
-				fast = [
-					gh3_guit_morello_intro1
-					gh3_guit_morello_intro2
-				]
-			}
-			normal = {
-				slow = [
-					gh3_guit_morello_intro1
-					gh3_guit_morello_intro2
-				]
-				med = [
-					gh3_guit_morello_intro1
-					gh3_guit_morello_intro2
-				]
-				fast = [
-					gh3_guit_morello_intro1
-					gh3_guit_morello_intro2
+				Fast = [
+					GH3_Guit_morello_intro1
+					GH3_Guit_morello_intro2
 				]
 			}
-			bad = {
-				slow = [
-					gh3_guit_morello_intro1
-					gh3_guit_morello_intro2
+			Normal = {
+				Slow = [
+					GH3_Guit_morello_intro1
+					GH3_Guit_morello_intro2
 				]
-				med = [
-					gh3_guit_morello_intro1
-					gh3_guit_morello_intro2
+				Med = [
+					GH3_Guit_morello_intro1
+					GH3_Guit_morello_intro2
 				]
-				fast = [
-					gh3_guit_morello_intro1
-					gh3_guit_morello_intro2
+				Fast = [
+					GH3_Guit_morello_intro1
+					GH3_Guit_morello_intro2
+				]
+			}
+			Bad = {
+				Slow = [
+					GH3_Guit_morello_intro1
+					GH3_Guit_morello_intro2
+				]
+				Med = [
+					GH3_Guit_morello_intro1
+					GH3_Guit_morello_intro2
+				]
+				Fast = [
+					GH3_Guit_morello_intro1
+					GH3_Guit_morello_intro2
 				]
 			}
 		}
-		transitions = {
-			stance_b = gh3_guit_morello_a_to_b
-			stance_c = gh3_guit_morello_a_med_idle1
+		Transitions = {
+			stance_b = GH3_Guit_morello_A_to_B
+			stance_c = GH3_Guit_morello_A_med_Idle1
 		}
 	}
 	win = {
-		idle = {
+		Idle = {
 			good = {
-				slow = [
-					gh3_guit_morello_win1
-					gh3_guit_morello_win2
+				Slow = [
+					GH3_Guit_morello_win1
+					GH3_Guit_morello_win2
 				]
-				med = [
-					gh3_guit_morello_win1
-					gh3_guit_morello_win2
+				Med = [
+					GH3_Guit_morello_win1
+					GH3_Guit_morello_win2
 				]
-				fast = [
-					gh3_guit_morello_win1
-					gh3_guit_morello_win2
-				]
-			}
-			normal = {
-				slow = [
-					gh3_guit_morello_win1
-					gh3_guit_morello_win2
-				]
-				med = [
-					gh3_guit_morello_win1
-					gh3_guit_morello_win2
-				]
-				fast = [
-					gh3_guit_morello_win1
-					gh3_guit_morello_win2
+				Fast = [
+					GH3_Guit_morello_win1
+					GH3_Guit_morello_win2
 				]
 			}
-			bad = {
-				slow = [
-					gh3_guit_morello_win1
-					gh3_guit_morello_win2
+			Normal = {
+				Slow = [
+					GH3_Guit_morello_win1
+					GH3_Guit_morello_win2
 				]
-				med = [
-					gh3_guit_morello_win1
-					gh3_guit_morello_win2
+				Med = [
+					GH3_Guit_morello_win1
+					GH3_Guit_morello_win2
 				]
-				fast = [
-					gh3_guit_morello_win1
-					gh3_guit_morello_win2
+				Fast = [
+					GH3_Guit_morello_win1
+					GH3_Guit_morello_win2
+				]
+			}
+			Bad = {
+				Slow = [
+					GH3_Guit_morello_win1
+					GH3_Guit_morello_win2
+				]
+				Med = [
+					GH3_Guit_morello_win1
+					GH3_Guit_morello_win2
+				]
+				Fast = [
+					GH3_Guit_morello_win1
+					GH3_Guit_morello_win2
 				]
 			}
 		}
-		transitions = {
-			stance_b = gh3_guit_morello_a_to_b
-			stance_c = gh3_guit_morello_a_med_idle1
+		Transitions = {
+			stance_b = GH3_Guit_morello_A_to_B
+			stance_c = GH3_Guit_morello_A_med_Idle1
 		}
 	}
 	win_smstg = {
-		idle = {
+		Idle = {
 			good = {
-				slow = [
-					gh3_guit_morello_win1
-					gh3_guit_morello_win2
+				Slow = [
+					GH3_Guit_morello_win1
+					GH3_Guit_morello_win2
 				]
-				med = [
-					gh3_guit_morello_win1
-					gh3_guit_morello_win2
+				Med = [
+					GH3_Guit_morello_win1
+					GH3_Guit_morello_win2
 				]
-				fast = [
-					gh3_guit_morello_win1
-					gh3_guit_morello_win2
-				]
-			}
-			normal = {
-				slow = [
-					gh3_guit_morello_win1
-					gh3_guit_morello_win2
-				]
-				med = [
-					gh3_guit_morello_win1
-					gh3_guit_morello_win2
-				]
-				fast = [
-					gh3_guit_morello_win1
-					gh3_guit_morello_win2
+				Fast = [
+					GH3_Guit_morello_win1
+					GH3_Guit_morello_win2
 				]
 			}
-			bad = {
-				slow = [
-					gh3_guit_morello_win1
-					gh3_guit_morello_win2
+			Normal = {
+				Slow = [
+					GH3_Guit_morello_win1
+					GH3_Guit_morello_win2
 				]
-				med = [
-					gh3_guit_morello_win1
-					gh3_guit_morello_win2
+				Med = [
+					GH3_Guit_morello_win1
+					GH3_Guit_morello_win2
 				]
-				fast = [
-					gh3_guit_morello_win1
-					gh3_guit_morello_win2
+				Fast = [
+					GH3_Guit_morello_win1
+					GH3_Guit_morello_win2
+				]
+			}
+			Bad = {
+				Slow = [
+					GH3_Guit_morello_win1
+					GH3_Guit_morello_win2
+				]
+				Med = [
+					GH3_Guit_morello_win1
+					GH3_Guit_morello_win2
+				]
+				Fast = [
+					GH3_Guit_morello_win1
+					GH3_Guit_morello_win2
 				]
 			}
 		}
-		transitions = {
-			stance_b = gh3_guit_morello_a_to_b
-			stance_c = gh3_guit_morello_a_med_idle1
+		Transitions = {
+			stance_b = GH3_Guit_morello_A_to_B
+			stance_c = GH3_Guit_morello_A_med_Idle1
 		}
 	}
 	lose = {
-		idle = {
+		Idle = {
 			good = {
-				slow = [
-					gh3_guit_morello_lose1
-					gh3_guit_morello_lose2
+				Slow = [
+					GH3_Guit_morello_lose1
+					GH3_Guit_morello_lose2
 				]
-				med = [
-					gh3_guit_morello_lose1
-					gh3_guit_morello_lose2
+				Med = [
+					GH3_Guit_morello_lose1
+					GH3_Guit_morello_lose2
 				]
-				fast = [
-					gh3_guit_morello_lose1
-					gh3_guit_morello_lose2
-				]
-			}
-			normal = {
-				slow = [
-					gh3_guit_morello_lose1
-					gh3_guit_morello_lose2
-				]
-				med = [
-					gh3_guit_morello_lose1
-					gh3_guit_morello_lose2
-				]
-				fast = [
-					gh3_guit_morello_lose1
-					gh3_guit_morello_lose2
+				Fast = [
+					GH3_Guit_morello_lose1
+					GH3_Guit_morello_lose2
 				]
 			}
-			bad = {
-				slow = [
-					gh3_guit_morello_lose1
-					gh3_guit_morello_lose2
+			Normal = {
+				Slow = [
+					GH3_Guit_morello_lose1
+					GH3_Guit_morello_lose2
 				]
-				med = [
-					gh3_guit_morello_lose1
-					gh3_guit_morello_lose2
+				Med = [
+					GH3_Guit_morello_lose1
+					GH3_Guit_morello_lose2
 				]
-				fast = [
-					gh3_guit_morello_lose1
-					gh3_guit_morello_lose2
+				Fast = [
+					GH3_Guit_morello_lose1
+					GH3_Guit_morello_lose2
+				]
+			}
+			Bad = {
+				Slow = [
+					GH3_Guit_morello_lose1
+					GH3_Guit_morello_lose2
+				]
+				Med = [
+					GH3_Guit_morello_lose1
+					GH3_Guit_morello_lose2
+				]
+				Fast = [
+					GH3_Guit_morello_lose1
+					GH3_Guit_morello_lose2
 				]
 			}
 		}
-		transitions = {
-			stance_b = gh3_guit_morello_a_to_b
-			stance_c = gh3_guit_morello_a_med_idle1
+		Transitions = {
+			stance_b = GH3_Guit_morello_A_to_B
+			stance_c = GH3_Guit_morello_A_med_Idle1
 		}
 	}
 	lose_smstg = {
-		idle = {
+		Idle = {
 			good = {
-				slow = [
-					gh3_guit_morello_lose1
+				Slow = [
+					GH3_Guit_morello_lose1
 				]
-				med = [
-					gh3_guit_morello_lose1
+				Med = [
+					GH3_Guit_morello_lose1
 				]
-				fast = [
-					gh3_guit_morello_lose1
-				]
-			}
-			normal = {
-				slow = [
-					gh3_guit_morello_lose1
-				]
-				med = [
-					gh3_guit_morello_lose1
-				]
-				fast = [
-					gh3_guit_morello_lose1
+				Fast = [
+					GH3_Guit_morello_lose1
 				]
 			}
-			bad = {
-				slow = [
-					gh3_guit_morello_lose1
+			Normal = {
+				Slow = [
+					GH3_Guit_morello_lose1
 				]
-				med = [
-					gh3_guit_morello_lose1
+				Med = [
+					GH3_Guit_morello_lose1
 				]
-				fast = [
-					gh3_guit_morello_lose1
+				Fast = [
+					GH3_Guit_morello_lose1
+				]
+			}
+			Bad = {
+				Slow = [
+					GH3_Guit_morello_lose1
+				]
+				Med = [
+					GH3_Guit_morello_lose1
+				]
+				Fast = [
+					GH3_Guit_morello_lose1
 				]
 			}
 		}
-		transitions = {
-			stance_b = gh3_guit_morello_a_to_b
-			stance_c = gh3_guit_morello_a_med_idle1
+		Transitions = {
+			stance_b = GH3_Guit_morello_A_to_B
+			stance_c = GH3_Guit_morello_A_med_Idle1
 		}
 	}
 	facial_anims = {
-		idle = [
-			gh3_guitarist_morello_elvis
-			gh3_guitarist_morello_grumble
-			gh3_guitarist_morello_idle
-			gh3_guitarist_morello_satisfied
-			gh3_guitarist_morello_yeah_eyesclo
-			gh3_guitarist_morello_yeah_eyesope
+		Idle = [
+			GH3_Guitarist_Morello_Elvis
+			GH3_Guitarist_Morello_Grumble
+			GH3_Guitarist_Morello_Idle
+			GH3_Guitarist_Morello_Satisfied
+			GH3_Guitarist_Morello_Yeah_EyesClo
+			GH3_Guitarist_Morello_Yeah_EyesOpe
 		]
 	}
 	walking = {
 		forward = {
 			start_anim = {
-				slow = gh3_guit_morello_walk_start
-				med = gh3_guit_morello_walk_start
-				fast = gh3_guit_morello_walk_start
+				Slow = GH3_Guit_morello_Walk_Start
+				Med = GH3_Guit_morello_Walk_Start
+				Fast = GH3_Guit_morello_Walk_Start
 			}
 			cycle_anim = {
-				slow = gh3_guit_morello_walk_loop
-				med = gh3_guit_morello_walk_loop
-				fast = gh3_guit_morello_walk_loop
+				Slow = GH3_Guit_morello_Walk_loop
+				Med = GH3_Guit_morello_Walk_loop
+				Fast = GH3_Guit_morello_Walk_loop
 			}
 			stop_left_anim = {
-				slow = gh3_guit_morello_walk_lend
-				med = gh3_guit_morello_walk_lend
-				fast = gh3_guit_morello_walk_lend
+				Slow = GH3_Guit_morello_Walk_LEnd
+				Med = GH3_Guit_morello_Walk_LEnd
+				Fast = GH3_Guit_morello_Walk_LEnd
 			}
 			stop_right_anim = {
-				slow = gh3_guit_morello_walk_rend
-				med = gh3_guit_morello_walk_rend
-				fast = gh3_guit_morello_walk_rend
+				Slow = GH3_Guit_morello_Walk_REnd
+				Med = GH3_Guit_morello_Walk_REnd
+				Fast = GH3_Guit_morello_Walk_REnd
 			}
 		}
 		backward = {
 			start_anim = {
-				slow = gh3_guit_morello_bckwrdwalk_start
-				med = gh3_guit_morello_bckwrdwalk_start
-				fast = gh3_guit_morello_bckwrdwalk_start
+				Slow = GH3_Guit_morello_BckwrdWalk_Start
+				Med = GH3_Guit_morello_BckwrdWalk_Start
+				Fast = GH3_Guit_morello_BckwrdWalk_Start
 			}
 			cycle_anim = {
-				slow = gh3_guit_morello_bckwrdwalk_loop
-				med = gh3_guit_morello_bckwrdwalk_loop
-				fast = gh3_guit_morello_bckwrdwalk_loop
+				Slow = GH3_Guit_morello_BckwrdWalk_loop
+				Med = GH3_Guit_morello_BckwrdWalk_loop
+				Fast = GH3_Guit_morello_BckwrdWalk_loop
 			}
 			stop_left_anim = {
-				slow = gh3_guit_morello_bckwrdwalk_lend
-				med = gh3_guit_morello_bckwrdwalk_lend
-				fast = gh3_guit_morello_bckwrdwalk_lend
+				Slow = GH3_Guit_morello_BckwrdWalk_LEnd
+				Med = GH3_Guit_morello_BckwrdWalk_LEnd
+				Fast = GH3_Guit_morello_BckwrdWalk_LEnd
 			}
 			stop_right_anim = {
-				slow = gh3_guit_morello_bckwrdwalk_rend
-				med = gh3_guit_morello_bckwrdwalk_rend
-				fast = gh3_guit_morello_bckwrdwalk_rend
+				Slow = GH3_Guit_morello_BckwrdWalk_REnd
+				Med = GH3_Guit_morello_BckwrdWalk_REnd
+				Fast = GH3_Guit_morello_BckwrdWalk_REnd
 			}
 		}
-		turn_left = gh3_guitarist_morello_testidle
-		turn_idle = gh3_guit_morello_walk_inplc
-		turn_right = gh3_guitarist_morello_testidle
+		turn_left = GH3_Guitarist_Morello_TestIdle
+		turn_idle = GH3_Guit_morello_Walk_InPlc
+		turn_right = GH3_Guitarist_Morello_TestIdle
 		min_turn = 45
 		max_turn = 180
 		turn_speed = 45
@@ -2507,55 +2507,55 @@ morello_animations = {
 	}
 }
 guitarist_finger_anims_morello = {
-	green = gh3_hnd_guit_chord_mor_roll3_1_d
-	red = gh3_hnd_guit_chord_mor_roll3_2_d
-	yellow = gh3_hnd_guit_chord_mor_roll3_3_d
-	blue = gh3_hnd_guit_chord_mor_roll3_4_d
-	orange = gh3_hnd_guit_chord_mor_roll3_4_d
-	green_red = gh3_hnd_guit_chord_mor_bar2_d
-	green_yellow = gh3_hnd_guit_chord_mor_bar3_d
-	green_blue = gh3_hnd_guit_chord_mor_bar4_d
-	green_orange = gh3_hnd_guit_chord_mor_bar5_d
-	red_yellow = gh3_hnd_guit_chord_mor_bar2_d
-	red_blue = gh3_hnd_guit_chord_mor_bar3_d
-	red_orange = gh3_hnd_guit_chord_mor_bar4_d
-	yellow_blue = gh3_hnd_guit_chord_mor_bar2_d
-	yellow_orange = gh3_hnd_guit_chord_mor_bar3_d
-	blue_orange = gh3_hnd_guit_chord_mor_bar2_d
-	green_red_yellow = gh3_hnd_guit_chord_mor_bar1_d
-	green_red_blue = gh3_hnd_guit_chord_mor_bar5_d
-	green_red_orange = gh3_hnd_guit_chord_mor_bar5_d
-	green_yellow_blue = gh3_hnd_guit_chord_mor_bar5_d
-	green_yellow_orange = gh3_hnd_guit_chord_mor_bar5_d
-	green_blue_orange = gh3_hnd_guit_chord_mor_bar5_d
-	red_yellow_blue = gh3_hnd_guit_chord_mor_bar1_d
-	red_yellow_orange = gh3_hnd_guit_chord_mor_bar5_d
-	red_blue_orange = gh3_hnd_guit_chord_mor_bar5_d
-	yellow_blue_orange = gh3_hnd_guit_chord_mor_bar1_d
-	green_red_yellow_blue = gh3_hnd_guit_chord_mor_bar5_d
-	green_red_yellow_orange = gh3_hnd_guit_chord_mor_bar5_d
-	green_red_blue_orange = gh3_hnd_guit_chord_mor_bar5_d
-	green_yellow_blue_orange = gh3_hnd_guit_chord_mor_bar5_d
-	green_red_yellow_blue_orange = gh3_hnd_guit_chord_mor_bar5_d
-	none = gh3_hnd_guit_chord_mor_empty_d
-	track_none = gh3_hnd_guit_chord_mor_empty_d
+	green = GH3_Hnd_Guit_Chord_MOR_Roll3_1_D
+	red = GH3_Hnd_Guit_Chord_MOR_Roll3_2_D
+	Yellow = GH3_Hnd_Guit_Chord_MOR_Roll3_3_D
+	Blue = GH3_Hnd_Guit_Chord_MOR_Roll3_4_D
+	Orange = GH3_Hnd_Guit_Chord_MOR_Roll3_4_D
+	green_red = GH3_Hnd_Guit_Chord_MOR_Bar2_D
+	green_yellow = GH3_Hnd_Guit_Chord_MOR_Bar3_D
+	green_blue = GH3_Hnd_Guit_Chord_MOR_Bar4_D
+	green_orange = GH3_Hnd_Guit_Chord_MOR_Bar5_D
+	red_yellow = GH3_Hnd_Guit_Chord_MOR_Bar2_D
+	red_blue = GH3_Hnd_Guit_Chord_MOR_Bar3_D
+	red_orange = GH3_Hnd_Guit_Chord_MOR_Bar4_D
+	yellow_blue = GH3_Hnd_Guit_Chord_MOR_Bar2_D
+	yellow_orange = GH3_Hnd_Guit_Chord_MOR_Bar3_D
+	blue_orange = GH3_Hnd_Guit_Chord_MOR_Bar2_D
+	green_red_yellow = GH3_Hnd_Guit_Chord_MOR_Bar1_D
+	green_red_blue = GH3_Hnd_Guit_Chord_MOR_Bar5_D
+	green_red_orange = GH3_Hnd_Guit_Chord_MOR_Bar5_D
+	green_yellow_blue = GH3_Hnd_Guit_Chord_MOR_Bar5_D
+	green_yellow_orange = GH3_Hnd_Guit_Chord_MOR_Bar5_D
+	green_blue_orange = GH3_Hnd_Guit_Chord_MOR_Bar5_D
+	red_yellow_blue = GH3_Hnd_Guit_Chord_MOR_Bar1_D
+	red_yellow_orange = GH3_Hnd_Guit_Chord_MOR_Bar5_D
+	red_blue_orange = GH3_Hnd_Guit_Chord_MOR_Bar5_D
+	yellow_blue_orange = GH3_Hnd_Guit_Chord_MOR_Bar1_D
+	green_red_yellow_blue = GH3_Hnd_Guit_Chord_MOR_Bar5_D
+	green_red_yellow_orange = GH3_Hnd_Guit_Chord_MOR_Bar5_D
+	green_red_blue_orange = GH3_Hnd_Guit_Chord_MOR_Bar5_D
+	green_yellow_blue_orange = GH3_Hnd_Guit_Chord_MOR_Bar5_D
+	green_red_yellow_blue_orange = GH3_Hnd_Guit_Chord_MOR_Bar5_D
+	none = Gh3_hnd_guit_chord_MOR_Empty_D
+	track_none = Gh3_hnd_guit_chord_MOR_Empty_D
 }
-normalmorello_strums = {
-	no_strum_anim = gh3_hnd_guit_strum_more_nostrum_d
-	short = [
-		gh3_hnd_guit_strum_more_norm_s01_d
-		gh3_hnd_guit_strum_more_norm_s02_d
-		gh3_hnd_guit_strum_more_norm_s03_d
-		gh3_hnd_guit_strum_more_norm_s04_d
-		gh3_hnd_guit_strum_more_norm_s05_d
+NormalMorello_Strums = {
+	no_strum_anim = GH3_Hnd_Guit_Strum_More_NoStrum_D
+	Short = [
+		GH3_Hnd_Guit_Strum_More_Norm_S01_D
+		GH3_Hnd_Guit_Strum_More_Norm_S02_D
+		GH3_Hnd_Guit_Strum_More_Norm_S03_D
+		GH3_Hnd_Guit_Strum_More_Norm_S04_D
+		GH3_Hnd_Guit_Strum_More_Norm_S05_D
 	]
-	med = [
-		gh3_hnd_guit_strum_more_norm_m01_d
-		gh3_hnd_guit_strum_more_norm_m02_d
-		gh3_hnd_guit_strum_more_norm_m03_d
+	Med = [
+		GH3_Hnd_Guit_Strum_More_Norm_M01_D
+		GH3_Hnd_Guit_Strum_More_Norm_M02_D
+		GH3_Hnd_Guit_Strum_More_Norm_M03_D
 	]
-	long = [
-		gh3_hnd_guit_strum_more_norm_l01_d
-		gh3_hnd_guit_strum_more_norm_l02_d
+	Long = [
+		GH3_Hnd_Guit_Strum_More_Norm_L01_D
+		GH3_Hnd_Guit_Strum_More_Norm_L02_D
 	]
 }

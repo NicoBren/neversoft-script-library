@@ -1,350 +1,350 @@
 
-script skate8_sfx_backgrounds_new_area \{immediate = 0}
-	change sfx_background_last_area = <bg_sfx_area>
+script Skate8_SFX_Backgrounds_New_Area \{immediate = 0}
+	change SFX_Background_Last_Area = <BG_SFX_Area>
 	if (<immediate> = 0)
-		wait \{1
+		Wait \{1
 			gameframe}
 	endif
-	change sfx_background_requested_area = <bg_sfx_area>
-	check_for_specific_bgs_in_struct
-	spawnscriptnow \{skate8_sfx_background_play}
+	change SFX_Background_Requested_Area = <BG_SFX_Area>
+	Check_For_Specific_BGs_In_Struct
+	spawnscriptnow \{Skate8_SFX_Background_Play}
 endscript
 
-script skate8_sfx_request_background_area_change 
-	change sfx_background_requested_area = <bg_sfx_area>
+script Skate8_SFX_Request_Background_Area_Change 
+	change SFX_Background_Requested_Area = <BG_SFX_Area>
 endscript
-sfx_background_last_area = `default`
-sfx_background_requested_area = `default`
-sfx_background_requested_checksum = `default`
-sfx_background_requested_volume = 60
-sfx_background_current_area = `default`
-sfx_background_current_checksum = `default`
-sfx_background_current_volume = 100
-sfx_background_previous_area = `default`
-sfx_background_previous_checksum = `default`
-sfx_background_fadein_area = `default`
-sfx_background_fadein_checksum = `default`
-sfx_background_fadein_volume_start = 1.0
-sfx_background_fadein_volume_target = 100.0
-sfx_background_fadein_volume_current = 1.0
-sfx_background_fadein_volume_add = 3.0
-sfx_background_fadingout_area = `default`
-sfx_background_fadingout_checksum = `default`
-sfx_background_fadeout_volume_start = 100.0
-sfx_background_fadeout_volume_target = 0.0
-sfx_background_fadeout_volume_current = 100.0
-sfx_background_fadeout_volume_subtract = 3.0
-sfx_background_crossfade_time = 0.75
-background_crossfade_gameframes = 90
-backgrounds_master_volume = 50.0
-pleasedocrossfade = 1
-sfx_background_is_crossfading = false
-currentlyplayingoneshotsoundevent = donothing_oneshot
-currentoneshotwaittime = 15
+SFX_Background_Last_Area = `default`
+SFX_Background_Requested_Area = `default`
+SFX_Background_Requested_Checksum = `default`
+SFX_Background_Requested_Volume = 60
+SFX_Background_Current_Area = `default`
+SFX_Background_Current_Checksum = `default`
+SFX_Background_Current_Volume = 100
+SFX_Background_Previous_Area = `default`
+SFX_Background_Previous_Checksum = `default`
+SFX_Background_FadeIn_Area = `default`
+SFX_Background_FadeIn_Checksum = `default`
+SFX_Background_FadeIn_Volume_Start = 1.0
+SFX_Background_FadeIn_Volume_Target = 100.0
+SFX_Background_FadeIn_Volume_Current = 1.0
+SFX_Background_FadeIn_Volume_Add = 3.0
+SFX_Background_FadingOut_Area = `default`
+SFX_Background_FadingOut_Checksum = `default`
+SFX_Background_FadeOut_Volume_Start = 100.0
+SFX_Background_FadeOut_Volume_Target = 0.0
+SFX_Background_FadeOut_Volume_Current = 100.0
+SFX_Background_FadeOut_Volume_Subtract = 3.0
+SFX_Background_CrossFade_Time = 0.75
+Background_CrossFade_GameFrames = 90
+Backgrounds_Master_Volume = 50.0
+PleaseDOCrossfade = 1
+SFX_Background_IS_Crossfading = false
+CurrentlyPlayingOneShotSoundEvent = DoNothing_OneShot
+CurrentOneShotWaitTime = 15
 
-script check_for_specific_bgs_in_struct 
-	setspawninstancelimits \{max = 1
+script Check_For_Specific_BGs_In_Struct 
+	SetSpawnInstanceLimits \{max = 1
 		management = kill_oldest}
-	local_var_struct = ($sfx_background_requested_area)
-	if structurecontains structure = $skate8_sfx_background_areas_and_states <local_var_struct>
-		check_for_tod_bgs_in_struct <...>
+	Local_Var_Struct = ($SFX_Background_Requested_Area)
+	if StructureContains Structure = $Skate8_SFX_Background_Areas_And_States <Local_Var_Struct>
+		Check_For_TOD_BGs_In_Struct <...>
 	else
 	endif
 endscript
 
-script check_for_tod_bgs_in_struct 
+script Check_For_TOD_BGs_In_Struct 
 	<current_time> = day
-	this_current_tod_name = <current_time>
-	if structurecontains structure = ($skate8_sfx_background_areas_and_states.<local_var_struct>) <this_current_tod_name>
-		change sfx_background_requested_checksum = ($skate8_sfx_background_areas_and_states.<local_var_struct>.<this_current_tod_name>)
+	this_current_TOD_name = <current_time>
+	if StructureContains Structure = ($Skate8_SFX_Background_Areas_And_States.<Local_Var_Struct>) <this_current_TOD_name>
+		change SFX_Background_Requested_Checksum = ($Skate8_SFX_Background_Areas_And_States.<Local_Var_Struct>.<this_current_TOD_name>)
 	else
-		if structurecontains structure = ($skate8_sfx_background_areas_and_states.<local_var_struct>) afternoon
-			change sfx_background_requested_checksum = ($skate8_sfx_background_areas_and_states.<local_var_struct>.afternoon)
+		if StructureContains Structure = ($Skate8_SFX_Background_Areas_And_States.<Local_Var_Struct>) Afternoon
+			change SFX_Background_Requested_Checksum = ($Skate8_SFX_Background_Areas_And_States.<Local_Var_Struct>.Afternoon)
 		else
-			if structurecontains structure = ($skate8_sfx_background_areas_and_states.<local_var_struct>) `default`
-				change sfx_background_requested_checksum = ($skate8_sfx_background_areas_and_states.<local_var_struct>.`default`)
+			if StructureContains Structure = ($Skate8_SFX_Background_Areas_And_States.<Local_Var_Struct>) `default`
+				change SFX_Background_Requested_Checksum = ($Skate8_SFX_Background_Areas_And_States.<Local_Var_Struct>.`default`)
 			else
 			endif
 		endif
 	endif
 endscript
 
-script skate8_sfx_background_play 
-	setspawninstancelimits \{max = 1
+script Skate8_SFX_Background_Play 
+	SetSpawnInstanceLimits \{max = 1
 		management = kill_oldest}
-	wait \{2
+	Wait \{2
 		gameframes}
-	if ($sfx_background_is_crossfading = true)
-		if NOT issoundplaying \{$sfx_background_fadein_checksum}
-			change \{sfx_background_fadein_checksum = none}
+	if ($SFX_Background_IS_Crossfading = true)
+		if NOT issoundplaying \{$SFX_Background_FadeIn_Checksum}
+			change \{SFX_Background_FadeIn_Checksum = none}
 		endif
-		if ($sfx_background_requested_checksum = ($sfx_background_fadein_checksum))
+		if ($SFX_Background_Requested_Checksum = ($SFX_Background_FadeIn_Checksum))
 		else
-			if ($sfx_background_requested_checksum = ($sfx_background_fadingout_checksum))
-				if ($backgroundsfxdebugprinttoscreen = 1)
-					formattext textname = my_text "BG: %n" n = ($sfx_background_fadingout_checksum) dontassertforchecksums
+			if ($SFX_Background_Requested_Checksum = ($SFX_Background_FadingOut_Checksum))
+				if ($BackgroundSFXDebugPrintToScreen = 1)
+					FormatText TextName = my_text "BG: %n" n = ($SFX_Background_FadingOut_Checksum) DontAssertForChecksums
 					create_panel_message {text = <my_text>
 						pos = (30.0, 380.0)
 						rgba = [144 32 32 100]
 						font_face = text_a1
 						time = 180000
 						just = [left left]
-						id = sfx_bg_panel_message
+						id = SFX_BG_PANEL_MESSAGE
 					}
 				endif
-				skate8_sfx_reverse_background_fading
+				Skate8_SFX_Reverse_Background_Fading
 			else
-				skate8_sfx_quick_dip
-				if ($backgroundsfxdebugprinttoscreen = 1)
-					formattext textname = my_text "BG: %n" n = ($sfx_background_requested_checksum) dontassertforchecksums
+				Skate8_SFX_Quick_Dip
+				if ($BackgroundSFXDebugPrintToScreen = 1)
+					FormatText TextName = my_text "BG: %n" n = ($SFX_Background_Requested_Checksum) DontAssertForChecksums
 					create_panel_message {text = <my_text>
 						pos = (30.0, 380.0)
 						rgba = [144 32 32 100]
 						font_face = text_a1
 						time = 180000
 						just = [left left]
-						id = sfx_bg_panel_message
+						id = SFX_BG_PANEL_MESSAGE
 					}
 				endif
-				spawnscriptnow \{skate8_sfx_change_background}
+				spawnscriptnow \{Skate8_SFX_Change_Background}
 			endif
 		endif
 	else
-		if NOT issoundplaying \{$sfx_background_current_checksum}
-			change \{sfx_background_current_checksum = none}
+		if NOT issoundplaying \{$SFX_Background_Current_Checksum}
+			change \{SFX_Background_Current_Checksum = none}
 		endif
-		if ($sfx_background_requested_checksum = $sfx_background_current_checksum)
+		if ($SFX_Background_Requested_Checksum = $SFX_Background_Current_Checksum)
 		else
-			if ($backgroundsfxdebugprinttoscreen = 1)
-				formattext textname = my_text "BG: %n" n = ($sfx_background_requested_checksum) dontassertforchecksums
+			if ($BackgroundSFXDebugPrintToScreen = 1)
+				FormatText TextName = my_text "BG: %n" n = ($SFX_Background_Requested_Checksum) DontAssertForChecksums
 				create_panel_message {text = <my_text>
 					pos = (30.0, 380.0)
 					rgba = [144 32 32 100]
 					font_face = text_a1
 					time = 180000
 					just = [left left]
-					id = sfx_bg_panel_message
+					id = SFX_BG_PANEL_MESSAGE
 				}
 			endif
-			spawnscriptnow \{skate8_sfx_change_background}
+			spawnscriptnow \{Skate8_SFX_Change_Background}
 		endif
 	endif
 endscript
 
-script skate8_sfx_change_current_area 
+script Skate8_SFX_Change_Current_Area 
 endscript
 
-script skate8_sfx_change_current_state 
+script Skate8_SFX_Change_Current_State 
 endscript
 
-script skate8_sfx_check_current_area 
+script Skate8_SFX_Check_Current_Area 
 endscript
 
-script skate8_sfx_check_current_state 
+script Skate8_SFX_Check_Current_State 
 endscript
 
-script skate8_sfx_do_not_change_background 
+script Skate8_SFX_Do_NOT_Change_Background 
 endscript
 
-script skate8_sfx_change_background 
-	setspawninstancelimits \{max = 1
+script Skate8_SFX_Change_Background 
+	SetSpawnInstanceLimits \{max = 1
 		management = kill_oldest}
-	change \{sfx_background_is_crossfading = true}
-	change sfx_background_fadein_area = ($sfx_background_requested_area)
-	change sfx_background_fadein_checksum = ($sfx_background_requested_checksum)
-	change sfx_background_fadingout_area = ($sfx_background_current_area)
-	change sfx_background_fadingout_checksum = ($sfx_background_current_checksum)
-	local_var_struct_fadein_area = ($sfx_background_fadein_area)
-	local_var_struct_fadein_checksum = ($sfx_background_fadein_checksum)
-	local_var_struct_fadeout_area = ($sfx_background_fadingout_area)
-	local_var_struct_fadeout_checksum = ($sfx_background_fadingout_checksum)
-	if NOT (gotparam overide_crossfade_time)
-		change \{sfx_background_crossfade_time = 0.75}
-		if structurecontains structure = ($skate8_sfx_background_areas_and_states.<local_var_struct_fadein_area>) fade_from
-			if structurecontains structure = ($skate8_sfx_background_areas_and_states.<local_var_struct_fadein_area>.fade_from) <local_var_struct_fadeout_area>
-				change sfx_background_crossfade_time = ($skate8_sfx_background_areas_and_states.<local_var_struct_fadein_area>.fade_from.<local_var_struct_fadeout_area>)
+	change \{SFX_Background_IS_Crossfading = true}
+	change SFX_Background_FadeIn_Area = ($SFX_Background_Requested_Area)
+	change SFX_Background_FadeIn_Checksum = ($SFX_Background_Requested_Checksum)
+	change SFX_Background_FadingOut_Area = ($SFX_Background_Current_Area)
+	change SFX_Background_FadingOut_Checksum = ($SFX_Background_Current_Checksum)
+	Local_Var_Struct_FadeIn_Area = ($SFX_Background_FadeIn_Area)
+	Local_Var_Struct_FadeIn_Checksum = ($SFX_Background_FadeIn_Checksum)
+	Local_Var_Struct_FadeOut_Area = ($SFX_Background_FadingOut_Area)
+	Local_Var_Struct_FadeOut_Checksum = ($SFX_Background_FadingOut_Checksum)
+	if NOT (GotParam Overide_Crossfade_Time)
+		change \{SFX_Background_CrossFade_Time = 0.75}
+		if StructureContains Structure = ($Skate8_SFX_Background_Areas_And_States.<Local_Var_Struct_FadeIn_Area>) Fade_From
+			if StructureContains Structure = ($Skate8_SFX_Background_Areas_And_States.<Local_Var_Struct_FadeIn_Area>.Fade_From) <Local_Var_Struct_FadeOut_Area>
+				change SFX_Background_CrossFade_Time = ($Skate8_SFX_Background_Areas_And_States.<Local_Var_Struct_FadeIn_Area>.Fade_From.<Local_Var_Struct_FadeOut_Area>)
 			endif
 		endif
 	else
-		change sfx_background_crossfade_time = <overide_crossfade_time>
+		change SFX_Background_CrossFade_Time = <Overide_Crossfade_Time>
 	endif
-	change \{sfx_background_fadein_volume_target = 100}
-	if structurecontains structure = ($skate8_sfx_background_areas_and_states.<local_var_struct_fadein_area>) volume_params
-		if structurecontains structure = ($skate8_sfx_background_areas_and_states.<local_var_struct_fadein_area>.volume_params) <local_var_struct_fadein_checksum>
-			change sfx_background_fadein_volume_target = ($skate8_sfx_background_areas_and_states.<local_var_struct_fadein_area>.volume_params.<local_var_struct_fadein_checksum>)
+	change \{SFX_Background_FadeIn_Volume_Target = 100}
+	if StructureContains Structure = ($Skate8_SFX_Background_Areas_And_States.<Local_Var_Struct_FadeIn_Area>) Volume_Params
+		if StructureContains Structure = ($Skate8_SFX_Background_Areas_And_States.<Local_Var_Struct_FadeIn_Area>.Volume_Params) <Local_Var_Struct_FadeIn_Checksum>
+			change SFX_Background_FadeIn_Volume_Target = ($Skate8_SFX_Background_Areas_And_States.<Local_Var_Struct_FadeIn_Area>.Volume_Params.<Local_Var_Struct_FadeIn_Checksum>)
 		endif
 	endif
-	if NOT ($sfx_background_crossfade_time = 0)
-		temp_a = ($sfx_background_crossfade_time * 30)
+	if NOT ($SFX_Background_CrossFade_Time = 0)
+		temp_a = ($SFX_Background_CrossFade_Time * 30)
 	else
 		stars
 		printf \{"SFX BG's WARNING: SFX_Background_CrossFade_Time = ZERO!!!!!!!!!!!!!"}
 		stars
 		temp_a = 1
 	endif
-	if NOT (gotparam overide_fadein_start_vol)
-		change \{sfx_background_fadein_volume_start = 1}
+	if NOT (GotParam Overide_FadeIn_Start_Vol)
+		change \{SFX_Background_FadeIn_Volume_Start = 1}
 	else
-		change sfx_background_fadein_volume_start = <overide_fadein_start_vol>
+		change SFX_Background_FadeIn_Volume_Start = <Overide_FadeIn_Start_Vol>
 	endif
-	if NOT (gotparam overide_fadeout_start_vol)
-		change sfx_background_fadeout_volume_start = ($sfx_background_current_volume)
+	if NOT (GotParam Overide_FadeOut_Start_Vol)
+		change SFX_Background_FadeOut_Volume_Start = ($SFX_Background_Current_Volume)
 	else
-		change sfx_background_fadeout_volume_start = <overide_fadeout_start_vol>
+		change SFX_Background_FadeOut_Volume_Start = <Overide_FadeOut_Start_Vol>
 	endif
-	change sfx_background_fadein_volume_add = (($sfx_background_fadein_volume_target - $sfx_background_fadein_volume_start) / <temp_a>)
-	change sfx_background_fadeout_volume_subtract = ($sfx_background_fadeout_volume_start / <temp_a>)
-	casttointeger \{temp_a}
-	change background_crossfade_gameframes = <temp_a>
-	if ($background_crossfade_gameframes < 1)
-		change \{background_crossfade_gameframes = 1}
+	change SFX_Background_FadeIn_Volume_Add = (($SFX_Background_FadeIn_Volume_Target - $SFX_Background_FadeIn_Volume_Start) / <temp_a>)
+	change SFX_Background_FadeOut_Volume_Subtract = ($SFX_Background_FadeOut_Volume_Start / <temp_a>)
+	CastToInteger \{temp_a}
+	change Background_CrossFade_GameFrames = <temp_a>
+	if ($Background_CrossFade_GameFrames < 1)
+		change \{Background_CrossFade_GameFrames = 1}
 	endif
-	change \{sfx_background_fadein_volume_current = $sfx_background_fadein_volume_start}
-	change \{sfx_background_fadeout_volume_current = $sfx_background_fadeout_volume_start}
-	testing_a = (($sfx_background_fadein_volume_start * ($backgrounds_master_volume / 100.0)) + 1)
-	if NOT (gotparam overide_yes)
-		if ($pleasedocrossfade = 1)
-			if isstreamplaying ($sfx_background_fadein_checksum)
-				stopstream ($sfx_background_fadein_checksum)
-				wait \{1
+	change \{SFX_Background_FadeIn_Volume_Current = $SFX_Background_FadeIn_Volume_Start}
+	change \{SFX_Background_FadeOut_Volume_Current = $SFX_Background_FadeOut_Volume_Start}
+	testing_a = (($SFX_Background_FadeIn_Volume_Start * ($Backgrounds_Master_Volume / 100.0)) + 1)
+	if NOT (GotParam Overide_Yes)
+		if ($PleaseDOCrossfade = 1)
+			if IsStreamPlaying ($SFX_Background_FadeIn_Checksum)
+				StopStream ($SFX_Background_FadeIn_Checksum)
+				Wait \{1
 					gameframe}
 			endif
-			playsound ($sfx_background_fadein_checksum) vol = (($sfx_background_fadein_volume_start * ($backgrounds_master_volume / 100.0)) + 1) num_loops = -1 priority = 105 buss = crowd_beds pan1x = -0.897089 pan1y = 0.1418498 pan2x = 0.88932973 pan2y = 0.15726662
+			PlaySound ($SFX_Background_FadeIn_Checksum) vol = (($SFX_Background_FadeIn_Volume_Start * ($Backgrounds_Master_Volume / 100.0)) + 1) num_loops = -1 priority = 105 buss = Crowd_Beds pan1x = -0.897089 pan1y = 0.1418498 pan2x = 0.88932973 pan2y = 0.15726662
 		endif
 	endif
-	wait \{1
+	Wait \{1
 		gameframe}
 	temp_counter = 1
 	begin
-	change sfx_background_fadein_volume_current = ($sfx_background_fadein_volume_current + $sfx_background_fadein_volume_add)
-	change sfx_background_fadeout_volume_current = ($sfx_background_fadeout_volume_current - $sfx_background_fadeout_volume_subtract)
-	if ($sfx_background_fadein_volume_current > $sfx_background_fadein_volume_target)
-		change \{sfx_background_fadein_volume_current = $sfx_background_fadein_volume_target}
+	change SFX_Background_FadeIn_Volume_Current = ($SFX_Background_FadeIn_Volume_Current + $SFX_Background_FadeIn_Volume_Add)
+	change SFX_Background_FadeOut_Volume_Current = ($SFX_Background_FadeOut_Volume_Current - $SFX_Background_FadeOut_Volume_Subtract)
+	if ($SFX_Background_FadeIn_Volume_Current > $SFX_Background_FadeIn_Volume_Target)
+		change \{SFX_Background_FadeIn_Volume_Current = $SFX_Background_FadeIn_Volume_Target}
 	endif
-	if isstreamplaying ($sfx_background_fadein_checksum)
-		setsoundparams ($sfx_background_fadein_checksum) vol = (($sfx_background_fadein_volume_current * ($backgrounds_master_volume / 100.0)) + 1)
+	if IsStreamPlaying ($SFX_Background_FadeIn_Checksum)
+		SetSoundParams ($SFX_Background_FadeIn_Checksum) vol = (($SFX_Background_FadeIn_Volume_Current * ($Backgrounds_Master_Volume / 100.0)) + 1)
 	else
-		playsound ($sfx_background_fadein_checksum) vol = (($sfx_background_fadein_volume_current * ($backgrounds_master_volume / 100.0)) + 1) num_loops = -1 priority = 105 buss = crowd_beds pan1x = -0.897089 pan1y = 0.1418498 pan2x = 0.88932973 pan2y = 0.15726662
+		PlaySound ($SFX_Background_FadeIn_Checksum) vol = (($SFX_Background_FadeIn_Volume_Current * ($Backgrounds_Master_Volume / 100.0)) + 1) num_loops = -1 priority = 105 buss = Crowd_Beds pan1x = -0.897089 pan1y = 0.1418498 pan2x = 0.88932973 pan2y = 0.15726662
 	endif
-	if ($sfx_background_fadeout_volume_current < 0)
-		change \{sfx_background_fadeout_volume_current = 0}
+	if ($SFX_Background_FadeOut_Volume_Current < 0)
+		change \{SFX_Background_FadeOut_Volume_Current = 0}
 	endif
-	if isstreamplaying ($sfx_background_fadingout_checksum)
-		setsoundparams ($sfx_background_fadingout_checksum) vol = (($sfx_background_fadeout_volume_current * ($backgrounds_master_volume / 100.0)) + 1)
+	if IsStreamPlaying ($SFX_Background_FadingOut_Checksum)
+		SetSoundParams ($SFX_Background_FadingOut_Checksum) vol = (($SFX_Background_FadeOut_Volume_Current * ($Backgrounds_Master_Volume / 100.0)) + 1)
 	endif
 	temp_counter = (<temp_counter> + 1)
-	wait \{1
+	Wait \{1
 		gameframe}
-	repeat $background_crossfade_gameframes
-	stopstream ($sfx_background_fadingout_checksum)
-	stopstream ($sfx_background_fadingout_checksum)
-	wait \{1
+	repeat $Background_CrossFade_GameFrames
+	StopStream ($SFX_Background_FadingOut_Checksum)
+	StopStream ($SFX_Background_FadingOut_Checksum)
+	Wait \{1
 		gameframe}
-	stopstream ($sfx_background_fadingout_checksum)
-	change sfx_background_current_area = ($sfx_background_fadein_area)
-	change sfx_background_current_checksum = ($sfx_background_fadein_checksum)
-	change sfx_background_current_volume = ($sfx_background_fadein_volume_current)
-	change \{sfx_background_fadein_checksum = `default`}
-	change \{sfx_background_fadingout_checksum = `default`}
-	change \{sfx_background_requested_area = `default`}
-	change \{sfx_background_requested_checksum = `default`}
-	change \{sfx_background_is_crossfading = false}
+	StopStream ($SFX_Background_FadingOut_Checksum)
+	change SFX_Background_Current_Area = ($SFX_Background_FadeIn_Area)
+	change SFX_Background_Current_Checksum = ($SFX_Background_FadeIn_Checksum)
+	change SFX_Background_Current_Volume = ($SFX_Background_FadeIn_Volume_Current)
+	change \{SFX_Background_FadeIn_Checksum = `default`}
+	change \{SFX_Background_FadingOut_Checksum = `default`}
+	change \{SFX_Background_Requested_Area = `default`}
+	change \{SFX_Background_Requested_Checksum = `default`}
+	change \{SFX_Background_IS_Crossfading = false}
 endscript
 
-script skate8_sfx_reverse_background_fading 
-	killspawnedscript \{name = skate8_sfx_change_background}
-	change sfx_background_current_checksum = ($sfx_background_fadein_checksum)
-	change sfx_background_requested_checksum = ($sfx_background_fadingout_checksum)
-	change sfx_background_requested_area = ($sfx_background_fadingout_area)
-	change sfx_background_current_area = ($sfx_background_fadein_area)
-	local_overide_calc = ($sfx_background_crossfade_time * ($sfx_background_fadein_volume_current / $sfx_background_fadein_volume_target))
-	spawnscriptnow skate8_sfx_change_background params = {overide_yes = 1 overide_crossfade_time = <local_overide_calc> overide_fadeout_start_vol = ($sfx_background_fadein_volume_current) overide_fadein_start_vol = ($sfx_background_fadeout_volume_current)}
+script Skate8_SFX_Reverse_Background_Fading 
+	KillSpawnedScript \{name = Skate8_SFX_Change_Background}
+	change SFX_Background_Current_Checksum = ($SFX_Background_FadeIn_Checksum)
+	change SFX_Background_Requested_Checksum = ($SFX_Background_FadingOut_Checksum)
+	change SFX_Background_Requested_Area = ($SFX_Background_FadingOut_Area)
+	change SFX_Background_Current_Area = ($SFX_Background_FadeIn_Area)
+	Local_Overide_Calc = ($SFX_Background_CrossFade_Time * ($SFX_Background_FadeIn_Volume_Current / $SFX_Background_FadeIn_Volume_Target))
+	spawnscriptnow Skate8_SFX_Change_Background params = {Overide_Yes = 1 Overide_Crossfade_Time = <Local_Overide_Calc> Overide_FadeOut_Start_Vol = ($SFX_Background_FadeIn_Volume_Current) Overide_FadeIn_Start_Vol = ($SFX_Background_FadeOut_Volume_Current)}
 endscript
 
-script skate8_sfx_quick_dip 
-	killspawnedscript \{name = skate8_sfx_change_background}
-	new_requested_area_not_playing = ($sfx_background_requested_area)
-	new_requested_checksum_not_playing = ($sfx_background_requested_checksum)
-	change sfx_background_requested_area = ($sfx_background_fadein_area)
-	change sfx_background_requested_checksum = ($sfx_background_fadein_checksum)
-	local_overide_calc = (0.5 * ($sfx_background_crossfade_time * ($sfx_background_fadein_volume_current / $sfx_background_fadein_volume_target)))
-	spawnscriptnow skate8_sfx_change_background params = {overide_yes = 1 overide_crossfade_time = <local_overide_calc> overide_fadein_start_vol = ($sfx_background_fadein_volume_current) overide_fadeout_start_vol = ($sfx_background_fadeout_volume_current)}
-	wait \{5
+script Skate8_SFX_Quick_Dip 
+	KillSpawnedScript \{name = Skate8_SFX_Change_Background}
+	New_Requested_Area_Not_Playing = ($SFX_Background_Requested_Area)
+	New_Requested_Checksum_Not_Playing = ($SFX_Background_Requested_Checksum)
+	change SFX_Background_Requested_Area = ($SFX_Background_FadeIn_Area)
+	change SFX_Background_Requested_Checksum = ($SFX_Background_FadeIn_Checksum)
+	Local_Overide_Calc = (0.5 * ($SFX_Background_CrossFade_Time * ($SFX_Background_FadeIn_Volume_Current / $SFX_Background_FadeIn_Volume_Target)))
+	spawnscriptnow Skate8_SFX_Change_Background params = {Overide_Yes = 1 Overide_Crossfade_Time = <Local_Overide_Calc> Overide_FadeIn_Start_Vol = ($SFX_Background_FadeIn_Volume_Current) Overide_FadeOut_Start_Vol = ($SFX_Background_FadeOut_Volume_Current)}
+	Wait \{5
 		gameframes}
 	begin
-	if ($sfx_background_is_crossfading = false)
+	if ($SFX_Background_IS_Crossfading = false)
 		break
 	endif
-	wait \{1
+	Wait \{1
 		gameframe}
 	repeat
-	change sfx_background_requested_area = <new_requested_area_not_playing>
-	change sfx_background_requested_checksum = <new_requested_checksum_not_playing>
-	wait \{1
+	change SFX_Background_Requested_Area = <New_Requested_Area_Not_Playing>
+	change SFX_Background_Requested_Checksum = <New_Requested_Checksum_Not_Playing>
+	Wait \{1
 		gameframe}
-	spawnscriptnow \{skate8_sfx_change_background}
+	spawnscriptnow \{Skate8_SFX_Change_Background}
 endscript
 
-script one_shot_soundevent \{waittime = 15
+script One_Shot_SoundEvent \{waittime = 15
 		immediate = 0}
-	if gotparam \{soundevent}
-		requestedsoundevent = <soundevent>
+	if GotParam \{SoundEvent}
+		RequestedSoundEvent = <SoundEvent>
 	else
-		requestedsoundevent = donothing_oneshot
+		RequestedSoundEvent = DoNothing_OneShot
 	endif
-	localcurrentlyplaying = $currentlyplayingoneshotsoundevent
-	if (<localcurrentlyplaying> = <requestedsoundevent>)
-		if NOT ($currentoneshotwaittime = <waittime>)
-			doactualchangeingofoneshots <...>
+	LocalCurrentlyPlaying = $CurrentlyPlayingOneShotSoundEvent
+	if (<LocalCurrentlyPlaying> = <RequestedSoundEvent>)
+		if NOT ($CurrentOneShotWaitTime = <waittime>)
+			DoActualChangeingOfOneShots <...>
 		endif
 	else
-		doactualchangeingofoneshots <...>
+		DoActualChangeingOfOneShots <...>
 	endif
 endscript
 
-script doactualchangeingofoneshots \{immediate = 0}
-	if issoundeventplaying <localcurrentlyplaying>
-		waitforoneshotsoundeventtoend <...>
+script DoActualChangeingOfOneShots \{immediate = 0}
+	if isSoundEventPlaying <LocalCurrentlyPlaying>
+		WaitForOneShotSoundEventToEnd <...>
 	endif
-	killspawnedscript \{name = spawnedoneshotbeginrepeatloop}
-	spawnscriptnow spawnedoneshotbeginrepeatloop params = {myoneshot = <requestedsoundevent> waittime = <waittime>}
-	change currentlyplayingoneshotsoundevent = <requestedsoundevent>
-	change currentoneshotwaittime = <waittime>
+	KillSpawnedScript \{name = SpawnedOneShotBeginRepeatLoop}
+	spawnscriptnow SpawnedOneShotBeginRepeatLoop params = {myoneshot = <RequestedSoundEvent> waittime = <waittime>}
+	change CurrentlyPlayingOneShotSoundEvent = <RequestedSoundEvent>
+	change CurrentOneShotWaitTime = <waittime>
 endscript
 
-script spawnedoneshotbeginrepeatloop \{waittime = 15}
-	if NOT (<myoneshot> = donothing_oneshot)
-		wait (RandomRange (0.3, 0.5) * <waittime>) seconds
+script SpawnedOneShotBeginRepeatLoop \{waittime = 15}
+	if NOT (<myoneshot> = DoNothing_OneShot)
+		Wait (RandomRange (0.3, 0.5) * <waittime>) seconds
 		begin
-		soundevent event = <myoneshot>
+		SoundEvent event = <myoneshot>
 		begin
-		if issoundeventplaying <myoneshot>
-			wait \{1
+		if isSoundEventPlaying <myoneshot>
+			Wait \{1
 				gameframe}
 		else
 			break
 		endif
 		repeat
-		wait (RandomRange (0.9, 1.6) * <waittime>) seconds
+		Wait (RandomRange (0.9, 1.6) * <waittime>) seconds
 		repeat
 	else
 	endif
 endscript
 
-script waitforoneshotsoundeventtoend \{immediate = 0}
+script WaitForOneShotSoundEventToEnd \{immediate = 0}
 	if (<immediate> = 1)
 		printf \{"WaitForOneShotSoundEventToEnd IMMEDIATE"}
-		if (issoundeventplaying <localcurrentlyplaying>)
-			stopsoundevent <localcurrentlyplaying>
+		if (isSoundEventPlaying <LocalCurrentlyPlaying>)
+			StopSoundEvent <LocalCurrentlyPlaying>
 		endif
 		return
 	endif
 	begin
-	if (issoundeventplaying <localcurrentlyplaying>)
+	if (isSoundEventPlaying <LocalCurrentlyPlaying>)
 	else
 		break
 	endif
-	wait \{1
+	Wait \{1
 		gameframe}
 	repeat
 endscript

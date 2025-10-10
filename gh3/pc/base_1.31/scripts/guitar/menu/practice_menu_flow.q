@@ -42,20 +42,20 @@ practice_setlist_fs = {
 script practice_check_song_for_parts 
 	load_songqpak song_name = ($current_song) async = 0
 	get_song_struct song = ($current_song)
-	if structurecontains structure = <song_struct> no_rhythm_track
+	if StructureContains Structure = <song_struct> no_rhythm_track
 		change \{structurename = player1_status
 			part = guitar}
 		return \{flow_state = practice_select_difficulty_fs}
 	endif
 	get_song_prefix song = ($current_song)
-	formattext checksumname = song_rhythm_array_id '%s_song_rhythm_easy' s = <song_prefix>
-	if globalexists name = <song_rhythm_array_id> type = array
-		getarraysize $<song_rhythm_array_id>
+	FormatText checksumname = song_rhythm_array_id '%s_song_rhythm_easy' s = <song_prefix>
+	if GlobalExists name = <song_rhythm_array_id> type = array
+		GetArraySize $<song_rhythm_array_id>
 		if (<array_size> > 0)
 			return \{flow_state = practice_select_part_fs}
 		endif
 	endif
-	if structurecontains structure = <song_struct> use_coop_notetracks
+	if StructureContains Structure = <song_struct> use_coop_notetracks
 		return \{flow_state = practice_select_part_fs}
 	endif
 	change \{structurename = player1_status
@@ -66,18 +66,18 @@ endscript
 script practice_check_song_for_parts_back 
 	load_songqpak song_name = ($current_song) async = 0
 	get_song_struct song = ($current_song)
-	if structurecontains structure = <song_struct> no_rhythm_track
+	if StructureContains Structure = <song_struct> no_rhythm_track
 		return \{flow_state = practice_setlist_fs}
 	endif
 	get_song_prefix song = ($current_song)
-	formattext checksumname = song_rhythm_array_id '%s_song_rhythm_easy' s = <song_prefix>
-	if globalexists name = <song_rhythm_array_id> type = array
-		getarraysize $<song_rhythm_array_id>
+	FormatText checksumname = song_rhythm_array_id '%s_song_rhythm_easy' s = <song_prefix>
+	if GlobalExists name = <song_rhythm_array_id> type = array
+		GetArraySize $<song_rhythm_array_id>
 		if (<array_size> > 0)
 			return \{flow_state = practice_select_part_fs}
 		endif
 	endif
-	if structurecontains structure = <song_struct> use_coop_notetracks
+	if StructureContains Structure = <song_struct> use_coop_notetracks
 		return \{flow_state = practice_select_part_fs}
 	endif
 	return \{flow_state = practice_setlist_fs}
@@ -154,14 +154,14 @@ script practice_start_song \{device_num = 0}
 	change \{game_mode = training}
 	change \{current_transition = practice}
 	change \{current_level = load_z_soundcheck}
-	start_song starttime = ($practice_start_time) device_num = <device_num> practice_intro = 1 endtime = ($practice_end_time)
+	start_song StartTime = ($practice_start_time) device_num = <device_num> practice_intro = 1 endtime = ($practice_end_time)
 	change \{practice_audio_muted = 0}
 	if ($current_speedfactor = 1.0)
 		menu_audio_settings_update_band_volume \{vol = 7}
 	else
 		menu_audio_settings_update_band_volume \{vol = 0}
 	endif
-	setsoundbussparams \{crowd = {
+	SetSoundBussParams \{Crowd = {
 			vol = -100.0
 		}}
 	spawnscriptnow \{practice_update}
@@ -170,14 +170,14 @@ endscript
 script practice_restart_song 
 	change \{game_mode = training}
 	change \{current_transition = practice}
-	restart_song practice_intro = 1 starttime = ($practice_start_time) endtime = ($practice_end_time)
+	restart_song practice_intro = 1 StartTime = ($practice_start_time) endtime = ($practice_end_time)
 	change \{practice_audio_muted = 0}
 	if ($current_speedfactor = 1.0)
 		menu_audio_settings_update_band_volume \{vol = 7}
 	else
 		menu_audio_settings_update_band_volume \{vol = 0}
 	endif
-	setsoundbussparams \{crowd = {
+	SetSoundBussParams \{Crowd = {
 			vol = -100.0
 		}}
 	spawnscriptnow \{practice_update}
@@ -186,27 +186,27 @@ endscript
 script practice_update 
 	begin
 	practice_audio_filter
-	getsongtimems
-	if (<time> > (($practice_end_time) + ($song_win_delay * 1000 - 100)))
+	GetSongTimeMs
+	if (<time> > (($practice_end_time) + ($Song_Win_Delay * 1000 - 100)))
 		spawnscriptnow \{finish_practice_song}
 	endif
-	wait \{1
+	Wait \{1
 		gameframes}
 	repeat
 endscript
 
 script finish_practice_song 
-	killspawnedscript \{name = practice_update}
+	KillSpawnedScript \{name = practice_update}
 	ui_flow_manager_respond_to_action \{action = end_song}
 	gh3_start_pressed
 endscript
 practice_audio_muted = 0
 
 script practice_audio_filter 
-	getsongtimems
+	GetSongTimeMs
 	if ((<time> > ($practice_start_time)) && (<time> < ($practice_end_time)))
 		if ($practice_audio_muted = 1)
-			getglobaltags \{user_options}
+			GetGlobalTags \{user_options}
 			menu_audio_settings_update_guitar_volume vol = <guitar_volume>
 			change \{practice_audio_muted = 0}
 		endif
@@ -220,12 +220,12 @@ script practice_audio_filter
 endscript
 
 script shut_down_practice_mode 
-	killspawnedscript \{name = practice_update}
-	getglobaltags \{user_options}
+	KillSpawnedScript \{name = practice_update}
+	GetGlobalTags \{user_options}
 	menu_audio_settings_update_guitar_volume vol = <guitar_volume>
 	menu_audio_settings_update_band_volume vol = <band_volume>
 	menu_audio_settings_update_sfx_volume vol = <sfx_volume>
-	setsoundbussparams {crowd = {vol = ($default_bussset.crowd.vol)}}
+	SetSoundBussParams {Crowd = {vol = ($Default_BussSet.Crowd.vol)}}
 endscript
 practice_play_song_fs = {
 	actions = [
@@ -516,7 +516,7 @@ practice_new_song_quit_warning_fs = {
 script end_practice_song_slomo 
 	change \{current_speedfactor = 1.0}
 	setslomo \{$current_speedfactor}
-	change \{structurename = pitchshiftslow1
+	change \{structurename = PitchShiftSlow1
 		pitch = 1.0}
 endscript
 
@@ -617,9 +617,9 @@ practice_end_fs = {
 script where_do_we_go_from_practice 
 	switch ($came_to_practice_from)
 		case main_menu
-		if gotparam \{from_choose_practice_section}
+		if GotParam \{from_choose_practice_section}
 			return \{flow_state = practice_select_difficulty_fs}
-		elseif gotparam \{from_practice_tutorial_select}
+		elseif GotParam \{from_practice_tutorial_select}
 			return \{flow_state = practice_select_mode_fs}
 		else
 			return \{flow_state = main_menu_fs}

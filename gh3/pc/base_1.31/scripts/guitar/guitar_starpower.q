@@ -1,4 +1,4 @@
-whammywibble0 = [
+WhammyWibble0 = [
 	1.0
 	1.0
 	1.0
@@ -136,7 +136,7 @@ whammywibble0 = [
 	1.0
 	1.0
 ]
-whammywibble1 = [
+WhammyWibble1 = [
 	1.0
 	1.0
 	1.0
@@ -317,20 +317,20 @@ star_power_ready_on_p1 = 0
 star_power_ready_on_p2 = 0
 
 script show_star_power_ready 
-	if ($cheat_performancemode = 1)
+	if ($Cheat_PerformanceMode = 1)
 		return
 	endif
 	if ($game_mode = p2_career || $game_mode = p2_coop)
 		<player_status> = player1_status
 	endif
-	soundevent \{event = star_power_ready_sfx}
+	SoundEvent \{event = Star_Power_Ready_SFX}
 	spawnscriptnow rock_meter_star_power_on params = {player_status = <player_status>}
-	formattext checksumname = player_container 'HUD_Note_Streak_Combo%d' d = ($<player_status>.player)
+	FormatText checksumname = player_container 'HUD_Note_Streak_Combo%d' d = ($<player_status>.player)
 	begin
-	if NOT screenelementexists id = <player_container>
+	if NOT ScreenElementExists id = <player_container>
 		break
 	endif
-	wait \{1
+	Wait \{1
 		gameframe}
 	repeat
 	if ($<player_status>.player = 1)
@@ -349,7 +349,7 @@ script show_star_power_ready
 	if ($<player_status>.star_power_used = 1)
 		return
 	endif
-	extendcrc star_power_ready_text ($<player_status>.text) out = id
+	ExtendCRC star_power_ready_text ($<player_status>.text) out = id
 	if (($game_mode = p2_faceoff) || ($game_mode = p2_pro_faceoff))
 		if ($<player_status>.player = 1)
 			original_pos = (($hud_screen_elements [0].pos) - (225.0, 50.0))
@@ -367,32 +367,32 @@ script show_star_power_ready
 		base_scale = 1.2
 		scale_big_mult = 1.5
 	endif
-	if screenelementexists id = <id>
-		<id> :domorph pos = <original_pos> scale = 4 rgba = [190 225 255 250] alpha = 0 rot_angle = 3
+	if ScreenElementExists id = <id>
+		<id> :DoMorph pos = <original_pos> scale = 4 rgba = [190 225 255 250] alpha = 0 rot_angle = 3
 	endif
-	extendcrc hud_destroygroup_window ($<player_status>.text) out = hud_destroygroup
+	ExtendCRC hud_destroygroup_window ($<player_status>.text) out = hud_destroygroup
 	spawnscriptnow hud_lightning_alert params = {player = ($<player_status>.player) alert_id = <id> player_container = <hud_destroygroup>}
-	if screenelementexists id = <id>
-		<id> :domorph pos = <original_pos> scale = <base_scale> alpha = 1 time = 0.3 rot_angle = -3 motion = ease_in
+	if ScreenElementExists id = <id>
+		<id> :DoMorph pos = <original_pos> scale = <base_scale> alpha = 1 time = 0.3 rot_angle = -3 motion = ease_in
 	endif
-	if screenelementexists id = <id>
-		<id> :domorph pos = <original_pos> scale = (<base_scale> * <scale_big_mult>) time = 0.3 rot_angle = 4 motion = ease_out
+	if ScreenElementExists id = <id>
+		<id> :DoMorph pos = <original_pos> scale = (<base_scale> * <scale_big_mult>) time = 0.3 rot_angle = 4 motion = ease_out
 	endif
-	if screenelementexists id = <id>
-		<id> :domorph pos = <original_pos> scale = <base_scale> time = 0.3 rot_angle = -5 rgba = [145 215 235 250] motion = ease_in
+	if ScreenElementExists id = <id>
+		<id> :DoMorph pos = <original_pos> scale = <base_scale> time = 0.3 rot_angle = -5 rgba = [145 215 235 250] motion = ease_in
 	endif
 	rotation = 10
 	begin
 	<rotation> = (<rotation> * -0.7)
-	if screenelementexists id = <id>
-		<id> :domorph pos = <original_pos> rot_angle = <rotation> alpha = 1 time = 0.08 motion = ease_out
+	if ScreenElementExists id = <id>
+		<id> :DoMorph pos = <original_pos> rot_angle = <rotation> alpha = 1 time = 0.08 motion = ease_out
 	endif
 	repeat 12
-	if screenelementexists id = <id>
-		<id> :domorph pos = <original_pos> rot_angle = 0 motion = ease_out
+	if ScreenElementExists id = <id>
+		<id> :DoMorph pos = <original_pos> rot_angle = 0 motion = ease_out
 	endif
-	if screenelementexists id = <id>
-		<id> :domorph pos = (<original_pos> - (0.0, 230.0)) scale = (<base_scale> * 0.5) alpha = 0 time = 0.3 motion = ease_in
+	if ScreenElementExists id = <id>
+		<id> :DoMorph pos = (<original_pos> - (0.0, 230.0)) scale = (<base_scale> * 0.5) alpha = 0 time = 0.3 motion = ease_in
 	endif
 	if ($<player_status>.player = 1)
 		change \{star_power_ready_on_p1 = 0}
@@ -404,12 +404,12 @@ showing_raise_axe = 0
 
 script show_coop_raise_axe_for_starpower 
 	if ($<player_status>.star_power_used = 1 ||
-			$is_attract_mode = 1 || $showing_raise_axe = 1 || $cheat_performancemode = 1 || $playing_song = 0)
+			$is_attract_mode = 1 || $showing_raise_axe = 1 || $Cheat_PerformanceMode = 1 || $playing_song = 0)
 		return
 	endif
 	change \{showing_raise_axe = 1}
-	extendcrc coop_raise_axe ($<player_status>.text) out = id
-	extendcrc coop_raise_axe_cont ($<player_status>.text) out = id_cont
+	ExtendCRC coop_raise_axe ($<player_status>.text) out = id
+	ExtendCRC coop_raise_axe_cont ($<player_status>.text) out = id_cont
 	if ($<player_status>.player = 1)
 		original_pos = (($hud_screen_elements [10].pos) - (225.0, 60.0))
 		original_pos_cont = (($hud_screen_elements [10].pos) - (225.0, 30.0))
@@ -419,74 +419,74 @@ script show_coop_raise_axe_for_starpower
 	endif
 	base_scale = 0.7
 	base_scale_cont = 1
-	if screenelementexists id = <id>
-		doscreenelementmorph {
+	if ScreenElementExists id = <id>
+		doScreenElementMorph {
 			id = <id>
 			pos = <original_pos>
 			scale = 0
 			alpha = 1
 		}
 	endif
-	if screenelementexists id = <id_cont>
-		doscreenelementmorph {
+	if ScreenElementExists id = <id_cont>
+		doScreenElementMorph {
 			id = <id_cont>
 			pos = <original_pos_cont>
 			scale = 0
 			alpha = 1
 		}
 	endif
-	if screenelementexists id = <id>
-		doscreenelementmorph id = <id> scale = <base_scale> time = 0.2
+	if ScreenElementExists id = <id>
+		doScreenElementMorph id = <id> scale = <base_scale> time = 0.2
 	endif
-	if screenelementexists id = <id_cont>
-		doscreenelementmorph id = <id_cont> scale = <base_scale_cont> time = 0.2
+	if ScreenElementExists id = <id_cont>
+		doScreenElementMorph id = <id_cont> scale = <base_scale_cont> time = 0.2
 	endif
-	wait \{0.2
+	Wait \{0.2
 		seconds}
-	if NOT screenelementexists id = <id>
+	if NOT ScreenElementExists id = <id>
 		change \{showing_raise_axe = 0}
 		return
 	endif
 	rotation = 4
 	begin
 	<rotation> = (<rotation> * -1)
-	if screenelementexists id = <id>
-		doscreenelementmorph {
+	if ScreenElementExists id = <id>
+		doScreenElementMorph {
 			id = <id>
 			rot_angle = <rotation>
 			time = 0.1
 		}
 	endif
-	if screenelementexists id = <id_cont>
-		doscreenelementmorph {
+	if ScreenElementExists id = <id_cont>
+		doScreenElementMorph {
 			id = <id_cont>
 			rot_angle = <rotation>
 			time = 0.1
 		}
 	endif
-	wait \{0.13
+	Wait \{0.13
 		seconds}
-	if NOT screenelementexists id = <id>
+	if NOT ScreenElementExists id = <id>
 		change \{showing_raise_axe = 0}
 		return
 	endif
 	repeat 8
-	if screenelementexists id = <id>
-		doscreenelementmorph id = <id> rot_angle = 0
+	if ScreenElementExists id = <id>
+		doScreenElementMorph id = <id> rot_angle = 0
 	endif
-	if screenelementexists id = <id_cont>
-		doscreenelementmorph id = <id_cont> rot_angle = 0
+	if ScreenElementExists id = <id_cont>
+		doScreenElementMorph id = <id_cont> rot_angle = 0
 	endif
-	if screenelementexists id = <id>
-		doscreenelementmorph {
+	if ScreenElementExists id = <id>
+		doScreenElementMorph {
 			id = <id>
 			pos = (<original_pos> - (0.0, 400.0))
 			scale = (<base_scale> * 0.5)
 			time = 0.35000002
 		}
 	endif
-	if screenelementexists id = <id_cont>
-		doscreenelementmorph {
+	if ScreenElementExists id = <id_cont>
+		doScreenElementMorph {
 			id = <id_cont>
 			pos = (<original_pos_cont> - (0.0, 400.0))
 			scale = (<base_scale_cont> * 0.5)
@@ -500,14 +500,14 @@ script star_power_hit_note
 	increase_star_power amount = $star_power_hit_note_score player_status = <player_status>
 	change structurename = <player_status> star_power_note_count = ($<player_status>.star_power_note_count + 1)
 	change structurename = <player_status> star_power_sequence = ($<player_status>.star_power_sequence + 1)
-	broadcastevent type = star_hit_note data = {song = <song> array_entry = <array_entry> player_status = <player_status>}
+	BroadcastEvent type = star_hit_note data = {song = <song> array_entry = <array_entry> player_status = <player_status>}
 	printf "star note hit: %s required %r" s = ($<player_status>.star_power_sequence) r = <sequence_count>
 	if (<sequence_count> = $<player_status>.star_power_sequence)
 		if ($<player_status>.star_power_sequence > $star_power_sequence_min)
 			if ($<player_status>.star_power_used = 0)
 				printf \{channel = training
 					"broadcasting star power bonus!!!!!!!!!!!"}
-				broadcastevent type = star_sequence_bonus data = {song = <song> array_entry = <array_entry>}
+				BroadcastEvent type = star_sequence_bonus data = {song = <song> array_entry = <array_entry>}
 				increase_star_power amount = $star_power_sequence_bonus player_status = <player_status>
 			endif
 		endif
@@ -521,9 +521,9 @@ endscript
 
 script star_power_miss_note 
 	change structurename = <player_status> star_power_sequence = 0
-	launchgemevent event = star_miss_note player = <player>
-	extendcrc star_miss_note <player_text> out = id
-	broadcastevent type = <id> data = {song = <song> array_entry = <array_entry>}
+	LaunchGemEvent event = star_miss_note player = <player>
+	ExtendCRC star_miss_note <player_text> out = id
+	BroadcastEvent type = <id> data = {song = <song> array_entry = <array_entry>}
 endscript
 
 script star_power_whammy 
@@ -538,8 +538,8 @@ script star_power_whammy
 	whammy_on = 0
 	whammy_star_on = 0
 	whammy_star_off = 0
-	extendcrc star_whammy_on <player_text> out = id
-	broadcastevent type = <id> data = {pattern = <pattern> time = <time> guitar_stream = <guitar_stream> song = <song> array_entry = <array_entry> player = <player> player_status = <player_status> player_text = <player_text>}
+	ExtendCRC star_whammy_on <player_text> out = id
+	BroadcastEvent type = <id> data = {pattern = <pattern> time = <time> guitar_stream = <guitar_stream> song = <song> array_entry = <array_entry> player = <player> player_status = <player_status> player_text = <player_text>}
 	<boss> = 0
 	if ($boss_battle = 1)
 		if (($<player_status>.player) = 2)
@@ -552,13 +552,13 @@ script star_power_whammy
 	endif
 	begin
 	if (($<player_status>.whammy_on) = 0)
-		extendcrc star_whammy_off <player_text> out = id
-		broadcastevent type = <id> data = {pattern = <pattern> time = <time> guitar_stream = <guitar_stream> song = <song> array_entry = <array_entry> player = <player> player_status = <player_status> player_text = <player_text> finished = 0}
+		ExtendCRC star_whammy_off <player_text> out = id
+		BroadcastEvent type = <id> data = {pattern = <pattern> time = <time> guitar_stream = <guitar_stream> song = <song> array_entry = <array_entry> player = <player> player_status = <player_status> player_text = <player_text> finished = 0}
 		break
 	endif
 	if (<boss> = 0)
-		if guitargetanalogueinfo controller = ($<player_status>.controller)
-			if isguitarcontroller controller = ($<player_status>.controller)
+		if GuitarGetAnalogueInfo controller = ($<player_status>.controller)
+			if IsGuitarController controller = ($<player_status>.controller)
 				<px> = ((<rightx> - $<player_status>.resting_whammy_position) / (1.0 - $<player_status>.resting_whammy_position))
 				if (<px> < 0)
 					<px> = 0
@@ -583,7 +583,7 @@ script star_power_whammy
 				else
 					if (<rightlength> > 0)
 						<px> = <rightx>
-						<py> = <righty>
+						<py> = <RightY>
 					endif
 				endif
 				if (<first> = 1)
@@ -619,14 +619,14 @@ script star_power_whammy
 				whammy_on = (<whammy_on> - 1)
 				if (<do_blue_whammys> = 1)
 					if (<whammy_star_on> = 5)
-						getarraysize \{$gem_colors}
+						GetArraySize \{$gem_colors}
 						gem_count = 0
 						begin
 						if ((<pattern> && $button_values [<gem_count>]) = $button_values [<gem_count>])
-							formattext checksumname = whammy_id '%c_%i_whammybar_p%p' c = ($gem_colors_text [<gem_count>]) i = <array_entry> p = ($<player_status>.player) addtostringlookup = true
-							if screenelementexists id = <whammy_id>
+							FormatText checksumname = whammy_id '%c_%i_whammybar_p%p' c = ($gem_colors_text [<gem_count>]) i = <array_entry> p = ($<player_status>.player) AddToStringLookup = true
+							if ScreenElementExists id = <whammy_id>
 								bar_name = (<whammy_id> + 1)
-								makestarwhammy name = <bar_name> player = ($<player_status>.player)
+								MakeStarWhammy name = <bar_name> player = ($<player_status>.player)
 							endif
 						endif
 						gem_count = (<gem_count> + 1)
@@ -638,14 +638,14 @@ script star_power_whammy
 				<whammy_star_off> = (<whammy_star_off> + 1)
 				if (<do_blue_whammys> = 1)
 					if (<whammy_star_off> = 5)
-						getarraysize \{$gem_colors}
+						GetArraySize \{$gem_colors}
 						gem_count = 0
 						begin
 						if ((<pattern> && $button_values [<gem_count>]) = $button_values [<gem_count>])
-							formattext checksumname = whammy_id '%c_%i_whammybar_p%p' c = ($gem_colors_text [<gem_count>]) i = <array_entry> p = ($<player_status>.player) addtostringlookup = true
-							if screenelementexists id = <whammy_id>
+							FormatText checksumname = whammy_id '%c_%i_whammybar_p%p' c = ($gem_colors_text [<gem_count>]) i = <array_entry> p = ($<player_status>.player) AddToStringLookup = true
+							if ScreenElementExists id = <whammy_id>
 								bar_name = (<whammy_id> + 1)
-								makenormalwhammy name = <bar_name> player = ($<player_status>.player)
+								MakeNormalWhammy name = <bar_name> player = ($<player_status>.player)
 							endif
 						endif
 						gem_count = (<gem_count> + 1)
@@ -659,11 +659,11 @@ script star_power_whammy
 	endif
 	<time> = (<time> - ($current_deltatime * 1000))
 	if (<time> <= 0)
-		extendcrc star_whammy_off <player_text> out = id
-		broadcastevent type = <id> data = {pattern = <pattern> time = <time> guitar_stream = <guitar_stream> song = <song> array_entry = <array_entry> player = <player> player_status = <player_status> player_text = <player_text> finished = 1}
+		ExtendCRC star_whammy_off <player_text> out = id
+		BroadcastEvent type = <id> data = {pattern = <pattern> time = <time> guitar_stream = <guitar_stream> song = <song> array_entry = <array_entry> player = <player> player_status = <player_status> player_text = <player_text> finished = 1}
 		break
 	endif
-	wait \{1
+	Wait \{1
 		gameframe}
 	repeat
 endscript
@@ -677,7 +677,7 @@ script reset_star_array
 	endif
 	if ($game_mode = p2_career || $game_mode = p2_coop ||
 			($game_mode = training && ($<player_status>.part = rhythm)))
-		if structurecontains structure = <song_struct> use_coop_notetracks
+		if StructureContains Structure = <song_struct> use_coop_notetracks
 			if (($<player_status>.part) = rhythm)
 				<part> = 'rhythmcoop_'
 			else
@@ -689,10 +689,10 @@ script reset_star_array
 	get_difficulty_text_nl difficulty = <difficulty>
 	if ($game_mode = p2_battle ||
 			$boss_battle = 1)
-		formattext checksumname = song '%s_%p%d_starbattlemode' s = <song_prefix> p = <part> d = <difficulty_text_nl> addtostringlookup
+		FormatText checksumname = song '%s_%p%d_starbattlemode' s = <song_prefix> p = <part> d = <difficulty_text_nl> AddToStringLookup
 		change structurename = <player_status> sp_phrases_total = 0
 	else
-		formattext checksumname = song '%s_%p%d_star' s = <song_prefix> p = <part> d = <difficulty_text_nl> addtostringlookup
+		FormatText checksumname = song '%s_%p%d_star' s = <song_prefix> p = <part> d = <difficulty_text_nl> AddToStringLookup
 	endif
 	change structurename = <player_status> current_song_star_array = <song>
 	change structurename = <player_status> current_star_array_entry = 0
@@ -700,7 +700,7 @@ endscript
 
 script is_star_note \{time = 0}
 	star_array = ($<player_status>.current_song_star_array)
-	getarraysize $<star_array>
+	GetArraySize $<star_array>
 	if (<array_size> = 0)
 		return \{false
 			star_count = 0}
@@ -721,228 +721,228 @@ script is_star_note \{time = 0}
 	return false star_count = <star_count>
 endscript
 
-script do_starpower_stagefx 
+script Do_StarPower_StageFX 
 	switch (<player_status>.character_id)
-		case casey
-		spawnscriptlater do_starpower_shotgunfx id = <scriptid> params = {<...>}
-		case johnny
-		spawnscriptlater do_starpower_flamethrowerfx id = <scriptid> params = {<...>}
+		case Casey
+		SpawnScriptLater Do_StarPower_ShotgunFX id = <scriptID> params = {<...>}
+		case Johnny
+		SpawnScriptLater Do_StarPower_FlameThrowerFX id = <scriptID> params = {<...>}
 		case judy
-		spawnscriptlater do_starpower_heartsfx id = <scriptid> params = {<...>}
-		case lars
-		case ripper
+		SpawnScriptLater Do_StarPower_HeartsFX id = <scriptID> params = {<...>}
+		case Lars
+		case RIPPER
 		case satan
-		spawnscriptlater do_starpower_batfx id = <scriptid> params = {<...>}
-		case midori
-		spawnscriptlater do_starpower_butterfliesfx id = <scriptid> params = {<...>}
-		case xavier
-		spawnscriptlater do_starpower_peacefx id = <scriptid> params = {<...>}
+		SpawnScriptLater Do_StarPower_BatFX id = <scriptID> params = {<...>}
+		case Midori
+		SpawnScriptLater Do_StarPower_ButterfliesFX id = <scriptID> params = {<...>}
+		case Xavier
+		SpawnScriptLater Do_StarPower_PeaceFX id = <scriptID> params = {<...>}
 		default
-		spawnscriptlater do_starpower_teslafx id = <scriptid> params = {<...>}
+		SpawnScriptLater Do_StarPower_TeslaFX id = <scriptID> params = {<...>}
 	endswitch
 endscript
-spcaseyshoot = 0
+spCaseyShoot = 0
 
-script do_starpower_shotgunfx 
+script Do_StarPower_ShotgunFX 
 	begin
-	if ($spcaseyshoot = 1)
-		formattext checksumname = shotgunid '%p_StarPower_ShotgunFXShotgunID' p = <player_text>
-		safegetuniquecompositeobjectid objid = (<player_status>.band_member) preferredid = <shotgunid>
-		createparticlesystem name = <uniqueid> objid = (<player_status>.band_member) bone = bone_guitar_neck params_script = $gp_starpower_shotgun01
-		formattext checksumname = smokeid '%p_StarPower_ShotgunFXSmokeID' p = <player_text>
-		safegetuniquecompositeobjectid objid = (<player_status>.band_member) preferredid = <smokeid>
-		createparticlesystem name = <uniqueid> objid = (<player_status>.band_member) bone = bone_guitar_neck params_script = $gp_starpower_shotgunsmoke01
-		change \{spcaseyshoot = 0}
+	if ($spCaseyShoot = 1)
+		FormatText checksumname = shotgunID '%p_StarPower_ShotgunFXShotgunID' p = <player_text>
+		SafeGetUniqueCompositeObjectID ObjID = (<player_status>.band_member) preferredID = <shotgunID>
+		CreateParticleSystem name = <uniqueID> ObjID = (<player_status>.band_member) bone = bone_guitar_neck params_Script = $GP_StarPower_Shotgun01
+		FormatText checksumname = smokeID '%p_StarPower_ShotgunFXSmokeID' p = <player_text>
+		SafeGetUniqueCompositeObjectID ObjID = (<player_status>.band_member) preferredID = <smokeID>
+		CreateParticleSystem name = <uniqueID> ObjID = (<player_status>.band_member) bone = bone_guitar_neck params_Script = $GP_StarPower_ShotgunSmoke01
+		change \{spCaseyShoot = 0}
 	endif
-	wait \{1
+	Wait \{1
 		frame}
 	repeat
 endscript
 
-script starpower_shootshotgun 
-	change \{spcaseyshoot = 1}
+script StarPower_ShootShotGun 
+	change \{spCaseyShoot = 1}
 endscript
-spjohnnyflameson = 0
-spjohnnyflamesdur = 0
+spJohnnyFlamesOn = 0
+spJohnnyFlamesDur = 0
 
-script do_starpower_flamethrowerfx 
-	(<player_status>.band_member) :obj_getboneposition bone = bone_pelvis
-	bonepos = (<x> * (1.0, 0.0, 0.0) + <y> * (0.0, 1.0, 0.0) + <z> * (0.0, 0.0, 1.0))
-	formattext checksumname = anarchy01id '%p_StarPower_FlameThrowerFXAnarchy01ID' p = <player_text>
-	createparticlesystem name = <anarchy01id> objid = (<player_status>.band_member) bone = bone_pelvis params_script = $gp_starpower_flamethroweranarchy01
-	wait \{1
+script Do_StarPower_FlameThrowerFX 
+	(<player_status>.band_member) :Obj_GetBonePosition bone = Bone_Pelvis
+	bonePos = (<x> * (1.0, 0.0, 0.0) + <y> * (0.0, 1.0, 0.0) + <z> * (0.0, 0.0, 1.0))
+	FormatText checksumname = anarchy01ID '%p_StarPower_FlameThrowerFXAnarchy01ID' p = <player_text>
+	CreateParticleSystem name = <anarchy01ID> ObjID = (<player_status>.band_member) bone = Bone_Pelvis params_Script = $GP_StarPower_FlameThrowerAnarchy01
+	Wait \{1
 		gameframe}
 	begin
-	if ($spjohnnyflameson = 1)
-		formattext checksumname = flamethrowerid '%p_StarPower_FlameThrowerFXFlameThrowerID' p = <player_text>
-		createparticlesystem name = <flamethrowerid> objid = (<player_status>.band_member) bone = bone_guitar_neck params_script = {$gp_starpower_flamethrower01 lifetime = $spjohnnyflamesdur}
-		change \{spjohnnyflameson = 0}
+	if ($spJohnnyFlamesOn = 1)
+		FormatText checksumname = flameThrowerID '%p_StarPower_FlameThrowerFXFlameThrowerID' p = <player_text>
+		CreateParticleSystem name = <flameThrowerID> ObjID = (<player_status>.band_member) bone = bone_guitar_neck params_Script = {$GP_StarPower_FlameThrower01 lifeTime = $spJohnnyFlamesDur}
+		change \{spJohnnyFlamesOn = 0}
 		break
 	endif
-	wait \{1
+	Wait \{1
 		frame}
 	repeat
 endscript
 
-script starpower_flamethrowerflames 
-	change spjohnnyflamesdur = <emitdur>
-	change \{spjohnnyflameson = 1}
+script StarPower_FlameThrowerFlames 
+	change spJohnnyFlamesDur = <emitDur>
+	change \{spJohnnyFlamesOn = 1}
 endscript
 
-script do_starpower_heartsfx 
-	(<player_status>.band_member) :obj_getboneposition bone = bone_pelvis
-	bonepos = (<x> * (1.0, 0.0, 0.0) + <y> * (0.0, 1.0, 0.0) + <z> * (0.0, 0.0, 1.0))
-	getuniquecompositeobjectid \{preferredid = heartspoofid01}
-	createparticlesystem name = <uniqueid> pos = <bonepos> params_script = $gp_starpower_heartspoof01
-	wait \{1
+script Do_StarPower_HeartsFX 
+	(<player_status>.band_member) :Obj_GetBonePosition bone = Bone_Pelvis
+	bonePos = (<x> * (1.0, 0.0, 0.0) + <y> * (0.0, 1.0, 0.0) + <z> * (0.0, 0.0, 1.0))
+	GetUniqueCompositeObjectID \{preferredID = heartsPoofID01}
+	CreateParticleSystem name = <uniqueID> pos = <bonePos> params_Script = $GP_StarPower_HeartsPoof01
+	Wait \{1
 		gameframe}
-	formattext checksumname = heartsid '%p_StarPower_HeartsFXHeartsID' p = <player_text>
-	createparticlesystem name = <heartsid> objid = (<player_status>.band_member) bone = bone_pelvis params_script = $gp_starpower_hearts01
-	wait \{1
+	FormatText checksumname = heartsID '%p_StarPower_HeartsFXHeartsID' p = <player_text>
+	CreateParticleSystem name = <heartsID> ObjID = (<player_status>.band_member) bone = Bone_Pelvis params_Script = $GP_StarPower_Hearts01
+	Wait \{1
 		gameframe}
-	formattext checksumname = swirlid '%p_StarPower_HeartsFXSwirlID' p = <player_text>
-	createparticlesystem name = <swirlid> objid = (<player_status>.band_member) bone = bone_pelvis params_script = $gp_starpower_heartsswirl01
-	formattext checksumname = windid '%p_StarPower_HeartsFXWindID' p = <player_text>
-	enginewind create = {
-		name = <windid>
-		type = twist
-		pos = <bonepos>
+	FormatText checksumname = swirlID '%p_StarPower_HeartsFXSwirlID' p = <player_text>
+	CreateParticleSystem name = <swirlID> ObjID = (<player_status>.band_member) bone = Bone_Pelvis params_Script = $GP_StarPower_HeartsSwirl01
+	FormatText checksumname = windID '%p_StarPower_HeartsFXWindID' p = <player_text>
+	EngineWind create = {
+		name = <windID>
+		type = Twist
+		pos = <bonePos>
 		velocity = (0.0, 0.2, 0.0)
-		speed = 8
-		tangentweight = 0.4
+		Speed = 8
+		tangentWeight = 0.4
 		range = 7
-		attenuation = inv_distance
+		attenuation = INV_DISTANCE
 		time = 0
 	}
 	begin
-	(<player_status>.band_member) :obj_getboneposition bone = bone_pelvis
-	bonepos = (<x> * (1.0, 0.0, 0.0) + <y> * (0.0, 1.0, 0.0) + <z> * (0.0, 0.0, 1.0))
-	enginewind modify = {
-		name = <windid>
-		pos = <bonepos>
+	(<player_status>.band_member) :Obj_GetBonePosition bone = Bone_Pelvis
+	bonePos = (<x> * (1.0, 0.0, 0.0) + <y> * (0.0, 1.0, 0.0) + <z> * (0.0, 0.0, 1.0))
+	EngineWind modify = {
+		name = <windID>
+		pos = <bonePos>
 	}
-	wait \{0.05
+	Wait \{0.05
 		seconds}
 	repeat
 endscript
 
-script do_starpower_batfx 
-	(<player_status>.band_member) :obj_getboneposition bone = bone_pelvis
-	bonepos = (<x> * (1.0, 0.0, 0.0) + <y> * (0.0, 1.0, 0.0) + <z> * (0.0, 0.0, 1.0))
-	getuniquecompositeobjectid \{preferredid = batpoofid01}
-	createparticlesystem name = <uniqueid> pos = <bonepos> params_script = $gp_starpower_batspoof01
-	wait \{1
+script Do_StarPower_BatFX 
+	(<player_status>.band_member) :Obj_GetBonePosition bone = Bone_Pelvis
+	bonePos = (<x> * (1.0, 0.0, 0.0) + <y> * (0.0, 1.0, 0.0) + <z> * (0.0, 0.0, 1.0))
+	GetUniqueCompositeObjectID \{preferredID = batPoofID01}
+	CreateParticleSystem name = <uniqueID> pos = <bonePos> params_Script = $GP_StarPower_BatsPoof01
+	Wait \{1
 		gameframe}
-	formattext checksumname = batid '%p_StarPower_BatFXBatID' p = <player_text>
-	createparticlesystem name = <batid> objid = (<player_status>.band_member) bone = bone_pelvis params_script = $gp_starpower_bats01
-	wait \{1
+	FormatText checksumname = batID '%p_StarPower_BatFXBatID' p = <player_text>
+	CreateParticleSystem name = <batID> ObjID = (<player_status>.band_member) bone = Bone_Pelvis params_Script = $GP_StarPower_Bats01
+	Wait \{1
 		gameframe}
-	formattext checksumname = swirlid '%p_StarPower_BatFXSwirlID' p = <player_text>
-	createparticlesystem name = <swirlid> objid = (<player_status>.band_member) bone = bone_pelvis params_script = $gp_starpower_batsswirl01
-	formattext checksumname = windid '%p_StarPower_BatFXWindID' p = <player_text>
-	enginewind create = {
-		name = <windid>
-		type = twist
-		pos = <bonepos>
+	FormatText checksumname = swirlID '%p_StarPower_BatFXSwirlID' p = <player_text>
+	CreateParticleSystem name = <swirlID> ObjID = (<player_status>.band_member) bone = Bone_Pelvis params_Script = $GP_StarPower_BatsSwirl01
+	FormatText checksumname = windID '%p_StarPower_BatFXWindID' p = <player_text>
+	EngineWind create = {
+		name = <windID>
+		type = Twist
+		pos = <bonePos>
 		velocity = (0.0, 0.2, 0.0)
-		speed = 8
-		tangentweight = 0.4
+		Speed = 8
+		tangentWeight = 0.4
 		range = 7
-		attenuation = inv_distance
+		attenuation = INV_DISTANCE
 		time = 0
 	}
 	begin
-	(<player_status>.band_member) :obj_getboneposition bone = bone_pelvis
-	bonepos = (<x> * (1.0, 0.0, 0.0) + <y> * (0.0, 1.0, 0.0) + <z> * (0.0, 0.0, 1.0))
-	enginewind modify = {
-		name = <windid>
-		pos = <bonepos>
+	(<player_status>.band_member) :Obj_GetBonePosition bone = Bone_Pelvis
+	bonePos = (<x> * (1.0, 0.0, 0.0) + <y> * (0.0, 1.0, 0.0) + <z> * (0.0, 0.0, 1.0))
+	EngineWind modify = {
+		name = <windID>
+		pos = <bonePos>
 	}
-	wait \{0.05
+	Wait \{0.05
 		seconds}
 	repeat
 endscript
 
-script do_starpower_butterfliesfx 
-	(<player_status>.band_member) :obj_getboneposition bone = bone_pelvis
-	bonepos = (<x> * (1.0, 0.0, 0.0) + <y> * (0.0, 1.0, 0.0) + <z> * (0.0, 0.0, 1.0))
-	getuniquecompositeobjectid \{preferredid = butterfliespoofid01}
-	createparticlesystem name = <uniqueid> pos = <bonepos> params_script = $gp_starpower_butterfliespoof01
-	wait \{1
+script Do_StarPower_ButterfliesFX 
+	(<player_status>.band_member) :Obj_GetBonePosition bone = Bone_Pelvis
+	bonePos = (<x> * (1.0, 0.0, 0.0) + <y> * (0.0, 1.0, 0.0) + <z> * (0.0, 0.0, 1.0))
+	GetUniqueCompositeObjectID \{preferredID = ButterfliesPoofID01}
+	CreateParticleSystem name = <uniqueID> pos = <bonePos> params_Script = $GP_StarPower_ButterfliesPoof01
+	Wait \{1
 		gameframe}
-	formattext checksumname = butterfliesid '%p_StarPower_ButterfliesFXButterfliesID01' p = <player_text>
-	createparticlesystem name = <butterfliesid> objid = (<player_status>.band_member) bone = bone_pelvis params_script = $gp_starpower_butterflies01
-	wait \{1
+	FormatText checksumname = butterfliesID '%p_StarPower_ButterfliesFXButterfliesID01' p = <player_text>
+	CreateParticleSystem name = <butterfliesID> ObjID = (<player_status>.band_member) bone = Bone_Pelvis params_Script = $GP_StarPower_Butterflies01
+	Wait \{1
 		gameframe}
-	formattext checksumname = butterfliesid '%p_StarPower_ButterfliesFXButterfliesID02' p = <player_text>
-	createparticlesystem name = <butterfliesid> objid = (<player_status>.band_member) bone = bone_pelvis params_script = $gp_starpower_butterflies01
-	wait \{1
+	FormatText checksumname = butterfliesID '%p_StarPower_ButterfliesFXButterfliesID02' p = <player_text>
+	CreateParticleSystem name = <butterfliesID> ObjID = (<player_status>.band_member) bone = Bone_Pelvis params_Script = $GP_StarPower_Butterflies01
+	Wait \{1
 		gameframe}
-	formattext checksumname = swirlid '%p_StarPower_ButterfliesFXSwirlID' p = <player_text>
-	createparticlesystem name = <swirlid> objid = (<player_status>.band_member) bone = bone_pelvis params_script = $gp_starpower_butterfliesswirl01
-	formattext checksumname = windid '%p_StarPower_ButterfliesFXWindID' p = <player_text>
-	enginewind create = {
-		name = <windid>
-		type = twist
-		pos = <bonepos>
+	FormatText checksumname = swirlID '%p_StarPower_ButterfliesFXSwirlID' p = <player_text>
+	CreateParticleSystem name = <swirlID> ObjID = (<player_status>.band_member) bone = Bone_Pelvis params_Script = $GP_StarPower_ButterfliesSwirl01
+	FormatText checksumname = windID '%p_StarPower_ButterfliesFXWindID' p = <player_text>
+	EngineWind create = {
+		name = <windID>
+		type = Twist
+		pos = <bonePos>
 		velocity = (0.0, 0.1, 0.0)
-		speed = 6
-		tangentweight = 0.4
+		Speed = 6
+		tangentWeight = 0.4
 		range = 7
-		attenuation = inv_distance
+		attenuation = INV_DISTANCE
 		time = 0
 	}
 	begin
-	(<player_status>.band_member) :obj_getboneposition bone = bone_pelvis
-	bonepos = (<x> * (1.0, 0.0, 0.0) + <y> * (0.0, 1.0, 0.0) + <z> * (0.0, 0.0, 1.0))
-	enginewind modify = {
-		name = <windid>
-		pos = <bonepos>
+	(<player_status>.band_member) :Obj_GetBonePosition bone = Bone_Pelvis
+	bonePos = (<x> * (1.0, 0.0, 0.0) + <y> * (0.0, 1.0, 0.0) + <z> * (0.0, 0.0, 1.0))
+	EngineWind modify = {
+		name = <windID>
+		pos = <bonePos>
 	}
-	wait \{0.05
+	Wait \{0.05
 		seconds}
 	repeat
 endscript
 
-script do_starpower_peacefx 
-	(<player_status>.band_member) :obj_getboneposition bone = bone_pelvis
-	bonepos = (<x> * (1.0, 0.0, 0.0) + <y> * (0.0, 1.0, 0.0) + <z> * (0.0, 0.0, 1.0))
-	getuniquecompositeobjectid \{preferredid = peacepoofid01}
-	createparticlesystem name = <uniqueid> pos = <bonepos> params_script = $gp_starpower_peacepoof01
-	wait \{1
+script Do_StarPower_PeaceFX 
+	(<player_status>.band_member) :Obj_GetBonePosition bone = Bone_Pelvis
+	bonePos = (<x> * (1.0, 0.0, 0.0) + <y> * (0.0, 1.0, 0.0) + <z> * (0.0, 0.0, 1.0))
+	GetUniqueCompositeObjectID \{preferredID = peacePoofID01}
+	CreateParticleSystem name = <uniqueID> pos = <bonePos> params_Script = $GP_StarPower_PeacePoof01
+	Wait \{1
 		gameframe}
-	formattext checksumname = peaceid '%p_StarPower_PeaceFXPeaceID' p = <player_text>
-	createparticlesystem name = <peaceid> objid = (<player_status>.band_member) bone = bone_pelvis params_script = $gp_starpower_peace01
-	wait \{1
+	FormatText checksumname = peaceID '%p_StarPower_PeaceFXPeaceID' p = <player_text>
+	CreateParticleSystem name = <peaceID> ObjID = (<player_status>.band_member) bone = Bone_Pelvis params_Script = $GP_StarPower_Peace01
+	Wait \{1
 		gameframe}
-	formattext checksumname = swirlid '%p_StarPower_PeaceFXSwirlID' p = <player_text>
-	createparticlesystem name = <swirlid> objid = (<player_status>.band_member) bone = bone_pelvis params_script = $gp_starpower_peaceswirl01
-	formattext checksumname = windid '%p_StarPower_PeaceFXWindID' p = <player_text>
-	enginewind create = {
-		name = <windid>
-		type = twist
-		pos = <bonepos>
+	FormatText checksumname = swirlID '%p_StarPower_PeaceFXSwirlID' p = <player_text>
+	CreateParticleSystem name = <swirlID> ObjID = (<player_status>.band_member) bone = Bone_Pelvis params_Script = $GP_StarPower_PeaceSwirl01
+	FormatText checksumname = windID '%p_StarPower_PeaceFXWindID' p = <player_text>
+	EngineWind create = {
+		name = <windID>
+		type = Twist
+		pos = <bonePos>
 		velocity = (0.0, 0.1, 0.0)
-		speed = 4
-		tangentweight = 0.4
+		Speed = 4
+		tangentWeight = 0.4
 		range = 7
-		attenuation = inv_distance
+		attenuation = INV_DISTANCE
 		time = 0
 	}
 	begin
-	(<player_status>.band_member) :obj_getboneposition bone = bone_pelvis
-	bonepos = (<x> * (1.0, 0.0, 0.0) + <y> * (0.0, 1.0, 0.0) + <z> * (0.0, 0.0, 1.0))
-	enginewind modify = {
-		name = <windid>
-		pos = <bonepos>
+	(<player_status>.band_member) :Obj_GetBonePosition bone = Bone_Pelvis
+	bonePos = (<x> * (1.0, 0.0, 0.0) + <y> * (0.0, 1.0, 0.0) + <z> * (0.0, 0.0, 1.0))
+	EngineWind modify = {
+		name = <windID>
+		pos = <bonePos>
 	}
-	wait \{0.05
+	Wait \{0.05
 		seconds}
 	repeat
 endscript
 
-script do_starpower_teslafx 
-	getpakmancurrent \{map = zones}
+script Do_StarPower_TeslaFX 
+	GetPakManCurrent \{map = zones}
 	switch <pak>
 		case z_artdeco
 		zoneprefix = 'Z_ArtDeco_GFX_TRG_TeslaNode_'
@@ -966,38 +966,38 @@ script do_starpower_teslafx
 	i = 1
 	begin
 	if (RandomRange (0.0, 1.0) = 0)
-		bone = bone_guitar_fret_pos
+		bone = Bone_Guitar_Fret_Pos
 	else
-		bone = bone_guitar_strum_pos
+		bone = BONE_GUITAR_STRUM_POS
 	endif
-	formattext checksumname = scriptid '%p_StarPower_TeslaFX%i' p = <player_text> i = <i>
-	formattext checksumname = teslafxid '%p_StarPower_TeslaFXID%i' p = <player_text> i = <i>
-	spawnscriptlater create_starpower_teslafx id = <scriptid> params = {
+	FormatText checksumname = scriptID '%p_StarPower_TeslaFX%i' p = <player_text> i = <i>
+	FormatText checksumname = teslaFXID '%p_StarPower_TeslaFXID%i' p = <player_text> i = <i>
+	SpawnScriptLater Create_StarPower_TeslaFX id = <scriptID> params = {
 		<...>
 		zoneprefix = <zoneprefix>
-		teslafxid = <teslafxid>
+		teslaFXID = <teslaFXID>
 		bone = <bone>
 		nodenum = RandomRange (1.0, 10.0)
 	}
 	i = (<i> + 1)
 	repeat RandomRange (2.0, 4.0)
 	begin
-	wait RandomRange (0.1, 1.0) seconds
+	Wait RandomRange (0.1, 1.0) seconds
 	i = RandomRange (1.0, 4.0)
-	formattext checksumname = scriptid '%p_StarPower_TeslaFX%i' p = <player_text> i = <i>
-	formattext checksumname = teslafxid '%p_StarPower_TeslaFXID%i' p = <player_text> i = <i>
-	killspawnedscript id = <scriptid>
-	deleteteslaeffectobject name = <teslafxid>
+	FormatText checksumname = scriptID '%p_StarPower_TeslaFX%i' p = <player_text> i = <i>
+	FormatText checksumname = teslaFXID '%p_StarPower_TeslaFXID%i' p = <player_text> i = <i>
+	KillSpawnedScript id = <scriptID>
+	DeleteTeslaEffectObject name = <teslaFXID>
 	if (<i> = 1 || <i> = 2 || RandomRange (0.0, 1.0) = 1)
 		if (RandomRange (0.0, 1.0) = 0)
-			bone = bone_guitar_fret_pos
+			bone = Bone_Guitar_Fret_Pos
 		else
-			bone = bone_guitar_strum_pos
+			bone = BONE_GUITAR_STRUM_POS
 		endif
-		spawnscriptlater create_starpower_teslafx id = <scriptid> params = {
+		SpawnScriptLater Create_StarPower_TeslaFX id = <scriptID> params = {
 			<...>
 			zoneprefix = <zoneprefix>
-			teslafxid = <teslafxid>
+			teslaFXID = <teslaFXID>
 			bone = <bone>
 			nodenum = RandomRange (1.0, 10.0)
 		}
@@ -1005,160 +1005,160 @@ script do_starpower_teslafx
 	repeat
 endscript
 
-script create_starpower_teslafx 
-	(<player_status>.band_member) :obj_getboneposition bone = <bone>
-	bonepos = (<x> * (1.0, 0.0, 0.0) + <y> * (0.0, 1.0, 0.0) + <z> * (0.0, 0.0, 1.0))
-	formattext checksumname = teslanodeid '%z%n' z = <zoneprefix> n = <nodenum>
-	getnode <teslanodeid>
-	getdistance posa = <bonepos> posb = (<node>.pos)
-	createteslaeffectobject name = <teslafxid> start = <bonepos> end = (<node>.pos) width = (0.15 * <dist_atob>) lightwidth = (0.4 / <dist_atob>) fadeout = 0.8 color = (0.2, 0.3, 1.0)
-	wait \{1
+script Create_StarPower_TeslaFX 
+	(<player_status>.band_member) :Obj_GetBonePosition bone = <bone>
+	bonePos = (<x> * (1.0, 0.0, 0.0) + <y> * (0.0, 1.0, 0.0) + <z> * (0.0, 0.0, 1.0))
+	FormatText checksumname = teslaNodeID '%z%n' z = <zoneprefix> n = <nodenum>
+	GetNode <teslaNodeID>
+	GetDistance posA = <bonePos> PosB = (<node>.pos)
+	CreateTeslaEffectObject name = <teslaFXID> start = <bonePos> end = (<node>.pos) width = (0.15 * <dist_atob>) lightWidth = (0.4 / <dist_atob>) fadeOut = 0.8 color = (0.2, 0.3, 1.0)
+	Wait \{1
 		gameframe}
-	getuniquecompositeobjectid \{preferredid = teslasparksfx01}
-	createparticlesystem name = <uniqueid> pos = (<node>.pos) groupid = starpowerfx params_script = $gp_starpower_teslasparks01
-	oldendpos = (<node>.pos)
+	GetUniqueCompositeObjectID \{preferredID = teslaSparksFX01}
+	CreateParticleSystem name = <uniqueID> pos = (<node>.pos) groupID = starPowerFX params_Script = $GP_StarPower_TeslaSparks01
+	oldEndPos = (<node>.pos)
 	begin
-	wait \{1
+	Wait \{1
 		frame}
-	(<player_status>.band_member) :obj_getboneposition bone = <bone>
-	bonepos = (<x> * (1.0, 0.0, 0.0) + <y> * (0.0, 1.0, 0.0) + <z> * (0.0, 0.0, 1.0))
-	newendpos = (<oldendpos> + RandomRange (-0.1, 0.1) * (1.0, 0.0, 0.0) + RandomRange (-0.1, 0.1) * (0.0, 0.0, 1.0))
-	getdistance posa = <bonepos> posb = <newendpos>
-	setteslaeffectobject name = <teslafxid> start = <bonepos> end = <newendpos> width = (0.15 * <dist_atob>) lightwidth = (0.4 / <dist_atob>)
-	oldendpos = <newendpos>
+	(<player_status>.band_member) :Obj_GetBonePosition bone = <bone>
+	bonePos = (<x> * (1.0, 0.0, 0.0) + <y> * (0.0, 1.0, 0.0) + <z> * (0.0, 0.0, 1.0))
+	newEndPos = (<oldEndPos> + RandomRange (-0.1, 0.1) * (1.0, 0.0, 0.0) + RandomRange (-0.1, 0.1) * (0.0, 0.0, 1.0))
+	GetDistance posA = <bonePos> PosB = <newEndPos>
+	SetTeslaEffectObject name = <teslaFXID> start = <bonePos> end = <newEndPos> width = (0.15 * <dist_atob>) lightWidth = (0.4 / <dist_atob>)
+	oldEndPos = <newEndPos>
 	repeat
 endscript
 
-script kill_starpower_stagefx \{ifempty = 1}
-	formattext checksumname = scriptid '%p_StarPower_StageFX' p = <player_text>
-	killspawnedscript id = <scriptid>
+script Kill_StarPower_StageFX \{ifEmpty = 1}
+	FormatText checksumname = scriptID '%p_StarPower_StageFX' p = <player_text>
+	KillSpawnedScript id = <scriptID>
 	switch (<player_status>.character_id)
-		case casey
-		change \{spcaseyshoot = 0}
-		case johnny
-		formattext checksumname = flamethrowerid '%p_StarPower_FlameThrowerFXFlameThrowerID' p = <player_text>
-		manglechecksums a = <flamethrowerid> b = (<player_status>.band_member) p = <player_text>
-		if iscreated <mangled_id>
-			<mangled_id> :emitrate rate = 0
-			<mangled_id> :destroy ifempty = <ifempty>
+		case Casey
+		change \{spCaseyShoot = 0}
+		case Johnny
+		FormatText checksumname = flameThrowerID '%p_StarPower_FlameThrowerFXFlameThrowerID' p = <player_text>
+		MangleChecksums a = <flameThrowerID> b = (<player_status>.band_member) p = <player_text>
+		if IsCreated <mangled_ID>
+			<mangled_ID> :EmitRate rate = 0
+			<mangled_ID> :destroy ifEmpty = <ifEmpty>
 		endif
-		formattext checksumname = anarchy01id '%p_StarPower_FlameThrowerFXAnarchy01ID' p = <player_text>
-		manglechecksums a = <anarchy01id> b = (<player_status>.band_member)
-		if iscreated <mangled_id>
-			<mangled_id> :emitrate rate = 0
-			<mangled_id> :destroy ifempty = <ifempty>
+		FormatText checksumname = anarchy01ID '%p_StarPower_FlameThrowerFXAnarchy01ID' p = <player_text>
+		MangleChecksums a = <anarchy01ID> b = (<player_status>.band_member)
+		if IsCreated <mangled_ID>
+			<mangled_ID> :EmitRate rate = 0
+			<mangled_ID> :destroy ifEmpty = <ifEmpty>
 		endif
-		change \{spjohnnyflameson = 0}
+		change \{spJohnnyFlamesOn = 0}
 		case judy
-		formattext checksumname = heartsid '%p_StarPower_HeartsFXHeartsID' p = <player_text>
-		manglechecksums a = <heartsid> b = (<player_status>.band_member)
-		if iscreated <mangled_id>
-			<mangled_id> :emitrate rate = 0
-			<mangled_id> :destroy ifempty = <ifempty>
+		FormatText checksumname = heartsID '%p_StarPower_HeartsFXHeartsID' p = <player_text>
+		MangleChecksums a = <heartsID> b = (<player_status>.band_member)
+		if IsCreated <mangled_ID>
+			<mangled_ID> :EmitRate rate = 0
+			<mangled_ID> :destroy ifEmpty = <ifEmpty>
 		endif
-		formattext checksumname = swirlid '%p_StarPower_HeartsFXSwirlID' p = <player_text>
-		manglechecksums a = <swirlid> b = (<player_status>.band_member)
-		if iscreated <mangled_id>
-			<mangled_id> :emitrate rate = 0
-			<mangled_id> :destroy ifempty = <ifempty>
+		FormatText checksumname = swirlID '%p_StarPower_HeartsFXSwirlID' p = <player_text>
+		MangleChecksums a = <swirlID> b = (<player_status>.band_member)
+		if IsCreated <mangled_ID>
+			<mangled_ID> :EmitRate rate = 0
+			<mangled_ID> :destroy ifEmpty = <ifEmpty>
 		endif
-		formattext checksumname = windid '%p_StarPower_HeartsFXWindID' p = <player_text>
-		enginewind remove <windid>
-		case lars
-		case ripper
+		FormatText checksumname = windID '%p_StarPower_HeartsFXWindID' p = <player_text>
+		EngineWind remove <windID>
+		case Lars
+		case RIPPER
 		case satan
-		formattext checksumname = batid '%p_StarPower_BatFXBatID' p = <player_text>
-		manglechecksums a = <batid> b = (<player_status>.band_member)
-		if iscreated <mangled_id>
-			<mangled_id> :emitrate rate = 0
-			<mangled_id> :destroy ifempty = <ifempty>
+		FormatText checksumname = batID '%p_StarPower_BatFXBatID' p = <player_text>
+		MangleChecksums a = <batID> b = (<player_status>.band_member)
+		if IsCreated <mangled_ID>
+			<mangled_ID> :EmitRate rate = 0
+			<mangled_ID> :destroy ifEmpty = <ifEmpty>
 		endif
-		formattext checksumname = swirlid '%p_StarPower_BatFXSwirlID' p = <player_text>
-		manglechecksums a = <swirlid> b = (<player_status>.band_member)
-		if iscreated <mangled_id>
-			<mangled_id> :emitrate rate = 0
-			<mangled_id> :destroy ifempty = <ifempty>
+		FormatText checksumname = swirlID '%p_StarPower_BatFXSwirlID' p = <player_text>
+		MangleChecksums a = <swirlID> b = (<player_status>.band_member)
+		if IsCreated <mangled_ID>
+			<mangled_ID> :EmitRate rate = 0
+			<mangled_ID> :destroy ifEmpty = <ifEmpty>
 		endif
-		formattext checksumname = windid '%p_StarPower_BatFXWindID' p = <player_text>
-		enginewind remove <windid>
-		case midori
-		formattext checksumname = butterfliesid '%p_StarPower_ButterfliesFXButterfliesID01' p = <player_text>
-		manglechecksums a = <butterfliesid> b = (<player_status>.band_member)
-		if iscreated <mangled_id>
-			<mangled_id> :emitrate rate = 0
-			<mangled_id> :destroy ifempty = <ifempty>
+		FormatText checksumname = windID '%p_StarPower_BatFXWindID' p = <player_text>
+		EngineWind remove <windID>
+		case Midori
+		FormatText checksumname = butterfliesID '%p_StarPower_ButterfliesFXButterfliesID01' p = <player_text>
+		MangleChecksums a = <butterfliesID> b = (<player_status>.band_member)
+		if IsCreated <mangled_ID>
+			<mangled_ID> :EmitRate rate = 0
+			<mangled_ID> :destroy ifEmpty = <ifEmpty>
 		endif
-		formattext checksumname = butterfliesid '%p_StarPower_ButterfliesFXButterfliesID02' p = <player_text>
-		manglechecksums a = <butterfliesid> b = (<player_status>.band_member)
-		if iscreated <mangled_id>
-			<mangled_id> :emitrate rate = 0
-			<mangled_id> :destroy ifempty = <ifempty>
+		FormatText checksumname = butterfliesID '%p_StarPower_ButterfliesFXButterfliesID02' p = <player_text>
+		MangleChecksums a = <butterfliesID> b = (<player_status>.band_member)
+		if IsCreated <mangled_ID>
+			<mangled_ID> :EmitRate rate = 0
+			<mangled_ID> :destroy ifEmpty = <ifEmpty>
 		endif
-		formattext checksumname = swirlid '%p_StarPower_ButterfliesFXSwirlID' p = <player_text>
-		manglechecksums a = <swirlid> b = (<player_status>.band_member)
-		if iscreated <mangled_id>
-			<mangled_id> :emitrate rate = 0
-			<mangled_id> :destroy ifempty = <ifempty>
+		FormatText checksumname = swirlID '%p_StarPower_ButterfliesFXSwirlID' p = <player_text>
+		MangleChecksums a = <swirlID> b = (<player_status>.band_member)
+		if IsCreated <mangled_ID>
+			<mangled_ID> :EmitRate rate = 0
+			<mangled_ID> :destroy ifEmpty = <ifEmpty>
 		endif
-		formattext checksumname = windid '%p_StarPower_ButterfliesFXWindID' p = <player_text>
-		enginewind remove <windid>
-		case xavier
-		formattext checksumname = peaceid '%p_StarPower_PeaceFXPeaceID' p = <player_text>
-		manglechecksums a = <peaceid> b = (<player_status>.band_member)
-		if iscreated <mangled_id>
-			<mangled_id> :emitrate rate = 0
-			<mangled_id> :destroy ifempty = <ifempty>
+		FormatText checksumname = windID '%p_StarPower_ButterfliesFXWindID' p = <player_text>
+		EngineWind remove <windID>
+		case Xavier
+		FormatText checksumname = peaceID '%p_StarPower_PeaceFXPeaceID' p = <player_text>
+		MangleChecksums a = <peaceID> b = (<player_status>.band_member)
+		if IsCreated <mangled_ID>
+			<mangled_ID> :EmitRate rate = 0
+			<mangled_ID> :destroy ifEmpty = <ifEmpty>
 		endif
-		formattext checksumname = swirlid '%p_StarPower_PeaceFXSwirlID' p = <player_text>
-		manglechecksums a = <swirlid> b = (<player_status>.band_member)
-		if iscreated <mangled_id>
-			<mangled_id> :emitrate rate = 0
-			<mangled_id> :destroy ifempty = <ifempty>
+		FormatText checksumname = swirlID '%p_StarPower_PeaceFXSwirlID' p = <player_text>
+		MangleChecksums a = <swirlID> b = (<player_status>.band_member)
+		if IsCreated <mangled_ID>
+			<mangled_ID> :EmitRate rate = 0
+			<mangled_ID> :destroy ifEmpty = <ifEmpty>
 		endif
-		formattext checksumname = windid '%p_StarPower_PeaceFXWindID' p = <player_text>
-		enginewind remove <windid>
+		FormatText checksumname = windID '%p_StarPower_PeaceFXWindID' p = <player_text>
+		EngineWind remove <windID>
 		default
-		if (<ifempty> = 0)
-			destroyparticlesbygroupid \{groupid = starpowerfx}
+		if (<ifEmpty> = 0)
+			DestroyParticlesByGroupID \{groupID = starPowerFX}
 		endif
 		i = 1
 		begin
-		formattext checksumname = scriptid '%p_StarPower_TeslaFX%i' p = <player_text> i = <i>
-		formattext checksumname = teslafxid '%p_StarPower_TeslaFXID%i' p = <player_text> i = <i>
-		killspawnedscript id = <scriptid>
-		deleteteslaeffectobject name = <teslafxid>
+		FormatText checksumname = scriptID '%p_StarPower_TeslaFX%i' p = <player_text> i = <i>
+		FormatText checksumname = teslaFXID '%p_StarPower_TeslaFXID%i' p = <player_text> i = <i>
+		KillSpawnedScript id = <scriptID>
+		DeleteTeslaEffectObject name = <teslaFXID>
 		i = (<i> + 1)
 		repeat 4
 	endswitch
 endscript
 using_starpower_camera = false
 
-script do_starpower_camera 
+script Do_StarPower_Camera 
 	if ($using_starpower_camera = true || $using_walk_camera = true)
 		return
 	endif
 	change \{using_starpower_camera = true}
-	wait \{1
+	Wait \{1
 		gameframe}
-	change \{cameracuts_allownotescripts = false}
-	cameracuts_setarrayprefix \{prefix = 'cameras_starpower'
+	change \{CameraCuts_AllowNoteScripts = false}
+	CameraCuts_SetArrayPrefix \{prefix = 'cameras_starpower'
 		changetime = 2500
 		length = 7000}
-	wait \{7
+	Wait \{7
 		seconds}
-	cameracuts_setarrayprefix \{prefix = 'cameras'}
-	change \{cameracuts_allownotescripts = true}
+	CameraCuts_SetArrayPrefix \{prefix = 'cameras'}
+	change \{CameraCuts_AllowNoteScripts = true}
 	change \{using_starpower_camera = false}
 endscript
 
-script kill_starpower_camera \{changecamera = 1}
+script Kill_StarPower_Camera \{changecamera = 1}
 	if ($using_starpower_camera = false)
 		return
 	endif
-	killspawnedscript \{name = do_starpower_camera}
+	KillSpawnedScript \{name = Do_StarPower_Camera}
 	if (<changecamera> = 1)
-		cameracuts_setarrayprefix \{prefix = 'cameras'}
+		CameraCuts_SetArrayPrefix \{prefix = 'cameras'}
 	endif
-	change \{cameracuts_allownotescripts = true}
+	change \{CameraCuts_AllowNoteScripts = true}
 	change \{using_starpower_camera = false}
 endscript

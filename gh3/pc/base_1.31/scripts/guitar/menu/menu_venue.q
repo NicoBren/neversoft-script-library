@@ -8,30 +8,30 @@ g_last_venue_selected = none
 script create_select_venue_menu \{player = 1}
 	change \{g_last_venue_selected = $current_level}
 	kill_start_key_binding
-	unpausegame
+	UnPauseGame
 	if ($game_mode = p1_career ||
 			$game_mode = p2_career)
-		formattext checksumname = bandname_id 'band%i_info_%g' i = ($current_band) g = ($game_mode_names.$game_mode)
-		getglobaltags <bandname_id> param = first_venue_movie_played
+		FormatText checksumname = bandname_id 'band%i_info_%g' i = ($current_band) g = ($game_mode_names.$game_mode)
+		GetGlobalTags <bandname_id> param = first_venue_movie_played
 		if (<first_venue_movie_played> = 0)
 			get_progression_globals game_mode = ($game_mode)
-			if structurecontains structure = ($<tier_global>) initial_movie
-				menu_music_off
-				playmovieandwait movie = ($<tier_global>.initial_movie)
+			if StructureContains Structure = ($<tier_global>) initial_movie
+				Menu_Music_Off
+				PlayMovieAndWait movie = ($<tier_global>.initial_movie)
 				get_movie_id_by_name movie = ($<tier_global>.initial_movie)
-				setglobaltags <id> params = {unlocked = 1}
+				SetGlobalTags <id> params = {unlocked = 1}
 			endif
-			setglobaltags <bandname_id> params = {first_venue_movie_played = 1}
+			SetGlobalTags <bandname_id> params = {first_venue_movie_played = 1}
 		endif
 	endif
 	if ($progression_play_completion_movie = 1)
 		get_progression_globals game_mode = ($game_mode)
-		formattext checksumname = tiername 'tier%i' i = ($progression_completion_tier)
-		if structurecontains structure = ($<tier_global>.<tiername>) completion_movie
-			menu_music_off
-			playmovieandwait movie = ($<tier_global>.<tiername>.completion_movie)
+		FormatText checksumname = tiername 'tier%i' i = ($progression_completion_tier)
+		if StructureContains Structure = ($<tier_global>.<tiername>) completion_movie
+			Menu_Music_Off
+			PlayMovieAndWait movie = ($<tier_global>.<tiername>.completion_movie)
 			get_movie_id_by_name movie = ($<tier_global>.<tiername>.completion_movie)
-			setglobaltags <id> params = {unlocked = 1}
+			SetGlobalTags <id> params = {unlocked = 1}
 		endif
 		change \{progression_play_completion_movie = 0}
 	endif
@@ -45,31 +45,31 @@ script create_select_venue_menu \{player = 1}
 				$game_mode = p2_pro_faceoff ||
 				$game_mode = p2_battle)
 			exclusive_mp_controllers = [0 , 0]
-			setarrayelement arrayname = exclusive_mp_controllers index = 0 newvalue = ($player1_device)
-			setarrayelement arrayname = exclusive_mp_controllers index = 1 newvalue = ($player2_device)
+			SetArrayElement ArrayName = exclusive_mp_controllers index = 0 newvalue = ($player1_device)
+			SetArrayElement ArrayName = exclusive_mp_controllers index = 1 newvalue = ($player2_device)
 			exclusive_device = <exclusive_mp_controllers>
 		else
 			exclusive_device = ($primary_controller)
 		endif
 	endif
-	createscreenelement \{type = containerelement
+	CreateScreenElement \{type = ContainerElement
 		id = venue_container
 		parent = root_window
 		pos = (0.0, 0.0)}
-	displaysprite \{id = venue_overlay
+	displaySprite \{id = venue_overlay
 		parent = root_window
 		tex = venue_overlay
 		pos = (0.0, 0.0)
 		z = 30
 		dims = (1280.0, 720.0)}
-	displaysprite \{parent = venue_container
+	displaySprite \{parent = venue_container
 		pos = (0.0, -5760.0)
-		tex = venue_backposter
+		tex = Venue_BackPoster
 		z = 0
 		dims = (1280.0, 6480.0)}
-	displaysprite \{parent = venue_container
+	displaySprite \{parent = venue_container
 		pos = (0.0, -12240.0)
-		tex = venue_backposter
+		tex = Venue_BackPoster
 		z = 0
 		dims = (1280.0, 6480.0)}
 	get_progression_globals \{game_mode = $game_mode}
@@ -84,10 +84,10 @@ script create_select_venue_menu \{player = 1}
 	if (<tier_num> > <number_of_tiers>)
 		break
 	endif
-	formattext checksumname = tier 'tier%i' i = <tier_num>
-	if structurecontains structure = (<tier_global>.<tier>) unlocked_levels
+	FormatText checksumname = tier 'tier%i' i = <tier_num>
+	if StructureContains Structure = (<tier_global>.<tier>) unlocked_levels
 		my_level = (<tier_global>.<tier>.unlocked_levels [<level_count>])
-		getarraysize (<tier_global>.<tier>.unlocked_levels)
+		GetArraySize (<tier_global>.<tier>.unlocked_levels)
 		level_count = (<level_count> + 1)
 		if (<level_count> >= <array_size>)
 			level_count = 0
@@ -97,22 +97,22 @@ script create_select_venue_menu \{player = 1}
 		my_level = (<tier_global>.<tier>.level)
 		level_count = 0
 		<tier_num> = (<tier_num> + 1)
-		if structurecontains structure = ($levelzones.<my_level>) debug_only
+		if StructureContains Structure = ($LevelZones.<my_level>) debug_only
 			available = 0
 		endif
 		if ($game_mode = p1_career || $game_mode = p2_career)
 			get_current_band_checksum
 			final_checksum = <band_checksum>
-			extendcrc <final_checksum> ($levelzones.<my_level>.name) out = final_checksum
+			ExtendCRC <final_checksum> ($LevelZones.<my_level>.name) out = final_checksum
 			unlocked = 1
-			getglobaltags <final_checksum> noassert = 1
+			GetGlobalTags <final_checksum> noassert = 1
 			if (<unlocked> = 0)
 				<available> = 0
 			endif
 		else
-			formattext checksumname = venue_checksum 'venue_%s' s = ($levelzones.<my_level>.name)
+			FormatText checksumname = venue_checksum 'venue_%s' s = ($LevelZones.<my_level>.name)
 			unlocked = 1
-			getglobaltags <venue_checksum> noassert = 1
+			GetGlobalTags <venue_checksum> noassert = 1
 			if (<unlocked> = 0)
 				<available> = 0
 			endif
@@ -122,9 +122,9 @@ script create_select_venue_menu \{player = 1}
 		endif
 	endif
 	if (<available> = 1)
-		formattext checksumname = venue_id 'venue_%d' d = <poster_index>
-		createscreenelement {
-			type = textelement
+		FormatText checksumname = venue_id 'venue_%d' d = <poster_index>
+		CreateScreenElement {
+			type = TextElement
 			parent = venue_container
 			id = <venue_id>
 			font = text_a1
@@ -139,20 +139,20 @@ script create_select_venue_menu \{player = 1}
 			exclusive_device = <exclusive_device>
 		}
 		new_poster_pos = ((640.0, 360.0) - (($g_venue_poster_space + <poster_dist>) * <poster_index>) * (0.0, 1.0))
-		displaysprite parent = venue_container pos = <new_poster_pos> tex = ($levelzones.<my_level>.bg) z = 20 dims = (720.0, 720.0) just = [center center]
-		getuppercasestring ($levelzones.<my_level>.title)
+		displaySprite parent = venue_container pos = <new_poster_pos> tex = ($LevelZones.<my_level>.bG) z = 20 dims = (720.0, 720.0) just = [center center]
+		GetUpperCaseString ($LevelZones.<my_level>.title)
 		<poster_index> = (<poster_index> + 1)
 	endif
 	repeat
-	getarraysize \{$levelzonearray}
+	GetArraySize \{$LevelZoneArray}
 	old_size = (<array_size>)
-	get_levelzonearray_size
+	get_LevelZoneArray_size
 	if (<array_size> > <old_size>)
 		venue_index = (<array_size> - 1)
 		begin
-		get_levelzonearray_checksum index = <venue_index>
+		get_LevelZoneArray_checksum index = <venue_index>
 		available = 1
-		if is_levelzone_downloaded level_checksum = <level_checksum>
+		if Is_LevelZone_Downloaded level_checksum = <level_checksum>
 			if (<download> = 1 &&
 					$is_network_game = 1)
 				available = 0
@@ -160,13 +160,13 @@ script create_select_venue_menu \{player = 1}
 		else
 			available = 0
 		endif
-		if structurecontains structure = ($levelzones.<level_checksum>.name) debug_only
+		if StructureContains Structure = ($LevelZones.<level_checksum>.name) debug_only
 			available = 0
 		endif
 		if (<available> = 1)
-			formattext checksumname = venue_id 'venue_%d' d = <poster_index>
-			createscreenelement {
-				type = textelement
+			FormatText checksumname = venue_id 'venue_%d' d = <poster_index>
+			CreateScreenElement {
+				type = TextElement
 				parent = venue_container
 				id = <venue_id>
 				font = text_a1
@@ -179,12 +179,12 @@ script create_select_venue_menu \{player = 1}
 				exclusive_device = <exclusive_device>
 			}
 			new_poster_pos = ((640.0, 360.0) - (($g_venue_poster_space + <poster_dist>) * <poster_index>) * (0.0, 1.0))
-			displaysprite parent = venue_container pos = <new_poster_pos> tex = ($levelzones.<level_checksum>.bg) z = 20 dims = (720.0, 720.0) just = [center center]
-			getuppercasestring ($levelzones.<level_checksum>.title)
-			displaysprite parent = venue_container tex = white pos = (<new_poster_pos> + (0.0, -100.0)) just = [center center] scale = (90.0, 15.0) z = 21
-			displaytext {
+			displaySprite parent = venue_container pos = <new_poster_pos> tex = ($LevelZones.<level_checksum>.bG) z = 20 dims = (720.0, 720.0) just = [center center]
+			GetUpperCaseString ($LevelZones.<level_checksum>.title)
+			displaySprite parent = venue_container tex = white pos = (<new_poster_pos> + (0.0, -100.0)) just = [center center] scale = (90.0, 15.0) z = 21
+			displayText {
 				parent = venue_container
-				text = <uppercasestring>
+				text = <UpperCaseString>
 				z = 22
 				just = [center center]
 				rgba = [88 1 17 255]
@@ -199,13 +199,13 @@ script create_select_venue_menu \{player = 1}
 	endif
 	change g_max_venues = <poster_index>
 	change \{disable_menu_sounds = 1}
-	formattext \{checksumname = venue_id
+	FormatText \{checksumname = venue_id
 		'venue_%d'
 		d = 0}
-	launchevent type = focus target = <venue_id>
+	LaunchEvent type = focus target = <venue_id>
 	tier_num = 1
 	begin
-	formattext checksumname = tier 'tier%i' i = <tier_num>
+	FormatText checksumname = tier 'tier%i' i = <tier_num>
 	my_level = (<tier_global>.<tier>.level)
 	if (<my_level> = $g_last_venue_selected)
 		break
@@ -223,7 +223,7 @@ script create_select_venue_menu \{player = 1}
 	add_user_control_helper \{text = "UP/DOWN"
 		button = strumbar
 		z = 100}
-	setmenuautorepeattimes \{(0.3, 0.3)}
+	SetMenuAutoRepeatTimes \{(0.3, 0.3)}
 endscript
 
 script destroy_select_venue_menu 
@@ -231,7 +231,7 @@ script destroy_select_venue_menu
 	clean_up_user_control_helpers
 	destroy_menu \{menu_id = venue_container}
 	change \{g_venue_index = 0}
-	setmenuautorepeattimes \{(0.3, 0.05)}
+	SetMenuAutoRepeatTimes \{(0.3, 0.05)}
 endscript
 
 script venue_go_back 
@@ -250,17 +250,17 @@ script venue_scroll_down \{time = 0.25
 		return
 	endif
 	change g_venue_index = ($g_venue_index - 1)
-	formattext \{checksumname = venue_id
+	FormatText \{checksumname = venue_id
 		'venue_%d'
 		d = $g_venue_index}
-	launchevent type = focus target = <venue_id>
+	LaunchEvent type = focus target = <venue_id>
 	generic_menu_up_or_down_sound \{up}
-	if screenelementexists \{id = venue_container}
+	if ScreenElementExists \{id = venue_container}
 		change g_venue_current_pos = ($g_venue_current_pos - $g_venue_pos_add - ($g_venue_poster_space * (0.0, 1.0)))
 		if (<morph> = 1)
-			venue_container :domorph pos = $g_venue_current_pos time = <time>
+			venue_container :DoMorph pos = $g_venue_current_pos time = <time>
 		else
-			venue_container :setprops \{pos = $g_venue_current_pos}
+			venue_container :SetProps \{pos = $g_venue_current_pos}
 		endif
 	endif
 endscript
@@ -271,17 +271,17 @@ script venue_scroll_up \{time = 0.25
 		return
 	endif
 	change g_venue_index = ($g_venue_index + 1)
-	formattext \{checksumname = venue_id
+	FormatText \{checksumname = venue_id
 		'venue_%d'
 		d = $g_venue_index}
-	launchevent type = focus target = <venue_id>
+	LaunchEvent type = focus target = <venue_id>
 	generic_menu_up_or_down_sound \{down}
-	if screenelementexists \{id = venue_container}
+	if ScreenElementExists \{id = venue_container}
 		change g_venue_current_pos = ($g_venue_current_pos + $g_venue_pos_add + ($g_venue_poster_space * (0.0, 1.0)))
 		if (<morph> = 1)
-			venue_container :domorph pos = $g_venue_current_pos time = <time>
+			venue_container :DoMorph pos = $g_venue_current_pos time = <time>
 		else
-			venue_container :setprops \{pos = $g_venue_current_pos}
+			venue_container :SetProps \{pos = $g_venue_current_pos}
 		endif
 	endif
 endscript

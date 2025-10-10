@@ -1,7 +1,7 @@
 
 script kill_panel_message_if_it_exists 
-	if screenelementexists id = <id>
-		destroyscreenelement id = <id>
+	if ScreenElementExists id = <id>
+		DestroyScreenElement id = <id>
 	endif
 endscript
 
@@ -10,24 +10,24 @@ script kill_panel_messages
 endscript
 
 script hide_panel_messages 
-	if screenelementexists \{id = panel_message_layer}
-		doscreenelementmorph \{id = panel_message_layer
+	if ScreenElementExists \{id = panel_message_layer}
+		doScreenElementMorph \{id = panel_message_layer
 			alpha = 0}
 	endif
 endscript
 
 script show_panel_messages 
-	if screenelementexists \{id = panel_message_layer}
-		doscreenelementmorph \{id = panel_message_layer
+	if ScreenElementExists \{id = panel_message_layer}
+		doScreenElementMorph \{id = panel_message_layer
 			alpha = 1}
 	endif
 endscript
 
 script create_panel_message_layer_if_needed 
-	if NOT screenelementexists \{id = panel_message_layer}
-		setscreenelementlock \{id = root_window
+	if NOT ScreenElementExists \{id = panel_message_layer}
+		SetScreenElementLock \{id = root_window
 			off}
-		createscreenelement \{type = containerelement
+		CreateScreenElement \{type = ContainerElement
 			parent = root_window
 			id = panel_message_layer}
 	endif
@@ -53,13 +53,13 @@ script create_panel_message \{text = "Default panel message"
 	if NOT (<font_face> = text_a1)
 		<font_face> = text_a1
 	endif
-	if gotparam \{id}
+	if GotParam \{id}
 		kill_panel_message_if_it_exists id = <id>
 	endif
 	create_panel_message_layer_if_needed
-	setscreenelementlock id = <parent> off
-	createscreenelement {
-		type = textelement
+	SetScreenElementLock id = <parent> off
+	CreateScreenElement {
+		type = TextElement
 		parent = <parent>
 		id = <id>
 		font = <font_face>
@@ -75,14 +75,14 @@ script create_panel_message \{text = "Default panel message"
 		font_spacing = 2
 		not_focusable
 	}
-	if gotparam \{style}
-		if gotparam \{params}
-			runscriptonscreenelement id = <id> <style> params = <params>
+	if GotParam \{style}
+		if GotParam \{params}
+			RunScriptOnScreenElement id = <id> <style> params = <params>
 		else
-			runscriptonscreenelement id = <id> <style> params = <...>
+			RunScriptOnScreenElement id = <id> <style> params = <...>
 		endif
 	else
-		runscriptonscreenelement id = <id> panel_message_wait_and_die params = {time = <time>}
+		RunScriptOnScreenElement id = <id> panel_message_wait_and_die params = {time = <time>}
 	endif
 endscript
 
@@ -99,15 +99,15 @@ script create_panel_sprite \{pos = (320.0, 60.0)
 			center
 			center
 		]}
-	if gotparam \{id}
-		if screenelementexists id = <id>
-			runscriptonscreenelement id = <id> kill_panel_message
+	if GotParam \{id}
+		if ScreenElementExists id = <id>
+			RunScriptOnScreenElement id = <id> kill_panel_message
 		endif
 	endif
 	create_panel_message_layer_if_needed
-	setscreenelementlock id = <parent> off
-	createscreenelement {
-		type = spriteelement
+	SetScreenElementLock id = <parent> off
+	CreateScreenElement {
+		type = SpriteElement
 		parent = <parent>
 		texture = <texture>
 		id = <id>
@@ -118,15 +118,15 @@ script create_panel_sprite \{pos = (320.0, 60.0)
 		z_priority = <z_priority>
 		blend = <blend>
 	}
-	if gotparam \{style}
-		if gotparam \{params}
-			runscriptonscreenelement id = <id> <style> params = <params>
+	if GotParam \{style}
+		if GotParam \{params}
+			RunScriptOnScreenElement id = <id> <style> params = <params>
 		else
-			runscriptonscreenelement id = <id> <style> params = <...>
+			RunScriptOnScreenElement id = <id> <style> params = <...>
 		endif
 	else
-		if gotparam \{time}
-			runscriptonscreenelement id = <id> panel_message_wait_and_die params = {time = <time>}
+		if GotParam \{time}
+			RunScriptOnScreenElement id = <id> panel_message_wait_and_die params = {time = <time>}
 		endif
 	endif
 endscript
@@ -154,14 +154,14 @@ script create_panel_block \{text = "Default panel message"
 		scale = 0.125
 		parent = panel_message_layer}
 	create_panel_message_layer_if_needed
-	setscreenelementlock id = <parent> off
-	if gotparam \{id}
-		if screenelementexists id = <id>
-			destroyscreenelement id = <id>
+	SetScreenElementLock id = <parent> off
+	if GotParam \{id}
+		if ScreenElementExists id = <id>
+			DestroyScreenElement id = <id>
 		endif
 	endif
-	createscreenelement {
-		type = textblockelement
+	CreateScreenElement {
+		type = TextBlockElement
 		parent = <parent>
 		id = <id>
 		font = <font_face>
@@ -174,20 +174,20 @@ script create_panel_block \{text = "Default panel message"
 		rgba = <rgba>
 		scale = <scale>
 		shadow
-		shadow_rgba = $ui_text_shadow_color
-		shadow_offs = $ui_text_shadow_offset
+		shadow_rgba = $UI_text_shadow_color
+		shadow_offs = $UI_text_shadow_offset
 		allow_expansion
 		z_priority = <z_priority>
 	}
-	if gotparam \{style}
-		if gotparam \{params}
-			runscriptonscreenelement id = <id> <style> params = <params>
+	if GotParam \{style}
+		if GotParam \{params}
+			RunScriptOnScreenElement id = <id> <style> params = <params>
 		else
-			runscriptonscreenelement id = <id> <style> params = <...>
+			RunScriptOnScreenElement id = <id> <style> params = <...>
 		endif
 	else
-		if NOT gotparam \{hold}
-			runscriptonscreenelement id = <id> panel_message_wait_and_die params = {time = <time>}
+		if NOT GotParam \{hold}
+			RunScriptOnScreenElement id = <id> panel_message_wait_and_die params = {time = <time>}
 		endif
 	endif
 endscript
@@ -215,21 +215,21 @@ script create_intro_panel_block \{text = "Default intro panel message"
 		scale = 0.5
 		parent = panel_message_layer}
 	create_panel_message_layer_if_needed
-	setscreenelementlock id = <parent> off
-	if gotparam \{id}
-		if screenelementexists id = <id>
-			destroyscreenelement id = <id>
+	SetScreenElementLock id = <parent> off
+	if GotParam \{id}
+		if ScreenElementExists id = <id>
+			DestroyScreenElement id = <id>
 		endif
 	endif
-	createscreenelement {
-		type = containerelement
+	CreateScreenElement {
+		type = ContainerElement
 		parent = <parent>
 		id = <id>
 		pos = (0.0, 0.0)
 	}
 	<the_id> = <id>
-	createscreenelement {
-		type = textblockelement
+	CreateScreenElement {
+		type = TextBlockElement
 		parent = <the_id>
 		font = <font_face>
 		text = <text>
@@ -241,15 +241,15 @@ script create_intro_panel_block \{text = "Default intro panel message"
 		rgba = <rgba>
 		scale = <scale>
 		shadow
-		shadow_rgba = $ui_text_shadow_color
-		shadow_offs = $ui_text_shadow_offset
+		shadow_rgba = $UI_text_shadow_color
+		shadow_offs = $UI_text_shadow_offset
 		allow_expansion
 		z_priority = (<z_priority> + 3)
 	}
 	grad_color = [17 67 92 255]
-	if gotparam \{create_bg}
-		createscreenelement {
-			type = spriteelement
+	if GotParam \{create_bg}
+		CreateScreenElement {
+			type = SpriteElement
 			parent = <the_id>
 			texture = goal_grad
 			pos = (<pos> + (300.0, 0.0))
@@ -259,8 +259,8 @@ script create_intro_panel_block \{text = "Default intro panel message"
 			alpha = 0.4
 			z_priority = (<z_priority> + 1)
 		}
-		createscreenelement {
-			type = spriteelement
+		CreateScreenElement {
+			type = SpriteElement
 			parent = <the_id>
 			texture = goal_grad
 			pos = (<pos> + (300.0, -20.0))
@@ -270,8 +270,8 @@ script create_intro_panel_block \{text = "Default intro panel message"
 			alpha = 0.6
 			z_priority = (<z_priority> + 1)
 		}
-		createscreenelement {
-			type = spriteelement
+		CreateScreenElement {
+			type = SpriteElement
 			parent = <the_id>
 			texture = goal_grad
 			pos = (<pos> + (300.0, 20.0))
@@ -282,8 +282,8 @@ script create_intro_panel_block \{text = "Default intro panel message"
 			flip_v
 			z_priority = (<z_priority> + 1)
 		}
-		createscreenelement {
-			type = spriteelement
+		CreateScreenElement {
+			type = SpriteElement
 			parent = <the_id>
 			pos = (<pos> + (320.0, 0.0))
 			just = [center center]
@@ -292,10 +292,10 @@ script create_intro_panel_block \{text = "Default intro panel message"
 			z_priority = (<z_priority> + 2)
 			rgba = [128 128 128 20]
 		}
-		getscreenelementposition id = <id>
-		getscreenelementdims id = <id>
-		createscreenelement {
-			type = spriteelement
+		GetScreenElementPosition id = <id>
+		GetScreenElementDims id = <id>
+		CreateScreenElement {
+			type = SpriteElement
 			parent = <the_id>
 			pos = (<screenelementpos> + (-16.0, 16.0))
 			just = [center center]
@@ -304,8 +304,8 @@ script create_intro_panel_block \{text = "Default intro panel message"
 			z_priority = (<z_priority> + 2)
 			rgba = [128 128 128 20]
 		}
-		createscreenelement {
-			type = spriteelement
+		CreateScreenElement {
+			type = SpriteElement
 			parent = <the_id>
 			pos = (<screenelementpos> + <width> * (1.0, 0.0) + (16.0, 16.0))
 			just = [center center]
@@ -315,48 +315,48 @@ script create_intro_panel_block \{text = "Default intro panel message"
 			rgba = [128 128 128 20]
 		}
 	endif
-	if gotparam \{style}
-		if gotparam \{params}
-			runscriptonscreenelement id = <the_id> <style> params = <params>
+	if GotParam \{style}
+		if GotParam \{params}
+			RunScriptOnScreenElement id = <the_id> <style> params = <params>
 		else
-			runscriptonscreenelement id = <the_id> <style> params = <...>
+			RunScriptOnScreenElement id = <the_id> <style> params = <...>
 		endif
 	else
-		runscriptonscreenelement id = <the_id> panel_message_wait_and_die params = {time = <time>}
+		RunScriptOnScreenElement id = <the_id> panel_message_wait_and_die params = {time = <time>}
 	endif
 endscript
 
 script panel_message_wait_and_die \{time = 1500}
-	wait <time> ignoreslomo
-	die
+	Wait <time> ignoreslomo
+	Die
 endscript
 
 script kill_panel_message 
-	die
+	Die
 endscript
 
 script hide_panel_message 
-	if screenelementexists id = <id>
-		setscreenelementprops {
+	if ScreenElementExists id = <id>
+		SetScreenElementProps {
 			id = <id>
 			hide
 		}
-		<id> :domorph alpha = 0
+		<id> :DoMorph alpha = 0
 	endif
 endscript
 
 script show_panel_message 
-	if screenelementexists id = <id>
-		setscreenelementprops {
+	if ScreenElementExists id = <id>
+		SetScreenElementProps {
 			id = <id>
 			unhide
 		}
-		<id> :domorph alpha = 1
+		<id> :DoMorph alpha = 1
 	endif
 endscript
 
 script destroy_panel_message 
-	if screenelementexists id = <id>
-		<id> :die
+	if ScreenElementExists id = <id>
+		<id> :Die
 	endif
 endscript

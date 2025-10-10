@@ -1,4 +1,4 @@
-gh3_coopcareer_songs = {
+GH3_CoopCareer_Songs = {
 	prefix = 'coopcareer'
 	num_tiers = 7
 	initial_movie = 'coop_01'
@@ -15,7 +15,7 @@ gh3_coopcareer_songs = {
 		level = load_z_dive
 		defaultunlocked = 4
 		completion_movie = 'coop_02'
-		setlist_icon = setlist_icon_bar
+		setlist_icon = setlist_icon_BAR
 	}
 	tier2 = {
 		title = "2. We just wanna be famous"
@@ -29,7 +29,7 @@ gh3_coopcareer_songs = {
 		encorep2
 		level = load_z_video
 		completion_movie = 'coop_03'
-		setlist_icon = setlist_icon_videoshoot
+		setlist_icon = setlist_icon_VIDEOSHOOT
 	}
 	tier3 = {
 		title = "3. Overnight success"
@@ -43,7 +43,7 @@ gh3_coopcareer_songs = {
 		encorep2
 		level = load_z_budokan
 		completion_movie = 'coop_04'
-		setlist_icon = setlist_icon_megadome
+		setlist_icon = setlist_icon_MEGADOME
 	}
 	tier4 = {
 		title = "4. Getting the band back together"
@@ -57,7 +57,7 @@ gh3_coopcareer_songs = {
 		encorep2
 		level = load_z_party
 		completion_movie = 'coop_05'
-		setlist_icon = setlist_icon_backyard
+		setlist_icon = setlist_icon_BACKYARD
 	}
 	tier5 = {
 		title = "5. Jailhouse rock"
@@ -71,13 +71,13 @@ gh3_coopcareer_songs = {
 		encorep2
 		level = load_z_prison
 		completion_movie = 'coop_06'
-		setlist_icon = setlist_icon_prison
+		setlist_icon = setlist_icon_PRISON
 	}
 	tier6 = {
 		title = "6. Battle for your souls"
 		songs = [
 			knightsofcydonia
-			one
+			ONE
 			numberofthebeast
 			cultofpersonality
 			monsters
@@ -85,12 +85,12 @@ gh3_coopcareer_songs = {
 		encorep2
 		level = load_z_hell
 		completion_movie = 'singleplayer_end'
-		setlist_icon = setlist_icon_hell
+		setlist_icon = setlist_icon_HELL
 	}
 	tier7 = {
 		title = "Unlocked Songs"
 		songs = [
-			talkdirtytome
+			TalkDirtyToMe
 			hitmewithyourbestshot
 			mississippiqueen
 			rocknrollallnite
@@ -110,42 +110,42 @@ gh3_coopcareer_songs = {
 		nocash
 	}
 }
-gh3_coopcareer_numsongtoprogress = {
+GH3_COOPCareer_NumSongToProgress = {
 	easy = 3
 	medium = 3
 	hard = 4
 	expert = 4
 }
-gh3_coopcareer_progression = [
+GH3_CoopCareer_Progression = [
 	{
 		name = set_initial_states
-		type = scr
-		atom_script = progression_init
+		type = Scr
+		atom_script = Progression_Init
 		atom_params = {
 		}
 	}
 	{
 		name = career_tier1_songscomplete
-		type = scr
-		atom_script = progression_tiersongscomplete
+		type = Scr
+		atom_script = Progression_TierSongsComplete
 		atom_params = {
 			tier = 1
 		}
 		depends_on = [
 			{
-				type = scr
-				scr = progression_checksongcomplete
+				type = Scr
+				Scr = Progression_CheckSongComplete
 				params = {
 					tier = 1
-					numsongstoprogress = $gh3_coopcareer_numsongtoprogress
+					numsongstoprogress = $GH3_COOPCareer_NumSongToProgress
 				}
 			}
 		]
 	}
 	{
 		name = career_tier1_encoreunlock
-		type = scr
-		atom_script = progression_tierencoreunlock
+		type = Scr
+		atom_script = Progression_TierEncoreUnlock
 		atom_params = {
 			tier = 1
 		}
@@ -155,8 +155,8 @@ gh3_coopcareer_progression = [
 				atom = career_tier1_songscomplete
 			}
 			{
-				type = scr
-				scr = progression_alwaysblock
+				type = Scr
+				Scr = Progression_AlwaysBlock
 				required = [
 					0
 					0
@@ -168,8 +168,8 @@ gh3_coopcareer_progression = [
 	}
 	{
 		name = career_tier1_encorecomplete
-		type = scr
-		atom_script = progression_tierencorecomplete
+		type = Scr
+		atom_script = Progression_TierEncoreComplete
 		atom_params = {
 			tier = 1
 		}
@@ -179,8 +179,8 @@ gh3_coopcareer_progression = [
 				atom = career_tier1_encoreunlock
 			}
 			{
-				type = scr
-				scr = progression_checkencorecomplete
+				type = Scr
+				Scr = Progression_CheckEncoreComplete
 				params = {
 					tier = 1
 				}
@@ -189,8 +189,8 @@ gh3_coopcareer_progression = [
 	}
 	{
 		name = career_tier1_complete
-		type = scr
-		atom_script = progression_tiercomplete
+		type = Scr
+		atom_script = Progression_TierComplete
 		atom_params = {
 			tier = 1
 		}
@@ -213,8 +213,8 @@ gh3_coopcareer_progression = [
 	}
 	{
 		name = career_tier2_songscomplete
-		type = scr
-		atom_script = progression_tiersongscomplete
+		type = Scr
+		atom_script = Progression_TierSongsComplete
 		atom_params = {
 			tier = 2
 		}
@@ -224,19 +224,19 @@ gh3_coopcareer_progression = [
 				atom = career_tier1_complete
 			}
 			{
-				type = scr
-				scr = progression_checksongcomplete
+				type = Scr
+				Scr = Progression_CheckSongComplete
 				params = {
 					tier = 2
-					numsongstoprogress = $gh3_coopcareer_numsongtoprogress
+					numsongstoprogress = $GH3_COOPCareer_NumSongToProgress
 				}
 			}
 		]
 	}
 	{
 		name = career_tier2_encoreunlock
-		type = scr
-		atom_script = progression_tierencoreunlock
+		type = Scr
+		atom_script = Progression_TierEncoreUnlock
 		atom_params = {
 			tier = 2
 		}
@@ -246,8 +246,8 @@ gh3_coopcareer_progression = [
 				atom = career_tier2_songscomplete
 			}
 			{
-				type = scr
-				scr = progression_alwaysblock
+				type = Scr
+				Scr = Progression_AlwaysBlock
 				required = [
 					0
 					0
@@ -259,8 +259,8 @@ gh3_coopcareer_progression = [
 	}
 	{
 		name = career_tier2_encorecomplete
-		type = scr
-		atom_script = progression_tierencorecomplete
+		type = Scr
+		atom_script = Progression_TierEncoreComplete
 		atom_params = {
 			tier = 2
 		}
@@ -270,8 +270,8 @@ gh3_coopcareer_progression = [
 				atom = career_tier2_encoreunlock
 			}
 			{
-				type = scr
-				scr = progression_checkencorecomplete
+				type = Scr
+				Scr = Progression_CheckEncoreComplete
 				params = {
 					tier = 2
 				}
@@ -280,8 +280,8 @@ gh3_coopcareer_progression = [
 	}
 	{
 		name = career_tier2_complete
-		type = scr
-		atom_script = progression_tiercomplete
+		type = Scr
+		atom_script = Progression_TierComplete
 		atom_params = {
 			tier = 2
 		}
@@ -304,8 +304,8 @@ gh3_coopcareer_progression = [
 	}
 	{
 		name = career_tier3_songscomplete
-		type = scr
-		atom_script = progression_tiersongscomplete
+		type = Scr
+		atom_script = Progression_TierSongsComplete
 		atom_params = {
 			tier = 3
 		}
@@ -315,19 +315,19 @@ gh3_coopcareer_progression = [
 				atom = career_tier2_complete
 			}
 			{
-				type = scr
-				scr = progression_checksongcomplete
+				type = Scr
+				Scr = Progression_CheckSongComplete
 				params = {
 					tier = 3
-					numsongstoprogress = $gh3_coopcareer_numsongtoprogress
+					numsongstoprogress = $GH3_COOPCareer_NumSongToProgress
 				}
 			}
 		]
 	}
 	{
 		name = career_tier3_encoreunlock
-		type = scr
-		atom_script = progression_tierencoreunlock
+		type = Scr
+		atom_script = Progression_TierEncoreUnlock
 		atom_params = {
 			tier = 3
 		}
@@ -337,8 +337,8 @@ gh3_coopcareer_progression = [
 				atom = career_tier3_songscomplete
 			}
 			{
-				type = scr
-				scr = progression_alwaysblock
+				type = Scr
+				Scr = Progression_AlwaysBlock
 				required = [
 					0
 					0
@@ -350,8 +350,8 @@ gh3_coopcareer_progression = [
 	}
 	{
 		name = career_tier3_encorecomplete
-		type = scr
-		atom_script = progression_tierencorecomplete
+		type = Scr
+		atom_script = Progression_TierEncoreComplete
 		atom_params = {
 			tier = 3
 		}
@@ -361,8 +361,8 @@ gh3_coopcareer_progression = [
 				atom = career_tier3_encoreunlock
 			}
 			{
-				type = scr
-				scr = progression_checkencorecomplete
+				type = Scr
+				Scr = Progression_CheckEncoreComplete
 				params = {
 					tier = 3
 				}
@@ -371,8 +371,8 @@ gh3_coopcareer_progression = [
 	}
 	{
 		name = career_tier3_complete
-		type = scr
-		atom_script = progression_tiercomplete
+		type = Scr
+		atom_script = Progression_TierComplete
 		atom_params = {
 			tier = 3
 		}
@@ -395,8 +395,8 @@ gh3_coopcareer_progression = [
 	}
 	{
 		name = career_tier4_songscomplete
-		type = scr
-		atom_script = progression_tiersongscomplete
+		type = Scr
+		atom_script = Progression_TierSongsComplete
 		atom_params = {
 			tier = 4
 		}
@@ -406,19 +406,19 @@ gh3_coopcareer_progression = [
 				atom = career_tier3_complete
 			}
 			{
-				type = scr
-				scr = progression_checksongcomplete
+				type = Scr
+				Scr = Progression_CheckSongComplete
 				params = {
 					tier = 4
-					numsongstoprogress = $gh3_coopcareer_numsongtoprogress
+					numsongstoprogress = $GH3_COOPCareer_NumSongToProgress
 				}
 			}
 		]
 	}
 	{
 		name = career_tier4_encoreunlock
-		type = scr
-		atom_script = progression_tierencoreunlock
+		type = Scr
+		atom_script = Progression_TierEncoreUnlock
 		atom_params = {
 			tier = 4
 		}
@@ -428,8 +428,8 @@ gh3_coopcareer_progression = [
 				atom = career_tier4_songscomplete
 			}
 			{
-				type = scr
-				scr = progression_alwaysblock
+				type = Scr
+				Scr = Progression_AlwaysBlock
 				required = [
 					0
 					0
@@ -441,8 +441,8 @@ gh3_coopcareer_progression = [
 	}
 	{
 		name = career_tier4_encorecomplete
-		type = scr
-		atom_script = progression_tierencorecomplete
+		type = Scr
+		atom_script = Progression_TierEncoreComplete
 		atom_params = {
 			tier = 4
 		}
@@ -452,8 +452,8 @@ gh3_coopcareer_progression = [
 				atom = career_tier4_encoreunlock
 			}
 			{
-				type = scr
-				scr = progression_checkencorecomplete
+				type = Scr
+				Scr = Progression_CheckEncoreComplete
 				params = {
 					tier = 4
 				}
@@ -462,8 +462,8 @@ gh3_coopcareer_progression = [
 	}
 	{
 		name = career_tier4_complete
-		type = scr
-		atom_script = progression_tiercomplete
+		type = Scr
+		atom_script = Progression_TierComplete
 		atom_params = {
 			tier = 4
 		}
@@ -486,8 +486,8 @@ gh3_coopcareer_progression = [
 	}
 	{
 		name = career_tier5_songscomplete
-		type = scr
-		atom_script = progression_tiersongscomplete
+		type = Scr
+		atom_script = Progression_TierSongsComplete
 		atom_params = {
 			tier = 5
 		}
@@ -497,19 +497,19 @@ gh3_coopcareer_progression = [
 				atom = career_tier4_complete
 			}
 			{
-				type = scr
-				scr = progression_checksongcomplete
+				type = Scr
+				Scr = Progression_CheckSongComplete
 				params = {
 					tier = 5
-					numsongstoprogress = $gh3_coopcareer_numsongtoprogress
+					numsongstoprogress = $GH3_COOPCareer_NumSongToProgress
 				}
 			}
 		]
 	}
 	{
 		name = career_tier5_encoreunlock
-		type = scr
-		atom_script = progression_tierencoreunlock
+		type = Scr
+		atom_script = Progression_TierEncoreUnlock
 		atom_params = {
 			tier = 5
 		}
@@ -519,8 +519,8 @@ gh3_coopcareer_progression = [
 				atom = career_tier5_songscomplete
 			}
 			{
-				type = scr
-				scr = progression_alwaysblock
+				type = Scr
+				Scr = Progression_AlwaysBlock
 				required = [
 					0
 					0
@@ -532,8 +532,8 @@ gh3_coopcareer_progression = [
 	}
 	{
 		name = career_tier5_encorecomplete
-		type = scr
-		atom_script = progression_tierencorecomplete
+		type = Scr
+		atom_script = Progression_TierEncoreComplete
 		atom_params = {
 			tier = 5
 		}
@@ -543,8 +543,8 @@ gh3_coopcareer_progression = [
 				atom = career_tier5_encoreunlock
 			}
 			{
-				type = scr
-				scr = progression_checkencorecomplete
+				type = Scr
+				Scr = Progression_CheckEncoreComplete
 				params = {
 					tier = 5
 				}
@@ -553,8 +553,8 @@ gh3_coopcareer_progression = [
 	}
 	{
 		name = career_tier5_complete
-		type = scr
-		atom_script = progression_tiercomplete
+		type = Scr
+		atom_script = Progression_TierComplete
 		atom_params = {
 			tier = 5
 		}
@@ -577,8 +577,8 @@ gh3_coopcareer_progression = [
 	}
 	{
 		name = career_tier6_songscomplete
-		type = scr
-		atom_script = progression_tiersongscomplete
+		type = Scr
+		atom_script = Progression_TierSongsComplete
 		atom_params = {
 			tier = 6
 		}
@@ -588,19 +588,19 @@ gh3_coopcareer_progression = [
 				atom = career_tier5_complete
 			}
 			{
-				type = scr
-				scr = progression_checksongcomplete
+				type = Scr
+				Scr = Progression_CheckSongComplete
 				params = {
 					tier = 6
-					numsongstoprogress = $gh3_coopcareer_numsongtoprogress
+					numsongstoprogress = $GH3_COOPCareer_NumSongToProgress
 				}
 			}
 		]
 	}
 	{
 		name = career_tier6_encoreunlock
-		type = scr
-		atom_script = progression_tierencoreunlock
+		type = Scr
+		atom_script = Progression_TierEncoreUnlock
 		atom_params = {
 			tier = 6
 		}
@@ -610,8 +610,8 @@ gh3_coopcareer_progression = [
 				atom = career_tier6_songscomplete
 			}
 			{
-				type = scr
-				scr = progression_alwaysblock
+				type = Scr
+				Scr = Progression_AlwaysBlock
 				required = [
 					0
 					0
@@ -623,8 +623,8 @@ gh3_coopcareer_progression = [
 	}
 	{
 		name = career_tier6_encorecomplete
-		type = scr
-		atom_script = progression_tierencorecomplete
+		type = Scr
+		atom_script = Progression_TierEncoreComplete
 		atom_params = {
 			tier = 6
 		}
@@ -634,8 +634,8 @@ gh3_coopcareer_progression = [
 				atom = career_tier6_encoreunlock
 			}
 			{
-				type = scr
-				scr = progression_checkencorecomplete
+				type = Scr
+				Scr = Progression_CheckEncoreComplete
 				params = {
 					tier = 6
 				}
@@ -644,8 +644,8 @@ gh3_coopcareer_progression = [
 	}
 	{
 		name = career_tier6_complete
-		type = scr
-		atom_script = progression_tiercomplete
+		type = Scr
+		atom_script = Progression_TierComplete
 		atom_params = {
 			tier = 6
 			finished_game
@@ -669,8 +669,8 @@ gh3_coopcareer_progression = [
 	}
 	{
 		name = career_unlock_unlockedsongs
-		type = scr
-		atom_script = progression_unlocktier
+		type = Scr
+		atom_script = Progression_UnlockTier
 		atom_params = {
 			tier = 7
 			complete
@@ -684,10 +684,10 @@ gh3_coopcareer_progression = [
 	}
 	{
 		name = unlock_bass1
-		type = scr
-		atom_script = progression_unlockguitar
+		type = Scr
+		atom_script = Progression_UnlockGuitar
 		atom_params = {
-			bass = 1
+			Bass = 1
 			for_difficulty
 		}
 		depends_on = [
@@ -696,8 +696,8 @@ gh3_coopcareer_progression = [
 				atom = career_tier6_complete
 			}
 			{
-				type = scr
-				scr = progression_checkdiff
+				type = Scr
+				Scr = Progression_CheckDiff
 				params = {
 					diff = easy
 					mode = p2_career
@@ -707,24 +707,24 @@ gh3_coopcareer_progression = [
 	}
 	{
 		name = unlock_bass2
-		type = scr
-		atom_script = progression_unlockguitar
+		type = Scr
+		atom_script = Progression_UnlockGuitar
 		atom_params = {
-			bass = 2
+			Bass = 2
 			for_stars
 		}
 		depends_on = [
 			{
-				type = scr
-				scr = progression_checkdiff
+				type = Scr
+				Scr = Progression_CheckDiff
 				params = {
 					diff = easy
 					mode = p2_career
 				}
 			}
 			{
-				type = scr
-				scr = progression_checksong5star
+				type = Scr
+				Scr = Progression_CheckSong5Star
 				params = {
 				}
 			}
@@ -732,10 +732,10 @@ gh3_coopcareer_progression = [
 	}
 	{
 		name = unlock_bass3
-		type = scr
-		atom_script = progression_unlockguitar
+		type = Scr
+		atom_script = Progression_UnlockGuitar
 		atom_params = {
-			bass = 3
+			Bass = 3
 			for_difficulty
 		}
 		depends_on = [
@@ -744,8 +744,8 @@ gh3_coopcareer_progression = [
 				atom = career_tier6_complete
 			}
 			{
-				type = scr
-				scr = progression_checkdiff
+				type = Scr
+				Scr = Progression_CheckDiff
 				params = {
 					diff = medium
 					mode = p2_career
@@ -755,24 +755,24 @@ gh3_coopcareer_progression = [
 	}
 	{
 		name = unlock_bass4
-		type = scr
-		atom_script = progression_unlockguitar
+		type = Scr
+		atom_script = Progression_UnlockGuitar
 		atom_params = {
-			bass = 4
+			Bass = 4
 			for_stars
 		}
 		depends_on = [
 			{
-				type = scr
-				scr = progression_checkdiff
+				type = Scr
+				Scr = Progression_CheckDiff
 				params = {
 					diff = medium
 					mode = p2_career
 				}
 			}
 			{
-				type = scr
-				scr = progression_checksong5star
+				type = Scr
+				Scr = Progression_CheckSong5Star
 				params = {
 				}
 			}
@@ -780,10 +780,10 @@ gh3_coopcareer_progression = [
 	}
 	{
 		name = unlock_bass5
-		type = scr
-		atom_script = progression_unlockguitar
+		type = Scr
+		atom_script = Progression_UnlockGuitar
 		atom_params = {
-			bass = 5
+			Bass = 5
 			for_difficulty
 		}
 		depends_on = [
@@ -792,8 +792,8 @@ gh3_coopcareer_progression = [
 				atom = career_tier6_complete
 			}
 			{
-				type = scr
-				scr = progression_checkdiff
+				type = Scr
+				Scr = Progression_CheckDiff
 				params = {
 					diff = hard
 					mode = p2_career
@@ -803,24 +803,24 @@ gh3_coopcareer_progression = [
 	}
 	{
 		name = unlock_bass6
-		type = scr
-		atom_script = progression_unlockguitar
+		type = Scr
+		atom_script = Progression_UnlockGuitar
 		atom_params = {
-			bass = 6
+			Bass = 6
 			for_stars
 		}
 		depends_on = [
 			{
-				type = scr
-				scr = progression_checkdiff
+				type = Scr
+				Scr = Progression_CheckDiff
 				params = {
 					diff = hard
 					mode = p2_career
 				}
 			}
 			{
-				type = scr
-				scr = progression_checksong5star
+				type = Scr
+				Scr = Progression_CheckSong5Star
 				params = {
 				}
 			}
@@ -828,10 +828,10 @@ gh3_coopcareer_progression = [
 	}
 	{
 		name = unlock_bass7
-		type = scr
-		atom_script = progression_unlockguitar
+		type = Scr
+		atom_script = Progression_UnlockGuitar
 		atom_params = {
-			bass = 7
+			Bass = 7
 			for_difficulty
 		}
 		depends_on = [
@@ -840,8 +840,8 @@ gh3_coopcareer_progression = [
 				atom = career_tier6_complete
 			}
 			{
-				type = scr
-				scr = progression_checkdiff
+				type = Scr
+				Scr = Progression_CheckDiff
 				params = {
 					diff = expert
 					mode = p2_career
@@ -851,24 +851,24 @@ gh3_coopcareer_progression = [
 	}
 	{
 		name = unlock_bass8
-		type = scr
-		atom_script = progression_unlockguitar
+		type = Scr
+		atom_script = Progression_UnlockGuitar
 		atom_params = {
-			bass = 8
+			Bass = 8
 			for_stars
 		}
 		depends_on = [
 			{
-				type = scr
-				scr = progression_checkdiff
+				type = Scr
+				Scr = Progression_CheckDiff
 				params = {
 					diff = expert
 					mode = p2_career
 				}
 			}
 			{
-				type = scr
-				scr = progression_checksong5star
+				type = Scr
+				Scr = Progression_CheckSong5Star
 				params = {
 				}
 			}
@@ -876,8 +876,8 @@ gh3_coopcareer_progression = [
 	}
 	{
 		name = end_of_first_update
-		type = scr
-		atom_script = progression_endoffirstupdate
+		type = Scr
+		atom_script = Progression_EndOfFirstUpdate
 		atom_params = {
 		}
 	}

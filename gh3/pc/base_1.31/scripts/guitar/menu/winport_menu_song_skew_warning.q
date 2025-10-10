@@ -31,6 +31,6 @@ script winport_destroy_calibrate_lag_warning_menu
 endscript
 
 script winport_menu_calibrate_lag_warning_select_yes 
-	gh3_sfx_fail_song_stop_sounds
+	GH3_SFX_fail_song_stop_sounds
 	ui_flow_manager_respond_to_action \{action = continue}
 endscript

@@ -17,18 +17,18 @@ winport_gfx_text_highlight_color = [
 	60
 	255
 ]
-winport_gfx_menuitems = [
+winport_gfx_menuItems = [
 	{
 		text = "Resolution"
 		handler = winport_gfx_option_handler
 		option = 0
-		needrestart = 1
+		needRestart = 1
 	}
 	{
 		text = "Graphics Detail"
 		handler = winport_gfx_option_handler
 		option = 1
-		needrestart = 1
+		needRestart = 1
 		choices = [
 			"Low"
 			"High"
@@ -38,7 +38,7 @@ winport_gfx_menuitems = [
 		text = "Crowd"
 		handler = winport_gfx_option_handler
 		option = 2
-		needrestart = 0
+		needRestart = 0
 		choices = [
 			"Empty"
 			"Normal"
@@ -49,7 +49,7 @@ winport_gfx_menuitems = [
 		text = "Physics"
 		handler = winport_gfx_option_handler
 		option = 3
-		needrestart = 0
+		needRestart = 0
 		choices = [
 			"Off"
 			"On"
@@ -59,7 +59,7 @@ winport_gfx_menuitems = [
 		text = "Lens Flare"
 		handler = winport_gfx_option_handler
 		option = 4
-		needrestart = 0
+		needRestart = 0
 		choices = [
 			"Off"
 			"On"
@@ -69,7 +69,7 @@ winport_gfx_menuitems = [
 		text = "Front Row Camera"
 		handler = winport_gfx_option_handler
 		option = 5
-		needrestart = 0
+		needRestart = 0
 		choices = [
 			"Off"
 			"On"
@@ -95,81 +95,81 @@ winport_gfx_values_new = [
 winport_gfx_need_restart = 0
 
 script winport_gfx_get_choices 
-	if structurecontains structure = ($winport_gfx_menuitems [<i>]) name = choices
-		return choices = (($winport_gfx_menuitems [<i>]).choices)
+	if StructureContains Structure = ($winport_gfx_menuItems [<i>]) name = choices
+		return choices = (($winport_gfx_menuItems [<i>]).choices)
 	else
-		winportgfxgetoptionchoices option = (($winport_gfx_menuitems [<i>]).option)
+		WinPortGfxGetOptionChoices option = (($winport_gfx_menuItems [<i>]).option)
 		return choices = <choices>
 	endif
 endscript
 
 script winport_gfx_set_value 
-	setarrayelement arrayname = winport_gfx_values_new globalarray index = <i> newvalue = <v>
+	SetArrayElement ArrayName = winport_gfx_values_new GlobalArray index = <i> newvalue = <v>
 endscript
 
 script winport_gfx_load_values 
-	getarraysize \{$winport_gfx_values_old}
-	valuecount = <array_size>
+	GetArraySize \{$winport_gfx_values_old}
+	valueCount = <array_size>
 	i = 0
 	begin
-	if structurecontains structure = ($winport_gfx_menuitems [<i>]) name = option
-		winportgfxgetoptionvalue option = (($winport_gfx_menuitems [<i>]).option)
-		setarrayelement arrayname = winport_gfx_values_old globalarray index = <i> newvalue = <value>
+	if StructureContains Structure = ($winport_gfx_menuItems [<i>]) name = option
+		WinPortGfxGetOptionValue option = (($winport_gfx_menuItems [<i>]).option)
+		SetArrayElement ArrayName = winport_gfx_values_old GlobalArray index = <i> newvalue = <value>
 	endif
 	i = (<i> + 1)
-	repeat <valuecount>
+	repeat <valueCount>
 	change \{winport_gfx_values_new = $winport_gfx_values_old}
 	change \{winport_gfx_need_restart = 0}
 endscript
 
 script winport_gfx_save_values 
-	getarraysize \{$winport_gfx_values_new}
-	valuecount = <array_size>
+	GetArraySize \{$winport_gfx_values_new}
+	valueCount = <array_size>
 	i = 0
 	begin
-	if structurecontains structure = ($winport_gfx_menuitems [<i>]) name = option
-		winportgfxsetoptionvalue option = (($winport_gfx_menuitems [<i>]).option) value = ($winport_gfx_values_new [<i>])
+	if StructureContains Structure = ($winport_gfx_menuItems [<i>]) name = option
+		WinPortGfxSetOptionValue option = (($winport_gfx_menuItems [<i>]).option) value = ($winport_gfx_values_new [<i>])
 	endif
-	if ((($winport_gfx_menuitems [<i>]).needrestart) = 1)
+	if ((($winport_gfx_menuItems [<i>]).needRestart) = 1)
 		if NOT (($winport_gfx_values_new [<i>]) = ($winport_gfx_values_old [<i>]))
 			change \{winport_gfx_need_restart = 1}
 		endif
 	endif
 	i = (<i> + 1)
-	repeat <valuecount>
+	repeat <valueCount>
 	change \{winport_gfx_values_old = $winport_gfx_values_new}
-	winportgfxapplyoptions
+	WinPortGfxApplyOptions
 	destroy_bg_viewport
 endscript
 
 script winport_gfx_reset_values 
-	getarraysize \{$winport_gfx_values_new}
-	valuecount = <array_size>
+	GetArraySize \{$winport_gfx_values_new}
+	valueCount = <array_size>
 	i = 0
 	begin
-	if structurecontains structure = ($winport_gfx_menuitems [<i>]) name = option
-		winportgfxgetdefaultoptionvalue option = (($winport_gfx_menuitems [<i>]).option)
-		setarrayelement arrayname = winport_gfx_values_new globalarray index = <i> newvalue = <value>
+	if StructureContains Structure = ($winport_gfx_menuItems [<i>]) name = option
+		WinPortGfxGetDefaultOptionValue option = (($winport_gfx_menuItems [<i>]).option)
+		SetArrayElement ArrayName = winport_gfx_values_new GlobalArray index = <i> newvalue = <value>
 	endif
 	i = (<i> + 1)
-	repeat <valuecount>
+	repeat <valueCount>
 endscript
 
 script winport_create_gfx_settings_menu 
-	menudim = (600.0, 500.0)
-	menupos = (640.0, 350.0)
-	menuitemdim = (600.0, 40.0)
-	menuitemoptiondim = (250.0, 40.0)
-	menuitemoptionpos = (0.0, 20.0)
-	menuitemoptionjust = [left center]
-	menuitemvaluedim = (250.0, 40.0)
-	menuitemvaluepos = (600.0, 20.0)
-	menuitemvaluejust = [right center]
-	menuitemhilitedim = (650.0, 60.0)
-	menuitemhilitepos = (-25.0, 34.0)
-	menuitemhilitejust = [left center]
-	menuitemhiliterot = -0.5
-	createscreenelement \{type = containerelement
+	menuDim = (600.0, 500.0)
+	menuPos = (640.0, 350.0)
+	menuItemDim = (600.0, 40.0)
+	menuItemOptionDim = (250.0, 40.0)
+	menuItemOptionPos = (0.0, 20.0)
+	menuItemOptionJust = [left center]
+	menuItemValueDim = (250.0, 40.0)
+	menuItemValuePos = (600.0, 20.0)
+	menuItemValueJust = [right center]
+	menuItemHiliteDim = (650.0, 60.0)
+	menuItemHilitePos = (-25.0, 34.0)
+	menuItemHiliteJust = [left center]
+	menuItemHiliteRot = -0.5
+	CreateScreenElement \{type = ContainerElement
 		parent = root_window
 		id = screen_container
 		pos = (0.0, 0.0)
@@ -177,8 +177,8 @@ script winport_create_gfx_settings_menu
 			left
 			top
 		]}
-	create_menu_backdrop \{texture = venue_bg}
-	createscreenelement \{type = spriteelement
+	create_menu_backdrop \{texture = Venue_BG}
+	CreateScreenElement \{type = SpriteElement
 		id = light_overlay
 		parent = screen_container
 		texture = venue_overlay
@@ -189,7 +189,7 @@ script winport_create_gfx_settings_menu
 			center
 		]
 		z_priority = 100}
-	displaysprite \{parent = screen_container
+	displaySprite \{parent = screen_container
 		tex = graphics_options_poster_part1
 		pos = (640.0, 360.0)
 		scale = (1.6, 1.7)
@@ -199,7 +199,7 @@ script winport_create_gfx_settings_menu
 		]
 		z = 1
 		rot_angle = 2}
-	displaysprite \{parent = screen_container
+	displaySprite \{parent = screen_container
 		tex = graphics_options_poster_part2
 		pos = (640.0, 360.0)
 		scale = (1.6, 1.7)
@@ -209,7 +209,7 @@ script winport_create_gfx_settings_menu
 		]
 		z = 2
 		rot_angle = 2}
-	displaysprite \{parent = screen_container
+	displaySprite \{parent = screen_container
 		tex = graphics_options_poster_part3
 		pos = (640.0, 360.0)
 		scale = (1.6, 1.7)
@@ -219,7 +219,7 @@ script winport_create_gfx_settings_menu
 		]
 		z = 3
 		rot_angle = 2}
-	createscreenelement \{type = textelement
+	CreateScreenElement \{type = TextElement
 		parent = screen_container
 		text = "GRAPHICS"
 		pos = (837.0, 180.0)
@@ -245,14 +245,14 @@ script winport_create_gfx_settings_menu
 			255
 		]
 		shadow_offs = (-3.0, 3.0)}
-	displaysprite \{parent = screen_container
-		tex = tape_v_01
+	displaySprite \{parent = screen_container
+		tex = Tape_V_01
 		pos = (1070.0, 330.0)
 		dims = (96.0, 192.0)
 		z = 5
 		rot_angle = 190}
-	displaysprite \{parent = screen_container
-		tex = tape_v_01
+	displaySprite \{parent = screen_container
+		tex = Tape_V_01
 		rgba = [
 			0
 			0
@@ -263,14 +263,14 @@ script winport_create_gfx_settings_menu
 		dims = (96.0, 192.0)
 		z = 5
 		rot_angle = 190}
-	displaysprite \{parent = screen_container
-		tex = tape_h_02
+	displaySprite \{parent = screen_container
+		tex = Tape_H_02
 		pos = (190.0, 475.0)
 		dims = (127.0, 64.0)
 		z = 5
 		rot_angle = -4}
-	displaysprite \{parent = screen_container
-		tex = tape_h_02
+	displaySprite \{parent = screen_container
+		tex = Tape_H_02
 		rgba = [
 			0
 			0
@@ -281,12 +281,12 @@ script winport_create_gfx_settings_menu
 		dims = (127.0, 64.0)
 		z = 5
 		rot_angle = -4}
-	createscreenelement {
-		type = vmenu
+	CreateScreenElement {
+		type = VMenu
 		id = menu
 		parent = screen_container
-		pos = <menupos>
-		dims = <menudim>
+		pos = <menuPos>
+		dims = <menuDim>
 		just = [center center]
 		rot_angle = 2
 		exclusive_device = ($primary_controller)
@@ -296,8 +296,8 @@ script winport_create_gfx_settings_menu
 			{pad_back winport_gfx_back_handler}
 		]
 	}
-	menutextprops = {
-		type = textelement
+	menuTextProps = {
+		type = TextElement
 		font = text_a4
 		scale = 0.7
 		rgba = $winport_gfx_text_color
@@ -306,75 +306,75 @@ script winport_create_gfx_settings_menu
 		shadow_rgba = $winport_gfx_text_dropshadow_color
 		shadow_offs = (-1.5, 1.5)
 	}
-	getarraysize \{$winport_gfx_menuitems}
-	menuitemcount = <array_size>
+	GetArraySize \{$winport_gfx_menuItems}
+	menuItemCount = <array_size>
 	i = 0
 	begin
-	formattext checksumname = itemid 'item%i' i = <i>
-	formattext checksumname = optionid 'option%i' i = <i>
-	formattext checksumname = valueid 'value%i' i = <i>
-	formattext checksumname = hiliteid 'hilite%i' i = <i>
-	createscreenelement {
-		type = containerelement
-		id = <itemid>
+	FormatText checksumname = itemId 'item%i' i = <i>
+	FormatText checksumname = optionId 'option%i' i = <i>
+	FormatText checksumname = valueId 'value%i' i = <i>
+	FormatText checksumname = hiliteId 'hilite%i' i = <i>
+	CreateScreenElement {
+		type = ContainerElement
+		id = <itemId>
 		parent = menu
-		dims = <menuitemdim>
+		dims = <menuItemDim>
 	}
-	if structurecontains structure = ($winport_gfx_menuitems [<i>]) name = text
-		setscreenelementprops {
-			id = <itemid>
+	if StructureContains Structure = ($winport_gfx_menuItems [<i>]) name = text
+		SetScreenElementProps {
+			id = <itemId>
 			event_handlers = [
-				{pad_choose (($winport_gfx_menuitems [<i>]).handler) params = {i = <i>}}
+				{pad_choose (($winport_gfx_menuItems [<i>]).handler) params = {i = <i>}}
 				{focus winport_gfx_focus_handler params = {i = <i>}}
 				{unfocus winport_gfx_unfocus_handler params = {i = <i>}}
 			]
 		}
-		createscreenelement {
-			type = spriteelement
-			id = <hiliteid>
-			parent = <itemid>
+		CreateScreenElement {
+			type = SpriteElement
+			id = <hiliteId>
+			parent = <itemId>
 			texture = graphics_options_highlight
-			pos = <menuitemhilitepos>
-			dims = <menuitemhilitedim>
-			rot_angle = <menuitemhiliterot>
-			just = <menuitemhilitejust>
+			pos = <menuItemHilitePos>
+			dims = <menuItemHiliteDim>
+			rot_angle = <menuItemHiliteRot>
+			just = <menuItemHiliteJust>
 			alpha = 0
 			z_priority = 1.5
 			<mode_disable>
 		}
-		createscreenelement {
-			<menutextprops>
-			id = <optionid>
-			text = (($winport_gfx_menuitems [<i>]).text)
-			parent = <itemid>
-			dims = <menuitemoptiondim>
-			pos = <menuitemoptionpos>
-			just = <menuitemoptionjust>
+		CreateScreenElement {
+			<menuTextProps>
+			id = <optionId>
+			text = (($winport_gfx_menuItems [<i>]).text)
+			parent = <itemId>
+			dims = <menuItemOptionDim>
+			pos = <menuItemOptionPos>
+			just = <menuItemOptionJust>
 			<mode_disable>
 		}
-		if structurecontains structure = ($winport_gfx_menuitems [<i>]) name = option
-			createscreenelement {
-				<menutextprops>
-				id = <valueid>
+		if StructureContains Structure = ($winport_gfx_menuItems [<i>]) name = option
+			CreateScreenElement {
+				<menuTextProps>
+				id = <valueId>
 				text = "Value"
-				parent = <itemid>
-				dims = <menuitemvaluedim>
-				pos = <menuitemvaluepos>
-				just = <menuitemvaluejust>
+				parent = <itemId>
+				dims = <menuItemValueDim>
+				pos = <menuItemValuePos>
+				just = <menuItemValueJust>
 				<mode_disable>
 			}
 			if (<i> = 1)
-				if (winportissm2card)
-					setscreenelementprops id = <itemid> not_focusable
-					setscreenelementprops id = <optionid> rgba = [80 80 80 255]
-					setscreenelementprops id = <valueid> rgba = [80 80 80 255]
+				if (WinPortIsSM2Card)
+					SetScreenElementProps id = <itemId> not_focusable
+					SetScreenElementProps id = <optionId> rgba = [80 80 80 255]
+					SetScreenElementProps id = <valueId> rgba = [80 80 80 255]
 				endif
 			endif
-			formattext checksumname = choicemenuid 'choiceMenu%i' i = <i>
-			createscreenelement {
-				type = vmenu
-				id = <choicemenuid>
-				parent = <itemid>
+			FormatText checksumname = choiceMenuId 'choiceMenu%i' i = <i>
+			CreateScreenElement {
+				type = VMenu
+				id = <choiceMenuId>
+				parent = <itemId>
 				event_handlers = [
 					{pad_up generic_menu_up_or_down_sound params = {up}}
 					{pad_down generic_menu_up_or_down_sound params = {down}}
@@ -383,31 +383,31 @@ script winport_create_gfx_settings_menu
 				]
 			}
 			winport_gfx_get_choices i = <i>
-			getarraysize <choices>
-			choicecount = <array_size>
+			GetArraySize <choices>
+			choiceCount = <array_size>
 			c = 0
 			begin
-			formattext checksumname = choiceitemid 'choiceItem%i_%c' i = <i> c = <c>
-			createscreenelement {
-				<menutextprops>
-				id = <choiceitemid>
-				parent = <choicemenuid>
+			FormatText checksumname = choiceItemId 'choiceItem%i_%c' i = <i> c = <c>
+			CreateScreenElement {
+				<menuTextProps>
+				id = <choiceItemId>
+				parent = <choiceMenuId>
 				event_handlers = [
 					{focus winport_gfx_choice_focus_handler params = {i = <i> c = <c>}}
 				]
 				<mode_disable>
 			}
 			c = (<c> + 1)
-			repeat <choicecount>
+			repeat <choiceCount>
 		endif
 	else
-		setscreenelementprops id = <itemid> not_focusable
+		SetScreenElementProps id = <itemId> not_focusable
 	endif
 	i = (<i> + 1)
-	repeat <menuitemcount>
+	repeat <menuItemCount>
 	winport_gfx_load_values
 	winport_gfx_update_value_items
-	launchevent \{type = focus
+	LaunchEvent \{type = focus
 		target = menu}
 	change \{user_control_pill_text_color = [
 			0
@@ -433,7 +433,7 @@ script winport_create_gfx_settings_menu
 endscript
 
 script winport_destroy_gfx_settings_menu 
-	destroyscreenelement \{id = screen_container}
+	DestroyScreenElement \{id = screen_container}
 	clean_up_user_control_helpers
 endscript
 
@@ -447,17 +447,17 @@ script winport_gfx_back_handler
 endscript
 
 script winport_gfx_update_value_items 
-	getarraysize \{$winport_gfx_menuitems}
-	menuitemcount = <array_size>
+	GetArraySize \{$winport_gfx_menuItems}
+	menuItemCount = <array_size>
 	i = 0
 	begin
-	if structurecontains structure = ($winport_gfx_menuitems [<i>]) name = option
+	if StructureContains Structure = ($winport_gfx_menuItems [<i>]) name = option
 		winport_gfx_get_choices i = <i>
-		formattext checksumname = valueid 'value%i' i = <i>
-		setscreenelementprops id = <valueid> text = (<choices> [($winport_gfx_values_new [<i>])])
+		FormatText checksumname = valueId 'value%i' i = <i>
+		SetScreenElementProps id = <valueId> text = (<choices> [($winport_gfx_values_new [<i>])])
 	endif
 	i = (<i> + 1)
-	repeat <menuitemcount>
+	repeat <menuItemCount>
 endscript
 
 script winport_gfx_reset_handler 
@@ -471,32 +471,32 @@ script winport_gfx_choice_focus_handler
 endscript
 
 script winport_gfx_focus_handler 
-	formattext checksumname = hiliteid 'hilite%i' i = <i>
-	setscreenelementprops id = <hiliteid> alpha = 1
+	FormatText checksumname = hiliteId 'hilite%i' i = <i>
+	SetScreenElementProps id = <hiliteId> alpha = 1
 endscript
 
 script winport_gfx_unfocus_handler 
-	formattext checksumname = hiliteid 'hilite%i' i = <i>
-	setscreenelementprops id = <hiliteid> alpha = 0
+	FormatText checksumname = hiliteId 'hilite%i' i = <i>
+	SetScreenElementProps id = <hiliteId> alpha = 0
 endscript
 
 script winport_gfx_option_handler 
-	formattext checksumname = valueid 'value%i' i = <i>
-	setscreenelementprops id = <valueid> rgba = $winport_gfx_text_highlight_color
-	formattext checksumname = choicemenuid 'choiceMenu%i' i = <i>
-	formattext checksumname = choiceitemid 'choiceItem%i_%c' i = <i> c = ($winport_gfx_values_new [<i>])
-	launchevent \{type = unfocus
+	FormatText checksumname = valueId 'value%i' i = <i>
+	SetScreenElementProps id = <valueId> rgba = $winport_gfx_text_highlight_color
+	FormatText checksumname = choiceMenuId 'choiceMenu%i' i = <i>
+	FormatText checksumname = choiceItemId 'choiceItem%i_%c' i = <i> c = ($winport_gfx_values_new [<i>])
+	LaunchEvent \{type = unfocus
 		target = menu}
-	launchevent type = focus target = <choicemenuid> data = {child_id = <choiceitemid>}
+	LaunchEvent type = focus target = <choiceMenuId> data = {child_id = <choiceItemId>}
 	winport_gfx_focus_handler i = <i>
 endscript
 
 script winport_gfx_choice_end_handler 
-	formattext checksumname = valueid 'value%i' i = <i>
-	setscreenelementprops id = <valueid> rgba = $winport_gfx_text_color
-	formattext checksumname = choicemenuid 'choiceMenu%i' i = <i>
-	launchevent type = unfocus target = <choicemenuid>
-	launchevent \{type = focus
+	FormatText checksumname = valueId 'value%i' i = <i>
+	SetScreenElementProps id = <valueId> rgba = $winport_gfx_text_color
+	FormatText checksumname = choiceMenuId 'choiceMenu%i' i = <i>
+	LaunchEvent type = unfocus target = <choiceMenuId>
+	LaunchEvent \{type = focus
 		target = menu}
 endscript
 

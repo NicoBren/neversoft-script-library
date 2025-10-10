@@ -1,58 +1,58 @@
-se_brightness = 5
-currenttodsettings = default_tod_manager
+SE_Brightness = 5
+currentTODSettings = Default_tod_manager
 
-script tod_proxim_create_lightfx 
-	screenfx_clearfxinstances \{viewport = 0}
-	if insplitscreengame
-		screenfx_clearfxinstances \{viewport = 0}
+script TOD_Proxim_Create_LightFX 
+	ScreenFX_ClearFXInstances \{viewport = 0}
+	if InSplitScreenGame
+		ScreenFX_ClearFXInstances \{viewport = 0}
 	endif
-	tod_proxim_update_global_brightness \{viewport = 0}
-	tod_proxim_update_lightfx \{viewport = bg_viewport
+	TOD_Proxim_Update_Global_Brightness \{viewport = 0}
+	TOD_Proxim_Update_LightFX \{viewport = bg_viewport
 		time = 0}
 endscript
 
-script tod_proxim_update_lightfx 
-	tod_proxim_update_lightfx_viewport viewport = 0 <...>
-	if insplitscreengame
-		tod_proxim_update_lightfx_viewport viewport = 0 <...>
+script TOD_Proxim_Update_LightFX 
+	TOD_Proxim_Update_LightFX_Viewport viewport = 0 <...>
+	if InSplitScreenGame
+		TOD_Proxim_Update_LightFX_Viewport viewport = 0 <...>
 	endif
 endscript
 
 script toggle_default_sceenfx 
 	printf \{"--- toggle_default_screenfx"}
-	tod_proxim_update_lightfx_viewport
+	TOD_Proxim_Update_LightFX_Viewport
 	toggle_screenfx_instances
 endscript
 
-script tod_proxim_update_lightfx_viewport \{fxparam = $default_tod_manager
+script TOD_Proxim_Update_LightFX_Viewport \{fxParam = $Default_tod_manager
 		viewport = 0
 		time = 1}
-	screenfx_clearfxinstances viewport = <viewport>
+	ScreenFX_ClearFXInstances viewport = <viewport>
 	if (<viewport> = 0)
-		tod_proxim_update_global_brightness <...>
+		TOD_Proxim_Update_Global_Brightness <...>
 	elseif (<viewport> = bg_viewport)
-		if NOT screenfx_fxinstanceexists viewport = <viewport> name = venue_dof
-			screenfx_addfxinstance {
+		if NOT ScreenFX_FxInstanceExists viewport = <viewport> name = venue_DOF
+			ScreenFX_AddFXInstance {
 				viewport = <viewport>
-				name = venue_dof
-				($dof_off_tod_manager.screen_fx [0])
+				name = venue_DOF
+				($DOF_Off_tod_manager.screen_fx [0])
 			}
 		else
-			screenfx_updatefxinstanceparams {
+			ScreenFX_UpdateFXInstanceParams {
 				viewport = <viewport>
-				name = venue_dof
-				($dof_off_tod_manager.screen_fx [0])
+				name = venue_DOF
+				($DOF_Off_tod_manager.screen_fx [0])
 			}
 		endif
 	endif
-	if structurecontains \{structure = fxparam
+	if StructureContains \{Structure = fxParam
 			screen_fx}
 		begin
-		if getnextarrayelement (<fxparam>.screen_fx)
-			getuniquecompositeobjectid \{preferredid = screenfxid}
-			screenfx_addfxinstance {
+		if GetNextArrayElement (<fxParam>.screen_fx)
+			GetUniqueCompositeObjectID \{preferredID = screenFXID}
+			ScreenFX_AddFXInstance {
 				viewport = <viewport>
-				name = <uniqueid>
+				name = <uniqueID>
 				<element>
 			}
 		else
@@ -60,32 +60,32 @@ script tod_proxim_update_lightfx_viewport \{fxparam = $default_tod_manager
 		endif
 		repeat
 	endif
-	if structurecontains \{structure = fxparam
+	if StructureContains \{Structure = fxParam
 			atmosphere}
-		updateatmosphere (<fxparam>.atmosphere)
+		UpdateAtmosphere (<fxParam>.atmosphere)
 	endif
 endscript
 
-script tod_proxim_reapply_lightfx 
-	tod_proxim_update_lightfx \{fxparam = $currenttodsettings
+script TOD_Proxim_Reapply_LightFX 
+	TOD_Proxim_Update_LightFX \{fxParam = $currentTODSettings
 		time = 0.0}
 endscript
 
-script tod_proxim_update_global_brightness \{viewport = 0}
-	if NOT screenfx_fxinstanceexists viewport = <viewport> name = global_brightness
-		screenfx_addfxinstance {
+script TOD_Proxim_Update_Global_Brightness \{viewport = 0}
+	if NOT ScreenFX_FxInstanceExists viewport = <viewport> name = global_brightness
+		ScreenFX_AddFXInstance {
 			viewport = <viewport>
 			name = global_brightness
 			on = 1
-			brightness = (0.5 + ($se_brightness) * 0.1)
+			brightness = (0.5 + ($SE_Brightness) * 0.1)
 			type = bright_sat
 		}
 	else
-		screenfx_updatefxinstanceparams {
+		ScreenFX_UpdateFXInstanceParams {
 			viewport = <viewport>
 			name = global_brightness
 			on = 1
-			brightness = (0.5 + ($se_brightness) * 0.1)
+			brightness = (0.5 + ($SE_Brightness) * 0.1)
 			time = 0
 		}
 	endif

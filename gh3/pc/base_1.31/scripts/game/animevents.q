@@ -1,49 +1,49 @@
-animtagtable = {
+AnimTagTable = {
 }
 z_artdeco_animevents = {
-	ven_artdeco_dragon_flame_fwd = [
+	Ven_ArtDeco_Dragon_Flame_Fwd = [
 		{
 			time = 1.75
-			scr = z_artdeco_animevent_dragon_start
+			Scr = z_artdeco_animevent_dragon_start
 			params = {
 				movement = forward
 			}
 		}
 		{
 			time = 3.95
-			scr = z_artdeco_animevent_dragon_stop
+			Scr = z_artdeco_animevent_dragon_stop
 			params = {
 				movement = forward
 			}
 		}
 	]
-	ven_artdeco_dragon_flame_r = [
+	Ven_ArtDeco_Dragon_Flame_R = [
 		{
 			time = 1.75
-			scr = z_artdeco_animevent_dragon_start
+			Scr = z_artdeco_animevent_dragon_start
 			params = {
 				movement = right
 			}
 		}
 		{
 			time = 3.95
-			scr = z_artdeco_animevent_dragon_stop
+			Scr = z_artdeco_animevent_dragon_stop
 			params = {
 				movement = right
 			}
 		}
 	]
-	ven_artdeco_dragon_flame_l = [
+	Ven_ArtDeco_Dragon_Flame_L = [
 		{
 			time = 1.75
-			scr = z_artdeco_animevent_dragon_start
+			Scr = z_artdeco_animevent_dragon_start
 			params = {
 				movement = left
 			}
 		}
 		{
 			time = 3.95
-			scr = z_artdeco_animevent_dragon_stop
+			Scr = z_artdeco_animevent_dragon_stop
 			params = {
 				movement = left
 			}
@@ -54,11 +54,11 @@ z_budokan_animevents = {
 }
 z_dive_animevents = {
 }
-z_hell_animevents = {
-	ven_hell_hammer_idle_good = [
+Z_Hell_AnimEvents = {
+	Ven_Hell_Hammer_Idle_Good = [
 		{
 			time = 2.1
-			scr = z_hell_puppet_hammer_down
+			Scr = Z_Hell_Puppet_Hammer_Down
 			params = {
 			}
 		}
@@ -73,3141 +73,3141 @@ z_video_animevents = {
 z_wikker_animevents = {
 }
 ped_animevents = {
-	gh3_guit_casey_a_star_power01 = [
+	GH3_Guit_Casey_A_Star_Power01 = [
 		{
 			time = 0.17
-			scr = starpower_shootshotgun
+			Scr = StarPower_ShootShotGun
 			params = {
 			}
 		}
 		{
 			time = 1.3299999
-			scr = starpower_shootshotgun
+			Scr = StarPower_ShootShotGun
 			params = {
 			}
 		}
 		{
 			time = 2.4
-			scr = starpower_shootshotgun
+			Scr = StarPower_ShootShotGun
 			params = {
 			}
 		}
 		{
 			time = 3.5
-			scr = starpower_shootshotgun
+			Scr = StarPower_ShootShotGun
 			params = {
 			}
 		}
 		{
 			time = 4.77
-			scr = starpower_shootshotgun
+			Scr = StarPower_ShootShotGun
 			params = {
 			}
 		}
 		{
 			time = 5.9
-			scr = starpower_shootshotgun
+			Scr = StarPower_ShootShotGun
 			params = {
 			}
 		}
 		{
 			time = 6.9700003
-			scr = starpower_shootshotgun
+			Scr = StarPower_ShootShotGun
 			params = {
 			}
 		}
 	]
-	gh3_guit_judy_b_star_power = [
+	GH3_Guit_Judy_B_Star_Power = [
 		{
 			time = 0.72999996
-			scr = starpower_shootshotgun
+			Scr = StarPower_ShootShotGun
 			params = {
 			}
 		}
 		{
 			time = 2.0
-			scr = starpower_shootshotgun
+			Scr = StarPower_ShootShotGun
 			params = {
 			}
 		}
 		{
 			time = 3.1
-			scr = starpower_shootshotgun
+			Scr = StarPower_ShootShotGun
 			params = {
 			}
 		}
 		{
 			time = 4.5
-			scr = starpower_shootshotgun
+			Scr = StarPower_ShootShotGun
 			params = {
 			}
 		}
 		{
 			time = 5.63
-			scr = starpower_shootshotgun
+			Scr = StarPower_ShootShotGun
 			params = {
 			}
 		}
 		{
 			time = 6.67
-			scr = starpower_shootshotgun
+			Scr = StarPower_ShootShotGun
 			params = {
 			}
 		}
 		{
 			time = 7.7
-			scr = starpower_shootshotgun
+			Scr = StarPower_ShootShotGun
 			params = {
 			}
 		}
 		{
 			time = 8.929999
-			scr = starpower_shootshotgun
+			Scr = StarPower_ShootShotGun
 			params = {
 			}
 		}
 	]
-	gh3_guit_judy_c_star_power = [
+	GH3_Guit_Judy_C_Star_Power = [
 		{
 			time = 0.7
-			scr = starpower_shootshotgun
+			Scr = StarPower_ShootShotGun
 			params = {
 			}
 		}
 		{
 			time = 1.8
-			scr = starpower_shootshotgun
+			Scr = StarPower_ShootShotGun
 			params = {
 			}
 		}
 		{
 			time = 3.1
-			scr = starpower_shootshotgun
+			Scr = StarPower_ShootShotGun
 			params = {
 			}
 		}
 		{
 			time = 4.27
-			scr = starpower_shootshotgun
+			Scr = StarPower_ShootShotGun
 			params = {
 			}
 		}
 		{
 			time = 5.4700003
-			scr = starpower_shootshotgun
+			Scr = StarPower_ShootShotGun
 			params = {
 			}
 		}
 		{
 			time = 6.8700004
-			scr = starpower_shootshotgun
+			Scr = StarPower_ShootShotGun
 			params = {
 			}
 		}
 		{
 			time = 8.13
-			scr = starpower_shootshotgun
+			Scr = StarPower_ShootShotGun
 			params = {
 			}
 		}
 		{
 			time = 9.33
-			scr = starpower_shootshotgun
+			Scr = StarPower_ShootShotGun
 			params = {
 			}
 		}
 	]
-	gh3_guit_john_a_star_power01 = [
+	GH3_Guit_John_A_Star_Power01 = [
 		{
 			time = 1.2
-			scr = starpower_flamethrowerflames
+			Scr = StarPower_FlameThrowerFlames
 			params = {
-				emitdur = 5.8300004
+				emitDur = 5.8300004
 			}
 		}
 	]
-	gh3_guit_john_b_star_power01 = [
+	GH3_Guit_John_B_Star_Power01 = [
 		{
 			time = 1.3299999
-			scr = starpower_flamethrowerflames
+			Scr = StarPower_FlameThrowerFlames
 			params = {
-				emitdur = 6.4300003
+				emitDur = 6.4300003
 			}
 		}
 	]
-	gh3_guit_john_c_star_power01 = [
+	GH3_Guit_John_C_Star_Power01 = [
 		{
 			time = 2.1
-			scr = starpower_flamethrowerflames
+			Scr = StarPower_FlameThrowerFlames
 			params = {
-				emitdur = 6.27
+				emitDur = 6.27
 			}
 		}
 	]
-	gh3_guit_axel_a_win1 = [
+	GH3_Guit_Axel_A_Win1 = [
 		{
 			time = 0.0
-			scr = preloadwinanimstream
+			Scr = PreloadWinAnimStream
 			params = {
-				stream = axel_win_4
+				stream = Axel_Win_4
 			}
 		}
 		{
 			time = 4
-			scr = playpreloadedwinanimstream
+			Scr = PlayPreLoadedWinAnimStream
 			params = {
-				stream = axel_win_4
+				stream = Axel_Win_4
 			}
 		}
 	]
-	gh3_guit_axel_a_win3 = [
+	GH3_Guit_Axel_A_Win3 = [
 		{
 			time = 0.0
-			scr = preloadwinanimstream
+			Scr = PreloadWinAnimStream
 			params = {
-				stream = axel_win_1
+				stream = Axel_Win_1
 			}
 		}
 		{
 			time = 4
-			scr = playpreloadedwinanimstream
+			Scr = PlayPreLoadedWinAnimStream
 			params = {
-				stream = axel_win_1
+				stream = Axel_Win_1
 			}
 		}
 	]
-	gh3_guit_axel_a_loss2 = [
+	GH3_Guit_Axel_A_Loss2 = [
 		{
 			time = 0.0
-			scr = preloadwinanimstream
+			Scr = PreloadWinAnimStream
 			params = {
-				stream = axel_lose_1
+				stream = Axel_Lose_1
 			}
 		}
 		{
 			time = 1.9
-			scr = playpreloadedwinanimstream
+			Scr = PlayPreLoadedWinAnimStream
 			params = {
-				stream = axel_lose_1
+				stream = Axel_Lose_1
 			}
 		}
 	]
-	gh3_guit_axel_a_loss1 = [
+	GH3_Guit_Axel_A_Loss1 = [
 		{
 			time = 0.0
-			scr = preloadwinanimstream
+			Scr = PreloadWinAnimStream
 			params = {
-				stream = axel_lose_2
+				stream = Axel_Lose_2
 			}
 		}
 		{
 			time = 0.35000002
-			scr = playpreloadedwinanimstream
+			Scr = PlayPreLoadedWinAnimStream
 			params = {
-				stream = axel_lose_2
+				stream = Axel_Lose_2
 			}
 		}
 	]
-	gh3_guit_izzy_a_loss1 = [
+	GH3_Guit_Izzy_A_Loss1 = [
 		{
 			time = 0.0
-			scr = preloadwinanimstream
+			Scr = PreloadWinAnimStream
 			params = {
-				stream = izzy_lose_1
+				stream = Izzy_Lose_1
 			}
 		}
 		{
 			time = 0.5
-			scr = playpreloadedwinanimstream
+			Scr = PlayPreLoadedWinAnimStream
 			params = {
-				stream = izzy_lose_1
+				stream = Izzy_Lose_1
 			}
 		}
 	]
-	gh3_guit_izzy_a_loss2 = [
+	GH3_Guit_Izzy_A_Loss2 = [
 		{
 			time = 0.0
-			scr = preloadwinanimstream
+			Scr = PreloadWinAnimStream
 			params = {
-				stream = izzy_lose_2
+				stream = Izzy_Lose_2
 			}
 		}
 		{
 			time = 4.5
-			scr = playpreloadedwinanimstream
+			Scr = PlayPreLoadedWinAnimStream
 			params = {
-				stream = izzy_lose_2
+				stream = Izzy_Lose_2
 			}
 		}
 	]
-	gh3_guit_midori_a_win2 = [
+	GH3_Guit_Midori_A_Win2 = [
 		{
 			time = 0.0
-			scr = preloadwinanimstream
+			Scr = PreloadWinAnimStream
 			params = {
-				stream = midori_win_1
+				stream = Midori_Win_1
 			}
 		}
 		{
 			time = 4.2
-			scr = playpreloadedwinanimstream
+			Scr = PlayPreLoadedWinAnimStream
 			params = {
-				stream = midori_win_1
+				stream = Midori_Win_1
 			}
 		}
 	]
-	gh3_guit_midori_a_loss3 = [
+	GH3_Guit_Midori_A_Loss3 = [
 		{
 			time = 0.0
-			scr = preloadwinanimstream
+			Scr = PreloadWinAnimStream
 			params = {
-				stream = midori_lose_1
+				stream = Midori_Lose_1
 			}
 		}
 		{
 			time = 0.51
-			scr = playpreloadedwinanimstream
+			Scr = PlayPreLoadedWinAnimStream
 			params = {
-				stream = midori_lose_1
+				stream = Midori_Lose_1
 			}
 		}
 	]
-	gh3_guit_lars_a_win2 = [
+	GH3_Guit_Lars_A_Win2 = [
 		{
 			time = 0.0
-			scr = preloadwinanimstream
+			Scr = PreloadWinAnimStream
 			params = {
-				stream = lars_win_3
+				stream = Lars_Win_3
 			}
 		}
 		{
 			time = 1.8
-			scr = playpreloadedwinanimstream
+			Scr = PlayPreLoadedWinAnimStream
 			params = {
-				stream = lars_win_3
+				stream = Lars_Win_3
 			}
 		}
 	]
-	gh3_guit_lars_a_lose1 = [
+	GH3_Guit_Lars_A_lose1 = [
 		{
 			time = 0.0
-			scr = preloadwinanimstream
+			Scr = PreloadWinAnimStream
 			params = {
-				stream = lars_lose_1
+				stream = Lars_Lose_1
 			}
 		}
 		{
 			time = 0.37
-			scr = playpreloadedwinanimstream
+			Scr = PlayPreLoadedWinAnimStream
 			params = {
-				stream = lars_lose_1
+				stream = Lars_Lose_1
 			}
 		}
 	]
-	gh3_guit_john_a_loss1 = [
+	GH3_Guit_John_A_Loss1 = [
 		{
 			time = 0.0
-			scr = preloadwinanimstream
+			Scr = PreloadWinAnimStream
 			params = {
-				stream = johnny_lose_1
+				stream = Johnny_Lose_1
 			}
 		}
 		{
 			time = 5.25
-			scr = playpreloadedwinanimstream
+			Scr = PlayPreLoadedWinAnimStream
 			params = {
-				stream = johnny_lose_1
+				stream = Johnny_Lose_1
 			}
 		}
 	]
-	gh3_guit_slash_a_breakguit = [
+	GH3_Guit_Slash_A_BreakGuit = [
 		{
 			time = 0.0
-			scr = preloadwinanimstream
+			Scr = PreloadWinAnimStream
 			params = {
-				stream = slash_guitar_smashing
+				stream = Slash_Guitar_Smashing
 			}
 		}
 		{
 			time = 5.0
-			scr = playpreloadedwinanimstream
+			Scr = PlayPreLoadedWinAnimStream
 			params = {
-				stream = slash_guitar_smashing
+				stream = Slash_Guitar_Smashing
 			}
 		}
 	]
-	gh3_guit_slash_a_loss1 = [
+	GH3_Guit_Slash_A_Loss1 = [
 		{
 			time = 0.0
-			scr = preloadwinanimstream
+			Scr = PreloadWinAnimStream
 			params = {
-				stream = izzy_lose_1
+				stream = Izzy_Lose_1
 			}
 		}
 		{
 			time = 1.6
-			scr = playpreloadedwinanimstream
+			Scr = PlayPreLoadedWinAnimStream
 			params = {
-				stream = izzy_lose_1
+				stream = Izzy_Lose_1
 			}
 		}
 	]
-	gh3_guitarist_judy_a_loss_armsup = [
+	GH3_Guitarist_Judy_A_loss_armsUp = [
 		{
 			time = 0.0
-			scr = preloadwinanimstream
+			Scr = PreloadWinAnimStream
 			params = {
-				stream = midori_lose_1
+				stream = Midori_Lose_1
 			}
 		}
 		{
 			time = 4.0
-			scr = playpreloadedwinanimstream
+			Scr = PlayPreLoadedWinAnimStream
 			params = {
-				stream = midori_lose_1
+				stream = Midori_Lose_1
 			}
 		}
 	]
-	gh3_crowd_becki_bad1 = [
+	GH3_crowd_Becki_bad1 = [
 		{
 			time = 0.0
-			scr = set_crowd_hand
+			Scr = set_crowd_hand
 			params = {
-				hand = left
+				Hand = left
 				type = clap
 			}
 		}
 		{
 			time = 0.0
-			scr = set_crowd_hand
+			Scr = set_crowd_hand
 			params = {
-				hand = right
-				type = clap
-			}
-		}
-	]
-	gh3_crowd_becki_bad2 = [
-		{
-			time = 0.0
-			scr = set_crowd_hand
-			params = {
-				hand = left
-				type = clap
-			}
-		}
-		{
-			time = 0.0
-			scr = set_crowd_hand
-			params = {
-				hand = right
+				Hand = right
 				type = clap
 			}
 		}
 	]
-	gh3_crowd_becki_bad3 = [
+	GH3_crowd_Becki_bad2 = [
 		{
 			time = 0.0
-			scr = set_crowd_hand
+			Scr = set_crowd_hand
 			params = {
-				hand = left
+				Hand = left
 				type = clap
 			}
 		}
 		{
 			time = 0.0
-			scr = set_crowd_hand
+			Scr = set_crowd_hand
 			params = {
-				hand = right
+				Hand = right
 				type = clap
 			}
 		}
 	]
-	gh3_crowd_becki_good_fast1 = [
+	GH3_crowd_Becki_bad3 = [
 		{
 			time = 0.0
-			scr = set_crowd_hand
+			Scr = set_crowd_hand
 			params = {
-				hand = left
+				Hand = left
+				type = clap
+			}
+		}
+		{
+			time = 0.0
+			Scr = set_crowd_hand
+			params = {
+				Hand = right
+				type = clap
+			}
+		}
+	]
+	GH3_crowd_Becki_good_fast1 = [
+		{
+			time = 0.0
+			Scr = set_crowd_hand
+			params = {
+				Hand = left
 				type = fist
 			}
 		}
 		{
 			time = 0.0
-			scr = set_crowd_hand
+			Scr = set_crowd_hand
 			params = {
-				hand = right
+				Hand = right
 				type = clap
 			}
 		}
 	]
-	gh3_crowd_becki_good_fast2 = [
+	GH3_crowd_Becki_good_fast2 = [
 		{
 			time = 0.0
-			scr = set_crowd_hand
+			Scr = set_crowd_hand
 			params = {
-				hand = left
+				Hand = left
 				type = fist
 			}
 		}
 		{
 			time = 0.0
-			scr = set_crowd_hand
+			Scr = set_crowd_hand
 			params = {
-				hand = right
-				type = rock
+				Hand = right
+				type = Rock
 			}
 		}
 	]
-	gh3_crowd_becki_good_fast3 = [
+	GH3_crowd_Becki_good_fast3 = [
 		{
 			time = 0.0
-			scr = set_crowd_hand
+			Scr = set_crowd_hand
 			params = {
-				hand = left
-				type = rock
+				Hand = left
+				type = Rock
 			}
 		}
 		{
 			time = 0.0
-			scr = set_crowd_hand
+			Scr = set_crowd_hand
 			params = {
-				hand = right
-				type = rock
+				Hand = right
+				type = Rock
 			}
 		}
 	]
-	gh3_crowd_becki_good_med1 = [
+	GH3_crowd_Becki_good_med1 = [
 		{
 			time = 0.0
-			scr = set_crowd_hand
+			Scr = set_crowd_hand
 			params = {
-				hand = left
+				Hand = left
 				type = fist
 			}
 		}
 		{
 			time = 0.0
-			scr = set_crowd_hand
+			Scr = set_crowd_hand
 			params = {
-				hand = right
+				Hand = right
 				type = clap
 			}
 		}
 	]
-	gh3_crowd_becki_good_med2 = [
+	GH3_crowd_Becki_good_med2 = [
 		{
 			time = 0.0
-			scr = set_crowd_hand
+			Scr = set_crowd_hand
 			params = {
-				hand = left
+				Hand = left
 				type = fist
 			}
 		}
 		{
 			time = 0.0
-			scr = set_crowd_hand
+			Scr = set_crowd_hand
 			params = {
-				hand = right
-				type = rock
+				Hand = right
+				type = Rock
 			}
 		}
 	]
-	gh3_crowd_becki_good_med3 = [
+	GH3_crowd_Becki_good_med3 = [
 		{
 			time = 0.0
-			scr = set_crowd_hand
+			Scr = set_crowd_hand
 			params = {
-				hand = left
+				Hand = left
 				type = fist
 			}
 		}
 		{
 			time = 0.0
-			scr = set_crowd_hand
+			Scr = set_crowd_hand
 			params = {
-				hand = right
-				type = rock
+				Hand = right
+				type = Rock
 			}
 		}
 	]
-	gh3_crowd_becki_good_slow1 = [
+	GH3_crowd_Becki_good_slow1 = [
 		{
 			time = 0.0
-			scr = set_crowd_hand
+			Scr = set_crowd_hand
 			params = {
-				hand = left
-				type = rock
+				Hand = left
+				type = Rock
 			}
 		}
 		{
 			time = 0.0
-			scr = set_crowd_hand
+			Scr = set_crowd_hand
 			params = {
-				hand = right
+				Hand = right
 				type = clap
 			}
 		}
 	]
-	gh3_crowd_becki_good_slow2 = [
+	GH3_crowd_Becki_good_slow2 = [
 		{
 			time = 0.0
-			scr = set_crowd_hand
+			Scr = set_crowd_hand
 			params = {
-				hand = left
-				type = rock
+				Hand = left
+				type = Rock
 			}
 		}
 		{
 			time = 0.0
-			scr = set_crowd_hand
+			Scr = set_crowd_hand
 			params = {
-				hand = right
-				type = rock
-			}
-		}
-	]
-	gh3_crowd_becki_good_slow3 = [
-		{
-			time = 0.0
-			scr = set_crowd_hand
-			params = {
-				hand = left
-				type = clap
-			}
-		}
-		{
-			time = 0.0
-			scr = set_crowd_hand
-			params = {
-				hand = right
-				type = rock
+				Hand = right
+				type = Rock
 			}
 		}
 	]
-	gh3_crowd_becki_reg_fast1 = [
+	GH3_crowd_Becki_good_slow3 = [
 		{
 			time = 0.0
-			scr = set_crowd_hand
+			Scr = set_crowd_hand
 			params = {
-				hand = left
+				Hand = left
 				type = clap
 			}
 		}
 		{
 			time = 0.0
-			scr = set_crowd_hand
+			Scr = set_crowd_hand
 			params = {
-				hand = right
-				type = clap
+				Hand = right
+				type = Rock
 			}
 		}
 	]
-	gh3_crowd_becki_reg_fast2 = [
+	GH3_crowd_Becki_reg_fast1 = [
 		{
 			time = 0.0
-			scr = set_crowd_hand
+			Scr = set_crowd_hand
 			params = {
-				hand = left
-				type = clap
-			}
-		}
-		{
-			time = 0.0
-			scr = set_crowd_hand
-			params = {
-				hand = right
-				type = clap
-			}
-		}
-	]
-	gh3_crowd_becki_reg_fast3 = [
-		{
-			time = 0.0
-			scr = set_crowd_hand
-			params = {
-				hand = left
+				Hand = left
 				type = clap
 			}
 		}
 		{
 			time = 0.0
-			scr = set_crowd_hand
+			Scr = set_crowd_hand
 			params = {
-				hand = right
-				type = rock
+				Hand = right
+				type = clap
 			}
 		}
 	]
-	gh3_crowd_becki_reg_fast4 = [
+	GH3_crowd_Becki_reg_fast2 = [
 		{
 			time = 0.0
-			scr = set_crowd_hand
+			Scr = set_crowd_hand
 			params = {
-				hand = left
-				type = rock
+				Hand = left
+				type = clap
 			}
 		}
 		{
 			time = 0.0
-			scr = set_crowd_hand
+			Scr = set_crowd_hand
 			params = {
-				hand = right
-				type = rock
+				Hand = right
+				type = clap
 			}
 		}
 	]
-	gh3_crowd_becki_reg_med1 = [
+	GH3_crowd_Becki_reg_fast3 = [
 		{
 			time = 0.0
-			scr = set_crowd_hand
+			Scr = set_crowd_hand
 			params = {
-				hand = left
+				Hand = left
+				type = clap
+			}
+		}
+		{
+			time = 0.0
+			Scr = set_crowd_hand
+			params = {
+				Hand = right
+				type = Rock
+			}
+		}
+	]
+	GH3_crowd_Becki_reg_fast4 = [
+		{
+			time = 0.0
+			Scr = set_crowd_hand
+			params = {
+				Hand = left
+				type = Rock
+			}
+		}
+		{
+			time = 0.0
+			Scr = set_crowd_hand
+			params = {
+				Hand = right
+				type = Rock
+			}
+		}
+	]
+	GH3_crowd_Becki_reg_med1 = [
+		{
+			time = 0.0
+			Scr = set_crowd_hand
+			params = {
+				Hand = left
 				type = fist
 			}
 		}
 		{
 			time = 0.0
-			scr = set_crowd_hand
+			Scr = set_crowd_hand
 			params = {
-				hand = right
+				Hand = right
 				type = clap
 			}
 		}
 	]
-	gh3_crowd_becki_reg_med2 = [
+	GH3_crowd_Becki_reg_med2 = [
 		{
 			time = 0.0
-			scr = set_crowd_hand
+			Scr = set_crowd_hand
 			params = {
-				hand = left
+				Hand = left
 				type = fist
 			}
 		}
 		{
 			time = 0.0
-			scr = set_crowd_hand
+			Scr = set_crowd_hand
 			params = {
-				hand = right
+				Hand = right
 				type = clap
 			}
 		}
 	]
-	gh3_crowd_becki_reg_med3 = [
+	GH3_crowd_Becki_reg_med3 = [
 		{
 			time = 0.0
-			scr = set_crowd_hand
+			Scr = set_crowd_hand
 			params = {
-				hand = left
-				type = rock
+				Hand = left
+				type = Rock
 			}
 		}
 		{
 			time = 0.0
-			scr = set_crowd_hand
+			Scr = set_crowd_hand
 			params = {
-				hand = right
-				type = rock
-			}
-		}
-	]
-	gh3_crowd_becki_reg_med4 = [
-		{
-			time = 0.0
-			scr = set_crowd_hand
-			params = {
-				hand = left
-				type = rock
-			}
-		}
-		{
-			time = 0.0
-			scr = set_crowd_hand
-			params = {
-				hand = right
-				type = rock
+				Hand = right
+				type = Rock
 			}
 		}
 	]
-	gh3_crowd_becki_regular_slow1 = [
+	GH3_crowd_Becki_reg_med4 = [
 		{
 			time = 0.0
-			scr = set_crowd_hand
+			Scr = set_crowd_hand
 			params = {
-				hand = left
-				type = clap
+				Hand = left
+				type = Rock
 			}
 		}
 		{
 			time = 0.0
-			scr = set_crowd_hand
+			Scr = set_crowd_hand
 			params = {
-				hand = right
-				type = rock
+				Hand = right
+				type = Rock
 			}
 		}
 	]
-	gh3_crowd_becki_regular_slow2 = [
+	GH3_crowd_Becki_regular_slow1 = [
 		{
 			time = 0.0
-			scr = set_crowd_hand
+			Scr = set_crowd_hand
 			params = {
-				hand = left
+				Hand = left
 				type = clap
 			}
 		}
 		{
 			time = 0.0
-			scr = set_crowd_hand
+			Scr = set_crowd_hand
 			params = {
-				hand = right
+				Hand = right
+				type = Rock
+			}
+		}
+	]
+	GH3_crowd_Becki_regular_slow2 = [
+		{
+			time = 0.0
+			Scr = set_crowd_hand
+			params = {
+				Hand = left
+				type = clap
+			}
+		}
+		{
+			time = 0.0
+			Scr = set_crowd_hand
+			params = {
+				Hand = right
 				type = clap
 			}
 		}
 	]
-	gh3_crowd_becki_regular_slow3 = [
+	GH3_crowd_Becki_regular_slow3 = [
 		{
 			time = 0.0
-			scr = set_crowd_hand
+			Scr = set_crowd_hand
 			params = {
-				hand = left
+				Hand = left
 				type = fist
 			}
 		}
 		{
 			time = 0.0
-			scr = set_crowd_hand
+			Scr = set_crowd_hand
 			params = {
-				hand = right
+				Hand = right
 				type = clap
 			}
 		}
 	]
-	gh3_crowd_becki_regular_slow4 = [
+	GH3_crowd_Becki_regular_slow4 = [
 		{
 			time = 0.0
-			scr = set_crowd_hand
+			Scr = set_crowd_hand
 			params = {
-				hand = left
-				type = rock
+				Hand = left
+				type = Rock
 			}
 		}
 		{
 			time = 0.0
-			scr = set_crowd_hand
+			Scr = set_crowd_hand
 			params = {
-				hand = right
-				type = rock
+				Hand = right
+				type = Rock
 			}
 		}
 	]
-	gh3_crowd_bill_good_slow1 = [
+	GH3_crowd_Bill_good_slow1 = [
 		{
 			time = 0.0
-			scr = set_crowd_hand
+			Scr = set_crowd_hand
 			params = {
-				hand = left
+				Hand = left
 				type = fist
 			}
 		}
 		{
 			time = 0.0
-			scr = set_crowd_hand
+			Scr = set_crowd_hand
 			params = {
-				hand = right
+				Hand = right
 				type = clap
 			}
 		}
 	]
-	gh3_crowd_bill_good_slow2 = [
+	GH3_crowd_Bill_good_slow2 = [
 		{
 			time = 0.0
-			scr = set_crowd_hand
+			Scr = set_crowd_hand
 			params = {
-				hand = left
+				Hand = left
 				type = fist
 			}
 		}
 		{
 			time = 0.0
-			scr = set_crowd_hand
+			Scr = set_crowd_hand
 			params = {
-				hand = right
-				type = rock
+				Hand = right
+				type = Rock
 			}
 		}
 	]
-	gh3_crowd_bill_good_slow3 = [
+	GH3_crowd_Bill_good_slow3 = [
 		{
 			time = 0.0
-			scr = set_crowd_hand
+			Scr = set_crowd_hand
 			params = {
-				hand = left
-				type = rock
+				Hand = left
+				type = Rock
 			}
 		}
 		{
 			time = 0.0
-			scr = set_crowd_hand
+			Scr = set_crowd_hand
 			params = {
-				hand = right
-				type = rock
+				Hand = right
+				type = Rock
 			}
 		}
 	]
-	gh3_crowd_bill_reg_fast1 = [
+	GH3_crowd_Bill_reg_fast1 = [
 		{
 			time = 0.0
-			scr = set_crowd_hand
+			Scr = set_crowd_hand
 			params = {
-				hand = left
+				Hand = left
 				type = fist
 			}
 		}
 		{
 			time = 0.0
-			scr = set_crowd_hand
+			Scr = set_crowd_hand
 			params = {
-				hand = right
+				Hand = right
 				type = fist
 			}
 		}
 	]
-	gh3_crowd_bill_reg_fast2 = [
+	GH3_crowd_Bill_reg_fast2 = [
 		{
 			time = 0.0
-			scr = set_crowd_hand
+			Scr = set_crowd_hand
 			params = {
-				hand = left
-				type = fist
-			}
-		}
-		{
-			time = 0.0
-			scr = set_crowd_hand
-			params = {
-				hand = right
-				type = rock
-			}
-		}
-	]
-	gh3_crowd_bill_reg_fast3 = [
-		{
-			time = 0.0
-			scr = set_crowd_hand
-			params = {
-				hand = left
+				Hand = left
 				type = fist
 			}
 		}
 		{
 			time = 0.0
-			scr = set_crowd_hand
+			Scr = set_crowd_hand
 			params = {
-				hand = right
-				type = clap
+				Hand = right
+				type = Rock
 			}
 		}
 	]
-	gh3_crowd_colin_bad1 = [
+	GH3_crowd_Bill_reg_fast3 = [
 		{
 			time = 0.0
-			scr = set_crowd_hand
+			Scr = set_crowd_hand
 			params = {
-				hand = left
-				type = clap
-			}
-		}
-		{
-			time = 0.0
-			scr = set_crowd_hand
-			params = {
-				hand = right
-				type = clap
-			}
-		}
-	]
-	gh3_crowd_colin_bad2 = [
-		{
-			time = 0.0
-			scr = set_crowd_hand
-			params = {
-				hand = left
-				type = clap
-			}
-		}
-		{
-			time = 0.0
-			scr = set_crowd_hand
-			params = {
-				hand = right
-				type = clap
-			}
-		}
-	]
-	gh3_crowd_colin_bad3 = [
-		{
-			time = 0.0
-			scr = set_crowd_hand
-			params = {
-				hand = left
-				type = clap
-			}
-		}
-		{
-			time = 0.0
-			scr = set_crowd_hand
-			params = {
-				hand = right
-				type = clap
-			}
-		}
-	]
-	gh3_crowd_colin_bad4 = [
-		{
-			time = 0.0
-			scr = set_crowd_hand
-			params = {
-				hand = left
+				Hand = left
 				type = fist
 			}
 		}
 		{
 			time = 0.0
-			scr = set_crowd_hand
+			Scr = set_crowd_hand
 			params = {
-				hand = right
+				Hand = right
 				type = clap
 			}
 		}
 	]
-	gh3_crowd_colin_good_fast1 = [
+	GH3_crowd_Colin_bad1 = [
 		{
 			time = 0.0
-			scr = set_crowd_hand
+			Scr = set_crowd_hand
 			params = {
-				hand = left
-				type = fist
-			}
-		}
-		{
-			time = 0.0
-			scr = set_crowd_hand
-			params = {
-				hand = right
-				type = rock
-			}
-		}
-	]
-	gh3_crowd_colin_good_fast2 = [
-		{
-			time = 0.0
-			scr = set_crowd_hand
-			params = {
-				hand = left
-				type = fist
-			}
-		}
-		{
-			time = 0.0
-			scr = set_crowd_hand
-			params = {
-				hand = right
-				type = rock
-			}
-		}
-	]
-	gh3_crowd_colin_good_fast3 = [
-		{
-			time = 0.0
-			scr = set_crowd_hand
-			params = {
-				hand = left
-				type = rock
-			}
-		}
-		{
-			time = 0.0
-			scr = set_crowd_hand
-			params = {
-				hand = right
-				type = rock
-			}
-		}
-	]
-	gh3_crowd_colin_good_med1 = [
-		{
-			time = 0.0
-			scr = set_crowd_hand
-			params = {
-				hand = left
-				type = fist
-			}
-		}
-		{
-			time = 0.0
-			scr = set_crowd_hand
-			params = {
-				hand = right
-				type = rock
-			}
-		}
-	]
-	gh3_crowd_colin_good_med2 = [
-		{
-			time = 0.0
-			scr = set_crowd_hand
-			params = {
-				hand = left
-				type = fist
-			}
-		}
-		{
-			time = 0.0
-			scr = set_crowd_hand
-			params = {
-				hand = right
-				type = rock
-			}
-		}
-	]
-	gh3_crowd_colin_good_med3 = [
-		{
-			time = 0.0
-			scr = set_crowd_hand
-			params = {
-				hand = left
+				Hand = left
 				type = clap
 			}
 		}
 		{
 			time = 0.0
-			scr = set_crowd_hand
+			Scr = set_crowd_hand
 			params = {
-				hand = right
+				Hand = right
+				type = clap
+			}
+		}
+	]
+	GH3_crowd_Colin_bad2 = [
+		{
+			time = 0.0
+			Scr = set_crowd_hand
+			params = {
+				Hand = left
+				type = clap
+			}
+		}
+		{
+			time = 0.0
+			Scr = set_crowd_hand
+			params = {
+				Hand = right
+				type = clap
+			}
+		}
+	]
+	GH3_crowd_Colin_bad3 = [
+		{
+			time = 0.0
+			Scr = set_crowd_hand
+			params = {
+				Hand = left
+				type = clap
+			}
+		}
+		{
+			time = 0.0
+			Scr = set_crowd_hand
+			params = {
+				Hand = right
+				type = clap
+			}
+		}
+	]
+	GH3_crowd_Colin_bad4 = [
+		{
+			time = 0.0
+			Scr = set_crowd_hand
+			params = {
+				Hand = left
+				type = fist
+			}
+		}
+		{
+			time = 0.0
+			Scr = set_crowd_hand
+			params = {
+				Hand = right
+				type = clap
+			}
+		}
+	]
+	GH3_crowd_Colin_good_fast1 = [
+		{
+			time = 0.0
+			Scr = set_crowd_hand
+			params = {
+				Hand = left
+				type = fist
+			}
+		}
+		{
+			time = 0.0
+			Scr = set_crowd_hand
+			params = {
+				Hand = right
+				type = Rock
+			}
+		}
+	]
+	GH3_crowd_Colin_good_fast2 = [
+		{
+			time = 0.0
+			Scr = set_crowd_hand
+			params = {
+				Hand = left
+				type = fist
+			}
+		}
+		{
+			time = 0.0
+			Scr = set_crowd_hand
+			params = {
+				Hand = right
+				type = Rock
+			}
+		}
+	]
+	GH3_crowd_Colin_good_fast3 = [
+		{
+			time = 0.0
+			Scr = set_crowd_hand
+			params = {
+				Hand = left
+				type = Rock
+			}
+		}
+		{
+			time = 0.0
+			Scr = set_crowd_hand
+			params = {
+				Hand = right
+				type = Rock
+			}
+		}
+	]
+	GH3_crowd_Colin_good_med1 = [
+		{
+			time = 0.0
+			Scr = set_crowd_hand
+			params = {
+				Hand = left
+				type = fist
+			}
+		}
+		{
+			time = 0.0
+			Scr = set_crowd_hand
+			params = {
+				Hand = right
+				type = Rock
+			}
+		}
+	]
+	GH3_crowd_Colin_good_med2 = [
+		{
+			time = 0.0
+			Scr = set_crowd_hand
+			params = {
+				Hand = left
+				type = fist
+			}
+		}
+		{
+			time = 0.0
+			Scr = set_crowd_hand
+			params = {
+				Hand = right
+				type = Rock
+			}
+		}
+	]
+	GH3_crowd_colin_good_med3 = [
+		{
+			time = 0.0
+			Scr = set_crowd_hand
+			params = {
+				Hand = left
+				type = clap
+			}
+		}
+		{
+			time = 0.0
+			Scr = set_crowd_hand
+			params = {
+				Hand = right
 				type = clap
 			}
 		}
 		{
 			time = 3.0
-			scr = set_crowd_hand
+			Scr = set_crowd_hand
 			params = {
-				hand = left
-				type = rock
+				Hand = left
+				type = Rock
 			}
 		}
 		{
 			time = 3.0
-			scr = set_crowd_hand
+			Scr = set_crowd_hand
 			params = {
-				hand = right
-				type = rock
+				Hand = right
+				type = Rock
 			}
 		}
 		{
 			time = 5.67
-			scr = set_crowd_hand
+			Scr = set_crowd_hand
 			params = {
-				hand = left
+				Hand = left
 				type = clap
 			}
 		}
 		{
 			time = 5.67
-			scr = set_crowd_hand
+			Scr = set_crowd_hand
 			params = {
-				hand = right
+				Hand = right
 				type = clap
 			}
 		}
 	]
-	gh3_crowd_colin_good_slow1 = [
+	GH3_crowd_Colin_good_slow1 = [
 		{
 			time = 0.0
-			scr = set_crowd_hand
+			Scr = set_crowd_hand
 			params = {
-				hand = left
-				type = rock
+				Hand = left
+				type = Rock
 			}
 		}
 		{
 			time = 0.0
-			scr = set_crowd_hand
+			Scr = set_crowd_hand
 			params = {
-				hand = right
+				Hand = right
 				type = fist
 			}
 		}
 	]
-	gh3_crowd_colin_good_slow2 = [
+	GH3_crowd_Colin_good_slow2 = [
 		{
 			time = 0.0
-			scr = set_crowd_hand
+			Scr = set_crowd_hand
 			params = {
-				hand = left
+				Hand = left
 				type = fist
 			}
 		}
 		{
 			time = 0.0
-			scr = set_crowd_hand
+			Scr = set_crowd_hand
 			params = {
-				hand = right
-				type = rock
+				Hand = right
+				type = Rock
 			}
 		}
 	]
-	gh3_crowd_colin_good_slow3 = [
+	GH3_crowd_Colin_good_slow3 = [
 		{
 			time = 0.0
-			scr = set_crowd_hand
+			Scr = set_crowd_hand
 			params = {
-				hand = left
+				Hand = left
 				type = clap
 			}
 		}
 		{
 			time = 0.0
-			scr = set_crowd_hand
+			Scr = set_crowd_hand
 			params = {
-				hand = right
-				type = clap
-			}
-		}
-	]
-	gh3_crowd_colin_reg_fast1 = [
-		{
-			time = 0.0
-			scr = set_crowd_hand
-			params = {
-				hand = left
-				type = clap
-			}
-		}
-		{
-			time = 0.0
-			scr = set_crowd_hand
-			params = {
-				hand = right
+				Hand = right
 				type = clap
 			}
 		}
 	]
-	gh3_crowd_colin_reg_fast2 = [
+	GH3_crowd_Colin_Reg_fast1 = [
 		{
 			time = 0.0
-			scr = set_crowd_hand
+			Scr = set_crowd_hand
 			params = {
-				hand = left
+				Hand = left
 				type = clap
 			}
 		}
 		{
 			time = 0.0
-			scr = set_crowd_hand
+			Scr = set_crowd_hand
 			params = {
-				hand = right
+				Hand = right
+				type = clap
+			}
+		}
+	]
+	GH3_crowd_Colin_Reg_fast2 = [
+		{
+			time = 0.0
+			Scr = set_crowd_hand
+			params = {
+				Hand = left
+				type = clap
+			}
+		}
+		{
+			time = 0.0
+			Scr = set_crowd_hand
+			params = {
+				Hand = right
 				type = clap
 			}
 		}
 		{
 			time = 2.0
-			scr = set_crowd_hand
+			Scr = set_crowd_hand
 			params = {
-				hand = right
-				type = rock
+				Hand = right
+				type = Rock
 			}
 		}
 		{
 			time = 7.0
-			scr = set_crowd_hand
+			Scr = set_crowd_hand
 			params = {
-				hand = right
+				Hand = right
 				type = clap
 			}
 		}
 	]
-	gh3_crowd_colin_reg_fast3 = [
+	GH3_crowd_Colin_Reg_fast3 = [
 		{
 			time = 0.0
-			scr = set_crowd_hand
+			Scr = set_crowd_hand
 			params = {
-				hand = left
+				Hand = left
 				type = clap
 			}
 		}
 		{
 			time = 0.0
-			scr = set_crowd_hand
+			Scr = set_crowd_hand
 			params = {
-				hand = right
-				type = clap
-			}
-		}
-	]
-	gh3_crowd_colin_reg_med1 = [
-		{
-			time = 0.0
-			scr = set_crowd_hand
-			params = {
-				hand = left
-				type = clap
-			}
-		}
-		{
-			time = 0.0
-			scr = set_crowd_hand
-			params = {
-				hand = right
+				Hand = right
 				type = clap
 			}
 		}
 	]
-	gh3_crowd_colin_reg_med2 = [
+	GH3_crowd_Colin_Reg_med1 = [
 		{
 			time = 0.0
-			scr = set_crowd_hand
+			Scr = set_crowd_hand
 			params = {
-				hand = left
+				Hand = left
+				type = clap
+			}
+		}
+		{
+			time = 0.0
+			Scr = set_crowd_hand
+			params = {
+				Hand = right
+				type = clap
+			}
+		}
+	]
+	GH3_crowd_Colin_Reg_med2 = [
+		{
+			time = 0.0
+			Scr = set_crowd_hand
+			params = {
+				Hand = left
 				type = fist
 			}
 		}
 		{
 			time = 0.0
-			scr = set_crowd_hand
+			Scr = set_crowd_hand
 			params = {
-				hand = right
+				Hand = right
 				type = fist
 			}
 		}
 	]
-	gh3_crowd_colin_reg_med3 = [
+	GH3_crowd_Colin_Reg_med3 = [
 		{
 			time = 0.0
-			scr = set_crowd_hand
+			Scr = set_crowd_hand
 			params = {
-				hand = left
-				type = rock
+				Hand = left
+				type = Rock
 			}
 		}
 		{
 			time = 0.0
-			scr = set_crowd_hand
+			Scr = set_crowd_hand
 			params = {
-				hand = right
-				type = rock
-			}
-		}
-	]
-	gh3_crowd_colin_reg_med4 = [
-		{
-			time = 0.0
-			scr = set_crowd_hand
-			params = {
-				hand = left
-				type = rock
-			}
-		}
-		{
-			time = 0.0
-			scr = set_crowd_hand
-			params = {
-				hand = right
-				type = rock
+				Hand = right
+				type = Rock
 			}
 		}
 	]
-	gh3_crowd_colin_reg_slow1 = [
+	GH3_crowd_Colin_Reg_med4 = [
 		{
 			time = 0.0
-			scr = set_crowd_hand
+			Scr = set_crowd_hand
 			params = {
-				hand = left
-				type = fist
+				Hand = left
+				type = Rock
 			}
 		}
 		{
 			time = 0.0
-			scr = set_crowd_hand
+			Scr = set_crowd_hand
 			params = {
-				hand = right
-				type = rock
-			}
-		}
-	]
-	gh3_crowd_colin_reg_slow2 = [
-		{
-			time = 0.0
-			scr = set_crowd_hand
-			params = {
-				hand = left
-				type = clap
-			}
-		}
-		{
-			time = 0.0
-			scr = set_crowd_hand
-			params = {
-				hand = right
-				type = clap
+				Hand = right
+				type = Rock
 			}
 		}
 	]
-	gh3_crowd_colin_reg_slow3 = [
+	GH3_crowd_Colin_Reg_slow1 = [
 		{
 			time = 0.0
-			scr = set_crowd_hand
+			Scr = set_crowd_hand
 			params = {
-				hand = left
+				Hand = left
 				type = fist
 			}
 		}
 		{
 			time = 0.0
-			scr = set_crowd_hand
+			Scr = set_crowd_hand
 			params = {
-				hand = right
-				type = rock
+				Hand = right
+				type = Rock
 			}
 		}
 	]
-	gh3_crowd_colin_reg_slow4 = [
+	GH3_crowd_Colin_Reg_slow2 = [
 		{
 			time = 0.0
-			scr = set_crowd_hand
+			Scr = set_crowd_hand
 			params = {
-				hand = left
+				Hand = left
+				type = clap
+			}
+		}
+		{
+			time = 0.0
+			Scr = set_crowd_hand
+			params = {
+				Hand = right
+				type = clap
+			}
+		}
+	]
+	GH3_crowd_Colin_Reg_slow3 = [
+		{
+			time = 0.0
+			Scr = set_crowd_hand
+			params = {
+				Hand = left
 				type = fist
 			}
 		}
 		{
 			time = 0.0
-			scr = set_crowd_hand
+			Scr = set_crowd_hand
 			params = {
-				hand = right
-				type = rock
+				Hand = right
+				type = Rock
 			}
 		}
 	]
-	gh3_crowd_colin_special_slow1 = [
+	GH3_crowd_Colin_Reg_slow4 = [
 		{
 			time = 0.0
-			scr = set_crowd_hand
+			Scr = set_crowd_hand
 			params = {
-				hand = left
-				type = clap
-			}
-		}
-		{
-			time = 0.0
-			scr = set_crowd_hand
-			params = {
-				hand = right
-				type = fist
-			}
-		}
-	]
-	gh3_crowd_colin_special_slow2 = [
-		{
-			time = 0.0
-			scr = set_crowd_hand
-			params = {
-				hand = left
-				type = clap
-			}
-		}
-		{
-			time = 0.0
-			scr = set_crowd_hand
-			params = {
-				hand = right
-				type = fist
-			}
-		}
-	]
-	gh3_crowd_colin_special_slow3 = [
-		{
-			time = 0.0
-			scr = set_crowd_hand
-			params = {
-				hand = left
-				type = clap
-			}
-		}
-		{
-			time = 0.0
-			scr = set_crowd_hand
-			params = {
-				hand = right
-				type = fist
-			}
-		}
-	]
-	gh3_crowd_colin_special_slow4 = [
-		{
-			time = 0.0
-			scr = set_crowd_hand
-			params = {
-				hand = left
+				Hand = left
 				type = fist
 			}
 		}
 		{
 			time = 0.0
-			scr = set_crowd_hand
+			Scr = set_crowd_hand
 			params = {
-				hand = right
-				type = clap
+				Hand = right
+				type = Rock
 			}
 		}
 	]
-	gh3_crowd_colin_starpower1 = [
+	GH3_crowd_colin_special_slow1 = [
 		{
 			time = 0.0
-			scr = set_crowd_hand
+			Scr = set_crowd_hand
 			params = {
-				hand = left
+				Hand = left
 				type = clap
 			}
 		}
 		{
 			time = 0.0
-			scr = set_crowd_hand
+			Scr = set_crowd_hand
 			params = {
-				hand = right
-				type = clap
+				Hand = right
+				type = fist
 			}
 		}
 	]
-	gh3_crowd_colin_starpower2 = [
+	GH3_crowd_Colin_special_slow2 = [
 		{
 			time = 0.0
-			scr = set_crowd_hand
+			Scr = set_crowd_hand
 			params = {
-				hand = left
+				Hand = left
 				type = clap
 			}
 		}
 		{
 			time = 0.0
-			scr = set_crowd_hand
+			Scr = set_crowd_hand
 			params = {
-				hand = right
-				type = clap
+				Hand = right
+				type = fist
 			}
 		}
 	]
-	gh3_crowd_colin_starpower3 = [
+	GH3_crowd_Colin_special_slow3 = [
 		{
 			time = 0.0
-			scr = set_crowd_hand
+			Scr = set_crowd_hand
 			params = {
-				hand = left
+				Hand = left
 				type = clap
 			}
 		}
 		{
 			time = 0.0
-			scr = set_crowd_hand
+			Scr = set_crowd_hand
 			params = {
-				hand = right
-				type = clap
+				Hand = right
+				type = fist
 			}
 		}
 	]
-	gh3_crowd_colin_starpower4 = [
+	GH3_crowd_colin_special_slow4 = [
 		{
 			time = 0.0
-			scr = set_crowd_hand
+			Scr = set_crowd_hand
 			params = {
-				hand = left
-				type = clap
-			}
-		}
-		{
-			time = 0.0
-			scr = set_crowd_hand
-			params = {
-				hand = right
-				type = clap
-			}
-		}
-	]
-	gh3_crowd_colin_starpower5 = [
-		{
-			time = 0.0
-			scr = set_crowd_hand
-			params = {
-				hand = left
-				type = clap
-			}
-		}
-		{
-			time = 0.0
-			scr = set_crowd_hand
-			params = {
-				hand = right
-				type = clap
-			}
-		}
-	]
-	gh3_crowd_colin_starpower6 = [
-		{
-			time = 0.0
-			scr = set_crowd_hand
-			params = {
-				hand = left
-				type = clap
-			}
-		}
-		{
-			time = 0.0
-			scr = set_crowd_hand
-			params = {
-				hand = right
-				type = clap
-			}
-		}
-	]
-	gh3_crowd_genna_bad1 = [
-		{
-			time = 0.0
-			scr = set_crowd_hand
-			params = {
-				hand = left
-				type = clap
-			}
-		}
-		{
-			time = 0.0
-			scr = set_crowd_hand
-			params = {
-				hand = right
-				type = clap
-			}
-		}
-	]
-	gh3_crowd_genna_bad2 = [
-		{
-			time = 0.0
-			scr = set_crowd_hand
-			params = {
-				hand = left
-				type = clap
-			}
-		}
-		{
-			time = 0.0
-			scr = set_crowd_hand
-			params = {
-				hand = right
-				type = clap
-			}
-		}
-	]
-	gh3_crowd_genna_bad3 = [
-		{
-			time = 0.0
-			scr = set_crowd_hand
-			params = {
-				hand = left
-				type = clap
-			}
-		}
-		{
-			time = 0.0
-			scr = set_crowd_hand
-			params = {
-				hand = right
-				type = clap
-			}
-		}
-	]
-	gh3_crowd_genna_bad4 = [
-		{
-			time = 0.0
-			scr = set_crowd_hand
-			params = {
-				hand = left
-				type = clap
-			}
-		}
-		{
-			time = 0.0
-			scr = set_crowd_hand
-			params = {
-				hand = right
-				type = clap
-			}
-		}
-	]
-	gh3_crowd_genna_good_fast1 = [
-		{
-			time = 0.0
-			scr = set_crowd_hand
-			params = {
-				hand = left
-				type = rock
-			}
-		}
-		{
-			time = 0.0
-			scr = set_crowd_hand
-			params = {
-				hand = right
-				type = rock
-			}
-		}
-	]
-	gh3_crowd_genna_good_fast2 = [
-		{
-			time = 0.0
-			scr = set_crowd_hand
-			params = {
-				hand = left
-				type = clap
-			}
-		}
-		{
-			time = 0.0
-			scr = set_crowd_hand
-			params = {
-				hand = right
-				type = clap
-			}
-		}
-	]
-	gh3_crowd_genna_good_fast3 = [
-		{
-			time = 0.0
-			scr = set_crowd_hand
-			params = {
-				hand = left
+				Hand = left
 				type = fist
 			}
 		}
 		{
 			time = 0.0
-			scr = set_crowd_hand
+			Scr = set_crowd_hand
 			params = {
-				hand = right
-				type = fist
+				Hand = right
+				type = clap
 			}
 		}
 	]
-	gh3_crowd_genna_good_med1 = [
+	GH3_crowd_Colin_StarPower1 = [
 		{
 			time = 0.0
-			scr = set_crowd_hand
+			Scr = set_crowd_hand
 			params = {
-				hand = left
-				type = fist
-			}
-		}
-		{
-			time = 0.0
-			scr = set_crowd_hand
-			params = {
-				hand = right
-				type = rock
-			}
-		}
-	]
-	gh3_crowd_genna_good_med2 = [
-		{
-			time = 0.0
-			scr = set_crowd_hand
-			params = {
-				hand = left
-				type = rock
-			}
-		}
-		{
-			time = 0.0
-			scr = set_crowd_hand
-			params = {
-				hand = right
-				type = fist
-			}
-		}
-	]
-	gh3_crowd_genna_good_med3 = [
-		{
-			time = 0.0
-			scr = set_crowd_hand
-			params = {
-				hand = left
-				type = fist
-			}
-		}
-		{
-			time = 0.0
-			scr = set_crowd_hand
-			params = {
-				hand = right
-				type = fist
-			}
-		}
-	]
-	gh3_crowd_genna_good_slow1 = [
-		{
-			time = 0.0
-			scr = set_crowd_hand
-			params = {
-				hand = left
-				type = fist
-			}
-		}
-		{
-			time = 0.0
-			scr = set_crowd_hand
-			params = {
-				hand = right
-				type = rock
-			}
-		}
-	]
-	gh3_crowd_genna_good_slow2 = [
-		{
-			time = 0.0
-			scr = set_crowd_hand
-			params = {
-				hand = left
-				type = rock
-			}
-		}
-		{
-			time = 0.0
-			scr = set_crowd_hand
-			params = {
-				hand = right
-				type = rock
-			}
-		}
-	]
-	gh3_crowd_genna_good_slow3 = [
-		{
-			time = 0.0
-			scr = set_crowd_hand
-			params = {
-				hand = left
-				type = rock
-			}
-		}
-		{
-			time = 0.0
-			scr = set_crowd_hand
-			params = {
-				hand = right
-				type = rock
-			}
-		}
-	]
-	gh3_crowd_genna_regular_fast1 = [
-		{
-			time = 0.0
-			scr = set_crowd_hand
-			params = {
-				hand = left
+				Hand = left
 				type = clap
 			}
 		}
 		{
 			time = 0.0
-			scr = set_crowd_hand
+			Scr = set_crowd_hand
 			params = {
-				hand = right
+				Hand = right
 				type = clap
 			}
 		}
 	]
-	gh3_crowd_genna_regular_fast2 = [
+	GH3_crowd_Colin_StarPower2 = [
 		{
 			time = 0.0
-			scr = set_crowd_hand
+			Scr = set_crowd_hand
 			params = {
-				hand = left
+				Hand = left
 				type = clap
 			}
 		}
 		{
 			time = 0.0
-			scr = set_crowd_hand
+			Scr = set_crowd_hand
 			params = {
-				hand = right
-				type = clap
-			}
-		}
-	]
-	gh3_crowd_genna_regular_fast3 = [
-		{
-			time = 0.0
-			scr = set_crowd_hand
-			params = {
-				hand = left
-				type = clap
-			}
-		}
-		{
-			time = 0.0
-			scr = set_crowd_hand
-			params = {
-				hand = right
+				Hand = right
 				type = clap
 			}
 		}
 	]
-	gh3_crowd_genna_regular_fast4 = [
+	GH3_crowd_Colin_StarPower3 = [
 		{
 			time = 0.0
-			scr = set_crowd_hand
+			Scr = set_crowd_hand
 			params = {
-				hand = left
+				Hand = left
 				type = clap
 			}
 		}
 		{
 			time = 0.0
-			scr = set_crowd_hand
+			Scr = set_crowd_hand
 			params = {
-				hand = right
-				type = clap
-			}
-		}
-	]
-	gh3_crowd_genna_regular_med1 = [
-		{
-			time = 0.0
-			scr = set_crowd_hand
-			params = {
-				hand = left
-				type = clap
-			}
-		}
-		{
-			time = 0.0
-			scr = set_crowd_hand
-			params = {
-				hand = right
+				Hand = right
 				type = clap
 			}
 		}
 	]
-	gh3_crowd_genna_regular_med2 = [
+	GH3_crowd_Colin_StarPower4 = [
 		{
 			time = 0.0
-			scr = set_crowd_hand
+			Scr = set_crowd_hand
 			params = {
-				hand = left
+				Hand = left
 				type = clap
 			}
 		}
 		{
 			time = 0.0
-			scr = set_crowd_hand
+			Scr = set_crowd_hand
 			params = {
-				hand = right
-				type = clap
-			}
-		}
-	]
-	gh3_crowd_genna_regular_med3 = [
-		{
-			time = 0.0
-			scr = set_crowd_hand
-			params = {
-				hand = left
-				type = fist
-			}
-		}
-		{
-			time = 0.0
-			scr = set_crowd_hand
-			params = {
-				hand = right
-				type = rock
-			}
-		}
-	]
-	gh3_crowd_genna_regular_med4 = [
-		{
-			time = 0.0
-			scr = set_crowd_hand
-			params = {
-				hand = left
-				type = rock
-			}
-		}
-		{
-			time = 0.0
-			scr = set_crowd_hand
-			params = {
-				hand = right
-				type = fist
-			}
-		}
-	]
-	gh3_crowd_genna_regular_slow1 = [
-		{
-			time = 0.0
-			scr = set_crowd_hand
-			params = {
-				hand = left
-				type = clap
-			}
-		}
-		{
-			time = 0.0
-			scr = set_crowd_hand
-			params = {
-				hand = right
+				Hand = right
 				type = clap
 			}
 		}
 	]
-	gh3_crowd_genna_regular_slow2 = [
+	GH3_crowd_Colin_StarPower5 = [
 		{
 			time = 0.0
-			scr = set_crowd_hand
+			Scr = set_crowd_hand
 			params = {
-				hand = left
+				Hand = left
 				type = clap
 			}
 		}
 		{
 			time = 0.0
-			scr = set_crowd_hand
+			Scr = set_crowd_hand
 			params = {
-				hand = right
-				type = clap
-			}
-		}
-	]
-	gh3_crowd_genna_regular_slow3 = [
-		{
-			time = 0.0
-			scr = set_crowd_hand
-			params = {
-				hand = left
-				type = clap
-			}
-		}
-		{
-			time = 0.0
-			scr = set_crowd_hand
-			params = {
-				hand = right
+				Hand = right
 				type = clap
 			}
 		}
 	]
-	gh3_crowd_genna_regular_slow4 = [
+	GH3_crowd_Colin_StarPower6 = [
 		{
 			time = 0.0
-			scr = set_crowd_hand
+			Scr = set_crowd_hand
 			params = {
-				hand = left
+				Hand = left
+				type = clap
+			}
+		}
+		{
+			time = 0.0
+			Scr = set_crowd_hand
+			params = {
+				Hand = right
+				type = clap
+			}
+		}
+	]
+	GH3_crowd_Genna_bad1 = [
+		{
+			time = 0.0
+			Scr = set_crowd_hand
+			params = {
+				Hand = left
+				type = clap
+			}
+		}
+		{
+			time = 0.0
+			Scr = set_crowd_hand
+			params = {
+				Hand = right
+				type = clap
+			}
+		}
+	]
+	GH3_crowd_Genna_bad2 = [
+		{
+			time = 0.0
+			Scr = set_crowd_hand
+			params = {
+				Hand = left
+				type = clap
+			}
+		}
+		{
+			time = 0.0
+			Scr = set_crowd_hand
+			params = {
+				Hand = right
+				type = clap
+			}
+		}
+	]
+	GH3_crowd_Genna_bad3 = [
+		{
+			time = 0.0
+			Scr = set_crowd_hand
+			params = {
+				Hand = left
+				type = clap
+			}
+		}
+		{
+			time = 0.0
+			Scr = set_crowd_hand
+			params = {
+				Hand = right
+				type = clap
+			}
+		}
+	]
+	GH3_crowd_Genna_bad4 = [
+		{
+			time = 0.0
+			Scr = set_crowd_hand
+			params = {
+				Hand = left
+				type = clap
+			}
+		}
+		{
+			time = 0.0
+			Scr = set_crowd_hand
+			params = {
+				Hand = right
+				type = clap
+			}
+		}
+	]
+	GH3_crowd_Genna_good_fast1 = [
+		{
+			time = 0.0
+			Scr = set_crowd_hand
+			params = {
+				Hand = left
+				type = Rock
+			}
+		}
+		{
+			time = 0.0
+			Scr = set_crowd_hand
+			params = {
+				Hand = right
+				type = Rock
+			}
+		}
+	]
+	GH3_crowd_genna_good_fast2 = [
+		{
+			time = 0.0
+			Scr = set_crowd_hand
+			params = {
+				Hand = left
+				type = clap
+			}
+		}
+		{
+			time = 0.0
+			Scr = set_crowd_hand
+			params = {
+				Hand = right
+				type = clap
+			}
+		}
+	]
+	GH3_crowd_Genna_good_fast3 = [
+		{
+			time = 0.0
+			Scr = set_crowd_hand
+			params = {
+				Hand = left
 				type = fist
 			}
 		}
 		{
 			time = 0.0
-			scr = set_crowd_hand
+			Scr = set_crowd_hand
 			params = {
-				hand = right
-				type = rock
+				Hand = right
+				type = fist
 			}
 		}
 	]
-	gh3_crowd_jerod_bad1 = [
+	GH3_crowd_genna_good_med1 = [
 		{
 			time = 0.0
-			scr = set_crowd_hand
+			Scr = set_crowd_hand
 			params = {
-				hand = left
-				type = clap
-			}
-		}
-		{
-			time = 0.0
-			scr = set_crowd_hand
-			params = {
-				hand = right
-				type = clap
-			}
-		}
-	]
-	gh3_crowd_jerod_bad2 = [
-		{
-			time = 0.0
-			scr = set_crowd_hand
-			params = {
-				hand = left
-				type = clap
-			}
-		}
-		{
-			time = 0.0
-			scr = set_crowd_hand
-			params = {
-				hand = right
-				type = clap
-			}
-		}
-	]
-	gh3_crowd_jerod_bad3 = [
-		{
-			time = 0.0
-			scr = set_crowd_hand
-			params = {
-				hand = left
-				type = clap
-			}
-		}
-		{
-			time = 0.0
-			scr = set_crowd_hand
-			params = {
-				hand = right
-				type = clap
-			}
-		}
-	]
-	gh3_crowd_jerod_bad4 = [
-		{
-			time = 0.0
-			scr = set_crowd_hand
-			params = {
-				hand = left
-				type = clap
-			}
-		}
-		{
-			time = 0.0
-			scr = set_crowd_hand
-			params = {
-				hand = right
-				type = clap
-			}
-		}
-	]
-	gh3_crowd_jerod_good_fast1 = [
-		{
-			time = 0.0
-			scr = set_crowd_hand
-			params = {
-				hand = left
-				type = rock
-			}
-		}
-		{
-			time = 0.0
-			scr = set_crowd_hand
-			params = {
-				hand = right
-				type = rock
-			}
-		}
-	]
-	gh3_crowd_jerod_good_fast2 = [
-		{
-			time = 0.0
-			scr = set_crowd_hand
-			params = {
-				hand = left
-				type = clap
-			}
-		}
-		{
-			time = 0.0
-			scr = set_crowd_hand
-			params = {
-				hand = right
-				type = clap
-			}
-		}
-	]
-	gh3_crowd_jerod_good_fast3 = [
-		{
-			time = 0.0
-			scr = set_crowd_hand
-			params = {
-				hand = left
+				Hand = left
 				type = fist
 			}
 		}
 		{
 			time = 0.0
-			scr = set_crowd_hand
+			Scr = set_crowd_hand
 			params = {
-				hand = right
-				type = rock
+				Hand = right
+				type = Rock
 			}
 		}
 	]
-	gh3_crowd_jerod_good_med1 = [
+	GH3_crowd_genna_good_med2 = [
 		{
 			time = 0.0
-			scr = set_crowd_hand
+			Scr = set_crowd_hand
 			params = {
-				hand = left
+				Hand = left
+				type = Rock
+			}
+		}
+		{
+			time = 0.0
+			Scr = set_crowd_hand
+			params = {
+				Hand = right
+				type = fist
+			}
+		}
+	]
+	GH3_crowd_genna_good_med3 = [
+		{
+			time = 0.0
+			Scr = set_crowd_hand
+			params = {
+				Hand = left
 				type = fist
 			}
 		}
 		{
 			time = 0.0
-			scr = set_crowd_hand
+			Scr = set_crowd_hand
 			params = {
-				hand = right
-				type = rock
+				Hand = right
+				type = fist
 			}
 		}
 	]
-	gh3_crowd_jerod_good_med2 = [
+	GH3_crowd_Genna_good_slow1 = [
 		{
 			time = 0.0
-			scr = set_crowd_hand
+			Scr = set_crowd_hand
 			params = {
-				hand = left
-				type = rock
+				Hand = left
+				type = fist
 			}
 		}
 		{
 			time = 0.0
-			scr = set_crowd_hand
+			Scr = set_crowd_hand
 			params = {
-				hand = right
-				type = rock
+				Hand = right
+				type = Rock
+			}
+		}
+	]
+	GH3_crowd_Genna_good_slow2 = [
+		{
+			time = 0.0
+			Scr = set_crowd_hand
+			params = {
+				Hand = left
+				type = Rock
+			}
+		}
+		{
+			time = 0.0
+			Scr = set_crowd_hand
+			params = {
+				Hand = right
+				type = Rock
+			}
+		}
+	]
+	GH3_crowd_Genna_good_slow3 = [
+		{
+			time = 0.0
+			Scr = set_crowd_hand
+			params = {
+				Hand = left
+				type = Rock
+			}
+		}
+		{
+			time = 0.0
+			Scr = set_crowd_hand
+			params = {
+				Hand = right
+				type = Rock
+			}
+		}
+	]
+	GH3_crowd_Genna_regular_fast1 = [
+		{
+			time = 0.0
+			Scr = set_crowd_hand
+			params = {
+				Hand = left
+				type = clap
+			}
+		}
+		{
+			time = 0.0
+			Scr = set_crowd_hand
+			params = {
+				Hand = right
+				type = clap
+			}
+		}
+	]
+	GH3_crowd_Genna_regular_fast2 = [
+		{
+			time = 0.0
+			Scr = set_crowd_hand
+			params = {
+				Hand = left
+				type = clap
+			}
+		}
+		{
+			time = 0.0
+			Scr = set_crowd_hand
+			params = {
+				Hand = right
+				type = clap
+			}
+		}
+	]
+	GH3_crowd_Genna_regular_fast3 = [
+		{
+			time = 0.0
+			Scr = set_crowd_hand
+			params = {
+				Hand = left
+				type = clap
+			}
+		}
+		{
+			time = 0.0
+			Scr = set_crowd_hand
+			params = {
+				Hand = right
+				type = clap
+			}
+		}
+	]
+	GH3_crowd_Genna_regular_fast4 = [
+		{
+			time = 0.0
+			Scr = set_crowd_hand
+			params = {
+				Hand = left
+				type = clap
+			}
+		}
+		{
+			time = 0.0
+			Scr = set_crowd_hand
+			params = {
+				Hand = right
+				type = clap
+			}
+		}
+	]
+	GH3_crowd_Genna_regular_med1 = [
+		{
+			time = 0.0
+			Scr = set_crowd_hand
+			params = {
+				Hand = left
+				type = clap
+			}
+		}
+		{
+			time = 0.0
+			Scr = set_crowd_hand
+			params = {
+				Hand = right
+				type = clap
+			}
+		}
+	]
+	GH3_crowd_Genna_regular_med2 = [
+		{
+			time = 0.0
+			Scr = set_crowd_hand
+			params = {
+				Hand = left
+				type = clap
+			}
+		}
+		{
+			time = 0.0
+			Scr = set_crowd_hand
+			params = {
+				Hand = right
+				type = clap
+			}
+		}
+	]
+	GH3_crowd_Genna_regular_med3 = [
+		{
+			time = 0.0
+			Scr = set_crowd_hand
+			params = {
+				Hand = left
+				type = fist
+			}
+		}
+		{
+			time = 0.0
+			Scr = set_crowd_hand
+			params = {
+				Hand = right
+				type = Rock
+			}
+		}
+	]
+	GH3_crowd_Genna_regular_med4 = [
+		{
+			time = 0.0
+			Scr = set_crowd_hand
+			params = {
+				Hand = left
+				type = Rock
+			}
+		}
+		{
+			time = 0.0
+			Scr = set_crowd_hand
+			params = {
+				Hand = right
+				type = fist
+			}
+		}
+	]
+	GH3_crowd_Genna_regular_slow1 = [
+		{
+			time = 0.0
+			Scr = set_crowd_hand
+			params = {
+				Hand = left
+				type = clap
+			}
+		}
+		{
+			time = 0.0
+			Scr = set_crowd_hand
+			params = {
+				Hand = right
+				type = clap
+			}
+		}
+	]
+	GH3_crowd_Genna_regular_slow2 = [
+		{
+			time = 0.0
+			Scr = set_crowd_hand
+			params = {
+				Hand = left
+				type = clap
+			}
+		}
+		{
+			time = 0.0
+			Scr = set_crowd_hand
+			params = {
+				Hand = right
+				type = clap
+			}
+		}
+	]
+	GH3_crowd_Genna_regular_slow3 = [
+		{
+			time = 0.0
+			Scr = set_crowd_hand
+			params = {
+				Hand = left
+				type = clap
+			}
+		}
+		{
+			time = 0.0
+			Scr = set_crowd_hand
+			params = {
+				Hand = right
+				type = clap
+			}
+		}
+	]
+	GH3_crowd_Genna_regular_slow4 = [
+		{
+			time = 0.0
+			Scr = set_crowd_hand
+			params = {
+				Hand = left
+				type = fist
+			}
+		}
+		{
+			time = 0.0
+			Scr = set_crowd_hand
+			params = {
+				Hand = right
+				type = Rock
+			}
+		}
+	]
+	GH3_crowd_Jerod_bad1 = [
+		{
+			time = 0.0
+			Scr = set_crowd_hand
+			params = {
+				Hand = left
+				type = clap
+			}
+		}
+		{
+			time = 0.0
+			Scr = set_crowd_hand
+			params = {
+				Hand = right
+				type = clap
+			}
+		}
+	]
+	GH3_crowd_Jerod_bad2 = [
+		{
+			time = 0.0
+			Scr = set_crowd_hand
+			params = {
+				Hand = left
+				type = clap
+			}
+		}
+		{
+			time = 0.0
+			Scr = set_crowd_hand
+			params = {
+				Hand = right
+				type = clap
+			}
+		}
+	]
+	GH3_crowd_Jerod_bad3 = [
+		{
+			time = 0.0
+			Scr = set_crowd_hand
+			params = {
+				Hand = left
+				type = clap
+			}
+		}
+		{
+			time = 0.0
+			Scr = set_crowd_hand
+			params = {
+				Hand = right
+				type = clap
+			}
+		}
+	]
+	GH3_crowd_Jerod_bad4 = [
+		{
+			time = 0.0
+			Scr = set_crowd_hand
+			params = {
+				Hand = left
+				type = clap
+			}
+		}
+		{
+			time = 0.0
+			Scr = set_crowd_hand
+			params = {
+				Hand = right
+				type = clap
+			}
+		}
+	]
+	GH3_crowd_Jerod_good_fast1 = [
+		{
+			time = 0.0
+			Scr = set_crowd_hand
+			params = {
+				Hand = left
+				type = Rock
+			}
+		}
+		{
+			time = 0.0
+			Scr = set_crowd_hand
+			params = {
+				Hand = right
+				type = Rock
+			}
+		}
+	]
+	GH3_crowd_jerod_good_fast2 = [
+		{
+			time = 0.0
+			Scr = set_crowd_hand
+			params = {
+				Hand = left
+				type = clap
+			}
+		}
+		{
+			time = 0.0
+			Scr = set_crowd_hand
+			params = {
+				Hand = right
+				type = clap
+			}
+		}
+	]
+	GH3_crowd_Jerod_good_fast3 = [
+		{
+			time = 0.0
+			Scr = set_crowd_hand
+			params = {
+				Hand = left
+				type = fist
+			}
+		}
+		{
+			time = 0.0
+			Scr = set_crowd_hand
+			params = {
+				Hand = right
+				type = Rock
+			}
+		}
+	]
+	GH3_crowd_Jerod_good_med1 = [
+		{
+			time = 0.0
+			Scr = set_crowd_hand
+			params = {
+				Hand = left
+				type = fist
+			}
+		}
+		{
+			time = 0.0
+			Scr = set_crowd_hand
+			params = {
+				Hand = right
+				type = Rock
+			}
+		}
+	]
+	GH3_crowd_jerod_good_med2 = [
+		{
+			time = 0.0
+			Scr = set_crowd_hand
+			params = {
+				Hand = left
+				type = Rock
+			}
+		}
+		{
+			time = 0.0
+			Scr = set_crowd_hand
+			params = {
+				Hand = right
+				type = Rock
 			}
 		}
 		{
 			time = 0.5
-			scr = set_crowd_hand
+			Scr = set_crowd_hand
 			params = {
-				hand = left
+				Hand = left
 				type = clap
 			}
 		}
 		{
 			time = 0.5
-			scr = set_crowd_hand
+			Scr = set_crowd_hand
 			params = {
-				hand = right
+				Hand = right
 				type = clap
 			}
 		}
 		{
 			time = 1.1
-			scr = set_crowd_hand
+			Scr = set_crowd_hand
 			params = {
-				hand = left
-				type = rock
+				Hand = left
+				type = Rock
 			}
 		}
 		{
 			time = 1.1
-			scr = set_crowd_hand
+			Scr = set_crowd_hand
 			params = {
-				hand = right
-				type = rock
+				Hand = right
+				type = Rock
 			}
 		}
 		{
 			time = 1.6
-			scr = set_crowd_hand
+			Scr = set_crowd_hand
 			params = {
-				hand = left
+				Hand = left
 				type = clap
 			}
 		}
 		{
 			time = 1.6
-			scr = set_crowd_hand
+			Scr = set_crowd_hand
 			params = {
-				hand = right
+				Hand = right
 				type = clap
 			}
 		}
 		{
 			time = 2.3
-			scr = set_crowd_hand
+			Scr = set_crowd_hand
 			params = {
-				hand = left
-				type = rock
+				Hand = left
+				type = Rock
 			}
 		}
 		{
 			time = 2.3
-			scr = set_crowd_hand
+			Scr = set_crowd_hand
 			params = {
-				hand = right
-				type = rock
+				Hand = right
+				type = Rock
 			}
 		}
 		{
 			time = 2.6699998
-			scr = set_crowd_hand
+			Scr = set_crowd_hand
 			params = {
-				hand = left
+				Hand = left
 				type = clap
 			}
 		}
 		{
 			time = 2.6699998
-			scr = set_crowd_hand
+			Scr = set_crowd_hand
 			params = {
-				hand = right
+				Hand = right
 				type = clap
 			}
 		}
 		{
 			time = 3.1
-			scr = set_crowd_hand
+			Scr = set_crowd_hand
 			params = {
-				hand = left
-				type = rock
+				Hand = left
+				type = Rock
 			}
 		}
 		{
 			time = 3.1
-			scr = set_crowd_hand
+			Scr = set_crowd_hand
 			params = {
-				hand = right
-				type = rock
+				Hand = right
+				type = Rock
 			}
 		}
 	]
-	gh3_crowd_jerod_good_med3 = [
+	GH3_crowd_Jerod_good_med3 = [
 		{
 			time = 0.0
-			scr = set_crowd_hand
+			Scr = set_crowd_hand
 			params = {
-				hand = left
+				Hand = left
 				type = fist
 			}
 		}
 		{
 			time = 0.0
-			scr = set_crowd_hand
+			Scr = set_crowd_hand
 			params = {
-				hand = right
+				Hand = right
 				type = clap
 			}
 		}
 	]
-	gh3_crowd_jerod_good_slow1 = [
+	GH3_crowd_Jerod_good_slow1 = [
 		{
 			time = 0.0
-			scr = set_crowd_hand
+			Scr = set_crowd_hand
 			params = {
-				hand = left
+				Hand = left
 				type = fist
 			}
 		}
 		{
 			time = 0.0
-			scr = set_crowd_hand
+			Scr = set_crowd_hand
 			params = {
-				hand = right
-				type = rock
+				Hand = right
+				type = Rock
 			}
 		}
 	]
-	gh3_crowd_jerod_good_slow2 = [
+	GH3_crowd_Jerod_good_slow2 = [
 		{
 			time = 0.0
-			scr = set_crowd_hand
+			Scr = set_crowd_hand
 			params = {
-				hand = left
-				type = rock
+				Hand = left
+				type = Rock
 			}
 		}
 		{
 			time = 0.0
-			scr = set_crowd_hand
+			Scr = set_crowd_hand
 			params = {
-				hand = right
-				type = rock
+				Hand = right
+				type = Rock
 			}
 		}
 	]
-	gh3_crowd_jerod_good_slow3 = [
+	GH3_crowd_Jerod_good_slow3 = [
 		{
 			time = 0.0
-			scr = set_crowd_hand
+			Scr = set_crowd_hand
 			params = {
-				hand = left
+				Hand = left
 				type = fist
 			}
 		}
 		{
 			time = 0.0
-			scr = set_crowd_hand
+			Scr = set_crowd_hand
 			params = {
-				hand = right
-				type = rock
+				Hand = right
+				type = Rock
 			}
 		}
 	]
-	gh3_crowd_jerod_reg_fast1 = [
+	GH3_crowd_Jerod_reg_fast1 = [
 		{
 			time = 0.0
-			scr = set_crowd_hand
+			Scr = set_crowd_hand
 			params = {
-				hand = left
+				Hand = left
 				type = clap
 			}
 		}
 		{
 			time = 0.0
-			scr = set_crowd_hand
+			Scr = set_crowd_hand
 			params = {
-				hand = right
-				type = clap
-			}
-		}
-	]
-	gh3_crowd_jerod_reg_fast2 = [
-		{
-			time = 0.0
-			scr = set_crowd_hand
-			params = {
-				hand = left
-				type = clap
-			}
-		}
-		{
-			time = 0.0
-			scr = set_crowd_hand
-			params = {
-				hand = right
+				Hand = right
 				type = clap
 			}
 		}
 	]
-	gh3_crowd_jerod_reg_fast3 = [
+	GH3_crowd_Jerod_reg_fast2 = [
 		{
 			time = 0.0
-			scr = set_crowd_hand
+			Scr = set_crowd_hand
 			params = {
-				hand = left
+				Hand = left
+				type = clap
+			}
+		}
+		{
+			time = 0.0
+			Scr = set_crowd_hand
+			params = {
+				Hand = right
+				type = clap
+			}
+		}
+	]
+	GH3_crowd_Jerod_reg_fast3 = [
+		{
+			time = 0.0
+			Scr = set_crowd_hand
+			params = {
+				Hand = left
 				type = fist
 			}
 		}
 		{
 			time = 0.0
-			scr = set_crowd_hand
+			Scr = set_crowd_hand
 			params = {
-				hand = right
-				type = rock
+				Hand = right
+				type = Rock
 			}
 		}
 	]
-	gh3_crowd_jerod_reg_fast4 = [
+	GH3_crowd_Jerod_reg_fast4 = [
 		{
 			time = 0.0
-			scr = set_crowd_hand
+			Scr = set_crowd_hand
 			params = {
-				hand = left
+				Hand = left
 				type = fist
 			}
 		}
 		{
 			time = 0.0
-			scr = set_crowd_hand
+			Scr = set_crowd_hand
 			params = {
-				hand = right
+				Hand = right
 				type = fist
 			}
 		}
 	]
-	gh3_crowd_jerod_reg_med1 = [
+	GH3_crowd_Jerod_reg_med1 = [
 		{
 			time = 0.0
-			scr = set_crowd_hand
+			Scr = set_crowd_hand
 			params = {
-				hand = left
-				type = fist
-			}
-		}
-		{
-			time = 0.0
-			scr = set_crowd_hand
-			params = {
-				hand = right
-				type = clap
-			}
-		}
-	]
-	gh3_crowd_jerod_reg_med2 = [
-		{
-			time = 0.0
-			scr = set_crowd_hand
-			params = {
-				hand = left
+				Hand = left
 				type = fist
 			}
 		}
 		{
 			time = 0.0
-			scr = set_crowd_hand
+			Scr = set_crowd_hand
 			params = {
-				hand = right
+				Hand = right
 				type = clap
 			}
 		}
 	]
-	gh3_crowd_jerod_reg_med3 = [
+	GH3_crowd_Jerod_reg_med2 = [
 		{
 			time = 0.0
-			scr = set_crowd_hand
+			Scr = set_crowd_hand
 			params = {
-				hand = left
+				Hand = left
 				type = fist
 			}
 		}
 		{
 			time = 0.0
-			scr = set_crowd_hand
+			Scr = set_crowd_hand
 			params = {
-				hand = right
-				type = fist
+				Hand = right
+				type = clap
 			}
 		}
 	]
-	gh3_crowd_jerod_reg_med4 = [
+	GH3_crowd_Jerod_reg_med3 = [
 		{
 			time = 0.0
-			scr = set_crowd_hand
+			Scr = set_crowd_hand
 			params = {
-				hand = left
-				type = rock
-			}
-		}
-		{
-			time = 0.0
-			scr = set_crowd_hand
-			params = {
-				hand = right
-				type = rock
-			}
-		}
-	]
-	gh3_crowd_jerod_regular_slow1 = [
-		{
-			time = 0.0
-			scr = set_crowd_hand
-			params = {
-				hand = left
+				Hand = left
 				type = fist
 			}
 		}
 		{
 			time = 0.0
-			scr = set_crowd_hand
+			Scr = set_crowd_hand
 			params = {
-				hand = right
-				type = rock
+				Hand = right
+				type = fist
 			}
 		}
 	]
-	gh3_crowd_jerod_regular_slow2 = [
+	GH3_crowd_Jerod_reg_med4 = [
 		{
 			time = 0.0
-			scr = set_crowd_hand
+			Scr = set_crowd_hand
 			params = {
-				hand = left
-				type = clap
+				Hand = left
+				type = Rock
 			}
 		}
 		{
 			time = 0.0
-			scr = set_crowd_hand
+			Scr = set_crowd_hand
 			params = {
-				hand = right
-				type = clap
+				Hand = right
+				type = Rock
 			}
 		}
 	]
-	gh3_crowd_jerod_regular_slow3 = [
+	GH3_crowd_Jerod_regular_slow1 = [
 		{
 			time = 0.0
-			scr = set_crowd_hand
+			Scr = set_crowd_hand
 			params = {
-				hand = left
+				Hand = left
 				type = fist
 			}
 		}
 		{
 			time = 0.0
-			scr = set_crowd_hand
+			Scr = set_crowd_hand
 			params = {
-				hand = right
+				Hand = right
+				type = Rock
+			}
+		}
+	]
+	GH3_crowd_Jerod_regular_slow2 = [
+		{
+			time = 0.0
+			Scr = set_crowd_hand
+			params = {
+				Hand = left
+				type = clap
+			}
+		}
+		{
+			time = 0.0
+			Scr = set_crowd_hand
+			params = {
+				Hand = right
 				type = clap
 			}
 		}
 	]
-	gh3_crowd_jerod_regular_slow4 = [
+	GH3_crowd_Jerod_regular_slow3 = [
 		{
 			time = 0.0
-			scr = set_crowd_hand
+			Scr = set_crowd_hand
 			params = {
-				hand = left
-				type = rock
-			}
-		}
-		{
-			time = 0.0
-			scr = set_crowd_hand
-			params = {
-				hand = right
-				type = rock
-			}
-		}
-	]
-	gh3_crowd_jerod_special_slow1 = [
-		{
-			time = 0.0
-			scr = set_crowd_hand
-			params = {
-				hand = left
+				Hand = left
 				type = fist
 			}
 		}
 		{
 			time = 0.0
-			scr = set_crowd_hand
+			Scr = set_crowd_hand
 			params = {
-				hand = right
-				type = fist
-			}
-		}
-	]
-	gh3_crowd_jerod_special_slow2 = [
-		{
-			time = 0.0
-			scr = set_crowd_hand
-			params = {
-				hand = left
-				type = fist
-			}
-		}
-		{
-			time = 0.0
-			scr = set_crowd_hand
-			params = {
-				hand = right
+				Hand = right
 				type = clap
 			}
 		}
 	]
-	gh3_crowd_jerod_special_slow3 = [
+	GH3_crowd_Jerod_regular_slow4 = [
 		{
 			time = 0.0
-			scr = set_crowd_hand
+			Scr = set_crowd_hand
 			params = {
-				hand = left
-				type = clap
+				Hand = left
+				type = Rock
 			}
 		}
 		{
 			time = 0.0
-			scr = set_crowd_hand
+			Scr = set_crowd_hand
 			params = {
-				hand = right
-				type = fist
+				Hand = right
+				type = Rock
 			}
 		}
 	]
-	gh3_crowd_jerod_special_slow4 = [
+	GH3_crowd_jerod_special_slow1 = [
 		{
 			time = 0.0
-			scr = set_crowd_hand
+			Scr = set_crowd_hand
 			params = {
-				hand = left
+				Hand = left
 				type = fist
 			}
 		}
 		{
 			time = 0.0
-			scr = set_crowd_hand
+			Scr = set_crowd_hand
 			params = {
-				hand = right
-				type = clap
+				Hand = right
+				type = fist
 			}
 		}
 	]
-	gh3_crowd_rick_bad1 = [
+	GH3_crowd_Jerod_special_slow2 = [
 		{
 			time = 0.0
-			scr = set_crowd_hand
+			Scr = set_crowd_hand
 			params = {
-				hand = left
-				type = clap
-			}
-		}
-		{
-			time = 0.0
-			scr = set_crowd_hand
-			params = {
-				hand = right
-				type = clap
-			}
-		}
-	]
-	gh3_crowd_rick_bad2 = [
-		{
-			time = 0.0
-			scr = set_crowd_hand
-			params = {
-				hand = left
-				type = clap
-			}
-		}
-		{
-			time = 0.0
-			scr = set_crowd_hand
-			params = {
-				hand = right
-				type = clap
-			}
-		}
-	]
-	gh3_crowd_rick_bad3 = [
-		{
-			time = 0.0
-			scr = set_crowd_hand
-			params = {
-				hand = left
-				type = clap
-			}
-		}
-		{
-			time = 0.0
-			scr = set_crowd_hand
-			params = {
-				hand = right
-				type = clap
-			}
-		}
-	]
-	gh3_crowd_rick_bad4 = [
-		{
-			time = 0.0
-			scr = set_crowd_hand
-			params = {
-				hand = left
-				type = clap
-			}
-		}
-		{
-			time = 0.0
-			scr = set_crowd_hand
-			params = {
-				hand = right
-				type = clap
-			}
-		}
-	]
-	gh3_crowd_rick_good_fast1 = [
-		{
-			time = 0.0
-			scr = set_crowd_hand
-			params = {
-				hand = left
-				type = rock
-			}
-		}
-		{
-			time = 0.0
-			scr = set_crowd_hand
-			params = {
-				hand = right
-				type = rock
-			}
-		}
-	]
-	gh3_crowd_rick_good_fast2 = [
-		{
-			time = 0.0
-			scr = set_crowd_hand
-			params = {
-				hand = left
-				type = rock
-			}
-		}
-		{
-			time = 0.0
-			scr = set_crowd_hand
-			params = {
-				hand = right
-				type = rock
-			}
-		}
-	]
-	gh3_crowd_rick_good_fast3 = [
-		{
-			time = 0.0
-			scr = set_crowd_hand
-			params = {
-				hand = left
+				Hand = left
 				type = fist
 			}
 		}
 		{
 			time = 0.0
-			scr = set_crowd_hand
+			Scr = set_crowd_hand
 			params = {
-				hand = right
-				type = rock
+				Hand = right
+				type = clap
 			}
 		}
 	]
-	gh3_crowd_rick_good_med1 = [
+	GH3_crowd_jerod_special_slow3 = [
 		{
 			time = 0.0
-			scr = set_crowd_hand
+			Scr = set_crowd_hand
 			params = {
-				hand = left
+				Hand = left
+				type = clap
+			}
+		}
+		{
+			time = 0.0
+			Scr = set_crowd_hand
+			params = {
+				Hand = right
+				type = fist
+			}
+		}
+	]
+	GH3_crowd_jerod_special_slow4 = [
+		{
+			time = 0.0
+			Scr = set_crowd_hand
+			params = {
+				Hand = left
 				type = fist
 			}
 		}
 		{
 			time = 0.0
-			scr = set_crowd_hand
+			Scr = set_crowd_hand
 			params = {
-				hand = right
-				type = rock
+				Hand = right
+				type = clap
 			}
 		}
 	]
-	gh3_crowd_rick_good_med2 = [
+	GH3_crowd_Rick_bad1 = [
 		{
 			time = 0.0
-			scr = set_crowd_hand
+			Scr = set_crowd_hand
 			params = {
-				hand = left
-				type = rock
+				Hand = left
+				type = clap
 			}
 		}
 		{
 			time = 0.0
-			scr = set_crowd_hand
+			Scr = set_crowd_hand
 			params = {
-				hand = right
-				type = rock
+				Hand = right
+				type = clap
 			}
 		}
 	]
-	gh3_crowd_rick_good_med3 = [
+	GH3_crowd_Rick_bad2 = [
 		{
 			time = 0.0
-			scr = set_crowd_hand
+			Scr = set_crowd_hand
 			params = {
-				hand = left
+				Hand = left
+				type = clap
+			}
+		}
+		{
+			time = 0.0
+			Scr = set_crowd_hand
+			params = {
+				Hand = right
+				type = clap
+			}
+		}
+	]
+	GH3_crowd_Rick_bad3 = [
+		{
+			time = 0.0
+			Scr = set_crowd_hand
+			params = {
+				Hand = left
+				type = clap
+			}
+		}
+		{
+			time = 0.0
+			Scr = set_crowd_hand
+			params = {
+				Hand = right
+				type = clap
+			}
+		}
+	]
+	GH3_crowd_Rick_bad4 = [
+		{
+			time = 0.0
+			Scr = set_crowd_hand
+			params = {
+				Hand = left
+				type = clap
+			}
+		}
+		{
+			time = 0.0
+			Scr = set_crowd_hand
+			params = {
+				Hand = right
+				type = clap
+			}
+		}
+	]
+	GH3_crowd_Rick_good_fast1 = [
+		{
+			time = 0.0
+			Scr = set_crowd_hand
+			params = {
+				Hand = left
+				type = Rock
+			}
+		}
+		{
+			time = 0.0
+			Scr = set_crowd_hand
+			params = {
+				Hand = right
+				type = Rock
+			}
+		}
+	]
+	GH3_crowd_Rick_good_fast2 = [
+		{
+			time = 0.0
+			Scr = set_crowd_hand
+			params = {
+				Hand = left
+				type = Rock
+			}
+		}
+		{
+			time = 0.0
+			Scr = set_crowd_hand
+			params = {
+				Hand = right
+				type = Rock
+			}
+		}
+	]
+	GH3_crowd_Rick_good_fast3 = [
+		{
+			time = 0.0
+			Scr = set_crowd_hand
+			params = {
+				Hand = left
 				type = fist
 			}
 		}
 		{
 			time = 0.0
-			scr = set_crowd_hand
+			Scr = set_crowd_hand
 			params = {
-				hand = right
-				type = fist
+				Hand = right
+				type = Rock
 			}
 		}
 	]
-	gh3_crowd_rick_good_slow1 = [
+	GH3_crowd_rick_good_med1 = [
 		{
 			time = 0.0
-			scr = set_crowd_hand
+			Scr = set_crowd_hand
 			params = {
-				hand = left
-				type = clap
-			}
-		}
-		{
-			time = 0.0
-			scr = set_crowd_hand
-			params = {
-				hand = right
-				type = clap
-			}
-		}
-	]
-	gh3_crowd_rick_good_slow2 = [
-		{
-			time = 0.0
-			scr = set_crowd_hand
-			params = {
-				hand = left
-				type = rock
-			}
-		}
-		{
-			time = 0.0
-			scr = set_crowd_hand
-			params = {
-				hand = right
-				type = rock
-			}
-		}
-	]
-	gh3_crowd_rick_good_slow3 = [
-		{
-			time = 0.0
-			scr = set_crowd_hand
-			params = {
-				hand = left
+				Hand = left
 				type = fist
 			}
 		}
 		{
 			time = 0.0
-			scr = set_crowd_hand
+			Scr = set_crowd_hand
 			params = {
-				hand = right
-				type = clap
+				Hand = right
+				type = Rock
 			}
 		}
 	]
-	gh3_crowd_rick_regular_fast1 = [
+	GH3_crowd_rick_good_med2 = [
 		{
 			time = 0.0
-			scr = set_crowd_hand
+			Scr = set_crowd_hand
 			params = {
-				hand = left
-				type = clap
+				Hand = left
+				type = Rock
 			}
 		}
 		{
 			time = 0.0
-			scr = set_crowd_hand
+			Scr = set_crowd_hand
 			params = {
-				hand = right
-				type = clap
-			}
-		}
-	]
-	gh3_crowd_rick_regular_fast2 = [
-		{
-			time = 0.0
-			scr = set_crowd_hand
-			params = {
-				hand = left
-				type = clap
-			}
-		}
-		{
-			time = 0.0
-			scr = set_crowd_hand
-			params = {
-				hand = right
-				type = clap
+				Hand = right
+				type = Rock
 			}
 		}
 	]
-	gh3_crowd_rick_regular_fast3 = [
+	GH3_crowd_rick_good_med3 = [
 		{
 			time = 0.0
-			scr = set_crowd_hand
+			Scr = set_crowd_hand
 			params = {
-				hand = left
-				type = clap
-			}
-		}
-		{
-			time = 0.0
-			scr = set_crowd_hand
-			params = {
-				hand = right
-				type = clap
-			}
-		}
-	]
-	gh3_crowd_rick_regular_fast4 = [
-		{
-			time = 0.0
-			scr = set_crowd_hand
-			params = {
-				hand = left
-				type = clap
-			}
-		}
-		{
-			time = 0.0
-			scr = set_crowd_hand
-			params = {
-				hand = right
-				type = clap
-			}
-		}
-	]
-	gh3_crowd_rick_regular_med1 = [
-		{
-			time = 0.0
-			scr = set_crowd_hand
-			params = {
-				hand = left
-				type = clap
-			}
-		}
-		{
-			time = 0.0
-			scr = set_crowd_hand
-			params = {
-				hand = right
-				type = clap
-			}
-		}
-	]
-	gh3_crowd_rick_regular_med2 = [
-		{
-			time = 0.0
-			scr = set_crowd_hand
-			params = {
-				hand = left
-				type = clap
-			}
-		}
-		{
-			time = 0.0
-			scr = set_crowd_hand
-			params = {
-				hand = right
-				type = clap
-			}
-		}
-	]
-	gh3_crowd_rick_regular_med3 = [
-		{
-			time = 0.0
-			scr = set_crowd_hand
-			params = {
-				hand = left
+				Hand = left
 				type = fist
 			}
 		}
 		{
 			time = 0.0
-			scr = set_crowd_hand
+			Scr = set_crowd_hand
 			params = {
-				hand = right
-				type = rock
+				Hand = right
+				type = fist
 			}
 		}
 	]
-	gh3_crowd_rick_regular_med4 = [
+	GH3_crowd_Rick_good_slow1 = [
 		{
 			time = 0.0
-			scr = set_crowd_hand
+			Scr = set_crowd_hand
 			params = {
-				hand = left
+				Hand = left
+				type = clap
+			}
+		}
+		{
+			time = 0.0
+			Scr = set_crowd_hand
+			params = {
+				Hand = right
+				type = clap
+			}
+		}
+	]
+	GH3_crowd_Rick_good_slow2 = [
+		{
+			time = 0.0
+			Scr = set_crowd_hand
+			params = {
+				Hand = left
+				type = Rock
+			}
+		}
+		{
+			time = 0.0
+			Scr = set_crowd_hand
+			params = {
+				Hand = right
+				type = Rock
+			}
+		}
+	]
+	GH3_crowd_Rick_good_slow3 = [
+		{
+			time = 0.0
+			Scr = set_crowd_hand
+			params = {
+				Hand = left
 				type = fist
 			}
 		}
 		{
 			time = 0.0
-			scr = set_crowd_hand
+			Scr = set_crowd_hand
 			params = {
-				hand = right
-				type = rock
-			}
-		}
-	]
-	gh3_crowd_rick_regular_slow1 = [
-		{
-			time = 0.0
-			scr = set_crowd_hand
-			params = {
-				hand = left
-				type = rock
-			}
-		}
-		{
-			time = 0.0
-			scr = set_crowd_hand
-			params = {
-				hand = right
-				type = rock
-			}
-		}
-	]
-	gh3_crowd_rick_regular_slow2 = [
-		{
-			time = 0.0
-			scr = set_crowd_hand
-			params = {
-				hand = left
-				type = clap
-			}
-		}
-		{
-			time = 0.0
-			scr = set_crowd_hand
-			params = {
-				hand = right
+				Hand = right
 				type = clap
 			}
 		}
 	]
-	gh3_crowd_rick_regular_slow3 = [
+	GH3_crowd_Rick_regular_fast1 = [
 		{
 			time = 0.0
-			scr = set_crowd_hand
+			Scr = set_crowd_hand
 			params = {
-				hand = left
+				Hand = left
 				type = clap
 			}
 		}
 		{
 			time = 0.0
-			scr = set_crowd_hand
+			Scr = set_crowd_hand
 			params = {
-				hand = right
+				Hand = right
 				type = clap
 			}
 		}
 	]
-	gh3_crowd_rick_regular_slow4 = [
+	GH3_crowd_Rick_regular_fast2 = [
 		{
 			time = 0.0
-			scr = set_crowd_hand
+			Scr = set_crowd_hand
 			params = {
-				hand = left
+				Hand = left
 				type = clap
 			}
 		}
 		{
 			time = 0.0
-			scr = set_crowd_hand
+			Scr = set_crowd_hand
 			params = {
-				hand = right
-				type = rock
+				Hand = right
+				type = clap
+			}
+		}
+	]
+	GH3_crowd_Rick_regular_fast3 = [
+		{
+			time = 0.0
+			Scr = set_crowd_hand
+			params = {
+				Hand = left
+				type = clap
+			}
+		}
+		{
+			time = 0.0
+			Scr = set_crowd_hand
+			params = {
+				Hand = right
+				type = clap
+			}
+		}
+	]
+	GH3_crowd_Rick_regular_fast4 = [
+		{
+			time = 0.0
+			Scr = set_crowd_hand
+			params = {
+				Hand = left
+				type = clap
+			}
+		}
+		{
+			time = 0.0
+			Scr = set_crowd_hand
+			params = {
+				Hand = right
+				type = clap
+			}
+		}
+	]
+	GH3_crowd_Rick_regular_med1 = [
+		{
+			time = 0.0
+			Scr = set_crowd_hand
+			params = {
+				Hand = left
+				type = clap
+			}
+		}
+		{
+			time = 0.0
+			Scr = set_crowd_hand
+			params = {
+				Hand = right
+				type = clap
+			}
+		}
+	]
+	GH3_crowd_Rick_regular_med2 = [
+		{
+			time = 0.0
+			Scr = set_crowd_hand
+			params = {
+				Hand = left
+				type = clap
+			}
+		}
+		{
+			time = 0.0
+			Scr = set_crowd_hand
+			params = {
+				Hand = right
+				type = clap
+			}
+		}
+	]
+	GH3_crowd_Rick_regular_med3 = [
+		{
+			time = 0.0
+			Scr = set_crowd_hand
+			params = {
+				Hand = left
+				type = fist
+			}
+		}
+		{
+			time = 0.0
+			Scr = set_crowd_hand
+			params = {
+				Hand = right
+				type = Rock
+			}
+		}
+	]
+	GH3_crowd_Rick_regular_med4 = [
+		{
+			time = 0.0
+			Scr = set_crowd_hand
+			params = {
+				Hand = left
+				type = fist
+			}
+		}
+		{
+			time = 0.0
+			Scr = set_crowd_hand
+			params = {
+				Hand = right
+				type = Rock
+			}
+		}
+	]
+	GH3_crowd_Rick_regular_slow1 = [
+		{
+			time = 0.0
+			Scr = set_crowd_hand
+			params = {
+				Hand = left
+				type = Rock
+			}
+		}
+		{
+			time = 0.0
+			Scr = set_crowd_hand
+			params = {
+				Hand = right
+				type = Rock
+			}
+		}
+	]
+	GH3_crowd_Rick_regular_slow2 = [
+		{
+			time = 0.0
+			Scr = set_crowd_hand
+			params = {
+				Hand = left
+				type = clap
+			}
+		}
+		{
+			time = 0.0
+			Scr = set_crowd_hand
+			params = {
+				Hand = right
+				type = clap
+			}
+		}
+	]
+	GH3_crowd_Rick_regular_slow3 = [
+		{
+			time = 0.0
+			Scr = set_crowd_hand
+			params = {
+				Hand = left
+				type = clap
+			}
+		}
+		{
+			time = 0.0
+			Scr = set_crowd_hand
+			params = {
+				Hand = right
+				type = clap
+			}
+		}
+	]
+	GH3_crowd_Rick_regular_slow4 = [
+		{
+			time = 0.0
+			Scr = set_crowd_hand
+			params = {
+				Hand = left
+				type = clap
+			}
+		}
+		{
+			time = 0.0
+			Scr = set_crowd_hand
+			params = {
+				Hand = right
+				type = Rock
 			}
 		}
 	]
 }
-preloadwinanimstream_guitaristid = -1
-preloadwinanimstream_bassistid = -1
+PreloadWinAnimStream_GuitaristID = -1
+PreloadWinAnimStream_BassistID = -1
 
-script preloadwinanimstream 
-	obj_getid
-	if (<objid> = guitarist)
-		if preloadstream <stream> buss = binkcutscenes
-			change preloadwinanimstream_guitaristid = <unique_id>
+script PreloadWinAnimStream 
+	Obj_GetID
+	if (<ObjID> = Guitarist)
+		if PreloadStream <stream> buss = binkcutscenes
+			change PreloadWinAnimStream_GuitaristID = <unique_id>
 		endif
-	elseif (<objid> = bassist)
-		if preloadstream <stream> buss = binkcutscenes
-			change preloadwinanimstream_bassistid = <unique_id>
+	elseif (<ObjID> = bassist)
+		if PreloadStream <stream> buss = binkcutscenes
+			change PreloadWinAnimStream_BassistID = <unique_id>
 		endif
 	endif
 endscript
 
-script playpreloadedwinanimstream 
-	obj_getid
-	if (<objid> = guitarist)
-		startpreloadedstream ($preloadwinanimstream_guitaristid) vol = 63 forcesafepreload = 1 buss = binkcutscenes
-	elseif (<objid> = bassist)
-		startpreloadedstream ($preloadwinanimstream_bassistid) vol = 63 forcesafepreload = 1 buss = binkcutscenes
+script PlayPreLoadedWinAnimStream 
+	Obj_GetID
+	if (<ObjID> = Guitarist)
+		StartPreloadedStream ($PreloadWinAnimStream_GuitaristID) vol = 63 forcesafepreload = 1 buss = binkcutscenes
+	elseif (<ObjID> = bassist)
+		StartPreloadedStream ($PreloadWinAnimStream_BassistID) vol = 63 forcesafepreload = 1 buss = binkcutscenes
 	endif
 endscript

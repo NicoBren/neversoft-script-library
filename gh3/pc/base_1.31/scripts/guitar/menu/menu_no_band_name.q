@@ -21,12 +21,12 @@ script create_no_band_menu
 	offwhite = [223 223 223 255]
 	new_menu scrollid = nb_scroll vmenuid = nb_vmenu use_backdrop = (0) menu_pos = <menu_pos>
 	create_pause_menu_frame x_scale = 1.1 y_scale = 1.1 tile_sprite = 0 z = <z>
-	createscreenelement \{type = containerelement
+	CreateScreenElement \{type = ContainerElement
 		parent = root_window
 		id = no_band_container
 		pos = (0.0, 0.0)}
-	createscreenelement {
-		type = textelement
+	CreateScreenElement {
+		type = TextElement
 		parent = no_band_container
 		font = <header_font>
 		text = "ENTER A BAND NAME"
@@ -39,9 +39,9 @@ script create_no_band_menu
 		shadow_offs = (3.0, 3.0)
 		shadow_rgba = [0 0 0 255]
 	}
-	getarraysize ($no_band_name_messages)
+	GetArraySize ($no_band_name_messages)
 	begin
-	getrandomvalue a = 0 b = (<array_size> -1) integer name = random_carp
+	GetRandomValue a = 0 b = (<array_size> -1) Integer name = random_carp
 	if NOT (<random_carp> = ($last_band_name_message_index))
 		break
 	endif
@@ -49,8 +49,8 @@ script create_no_band_menu
 	change last_band_name_message_index = (<random_carp>)
 	no_band_text = ($no_band_name_messages [<random_carp>])
 	printstruct <...>
-	createscreenelement {
-		type = textblockelement
+	CreateScreenElement {
+		type = TextBlockElement
 		parent = no_band_container
 		font = <menu_font>
 		text = <no_band_text>
@@ -62,13 +62,13 @@ script create_no_band_menu
 		dims = <quit_warning_text_dims>
 		z_priority = (<z> + 3)
 	}
-	displaysprite parent = no_band_container tex = dialog_bg pos = (480.0, 485.0) dims = (320.0, 64.0) z = (<z> + 3)
-	displaysprite parent = no_band_container tex = dialog_bg flip_h pos = (480.0, 554.0) dims = (320.0, 64.0) z = (<z> + 3)
-	displaysprite parent = no_band_container tex = white pos = (492.0, 541.0) scale = (75.0, 6.0) z = (<z> + 3) rgba = <offwhite>
-	displaysprite parent = no_band_container tex = dialog_frame_joiner pos = (480.0, 534.0) rot_angle = 5 scale = (1.575, 1.5) z = (<z> + 3.01)
-	displaysprite parent = no_band_container tex = dialog_frame_joiner pos = (750.0, 538.0) flip_v rot_angle = -5 scale = (1.575, 1.5) z = (<z> + 3.01)
-	displaysprite id = hi_right parent = no_band_container tex = dialog_highlight pos = (770.0, 533.0) scale = (1.0, 1.0) z = (<z> + 3.02)
-	displaysprite id = hi_left parent = no_band_container tex = dialog_highlight flip_v pos = (500.0, 533.0) scale = (1.0, 1.0) z = (<z> + 3.02)
+	displaySprite parent = no_band_container tex = dialog_bg pos = (480.0, 485.0) dims = (320.0, 64.0) z = (<z> + 3)
+	displaySprite parent = no_band_container tex = dialog_bg flip_h pos = (480.0, 554.0) dims = (320.0, 64.0) z = (<z> + 3)
+	displaySprite parent = no_band_container tex = white pos = (492.0, 541.0) scale = (75.0, 6.0) z = (<z> + 3) rgba = <offwhite>
+	displaySprite parent = no_band_container tex = dialog_frame_joiner pos = (480.0, 534.0) rot_angle = 5 scale = (1.575, 1.5) z = (<z> + 3.01)
+	displaySprite parent = no_band_container tex = dialog_frame_joiner pos = (750.0, 538.0) flip_v rot_angle = -5 scale = (1.575, 1.5) z = (<z> + 3.01)
+	displaySprite id = hi_right parent = no_band_container tex = Dialog_Highlight pos = (770.0, 533.0) scale = (1.0, 1.0) z = (<z> + 3.02)
+	displaySprite id = hi_left parent = no_band_container tex = Dialog_Highlight flip_v pos = (500.0, 533.0) scale = (1.0, 1.0) z = (<z> + 3.02)
 	set_focus_color \{rgba = [
 			180
 			50
@@ -81,8 +81,8 @@ script create_no_band_menu
 			0
 			255
 		]}
-	createscreenelement {
-		type = textelement
+	CreateScreenElement {
+		type = TextElement
 		parent = nb_vmenu
 		font = <header_font>
 		rgba = [130 50 50 255]
@@ -106,9 +106,9 @@ endscript
 
 script menu_no_band_continue_highlight 
 	retail_menu_focus
-	setscreenelementprops \{id = hi_left
+	SetScreenElementProps \{id = hi_left
 		pos = (480.0, 530.0)
 		flip_v}
-	setscreenelementprops \{id = hi_right
+	SetScreenElementProps \{id = hi_right
 		pos = (740.0, 530.0)}
 endscript

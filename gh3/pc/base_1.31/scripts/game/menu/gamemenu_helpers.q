@@ -1,4 +1,4 @@
-default_font_colors = [
+Default_Font_Colors = [
 	[
 		200
 		200
@@ -77,8 +77,8 @@ lens_flare_visible_before_pause = 1
 is_changing_levels = 0
 
 script handle_pause_continue 
-	root_window :gettags
-	if gotparam \{pause_controller}
+	root_window :GetTags
+	if GotParam \{pause_controller}
 		if NOT (<pause_controller> = <device_num>)
 			return
 		endif
@@ -88,35 +88,35 @@ endscript
 
 script pause_game_and_create_pause_menu 
 	do_actual_pause <...>
-	ui_change_state \{state = uistate_pausemenu}
+	ui_change_state \{state = UIstate_pausemenu}
 endscript
 
 script do_actual_pause 
 	printf \{"--- do_actual_pause"}
-	if NOT cd
-		dumpprogresslog
+	if NOT CD
+		DumpProgressLog
 	endif
-	if NOT innetgame
+	if NOT InNetGame
 		printf \{"-------------------- PAUSING GAME ----------------------"}
-		pausegame
-		gman_pauseallgoals
+		PauseGame
+		GMan_PauseAllGoals
 	endif
-	if screenelementexists \{id = root_window}
-		setscreenelementprops \{id = root_window
+	if ScreenElementExists \{id = root_window}
+		SetScreenElementProps \{id = root_window
 			tags = {
 				menu_state = on
 			}}
 	endif
-	if innetgame
-		if NOT isobserving
-			if objectexists \{id = skater}
-				skater :netdisableplayerinput
+	if InNetGame
+		if NOT IsObserving
+			if ObjectExists \{id = skater}
+				skater :NetDisablePlayerInput
 			endif
 		endif
-		enableactuators \{0}
+		EnableActuators \{0}
 	endif
-	if insplitscreengame
-		enableactuators \{0}
+	if InSplitScreenGame
+		EnableActuators \{0}
 	endif
 	change \{viewer_buttons_enabled = 0}
 endscript
@@ -132,47 +132,47 @@ endscript
 script do_actual_unpause 
 	printf \{"--- do_actual_unpause"}
 	change \{check_for_unplugged_controllers = 0}
-	clearviewerobject
-	debounce \{x
+	ClearViewerObject
+	Debounce \{x
 		time = 0.3}
-	debounce \{triangle
+	Debounce \{triangle
 		time = 0.3}
-	debounce \{circle
+	Debounce \{circle
 		time = 0.3}
-	debounce \{square
+	Debounce \{square
 		time = 0.3}
 	pause_menu_gradient \{off}
 	change \{inside_pause = 0}
 	change \{no_focus_sound = 1}
-	if innetgame
-		if NOT isobserving
-			if objectexists \{id = skater}
-				skater :netenableplayerinput
+	if InNetGame
+		if NOT IsObserving
+			if ObjectExists \{id = skater}
+				skater :NetEnablePlayerInput
 			endif
 		endif
-		enableactuators \{1}
+		EnableActuators \{1}
 	endif
-	if insplitscreengame
-		enableactuators \{1}
+	if InSplitScreenGame
+		EnableActuators \{1}
 	endif
-	if NOT innetgame
+	if NOT InNetGame
 		printf \{'-------------------- UNPAUSING GAME ----------------------'}
-		unpausegame
+		UnPauseGame
 	endif
-	pausestream \{0}
-	pausemusic \{0}
-	gman_unpauseallgoals
-	if NOT innetgame
-		if NOT gamemodeequals \{is_horse}
+	PauseStream \{0}
+	PauseMusic \{0}
+	GMan_UnPauseAllGoals
+	if NOT InNetGame
+		if NOT GameModeEquals \{is_horse}
 			unpauseskaters
 		endif
 	endif
-	if gman_hasactivegoals
-		gman_toggleallgoaltriggers \{hide = 1}
+	if GMan_HasActiveGoals
+		GMan_ToggleAllGoalTriggers \{hide = 1}
 	endif
 	change \{check_for_unplugged_controllers = 1}
-	if screenelementexists \{id = root_window}
-		setscreenelementprops \{id = root_window
+	if ScreenElementExists \{id = root_window}
+		SetScreenElementProps \{id = root_window
 			tags = {
 				menu_state = off
 			}}
@@ -181,24 +181,24 @@ script do_actual_unpause
 endscript
 
 script enable_new_ui_system 
-	mempushcontext \{aiheap}
-	registerbehaviors_debug
-	registerbehaviors_runscript
-	registerbehaviors_runbehavior
-	mempopcontext
-	registeruibehaviors
+	MemPushContext \{AIHeap}
+	RegisterBehaviors_Debug
+	RegisterBehaviors_RunScript
+	RegisterBehaviors_RunBehavior
+	MemPopContext
+	RegisterUIBehaviors
 endscript
 ui_controller_which_paused = 0
 
 script handle_start_pressed 
-	if NOT renderingenabled
+	if NOT RenderingEnabled
 		return
 	endif
-	if istrue \{$paused_for_hardware}
+	if IsTrue \{$paused_for_hardware}
 		printf \{"handle_start_pressed: $paused_for_hardware is true, ending"}
 		return
 	endif
-	if istrue \{$sysnotify_wait_in_progress}
+	if IsTrue \{$sysnotify_wait_in_progress}
 		printf \{"handle_start_pressed: $sysnotify_wait_in_progress is true, ending"}
 		return
 	endif
@@ -206,18 +206,18 @@ script handle_start_pressed
 		printf \{"handle_start_pressed: $is_changing_levels is true, ending"}
 		return
 	endif
-	if istrue \{$ingame_save_active}
+	if IsTrue \{$ingame_save_active}
 		printf \{"handle_start_pressed: $ingame_save_active is true, ending"}
 		return
 	endif
-	if infrontend
+	if InFrontend
 		printf \{"handle_start_pressed: InFrontEnd is true, ending"}
 		return
 	endif
-	root_window :gettags
+	root_window :GetTags
 	change ui_controller_which_paused = <device_num>
-	if checksumequals a = <menu_state> b = on
-		if gotparam \{pause_controller}
+	if ChecksumEquals a = <menu_state> b = on
+		if GotParam \{pause_controller}
 			if NOT (<pause_controller> = -1)
 				if NOT (<device_num> = <pause_controller>)
 					return
@@ -225,71 +225,71 @@ script handle_start_pressed
 			endif
 		endif
 		do_actual_unpause
-		broadcastevent \{type = event_unpause_game}
+		BroadcastEvent \{type = event_unpause_game}
 		ui_change_state \{state = uistate_gameplay}
 		change \{inside_pause = 0}
 	endif
-	if checksumequals a = <menu_state> b = off
-		if NOT inmultiplayergame
-			if NOT controllerboundtoskater controller = <device_num> skater = 0
+	if ChecksumEquals a = <menu_state> b = off
+		if NOT InMultiplayerGame
+			if NOT ControllerBoundToSkater controller = <device_num> skater = 0
 				return
 			endif
 		else
-			if insplitscreengame
-				if NOT controllerboundtoskater controller = <device_num> skater = 0
-					if NOT controllerboundtoskater controller = <device_num> skater = 1
+			if InSplitScreenGame
+				if NOT ControllerBoundToSkater controller = <device_num> skater = 0
+					if NOT ControllerBoundToSkater controller = <device_num> skater = 1
 						return
 					endif
 				endif
 			endif
 		endif
-		if innetgame
-			if NOT controllerboundtoskater controller = <device_num> skater = 0
+		if InNetGame
+			if NOT ControllerBoundToSkater controller = <device_num> skater = 0
 				return
 			endif
 		endif
-		settags pause_controller = <device_num>
-		if NOT innetgame
-			getskaterid
-			if getskatercamanimparams skater = <objid>
+		SetTags pause_controller = <device_num>
+		if NOT InNetGame
+			GetSkaterId
+			if GetSkaterCamAnimParams skater = <ObjID>
 				if (<allow_pause> = 0)
 					return
 				endif
 			endif
 		endif
-		broadcastevent \{type = event_pause_game}
-		if gman_goalisactive \{goal = m_pro_burnquist}
-			wait \{2
+		BroadcastEvent \{type = event_pause_game}
+		if GMan_GoalIsActive \{goal = m_pro_burnquist}
+			Wait \{2
 				gameframe}
 		endif
 		do_actual_pause
 		set_pause_menu_allow_continue
-		if intraining
-			ui_change_state \{state = uistate_training_pausemenu}
+		if InTraining
+			ui_change_state \{state = UIState_Training_PauseMenu}
 		else
-			ui_change_state \{state = uistate_pausemenu}
+			ui_change_state \{state = UIstate_pausemenu}
 		endif
 	endif
 endscript
 
 script set_pause_menu_allow_continue 
-	if gotparam \{off}
-		root_window :settags \{no_exit_pause_menu = 1}
+	if GotParam \{off}
+		root_window :SetTags \{no_exit_pause_menu = 1}
 	else
-		root_window :removetags \{tags = [
+		root_window :RemoveTags \{tags = [
 				no_exit_pause_menu
 			]}
 	endif
 endscript
 
 script set_custom_restart 
-	if NOT skater :inair
-		skater :setcustomrestart \{set}
+	if NOT skater :InAir
+		skater :SetCustomRestart \{set}
 	endif
 endscript
 
 script skip_to_custom_restart 
-	skater :skiptocustomrestart
+	skater :SkipToCustomRestart
 endscript
 
 script set_sub_bg \{parent = current_menu_anchor
@@ -299,8 +299,8 @@ script set_sub_bg \{parent = current_menu_anchor
 			center
 			top
 		]}
-	createscreenelement {
-		type = spriteelement
+	CreateScreenElement {
+		type = SpriteElement
 		parent = <parent>
 		texture = options_bg
 		draw_behind_parent
@@ -313,49 +313,49 @@ script set_sub_bg \{parent = current_menu_anchor
 endscript
 
 script hide_everything 
-	doscreenelementmorph \{id = root_window
+	doScreenElementMorph \{id = root_window
 		time = 0
 		scale = 0}
 endscript
 
 script unhide_everything 
-	doscreenelementmorph \{id = root_window
+	doScreenElementMorph \{id = root_window
 		time = 0
 		scale = 1}
 endscript
 
 script hide_all_hud_sprites 
 	dialog_box_exit no_pad_start <...>
-	if screenelementexists \{id = console_message_vmenu}
-		doscreenelementmorph \{id = console_message_vmenu
+	if ScreenElementExists \{id = console_message_vmenu}
+		doScreenElementMorph \{id = console_message_vmenu
 			time = 0
 			scale = 0}
 	endif
-	if screenelementexists \{id = first_time_goal_info}
-		destroyscreenelement \{id = first_time_goal_info}
+	if ScreenElementExists \{id = first_time_goal_info}
+		DestroyScreenElement \{id = first_time_goal_info}
 	endif
-	if screenelementexists \{id = cutscene_camera_hud_anchor}
+	if ScreenElementExists \{id = cutscene_camera_hud_anchor}
 		change \{camera_hud_is_hidden = 1}
-		doscreenelementmorph \{id = cutscene_camera_hud_anchor
+		doScreenElementMorph \{id = cutscene_camera_hud_anchor
 			alpha = 0}
 	endif
-	if screenelementexists \{id = the_time}
-		setscreenelementprops \{id = the_time
+	if ScreenElementExists \{id = the_time}
+		SetScreenElementProps \{id = the_time
 			hide}
 	endif
-	if screenelementexists \{id = goal_viewport_parent}
-		setscreenelementprops \{id = goal_viewport_parent
+	if ScreenElementExists \{id = goal_viewport_parent}
+		SetScreenElementProps \{id = goal_viewport_parent
 			hide}
 	endif
-	if NOT gotparam \{ignore_speech_boxes}
+	if NOT GotParam \{ignore_speech_boxes}
 		hide_speech_boxes
 	endif
-	if screenelementexists \{id = digital_timer_anchor}
-		setscreenelementprops \{id = digital_timer_anchor
+	if ScreenElementExists \{id = digital_timer_anchor}
+		SetScreenElementProps \{id = digital_timer_anchor
 			hide}
 	endif
-	if screenelementexists \{id = lightning_container}
-		setscreenelementprops \{id = lightning_container
+	if ScreenElementExists \{id = lightning_container}
+		SetScreenElementProps \{id = lightning_container
 			hide}
 	endif
 	xboxlive_message_container_hide
@@ -363,7 +363,7 @@ script hide_all_hud_sprites
 	pause_balance_meter
 	pause_run_timer
 	hide_goal_panel_messages
-	goalmanager_hidegoalpoints
+	GoalManager_HideGoalPoints
 	hide_3d_goal_arrow
 	hide_landing_msg
 	hide_console_window
@@ -380,11 +380,11 @@ endscript
 
 script hide_all_hud_items 
 	hide_all_hud_sprites <...>
-	maybehidelensflare
-	if NOT infrontend
-		if NOT inmultiplayergame
-			change \{lens_flare_visible_before_pause = $doupdatelensflare}
-			change \{doupdatelensflare = 0}
+	MaybeHideLensFlare
+	if NOT InFrontend
+		if NOT InMultiplayerGame
+			change \{lens_flare_visible_before_pause = $DoUpdateLensFlare}
+			change \{DoUpdateLensFlare = 0}
 		endif
 	endif
 	kill_blur
@@ -399,62 +399,62 @@ script show_all_hud_sprites
 	unhide_death_msg
 	unhide_comp_text
 	unpause_trick_text
-	if NOT innetgame
+	if NOT InNetGame
 		unpause_trick_text
 	endif
-	unpause_balance_meter
+	Unpause_Balance_Meter
 	unpause_run_timer
 	unhide_speech_boxes
-	if screenelementexists \{id = cutscene_camera_hud_anchor}
+	if ScreenElementExists \{id = cutscene_camera_hud_anchor}
 		if (camera_hud_is_hidden = 1)
 			change \{camera_hud_is_hidden = 0}
-			doscreenelementmorph \{id = cutscene_camera_hud_anchor
+			doScreenElementMorph \{id = cutscene_camera_hud_anchor
 				alpha = 1}
 		endif
 	endif
-	if screenelementexists \{id = lightning_container}
-		setscreenelementprops \{id = lightning_container
+	if ScreenElementExists \{id = lightning_container}
+		SetScreenElementProps \{id = lightning_container
 			unhide}
 	endif
-	if screenelementexists \{id = the_time}
-		setscreenelementprops \{id = the_time
+	if ScreenElementExists \{id = the_time}
+		SetScreenElementProps \{id = the_time
 			unhide}
 	endif
-	if screenelementexists \{id = goal_viewport_parent}
-		setscreenelementprops \{id = goal_viewport_parent
+	if ScreenElementExists \{id = goal_viewport_parent}
+		SetScreenElementProps \{id = goal_viewport_parent
 			unhide}
 	endif
-	if screenelementexists \{id = digital_timer_anchor}
-		setscreenelementprops \{id = digital_timer_anchor
+	if ScreenElementExists \{id = digital_timer_anchor}
+		SetScreenElementProps \{id = digital_timer_anchor
 			unhide}
 	endif
 	show_goal_panel_messages
-	if NOT inmultiplayergame
-		if NOT gman_hasactivegoals
-			goalmanager_showgoalpoints
+	if NOT InMultiplayerGame
+		if NOT GMan_HasActiveGoals
+			GoalManager_ShowGoalPoints
 		else
-			goalmanager_hidegoalpoints
+			GoalManager_HideGoalPoints
 		endif
 	endif
-	if objectexists \{id = console_message_vmenu}
-		doscreenelementmorph \{id = console_message_vmenu
+	if ObjectExists \{id = console_message_vmenu}
+		doScreenElementMorph \{id = console_message_vmenu
 			time = 0
 			scale = 1}
 	endif
-	if ($hidehud = 1)
+	if ($HIDEHUD = 1)
 		printf \{"hiding"}
 		hide_root_window
 	endif
-	if getglobalflag \{flag = $no_display_hud}
-		goalmanager_hidegoalpoints
-		goalmanager_hidepoints
+	if GetGlobalFlag \{flag = $NO_DISPLAY_HUD}
+		GoalManager_HideGoalPoints
+		GoalManager_HidePoints
 	endif
-	if NOT getglobalflag \{flag = $no_display_chatwindow}
+	if NOT GetGlobalFlag \{flag = $NO_DISPLAY_CHATWINDOW}
 		unhide_console_window
 	else
 		hide_console_window
 	endif
-	if NOT getglobalflag \{flag = $no_display_net_scores}
+	if NOT GetGlobalFlag \{flag = $NO_DISPLAY_NET_SCORES}
 		unhide_net_scores
 	else
 		hide_net_scores
@@ -466,371 +466,371 @@ script show_all_hud_sprites
 endscript
 
 script show_all_hud_items 
-	if skatercamanimfinished \{name = igc_custom_camera_name}
+	if SkaterCamAnimFinished \{name = igc_custom_camera_name}
 		show_all_hud_sprites <...>
 	endif
-	if NOT infrontend
-		if NOT inmultiplayergame
-			change \{doupdatelensflare = 1}
-			unhidelensflare
+	if NOT InFrontend
+		if NOT InMultiplayerGame
+			change \{DoUpdateLensFlare = 1}
+			UnHideLensFlare
 		endif
 	endif
 endscript
 
 script hide_speech_boxes 
-	if screenelementexists \{id = speech_box_anchor}
-		setscreenelementprops \{id = speech_box_anchor
+	if ScreenElementExists \{id = speech_box_anchor}
+		SetScreenElementProps \{id = speech_box_anchor
 			block_events}
-		doscreenelementmorph \{id = speech_box_anchor
+		doScreenElementMorph \{id = speech_box_anchor
 			scale = 0
 			relative_scale}
 	endif
-	if screenelementexists \{id = goal_start_dialog}
-		setscreenelementprops \{id = goal_start_dialog
+	if ScreenElementExists \{id = goal_start_dialog}
+		SetScreenElementProps \{id = goal_start_dialog
 			block_events}
-		doscreenelementmorph \{id = goal_start_dialog
+		doScreenElementMorph \{id = goal_start_dialog
 			scale = 0
 			relative_scale}
 	endif
-	if screenelementexists \{id = ped_speech_dialog}
-		setscreenelementprops \{id = ped_speech_dialog
+	if ScreenElementExists \{id = ped_speech_dialog}
+		SetScreenElementProps \{id = ped_speech_dialog
 			block_events}
-		doscreenelementmorph \{id = ped_speech_dialog
+		doScreenElementMorph \{id = ped_speech_dialog
 			scale = 0
 			relative_scale}
 	endif
-	if screenelementexists \{id = goal_retry_anchor}
-		setscreenelementprops \{id = goal_retry_anchor
+	if ScreenElementExists \{id = goal_retry_anchor}
+		SetScreenElementProps \{id = goal_retry_anchor
 			block_events}
-		doscreenelementmorph \{id = goal_retry_anchor
+		doScreenElementMorph \{id = goal_retry_anchor
 			scale = 0
 			relative_scale}
 	endif
-	if screenelementexists \{id = ped_hint_dialog}
-		setscreenelementprops \{id = ped_hint_dialog
+	if ScreenElementExists \{id = ped_hint_dialog}
+		SetScreenElementProps \{id = ped_hint_dialog
 			block_events}
-		doscreenelementmorph \{id = ped_hint_dialog
+		doScreenElementMorph \{id = ped_hint_dialog
 			scale = 0
 			relative_scale}
 	endif
-	if player1_panel_container :getsingletag \{grid_control_speech_box}
-		if screenelementexists id = <grid_control_speech_box>
-			setscreenelementprops id = <grid_control_speech_box> block_events
-			doscreenelementmorph id = <grid_control_speech_box> scale = 0 relative_scale
+	if player1_panel_container :GetSingleTag \{grid_control_speech_box}
+		if ScreenElementExists id = <grid_control_speech_box>
+			SetScreenElementProps id = <grid_control_speech_box> block_events
+			doScreenElementMorph id = <grid_control_speech_box> scale = 0 relative_scale
 		endif
 	endif
 endscript
 
 script unhide_speech_boxes 
-	if screenelementexists \{id = speech_box_anchor}
-		setscreenelementprops \{id = speech_box_anchor
+	if ScreenElementExists \{id = speech_box_anchor}
+		SetScreenElementProps \{id = speech_box_anchor
 			unblock_events}
-		doscreenelementmorph \{id = speech_box_anchor
+		doScreenElementMorph \{id = speech_box_anchor
 			scale = 1
 			relative_scale}
 	endif
-	if screenelementexists \{id = goal_start_dialog}
-		setscreenelementprops \{id = goal_start_dialog
+	if ScreenElementExists \{id = goal_start_dialog}
+		SetScreenElementProps \{id = goal_start_dialog
 			unblock_events}
-		doscreenelementmorph \{id = goal_start_dialog
+		doScreenElementMorph \{id = goal_start_dialog
 			scale = 1
 			relative_scale}
 	endif
-	if screenelementexists \{id = ped_speech_dialog}
-		setscreenelementprops \{id = ped_speech_dialog
+	if ScreenElementExists \{id = ped_speech_dialog}
+		SetScreenElementProps \{id = ped_speech_dialog
 			unblock_events}
-		doscreenelementmorph \{id = ped_speech_dialog
+		doScreenElementMorph \{id = ped_speech_dialog
 			scale = 1
 			relative_scale}
 	endif
-	if screenelementexists \{id = goal_retry_anchor}
-		setscreenelementprops \{id = goal_retry_anchor
+	if ScreenElementExists \{id = goal_retry_anchor}
+		SetScreenElementProps \{id = goal_retry_anchor
 			unblock_events}
-		doscreenelementmorph \{id = goal_retry_anchor
+		doScreenElementMorph \{id = goal_retry_anchor
 			scale = 1
 			relative_scale}
 	endif
-	if screenelementexists \{id = ped_hint_dialog}
-		setscreenelementprops \{id = ped_hint_dialog
+	if ScreenElementExists \{id = ped_hint_dialog}
+		SetScreenElementProps \{id = ped_hint_dialog
 			block_events}
-		doscreenelementmorph \{id = ped_hint_dialog
+		doScreenElementMorph \{id = ped_hint_dialog
 			scale = 1
 			relative_scale}
 	endif
-	if player1_panel_container :getsingletag \{grid_control_speech_box}
-		if screenelementexists id = <grid_control_speech_box>
-			setscreenelementprops id = <grid_control_speech_box> unblock_events
-			doscreenelementmorph id = <grid_control_speech_box> scale = 1 relative_scale
+	if player1_panel_container :GetSingleTag \{grid_control_speech_box}
+		if ScreenElementExists id = <grid_control_speech_box>
+			SetScreenElementProps id = <grid_control_speech_box> unblock_events
+			doScreenElementMorph id = <grid_control_speech_box> scale = 1 relative_scale
 		endif
 	endif
 endscript
 
 script kill_speech_boxes 
-	if screenelementexists \{id = speech_box_anchor}
-		destroyscreenelement \{id = speech_box_anchor}
+	if ScreenElementExists \{id = speech_box_anchor}
+		DestroyScreenElement \{id = speech_box_anchor}
 	endif
-	if screenelementexists \{id = goal_start_dialog}
-		destroyscreenelement \{id = goal_start_dialog}
+	if ScreenElementExists \{id = goal_start_dialog}
+		DestroyScreenElement \{id = goal_start_dialog}
 	endif
-	if screenelementexists \{id = ped_speech_dialog}
-		destroyscreenelement \{id = ped_speech_dialog}
+	if ScreenElementExists \{id = ped_speech_dialog}
+		DestroyScreenElement \{id = ped_speech_dialog}
 	endif
-	if screenelementexists \{id = goal_retry_anchor}
-		destroyscreenelement \{id = goal_retry_anchor}
+	if ScreenElementExists \{id = goal_retry_anchor}
+		DestroyScreenElement \{id = goal_retry_anchor}
 	endif
-	if screenelementexists \{id = ped_hint_dialog}
-		destroyscreenelement \{id = ped_hint_dialog}
+	if ScreenElementExists \{id = ped_hint_dialog}
+		DestroyScreenElement \{id = ped_hint_dialog}
 	endif
 endscript
 
 script hide_landing_msg 
-	if objectexists \{id = perfect}
-		doscreenelementmorph \{id = perfect
+	if ObjectExists \{id = perfect}
+		doScreenElementMorph \{id = perfect
 			time = 0
 			alpha = 0}
 	endif
-	if objectexists \{id = perfect2}
-		doscreenelementmorph \{id = perfect2
+	if ObjectExists \{id = perfect2}
+		doScreenElementMorph \{id = perfect2
 			time = 0
 			alpha = 0}
 	endif
 endscript
 
 script unhide_landing_msg 
-	if objectexists \{id = perfect}
-		doscreenelementmorph \{id = perfect
+	if ObjectExists \{id = perfect}
+		doScreenElementMorph \{id = perfect
 			time = 0
 			alpha = 0.5}
 	endif
-	if objectexists \{id = perfect2}
-		doscreenelementmorph \{id = perfect2
+	if ObjectExists \{id = perfect2}
+		doScreenElementMorph \{id = perfect2
 			time = 0
 			alpha = 0.5}
 	endif
 endscript
 
 script hide_3d_goal_arrow 
-	if screenelementexists \{id = designercreated_3darrowpointer}
-		doscreenelementmorph \{id = designercreated_3darrowpointer
+	if ScreenElementExists \{id = DesignerCreated_3DArrowPointer}
+		doScreenElementMorph \{id = DesignerCreated_3DArrowPointer
 			pos = (320.0, -300.0)}
 	endif
-	if screenelementexists \{id = race_arrow}
-		doscreenelementmorph \{id = race_arrow
+	if ScreenElementExists \{id = race_arrow}
+		doScreenElementMorph \{id = race_arrow
 			pos = (320.0, -300.0)}
 	endif
-	if screenelementexists \{id = ctf_arrow}
-		doscreenelementmorph \{id = ctf_arrow
+	if ScreenElementExists \{id = ctf_arrow}
+		doScreenElementMorph \{id = ctf_arrow
 			pos = (320.0, -300.0)}
 	endif
 endscript
 
 script unhide_3d_goal_arrow 
-	if screenelementexists \{id = designercreated_3darrowpointer}
-		doscreenelementmorph \{id = designercreated_3darrowpointer
+	if ScreenElementExists \{id = DesignerCreated_3DArrowPointer}
+		doScreenElementMorph \{id = DesignerCreated_3DArrowPointer
 			pos = (320.0, 70.0)}
 	endif
-	if screenelementexists \{id = race_arrow}
-		doscreenelementmorph \{id = race_arrow
+	if ScreenElementExists \{id = race_arrow}
+		doScreenElementMorph \{id = race_arrow
 			pos = (320.0, 70.0)}
 	endif
-	if screenelementexists \{id = ctf_arrow}
-		doscreenelementmorph \{id = ctf_arrow
+	if ScreenElementExists \{id = ctf_arrow}
+		doScreenElementMorph \{id = ctf_arrow
 			pos = (320.0, 70.0)}
 	endif
 endscript
 
 script hide_net_scores 
-	if objectexists \{id = net_score_1}
-		doscreenelementmorph \{id = net_score_1
+	if ObjectExists \{id = net_score_1}
+		doScreenElementMorph \{id = net_score_1
 			time = 0
 			scale = 0}
 	endif
-	if objectexists \{id = net_score_2}
-		doscreenelementmorph \{id = net_score_2
+	if ObjectExists \{id = net_score_2}
+		doScreenElementMorph \{id = net_score_2
 			time = 0
 			scale = 0}
 	endif
-	if objectexists \{id = net_score_3}
-		doscreenelementmorph \{id = net_score_3
+	if ObjectExists \{id = net_score_3}
+		doScreenElementMorph \{id = net_score_3
 			time = 0
 			scale = 0}
 	endif
-	if objectexists \{id = net_score_4}
-		doscreenelementmorph \{id = net_score_4
+	if ObjectExists \{id = net_score_4}
+		doScreenElementMorph \{id = net_score_4
 			time = 0
 			scale = 0}
 	endif
-	if objectexists \{id = net_score_5}
-		doscreenelementmorph \{id = net_score_5
+	if ObjectExists \{id = net_score_5}
+		doScreenElementMorph \{id = net_score_5
 			time = 0
 			scale = 0}
 	endif
-	if objectexists \{id = net_score_6}
-		doscreenelementmorph \{id = net_score_6
+	if ObjectExists \{id = net_score_6}
+		doScreenElementMorph \{id = net_score_6
 			time = 0
 			scale = 0}
 	endif
-	if objectexists \{id = net_score_7}
-		doscreenelementmorph \{id = net_score_7
+	if ObjectExists \{id = net_score_7}
+		doScreenElementMorph \{id = net_score_7
 			time = 0
 			scale = 0}
 	endif
-	if objectexists \{id = net_score_8}
-		doscreenelementmorph \{id = net_score_8
+	if ObjectExists \{id = net_score_8}
+		doScreenElementMorph \{id = net_score_8
 			time = 0
 			scale = 0}
 	endif
 endscript
 
 script unhide_net_scores 
-	if objectexists \{id = net_score_1}
-		doscreenelementmorph \{id = net_score_1
+	if ObjectExists \{id = net_score_1}
+		doScreenElementMorph \{id = net_score_1
 			time = 0
 			scale = 1}
 	endif
-	if objectexists \{id = net_score_2}
-		doscreenelementmorph \{id = net_score_2
+	if ObjectExists \{id = net_score_2}
+		doScreenElementMorph \{id = net_score_2
 			time = 0
 			scale = 1}
 	endif
-	if objectexists \{id = net_score_3}
-		doscreenelementmorph \{id = net_score_3
+	if ObjectExists \{id = net_score_3}
+		doScreenElementMorph \{id = net_score_3
 			time = 0
 			scale = 1}
 	endif
-	if objectexists \{id = net_score_4}
-		doscreenelementmorph \{id = net_score_4
+	if ObjectExists \{id = net_score_4}
+		doScreenElementMorph \{id = net_score_4
 			time = 0
 			scale = 1}
 	endif
-	if objectexists \{id = net_score_5}
-		doscreenelementmorph \{id = net_score_5
+	if ObjectExists \{id = net_score_5}
+		doScreenElementMorph \{id = net_score_5
 			time = 0
 			scale = 1}
 	endif
-	if objectexists \{id = net_score_6}
-		doscreenelementmorph \{id = net_score_6
+	if ObjectExists \{id = net_score_6}
+		doScreenElementMorph \{id = net_score_6
 			time = 0
 			scale = 1}
 	endif
-	if objectexists \{id = net_score_7}
-		doscreenelementmorph \{id = net_score_7
+	if ObjectExists \{id = net_score_7}
+		doScreenElementMorph \{id = net_score_7
 			time = 0
 			scale = 1}
 	endif
-	if objectexists \{id = net_score_8}
-		doscreenelementmorph \{id = net_score_8
+	if ObjectExists \{id = net_score_8}
+		doScreenElementMorph \{id = net_score_8
 			time = 0
 			scale = 1}
 	endif
 endscript
 
 script hide_current_goal 
-	if objectexists \{id = current_goal}
-		doscreenelementmorph \{id = current_goal
+	if ObjectExists \{id = current_goal}
+		doScreenElementMorph \{id = current_goal
 			time = 0
 			scale = 0}
 	endif
-	if objectexists \{id = mp_goal_text}
-		doscreenelementmorph \{id = mp_goal_text
+	if ObjectExists \{id = mp_goal_text}
+		doScreenElementMorph \{id = mp_goal_text
 			time = 0
 			scale = 0}
 	endif
-	if objectexists \{id = sc_goal_text}
-		doscreenelementmorph \{id = sc_goal_text
+	if ObjectExists \{id = sc_goal_text}
+		doScreenElementMorph \{id = sc_goal_text
 			time = 0
 			scale = 0}
 	endif
-	if objectexists \{id = eric_score}
-		doscreenelementmorph \{id = eric_score
+	if ObjectExists \{id = Eric_score}
+		doScreenElementMorph \{id = Eric_score
 			time = 0
 			scale = 0}
 	endif
 endscript
 comp_texts = [
-	eric_text
-	ron_text
-	johnny_text
-	chicken_text
-	raven_text
+	Eric_Text
+	Ron_Text
+	Johnny_Text
+	Chicken_Text
+	Raven_Text
 	final_scores
 	goal_comp_out_of_bounds_warning
 ]
 
 script hide_comp_text 
-	getarraysize \{$comp_texts}
+	GetArraySize \{$comp_texts}
 	<index> = 0
 	begin
 	<id> = ($comp_texts [<index>])
-	if objectexists id = <id>
-		doscreenelementmorph id = <id> time = 0 scale = 0
+	if ObjectExists id = <id>
+		doScreenElementMorph id = <id> time = 0 scale = 0
 	endif
 	<index> = (<index> + 1)
 	repeat <array_size>
 endscript
 
 script unhide_comp_text 
-	getarraysize \{$comp_texts}
+	GetArraySize \{$comp_texts}
 	<index> = 0
 	begin
 	<id> = ($comp_texts [<index>])
-	if objectexists id = <id>
-		doscreenelementmorph id = <id> time = 0 scale = 1
+	if ObjectExists id = <id>
+		doScreenElementMorph id = <id> time = 0 scale = 1
 	endif
 	<index> = (<index> + 1)
 	repeat <array_size>
 endscript
 
 script unhide_current_goal 
-	if objectexists \{id = current_goal}
-		doscreenelementmorph \{id = current_goal
+	if ObjectExists \{id = current_goal}
+		doScreenElementMorph \{id = current_goal
 			time = 0
 			scale = 0.83}
 	endif
-	if objectexists \{id = mp_goal_text}
-		doscreenelementmorph \{id = mp_goal_text
+	if ObjectExists \{id = mp_goal_text}
+		doScreenElementMorph \{id = mp_goal_text
 			time = 0
 			scale = 0.83}
 	endif
-	if objectexists \{id = sc_goal_text}
-		doscreenelementmorph \{id = sc_goal_text
+	if ObjectExists \{id = sc_goal_text}
+		doScreenElementMorph \{id = sc_goal_text
 			time = 0
 			scale = 0.83}
 	endif
-	if objectexists \{id = eric_score}
-		doscreenelementmorph \{id = eric_score
+	if ObjectExists \{id = Eric_score}
+		doScreenElementMorph \{id = Eric_score
 			time = 0
 			scale = 0.83}
 	endif
 endscript
 
 script hide_death_msg 
-	if objectexists \{id = death_message}
-		doscreenelementmorph \{id = death_message
+	if ObjectExists \{id = death_message}
+		doScreenElementMorph \{id = death_message
 			time = 0
 			scale = 0}
 	endif
 endscript
 
 script unhide_death_msg 
-	if objectexists \{id = death_message}
-		doscreenelementmorph \{id = death_message
+	if ObjectExists \{id = death_message}
+		doScreenElementMorph \{id = death_message
 			time = 0
 			scale = 1}
 	endif
 endscript
 
 script hide_tips 
-	if objectexists \{id = skater_hint}
-		doscreenelementmorph \{id = skater_hint
+	if ObjectExists \{id = skater_hint}
+		doScreenElementMorph \{id = skater_hint
 			time = 0
 			pos = (320.0, 11050.0)}
 	endif
 endscript
 
 script unhide_tips 
-	if objectexists \{id = skater_hint}
-		doscreenelementmorph \{id = skater_hint
+	if ObjectExists \{id = skater_hint}
+		doScreenElementMorph \{id = skater_hint
 			time = 0
 			pos = (320.0, 150.0)}
 	endif
@@ -844,91 +844,91 @@ endscript
 
 script change_gamemode_career 
 	printf \{"********** CHANGING GAME MODE TO CAREER"}
-	enablesun
-	setgametype \{career}
-	setcurrentgametype
-	careerfunc \{func = setappropriatenodeflags}
+	EnableSun
+	SetGameType \{career}
+	SetCurrentGameType
+	CareerFunc \{func = SetAppropriateNodeFlags}
 endscript
 
 script change_gamemode_classic 
 	printf \{"********** CHANGING GAME MODE TO CLASSIC"}
-	enablesun
-	setgametype \{classic}
-	setcurrentgametype
-	careerfunc \{func = setappropriatenodeflags}
+	EnableSun
+	SetGameType \{Classic}
+	SetCurrentGameType
+	CareerFunc \{func = SetAppropriateNodeFlags}
 endscript
 
 script change_gamemode_coop 
 	printf \{"********** CHANGING GAME MODE TO CO-OP"}
-	enablesun
-	setgametype \{coop}
-	setcurrentgametype
-	careerfunc \{func = setappropriatenodeflags}
+	EnableSun
+	SetGameType \{coop}
+	SetCurrentGameType
+	CareerFunc \{func = SetAppropriateNodeFlags}
 endscript
 
 script change_gamemode_net 
 	printf \{"********** CHANGING GAME MODE TO NET!!!"}
-	disablesun
-	setgametype \{net}
-	setcurrentgametype
-	careerfunc \{func = setappropriatenodeflags}
+	DisableSun
+	SetGameType \{net}
+	SetCurrentGameType
+	CareerFunc \{func = SetAppropriateNodeFlags}
 endscript
 
 script change_gamemode_singlesession 
-	enablesun
-	setgametype \{singlesession}
-	setcurrentgametype
-	careerfunc \{func = setappropriatenodeflags}
+	EnableSun
+	SetGameType \{singlesession}
+	SetCurrentGameType
+	CareerFunc \{func = SetAppropriateNodeFlags}
 endscript
 
 script change_gamemode_freeskate_2p 
-	disablesun
-	setgametype \{freeskate2p}
-	setcurrentgametype
-	careerfunc \{func = setappropriatenodeflags}
+	DisableSun
+	SetGameType \{freeskate2p}
+	SetCurrentGameType
+	CareerFunc \{func = SetAppropriateNodeFlags}
 endscript
 
 script animate_in 
-	setbuttoneventmappings \{block_menu_input}
-	setscreenelementprops \{id = root_window
+	SetButtonEventMappings \{block_menu_input}
+	SetScreenElementProps \{id = root_window
 		tags = {
 			menu_state = entering
 		}}
-	launchevent type = focus target = <menu_id>
-	domorph \{time = 0.05
+	LaunchEvent type = focus target = <menu_id>
+	DoMorph \{time = 0.05
 		rot_angle = 3
 		pos = (40.0, 0.0)
 		alpha = 1}
-	domorph \{time = 0.01
+	DoMorph \{time = 0.01
 		rot_angle = 0
 		pos = (10.0, 0.0)}
-	setscreenelementprops \{id = root_window
+	SetScreenElementProps \{id = root_window
 		tags = {
 			menu_state = on
 		}}
-	if NOT gotparam \{dont_unblock}
-		setbuttoneventmappings \{unblock_menu_input}
+	if NOT GotParam \{dont_unblock}
+		SetButtonEventMappings \{unblock_menu_input}
 	endif
 endscript
 
 script menu_onscreen \{menu_id = current_menu_anchor}
-	domorph \{scale = 1
+	DoMorph \{scale = 1
 		time = 0}
-	if gotparam \{pos}
-		domorph pos = <pos>
+	if GotParam \{pos}
+		DoMorph pos = <pos>
 	endif
-	setprops \{just = [
+	SetProps \{just = [
 			center
 			center
 		]}
-	gettags
-	if gotparam \{focus_child}
-		launchevent type = focus target = <menu_id> data = {child_id = <focus_child>}
+	GetTags
+	if GotParam \{focus_child}
+		LaunchEvent type = focus target = <menu_id> data = {child_id = <focus_child>}
 	else
-		launchevent type = focus target = <id>
+		LaunchEvent type = focus target = <id>
 	endif
-	if NOT gotparam \{preserve_menu_state}
-		setscreenelementprops \{id = root_window
+	if NOT GotParam \{preserve_menu_state}
+		SetScreenElementProps \{id = root_window
 			tags = {
 				menu_state = on
 			}}
@@ -936,77 +936,77 @@ script menu_onscreen \{menu_id = current_menu_anchor}
 endscript
 
 script animate_out \{menu_id = current_menu_anchor}
-	setbuttoneventmappings \{block_menu_input}
-	setscreenelementprops \{id = root_window
+	SetButtonEventMappings \{block_menu_input}
+	SetScreenElementProps \{id = root_window
 		tags = {
 			menu_state = leaving
 		}}
-	gettags
-	setprops \{just = [
+	GetTags
+	SetProps \{just = [
 			center
 			center
 		]}
-	domorph \{time = 0
+	DoMorph \{time = 0
 		scale = 1.0}
-	domorph \{time = 0.3
+	DoMorph \{time = 0.3
 		alpha = 0}
-	setscreenelementprops \{id = root_window
+	SetScreenElementProps \{id = root_window
 		tags = {
 			menu_state = off
 		}}
-	setscreenelementlock \{id = root_window
+	SetScreenElementLock \{id = root_window
 		off}
-	destroyscreenelement id = <menu_id>
-	setbuttoneventmappings \{unblock_menu_input}
+	DestroyScreenElement id = <menu_id>
+	SetButtonEventMappings \{unblock_menu_input}
 endscript
 
 script menu_offscreen 
-	setscreenelementprops \{id = root_window
+	SetScreenElementProps \{id = root_window
 		tags = {
 			menu_state = off
 		}}
-	setscreenelementlock \{id = root_window
+	SetScreenElementLock \{id = root_window
 		off}
-	gettags
-	launchevent type = unfocus target = <id>
-	destroyscreenelement id = <id> recurse
+	GetTags
+	LaunchEvent type = unfocus target = <id>
+	DestroyScreenElement id = <id> recurse
 endscript
 
 script hide_root_window 
-	setscreenelementprops \{id = root_window
+	SetScreenElementProps \{id = root_window
 		hide}
 endscript
 
 script unhide_root_window 
-	setscreenelementprops \{id = root_window
+	SetScreenElementProps \{id = root_window
 		unhide}
 endscript
 
 script generic_menu_update_arrows \{menu_id = current_menu}
-	if NOT objectexists id = <up_arrow_id>
+	if NOT ObjectExists id = <up_arrow_id>
 		return
 	endif
-	if NOT objectexists id = <down_arrow_id>
+	if NOT ObjectExists id = <down_arrow_id>
 		return
 	endif
-	if <menu_id> :menu_selectedindexis first
-		setscreenelementprops {
+	if <menu_id> :Menu_SelectedIndexIs first
+		SetScreenElementProps {
 			id = <up_arrow_id>
 			rgba = [128 128 128 0]
 		}
 	else
-		setscreenelementprops {
+		SetScreenElementProps {
 			id = <up_arrow_id>
 			rgba = [128 128 128 128]
 		}
 	endif
-	if <menu_id> :menu_selectedindexis last
-		setscreenelementprops {
+	if <menu_id> :Menu_SelectedIndexIs last
+		SetScreenElementProps {
 			id = <down_arrow_id>
 			rgba = [128 128 128 0]
 		}
 	else
-		setscreenelementprops {
+		SetScreenElementProps {
 			id = <down_arrow_id>
 			rgba = [128 128 128 128]
 		}
@@ -1016,13 +1016,13 @@ endscript
 script generic_menu_pad_back 
 	printf \{"generic_menu_pad_back Parameters = "}
 	generic_menu_pad_back_sound
-	if gotparam \{callback}
+	if GotParam \{callback}
 		<callback> <...>
 	endif
 endscript
 
 script generic_menu_pad_choose 
-	if gotparam \{callback}
+	if GotParam \{callback}
 		<callback> <...>
 	endif
 endscript
@@ -1034,21 +1034,21 @@ script generic_menu_pad_up_down_sound
 endscript
 
 script generic_menu_pad_choose_sound 
-	soundevent \{event = ui_sfx_select}
+	SoundEvent \{event = ui_sfx_select}
 endscript
 disable_menu_sounds = 0
 
 script generic_menu_up_or_down_sound \{menu_id = current_menu}
 	printf \{"--- generic_menu_up_or_down_sound"}
 	if ($disable_menu_sounds = 0)
-		soundevent \{event = ui_sfx_scroll}
-		soundevent \{event = ui_sfx_scroll_add}
+		SoundEvent \{event = ui_sfx_scroll}
+		SoundEvent \{event = ui_sfx_scroll_add}
 	endif
 endscript
 
 script generic_menu_scroll_sideways_sound 
 	if ($disable_menu_sounds = 0)
-		soundevent \{event = generic_menu_pad_sideways_sfx}
+		SoundEvent \{event = Generic_menu_pad_sideways_SFX}
 	endif
 endscript
 
@@ -1056,68 +1056,68 @@ script generic_keyboard_sound
 endscript
 
 script theme_menu_pad_choose_sound 
-	soundevent \{event = generic_menu_pad_choose_sfx}
+	SoundEvent \{event = Generic_menu_pad_choose_SFX}
 endscript
 
 script generic_pause_exit_sound 
-	soundevent \{event = generic_menu_pad_back_sfx}
+	SoundEvent \{event = Generic_menu_pad_back_SFX}
 endscript
 
 script videophone_menu_up_or_down_sound \{menu_id = current_menu}
 	if ($disable_menu_sounds = 0)
-		if gotparam \{up}
-			soundevent \{event = vp_menu_pad_up_sfx}
+		if GotParam \{up}
+			SoundEvent \{event = VP_menu_pad_up_SFX}
 		endif
-		if gotparam \{down}
-			soundevent \{event = vp_menu_pad_down_sfx}
+		if GotParam \{down}
+			SoundEvent \{event = VP_menu_pad_down_SFX}
 		endif
 	endif
 endscript
 
-script videophone_pad_back_sound 
-	soundevent \{event = vp_menu_pad_back_sfx}
+script Videophone_pad_back_sound 
+	SoundEvent \{event = VP_menu_pad_back_SFX}
 endscript
 
-script videophone_pad_choose_sound 
-	soundevent \{event = vp_menu_pad_select_sfx}
+script Videophone_pad_choose_sound 
+	SoundEvent \{event = VP_menu_pad_Select_SFX}
 endscript
 
 script cas_menu_pad_choose_sound 
-	soundevent \{event = cas_menu_pad_choose_sfx}
+	SoundEvent \{event = CAS_menu_pad_choose_SFX}
 endscript
 
 script cas_menu_up_or_down_sound \{menu_id = current_menu}
 	if ($disable_menu_sounds = 0)
-		if gotparam \{up}
-			soundevent \{event = cas_menu_pad_up_sfx}
+		if GotParam \{up}
+			SoundEvent \{event = CAS_menu_pad_up_SFX}
 		endif
-		if gotparam \{down}
-			soundevent \{event = cas_menu_pad_down_sfx}
+		if GotParam \{down}
+			SoundEvent \{event = CAS_menu_pad_down_SFX}
 		endif
 	endif
 endscript
 
 script menu_audio_settings_band_volume_sound 
 	if ($disable_menu_sounds = 0)
-		soundevent \{event = ui_sfx_bandvol}
+		SoundEvent \{event = ui_sfx_bandvol}
 	endif
 endscript
 
 script menu_audio_settings_guitar_volume_sound 
 	if ($disable_menu_sounds = 0)
-		soundevent \{event = ui_sfx_guitvol}
+		SoundEvent \{event = ui_sfx_guitvol}
 	endif
 endscript
 
 script menu_audio_settings_fx_volume_sound 
 	if ($disable_menu_sounds = 0)
-		soundevent \{event = ui_sfx_crowdvol}
+		SoundEvent \{event = ui_sfx_crowdvol}
 	endif
 endscript
 
 script menu_video_settings_lefty_flip_sound 
 	if ($disable_menu_sounds = 0)
-		soundevent \{event = box_check_sfx}
+		SoundEvent \{event = Box_Check_SFX}
 	endif
 endscript
 
@@ -1129,19 +1129,19 @@ endscript
 
 script menu_video_settings_calibrate_reset_to_zero_sound 
 	if ($disable_menu_sounds = 0)
-		soundevent \{event = ui_sfx_select}
+		SoundEvent \{event = ui_sfx_select}
 	endif
 endscript
 
 script menu_song_complete_sound 
 	if ($disable_menu_sounds = 0)
-		soundevent \{event = ui_sfx_select}
+		SoundEvent \{event = ui_sfx_select}
 	endif
 endscript
 
 script menu_get_sponsor_sound 
 	if ($disable_menu_sounds = 0)
-		soundevent \{event = ui_sfx_select}
+		SoundEvent \{event = ui_sfx_select}
 	endif
 endscript
 
@@ -1150,97 +1150,97 @@ script menu_setlist_bonus_tab_sound
 		s = $disable_menu_sounds}
 	if ($disable_menu_sounds = 0)
 		printf \{"sklajkjahsdflhasdlasdf"}
-		soundevent \{event = ui_sfx_select}
+		SoundEvent \{event = ui_sfx_select}
 	endif
 endscript
 
 script menu_setlist_downloads_tab_sound 
 	if ($disable_menu_sounds = 0)
-		soundevent \{event = ui_sfx_select}
+		SoundEvent \{event = ui_sfx_select}
 	endif
 endscript
 
 script menu_setlist_setlist_tab_sound 
 	if ($disable_menu_sounds = 0)
-		soundevent \{event = ui_sfx_select}
+		SoundEvent \{event = ui_sfx_select}
 	endif
 endscript
 
 script reset_gamemode 
-	resettodefaultprofile \{name = custom_story}
-	careerfunc \{func = reset}
-	if objectexists \{id = skater}
-		skater :recordcomponent_resetcomponent
+	ResetToDefaultProfile \{name = custom_story}
+	CareerFunc \{func = reset}
+	if ObjectExists \{id = skater}
+		skater :RecordComponent_ResetComponent
 	endif
-	gman_resetcareer
-	careerfunc \{func = setappropriatenodeflags}
+	GMan_ResetCareer
+	CareerFunc \{func = SetAppropriateNodeFlags}
 	training_reset_checkpoints
-	unsetglobalflag \{flag = $career_started}
-	getarraysize \{$story_clear_global_flags}
+	UnSetGlobalFlag \{flag = $CAREER_STARTED}
+	GetArraySize \{$STORY_CLEAR_GLOBAL_FLAGS}
 	index = 0
 	begin
-	printf "clearing global flag %d" d = ($story_clear_global_flags [<index>])
-	unsetglobalflag flag = ($story_clear_global_flags [<index>])
+	printf "clearing global flag %d" d = ($STORY_CLEAR_GLOBAL_FLAGS [<index>])
+	UnSetGlobalFlag flag = ($STORY_CLEAR_GLOBAL_FLAGS [<index>])
 	<index> = (<index> + 1)
 	repeat <array_size>
-	if getglobalflag \{flag = $cheat_cas_vans_unlocked}
+	if GetGlobalFlag \{flag = $CHEAT_CAS_VANS_UNLOCKED}
 		cheat_unlock_the_vans
 	endif
 endscript
 
 script generic_menu_animate_in \{menu = current_menu_anchor}
-	if gotparam \{force}
-		<menu> :settags animate_me = 1
+	if GotParam \{force}
+		<menu> :SetTags animate_me = 1
 	else
-		if NOT <menu> :getsingletag animate_me
+		if NOT <menu> :GetSingleTag animate_me
 			return
 		endif
 	endif
-	if gotparam \{pos}
+	if GotParam \{pos}
 		screenelementpos = <pos>
 	else
-		getscreenelementposition id = <menu>
+		GetScreenElementPosition id = <menu>
 	endif
-	doscreenelementmorph id = <menu> pos = (<screenelementpos> + (640.0, 0.0)) time = 0
-	doscreenelementmorph id = <menu> pos = <screenelementpos> time = 0.15
-	if NOT gotparam \{no_wait}
-		wait \{0.2
+	doScreenElementMorph id = <menu> pos = (<screenelementpos> + (640.0, 0.0)) time = 0
+	doScreenElementMorph id = <menu> pos = <screenelementpos> time = 0.15
+	if NOT GotParam \{no_wait}
+		Wait \{0.2
 			seconds}
 	endif
 endscript
 
 script generic_menu_animate_out \{menu = current_menu_anchor}
-	if gotparam \{force}
-		<menu> :settags animate_me = 1
+	if GotParam \{force}
+		<menu> :SetTags animate_me = 1
 	endif
-	if NOT <menu> :getsingletag animate_me
+	if NOT <menu> :GetSingleTag animate_me
 		return
 	endif
-	if gotparam \{pos}
+	if GotParam \{pos}
 		screenelementpos = <pos>
 	else
-		getscreenelementposition id = <menu>
+		GetScreenElementPosition id = <menu>
 	endif
-	doscreenelementmorph id = <menu> pos = (<screenelementpos> + (640.0, 0.0)) time = 0.15
-	wait \{0.2
+	doScreenElementMorph id = <menu> pos = (<screenelementpos> + (640.0, 0.0)) time = 0.15
+	Wait \{0.2
 		seconds}
 endscript
 
 script generic_animate_out_last_menu 
-	if objectexists \{id = current_menu}
-		if current_menu :getsingletag \{animate_me}
+	if ObjectExists \{id = current_menu}
+		if current_menu :GetSingleTag \{animate_me}
 			generic_menu_animate_out \{menu = current_menu}
 			return
 		endif
 	endif
-	if objectexists \{id = current_menu_anchor}
-		if current_menu_anchor :getsingletag \{animate_me}
+	if ObjectExists \{id = current_menu_anchor}
+		if current_menu_anchor :GetSingleTag \{animate_me}
 			generic_menu_animate_out
 			return
 		endif
 	endif
-	if objectexists \{id = sub_menu}
-		if sub_menu :getsingletag \{animate_me}
+	if ObjectExists \{id = sub_menu}
+		if sub_menu :GetSingleTag \{animate_me}
 			generic_menu_animate_out \{force
 				menu = sub_menu
 				pos = (320.0, 240.0)}
@@ -1249,6 +1249,6 @@ script generic_animate_out_last_menu
 	endif
 endscript
 
-script runscriptonscreenelement_script 
-	runscriptonscreenelement <...>
+script RunScriptOnScreenElement_script 
+	RunScriptOnScreenElement <...>
 endscript

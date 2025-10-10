@@ -46,36 +46,36 @@ script create_loading_screen \{mode = play_song}
 		return
 	endif
 	change \{is_changing_levels = 1}
-	getarraysize ($loading_screen_tips)
-	getrandomvalue name = rand_num a = 0 b = (<array_size> - 1) integer
+	GetArraySize ($loading_screen_tips)
+	GetRandomValue name = rand_num a = 0 b = (<array_size> - 1) Integer
 	rand_tip = ($loading_screen_tips [<rand_num>])
 	if (<mode> = play_song || <mode> = play_encore || <mode> = play_boss || <mode> = restart_song)
-		killspawnedscript \{name = jiggle_text_array_elements}
-		if screenelementexists \{id = $g_loading_screen_split_container_id}
-			destroyscreenelement \{id = $g_loading_screen_split_container_id}
+		KillSpawnedScript \{name = jiggle_text_array_elements}
+		if ScreenElementExists \{id = $g_loading_screen_split_container_id}
+			DestroyScreenElement \{id = $g_loading_screen_split_container_id}
 		endif
 		movie = 'loading_flying'
-		if NOT ismovieinbuffer movie = <movie>
+		if NOT IsMovieInBuffer movie = <movie>
 			buffer_slot = 0
-			freemoviebuffer buffer_slot = <buffer_slot>
-			if gotextramemory
-				mempushcontext \{debugheap}
+			FreeMovieBuffer buffer_slot = <buffer_slot>
+			if GotExtraMemory
+				MemPushContext \{DebugHeap}
 			endif
-			allocatemoviebuffer buffer_slot = <buffer_slot> movie = 'movies\\bik\\loading_flying.bik.xen'
-			if gotextramemory
-				mempopcontext
+			AllocateMovieBuffer buffer_slot = <buffer_slot> movie = 'movies\\bik\\loading_flying.bik.xen'
+			if GotExtraMemory
+				MemPopContext
 			endif
-			loadmovieintobuffer buffer_slot = <buffer_slot> movie = <movie>
+			LoadMovieIntoBuffer buffer_slot = <buffer_slot> movie = <movie>
 		endif
-		playmoviefrombuffer {
+		PlayMovieFromBuffer {
 			buffer_slot = <buffer_slot>
-			textureslot = 2
+			TextureSlot = 2
 			no_hold
 			wait_until_rendered
-			texturepri = 4999
+			TexturePri = 4999
 		}
-		createscreenelement {
-			type = textblockelement
+		CreateScreenElement {
+			type = TextBlockElement
 			parent = root_window
 			id = loading_tip_text
 			text = <rand_tip>
@@ -118,12 +118,12 @@ script create_loading_screen \{mode = play_song}
 				explode = 0
 			}}
 	else
-		killspawnedscript \{name = destroy_loading_screen_spawned}
-		createscreenelement \{type = containerelement
+		KillSpawnedScript \{name = destroy_loading_screen_spawned}
+		CreateScreenElement \{type = ContainerElement
 			parent = root_window
 			id = loading_screen_container
 			pos = (0.0, 0.0)}
-		createscreenelement \{type = spriteelement
+		CreateScreenElement \{type = SpriteElement
 			parent = loading_screen_container
 			texture = loading_flying_static
 			pos = (640.0, 360.0)
@@ -137,41 +137,41 @@ endscript
 
 script destroy_loading_screen 
 	destroy_menu \{menu_id = loading_tip_text}
-	killspawnedscript \{name = jiggle_text_array_elements}
-	if screenelementexists \{id = $g_loading_screen_split_container_id}
-		destroyscreenelement \{id = $g_loading_screen_split_container_id}
+	KillSpawnedScript \{name = jiggle_text_array_elements}
+	if ScreenElementExists \{id = $g_loading_screen_split_container_id}
+		DestroyScreenElement \{id = $g_loading_screen_split_container_id}
 	endif
-	if ismovieplaying \{textureslot = 2}
-		killmovie \{textureslot = 2}
+	if IsMoviePlaying \{TextureSlot = 2}
+		KillMovie \{TextureSlot = 2}
 	endif
 	spawnscriptnow \{destroy_loading_screen_spawned}
-	hideloadingscreen
+	Hideloadingscreen
 	if ($playing_song = 0)
 		change \{is_changing_levels = 0}
 	endif
 endscript
 
 script destroy_loading_screen_spawned \{time = 0.3}
-	onexitrun \{destroy_loading_screen_finish}
+	OnExitRun \{destroy_loading_screen_finish}
 	if (<time> > 0)
-		if screenelementexists \{id = menu_backdrop_container}
-			doscreenelementmorph id = menu_backdrop_container alpha = 0 time = <time>
+		if ScreenElementExists \{id = menu_backdrop_container}
+			doScreenElementMorph id = menu_backdrop_container alpha = 0 time = <time>
 		endif
-		if screenelementexists \{id = loading_screen_container}
-			doscreenelementmorph id = loading_screen_container alpha = 0 time = <time>
+		if ScreenElementExists \{id = loading_screen_container}
+			doScreenElementMorph id = loading_screen_container alpha = 0 time = <time>
 		endif
-		wait <time> seconds
+		Wait <time> seconds
 	endif
 endscript
 
 script destroy_loading_screen_finish 
-	if iswinport
-		if ismovieplaying \{textureslot = 2}
-			killmovie \{textureslot = 2}
+	if IsWinPort
+		if IsMoviePlaying \{TextureSlot = 2}
+			KillMovie \{TextureSlot = 2}
 		endif
 	endif
-	if screenelementexists \{id = loading_screen_container}
-		destroyscreenelement \{id = loading_screen_container}
+	if ScreenElementExists \{id = loading_screen_container}
+		DestroyScreenElement \{id = loading_screen_container}
 	endif
 	destroy_menu_backdrop
 endscript

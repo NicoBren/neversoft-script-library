@@ -1,53 +1,53 @@
-gp_artdeco_encore_guitaristpoof01 = {
+GP_ArtDeco_Encore_GuitaristPoof01 = {
 	pos = (1.627627, 2.272827, -0.45027503)
 	angles = (0.0, 0.0, 0.0)
-	class = particleobject
-	particletype = flexparticle
+	Class = ParticleObject
+	ParticleType = FlexParticle
 	type = flat
 	active
-	createdatstart
-	emitrangedims = (0.7, 1.0, 0.5)
-	emit_target = (0.0, 1.0, 0.0)
-	emitangle = (0.0, 0.0, 0.0)
+	CreatedAtStart
+	EmitRangeDims = (0.7, 1.0, 0.5)
+	emit_Target = (0.0, 1.0, 0.0)
+	EmitAngle = (0.0, 0.0, 0.0)
 	force = (0.0, -0.5, 0.0)
-	windcoeff = 0.0
-	localwindcoeff = 0.0
-	emittervelocityweight = 0.0
-	radiate
-	anglespread = 360.0
-	liferange = (1.0, 2.0)
+	WindCoeff = 0.0
+	LocalWindCoeff = 0.0
+	EmitterVelocityWeight = 0.0
+	Radiate
+	AngleSpread = 360.0
+	LifeRange = (1.0, 2.0)
 	emit_rate = 64.0
 	max = 0
-	timeseed = 0.5
-	lifetime = 0.0
-	emitnum = 96
-	followemitter = 0.0
-	emitfunction = constant
-	emitperiod = 1.0
-	sizerange = [
+	TimeSeed = 0.5
+	lifeTime = 0.0
+	emitNum = 96
+	FollowEmitter = 0.0
+	EmitFunction = constant
+	EmitPeriod = 1.0
+	SizeRange = [
 		(1.0, 1.0)
 		(1.5, 1.5)
 	]
-	speedrange = (0.0, 0.5)
-	rotvel = (-0.5, 0.5)
-	rotveltimescale = 1.0
-	emitdelaystart = 0.0
-	pathfollowtime = 0.2
-	history = 2
-	historylistcoordinatespace = world
+	SpeedRange = (0.0, 0.5)
+	RotVel = (-0.5, 0.5)
+	RotVelTimeScale = 1.0
+	EmitDelayStart = 0.0
+	PathFollowTime = 0.2
+	History = 2
+	HistoryListCoordinateSpace = world
 	color = -1
-	lod_default
-	quickmaterial = {
-		texturelayout = layout2x2
-		diffusetextureenabled
-		diffusetexture = jow_steam02
-		specularpower = 0
-		lighting
+	LOD_Default
+	QuickMaterial = {
+		TextureLayout = Layout2x2
+		DiffuseTextureEnabled
+		DiffuseTexture = JOW_Steam02
+		SpecularPower = 0
+		Lighting
 		alphacutoff = 16
-		blendmode = blend
-		quadanimationfps = 0
+		blendMode = blend
+		QuadAnimationFPS = 0
 	}
-	knot = [
+	Knot = [
 		(-0.48496202, 0.0, -0.0)
 		(-0.48496202, 0.0, -0.0)
 		(-0.46225402, 0.0, -0.0)
@@ -61,7 +61,7 @@ gp_artdeco_encore_guitaristpoof01 = {
 		(1.051219, 0.0, -0.0)
 		(1.051219, 0.0, -0.0)
 	]
-	particlecolor = [
+	ParticleColor = [
 		1917271552
 		1730948096
 		1580798719
@@ -71,7 +71,7 @@ gp_artdeco_encore_guitaristpoof01 = {
 		488447232
 		623191296
 	]
-	vertexweight = [
+	VertexWeight = [
 		0.314324
 		0.67167693
 		1.0

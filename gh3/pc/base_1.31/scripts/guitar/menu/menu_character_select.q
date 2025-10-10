@@ -45,16 +45,16 @@ script create_net_game_info_panel \{parent = user_control_container
 		window_width = 250
 		window_body_height = 40
 		base_z = -1}
-	if NOT gotparam \{parent}
-		softassert \{"Did not get a parent for the net_game_info_panel!"}
+	if NOT GotParam \{parent}
+		SoftAssert \{"Did not get a parent for the net_game_info_panel!"}
 		return
 	endif
-	if screenelementexists \{id = net_game_info_panel}
-		destroyscreenelement \{id = net_game_info_panel}
+	if ScreenElementExists \{id = net_game_info_panel}
+		DestroyScreenElement \{id = net_game_info_panel}
 	endif
 	bg_fill_color = [0 0 0 200]
-	createscreenelement {
-		type = containerelement
+	CreateScreenElement {
+		type = ContainerElement
 		id = net_game_info_panel
 		parent = <parent>
 		pos = <pos>
@@ -67,8 +67,8 @@ script create_net_game_info_panel \{parent = user_control_container
 	text_pos_rt = ((0.0, 25.0) + <side_offset> * (1.0, 0.0))
 	text_space = 0
 	text_z = 0.1
-	createscreenelement {
-		type = textelement
+	CreateScreenElement {
+		type = TextElement
 		parent = <cont_id>
 		font = fontgrid_title_gh3
 		text = "Settings"
@@ -77,10 +77,10 @@ script create_net_game_info_panel \{parent = user_control_container
 		just = [center top]
 		z_priority = (<base_z> + <text_z>)
 	}
-	getscreenelementdims id = <id>
-	text_pos_rt = (<text_pos_rt> + (0.0, 1.0) * <height> + (0.0, 1.0) * <text_space>)
-	createscreenelement {
-		type = textelement
+	GetScreenElementDims id = <id>
+	text_pos_rt = (<text_pos_rt> + (0.0, 1.0) * <Height> + (0.0, 1.0) * <text_space>)
+	CreateScreenElement {
+		type = TextElement
 		parent = <cont_id>
 		font = fontgrid_title_gh3
 		text = "Mode:"
@@ -92,8 +92,8 @@ script create_net_game_info_panel \{parent = user_control_container
 	fit_text_into_menu_item id = <id> max_width = 70
 	get_game_mode_ui_string game_mode = ($game_mode)
 	printstruct <...>
-	createscreenelement {
-		type = textelement
+	CreateScreenElement {
+		type = TextElement
 		parent = <cont_id>
 		font = fontgrid_title_gh3
 		text = <ui_string>
@@ -103,12 +103,12 @@ script create_net_game_info_panel \{parent = user_control_container
 		z_priority = (<base_z> + <text_z>)
 	}
 	fit_text_into_menu_item id = <id> max_width = 120
-	if checksumequals a = ($game_mode) b = p2_pro_faceoff
-		getscreenelementdims id = <id>
-		text_pos_rt = (<text_pos_rt> + (0.0, 1.0) * <height> + (0.0, 1.0) * <text_space>)
+	if ChecksumEquals a = ($game_mode) b = p2_pro_faceoff
+		GetScreenElementDims id = <id>
+		text_pos_rt = (<text_pos_rt> + (0.0, 1.0) * <Height> + (0.0, 1.0) * <text_space>)
 		window_body_height = 80
-		createscreenelement {
-			type = textelement
+		CreateScreenElement {
+			type = TextElement
 			parent = <cont_id>
 			font = fontgrid_title_gh3
 			text = "Difficulty:"
@@ -120,8 +120,8 @@ script create_net_game_info_panel \{parent = user_control_container
 		fit_text_into_menu_item id = <id> max_width = 120
 		get_difficulty_ui_string difficulty = ($current_difficulty)
 		printstruct <...>
-		createscreenelement {
-			type = textelement
+		CreateScreenElement {
+			type = TextElement
 			parent = <cont_id>
 			font = fontgrid_title_gh3
 			text = <ui_string>
@@ -132,10 +132,10 @@ script create_net_game_info_panel \{parent = user_control_container
 		}
 		fit_text_into_menu_item id = <id> max_width = 70
 	endif
-	getscreenelementdims id = <id>
-	text_pos_rt = (<text_pos_rt> + (0.0, 1.0) * <height> + (0.0, 1.0) * <text_space>)
-	createscreenelement {
-		type = textelement
+	GetScreenElementDims id = <id>
+	text_pos_rt = (<text_pos_rt> + (0.0, 1.0) * <Height> + (0.0, 1.0) * <text_space>)
+	CreateScreenElement {
+		type = TextElement
 		parent = <cont_id>
 		font = fontgrid_title_gh3
 		text = "Num Songs:"
@@ -145,9 +145,9 @@ script create_net_game_info_panel \{parent = user_control_container
 		z_priority = (<base_z> + <text_z>)
 	}
 	get_number_of_songs
-	formattext textname = num_songs_text "%d" d = <num_songs>
-	createscreenelement {
-		type = textelement
+	FormatText TextName = num_songs_text "%d" d = <num_songs>
+	CreateScreenElement {
+		type = TextElement
 		parent = <cont_id>
 		font = fontgrid_title_gh3
 		text = <num_songs_text>
@@ -158,7 +158,7 @@ script create_net_game_info_panel \{parent = user_control_container
 	}
 	top_dims = ((0.0, 64.0) + <window_width> * (1.0, 0.0))
 	top_pos = (0.0, 0.0)
-	displaysprite {
+	displaySprite {
 		parent = <cont_id>
 		tex = window_frame_cap
 		rgba = ($online_medium_blue)
@@ -171,7 +171,7 @@ script create_net_game_info_panel \{parent = user_control_container
 		target_width = (<top_dims>.(1.0, 0.0))
 		target_height = (<top_dims>.(0.0, 1.0))
 	}
-	displaysprite {
+	displaySprite {
 		parent = <cont_id>
 		tex = window_fill_cap
 		rgba = <bg_fill_color>
@@ -184,10 +184,10 @@ script create_net_game_info_panel \{parent = user_control_container
 		target_width = (<top_dims>.(1.0, 0.0))
 		target_height = (<top_dims>.(0.0, 1.0))
 	}
-	getscreenelementdims id = <id>
-	middle_pos = (<top_pos> + <height> * (0.0, 1.0))
+	GetScreenElementDims id = <id>
+	middle_pos = (<top_pos> + <Height> * (0.0, 1.0))
 	middle_dims = ((0.0, 1.0) * <window_body_height> + <window_width> * (1.0, 0.0))
-	displaysprite {
+	displaySprite {
 		parent = <cont_id>
 		tex = window_frame_body_tall
 		rgba = ($online_medium_blue)
@@ -201,7 +201,7 @@ script create_net_game_info_panel \{parent = user_control_container
 		target_width = (<middle_dims>.(1.0, 0.0))
 		target_height = (<middle_dims>.(0.0, 1.0))
 	}
-	displaysprite {
+	displaySprite {
 		parent = <cont_id>
 		tex = window_fill_body_large
 		rgba = <bg_fill_color>
@@ -215,10 +215,10 @@ script create_net_game_info_panel \{parent = user_control_container
 		target_width = (<middle_dims>.(1.0, 0.0))
 		target_height = (<middle_dims>.(0.0, 1.0))
 	}
-	getscreenelementdims id = <id>
-	bottom_pos = (<middle_pos> + <height> * (0.0, 1.0))
+	GetScreenElementDims id = <id>
+	bottom_pos = (<middle_pos> + <Height> * (0.0, 1.0))
 	bottom_dims = ((0.0, 64.0) + <window_width> * (1.0, 0.0))
-	displaysprite {
+	displaySprite {
 		parent = <cont_id>
 		tex = window_frame_cap
 		rgba = ($online_medium_blue)
@@ -232,7 +232,7 @@ script create_net_game_info_panel \{parent = user_control_container
 		target_width = (<bottom_dims>.(1.0, 0.0))
 		target_height = (<bottom_dims>.(0.0, 1.0))
 	}
-	displaysprite {
+	displaySprite {
 		parent = <cont_id>
 		tex = window_fill_cap
 		rgba = <bg_fill_color>
@@ -246,9 +246,9 @@ script create_net_game_info_panel \{parent = user_control_container
 		target_width = (<bottom_dims>.(1.0, 0.0))
 		target_height = (<bottom_dims>.(0.0, 1.0))
 	}
-	getscreenelementdims id = <id>
-	cont_dims = (<bottom_pos> + (1.0, 0.0) * <width> + (0.0, 1.0) * <height>)
-	setscreenelementprops {
+	GetScreenElementDims id = <id>
+	cont_dims = (<bottom_pos> + (1.0, 0.0) * <width> + (0.0, 1.0) * <Height>)
+	SetScreenElementProps {
 		id = <cont_id>
 		dims = <cont_dims>
 	}
@@ -260,7 +260,7 @@ script create_character_select_menu \{player = 1}
 	if ($is_network_game)
 		mark_unsafe_for_shutdown
 		change \{winport_block_net_pause = 1}
-		change \{ghandlingwindowclosed = 0}
+		change \{gHandlingWindowClosed = 0}
 	endif
 	if (($is_network_game = 1) && (<player> = 1) && ($net_can_send_approval = 1))
 		if NOT ($net_current_flow_state = character_hub)
@@ -274,11 +274,11 @@ script create_character_select_menu \{player = 1}
 	endif
 	change \{menu_flow_locked = 1}
 	destroy_character_select_menu player = <player>
-	formattext checksumname = safe_to_scroll 'g_cs_safe_to_scroll_p%d' d = <player>
+	FormatText checksumname = safe_to_scroll 'g_cs_safe_to_scroll_p%d' d = <player>
 	change globalname = <safe_to_scroll> newvalue = 0
 	change \{rich_presence_context = presence_character_select}
 	if ($is_network_game = 1)
-		killspawnedscript \{name = net_hub_stream}
+		KillSpawnedScript \{name = net_hub_stream}
 		if ($player2_present)
 			spawnscriptnow \{net_hub_stream}
 		endif
@@ -301,7 +301,7 @@ script create_character_select_menu \{player = 1}
 	endif
 	exclusive_dev = $player1_device
 	if (($is_network_game) = 1)
-		netsessionfunc \{obj = voice
+		NetSessionFunc \{obj = voice
 			func = entering_free_skate}
 		<exclusive_dev> = $primary_controller
 	else
@@ -340,7 +340,7 @@ script create_character_select_menu \{player = 1}
 			no_focus = 1
 		}
 		if (($is_network_game) = 1)
-			launchevent \{type = unfocus
+			LaunchEvent \{type = unfocus
 				target = vmenu_character_select_p2}
 		endif
 	else
@@ -359,14 +359,14 @@ script create_character_select_menu \{player = 1}
 			}
 			get_current_first_play
 			if (<first_play>)
-				launchevent \{type = unfocus
+				LaunchEvent \{type = unfocus
 					target = vmenu_character_select_p1}
 			endif
 		else
 			if ($is_network_game)
-				createscreenelement \{type = containerelement
+				CreateScreenElement \{type = ContainerElement
 					parent = root_window
-					id = menu_container
+					id = Menu_Container
 					pos = (0.0, 0.0)}
 			endif
 			new_menu {
@@ -400,22 +400,22 @@ script create_character_select_menu \{player = 1}
 		endif
 	endif
 	if (<player> = 1)
-		mod \{a = $character_select_highlighted_character_p1
+		Mod \{a = $character_select_highlighted_character_p1
 			b = $g_cs_num_icons}
 		change g_cs_jumped_p1 = (($character_select_highlighted_character_p1 / $g_cs_num_icons) * $g_cs_num_icons)
-		change g_character_select_icon_index_p1 = <mod>
+		change g_character_select_icon_index_p1 = <Mod>
 	else
-		mod \{a = $character_select_highlighted_character_p2
+		Mod \{a = $character_select_highlighted_character_p2
 			b = $g_cs_num_icons}
 		change g_cs_jumped_p2 = (($character_select_highlighted_character_p2 / $g_cs_num_icons) * $g_cs_num_icons)
-		change g_character_select_icon_index_p2 = <mod>
+		change g_character_select_icon_index_p2 = <Mod>
 	endif
 	character_select_menu_highlight_name player = 1 musician_index = ($character_select_highlighted_character_p1)
 	character_select_menu_highlight_name player = 2 musician_index = ($character_select_highlighted_character_p2)
-	formattext checksumname = player_status 'player%i_status' i = <player>
+	FormatText checksumname = player_status 'player%i_status' i = <player>
 	char_name = ($<player_status>.band_member)
-	extendcrc <char_name> '_Info' out = info_struct
-	change structurename = <info_struct> current_anim = idle
+	ExtendCRC <char_name> '_Info' out = info_struct
+	change structurename = <info_struct> current_anim = Idle
 	change structurename = <info_struct> cycle_anim = true
 	change structurename = <info_struct> next_anim = none
 	if NOT ($game_mode = p2_career || $game_mode = p2_coop)
@@ -428,26 +428,26 @@ script create_character_select_menu \{player = 1}
 		do_character_hub_dirty
 	endif
 	setup_character_hub player = <player>
-	if compositeobjectexists name = <char_name>
+	if CompositeObjectExists name = <char_name>
 		if NOT ($<info_struct>.stance = stance_frontend)
 			<char_name> :handle_change_stance stance = stance_frontend no_wait
 		endif
 	endif
-	formattext checksumname = char_select_parent_container 'char_select_container_p%p' p = <player>
-	formattext checksumname = char_select_character_container 'char_select_character_container_p%p' p = <player>
-	formattext checksumname = char_select_next_icon 'cs_icon_id_next_p%p' p = <player>
-	formattext checksumname = icon_id_prev 'cs_icon_id_prev_p%p' p = <player>
-	formattext checksumname = char_select_icon 'g_character_select_icon_index_p%p' p = <player>
-	formattext checksumname = cs_jumped 'g_cs_jumped_p%p' p = <player>
-	formattext checksumname = hilite_container 'char_select_hilite_container_p%p' p = <player>
-	formattext checksumname = cs_name_text 'cs_name_text_p%p' p = <player>
-	createscreenelement {
-		type = containerelement
+	FormatText checksumname = char_select_parent_container 'char_select_container_p%p' p = <player>
+	FormatText checksumname = char_select_character_container 'char_select_character_container_p%p' p = <player>
+	FormatText checksumname = char_select_next_icon 'cs_icon_id_next_p%p' p = <player>
+	FormatText checksumname = icon_id_prev 'cs_icon_id_prev_p%p' p = <player>
+	FormatText checksumname = char_select_icon 'g_character_select_icon_index_p%p' p = <player>
+	FormatText checksumname = cs_jumped 'g_cs_jumped_p%p' p = <player>
+	FormatText checksumname = hilite_container 'char_select_hilite_container_p%p' p = <player>
+	FormatText checksumname = cs_name_text 'cs_name_text_p%p' p = <player>
+	CreateScreenElement {
+		type = ContainerElement
 		id = <char_select_parent_container>
 		parent = root_window
 		pos = (0.0, 0.0)
 	}
-	<char_select_parent_container> :settags pos = (0.0, 0.0)
+	<char_select_parent_container> :SetTags pos = (0.0, 0.0)
 	if ($is_network_game = 1)
 		create_net_game_info_panel \{parent = user_control_container}
 	endif
@@ -476,32 +476,32 @@ script create_character_select_menu \{player = 1}
 	else
 		<prev_pos> = ((80.0, -90.0) * <icon_scale>)
 	endif
-	displaysprite {
+	displaySprite {
 		id = <icon_id_prev>
 		parent = <char_select_parent_container>
-		tex = char_select_menu_arrow
+		tex = Char_Select_Menu_Arrow
 		pos = (<next_icon_pos> + <prev_pos>)
 		dims = <icon_dims>
 		flip_h
 	}
-	doscreenelementmorph id = <icon_id_prev> alpha = 0
+	doScreenElementMorph id = <icon_id_prev> alpha = 0
 	hilight_pos = (0.0, 0.0)
 	num_hilite_add = 0
 	i = 0
 	begin
 	if (<i> < $g_cs_num_icons)
-		formattext checksumname = icon_id 'cs_icon_p%p_id_%d' p = <player> d = <i>
-		displaysprite {
+		FormatText checksumname = icon_id 'cs_icon_p%p_id_%d' p = <player> d = <i>
+		displaySprite {
 			id = <icon_id>
 			parent = <char_select_parent_container>
-			tex = char_select_default
+			tex = Char_Select_Default
 			pos = (<next_icon_pos> + ((32.0, 64.0) * <icon_scale>))
 			dims = <icon_dims>
 			just = [center center]
 			z = 5
 		}
-		<icon_id> :settags selectable = 0 pos = <next_icon_pos>
-		displaysprite {
+		<icon_id> :SetTags selectable = 0 pos = <next_icon_pos>
+		displaySprite {
 			parent = <char_select_parent_container>
 			tex = white
 			rgba = [0 0 0 255]
@@ -509,16 +509,16 @@ script create_character_select_menu \{player = 1}
 			scale = ((19 * <icon_scale> * (1.0, 0.0)) + (21 * <icon_scale> * (0.0, 1.0)))
 		}
 	else
-		displaysprite {
+		displaySprite {
 			id = <char_select_next_icon>
 			parent = <char_select_parent_container>
-			tex = char_select_menu_arrow
+			tex = Char_Select_Menu_Arrow
 			pos = <next_icon_pos>
 			dims = <icon_dims>
 		}
 		if (<array_size> > $g_cs_num_icons)
 		else
-			doscreenelementmorph id = <char_select_next_icon> alpha = 0
+			doScreenElementMorph id = <char_select_next_icon> alpha = 0
 		endif
 	endif
 	if (<left>)
@@ -568,40 +568,40 @@ script create_character_select_menu \{player = 1}
 		endif
 	endif
 	<hilite_container_pos> = (<hilite_container_pos> + <hilight_pos>)
-	createscreenelement {
-		type = containerelement
+	CreateScreenElement {
+		type = ContainerElement
 		id = <hilite_container>
 		parent = root_window
 		pos = <hilite_container_pos>
 	}
-	<hilite_container> :settags pos = <hilite_container_pos>
-	formattext checksumname = cs_jumped 'g_cs_jumped_p%d' d = <player>
+	<hilite_container> :SetTags pos = <hilite_container_pos>
+	FormatText checksumname = cs_jumped 'g_cs_jumped_p%d' d = <player>
 	flags = {}
 	if (<player> = 2)
 		<flags> = {flip_v}
 	endif
-	formattext checksumname = icon_id 'cs_icon_p%p_id_%d' p = <player> d = $<char_select_icon>
+	FormatText checksumname = icon_id 'cs_icon_p%p_id_%d' p = <player> d = $<char_select_icon>
 	get_valid_character_index char_index = ($<cs_jumped> + $<char_select_icon>) player = <player>
 	get_musician_profile_struct index = <index>
-	setscreenelementprops id = <icon_id> texture = (<profile_struct>.icon_on)
-	getscreenelementdims id = <icon_id>
-	<icon_id> :setprops dims = ($g_cs_select_extra_w * (1.0, 0.0) + $g_cs_select_extra_h * (0.0, 1.0)) z_priority = 50
-	getscreenelementprops id = <icon_id>
-	<icon_id> :setprops pos = (<pos> + ($g_cs_select_extra_h * 0.05) * (0.0, 1.0)) <flags>
+	SetScreenElementProps id = <icon_id> texture = (<profile_struct>.icon_on)
+	GetScreenElementDims id = <icon_id>
+	<icon_id> :SetProps dims = ($g_cs_select_extra_w * (1.0, 0.0) + $g_cs_select_extra_h * (0.0, 1.0)) z_priority = 50
+	GetScreenElementProps id = <icon_id>
+	<icon_id> :SetProps pos = (<pos> + ($g_cs_select_extra_h * 0.05) * (0.0, 1.0)) <flags>
 	<i> = 1
 	begin
-	formattext checksumname = hilite_id 'cs_hilite%d_p%p' d = <i> p = <player>
+	FormatText checksumname = hilite_id 'cs_hilite%d_p%p' d = <i> p = <player>
 	if (<i> = 3)
 		<i> = 2
 	endif
-	formattext checksumname = hilite_tex 'Char_Select_Hilite%d' d = <i>
+	FormatText checksumname = hilite_tex 'Char_Select_Hilite%d' d = <i>
 	hilite_rgba = [200 90 40 255]
 	if (<player> = 2)
 		<hilite_rgba> = [180 130 220 255]
 	endif
-	displaysprite id = <hilite_id> parent = <hilite_container> pos = (80.0, 40.0) tex = <hilite_tex> dims = (<icon_scale> * (220.0, 220.0)) just = 0 z = 49
+	displaySprite id = <hilite_id> parent = <hilite_container> pos = (80.0, 40.0) tex = <hilite_tex> dims = (<icon_scale> * (220.0, 220.0)) just = 0 z = 49
 	if (<i> = 1)
-		<id> :setprops rgba = <hilite_rgba> alpha = 0.66 dims = (<icon_scale> * (180.0, 180.0))
+		<id> :SetProps rgba = <hilite_rgba> alpha = 0.66 dims = (<icon_scale> * (180.0, 180.0))
 	endif
 	<i> = (<i> + 1)
 	repeat 3
@@ -622,13 +622,13 @@ script create_character_select_menu \{player = 1}
 		player_title_pos = (<cs_menu_pos> + (655.0, -30.0))
 		player_title_num_pos = (<cs_menu_pos> + (655.0, -30.0))
 	endif
-	<icon_id> :gettags
-	getuppercasestring <char_name>
+	<icon_id> :GetTags
+	GetUpperCaseString <char_name>
 	if ($current_num_players = 1)
 		<brown_window_color> = [120 60 10 255]
 		<window_fill_color> = [0 0 0 200]
 		<cs_menu_starting_pos> = (512.0, 110.0)
-		displaysprite {
+		displaySprite {
 			parent = <char_select_parent_container>
 			tex = window_frame_cap
 			pos = <cs_menu_starting_pos>
@@ -637,7 +637,7 @@ script create_character_select_menu \{player = 1}
 			rgba = <brown_window_color>
 			z = 0
 		}
-		displaysprite {
+		displaySprite {
 			parent = <char_select_parent_container>
 			tex = window_fill_cap
 			pos = <cs_menu_starting_pos>
@@ -646,7 +646,7 @@ script create_character_select_menu \{player = 1}
 			rgba = <window_fill_color>
 			z = 0
 		}
-		displaysprite {
+		displaySprite {
 			parent = <char_select_parent_container>
 			tex = window_header_01
 			pos = (<cs_menu_starting_pos> + (0.0, -40.0))
@@ -655,7 +655,7 @@ script create_character_select_menu \{player = 1}
 			rgba = [200 200 200 255]
 			z = 1
 		}
-		displaysprite {
+		displaySprite {
 			parent = <char_select_parent_container>
 			tex = window_frame_body_tall
 			pos = (<cs_menu_starting_pos> + (0.0, 32.0))
@@ -664,7 +664,7 @@ script create_character_select_menu \{player = 1}
 			rgba = <brown_window_color>
 			z = 0
 		}
-		displaysprite {
+		displaySprite {
 			parent = <char_select_parent_container>
 			tex = window_fill_body_large
 			pos = (<cs_menu_starting_pos> + (0.0, 32.0))
@@ -673,7 +673,7 @@ script create_character_select_menu \{player = 1}
 			rgba = <window_fill_color>
 			z = 0
 		}
-		displaysprite {
+		displaySprite {
 			parent = <char_select_parent_container>
 			tex = window_frame_cap
 			pos = (<cs_menu_starting_pos> + (0.0, 466.0))
@@ -683,7 +683,7 @@ script create_character_select_menu \{player = 1}
 			z = 0
 			flip_h
 		}
-		displaysprite {
+		displaySprite {
 			parent = <char_select_parent_container>
 			tex = window_fill_cap
 			pos = (<cs_menu_starting_pos> + (0.0, 466.0))
@@ -693,16 +693,16 @@ script create_character_select_menu \{player = 1}
 			z = 0
 			flip_h
 		}
-		displaysprite {
+		displaySprite {
 			parent = <char_select_parent_container>
-			tex = char_select_frame_bg
+			tex = Char_Select_Frame_BG
 			pos = (507.0, 210.0)
 			dims = (266.0, 128.0)
 			just = [center center]
 			rgba = [250 250 200 255]
 			z = 1
 		}
-		displaytext {
+		displayText {
 			parent = <char_select_parent_container>
 			text = "SELECT YOUR HERO"
 			pos = (<cs_menu_starting_pos> + (0.0, 20.0))
@@ -712,23 +712,23 @@ script create_character_select_menu \{player = 1}
 			rgba = [180 100 60 255]
 			z = 1
 		}
-		createscreenelement {
-			type = textelement
+		CreateScreenElement {
+			type = TextElement
 			id = <cs_name_text>
 			parent = <char_select_parent_container>
 			just = [center center]
 			pos = (506.0, 220.0)
 			scale = 1
-			text = <uppercasestring>
+			text = <UpperCaseString>
 			font = fontgrid_title_gh3
 			rgba = [140 50 7 255]
 			z_priority = 30
 		}
-		getscreenelementdims id = <cs_name_text>
+		GetScreenElementDims id = <cs_name_text>
 		if (<width> > 256)
-			fit_text_in_rectangle id = <cs_name_text> dims = ((220.0, 0.0) + (<height> * (0.0, 1.0))) pos = (506.0, 220.0)
+			fit_text_in_rectangle id = <cs_name_text> dims = ((220.0, 0.0) + (<Height> * (0.0, 1.0))) pos = (506.0, 220.0)
 		endif
-		createscreenelement \{type = containerelement
+		CreateScreenElement \{type = ContainerElement
 			parent = root_window
 			id = select_guitar_container
 			pos = (510.0, 0.0)}
@@ -744,10 +744,10 @@ script create_character_select_menu \{player = 1}
 		if (<player> = 2)
 			<name_just> = [right center]
 		endif
-		displaytext {
+		displayText {
 			id = <cs_name_text>
 			parent = <char_select_parent_container>
-			text = <uppercasestring>
+			text = <UpperCaseString>
 			font = text_a5
 			just = <name_just>
 			pos = <player_name_pos>
@@ -755,13 +755,13 @@ script create_character_select_menu \{player = 1}
 			rgba = [233 233 233 255]
 			z_priority = 3
 		}
-		getscreenelementdims id = <cs_name_text>
+		GetScreenElementDims id = <cs_name_text>
 		if (<width> > 400)
 			fit_text_in_rectangle id = <cs_name_text> dims = (400.0, 50.0) pos = (<cs_menu_pos> + (274.0, -14.0)) just = left
 		endif
 		if ($is_network_game)
 			if (<player> = 1)
-				if (netsessionfunc obj = match func = get_gamertag)
+				if (NetSessionFunc obj = match func = get_gamertag)
 					<player_identifier> = <name>
 				endif
 				color = ($player1_color)
@@ -789,12 +789,12 @@ script create_character_select_menu \{player = 1}
 				ui_print_gamertag name = <player_identifier> start_pos = <gt_pos> color = <color> player = <player> just = (<gt_just>) dims = (450.0, 35.0)
 			endif
 		else
-			formattext checksumname = player_text_id 'player%a_text' a = <player>
+			FormatText checksumname = player_text_id 'player%a_text' a = <player>
 			player_text_just = [left top]
 			if (<player> = 2)
 				<player_text_just> = [right top]
 			endif
-			displaytext {
+			displayText {
 				id = <player_text_id>
 				parent = <char_select_parent_container>
 				text = "PLAYER"
@@ -806,10 +806,10 @@ script create_character_select_menu \{player = 1}
 				z_priority = 3
 			}
 			if (<player> = 1)
-				getscreenelementdims id = <player_text_id>
+				GetScreenElementDims id = <player_text_id>
 				<player_title_num_pos> = (<player_title_num_pos> + <width> * (1.0, 0.0) + (10.0, 0.0))
 			endif
-			displaytext {
+			displayText {
 				parent = <char_select_parent_container>
 				text = <player_number>
 				font = fontgrid_title_gh3
@@ -820,45 +820,45 @@ script create_character_select_menu \{player = 1}
 				z_priority = 3
 			}
 			if (<player> = 2)
-				getscreenelementdims id = <id>
-				setscreenelementprops id = <player_text_id> pos = (<player_title_num_pos> - <width> * (1.0, 0.0) - (10.0, 0.0))
+				GetScreenElementDims id = <id>
+				SetScreenElementProps id = <player_text_id> pos = (<player_title_num_pos> - <width> * (1.0, 0.0) - (10.0, 0.0))
 			endif
 		endif
 	endif
-	createscreenelement {
-		type = containerelement
+	CreateScreenElement {
+		type = ContainerElement
 		id = <char_select_character_container>
 		parent = root_window
 		pos = (0.0, 0.0)
 	}
-	if compositeobjectexists \{name = guitarist}
-		guitarist :handle_change_stance \{stance = stance_frontend}
+	if CompositeObjectExists \{name = Guitarist}
+		Guitarist :handle_change_stance \{stance = stance_frontend}
 	endif
-	if compositeobjectexists \{name = bassist}
+	if CompositeObjectExists \{name = bassist}
 		bassist :handle_change_stance \{stance = stance_frontend}
 	endif
-	formattext checksumname = spawnedscript 'cs_rotate_hilites_p%d' d = <player>
+	FormatText checksumname = spawnedscript 'cs_rotate_hilites_p%d' d = <player>
 	spawnscriptnow <spawnedscript>
 	cs_get_total_guitarists player = <player>
-	formattext checksumname = total_guitarists 'cs_total_guitarists_p%i' i = <player>
+	FormatText checksumname = total_guitarists 'cs_total_guitarists_p%i' i = <player>
 	change globalname = <total_guitarists> newvalue = <num_guitarists>
 	change globalname = <safe_to_scroll> newvalue = 1
 	if ($current_num_players = 1)
 		get_current_first_play
 		if (<first_play>)
-			launchevent \{type = focus
+			LaunchEvent \{type = focus
 				target = vmenu_character_select_p1}
 		endif
 	endif
 	change \{menu_flow_locked = 0}
 	if (<player> = 1)
-		launchevent \{type = focus
+		LaunchEvent \{type = focus
 			target = vmenu_character_select_p1}
 	else
-		launchevent \{type = focus
+		LaunchEvent \{type = focus
 			target = vmenu_character_select_p2}
 	endif
-	if gotparam \{blah}
+	if GotParam \{blah}
 		if ($net_can_send_approval = 1)
 			if ($is_network_game = 1 && <player> = 1)
 				net_lobby_state_message \{current_state = character_hub
@@ -869,28 +869,28 @@ script create_character_select_menu \{player = 1}
 	endif
 	if ($is_network_game)
 		mark_safe_for_shutdown
-		change \{gisinnetgame = 1}
+		change \{gIsInNetGame = 1}
 	endif
 endscript
 
 script destroy_character_select_menu 
 	change \{menu_flow_locked = 1}
 	if (<player> = 1)
-		killspawnedscript \{name = cs_rotate_hilites_p1}
+		KillSpawnedScript \{name = cs_rotate_hilites_p1}
 		change \{g_cs_scroll_ready_p1 = 1}
 		change \{g_cs_choose_ready_p1 = 0}
 		destroy_menu \{menu_id = char_select_character_container_p1}
 		destroy_menu \{menu_id = char_select_container_p1}
 		destroy_menu \{menu_id = char_select_hilite_container_p1}
 		destroy_menu \{menu_id = scrolling_character_select_p1}
-		killspawnedscript \{name = select_guitar_scroll_instrument_info}
+		KillSpawnedScript \{name = select_guitar_scroll_instrument_info}
 		destroy_menu \{menu_id = gs_instrument_info_scroll_window}
 		destroy_menu \{menu_id = select_guitar_container}
-		if screenelementexists \{id = menu_container}
-			destroyscreenelement \{id = menu_container}
+		if ScreenElementExists \{id = Menu_Container}
+			DestroyScreenElement \{id = Menu_Container}
 		endif
 	else
-		killspawnedscript \{name = cs_rotate_hilites_p2}
+		KillSpawnedScript \{name = cs_rotate_hilites_p2}
 		change \{g_cs_scroll_ready_p2 = 1}
 		change \{g_cs_choose_ready_p2 = 0}
 		destroy_menu \{menu_id = char_select_character_container_p2}
@@ -918,17 +918,17 @@ endscript
 
 script cs_scroll_up_or_down \{player = 1
 		dir = down}
-	formattext checksumname = safe_to_scroll 'g_cs_safe_to_scroll_p%d' d = <player>
+	FormatText checksumname = safe_to_scroll 'g_cs_safe_to_scroll_p%d' d = <player>
 	if (<safe_to_scroll> = 0)
 		return
 	endif
-	formattext checksumname = scroll_ready 'g_cs_scroll_ready_p%d' d = <player>
-	formattext checksumname = char_select_icon_index 'g_character_select_icon_index_p%d' d = <player>
-	formattext checksumname = cs_jumped 'g_cs_jumped_p%d' d = <player>
-	formattext checksumname = hilite_container 'char_select_hilite_container_p%d' d = <player>
-	formattext checksumname = cs_name_text 'cs_name_text_p%d' d = <player>
-	formattext checksumname = cs_last_guitarist 'g_cs_last_guitarist_p%d' d = <player>
-	formattext checksumname = total_num_guitarists 'cs_total_guitarists_p%i' i = <player>
+	FormatText checksumname = scroll_ready 'g_cs_scroll_ready_p%d' d = <player>
+	FormatText checksumname = char_select_icon_index 'g_character_select_icon_index_p%d' d = <player>
+	FormatText checksumname = cs_jumped 'g_cs_jumped_p%d' d = <player>
+	FormatText checksumname = hilite_container 'char_select_hilite_container_p%d' d = <player>
+	FormatText checksumname = cs_name_text 'cs_name_text_p%d' d = <player>
+	FormatText checksumname = cs_last_guitarist 'g_cs_last_guitarist_p%d' d = <player>
+	FormatText checksumname = total_num_guitarists 'cs_total_guitarists_p%i' i = <player>
 	if NOT ($<scroll_ready>)
 		return
 	endif
@@ -967,44 +967,44 @@ script cs_scroll_up_or_down \{player = 1
 			change globalname = <cs_jumped> newvalue = ($<cs_jumped> + $g_cs_num_icons)
 			change globalname = <char_select_icon_index> newvalue = 0
 		endif
-		formattext checksumname = icon_id 'cs_icon_p%p_id_%d' p = <player> d = <old_icon_index>
-		if screenelementexists id = <icon_id>
+		FormatText checksumname = icon_id 'cs_icon_p%p_id_%d' p = <player> d = <old_icon_index>
+		if ScreenElementExists id = <icon_id>
 			get_valid_character_index char_index = (<old_jumped> + <old_icon_index>) player = <player>
 			get_musician_profile_struct index = <index>
-			setscreenelementprops id = <icon_id> texture = (<profile_struct>.icon_off)
-			getscreenelementdims id = <icon_id>
-			<icon_id> :setprops dims = (($g_cs_select_normal_w * (1.0, 0.0)) + ($g_cs_select_normal_h * (0.0, 1.0))) z_priority = 5
-			getscreenelementprops id = <icon_id>
-			<icon_id> :setprops pos = (<pos> - ($g_cs_select_extra_h * 0.05) * (0.0, 1.0)) <flags>
+			SetScreenElementProps id = <icon_id> texture = (<profile_struct>.icon_off)
+			GetScreenElementDims id = <icon_id>
+			<icon_id> :SetProps dims = (($g_cs_select_normal_w * (1.0, 0.0)) + ($g_cs_select_normal_h * (0.0, 1.0))) z_priority = 5
+			GetScreenElementProps id = <icon_id>
+			<icon_id> :SetProps pos = (<pos> - ($g_cs_select_extra_h * 0.05) * (0.0, 1.0)) <flags>
 		endif
 		generic_menu_up_or_down_sound <dir>
 		cs_load_characters starting_index = $<cs_jumped> player = <player>
-		formattext checksumname = icon_id 'cs_icon_p%p_id_%d' p = <player> d = $<char_select_icon_index>
-		if screenelementexists id = <icon_id>
+		FormatText checksumname = icon_id 'cs_icon_p%p_id_%d' p = <player> d = $<char_select_icon_index>
+		if ScreenElementExists id = <icon_id>
 			get_valid_character_index char_index = ($<cs_jumped> + $<char_select_icon_index>) player = <player>
 			get_musician_profile_struct index = <index>
-			setscreenelementprops id = <icon_id> texture = (<profile_struct>.icon_on)
-			getscreenelementdims id = <icon_id>
-			<icon_id> :setprops dims = ($g_cs_select_extra_w * (1.0, 0.0) + $g_cs_select_extra_h * (0.0, 1.0)) z_priority = 50
-			getscreenelementprops id = <icon_id>
-			<icon_id> :setprops pos = (<pos> + ($g_cs_select_extra_h * 0.05) * (0.0, 1.0)) <flags>
+			SetScreenElementProps id = <icon_id> texture = (<profile_struct>.icon_on)
+			GetScreenElementDims id = <icon_id>
+			<icon_id> :SetProps dims = ($g_cs_select_extra_w * (1.0, 0.0) + $g_cs_select_extra_h * (0.0, 1.0)) z_priority = 50
+			GetScreenElementProps id = <icon_id>
+			<icon_id> :SetProps pos = (<pos> + ($g_cs_select_extra_h * 0.05) * (0.0, 1.0)) <flags>
 		endif
-		formattext checksumname = icon_id 'cs_icon_p%p_id_%d' p = <player> d = ($<char_select_icon_index>)
-		if screenelementexists id = <icon_id>
-			<icon_id> :gettags
+		FormatText checksumname = icon_id 'cs_icon_p%p_id_%d' p = <player> d = ($<char_select_icon_index>)
+		if ScreenElementExists id = <icon_id>
+			<icon_id> :GetTags
 		endif
 		<pos> = (<pos> - (50.0, 10.0))
-		setscreenelementprops id = <hilite_container> pos = <pos>
-		<hilite_container> :settags pos = <pos>
-		getuppercasestring <char_name>
-		setscreenelementprops id = <cs_name_text> text = <uppercasestring>
-		getscreenelementdims id = <cs_name_text>
+		SetScreenElementProps id = <hilite_container> pos = <pos>
+		<hilite_container> :SetTags pos = <pos>
+		GetUpperCaseString <char_name>
+		SetScreenElementProps id = <cs_name_text> text = <UpperCaseString>
+		GetScreenElementDims id = <cs_name_text>
 		if (<width> > 256)
 			if ($current_num_players = 1)
-				fit_text_in_rectangle id = <cs_name_text> dims = ((220.0, 0.0) + (<height> * (0.0, 1.0))) pos = (506.0, 220.0)
+				fit_text_in_rectangle id = <cs_name_text> dims = ((220.0, 0.0) + (<Height> * (0.0, 1.0))) pos = (506.0, 220.0)
 			endif
 		else
-			<cs_name_text> :setprops scale = 1
+			<cs_name_text> :SetProps scale = 1
 		endif
 		character_select_menu_highlight_name player = <player> musician_index = <char_array_index>
 		if ($current_num_players = 1)
@@ -1016,8 +1016,8 @@ script cs_scroll_up_or_down \{player = 1
 				z = 3
 			}
 		endif
-		formattext checksumname = killedscript 'cs_rotate_hilites_p%d' d = <player>
-		killspawnedscript name = <killedscript>
+		FormatText checksumname = killedscript 'cs_rotate_hilites_p%d' d = <player>
+		KillSpawnedScript name = <killedscript>
 		spawnscriptnow <killedscript>
 		if ((($is_network_game) = 1) && (<player> = 1) && ($player2_present))
 			network_player_lobby_message {
@@ -1039,19 +1039,19 @@ script cs_scroll_up_or_down \{player = 1
 		endif
 	endif
 	generic_menu_up_or_down_sound <dir>
-	formattext checksumname = icon_id 'cs_icon_p%p_id_%d' p = <player> d = $<char_select_icon_index>
-	if screenelementexists id = <icon_id>
+	FormatText checksumname = icon_id 'cs_icon_p%p_id_%d' p = <player> d = $<char_select_icon_index>
+	if ScreenElementExists id = <icon_id>
 		get_valid_character_index char_index = ($<cs_jumped> + $<char_select_icon_index>) player = <player>
 		get_musician_profile_struct index = <index>
-		setscreenelementprops id = <icon_id> texture = (<profile_struct>.icon_off)
-		getscreenelementdims id = <icon_id>
-		<icon_id> :setprops dims = (($g_cs_select_normal_w * (1.0, 0.0)) + ($g_cs_select_normal_h * (0.0, 1.0))) z_priority = 5
-		getscreenelementprops id = <icon_id>
-		<icon_id> :setprops pos = (<pos> - ($g_cs_select_extra_h * 0.05) * (0.0, 1.0)) <flags>
+		SetScreenElementProps id = <icon_id> texture = (<profile_struct>.icon_off)
+		GetScreenElementDims id = <icon_id>
+		<icon_id> :SetProps dims = (($g_cs_select_normal_w * (1.0, 0.0)) + ($g_cs_select_normal_h * (0.0, 1.0))) z_priority = 5
+		GetScreenElementProps id = <icon_id>
+		<icon_id> :SetProps pos = (<pos> - ($g_cs_select_extra_h * 0.05) * (0.0, 1.0)) <flags>
 	endif
-	formattext checksumname = icon_id 'cs_icon_p%p_id_%d' p = <player> d = ($<char_select_icon_index> + <pos_or_neg_one>)
-	if screenelementexists id = <icon_id>
-		<icon_id> :gettags
+	FormatText checksumname = icon_id 'cs_icon_p%p_id_%d' p = <player> d = ($<char_select_icon_index> + <pos_or_neg_one>)
+	if ScreenElementExists id = <icon_id>
+		<icon_id> :GetTags
 	endif
 	if ((($is_network_game) = 1) && (<player> = 1) && ($player2_present))
 		network_player_lobby_message {
@@ -1063,30 +1063,30 @@ script cs_scroll_up_or_down \{player = 1
 	endif
 	change globalname = <char_select_icon_index> newvalue = ($<char_select_icon_index> + <pos_or_neg_one>)
 	<pos> = (<pos> - (50.0, 10.0))
-	setscreenelementprops id = <hilite_container> pos = <pos>
-	<hilite_container> :settags pos = <pos>
-	formattext checksumname = icon_id 'cs_icon_p%p_id_%d' p = <player> d = $<char_select_icon_index>
-	if screenelementexists id = <icon_id>
+	SetScreenElementProps id = <hilite_container> pos = <pos>
+	<hilite_container> :SetTags pos = <pos>
+	FormatText checksumname = icon_id 'cs_icon_p%p_id_%d' p = <player> d = $<char_select_icon_index>
+	if ScreenElementExists id = <icon_id>
 		get_valid_character_index char_index = ($<cs_jumped> + $<char_select_icon_index>) player = <player>
 		get_musician_profile_struct index = <index>
-		setscreenelementprops id = <icon_id> texture = (<profile_struct>.icon_on)
-		getscreenelementdims id = <icon_id>
-		<icon_id> :setprops dims = ($g_cs_select_extra_w * (1.0, 0.0) + $g_cs_select_extra_h * (0.0, 1.0)) z_priority = 50
-		getscreenelementprops id = <icon_id>
-		<icon_id> :setprops pos = (<pos> + ($g_cs_select_extra_h * 0.05) * (0.0, 1.0)) <flags>
+		SetScreenElementProps id = <icon_id> texture = (<profile_struct>.icon_on)
+		GetScreenElementDims id = <icon_id>
+		<icon_id> :SetProps dims = ($g_cs_select_extra_w * (1.0, 0.0) + $g_cs_select_extra_h * (0.0, 1.0)) z_priority = 50
+		GetScreenElementProps id = <icon_id>
+		<icon_id> :SetProps pos = (<pos> + ($g_cs_select_extra_h * 0.05) * (0.0, 1.0)) <flags>
 	endif
-	getuppercasestring <char_name>
-	setscreenelementprops id = <cs_name_text> text = <uppercasestring>
-	getscreenelementdims id = <cs_name_text>
+	GetUpperCaseString <char_name>
+	SetScreenElementProps id = <cs_name_text> text = <UpperCaseString>
+	GetScreenElementDims id = <cs_name_text>
 	if (<width> > 256)
 		if ($current_num_players = 1)
-			fit_text_in_rectangle id = <cs_name_text> dims = ((220.0, 0.0) + (<height> * (0.0, 1.0))) pos = (506.0, 220.0)
+			fit_text_in_rectangle id = <cs_name_text> dims = ((220.0, 0.0) + (<Height> * (0.0, 1.0))) pos = (506.0, 220.0)
 		endif
 	else
-		<cs_name_text> :setprops scale = 1
+		<cs_name_text> :SetProps scale = 1
 	endif
-	if screenelementexists id = <icon_id>
-		<icon_id> :gettags
+	if ScreenElementExists id = <icon_id>
+		<icon_id> :GetTags
 	endif
 	character_select_menu_highlight_name player = <player> musician_index = <char_array_index>
 	if ($current_num_players = 1)
@@ -1098,8 +1098,8 @@ script cs_scroll_up_or_down \{player = 1
 			z = 3
 		}
 	endif
-	formattext checksumname = killedscript 'cs_rotate_hilites_p%d' d = <player>
-	killspawnedscript name = <killedscript>
+	FormatText checksumname = killedscript 'cs_rotate_hilites_p%d' d = <player>
+	KillSpawnedScript name = <killedscript>
 	spawnscriptnow <killedscript>
 endscript
 
@@ -1108,20 +1108,20 @@ script cs_rotate_hilites_p1 \{time = 3.0}
 	rot2 = 180
 	alpha1 = 1
 	alpha2 = 1
-	setscreenelementprops \{id = cs_hilite2_p1
+	SetScreenElementProps \{id = cs_hilite2_p1
 		rot_angle = 0
 		alpha = 0}
-	setscreenelementprops \{id = cs_hilite3_p1
+	SetScreenElementProps \{id = cs_hilite3_p1
 		rot_angle = 0
 		alpha = 0}
 	begin
 	i = 1
 	begin
-	if screenelementexists \{id = cs_hilite2_p1}
-		doscreenelementmorph id = cs_hilite2_p1 rot_angle = <rot1> alpha = <alpha1> time = <time>
+	if ScreenElementExists \{id = cs_hilite2_p1}
+		doScreenElementMorph id = cs_hilite2_p1 rot_angle = <rot1> alpha = <alpha1> time = <time>
 	endif
-	if screenelementexists \{id = cs_hilite3_p1}
-		doscreenelementmorph id = cs_hilite3_p1 rot_angle = <rot2> alpha = <alpha2> time = <time>
+	if ScreenElementExists \{id = cs_hilite3_p1}
+		doScreenElementMorph id = cs_hilite3_p1 rot_angle = <rot2> alpha = <alpha2> time = <time>
 	endif
 	<i> = (<i> + 1)
 	repeat 2
@@ -1137,7 +1137,7 @@ script cs_rotate_hilites_p1 \{time = 3.0}
 	else
 		<alpha2> = 1
 	endif
-	wait <time> seconds
+	Wait <time> seconds
 	repeat
 endscript
 
@@ -1146,20 +1146,20 @@ script cs_rotate_hilites_p2 \{time = 3.0}
 	rot2 = 180
 	alpha1 = 1
 	alpha2 = 1
-	setscreenelementprops \{id = cs_hilite2_p2
+	SetScreenElementProps \{id = cs_hilite2_p2
 		rot_angle = 0
 		alpha = 0}
-	setscreenelementprops \{id = cs_hilite3_p2
+	SetScreenElementProps \{id = cs_hilite3_p2
 		rot_angle = 0
 		alpha = 0}
 	begin
 	i = 1
 	begin
-	if screenelementexists \{id = cs_hilite2_p2}
-		doscreenelementmorph id = cs_hilite2_p2 rot_angle = <rot1> alpha = <alpha1> time = <time>
+	if ScreenElementExists \{id = cs_hilite2_p2}
+		doScreenElementMorph id = cs_hilite2_p2 rot_angle = <rot1> alpha = <alpha1> time = <time>
 	endif
-	if screenelementexists \{id = cs_hilite3_p2}
-		doscreenelementmorph id = cs_hilite3_p2 rot_angle = <rot2> alpha = <alpha2> time = <time>
+	if ScreenElementExists \{id = cs_hilite3_p2}
+		doScreenElementMorph id = cs_hilite3_p2 rot_angle = <rot2> alpha = <alpha2> time = <time>
 	endif
 	<i> = (<i> + 1)
 	repeat 2
@@ -1175,7 +1175,7 @@ script cs_rotate_hilites_p2 \{time = 3.0}
 	else
 		<alpha2> = 1
 	endif
-	wait <time> seconds
+	Wait <time> seconds
 	repeat
 endscript
 
@@ -1211,7 +1211,7 @@ script get_valid_character_index \{char_index = 0
 	else
 		if is_musician_profile_downloaded index = <index>
 			if (<download> = 1)
-				if getglobaltags (<profile_struct>.musician_body.desc_id) noassert = 1
+				if GetGlobalTags (<profile_struct>.musician_body.desc_id) noassert = 1
 					if (<available_on_other_client> = 0)
 						printf \{"Not valid because it's download content which isn't available on other client"}
 						valid = 0
@@ -1222,24 +1222,24 @@ script get_valid_character_index \{char_index = 0
 			endif
 		endif
 	endif
-	if structurecontains structure = (<profile_struct>) debug_only
+	if StructureContains Structure = (<profile_struct>) debug_only
 		printf \{"Not valid because it's debug only"}
 		valid = 0
 	endif
-	if NOT (<profile_struct>.type = guitarist)
+	if NOT (<profile_struct>.type = Guitarist)
 		printf \{"Not valid because it's no guitarist"}
 		valid = 0
 	endif
 	if NOT ($is_network_game = 1 && <player> = 2)
 		unlocked = 1
-		if getglobaltags (<profile_struct>.musician_body.desc_id) noassert = 1
+		if GetGlobalTags (<profile_struct>.musician_body.desc_id) noassert = 1
 			if (<unlocked> = 0)
 				valid = 0
 			endif
 		endif
 	else
 		unlocked_on_other_client = 1
-		if getglobaltags (<profile_struct>.musician_body.desc_id) noassert = 1
+		if GetGlobalTags (<profile_struct>.musician_body.desc_id) noassert = 1
 			if (<unlocked_on_other_client> = 0)
 				printf \{"Not valid because it's not unlocked on other client"}
 				valid = 0
@@ -1281,7 +1281,7 @@ script character_select_choose
 		char_index = ($g_cs_jumped_p1 + $g_character_select_icon_index_p1)
 		get_valid_character_index char_index = <char_index> player = <player>
 		get_musician_profile_struct index = <index>
-		formattext checksumname = character_id '%s' s = (<profile_struct>.name)
+		FormatText checksumname = character_id '%s' s = (<profile_struct>.name)
 		change structurename = player1_status character_id = <character_id>
 		if (($is_network_game = 1) && ($player2_present))
 			network_player_lobby_message {
@@ -1294,7 +1294,7 @@ script character_select_choose
 		char_index = ($g_cs_jumped_p2 + $g_character_select_icon_index_p2)
 		get_valid_character_index char_index = <char_index> player = <player>
 		get_musician_profile_struct index = <index>
-		formattext checksumname = character_id '%s' s = (<profile_struct>.name)
+		FormatText checksumname = character_id '%s' s = (<profile_struct>.name)
 		change structurename = player2_status character_id = <character_id>
 	endif
 	ui_flow_manager_respond_to_action action = continue create_params = {player = <player>} player = <player>
@@ -1307,35 +1307,35 @@ script cs_load_characters \{starting_index = $g_cs_jumped_p1
 	if (<remaining> > $g_cs_num_icons)
 		<remaining> = $g_cs_num_icons
 		if (<player> = 2)
-			doscreenelementmorph \{id = cs_icon_id_next_p2
+			doScreenElementMorph \{id = cs_icon_id_next_p2
 				alpha = 1}
 		else
-			doscreenelementmorph \{id = cs_icon_id_next_p1
+			doScreenElementMorph \{id = cs_icon_id_next_p1
 				alpha = 1}
 		endif
 	else
 		if (<player> = 2)
-			doscreenelementmorph \{id = cs_icon_id_next_p2
+			doScreenElementMorph \{id = cs_icon_id_next_p2
 				alpha = 0}
 		else
-			doscreenelementmorph \{id = cs_icon_id_next_p1
+			doScreenElementMorph \{id = cs_icon_id_next_p1
 				alpha = 0}
 		endif
 	endif
 	if (<starting_index> > 0)
 		if (<player> = 2)
-			doscreenelementmorph \{id = cs_icon_id_prev_p2
+			doScreenElementMorph \{id = cs_icon_id_prev_p2
 				alpha = 1}
 		else
-			doscreenelementmorph \{id = cs_icon_id_prev_p1
+			doScreenElementMorph \{id = cs_icon_id_prev_p1
 				alpha = 1}
 		endif
 	else
 		if (<player> = 2)
-			doscreenelementmorph \{id = cs_icon_id_prev_p2
+			doScreenElementMorph \{id = cs_icon_id_prev_p2
 				alpha = 0}
 		else
-			doscreenelementmorph \{id = cs_icon_id_prev_p1
+			doScreenElementMorph \{id = cs_icon_id_prev_p1
 				alpha = 0}
 		endif
 	endif
@@ -1345,22 +1345,22 @@ script cs_load_characters \{starting_index = $g_cs_jumped_p1
 	get_valid_character_index char_index = (<char_index> + <starting_index>) player = <player>
 	get_musician_profile_struct index = <index>
 	if (<player> = 1)
-		formattext checksumname = icon_id 'cs_icon_p1_id_%d' d = <char_index>
+		FormatText checksumname = icon_id 'cs_icon_p1_id_%d' d = <char_index>
 	elseif (<player> = 2)
-		formattext checksumname = icon_id 'cs_icon_p2_id_%d' d = <char_index>
+		FormatText checksumname = icon_id 'cs_icon_p2_id_%d' d = <char_index>
 	endif
-	if screenelementexists id = <icon_id>
+	if ScreenElementExists id = <icon_id>
 		flags = {}
 		if (<player> = 2)
 			<flags> = {flip_v}
 		endif
-		setscreenelementprops id = <icon_id> texture = (<profile_struct>.icon_off) <flags>
-		if structurecontains structure = (<profile_struct>) fullname
+		SetScreenElementProps id = <icon_id> texture = (<profile_struct>.icon_off) <flags>
+		if StructureContains Structure = (<profile_struct>) fullname
 			character_name = (<profile_struct>.fullname)
 		else
 			character_name = (<profile_struct>.name)
 		endif
-		<icon_id> :settags {
+		<icon_id> :SetTags {
 			selectable = 1
 			char_name = <character_name>
 			char_array_index = (<char_index> + <starting_index>)
@@ -1374,16 +1374,16 @@ script cs_reset_selectables \{player = 1}
 	i = 0
 	begin
 	if (<player> = 1)
-		formattext checksumname = icon_id 'cs_icon_p1_id_%d' d = <i>
-		if screenelementexists id = <icon_id>
-			setscreenelementprops id = <icon_id> texture = char_select_default
-			<icon_id> :settags selectable = 0
+		FormatText checksumname = icon_id 'cs_icon_p1_id_%d' d = <i>
+		if ScreenElementExists id = <icon_id>
+			SetScreenElementProps id = <icon_id> texture = Char_Select_Default
+			<icon_id> :SetTags selectable = 0
 		endif
 	else
-		formattext checksumname = icon_id 'cs_icon_p2_id_%d' d = <i>
-		if screenelementexists id = <icon_id>
-			setscreenelementprops id = <icon_id> texture = char_select_default
-			<icon_id> :settags selectable = 0
+		FormatText checksumname = icon_id 'cs_icon_p2_id_%d' d = <i>
+		if ScreenElementExists id = <icon_id>
+			SetScreenElementProps id = <icon_id> texture = Char_Select_Default
+			<icon_id> :SetTags selectable = 0
 		endif
 	endif
 	<i> = (<i> + 1)
@@ -1391,29 +1391,29 @@ script cs_reset_selectables \{player = 1}
 endscript
 
 script cs_set_containers_above_or_below \{player = 1}
-	formattext checksumname = next_icon_pos 'next_icon_pos_p%d' d = <player>
-	formattext checksumname = hilite_container 'char_select_hilite_container_p%d' d = <player>
-	formattext checksumname = char_select_container 'char_select_container_p%d' d = <player>
-	if gotparam \{above}
+	FormatText checksumname = next_icon_pos 'next_icon_pos_p%d' d = <player>
+	FormatText checksumname = hilite_container 'char_select_hilite_container_p%d' d = <player>
+	FormatText checksumname = char_select_container 'char_select_container_p%d' d = <player>
+	if GotParam \{above}
 		if (<player> = 1)
 			<next_icon_pos> = (155.0, 540.0)
 		else
 			<next_icon_pos> = (960.0, 550.0)
 		endif
-		setscreenelementprops id = <char_select_container> pos = (0.0, -720.0)
-		<char_select_container> :settags pos = (0.0, -720.0)
-		setscreenelementprops id = <hilite_container> pos = (<next_icon_pos> - (0.0, 720.0))
-		<hilite_container> :settags pos = (<next_icon_pos> - (0.0, 720.0))
+		SetScreenElementProps id = <char_select_container> pos = (0.0, -720.0)
+		<char_select_container> :SetTags pos = (0.0, -720.0)
+		SetScreenElementProps id = <hilite_container> pos = (<next_icon_pos> - (0.0, 720.0))
+		<hilite_container> :SetTags pos = (<next_icon_pos> - (0.0, 720.0))
 	else
 		if (<player> = 1)
 			<next_icon_pos> = (155.0, 50.0)
 		else
 			<next_icon_pos> = (955.0, 60.0)
 		endif
-		setscreenelementprops id = <char_select_container> pos = (0.0, 720.0)
-		<char_select_container> :settags pos = (0.0, 720.0)
-		setscreenelementprops id = <hilite_container> pos = (<next_icon_pos> + (0.0, 720.0))
-		<hilite_container> :settags pos = (<next_icon_pos> + (0.0, 720.0))
+		SetScreenElementProps id = <char_select_container> pos = (0.0, 720.0)
+		<char_select_container> :SetTags pos = (0.0, 720.0)
+		SetScreenElementProps id = <hilite_container> pos = (<next_icon_pos> + (0.0, 720.0))
+		<hilite_container> :SetTags pos = (<next_icon_pos> + (0.0, 720.0))
 	endif
 endscript
 
@@ -1433,36 +1433,36 @@ script character_select_menu_highlight_name \{player = 1}
 		change character_select_highlighted_character_p1 = <musician_index>
 		get_valid_character_index char_index = <musician_index> player = <player>
 		get_musician_profile_struct index = <index>
-		formattext checksumname = character_id '%s' s = (<profile_struct>.name)
+		FormatText checksumname = character_id '%s' s = (<profile_struct>.name)
 	else
 		change character_select_highlighted_character_p2 = <musician_index>
 		get_valid_character_index char_index = <musician_index> player = <player>
 		get_musician_profile_struct index = <index>
-		formattext checksumname = character_id '%s' s = (<profile_struct>.name)
+		FormatText checksumname = character_id '%s' s = (<profile_struct>.name)
 	endif
-	formattext checksumname = player_status 'player%i_status' i = <player>
+	FormatText checksumname = player_status 'player%i_status' i = <player>
 	if NOT (<character_id> = $<player_status>.character_id)
 		change structurename = <player_status> character_id = <character_id>
 		if find_profile_by_id id = <character_id>
 			get_musician_profile_struct index = <index>
-			formattext checksumname = default_characterguitartag 'character_%c_player_%p_guitar_tags' c = (<profile_struct>.name) p = <player> addtostringlookup = true
-			if getglobaltags <default_characterguitartag> noassert = 1
+			FormatText checksumname = default_characterguitartag 'character_%c_player_%p_guitar_tags' c = (<profile_struct>.name) p = <player> AddToStringLookup = true
+			if GetGlobalTags <default_characterguitartag> noassert = 1
 				if (<current_instrument> = guitar)
-					<inst_id> = <current_selected_guitar>
+					<inst_ID> = <current_selected_guitar>
 				else
 					if NOT ($game_mode = p2_career)
-						setglobaltags <default_characterguitartag> params = {current_instrument = guitar}
-						<inst_id> = <current_selected_guitar>
+						SetGlobalTags <default_characterguitartag> params = {current_instrument = guitar}
+						<inst_ID> = <current_selected_guitar>
 					else
-						<inst_id> = <current_selected_bass>
+						<inst_ID> = <current_selected_bass>
 					endif
 				endif
-				change structurename = <player_status> instrument_id = <inst_id>
+				change structurename = <player_status> instrument_id = <inst_ID>
 				change structurename = <player_status> outfit = <current_outfit>
 				change structurename = <player_status> style = <current_style>
 			endif
 		endif
-		formattext checksumname = change_flag 'generic_select_monitor_p%i_changed' i = <player>
+		FormatText checksumname = change_flag 'generic_select_monitor_p%i_changed' i = <player>
 		change globalname = <change_flag> newvalue = 1
 	endif
 endscript

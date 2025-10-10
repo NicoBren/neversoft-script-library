@@ -1,31 +1,31 @@
-jowblue = 717488127
-jowgreen = 771697407
-joworange = -6149377
-jowred = -15061505
-jowyellow = -3267073
+jowBlue = 717488127
+jowGreen = 771697407
+jowOrange = -6149377
+jowRed = -15061505
+jowYellow = -3267073
 
-script jow_stars 
+script JOW_Stars 
 	printf \{"*******************************************************************"}
 	printf <...>
 	printf \{"*******************************************************************"}
 endscript
 
-script safegetuniquecompositeobjectid \{preferredid = safefxid01}
-	if NOT gotparam \{objid}
-		getuniquecompositeobjectid preferredid = <preferredid>
-		return uniqueid = <uniqueid>
+script SafeGetUniqueCompositeObjectID \{preferredID = safeFXID01}
+	if NOT GotParam \{ObjID}
+		GetUniqueCompositeObjectID preferredID = <preferredID>
+		return uniqueID = <uniqueID>
 	endif
 	i = 0
-	formattext textname = index '%i' i = <i>
-	extendcrc <preferredid> <index> out = preferredid
+	FormatText TextName = index '%i' i = <i>
+	ExtendCRC <preferredID> <index> out = preferredID
 	begin
-	manglechecksums a = <preferredid> b = <objid>
-	if NOT objectexists id = <mangled_id>
-		return uniqueid = <preferredid>
+	MangleChecksums a = <preferredID> b = <ObjID>
+	if NOT ObjectExists id = <mangled_ID>
+		return uniqueID = <preferredID>
 	else
 		i = (<i> + 1)
-		formattext textname = index '%i' i = <i>
-		extendcrc <preferredid> <index> out = preferredid
+		FormatText TextName = index '%i' i = <i>
+		ExtendCRC <preferredID> <index> out = preferredID
 	endif
 	repeat
 endscript

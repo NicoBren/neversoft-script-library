@@ -1,30 +1,30 @@
-flag_improv_toggle = 10
+FLAG_IMPROV_TOGGLE = 10
 
 script improvmode_startup 
 	change \{game_mode = improv}
 	begin
-	waitforevent \{type = hit_notesp1}
+	WaitForEvent \{type = hit_notesp1}
 	if (<pattern> && 65536)
-		soundevent \{event = improv_lead_bend1}
+		SoundEvent \{event = Improv_Lead_Bend1}
 		printf \{'L2'}
 	endif
 	if (<pattern> && 4096)
-		soundevent \{event = lead_sliding_lick}
+		SoundEvent \{event = Lead_Sliding_Lick}
 		printf \{'L1'}
 	endif
 	if (<pattern> && 256)
-		soundevent \{event = lead_real_short3}
+		SoundEvent \{event = Lead_Real_Short3}
 		printf \{'R1'}
 	endif
 	if (<pattern> && 16)
-		soundevent \{event = lead_real_short4}
+		SoundEvent \{event = Lead_Real_Short4}
 		printf \{'R2'}
 	endif
 	if (<pattern> && 1)
-		soundevent \{event = lead_real_short5}
+		SoundEvent \{event = Lead_Real_Short5}
 		printf \{'X'}
 	endif
-	wait \{1
+	Wait \{1
 		frame}
 	repeat
 endscript

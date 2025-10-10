@@ -1,53 +1,53 @@
 proximobj_composite_structure = [
 	{
-		component = sound
+		Component = Sound
 	}
 ]
 particle_composite_structure = [
 	{
-		component = suspend
+		Component = Suspend
 	}
 	{
-		component = particle
+		Component = particle
 	}
 ]
 moving_particle_composite_structure = [
 	{
-		component = suspend
+		Component = Suspend
 	}
 	{
-		component = motion
+		Component = motion
 	}
 	{
-		component = particle
+		Component = particle
 	}
 ]
 flexparticle_composite_structure = [
 	{
-		component = suspend
+		Component = Suspend
 	}
 	{
-		component = flexibleparticle
+		Component = flexibleparticle
 	}
 ]
 moving_flexparticle_composite_structure = [
 	{
-		component = suspend
+		Component = Suspend
 	}
 	{
-		component = motion
+		Component = motion
 	}
 	{
-		component = flexibleparticle
+		Component = flexibleparticle
 	}
 ]
 viewercam_composite_structure = [
 	{
-		component = camera
+		Component = camera
 		far_clip = $camera_default_far_clip
 	}
 	{
-		component = proximtrigger
+		Component = ProximTrigger
 		cube_length = 0.4
 		trigger_checksum = camera
 		inactive
@@ -55,146 +55,146 @@ viewercam_composite_structure = [
 ]
 levellight_composite_structure = [
 	{
-		component = positionmorph
+		Component = PositionMorph
 	}
 	{
-		component = dynamiclight
+		Component = dynamiclight
 	}
 ]
 igc_camera_structure = [
 	{
-		component = cinematiccamera
-		updatewhencamerainactive = false
+		Component = CinematicCamera
+		UpdateWhenCameraInactive = false
 	}
 	{
-		component = camera
+		Component = camera
 	}
 ]
 gridobj_composite_structure = [
 	{
-		component = suspend
+		Component = Suspend
 	}
 ]
-geometryobject_structure = [
+GeometryObject_structure = [
 	{
-		component = geometryobject
+		Component = GeometryObject
 	}
 ]
 master_node_composite_structure = [
 	{
-		component = eventcache
+		Component = EventCache
 	}
 	{
-		component = statemachinemanager
+		Component = StateMachineManager
 	}
 ]
 gameobj_composite_structure = [
 	{
-		component = lockobj
+		Component = lockobj
 		off
 	}
 	{
-		component = motion
+		Component = motion
 	}
 ]
 constraint_composite_structure = [
 	{
-		component = constraint
+		Component = constraint
 	}
 ]
 bouncy_composite_structure = [
 	{
-		component = suspend
+		Component = Suspend
 	}
 	{
-		component = rigidbody
+		Component = rigidbody
 	}
 	{
-		component = sound
+		Component = Sound
 	}
 ]
 
-script processorgroup_registerdefault 
-	registerprocessorgroupdesc \{name = processorgroup_compositesystem
+script ProcessorGroup_RegisterDefault 
+	RegisterProcessorGroupDesc \{name = ProcessorGroup_CompositeSystem
 		processors = [
 			{
-				name = processor_default
+				name = Processor_Default
 				task = {
-					name = ptask_default
+					name = PTask_Default
 				}
 			}
 		]}
-	processormgr_init \{group = processorgroup_compositesystem}
+	ProcessorMgr_Init \{group = ProcessorGroup_CompositeSystem}
 endscript
 
-script passgroup_registerdefault 
-	registerpassgroupdesc \{name = passgroup_compositesystem
+script PassGroup_RegisterDefault 
+	RegisterPassGroupDesc \{name = PassGroup_CompositeSystem
 		passes = [
 			{
-				name = pass_default
+				name = Pass_Default
 				processors = [
-					processor_default
+					Processor_Default
 				]
 			}
 			{
-				name = pass_agent
+				name = Pass_Agent
 				processors = [
-					processor_default
+					Processor_Default
 				]
 			}
 			{
-				name = pass_behavior
+				name = Pass_Behavior
 				processors = [
-					processor_default
+					Processor_Default
 				]
 			}
 			{
-				name = pass_anim
+				name = Pass_Anim
 				processors = [
-					processor_default
+					Processor_Default
 				]
 			}
 			{
-				name = pass_move
+				name = Pass_Move
 				processors = [
-					processor_default
+					Processor_Default
 				]
 			}
 			{
-				name = pass_model
+				name = Pass_Model
 				processors = [
-					processor_default
+					Processor_Default
 				]
 			}
 		]}
-	passmgr_init \{group = passgroup_compositesystem}
+	PassMgr_Init \{group = PassGroup_CompositeSystem}
 endscript
 
-script compositeobjects_registerdefault 
-	passdefault_components = [
-		{name = suspend}
-		{name = bbox}
-		{name = objectproximity}
-		{name = sound}
+script CompositeObjects_RegisterDefault 
+	PassDefault_components = [
+		{name = Suspend}
+		{name = BBox}
+		{name = ObjectProximity}
+		{name = Sound}
 		{name = stream}
 	]
-	registercompositeobjectdesc {
-		name = compositehuman
-		callback = compositeagent_customizecomponents
+	RegisterCompositeObjectDesc {
+		name = CompositeHuman
+		callback = CompositeAgent_CustomizeComponents
 		passes =
 		[
-			{pass = pass_default
-				components = <passdefault_components>
+			{pass = Pass_Default
+				Components = <PassDefault_components>
 			}
-			{pass = pass_agent
-				components = [{name = pedlife}
-					{name = aiinfo}
-					{name = agent}
-					{name = fam}
-					{name = locator}
-					{name = itemcontrol}
-					{name = vision}
-					{name = collisioncache
+			{pass = Pass_Agent
+				Components = [{name = PedLife}
+					{name = AiInfo}
+					{name = Agent}
+					{name = FAM}
+					{name = Locator}
+					{name = ItemControl}
+					{name = Vision}
+					{name = CollisionCache
 						params = {bbox_min = (-0.1, -20.0, -0.1)
 							bbox_max = (0.1, 10.0, 0.1)
 							layer = static_geometry_feeler}}
@@ -203,51 +203,51 @@ script compositeobjects_registerdefault
 					{name = ragdoll}
 				]
 			}
-			{pass = pass_behavior
-				components = [{name = eventcache}
-					{name = behaviorsystem}
+			{pass = Pass_Behavior
+				Components = [{name = EventCache}
+					{name = BehaviorSystem}
 					{name = inventory}
 					{name = seek}
-					{name = passenger}
-					{name = targetable}
-					{name = proximity}
-					{name = interact}
-					{name = skaterloopingsound}
-					{name = animtree}
+					{name = Passenger}
+					{name = Targetable}
+					{name = Proximity}
+					{name = Interact}
+					{name = SkaterLoopingSound}
+					{name = AnimTree}
 					{name = lockobj
 						params = {lock_to_object_matrix
 							off}}
-					{name = navcollision}
-					{name = aligntoground
+					{name = NavCollision}
+					{name = AlignToGround
 						params = {off}}
 				]
 			}
-			{pass = pass_model
-				components = [{name = skeleton}
-					{name = model}
-					{name = specialitem}
-					{name = proximtrigger
-						params = {trigger_checksum = ped , cube_length = 0.4}}
+			{pass = Pass_Model
+				Components = [{name = skeleton}
+					{name = Model}
+					{name = SpecialItem}
+					{name = ProximTrigger
+						params = {trigger_checksum = Ped , cube_length = 0.4}}
 				]
 			}
 		]
 	}
-	registercompositeobjectdesc {
-		name = compositevehicle
-		callback = compositeagent_customizecomponents
+	RegisterCompositeObjectDesc {
+		name = CompositeVehicle
+		callback = CompositeAgent_CustomizeComponents
 		passes =
 		[
-			{pass = pass_default
-				components = <passdefault_components>
+			{pass = Pass_Default
+				Components = <PassDefault_components>
 			}
-			{pass = pass_agent
-				components = [{name = pedlife}
-					{name = aiinfo}
-					{name = agent}
-					{name = fam}
-					{name = locator}
-					{name = itemcontrol}
-					{name = collisioncache
+			{pass = Pass_Agent
+				Components = [{name = PedLife}
+					{name = AiInfo}
+					{name = Agent}
+					{name = FAM}
+					{name = Locator}
+					{name = ItemControl}
+					{name = CollisionCache
 						params = {bbox_min = (-0.1, -20.0, -0.1)
 							bbox_max = (0.1, 10.0, 0.1)
 							layer = static_geometry_feeler}}
@@ -255,121 +255,121 @@ script compositeobjects_registerdefault
 					{name = motion}
 				]
 			}
-			{pass = pass_behavior
-				components = [{name = eventcache}
-					{name = behaviorsystem}
+			{pass = Pass_Behavior
+				Components = [{name = EventCache}
+					{name = BehaviorSystem}
 					{name = seek}
-					{name = interact}
-					{name = vehiclephysics}
-					{name = animtree}
-					{name = input
+					{name = Interact}
+					{name = VehiclePhysics}
+					{name = AnimTree}
+					{name = Input
 						params = {controller = 1}}
 				]
 			}
-			{pass = pass_model
-				components = [{name = skeleton}
-					{name = model}
-					{name = proximtrigger
-						params = {trigger_checksum = vehicle , cube_length = 0.4}}
+			{pass = Pass_Model
+				Components = [{name = skeleton}
+					{name = Model}
+					{name = ProximTrigger
+						params = {trigger_checksum = Vehicle , cube_length = 0.4}}
 				]
 			}]
 	}
-	registercompositeobjectdesc \{name = compositegameobject_simplehover
+	RegisterCompositeObjectDesc \{name = CompositeGameObject_SimpleHover
 		callback = nullscript
 		passes = [
 			{
-				pass = pass_default
-				components = [
+				pass = Pass_Default
+				Components = [
 					{
-						name = suspend
+						name = Suspend
 					}
 				]
 			}
 			{
-				pass = pass_move
-				components = [
+				pass = Pass_Move
+				Components = [
 					{
-						name = hover
+						name = Hover
 					}
 				]
 			}
 			{
-				pass = pass_model
-				components = [
+				pass = Pass_Model
+				Components = [
 					{
-						name = objectproximity
+						name = ObjectProximity
 					}
 					{
-						name = model
+						name = Model
 					}
 				]
 			}
 		]}
-	registercompositeobjectdesc \{name = compositegameobject_standardrigidbody
+	RegisterCompositeObjectDesc \{name = CompositeGameObject_StandardRigidBody
 		callback = nullscript
 		passes = [
 			{
-				pass = pass_default
-				components = [
+				pass = Pass_Default
+				Components = [
 					{
-						name = suspend
+						name = Suspend
 					}
 				]
 			}
 			{
-				pass = pass_move
-				components = [
+				pass = Pass_Move
+				Components = [
 					{
 						name = rigidbody
 					}
 				]
 			}
 			{
-				pass = pass_model
-				components = [
+				pass = Pass_Model
+				Components = [
 					{
-						name = sound
+						name = Sound
 					}
 					{
-						name = model
+						name = Model
 					}
 				]
 			}
 		]}
-	adobject_components = [{name = model}
+	AdObject_components = [{name = Model}
 		{name = motion}
 	]
-	massive_components = [{name = massivead}]
-	adobject_components = (<adobject_components> + <massive_components>)
-	registercompositeobjectdesc {
+	Massive_components = [{name = massivead}]
+	AdObject_components = (<AdObject_components> + <Massive_components>)
+	RegisterCompositeObjectDesc {
 		name = compositegameobject_adobject
 		callback = nullscript
 		passes =
 		[
-			{pass = pass_default
-				components = <adobject_components>
+			{pass = Pass_Default
+				Components = <AdObject_components>
 			}
 		]
 	}
 endscript
 
-script compositeagent_customizecomponents 
-	if gotparam \{compassbliptype}
-		createcomponentfromstructure component = compassblip <...>
+script CompositeAgent_CustomizeComponents 
+	if GotParam \{CompassBlipType}
+		CreateComponentFromStructure Component = CompassBlip <...>
 	endif
-	if gotparam \{voice_profile}
-		if structurecontains \{structure = appearance
+	if GotParam \{voice_profile}
+		if StructureContains \{Structure = appearance
 				voice_profile}
 			voice_profile = (<appearance>.voice_profile)
 		else
 			voice_profile = (<profile>.voice_profile)
 		endif
-		if structurecontains structure = $noticevovoiceprofiles <voice_profile>
-			has_notice_vo = ($noticevovoiceprofiles.<voice_profile>)
+		if StructureContains Structure = $NoticeVoVoiceProfiles <voice_profile>
+			has_notice_vo = ($NoticeVoVoiceProfiles.<voice_profile>)
 		else
 			has_notice_vo = false
 		endif
-		settags {
+		SetTags {
 			profile = <profile>
 			voice_profile = <voice_profile>
 			has_notice_vo = <has_notice_vo>

@@ -1,14 +1,14 @@
 
 script create_node_flags 
-	createnodeflag \{ls_perf_medium_good}
-	createnodeflag \{ls_perf_poor}
-	createnodeflag \{ls_perf_medium_good_noblackout}
-	createnodeflag \{ls_perf_medium}
-	createnodeflag \{ls_perf_poor_noblackout}
-	createnodeflag \{nodeflag_viewerlights}
-	createnodeflag \{ls_mood_flare}
-	createnodeflag \{ls_mood_blackout}
-	createnodeflag \{ls_perf_good}
-	createnodeflag \{ls_perf_poor_medium}
-	createnodeflag \{ls_perf_poor_medium_good}
+	CreateNodeFlag \{LS_PERF_MEDIUM_GOOD}
+	CreateNodeFlag \{LS_PERF_POOR}
+	CreateNodeFlag \{LS_PERF_MEDIUM_GOOD_NOBLACKOUT}
+	CreateNodeFlag \{LS_PERF_MEDIUM}
+	CreateNodeFlag \{LS_PERF_POOR_NOBLACKOUT}
+	CreateNodeFlag \{NODEFLAG_VIEWERLIGHTS}
+	CreateNodeFlag \{LS_MOOD_FLARE}
+	CreateNodeFlag \{LS_MOOD_BLACKOUT}
+	CreateNodeFlag \{LS_PERF_GOOD}
+	CreateNodeFlag \{LS_PERF_POOR_MEDIUM}
+	CreateNodeFlag \{LS_PERF_POOR_MEDIUM_GOOD}
 endscript

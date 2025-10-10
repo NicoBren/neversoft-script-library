@@ -1,8 +1,8 @@
 singer_male_animations = {
-	stance_a = {
-		idle = {
+	Stance_A = {
+		Idle = {
 			good = {
-				fast = [
+				Fast = [
 					gh3_singer_male_fast_nosingidle1
 					gh3_singer_male_fast_nosingidle2
 					gh3_singer_male_fast_nosingidle4
@@ -11,7 +11,7 @@ singer_male_animations = {
 					gh3_singer_male_fast_nosingidle5
 					gh3_singer_male_fast_nosingidle6
 				]
-				med = [
+				Med = [
 					gh3_singer_male_med_nosingidle1
 					gh3_singer_male_med_nosingidle2
 					gh3_singer_male_med_nosingidle2
@@ -20,7 +20,7 @@ singer_male_animations = {
 					gh3_singer_male_med_nosingidle4
 					gh3_singer_male_med_nosingidle5
 				]
-				slow = [
+				Slow = [
 					gh3_singer_male_slow_nosingidle1
 					gh3_singer_male_slow_nosingidle2
 					gh3_singer_male_slow_nosingidle2
@@ -29,8 +29,8 @@ singer_male_animations = {
 					gh3_singer_male_slow_nosingidle5
 				]
 			}
-			normal = {
-				fast = [
+			Normal = {
+				Fast = [
 					gh3_singer_male_fast_nosingidle1
 					gh3_singer_male_fast_nosingidle2
 					gh3_singer_male_fast_nosingidle4
@@ -39,7 +39,7 @@ singer_male_animations = {
 					gh3_singer_male_fast_nosingidle5
 					gh3_singer_male_fast_nosingidle6
 				]
-				med = [
+				Med = [
 					gh3_singer_male_med_nosingidle1
 					gh3_singer_male_med_nosingidle2
 					gh3_singer_male_med_nosingidle2
@@ -48,7 +48,7 @@ singer_male_animations = {
 					gh3_singer_male_med_nosingidle4
 					gh3_singer_male_med_nosingidle5
 				]
-				slow = [
+				Slow = [
 					gh3_singer_male_slow_nosingidle1
 					gh3_singer_male_slow_nosingidle2
 					gh3_singer_male_slow_nosingidle2
@@ -57,8 +57,8 @@ singer_male_animations = {
 					gh3_singer_male_slow_nosingidle5
 				]
 			}
-			bad = {
-				fast = [
+			Bad = {
+				Fast = [
 					gh3_singer_male_fast_nosingidle1
 					gh3_singer_male_fast_nosingidle2
 					gh3_singer_male_fast_nosingidle4
@@ -67,7 +67,7 @@ singer_male_animations = {
 					gh3_singer_male_fast_nosingidle5
 					gh3_singer_male_fast_nosingidle6
 				]
-				med = [
+				Med = [
 					gh3_singer_male_med_nosingidle1
 					gh3_singer_male_med_nosingidle2
 					gh3_singer_male_med_nosingidle2
@@ -76,7 +76,7 @@ singer_male_animations = {
 					gh3_singer_male_med_nosingidle4
 					gh3_singer_male_med_nosingidle5
 				]
-				slow = [
+				Slow = [
 					gh3_singer_male_slow_nosingidle1
 					gh3_singer_male_slow_nosingidle2
 					gh3_singer_male_slow_nosingidle2
@@ -88,7 +88,7 @@ singer_male_animations = {
 		}
 		special = {
 			good = {
-				fast = [
+				Fast = [
 					gh3_singer_male_fast_nosingidle1
 					gh3_singer_male_fast_nosingidle2
 					gh3_singer_male_fast_nosingidle4
@@ -97,7 +97,7 @@ singer_male_animations = {
 					gh3_singer_male_fast_nosingidle5
 					gh3_singer_male_fast_nosingidle6
 				]
-				med = [
+				Med = [
 					gh3_singer_male_med_nosingidle1
 					gh3_singer_male_med_nosingidle2
 					gh3_singer_male_med_nosingidle2
@@ -106,7 +106,7 @@ singer_male_animations = {
 					gh3_singer_male_med_nosingidle4
 					gh3_singer_male_med_nosingidle5
 				]
-				slow = [
+				Slow = [
 					gh3_singer_male_slow_nosingidle1
 					gh3_singer_male_slow_nosingidle2
 					gh3_singer_male_slow_nosingidle2
@@ -115,8 +115,8 @@ singer_male_animations = {
 					gh3_singer_male_slow_nosingidle5
 				]
 			}
-			normal = {
-				fast = [
+			Normal = {
+				Fast = [
 					gh3_singer_male_fast_nosingidle1
 					gh3_singer_male_fast_nosingidle2
 					gh3_singer_male_fast_nosingidle4
@@ -125,7 +125,7 @@ singer_male_animations = {
 					gh3_singer_male_fast_nosingidle5
 					gh3_singer_male_fast_nosingidle6
 				]
-				med = [
+				Med = [
 					gh3_singer_male_med_nosingidle1
 					gh3_singer_male_med_nosingidle2
 					gh3_singer_male_med_nosingidle2
@@ -134,7 +134,7 @@ singer_male_animations = {
 					gh3_singer_male_med_nosingidle4
 					gh3_singer_male_med_nosingidle5
 				]
-				slow = [
+				Slow = [
 					gh3_singer_male_slow_nosingidle1
 					gh3_singer_male_slow_nosingidle2
 					gh3_singer_male_slow_nosingidle2
@@ -143,8 +143,8 @@ singer_male_animations = {
 					gh3_singer_male_slow_nosingidle5
 				]
 			}
-			bad = {
-				fast = [
+			Bad = {
+				Fast = [
 					gh3_singer_male_fast_nosingidle1
 					gh3_singer_male_fast_nosingidle2
 					gh3_singer_male_fast_nosingidle4
@@ -153,7 +153,7 @@ singer_male_animations = {
 					gh3_singer_male_fast_nosingidle5
 					gh3_singer_male_fast_nosingidle6
 				]
-				med = [
+				Med = [
 					gh3_singer_male_med_nosingidle1
 					gh3_singer_male_med_nosingidle2
 					gh3_singer_male_med_nosingidle2
@@ -162,7 +162,7 @@ singer_male_animations = {
 					gh3_singer_male_med_nosingidle4
 					gh3_singer_male_med_nosingidle5
 				]
-				slow = [
+				Slow = [
 					gh3_singer_male_slow_nosingidle1
 					gh3_singer_male_slow_nosingidle2
 					gh3_singer_male_slow_nosingidle2
@@ -172,49 +172,49 @@ singer_male_animations = {
 				]
 			}
 		}
-		jump = {
+		Jump = {
 			good = {
-				slow = [
+				Slow = [
 					gh3_singer_male_jump_no_singing
 				]
-				med = [
+				Med = [
 					gh3_singer_male_jump_no_singing
 				]
-				fast = [
-					gh3_singer_male_jump_no_singing
-				]
-			}
-			normal = {
-				slow = [
-					gh3_singer_male_jump_no_singing
-				]
-				med = [
-					gh3_singer_male_jump_no_singing
-				]
-				fast = [
+				Fast = [
 					gh3_singer_male_jump_no_singing
 				]
 			}
-			bad = {
-				slow = [
+			Normal = {
+				Slow = [
 					gh3_singer_male_jump_no_singing
 				]
-				med = [
+				Med = [
 					gh3_singer_male_jump_no_singing
 				]
-				fast = [
+				Fast = [
+					gh3_singer_male_jump_no_singing
+				]
+			}
+			Bad = {
+				Slow = [
+					gh3_singer_male_jump_no_singing
+				]
+				Med = [
+					gh3_singer_male_jump_no_singing
+				]
+				Fast = [
 					gh3_singer_male_jump_no_singing
 				]
 			}
 		}
-		transitions = {
-			stance_b = gh3_singer_male_nosing_to_sing
+		Transitions = {
+			stance_b = GH3_Singer_Male_nosing_to_sing
 		}
 	}
 	stance_b = {
-		idle = {
+		Idle = {
 			good = {
-				fast = [
+				Fast = [
 					gh3_singer_male_fast_singidle1
 					gh3_singer_male_fast_singidle2
 					gh3_singer_male_fast_singidle3
@@ -225,7 +225,7 @@ singer_male_animations = {
 					gh3_singer_male_fast_singsolo1
 					gh3_singer_male_fast_singsolo2
 				]
-				med = [
+				Med = [
 					gh3_singer_male_med_singidle1
 					gh3_singer_male_med_singidle2
 					gh3_singer_male_med_singidle4
@@ -235,7 +235,7 @@ singer_male_animations = {
 					gh3_singer_male_med_singidle9
 					gh3_singer_male_med_singidle_10
 				]
-				slow = [
+				Slow = [
 					gh3_singer_male_slow_singidle1
 					gh3_singer_male_slow_singidle2
 					gh3_singer_male_slow_singidle3
@@ -246,8 +246,8 @@ singer_male_animations = {
 					gh3_singer_male_slow_singidle_10
 				]
 			}
-			normal = {
-				fast = [
+			Normal = {
+				Fast = [
 					gh3_singer_male_fast_singidle1
 					gh3_singer_male_fast_singidle2
 					gh3_singer_male_fast_singidle3
@@ -258,7 +258,7 @@ singer_male_animations = {
 					gh3_singer_male_fast_singsolo1
 					gh3_singer_male_fast_singsolo2
 				]
-				med = [
+				Med = [
 					gh3_singer_male_med_singidle1
 					gh3_singer_male_med_singidle2
 					gh3_singer_male_med_singidle4
@@ -268,7 +268,7 @@ singer_male_animations = {
 					gh3_singer_male_med_singidle9
 					gh3_singer_male_med_singidle_10
 				]
-				slow = [
+				Slow = [
 					gh3_singer_male_slow_singidle1
 					gh3_singer_male_slow_singidle2
 					gh3_singer_male_slow_singidle3
@@ -279,8 +279,8 @@ singer_male_animations = {
 					gh3_singer_male_slow_singidle_10
 				]
 			}
-			bad = {
-				fast = [
+			Bad = {
+				Fast = [
 					gh3_singer_male_fast_singidle1
 					gh3_singer_male_fast_singidle2
 					gh3_singer_male_fast_singidle3
@@ -291,7 +291,7 @@ singer_male_animations = {
 					gh3_singer_male_fast_singsolo1
 					gh3_singer_male_fast_singsolo2
 				]
-				med = [
+				Med = [
 					gh3_singer_male_med_singidle1
 					gh3_singer_male_med_singidle2
 					gh3_singer_male_med_singidle4
@@ -301,7 +301,7 @@ singer_male_animations = {
 					gh3_singer_male_med_singidle9
 					gh3_singer_male_med_singidle_10
 				]
-				slow = [
+				Slow = [
 					gh3_singer_male_slow_singidle1
 					gh3_singer_male_slow_singidle2
 					gh3_singer_male_slow_singidle3
@@ -315,56 +315,56 @@ singer_male_animations = {
 		}
 		special = {
 			good = {
-				fast = [
+				Fast = [
 					gh3_singer_male_fast_singspec1
 					gh3_singer_male_fast_singspec2
 					gh3_singer_male_fast_singspec3
 				]
-				med = [
+				Med = [
 					gh3_singer_male_med_singspec1
 					gh3_singer_male_med_singspec2
 					gh3_singer_male_med_singspec3
 					gh3_singer_male_med_singspec4
 				]
-				slow = [
+				Slow = [
 					gh3_singer_male_slow_singspec1
 					gh3_singer_male_slow_singspec2
 					gh3_singer_male_slow_singspec3
 					gh3_singer_male_slow_singspec4
 				]
 			}
-			normal = {
-				fast = [
+			Normal = {
+				Fast = [
 					gh3_singer_male_fast_singspec1
 					gh3_singer_male_fast_singspec2
 					gh3_singer_male_fast_singspec3
 				]
-				med = [
+				Med = [
 					gh3_singer_male_med_singspec1
 					gh3_singer_male_med_singspec2
 					gh3_singer_male_med_singspec3
 					gh3_singer_male_med_singspec4
 				]
-				slow = [
+				Slow = [
 					gh3_singer_male_slow_singspec1
 					gh3_singer_male_slow_singspec2
 					gh3_singer_male_slow_singspec3
 					gh3_singer_male_slow_singspec4
 				]
 			}
-			bad = {
-				fast = [
+			Bad = {
+				Fast = [
 					gh3_singer_male_fast_singspec1
 					gh3_singer_male_fast_singspec2
 					gh3_singer_male_fast_singspec3
 				]
-				med = [
+				Med = [
 					gh3_singer_male_med_singspec1
 					gh3_singer_male_med_singspec2
 					gh3_singer_male_med_singspec3
 					gh3_singer_male_med_singspec4
 				]
-				slow = [
+				Slow = [
 					gh3_singer_male_slow_singspec1
 					gh3_singer_male_slow_singspec2
 					gh3_singer_male_slow_singspec3
@@ -372,184 +372,184 @@ singer_male_animations = {
 				]
 			}
 		}
-		jump = {
+		Jump = {
 			good = {
-				slow = [
+				Slow = [
 					gh3_singer_male_jump_singing
 				]
-				med = [
+				Med = [
 					gh3_singer_male_jump_singing
 				]
-				fast = [
-					gh3_singer_male_jump_singing
-				]
-			}
-			normal = {
-				slow = [
-					gh3_singer_male_jump_singing
-				]
-				med = [
-					gh3_singer_male_jump_singing
-				]
-				fast = [
+				Fast = [
 					gh3_singer_male_jump_singing
 				]
 			}
-			bad = {
-				slow = [
+			Normal = {
+				Slow = [
 					gh3_singer_male_jump_singing
 				]
-				med = [
+				Med = [
 					gh3_singer_male_jump_singing
 				]
-				fast = [
+				Fast = [
+					gh3_singer_male_jump_singing
+				]
+			}
+			Bad = {
+				Slow = [
+					gh3_singer_male_jump_singing
+				]
+				Med = [
+					gh3_singer_male_jump_singing
+				]
+				Fast = [
 					gh3_singer_male_jump_singing
 				]
 			}
 		}
 		kick = {
 			good = {
-				slow = [
+				Slow = [
 					gh3_singer_male_kick
 				]
-				med = [
+				Med = [
 					gh3_singer_male_kick
 				]
-				fast = [
-					gh3_singer_male_kick
-				]
-			}
-			normal = {
-				slow = [
-					gh3_singer_male_kick
-				]
-				med = [
-					gh3_singer_male_kick
-				]
-				fast = [
+				Fast = [
 					gh3_singer_male_kick
 				]
 			}
-			bad = {
-				slow = [
+			Normal = {
+				Slow = [
 					gh3_singer_male_kick
 				]
-				med = [
+				Med = [
 					gh3_singer_male_kick
 				]
-				fast = [
+				Fast = [
+					gh3_singer_male_kick
+				]
+			}
+			Bad = {
+				Slow = [
+					gh3_singer_male_kick
+				]
+				Med = [
+					gh3_singer_male_kick
+				]
+				Fast = [
 					gh3_singer_male_kick
 				]
 			}
 		}
 		release = {
 			good = {
-				fast = [
+				Fast = [
 					gh3_singer_male_fast_singibreak1
 					gh3_singer_male_fast_singibreak2
 					gh3_singer_male_fast_singibreak3
 				]
-				med = [
+				Med = [
 					gh3_singer_male_med_singibreak1
 					gh3_singer_male_med_singibreak2
 					gh3_singer_male_med_singibreak3
 				]
-				slow = [
+				Slow = [
 					gh3_singer_male_slow_singibreak1
 					gh3_singer_male_slow_singibreak2
 					gh3_singer_male_slow_singibreak3
 				]
 			}
-			normal = {
-				fast = [
+			Normal = {
+				Fast = [
 					gh3_singer_male_fast_singibreak1
 					gh3_singer_male_fast_singibreak2
 					gh3_singer_male_fast_singibreak3
 				]
-				med = [
+				Med = [
 					gh3_singer_male_med_singibreak1
 					gh3_singer_male_med_singibreak2
 					gh3_singer_male_med_singibreak3
 				]
-				slow = [
+				Slow = [
 					gh3_singer_male_slow_singibreak1
 					gh3_singer_male_slow_singibreak2
 					gh3_singer_male_slow_singibreak3
 				]
 			}
-			bad = {
-				fast = [
+			Bad = {
+				Fast = [
 					gh3_singer_male_fast_singibreak1
 					gh3_singer_male_fast_singibreak2
 					gh3_singer_male_fast_singibreak3
 				]
-				med = [
+				Med = [
 					gh3_singer_male_med_singibreak1
 					gh3_singer_male_med_singibreak2
 					gh3_singer_male_med_singibreak3
 				]
-				slow = [
+				Slow = [
 					gh3_singer_male_slow_singibreak1
 					gh3_singer_male_slow_singibreak2
 					gh3_singer_male_slow_singibreak3
 				]
 			}
 		}
-		long_note = {
+		Long_note = {
 			good = {
-				fast = [
+				Fast = [
 					gh3_singer_male_long_note1
 					gh3_singer_male_long_note2
 					gh3_singer_male_long_note3
 					gh3_singer_male_long_note4
 				]
-				med = [
+				Med = [
 					gh3_singer_male_long_note1
 					gh3_singer_male_long_note2
 					gh3_singer_male_long_note3
 					gh3_singer_male_long_note4
 				]
-				slow = [
-					gh3_singer_male_long_note1
-					gh3_singer_male_long_note2
-					gh3_singer_male_long_note3
-					gh3_singer_male_long_note4
-				]
-			}
-			normal = {
-				fast = [
-					gh3_singer_male_long_note1
-					gh3_singer_male_long_note2
-					gh3_singer_male_long_note3
-					gh3_singer_male_long_note4
-				]
-				med = [
-					gh3_singer_male_long_note1
-					gh3_singer_male_long_note2
-					gh3_singer_male_long_note3
-					gh3_singer_male_long_note4
-				]
-				slow = [
+				Slow = [
 					gh3_singer_male_long_note1
 					gh3_singer_male_long_note2
 					gh3_singer_male_long_note3
 					gh3_singer_male_long_note4
 				]
 			}
-			bad = {
-				fast = [
+			Normal = {
+				Fast = [
 					gh3_singer_male_long_note1
 					gh3_singer_male_long_note2
 					gh3_singer_male_long_note3
 					gh3_singer_male_long_note4
 				]
-				med = [
+				Med = [
 					gh3_singer_male_long_note1
 					gh3_singer_male_long_note2
 					gh3_singer_male_long_note3
 					gh3_singer_male_long_note4
 				]
-				slow = [
+				Slow = [
+					gh3_singer_male_long_note1
+					gh3_singer_male_long_note2
+					gh3_singer_male_long_note3
+					gh3_singer_male_long_note4
+				]
+			}
+			Bad = {
+				Fast = [
+					gh3_singer_male_long_note1
+					gh3_singer_male_long_note2
+					gh3_singer_male_long_note3
+					gh3_singer_male_long_note4
+				]
+				Med = [
+					gh3_singer_male_long_note1
+					gh3_singer_male_long_note2
+					gh3_singer_male_long_note3
+					gh3_singer_male_long_note4
+				]
+				Slow = [
 					gh3_singer_male_long_note1
 					gh3_singer_male_long_note2
 					gh3_singer_male_long_note3
@@ -557,330 +557,330 @@ singer_male_animations = {
 				]
 			}
 		}
-		transitions = {
-			stance_a = gh3_singer_male_sing_to_nosing
-			intro = gh3_singer_male_sing_to_nosing
-			win = gh3_singer_male_sing_to_nosing
-			lose = gh3_singer_male_sing_to_nosing
+		Transitions = {
+			Stance_A = GH3_Singer_Male_sing_to_nosing
+			intro = GH3_Singer_Male_sing_to_nosing
+			win = GH3_Singer_Male_sing_to_nosing
+			lose = GH3_Singer_Male_sing_to_nosing
 		}
 	}
 	intro = {
-		idle = {
+		Idle = {
 			good = {
-				slow = [
+				Slow = [
 					gh3_singer_male_med_nosingidle1
 				]
-				med = [
+				Med = [
 					gh3_singer_male_med_nosingidle1
 				]
-				fast = [
-					gh3_singer_male_med_nosingidle1
-				]
-			}
-			normal = {
-				slow = [
-					gh3_singer_male_med_nosingidle1
-				]
-				med = [
-					gh3_singer_male_med_nosingidle1
-				]
-				fast = [
+				Fast = [
 					gh3_singer_male_med_nosingidle1
 				]
 			}
-			bad = {
-				slow = [
+			Normal = {
+				Slow = [
 					gh3_singer_male_med_nosingidle1
 				]
-				med = [
+				Med = [
 					gh3_singer_male_med_nosingidle1
 				]
-				fast = [
+				Fast = [
+					gh3_singer_male_med_nosingidle1
+				]
+			}
+			Bad = {
+				Slow = [
+					gh3_singer_male_med_nosingidle1
+				]
+				Med = [
+					gh3_singer_male_med_nosingidle1
+				]
+				Fast = [
 					gh3_singer_male_med_nosingidle1
 				]
 			}
 		}
-		transitions = {
-			stance_b = gh3_singer_male_nosing_to_sing
+		Transitions = {
+			stance_b = GH3_Singer_Male_nosing_to_sing
 		}
 	}
 	intro_smstg = {
-		idle = {
+		Idle = {
 			good = {
-				slow = [
+				Slow = [
 					gh3_singer_male_med_nosingidle1
 				]
-				med = [
+				Med = [
 					gh3_singer_male_med_nosingidle1
 				]
-				fast = [
-					gh3_singer_male_med_nosingidle1
-				]
-			}
-			normal = {
-				slow = [
-					gh3_singer_male_med_nosingidle1
-				]
-				med = [
-					gh3_singer_male_med_nosingidle1
-				]
-				fast = [
+				Fast = [
 					gh3_singer_male_med_nosingidle1
 				]
 			}
-			bad = {
-				slow = [
+			Normal = {
+				Slow = [
 					gh3_singer_male_med_nosingidle1
 				]
-				med = [
+				Med = [
 					gh3_singer_male_med_nosingidle1
 				]
-				fast = [
+				Fast = [
+					gh3_singer_male_med_nosingidle1
+				]
+			}
+			Bad = {
+				Slow = [
+					gh3_singer_male_med_nosingidle1
+				]
+				Med = [
+					gh3_singer_male_med_nosingidle1
+				]
+				Fast = [
 					gh3_singer_male_med_nosingidle1
 				]
 			}
 		}
-		transitions = {
-			stance_b = gh3_singer_male_nosing_to_sing
+		Transitions = {
+			stance_b = GH3_Singer_Male_nosing_to_sing
 		}
 	}
 	win = {
-		idle = {
+		Idle = {
 			good = {
-				slow = [
-					gh3_singer_male_nswin2
-					gh3_singer_male_nswin3
-					gh3_singer_male_nswin4
+				Slow = [
+					GH3_Singer_Male_NSWin2
+					GH3_Singer_Male_NSWin3
+					GH3_Singer_Male_NSWin4
 				]
-				med = [
-					gh3_singer_male_nswin2
-					gh3_singer_male_nswin3
-					gh3_singer_male_nswin4
+				Med = [
+					GH3_Singer_Male_NSWin2
+					GH3_Singer_Male_NSWin3
+					GH3_Singer_Male_NSWin4
 				]
-				fast = [
-					gh3_singer_male_nswin2
-					gh3_singer_male_nswin3
-					gh3_singer_male_nswin4
-				]
-			}
-			normal = {
-				slow = [
-					gh3_singer_male_nswin2
-					gh3_singer_male_nswin3
-					gh3_singer_male_nswin4
-				]
-				med = [
-					gh3_singer_male_nswin2
-					gh3_singer_male_nswin3
-					gh3_singer_male_nswin4
-				]
-				fast = [
-					gh3_singer_male_nswin2
-					gh3_singer_male_nswin3
-					gh3_singer_male_nswin4
+				Fast = [
+					GH3_Singer_Male_NSWin2
+					GH3_Singer_Male_NSWin3
+					GH3_Singer_Male_NSWin4
 				]
 			}
-			bad = {
-				slow = [
-					gh3_singer_male_nswin2
-					gh3_singer_male_nswin3
-					gh3_singer_male_nswin4
+			Normal = {
+				Slow = [
+					GH3_Singer_Male_NSWin2
+					GH3_Singer_Male_NSWin3
+					GH3_Singer_Male_NSWin4
 				]
-				med = [
-					gh3_singer_male_nswin2
-					gh3_singer_male_nswin3
-					gh3_singer_male_nswin4
+				Med = [
+					GH3_Singer_Male_NSWin2
+					GH3_Singer_Male_NSWin3
+					GH3_Singer_Male_NSWin4
 				]
-				fast = [
-					gh3_singer_male_nswin2
-					gh3_singer_male_nswin3
-					gh3_singer_male_nswin4
+				Fast = [
+					GH3_Singer_Male_NSWin2
+					GH3_Singer_Male_NSWin3
+					GH3_Singer_Male_NSWin4
+				]
+			}
+			Bad = {
+				Slow = [
+					GH3_Singer_Male_NSWin2
+					GH3_Singer_Male_NSWin3
+					GH3_Singer_Male_NSWin4
+				]
+				Med = [
+					GH3_Singer_Male_NSWin2
+					GH3_Singer_Male_NSWin3
+					GH3_Singer_Male_NSWin4
+				]
+				Fast = [
+					GH3_Singer_Male_NSWin2
+					GH3_Singer_Male_NSWin3
+					GH3_Singer_Male_NSWin4
 				]
 			}
 		}
-		transitions = {
-			stance_b = gh3_singer_male_nosing_to_sing
+		Transitions = {
+			stance_b = GH3_Singer_Male_nosing_to_sing
 		}
 	}
 	win_smstg = {
-		idle = {
+		Idle = {
 			good = {
-				slow = [
-					gh3_singer_male_nswin2
-					gh3_singer_male_nswin3
-					gh3_singer_male_nswin4
+				Slow = [
+					GH3_Singer_Male_NSWin2
+					GH3_Singer_Male_NSWin3
+					GH3_Singer_Male_NSWin4
 				]
-				med = [
-					gh3_singer_male_nswin2
-					gh3_singer_male_nswin3
-					gh3_singer_male_nswin4
+				Med = [
+					GH3_Singer_Male_NSWin2
+					GH3_Singer_Male_NSWin3
+					GH3_Singer_Male_NSWin4
 				]
-				fast = [
-					gh3_singer_male_nswin2
-					gh3_singer_male_nswin3
-					gh3_singer_male_nswin4
-				]
-			}
-			normal = {
-				slow = [
-					gh3_singer_male_nswin2
-					gh3_singer_male_nswin3
-					gh3_singer_male_nswin4
-				]
-				med = [
-					gh3_singer_male_nswin2
-					gh3_singer_male_nswin3
-					gh3_singer_male_nswin4
-				]
-				fast = [
-					gh3_singer_male_nswin2
-					gh3_singer_male_nswin3
-					gh3_singer_male_nswin4
+				Fast = [
+					GH3_Singer_Male_NSWin2
+					GH3_Singer_Male_NSWin3
+					GH3_Singer_Male_NSWin4
 				]
 			}
-			bad = {
-				slow = [
-					gh3_singer_male_nswin2
-					gh3_singer_male_nswin3
-					gh3_singer_male_nswin4
+			Normal = {
+				Slow = [
+					GH3_Singer_Male_NSWin2
+					GH3_Singer_Male_NSWin3
+					GH3_Singer_Male_NSWin4
 				]
-				med = [
-					gh3_singer_male_nswin2
-					gh3_singer_male_nswin3
-					gh3_singer_male_nswin4
+				Med = [
+					GH3_Singer_Male_NSWin2
+					GH3_Singer_Male_NSWin3
+					GH3_Singer_Male_NSWin4
 				]
-				fast = [
-					gh3_singer_male_nswin2
-					gh3_singer_male_nswin3
-					gh3_singer_male_nswin4
+				Fast = [
+					GH3_Singer_Male_NSWin2
+					GH3_Singer_Male_NSWin3
+					GH3_Singer_Male_NSWin4
+				]
+			}
+			Bad = {
+				Slow = [
+					GH3_Singer_Male_NSWin2
+					GH3_Singer_Male_NSWin3
+					GH3_Singer_Male_NSWin4
+				]
+				Med = [
+					GH3_Singer_Male_NSWin2
+					GH3_Singer_Male_NSWin3
+					GH3_Singer_Male_NSWin4
+				]
+				Fast = [
+					GH3_Singer_Male_NSWin2
+					GH3_Singer_Male_NSWin3
+					GH3_Singer_Male_NSWin4
 				]
 			}
 		}
-		transitions = {
-			stance_b = gh3_singer_male_nosing_to_sing
+		Transitions = {
+			stance_b = GH3_Singer_Male_nosing_to_sing
 		}
 	}
 	lose = {
-		idle = {
+		Idle = {
 			good = {
-				slow = [
-					gh3_singer_male_nslose1
-					gh3_singer_male_nslose2
-					gh3_singer_male_nslose3
+				Slow = [
+					GH3_Singer_Male_NSLose1
+					GH3_Singer_Male_NSLose2
+					GH3_Singer_Male_NSLose3
 				]
-				med = [
-					gh3_singer_male_nslose1
-					gh3_singer_male_nslose2
-					gh3_singer_male_nslose3
+				Med = [
+					GH3_Singer_Male_NSLose1
+					GH3_Singer_Male_NSLose2
+					GH3_Singer_Male_NSLose3
 				]
-				fast = [
-					gh3_singer_male_nslose1
-					gh3_singer_male_nslose2
-					gh3_singer_male_nslose3
-				]
-			}
-			normal = {
-				slow = [
-					gh3_singer_male_nslose1
-					gh3_singer_male_nslose2
-					gh3_singer_male_nslose3
-				]
-				med = [
-					gh3_singer_male_nslose1
-					gh3_singer_male_nslose2
-					gh3_singer_male_nslose3
-				]
-				fast = [
-					gh3_singer_male_nslose1
-					gh3_singer_male_nslose2
-					gh3_singer_male_nslose3
+				Fast = [
+					GH3_Singer_Male_NSLose1
+					GH3_Singer_Male_NSLose2
+					GH3_Singer_Male_NSLose3
 				]
 			}
-			bad = {
-				slow = [
-					gh3_singer_male_nslose1
-					gh3_singer_male_nslose2
-					gh3_singer_male_nslose3
+			Normal = {
+				Slow = [
+					GH3_Singer_Male_NSLose1
+					GH3_Singer_Male_NSLose2
+					GH3_Singer_Male_NSLose3
 				]
-				med = [
-					gh3_singer_male_nslose1
-					gh3_singer_male_nslose2
-					gh3_singer_male_nslose3
+				Med = [
+					GH3_Singer_Male_NSLose1
+					GH3_Singer_Male_NSLose2
+					GH3_Singer_Male_NSLose3
 				]
-				fast = [
-					gh3_singer_male_nslose1
-					gh3_singer_male_nslose2
-					gh3_singer_male_nslose3
+				Fast = [
+					GH3_Singer_Male_NSLose1
+					GH3_Singer_Male_NSLose2
+					GH3_Singer_Male_NSLose3
+				]
+			}
+			Bad = {
+				Slow = [
+					GH3_Singer_Male_NSLose1
+					GH3_Singer_Male_NSLose2
+					GH3_Singer_Male_NSLose3
+				]
+				Med = [
+					GH3_Singer_Male_NSLose1
+					GH3_Singer_Male_NSLose2
+					GH3_Singer_Male_NSLose3
+				]
+				Fast = [
+					GH3_Singer_Male_NSLose1
+					GH3_Singer_Male_NSLose2
+					GH3_Singer_Male_NSLose3
 				]
 			}
 		}
-		transitions = {
-			stance_b = gh3_singer_male_nosing_to_sing
+		Transitions = {
+			stance_b = GH3_Singer_Male_nosing_to_sing
 		}
 	}
 	lose_smstg = {
-		idle = {
+		Idle = {
 			good = {
-				slow = [
-					gh3_singer_male_nslose1
-					gh3_singer_male_nslose2
-					gh3_singer_male_nslose3
+				Slow = [
+					GH3_Singer_Male_NSLose1
+					GH3_Singer_Male_NSLose2
+					GH3_Singer_Male_NSLose3
 				]
-				med = [
-					gh3_singer_male_nslose1
-					gh3_singer_male_nslose2
-					gh3_singer_male_nslose3
+				Med = [
+					GH3_Singer_Male_NSLose1
+					GH3_Singer_Male_NSLose2
+					GH3_Singer_Male_NSLose3
 				]
-				fast = [
-					gh3_singer_male_nslose1
-					gh3_singer_male_nslose2
-					gh3_singer_male_nslose3
-				]
-			}
-			normal = {
-				slow = [
-					gh3_singer_male_nslose1
-					gh3_singer_male_nslose2
-					gh3_singer_male_nslose3
-				]
-				med = [
-					gh3_singer_male_nslose1
-					gh3_singer_male_nslose2
-					gh3_singer_male_nslose3
-				]
-				fast = [
-					gh3_singer_male_nslose1
-					gh3_singer_male_nslose2
-					gh3_singer_male_nslose3
+				Fast = [
+					GH3_Singer_Male_NSLose1
+					GH3_Singer_Male_NSLose2
+					GH3_Singer_Male_NSLose3
 				]
 			}
-			bad = {
-				slow = [
-					gh3_singer_male_nslose1
-					gh3_singer_male_nslose2
-					gh3_singer_male_nslose3
+			Normal = {
+				Slow = [
+					GH3_Singer_Male_NSLose1
+					GH3_Singer_Male_NSLose2
+					GH3_Singer_Male_NSLose3
 				]
-				med = [
-					gh3_singer_male_nslose1
-					gh3_singer_male_nslose2
-					gh3_singer_male_nslose3
+				Med = [
+					GH3_Singer_Male_NSLose1
+					GH3_Singer_Male_NSLose2
+					GH3_Singer_Male_NSLose3
 				]
-				fast = [
-					gh3_singer_male_nslose1
-					gh3_singer_male_nslose2
-					gh3_singer_male_nslose3
+				Fast = [
+					GH3_Singer_Male_NSLose1
+					GH3_Singer_Male_NSLose2
+					GH3_Singer_Male_NSLose3
+				]
+			}
+			Bad = {
+				Slow = [
+					GH3_Singer_Male_NSLose1
+					GH3_Singer_Male_NSLose2
+					GH3_Singer_Male_NSLose3
+				]
+				Med = [
+					GH3_Singer_Male_NSLose1
+					GH3_Singer_Male_NSLose2
+					GH3_Singer_Male_NSLose3
+				]
+				Fast = [
+					GH3_Singer_Male_NSLose1
+					GH3_Singer_Male_NSLose2
+					GH3_Singer_Male_NSLose3
 				]
 			}
 		}
-		transitions = {
-			stance_b = gh3_singer_male_nosing_to_sing
+		Transitions = {
+			stance_b = GH3_Singer_Male_nosing_to_sing
 		}
 	}
 	facial_anims = {
-		idle = [
-			gh3_singer_male_face_idle_1
-			gh3_singer_male_face_idle_2
-			gh3_singer_male_face_wink
+		Idle = [
+			GH3_Singer_Male_Face_Idle_1
+			GH3_Singer_Male_Face_Idle_2
+			GH3_Singer_Male_Face_Wink
 		]
 	}
 }

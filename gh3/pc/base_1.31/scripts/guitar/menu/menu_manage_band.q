@@ -2,26 +2,26 @@ manage_band_menu_font = text_a4
 
 script create_manage_band_menu 
 	get_band_game_mode_name
-	formattext checksumname = bandname_id 'band%i_info_%g' i = ($current_band) g = <game_mode_name>
-	getglobaltags <bandname_id>
-	formattext textname = the_bands_name "''%n''" n = <name>
+	FormatText checksumname = bandname_id 'band%i_info_%g' i = ($current_band) g = <game_mode_name>
+	GetGlobalTags <bandname_id>
+	FormatText TextName = the_bands_name "''%n''" n = <name>
 	new_menu \{scrollid = mb_scroll
 		vmenuid = mb_vmenu
 		use_backdrop = 0
 		menu_pos = (732.0, 314.0)
 		rot_angle = -2
 		spacing = 1}
-	create_menu_backdrop \{texture = toprockers_bg}
-	createscreenelement \{type = containerelement
+	create_menu_backdrop \{texture = TopRockers_BG}
+	CreateScreenElement \{type = ContainerElement
 		id = mb_helper_container
 		parent = root_window
 		pos = (0.0, 0.0)}
-	createscreenelement \{type = containerelement
+	CreateScreenElement \{type = ContainerElement
 		id = mb_menu_container
 		parent = mb_vmenu
 		pos = (0.0, 0.0)
 		not_focusable}
-	createscreenelement \{type = spriteelement
+	CreateScreenElement \{type = SpriteElement
 		parent = mb_helper_container
 		id = light_overlay
 		texture = venue_overlay
@@ -32,7 +32,7 @@ script create_manage_band_menu
 			center
 		]
 		z_priority = 99}
-	createscreenelement \{type = spriteelement
+	CreateScreenElement \{type = SpriteElement
 		parent = mb_helper_container
 		id = ticket_image
 		texture = band_name_ticket
@@ -49,8 +49,8 @@ script create_manage_band_menu
 			center
 		]
 		z_priority = 1}
-	createscreenelement {
-		type = spriteelement
+	CreateScreenElement {
+		type = SpriteElement
 		parent = mb_helper_container
 		id = mb_random_image
 		texture = band_name_graphic03
@@ -60,23 +60,23 @@ script create_manage_band_menu
 		z_priority = 2
 	}
 	<rand> = 0
-	getrandomvalue \{name = rand
-		integer
+	GetRandomValue \{name = rand
+		Integer
 		a = 0
 		b = 2}
 	if (<rand> = 0)
-		setscreenelementprops \{id = mb_random_image
+		SetScreenElementProps \{id = mb_random_image
 			texture = band_name_graphic01}
 	elseif (<rand> = 1)
-		setscreenelementprops \{id = mb_random_image
+		SetScreenElementProps \{id = mb_random_image
 			texture = band_name_graphic02}
 	elseif (<rand> = 2)
-		setscreenelementprops \{id = mb_random_image
+		SetScreenElementProps \{id = mb_random_image
 			texture = band_name_graphic03}
 	endif
 	<manage_band_pos> = (725.0, 190.0)
-	createscreenelement {
-		type = textelement
+	CreateScreenElement {
+		type = TextElement
 		parent = mb_helper_container
 		pos = <manage_band_pos>
 		font = text_a10_large
@@ -87,8 +87,8 @@ script create_manage_band_menu
 		rot_angle = -2
 	}
 	fit_text_in_rectangle id = <id> dims = (850.0, 200.0) pos = <manage_band_pos>
-	createscreenelement {
-		type = textelement
+	CreateScreenElement {
+		type = TextElement
 		parent = mb_helper_container
 		pos = (<manage_band_pos> + (0.0, 110.0))
 		font = ($choose_band_menu_font)
@@ -98,11 +98,11 @@ script create_manage_band_menu
 		z_priority = 3
 		rot_angle = -2
 	}
-	getscreenelementdims id = <id>
+	GetScreenElementDims id = <id>
 	if (<width> > 600)
 		fit_text_in_rectangle id = <id> dims = (1000.0, 70.0) pos = (<manage_band_pos> + (0.0, 110.0))
 	endif
-	displaysprite {
+	displaySprite {
 		parent = mb_helper_container
 		tex = white
 		rgba = [90 25 5 255]
@@ -111,39 +111,39 @@ script create_manage_band_menu
 		z = 3
 		rot_angle = -2
 	}
-	<mb_hlbar_pos_1> = (408.0, 385.0)
-	<mb_hlbar_pos_2> = (408.0, 441.0)
-	<mb_hlbar_dims> = (654.0, 58.0)
-	displaysprite {
-		id = mb_hlbarid
+	<mb_hlBar_pos_1> = (408.0, 385.0)
+	<mb_hlBar_pos_2> = (408.0, 441.0)
+	<mb_hlBar_dims> = (654.0, 58.0)
+	displaySprite {
+		id = mb_hlBarID
 		parent = mb_helper_container
 		tex = white
 		rgba = [205 105 110 255]
-		pos = <mb_hlbar_pos_1>
-		dims = <mb_hlbar_dims>
+		pos = <mb_hlBar_pos_1>
+		dims = <mb_hlBar_dims>
 		z = 3
 		rot_angle = -2
 	}
-	createscreenelement {
+	CreateScreenElement {
 		id = mb_rename_band_id
 		parent = mb_menu_container
-		type = textelement
+		type = TextElement
 		font = ($choose_band_menu_font)
 		rgba = ($menu_unfocus_color)
 		text = "RENAME  BAND"
 		just = [center top]
 	}
-	createscreenelement {
+	CreateScreenElement {
 		parent = mb_vmenu
-		type = textelement
+		type = TextElement
 		font = ($choose_band_menu_font)
 		text = ""
 		scale = 1.3
 		just = [center top]
 		event_handlers = [
-			{focus setscreenelementprops params = {
-					id = mb_hlbarid
-					pos = <mb_hlbar_pos_1>
+			{focus SetScreenElementProps params = {
+					id = mb_hlBarID
+					pos = <mb_hlBar_pos_1>
 				}
 			}
 			{focus manage_band_highlighter params = {id = mb_rename_band_id select}}
@@ -151,35 +151,35 @@ script create_manage_band_menu
 			{pad_choose menu_manage_band_rename_band}
 		]
 	}
-	createscreenelement {
+	CreateScreenElement {
 		id = mb_delete_band_id
 		parent = mb_menu_container
-		type = textelement
+		type = TextElement
 		font = ($choose_band_menu_font)
 		rgba = [90 25 5 255]
 		text = "DELETE  BAND"
 		just = [center top]
 		pos = (0.0, 56.0)
 	}
-	createscreenelement {
+	CreateScreenElement {
 		parent = mb_vmenu
-		type = textelement
+		type = TextElement
 		font = ($choose_band_menu_font)
 		text = ""
 		just = [center top]
 		event_handlers = [
-			{focus setscreenelementprops params = {
-					id = mb_hlbarid
-					pos = <mb_hlbar_pos_2>
+			{focus SetScreenElementProps params = {
+					id = mb_hlBarID
+					pos = <mb_hlBar_pos_2>
 				}
 			}
-			{focus setscreenelementprops params = {
+			{focus SetScreenElementProps params = {
 					id = mb_delete_band_id
 					scale = 1.3
 					rgba = [255 220 140 255]
 				}
 			}
-			{unfocus setscreenelementprops params = {
+			{unfocus SetScreenElementProps params = {
 					id = mb_delete_band_id
 					scale = 1.0
 					rgba = [90 25 5 255]
@@ -200,17 +200,17 @@ script create_manage_band_menu
 endscript
 
 script manage_band_highlighter 
-	if gotparam \{select}
-		setscreenelementprops id = <id> scale = 1.3 rgba = [255 220 140 255]
-		getscreenelementdims id = <id>
+	if GotParam \{select}
+		SetScreenElementProps id = <id> scale = 1.3 rgba = [255 220 140 255]
+		GetScreenElementDims id = <id>
 		if (<width> > 634)
-			fit_text_in_rectangle id = <id> dims = ((626.0, 0.0) + ((0.0, 1.0) * <height>)) start_x_scale = 1.3 start_y_scale = 1.3
+			fit_text_in_rectangle id = <id> dims = ((626.0, 0.0) + ((0.0, 1.0) * <Height>)) start_x_scale = 1.3 start_y_scale = 1.3
 		endif
-	elseif gotparam \{unselect}
-		setscreenelementprops id = <id> scale = 1.0 rgba = [90 25 5 255]
-		getscreenelementdims id = <id>
+	elseif GotParam \{unselect}
+		SetScreenElementProps id = <id> scale = 1.0 rgba = [90 25 5 255]
+		GetScreenElementDims id = <id>
 		if (<width> > 634)
-			fit_text_in_rectangle id = <id> dims = ((626.0, 0.0) + ((0.0, 1.0) * <height>)) start_x_scale = 1.0 start_y_scale = 1.0
+			fit_text_in_rectangle id = <id> dims = ((626.0, 0.0) + ((0.0, 1.0) * <Height>)) start_x_scale = 1.0 start_y_scale = 1.0
 		endif
 	endif
 endscript

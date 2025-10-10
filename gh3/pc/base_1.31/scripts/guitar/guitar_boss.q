@@ -1,141 +1,141 @@
 boss_hammer_try_strum = 4
-boss_tommorello_props = {
-	gainpernote = {
+Boss_TomMorello_Props = {
+	GainPerNote = {
 		easy = 0.8
 		medium = 0.7
 		hard = 0.55
 		expert = 0.4
 	}
-	losspernote = {
+	LossPerNote = {
 		easy = 5.25
 		medium = 3.0
 		hard = 2.75
 		expert = 2.25
 	}
-	powerupmissednote = {
+	PowerUpMissedNote = {
 		easy = 55.0
 		medium = 50.0
 		hard = 45.0
 		expert = 40.0
 	}
-	whammyspeed = {
+	WhammySpeed = {
 		easy = 1100
 		medium = 800
 		hard = 500
 		expert = 350
 	}
-	brokenstringspeed = {
+	BrokenStringSpeed = {
 		easy = 1200
 		medium = 950
 		hard = 700
 		expert = 450
 	}
-	brokenstringmissednote = {
+	BrokenStringMissedNote = {
 		easy = 25.0
 		medium = 20.0
 		hard = 20.0
 		expert = 15.0
 	}
-	powerups = [
+	PowerUps = [
 		lightning
-		difficultyup
-		doublenotes
-		whammyattack
+		DifficultyUp
+		DoubleNotes
+		WhammyAttack
 	]
 	character_profile = morello
 	character_name = "Tom Morello"
 }
-boss_slash_props = {
-	gainpernote = {
+Boss_Slash_Props = {
+	GainPerNote = {
 		easy = 0.8
 		medium = 0.7
 		hard = 0.55
 		expert = 0.4
 	}
-	losspernote = {
+	LossPerNote = {
 		easy = 5.0
 		medium = 2.75
 		hard = 2.5
 		expert = 2.0
 	}
-	powerupmissednote = {
+	PowerUpMissedNote = {
 		easy = 45.0
 		medium = 42.0
 		hard = 35.0
 		expert = 30.0
 	}
-	whammyspeed = {
+	WhammySpeed = {
 		easy = 1150
 		medium = 900
 		hard = 500
 		expert = 350
 	}
-	brokenstringspeed = {
+	BrokenStringSpeed = {
 		easy = 11500
 		medium = 850
 		hard = 650
 		expert = 400
 	}
-	brokenstringmissednote = {
+	BrokenStringMissedNote = {
 		easy = 24.0
 		medium = 17.0
 		hard = 14.0
 		expert = 11.5
 	}
-	powerups = [
+	PowerUps = [
 		lightning
-		difficultyup
-		doublenotes
-		brokenstring
-		whammyattack
+		DifficultyUp
+		DoubleNotes
+		BrokenString
+		WhammyAttack
 	]
 	character_profile = slash
 	character_name = "Slash"
 }
-boss_devil_props = {
-	gainpernote = {
+Boss_Devil_Props = {
+	GainPerNote = {
 		easy = 0.75
 		medium = 0.65000004
 		hard = 0.35000002
 		expert = 0.35000002
 	}
-	losspernote = {
+	LossPerNote = {
 		easy = 5.0
 		medium = 3.0
 		hard = 2.25
 		expert = 2.0
 	}
-	powerupmissednote = {
+	PowerUpMissedNote = {
 		easy = 45.0
 		medium = 42.5
 		hard = 30.0
 		expert = 30.0
 	}
-	whammyspeed = {
+	WhammySpeed = {
 		easy = 1050
 		medium = 800
 		hard = 500
 		expert = 350
 	}
-	brokenstringspeed = {
+	BrokenStringSpeed = {
 		easy = 1100
 		medium = 950
 		hard = 600
 		expert = 350
 	}
-	brokenstringmissednote = {
+	BrokenStringMissedNote = {
 		easy = 22.5
 		medium = 20.0
 		hard = 12.5
 		expert = 10.0
 	}
-	powerups = [
+	PowerUps = [
 		lightning
-		difficultyup
-		doublenotes
-		leftynotes
-		brokenstring
-		whammyattack
+		DifficultyUp
+		DoubleNotes
+		LeftyNotes
+		BrokenString
+		WhammyAttack
 	]
 	character_profile = satan
 	character_name = "Lou"
@@ -144,9 +144,9 @@ save_lefty_flip_p2 = 0
 
 script bossbattle_init 
 	if ($game_mode = p2_battle)
-		scriptassert \{"Cannot choose p2_battle and bossbattle"}
+		ScriptAssert \{"Cannot choose p2_battle and bossbattle"}
 	endif
-	createscreenelement \{type = containerelement
+	CreateScreenElement \{type = ContainerElement
 		parent = root_window
 		id = battlemode_container
 		pos = (0.0, 0.0)
@@ -156,7 +156,7 @@ script bossbattle_init
 		]}
 	player = 1
 	begin
-	formattext checksumname = player_status 'player%i_status' i = <player> addtostringlookup
+	FormatText checksumname = player_status 'player%i_status' i = <player> AddToStringLookup
 	change structurename = <player_status> battlemode_creation_selection = -1
 	change structurename = <player_status> current_num_powerups = 0
 	change structurename = <player_status> shake_notes = -1
@@ -187,10 +187,10 @@ script bossbattle_init
 	change \{boss_lastbrokenstringtime = 0}
 	change \{boss_hammer_count = 0}
 	if ($current_song = bossdevil)
-		getglobaltags \{user_options}
+		GetGlobalTags \{user_options}
 		if (<lefty_flip_p2> = 1)
 			change \{save_lefty_flip_p2 = 1}
-			setglobaltags \{user_options
+			SetGlobalTags \{user_options
 				params = {
 					lefty_flip_p2 = 0
 				}}
@@ -205,7 +205,7 @@ script bossbattle_deinit
 		change \{boss_battle = 0}
 		change \{current_num_players = 1}
 		change structurename = player2_status controller = ($boss_oldcontroller)
-		killspawnedscript \{id = battlemode}
+		KillSpawnedScript \{id = battlemode}
 		change structurename = <player_status> battlemode_creation_selection = -1
 		change structurename = <player_status> current_num_powerups = 0
 		change structurename = <player_status> shake_notes = -1
@@ -223,21 +223,21 @@ script bossbattle_deinit
 		change structurename = <player_status> broken_string_blue = 0
 		change structurename = <player_status> broken_string_orange = 0
 		change structurename = <player_status> hold_difficulty_up = 0.0
-		if screenelementexists \{id = battlemode_container}
-			destroyscreenelement \{id = battlemode_container}
+		if ScreenElementExists \{id = battlemode_container}
+			DestroyScreenElement \{id = battlemode_container}
 		endif
-		killspawnedscript \{name = boss_battle_begin_deathlick}
-		killspawnedscript \{name = animate_death_icon}
-		killspawnedscript \{name = update_battle_death_meter}
-		killspawnedscript \{name = update_battle_death_meter_wings}
-		killspawnedscript \{name = stop_pattern_hold_boss}
+		KillSpawnedScript \{name = boss_battle_begin_deathlick}
+		KillSpawnedScript \{name = animate_death_icon}
+		KillSpawnedScript \{name = update_battle_death_meter}
+		KillSpawnedScript \{name = update_battle_death_meter_wings}
+		KillSpawnedScript \{name = stop_pattern_hold_boss}
 		battlemode_killspawnedscripts
-		gh_battlemode_stop_heartbeat_p1
-		gh_battlemode_stop_heartbeat_p2
+		GH_BattleMode_Stop_Heartbeat_P1
+		GH_BattleMode_Stop_Heartbeat_P2
 		change \{boss_hammer_count = 0}
 		if ($current_song = bossdevil)
 			if ($save_lefty_flip_p2 = 1)
-				setglobaltags \{user_options
+				SetGlobalTags \{user_options
 					params = {
 						lefty_flip_p2 = $save_lefty_flip_p2
 					}}
@@ -267,22 +267,22 @@ script bossbattle_select \{player_status = player1_status}
 			<next_attack> = ($current_powerups_p2 [($<player_status>.current_num_powerups - 1)])
 		endif
 	endif
-	getarraysize ($current_boss.powerups)
+	GetArraySize ($current_boss.PowerUps)
 	powerups_size = <array_size>
-	getarraysize \{$battlemode_powerups}
+	GetArraySize \{$battlemode_powerups}
 	array_count = 0
 	begin
 	powerup_enabled = 0
 	powerup_count = 0
 	begin
-	if ($current_boss.powerups [<powerup_count>] = $battlemode_powerups [<array_count>].name)
+	if ($current_boss.PowerUps [<powerup_count>] = $battlemode_powerups [<array_count>].name)
 		powerup_enabled = 1
 		break
 	endif
 	powerup_count = (<powerup_count> + 1)
 	repeat <powerups_size>
 	if (<powerup_enabled> = 1)
-		if NOT ((<other_player_difficulty> = expert) && ($battlemode_powerups [<array_count>].name = difficultyup))
+		if NOT ((<other_player_difficulty> = expert) && ($battlemode_powerups [<array_count>].name = DifficultyUp))
 			if ($<player_status>.last_selected_attack = <array_count> || <next_attack> = <array_count>)
 				total_weight = (<total_weight> + $battlemode_powerups [<array_count>].weight_low)
 			else
@@ -292,20 +292,20 @@ script bossbattle_select \{player_status = player1_status}
 	endif
 	array_count = (<array_count> + 1)
 	repeat <array_size>
-	getrandomvalue name = select_weight a = 0 b = (<total_weight> - 1) integer
+	GetRandomValue name = select_weight a = 0 b = (<total_weight> - 1) Integer
 	array_count = 0
 	begin
 	powerup_enabled = 0
 	powerup_count = 0
 	begin
-	if ($current_boss.powerups [<powerup_count>] = $battlemode_powerups [<array_count>].name)
+	if ($current_boss.PowerUps [<powerup_count>] = $battlemode_powerups [<array_count>].name)
 		powerup_enabled = 1
 		break
 	endif
 	powerup_count = (<powerup_count> + 1)
 	repeat <powerups_size>
 	if (<powerup_enabled> = 1)
-		if NOT ((<other_player_difficulty> = expert) && ($battlemode_powerups [<array_count>].name = difficultyup))
+		if NOT ((<other_player_difficulty> = expert) && ($battlemode_powerups [<array_count>].name = DifficultyUp))
 			if ($<player_status>.last_selected_attack = <array_count> || <next_attack> = <array_count>)
 				select_weight = (<select_weight> - $battlemode_powerups [<array_count>].weight_low)
 			else
@@ -322,7 +322,7 @@ script bossbattle_select \{player_status = player1_status}
 	repeat <array_size>
 	if ($<player_status>.battlemode_creation_selection = -1)
 		printstruct <...>
-		scriptassert \{"Battlemode selection not found"}
+		ScriptAssert \{"Battlemode selection not found"}
 	endif
 endscript
 
@@ -330,15 +330,15 @@ script bossbattle_ready \{battle_gem = 0
 		player_status = player1_status}
 	printf \{"bossbattle_ready"}
 	if ($<player_status>.player = 1)
-		soundevent \{event = battle_power_awarded_sfx_p1}
+		SoundEvent \{event = Battle_Power_Awarded_SFX_P1}
 	else
-		soundevent \{event = battle_power_awarded_sfx_p2}
+		SoundEvent \{event = Battle_Power_Awarded_SFX_P2}
 	endif
 	current_num_powerups = ($<player_status>.current_num_powerups)
 	if (<current_num_powerups> >= $max_num_powerups)
-		formattext checksumname = card_checksum 'battlecard_%i_%s' i = ($<player_status>.current_num_powerups - 1) s = ($<player_status>.player)
-		if screenelementexists id = <card_checksum>
-			destroyscreenelement id = <card_checksum>
+		FormatText checksumname = card_checksum 'battlecard_%i_%s' i = ($<player_status>.current_num_powerups - 1) s = ($<player_status>.player)
+		if ScreenElementExists id = <card_checksum>
+			DestroyScreenElement id = <card_checksum>
 		endif
 		change structurename = <player_status> current_num_powerups = ($<player_status>.current_num_powerups - 1)
 		update_battlecards_remove player_status = <player_status>
@@ -346,10 +346,10 @@ script bossbattle_ready \{battle_gem = 0
 	current_num_powerups = ($<player_status>.current_num_powerups)
 	select = <battle_gem>
 	if ($<player_status>.player = 1)
-		setarrayelement arrayname = current_powerups_p1 globalarray index = <current_num_powerups> newvalue = <select>
+		SetArrayElement ArrayName = current_powerups_p1 GlobalArray index = <current_num_powerups> newvalue = <select>
 		card_pos = (($battle_hud_2d_elements.rock_pos_p1) + ($battle_hud_2d_elements.card_1_off_p1))
 	else
-		setarrayelement arrayname = current_powerups_p2 globalarray index = <current_num_powerups> newvalue = <select>
+		SetArrayElement ArrayName = current_powerups_p2 GlobalArray index = <current_num_powerups> newvalue = <select>
 		card_pos = (($battle_hud_2d_elements.rock_pos_p2) + ($battle_hud_2d_elements.card_1_off_p2))
 	endif
 	change structurename = <player_status> current_num_powerups = ($<player_status>.current_num_powerups + 1)
@@ -371,9 +371,9 @@ script bossbattle_ready \{battle_gem = 0
 	if NOT ($show_battle_text = 1)
 		<card_alpha> = 0
 	endif
-	formattext checksumname = card_checksum 'battlecard_%i_%s' i = <current_num_powerups> s = ($<player_status>.player)
-	createscreenelement {
-		type = spriteelement
+	FormatText checksumname = card_checksum 'battlecard_%i_%s' i = <current_num_powerups> s = ($<player_status>.player)
+	CreateScreenElement {
+		type = SpriteElement
 		id = <card_checksum>
 		parent = battlemode_container
 		texture = ($battlemode_powerups [<select>].card_texture)
@@ -387,7 +387,7 @@ script bossbattle_ready \{battle_gem = 0
 	if ($game_mode = tutorial)
 		card_pos = (<card_pos> + (0.0, 50.0))
 	endif
-	doscreenelementmorph {
+	doScreenElementMorph {
 		id = <card_checksum>
 		pos = <card_pos>
 		time = 0.3
@@ -411,9 +411,9 @@ script bossbattle_trigger_on \{player = 1
 		<other_difficulty> = $current_difficulty2
 		<other_player_status> = player2_status
 		select = ($current_powerups_p1 [($<player_status>.current_num_powerups - 1)])
-		gh3_battle_play_crowd_reaction_sfx receiving_player = 2 receiving_player_current_crowd_level = ($<other_player_status>.current_health)
+		GH3_Battle_Play_Crowd_Reaction_SFX receiving_player = 2 receiving_player_current_crowd_level = ($<other_player_status>.current_health)
 		if ($is_network_game)
-			sendnetmessage {
+			SendNetMessage {
 				type = bossbattle_trigger_on
 				select = <select>
 			}
@@ -424,20 +424,20 @@ script bossbattle_trigger_on \{player = 1
 		<other_difficulty> = $current_difficulty
 		<other_player_status> = player1_status
 		select = ($current_powerups_p2 [($<player_status>.current_num_powerups - 1)])
-		gh3_battle_play_crowd_reaction_sfx receiving_player = 1 receiving_player_current_crowd_level = ($<other_player_status>.current_health)
+		GH3_Battle_Play_Crowd_Reaction_SFX receiving_player = 1 receiving_player_current_crowd_level = ($<other_player_status>.current_health)
 	endif
-	formattext checksumname = card_checksum 'battlecard_%i_%s' i = ($<player_status>.current_num_powerups - 1) s = ($<player_status>.player)
-	if screenelementexists id = <card_checksum>
-		destroyscreenelement id = <card_checksum>
+	FormatText checksumname = card_checksum 'battlecard_%i_%s' i = ($<player_status>.current_num_powerups - 1) s = ($<player_status>.player)
+	if ScreenElementExists id = <card_checksum>
+		DestroyScreenElement id = <card_checksum>
 	endif
 	change structurename = <player_status> current_num_powerups = ($<player_status>.current_num_powerups - 1)
 	update_battlecards_remove player_status = <player_status>
 	drain_time = ($battlemode_powerups [<select>].drain_time)
 	if ($<player_status>.player = 1)
-		spawnscript bossbattle_ai_damage params = {drain_time = <drain_time> player_status = <other_player_status> player_text = <other_player_text> select = <select>}
+		SpawnScript bossbattle_ai_damage params = {drain_time = <drain_time> player_status = <other_player_status> player_text = <other_player_text> select = <select>}
 	endif
 	change structurename = <player_status> final_blow_powerup = <select>
-	spawnscriptnow ($battlemode_powerups [<select>].scr) id = battlemode params = {drain_time = <drain_time>
+	spawnscriptnow ($battlemode_powerups [<select>].Scr) id = battlemode params = {drain_time = <drain_time>
 		player = <other_player>
 		player_text = <other_player_text>
 		other_player_status = <other_player_status>
@@ -445,8 +445,8 @@ script bossbattle_trigger_on \{player = 1
 		difficulty = <other_difficulty>
 		($battlemode_powerups [<select>].params)}
 	change structurename = <player_status> battle_num_attacks = ($<player_status>.battle_num_attacks + 1)
-	band_playattackanim name = ($<player_status>.band_member) type = <select>
-	band_playresponseanim name = ($<other_player_status>.band_member) type = <select>
+	Band_PlayAttackAnim name = ($<player_status>.band_member) type = <select>
+	Band_PlayResponseAnim name = ($<other_player_status>.band_member) type = <select>
 	spawnscriptnow hammer_highway params = {other_player_text = <other_player_text>}
 	if ($battlemode_powerups [<select>].fire_bolt = 1)
 		spawnscriptnow attack_bolt params = {player_status = <player_status> other_player_status = <other_player_status>}
@@ -458,14 +458,14 @@ bossbattle_missingnotefraction = 0.0
 script bossbattle_ai_damage \{player_status = player2_status
 		drain_time = 15000
 		player_text = 'p2'}
-	if structurecontains structure = ($battlemode_powerups [<select>]) no_ai_damage
+	if StructureContains Structure = ($battlemode_powerups [<select>]) no_ai_damage
 		return
 	endif
 	gem_fraction = 0.0
-	formattext checksumname = input_array 'bossresponse_array%p' p = <player_text>
-	formattext checksumname = input_array_entry 'bossresponse_array%p_entry' p = <player_text>
-	getsongtimems
-	if structurecontains structure = ($battlemode_powerups [<select>]) immediate
+	FormatText checksumname = input_array 'bossresponse_array%p' p = <player_text>
+	FormatText checksumname = input_array_entry 'bossresponse_array%p_entry' p = <player_text>
+	GetSongTimeMs
+	if StructureContains Structure = ($battlemode_powerups [<select>]) immediate
 		start_creation_time = <time>
 		end_creation_time = (<start_creation_time> + <drain_time>)
 		start_creation_index = ($last_bossresponse_array_entry)
@@ -474,21 +474,21 @@ script bossbattle_ai_damage \{player_status = player2_status
 		end_creation_time = (<start_creation_time> + <drain_time>)
 		start_creation_index = ($<input_array_entry>)
 	endif
-	missed_note_percentage = ($current_boss.powerupmissednote.($current_difficulty))
-	if ($battlemode_powerups [<select>].name = brokenstring)
+	missed_note_percentage = ($current_boss.PowerUpMissedNote.($current_difficulty))
+	if ($battlemode_powerups [<select>].name = BrokenString)
 		<end_creation_time> = (<start_creation_time> + 60000)
-		<missed_note_percentage> = ($current_boss.brokenstringmissednote.($current_difficulty))
+		<missed_note_percentage> = ($current_boss.BrokenStringMissedNote.($current_difficulty))
 	endif
 	begin
 	begin
-	getsongtimems
+	GetSongTimeMs
 	if (<time> > <start_creation_time> - 200)
 		break
 	endif
-	wait \{1
+	Wait \{1
 		gameframe}
 	repeat
-	if ($battlemode_powerups [<select>].name = brokenstring)
+	if ($battlemode_powerups [<select>].name = BrokenString)
 		if ($<player_status>.broken_string_green < 3 &&
 				$<player_status>.broken_string_red < 3 &&
 				$<player_status>.broken_string_yellow < 3 &&
@@ -497,14 +497,14 @@ script bossbattle_ai_damage \{player_status = player2_status
 			break
 		endif
 	endif
-	applybossbattlegemmisses {miss_percent = <missed_note_percentage>
+	ApplyBossBattleGemMisses {miss_percent = <missed_note_percentage>
 		start_creation_index = <start_creation_index>
 		start_creation_time = <start_creation_time>
 		end_creation_time = <end_creation_time>
 		gem_fraction = <gem_fraction>}
-	getsongtimems
+	GetSongTimeMs
 	start_creation_time = (<time> + ($<player_status>.scroll_time - $destroy_time) * 1000.0 + 1000)
-	if NOT ($battlemode_powerups [<select>].name = brokenstring)
+	if NOT ($battlemode_powerups [<select>].name = BrokenString)
 		if (<start_creation_time> >= <end_creation_time>)
 			break
 		endif
@@ -514,7 +514,7 @@ endscript
 boss_hammer_count = 0
 
 script check_buttons_boss 
-	checkbuttonsboss player = <player> array_entry = <array_entry>
+	CheckButtonsBoss player = <player> array_entry = <array_entry>
 endscript
 
 script bossbattle_fill 
@@ -536,51 +536,51 @@ endscript
 script boss_battle_death_icon 
 	boss_pos = (900.0, 150.0)
 	player_pos = (300.0, 183.0)
-	displaysprite parent = root_window tex = icon_attack_deth pos = <boss_pos> just = [center center] z = 500
-	doscreenelementmorph id = <id> pos = <player_pos> scale = 3.1 relative_scale time = 1.0
-	wait \{2.0
+	displaySprite parent = root_window tex = icon_attack_deth pos = <boss_pos> just = [center center] z = 500
+	doScreenElementMorph id = <id> pos = <player_pos> scale = 3.1 relative_scale time = 1.0
+	Wait \{2.0
 		seconds}
-	doscreenelementmorph id = <id> alpha = 0 time = 2.0
-	wait \{2.0
+	doScreenElementMorph id = <id> alpha = 0 time = 2.0
+	Wait \{2.0
 		seconds}
 	destroy_menu menu_id = <id>
 endscript
 
 script create_battle_death_meter 
-	killspawnedscript \{name = update_battle_death_meter}
-	killspawnedscript \{name = update_battle_death_meter_wings}
-	formattext \{checksumname = death_meter
+	KillSpawnedScript \{name = update_battle_death_meter}
+	KillSpawnedScript \{name = update_battle_death_meter_wings}
+	FormatText \{checksumname = death_meter
 		'battle_death_meter'
-		addtostringlookup = true}
-	formattext \{checksumname = death_meter_marker
+		AddToStringLookup = true}
+	FormatText \{checksumname = death_meter_marker
 		'battle_death_meter_marker'
-		addtostringlookup = true}
-	formattext \{checksumname = death_meter_text
+		AddToStringLookup = true}
+	FormatText \{checksumname = death_meter_text
 		'battle_death_meter_text'
-		addtostringlookup = true}
-	formattext \{checksumname = battle_death_meter_wing_r
+		AddToStringLookup = true}
+	FormatText \{checksumname = battle_death_meter_wing_r
 		'battle_death_meter_wing_r'
-		addtostringlookup = true}
-	formattext \{checksumname = battle_death_meter_wing_l
+		AddToStringLookup = true}
+	FormatText \{checksumname = battle_death_meter_wing_l
 		'battle_death_meter_wing_l'
-		addtostringlookup = true}
-	if screenelementexists id = <death_meter>
-		destroyscreenelement id = <death_meter>
+		AddToStringLookup = true}
+	if ScreenElementExists id = <death_meter>
+		DestroyScreenElement id = <death_meter>
 	endif
-	if screenelementexists id = <death_meter_marker>
-		destroyscreenelement id = <death_meter_marker>
+	if ScreenElementExists id = <death_meter_marker>
+		DestroyScreenElement id = <death_meter_marker>
 	endif
-	if screenelementexists id = <death_meter_text>
-		destroyscreenelement id = <death_meter_text>
+	if ScreenElementExists id = <death_meter_text>
+		DestroyScreenElement id = <death_meter_text>
 	endif
-	if screenelementexists id = <battle_death_meter_wing_r>
-		destroyscreenelement id = <battle_death_meter_wing_r>
+	if ScreenElementExists id = <battle_death_meter_wing_r>
+		DestroyScreenElement id = <battle_death_meter_wing_r>
 	endif
-	if screenelementexists id = <battle_death_meter_wing_l>
-		destroyscreenelement id = <battle_death_meter_wing_l>
+	if ScreenElementExists id = <battle_death_meter_wing_l>
+		DestroyScreenElement id = <battle_death_meter_wing_l>
 	endif
-	createscreenelement {
-		type = spriteelement
+	CreateScreenElement {
+		type = SpriteElement
 		id = <death_meter>
 		parent = battlemode_container
 		texture = battle_death_meter
@@ -591,8 +591,8 @@ script create_battle_death_meter
 		just = [center center]
 		z_priority = 0
 	}
-	createscreenelement {
-		type = spriteelement
+	CreateScreenElement {
+		type = SpriteElement
 		id = <death_meter_marker>
 		parent = <death_meter>
 		texture = battle_death_meter_marker
@@ -603,8 +603,8 @@ script create_battle_death_meter
 		just = [center center]
 		z_priority = 1
 	}
-	createscreenelement {
-		type = spriteelement
+	CreateScreenElement {
+		type = SpriteElement
 		id = <battle_death_meter_wing_r>
 		parent = <death_meter>
 		texture = battle_alert_death_wing
@@ -615,8 +615,8 @@ script create_battle_death_meter
 		just = [left top]
 		z_priority = 0
 	}
-	createscreenelement {
-		type = spriteelement
+	CreateScreenElement {
+		type = SpriteElement
 		id = <battle_death_meter_wing_l>
 		parent = <death_meter>
 		texture = battle_alert_death_wing
@@ -627,18 +627,18 @@ script create_battle_death_meter
 		just = [right top]
 		z_priority = 0
 	}
-	doscreenelementmorph \{id = battle_death_meter
+	doScreenElementMorph \{id = battle_death_meter
 		pos = (648.0, 500.0)
 		time = 0.3}
-	wait \{0.3
+	Wait \{0.3
 		seconds}
 	spawnscriptnow update_battle_death_meter params = {death_meter_marker = <death_meter_marker>}
-	spawnscriptnow update_battle_death_meter_wings params = {wing_r = <battle_death_meter_wing_r> wing_l = <battle_death_meter_wing_l>}
+	spawnscriptnow update_battle_death_meter_wings params = {wing_R = <battle_death_meter_wing_r> wing_L = <battle_death_meter_wing_l>}
 endscript
 
 script update_battle_death_meter 
-	getsongtimems
-	starttime = <time>
+	GetSongTimeMs
+	StartTime = <time>
 	if ($current_song = bossdevil)
 		endtime = 321466
 	elseif ($current_song = bossslash)
@@ -648,37 +648,37 @@ script update_battle_death_meter
 	else
 		return
 	endif
-	if (<starttime> > <endtime>)
-		<starttime> = 0
+	if (<StartTime> > <endtime>)
+		<StartTime> = 0
 	endif
-	metertime = ((<endtime> - <starttime>) / 1000)
-	meterdistance = 150
-	meterstep = (<metertime> / <meterdistance>)
+	meterTime = ((<endtime> - <StartTime>) / 1000)
+	meterDistance = 150
+	meterStep = (<meterTime> / <meterDistance>)
 	pos_update = 0
 	color_update = 0
 	begin
 	<pos_update> = (<pos_update> + 1)
-	if screenelementexists id = <death_meter_marker>
+	if ScreenElementExists id = <death_meter_marker>
 		if (<color_update> = 0)
-			doscreenelementmorph id = <death_meter_marker> rgba = [0 255 100 255] time = 1
+			doScreenElementMorph id = <death_meter_marker> rgba = [0 255 100 255] time = 1
 			<color_update> = 1
 		else
-			doscreenelementmorph id = <death_meter_marker> rgba = [255 255 255 255] time = 1
+			doScreenElementMorph id = <death_meter_marker> rgba = [255 255 255 255] time = 1
 			<color_update> = 0
 		endif
-		if (<meterstep> > 0)
-			doscreenelementmorph id = <death_meter_marker> pos = ((29.0, 200.0) - ((0.0, 1.0) * <pos_update>)) time = <meterstep>
+		if (<meterStep> > 0)
+			doScreenElementMorph id = <death_meter_marker> pos = ((29.0, 200.0) - ((0.0, 1.0) * <pos_update>)) time = <meterStep>
 		endif
 	else
 		break
 	endif
-	wait <meterstep> second
+	Wait <meterStep> second
 	repeat
 endscript
 
 script update_battle_death_meter_wings 
-	getsongtimems
-	starttime = <time>
+	GetSongTimeMs
+	StartTime = <time>
 	if ($current_song = bossdevil)
 		endtime = 321466
 	elseif ($current_song = bossslash)
@@ -688,29 +688,29 @@ script update_battle_death_meter_wings
 	else
 		return
 	endif
-	if (<starttime> > <endtime>)
-		<starttime> = 0
+	if (<StartTime> > <endtime>)
+		<StartTime> = 0
 	endif
-	metertime = ((<endtime> - <starttime>) / 1000)
-	meterdistance = 40
-	meterstep = (<metertime> / <meterdistance>)
+	meterTime = ((<endtime> - <StartTime>) / 1000)
+	meterDistance = 40
+	meterStep = (<meterTime> / <meterDistance>)
 	rot_update = 0
 	begin
 	<rot_update> = (<rot_update> + 1)
-	if screenelementexists id = <wing_r>
-		if (<metertime> > 0)
-			doscreenelementmorph id = <wing_r> rot_angle = (15 - <rot_update>) time = <meterstep>
+	if ScreenElementExists id = <wing_R>
+		if (<meterTime> > 0)
+			doScreenElementMorph id = <wing_R> rot_angle = (15 - <rot_update>) time = <meterStep>
 		endif
 	else
 		break
 	endif
-	if screenelementexists id = <wing_l>
-		if (<metertime> > 0)
-			doscreenelementmorph id = <wing_l> rot_angle = (-15 + <rot_update>) time = <meterstep>
+	if ScreenElementExists id = <wing_L>
+		if (<meterTime> > 0)
+			doScreenElementMorph id = <wing_L> rot_angle = (-15 + <rot_update>) time = <meterStep>
 		endif
 	else
 		break
 	endif
-	wait <meterstep> seconds
+	Wait <meterStep> seconds
 	repeat
 endscript

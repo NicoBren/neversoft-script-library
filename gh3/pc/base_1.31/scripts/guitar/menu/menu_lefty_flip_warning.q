@@ -31,22 +31,22 @@ script destroy_lefty_flip_warning_menu
 endscript
 
 script menu_lefty_flip_warning_select_yes 
-	getglobaltags \{user_options}
+	GetGlobalTags \{user_options}
 	if (<player> = 1)
 		if (<lefty_flip_p1> = 0)
 			<lefty_flip_p1> = 1
 		else
 			<lefty_flip_p1> = 0
 		endif
-		setglobaltags user_options params = {lefty_flip_p1 = <lefty_flip_p1>}
+		SetGlobalTags user_options params = {lefty_flip_p1 = <lefty_flip_p1>}
 	else
 		if (<lefty_flip_p2> = 0)
 			<lefty_flip_p2> = 1
 		else
 			<lefty_flip_p2> = 0
 		endif
-		setglobaltags user_options params = {lefty_flip_p2 = <lefty_flip_p2>}
+		SetGlobalTags user_options params = {lefty_flip_p2 = <lefty_flip_p2>}
 	endif
-	gh3_sfx_fail_song_stop_sounds
+	GH3_SFX_fail_song_stop_sounds
 	ui_flow_manager_respond_to_action \{action = continue}
 endscript

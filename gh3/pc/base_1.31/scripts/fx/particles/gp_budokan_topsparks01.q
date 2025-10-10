@@ -1,56 +1,56 @@
-gp_budokan_topsparks01 = {
+GP_Budokan_TopSparks01 = {
 	pos = (-9.32233, 15.0708685, -9.05583)
 	angles = (0.0, 0.0, 0.0)
-	class = particleobject
-	particletype = flexparticle
+	Class = ParticleObject
+	ParticleType = FlexParticle
 	type = flat
 	active
-	createdatstart
-	emitrangedims = (1.0, 0.0, 1.0)
-	emit_target = (0.0, -0.2, 1.0)
-	emitangle = (0.0, 0.0, 0.0)
+	CreatedAtStart
+	EmitRangeDims = (1.0, 0.0, 1.0)
+	emit_Target = (0.0, -0.2, 1.0)
+	EmitAngle = (0.0, 0.0, 0.0)
 	force = (0.0, -4.0, 0.0)
-	windcoeff = 0.0
-	localwindcoeff = 0.0
-	emittervelocityweight = 0.0
-	radiate
-	anglespread = 180.0
-	bounceheight = 0.0
-	bouncecoeff = 0.2
-	bouncecallbackrate = 0.0
-	liferange = (2.0, 5.0)
+	WindCoeff = 0.0
+	LocalWindCoeff = 0.0
+	EmitterVelocityWeight = 0.0
+	Radiate
+	AngleSpread = 180.0
+	BounceHeight = 0.0
+	BounceCoeff = 0.2
+	BounceCallbackRate = 0.0
+	LifeRange = (2.0, 5.0)
 	emit_rate = 100.0
 	max = 0
-	timeseed = 1.0
-	lifetime = 1.0
-	emitnum = 0
-	followemitter = 0.0
-	emitfunction = constant
-	emitperiod = 1.0
-	sizerange = [
+	TimeSeed = 1.0
+	lifeTime = 1.0
+	emitNum = 0
+	FollowEmitter = 0.0
+	EmitFunction = constant
+	EmitPeriod = 1.0
+	SizeRange = [
 		(0.15, 0.15)
 		(0.02, 0.15)
 	]
-	speedrange = (1.0, 4.0)
-	rotvel = (0.0, 0.0)
-	rotveltimescale = 0.0
-	emitdelaystart = 0.0
-	alignwithpath
-	pathfollowtime = 0.05
-	history = 2
-	historylistcoordinatespace = world
+	SpeedRange = (1.0, 4.0)
+	RotVel = (0.0, 0.0)
+	RotVelTimeScale = 0.0
+	EmitDelayStart = 0.0
+	AlignWithPath
+	PathFollowTime = 0.05
+	History = 2
+	HistoryListCoordinateSpace = world
 	color = -9559553
-	lod_distances = (20.0, 30.0)
-	novisibilitytest
-	quickmaterial = {
-		diffusetextureenabled
-		diffusetexture = jow_spark01
-		specularpower = 0
+	LOD_Distances = (20.0, 30.0)
+	NoVisibilityTest
+	QuickMaterial = {
+		DiffuseTextureEnabled
+		DiffuseTexture = JOW_Spark01
+		SpecularPower = 0
 		alphacutoff = 16
-		blendmode = add
-		quadanimationfps = 0
+		blendMode = Add
+		QuadAnimationFPS = 0
 	}
-	knot = [
+	Knot = [
 		(-0.46765104, 0.0, -0.0)
 		(-0.46765104, 0.0, -0.0)
 		(-0.24335201, 0.0, -0.0)
@@ -61,7 +61,7 @@ gp_budokan_topsparks01 = {
 		(0.46765104, 0.0, -0.0)
 		(0.46765104, 0.0, -0.0)
 	]
-	particlecolor = [
+	ParticleColor = [
 		-1
 		-1
 		-1
@@ -69,7 +69,7 @@ gp_budokan_topsparks01 = {
 		-256
 		-256
 	]
-	vertexweight = [
+	VertexWeight = [
 		0.719444
 		1.0
 	]

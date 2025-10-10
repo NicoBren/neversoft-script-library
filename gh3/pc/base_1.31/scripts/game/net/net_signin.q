@@ -1,27 +1,27 @@
-nx_signincomplete = 0
-nx_signedin = 0
+NX_SignInComplete = 0
+NX_SignedIn = 0
 
-script startnetworkplatform 
-	if isps3
+script StartNetworkPlatform 
+	if IsPs3
 		printf \{"--- StartNetworkPlatform ---"}
-		if NOT checkforsignin
-			displaynetplatformwarning
+		if NOT CheckForSignIn
+			DisplayNetplatformWarning
 			begin
-			if (1 = $nx_signincomplete)
+			if (1 = $NX_SignInComplete)
 				printf \{"--- Sign in is complete ---"}
 				break
 			endif
-			wait \{1
+			Wait \{1
 				frame}
 			repeat
-			if (1 = $nx_signedin)
-				change \{nx_signincomplete = 0}
-				change \{nx_signedin = 0}
+			if (1 = $NX_SignedIn)
+				change \{NX_SignInComplete = 0}
+				change \{NX_SignedIn = 0}
 				printf \{"We are signed in"}
 				return \{true}
 			else
-				change \{nx_signincomplete = 0}
-				change \{nx_signedin = 0}
+				change \{NX_SignInComplete = 0}
+				change \{NX_SignedIn = 0}
 				printf \{"We are not signed in"}
 				return \{false}
 			endif
@@ -29,10 +29,10 @@ script startnetworkplatform
 	endif
 endscript
 
-script networkplatformcomplete 
+script NetworkPlatformComplete 
 	printf \{"NetworkPlatformComplete"}
-	change \{nx_signincomplete = 1}
-	if gotparam \{signedin}
-		change \{nx_signedin = 1}
+	change \{NX_SignInComplete = 1}
+	if GotParam \{SignedIn}
+		change \{NX_SignedIn = 1}
 	endif
 endscript

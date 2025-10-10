@@ -24,28 +24,28 @@ script reset_score
 	last_time_in_lead = 0.0
 	last_time_in_lead_player = -1
 	get_song_prefix song = ($current_song)
-	formattext checksumname = song_section_array '%s_markers' s = <song_prefix>
+	FormatText checksumname = song_section_array '%s_markers' s = <song_prefix>
 	change current_section_array = <song_section_array>
 	change \{current_section_array_entry = 0}
-	formattext checksumname = detailstats_array '%s_last_song_detailed_stats' s = (<player_status>.text)
+	FormatText checksumname = detailstats_array '%s_last_song_detailed_stats' s = (<player_status>.text)
 	change structurename = <player_status> current_detailedstats_array_entry = 0
 	change structurename = <player_status> current_detailedstats_array = <detailstats_array>
-	formattext checksumname = detailstats_array_max '%s_last_song_detailed_stats_max' s = (<player_status>.text)
+	FormatText checksumname = detailstats_array_max '%s_last_song_detailed_stats_max' s = (<player_status>.text)
 	change structurename = <player_status> current_detailedstats_max_array = <detailstats_array_max>
-	getarraysize ($<detailstats_array>)
+	GetArraySize ($<detailstats_array>)
 	array_count = 0
 	begin
-	setarrayelement arrayname = <detailstats_array> globalarray index = <array_count> newvalue = 0
-	setarrayelement arrayname = <detailstats_array_max> globalarray index = <array_count> newvalue = 0
+	SetArrayElement ArrayName = <detailstats_array> GlobalArray index = <array_count> newvalue = 0
+	SetArrayElement ArrayName = <detailstats_array_max> GlobalArray index = <array_count> newvalue = 0
 	array_count = (<array_count> + 1)
 	repeat <array_size>
 	change \{whammy_mania_achievement_invalidated = 0}
-	change \{gstar_power_triggered = 0}
+	change \{gStar_Power_Triggered = 0}
 endscript
 
 script calc_songscoreinfo \{player_status = player1_status}
 	get_song_prefix song = ($current_song)
-	calcsongscoreinfo <...>
+	CalcSongScoreInfo <...>
 	return
 	fast_base_score = ($<player_status>.base_score)
 	fast_max_notes = ($<player_status>.max_notes)
@@ -63,38 +63,38 @@ script calc_songscoreinfo \{player_status = player1_status}
 		return
 	endif
 	fretbar_count = 0
-	getarraysize $<fretbar_array>
+	GetArraySize $<fretbar_array>
 	fretbar_size = <array_size>
 	get_song_prefix song = ($current_song)
-	formattext checksumname = song_section_array '%s_markers' s = <song_prefix>
-	getarraysize ($<song_section_array>)
+	FormatText checksumname = song_section_array '%s_markers' s = <song_prefix>
+	GetArraySize ($<song_section_array>)
 	song_section_array_size = <array_size>
-	formattext checksumname = detailstats_array_max '%s_last_song_detailed_stats_max' s = (<player_status>.text)
-	getarraysize ($<detailstats_array_max>)
+	FormatText checksumname = detailstats_array_max '%s_last_song_detailed_stats_max' s = (<player_status>.text)
+	GetArraySize ($<detailstats_array_max>)
 	array_count = 0
 	begin
-	setarrayelement arrayname = <detailstats_array_max> globalarray index = <array_count> newvalue = 0
+	SetArrayElement ArrayName = <detailstats_array_max> GlobalArray index = <array_count> newvalue = 0
 	array_count = (<array_count> + 1)
 	repeat <array_size>
 	starpower_array = ($<player_status>.current_song_star_array)
 	starpower_array_entry = 0
 	starpower_on = 0
-	getarraysize ($<starpower_array>)
+	GetArraySize ($<starpower_array>)
 	starpower_array_size = <array_size>
 	sp_phrases_total = 0
 	if ($game_mode = p2_faceoff)
 		faceoff_array_entry = 0
 		gemfiller_on = 0
 		get_song_prefix song = ($current_song)
-		formattext checksumname = faceoff_array '%s_faceoff%p' s = <song_prefix> p = ($<player_status>.text) addtostringlookup
-		getarraysize $<faceoff_array>
+		FormatText checksumname = faceoff_array '%s_faceoff%p' s = <song_prefix> p = ($<player_status>.text) AddToStringLookup
+		GetArraySize $<faceoff_array>
 		faceoff_array_size = <array_size>
 	else
 		gemfiller_on = 1
 	endif
 	song = ($<player_status>.current_song_gem_array)
 	difficulty = $current_difficulty
-	getarraysize $<song>
+	GetArraySize $<song>
 	song_size = (<array_size> / $num_song_columns)
 	array_count = 0
 	if (<song_size> = 0)
@@ -181,9 +181,9 @@ script calc_songscoreinfo \{player_status = player1_status}
 	if (<gemfiller_on> = 1)
 		sim_bot_note_count = (<sim_bot_note_count> + 1)
 		max_notes = (<max_notes> + 1)
-		setarrayelement arrayname = <detailstats_array_max> globalarray index = <section_index> newvalue = (($<detailstats_array_max> [<section_index>]) + 1)
+		SetArrayElement ArrayName = <detailstats_array_max> GlobalArray index = <section_index> newvalue = (($<detailstats_array_max> [<section_index>]) + 1)
 	endif
-	getarraysize \{$gem_colors}
+	GetArraySize \{$gem_colors}
 	color = 0
 	whammy_value = -1
 	length = ($<song> [(<array_count> + 1)])
@@ -257,12 +257,12 @@ script calc_songscoreinfo \{player_status = player1_status}
 	change structurename = <player_status> max_notes = <max_notes>
 	change structurename = <player_status> base_score = <base_score>
 	change structurename = <player_status> sp_phrases_total = <sp_phrases_total>
-	casttointeger \{fast_base_score}
-	casttointeger \{base_score}
+	CastToInteger \{fast_base_score}
+	CastToInteger \{base_score}
 	if (<fast_base_score> != <base_score> ||
 			<fast_max_notes> != <max_notes> ||
 			<fast_sp_phrases_total> != <sp_phrases_total>)
-		scriptassert \{"Mismatch in CalcSongScoreInfo"}
+		ScriptAssert \{"Mismatch in CalcSongScoreInfo"}
 	endif
 endscript
 
@@ -288,11 +288,11 @@ script unnecessary_note
 endscript
 
 script update_score_fast 
-	updatescorefastinit player_status = <player_status>
+	UpdateScoreFastInit player_status = <player_status>
 	begin
-	getsongtimems
-	updatescorefastperframe player_status = <player_status> time = <time>
-	wait \{1
+	GetSongTimeMs
+	UpdateScoreFastPerFrame player_status = <player_status> time = <time>
+	Wait \{1
 		gameframe}
 	repeat
 endscript
@@ -302,24 +302,24 @@ script update_score
 	last_star = -1.0
 	last_health = -1.0
 	last_run = -1
-	extendcrc scoremeter_wheel_100000 <player_text> out = wheel_100000
-	extendcrc scoremeter_wheel_10000 <player_text> out = wheel_10000
-	extendcrc scoremeter_wheel_1000 <player_text> out = wheel_1000
-	extendcrc scoremeter_wheel_100 <player_text> out = wheel_100
-	extendcrc scoremeter_wheel_10 <player_text> out = wheel_10
-	extendcrc scoremeter_wheel_1 <player_text> out = wheel_1
-	extendcrc rockmeter_bulb0 <player_text> out = bulb0
-	extendcrc rockmeter_bulb1 <player_text> out = bulb1
-	extendcrc rockmeter_bulb2 <player_text> out = bulb2
-	extendcrc rockmeter_bulb3 <player_text> out = bulb3
-	extendcrc rockmeter_bulb4 <player_text> out = bulb4
-	extendcrc rockmeter_bulb5 <player_text> out = bulb5
-	extendcrc rockmeter_bulb_lit0 <player_text> out = bulb_lit0
-	extendcrc rockmeter_bulb_lit1 <player_text> out = bulb_lit1
-	extendcrc rockmeter_bulb_lit2 <player_text> out = bulb_lit2
-	extendcrc rockmeter_bulb_lit3 <player_text> out = bulb_lit3
-	extendcrc rockmeter_bulb_lit4 <player_text> out = bulb_lit4
-	extendcrc rockmeter_bulb_lit5 <player_text> out = bulb_lit5
+	ExtendCRC ScoreMeter_Wheel_100000 <player_text> out = Wheel_100000
+	ExtendCRC ScoreMeter_Wheel_10000 <player_text> out = Wheel_10000
+	ExtendCRC ScoreMeter_Wheel_1000 <player_text> out = Wheel_1000
+	ExtendCRC ScoreMeter_Wheel_100 <player_text> out = Wheel_100
+	ExtendCRC ScoreMeter_Wheel_10 <player_text> out = Wheel_10
+	ExtendCRC ScoreMeter_Wheel_1 <player_text> out = Wheel_1
+	ExtendCRC RockMeter_Bulb0 <player_text> out = Bulb0
+	ExtendCRC RockMeter_Bulb1 <player_text> out = Bulb1
+	ExtendCRC RockMeter_Bulb2 <player_text> out = Bulb2
+	ExtendCRC RockMeter_Bulb3 <player_text> out = Bulb3
+	ExtendCRC RockMeter_Bulb4 <player_text> out = Bulb4
+	ExtendCRC RockMeter_Bulb5 <player_text> out = Bulb5
+	ExtendCRC RockMeter_Bulb_Lit0 <player_text> out = Bulb_Lit0
+	ExtendCRC RockMeter_Bulb_Lit1 <player_text> out = Bulb_Lit1
+	ExtendCRC RockMeter_Bulb_Lit2 <player_text> out = Bulb_Lit2
+	ExtendCRC RockMeter_Bulb_Lit3 <player_text> out = Bulb_Lit3
+	ExtendCRC RockMeter_Bulb_Lit4 <player_text> out = Bulb_Lit4
+	ExtendCRC RockMeter_Bulb_Lit5 <player_text> out = Bulb_Lit5
 	begin
 	<score> = ($<player_status>.score)
 	if NOT (<last_score> = <score>)
@@ -337,66 +337,66 @@ script update_score
 		<score_10000> = (<score_10000> - (<score_100000> * 10))
 		<score_100000> = (<score_100000> - (<score_1000000> * 10))
 		<step> = ((3.1415927 * 2.0) / 10.0)
-		setscreenelementprops id = <wheel_100000> anglex = (<step> * <score_100000>)
-		setscreenelementprops id = <wheel_10000> anglex = (<step> * <score_10000>)
-		setscreenelementprops id = <wheel_1000> anglex = (<step> * <score_1000>)
-		setscreenelementprops id = <wheel_100> anglex = (<step> * <score_100>)
-		setscreenelementprops id = <wheel_10> anglex = (<step> * <score_10>)
-		setscreenelementprops id = <wheel_1> anglex = (<step> * <score_1>)
+		SetScreenElementProps id = <Wheel_100000> anglex = (<step> * <score_100000>)
+		SetScreenElementProps id = <Wheel_10000> anglex = (<step> * <score_10000>)
+		SetScreenElementProps id = <Wheel_1000> anglex = (<step> * <score_1000>)
+		SetScreenElementProps id = <Wheel_100> anglex = (<step> * <score_100>)
+		SetScreenElementProps id = <Wheel_10> anglex = (<step> * <score_10>)
+		SetScreenElementProps id = <Wheel_1> anglex = (<step> * <score_1>)
 	endif
 	<star> = ($<player_status>.star_power_amount)
 	if NOT (<last_star> = <star>)
 		<last_star> = <star>
 		<amount_per_bulb> = (100.0 / 6.0)
 		if (<star> >= <amount_per_bulb>)
-			doscreenelementmorph id = <bulb0> alpha = 0
-			doscreenelementmorph id = <bulb_lit0> alpha = 1
+			doScreenElementMorph id = <Bulb0> alpha = 0
+			doScreenElementMorph id = <Bulb_Lit0> alpha = 1
 		else
-			doscreenelementmorph id = <bulb0> alpha = 1
-			doscreenelementmorph id = <bulb_lit0> alpha = 0
+			doScreenElementMorph id = <Bulb0> alpha = 1
+			doScreenElementMorph id = <Bulb_Lit0> alpha = 0
 		endif
 		if (<star> >= (<amount_per_bulb> * 2))
-			doscreenelementmorph id = <bulb1> alpha = 0
-			doscreenelementmorph id = <bulb_lit1> alpha = 1
+			doScreenElementMorph id = <Bulb1> alpha = 0
+			doScreenElementMorph id = <Bulb_Lit1> alpha = 1
 		else
-			doscreenelementmorph id = <bulb1> alpha = 1
-			doscreenelementmorph id = <bulb_lit1> alpha = 0
+			doScreenElementMorph id = <Bulb1> alpha = 1
+			doScreenElementMorph id = <Bulb_Lit1> alpha = 0
 		endif
 		if (<star> >= (<amount_per_bulb> * 3))
-			doscreenelementmorph id = <bulb2> alpha = 0
-			doscreenelementmorph id = <bulb_lit2> alpha = 1
+			doScreenElementMorph id = <Bulb2> alpha = 0
+			doScreenElementMorph id = <Bulb_Lit2> alpha = 1
 		else
-			doscreenelementmorph id = <bulb2> alpha = 1
-			doscreenelementmorph id = <bulb_lit2> alpha = 0
+			doScreenElementMorph id = <Bulb2> alpha = 1
+			doScreenElementMorph id = <Bulb_Lit2> alpha = 0
 		endif
 		if (<star> >= (<amount_per_bulb> * 4))
-			doscreenelementmorph id = <bulb3> alpha = 0
-			doscreenelementmorph id = <bulb_lit3> alpha = 1
+			doScreenElementMorph id = <Bulb3> alpha = 0
+			doScreenElementMorph id = <Bulb_Lit3> alpha = 1
 		else
-			doscreenelementmorph id = <bulb3> alpha = 1
-			doscreenelementmorph id = <bulb_lit3> alpha = 0
+			doScreenElementMorph id = <Bulb3> alpha = 1
+			doScreenElementMorph id = <Bulb_Lit3> alpha = 0
 		endif
 		if (<star> >= (<amount_per_bulb> * 5))
-			doscreenelementmorph id = <bulb4> alpha = 0
-			doscreenelementmorph id = <bulb_lit4> alpha = 1
+			doScreenElementMorph id = <Bulb4> alpha = 0
+			doScreenElementMorph id = <Bulb_Lit4> alpha = 1
 		else
-			doscreenelementmorph id = <bulb4> alpha = 1
-			doscreenelementmorph id = <bulb_lit4> alpha = 0
+			doScreenElementMorph id = <Bulb4> alpha = 1
+			doScreenElementMorph id = <Bulb_Lit4> alpha = 0
 		endif
 		if (<star> >= (<amount_per_bulb> * 6))
-			doscreenelementmorph id = <bulb5> alpha = 0
-			doscreenelementmorph id = <bulb_lit5> alpha = 1
+			doScreenElementMorph id = <Bulb5> alpha = 0
+			doScreenElementMorph id = <Bulb_Lit5> alpha = 1
 		else
-			doscreenelementmorph id = <bulb5> alpha = 1
-			doscreenelementmorph id = <bulb_lit5> alpha = 0
+			doScreenElementMorph id = <Bulb5> alpha = 1
+			doScreenElementMorph id = <Bulb_Lit5> alpha = 0
 		endif
 	endif
 	<health> = ($health_scale - $<player_status>.current_health)
 	if NOT (<last_health> = <health>)
 		<last_health> = <health>
 		<rot> = (((<health> / $health_scale) * (0.65000004 * 2.0)) - 0.65000004)
-		extendcrc rockmeter_needle <player_text> out = needle
-		setscreenelementprops id = <needle> anglez = <rot>
+		ExtendCRC RockMeter_Needle <player_text> out = needle
+		SetScreenElementProps id = <needle> anglez = <rot>
 	endif
 	<run> = ($<player_status>.current_run)
 	if NOT (<last_run> = <run>)
@@ -421,14 +421,14 @@ script update_score
 		endif
 		index = 0
 		begin
-		formattext checksumname = dark_bulb 'ScoreMeter_Bulb%n%p' n = <index> p = <player_text>
-		formattext checksumname = lit_bulb 'ScoreMeter_Bulb_Lit%n%p' n = <index> p = <player_text>
+		FormatText checksumname = dark_bulb 'ScoreMeter_Bulb%n%p' n = <index> p = <player_text>
+		FormatText checksumname = lit_bulb 'ScoreMeter_Bulb_Lit%n%p' n = <index> p = <player_text>
 		if (<bulbs> > <index>)
-			doscreenelementmorph id = <dark_bulb> alpha = 0
-			doscreenelementmorph id = <lit_bulb> alpha = 1
+			doScreenElementMorph id = <dark_bulb> alpha = 0
+			doScreenElementMorph id = <lit_bulb> alpha = 1
 		else
-			doscreenelementmorph id = <dark_bulb> alpha = 1
-			doscreenelementmorph id = <lit_bulb> alpha = 0
+			doScreenElementMorph id = <dark_bulb> alpha = 1
+			doScreenElementMorph id = <lit_bulb> alpha = 0
 		endif
 		<index> = (<index> + 1)
 		repeat 10
@@ -437,16 +437,16 @@ script update_score
 		idx = 0
 		begin
 		<index> = (<mults> [<idx>])
-		formattext checksumname = multiplier_element 'ScoreMeter_Multiplier%n%p' n = <index> p = <player_text>
+		FormatText checksumname = multiplier_element 'ScoreMeter_Multiplier%n%p' n = <index> p = <player_text>
 		if (<multiplier> = <index>)
-			doscreenelementmorph id = <multiplier_element> alpha = 1
+			doScreenElementMorph id = <multiplier_element> alpha = 1
 		else
-			doscreenelementmorph id = <multiplier_element> alpha = 0
+			doScreenElementMorph id = <multiplier_element> alpha = 0
 		endif
 		<idx> = (<idx> + 1)
 		repeat 6
 	endif
-	wait \{1
+	Wait \{1
 		gameframe}
 	repeat
 endscript

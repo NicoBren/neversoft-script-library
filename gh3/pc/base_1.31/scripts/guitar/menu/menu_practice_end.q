@@ -7,8 +7,8 @@ script create_practice_end_menu
 	new_menu scrollid = scrolling_pause vmenuid = vmenu_pause menu_pos = (480.0, 255.0) spacing = -12 use_backdrop = (0)
 	z = 100
 	create_pause_menu_frame z = (<z> - 10)
-	createscreenelement {
-		type = textelement
+	CreateScreenElement {
+		type = TextElement
 		parent = vmenu_pause
 		font = fontgrid_title_gh3
 		scale = 1.1
@@ -25,8 +25,8 @@ script create_practice_end_menu
 			{pad_choose ui_flow_manager_respond_to_action params = {action = restart}}
 		]
 	}
-	createscreenelement {
-		type = textelement
+	CreateScreenElement {
+		type = TextElement
 		parent = vmenu_pause
 		font = fontgrid_title_gh3
 		scale = 1.1
@@ -43,8 +43,8 @@ script create_practice_end_menu
 			{pad_choose ui_flow_manager_respond_to_action params = {action = change_speed}}
 		]
 	}
-	createscreenelement {
-		type = textelement
+	CreateScreenElement {
+		type = TextElement
 		parent = vmenu_pause
 		font = fontgrid_title_gh3
 		scale = 1.1
@@ -61,8 +61,8 @@ script create_practice_end_menu
 			{pad_choose ui_flow_manager_respond_to_action params = {action = change_section}}
 		]
 	}
-	createscreenelement {
-		type = textelement
+	CreateScreenElement {
+		type = TextElement
 		parent = vmenu_pause
 		font = fontgrid_title_gh3
 		scale = 1.1
@@ -79,8 +79,8 @@ script create_practice_end_menu
 			{pad_choose ui_flow_manager_respond_to_action params = {action = new_song}}
 		]
 	}
-	createscreenelement {
-		type = textelement
+	CreateScreenElement {
+		type = TextElement
 		parent = vmenu_pause
 		font = fontgrid_title_gh3
 		scale = 1.1

@@ -4,8 +4,8 @@ g_tr_went_past_max_width = 0
 
 script create_top_rockers_menu \{for_options = 0}
 	disable_pause
-	create_menu_backdrop \{texture = toprockers_bg}
-	createscreenelement \{type = containerelement
+	create_menu_backdrop \{texture = TopRockers_BG}
+	CreateScreenElement \{type = ContainerElement
 		parent = root_window
 		id = tr_container
 		pos = (0.0, 0.0)}
@@ -47,12 +47,12 @@ script destroy_top_rockers_menu
 endscript
 
 script menu_top_rockers_create_poster 
-	displaysprite \{parent = tr_container
+	displaySprite \{parent = tr_container
 		tex = venue_overlay
 		pos = (0.0, 0.0)
 		dims = (1280.0, 720.0)
 		z = 50}
-	createscreenelement \{type = spriteelement
+	CreateScreenElement \{type = SpriteElement
 		parent = tr_container
 		texture = toprockers_poster
 		pos = (740.0, 30.0)
@@ -63,40 +63,40 @@ script menu_top_rockers_create_poster
 		dims = (620.0, 620.0)
 		z_priority = 1.2
 		rot_angle = -3}
-	formattext \{textname = rockers_title
+	FormatText \{TextName = Rockers_title
 		"\\c9%T\\c0%R"
 		t = "TOP"
 		r = "ROCKERS"}
-	createscreenelement {
-		type = textelement
+	CreateScreenElement {
+		type = TextElement
 		parent = tr_container
 		pos = (460.0, 625.0)
 		just = [center center]
 		z_priority = 1.3
 		font = fontgrid_title_gh3
 		rot_angle = -4
-		text = <rockers_title>
+		text = <Rockers_title>
 	}
 	fit_text_in_rectangle id = <id> dims = (380.0, 100.0) keep_ar = 1
 endscript
 
 script menu_top_rockers_create_paper 
-	createscreenelement \{type = containerelement
+	CreateScreenElement \{type = ContainerElement
 		parent = tr_container
 		id = tr_paper_container
 		pos = (630.0, 90.0)}
 	get_difficulty_text_nl difficulty = ($current_difficulty)
 	get_song_prefix song = ($current_song)
-	formattext checksumname = songname '%s_%d' s = <song_prefix> d = <difficulty_text_nl>
-	getglobaltags <songname>
+	FormatText checksumname = songname '%s_%d' s = <song_prefix> d = <difficulty_text_nl>
+	GetGlobalTags <songname>
 	get_difficulty_text difficulty = ($current_difficulty)
 	get_song_title song = ($current_song)
-	getuppercasestring <song_title>
-	song_title = <uppercasestring>
-	getuppercasestring <difficulty_text>
-	difficulty_text = <uppercasestring>
-	stringtochararray string = <song_title>
-	getarraysize <char_array>
+	GetUpperCaseString <song_title>
+	song_title = <UpperCaseString>
+	GetUpperCaseString <difficulty_text>
+	difficulty_text = <UpperCaseString>
+	StringToCharArray string = <song_title>
+	GetArraySize <char_array>
 	max_width = 190
 	max_characters = 20
 	if (<array_size> >= <max_characters>)
@@ -118,9 +118,9 @@ script menu_top_rockers_create_paper
 		<song_title> = (<new_song_text> + "...")
 		<max_width> = 270
 	endif
-	formattext textname = song_diff_text "\\c9%s \\c2%d" s = <song_title> d = <difficulty_text>
-	createscreenelement {
-		type = textelement
+	FormatText TextName = song_diff_text "\\c9%s \\c2%d" s = <song_title> d = <difficulty_text>
+	CreateScreenElement {
+		type = TextElement
 		parent = tr_container
 		id = tr_song_name
 		pos = (435.0, 115.0)
@@ -131,13 +131,13 @@ script menu_top_rockers_create_paper
 		text = <song_diff_text>
 	}
 	fit_text_in_rectangle id = <id> dims = (380.0, 100.0) keep_ar = 1
-	displaysprite \{parent = tr_container
-		tex = toprockers_tape_1
+	displaySprite \{parent = tr_container
+		tex = Toprockers_Tape_1
 		pos = (500.0, -10.0)
 		dims = (140.0, 70.0)
 		z = 50}
-	displaysprite \{parent = tr_container
-		tex = toprockers_tape_2
+	displaySprite \{parent = tr_container
+		tex = Toprockers_Tape_2
 		pos = (280.0, 240.0)
 		z = 50
 		rot_angle = 90
@@ -150,16 +150,16 @@ script menu_top_rockers_create_paper
 	skull_offset = (-20.0, 0.0)
 	score_val = 1
 	begin
-	formattext checksumname = song_score_cs 'score%d' d = <score_val>
-	formattext textname = song_score_text "%s" s = (<...>.<song_score_cs>) usecommas
-	formattext checksumname = score_name_cs 'name%d' d = <score_val>
-	formattext textname = score_name_text "%s" s = (<...>.<score_name_cs>)
-	formattext textname = number_text "%n" n = <score_val>
-	formattext checksumname = song_score_id 'song_score%d' d = <score_val>
-	formattext checksumname = score_name_id 'score_name%d' d = <score_val>
+	FormatText checksumname = song_score_cs 'score%d' d = <score_val>
+	FormatText TextName = song_score_text "%s" s = (<...>.<song_score_cs>) usecommas
+	FormatText checksumname = score_name_cs 'name%d' d = <score_val>
+	FormatText TextName = score_name_text "%s" s = (<...>.<score_name_cs>)
+	FormatText TextName = number_text "%n" n = <score_val>
+	FormatText checksumname = song_score_id 'song_score%d' d = <score_val>
+	FormatText checksumname = score_name_id 'score_name%d' d = <score_val>
 	score_scale = (0.6, 0.8)
 	rand = Random (@ 1 @ 2 )
-	formattext checksumname = bar_tex 'Toprockers_Bar_%d' d = <rand>
+	FormatText checksumname = bar_tex 'Toprockers_Bar_%d' d = <rand>
 	bar_flags = {}
 	<rand> = Random (@ 1 @ 2 @ 3 )
 	if (<rand> = 1)
@@ -177,8 +177,8 @@ script menu_top_rockers_create_paper
 		<text_rgba> = [190 160 30 255]
 		<show_num> = 0
 	endif
-	createscreenelement {
-		type = spriteelement
+	CreateScreenElement {
+		type = SpriteElement
 		parent = tr_paper_container
 		pos = ((1.0, 0.0) * <column_x> + <number_offset> + <current_y_position> + <bar_offset>)
 		z_priority = 1.0
@@ -189,9 +189,9 @@ script menu_top_rockers_create_paper
 		<bar_flags>
 	}
 	if (<show_num> = 1)
-		createscreenelement {
+		CreateScreenElement {
 			scale = 1.0
-			type = textelement
+			type = TextElement
 			parent = tr_paper_container
 			pos = ((1.0, 0.0) * <column_x> + <number_offset> + <current_y_position> + (0.0, 17.0))
 			z_priority = 1.3
@@ -201,20 +201,20 @@ script menu_top_rockers_create_paper
 			font = fontgrid_title_gh3
 		}
 	else
-		createscreenelement {
-			type = spriteelement
+		CreateScreenElement {
+			type = SpriteElement
 			parent = tr_paper_container
 			pos = ((1.0, 0.0) * <column_x> + <number_offset> + <current_y_position> + <skull_offset>)
 			z_priority = 1.3
 			rgba = [255 255 255 255]
 			just = [left bottom]
-			texture = toprockers_skull
+			texture = Toprockers_Skull
 			dims = (48.0, 48.0)
 		}
 	endif
-	createscreenelement {
+	CreateScreenElement {
 		scale = <score_scale>
-		type = textelement
+		type = TextElement
 		parent = tr_paper_container
 		pos = ((1.0, 0.0) * <column_x> + <current_y_position> + (0.0, 10.0))
 		z_priority = 1.3
@@ -225,9 +225,9 @@ script menu_top_rockers_create_paper
 		id = <song_score_id>
 	}
 	fit_text_in_rectangle id = <id> dims = (65.0, 40.0) only_if_larger_x = 1
-	createscreenelement {
+	CreateScreenElement {
 		scale = (0.8, 0.8)
-		type = textelement
+		type = TextElement
 		parent = tr_paper_container
 		pos = ((1.0, 0.0) * <column_x> + <current_y_position> + <name_offset> + (0.0, 3.0))
 		z_priority = 1.3
@@ -237,7 +237,7 @@ script menu_top_rockers_create_paper
 		font = fontgrid_title_gh3
 		id = <score_name_id>
 	}
-	getscreenelementdims id = <id>
+	GetScreenElementDims id = <id>
 	fit_text_in_rectangle id = <id> dims = (135.0, 35.0) only_if_larger_x = 1 pos = ((1.0, 0.0) * <column_x> + <current_y_position> + <name_offset>)
 	<current_y_position> = (<current_y_position> + (0.0, 50.0))
 	<score_val> = (<score_val> + 1)
@@ -245,8 +245,8 @@ script menu_top_rockers_create_paper
 endscript
 
 script menu_top_rockers_create_continue_button 
-	createscreenelement {
-		type = textelement
+	CreateScreenElement {
+		type = TextElement
 		parent = root_window
 		id = continue_button
 		scale = 0.9
@@ -256,8 +256,8 @@ script menu_top_rockers_create_continue_button
 		just = [left top]
 		z_priority = 4
 	}
-	createscreenelement {
-		type = textelement
+	CreateScreenElement {
+		type = TextElement
 		parent = continue_button
 		id = continue_text
 		scale = 0.8
@@ -270,30 +270,30 @@ script menu_top_rockers_create_continue_button
 			{pad_back ui_flow_manager_respond_to_action params = {action = continue}}
 		]
 	}
-	launchevent \{type = focus
+	LaunchEvent \{type = focus
 		target = continue_text}
 endscript
 
 script menu_top_rockers_check_for_new_top_score \{nowrite = 0}
 	newbestscore = 0
 	player_score = ($player1_status.score)
-	casttointeger \{player_score}
+	CastToInteger \{player_score}
 	player_stars = ($player1_status.stars)
 	get_difficulty_text_nl difficulty = ($current_difficulty)
 	get_song_prefix song = ($current_song)
-	formattext checksumname = songname '%s_%d' s = <song_prefix> d = <difficulty_text_nl>
-	getglobaltags <songname>
+	FormatText checksumname = songname '%s_%d' s = <song_prefix> d = <difficulty_text_nl>
+	GetGlobalTags <songname>
 	score_array = [0 0 0 0 0]
 	name_array = ["" "" "" "" ""]
 	stars_array = [0 0 0 0 0]
 	score_index = 0
 	begin
-	formattext checksumname = score_cs 'score%d' d = (<score_index> + 1)
-	formattext checksumname = name_cs 'name%d' d = (<score_index> + 1)
-	formattext checksumname = stars_cs 'stars%d' d = (<score_index> + 1)
-	setarrayelement arrayname = score_array index = <score_index> newvalue = (<...>.<score_cs>)
-	setarrayelement arrayname = name_array index = <score_index> newvalue = (<...>.<name_cs>)
-	setarrayelement arrayname = stars_array index = <score_index> newvalue = (<...>.<stars_cs>)
+	FormatText checksumname = score_cs 'score%d' d = (<score_index> + 1)
+	FormatText checksumname = name_cs 'name%d' d = (<score_index> + 1)
+	FormatText checksumname = stars_cs 'stars%d' d = (<score_index> + 1)
+	SetArrayElement ArrayName = score_array index = <score_index> newvalue = (<...>.<score_cs>)
+	SetArrayElement ArrayName = name_array index = <score_index> newvalue = (<...>.<name_cs>)
+	SetArrayElement ArrayName = stars_array index = <score_index> newvalue = (<...>.<stars_cs>)
 	<score_index> = (<score_index> + 1)
 	repeat ($num_top_scores)
 	<score_index> = 0
@@ -305,14 +305,14 @@ script menu_top_rockers_check_for_new_top_score \{nowrite = 0}
 			score_shift_index = ($num_top_scores - 2)
 			if NOT (($num_top_scores - (<score_index> + 1)) = 0)
 				begin
-				setarrayelement arrayname = score_array index = (<score_shift_index> + 1) newvalue = (<score_array> [<score_shift_index>])
-				setarrayelement arrayname = name_array index = (<score_shift_index> + 1) newvalue = (<name_array> [<score_shift_index>])
-				setarrayelement arrayname = stars_array index = (<score_shift_index> + 1) newvalue = (<stars_array> [<score_shift_index>])
+				SetArrayElement ArrayName = score_array index = (<score_shift_index> + 1) newvalue = (<score_array> [<score_shift_index>])
+				SetArrayElement ArrayName = name_array index = (<score_shift_index> + 1) newvalue = (<name_array> [<score_shift_index>])
+				SetArrayElement ArrayName = stars_array index = (<score_shift_index> + 1) newvalue = (<stars_array> [<score_shift_index>])
 				<score_shift_index> = (<score_shift_index> - 1)
 				repeat ($num_top_scores - (<score_index> + 1))
 			endif
-			setarrayelement arrayname = score_array index = <score_index> newvalue = <player_score>
-			setarrayelement arrayname = stars_array index = <score_index> newvalue = <player_stars>
+			SetArrayElement ArrayName = score_array index = <score_index> newvalue = <player_score>
+			SetArrayElement ArrayName = stars_array index = <score_index> newvalue = <player_stars>
 		endif
 		break
 	endif
@@ -321,16 +321,16 @@ script menu_top_rockers_check_for_new_top_score \{nowrite = 0}
 	if (<bestscore> < <player_score>)
 		bestscore = <player_score>
 		beststars = <player_stars>
-		setglobaltags <songname> params = {bestscore = <bestscore>}
-		setglobaltags <songname> params = {beststars = <beststars>}
+		SetGlobalTags <songname> params = {bestscore = <bestscore>}
+		SetGlobalTags <songname> params = {beststars = <beststars>}
 		newbestscore = 1
 	endif
 	if (<nowrite> = 1)
 		return new_score = <new_score> newbestscore = 1
 	endif
-	setglobaltags <songname> params = {score1 = (<score_array> [0]) score2 = (<score_array> [1]) score3 = (<score_array> [2]) score4 = (<score_array> [3]) score5 = (<score_array> [4])}
-	setglobaltags <songname> params = {name1 = (<name_array> [0]) name2 = (<name_array> [1]) name3 = (<name_array> [2]) name4 = (<name_array> [3]) name5 = (<name_array> [4])}
-	setglobaltags <songname> params = {stars1 = (<stars_array> [0]) stars2 = (<stars_array> [1]) stars3 = (<stars_array> [2]) stars4 = (<stars_array> [3]) stars5 = (<stars_array> [4])}
+	SetGlobalTags <songname> params = {score1 = (<score_array> [0]) score2 = (<score_array> [1]) score3 = (<score_array> [2]) score4 = (<score_array> [3]) score5 = (<score_array> [4])}
+	SetGlobalTags <songname> params = {name1 = (<name_array> [0]) name2 = (<name_array> [1]) name3 = (<name_array> [2]) name4 = (<name_array> [3]) name5 = (<name_array> [4])}
+	SetGlobalTags <songname> params = {stars1 = (<stars_array> [0]) stars2 = (<stars_array> [1]) stars3 = (<stars_array> [2]) stars4 = (<stars_array> [3]) stars5 = (<stars_array> [4])}
 	return new_score = <new_score> newbestscore = 0
 endscript
 tr_first_time_initialised = 0
@@ -380,7 +380,7 @@ script menu_top_rockers_init_band_name_creation \{score_index = 0}
 		change \{new_band_index = 0}
 		change \{tr_first_time_initialised = 1}
 	endif
-	setscreenelementprops \{id = root_window
+	SetScreenElementProps \{id = root_window
 		event_handlers = [
 			{
 				pad_start
@@ -395,28 +395,28 @@ script menu_top_rockers_init_band_name_creation \{score_index = 0}
 		{pad_back menu_tr_band_retreat_pointer params = {score_index = (<score_index>)}}
 		{pad_start menu_tr_confirm_band_name params = {score_index = (<score_index>)}}
 	]
-	formattext checksumname = score_name_id 'score_name%d' d = (<score_index> + 1)
-	setscreenelementprops id = <score_name_id> event_handlers = <event_handlers> replace_handlers
-	launchevent type = focus target = <score_name_id>
+	FormatText checksumname = score_name_id 'score_name%d' d = (<score_index> + 1)
+	SetScreenElementProps id = <score_name_id> event_handlers = <event_handlers> replace_handlers
+	LaunchEvent type = focus target = <score_name_id>
 	menu_tr_refresh_band_name score_index = <score_index>
 endscript
 
 script menu_tr_get_band_name_text 
-	formattext textname = band_name_text_string "%a%b%c%d%e%f%g%h%i%j%k%l%m%n%o%p" a = ($new_band_name [0]) b = ($new_band_name [1]) c = ($new_band_name [2]) d = ($new_band_name [3]) e = ($new_band_name [4]) f = ($new_band_name [5]) g = ($new_band_name [6]) h = ($new_band_name [7]) i = ($new_band_name [8]) j = ($new_band_name [9]) k = ($new_band_name [10]) l = ($new_band_name [11]) m = ($new_band_name [12]) n = ($new_band_name [13]) o = ($new_band_name [14]) p = ($new_band_name [15])
+	FormatText TextName = band_name_text_string "%a%b%c%d%e%f%g%h%i%j%k%l%m%n%o%p" a = ($new_band_name [0]) b = ($new_band_name [1]) c = ($new_band_name [2]) d = ($new_band_name [3]) e = ($new_band_name [4]) f = ($new_band_name [5]) g = ($new_band_name [6]) h = ($new_band_name [7]) i = ($new_band_name [8]) j = ($new_band_name [9]) k = ($new_band_name [10]) l = ($new_band_name [11]) m = ($new_band_name [12]) n = ($new_band_name [13]) o = ($new_band_name [14]) p = ($new_band_name [15])
 	return band_name_text_string = <band_name_text_string>
 endscript
 
 script menu_tr_refresh_band_name \{score_index = 0}
 	printf "Score index is %d" d = <score_index>
-	formattext checksumname = score_name_id 'score_name%d' d = (<score_index> + 1)
+	FormatText checksumname = score_name_id 'score_name%d' d = (<score_index> + 1)
 	menu_tr_get_band_name_text
-	setscreenelementprops id = <score_name_id> text = (<band_name_text_string>)
-	getscreenelementdims id = <score_name_id>
+	SetScreenElementProps id = <score_name_id> text = (<band_name_text_string>)
+	GetScreenElementDims id = <score_name_id>
 	if (<width> >= 200)
-		getscreenelementprops id = <score_name_id>
-		setscreenelementprops id = <score_name_id> scale = 1
+		GetScreenElementProps id = <score_name_id>
+		SetScreenElementProps id = <score_name_id> scale = 1
 		fit_text_in_rectangle id = <score_name_id> dims = (200.0, 50.0) pos = <pos>
-		if gotparam \{add_2_width}
+		if GotParam \{add_2_width}
 			change g_tr_went_past_max_width = ($g_tr_went_past_max_width + 1)
 		endif
 	endif
@@ -424,71 +424,71 @@ endscript
 
 script menu_tr_confirm_band_name 
 	menu_tr_get_band_name_text
-	stringremovetrailingwhitespace string = <band_name_text_string>
+	StringRemoveTrailingWhitespace string = <band_name_text_string>
 	get_difficulty_text_nl difficulty = ($current_difficulty)
 	get_song_prefix song = ($current_song)
-	formattext checksumname = songname '%s_%d' s = <song_prefix> d = <difficulty_text_nl>
+	FormatText checksumname = songname '%s_%d' s = <song_prefix> d = <difficulty_text_nl>
 	switch (<score_index> + 1)
 		case 1
-		setglobaltags <songname> params = {name1 = <new_string>}
+		SetGlobalTags <songname> params = {name1 = <new_string>}
 		case 2
-		setglobaltags <songname> params = {name2 = <new_string>}
+		SetGlobalTags <songname> params = {name2 = <new_string>}
 		case 3
-		setglobaltags <songname> params = {name3 = <new_string>}
+		SetGlobalTags <songname> params = {name3 = <new_string>}
 		case 4
-		setglobaltags <songname> params = {name4 = <new_string>}
+		SetGlobalTags <songname> params = {name4 = <new_string>}
 		case 5
-		setglobaltags <songname> params = {name5 = <new_string>}
+		SetGlobalTags <songname> params = {name5 = <new_string>}
 	endswitch
 	ui_flow_manager_respond_to_action \{action = continue}
 endscript
 
 script menu_tr_change_character_up 
 	generic_menu_up_or_down_sound \{up}
-	setarrayelement arrayname = default_band_indexes globalarray index = $new_band_index newvalue = ($default_band_indexes [$new_band_index] + 1)
-	getarraysize \{$default_band_characters}
+	SetArrayElement ArrayName = default_band_indexes GlobalArray index = $new_band_index newvalue = ($default_band_indexes [$new_band_index] + 1)
+	GetArraySize \{$default_band_characters}
 	if ($default_band_indexes [$new_band_index] > (<array_size> -1))
-		setarrayelement \{arrayname = default_band_indexes
-			globalarray
+		SetArrayElement \{ArrayName = default_band_indexes
+			GlobalArray
 			index = $new_band_index
 			newvalue = 0}
 	endif
-	setarrayelement arrayname = new_band_name globalarray index = $new_band_index newvalue = ($default_band_characters [($default_band_indexes [$new_band_index])])
+	SetArrayElement ArrayName = new_band_name GlobalArray index = $new_band_index newvalue = ($default_band_characters [($default_band_indexes [$new_band_index])])
 	menu_tr_refresh_band_name score_index = <score_index>
 endscript
 
 script menu_tr_change_character_down 
 	generic_menu_up_or_down_sound \{down}
-	setarrayelement arrayname = default_band_indexes globalarray index = $new_band_index newvalue = ($default_band_indexes [$new_band_index] -1)
-	getarraysize \{$default_band_characters}
+	SetArrayElement ArrayName = default_band_indexes GlobalArray index = $new_band_index newvalue = ($default_band_indexes [$new_band_index] -1)
+	GetArraySize \{$default_band_characters}
 	if ($default_band_indexes [$new_band_index] < 0)
-		setarrayelement arrayname = default_band_indexes globalarray index = $new_band_index newvalue = (<array_size> -1)
+		SetArrayElement ArrayName = default_band_indexes GlobalArray index = $new_band_index newvalue = (<array_size> -1)
 	endif
-	setarrayelement arrayname = new_band_name globalarray index = $new_band_index newvalue = ($default_band_characters [($default_band_indexes [$new_band_index])])
+	SetArrayElement ArrayName = new_band_name GlobalArray index = $new_band_index newvalue = ($default_band_characters [($default_band_indexes [$new_band_index])])
 	menu_tr_refresh_band_name score_index = <score_index>
 endscript
 
 script menu_tr_band_advance_pointer 
 	if (($new_band_index + 1) < $tr_max_band_characters)
 		change new_band_index = ($new_band_index + 1)
-		setarrayelement arrayname = new_band_name globalarray index = $new_band_index newvalue = ($default_band_characters [($default_band_indexes [$new_band_index])])
+		SetArrayElement ArrayName = new_band_name GlobalArray index = $new_band_index newvalue = ($default_band_characters [($default_band_indexes [$new_band_index])])
 		menu_tr_refresh_band_name score_index = <score_index> add_2_width
 	endif
 endscript
 
 script menu_tr_band_retreat_pointer 
 	if (($new_band_index -1) > -1)
-		setarrayelement arrayname = default_band_indexes globalarray index = ($new_band_index) newvalue = 0
+		SetArrayElement ArrayName = default_band_indexes GlobalArray index = ($new_band_index) newvalue = 0
 		change new_band_index = ($new_band_index -1)
-		setarrayelement arrayname = new_band_name globalarray index = ($new_band_index + 1) newvalue = ""
+		SetArrayElement ArrayName = new_band_name GlobalArray index = ($new_band_index + 1) newvalue = ""
 		if ($g_tr_went_past_max_width > 0)
 			change g_tr_went_past_max_width = ($g_tr_went_past_max_width - 1)
-			formattext checksumname = score_name_id 'score_name%d' d = (<score_index> + 1)
+			FormatText checksumname = score_name_id 'score_name%d' d = (<score_index> + 1)
 			if ($g_tr_went_past_max_width = 0)
-				setscreenelementprops id = <score_name_id> scale = (0.6, 0.8)
+				SetScreenElementProps id = <score_name_id> scale = (0.6, 0.8)
 			else
-				getscreenelementprops id = <score_name_id>
-				setscreenelementprops id = <score_name_id> scale = 1
+				GetScreenElementProps id = <score_name_id>
+				SetScreenElementProps id = <score_name_id> scale = 1
 				fit_text_in_rectangle id = <score_name_id> dims = (200.0, 50.0) pos = <pos>
 			endif
 		endif
@@ -497,14 +497,14 @@ script menu_tr_band_retreat_pointer
 endscript
 
 script menu_tr_change_character 
-	if isguitarcontroller controller = <device_num>
-		if gotparam \{up}
+	if IsGuitarController controller = <device_num>
+		if GotParam \{up}
 			menu_tr_change_character_down score_index = <score_index>
 		else
 			menu_tr_change_character_up score_index = <score_index>
 		endif
 	else
-		if gotparam \{up}
+		if GotParam \{up}
 			menu_tr_change_character_up score_index = <score_index>
 		else
 			menu_tr_change_character_down score_index = <score_index>

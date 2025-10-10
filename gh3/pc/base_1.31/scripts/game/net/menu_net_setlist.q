@@ -1,6 +1,6 @@
 host_songs_to_pick = 0
 client_songs_to_pick = 0
-tie_breaker = host
+tie_breaker = HOST
 num_songs = num_1
 player1_color = [
 	0
@@ -48,7 +48,7 @@ script create_setlist_popup
 			right
 			top
 		]}
-	if (screenelementexists id = net_setlist_popup_container)
+	if (ScreenElementExists id = net_setlist_popup_container)
 		return
 	endif
 	create_ready_icons \{pos1 = (290.0, 170.0)
@@ -61,7 +61,7 @@ script create_setlist_popup
 	if ((<num_songs> = 1) || ($game_mode = p2_coop))
 		set_final_song_selection
 	endif
-	if (ishost)
+	if (IsHost)
 		if ($host_songs_to_pick = 0)
 			setlist_ready_up
 		endif
@@ -86,9 +86,9 @@ script destroy_setlist_popup
 endscript
 
 script net_request_song 
-	formattext checksumname = tier_checksum 'tier%s' s = <tier>
+	FormatText checksumname = tier_checksum 'tier%s' s = <tier>
 	song_checksum = ($g_gh3_setlist.<tier_checksum>.songs [<song_count>])
-	sendnetmessage {
+	SendNetMessage {
 		type = select_song
 		tier = <tier>
 		song_checksum = <song_checksum>
@@ -96,7 +96,7 @@ script net_request_song
 endscript
 
 script net_setlist_go_back 
-	sendnetmessage \{type = select_song
+	SendNetMessage \{type = select_song
 		tier = 0
 		song_checksum = 0}
 endscript
@@ -108,39 +108,39 @@ script net_select_song
 	if (<is_host_selection>)
 		change host_songs_to_pick = ($host_songs_to_pick -1)
 		if ($host_songs_to_pick = 0)
-			if ishost
-				vmenu_setlist :obj_spawnscriptlater \{setlist_ready_up}
+			if IsHost
+				vmenu_setlist :Obj_SpawnScriptLater \{setlist_ready_up}
 			else
-				vmenu_setlist :obj_spawnscriptlater drop_in_ready_sign params = {player = <player>}
+				vmenu_setlist :Obj_SpawnScriptLater drop_in_ready_sign params = {player = <player>}
 			endif
 		endif
 	else
 		change client_songs_to_pick = ($client_songs_to_pick -1)
 		if ($client_songs_to_pick = 0)
-			if NOT ishost
-				vmenu_setlist :obj_spawnscriptlater \{setlist_ready_up}
+			if NOT IsHost
+				vmenu_setlist :Obj_SpawnScriptLater \{setlist_ready_up}
 			else
-				vmenu_setlist :obj_spawnscriptlater drop_in_ready_sign params = {player = <player>}
+				vmenu_setlist :Obj_SpawnScriptLater drop_in_ready_sign params = {player = <player>}
 			endif
 		endif
 	endif
-	formattext checksumname = chosen_song_id 'chosen_song_id_p%a_%b' a = <player> b = <menu_selection_index>
+	FormatText checksumname = chosen_song_id 'chosen_song_id_p%a_%b' a = <player> b = <menu_selection_index>
 	get_song_title song = <song_selection>
-	<chosen_song_id> :setprops text = <song_title> scale = (0.58, 0.75)
-	setarrayelement arrayname = net_setlist_songs globalarray index = (<songlist_index> -1) newvalue = <song_selection>
-	setarrayelement arrayname = net_setlist_tiers globalarray index = (<songlist_index> -1) newvalue = <tier>
+	<chosen_song_id> :SetProps text = <song_title> scale = (0.58, 0.75)
+	SetArrayElement ArrayName = net_setlist_songs GlobalArray index = (<songlist_index> -1) newvalue = <song_selection>
+	SetArrayElement ArrayName = net_setlist_tiers GlobalArray index = (<songlist_index> -1) newvalue = <tier>
 	if (($host_songs_to_pick + $client_songs_to_pick) = 0)
-		spawnscriptlater \{net_setlist_players_ready}
+		SpawnScriptLater \{net_setlist_players_ready}
 	endif
 endscript
 
 script net_setlist_players_ready 
-	wait \{2
+	Wait \{2
 		seconds}
 	printf \{"Starting net play with setlist:"}
 	net_print_setlist
 	change current_song = ($net_setlist_songs [($net_song_num)])
-	setglobaltags progression params = {current_tier = ($net_setlist_tiers [($net_song_num)])}
+	SetGlobalTags Progression params = {current_tier = ($net_setlist_tiers [($net_song_num)])}
 	if ($g_tie_breaker_song = 1)
 		ui_flow_manager_respond_to_action \{action = continue_to_final_song}
 	else
@@ -149,7 +149,7 @@ script net_setlist_players_ready
 endscript
 
 script net_print_setlist 
-	getarraysize \{$net_setlist_songs}
+	GetArraySize \{$net_setlist_songs}
 	array_count = 0
 	begin
 	printf "%c" c = ($net_setlist_songs [<array_count>])
@@ -189,35 +189,35 @@ script net_deselect_song
 	get_selection_indeces is_host_selection = <is_host_selection>
 	if (<menu_selection_index> = 1)
 		begin
-		killspawnedscript \{name = drop_in_ready_sign}
-		killspawnedscript \{name = drop_out_ready_sign}
+		KillSpawnedScript \{name = drop_in_ready_sign}
+		KillSpawnedScript \{name = drop_out_ready_sign}
 		repeat 2
 		ui_flow_manager_respond_to_action \{action = go_back}
 		return
 	endif
-	formattext checksumname = chosen_song_id 'chosen_song_id_p%a_%b' a = <player> b = (<menu_selection_index> -1)
-	<chosen_song_id> :setprops text = "..." scale = (1.0, 1.0)
+	FormatText checksumname = chosen_song_id 'chosen_song_id_p%a_%b' a = <player> b = (<menu_selection_index> -1)
+	<chosen_song_id> :SetProps text = "..." scale = (1.0, 1.0)
 	if (<is_host_selection>)
 		if ($host_songs_to_pick = 0)
-			if ishost
-				spawnscriptlater \{setlist_unready}
+			if IsHost
+				SpawnScriptLater \{setlist_unready}
 			else
-				spawnscriptlater drop_out_ready_sign params = {player = <player>}
+				SpawnScriptLater drop_out_ready_sign params = {player = <player>}
 			endif
 		endif
 		change host_songs_to_pick = ($host_songs_to_pick + 1)
 	else
 		if ($client_songs_to_pick = 0)
-			if NOT ishost
-				spawnscriptlater \{setlist_unready}
+			if NOT IsHost
+				SpawnScriptLater \{setlist_unready}
 			else
-				spawnscriptlater drop_out_ready_sign params = {player = <player>}
+				SpawnScriptLater drop_out_ready_sign params = {player = <player>}
 			endif
 		endif
 		change client_songs_to_pick = ($client_songs_to_pick + 1)
 	endif
-	setarrayelement arrayname = net_setlist_songs globalarray index = (<songlist_index> -3) newvalue = null
-	setarrayelement arrayname = net_setlist_tiers globalarray index = (<songlist_index> -3) newvalue = 0
+	SetArrayElement ArrayName = net_setlist_songs GlobalArray index = (<songlist_index> -3) newvalue = null
+	SetArrayElement ArrayName = net_setlist_tiers GlobalArray index = (<songlist_index> -3) newvalue = 0
 endscript
 
 script reset_setlist 
@@ -225,14 +225,14 @@ script reset_setlist
 	get_number_of_song_selections
 	change host_songs_to_pick = <song_selections>
 	change client_songs_to_pick = <song_selections>
-	if (ishost)
-		setsongselections
+	if (IsHost)
+		SetSongSelections
 	endif
-	getarraysize \{$net_setlist_songs}
+	GetArraySize \{$net_setlist_songs}
 	array_count = 0
 	begin
-	setarrayelement arrayname = net_setlist_songs globalarray index = <array_count> newvalue = null
-	setarrayelement arrayname = net_setlist_tiers globalarray index = <array_count> newvalue = 0
+	SetArrayElement ArrayName = net_setlist_songs GlobalArray index = <array_count> newvalue = null
+	SetArrayElement ArrayName = net_setlist_tiers GlobalArray index = <array_count> newvalue = 0
 	<array_count> = (<array_count> + 1)
 	repeat <array_size>
 endscript
@@ -256,12 +256,12 @@ script get_number_of_songs
 endscript
 
 script create_setlist_popup_frames 
-	createscreenelement \{type = containerelement
+	CreateScreenElement \{type = ContainerElement
 		id = net_setlist_popup_container
 		parent = root_window
 		pos = (0.0, 0.0)}
 	setlist_popup_z = ($setlist_text_z + 50.0)
-	if (ishost)
+	if (IsHost)
 		p1_songs = ($host_songs_to_pick)
 		p2_songs = ($client_songs_to_pick)
 	else
@@ -282,18 +282,18 @@ script create_setlist_popup_frames
 		frame_dims = (350.0, 16.0)
 		middle_dims = ((350.0, 0.0) + (0.0, 32.0) * <num_songs>)
 		bottom_pos = (<popup_pos> + (13.0, 16.0) + (0.0, 32.0) * <num_songs>)
-		displaysprite parent = net_setlist_popup_container tex = window_frame_cap pos = (<popup_pos> + (13.0, 8.0)) dims = <frame_dims> just = [center center] rgba = ($online_dark_blue) z = <setlist_popup_z>
-		displaysprite parent = net_setlist_popup_container tex = window_frame_body_tall pos = (<popup_pos> + (13.0, 16.0)) dims = <middle_dims> just = [center top] rgba = ($online_dark_blue) z = <setlist_popup_z>
-		displaysprite parent = net_setlist_popup_container tex = window_frame_cap pos = <bottom_pos> dims = <frame_dims> just = [center top] rgba = ($online_dark_blue) z = <setlist_popup_z> flip_h
-		displaysprite parent = net_setlist_popup_container tex = window_fill_cap pos = (<popup_pos> + (13.0, 8.0)) dims = <frame_dims> just = [center center] rgba = ($online_trans_grey) z = <setlist_popup_z>
-		displaysprite parent = net_setlist_popup_container tex = window_fill_body_large pos = (<popup_pos> + (13.0, 16.0)) dims = <middle_dims> just = [center top] rgba = ($online_trans_grey) z = <setlist_popup_z>
-		displaysprite parent = net_setlist_popup_container tex = window_fill_cap pos = <bottom_pos> dims = <frame_dims> just = [center top] rgba = ($online_trans_grey) z = <setlist_popup_z> flip_h
+		displaySprite parent = net_setlist_popup_container tex = window_frame_cap pos = (<popup_pos> + (13.0, 8.0)) dims = <frame_dims> just = [center center] rgba = ($online_dark_blue) z = <setlist_popup_z>
+		displaySprite parent = net_setlist_popup_container tex = window_frame_body_tall pos = (<popup_pos> + (13.0, 16.0)) dims = <middle_dims> just = [center top] rgba = ($online_dark_blue) z = <setlist_popup_z>
+		displaySprite parent = net_setlist_popup_container tex = window_frame_cap pos = <bottom_pos> dims = <frame_dims> just = [center top] rgba = ($online_dark_blue) z = <setlist_popup_z> flip_h
+		displaySprite parent = net_setlist_popup_container tex = window_fill_cap pos = (<popup_pos> + (13.0, 8.0)) dims = <frame_dims> just = [center center] rgba = ($online_trans_grey) z = <setlist_popup_z>
+		displaySprite parent = net_setlist_popup_container tex = window_fill_body_large pos = (<popup_pos> + (13.0, 16.0)) dims = <middle_dims> just = [center top] rgba = ($online_trans_grey) z = <setlist_popup_z>
+		displaySprite parent = net_setlist_popup_container tex = window_fill_cap pos = <bottom_pos> dims = <frame_dims> just = [center top] rgba = ($online_trans_grey) z = <setlist_popup_z> flip_h
 		text_pos = (<popup_pos> + (0.0, 37.0))
 		array_count = 1
 		begin
-		formattext checksumname = chosen_song_id 'chosen_song_id_p%a_%b' a = <player> b = <array_count>
-		createscreenelement {
-			type = textelement
+		FormatText checksumname = chosen_song_id 'chosen_song_id_p%a_%b' a = <player> b = <array_count>
+		CreateScreenElement {
+			type = TextElement
 			id = <chosen_song_id>
 			parent = net_setlist_popup_container
 			just = [center center]
@@ -314,14 +314,14 @@ script create_setlist_popup_frames
 endscript
 
 script setlist_ready_up 
-	launchevent \{type = unfocus
+	LaunchEvent \{type = unfocus
 		target = vmenu_setlist}
 	drop_in_ready_sign \{player = 1}
 	if ($net_current_flow_state = song)
-		launchevent \{type = focus
+		LaunchEvent \{type = focus
 			target = ready_container_p1}
 	endif
-	ready_container_p1 :setprops \{event_handlers = [
+	ready_container_p1 :SetProps \{event_handlers = [
 			{
 				pad_back
 				setlist_go_back
@@ -335,9 +335,9 @@ script setlist_ready_up
 endscript
 
 script setlist_unready 
-	launchevent \{type = unfocus
+	LaunchEvent \{type = unfocus
 		target = ready_container_p1}
-	launchevent \{type = focus
+	LaunchEvent \{type = focus
 		target = vmenu_setlist}
 	drop_out_ready_sign \{player = 1}
 endscript

@@ -51,13 +51,13 @@ legal_timer = 0
 
 script start_legal_timer 
 	change \{legal_timer = 0}
-	wait \{6
+	Wait \{6
 		seconds}
 	change \{legal_timer = 1}
 endscript
 
 script wait_for_legal_timer 
-	if notcd
+	if NotCD
 		if ($show_movies = 0)
 			return
 		endif
@@ -66,7 +66,7 @@ script wait_for_legal_timer
 	if ($legal_timer = 1)
 		break
 	endif
-	wait \{1
+	Wait \{1
 		gameframe}
 	repeat
 endscript
@@ -74,14 +74,14 @@ endscript
 script bootup_sequence 
 	wait_for_legal_timer
 	startrendering
-	playmovieandwait \{movie = 'atvi'}
-	playmovieandwait \{movie = 'ro_logo'}
-	playmovieandwait \{movie = 'ns_logo'}
-	playmovieandwait \{movie = 'Aspyr'}
-	if notismacport
-		playmovieandwait \{movie = 'DELL_Cert_3CD'}
+	PlayMovieAndWait \{movie = 'atvi'}
+	PlayMovieAndWait \{movie = 'ro_logo'}
+	PlayMovieAndWait \{movie = 'ns_logo'}
+	PlayMovieAndWait \{movie = 'Aspyr'}
+	if NotIsMacPort
+		PlayMovieAndWait \{movie = 'DELL_Cert_3CD'}
 	endif
-	playmovieandwait \{movie = 'intro'}
+	PlayMovieAndWait \{movie = 'intro'}
 	spawnscriptnow \{ui_flow_manager_respond_to_action
 		params = {
 			action = skip_bootup_sequence
@@ -90,7 +90,7 @@ script bootup_sequence
 endscript
 
 script start_bootup_sequence 
-	if notcd
+	if NotCD
 		if ($show_movies = 0)
 			startrendering
 			spawnscriptnow \{ui_flow_manager_respond_to_action
@@ -109,7 +109,7 @@ endscript
 
 script check_signin_change_monitor_flag 
 	if ($respond_to_signin_changed = 0)
-		scriptassert \{"check_signin_change_monitor_flag failed"}
+		ScriptAssert \{"check_signin_change_monitor_flag failed"}
 	endif
 endscript
 
@@ -117,37 +117,37 @@ script start_checking_for_signin_change
 	printf \{"start_checking_for_signin_change"}
 	printscriptinfo \{"start_checking_for_signin_change"}
 	printf \{"start_checking_for_signin_change - killing sysnotifys"}
-	killspawnedscript \{name = sysnotify_handle_signin_change}
+	KillSpawnedScript \{name = sysnotify_handle_signin_change}
 	printf \{"start_checking_for_signin_change - begin"}
 	change \{respond_to_signin_changed = 1}
 	change \{menu_select_difficulty_first_time = 1}
 endscript
 
 script bootup_check_autologin 
-	killspawnedscript \{name = attract_mode_spawner}
+	KillSpawnedScript \{name = attract_mode_spawner}
 	change \{enable_saving = 1}
-	if gotparam \{device_num}
+	if GotParam \{device_num}
 		change primary_controller = <device_num>
 		change \{primary_controller_assigned = 1}
 		change structurename = player1_status controller = ($primary_controller)
 	endif
-	netsessionfunc \{func = getautologinsetting}
-	if (<autologinsetting> = autologinoff || $is_demo_mode = 1)
+	NetSessionFunc \{func = GetAutoLoginSetting}
+	if (<autoLoginSetting> = autoLoginOff || $is_demo_mode = 1)
 		process_signin_complete
 		return flow_state = <flow_state>
 	endif
-	if (<autologinsetting> = autologinon)
+	if (<autoLoginSetting> = autoLoginOn)
 		return \{flow_state = online_winport_start_connection_fs}
 	endif
 	return \{flow_state = bootup_query_autologin_fs}
 endscript
 
 script process_signin_complete 
-	refreshsigninstatus
-	if isxenon
-		startgameprofilesettingsread
+	RefreshSigninStatus
+	if isXenon
+		StartGameProfileSettingsRead
 		begin
-		if gameprofilesettingsfinished
+		if GameProfileSettingsFinished
 			break
 		endif
 		repeat
@@ -157,14 +157,14 @@ endscript
 ps3_signin_complete = 0
 
 script wait_for_blade_complete 
-	if isxenon
+	if isXenon
 		wait_for_sysnotify_unpause
 	else
 		begin
 		if (1 = $ps3_signin_complete)
 			break
 		endif
-		wait \{1
+		Wait \{1
 			frame}
 		repeat
 	endif
@@ -194,7 +194,7 @@ bootup_signin_warning_fs = {
 bootup_do_memcard_sequence_fs = {
 	create = memcard_sequence_begin_bootup
 	create_params = {
-		storageselectorforce = 1
+		StorageSelectorForce = 1
 	}
 	destroy = memcard_sequence_cleanup_generic
 	actions = [
@@ -300,7 +300,7 @@ script wait_for_safe_shutdown
 	if ($is_shutdown_safe = 1)
 		break
 	endif
-	wait \{1
+	Wait \{1
 		gameframe}
 	repeat
 endscript
@@ -313,7 +313,7 @@ script handle_signin_changed
 	disable_pause
 	stoprendering
 	shutdown_game_for_signin_change \{signin_change = 1}
-	launchevent \{type = unfocus
+	LaunchEvent \{type = unfocus
 		target = root_window}
 	create_signin_changed_menu
 	startrendering
@@ -324,7 +324,7 @@ script signing_change_confirm_reboot
 	printf \{"signing_change_confirm_reboot"}
 	destroy_signin_changed_menu
 	enable_pause
-	wait \{5
+	Wait \{5
 		gameframes}
 	start_flow_manager \{flow_state = bootup_press_any_button_fs}
 	printf \{"signing_change_confirm_reboot end"}
@@ -335,16 +335,16 @@ script shutdown_game_for_signin_change \{unloadcontent = 1
 		signin_change = 0}
 	printf \{"shutdown_game_for_signin_change"}
 	change \{shutdown_game_for_signin_change_flag = 1}
-	stopallsounds
-	killspawnedscript \{name = online_menu_init}
-	killspawnedscript \{name = do_calibration_update}
-	killspawnedscript \{name = cl_do_ping}
-	killspawnedscript \{name = kill_off_and_finish_calibration}
-	killspawnedscript \{name = menu_calibrate_lag_create_circles}
+	StopAllSounds
+	KillSpawnedScript \{name = online_menu_init}
+	KillSpawnedScript \{name = do_calibration_update}
+	KillSpawnedScript \{name = cl_do_ping}
+	KillSpawnedScript \{name = kill_off_and_finish_calibration}
+	KillSpawnedScript \{name = menu_calibrate_lag_create_circles}
 	set_demonware_failed
-	killspawnedscript \{name = create_leaderboard_menu2}
-	killspawnedscript \{name = create_leaderboard_menu3}
-	killspawnedscript \{name = add_leaderboard_rows_to_menu}
+	KillSpawnedScript \{name = create_leaderboard_menu2}
+	KillSpawnedScript \{name = create_leaderboard_menu3}
+	KillSpawnedScript \{name = add_leaderboard_rows_to_menu}
 	shutdown_options_video_monitor
 	destroy_alert_popup \{force = 1}
 	end_practice_song_slomo
@@ -362,32 +362,32 @@ script shutdown_game_for_signin_change \{unloadcontent = 1
 	shut_down_flow_manager \{player = 2
 		resetstate}
 	store_monitor_goal_guitar_finish
-	deregisteratoms
+	DeRegisterAtoms
 	kill_gem_scroller \{no_render = 1}
 	progression_push_current \{force = 1}
 	clean_up_user_control_helpers
-	menu_music_off
+	Menu_Music_Off
 	unload_songqpak
-	setpakmancurrentblock \{map = zones
+	SetPakManCurrentBlock \{map = zones
 		pak = none
 		block_scripts = 1}
 	destroy_band \{unload_paks}
-	destroy_downloads_enumcontent
+	destroy_downloads_EnumContent
 	if (<unloadcontent> = 1)
-		downloads_unloadcontent
-		clearglobaltags
+		Downloads_UnloadContent
+		ClearGlobalTags
 		setup_globaltags
 	endif
 	if (<signin_change> = 1)
 		clear_cheats
 	endif
-	if screenelementexists \{id = ready_container_p2}
-		destroyscreenelement \{id = ready_container_p2}
+	if ScreenElementExists \{id = ready_container_p2}
+		DestroyScreenElement \{id = ready_container_p2}
 	endif
 	set_default_misc_globals
 	cleanup_songwon_event
 	destroy_menu_transition
-	unpausegame
+	UnPauseGame
 	change \{shutdown_game_for_signin_change_flag = 0}
 	printf \{"shutdown_game_for_signin_change end"}
 endscript
@@ -396,9 +396,9 @@ script cleanup_songwon_event
 	destroy_menu \{menu_id = yourock_text}
 	destroy_menu \{menu_id = yourock_text_2}
 	destroy_menu \{menu_id = yourock_text_legend}
-	killspawnedscript \{name = jiggle_text_array_elements}
-	killspawnedscript \{name = you_rock_waiting_crowd_sfx}
-	killspawnedscript \{name = guitarevent_songwon_spawned}
+	KillSpawnedScript \{name = jiggle_text_array_elements}
+	KillSpawnedScript \{name = You_Rock_Waiting_Crowd_SFX}
+	KillSpawnedScript \{name = GuitarEvent_SongWon_Spawned}
 endscript
 
 script set_default_misc_globals 

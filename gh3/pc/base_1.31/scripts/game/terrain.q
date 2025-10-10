@@ -1,334 +1,334 @@
-terrain_types = [
+Terrain_Types = [
 	{
-		checksum = terrain_default
+		checksum = TERRAIN_DEFAULT
 		desc = 'Default'
 	}
 	{
-		checksum = terrain_asphalt
+		checksum = TERRAIN_ASPHALT
 		desc = 'Asphalt'
 	}
 	{
-		checksum = terrain_brick
+		checksum = TERRAIN_BRICK
 		desc = 'Brick'
 	}
 	{
-		checksum = terrain_concsmooth
+		checksum = TERRAIN_CONCSMOOTH
 		desc = 'ConcSmooth'
 	}
 	{
-		checksum = terrain_concrough
+		checksum = TERRAIN_CONCROUGH
 		desc = 'ConcRough'
 	}
 	{
-		checksum = terrain_dirt
+		checksum = TERRAIN_DIRT
 		desc = 'Dirt'
 	}
 	{
-		checksum = terrain_electricwire
+		checksum = TERRAIN_ELECTRICWIRE
 		desc = 'ElectricWire'
 	}
 	{
-		checksum = terrain_grass
+		checksum = TERRAIN_GRASS
 		desc = 'Grass'
 	}
 	{
-		checksum = terrain_metal
+		checksum = TERRAIN_METAL
 		desc = 'Metal'
 	}
 	{
-		checksum = terrain_metalpole
+		checksum = TERRAIN_METALPOLE
 		desc = 'MetalPole'
 	}
 	{
-		checksum = terrain_sidewalk
+		checksum = TERRAIN_SIDEWALK
 		desc = 'Sidewalk'
 	}
 	{
-		checksum = terrain_water
+		checksum = TERRAIN_WATER
 		desc = 'WaterDeep'
 	}
 	{
-		checksum = terrain_wood
+		checksum = TERRAIN_WOOD
 		desc = 'Wood'
 	}
 	{
-		checksum = terrain_woodpainted_w
+		checksum = TERRAIN_WOODPAINTED_W
 		desc = 'WoodPainted'
 	}
 	{
-		checksum = terrain_wooddeck
+		checksum = TERRAIN_WOODDECK
 		desc = 'WoodDeck'
 	}
 	{
-		checksum = terrain_wood_4ft
+		checksum = TERRAIN_WOOD_4FT
 		desc = 'WoodHollow_4FT'
 	}
 	{
-		checksum = terrain_wood_8ft
+		checksum = TERRAIN_WOOD_8FT
 		desc = 'WoodHollow_8FT'
 	}
 	{
-		checksum = terrain_woodfence
+		checksum = TERRAIN_WOODFENCE
 		desc = 'WoodFence'
 	}
 	{
-		checksum = terrain_woodsiding
+		checksum = TERRAIN_WOODSIDING
 		desc = 'WoodSiding'
 	}
 	{
-		checksum = terrain_woodtable
+		checksum = TERRAIN_WOODTABLE
 		desc = 'WoodTable'
 	}
 	{
-		checksum = terrain_woodplywood
+		checksum = TERRAIN_WOODPLYWOOD
 		desc = 'WoodPlywood'
 	}
 	{
-		checksum = terrain_woodgymfloor
+		checksum = TERRAIN_WOODGYMFLOOR
 		desc = 'WoodGymFloor'
 	}
 	{
-		checksum = terrain_tile_6in
+		checksum = TERRAIN_TILE_6IN
 		desc = 'Tile_6in'
 	}
 	{
-		checksum = terrain_tile_2ft
+		checksum = TERRAIN_TILE_2FT
 		desc = 'Tile_2ft'
 	}
 	{
-		checksum = terrain_tile_4ft
+		checksum = TERRAIN_TILE_4FT
 		desc = 'Tile_4ft'
 	}
 	{
-		checksum = terrain_woodbamboopillons
+		checksum = TERRAIN_WOODBAMBOOPILLONS
 		desc = 'WoodBambooPillons'
 	}
 	{
-		checksum = terrain_plastichollow
+		checksum = TERRAIN_PLASTICHOLLOW
 		desc = 'PlasticHollow'
 	}
 	{
-		checksum = terrain_plastichard
+		checksum = TERRAIN_PLASTICHARD
 		desc = 'PlasticHard'
 	}
 	{
-		checksum = terrain_plasticpoolcover
+		checksum = TERRAIN_PLASTICPOOLCOVER
 		desc = 'PlasticPoolCover'
 	}
 	{
-		checksum = terrain_canvasawning
+		checksum = TERRAIN_CANVASAWNING
 		desc = 'CanvasAwning'
 	}
 	{
-		checksum = terrain_shinglescomposite
+		checksum = TERRAIN_SHINGLESCOMPOSITE
 		desc = 'ShinglesComposite'
 	}
 	{
-		checksum = terrain_shingleswood
+		checksum = TERRAIN_SHINGLESWOOD
 		desc = 'ShinglesWood'
 	}
 	{
-		checksum = terrain_shinglestile
+		checksum = TERRAIN_SHINGLESTILE
 		desc = 'ShinglesTile'
 	}
 	{
-		checksum = terrain_metalcar
+		checksum = TERRAIN_METALCAR
 		desc = 'MetalCar'
 	}
 	{
-		checksum = terrain_glasswindshield
+		checksum = TERRAIN_GLASSWINDSHIELD
 		desc = 'GlassWindshield'
 	}
 	{
-		checksum = terrain_watershallow
+		checksum = TERRAIN_WATERSHALLOW
 		desc = 'WaterShallow'
 	}
 	{
-		checksum = terrain_waterpuddle
+		checksum = TERRAIN_WATERPUDDLE
 		desc = 'WaterPuddle'
 	}
 	{
-		checksum = terrain_sand
+		checksum = TERRAIN_SAND
 		desc = 'Sand'
 	}
 	{
-		checksum = terrain_mattress
+		checksum = TERRAIN_MATTRESS
 		desc = 'Mattress'
 	}
 	{
-		checksum = terrain_mailbox
+		checksum = TERRAIN_MAILBOX
 		desc = 'Mailbox'
 	}
 	{
-		checksum = terrain_metaltin
+		checksum = TERRAIN_METALTIN
 		desc = 'MetalTin'
 	}
 	{
-		checksum = terrain_plasticpicnictable
+		checksum = TERRAIN_PLASTICPICNICTABLE
 		desc = 'PlasticPicnicTable'
 	}
 	{
-		checksum = terrain_countertoplab
+		checksum = TERRAIN_COUNTERTOPLAB
 		desc = 'CounterTopLab'
 	}
 	{
-		checksum = terrain_chalkboard
+		checksum = TERRAIN_CHALKBOARD
 		desc = 'Chalkboard'
 	}
 	{
-		checksum = terrain_metallockers
+		checksum = TERRAIN_METALLOCKERS
 		desc = 'MetalLockers'
 	}
 	{
-		checksum = terrain_glass
+		checksum = TERRAIN_GLASS
 		desc = 'Glass'
 	}
 	{
-		checksum = terrain_metalthin
+		checksum = TERRAIN_METALTHIN
 		desc = 'MetalThin'
 	}
 	{
-		checksum = terrain_griptape
+		checksum = TERRAIN_GRIPTAPE
 		desc = 'GripTape'
 	}
 	{
-		checksum = terrain_rope
+		checksum = TERRAIN_ROPE
 		desc = 'Rope'
 	}
 	{
-		checksum = terrain_metalpipelarge
+		checksum = TERRAIN_METALPIPELARGE
 		desc = 'MetalPipeLarge'
 	}
 	{
-		checksum = terrain_grassdried
+		checksum = TERRAIN_GRASSDRIED
 		desc = 'GrassDried'
 	}
 	{
-		checksum = terrain_leaves
+		checksum = TERRAIN_LEAVES
 		desc = 'Leaves'
 	}
 	{
-		checksum = terrain_mud
+		checksum = TERRAIN_MUD
 		desc = 'Mud'
 	}
 	{
-		checksum = terrain_asphaltsmooth
+		checksum = TERRAIN_ASPHALTSMOOTH
 		desc = 'AsphaltSmooth'
 	}
 	{
-		checksum = terrain_asphaltrough
+		checksum = TERRAIN_ASPHALTROUGH
 		desc = 'AsphaltRough'
 	}
 	{
-		checksum = terrain_sidewalk_1ft
+		checksum = TERRAIN_SIDEWALK_1FT
 		desc = 'Sidewalk_1FT'
 	}
 	{
-		checksum = terrain_sidewalk_2ft
+		checksum = TERRAIN_SIDEWALK_2FT
 		desc = 'Sidewalk_2FT'
 	}
 	{
-		checksum = terrain_sidewalk_4ft
+		checksum = TERRAIN_SIDEWALK_4FT
 		desc = 'Sidewalk_4FT'
 	}
 	{
-		checksum = terrain_sidewalk_8ft
+		checksum = TERRAIN_SIDEWALK_8FT
 		desc = 'Sidewalk_8FT'
 	}
 	{
-		checksum = terrain_brick_6in
+		checksum = TERRAIN_BRICK_6IN
 		desc = 'Brick_6IN'
 	}
 	{
-		checksum = terrain_brick_1ft
+		checksum = TERRAIN_BRICK_1FT
 		desc = 'Brick_1FT'
 	}
 	{
-		checksum = terrain_brick_2ft
+		checksum = TERRAIN_BRICK_2FT
 		desc = 'Brick_2FT'
 	}
 	{
-		checksum = terrain_brick_4ft
+		checksum = TERRAIN_BRICK_4FT
 		desc = 'Brick_4FT'
 	}
 	{
-		checksum = terrain_cobblestone
+		checksum = TERRAIN_COBBLESTONE
 		desc = 'CobbleStone'
 	}
 	{
-		checksum = terrain_metalgrate
+		checksum = TERRAIN_METALGRATE
 		desc = 'MetalGrate'
 	}
 	{
-		checksum = terrain_rubber
+		checksum = TERRAIN_RUBBER
 		desc = 'Rubber'
 	}
 	{
-		checksum = terrain_arcade
+		checksum = TERRAIN_ARCADE
 		desc = 'Arcade'
 	}
 	{
-		checksum = terrain_zerofriction
+		checksum = TERRAIN_ZEROFRICTION
 		desc = 'ZeroFriction'
 	}
 	{
-		checksum = terrain_highfriction
+		checksum = TERRAIN_HIGHFRICTION
 		desc = 'HighFriction'
 	}
 	{
-		checksum = terrain_rooftop
+		checksum = TERRAIN_ROOFTOP
 		desc = 'RoofTop'
 	}
 	{
-		checksum = terrain_rubble
+		checksum = TERRAIN_RUBBLE
 		desc = 'Rubble'
 	}
 	{
-		checksum = terrain_gravel
+		checksum = TERRAIN_GRAVEL
 		desc = 'Gravel'
 	}
 	{
-		checksum = terrain_chainlinkfence
+		checksum = TERRAIN_CHAINLINKFENCE
 		desc = 'ChainLinkFence'
 	}
 	{
-		checksum = terrain_flowerbed
+		checksum = TERRAIN_FLOWERBED
 		desc = 'FlowerBed'
 	}
 	{
-		checksum = terrain_goldcoins
+		checksum = TERRAIN_GOLDCOINS
 		desc = 'GoldCoins'
 	}
 	{
-		checksum = terrain_asphaltsmooth_hf
+		checksum = TERRAIN_ASPHALTSMOOTH_HF
 		desc = 'AsphaltSmooth_HF'
 	}
 	{
-		checksum = terrain_grass_hf
+		checksum = TERRAIN_GRASS_HF
 		desc = 'Grass_HF'
 	}
 	{
-		checksum = terrain_sidewalk_4ft_hf
+		checksum = TERRAIN_SIDEWALK_4FT_HF
 		desc = 'Sidewalk_4FT_HF'
 	}
 	{
-		checksum = terrain_shallowwaterpooltile
+		checksum = TERRAIN_SHALLOWWATERPOOLTILE
 		desc = 'ShallowWaterPoolTile'
 	}
 	{
-		checksum = terrain_electricfloor
+		checksum = TERRAIN_ELECTRICFLOOR
 		desc = 'ElectricFloor'
 	}
 	{
-		checksum = terrain_chain
+		checksum = TERRAIN_CHAIN
 		desc = 'Chain'
 	}
 	{
-		checksum = terrain_concsmoothtraining
+		checksum = TERRAIN_CONCSMOOTHTRAINING
 		desc = 'ConcSmoothTraining'
 	}
 	{
-		checksum = terrain_concroughtraining
+		checksum = TERRAIN_CONCROUGHTRAINING
 		desc = 'ConcRoughTraining'
 	}
 ]

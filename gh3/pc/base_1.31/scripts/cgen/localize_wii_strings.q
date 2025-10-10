@@ -105,7 +105,7 @@ script get_string_wii \{message = unknown}
 	switch <message>
 		case loading
 		localized_string = "Loading data. Please do not touch the Power Button or RESET."
-		case saving
+		case Saving
 		localized_string = "Saving data. Please do not touch the Power Button or RESET."
 		case autosaving
 		localized_string = "Autosaving data. Please do not touch the Power Button or RESET."

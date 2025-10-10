@@ -1,34 +1,34 @@
 
-script runremotescript_executeandreturnresult \{localcallback = null}
-	if NOT gotparam \{scriptname}
+script RunRemoteScript_ExecuteAndReturnResult \{LocalCallback = null}
+	if NOT GotParam \{ScriptName}
 		script_assert \{"Expected a ScriptName!"}
 		return
 	endif
-	if gotparam \{objid}
+	if GotParam \{ObjID}
 		printf \{"Running game script requested by debugger on object..."}
-		<objid> :<scriptname> <params>
+		<ObjID> :<ScriptName> <params>
 	else
 		printf \{"Running game script requested by debugger ..."}
-		<scriptname> <params>
+		<ScriptName> <params>
 	endif
-	if NOT checksumequals a = <localcallback> b = null
+	if NOT ChecksumEquals a = <LocalCallback> b = null
 		printf \{"Debugger requested a callback, sending..."}
-		removeparameter \{params}
-		removeparameter \{objid}
-		removeparameter \{scriptname}
-		runremotescript scriptname = <localcallback> params = {<...> localcallback = null}
+		RemoveParameter \{params}
+		RemoveParameter \{ObjID}
+		RemoveParameter \{ScriptName}
+		RunRemoteScript ScriptName = <LocalCallback> params = {<...> LocalCallback = null}
 	endif
 endscript
 
-script copycameralocationtoclipboard 
-	getcamoffset
-	sendtoclipboard <...>
+script CopyCameraLocationToClipboard 
+	GetCamOffset
+	SendToClipboard <...>
 endscript
 
-script sendtoclipboard 
-	runremotescript scriptname = printstruct params = {<...> sendtoclipboard}
+script SendToClipboard 
+	RunRemoteScript ScriptName = printstruct params = {<...> SendToClipboard}
 endscript
 
-script sendtowindow 
-	runremotescript scriptname = printstruct params = {<...> sendtowindow}
+script SendToWindow 
+	RunRemoteScript ScriptName = printstruct params = {<...> SendToWindow}
 endscript

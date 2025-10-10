@@ -7,7 +7,7 @@ frustumdebugtype = 3
 lockfrustums = 0
 renderinstances = 1
 rendergeoms = 1
-renderzonemode = 1
+renderZoneMode = 1
 showinstancesonly = 0
 renderprims = 1
 renderprims3d = 1
@@ -29,10 +29,10 @@ tempcamerafarplane = 400
 quaddbg_2 = 0
 
 script toggle_one_zone_only 
-	if ($renderzonemode = 1)
-		change \{renderzonemode = 2}
+	if ($renderZoneMode = 1)
+		change \{renderZoneMode = 2}
 	else
-		change \{renderzonemode = 1}
+		change \{renderZoneMode = 1}
 	endif
 endscript
 

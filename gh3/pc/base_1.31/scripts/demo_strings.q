@@ -1,4 +1,4 @@
-gh3demolocalizationstrings = [
+GH3DemoLocalizationStrings = [
 	"UNAVAILABLE IN DEMO"
 	"Just a taste"
 ]
