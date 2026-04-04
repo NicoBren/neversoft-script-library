@@ -1,54 +1,54 @@
-gp_fx_scifi_elecexplo_sparks_01 = {
+GP_FX_SciFi_ElecExplo_Sparks_01 = {
 	pos = (4.697287, 2.0851018, 0.631156)
 	angles = (0.0, 0.0, 0.0)
-	class = particleobject
-	particletype = flexparticle
+	Class = ParticleObject
+	ParticleType = FlexParticle
 	type = flat
 	active
-	createdatstart
-	emitrangedims = (0.2, 0.2, 0.2)
-	emit_target = (0.0, 1.0, 0.0)
-	emitangle = (0.0, 0.0, 0.0)
+	CreatedAtStart
+	EmitRangeDims = (0.2, 0.2, 0.2)
+	emit_Target = (0.0, 1.0, 0.0)
+	EmitAngle = (0.0, 0.0, 0.0)
 	force = (0.0, -8.0, 0.0)
-	windcoeff = 0.0
-	localwindcoeff = 0.0
-	emittervelocityweight = 0.0
-	anglespread = 200.0
-	bounceheight = 0.0
-	bouncecoeff = 0.5
-	bouncecallbackrate = 0.0
-	liferange = (0.6, 1.0)
+	WindCoeff = 0.0
+	LocalWindCoeff = 0.0
+	EmitterVelocityWeight = 0.0
+	AngleSpread = 200.0
+	BounceHeight = 0.0
+	BounceCoeff = 0.5
+	BounceCallbackRate = 0.0
+	LifeRange = (0.6, 1.0)
 	emit_rate = 50.0
 	max = 0
-	timeseed = 0.0
-	lifetime = 4.0
-	emitnum = 0
-	followemitter = 0.0
-	emitfunction = sawtooth
-	emitperiod = 1.0
-	sizerange = [
+	TimeSeed = 0.0
+	lifeTime = 4.0
+	emitNum = 0
+	FollowEmitter = 0.0
+	EmitFunction = sawtooth
+	EmitPeriod = 1.0
+	SizeRange = [
 		(0.04, 0.3)
 		(0.02, 0.02)
 	]
-	speedrange = (3.0, 5.0)
-	rotvel = (0.0, 0.0)
-	rotveltimescale = 0.0
-	emitdelaystart = 0.0
-	alignwithpath
-	pathfollowtime = 0.1
-	history = 2
-	historylistcoordinatespace = world
+	SpeedRange = (3.0, 5.0)
+	RotVel = (0.0, 0.0)
+	RotVelTimeScale = 0.0
+	EmitDelayStart = 0.0
+	AlignWithPath
+	PathFollowTime = 0.1
+	History = 2
+	HistoryListCoordinateSpace = world
 	color = -4882945
-	lod_default
-	quickmaterial = {
-		diffusetextureenabled
-		diffusetexture = jow_spark01
-		specularpower = 0
+	LOD_Default
+	QuickMaterial = {
+		DiffuseTextureEnabled
+		DiffuseTexture = JOW_Spark01
+		SpecularPower = 0
 		alphacutoff = 1
-		blendmode = add
-		quadanimationfps = 0
+		blendMode = Add
+		QuadAnimationFPS = 0
 	}
-	knot = [
+	Knot = [
 		(-0.289338, 0.0, 0.003587)
 		(-0.289338, 0.0, 0.003587)
 		(-0.16197601, 0.0, 0.001793)
@@ -59,7 +59,7 @@ gp_fx_scifi_elecexplo_sparks_01 = {
 		(0.257654, 0.0, -0.001793)
 		(0.257654, 0.0, -0.001793)
 	]
-	particlecolor = [
+	ParticleColor = [
 		-1
 		-1
 		-1
@@ -67,7 +67,7 @@ gp_fx_scifi_elecexplo_sparks_01 = {
 		-256
 		-256
 	]
-	vertexweight = [
+	VertexWeight = [
 		0.69854105
 		1.0
 	]

@@ -1,80 +1,80 @@
 gbh_first_time_in = 1
 battle_explanation_bullet_materials = [
-	mat_battle_green
-	mat_battle_red
-	mat_battle_yellow
-	mat_battle_blue
-	mat_battle_orange
+	Mat_Battle_Green
+	Mat_Battle_Red
+	Mat_Battle_Yellow
+	Mat_Battle_Blue
+	Mat_Battle_Orange
 ]
 battle_explanation_text = {
 	bosszakk = {
 		image = battle_help_boss_bg_zakk
-		title = qs(0xed85f5af)
+		title = qs("ALL RIGHT, THIS IS IT!")
 		gem_texture = icon_gig_wylde
 		bullets = [
 			{
-				text = qs(0x3e8d7a28)
+				text = qs("Zakk Wylde wants to see if you have what it takes to hang with him.")
 			}
 			{
-				text = qs(0x461f8ed5)
+				text = qs("Play your best to prove that you belong on the stage with Zakk.")
 			}
 			{
-				text = qs(0x07b3efe7)
+				text = qs("If he gets the crowd meter all the way to his side then the crowd will boo you off stage.")
 			}
 			{
-				text = qs(0xb5b8fcb3)
+				text = qs("Oh yeah, good luck!")
 			}
 		]
-		prompt = qs(0x816ad59e)
+		prompt = qs("READY TO ROCK?")
 	}
 	bossted = {
 		image = battle_help_boss_bg_nugent
-		title = qs(0xed85f5af)
+		title = qs("ALL RIGHT, THIS IS IT!")
 		gem_texture = icon_gig_nugent
 		bullets = [
 			{
-				text = qs(0x5112f6e1)
+				text = qs("Ted Nugent wants to jam on stage with you.")
 			}
 			{
-				text = qs(0xc8dd473f)
+				text = qs("You don't want to embarrass yourself so play your best.")
 			}
 			{
-				text = qs(0x25fbdd8d)
+				text = qs("If the crowd meter goes all the way to Ted's side you'll get booed off stage.")
 			}
 			{
-				text = qs(0xed0fdc1f)
+				text = qs("You ready to face the Motor City Madman?!")
 			}
 		]
-		prompt = qs(0x816ad59e)
+		prompt = qs("READY TO ROCK?")
 	}
 	generic = {
-		title = qs(0x01f891e7)
+		title = qs("BATTLE MODE!")
 		gem_texture = battle_material
 		bullets = [
 			{
-				text = qs(0x56014da8)
+				text = qs("Hit each series of BATTLE GEMS to collect ATTACKS")
 			}
 			{
-				text = qs(0xc059dc09)
+				text = qs("Once you have collected an ATTACK, Tilt your guitar upward to disrupt your opponent and make them miss")
 			}
 			{
-				text = qs(0x50291e58)
+				text = qs("You HAVE to make your opponent FAIL before the end or else you go to SUDDEN DEATH")
 			}
 			{
-				text = qs(0x2d76adbc)
+				text = qs("In SUDDEN DEATH all the ATTACKS become the devastating DEATH DRAIN")
 			}
 		]
-		prompt = qs(0x816ad59e)
+		prompt = qs("READY TO ROCK?")
 	}
 }
 
 script create_battle_helper_menu \{device_num = 0
 		popup = 0}
-	if gameispaused
-		unpausegame
+	if GameIsPaused
+		UnPauseGame
 	endif
-	<bg_texture> = battle_mode_bg
-	if gotparam \{boss}
+	<bg_texture> = battle_mode_BG
+	if GotParam \{boss}
 		if ($game_mode = p2_battle)
 			<boss_structure> = ($battle_explanation_text.generic)
 		else
@@ -82,15 +82,15 @@ script create_battle_helper_menu \{device_num = 0
 			<bg_texture> = ($battle_explanation_text.<boss>.image)
 		endif
 	else
-		getglobaltags \{progression}
+		GetGlobalTags \{Progression}
 		<boss_structure> = ($battle_explanation_text.generic)
 	endif
 	menu_z = 10
-	createscreenelement \{type = containerelement
+	CreateScreenElement \{type = ContainerElement
 		parent = root_window
 		id = battle_explanation_container}
-	createscreenelement \{parent = battle_explanation_container
-		type = vmenu
+	CreateScreenElement \{parent = battle_explanation_container
+		type = VMenu
 		id = bullet_spacer
 		pos = (685.0, 205.0)
 		just = [
@@ -101,23 +101,23 @@ script create_battle_helper_menu \{device_num = 0
 			left
 			top
 		]}
-	getarraysize \{$battle_explanation_bullet_materials}
+	GetArraySize \{$battle_explanation_bullet_materials}
 	<num_materials> = <array_size>
-	getarraysize (<boss_structure>.bullets)
+	GetArraySize (<boss_structure>.bullets)
 	<num_bullets> = <array_size>
 	<i> = 0
 	begin
-	createscreenelement \{parent = bullet_spacer
-		type = containerelement
+	CreateScreenElement \{parent = bullet_spacer
+		type = ContainerElement
 		dims = (100.0, 100.0)
 		just = [
 			left
 			top
 		]}
 	<container_id> = <id>
-	createscreenelement {
+	CreateScreenElement {
 		parent = <container_id>
-		type = textblockelement
+		type = TextBlockElement
 		text = (<boss_structure>.bullets [<i>].text)
 		local_id = text
 		dims = (480.0, 0.0)
@@ -135,12 +135,12 @@ script create_battle_helper_menu \{device_num = 0
 		shadow_offs = (3.0, 3.0)
 		alpha = 0
 	}
-	getscreenelementdims id = <id>
-	<container_id> :se_setprops dims = ((1.0, 0.0) * <width> + (0.0, 1.0) * <height> + (0.0, 20.0))
+	GetScreenElementDims id = <id>
+	<container_id> :SE_SetProps dims = ((1.0, 0.0) * <width> + (0.0, 1.0) * <Height> + (0.0, 20.0))
 	if (<boss_structure>.gem_texture = battle_material)
-		mod a = <i> b = <num_materials>
-		createscreenelement {
-			type = spriteelement
+		Mod a = <i> b = <num_materials>
+		CreateScreenElement {
+			type = SpriteElement
 			parent = <container_id>
 			rgba = [255 255 255 255]
 			just = [right top]
@@ -148,26 +148,26 @@ script create_battle_helper_menu \{device_num = 0
 			local_id = gem
 			pos = (-10.0, 7.0)
 			scale = 0.5
-			material = (($battle_explanation_bullet_materials) [<mod>])
+			material = (($battle_explanation_bullet_materials) [<Mod>])
 			alpha = 0
-			materialprops = [
+			MaterialProps = [
 				{
-					name = m_startfade
-					property = 1.0
+					name = m_startFade
+					Property = 1.0
 				}
 				{
-					name = m_endfade
-					property = 1.0
+					name = m_endFade
+					Property = 1.0
 				}
 				{
-					name = m_playerindex
-					property = 1.0
+					name = m_playerIndex
+					Property = 1.0
 				}
 			]
 		}
 	else
-		createscreenelement {
-			type = spriteelement
+		CreateScreenElement {
+			type = SpriteElement
 			parent = <container_id>
 			texture = (<boss_structure>.gem_texture)
 			rgba = [255 255 255 255]
@@ -180,21 +180,21 @@ script create_battle_helper_menu \{device_num = 0
 			alpha = 0
 		}
 	endif
-	runscriptonscreenelement id = <container_id> battle_fly_in_anim params = {idx = <i> container_id = <container_id>}
+	RunScriptOnScreenElement id = <container_id> battle_fly_in_anim params = {idx = <i> container_id = <container_id>}
 	<i> = (<i> + 1)
 	repeat <num_bullets>
-	if isps3
-		setprojectspecificspriteparams \{highwaystartfade = 1.0
-			highwayendfade = 1.0}
+	if IsPs3
+		SetProjectSpecificSpriteParams \{HighwayStartFade = 1.0
+			HighwayEndFade = 1.0}
 	endif
-	if iswinport
-		change \{ghighwaystartfade = 1.0}
-		change \{ghighwayendfade = 1.0}
+	if IsWinPort
+		change \{gHighwayStartFade = 1.0}
+		change \{gHighwayEndFade = 1.0}
 	endif
-	if structurecontains \{structure = boss_structure
+	if StructureContains \{Structure = boss_structure
 			image}
-		createscreenelement {
-			type = spriteelement
+		CreateScreenElement {
+			type = SpriteElement
 			id = who_wants_to_battle_image
 			parent = battle_explanation_container
 			rgba = [255 255 255 255]
@@ -207,8 +207,8 @@ script create_battle_helper_menu \{device_num = 0
 		}
 	endif
 	<title_offset> = (-10.0, -20.0)
-	createscreenelement {
-		type = spriteelement
+	CreateScreenElement {
+		type = SpriteElement
 		parent = battle_explanation_container
 		pos = ((910.0, 165.0) + <title_offset>)
 		dims = (384.0, 96.0)
@@ -217,8 +217,8 @@ script create_battle_helper_menu \{device_num = 0
 		z_priority = 50
 		alpha = 0.5
 	}
-	createscreenelement {
-		type = spriteelement
+	CreateScreenElement {
+		type = SpriteElement
 		parent = battle_explanation_container
 		pos = ((910.0, 145.0) + <title_offset>)
 		dims = (384.0, 96.0)
@@ -233,14 +233,14 @@ script create_battle_helper_menu \{device_num = 0
 			$game_mode = p2_battle ||
 			$game_mode = p2_quickplay)
 		exclusive_mp_controllers = [0 , 0]
-		setarrayelement arrayname = exclusive_mp_controllers index = 0 newvalue = ($player1_device)
-		setarrayelement arrayname = exclusive_mp_controllers index = 1 newvalue = ($player2_device)
+		SetArrayElement ArrayName = exclusive_mp_controllers index = 0 newvalue = ($player1_device)
+		SetArrayElement ArrayName = exclusive_mp_controllers index = 1 newvalue = ($player2_device)
 		exclusive_device = <exclusive_mp_controllers>
 	else
 		exclusive_device = ($primary_controller)
 	endif
-	createscreenelement {
-		type = textelement
+	CreateScreenElement {
+		type = TextElement
 		parent = battle_explanation_container
 		id = who_wants_to_battle_text
 		text = (<boss_structure>.title)
@@ -260,10 +260,10 @@ script create_battle_helper_menu \{device_num = 0
 		]
 		exclusive_device = <exclusive_device>
 	}
-	getscreenelementdims id = <id>
-	fit_text_in_rectangle id = <id> dims = ((530.0, 0.0) + (<height> * (0.0, 1.0))) start_x_scale = 1 start_y_scale = 1 only_if_larger_x = 1
-	createscreenelement {
-		type = textelement
+	GetScreenElementDims id = <id>
+	fit_text_in_rectangle id = <id> dims = ((530.0, 0.0) + (<Height> * (0.0, 1.0))) start_x_scale = 1 start_y_scale = 1 only_if_larger_x = 1
+	CreateScreenElement {
+		type = TextElement
 		parent = bullet_spacer
 		text = (<boss_structure>.prompt)
 		font = fontgrid_text_a8
@@ -277,9 +277,9 @@ script create_battle_helper_menu \{device_num = 0
 		shadow_rgba = (($g_menu_colors).black)
 		alpha = 0
 	}
-	runscriptonscreenelement id = <id> wait_and_show_ready
+	RunScriptOnScreenElement id = <id> wait_and_show_ready
 	if ($gbh_first_time_in = 0)
-		launchevent \{type = focus
+		LaunchEvent \{type = focus
 			target = who_wants_to_battle_text}
 		set_user_control_color \{text_rgba = [
 				200
@@ -293,21 +293,21 @@ script create_battle_helper_menu \{device_num = 0
 				0
 				200
 			]}
-		add_user_control_helper \{text = qs(0x33b59779)
+		add_user_control_helper \{text = qs("BATTLE")
 			button = green
 			z = 100}
-		add_user_control_helper \{text = qs(0x0bbc9ad9)
+		add_user_control_helper \{text = qs("DECLINE")
 			button = red
 			z = 100}
 	endif
 endscript
 
 script battle_helper_continue 
-	playsound \{guitar_select_affirmation_1
+	PlaySound \{Guitar_Select_Affirmation_1
 		vol = -5
 		buss = front_end}
-	spawnscriptnow \{crowd_sustain_boss_battle}
-	se_setprops \{block_events}
+	spawnscriptnow \{Crowd_Sustain_Boss_Battle}
+	SE_SetProps \{block_events}
 	change \{is_changing_levels = 1}
 	restart_song
 	change \{is_changing_levels = 0}
@@ -315,11 +315,11 @@ script battle_helper_continue
 endscript
 
 script battle_helper_back 
-	soundevent \{event = menu_warning_sfx_softer}
-	soundevent \{event = crowd_fail_song_sfx_softer}
-	skate8_sfx_backgrounds_new_area \{bg_sfx_area = frontend_menu_music}
+	SoundEvent \{event = Menu_Warning_SFX_softer}
+	SoundEvent \{event = Crowd_Fail_Song_SFX_softer}
+	Skate8_SFX_Backgrounds_New_Area \{BG_SFX_Area = FrontEnd_Menu_Music}
 	if ($game_mode = p1_career)
-		writeachievements \{achievement = wuss_out}
+		WriteAchievements \{achievement = wuss_out}
 	endif
 	generic_event_back \{state = uistate_gig_posters}
 endscript
@@ -333,34 +333,34 @@ script destroy_battle_helper_menu
 endscript
 
 script battle_fly_in_anim 
-	resolvescreenelementid id = {<container_id> child = text}
+	ResolveScreenElementId id = {<container_id> child = text}
 	<text_id> = <resolved_id>
-	resolvescreenelementid id = {<container_id> child = gem}
+	ResolveScreenElementId id = {<container_id> child = gem}
 	<gem_id> = <resolved_id>
-	wait \{0.15
+	Wait \{0.15
 		seconds}
-	wait (<idx> * 2.25) seconds
-	<gem_id> :se_getprops
+	Wait (<idx> * 2.25) seconds
+	<gem_id> :SE_GetProps
 	<gem_final_pos> = <pos>
-	<gem_id> :se_setprops pos = (<gem_final_pos> + (-600.0, 0.0)) alpha = 1
-	<gem_id> :se_setprops pos = <gem_final_pos> time = 0.35000002 motion = ease_in
-	<text_id> :se_setprops time = 0.2 motion = ease_in rgba = [255 255 255 255] alpha = 1
-	<text_id> :se_waitprops
-	<text_id> :se_setprops time = 0.1 motion = ease_out rgba = (($g_menu_colors).lt_violet_grey)
-	spawnscriptnow \{boss_battle_whoosh_sound}
+	<gem_id> :SE_SetProps pos = (<gem_final_pos> + (-600.0, 0.0)) alpha = 1
+	<gem_id> :SE_SetProps pos = <gem_final_pos> time = 0.35000002 motion = ease_in
+	<text_id> :SE_SetProps time = 0.2 motion = ease_in rgba = [255 255 255 255] alpha = 1
+	<text_id> :SE_WaitProps
+	<text_id> :SE_SetProps time = 0.1 motion = ease_out rgba = (($g_menu_colors).lt_violet_grey)
+	spawnscriptnow \{Boss_Battle_Whoosh_Sound}
 endscript
 
 script wait_and_show_ready 
 	<time> = 9.8
 	if ($gbh_first_time_in = 1)
-		se_setprops \{alpha = 0}
-		wait \{4
+		SE_SetProps \{alpha = 0}
+		Wait \{4
 			seconds}
-		launchevent \{type = focus
+		LaunchEvent \{type = focus
 			target = who_wants_to_battle_text}
-		wait (<time> - 4.0) seconds
-		soundevent \{event = boss_battle_press_sound}
-		se_setprops \{time = 0.2
+		Wait (<time> - 4.0) seconds
+		SoundEvent \{event = Boss_Battle_Press_Sound}
+		SE_SetProps \{time = 0.2
 			motion = ease_in
 			rgba = [
 				255
@@ -369,8 +369,8 @@ script wait_and_show_ready
 				255
 			]
 			alpha = 1}
-		se_waitprops
-		se_setprops \{time = 0.1
+		SE_WaitProps
+		SE_SetProps \{time = 0.1
 			motion = ease_in
 			rgba = [
 				80
@@ -390,16 +390,16 @@ script wait_and_show_ready
 				180
 				255
 			]}
-		add_user_control_helper \{text = qs(0x33b59779)
+		add_user_control_helper \{text = qs("BATTLE")
 			button = green
 			z = 100}
-		add_user_control_helper \{text = qs(0x0bbc9ad9)
+		add_user_control_helper \{text = qs("DECLINE")
 			button = red
 			z = 100}
 	else
-		wait <time> seconds
-		soundevent \{event = boss_battle_press_sound}
-		se_setprops \{time = 0.2
+		Wait <time> seconds
+		SoundEvent \{event = Boss_Battle_Press_Sound}
+		SE_SetProps \{time = 0.2
 			motion = ease_in
 			rgba = [
 				255
@@ -408,8 +408,8 @@ script wait_and_show_ready
 				255
 			]
 			alpha = 1}
-		se_waitprops
-		se_setprops \{time = 0.1
+		SE_WaitProps
+		SE_SetProps \{time = 0.1
 			motion = ease_in
 			rgba = [
 				80

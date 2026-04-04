@@ -1,7 +1,7 @@
 
 script ui_create_cag_custom_hardware 
 	make_generic_menu \{vmenu_id = create_cag_custom_hardware_vmenu
-		title = qs(0xf307bba2)
+		title = qs("Hardware")
 		show_history}
 	setup_cas_menu_handlers \{vmenu_id = create_cag_custom_hardware_vmenu
 		camera_list = [
@@ -13,12 +13,12 @@ script ui_create_cag_custom_hardware
 		zoom_camera = 'customize_cag_Zoom'}
 	add_generic_menu_icon_item {
 		icon = icon_cag_pickguard
-		text = qs(0xd35350a0)
-		choose_state = uistate_cag_select_part_inclusion
+		text = qs("PICKGUARD")
+		choose_state = UIstate_cag_select_part_inclusion
 		choose_state_data = {
 			part = (<instrument_info>.pick_guard_part)
 			body_part = (<instrument_info>.body_part)
-			text = qs(0x950867d1)
+			text = qs("Pickguard")
 			cam_name = 'cag_custom_hardware'
 			camera_list = ['cag_custom_hardware' 'cag_custom_hardware_R' 'cag_custom_hardware_B' 'cag_custom_hardware_L']
 			zoom_camera = 'customize_cag_Zoom'
@@ -28,15 +28,15 @@ script ui_create_cag_custom_hardware
 		}
 		ui_event_script = ui_event_if_camera_finished
 	}
-	get_section_index_from_desc_id part = (<instrument_info>.pick_guard_part) target_desc_id = finishes
-	if gotparam \{section_index}
+	get_section_index_from_desc_id part = (<instrument_info>.pick_guard_part) target_desc_id = Finishes
+	if GotParam \{section_index}
 		add_generic_menu_icon_item {
 			icon = icon_pickguard_finishes
-			text = qs(0x1f080e95)
-			choose_state = uistate_cap_artist_layer_popout
+			text = qs("PICKGUARD FINISH")
+			choose_state = UIstate_cap_artist_layer_popout
 			choose_state_data = {
 				part = (<instrument_info>.pick_guard_part)
-				text = qs(0xe5477553)
+				text = qs("Pickguard Finish")
 				section_index = <section_index>
 				camera_list = ['cag_custom_hardware' 'cag_custom_hardware_R' 'cag_custom_hardware_B' 'cag_custom_hardware_L']
 				zoom_camera = 'customize_cag_Zoom'
@@ -45,16 +45,16 @@ script ui_create_cag_custom_hardware
 			}
 			ui_event_script = ui_event_if_camera_finished
 		}
-		removeparameter \{section_index}
+		RemoveParameter \{section_index}
 	endif
 	add_generic_menu_icon_item {
 		icon = icon_cag_pickups
-		text = qs(0xa3273aad)
-		choose_state = uistate_cag_select_part_inclusion
+		text = qs("PICKUPS")
+		choose_state = UIstate_cag_select_part_inclusion
 		choose_state_data = {
 			part = (<instrument_info>.pickups_part)
 			body_part = (<instrument_info>.body_part)
-			text = qs(0x3f270e79)
+			text = qs("Pickups")
 			cam_name = 'cag_custom_hardware'
 			camera_list = ['cag_custom_hardware' 'cag_custom_hardware_R' 'cag_custom_hardware_B' 'cag_custom_hardware_L']
 			zoom_camera = 'customize_cag_Zoom'
@@ -66,12 +66,12 @@ script ui_create_cag_custom_hardware
 	}
 	add_generic_menu_icon_item {
 		icon = icon_cag_knobs
-		text = qs(0x18bd9d99)
-		choose_state = uistate_cag_select_part_inclusion
+		text = qs("KNOBS")
+		choose_state = UIstate_cag_select_part_inclusion
 		choose_state_data = {
 			part = (<instrument_info>.knobs_part)
 			body_part = (<instrument_info>.body_part)
-			text = qs(0xd3d17165)
+			text = qs("Knobs")
 			cam_name = 'cag_custom_hardware'
 			camera_list = ['cag_custom_hardware' 'cag_custom_hardware_R' 'cag_custom_hardware_B' 'cag_custom_hardware_L']
 			zoom_camera = 'customize_cag_Zoom'
@@ -83,12 +83,12 @@ script ui_create_cag_custom_hardware
 	}
 	add_generic_menu_icon_item {
 		icon = icon_cag_bridges
-		text = qs(0xbeaa0dc6)
-		choose_state = uistate_cag_select_part_inclusion
+		text = qs("BRIDGES")
+		choose_state = UIstate_cag_select_part_inclusion
 		choose_state_data = {
 			part = (<instrument_info>.bridge_part)
 			body_part = (<instrument_info>.body_part)
-			text = qs(0x22aa3912)
+			text = qs("Bridges")
 			cam_name = 'cag_custom_hardware'
 			camera_list = ['cag_custom_hardware' 'cag_custom_hardware_R' 'cag_custom_hardware_B' 'cag_custom_hardware_L']
 			zoom_camera = 'customize_cag_Zoom'
@@ -100,14 +100,14 @@ script ui_create_cag_custom_hardware
 	}
 	add_generic_menu_icon_item {
 		icon = icon_cag_strings
-		text = qs(0x636783b1)
-		choose_state = uistate_cag_custom_strings
-		choose_state_data = {part = (<instrument_info>.string_part) text = qs(0xff67b765) cam_name = 'DrumStart' is_popup}
+		text = qs("STRINGS")
+		choose_state = UIstate_cag_custom_strings
+		choose_state_data = {part = (<instrument_info>.string_part) text = qs("Strings") cam_name = 'DrumStart' is_popup}
 		ui_event_script = ui_event_if_camera_finished
 	}
 	change \{generic_menu_block_input = 0}
 	menu_finish \{car_helper_text}
-	launchevent type = focus target = create_cag_custom_hardware_vmenu data = {child_index = <selected_index>}
+	LaunchEvent type = focus target = create_cag_custom_hardware_vmenu data = {child_index = <selected_index>}
 endscript
 
 script ui_destroy_cag_custom_hardware 

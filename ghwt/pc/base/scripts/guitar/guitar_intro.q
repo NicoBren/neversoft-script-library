@@ -57,16 +57,16 @@ immediate_sequence_props = {
 current_intro = $fast_intro_sequence_props
 
 script play_intro 
-	killspawnedscript \{name = loading_screen_crowd_swell}
-	killspawnedscript \{name = crowd_loading_whistle}
+	KillSpawnedScript \{name = Loading_Screen_Crowd_Swell}
+	KillSpawnedScript \{name = Crowd_Loading_Whistle}
 	printstruct <...>
 	start_drummer_cameras
-	gamemode_getnumplayersshown
+	GameMode_GetNumPlayersShown
 	if ($show_boss_helper_screen = 1)
 		player = 1
 		begin
-		formattext checksumname = player_status 'player%i_status' i = <player>
-		enableinput off controller = ($<player_status>.controller)
+		FormatText checksumname = player_status 'player%i_status' i = <player>
+		EnableInput off controller = ($<player_status>.controller)
 		player = (<player> + 1)
 		repeat <num_players_shown>
 		intro_check_for_celeb_intro_ui
@@ -76,10 +76,10 @@ script play_intro
 		disable_bg_viewport
 		return
 	endif
-	killspawnedscript \{name = guitarevent_songfailed_spawned}
-	if gotparam \{fast}
+	KillSpawnedScript \{name = GuitarEvent_SongFailed_Spawned}
+	if GotParam \{Fast}
 		change \{current_intro = $fastintro_sequence_props}
-	elseif gotparam \{practice}
+	elseif GotParam \{practice}
 		change \{current_intro = $practice_sequence_props}
 	else
 		change \{current_intro = $intro_sequence_props}
@@ -89,14 +89,14 @@ script play_intro
 			id = intro_scripts}
 	endif
 	intro_check_for_celeb_intro_ui
-	if NOT ($cheat_performancemode = 1 && $is_network_game = 0)
+	if NOT ($Cheat_PerformanceMode = 1 && $is_network_game = 0)
 		spawnscriptnow \{intro_highway_move
 			id = intro_scripts}
 	endif
 	player = 1
 	begin
-	formattext checksumname = player_status 'player%i_status' i = <player>
-	formattext textname = player_text 'p%i' i = <player>
+	FormatText checksumname = player_status 'player%i_status' i = <player>
+	FormatText TextName = player_text 'p%i' i = <player>
 	spawnscriptnow intro_buttonup_ripple params = <...> id = intro_scripts
 	player = (<player> + 1)
 	repeat <num_players_shown>
@@ -104,77 +104,77 @@ script play_intro
 		spawnscriptnow \{intro_hud_move
 			id = intro_scripts}
 	endif
-	bandmanager_setplayingintroanims
+	BandManager_SetPlayingIntroAnims
 endscript
 
 script destroy_intro 
-	killspawnedscript \{id = intro_scripts}
-	killspawnedscript \{name = song_intro_kick_sfx_waiting}
-	killspawnedscript \{name = song_intro_highway_up_sfx_waiting}
-	killspawnedscript \{name = move_highway_2d}
-	killspawnedscript \{name = intro_buttonup_ripple}
-	killspawnedscript \{name = intro_hud_move}
-	destroyscreenelement \{id = intro_container}
+	KillSpawnedScript \{id = intro_scripts}
+	KillSpawnedScript \{name = Song_Intro_Kick_SFX_Waiting}
+	KillSpawnedScript \{name = Song_Intro_Highway_Up_SFX_Waiting}
+	KillSpawnedScript \{name = move_highway_2d}
+	KillSpawnedScript \{name = intro_buttonup_ripple}
+	KillSpawnedScript \{name = intro_hud_move}
+	DestroyScreenElement \{id = intro_container}
 	player = 1
 	begin
-	formattext checksumname = player_status 'player%i_status' i = <player> addtostringlookup
-	enableinput controller = ($<player_status>.controller)
+	FormatText checksumname = player_status 'player%i_status' i = <player> AddToStringLookup
+	EnableInput controller = ($<player_status>.controller)
 	player = (<player> + 1)
 	repeat $current_num_players
 endscript
 
 script intro_buttonup_ripple 
-	enableinput off controller = ($<player_status>.controller)
+	EnableInput off controller = ($<player_status>.controller)
 	begin
-	getsongtimems
+	GetSongTimeMs
 	if ($current_intro.button_ripple_start_time + $current_starttime < <time>)
 		break
 	endif
-	wait \{1
+	Wait \{1
 		gameframe}
 	repeat
 	if ($current_intro.button_ripple_per_button_time = 0)
-		enableinput controller = ($<player_status>.controller)
+		EnableInput controller = ($<player_status>.controller)
 		return
 	endif
-	getarraysize \{$gem_colors}
+	GetArraySize \{$gem_colors}
 	all_vocals = 1
 	player = 1
 	begin
-	formattext checksumname = current_player_status 'player%i_status' i = <player> addtostringlookup
-	if NOT ($<current_player_status>.part = vocals)
+	FormatText checksumname = current_player_status 'player%i_status' i = <player> AddToStringLookup
+	if NOT ($<current_player_status>.part = Vocals)
 		all_vocals = 0
 		break
 	endif
 	player = (<player> + 1)
 	repeat $current_num_players
 	if (<all_vocals> = 0)
-		soundevent \{event = notes_ripple_up_sfx}
+		SoundEvent \{event = Notes_Ripple_Up_SFX}
 	endif
-	extendcrc button_up_pixel_array ($<player_status>.text) out = pixel_array
+	ExtendCRC button_up_pixel_array ($<player_status>.text) out = pixel_array
 	buttonup_count = 0
 	begin
-	wait ($current_intro.button_ripple_per_button_time / 1000.0) seconds
+	Wait ($current_intro.button_ripple_per_button_time / 1000.0) seconds
 	array_count = 0
 	begin
 	color = ($gem_colors [<array_count>])
 	if (<array_count> = <buttonup_count>)
-		setarrayelement arrayname = <pixel_array> globalarray index = <array_count> newvalue = $button_up_pixels
+		SetArrayElement ArrayName = <pixel_array> GlobalArray index = <array_count> newvalue = $button_up_pixels
 	endif
 	array_count = (<array_count> + 1)
 	repeat <array_size>
 	buttonup_count = (<buttonup_count> + 1)
 	repeat (<array_size> + 1)
-	enableinput controller = ($<player_status>.controller)
+	EnableInput controller = ($<player_status>.controller)
 endscript
 
 script intro_song_info 
 	begin
-	getsongtimems
+	GetSongTimeMs
 	if ($current_intro.song_title_start_time + $current_starttime < <time>)
 		break
 	endif
-	wait \{1
+	Wait \{1
 		gameframe}
 	repeat
 	if ($current_intro.song_title_on_time = 0)
@@ -187,7 +187,7 @@ script intro_song_info
 		year = 2008
 		if ui_event_exists_in_stack \{name = 'setlist'}
 			jam_directory_index = ($temp_jamsession_song_list [($quickplay_song_list_current)])
-			getarraysize ($jam_curr_directory_listing) param = directory_size
+			GetArraySize ($jam_curr_directory_listing) param = directory_size
 			if (<jam_directory_index> > 0 && <jam_directory_index> < <directory_size>)
 				<year> = ($jam_curr_directory_listing [<jam_directory_index>].year)
 			endif
@@ -195,24 +195,24 @@ script intro_song_info
 			jam_struct = ($jamsession_songlist_props.jamsession)
 			year = (<jam_struct>.year_num)
 		endif
-		if NOT gotparam \{song_artist}
+		if NOT GotParam \{song_artist}
 			get_savegame_from_controller controller = ($primary_controller)
 			get_current_band_info
-			getglobaltags savegame = <savegame> <band_info>
-			song_artist = qs(0x98b69c18)
-			if gotparam \{name}
-				if (<name> != qs(0x03ac90f0))
+			GetGlobalTags savegame = <savegame> <band_info>
+			song_artist = qs("Custom Song")
+			if GotParam \{name}
+				if (<name> != qs("\L"))
 					song_artist = <name>
 				endif
 			endif
-			formattext textname = year_text qs(0x06d54ab3) d = <year>
+			FormatText TextName = year_text qs("\L, %d") d = <year>
 			song_artist = (<song_artist> + <year_text>)
 		endif
 	endif
-	createscreenelement {
+	CreateScreenElement {
 		parent = root_window
 		id = intro_container
-		type = descinterface
+		type = DescInterface
 		desc = 'song_intro'
 		alpha = 0
 		z_priority = 500
@@ -220,45 +220,45 @@ script intro_song_info
 		intro_title_text = <song_title>
 		intro_performed_text = <song_artist_text>
 	}
-	intro_container :se_setprops alpha = 1 time = ($current_intro.song_title_fade_time / 1000.0)
-	intro_container :se_waitprops
-	wait ($current_intro.song_title_on_time / 1000.0) seconds
-	intro_container :se_setprops alpha = 0 time = ($current_intro.song_title_fade_time / 1000.0)
-	intro_container :se_waitprops
-	destroyscreenelement \{id = intro_container}
+	intro_container :SE_SetProps alpha = 1 time = ($current_intro.song_title_fade_time / 1000.0)
+	intro_container :SE_WaitProps
+	Wait ($current_intro.song_title_on_time / 1000.0) seconds
+	intro_container :SE_SetProps alpha = 0 time = ($current_intro.song_title_fade_time / 1000.0)
+	intro_container :SE_WaitProps
+	DestroyScreenElement \{id = intro_container}
 endscript
 
 script intro_highway_move 
-	killspawnedscript \{name = oneshotsbetweensongs}
-	killspawnedscript \{name = surgebetweensongs}
+	KillSpawnedScript \{name = OneShotsBetweenSongs}
+	KillSpawnedScript \{name = SurgeBetweenSongs}
 	begin
-	getsongtimems
+	GetSongTimeMs
 	if ($current_intro.highway_start_time + $current_starttime < <time>)
 		break
 	endif
-	wait \{1
+	Wait \{1
 		gameframe}
 	repeat
 	all_vocals = 1
 	player = 1
 	begin
-	formattext checksumname = player_status 'player%i_status' i = <player> addtostringlookup
-	if NOT ($<player_status>.part = vocals)
+	FormatText checksumname = player_status 'player%i_status' i = <player> AddToStringLookup
+	if NOT ($<player_status>.part = Vocals)
 		all_vocals = 0
 		break
 	endif
 	player = (<player> + 1)
 	repeat $current_num_players
 	if (<all_vocals> = 0)
-		spawnscriptnow \{song_intro_highway_up_sfx_waiting}
+		spawnscriptnow \{Song_Intro_Highway_Up_SFX_Waiting}
 	else
-		spawnscriptnow \{song_intro_highway_up_vocals_sfx_waiting}
+		spawnscriptnow \{Song_Intro_Highway_Up_Vocals_SFX_Waiting}
 	endif
-	gamemode_getnumplayersshown
+	GameMode_GetNumPlayersShown
 	player = 1
 	begin
-	formattext checksumname = player_status 'player%i_status' i = <player> addtostringlookup
-	formattext textname = player_text 'p%i' i = <player> addtostringlookup
+	FormatText checksumname = player_status 'player%i_status' i = <player> AddToStringLookup
+	FormatText TextName = player_text 'p%i' i = <player> AddToStringLookup
 	vocals_highway_slide_in player = <player>
 	move_highway_camera_to_default <...> time = ($current_intro.highway_move_time / 1000.0)
 	player = (<player> + 1)
@@ -267,18 +267,18 @@ endscript
 
 script intro_hud_move 
 	begin
-	getsongtimems
+	GetSongTimeMs
 	if ($current_intro.hud_start_time + $current_starttime < <time>)
 		break
 	endif
-	wait \{1
+	Wait \{1
 		gameframe}
 	repeat
-	gamemode_getnumplayersshown
+	GameMode_GetNumPlayersShown
 	player = 1
 	begin
-	formattext checksumname = player_status 'player%i_status' i = <player> addtostringlookup
-	formattext textname = player_text 'p%i' i = <player> addtostringlookup
+	FormatText checksumname = player_status 'player%i_status' i = <player> AddToStringLookup
+	FormatText TextName = player_text 'p%i' i = <player> AddToStringLookup
 	move_hud_to_default time = ($current_intro.hud_move_time / 1000.0)
 	player = (<player> + 1)
 	repeat <num_players_shown>
@@ -288,18 +288,18 @@ script intro_hud_move
 	all_vocals = 1
 	player = 1
 	begin
-	formattext checksumname = player_status 'player%i_status' i = <player> addtostringlookup
-	if NOT ($<player_status>.part = vocals)
+	FormatText checksumname = player_status 'player%i_status' i = <player> AddToStringLookup
+	if NOT ($<player_status>.part = Vocals)
 		all_vocals = 0
 		break
 	endif
 	player = (<player> + 1)
 	repeat $current_num_players
-	spawnscriptnow \{song_intro_kick_sfx_waiting}
+	spawnscriptnow \{Song_Intro_Kick_SFX_Waiting}
 endscript
 
 script intro_check_for_celeb_intro_ui 
-	transition_getprefix type = ($current_playing_transition)
+	Transition_GetPrefix type = ($current_playing_transition)
 	if (<celeb_intro> = 1)
 		spawnscriptnow intro_celeb_ui params = {celeb_intro = <type_textnl>}
 	endif
@@ -313,14 +313,14 @@ script intro_celeb_ui
 		case intro_zakk
 		<start_delay> = 9.0
 		<duration> = 4.0
-		skate8_sfx_backgrounds_new_area \{bg_sfx_area = $current_crowd_looping_bg_area_good}
+		Skate8_SFX_Backgrounds_New_Area \{BG_SFX_Area = $Current_Crowd_Looping_BG_Area_Good}
 		case intro_hayley
 		<start_delay> = 4.3
 		<duration> = 4.0
 		case intro_ted
 		<start_delay> = 8.1
 		<duration> = 4.0
-		skate8_sfx_backgrounds_new_area \{bg_sfx_area = $current_crowd_looping_bg_area_good}
+		Skate8_SFX_Backgrounds_New_Area \{BG_SFX_Area = $Current_Crowd_Looping_BG_Area_Good}
 		case intro_billy
 		<start_delay> = 2.6
 		<duration> = 4.0
@@ -337,67 +337,67 @@ script intro_celeb_ui
 		<start_delay> = 2.0
 		<duration> = 4.0
 	endswitch
-	formattext textname = desc 'celeb_%c' c = <celeb_intro>
-	wait <start_delay> seconds
-	soundevent \{event = boss_logo_first_part}
-	createscreenelement \{type = containerelement
+	FormatText TextName = desc 'celeb_%c' c = <celeb_intro>
+	Wait <start_delay> seconds
+	SoundEvent \{event = Boss_Logo_First_Part}
+	CreateScreenElement \{type = ContainerElement
 		id = celeb_intro_ui_cont
 		parent = root_window
 		pos = (0.0, 0.0)
 		z_priority = 100}
-	setsearchallassetcontexts
-	createscreenelement {
+	SetSearchAllAssetContexts
+	CreateScreenElement {
 		parent = celeb_intro_ui_cont
 		id = celeb_intro_ui
-		type = descinterface
+		type = DescInterface
 		desc = <desc>
 	}
-	setsearchallassetcontexts \{off}
-	celeb_intro_ui :desc_resolvealias \{name = alias_celeb_intro_banner}
-	assignalias id = <resolved_id> alias = celeb_intro_banner
-	celeb_intro_banner :se_setprops \{alpha = 0.0}
-	celeb_intro_banner :se_getprops \{pos}
+	SetSearchAllAssetContexts \{off}
+	celeb_intro_ui :Desc_ResolveAlias \{name = alias_celeb_intro_banner}
+	AssignAlias id = <resolved_id> alias = celeb_intro_banner
+	celeb_intro_banner :SE_SetProps \{alpha = 0.0}
+	celeb_intro_banner :SE_GetProps \{pos}
 	<banner_pos> = <pos>
-	celeb_intro_ui :desc_resolvealias \{name = alias_celeb_intro_alltherest}
-	assignalias id = <resolved_id> alias = celeb_intro_alltherest
-	celeb_intro_alltherest :se_setprops \{alpha = 0.0}
-	celeb_intro_alltherest :se_getprops \{pos}
+	celeb_intro_ui :Desc_ResolveAlias \{name = alias_celeb_intro_alltherest}
+	AssignAlias id = <resolved_id> alias = celeb_intro_alltherest
+	celeb_intro_alltherest :SE_SetProps \{alpha = 0.0}
+	celeb_intro_alltherest :SE_GetProps \{pos}
 	<alltherest_pos> = <pos>
 	<time_between_bounces> = 0.4
-	celeb_intro_banner :obj_spawnscriptnow intro_celeb_ui_bounce params = {id = celeb_intro_banner starting_pos = <banner_pos>}
-	wait <time_between_bounces> seconds
-	celeb_intro_alltherest :obj_spawnscriptnow intro_celeb_ui_bounce params = {id = celeb_intro_alltherest starting_pos = <alltherest_pos>}
-	wait (<duration> - <time_between_bounces>) seconds
-	soundevent \{event = boss_logo_second_part}
+	celeb_intro_banner :Obj_SpawnScriptNow intro_celeb_ui_bounce params = {id = celeb_intro_banner starting_pos = <banner_pos>}
+	Wait <time_between_bounces> seconds
+	celeb_intro_alltherest :Obj_SpawnScriptNow intro_celeb_ui_bounce params = {id = celeb_intro_alltherest starting_pos = <alltherest_pos>}
+	Wait (<duration> - <time_between_bounces>) seconds
+	SoundEvent \{event = Boss_Logo_Second_Part}
 	<zoom_out_time> = 0.15
-	celeb_intro_alltherest :se_setprops scale = 3.0 alpha = 0.0 pos = (<alltherest_pos> + (0.0, 300.0)) time = <zoom_out_time>
-	wait \{0.1
+	celeb_intro_alltherest :SE_SetProps scale = 3.0 alpha = 0.0 pos = (<alltherest_pos> + (0.0, 300.0)) time = <zoom_out_time>
+	Wait \{0.1
 		seconds}
-	celeb_intro_banner :se_setprops scale = 3.0 alpha = 0.0 pos = (<banner_pos> + (0.0, 300.0)) time = <zoom_out_time>
-	celeb_intro_banner :se_waitprops
-	destroyscreenelement \{id = celeb_intro_ui_cont}
+	celeb_intro_banner :SE_SetProps scale = 3.0 alpha = 0.0 pos = (<banner_pos> + (0.0, 300.0)) time = <zoom_out_time>
+	celeb_intro_banner :SE_WaitProps
+	DestroyScreenElement \{id = celeb_intro_ui_cont}
 endscript
 
 script intro_celeb_ui_bounce 
 	<zoom_in_time> = 0.25
 	<first_bounce_time> = 0.15
 	<settle_in_time> = 0.15
-	<id> :se_setprops scale = 3.0 pos = (<starting_pos> + (0.0, 200.0))
-	<id> :se_setprops scale = 0.8 alpha = 1.0 pos = (<starting_pos>) motion = ease_in time = <zoom_in_time>
-	<id> :se_waitprops
-	<id> :se_setprops scale = 0.9 pos = (<starting_pos> + (0.0, 5.0)) moion = ease_out time = <first_bounce_time>
-	<id> :se_waitprops
-	<id> :se_setprops scale = 0.8 pos = (<starting_pos>) motion = ease_in time = <settle_in_time>
+	<id> :SE_SetProps scale = 3.0 pos = (<starting_pos> + (0.0, 200.0))
+	<id> :SE_SetProps scale = 0.8 alpha = 1.0 pos = (<starting_pos>) motion = ease_in time = <zoom_in_time>
+	<id> :SE_WaitProps
+	<id> :SE_SetProps scale = 0.9 pos = (<starting_pos> + (0.0, 5.0)) moion = ease_out time = <first_bounce_time>
+	<id> :SE_WaitProps
+	<id> :SE_SetProps scale = 0.8 pos = (<starting_pos>) motion = ease_in time = <settle_in_time>
 endscript
 
 script kill_intro_celeb_ui 
-	if scriptisrunning \{wait_and_show_boss_helper_after_intro}
-		killspawnedscript \{name = wait_and_show_boss_helper_after_intro}
+	if ScriptIsRunning \{wait_and_show_boss_helper_after_intro}
+		KillSpawnedScript \{name = wait_and_show_boss_helper_after_intro}
 	endif
-	if scriptisrunning \{intro_celeb_ui}
-		if screenelementexists \{id = celeb_intro_ui_cont}
-			destroyscreenelement \{id = celeb_intro_ui_cont}
+	if ScriptIsRunning \{intro_celeb_ui}
+		if ScreenElementExists \{id = celeb_intro_ui_cont}
+			DestroyScreenElement \{id = celeb_intro_ui_cont}
 		endif
-		killspawnedscript \{name = intro_celeb_ui}
+		KillSpawnedScript \{name = intro_celeb_ui}
 	endif
 endscript

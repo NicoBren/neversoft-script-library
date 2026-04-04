@@ -1,64 +1,64 @@
-l_guit_gsb_g_floaton_set = {
-	stance_a = {
-		idle = {
+L_GUIT_GSB_G_FloatOn_set = {
+	Stance_A = {
+		Idle = {
 			good = {
-				slow = [
-					gsb_g_floaton01
-					gsb_g_floaton02
-					gsb_g_floaton03
-					gsb_g_floaton04
+				Slow = [
+					GSB_G_FloatOn01
+					GSB_G_FloatOn02
+					GSB_G_FloatOn03
+					GSB_G_FloatOn04
 				]
-				med = [
-					gsb_g_floaton01
-					gsb_g_floaton02
-					gsb_g_floaton03
-					gsb_g_floaton04
+				Med = [
+					GSB_G_FloatOn01
+					GSB_G_FloatOn02
+					GSB_G_FloatOn03
+					GSB_G_FloatOn04
 				]
-				fast = [
-					gsb_g_floaton01
-					gsb_g_floaton02
-					gsb_g_floaton03
-					gsb_g_floaton04
-				]
-			}
-			normal = {
-				slow = [
-					gsb_g_floaton01
-					gsb_g_floaton02
-					gsb_g_floaton03
-					gsb_g_floaton04
-				]
-				med = [
-					gsb_g_floaton01
-					gsb_g_floaton02
-					gsb_g_floaton03
-					gsb_g_floaton04
-				]
-				fast = [
-					gsb_g_floaton01
-					gsb_g_floaton02
-					gsb_g_floaton03
-					gsb_g_floaton04
+				Fast = [
+					GSB_G_FloatOn01
+					GSB_G_FloatOn02
+					GSB_G_FloatOn03
+					GSB_G_FloatOn04
 				]
 			}
-			bad = {
-				slow = [
-					gsb_g_floaton01
-					gsb_g_floaton02
-					gsb_g_floaton03
-					gsb_g_floaton04
+			Normal = {
+				Slow = [
+					GSB_G_FloatOn01
+					GSB_G_FloatOn02
+					GSB_G_FloatOn03
+					GSB_G_FloatOn04
 				]
-				med = [
-					gsb_g_floaton01
-					gsb_g_floaton02
-					gsb_g_floaton03
-					gsb_g_floaton04
+				Med = [
+					GSB_G_FloatOn01
+					GSB_G_FloatOn02
+					GSB_G_FloatOn03
+					GSB_G_FloatOn04
 				]
-				fast = [
-					gsb_g_floaton01
-					gsb_g_floaton02
-					gsb_g_floaton03
-					gsb_g_floaton04
+				Fast = [
+					GSB_G_FloatOn01
+					GSB_G_FloatOn02
+					GSB_G_FloatOn03
+					GSB_G_FloatOn04
+				]
+			}
+			Bad = {
+				Slow = [
+					GSB_G_FloatOn01
+					GSB_G_FloatOn02
+					GSB_G_FloatOn03
+					GSB_G_FloatOn04
+				]
+				Med = [
+					GSB_G_FloatOn01
+					GSB_G_FloatOn02
+					GSB_G_FloatOn03
+					GSB_G_FloatOn04
+				]
+				Fast = [
+					GSB_G_FloatOn01
+					GSB_G_FloatOn02
+					GSB_G_FloatOn03
+					GSB_G_FloatOn04
 				]
 			}
 		}

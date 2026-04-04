@@ -1,60 +1,60 @@
-gp_fx_jet01_launch_smoke_01 = {
+GP_FX_Jet01_Launch_Smoke_01 = {
 	pos = (-0.06472499, 0.0, -10.994184)
 	angles = (0.0, 0.0, 0.0)
-	class = particleobject
-	particletype = flexparticle
+	Class = ParticleObject
+	ParticleType = FlexParticle
 	type = flat
 	active
-	createdatstart
+	CreatedAtStart
 	attach
-	align
-	applypositionoffset
-	attachobject = z_military_g_rmm_jet_anim01
-	emitrangedims = (0.1, 0.1, 0.1)
-	emit_target = (0.0, 0.0, -1.0)
-	enablerotate
-	emitangle = (0.0, 0.0, 0.0)
+	Align
+	ApplyPositionOffset
+	AttachObject = Z_Military_G_RMM_Jet_anim01
+	EmitRangeDims = (0.1, 0.1, 0.1)
+	emit_Target = (0.0, 0.0, -1.0)
+	EnableRotate
+	EmitAngle = (0.0, 0.0, 0.0)
 	force = (0.0, 0.0, 0.0)
-	windcoeff = 0.0
-	localwindcoeff = 0.0
-	emittervelocityweight = 0.0
-	anglespread = 45.0
-	liferange = (0.5, 1.0)
+	WindCoeff = 0.0
+	LocalWindCoeff = 0.0
+	EmitterVelocityWeight = 0.0
+	AngleSpread = 45.0
+	LifeRange = (0.5, 1.0)
 	emit_rate = 200.0
 	max = 0
-	timeseed = 0.0
-	lifetime = 1.0
-	emitnum = 0
-	followemitter = 0.0
-	emitfunction = constant
-	emitperiod = 1.0
-	sizerange = [
+	TimeSeed = 0.0
+	lifeTime = 1.0
+	emitNum = 0
+	FollowEmitter = 0.0
+	EmitFunction = constant
+	EmitPeriod = 1.0
+	SizeRange = [
 		(4.0, 4.0)
 		(7.0, 7.0)
 	]
-	speedrange = (20.0, 22.0)
-	rotvel = (0.3, -0.3)
-	rotveltimescale = 0.5
-	emitdelaystart = 0.0
-	pathfollowtime = 0.0
-	history = 2
-	historylistcoordinatespace = world
+	SpeedRange = (20.0, 22.0)
+	RotVel = (0.3, -0.3)
+	RotVelTimeScale = 0.5
+	EmitDelayStart = 0.0
+	PathFollowTime = 0.0
+	History = 2
+	HistoryListCoordinateSpace = world
 	color = -1060043
-	lod_default
-	quickmaterial = {
-		diffusetextureenabled
-		diffusetexture = ph_smoke_singlepuff_blend_02
-		specularpower = 0
+	LOD_Default
+	QuickMaterial = {
+		DiffuseTextureEnabled
+		DiffuseTexture = PH_Smoke_SinglePuff_Blend_02
+		SpecularPower = 0
 		fillburst
 		alphacutoff = 1
-		blendmode = blend
-		softedge
-		softedgescale = 0.5
-		burn
-		burnvalue = 0.1
-		quadanimationfps = 0
+		blendMode = blend
+		SoftEdge
+		SoftedgeScale = 0.5
+		Burn
+		BurnValue = 0.1
+		QuadAnimationFPS = 0
 	}
-	knot = [
+	Knot = [
 		(-2.167634, 0.0, -0.0)
 		(-2.167634, 0.0, -0.0)
 		(-1.9289559, 0.0, -0.0)
@@ -68,7 +68,7 @@ gp_fx_jet01_launch_smoke_01 = {
 		(2.258766, 0.0, -0.0)
 		(2.258766, 0.0, -0.0)
 	]
-	particlecolor = [
+	ParticleColor = [
 		-256
 		-256
 		-1
@@ -78,7 +78,7 @@ gp_fx_jet01_launch_smoke_01 = {
 		-256
 		-256
 	]
-	vertexweight = [
+	VertexWeight = [
 		0.16176501
 		0.797059
 		1.0

@@ -1,6 +1,6 @@
 
-script fsm_set \{replacement = child}
-	fsm_replace {
+script Fsm_Set \{replacement = child}
+	Fsm_Replace {
 		hierarchy = current
 		replacement = <replacement>
 		state = <state>
@@ -8,33 +8,33 @@ script fsm_set \{replacement = child}
 	}
 endscript
 
-script register_fsm_states 
-	registerstate \{name = state_testfsm
+script Register_Fsm_States 
+	RegisterState \{name = State_TestFsm
 		task = {
-			name = task_debug
+			name = Task_Debug
 			params = {
-				label = state_message
+				label = State_Message
 				message = 'Fsm Test State'
 			}
 		}
-		transitions = [
+		Transitions = [
 			{
 				events = [
-					enter_behavior
+					Enter_Behavior
 				]
 				responses = [
 					{
 						replacement = this
-						behavior = state_testfsm2
+						behavior = State_TestFsm2
 					}
 				]
 			}
 		]}
-	registerstate \{name = state_testfsm2
+	RegisterState \{name = State_TestFsm2
 		task = {
-			name = task_debug
+			name = Task_Debug
 			params = {
-				label = state_message
+				label = State_Message
 				message = 'Fsm Test State 2'
 			}
 		}}

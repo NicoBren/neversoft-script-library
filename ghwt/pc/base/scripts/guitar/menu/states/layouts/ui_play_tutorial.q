@@ -12,8 +12,8 @@ script ui_play_tutorial_anim_out
 endscript
 
 script ui_return_play_tutorial 
-	if screenelementexists \{id = menu_tutorial}
-		launchevent \{type = focus
+	if ScreenElementExists \{id = menu_tutorial}
+		LaunchEvent \{type = focus
 			target = menu_tutorial}
 	else
 		create_training_pause_handler

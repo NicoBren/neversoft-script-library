@@ -8,41 +8,41 @@ script ui_create_select_controller \{player = 2}
 	change \{respond_to_signin_changed_all_players = 0}
 	change \{respond_to_signin_changed_func = main_menu_signin_changed}
 	change \{in_controller_select_menu = 1}
-	getactivecontrollers
+	GetActiveControllers
 	change g_head_to_head_active_controllers = <active_controllers>
 	make_menu_frontend \{screen = bassist
-		title = qs(0x5cf43a27)
+		title = qs("Select Controller")
 		no_menu
 		use_all_controllers}
-	if <desc_id> :desc_resolvealias name = alias_body
-		getscreenelementdims id = <resolved_id>
-		createscreenelement {
-			type = descinterface
+	if <desc_id> :Desc_ResolveAlias name = alias_body
+		GetScreenElementDims id = <resolved_id>
+		CreateScreenElement {
+			type = DescInterface
 			id = current_menu
 			parent = <resolved_id>
 			desc = 'p2_select_controller'
 			pos = (-75.0, -10.0)
-			autosizedims = true
+			autoSizeDims = true
 		}
-		if french
-			current_menu :se_setprops \{ready_banner_texture = ready_banner_french}
-		elseif german
-			current_menu :se_setprops \{ready_banner_texture = ready_banner_german}
-		elseif italian
-			current_menu :se_setprops \{ready_banner_texture = ready_banner_italian}
-		elseif spanish
-			current_menu :se_setprops \{ready_banner_texture = ready_banner_spanish}
+		if French
+			current_menu :SE_SetProps \{ready_banner_texture = ready_banner_french}
+		elseif German
+			current_menu :SE_SetProps \{ready_banner_texture = ready_banner_german}
+		elseif Italian
+			current_menu :SE_SetProps \{ready_banner_texture = ready_banner_italian}
+		elseif Spanish
+			current_menu :SE_SetProps \{ready_banner_texture = ready_banner_spanish}
 		endif
 	endif
-	if current_menu :desc_resolvealias \{name = alias_all_controllers}
+	if current_menu :Desc_ResolveAlias \{name = alias_all_controllers}
 		<alias_players> = <resolved_id>
-		<alias_players> :settags {p1 = -1 p2 = -1 p1_ready = 0 p2_ready = 0}
-		getscreenelementchildren id = <alias_players>
+		<alias_players> :SetTags {p1 = -1 p2 = -1 p1_ready = 0 p2_ready = 0}
+		GetScreenElementChildren id = <alias_players>
 		<players_children> = <children>
 		printstruct <...>
-		getarraysize <players_children>
+		GetArraySize <players_children>
 		if NOT (<array_size> = 4)
-			scriptassert \{'array size needs to be four, we have four controller slots'}
+			ScriptAssert \{'array size needs to be four, we have four controller slots'}
 		endif
 		i = 0
 		begin
@@ -57,32 +57,32 @@ endscript
 script get_controller_texture 
 	switch <type>
 		case guitar
-		printf \{qs(0xf7e5acb3)}
+		printf \{qs("\LI've got guitar controller!")}
 		<texture> = guitar_controller
-		case drums
-		printf \{qs(0x0ddeed7e)}
+		case Drums
+		printf \{qs("\LI've got drum controller!")}
 		<texture> = drum_controller
 		case keyboard
 		printf \{qs(0x5018b68c)}
-		<texture> = 0xe974c02c
+		<texture> = mixer_icon_keyboard
 	endswitch
 	return texture = <texture>
 endscript
 
 script ui_destroy_select_controller 
 	change \{in_controller_select_menu = 0}
-	if screenelementexists \{id = popup_warning_container}
+	if ScreenElementExists \{id = popup_warning_container}
 		destroy_popup_warning_menu
 	endif
-	killspawnedscript \{name = ui_select_controller_poll_for_controllers}
+	KillSpawnedScript \{name = ui_select_controller_poll_for_controllers}
 	generic_ui_destroy
 endscript
 
-script 0xa257e42b controller = ($primary_controller)
+script ui_select_controller_get_controller_type controller = ($primary_controller)
 	type = guitar
-	if NOT isguitarcontroller controller = <controller>
-		type = drums
-		if NOT isdrumcontroller controller = <controller>
+	if NOT IsGuitarController controller = <controller>
+		type = Drums
+		if NOT IsDrumController controller = <controller>
 			type = keyboard
 		endif
 	endif
@@ -92,29 +92,29 @@ endscript
 script ui_select_controller_hide_or_unhide_icons 
 	<child_id> = (<players_children> [<i>])
 	if ((<active_controllers> [<i>]) = 0)
-		<child_id> :se_getparentid
-		<parent_id> :gettags
-		<child_id> :gettags
-		<child_id> :se_setprops hide pos = <old_pos>
-		<child_id> :settags hidden = 1
+		<child_id> :SE_GetParentId
+		<parent_id> :GetTags
+		<child_id> :GetTags
+		<child_id> :SE_SetProps hide pos = <old_pos>
+		<child_id> :SetTags hidden = 1
 		get_controller_ready_se_objs
 		if (<p1> = <i>)
-			<parent_id> :settags p1 = -1
-			<parent_id> :settags p1_ready = 0
-			setscreenelementprops id = {<p1_se> child = ready} alpha = 0.0 time = 0.1
+			<parent_id> :SetTags p1 = -1
+			<parent_id> :SetTags p1_ready = 0
+			SetScreenElementProps id = {<p1_se> child = ready} alpha = 0.0 time = 0.1
 		elseif (<p2> = <i>)
-			<parent_id> :settags p2 = -1
-			<parent_id> :settags p2_ready = 0
-			setscreenelementprops id = {<p2_se> child = ready} alpha = 0.0 time = 0.1
+			<parent_id> :SetTags p2 = -1
+			<parent_id> :SetTags p2_ready = 0
+			SetScreenElementProps id = {<p2_se> child = ready} alpha = 0.0 time = 0.1
 		endif
 		printf 'ui_select_controller_hide_or_unhide_icons controller %c HIDE' c = <i>
 	else
 		printf 'ui_select_controller_hide_or_unhide_icons controller %c NOTHIDE' c = <i>
-		<child_id> :se_getprops
-		<child_id> :se_setprops {
+		<child_id> :SE_GetProps
+		<child_id> :SE_SetProps {
 			event_handlers = [] replace_handlers
 		}
-		<child_id> :se_setprops {
+		<child_id> :SE_SetProps {
 			exclusive_device = <i>
 			event_handlers = [
 				{pad_up ui_select_controller_move params = {left}}
@@ -125,13 +125,13 @@ script ui_select_controller_hide_or_unhide_icons
 			replace_handlers
 			tags = {old_pos = <pos>}
 		}
-		if iswinport
-			0xa257e42b controller = <i>
+		if IsWinPort
+			ui_select_controller_get_controller_type controller = <i>
 		else
 			ui_options_get_controller_type controller = <i>
 		endif
-		if NOT iswinport
-			if (<type> = vocals)
+		if NOT IsWinPort
+			if (<type> = Vocals)
 				get_num_mics_plugged_in
 				if (<num_mics_plugged_in> < 2)
 					<type> = vocals_no_mic
@@ -139,37 +139,37 @@ script ui_select_controller_hide_or_unhide_icons
 			endif
 		endif
 		get_controller_texture type = <type>
-		<child_id> :se_setprops {
+		<child_id> :SE_SetProps {
 			texture = <texture>
 			unhide
 		}
-		<child_id> :settags hidden = 0
-		launchevent type = focus target = <child_id>
+		<child_id> :SetTags hidden = 0
+		LaunchEvent type = focus target = <child_id>
 	endif
 endscript
 
 script ui_select_controller_poll_for_controllers 
 	begin
-	getactivecontrollers
-	getarraysize <active_controllers>
+	GetActiveControllers
+	GetArraySize <active_controllers>
 	<i> = 0
 	begin
-	if iswinport
-		0xa257e42b controller = <i>
+	if IsWinPort
+		ui_select_controller_get_controller_type controller = <i>
 	else
 		ui_options_get_controller_type controller = <i>
 	endif
 	if NOT (($g_head_to_head_active_controllers [<i>]) = (<active_controllers> [<i>]))
 		ui_select_controller_hide_or_unhide_icons i = <i> players_children = <players_children> active_controllers = <active_controllers>
-		setarrayelement arrayname = g_head_to_head_active_controllers globalarray index = <i> newvalue = (<active_controllers> [<i>])
-	elseif isps3
+		SetArrayElement ArrayName = g_head_to_head_active_controllers GlobalArray index = <i> newvalue = (<active_controllers> [<i>])
+	elseif IsPs3
 		<child_id> = (<players_children> [<i>])
-		<child_id> :se_getprops
+		<child_id> :SE_GetProps
 		<my_texture> = <texture>
-		<child_id> :gettags
+		<child_id> :GetTags
 		if (<hidden> = 0)
 			ui_options_get_controller_type controller = <i>
-			if (<type> = vocals)
+			if (<type> = Vocals)
 				get_num_mics_plugged_in
 				if (<num_mics_plugged_in> < 2)
 					<type> = vocals_no_mic
@@ -178,30 +178,30 @@ script ui_select_controller_poll_for_controllers
 			get_controller_texture type = <type>
 			<new_texture> = <texture>
 			if NOT (<my_texture> = <new_texture>)
-				<child_id> :se_setprops {
+				<child_id> :SE_SetProps {
 					texture = <new_texture>
 					unhide
 				}
-				<child_id> :settags hidden = 0
+				<child_id> :SetTags hidden = 0
 			endif
 		endif
 	endif
 	<i> = (<i> + 1)
 	repeat <array_size>
-	wait \{1
+	Wait \{1
 		gameframe}
 	repeat
 endscript
 
 script ui_select_controller_move 
-	se_getparentid
-	obj_getid
-	<parent_id> :gettags
-	gettags
-	if iswinport
+	SE_GetParentId
+	Obj_GetID
+	<parent_id> :GetTags
+	GetTags
+	if IsWinPort
 		if (<device_num> > 0)
 			if is_regular_controller controller = <device_num>
-				launchevent \{type = unfocus
+				LaunchEvent \{type = unfocus
 					target = current_menu}
 				text = qs(0xb31a37ce)
 				create_popup_warning_menu {
@@ -213,27 +213,27 @@ script ui_select_controller_move
 					options = [
 						{
 							func = ui_select_controller_warning_go_back
-							text = qs(0x320a8d1c)
+							text = qs("GO BACK")
 						}
 					]
 				}
-				soundevent \{event = menu_warning_sfx}
+				SoundEvent \{event = Menu_Warning_SFX}
 				return
 			endif
 		endif
 	endif
 	<play_sound> = 1
-	if gotparam \{left}
+	if GotParam \{left}
 		<dir> = {up}
 		if (<p2> = <device_num>)
 			if (<p2_ready> = 1)
 				return
 			endif
-			<parent_id> :settags p2 = -1
-			se_setprops pos = <old_pos> time = 0.1
+			<parent_id> :SetTags p2 = -1
+			SE_SetProps pos = <old_pos> time = 0.1
 		elseif (<p1> = -1)
-			<parent_id> :settags p1 = <device_num>
-			se_setprops \{pos = (-200.0, -250.0)
+			<parent_id> :SetTags p1 = <device_num>
+			SE_SetProps \{pos = (-200.0, -250.0)
 				time = 0.1}
 		else
 			<play_sound> = 0
@@ -244,11 +244,11 @@ script ui_select_controller_move
 			if (<p1_ready> = 1)
 				return
 			endif
-			<parent_id> :settags p1 = -1
-			se_setprops pos = <old_pos> time = 0.1
+			<parent_id> :SetTags p1 = -1
+			SE_SetProps pos = <old_pos> time = 0.1
 		elseif (<p2> = -1)
-			<parent_id> :settags p2 = <device_num>
-			se_setprops \{pos = (180.0, 50.0)
+			<parent_id> :SetTags p2 = <device_num>
+			SE_SetProps \{pos = (180.0, 50.0)
 				time = 0.1}
 		else
 			<play_sound> = 0
@@ -260,27 +260,27 @@ script ui_select_controller_move
 endscript
 
 script get_controller_ready_se_objs 
-	current_menu :desc_resolvealias \{name = alias_players}
+	current_menu :Desc_ResolveAlias \{name = alias_players}
 	<alias_players> = <resolved_id>
-	getscreenelementchildren id = <alias_players>
+	GetScreenElementChildren id = <alias_players>
 	return p1_se = (<children> [0]) p2_se = (<children> [1])
 endscript
 
 script ui_select_controller_choose 
 	get_controller_ready_se_objs
-	se_getparentid
-	obj_getid
-	<parent_id> :gettags
+	SE_GetParentId
+	Obj_GetID
+	<parent_id> :GetTags
 	if (<p1> = <device_num>)
-		<parent_id> :settags p1_ready = 1
-		setscreenelementprops id = {<p1_se> child = ready} alpha = 1.0 time = 0.1
-		soundevent \{event = box_check_sfx}
+		<parent_id> :SetTags p1_ready = 1
+		SetScreenElementProps id = {<p1_se> child = ready} alpha = 1.0 time = 0.1
+		SoundEvent \{event = Box_Check_SFX}
 	elseif (<p2> = <device_num>)
-		<parent_id> :settags p2_ready = 1
-		setscreenelementprops id = {<p2_se> child = ready} alpha = 1.0 time = 0.1
-		soundevent \{event = box_check_sfx}
+		<parent_id> :SetTags p2_ready = 1
+		SetScreenElementProps id = {<p2_se> child = ready} alpha = 1.0 time = 0.1
+		SoundEvent \{event = Box_Check_SFX}
 	endif
-	<parent_id> :gettags
+	<parent_id> :GetTags
 	if ((<p1_ready> = 1) && (<p2_ready> = 1))
 		if ((<p1> < 0) || (<p1> >= 4))
 			return
@@ -288,61 +288,61 @@ script ui_select_controller_choose
 		if ((<p2> < 0) || (<p2> >= 4))
 			return
 		endif
-		if iswinport
-			0xa257e42b controller = <p1>
+		if IsWinPort
+			ui_select_controller_get_controller_type controller = <p1>
 		else
 			ui_options_get_controller_type controller = <p1>
 		endif
 		p1_type = <type>
-		if iswinport
-			0xa257e42b controller = <p2>
+		if IsWinPort
+			ui_select_controller_get_controller_type controller = <p2>
 		else
 			ui_options_get_controller_type controller = <p2>
 		endif
 		p2_type = <type>
-		if iswinport
-			if 0x1c708d82 controller = <p1>
+		if IsWinPort
+			if WinPortIsKeyboardController controller = <p1>
 				printf \{qs(0x20a6a33d)}
 				p1_type = <p2_type>
 			endif
-			if 0x1c708d82 controller = <p2>
+			if WinPortIsKeyboardController controller = <p2>
 				printf \{qs(0x189d284e)}
 				p2_type = <p1_type>
 			endif
 		endif
 		if ($allow_controller_for_all_instruments = 0)
 			if NOT (<p1_type> = <p2_type>)
-				launchevent \{type = unfocus
+				LaunchEvent \{type = unfocus
 					target = current_menu}
 				create_popup_warning_menu {
-					title = qs(0x3817b618)
+					title = qs("MISMATCH")
 					textblock = {
-						text = qs(0x1f2885cb)
+						text = qs("You can only go Head to Head with the same instrument type!")
 					}
 					player_device = <device_num>
 					no_background
 					options = [
 						{
 							func = ui_select_controller_warning_go_back
-							text = qs(0x320a8d1c)
+							text = qs("GO BACK")
 						}
 					]
 				}
-				soundevent \{event = menu_warning_sfx}
+				SoundEvent \{event = Menu_Warning_SFX}
 				ui_select_controller_back <...>
 				return
 			endif
-			if checksumequals a = <p1_type> b = vocals
+			if ChecksumEquals a = <p1_type> b = Vocals
 				get_num_mics_plugged_in
 				if (<num_mics_plugged_in> < 2)
-					launchevent \{type = unfocus
+					LaunchEvent \{type = unfocus
 						target = current_menu}
-					if iswinport
-						<text> = qs(0x4e60df69)
-					elseif isxenon
-						<text> = qs(0x11391a52)
+					if IsWinPort
+						<text> = qs("You need to have two microphones plugged in to go Head to Head on vocals!")
+					elseif isXenon
+						<text> = qs("You need to have two microphones or Xbox 360 Headsets to go Head to Head on vocals!")
 					else
-						<text> = qs(0x4e60df69)
+						<text> = qs("You need to have two microphones plugged in to go Head to Head on vocals!")
 					endif
 					create_popup_warning_menu {
 						textblock = {
@@ -353,22 +353,22 @@ script ui_select_controller_choose
 						options = [
 							{
 								func = ui_select_controller_warning_go_back
-								text = qs(0x320a8d1c)
+								text = qs("GO BACK")
 							}
 						]
 					}
-					soundevent \{event = menu_warning_sfx}
+					SoundEvent \{event = Menu_Warning_SFX}
 					ui_select_controller_back <...>
 					return
 				endif
 			endif
 		endif
 		change g_head_to_head_instrument_type = <p1_type>
-		launchevent \{type = unfocus
+		LaunchEvent \{type = unfocus
 			target = current_menu}
 		if (<p1> != ($player1_status.controller))
-			swap_player_status_elements \{player_a = 1
-				player_b = 2
+			swap_player_status_elements \{player_A = 1
+				player_B = 2
 				lefty_flip}
 		endif
 		change structurename = player1_status controller = <p1>
@@ -378,16 +378,16 @@ script ui_select_controller_choose
 		add_exclusive_device device = <p1>
 		add_exclusive_device device = <p2>
 		printstruct <...>
-		if checksumequals a = <p1_type> b = vocals
+		if ChecksumEquals a = <p1_type> b = Vocals
 			change \{structurename = player1_status
-				part = vocals}
+				part = Vocals}
 			change \{structurename = player2_status
-				part = vocals}
+				part = Vocals}
 			vocals_distribute_mics
 		endif
-		wait \{0.25
+		Wait \{0.25
 			seconds}
-		data = {device_num = <p2> allow_back = 1 new_state = uistate_select_mp_mode primary = 0}
+		data = {device_num = <p2> allow_back = 1 new_state = UIstate_select_mp_mode primary = 0}
 		set_primary_controller device_num = <p1> state = uistate_signin data = <data>
 	endif
 endscript
@@ -400,34 +400,34 @@ endscript
 
 script ui_select_controller_back 
 	get_controller_ready_se_objs
-	se_getparentid
-	obj_getid
-	<parent_id> :gettags
+	SE_GetParentId
+	Obj_GetID
+	<parent_id> :GetTags
 	if ((<p1_ready> = 0) && (<p2_ready> = 0))
 		generic_event_back
 	endif
 	if (<p1> = <device_num>)
-		<parent_id> :settags p1_ready = 0
-		setscreenelementprops id = {<p1_se> child = ready} alpha = 0.0 time = 0.1
+		<parent_id> :SetTags p1_ready = 0
+		SetScreenElementProps id = {<p1_se> child = ready} alpha = 0.0 time = 0.1
 		generic_menu_pad_back_sound
 	elseif (<p2> = <device_num>)
-		<parent_id> :settags p2_ready = 0
-		setscreenelementprops id = {<p2_se> child = ready} alpha = 0.0 time = 0.1
+		<parent_id> :SetTags p2_ready = 0
+		SetScreenElementProps id = {<p2_se> child = ready} alpha = 0.0 time = 0.1
 		generic_menu_pad_back_sound
 	endif
 endscript
 
-script swap_player_status_elements \{player_a = 1
-		player_b = 2}
-	formattext checksumname = player_status_a 'player%n_status' n = <player_a>
-	formattext checksumname = player_status_b 'player%n_status' n = <player_b>
-	if gotparam \{lefty_flip}
-		<temp_value> = ($<player_status_a>.lefty_flip)
-		change structurename = <player_status_a> lefty_flip = ($<player_status_b>.lefty_flip)
-		get_savegame_from_controller controller = ($<player_status_a>.controller)
-		setglobaltags savegame = <savegame> user_options params = {lefty_flip_save = ($<player_status_b>.lefty_flip)}
-		change structurename = <player_status_b> lefty_flip = <temp_value>
-		get_savegame_from_controller controller = ($<player_status_b>.controller)
-		setglobaltags savegame = <savegame> user_options params = {lefty_flip_save = <temp_value>}
+script swap_player_status_elements \{player_A = 1
+		player_B = 2}
+	FormatText checksumname = player_status_A 'player%n_status' n = <player_A>
+	FormatText checksumname = player_status_B 'player%n_status' n = <player_B>
+	if GotParam \{lefty_flip}
+		<temp_value> = ($<player_status_A>.lefty_flip)
+		change structurename = <player_status_A> lefty_flip = ($<player_status_B>.lefty_flip)
+		get_savegame_from_controller controller = ($<player_status_A>.controller)
+		SetGlobalTags savegame = <savegame> user_options params = {lefty_flip_save = ($<player_status_B>.lefty_flip)}
+		change structurename = <player_status_B> lefty_flip = <temp_value>
+		get_savegame_from_controller controller = ($<player_status_B>.controller)
+		SetGlobalTags savegame = <savegame> user_options params = {lefty_flip_save = <temp_value>}
 	endif
 endscript

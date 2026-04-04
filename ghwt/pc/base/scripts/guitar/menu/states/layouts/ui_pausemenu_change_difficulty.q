@@ -1,8 +1,8 @@
 
 script ui_create_pausemenu_change_difficulty 
 	player_device = ($last_start_pressed_device)
-	ui_pausemenu_create_bg \{title_text = qs(0x9f281c76)}
-	if pausemenu_bg :desc_resolvealias \{name = alias_menu}
+	ui_pausemenu_create_bg \{title_text = qs("DIFFICULTY")}
+	if pausemenu_bg :Desc_ResolveAlias \{name = alias_menu}
 		<parent> = <resolved_id>
 	endif
 	make_menu {
@@ -11,15 +11,15 @@ script ui_create_pausemenu_change_difficulty
 		exclusive_device = <player_device>
 		extra_z = 600
 		centered
-		nobg
+		noBG
 	}
 	pausemenu_change_difficulty_get_current_index
 	diff_index = 0
-	getarraysize \{$difficulty_list}
+	GetArraySize \{$difficulty_list}
 	begin
 	<text> = ($difficulty_list_props.($difficulty_list [<diff_index>]).text)
 	if (<difficulty_index> = <diff_index>)
-		<text> = (<text> + qs(0x11e243f5))
+		<text> = (<text> + qs(" *"))
 	endif
 	add_menu_item {
 		text = <text>
@@ -38,11 +38,11 @@ script ui_destroy_pausemenu_change_difficulty
 endscript
 
 script pausemenu_change_difficulty_choose 
-	removeparameter \{base_name}
-	if gotparam \{no_warning}
-		generic_event_choose state = uistate_pausemenu_change_difficulty_confirm data = {<...> difficulty = <difficulty>}
+	RemoveParameter \{base_name}
+	if GotParam \{no_warning}
+		generic_event_choose state = UIstate_pausemenu_change_difficulty_confirm data = {<...> difficulty = <difficulty>}
 	else
-		generic_event_choose state = uistate_pausemenu_change_difficulty_warning data = {<...> difficulty = <difficulty>}
+		generic_event_choose state = UIstate_pausemenu_change_difficulty_warning data = {<...> difficulty = <difficulty>}
 	endif
 endscript
 
@@ -52,7 +52,7 @@ script pausemenu_change_difficulty_get_current_index
 		<player_device> = ($last_start_pressed_device)
 		<i> = 1
 		begin
-		getplayerinfo <i> controller
+		GetPlayerInfo <i> controller
 		if (<controller> = <player_device>)
 			<player> = <i>
 			break
@@ -60,7 +60,7 @@ script pausemenu_change_difficulty_get_current_index
 		<i> = (<i> + 1)
 		repeat ($current_num_players)
 	endif
-	getplayerinfo <player> difficulty
+	GetPlayerInfo <player> difficulty
 	switch <difficulty>
 		case easy_rhythm
 		<difficulty_index> = 0

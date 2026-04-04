@@ -1,56 +1,56 @@
-gp_fx_soundcheck_frontfog_01 = {
+GP_FX_SoundCheck_FrontFog_01 = {
 	pos = (-26.593584, -0.543919, 5.096671)
 	angles = (0.0, 0.0, 0.0)
-	class = particleobject
-	particletype = flexparticle
+	Class = ParticleObject
+	ParticleType = FlexParticle
 	type = flat
 	active
-	createdatstart
-	emitrangedims = (0.1, 0.1, 0.1)
-	emit_target = (0.0, 1.0, 0.0)
-	emitangle = (0.0, 0.0, 0.0)
+	CreatedAtStart
+	EmitRangeDims = (0.1, 0.1, 0.1)
+	emit_Target = (0.0, 1.0, 0.0)
+	EmitAngle = (0.0, 0.0, 0.0)
 	force = (0.0, -0.05, 0.0)
-	windcoeff = 0.0
-	localwindcoeff = 0.0
-	emittervelocityweight = 0.0
-	elevspread = (90.0, 130.0)
-	sweepspread = (80.0, 90.0)
-	liferange = (3.0, 4.0)
+	WindCoeff = 0.0
+	LocalWindCoeff = 0.0
+	EmitterVelocityWeight = 0.0
+	ElevSpread = (90.0, 130.0)
+	SweepSpread = (80.0, 90.0)
+	LifeRange = (3.0, 4.0)
 	emit_rate = 4.0
 	max = 0
-	timeseed = 0.0
-	lifetime = 0.0
-	emitnum = 0
-	followemitter = 0.0
-	emitfunction = sin
-	emitperiod = 3.0
-	sizerange = [
+	TimeSeed = 0.0
+	lifeTime = 0.0
+	emitNum = 0
+	FollowEmitter = 0.0
+	EmitFunction = sin
+	EmitPeriod = 3.0
+	SizeRange = [
 		(1.5, 1.5)
 		(2.0, 2.0)
 	]
-	speedrange = (0.1, 0.4)
-	rotvel = (0.1, -0.1)
-	rotveltimescale = 0.1
-	emitdelaystart = 0.0
-	pathfollowtime = 0.0
-	history = 2
-	historylistcoordinatespace = world
+	SpeedRange = (0.1, 0.4)
+	RotVel = (0.1, -0.1)
+	RotVelTimeScale = 0.1
+	EmitDelayStart = 0.0
+	PathFollowTime = 0.0
+	History = 2
+	HistoryListCoordinateSpace = world
 	color = -1551205127
-	lod_default
-	quickmaterial = {
-		diffusetextureenabled
-		diffusetexture = ph_smoke_singlepuff_blend_02
-		specularpower = 0
-		fakeambientocclusion
+	LOD_Default
+	QuickMaterial = {
+		DiffuseTextureEnabled
+		DiffuseTexture = PH_Smoke_SinglePuff_Blend_02
+		SpecularPower = 0
+		FakeAmbientOcclusion
 		alphacutoff = 1
-		blendmode = blend
-		softedge
-		softedgescale = 0.2
-		burn
-		burnvalue = 0.8
-		quadanimationfps = 0
+		blendMode = blend
+		SoftEdge
+		SoftedgeScale = 0.2
+		Burn
+		BurnValue = 0.8
+		QuadAnimationFPS = 0
 	}
-	knot = [
+	Knot = [
 		(-0.62482506, 0.0, -0.0)
 		(-0.62482506, 0.0, -0.0)
 		(-0.52626395, 0.0, -0.0)
@@ -64,7 +64,7 @@ gp_fx_soundcheck_frontfog_01 = {
 		(0.62482405, 0.0, -0.0)
 		(0.62482405, 0.0, -0.0)
 	]
-	particlecolor = [
+	ParticleColor = [
 		-256
 		-256
 		-1
@@ -74,7 +74,7 @@ gp_fx_soundcheck_frontfog_01 = {
 		-256
 		-256
 	]
-	vertexweight = [
+	VertexWeight = [
 		0.236576
 		0.620653
 		1.0

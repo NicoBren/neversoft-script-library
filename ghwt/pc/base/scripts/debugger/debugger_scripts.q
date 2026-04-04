@@ -1,58 +1,58 @@
 
-script ondebuggerstartup 
-	printf \{qs(0xe606847b)}
-	sendscriptfunctionstodebugger
-	debuggersendmodetext
+script OnDebuggerStartup 
+	printf \{qs("\LStarting up debugger scripts...")}
+	SendScriptFunctionsToDebugger
+	DebuggerSendModeText
 endscript
 
-script ondebuggerquit 
+script OnDebuggerQuit 
 endscript
 
-script debuggersendmodetext 
-	debuggergetmodetext
-	runremotescript {
-		objid = mouse_window
-		scriptname = settitle
+script DebuggerSendModeText 
+	DebuggerGetModeText
+	RunRemoteScript {
+		ObjID = mouse_window
+		ScriptName = SetTitle
 		params = {
 			('Mouse window: ' + <mode_text>)
 		}
 	}
 endscript
 
-script getgamescriptfunctionlist 
-	scriptfunctions = [
-		{text = 'Send Camera to Clipboard' , scriptname = copycameralocationtoclipboard}
+script GetGameScriptFunctionList 
+	ScriptFunctions = [
+		{text = 'Send Camera to Clipboard' , ScriptName = CopyCameraLocationToClipboard}
 	]
 	return <...>
 endscript
 
-script getandcombinescriptfunctionlists 
-	getgamescriptfunctionlist
-	if scriptexists \{getuserscriptfunctionlist}
-		getuserscriptfunctionlist
-		if gotparam \{userscriptfunctions}
+script GetAndCombineScriptFunctionLists 
+	GetGameScriptFunctionList
+	if ScriptExists \{GetUserScriptFunctionList}
+		GetUserScriptFunctionList
+		if GotParam \{UserScriptFunctions}
 			return {
-				functionsets = [
-					{setname = 'User Scripts' functions = <userscriptfunctions>}
-					{setname = 'Game Scripts' functions = <scriptfunctions>}
+				FunctionSets = [
+					{SetName = 'User Scripts' Functions = <UserScriptFunctions>}
+					{SetName = 'Game Scripts' Functions = <ScriptFunctions>}
 				]
 				title = 'Script Function List'
 				id = scriptfuncs
-				buttonscript = runremotescript
+				ButtonScript = RunRemoteScript
 			}
 		endif
 	endif
 	return {
-		functionsets = [
-			{setname = 'Game Scripts' functions = <scriptfunctions>}
+		FunctionSets = [
+			{SetName = 'Game Scripts' Functions = <ScriptFunctions>}
 		]
 		title = 'Script Function List'
 		id = scriptfuncs
-		buttonscript = runremotescript
+		ButtonScript = RunRemoteScript
 	}
 endscript
 
-script sendscriptfunctionstodebugger 
-	getandcombinescriptfunctionlists
-	runremotescript scriptname = createfunctionlistwindow params = <...>
+script SendScriptFunctionsToDebugger 
+	GetAndCombineScriptFunctionLists
+	RunRemoteScript ScriptName = CreateFunctionListWindow params = <...>
 endscript

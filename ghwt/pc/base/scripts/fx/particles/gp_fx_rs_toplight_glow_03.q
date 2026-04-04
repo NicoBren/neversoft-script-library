@@ -1,58 +1,58 @@
-gp_fx_rs_toplight_glow_03 = {
+GP_FX_RS_TopLight_Glow_03 = {
 	pos = (0.0, -1.937838, -0.062209)
 	angles = (0.0, 0.0, 0.0)
-	class = particleobject
-	particletype = flexparticle
+	Class = ParticleObject
+	ParticleType = FlexParticle
 	type = flat
 	active
-	createdatstart
+	CreatedAtStart
 	attach
-	align
-	applypositionoffset
-	attachobject = z_recordstore_g_jg_hanglight03
-	emitrangedims = (0.0, 0.0, 0.0)
-	emit_target = (0.0, 1.0, 0.0)
-	enablerotate
-	emitangle = (0.0, 0.0, 0.0)
+	Align
+	ApplyPositionOffset
+	AttachObject = GH3_Camera_Steven_DreamOn_3a
+	EmitRangeDims = (0.0, 0.0, 0.0)
+	emit_Target = (0.0, 1.0, 0.0)
+	EnableRotate
+	EmitAngle = (0.0, 0.0, 0.0)
 	force = (0.0, 0.0, 0.0)
-	windcoeff = 0.0
-	localwindcoeff = 0.0
-	emittervelocityweight = 0.0
-	anglespread = 45.0
-	liferange = (0.1, 10.0)
+	WindCoeff = 0.0
+	LocalWindCoeff = 0.0
+	EmitterVelocityWeight = 0.0
+	AngleSpread = 45.0
+	LifeRange = (0.1, 10.0)
 	emit_rate = 10.0
 	max = 2
-	timeseed = 0.0
-	lifetime = 0.0
-	emitnum = 0
-	followemitter = 0.0
-	emitfunction = constant
-	emitperiod = 1.0
-	sizerange = [
+	TimeSeed = 0.0
+	lifeTime = 0.0
+	emitNum = 0
+	FollowEmitter = 0.0
+	EmitFunction = constant
+	EmitPeriod = 1.0
+	SizeRange = [
 		(6.0, 6.0)
 		(6.0, 6.0)
 	]
-	speedrange = (0.0, 0.0)
-	rotvel = (0.0, 0.0)
-	rotveltimescale = 0.0
-	emitdelaystart = 0.0
-	pathfollowtime = 0.0
-	history = 2
-	historylistcoordinatespace = object
+	SpeedRange = (0.0, 0.0)
+	RotVel = (0.0, 0.0)
+	RotVelTimeScale = 0.0
+	EmitDelayStart = 0.0
+	PathFollowTime = 0.0
+	History = 2
+	HistoryListCoordinateSpace = object
 	color = -1364362497
-	lod_default
-	quickmaterial = {
-		diffusetextureenabled
-		diffusetexture = ph_radialglow_01
-		specularpower = 0
+	LOD_Default
+	QuickMaterial = {
+		DiffuseTextureEnabled
+		DiffuseTexture = PH_RadialGlow_01
+		SpecularPower = 0
 		fillburst
 		alphacutoff = 1
-		blendmode = add
-		burn
-		burnvalue = 0.9
-		quadanimationfps = 0
+		blendMode = Add
+		Burn
+		BurnValue = 0.9
+		QuadAnimationFPS = 0
 	}
-	knot = [
+	Knot = [
 		(-1.182281, 0.0, -0.0)
 		(-1.182281, 0.0, -0.0)
 		(-1.1722431, 0.0, -0.0)
@@ -66,7 +66,7 @@ gp_fx_rs_toplight_glow_03 = {
 		(1.261823, 0.0, -0.0)
 		(1.261823, 0.0, -0.0)
 	]
-	particlecolor = [
+	ParticleColor = [
 		-256
 		-256
 		-196
@@ -76,7 +76,7 @@ gp_fx_rs_toplight_glow_03 = {
 		-256
 		-256
 	]
-	vertexweight = [
+	VertexWeight = [
 		0.012321001
 		0.99476695
 		1.0

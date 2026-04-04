@@ -1,368 +1,368 @@
 ped_editable_list = [
 	{
-		part = cas_full_body
+		part = CAS_Full_Body
 	}
 	{
-		part = cas_full_instrument
+		part = CAS_Full_Instrument
 	}
 ]
 master_editable_list = [
 	{
-		part = cas_body
+		part = CAS_Body
 	}
 	{
 		part = cas_physique
 	}
 	{
-		part = cas_full_body
+		part = CAS_Full_Body
 	}
 	{
-		part = cas_eyes
+		part = CAS_Eyes
 	}
 	{
-		part = cas_female_hair
+		part = CAS_Female_Hair
 	}
 	{
-		part = cas_female_hat_hair
+		part = CAS_Female_Hat_Hair
 	}
 	{
-		part = cas_female_hat
+		part = CAS_Female_Hat
 	}
 	{
-		part = cas_female_facial_hair
+		part = CAS_Female_Facial_Hair
 	}
 	{
-		part = cas_female_torso
+		part = CAS_Female_Torso
 	}
 	{
-		part = cas_female_legs
+		part = CAS_Female_Legs
 	}
 	{
-		part = cas_female_shoes
+		part = CAS_Female_Shoes
 	}
 	{
-		part = cas_female_acc_left
+		part = CAS_Female_Acc_Left
 	}
 	{
-		part = cas_female_acc_right
+		part = CAS_Female_Acc_Right
 	}
 	{
-		part = cas_female_acc_face
+		part = CAS_Female_Acc_Face
 	}
 	{
-		part = cas_female_acc_ears
+		part = CAS_Female_Acc_Ears
 	}
 	{
-		part = cas_female_intro_anim
+		part = CAS_Female_Intro_Anim
 	}
 	{
-		part = cas_female_win_anim
+		part = CAS_Female_Win_Anim
 	}
 	{
-		part = cas_female_lose_anim
+		part = CAS_Female_Lose_Anim
 	}
 	{
-		part = cas_female_age
+		part = CAS_Female_Age
 	}
 	{
-		part = cas_male_hair
+		part = CAS_Male_Hair
 	}
 	{
-		part = cas_male_hat_hair
+		part = CAS_Male_Hat_Hair
 	}
 	{
-		part = cas_male_hat
+		part = CAS_Male_Hat
 	}
 	{
-		part = cas_male_facial_hair
+		part = CAS_Male_Facial_Hair
 	}
 	{
-		part = cas_male_torso
+		part = CAS_Male_Torso
 	}
 	{
-		part = cas_male_legs
+		part = CAS_Male_Legs
 	}
 	{
-		part = cas_male_shoes
+		part = CAS_Male_Shoes
 	}
 	{
-		part = cas_male_acc_left
+		part = CAS_Male_Acc_Left
 	}
 	{
-		part = cas_male_acc_right
+		part = CAS_Male_Acc_Right
 	}
 	{
-		part = cas_male_acc_face
+		part = CAS_Male_Acc_Face
 	}
 	{
-		part = cas_male_acc_ears
+		part = CAS_Male_Acc_Ears
 	}
 	{
-		part = cas_male_intro_anim
+		part = CAS_Male_Intro_Anim
 	}
 	{
-		part = cas_male_win_anim
+		part = CAS_Male_Win_Anim
 	}
 	{
-		part = cas_male_lose_anim
+		part = CAS_Male_Lose_Anim
 	}
 	{
-		part = cas_male_age
+		part = CAS_Male_Age
 	}
 	{
-		part = cas_full_instrument
+		part = CAS_Full_Instrument
 	}
 	{
-		part = cas_guitar_body
+		part = CAS_Guitar_Body
 	}
 	{
-		part = cas_guitar_neck
+		part = CAS_Guitar_Neck
 	}
 	{
-		part = cas_guitar_head
+		part = CAS_Guitar_Head
 	}
 	{
-		part = cas_guitar_pickguards
+		part = CAS_Guitar_Pickguards
 	}
 	{
-		part = cas_guitar_bridges
+		part = CAS_Guitar_Bridges
 	}
 	{
-		part = cas_guitar_knobs
+		part = CAS_Guitar_Knobs
 	}
 	{
-		part = cas_guitar_pickups
+		part = CAS_Guitar_Pickups
 	}
 	{
-		part = cas_guitar_strings
+		part = CAS_Guitar_Strings
 	}
 	{
-		part = cas_guitar_highway
+		part = CAS_Guitar_Highway
 	}
 	{
-		part = cas_bass_body
+		part = CAS_Bass_Body
 	}
 	{
-		part = cas_bass_neck
+		part = CAS_Bass_Neck
 	}
 	{
-		part = cas_bass_head
+		part = CAS_Bass_Head
 	}
 	{
-		part = cas_bass_pickguards
+		part = CAS_Bass_Pickguards
 	}
 	{
-		part = cas_bass_pickups
+		part = CAS_Bass_Pickups
 	}
 	{
-		part = cas_bass_bridges
+		part = CAS_Bass_Bridges
 	}
 	{
-		part = cas_bass_knobs
+		part = CAS_Bass_Knobs
 	}
 	{
-		part = cas_bass_strings
+		part = CAS_Bass_Strings
 	}
 	{
-		part = cas_bass_highway
+		part = CAS_Bass_Highway
 	}
 	{
-		part = cas_drums
+		part = CAS_Drums
 	}
 	{
-		part = cas_drums_sticks
+		part = CAS_Drums_Sticks
 	}
 	{
-		part = cas_drums_highway
+		part = CAS_Drums_Highway
 	}
 	{
-		part = cas_mic
+		part = CAS_Mic
 	}
 	{
-		part = cas_mic_stand
+		part = CAS_Mic_Stand
 	}
 	{
-		part = cas_band_logo
+		part = CAS_Band_Logo
 	}
 ]
 instrument_part_sets = {
 	guitar = [
-		cas_guitar_body
-		cas_guitar_neck
-		cas_guitar_head
-		cas_guitar_pickguards
-		cas_guitar_bridges
-		cas_guitar_knobs
-		cas_guitar_pickups
-		cas_guitar_highway
-		cas_full_instrument
+		CAS_Guitar_Body
+		CAS_Guitar_Neck
+		CAS_Guitar_Head
+		CAS_Guitar_Pickguards
+		CAS_Guitar_Bridges
+		CAS_Guitar_Knobs
+		CAS_Guitar_Pickups
+		CAS_Guitar_Highway
+		CAS_Full_Instrument
 	]
-	guitar_and_vocals = [
-		cas_guitar_body
-		cas_guitar_neck
-		cas_guitar_head
-		cas_guitar_pickguards
-		cas_guitar_bridges
-		cas_guitar_knobs
-		cas_guitar_pickups
-		cas_guitar_highway
-		cas_full_instrument
-		cas_mic
-		cas_mic_stand
+	Guitar_And_Vocals = [
+		CAS_Guitar_Body
+		CAS_Guitar_Neck
+		CAS_Guitar_Head
+		CAS_Guitar_Pickguards
+		CAS_Guitar_Bridges
+		CAS_Guitar_Knobs
+		CAS_Guitar_Pickups
+		CAS_Guitar_Highway
+		CAS_Full_Instrument
+		CAS_Mic
+		CAS_Mic_Stand
 	]
-	bass = [
-		cas_bass_body
-		cas_bass_neck
-		cas_bass_head
-		cas_bass_pickguards
-		cas_bass_bridges
-		cas_bass_knobs
-		cas_bass_pickups
-		cas_bass_highway
-		cas_full_instrument
+	Bass = [
+		CAS_Bass_Body
+		CAS_Bass_Neck
+		CAS_Bass_Head
+		CAS_Bass_Pickguards
+		CAS_Bass_Bridges
+		CAS_Bass_Knobs
+		CAS_Bass_Pickups
+		CAS_Bass_Highway
+		CAS_Full_Instrument
 	]
-	bass_and_vocals = [
-		cas_bass_body
-		cas_bass_neck
-		cas_bass_head
-		cas_bass_pickguards
-		cas_bass_bridges
-		cas_bass_knobs
-		cas_bass_pickups
-		cas_bass_highway
-		cas_full_instrument
-		cas_mic
-		cas_mic_stand
+	Bass_And_Vocals = [
+		CAS_Bass_Body
+		CAS_Bass_Neck
+		CAS_Bass_Head
+		CAS_Bass_Pickguards
+		CAS_Bass_Bridges
+		CAS_Bass_Knobs
+		CAS_Bass_Pickups
+		CAS_Bass_Highway
+		CAS_Full_Instrument
+		CAS_Mic
+		CAS_Mic_Stand
 	]
 	drum = [
-		cas_drums
-		cas_drums_sticks
-		cas_drums_highway
+		CAS_Drums
+		CAS_Drums_Sticks
+		CAS_Drums_Highway
 	]
-	vocals = [
-		cas_mic
-		cas_mic_stand
+	Vocals = [
+		CAS_Mic
+		CAS_Mic_Stand
 	]
 }
 body_parts = [
-	cas_body
+	CAS_Body
 	cas_physique
-	cas_full_body
-	cas_eyes
-	cas_female_hair
-	cas_female_hat_hair
-	cas_female_hat
-	cas_female_facial_hair
-	cas_female_torso
-	cas_female_legs
-	cas_female_shoes
-	cas_female_acc_left
-	cas_female_acc_right
-	cas_female_acc_face
-	cas_female_acc_ears
-	cas_female_intro_anim
-	cas_female_win_anim
-	cas_female_lose_anim
-	cas_female_age
-	cas_male_hair
-	cas_male_hat_hair
-	cas_male_hat
-	cas_male_facial_hair
-	cas_male_torso
-	cas_male_legs
-	cas_male_shoes
-	cas_male_acc_left
-	cas_male_acc_right
-	cas_male_acc_face
-	cas_male_acc_ears
-	cas_male_intro_anim
-	cas_male_win_anim
-	cas_male_lose_anim
-	cas_male_age
+	CAS_Full_Body
+	CAS_Eyes
+	CAS_Female_Hair
+	CAS_Female_Hat_Hair
+	CAS_Female_Hat
+	CAS_Female_Facial_Hair
+	CAS_Female_Torso
+	CAS_Female_Legs
+	CAS_Female_Shoes
+	CAS_Female_Acc_Left
+	CAS_Female_Acc_Right
+	CAS_Female_Acc_Face
+	CAS_Female_Acc_Ears
+	CAS_Female_Intro_Anim
+	CAS_Female_Win_Anim
+	CAS_Female_Lose_Anim
+	CAS_Female_Age
+	CAS_Male_Hair
+	CAS_Male_Hat_Hair
+	CAS_Male_Hat
+	CAS_Male_Facial_Hair
+	CAS_Male_Torso
+	CAS_Male_Legs
+	CAS_Male_Shoes
+	CAS_Male_Acc_Left
+	CAS_Male_Acc_Right
+	CAS_Male_Acc_Face
+	CAS_Male_Acc_Ears
+	CAS_Male_Intro_Anim
+	CAS_Male_Win_Anim
+	CAS_Male_Lose_Anim
+	CAS_Male_Age
 ]
 hair_part_sets = {
 	hat_hair = [
-		cas_male_hat_hair
-		cas_female_hat_hair
+		CAS_Male_Hat_Hair
+		CAS_Female_Hat_Hair
 	]
 	hair = [
-		cas_male_hair
-		cas_female_hair
+		CAS_Male_Hair
+		CAS_Female_Hair
 	]
 }
 body_specific_parts_list = [
 	{
-		part = cas_hair
+		part = CAS_Hair
 	}
 	{
-		part = cas_hat_hair
+		part = CAS_Hat_Hair
 	}
 	{
-		part = cas_hat
+		part = CAS_Hat
 	}
 	{
-		part = cas_facial_hair
+		part = CAS_Facial_Hair
 	}
 	{
-		part = cas_torso
+		part = CAS_Torso
 	}
 	{
-		part = cas_legs
+		part = CAS_Legs
 	}
 	{
-		part = cas_socks
+		part = CAS_Socks
 	}
 	{
-		part = cas_shoes
+		part = CAS_Shoes
 	}
 	{
-		part = cas_acc_left
+		part = CAS_Acc_Left
 	}
 	{
-		part = cas_acc_right
+		part = CAS_Acc_Right
 	}
 	{
-		part = cas_acc_face
+		part = CAS_Acc_Face
 	}
 	{
-		part = cas_acc_ears
+		part = CAS_Acc_Ears
 	}
 	{
-		part = cas_age
+		part = CAS_Age
 	}
 	{
-		part = cas_intro_anim
+		part = CAS_Intro_Anim
 	}
 	{
-		part = cas_win_anim
+		part = CAS_Win_Anim
 	}
 	{
-		part = cas_lose_anim
+		part = CAS_Lose_Anim
 	}
 ]
 master_uv_list = [
 ]
 cas_guitar_pak_contents = [
 	{
-		part = cas_guitar_body
+		part = CAS_Guitar_Body
 		cap_textures = 0
 	}
 	{
-		part = cas_guitar_pickguards
+		part = CAS_Guitar_Pickguards
 	}
 	{
-		part = cas_guitar_bridges
+		part = CAS_Guitar_Bridges
 	}
 	{
-		part = cas_guitar_knobs
+		part = CAS_Guitar_Knobs
 	}
 	{
-		part = cas_guitar_pickups
+		part = CAS_Guitar_Pickups
 	}
 ]
 cas_guitar_pak_finishes_0_contents = [
 	{
-		part = cas_guitar_body
+		part = CAS_Guitar_Body
 		cap_basetex = 1
 		omit_geom = 1
 		get_pak_num = 0
@@ -370,7 +370,7 @@ cas_guitar_pak_finishes_0_contents = [
 ]
 cas_guitar_pak_finishes_1_contents = [
 	{
-		part = cas_guitar_body
+		part = CAS_Guitar_Body
 		cap_basetex = 1
 		omit_geom = 1
 		get_pak_num = 1
@@ -378,7 +378,7 @@ cas_guitar_pak_finishes_1_contents = [
 ]
 cas_guitar_pak_finishes_2_contents = [
 	{
-		part = cas_guitar_body
+		part = CAS_Guitar_Body
 		cap_basetex = 1
 		omit_geom = 1
 		get_pak_num = 2
@@ -386,33 +386,33 @@ cas_guitar_pak_finishes_2_contents = [
 ]
 cas_guitar_pak_nh_contents = [
 	{
-		part = cas_guitar_neck
+		part = CAS_Guitar_Neck
 	}
 	{
-		part = cas_guitar_head
+		part = CAS_Guitar_Head
 	}
 ]
 cas_bass_pak_contents = [
 	{
-		part = cas_bass_body
+		part = CAS_Bass_Body
 		cap_textures = 0
 	}
 	{
-		part = cas_bass_pickguards
+		part = CAS_Bass_Pickguards
 	}
 	{
-		part = cas_bass_pickups
+		part = CAS_Bass_Pickups
 	}
 	{
-		part = cas_bass_bridges
+		part = CAS_Bass_Bridges
 	}
 	{
-		part = cas_bass_knobs
+		part = CAS_Bass_Knobs
 	}
 ]
 cas_bass_pak_finishes_0_contents = [
 	{
-		part = cas_bass_body
+		part = CAS_Bass_Body
 		cap_basetex = 1
 		omit_geom = 1
 		get_pak_num = 0
@@ -420,7 +420,7 @@ cas_bass_pak_finishes_0_contents = [
 ]
 cas_bass_pak_finishes_1_contents = [
 	{
-		part = cas_bass_body
+		part = CAS_Bass_Body
 		cap_basetex = 1
 		omit_geom = 1
 		get_pak_num = 1
@@ -428,7 +428,7 @@ cas_bass_pak_finishes_1_contents = [
 ]
 cas_bass_pak_finishes_2_contents = [
 	{
-		part = cas_bass_body
+		part = CAS_Bass_Body
 		cap_basetex = 1
 		omit_geom = 1
 		get_pak_num = 2
@@ -436,195 +436,195 @@ cas_bass_pak_finishes_2_contents = [
 ]
 cas_bass_pak_nh_contents = [
 	{
-		part = cas_bass_neck
+		part = CAS_Bass_Neck
 	}
 	{
-		part = cas_bass_head
+		part = CAS_Bass_Head
 	}
 ]
 cas_full_parts_pak_contents = [
 	{
-		part = cas_full_body
+		part = CAS_Full_Body
 	}
 	{
-		part = cas_full_instrument
+		part = CAS_Full_Instrument
 	}
 ]
 cas_drums_pak_contents = [
 	{
-		part = cas_drums
+		part = CAS_Drums
 	}
 	{
-		part = cas_drums_sticks
+		part = CAS_Drums_Sticks
 	}
 ]
 cas_vocals_pak_contents = [
 	{
-		part = cas_mic
+		part = CAS_Mic
 	}
 	{
-		part = cas_mic_stand
+		part = CAS_Mic_Stand
 	}
 ]
 cas_global_pak_contents = [
 	{
-		part = cas_body
+		part = CAS_Body
 		cap_basetex = 1
 		cap_textures = 0
 		texture_swaps = 0
 	}
 	{
-		part = cas_band_logo
+		part = CAS_Band_Logo
 		cap_textures = 0
 	}
 ]
 cas_preset_texswaps_pak_contents = [
 	{
-		part = cas_body
+		part = CAS_Body
 		cap_basetex = 0
 		cap_textures = 0
 	}
 ]
 cas_female_body_pak_contents = [
 	{
-		part = cas_body
+		part = CAS_Body
 		omit_geom = 1
 		cap_textures = 1
 		pieces = [
-			gh4_car_female
+			GH4_CAR_Female
 		]
 	}
 	{
-		part = cas_female_hair
+		part = CAS_Female_Hair
 	}
 	{
-		part = cas_female_hat_hair
+		part = CAS_Female_Hat_Hair
 	}
 	{
-		part = cas_female_facial_hair
+		part = CAS_Female_Facial_Hair
 	}
 	{
-		part = cas_eyes
+		part = CAS_Eyes
 	}
 	{
-		part = cas_female_age
+		part = CAS_Female_Age
 	}
 	{
-		part = cas_female_intro_anim
+		part = CAS_Female_Intro_Anim
 	}
 	{
-		part = cas_female_win_anim
+		part = CAS_Female_Win_Anim
 	}
 	{
-		part = cas_female_lose_anim
+		part = CAS_Female_Lose_Anim
 	}
 ]
 cas_male_body_pak_contents = [
 	{
-		part = cas_body
+		part = CAS_Body
 		omit_geom = 1
 		cap_textures = 1
 		pieces = [
-			gh4_car_male
+			GH4_CAR_Male
 		]
 	}
 	{
-		part = cas_male_hair
+		part = CAS_Male_Hair
 	}
 	{
-		part = cas_male_hat_hair
+		part = CAS_Male_Hat_Hair
 	}
 	{
-		part = cas_male_facial_hair
+		part = CAS_Male_Facial_Hair
 	}
 	{
-		part = cas_eyes
+		part = CAS_Eyes
 	}
 	{
-		part = cas_male_age
+		part = CAS_Male_Age
 	}
 	{
-		part = cas_male_intro_anim
+		part = CAS_Male_Intro_Anim
 	}
 	{
-		part = cas_male_win_anim
+		part = CAS_Male_Win_Anim
 	}
 	{
-		part = cas_male_lose_anim
+		part = CAS_Male_Lose_Anim
 	}
 ]
 cas_female_accessory_pak_contents = [
 	{
-		part = cas_female_hat
+		part = CAS_Female_Hat
 	}
 	{
-		part = cas_female_acc_left
+		part = CAS_Female_Acc_Left
 	}
 	{
-		part = cas_female_acc_right
+		part = CAS_Female_Acc_Right
 	}
 	{
-		part = cas_female_acc_face
+		part = CAS_Female_Acc_Face
 	}
 	{
-		part = cas_female_acc_ears
+		part = CAS_Female_Acc_Ears
 	}
 ]
 cas_male_accessory_pak_contents = [
 	{
-		part = cas_male_hat
+		part = CAS_Male_Hat
 	}
 	{
-		part = cas_male_acc_left
+		part = CAS_Male_Acc_Left
 	}
 	{
-		part = cas_male_acc_right
+		part = CAS_Male_Acc_Right
 	}
 	{
-		part = cas_male_acc_face
+		part = CAS_Male_Acc_Face
 	}
 	{
-		part = cas_male_acc_ears
+		part = CAS_Male_Acc_Ears
 	}
 ]
 cas_female_torso_pak_contents = [
 	{
-		part = cas_female_torso
+		part = CAS_Female_Torso
 	}
 ]
 cas_male_torso_pak_contents = [
 	{
-		part = cas_male_torso
+		part = CAS_Male_Torso
 	}
 ]
 cas_female_legs_pak_contents = [
 	{
-		part = cas_female_legs
+		part = CAS_Female_Legs
 	}
 ]
 cas_male_legs_pak_contents = [
 	{
-		part = cas_male_legs
+		part = CAS_Male_Legs
 	}
 ]
 cas_female_shoes_pak_contents = [
 	{
-		part = cas_female_shoes
+		part = CAS_Female_Shoes
 	}
 ]
 cas_male_shoes_pak_contents = [
 	{
-		part = cas_male_shoes
+		part = CAS_Male_Shoes
 	}
 ]
 
 script build_cas_editable_list 
 	switch (<cas_type>)
-		case cas_full_parts
+		case CAS_FULL_PARTS
 		return cas_editable_list = ($cas_full_parts_pak_contents)
-		case cas_globalpak
+		case CAS_GLOBALPAK
 		return cas_editable_list = ($cas_global_pak_contents)
-		case cas_preset_texswaps
+		case CAS_PRESET_TEXSWAPS
 		return cas_editable_list = ($cas_preset_texswaps_pak_contents)
 		case cas_female_bodypak
 		return cas_editable_list = ($cas_female_body_pak_contents)
@@ -670,21 +670,21 @@ script build_cas_editable_list
 		return cas_editable_list = ($cas_drums_pak_contents)
 		case cas_vocalspak
 		return cas_editable_list = ($cas_vocals_pak_contents)
-		case cas_deform
+		case CAS_DEFORM
 		return cas_editable_list = ($master_editable_list)
-		case cas_captextures
+		case CAS_CAPTEXTURES
 		return cas_editable_list = ($master_editable_list)
-		case cas_compress_table_16
+		case CAS_COMPRESS_TABLE_16
 		return cas_editable_list = ($master_editable_list)
-		case cas_agora
+		case CAS_AGORA
 		return cas_editable_list = ($master_editable_list)
-		case cas_archive
+		case CAS_ARCHIVE
 		return cas_editable_list = ($master_editable_list)
 		default
-		scriptassert \{'Bad CAS Pak'}
+		ScriptAssert \{'Bad CAS Pak'}
 	endswitch
 endscript
 agora_cap_sections = [
-	finishes
-	details
+	Finishes
+	Details
 ]

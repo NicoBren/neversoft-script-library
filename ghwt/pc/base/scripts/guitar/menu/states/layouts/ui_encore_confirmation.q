@@ -12,32 +12,32 @@ script ui_destroy_encore_confirmation
 endscript
 
 script ui_create_encore_confirmation_spawned 
-	soundevent \{event = $current_crowd_encore}
+	SoundEvent \{event = $Current_Crowd_Encore}
 	destroy_ui_encore_confirmation
-	if issingleplayergame
-		getnewcashfromdetailedstats
+	if isSinglePlayerGame
+		getNewCashFromDetailedStats
 		stars = ($player1_status.stars)
 		score = ($player1_status.score)
-		cash = <new_cash>
+		Cash = <new_cash>
 	else
-		gamemode_getnumplayersshown
+		GameMode_GetNumPlayersShown
 		total_cash = 0
 		p = 1
 		begin
-		getplayerinfo <p> is_local_client
+		GetPlayerInfo <p> is_local_client
 		if (<is_local_client> = 1)
-			getnewcashfromdetailedstats player = <p>
+			getNewCashFromDetailedStats player = <p>
 			total_cash = (<total_cash> + <new_cash>)
 		endif
 		p = (<p> + 1)
 		repeat <num_players_shown>
 		score = ($band1_status.score)
 		stars = ($band1_status.stars)
-		cash = <total_cash>
+		Cash = <total_cash>
 	endif
-	createscreenelement \{type = descinterface
+	CreateScreenElement \{type = DescInterface
 		parent = root_window
-		id = encoreinterface
+		id = EncoreInterface
 		desc = 'encore'
 		encore_master_container_scale = 1.0
 		event_handlers = [
@@ -46,13 +46,13 @@ script ui_create_encore_confirmation_spawned
 				encore_play
 			}
 		]}
-	if encoreinterface :desc_resolvealias \{name = alias_encore_title}
-		encoreinterface :se_getprops
+	if EncoreInterface :Desc_ResolveAlias \{name = alias_encore_title}
+		EncoreInterface :SE_GetProps
 		text_to_morph = <encore_title_text>
 		text_to_morph_rgba = <encore_title_rgba>
 		text_to_morph_dims = <encore_title_dims>
 		text_to_morph_font = <encore_title_font>
-		encoreinterface :se_setprops \{encore_title_text = qs(0x03ac90f0)}
+		EncoreInterface :SE_SetProps \{encore_title_text = qs("\L")}
 		split_text_into_menu {
 			text = <text_to_morph>
 			dims = <text_to_morph_dims>
@@ -81,7 +81,7 @@ script ui_create_encore_confirmation_spawned
 		i = 0
 		begin
 		text_element = (<text_element_array> [<i>])
-		<text_element> :se_setprops internal_scale = (<letter_scale> [<s>])
+		<text_element> :SE_SetProps internal_scale = (<letter_scale> [<s>])
 		s = (<s> + 1)
 		if (<s> > 3)
 			s = 0
@@ -89,15 +89,15 @@ script ui_create_encore_confirmation_spawned
 		i = (<i> + 1)
 		repeat <text_element_array_size>
 	endif
-	if encoreinterface :desc_resolvealias \{name = alias_stars_stack}
-		if getscreenelementchildren id = <resolved_id>
-			getarraysize <children>
+	if EncoreInterface :Desc_ResolveAlias \{name = alias_stars_stack}
+		if GetScreenElementChildren id = <resolved_id>
+			GetArraySize <children>
 			child_index = 0
 			begin
-			getrandomvalue \{name = rand_rot
+			GetRandomValue \{name = rand_rot
 				a = 0
 				b = 360}
-			setscreenelementprops id = (<children> [<child_index>]) rot_angle = <rand_rot>
+			SetScreenElementProps id = (<children> [<child_index>]) rot_angle = <rand_rot>
 			child_index = (<child_index> + 1)
 			repeat <array_size>
 			if (<array_size> > 0)
@@ -110,20 +110,20 @@ script ui_create_encore_confirmation_spawned
 			endif
 		endif
 	endif
-	casttointeger \{score}
-	formattext textname = score_text qs(0x48c6d14c) d = <score> usecommas
-	encoreinterface :se_setprops encore_score_text = <score_text>
-	formattext textname = cash_text qs(0x447de8d3) d = <cash> usecommas
-	encoreinterface :se_setprops encore_money_text = <cash_text>
+	CastToInteger \{score}
+	FormatText TextName = score_text qs("%d") d = <score> usecommas
+	EncoreInterface :SE_SetProps encore_score_text = <score_text>
+	FormatText TextName = cash_text qs("$%d") d = <Cash> usecommas
+	EncoreInterface :SE_SetProps encore_money_text = <cash_text>
 	mark_encore_started
 endscript
 
 script mark_encore_started 
 	get_progression_globals ($current_progression_flag)
 	format_globaltag_gigname setlist_prefix = ($<tier_global>.prefix) gignum = ($current_gig_number)
-	setglobaltags <gig_name> params = {started = 1 encore_unlocked = 1} all_active_players = 1
-	if ishost
-		sendstructure \{callback = mark_encore_started
+	SetGlobalTags <gig_name> params = {started = 1 encore_unlocked = 1} all_active_players = 1
+	if IsHost
+		SendStructure \{callback = mark_encore_started
 			data_to_send = {
 				none
 			}}
@@ -131,20 +131,20 @@ script mark_encore_started
 endscript
 
 script destroy_ui_encore_confirmation 
-	killspawnedscript \{name = ui_encore_animate_flashbulbs}
+	KillSpawnedScript \{name = ui_encore_animate_flashbulbs}
 	ui_destroy_encore_flashbulbs
-	if screenelementexists \{id = encoreinterface}
-		encoreinterface :die
+	if ScreenElementExists \{id = EncoreInterface}
+		EncoreInterface :Die
 	endif
 endscript
 
 script ui_encore_animate_flashbulbs 
-	spawnscriptlater \{pulsate_helper_pill
+	SpawnScriptLater \{pulsate_helper_pill
 		params = {
-			id = encoreinterface
+			id = EncoreInterface
 		}}
 endscript
 
 script ui_destroy_encore_flashbulbs 
-	killspawnedscript \{name = pulsate_helper_pill}
+	KillSpawnedScript \{name = pulsate_helper_pill}
 endscript

@@ -5,18 +5,18 @@ script ui_create_jam_publish_update_fileid
 endscript
 
 script ui_create_jam_publish_update_fileid_and_save 
-	setsonginfo \{file_id = {
+	SetSongInfo \{file_id = {
 			file_id = [
 				0
 				0
 			]
 		}}
-	wait \{1
+	Wait \{1
 		second}
 	startrendering
 	ui_memcard_save_jam \{event = menu_back
 		data = {
-			state = uistate_jam_select_song
+			state = UIstate_jam_select_song
 			show_popup = 0
 		}}
 endscript

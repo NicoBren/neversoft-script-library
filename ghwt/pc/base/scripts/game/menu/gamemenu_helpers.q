@@ -1,4 +1,4 @@
-default_font_colors = [
+Default_Font_Colors = [
 	[
 		200
 		200
@@ -81,9 +81,9 @@ default_font_colors = [
 is_changing_levels = 0
 
 script generic_menu_pad_back 
-	printf \{qs(0xd7d7f670)}
+	printf \{qs("\Lgeneric_menu_pad_back Parameters = ")}
 	generic_menu_pad_back_sound
-	if gotparam \{callback}
+	if GotParam \{callback}
 		<callback> <...>
 	endif
 endscript
@@ -91,10 +91,10 @@ endscript
 script generic_event_back \{object = 1
 		data = {
 		}}
-	if gotparam \{state}
+	if GotParam \{state}
 		data = {<data> state = <state>}
 	endif
-	if NOT gotparam \{nosound}
+	if NOT GotParam \{nosound}
 		generic_menu_pad_back_sound
 	endif
 	ui_event event = menu_back object = <object> data = <data>
@@ -103,10 +103,10 @@ endscript
 script generic_event_back_block \{object = 1
 		data = {
 		}}
-	if gotparam \{state}
+	if GotParam \{state}
 		data = {<data> state = <state>}
 	endif
-	if NOT gotparam \{nosound}
+	if NOT GotParam \{nosound}
 		generic_menu_pad_back_sound
 	endif
 	ui_event_block event = menu_back object = <object> data = <data>
@@ -115,10 +115,10 @@ endscript
 script generic_event_back_refresh \{object = 1
 		data = {
 		}}
-	if gotparam \{state}
+	if GotParam \{state}
 		data = {<data> state = <state>}
 	endif
-	if NOT gotparam \{no_sound}
+	if NOT GotParam \{no_sound}
 		generic_menu_pad_back_sound
 	endif
 	ui_event event = menu_back object = <object> data = {refresh_previous_state <data>}
@@ -132,10 +132,10 @@ script generic_event_choose \{event = menu_change
 		object = 1
 		data = {
 		}}
-	if gotparam \{state}
+	if GotParam \{state}
 		data = {<data> state = <state>}
 	endif
-	if NOT gotparam \{no_sound}
+	if NOT GotParam \{no_sound}
 		generic_menu_pad_choose_sound
 	endif
 	ui_event event = <event> data = <data> object = <object>
@@ -145,37 +145,37 @@ script generic_event_replace \{event = menu_replace
 		object = 1
 		data = {
 		}}
-	if gotparam \{state}
+	if GotParam \{state}
 		data = {<data> state = <state>}
 	endif
-	if NOT gotparam \{no_sound}
+	if NOT GotParam \{no_sound}
 		generic_menu_pad_choose_sound
 	endif
 	ui_event event = <event> data = <data> object = <object>
 endscript
 
 script generic_menu_pad_back_sound 
-	soundevent \{event = generic_menu_back_sfx}
+	SoundEvent \{event = Generic_Menu_Back_SFX}
 endscript
 
 script generic_menu_pad_choose_sound 
-	soundevent \{event = ui_sfx_select}
+	SoundEvent \{event = ui_sfx_select}
 endscript
 disable_menu_sounds = 0
 
 script generic_menu_up_or_down_sound \{menu_id = current_menu}
 	if ($disable_menu_sounds = 0)
-		if gotparam \{down}
-			soundevent \{event = ui_sfx_scroll_down}
+		if GotParam \{down}
+			SoundEvent \{event = UI_SFX_Scroll_Down}
 		else
-			soundevent \{event = ui_sfx_scroll_up}
+			SoundEvent \{event = UI_SFX_Scroll_Up}
 		endif
 	endif
 endscript
 
 script menu_scroll_end_sound 
 	if ($disable_menu_sounds = 0)
-		soundevent \{event = menu_scroll_end}
+		SoundEvent \{event = Menu_Scroll_End}
 	endif
 endscript
 
@@ -202,7 +202,7 @@ endscript
 
 script menu_video_settings_lefty_flip_sound 
 	if ($disable_menu_sounds = 0)
-		soundevent \{event = box_check_sfx}
+		SoundEvent \{event = Box_Check_SFX}
 	endif
 endscript
 
@@ -214,64 +214,64 @@ endscript
 
 script menu_video_settings_calibrate_reset_to_zero_sound 
 	if ($disable_menu_sounds = 0)
-		soundevent \{event = ui_sfx_select}
+		SoundEvent \{event = ui_sfx_select}
 	endif
 endscript
 
 script menu_song_complete_sound 
 	if ($disable_menu_sounds = 0)
-		soundevent \{event = ui_sfx_select}
+		SoundEvent \{event = ui_sfx_select}
 	endif
 endscript
 
 script menu_get_sponsor_sound 
 	if ($disable_menu_sounds = 0)
-		soundevent \{event = gh4_gigcomplete_sponsor}
+		SoundEvent \{event = Gh4_GigComplete_Sponsor}
 	endif
 endscript
 
-script ghmix_pad_back_sound 
+script GhMix_Pad_Back_Sound 
 	if ($disable_menu_sounds = 0)
-		soundevent \{event = ghmix_back}
+		SoundEvent \{event = GhMix_Back}
 	endif
 endscript
 
-script ghmix_pad_choose_sound 
+script GhMix_Pad_Choose_Sound 
 	if ($disable_menu_sounds = 0)
-		soundevent \{event = ghmix_select}
+		SoundEvent \{event = GhMix_Select}
 	endif
 endscript
 
-script ghmix_pad_up_down 
+script GhMix_Pad_Up_Down 
 	if ($disable_menu_sounds = 0)
-		soundevent \{event = ghmix_scroll_up_down}
+		SoundEvent \{event = GhMix_Scroll_Up_Down}
 	endif
 endscript
 
 script menu_setlist_bonus_tab_sound 
 	if ($disable_menu_sounds = 0)
-		soundevent \{event = ui_sfx_select}
+		SoundEvent \{event = ui_sfx_select}
 	endif
 endscript
 
 script menu_setlist_downloads_tab_sound 
 	if ($disable_menu_sounds = 0)
-		soundevent \{event = ui_sfx_select}
+		SoundEvent \{event = ui_sfx_select}
 	endif
 endscript
 
 script menu_setlist_setlist_tab_sound 
 	if ($disable_menu_sounds = 0)
-		soundevent \{event = ui_sfx_select}
+		SoundEvent \{event = ui_sfx_select}
 	endif
 endscript
 
 script screenelement_get_tags 
-	requireparams \{[
+	RequireParams \{[
 			id
 		]
 		all}
-	<id> :gettags
-	removeparameter \{id}
+	<id> :GetTags
+	RemoveParameter \{id}
 	return {tags = <...>}
 endscript

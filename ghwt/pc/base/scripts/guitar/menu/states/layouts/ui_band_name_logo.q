@@ -3,11 +3,11 @@ band_name_logo_current_name = none
 store_bnl_respond_to_signin_changed = 0
 store_bnl_respond_to_signin_changed_all_players = 0
 store_bnl_respond_to_signin_changed_func = none
-0xb1d07721 = 0
+winport_isBandLogo = 0
 
 script ui_init_band_name_logo controller = ($primary_controller)
-	if iswinport
-		change \{0xb1d07721 = 1}
+	if IsWinPort
+		change \{winport_isBandLogo = 1}
 	endif
 	init_band_logo controller = <controller>
 	change \{ui_band_name_logo_current_mode = main}
@@ -26,22 +26,22 @@ script ui_create_band_name_logo controller = ($primary_controller)
 	change \{respond_to_signin_changed = 0}
 	change \{respond_to_signin_changed_all_players = 0}
 	change \{respond_to_signin_changed_func = ui_band_name_logo_signin_changed}
-	if NOT screenelementexists \{id = bandinterface}
-		name_a = qs(0x36544ec2)
-		name_b = qs(0x8dadb316)
-		name_c = qs(0x0637ad1d)
-		name_d = qs(0xe0945f6e)
-		name_e = qs(0x447be3c8)
-		name_f = qs(0x8bee559c)
-		name_g = qs(0x63c0a9b5)
-		name_h = qs(0x0c3b62bb)
-		name_i = qs(0x511a2cbf)
-		name_j = qs(0xead0941e)
+	if NOT ScreenElementExists \{id = BandInterface}
+		name_a = qs("IDEA: FIND A RANDOM WORD OR TWO\NIN THE DICTIONARY")
+		name_b = qs("IDEA: COMBINE THE INITIALS OF\NYOUR BAND MEMBERS")
+		name_c = qs("IDEA: MAKE A LIST OF YOUR FAVORITE\NWORDS AND USE TWO")
+		name_d = qs("IDEA: PICK A ROCKIN' WORD AND\NSPELL IT WEIRD")
+		name_e = qs("IDEA: TRY AN INTERESTING VEGETABLE OR FLOWER")
+		name_f = qs("IDEA: NAME YOUR BAND AFTER A\NPLACE OR LANDMARK NEARBY")
+		name_g = qs("IDEA: START WITH THE NAME OF\NYOUR FAVORITE SONG")
+		name_h = qs("IDEA: YOUR NAME SHOULD MATCH\NYOUR STYLE")
+		name_i = qs("IDEA: BE ORIGINAL AND FUNNY!")
+		name_j = qs("IDEA: CHOOSE SOMETHING THAT\NWON'T MAKE YOUR MOM BLUSH")
 		random_name_tip = Random (@ <name_a> @ <name_b> @ <name_c> @ <name_d> @ <name_e> @ <name_f> @ <name_g> @ <name_h> @ <name_i> @ <name_j> )
-		createscreenelement {
+		CreateScreenElement {
 			parent = root_window
-			id = bandinterface
-			type = descinterface
+			id = BandInterface
+			type = DescInterface
 			desc = 'band_name'
 			exclusive_device = ($band_name_logo_controller)
 			just = [left top]
@@ -52,11 +52,11 @@ script ui_create_band_name_logo controller = ($primary_controller)
 				mode = main
 				text_case = upper
 				letter_index = 0
-				upper_characters = qs(0x443718d0)
-				lower_characters = qs(0xc808df1b)
-				number_characters = qs(0xae9f5865)
-				misc_characters = qs(0xd12b75c0)
-				foreign_characters = qs(0x6f0b8b63)
+				upper_characters = qs("\LABCDEFGHIJKLMNOPQRSTUVWXYZ")
+				lower_characters = qs("\Labcdefghijklmnopqrstuvwxyz")
+				number_characters = qs("\L0123456789")
+				misc_characters = qs("\L .,-!?:'+/^®()*@`¡¢£¤¥¦§¨©ª«¬{_#$%&=")
+				foreign_characters = qs("\LßÄÀÁÉÈÊÌÍÎÖÓÒÜÚÙàáâäêèéëíìîïóôòöúùûüçœŒñÑ€Ç¿")
 				from_boot = <from_boot>
 				from_save = <from_save>
 				event_params = <event_params>
@@ -64,68 +64,68 @@ script ui_create_band_name_logo controller = ($primary_controller)
 			}
 		}
 		cas_update_band_logo controller = ($band_name_logo_controller)
-		pushassetcontext context = ($cas_band_logo_details.assetcontext)
-		createscreenelement {
-			type = spriteelement
+		PushAssetContext context = ($CAS_Band_Logo_Details.assetcontext)
+		CreateScreenElement {
+			type = SpriteElement
 			parent = <id>
-			texture = ($cas_band_logo_details.textureasset)
+			texture = ($CAS_Band_Logo_Details.textureasset)
 			just = [left center]
 			rgba = [255 255 255 250]
 			pos = (460.0, 298.0)
 			dims = (250.0, 250.0)
 			z_priority = 5
 		}
-		popassetcontext
+		PopAssetContext
 	else
-		bandinterface :se_setprops \{pos = {
+		BandInterface :SE_SetProps \{pos = {
 				relative
 				(-250.0, 0.0)
 			}
 			time = 0.2}
 	endif
 	if NOT (($band_name_logo_current_name) = none)
-		bandinterface :se_setprops band_name_text = ($band_name_logo_current_name)
+		BandInterface :SE_SetProps band_name_text = ($band_name_logo_current_name)
 	elseif current_band_has_band_name controller = ($band_name_logo_controller)
 		get_savegame_from_controller controller = ($band_name_logo_controller)
 		get_current_band_info
-		getglobaltags savegame = <savegame> <band_info>
-		bandinterface :se_setprops band_name_text = <name> band_name_font = <font>
+		GetGlobalTags savegame = <savegame> <band_info>
+		BandInterface :SE_SetProps band_name_text = <name> band_name_font = <font>
 		change band_name_logo_current_name = <name>
-	elseif ((gotparam from_boot) || (gotparam from_save))
+	elseif ((GotParam from_boot) || (GotParam from_save))
 		ui_band_name_logo_random_name \{no_sound}
 		randomize_band_logo
 	endif
-	if NOT ((gotparam from_boot) || (gotparam from_save))
-		bandinterface :se_setprops band_name_info_text = <random_name_tip>
+	if NOT ((GotParam from_boot) || (GotParam from_save))
+		BandInterface :SE_SetProps band_name_info_text = <random_name_tip>
 	endif
-	assignalias \{id = bandinterface
+	AssignAlias \{id = BandInterface
 		alias = band_name_menu}
 	ui_band_name_logo_mode
-	launchevent \{type = focus
-		target = bandinterface}
-	if gotparam \{skip_destroy}
+	LaunchEvent \{type = focus
+		target = BandInterface}
+	if GotParam \{skip_destroy}
 		ui_event_remove_params \{param = skip_destroy}
 	endif
 endscript
 
 script ui_band_name_logo_signin_changed controller = ($primary_controller)
-	printf \{qs(0xe90ca467)}
+	printf \{qs("\Lui_band_name_logo_signin_changed")}
 	if (($primary_controller = <controller>) ||
 			($band_name_logo_controller = <controller>))
 		handle_signin_changed
 		return
 	endif
-	removecontentfiles playerid = <controller>
+	RemoveContentFiles playerid = <controller>
 	reset_globaltags savegame = <controller>
 	cheat_turnoffalllocked
 endscript
 
 script ui_destroy_band_name_logo 
 	clean_up_user_control_helpers
-	if NOT gotparam \{skip_destroy}
-		if screenelementexists \{id = bandinterface}
-			bandinterface :gettags
-			destroyscreenelement \{id = bandinterface}
+	if NOT GotParam \{skip_destroy}
+		if ScreenElementExists \{id = BandInterface}
+			BandInterface :GetTags
+			DestroyScreenElement \{id = BandInterface}
 		endif
 	else
 		ui_event_remove_params \{param = skip_destroy}
@@ -133,62 +133,62 @@ script ui_destroy_band_name_logo
 endscript
 
 script ui_deinit_band_name_logo 
-	if iswinport
-		change \{0xb1d07721 = 0}
+	if IsWinPort
+		change \{winport_isBandLogo = 0}
 	endif
 	change \{cas_override_object = none}
-	bandlogoobject :switchoffatomic \{cas_band_logo}
+	BandLogoObject :SwitchOffAtomic \{CAS_Band_Logo}
 	cas_free_resources \{no_bink
 		no_loading_screen
 		band_logo
 		no_fix_camera}
 	change \{menu_over_ride_exclusive_device = -1}
 	change \{band_name_logo_current_name = none}
-	if screenelementexists \{id = bandinterface}
-		destroyscreenelement \{id = bandinterface}
+	if ScreenElementExists \{id = BandInterface}
+		DestroyScreenElement \{id = BandInterface}
 	endif
 endscript
 
 script ui_band_name_logo_save 
-	bandinterface :se_getprops
-	bandinterface :gettags
+	BandInterface :SE_GetProps
+	BandInterface :GetTags
 	change ui_band_name_logo_current_mode = <mode>
 	bandname_id = band_info
-	gettruestarttime
-	formattext checksumname = band_unique_id 'band_info_%d' d = <starttime>
+	GetTrueStartTime
+	FormatText checksumname = band_unique_id 'band_info_%d' d = <StartTime>
 	get_savegame_from_controller controller = ($band_name_logo_controller)
-	setglobaltags savegame = <savegame> <bandname_id> params = {name = <band_name_text> band_unique_id = <band_unique_id> font = <band_name_font>}
+	SetGlobalTags savegame = <savegame> <bandname_id> params = {name = <band_name_text> band_unique_id = <band_unique_id> font = <band_name_font>}
 	agora_update band_id = <band_unique_id> name = <band_name_text> new_band
-	getcasappearancepart \{part = cas_band_logo}
-	if gotparam \{cap}
+	GetCASAppearancePart \{part = CAS_Band_Logo}
+	if GotParam \{cap}
 		get_current_band_info
-		lockglobaltags \{off}
-		setglobaltags savegame = <savegame> <band_info> params = {band_logo = <cap>}
-		lockglobaltags
+		LockGlobalTags \{off}
+		SetGlobalTags savegame = <savegame> <band_info> params = {band_logo = <cap>}
+		LockGlobalTags
 	endif
 endscript
 
 script ui_band_name_logo_continue 
-	bandinterface :gettags
+	BandInterface :GetTags
 	ui_band_name_logo_save
-	soundevent \{event = enter_band_name_finish}
+	SoundEvent \{event = Enter_Band_Name_Finish}
 	change respond_to_signin_changed = ($store_bnl_respond_to_signin_changed)
 	change respond_to_signin_changed_all_players = ($store_bnl_respond_to_signin_changed_all_players)
 	change respond_to_signin_changed_func = ($store_bnl_respond_to_signin_changed_func)
-	if gotparam \{from_boot}
-		unpausegame
+	if GotParam \{from_boot}
+		UnPauseGame
 		printf \{'ui_band_name_logo_continue - ui_event_wait_for_safe'}
 		ui_event_wait_for_safe
 		fadetoblack \{on
 			z_priority = 0
 			alpha = 1.0}
 	endif
-	if ((gotparam from_boot) || (gotparam from_save))
+	if ((GotParam from_boot) || (GotParam from_save))
 		ui_memcard_autosave_replace event = menu_replace state = uistate_boot_download_scan data = {event_params = <event_params> savegame = <device_num> controller = <device_num>}
 	else
 		data = {controller = <device_num>}
-		if gotparam \{event_params}
-			if structurecontains structure = <event_params> data
+		if GotParam \{event_params}
+			if StructureContains Structure = <event_params> data
 				data = {(<event_params>.data) savegame = <device_num> controller = <device_num>}
 			endif
 		endif
@@ -197,46 +197,46 @@ script ui_band_name_logo_continue
 endscript
 
 script ui_band_name_logo_edit 
-	requireparams \{[
+	RequireParams \{[
 			savegame
 		]
 		all}
-	if screenelementexists \{id = bandinterface}
-		bandinterface :se_setprops \{pos = {
+	if ScreenElementExists \{id = BandInterface}
+		BandInterface :SE_SetProps \{pos = {
 				relative
 				(250.0, 0.0)
 			}
 			time = 0.2}
 	endif
-	generic_event_choose data = {state = uistate_cap_main text = qs(0x9a6bb96f) part = cas_band_logo num_icons = 0 savegame = <savegame>}
+	generic_event_choose data = {state = UIstate_cap_main text = qs("Edit Band Logo") part = CAS_Band_Logo num_icons = 0 savegame = <savegame>}
 	ui_event_add_params \{skip_destroy = 1}
 endscript
 
 script ui_band_name_logo_mode \{mode = main}
-	setspawninstancelimits \{max = 1
+	SetSpawnInstanceLimits \{max = 1
 		management = ignore_spawn_request}
 	change \{rich_presence_context = presence_band_logo_edit_and_instrument_edit}
-	if gotparam \{check_name}
-		bandinterface :se_getprops
+	if GotParam \{check_name}
+		BandInterface :SE_GetProps
 		if NOT ui_band_name_is_valid text = <band_name_text>
-			soundevent \{event = menu_warning_sfx}
-			bandinterface :obj_spawnscript \{ui_band_name_logo_warning}
+			SoundEvent \{event = Menu_Warning_SFX}
+			BandInterface :obj_spawnscript \{ui_band_name_logo_warning}
 			return
 		endif
 	endif
-	if gotparam \{from_logo}
-		soundevent \{event = box_check_sfx}
-	elseif gotparam \{from_name}
-		soundevent \{event = box_check_sfx}
+	if GotParam \{From_Logo}
+		SoundEvent \{event = Box_Check_SFX}
+	elseif GotParam \{From_Name}
+		SoundEvent \{event = Box_Check_SFX}
 	endif
 	clean_up_user_control_helpers
 	if NOT ($ui_band_name_logo_current_mode = main)
 		mode = $ui_band_name_logo_current_mode
 		change \{ui_band_name_logo_current_mode = main}
 	endif
-	bandinterface :settags mode = <mode>
-	bandinterface :gettags
-	bandinterface :se_setprops \{event_handlers = [
+	BandInterface :SetTags mode = <mode>
+	BandInterface :GetTags
+	BandInterface :SE_SetProps \{event_handlers = [
 		]
 		replace_handlers}
 	switch (<mode>)
@@ -248,31 +248,31 @@ script ui_band_name_logo_mode \{mode = main}
 			{pad_option ui_band_name_logo_edit params = {savegame = <savegame>}}
 			{pad_l1 ui_band_name_logo_random_name}
 		]
-		if bandinterface :desc_resolvealias \{name = alias_cursor}
-			<resolved_id> :se_setprops text = qs(0x00000000) alpha = 0.0
-			killspawnedscript \{name = ui_band_name_logo_blink_cursor}
+		if BandInterface :Desc_ResolveAlias \{name = alias_cursor}
+			<resolved_id> :SE_SetProps text = qs("") alpha = 0.0
+			KillSpawnedScript \{name = ui_band_name_logo_blink_cursor}
 		endif
-		if bandinterface :desc_resolvealias \{name = alias_band_name_letter}
-			<resolved_id> :se_setprops font = fontgrid_text_a6_fire material = null alpha = 0.25
+		if BandInterface :Desc_ResolveAlias \{name = alias_band_name_letter}
+			<resolved_id> :SE_SetProps font = fontgrid_text_a6_fire material = null alpha = 0.25
 		endif
-		add_user_control_helper \{text = qs(0xb73cb78f)
+		add_user_control_helper \{text = qs("ACCEPT")
 			button = green
 			z = 100000}
-		if NOT gotparam \{from_boot}
-			add_user_control_helper \{text = qs(0xf7723015)
+		if NOT GotParam \{from_boot}
+			add_user_control_helper \{text = qs("CANCEL")
 				button = red
 				z = 100000}
 		endif
-		add_user_control_helper \{text = qs(0x86be1220)
-			button = yellow
+		add_user_control_helper \{text = qs("NAME")
+			button = Yellow
 			z = 100000}
-		add_user_control_helper \{text = qs(0x6bc37cc3)
-			button = blue
+		add_user_control_helper \{text = qs("LOGO")
+			button = Blue
 			z = 100000}
-		add_user_control_helper \{text = qs(0xf99069a2)
-			button = orange
+		add_user_control_helper \{text = qs("RANDOM NAME")
+			button = Orange
 			z = 100000}
-		if NOT gotparam \{from_boot}
+		if NOT GotParam \{from_boot}
 			event_handlers = [
 				{pad_back generic_event_back}
 				{pad_choose ui_band_name_logo_continue}
@@ -282,12 +282,12 @@ script ui_band_name_logo_mode \{mode = main}
 			]
 		endif
 		case name
-		if NOT gotparam \{no_sound}
+		if NOT GotParam \{no_sound}
 			generic_menu_pad_choose_sound
 		endif
-		bandinterface :se_getprops
+		BandInterface :SE_GetProps
 		event_handlers = [
-			{pad_choose ui_band_name_logo_mode params = {check_name from_name}}
+			{pad_choose ui_band_name_logo_mode params = {check_name From_Name}}
 			{pad_back ui_band_name_logo_cancel_name params = {band_name_text = <band_name_text>}}
 			{pad_option2 ui_band_name_logo_enter_character}
 			{pad_option ui_band_name_logo_backspace}
@@ -295,120 +295,120 @@ script ui_band_name_logo_mode \{mode = main}
 			{pad_up ui_band_name_logo_scroll params = {up}}
 			{pad_down ui_band_name_logo_scroll}
 		]
-		if bandinterface :desc_resolvealias \{name = alias_cursor}
-			if NOT scriptisrunning \{ui_band_name_logo_blink_cursor}
-				<resolved_id> :se_setprops text = qs(0xd99030ce) alpha = 1.0
+		if BandInterface :Desc_ResolveAlias \{name = alias_cursor}
+			if NOT ScriptIsRunning \{ui_band_name_logo_blink_cursor}
+				<resolved_id> :SE_SetProps text = qs("\L_") alpha = 1.0
 				<resolved_id> :obj_spawnscript ui_band_name_logo_blink_cursor
 			endif
 		endif
-		if bandinterface :desc_resolvealias \{name = alias_band_name_letter}
-			<resolved_id> :se_setprops font = fontgrid_text_a6_fire material = sys_fontgrid_text_a6_fire_sys_fontgrid_text_a6_fire alpha = 1.0
+		if BandInterface :Desc_ResolveAlias \{name = alias_band_name_letter}
+			<resolved_id> :SE_SetProps font = fontgrid_text_a6_fire material = sys_fontgrid_text_A6_fire_sys_fontgrid_text_A6_fire alpha = 1.0
 		endif
-		add_user_control_helper \{text = qs(0xb73cb78f)
+		add_user_control_helper \{text = qs("ACCEPT")
 			button = green
 			z = 100000}
-		add_user_control_helper \{text = qs(0xf7723015)
+		add_user_control_helper \{text = qs("CANCEL")
 			button = red
 			z = 100000}
-		add_user_control_helper \{text = qs(0x09758c70)
-			button = yellow
+		add_user_control_helper \{text = qs("ADD LETTER")
+			button = Yellow
 			z = 100000}
-		add_user_control_helper \{text = qs(0x1c2cd639)
-			button = blue
+		add_user_control_helper \{text = qs("BACKSPACE")
+			button = Blue
 			z = 100000}
-		bandinterface :getsingletag \{text_case}
+		BandInterface :GetSingleTag \{text_case}
 		controller = ($band_name_logo_controller)
 		switch (<text_case>)
 			case upper
-			add_user_control_helper \{text = qs(0x5d820f70)
-				button = orange
+			add_user_control_helper \{text = qs("LOWER")
+				button = Orange
 				z = 100000}
 			case lower
-			add_user_control_helper \{text = qs(0xaf4512b4)
-				button = orange
+			add_user_control_helper \{text = qs("NUMBERS")
+				button = Orange
 				z = 100000}
 			case number
-			add_user_control_helper \{text = qs(0x6a5a10c8)
-				button = orange
+			add_user_control_helper \{text = qs("SYMBOLS")
+				button = Orange
 				z = 100000}
-			case misc
-			add_user_control_helper \{text = qs(0x415478eb)
-				button = orange
+			case Misc
+			add_user_control_helper \{text = qs("ACCENTS")
+				button = Orange
 				z = 100000}
 			case foreign
-			add_user_control_helper \{text = qs(0x3ea7b66d)
-				button = orange
+			add_user_control_helper \{text = qs("UPPER")
+				button = Orange
 				z = 100000}
 		endswitch
 	endswitch
-	bandinterface :se_setprops {
+	BandInterface :SE_SetProps {
 		event_handlers = <event_handlers>
 		replace_handlers
 	}
 endscript
 
 script ui_band_name_logo_toggle_case 
-	setspawninstancelimits \{max = 1
+	SetSpawnInstanceLimits \{max = 1
 		management = ignore_spawn_request}
-	bandinterface :gettags
+	BandInterface :GetTags
 	switch (<text_case>)
 		case upper
-		bandinterface :settags \{text_case = lower}
-		stringtochararray string = <lower_characters>
+		BandInterface :SetTags \{text_case = lower}
+		StringToCharArray string = <lower_characters>
 		band_name_letter_text = (<char_array> [<letter_index>])
 		case lower
-		bandinterface :settags \{text_case = number}
-		stringtochararray string = <number_characters>
+		BandInterface :SetTags \{text_case = number}
+		StringToCharArray string = <number_characters>
 		band_name_letter_text = (<char_array> [0])
 		case number
-		bandinterface :settags \{text_case = misc}
-		stringtochararray string = <misc_characters>
+		BandInterface :SetTags \{text_case = Misc}
+		StringToCharArray string = <misc_characters>
 		band_name_letter_text = (<char_array> [0])
-		case misc
-		bandinterface :settags \{text_case = foreign}
-		stringtochararray string = <foreign_characters>
+		case Misc
+		BandInterface :SetTags \{text_case = foreign}
+		StringToCharArray string = <foreign_characters>
 		band_name_letter_text = (<char_array> [0])
 		case foreign
-		bandinterface :settags \{text_case = upper}
-		stringtochararray string = <upper_characters>
+		BandInterface :SetTags \{text_case = upper}
+		StringToCharArray string = <upper_characters>
 		band_name_letter_text = (<char_array> [<letter_index>])
 	endswitch
-	soundevent \{event = enter_band_name_caps}
+	SoundEvent \{event = Enter_Band_Name_Caps}
 	ui_band_name_logo_mode \{mode = name
 		no_sound}
-	bandinterface :se_setprops band_name_letter_text = <band_name_letter_text>
+	BandInterface :SE_SetProps band_name_letter_text = <band_name_letter_text>
 endscript
 
 script ui_band_name_logo_random_name 
-	setspawninstancelimits \{max = 1
+	SetSpawnInstanceLimits \{max = 1
 		management = ignore_spawn_request}
 	cas_random_band_name
-	if NOT gotparam \{no_sound}
-		soundevent \{event = enter_band_name_caps}
+	if NOT GotParam \{no_sound}
+		SoundEvent \{event = Enter_Band_Name_Caps}
 	endif
-	bandinterface :se_setprops band_name_text = <random_name>
+	BandInterface :SE_SetProps band_name_text = <random_name>
 	change band_name_logo_current_name = <random_name>
 endscript
 
 script ui_band_name_logo_scroll 
-	setspawninstancelimits \{max = 1
+	SetSpawnInstanceLimits \{max = 1
 		management = ignore_spawn_request}
-	bandinterface :se_getprops
-	bandinterface :gettags
+	BandInterface :SE_GetProps
+	BandInterface :GetTags
 	switch (<text_case>)
 		case upper
-		stringtochararray string = <upper_characters>
+		StringToCharArray string = <upper_characters>
 		case lower
-		stringtochararray string = <lower_characters>
+		StringToCharArray string = <lower_characters>
 		case number
-		stringtochararray string = <number_characters>
-		case misc
-		stringtochararray string = <misc_characters>
+		StringToCharArray string = <number_characters>
+		case Misc
+		StringToCharArray string = <misc_characters>
 		case foreign
-		stringtochararray string = <foreign_characters>
+		StringToCharArray string = <foreign_characters>
 	endswitch
-	if gotparam \{char_array}
-		getarraysize <char_array>
+	if GotParam \{char_array}
+		GetArraySize <char_array>
 		printstruct <...>
 		i = 0
 		begin
@@ -420,87 +420,87 @@ script ui_band_name_logo_scroll
 		if (<i> = <array_size>)
 			return
 		endif
-		if gotparam \{up}
-			soundevent \{event = enter_band_name_scroll_up}
+		if GotParam \{up}
+			SoundEvent \{event = Enter_Band_Name_Scroll_Up}
 			if (<i> = (<array_size> - 1))
 				switch (<text_case>)
 					case upper
-					bandinterface :settags \{text_case = lower}
-					stringtochararray string = <lower_characters>
-					bandinterface :settags \{letter_index = 0}
+					BandInterface :SetTags \{text_case = lower}
+					StringToCharArray string = <lower_characters>
+					BandInterface :SetTags \{letter_index = 0}
 					case lower
-					bandinterface :settags \{text_case = number}
-					stringtochararray string = <number_characters>
+					BandInterface :SetTags \{text_case = number}
+					StringToCharArray string = <number_characters>
 					case number
-					bandinterface :settags \{text_case = misc}
-					stringtochararray string = <misc_characters>
-					case misc
-					bandinterface :settags \{text_case = foreign}
-					stringtochararray string = <foreign_characters>
+					BandInterface :SetTags \{text_case = Misc}
+					StringToCharArray string = <misc_characters>
+					case Misc
+					BandInterface :SetTags \{text_case = foreign}
+					StringToCharArray string = <foreign_characters>
 					case foreign
-					bandinterface :settags \{text_case = upper}
-					stringtochararray string = <upper_characters>
-					bandinterface :settags \{letter_index = 0}
+					BandInterface :SetTags \{text_case = upper}
+					StringToCharArray string = <upper_characters>
+					BandInterface :SetTags \{letter_index = 0}
 				endswitch
 				band_name_letter_text = (<char_array> [0])
 			else
 				band_name_letter_text = (<char_array> [(<i> + 1)])
 				if ((<text_case> = upper) || (<text_case> = lower))
-					bandinterface :settags letter_index = (<i> + 1)
+					BandInterface :SetTags letter_index = (<i> + 1)
 				endif
 			endif
-			bandinterface :obj_spawnscript \{ui_band_name_logo_scale_up_arrow}
+			BandInterface :obj_spawnscript \{ui_band_name_logo_scale_up_arrow}
 		else
-			soundevent \{event = enter_band_name_scroll_down}
+			SoundEvent \{event = Enter_Band_Name_Scroll_Down}
 			if (<i> = 0)
 				switch (<text_case>)
 					case upper
-					bandinterface :settags \{text_case = foreign}
-					stringtochararray string = <foreign_characters>
+					BandInterface :SetTags \{text_case = foreign}
+					StringToCharArray string = <foreign_characters>
 					case lower
-					bandinterface :settags \{text_case = upper}
-					stringtochararray string = <upper_characters>
+					BandInterface :SetTags \{text_case = upper}
+					StringToCharArray string = <upper_characters>
 					case number
-					bandinterface :settags \{text_case = lower}
-					stringtochararray string = <lower_characters>
-					case misc
-					bandinterface :settags \{text_case = number}
-					stringtochararray string = <number_characters>
+					BandInterface :SetTags \{text_case = lower}
+					StringToCharArray string = <lower_characters>
+					case Misc
+					BandInterface :SetTags \{text_case = number}
+					StringToCharArray string = <number_characters>
 					case foreign
-					bandinterface :settags \{text_case = misc}
-					stringtochararray string = <misc_characters>
+					BandInterface :SetTags \{text_case = Misc}
+					StringToCharArray string = <misc_characters>
 				endswitch
-				getarraysize <char_array>
+				GetArraySize <char_array>
 				band_name_letter_text = (<char_array> [(<array_size> - 1)])
-				bandinterface :getsingletag \{text_case}
+				BandInterface :GetSingleTag \{text_case}
 				if ((<text_case> = upper) || (<text_case> = lower))
-					bandinterface :settags letter_index = (<array_size> - 1)
+					BandInterface :SetTags letter_index = (<array_size> - 1)
 				endif
 			else
 				band_name_letter_text = (<char_array> [(<i> - 1)])
 				if ((<text_case> = upper) || (<text_case> = lower))
-					bandinterface :settags letter_index = (<i> - 1)
+					BandInterface :SetTags letter_index = (<i> - 1)
 				endif
 			endif
-			bandinterface :obj_spawnscript \{ui_band_name_logo_scale_down_arrow}
+			BandInterface :obj_spawnscript \{ui_band_name_logo_scale_down_arrow}
 		endif
 	endif
 	ui_band_name_logo_mode \{mode = name
 		no_sound}
-	bandinterface :se_setprops band_name_letter_text = <band_name_letter_text>
+	BandInterface :SE_SetProps band_name_letter_text = <band_name_letter_text>
 endscript
 
 script ui_band_name_logo_enter_character 
-	setspawninstancelimits \{max = 1
+	SetSpawnInstanceLimits \{max = 1
 		management = ignore_spawn_request}
-	bandinterface :se_getprops
-	stringtochararray string = <band_name_text>
-	if gotparam \{char_array}
-		getarraysize <char_array>
+	BandInterface :SE_GetProps
+	StringToCharArray string = <band_name_text>
+	if GotParam \{char_array}
+		GetArraySize <char_array>
 		if NOT (<array_size> >= 20)
 			band_name_text = (<band_name_text> + <band_name_letter_text>)
-			soundevent \{event = enter_band_name_select}
-			bandinterface :se_setprops band_name_text = <band_name_text>
+			SoundEvent \{event = enter_band_name_select}
+			BandInterface :SE_SetProps band_name_text = <band_name_text>
 			change band_name_logo_current_name = <band_name_text>
 		else
 			menu_scroll_end_sound
@@ -509,33 +509,33 @@ script ui_band_name_logo_enter_character
 endscript
 
 script ui_band_name_logo_backspace 
-	setspawninstancelimits \{max = 1
+	SetSpawnInstanceLimits \{max = 1
 		management = ignore_spawn_request}
-	bandinterface :se_getprops
-	stringtochararray string = <band_name_text>
-	if gotparam \{char_array}
-		getarraysize <char_array>
-		text = qs(0x03ac90f0)
+	BandInterface :SE_GetProps
+	StringToCharArray string = <band_name_text>
+	if GotParam \{char_array}
+		GetArraySize <char_array>
+		text = qs("\L")
 		if (<array_size> > 1)
 			i = 0
 			begin
 			text = (<text> + (<char_array> [<i>]))
 			i = (<i> + 1)
 			repeat (<array_size> - 1)
-			soundevent \{event = enter_band_name_back}
+			SoundEvent \{event = Enter_Band_Name_Back}
 		elseif (<array_size> = 1)
-			soundevent \{event = enter_band_name_back}
+			SoundEvent \{event = Enter_Band_Name_Back}
 		else
 			menu_scroll_end_sound
 		endif
-		bandinterface :se_setprops band_name_text = <text>
+		BandInterface :SE_SetProps band_name_text = <text>
 		change band_name_logo_current_name = <text>
 	endif
 endscript
 
 script ui_band_name_logo_toggle_font 
-	bandinterface :se_getprops
-	getarraysize \{$car_font_list}
+	BandInterface :SE_GetProps
+	GetArraySize \{$car_font_list}
 	i = 0
 	printstruct <...>
 	begin
@@ -549,70 +549,70 @@ script ui_band_name_logo_toggle_font
 	else
 		i = (<i> + 1)
 	endif
-	soundevent \{event = enter_band_name_caps}
-	bandinterface :se_setprops band_name_font = ((($car_font_list) [<i>]).font_checksum)
+	SoundEvent \{event = Enter_Band_Name_Caps}
+	BandInterface :SE_SetProps band_name_font = ((($car_font_list) [<i>]).font_checksum)
 endscript
 
 script ui_band_name_logo_blink_cursor 
-	setspawninstancelimits \{max = 1
+	SetSpawnInstanceLimits \{max = 1
 		management = ignore_spawn_request}
 	begin
-	se_setprops \{alpha = 0.0
+	SE_SetProps \{alpha = 0.0
 		time = 0.25
 		motion = ease_out}
-	se_waitprops
-	se_setprops \{alpha = 1.0
+	SE_WaitProps
+	SE_SetProps \{alpha = 1.0
 		time = 0.25
 		motion = ease_out}
-	se_waitprops
+	SE_WaitProps
 	repeat
 endscript
 
 script ui_band_name_logo_warning 
-	setspawninstancelimits \{max = 1
+	SetSpawnInstanceLimits \{max = 1
 		management = kill_oldest}
-	gettags
-	bandinterface :se_setprops \{band_name_info_text = qs(0xf9afb2a1)}
-	wait \{4.0
+	GetTags
+	BandInterface :SE_SetProps \{band_name_info_text = qs("YOU MUST ENTER A BAND NAME TO CONTINUE")}
+	Wait \{4.0
 		seconds}
-	if ((gotparam from_boot) || (gotparam from_save))
-		bandinterface :se_setprops \{band_name_info_text = qs(0x7a5e3606)}
+	if ((GotParam from_boot) || (GotParam from_save))
+		BandInterface :SE_SetProps \{band_name_info_text = qs("DON'T WORRY, YOU CAN EDIT YOUR\nBAND NAME OR LOGO LATER")}
 	else
-		bandinterface :se_setprops band_name_info_text = <random_name_tip>
+		BandInterface :SE_SetProps band_name_info_text = <random_name_tip>
 	endif
 endscript
 
 script ui_band_name_logo_scale_up_arrow 
-	setspawninstancelimits \{max = 1
+	SetSpawnInstanceLimits \{max = 1
 		management = kill_oldest}
-	bandinterface :se_setprops \{name_arrow_up_scale = 1.25
+	BandInterface :SE_SetProps \{name_arrow_up_scale = 1.25
 		time = 0.1}
-	wait \{0.1
+	Wait \{0.1
 		seconds}
-	bandinterface :se_setprops \{name_arrow_up_scale = 1.0
+	BandInterface :SE_SetProps \{name_arrow_up_scale = 1.0
 		time = 0.05}
 endscript
 
 script ui_band_name_logo_scale_down_arrow 
-	setspawninstancelimits \{max = 1
+	SetSpawnInstanceLimits \{max = 1
 		management = kill_oldest}
-	bandinterface :se_setprops \{name_arrow_dn_scale = 1.25
+	BandInterface :SE_SetProps \{name_arrow_dn_scale = 1.25
 		time = 0.1
 		motion = ease_out}
-	wait \{0.1
+	Wait \{0.1
 		seconds}
-	bandinterface :se_setprops \{name_arrow_dn_scale = 1.0
+	BandInterface :SE_SetProps \{name_arrow_dn_scale = 1.0
 		time = 0.1
 		motion = ease_out}
 endscript
 
 script ui_band_name_logo_cancel_name 
-	bandinterface :se_setprops band_name_text = <band_name_text>
+	BandInterface :SE_SetProps band_name_text = <band_name_text>
 	change band_name_logo_current_name = <band_name_text>
 	if ui_band_name_is_valid text = <band_name_text>
 		ui_band_name_logo_mode \{mode = main
-			from_name}
+			From_Name}
 	else
-		bandinterface :obj_spawnscript \{ui_band_name_logo_warning}
+		BandInterface :obj_spawnscript \{ui_band_name_logo_warning}
 	endif
 endscript

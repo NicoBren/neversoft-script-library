@@ -4,27 +4,27 @@ script ui_create_popout_select_part
 endscript
 
 script ui_create_popout_select_part_spawned 
-	requireparams \{[
+	RequireParams \{[
 			part
 		]
 		all}
 	make_list_menu {
 		vmenu_id = create_popout_select_part_vmenu
 		pad_back_script = generic_exit_restore
-		pad_back_sound = nullsound
+		pad_back_sound = NullSound
 		parent = <container_id>
 		text_case = <text_case>
 		icon = <hist_tex>
 		icon_offset = <icon_offset>
 		list_offset = <list_offset>
 	}
-	if NOT gotparam \{disable_rotation_zoom}
+	if NOT GotParam \{disable_rotation_zoom}
 		setup_cas_menu_handlers vmenu_id = create_popout_select_part_vmenu camera_list = <camera_list> zoom_camera = <zoom_camera> no_rotate = <no_rotate> no_zoom = <no_zoom> pull_back_distance = <pull_back_distance>
 	endif
-	resolvebodyspecificpartinappearance part = <part>
+	ResolveBodySpecificPartInAppearance part = <part>
 	current_part = 0
 	get_part_current_desc_id part = <part>
-	getarraysize ($<part>)
+	GetArraySize ($<part>)
 	num_parts_added = 0
 	i = 0
 	begin
@@ -34,16 +34,16 @@ script ui_create_popout_select_part_spawned
 				current_part = <num_parts_added>
 			endif
 			if NOT is_part_purchased part = <part> desc_id = ((($<part>) [<i>]).desc_id) savegame = ($cas_current_savegame)
-				if gotparam \{purchase_menu}
+				if GotParam \{purchase_menu}
 					price = ((($<part>) [<i>]).price)
-					formattext textname = pad_choose_dialogue qs(0x30e8eb93) s = ((($<part>) [<i>]).frontend_desc)
+					FormatText TextName = pad_choose_dialogue qs("Would you like to purchase and edit this %s?") s = ((($<part>) [<i>]).frontend_desc)
 					show_purchasable = 1
 				endif
 				if is_part_editable part = <part> desc_id = ((($<part>) [<i>]).desc_id)
 					editable = {editable}
 				endif
 			elseif is_part_editable part = <part> desc_id = ((($<part>) [<i>]).desc_id)
-				if gotparam \{choose_script}
+				if GotParam \{choose_script}
 					pad_option2_script = <choose_script>
 				else
 					pad_option2_script = popout_select_part_decide_action
@@ -67,38 +67,38 @@ script ui_create_popout_select_part_spawned
 				<editable>
 			}
 			num_parts_added = (<num_parts_added> + 1)
-			if gotparam \{price}
-				removeparameter \{price}
+			if GotParam \{price}
+				RemoveParameter \{price}
 			endif
-			if gotparam \{pad_choose_dialogue}
-				removeparameter \{pad_choose_dialogue}
+			if GotParam \{pad_choose_dialogue}
+				RemoveParameter \{pad_choose_dialogue}
 			endif
-			if gotparam \{pad_back_dialogue}
-				removeparameter \{pad_back_dialogue}
+			if GotParam \{pad_back_dialogue}
+				RemoveParameter \{pad_back_dialogue}
 			endif
-			if gotparam \{show_purchasable}
-				removeparameter \{show_purchasable}
+			if GotParam \{show_purchasable}
+				RemoveParameter \{show_purchasable}
 			endif
-			if gotparam \{show_editable}
-				removeparameter \{show_editable}
+			if GotParam \{show_editable}
+				RemoveParameter \{show_editable}
 			endif
-			if gotparam \{pad_option2_script}
-				removeparameter \{pad_option2_script}
+			if GotParam \{pad_option2_script}
+				RemoveParameter \{pad_option2_script}
 			endif
-			if gotparam \{editable}
-				removeparameter \{editable}
+			if GotParam \{editable}
+				RemoveParameter \{editable}
 			endif
 		endif
 	endif
 	i = (<i> + 1)
 	repeat <array_size>
 	clean_up_user_control_helpers
-	launchevent type = focus target = create_popout_select_part_vmenu data = {child_index = <current_part>}
-	if gotparam \{stance}
-		getcurrentcasobject
-		bandmanager_changestance name = <cas_object> stance = <stance> no_wait
+	LaunchEvent type = focus target = create_popout_select_part_vmenu data = {child_index = <current_part>}
+	if GotParam \{stance}
+		GetCurrentCASObject
+		BandManager_ChangeStance name = <cas_object> stance = <stance> no_wait
 	endif
-	if gotparam \{cam_name}
+	if GotParam \{cam_name}
 		change \{generic_menu_block_input = 1}
 		task_menu_default_anim_in base_name = <cam_name>
 		change \{generic_menu_block_input = 0}
@@ -111,29 +111,29 @@ script ui_destroy_popout_select_part
 endscript
 
 script ui_init_popout_select_part 
-	requireparams \{[
+	RequireParams \{[
 			part
 		]
 		all}
 	ui_load_cas_rawpak part = <part>
-	if gotparam \{additional_init_script}
+	if GotParam \{additional_init_script}
 		<additional_init_script>
 	endif
-	pushtemporarycasappearance
+	PushTemporaryCASAppearance
 endscript
 
 script ui_deinit_popout_select_part 
-	flushallcompositetextures
-	poptemporarycasappearance
-	if NOT gotparam \{skip_deinit_script}
-		if gotparam \{additional_deinit_script}
+	FlushAllCompositeTextures
+	PopTemporaryCASAppearance
+	if NOT GotParam \{skip_deinit_script}
+		if GotParam \{additional_deinit_script}
 			<additional_deinit_script>
 		endif
-		getcurrentcasobject
-		if gotparam \{return_stance}
-			bandmanager_changestance name = <cas_object> stance = <return_stance> no_wait
+		GetCurrentCASObject
+		if GotParam \{return_stance}
+			BandManager_ChangeStance name = <cas_object> stance = <return_stance> no_wait
 		else
-			bandmanager_changestance name = <cas_object> stance = stance_frontend no_wait
+			BandManager_ChangeStance name = <cas_object> stance = stance_frontend no_wait
 		endif
 	else
 		ui_event_remove_params \{param = skip_deinit_script}
@@ -142,20 +142,20 @@ script ui_deinit_popout_select_part
 endscript
 
 script popout_select_part_decide_action 
-	if scriptisrunning \{select_part_focus_change_spawned}
-		killspawnedscript \{name = select_part_focus_change_spawned}
+	if ScriptIsRunning \{select_part_focus_change_spawned}
+		KillSpawnedScript \{name = select_part_focus_change_spawned}
 	endif
-	requireparams \{[
+	RequireParams \{[
 			part
 		]
 		all}
-	if gotparam \{purchase_menu}
+	if GotParam \{purchase_menu}
 	endif
 	ui_event_add_params \{skip_deinit_script = 1}
 	if is_part_capable part = <part>
-		if getcaspartmaterials part = <part>
+		if GetCASPartMaterials part = <part>
 			generic_event_replace data = {
-				state = uistate_cas_select_part_options
+				state = UIstate_cas_select_part_options
 				part = <part>
 				part_materials = <part_materials>
 				num_states = 1
@@ -173,11 +173,11 @@ script popout_select_part_decide_action
 			}
 			return
 		endif
-		get_section_index_from_desc_id part = <part> target_desc_id = finishes
-		if gotparam \{section_index}
+		get_section_index_from_desc_id part = <part> target_desc_id = Finishes
+		if GotParam \{section_index}
 			generic_event_replace data = {
-				state = uistate_cap_artist_layer
-				part = <part> text = qs(0x6e23fd31)
+				state = UIstate_cap_artist_layer
+				part = <part> text = qs("Finishes")
 				section_index = <section_index>
 				back_steps = 2
 				camera_list = <camera_list>
@@ -193,9 +193,9 @@ script popout_select_part_decide_action
 			return
 		else
 			generic_event_replace data = {
-				state = uistate_cap_main
+				state = UIstate_cap_main
 				savegame = ($cas_current_savegame)
-				part = <part> text = qs(0xd02a3b59)
+				part = <part> text = qs("Design")
 				back_steps = 1
 				camera_list = <camera_list>
 				zoom_camera = <zoom_camera>
@@ -209,11 +209,11 @@ script popout_select_part_decide_action
 			}
 			return
 		endif
-	elseif getcaspartmaterials part = <part>
-		getarraysize <part_materials>
+	elseif GetCASPartMaterials part = <part>
+		GetArraySize <part_materials>
 		if (<array_size> > 1)
 			ui_event event = menu_replace data = {
-				state = uistate_cas_select_part_color_options
+				state = UIstate_cas_select_part_color_options
 				part = <part>
 				part_materials = <part_materials>
 				hist_tex = menu_history_color_edit
@@ -232,7 +232,7 @@ script popout_select_part_decide_action
 			}
 		elseif (<array_size> = 1)
 			ui_event event = menu_replace data = {
-				state = uistate_cas_color_edit
+				state = UIstate_cas_color_edit
 				part = <part>
 				part_materials = <part_materials>
 				hist_tex = menu_history_color_edit
@@ -255,38 +255,38 @@ script popout_select_part_decide_action
 endscript
 
 script select_part_focus_change 
-	requireparams \{[
+	RequireParams \{[
 			part
 		]
 		all}
-	killallcompositetextures
+	KillAllCompositeTextures
 	get_part_current_desc_id part = <part>
-	printf qs(0x1e9f665e) c = <current_desc_id> donotresolve
+	printf qs("\LCurrent Desc ID is %c") c = <current_desc_id> DoNotResolve
 	if (((($<part>) [<index>]).desc_id) != <current_desc_id>)
 		cas_add_item_to_appearance {
 			part = <part>
 			desc_id = (($<part>) [<index>].desc_id)
 		}
-		if NOT getcasappearancepart part = <part>
-			scriptassert '%s not found' s = <part> donotresolve donotresolve
+		if NOT GetCASAppearancePart part = <part>
+			ScriptAssert '%s not found' s = <part> DoNotResolve DoNotResolve
 		endif
-		if NOT getactualcasoptionstruct part = <part> desc_id = <desc_id>
-			scriptassert '%s %t not found' s = <part> t = <desc_id> donotresolve
+		if NOT GetActualCASOptionStruct part = <part> desc_id = <desc_id>
+			ScriptAssert '%s %t not found' s = <part> t = <desc_id> DoNotResolve
 		endif
 	endif
-	if gotparam \{play_current_anim}
-		if gotparam \{frontend_anim_name}
-			getcurrentcasobject
-			band_playsimpleanim name = <cas_object> anim = <frontend_anim_name>
+	if GotParam \{play_current_anim}
+		if GotParam \{frontend_anim_name}
+			GetCurrentCASObject
+			Band_PlaysimpleAnim name = <cas_object> Anim = <frontend_anim_name>
 		endif
 	endif
 	clean_up_user_control_helpers
-	if gotparam \{disable_rotation_zoom}
+	if GotParam \{disable_rotation_zoom}
 		no_rotate_zoom_text = {no_rotate_zoom_text}
 	endif
-	if gotparam \{show_editable}
+	if GotParam \{show_editable}
 		car_helper_text = {car_helper_text_alt}
-	elseif gotparam \{show_purchasable}
+	elseif GotParam \{show_purchasable}
 		car_helper_text = {car_helper_text_purchase}
 	else
 		car_helper_text = {car_helper_text_cancel}

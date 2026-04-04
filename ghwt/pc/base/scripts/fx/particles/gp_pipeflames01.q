@@ -1,58 +1,58 @@
-gp_pipeflames01 = {
+GP_PipeFlames01 = {
 	pos = (2.0216632, 5.1616206, -1.478416)
 	angles = (0.0, 0.0, 0.0)
-	class = particleobject
-	particletype = flexparticle
+	Class = ParticleObject
+	ParticleType = FlexParticle
 	type = flat
 	active
-	createdatstart
-	emitrangedims = (0.2, 0.2, 0.1)
-	emit_target = (0.0, 0.4, 1.0)
-	emitangle = (0.0, 0.0, 0.0)
+	CreatedAtStart
+	EmitRangeDims = (0.2, 0.2, 0.1)
+	emit_Target = (0.0, 0.4, 1.0)
+	EmitAngle = (0.0, 0.0, 0.0)
 	force = (0.0, -1.0, 0.0)
-	windcoeff = 0.0
-	localwindcoeff = 0.0
-	emittervelocityweight = 0.0
-	radiate
-	anglespread = 25.0
-	liferange = (0.1, 0.5)
+	WindCoeff = 0.0
+	LocalWindCoeff = 0.0
+	EmitterVelocityWeight = 0.0
+	Radiate
+	AngleSpread = 25.0
+	LifeRange = (0.1, 0.5)
 	emit_rate = 48.0
 	max = 0
-	timeseed = 0.0
-	lifetime = 0.0
-	emitnum = 0
-	followemitter = 0.0
-	emitfunction = constant
-	emitperiod = 1.0
-	sizerange = [
+	TimeSeed = 0.0
+	lifeTime = 0.0
+	emitNum = 0
+	FollowEmitter = 0.0
+	EmitFunction = constant
+	EmitPeriod = 1.0
+	SizeRange = [
 		(1.5, 1.5)
 		(0.5, 0.5)
 	]
-	speedrange = (5.0, 6.0)
-	rotvel = (0.0, 0.0)
-	rotveltimescale = 0.0
-	emitdelaystart = 0.0
-	alignwithpath
-	pathfollowtime = 0.3
-	history = 2
-	historylistcoordinatespace = world
+	SpeedRange = (5.0, 6.0)
+	RotVel = (0.0, 0.0)
+	RotVelTimeScale = 0.0
+	EmitDelayStart = 0.0
+	AlignWithPath
+	PathFollowTime = 0.3
+	History = 2
+	HistoryListCoordinateSpace = world
 	color = -9223425
-	lod_distances = (20.0, 30.0)
-	novisibilitytest
-	quickmaterial = {
-		texturelayout = layout2x2
-		diffusetextureenabled
-		diffusetexture = jow_statueflames01
-		specularpower = 0
+	LOD_Distances = (20.0, 30.0)
+	NoVisibilityTest
+	QuickMaterial = {
+		TextureLayout = Layout2x2
+		DiffuseTextureEnabled
+		DiffuseTexture = jow_statueflames01
+		SpecularPower = 0
 		alphacutoff = 16
-		blendmode = add
-		burn
-		burnvalue = 0.8
-		sortgroup = 3
-		draworder = 12.0
-		quadanimationfps = 12
+		blendMode = Add
+		Burn
+		BurnValue = 0.8
+		SortGroup = 3
+		DrawOrder = 12.0
+		QuadAnimationFPS = 12
 	}
-	knot = [
+	Knot = [
 		(-0.46765104, 0.0, -0.0)
 		(-0.46765104, 0.0, -0.0)
 		(-0.24335201, 0.0, -0.0)
@@ -63,7 +63,7 @@ gp_pipeflames01 = {
 		(0.46765104, 0.0, -0.0)
 		(0.46765104, 0.0, -0.0)
 	]
-	particlecolor = [
+	ParticleColor = [
 		-1
 		-1
 		-12566273
@@ -71,7 +71,7 @@ gp_pipeflames01 = {
 		-12566528
 		-15066624
 	]
-	vertexweight = [
+	VertexWeight = [
 		0.719445
 		1.0
 	]

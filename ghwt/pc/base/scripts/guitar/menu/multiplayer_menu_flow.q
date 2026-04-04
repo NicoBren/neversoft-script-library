@@ -25,7 +25,7 @@ script set_store_came_from_p2_multiplayer
 endscript
 
 script mp_faceoff_song_select_quit 
-	gh3_sfx_fail_song_stop_sounds
+	GH3_SFX_fail_song_stop_sounds
 	kill_gem_scroller
 endscript
 

@@ -4,7 +4,7 @@ script ui_create_cap_artist_layer_popout
 endscript
 
 script ui_create_cap_artist_layer_popout_spawned \{back_steps = 1}
-	requireparams \{[
+	RequireParams \{[
 			part
 			text
 			section_index
@@ -21,17 +21,17 @@ script ui_create_cap_artist_layer_popout_spawned \{back_steps = 1}
 		list_offset = <list_offset>
 	}
 	setup_cas_menu_handlers vmenu_id = create_cap_artist_layer_popout_vmenu camera_list = <camera_list> zoom_camera = <zoom_camera> no_rotate = <no_rotate> no_zoom = <no_zoom> pull_back_distance = <pull_back_distance>
-	if NOT getcasappearancepart part = <part>
-		scriptassert '%s not found' s = <part> donotresolve
+	if NOT GetCASAppearancePart part = <part>
+		ScriptAssert '%s not found' s = <part> DoNotResolve
 	endif
-	if NOT getactualcasoptionstruct part = <part> desc_id = <desc_id>
-		scriptassert '%s %t not found' s = <part> t = <desc_id>
+	if NOT GetActualCASOptionStruct part = <part> desc_id = <desc_id>
+		ScriptAssert '%s %t not found' s = <part> t = <desc_id>
 	endif
 	create_lookup_layer_is_on_model section = (<sections> [<section_index>]) part = <part> mask = (<mask>) mask_index = <i>
-	if gotparam \{sections}
+	if GotParam \{sections}
 		current_part = 0
 		mask = ((<sections> [<section_index>]).mask)
-		getarraysize (<mask>)
+		GetArraySize (<mask>)
 		i = 0
 		begin
 		if lookup_layer_is_on_model section = (<sections> [<section_index>]) part = <part> mask = (<mask>) mask_index = <i> model_layers = <model_layers>
@@ -49,16 +49,16 @@ script ui_create_cap_artist_layer_popout_spawned \{back_steps = 1}
 			additional_focus_params = {part = <part> mask_index = <i> mask = <mask> section = (<sections> [<section_index>])}
 			<editable>
 		}
-		if gotparam \{editable}
-			removeparameter \{editable}
+		if GotParam \{editable}
+			RemoveParameter \{editable}
 		endif
 		i = (<i> + 1)
 		repeat <array_size>
 	endif
 	clean_up_user_control_helpers
 	menu_finish \{car_helper_text_alt}
-	launchevent type = focus target = create_cap_artist_layer_popout_vmenu data = {child_index = <current_part>}
-	if gotparam \{cam_name}
+	LaunchEvent type = focus target = create_cap_artist_layer_popout_vmenu data = {child_index = <current_part>}
+	if GotParam \{cam_name}
 		task_menu_default_anim_in base_name = <cam_name>
 	endif
 endscript
@@ -68,20 +68,20 @@ script ui_destroy_cap_artist_layer_popout
 endscript
 
 script ui_init_cap_artist_layer_popout 
-	ui_load_cas_rawpak finishes = <part>
-	pushtemporarycasappearance
-	if gotparam \{additional_init_script}
+	ui_load_cas_rawpak Finishes = <part>
+	PushTemporaryCASAppearance
+	if GotParam \{additional_init_script}
 		<additional_init_script>
 	endif
 endscript
 
 script ui_deinit_cap_artist_layer_popout 
-	flushallcompositetextures
-	if NOT gotparam \{skip_deinit_script}
-		if gotparam \{additional_deinit_script}
+	FlushAllCompositeTextures
+	if NOT GotParam \{skip_deinit_script}
+		if GotParam \{additional_deinit_script}
 			<additional_deinit_script>
 		endif
-		poptemporarycasappearance
+		PopTemporaryCASAppearance
 	else
 		ui_event_remove_params \{param = skip_deinit_script}
 	endif
@@ -92,51 +92,51 @@ script cap_artist_layers_popout_decide_action
 	ui_event_add_params \{skip_deinit_script = 1}
 	mask = (<section>.mask)
 	if NOT cap_no_transforms mask = ((<mask>) [<mask_index>])
-		ui_event_wait event = menu_replace data = {state = uistate_cap_artist_layer_options <...>}
+		ui_event_wait event = menu_replace data = {state = UIstate_cap_artist_layer_options <...>}
 	endif
 endscript
 
 script create_lookup_layer_is_on_model 
-	requireparams \{[
+	RequireParams \{[
 			part
 			section
 		]
 		all}
-	if NOT getcasappearancepart part = <part>
-		scriptassert '%s not found' s = <part> donotresolve
+	if NOT GetCASAppearancePart part = <part>
+		ScriptAssert '%s not found' s = <part> DoNotResolve
 	endif
-	if NOT getactualcasoptionstruct part = <part> desc_id = <desc_id>
-		scriptassert '%s %t not found' s = <part> t = <desc_id>
+	if NOT GetActualCASOptionStruct part = <part> desc_id = <desc_id>
+		ScriptAssert '%s %t not found' s = <part> t = <desc_id>
 	endif
 	model_layers = []
-	if gotparam \{cap}
-		getarraysize \{cap}
+	if GotParam \{cap}
+		GetArraySize \{cap}
 		cap_array_size = <array_size>
 		if (<cap_array_size> > 0)
 			i = 0
 			begin
-			formattext checksumname = name '%s' s = (<section>.base_tex)
+			FormatText checksumname = name '%s' s = (<section>.base_tex)
 			if is_matching_section cap = (<cap> [<i>]) section = <section>
-				if structurecontains structure = (<cap> [<i>]) pre_layer
-					if structurecontains structure = <section> pre_userlayer
-						getarraysize (((<cap> [<i>]).pre_layer))
+				if StructureContains Structure = (<cap> [<i>]) pre_layer
+					if StructureContains Structure = <section> pre_userlayer
+						GetArraySize (((<cap> [<i>]).pre_layer))
 						if (<array_size> > 0)
 							j = 0
 							begin
-							addarrayelement array = <model_layers> element = ((((<cap> [<i>]).pre_layer) [<j>]).texture)
+							AddArrayElement array = <model_layers> element = ((((<cap> [<i>]).pre_layer) [<j>]).texture)
 							model_layers = <array>
 							j = (<j> + 1)
 							repeat <array_size>
 						endif
 					endif
 				endif
-				if structurecontains structure = (<cap> [<i>]) post_layer
-					if structurecontains structure = <section> post_userlayer
-						getarraysize (((<cap> [<i>]).post_layer))
+				if StructureContains Structure = (<cap> [<i>]) post_layer
+					if StructureContains Structure = <section> post_userlayer
+						GetArraySize (((<cap> [<i>]).post_layer))
 						if (<array_size> > 0)
 							j = 0
 							begin
-							addarrayelement array = <model_layers> element = ((((<cap> [<i>]).post_layer) [<j>]).texture)
+							AddArrayElement array = <model_layers> element = ((((<cap> [<i>]).post_layer) [<j>]).texture)
 							model_layers = <array>
 							j = (<j> + 1)
 							repeat <array_size>
@@ -152,13 +152,13 @@ script create_lookup_layer_is_on_model
 endscript
 
 script lookup_layer_is_on_model 
-	requireparams \{[
+	RequireParams \{[
 			mask
 			mask_index
 		]
 		all}
-	fiximagepath path = (((<mask>) [<mask_index>]).pattern)
-	if arraycontains array = <model_layers> contains = <name>
+	FixImagePath path = (((<mask>) [<mask_index>]).pattern)
+	if ArrayContains array = <model_layers> contains = <name>
 		return \{true}
 	else
 		return \{false}

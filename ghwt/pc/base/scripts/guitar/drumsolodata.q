@@ -4,43 +4,43 @@ drum_solo_structs = {
 		drum_solo_beats = 32
 		events = [
 			{
-				event = fadeout
-				target = leadgtr_balance
+				event = fadeOut
+				target = leadGTR_balance
 				time = 195621
 				dur = 146
 				type = inv_exponential
 			}
 			{
-				event = fadeout
+				event = fadeOut
 				target = bass_balance
 				time = 202479
 				dur = 37
 				type = linear
 			}
 			{
-				event = fadeout
-				target = drums_balance
+				event = fadeOut
+				target = Drums_Balance
 				time = 203450
 				dur = 3
 				type = inv_exponential
 			}
 			{
-				event = fadeout
-				target = leadvox_balance
+				event = fadeOut
+				target = LeadVox_Balance
 				time = 195621
 				dur = 146
 				type = linear
 			}
 			{
-				event = fadeout
-				target = band_balance
+				event = fadeOut
+				target = Band_Balance
 				time = 195621
 				dur = 146
 				type = linear
 			}
 			{
-				event = fadeout
-				target = crowd_singalong
+				event = fadeOut
+				target = Crowd_Singalong
 				time = 195621
 				dur = 146
 				type = linear
@@ -78,7 +78,7 @@ drum_solo_structs = {
 			}
 			{
 				event = fadein
-				target = leadgtr_balance
+				target = leadGTR_balance
 				time = 209791
 				dur = 3
 				type = exponential
@@ -92,28 +92,28 @@ drum_solo_structs = {
 			}
 			{
 				event = fadein_drums
-				target = drums_balance
+				target = Drums_Balance
 				time = 208250
 				dur = 3
 				type = exponential
 			}
 			{
 				event = fadein
-				target = leadvox_balance
+				target = LeadVox_Balance
 				time = 209848
 				dur = 3
 				type = exponential
 			}
 			{
 				event = fadein
-				target = band_balance
+				target = Band_Balance
 				time = 209848
 				dur = 3
 				type = exponential
 			}
 			{
 				event = fadein
-				target = crowd_singalong
+				target = Crowd_Singalong
 				time = 209848
 				dur = 3
 				type = exponential
@@ -125,43 +125,43 @@ drum_solo_structs = {
 		drum_solo_beats = 45
 		events = [
 			{
-				event = fadeout
-				target = leadgtr_balance
+				event = fadeOut
+				target = leadGTR_balance
 				time = 159040
 				dur = 905
 				type = inv_exponential
 			}
 			{
-				event = fadeout
+				event = fadeOut
 				target = bass_balance
 				time = 158930
 				dur = 138
 				type = inv_exponential
 			}
 			{
-				event = fadeout
-				target = drums_balance
+				event = fadeOut
+				target = Drums_Balance
 				time = 159643
 				dur = 77
 				type = linear
 			}
 			{
-				event = fadeout
-				target = leadvox_balance
+				event = fadeOut
+				target = LeadVox_Balance
 				time = 148416
 				dur = 237
 				type = linear
 			}
 			{
-				event = fadeout
-				target = band_balance
+				event = fadeOut
+				target = Band_Balance
 				time = 145365
 				dur = 672
 				type = linear
 			}
 			{
-				event = fadeout
-				target = crowd_singalong
+				event = fadeOut
+				target = Crowd_Singalong
 				time = 145365
 				dur = 672
 				type = linear
@@ -199,7 +199,7 @@ drum_solo_structs = {
 			}
 			{
 				event = fadein
-				target = leadgtr_balance
+				target = leadGTR_balance
 				time = 159974
 				dur = 3
 				type = exponential
@@ -213,28 +213,28 @@ drum_solo_structs = {
 			}
 			{
 				event = fadein_drums
-				target = drums_balance
+				target = Drums_Balance
 				time = 159974
 				dur = 3
 				type = exponential
 			}
 			{
 				event = fadein
-				target = leadvox_balance
+				target = LeadVox_Balance
 				time = 177498
 				dur = 3
 				type = exponential
 			}
 			{
 				event = fadein
-				target = band_balance
+				target = Band_Balance
 				time = 166920
 				dur = 3
 				type = exponential
 			}
 			{
 				event = fadein
-				target = crowd_singalong
+				target = Crowd_Singalong
 				time = 166920
 				dur = 3
 				type = exponential
@@ -246,43 +246,43 @@ drum_solo_structs = {
 		drum_solo_beats = 32
 		events = [
 			{
-				event = fadeout
-				target = leadgtr_balance
+				event = fadeOut
+				target = leadGTR_balance
 				time = 145408
 				dur = 341
 				type = linear
 			}
 			{
-				event = fadeout
+				event = fadeOut
 				target = bass_balance
 				time = 145408
 				dur = 341
 				type = inv_exponential
 			}
 			{
-				event = fadeout
-				target = drums_balance
+				event = fadeOut
+				target = Drums_Balance
 				time = 149882
 				dur = 325
 				type = exponential
 			}
 			{
-				event = fadeout
-				target = leadvox_balance
+				event = fadeOut
+				target = LeadVox_Balance
 				time = 149882
 				dur = 325
 				type = linear
 			}
 			{
-				event = fadeout
-				target = band_balance
+				event = fadeOut
+				target = Band_Balance
 				time = 145408
 				dur = 341
 				type = linear
 			}
 			{
-				event = fadeout
-				target = crowd_singalong
+				event = fadeOut
+				target = Crowd_Singalong
 				time = 145408
 				dur = 341
 				type = linear
@@ -320,7 +320,7 @@ drum_solo_structs = {
 			}
 			{
 				event = fadein
-				target = leadgtr_balance
+				target = leadGTR_balance
 				time = 154647
 				dur = 3
 				type = exponential
@@ -334,28 +334,28 @@ drum_solo_structs = {
 			}
 			{
 				event = fadein_drums
-				target = drums_balance
+				target = Drums_Balance
 				time = 154647
 				dur = 3
 				type = exponential
 			}
 			{
 				event = fadein
-				target = leadvox_balance
+				target = LeadVox_Balance
 				time = 150207
 				dur = 3
 				type = exponential
 			}
 			{
 				event = fadein
-				target = band_balance
+				target = Band_Balance
 				time = 150207
 				dur = 300
 				type = exponential
 			}
 			{
 				event = fadein
-				target = crowd_singalong
+				target = Crowd_Singalong
 				time = 150207
 				dur = 3
 				type = exponential
@@ -367,43 +367,43 @@ drum_solo_structs = {
 		drum_solo_beats = 38
 		events = [
 			{
-				event = fadeout
-				target = leadgtr_balance
+				event = fadeOut
+				target = leadGTR_balance
 				time = 109440
 				dur = 2305
 				type = linear
 			}
 			{
-				event = fadeout
+				event = fadeOut
 				target = bass_balance
 				time = 109440
 				dur = 2305
 				type = linear
 			}
 			{
-				event = fadeout
-				target = drums_balance
+				event = fadeOut
+				target = Drums_Balance
 				time = 111269
 				dur = 476
 				type = inv_exponential
 			}
 			{
-				event = fadeout
-				target = leadvox_balance
+				event = fadeOut
+				target = LeadVox_Balance
 				time = 109994
 				dur = 1750
 				type = linear
 			}
 			{
-				event = fadeout
-				target = band_balance
+				event = fadeOut
+				target = Band_Balance
 				time = 109994
 				dur = 1750
 				type = linear
 			}
 			{
-				event = fadeout
-				target = crowd_singalong
+				event = fadeOut
+				target = Crowd_Singalong
 				time = 109994
 				dur = 1750
 				type = linear
@@ -441,7 +441,7 @@ drum_solo_structs = {
 			}
 			{
 				event = fadein
-				target = leadgtr_balance
+				target = leadGTR_balance
 				time = 111745
 				dur = 3
 				type = exponential
@@ -455,28 +455,28 @@ drum_solo_structs = {
 			}
 			{
 				event = fadein_drums
-				target = drums_balance
+				target = Drums_Balance
 				time = 111745
 				dur = 3
 				type = exponential
 			}
 			{
 				event = fadein
-				target = leadvox_balance
+				target = LeadVox_Balance
 				time = 111745
 				dur = 3
 				type = exponential
 			}
 			{
 				event = fadein
-				target = band_balance
+				target = Band_Balance
 				time = 111745
 				dur = 300
 				type = exponential
 			}
 			{
 				event = fadein
-				target = crowd_singalong
+				target = Crowd_Singalong
 				time = 111745
 				dur = 3
 				type = exponential
@@ -488,43 +488,43 @@ drum_solo_structs = {
 		drum_solo_beats = 32
 		events = [
 			{
-				event = fadeout
-				target = leadgtr_balance
+				event = fadeOut
+				target = leadGTR_balance
 				time = 139608
 				dur = 50
 				type = linear
 			}
 			{
-				event = fadeout
+				event = fadeOut
 				target = bass_balance
 				time = 139600
 				dur = 127
 				type = linear
 			}
 			{
-				event = fadeout
-				target = drums_balance
+				event = fadeOut
+				target = Drums_Balance
 				time = 139456
 				dur = 305
 				type = exponential
 			}
 			{
-				event = fadeout
-				target = leadvox_balance
+				event = fadeOut
+				target = LeadVox_Balance
 				time = 138266
 				dur = 47
 				type = linear
 			}
 			{
-				event = fadeout
-				target = band_balance
+				event = fadeOut
+				target = Band_Balance
 				time = 139600
 				dur = 127
 				type = linear
 			}
 			{
-				event = fadeout
-				target = crowd_singalong
+				event = fadeOut
+				target = Crowd_Singalong
 				time = 139562
 				dur = 198
 				type = linear
@@ -562,7 +562,7 @@ drum_solo_structs = {
 			}
 			{
 				event = fadein
-				target = leadgtr_balance
+				target = leadGTR_balance
 				time = 139764
 				dur = 3
 				type = exponential
@@ -576,76 +576,76 @@ drum_solo_structs = {
 			}
 			{
 				event = fadein_drums
-				target = drums_balance
+				target = Drums_Balance
 				time = 139764
 				dur = 3
 				type = exponential
 			}
 			{
 				event = fadein
-				target = leadvox_balance
+				target = LeadVox_Balance
 				time = 141639
 				dur = 3
 				type = exponential
 			}
 			{
 				event = fadein
-				target = band_balance
+				target = Band_Balance
 				time = 139764
 				dur = 300
 				type = exponential
 			}
 			{
 				event = fadein
-				target = crowd_singalong
+				target = Crowd_Singalong
 				time = 141639
 				dur = 3
 				type = exponential
 			}
 		]
 	}
-	jessiesgirl = {
+	JessiesGirl = {
 		drum_solo_bpm = 130.926
 		drum_solo_beats = 40
 		events = [
 			{
-				event = fadeout
-				target = leadgtr_balance
+				event = fadeOut
+				target = leadGTR_balance
 				time = 125333
 				dur = 193
 				type = exponential
 			}
 			{
-				event = fadeout
+				event = fadeOut
 				target = bass_balance
 				time = 125333
 				dur = 193
 				type = exponential
 			}
 			{
-				event = fadeout
-				target = drums_balance
+				event = fadeOut
+				target = Drums_Balance
 				time = 125432
 				dur = 97
 				type = exponential
 			}
 			{
-				event = fadeout
-				target = leadvox_balance
+				event = fadeOut
+				target = LeadVox_Balance
 				time = 125290
 				dur = 238
 				type = linear
 			}
 			{
-				event = fadeout
-				target = band_balance
+				event = fadeOut
+				target = Band_Balance
 				time = 123840
 				dur = 1689
 				type = linear
 			}
 			{
-				event = fadeout
-				target = crowd_singalong
+				event = fadeOut
+				target = Crowd_Singalong
 				time = 125290
 				dur = 238
 				type = linear
@@ -683,7 +683,7 @@ drum_solo_structs = {
 			}
 			{
 				event = fadein
-				target = leadgtr_balance
+				target = leadGTR_balance
 				time = 140123
 				dur = 3
 				type = exponential
@@ -697,28 +697,28 @@ drum_solo_structs = {
 			}
 			{
 				event = fadein_drums
-				target = drums_balance
+				target = Drums_Balance
 				time = 140123
 				dur = 3
 				type = exponential
 			}
 			{
 				event = fadein
-				target = leadvox_balance
+				target = LeadVox_Balance
 				time = 139638
 				dur = 3
 				type = exponential
 			}
 			{
 				event = fadein
-				target = band_balance
+				target = Band_Balance
 				time = 140123
 				dur = 3
 				type = exponential
 			}
 			{
 				event = fadein
-				target = crowd_singalong
+				target = Crowd_Singalong
 				time = 139638
 				dur = 3
 				type = exponential
@@ -730,43 +730,43 @@ drum_solo_structs = {
 		drum_solo_beats = 46
 		events = [
 			{
-				event = fadeout
-				target = leadgtr_balance
+				event = fadeOut
+				target = leadGTR_balance
 				time = 180890
 				dur = 174
 				type = linear
 			}
 			{
-				event = fadeout
+				event = fadeOut
 				target = bass_balance
 				time = 180890
 				dur = 174
 				type = linear
 			}
 			{
-				event = fadeout
-				target = drums_balance
+				event = fadeOut
+				target = Drums_Balance
 				time = 182613
 				dur = 469
 				type = linear
 			}
 			{
-				event = fadeout
-				target = leadvox_balance
+				event = fadeOut
+				target = LeadVox_Balance
 				time = 180890
 				dur = 174
 				type = linear
 			}
 			{
-				event = fadeout
-				target = band_balance
+				event = fadeOut
+				target = Band_Balance
 				time = 180890
 				dur = 174
 				type = linear
 			}
 			{
-				event = fadeout
-				target = crowd_singalong
+				event = fadeOut
+				target = Crowd_Singalong
 				time = 180890
 				dur = 174
 				type = linear
@@ -804,7 +804,7 @@ drum_solo_structs = {
 			}
 			{
 				event = fadein
-				target = leadgtr_balance
+				target = leadGTR_balance
 				time = 186665
 				dur = 3
 				type = exponential
@@ -818,28 +818,28 @@ drum_solo_structs = {
 			}
 			{
 				event = fadein_drums
-				target = drums_balance
+				target = Drums_Balance
 				time = 188117
 				dur = 3
 				type = exponential
 			}
 			{
 				event = fadein
-				target = leadvox_balance
+				target = LeadVox_Balance
 				time = 186665
 				dur = 3
 				type = exponential
 			}
 			{
 				event = fadein
-				target = band_balance
+				target = Band_Balance
 				time = 186665
 				dur = 3
 				type = exponential
 			}
 			{
 				event = fadein
-				target = crowd_singalong
+				target = Crowd_Singalong
 				time = 186665
 				dur = 3
 				type = exponential
@@ -851,43 +851,43 @@ drum_solo_structs = {
 		drum_solo_beats = 38
 		events = [
 			{
-				event = fadeout
-				target = leadgtr_balance
+				event = fadeOut
+				target = leadGTR_balance
 				time = 108554
 				dur = 155
 				type = linear
 			}
 			{
-				event = fadeout
+				event = fadeOut
 				target = bass_balance
 				time = 108554
 				dur = 155
 				type = linear
 			}
 			{
-				event = fadeout
-				target = drums_balance
+				event = fadeOut
+				target = Drums_Balance
 				time = 112021
 				dur = 162
 				type = exponential
 			}
 			{
-				event = fadeout
-				target = leadvox_balance
+				event = fadeOut
+				target = LeadVox_Balance
 				time = 108554
 				dur = 155
 				type = linear
 			}
 			{
-				event = fadeout
-				target = band_balance
+				event = fadeOut
+				target = Band_Balance
 				time = 108626
 				dur = 130
 				type = linear
 			}
 			{
-				event = fadeout
-				target = crowd_singalong
+				event = fadeOut
+				target = Crowd_Singalong
 				time = 108554
 				dur = 155
 				type = linear
@@ -925,7 +925,7 @@ drum_solo_structs = {
 			}
 			{
 				event = fadein
-				target = leadgtr_balance
+				target = leadGTR_balance
 				time = 117614
 				dur = 3
 				type = exponential
@@ -939,28 +939,28 @@ drum_solo_structs = {
 			}
 			{
 				event = fadein_drums
-				target = drums_balance
+				target = Drums_Balance
 				time = 116741
 				dur = 3
 				type = exponential
 			}
 			{
 				event = fadein
-				target = leadvox_balance
+				target = LeadVox_Balance
 				time = 117614
 				dur = 3
 				type = exponential
 			}
 			{
 				event = fadein
-				target = band_balance
+				target = Band_Balance
 				time = 117614
 				dur = 3
 				type = exponential
 			}
 			{
 				event = fadein
-				target = crowd_singalong
+				target = Crowd_Singalong
 				time = 117614
 				dur = 3
 				type = exponential
@@ -972,43 +972,43 @@ drum_solo_structs = {
 		drum_solo_beats = 42
 		events = [
 			{
-				event = fadeout
-				target = leadgtr_balance
+				event = fadeOut
+				target = leadGTR_balance
 				time = 87520
 				dur = 266
 				type = inv_exponential
 			}
 			{
-				event = fadeout
+				event = fadeOut
 				target = bass_balance
 				time = 87520
 				dur = 266
 				type = inv_exponential
 			}
 			{
-				event = fadeout
-				target = drums_balance
+				event = fadeOut
+				target = Drums_Balance
 				time = 87742
 				dur = 43
 				type = exponential
 			}
 			{
-				event = fadeout
-				target = leadvox_balance
+				event = fadeOut
+				target = LeadVox_Balance
 				time = 87274
 				dur = 511
 				type = inv_exponential
 			}
 			{
-				event = fadeout
-				target = band_balance
+				event = fadeOut
+				target = Band_Balance
 				time = 87520
 				dur = 266
 				type = inv_exponential
 			}
 			{
-				event = fadeout
-				target = crowd_singalong
+				event = fadeOut
+				target = Crowd_Singalong
 				time = 87274
 				dur = 511
 				type = inv_exponential
@@ -1046,7 +1046,7 @@ drum_solo_structs = {
 			}
 			{
 				event = fadein
-				target = leadgtr_balance
+				target = leadGTR_balance
 				time = 89281
 				dur = 3
 				type = exponential
@@ -1060,76 +1060,76 @@ drum_solo_structs = {
 			}
 			{
 				event = fadein_drums
-				target = drums_balance
+				target = Drums_Balance
 				time = 88842
 				dur = 3
 				type = exponential
 			}
 			{
 				event = fadein
-				target = leadvox_balance
+				target = LeadVox_Balance
 				time = 87786
 				dur = 3
 				type = exponential
 			}
 			{
 				event = fadein
-				target = band_balance
+				target = Band_Balance
 				time = 89430
 				dur = 3
 				type = exponential
 			}
 			{
 				event = fadein
-				target = crowd_singalong
+				target = Crowd_Singalong
 				time = 87786
 				dur = 3
 				type = exponential
 			}
 		]
 	}
-	dammit = {
+	Dammit = {
 		drum_solo_bpm = 116.522995
 		drum_solo_beats = 32
 		events = [
 			{
-				event = fadeout
-				target = leadgtr_balance
+				event = fadeOut
+				target = leadGTR_balance
 				time = 127722
 				dur = 2005
 				type = linear
 			}
 			{
-				event = fadeout
+				event = fadeOut
 				target = bass_balance
 				time = 127765
 				dur = 1699
 				type = linear
 			}
 			{
-				event = fadeout
-				target = drums_balance
+				event = fadeOut
+				target = Drums_Balance
 				time = 131786
 				dur = 54
 				type = exponential
 			}
 			{
-				event = fadeout
-				target = leadvox_balance
+				event = fadeOut
+				target = LeadVox_Balance
 				time = 131786
 				dur = 54
 				type = exponential
 			}
 			{
-				event = fadeout
-				target = band_balance
+				event = fadeOut
+				target = Band_Balance
 				time = 127765
 				dur = 1699
 				type = linear
 			}
 			{
-				event = fadeout
-				target = crowd_singalong
+				event = fadeOut
+				target = Crowd_Singalong
 				time = 131786
 				dur = 54
 				type = exponential
@@ -1167,7 +1167,7 @@ drum_solo_structs = {
 			}
 			{
 				event = fadein
-				target = leadgtr_balance
+				target = leadGTR_balance
 				time = 144274
 				dur = 3
 				type = exponential
@@ -1181,28 +1181,28 @@ drum_solo_structs = {
 			}
 			{
 				event = fadein_drums
-				target = drums_balance
+				target = Drums_Balance
 				time = 142290
 				dur = 3
 				type = exponential
 			}
 			{
 				event = fadein
-				target = leadvox_balance
+				target = LeadVox_Balance
 				time = 145182
 				dur = 3
 				type = exponential
 			}
 			{
 				event = fadein
-				target = band_balance
+				target = Band_Balance
 				time = 142290
 				dur = 3
 				type = exponential
 			}
 			{
 				event = fadein
-				target = crowd_singalong
+				target = Crowd_Singalong
 				time = 145182
 				dur = 3
 				type = exponential
@@ -1214,43 +1214,43 @@ drum_solo_structs = {
 		drum_solo_beats = 56
 		events = [
 			{
-				event = fadeout
-				target = leadgtr_balance
+				event = fadeOut
+				target = leadGTR_balance
 				time = 123950
 				dur = 1162
 				type = linear
 			}
 			{
-				event = fadeout
+				event = fadeOut
 				target = bass_balance
 				time = 123950
 				dur = 1162
 				type = linear
 			}
 			{
-				event = fadeout
-				target = drums_balance
+				event = fadeOut
+				target = Drums_Balance
 				time = 125177
 				dur = 36
 				type = exponential
 			}
 			{
-				event = fadeout
-				target = leadvox_balance
+				event = fadeOut
+				target = LeadVox_Balance
 				time = 125175
 				dur = 38
 				type = exponential
 			}
 			{
-				event = fadeout
-				target = band_balance
+				event = fadeOut
+				target = Band_Balance
 				time = 123950
 				dur = 1162
 				type = linear
 			}
 			{
-				event = fadeout
-				target = crowd_singalong
+				event = fadeOut
+				target = Crowd_Singalong
 				time = 123950
 				dur = 1162
 				type = exponential
@@ -1288,7 +1288,7 @@ drum_solo_structs = {
 			}
 			{
 				event = fadein
-				target = leadgtr_balance
+				target = leadGTR_balance
 				time = 143206
 				dur = 3
 				type = exponential
@@ -1302,28 +1302,28 @@ drum_solo_structs = {
 			}
 			{
 				event = fadein_drums
-				target = drums_balance
+				target = Drums_Balance
 				time = 141773
 				dur = 3
 				type = exponential
 			}
 			{
 				event = fadein
-				target = leadvox_balance
+				target = LeadVox_Balance
 				time = 141773
 				dur = 3
 				type = exponential
 			}
 			{
 				event = fadein
-				target = band_balance
+				target = Band_Balance
 				time = 141773
 				dur = 3
 				type = exponential
 			}
 			{
 				event = fadein
-				target = crowd_singalong
+				target = Crowd_Singalong
 				time = 141773
 				dur = 3
 				type = exponential
@@ -1335,43 +1335,43 @@ drum_solo_structs = {
 		drum_solo_beats = 41
 		events = [
 			{
-				event = fadeout
-				target = leadgtr_balance
+				event = fadeOut
+				target = leadGTR_balance
 				time = 94405
 				dur = 96
 				type = linear
 			}
 			{
-				event = fadeout
+				event = fadeOut
 				target = bass_balance
 				time = 95340
 				dur = 50
 				type = linear
 			}
 			{
-				event = fadeout
-				target = drums_balance
+				event = fadeOut
+				target = Drums_Balance
 				time = 95340
 				dur = 50
 				type = exponential
 			}
 			{
-				event = fadeout
-				target = leadvox_balance
+				event = fadeOut
+				target = LeadVox_Balance
 				time = 93994
 				dur = 859
 				type = linear
 			}
 			{
-				event = fadeout
-				target = band_balance
+				event = fadeOut
+				target = Band_Balance
 				time = 93994
 				dur = 859
 				type = linear
 			}
 			{
-				event = fadeout
-				target = crowd_singalong
+				event = fadeOut
+				target = Crowd_Singalong
 				time = 93994
 				dur = 859
 				type = linear
@@ -1409,7 +1409,7 @@ drum_solo_structs = {
 			}
 			{
 				event = fadein
-				target = leadgtr_balance
+				target = leadGTR_balance
 				time = 101413
 				dur = 3
 				type = exponential
@@ -1423,76 +1423,76 @@ drum_solo_structs = {
 			}
 			{
 				event = fadein_drums
-				target = drums_balance
+				target = Drums_Balance
 				time = 98731
 				dur = 3
 				type = exponential
 			}
 			{
 				event = fadein
-				target = leadvox_balance
+				target = LeadVox_Balance
 				time = 98731
 				dur = 3
 				type = exponential
 			}
 			{
 				event = fadein
-				target = band_balance
+				target = Band_Balance
 				time = 101413
 				dur = 3
 				type = exponential
 			}
 			{
 				event = fadein
-				target = crowd_singalong
+				target = Crowd_Singalong
 				time = 98731
 				dur = 3
 				type = exponential
 			}
 		]
 	}
-	overkill = {
+	Overkill = {
 		drum_solo_bpm = 129.537
 		drum_solo_beats = 40
 		events = [
 			{
-				event = fadeout
-				target = leadgtr_balance
+				event = fadeOut
+				target = leadGTR_balance
 				time = 235346
 				dur = 3
 				type = linear
 			}
 			{
-				event = fadeout
+				event = fadeOut
 				target = bass_balance
 				time = 235346
 				dur = 3
 				type = linear
 			}
 			{
-				event = fadeout
-				target = drums_balance
+				event = fadeOut
+				target = Drums_Balance
 				time = 236138
 				dur = 53
 				type = linear
 			}
 			{
-				event = fadeout
-				target = leadvox_balance
+				event = fadeOut
+				target = LeadVox_Balance
 				time = 235346
 				dur = 3
 				type = linear
 			}
 			{
-				event = fadeout
-				target = band_balance
+				event = fadeOut
+				target = Band_Balance
 				time = 235346
 				dur = 3
 				type = linear
 			}
 			{
-				event = fadeout
-				target = crowd_singalong
+				event = fadeOut
+				target = Crowd_Singalong
 				time = 235346
 				dur = 3
 				type = linear
@@ -1530,7 +1530,7 @@ drum_solo_structs = {
 			}
 			{
 				event = fadein
-				target = leadgtr_balance
+				target = leadGTR_balance
 				time = 243565
 				dur = 3
 				type = exponential
@@ -1544,28 +1544,28 @@ drum_solo_structs = {
 			}
 			{
 				event = fadein_drums
-				target = drums_balance
+				target = Drums_Balance
 				time = 242648
 				dur = 3
 				type = exponential
 			}
 			{
 				event = fadein
-				target = leadvox_balance
+				target = LeadVox_Balance
 				time = 242648
 				dur = 3
 				type = exponential
 			}
 			{
 				event = fadein
-				target = band_balance
+				target = Band_Balance
 				time = 242648
 				dur = 3
 				type = exponential
 			}
 			{
 				event = fadein
-				target = crowd_singalong
+				target = Crowd_Singalong
 				time = 242648
 				dur = 3
 				type = exponential
@@ -1577,43 +1577,43 @@ drum_solo_structs = {
 		drum_solo_beats = 40
 		events = [
 			{
-				event = fadeout
-				target = leadgtr_balance
+				event = fadeOut
+				target = leadGTR_balance
 				time = 258426
 				dur = 80
 				type = linear
 			}
 			{
-				event = fadeout
+				event = fadeOut
 				target = bass_balance
 				time = 258426
 				dur = 80
 				type = linear
 			}
 			{
-				event = fadeout
-				target = drums_balance
+				event = fadeOut
+				target = Drums_Balance
 				time = 260210
 				dur = 78
 				type = linear
 			}
 			{
-				event = fadeout
-				target = leadvox_balance
+				event = fadeOut
+				target = LeadVox_Balance
 				time = 258426
 				dur = 80
 				type = linear
 			}
 			{
-				event = fadeout
-				target = band_balance
+				event = fadeOut
+				target = Band_Balance
 				time = 258426
 				dur = 80
 				type = linear
 			}
 			{
-				event = fadeout
-				target = crowd_singalong
+				event = fadeOut
+				target = Crowd_Singalong
 				time = 258426
 				dur = 80
 				type = linear
@@ -1651,7 +1651,7 @@ drum_solo_structs = {
 			}
 			{
 				event = fadein
-				target = leadgtr_balance
+				target = leadGTR_balance
 				time = 261832
 				dur = 3
 				type = exponential
@@ -1665,28 +1665,28 @@ drum_solo_structs = {
 			}
 			{
 				event = fadein_drums
-				target = drums_balance
+				target = Drums_Balance
 				time = 2602892
 				dur = 3
 				type = exponential
 			}
 			{
 				event = fadein
-				target = leadvox_balance
+				target = LeadVox_Balance
 				time = 261078
 				dur = 3
 				type = exponential
 			}
 			{
 				event = fadein
-				target = band_balance
+				target = Band_Balance
 				time = 261078
 				dur = 3
 				type = exponential
 			}
 			{
 				event = fadein
-				target = crowd_singalong
+				target = Crowd_Singalong
 				time = 261078
 				dur = 3
 				type = exponential

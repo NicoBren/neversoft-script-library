@@ -5,19 +5,19 @@ ghtunes_num_rated_upgrade1 = 20
 ghtunes_num_rated_upgrade2 = 50
 
 script ui_create_jam_publish_slot 
-	if gotparam \{delete_only}
-		make_generic_menu \{title = qs(0xfde202a4)
+	if GotParam \{delete_only}
+		make_generic_menu \{title = qs("Manage GHTunes")
 			vmenu_id = jam_publish_slot_vmenu}
 	else
-		make_generic_menu \{title = qs(0xfff6fa12)
+		make_generic_menu \{title = qs("Upload To GHTunes")
 			vmenu_id = jam_publish_slot_vmenu}
 	endif
-	if gotparam \{delete_only}
+	if GotParam \{delete_only}
 		num_slots = ($jam_ghtunes_max_num_slots)
 	else
-		getglobaltags \{user_options
+		GetGlobalTags \{user_options
 			param = ghtunes_num_songs_rated}
-		printf channel = jam_mode qs(0x9f03a9e0) a = <ghtunes_num_songs_rated> b = ($ghtunes_num_rated_to_upgrade)
+		printf channel = jam_mode qs("\LUSER Rated %a songs, %b needed to upgrade") a = <ghtunes_num_songs_rated> b = ($ghtunes_num_rated_to_upgrade)
 		if (<ghtunes_num_songs_rated> >= ($ghtunes_num_rated_upgrade2))
 			num_slots = ($jam_ghtunes_max_num_slots)
 		elseif (<ghtunes_num_songs_rated> >= ($ghtunes_num_rated_upgrade1))
@@ -30,9 +30,9 @@ script ui_create_jam_publish_slot
 	begin
 	has_content = 0
 	if ((<slot_array> [<i>].has_content) = 1)
-		getarraysize \{$jam_genre_list}
+		GetArraySize \{$jam_genre_list}
 		genre_count = 0
-		genre_text = qs(0x00000000)
+		genre_text = qs("")
 		begin
 		if (($jam_genre_list [<genre_count>].checksum) = (<slot_array> [<i>].genre))
 			genre_text = ($jam_genre_list [<genre_count>].name_text)
@@ -40,8 +40,8 @@ script ui_create_jam_publish_slot
 		endif
 		<genre_count> = (<genre_count> + 1)
 		repeat <array_size>
-		formattext textname = slot_text qs(0xc47d6d84) s = (<i> + 1) n = (<slot_array> [<i>].filename)
-		if gotparam \{delete_only}
+		FormatText TextName = slot_text qs("Slot %s: %n") s = (<i> + 1) n = (<slot_array> [<i>].filename)
+		if GotParam \{delete_only}
 			add_generic_menu_text_item {
 				text = <slot_text>
 				pad_start_script = jam_remove_song_from_slot_check
@@ -56,8 +56,8 @@ script ui_create_jam_publish_slot
 			}
 		endif
 	else
-		formattext textname = slot_text qs(0xeac75b19) s = (<i> + 1)
-		if gotparam \{delete_only}
+		FormatText TextName = slot_text qs("Slot %s: empty") s = (<i> + 1)
+		if GotParam \{delete_only}
 			add_generic_menu_text_item {
 				not_focusable
 				text = <slot_text>
@@ -72,23 +72,23 @@ script ui_create_jam_publish_slot
 			}
 		endif
 	endif
-	if gotparam \{delete_only}
+	if GotParam \{delete_only}
 		if (<i> = 4)
-			add_generic_menu_text_item \{text = qs(0xb662f6ca)
+			add_generic_menu_text_item \{text = qs("Bonus slots")
 				heading}
 		endif
 	endif
 	i = (<i> + 1)
 	repeat <num_slots>
 	if (<num_slots> < ($jam_ghtunes_max_num_slots))
-		add_generic_menu_text_item \{text = qs(0xe7f27138)
+		add_generic_menu_text_item \{text = qs("Rate more songs to")
 			heading}
-		add_generic_menu_text_item \{text = qs(0xbd79c436)
+		add_generic_menu_text_item \{text = qs("unlock more slots!")
 			heading}
 	endif
 	menu_finish
 	clean_up_user_control_helpers
-	add_user_control_helper \{text = qs(0xaf4d5dd2)
+	add_user_control_helper \{text = qs("BACK")
 		button = red
 		z = 100000}
 	startrendering
@@ -97,31 +97,31 @@ endscript
 script ui_jam_slot_draw_helpers 
 	clean_up_user_control_helpers
 	if (<has_content> = 1)
-		add_user_control_helper \{text = qs(0x0307b55c)
+		add_user_control_helper \{text = qs("REMOVE")
 			button = start
 			z = 100000}
 	else
-		add_user_control_helper \{text = qs(0xc18d5e76)
+		add_user_control_helper \{text = qs("SELECT")
 			button = green
 			z = 100000}
 	endif
-	add_user_control_helper \{text = qs(0xaf4d5dd2)
+	add_user_control_helper \{text = qs("BACK")
 		button = red
 		z = 100000}
 endscript
 
 script ui_destroy_jam_publish_slot 
-	if screenelementexists \{id = ghtunes_legal_dialog_box}
-		destroyscreenelement \{id = ghtunes_legal_dialog_box}
+	if ScreenElementExists \{id = ghtunes_legal_dialog_box}
+		DestroyScreenElement \{id = ghtunes_legal_dialog_box}
 	endif
 	stoprendering
 	destroy_generic_menu
 endscript
 
 script ghtunes_show_submission_agreement 
-	createscreenelement {
+	CreateScreenElement {
 		parent = root_window
-		type = descinterface
+		type = DescInterface
 		id = ghtunes_legal_dialog_box
 		desc = 'ghtunes_legal_dialog'
 		pos = (10.0, -6.0)
@@ -134,13 +134,13 @@ script ghtunes_show_submission_agreement
 			{pad_back ghtunes_submission_decline params = {}}
 		]
 	}
-	ghtunes_legal_dialog_box :setprops legal_title_text = ($ghtunes_submission_agreement_array [0])
-	if ghtunes_legal_dialog_box :desc_resolvealias \{name = alias_text_menu}
-		getarraysize ($ghtunes_submission_agreement_array)
+	ghtunes_legal_dialog_box :SetProps legal_title_text = ($ghtunes_submission_agreement_array [0])
+	if ghtunes_legal_dialog_box :Desc_ResolveAlias \{name = alias_text_menu}
+		GetArraySize ($ghtunes_submission_agreement_array)
 		<i> = 1
 		begin
-		createscreenelement {
-			type = textblockelement
+		CreateScreenElement {
+			type = TextBlockElement
 			parent = <resolved_id>
 			font = fontgrid_text_a3
 			just = [left top]
@@ -154,42 +154,42 @@ script ghtunes_show_submission_agreement
 			fit_width = wrap
 			fit_height = `expand dims`
 			scale_mode = proportional
-			text_case = original
+			text_case = Original
 		}
 		<i> = (<i> + 1)
 		repeat (<array_size> -1)
 	endif
-	launchevent \{type = focus
+	LaunchEvent \{type = focus
 		target = ghtunes_legal_dialog_box}
 	clean_up_user_control_helpers
-	add_user_control_helper \{text = qs(0xeb3848a8)
+	add_user_control_helper \{text = qs("I AGREE")
 		button = green
 		z = 100000}
-	add_user_control_helper \{text = qs(0xe8ad3fa3)
+	add_user_control_helper \{text = qs("I DECLINE")
 		button = red
 		z = 100000}
 endscript
 
 script ghtunes_destroy_submission_agreement 
-	if screenelementexists \{id = ghtunes_legal_dialog_box}
-		destroyscreenelement \{id = ghtunes_legal_dialog_box}
+	if ScreenElementExists \{id = ghtunes_legal_dialog_box}
+		DestroyScreenElement \{id = ghtunes_legal_dialog_box}
 	endif
 endscript
 
 script ghtunes_submission_scroll 
 	ui_menu_scroll_sfx
 	<scroll_speed> = (0.0, 20.0)
-	if ghtunes_legal_dialog_box :desc_resolvealias \{name = alias_text_menu}
-		getscreenelementprops id = <resolved_id>
+	if ghtunes_legal_dialog_box :Desc_ResolveAlias \{name = alias_text_menu}
+		GetScreenElementProps id = <resolved_id>
 		<up_limit> = 0
 		<down_limit> = (((<dims> [1]) * -1) + 400)
-		if gotparam \{up}
+		if GotParam \{up}
 			if ((<pos> [1]) < <up_limit>)
 				<new_pos> = (<pos> + <scroll_speed>)
 			else
 				<new_pos> = (1.0, 0.0)
 			endif
-		elseif gotparam \{down}
+		elseif GotParam \{down}
 			if ((<pos> [1]) > <down_limit>)
 				<new_pos> = (<pos> - <scroll_speed>)
 			else
@@ -199,8 +199,8 @@ script ghtunes_submission_scroll
 		<ratio> = (360.0 / (<down_limit> * -1))
 		<scroll_pos_y> = (((<new_pos> [1] * -1) * <ratio>) + 42)
 		<scroll_pos> = ((1.0, 0.0) + ((<scroll_pos_y>) * (0.0, 1.0)))
-		ghtunes_legal_dialog_box :setprops scrollbar_pos = <scroll_pos>
-		<resolved_id> :setprops pos = <new_pos>
+		ghtunes_legal_dialog_box :SetProps scrollbar_pos = <scroll_pos>
+		<resolved_id> :SetProps pos = <new_pos>
 	endif
 endscript
 
@@ -215,6 +215,6 @@ script ghtunes_submission_decline
 	generic_menu_pad_back_sound
 	clean_up_user_control_helpers
 	ghtunes_destroy_submission_agreement
-	launchevent \{type = focus
+	LaunchEvent \{type = focus
 		target = current_menu}
 endscript

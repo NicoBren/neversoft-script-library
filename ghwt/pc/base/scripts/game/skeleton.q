@@ -1,4 +1,4 @@
-bone_lod_distances = [
+Bone_LOD_Distances = [
 	10000.0
 	10000.0
 	10000.0
@@ -11,171 +11,171 @@ bone_lod_distances = [
 	10000.0
 	10000.0
 ]
-donotassertonmissinganims = 1
+DoNotAssertOnMissingAnims = 1
 skater_accessory_bones = [
-	bone_acc_pantleg_l
-	bone_acc_pantleg_r
-	bone_acc_tsleeve_l
-	bone_acc_tsleeve_r
-	bone_acc_hood
-	bone_acc_headphones
-	bone_acc_can
-	bone_acc_shirtfront_l
-	bone_acc_shirtfront_r
-	bone_acc_shirtback_l
-	bone_acc_shirtback_r
-	bone_acc_hair_l
-	bone_acc_hair_r
-	bone_acc_hair_b
-	bone_acc_hair_t
-	bone_acc_shortleg_l
-	bone_acc_shortleg_r
-	bone_collar_l
-	bone_collar_r
-	bone_head
+	Bone_ACC_PantLeg_L
+	Bone_ACC_PantLeg_R
+	Bone_ACC_TSleeve_L
+	Bone_ACC_TSleeve_R
+	Bone_ACC_Hood
+	Bone_ACC_Headphones
+	Bone_ACC_Can
+	Bone_ACC_ShirtFront_L
+	Bone_ACC_ShirtFront_R
+	Bone_ACC_ShirtBack_L
+	Bone_ACC_ShirtBack_R
+	Bone_ACC_Hair_L
+	Bone_ACC_Hair_R
+	Bone_ACC_Hair_B
+	Bone_ACC_Hair_T
+	Bone_ACC_ShortLeg_L
+	Bone_ACC_ShortLeg_R
+	Bone_Collar_L
+	Bone_Collar_R
+	Bone_Head
 ]
-boneskiplodinfo = {
+BoneSkipLODInfo = {
 }
-custonunactivebonelist_skaterall = [
-	bone_pelvis_master
-	bone_pelvis
-	bone_hips
-	bone_thigh_l
-	bone_knee_l
-	bone_ankle_l
-	bone_toe_l
-	bone_split_knee_l
-	bone_thigh_r
-	bone_knee_r
-	bone_ankle_r
-	bone_toe_r
-	bone_split_knee_r
-	bone_split_ass2_l
-	bone_split_ass2_r
-	bone_split_ass_l
-	bone_split_ass_r
-	bone_stomach_lower
-	bone_stomach_upper
-	bone_chest
-	bone_collar_l
-	bone_bicep_l
-	bone_forearm_l
-	bone_palm_l
-	bone_hand_index_base_l
-	bone_hand_index_mid_l
-	bone_hand_middle_base_l
-	bone_hand_middle_mid_l
-	bone_hand_pinkey_base_l
-	bone_hand_pinkey_mid_l
-	bone_hand_ring_base_l
-	bone_hand_ring_mid_l
-	bone_hand_thumb_base_l
-	bone_hand_thumb_mid_l
-	bone_twist_wrist_l
-	bone_twist_bicep_mid_l
-	bone_twist_bicep_top_l
-	bone_split_elbow_l
-	bone_collar_r
-	bone_bicep_r
-	bone_forearm_r
-	bone_palm_r
-	bone_hand_index_base_r
-	bone_hand_index_mid_r
-	bone_hand_middle_base_r
-	bone_hand_middle_mid_r
-	bone_hand_pinkey_base_r
-	bone_hand_pinkey_mid_r
-	bone_hand_ring_base_r
-	bone_hand_ring_mid_r
-	bone_hand_thumb_base_r
-	bone_hand_thumb_mid_r
-	bone_twist_wrist_r
-	bone_twist_bicep_mid_r
-	bone_twist_bicep_top_r
-	bone_split_elbow_r
-	bone_neck
-	bone_head
-	bone_brow_l
-	bone_brow_mid
-	bone_brow_mid_l
-	bone_brow_mid_r
-	bone_brow_r
-	bone_cheek_l
-	bone_cheek_r
-	bone_cheek_upper_l
-	bone_cheek_upper_r
+CustonUnactiveBoneList_SkaterAll = [
+	Bone_Pelvis_master
+	Bone_Pelvis
+	Bone_Hips
+	Bone_Thigh_L
+	Bone_Knee_L
+	Bone_Ankle_L
+	Bone_Toe_L
+	Bone_Split_Knee_L
+	Bone_Thigh_R
+	Bone_Knee_R
+	Bone_Ankle_R
+	Bone_Toe_R
+	Bone_Split_Knee_R
+	Bone_Split_Ass2_L
+	Bone_Split_Ass2_R
+	Bone_Split_Ass_L
+	Bone_Split_Ass_R
+	Bone_Stomach_Lower
+	Bone_Stomach_Upper
+	Bone_Chest
+	Bone_Collar_L
+	Bone_Bicep_L
+	Bone_Forearm_L
+	Bone_Palm_L
+	Bone_Hand_Index_Base_L
+	Bone_Hand_Index_Mid_L
+	Bone_Hand_Middle_Base_L
+	Bone_Hand_Middle_Mid_L
+	Bone_Hand_Pinkey_Base_L
+	Bone_Hand_Pinkey_Mid_L
+	Bone_Hand_Ring_Base_L
+	Bone_Hand_Ring_Mid_L
+	Bone_Hand_Thumb_Base_L
+	Bone_Hand_Thumb_Mid_L
+	Bone_Twist_Wrist_L
+	Bone_Twist_Bicep_Mid_L
+	Bone_Twist_Bicep_Top_L
+	Bone_Split_Elbow_L
+	Bone_Collar_R
+	Bone_Bicep_R
+	Bone_Forearm_R
+	Bone_Palm_R
+	Bone_Hand_Index_Base_R
+	Bone_Hand_Index_Mid_R
+	Bone_Hand_Middle_Base_R
+	Bone_Hand_Middle_Mid_R
+	Bone_Hand_Pinkey_Base_R
+	Bone_Hand_Pinkey_Mid_R
+	Bone_Hand_Ring_Base_R
+	Bone_Hand_Ring_Mid_R
+	Bone_Hand_Thumb_Base_R
+	Bone_Hand_Thumb_Mid_R
+	Bone_Twist_Wrist_R
+	Bone_Twist_Bicep_Mid_R
+	Bone_Twist_Bicep_Top_R
+	Bone_Split_Elbow_R
+	Bone_Neck
+	Bone_Head
+	Bone_Brow_L
+	Bone_Brow_Mid
+	Bone_Brow_Mid_L
+	Bone_Brow_Mid_R
+	Bone_Brow_R
+	Bone_Cheek_L
+	Bone_Cheek_R
+	Bone_Cheek_Upper_L
+	Bone_Cheek_Upper_R
 	bone_eye_l
-	bone_eye_r
-	bone_eyelid_lower_l
-	bone_eyelid_lower_r
-	bone_eyelid_upper_l
-	bone_eyelid_upper_r
-	bone_jaw
-	bone_lip_lower_corner_l
-	bone_lip_lower_corner_r
-	bone_lip_lower_l
-	bone_lip_lower_mid
-	bone_lip_lower_r
-	bone_lip_upper_corner_l
-	bone_lip_upper_corner_r
-	bone_lip_upper_l
-	bone_lip_upper_mid
-	bone_lip_upper_r
-	bone_mouth_l
-	bone_mouth_r
-	bone_nostrils
-	bone_tongue
-	bone_ik_foot_master_l
-	bone_ik_foot_slave_l
-	bone_ik_foot_master_r
-	bone_ik_foot_slave_r
-	bone_ik_knee_master_l
-	bone_ik_knee_slave_l
-	bone_ik_knee_master_r
-	bone_ik_knee_slave_r
-	bone_ik_elbow_slave_l
-	bone_ik_elbow_slave_r
-	bone_ik_hand_slave_l
-	bone_ik_hand_slave_r
-	bone_acc_hair_b
-	bone_acc_hair_l
-	bone_acc_hair_r
-	bone_acc_hair_t
-	bone_acc_can
-	bone_acc_headphones
-	bone_acc_hood
-	bone_acc_shortleg_l
-	bone_acc_shortleg_r
-	bone_acc_pantleg_l
-	bone_acc_pantleg_r
-	bone_acc_shirtback_l
-	bone_acc_shirtback_r
-	bone_acc_shirtfront_l
-	bone_acc_shirtfront_r
-	bone_acc_tsleeve_l
-	bone_acc_tsleeve_r
+	Bone_Eye_R
+	Bone_Eyelid_Lower_L
+	Bone_Eyelid_Lower_R
+	Bone_Eyelid_Upper_L
+	Bone_Eyelid_Upper_R
+	Bone_Jaw
+	Bone_Lip_Lower_Corner_L
+	Bone_Lip_Lower_Corner_R
+	Bone_Lip_Lower_L
+	Bone_Lip_Lower_Mid
+	Bone_Lip_Lower_R
+	Bone_Lip_Upper_Corner_L
+	Bone_Lip_Upper_Corner_R
+	Bone_Lip_Upper_L
+	Bone_Lip_Upper_Mid
+	Bone_Lip_Upper_R
+	Bone_Mouth_L
+	Bone_Mouth_R
+	Bone_Nostrils
+	Bone_Tongue
+	Bone_IK_Foot_Master_L
+	Bone_IK_Foot_Slave_L
+	Bone_IK_Foot_Master_R
+	Bone_IK_Foot_Slave_R
+	Bone_IK_Knee_Master_L
+	Bone_IK_Knee_Slave_L
+	Bone_IK_Knee_Master_R
+	Bone_IK_Knee_Slave_R
+	Bone_IK_Elbow_Slave_L
+	Bone_IK_Elbow_Slave_R
+	Bone_IK_Hand_Slave_L
+	Bone_IK_Hand_Slave_R
+	Bone_ACC_Hair_B
+	Bone_ACC_Hair_L
+	Bone_ACC_Hair_R
+	Bone_ACC_Hair_T
+	Bone_ACC_Can
+	Bone_ACC_Headphones
+	Bone_ACC_Hood
+	Bone_ACC_ShortLeg_L
+	Bone_ACC_ShortLeg_R
+	Bone_ACC_PantLeg_L
+	Bone_ACC_PantLeg_R
+	Bone_ACC_ShirtBack_L
+	Bone_ACC_ShirtBack_R
+	Bone_ACC_ShirtFront_L
+	Bone_ACC_ShirtFront_R
+	Bone_ACC_TSleeve_L
+	Bone_ACC_TSleeve_R
 ]
-custonunactivebonelist_skaterstandard = [
-	bone_ik_knee_master_l
-	bone_ik_knee_slave_l
-	bone_ik_knee_master_r
-	bone_ik_knee_slave_r
-	bone_ik_elbow_slave_l
-	bone_ik_elbow_slave_r
-	bone_ik_hand_slave_l
-	bone_ik_hand_slave_r
+CustonUnactiveBoneList_SkaterStandard = [
+	Bone_IK_Knee_Master_L
+	Bone_IK_Knee_Slave_L
+	Bone_IK_Knee_Master_R
+	Bone_IK_Knee_Slave_R
+	Bone_IK_Elbow_Slave_L
+	Bone_IK_Elbow_Slave_R
+	Bone_IK_Hand_Slave_L
+	Bone_IK_Hand_Slave_R
 ]
-rigidbodycontrollerparams_skater = {
-	hierarchygain = 0
-	velocitydamping = 0.9
-	accelerationgain = 1
-	velocitygain = 1
-	positiongain = 0.25
-	positionmaxlinearvelocity = 200
-	positionmaxangularvelocity = 1.8
-	snapgain = 0.1
-	snapmaxlinearvelocity = 200
-	snapmaxangularvelocity = 1.3
-	snapmaxlineardistance = 100
-	snapmaxangulardistance = 4
+RigidbodyControllerParams_Skater = {
+	hierarchyGain = 0
+	velocityDamping = 0.9
+	accelerationGain = 1
+	velocityGain = 1
+	positionGain = 0.25
+	positionMaxLinearVelocity = 200
+	positionMaxAngularVelocity = 1.8
+	snapGain = 0.1
+	snapMaxLinearVelocity = 200
+	snapMaxAngularVelocity = 1.3
+	snapMaxLinearDistance = 100
+	snapMaxAngularDistance = 4
 }

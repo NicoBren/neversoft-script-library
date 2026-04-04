@@ -1,57 +1,57 @@
-gp_fx_fsc_greysmoke_column_01 = {
+GP_FX_FSC_GreySmoke_Column_01 = {
 	pos = (-2.2126443, 0.530114, -6.9561367)
 	angles = (0.0, 0.0, 0.0)
-	class = particleobject
-	particletype = flexparticle
+	Class = ParticleObject
+	ParticleType = FlexParticle
 	type = flat
 	active
-	createdatstart
-	emitrangedims = (0.15, 0.0, 0.0)
-	emit_target = (0.0, 1.0, 0.0)
-	emitangle = (0.0, 0.0, 0.0)
+	CreatedAtStart
+	EmitRangeDims = (0.15, 0.0, 0.0)
+	emit_Target = (0.0, 1.0, 0.0)
+	EmitAngle = (0.0, 0.0, 0.0)
 	force = (0.0, 0.0, 0.0)
-	windcoeff = 0.0
-	localwindcoeff = 0.0
-	emittervelocityweight = 0.0
-	anglespread = 1.0
-	liferange = (2.5, 2.7)
+	WindCoeff = 0.0
+	LocalWindCoeff = 0.0
+	EmitterVelocityWeight = 0.0
+	AngleSpread = 1.0
+	LifeRange = (2.5, 2.7)
 	emit_rate = 20.0
 	max = 0
-	timeseed = 0.2
-	lifetime = 0.7
-	emitnum = 0
-	followemitter = 0.0
-	emitfunction = constant
-	emitperiod = 1.0
-	sizerange = [
+	TimeSeed = 0.2
+	lifeTime = 0.7
+	emitNum = 0
+	FollowEmitter = 0.0
+	EmitFunction = constant
+	EmitPeriod = 1.0
+	SizeRange = [
 		(0.4, 0.4)
 		(0.9, 0.9)
 	]
-	speedrange = (1.0, 1.2)
-	rotvel = (1.2, -1.2)
-	rotveltimescale = 0.5
-	emitdelaystart = 0.0
-	pathfollowtime = 0.0
-	history = 2
-	historylistcoordinatespace = world
+	SpeedRange = (1.0, 1.2)
+	RotVel = (1.2, -1.2)
+	RotVelTimeScale = 0.5
+	EmitDelayStart = 0.0
+	PathFollowTime = 0.0
+	History = 2
+	HistoryListCoordinateSpace = world
 	color = -1667457902
-	lod_default
-	quickmaterial = {
-		texturelayout = layout2x2
-		diffusetextureenabled
-		diffusetexture = jow_steam02
-		specularpower = 0
-		lighting
-		fakeambientocclusion
+	LOD_Default
+	QuickMaterial = {
+		TextureLayout = Layout2x2
+		DiffuseTextureEnabled
+		DiffuseTexture = JOW_Steam02
+		SpecularPower = 0
+		Lighting
+		FakeAmbientOcclusion
 		alphacutoff = 1
-		blendmode = blend
-		softedge
-		softedgescale = 0.2
-		burn
-		burnvalue = 0.2
-		quadanimationfps = 0
+		blendMode = blend
+		SoftEdge
+		SoftedgeScale = 0.2
+		Burn
+		BurnValue = 0.2
+		QuadAnimationFPS = 0
 	}
-	knot = [
+	Knot = [
 		(-0.412285, 0.0, -0.0)
 		(-0.412285, 0.0, -0.0)
 		(-0.38152102, 0.0, -0.0)
@@ -65,7 +65,7 @@ gp_fx_fsc_greysmoke_column_01 = {
 		(0.41333, 0.0, -0.0)
 		(0.41333, 0.0, -0.0)
 	]
-	particlecolor = [
+	ParticleColor = [
 		-256
 		-256
 		-256
@@ -75,7 +75,7 @@ gp_fx_fsc_greysmoke_column_01 = {
 		-256
 		-256
 	]
-	vertexweight = [
+	VertexWeight = [
 		0.111787
 		0.5433661
 		1.0

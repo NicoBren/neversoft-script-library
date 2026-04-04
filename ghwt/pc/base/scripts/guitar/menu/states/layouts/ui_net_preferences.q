@@ -1,13 +1,13 @@
 
 script ui_create_net_preferences 
-	requireparams \{[
+	RequireParams \{[
 			exit_script
 		]
 		all}
 	info_index = 1
 	index = 1
 	begin
-	getplayerinfo <index> controller
+	GetPlayerInfo <index> controller
 	if (<device_num> = <controller>)
 		<info_index> = <index>
 		break
@@ -15,46 +15,46 @@ script ui_create_net_preferences
 	index = (<index> + 1)
 	repeat 8
 	<my_parent> = root_window
-	if screenelementexists \{id = onlinelobbyinterface}
-		<my_parent> = onlinelobbyinterface
+	if ScreenElementExists \{id = OnlineLobbyInterface}
+		<my_parent> = OnlineLobbyInterface
 	endif
-	createscreenelement {
-		type = descinterface
+	CreateScreenElement {
+		type = DescInterface
 		parent = <my_parent>
 		desc = 'online_lobby_left_side'
 		pos = (0.0, -1000.0)
-		id = netprefinterface
+		id = NetPrefInterface
 		exclusive_device = <device_num>
 		tags = {
 			menu_index = 0
-			menu_items = 0
+			Menu_items = 0
 			submenu_id = null
 			player_num = <info_index>
 			exit_script = <exit_script>
 		}
 	}
-	netprefinterface :desc_checkversion \{desired = 2
-		assertif = mismatch}
-	<id> :se_setprops title_text = qs(0xed494bd1)
-	if netprefinterface :desc_resolvealias \{name = alias_online_lobby_scrollbar
+	NetPrefInterface :Desc_CheckVersion \{desired = 2
+		AssertIf = Mismatch}
+	<id> :SE_SetProps title_text = qs("PREFERENCES")
+	if NetPrefInterface :Desc_ResolveAlias \{name = alias_online_lobby_scrollbar
 			param = scrollbar_id}
-		<scrollbar_id> :die
+		<scrollbar_id> :Die
 	endif
 	create_net_preferences_menu controller = <device_num> <...>
-	<id> :obj_spawnscriptnow animate_left_side params = {id = netprefinterface direction = in}
+	<id> :Obj_SpawnScriptNow animate_left_side params = {id = NetPrefInterface direction = in}
 	clean_up_user_control_helpers
 	add_gamertag_helper exclusive_device = <device_num>
 	menu_finish
 endscript
 
 script ui_destroy_net_preferences 
-	if screenelementexists \{id = netprefinterface}
-		netprefinterface :gettags
+	if ScreenElementExists \{id = NetPrefInterface}
+		NetPrefInterface :GetTags
 		generic_menu_pad_back_sound
-		animate_left_side \{id = netprefinterface
+		animate_left_side \{id = NetPrefInterface
 			direction = out}
-		destroyscreenelement \{id = netprefinterface}
-		if gotparam \{no_focus}
+		DestroyScreenElement \{id = NetPrefInterface}
+		if GotParam \{no_focus}
 			spawnscriptnow <exit_script> params = {no_focus}
 		else
 			spawnscriptnow <exit_script>
@@ -63,29 +63,29 @@ script ui_destroy_net_preferences
 endscript
 
 script set_net_preferences_helper_text 
-	if NOT gotparam \{msg_checksum}
+	if NOT GotParam \{msg_checksum}
 		return
 	endif
-	if isxenon
+	if isXenon
 		plat_helper_strings = net_helper_text_strings_ps3
-	elseif isps3
+	elseif IsPs3
 		plat_helper_strings = net_helper_text_strings_ps3
 	endif
-	appendsuffixtochecksum base = <msg_checksum> suffixstring = '_text'
-	if structurecontains structure = ($<plat_helper_strings>) <appended_id>
-		if screenelementexists \{id = netprefinterface}
-			netprefinterface :se_setprops info_text = ($<plat_helper_strings>.<appended_id>)
+	AppendSuffixToChecksum Base = <msg_checksum> SuffixString = '_text'
+	if StructureContains Structure = ($<plat_helper_strings>) <appended_id>
+		if ScreenElementExists \{id = NetPrefInterface}
+			NetPrefInterface :SE_SetProps info_text = ($<plat_helper_strings>.<appended_id>)
 		endif
-	elseif structurecontains structure = ($net_helper_text_strings) <appended_id>
-		if screenelementexists \{id = netprefinterface}
-			netprefinterface :se_setprops info_text = ($net_helper_text_strings.<appended_id>)
+	elseif StructureContains Structure = ($net_helper_text_strings) <appended_id>
+		if ScreenElementExists \{id = NetPrefInterface}
+			NetPrefInterface :SE_SetProps info_text = ($net_helper_text_strings.<appended_id>)
 		endif
 	endif
 endscript
 
-script create_net_preferences_menu \{container_id = netprefinterface}
-	if netprefinterface :desc_resolvealias \{name = alias_left_side_vmenu}
-		<resolved_id> :se_setprops {
+script create_net_preferences_menu \{container_id = NetPrefInterface}
+	if NetPrefInterface :Desc_ResolveAlias \{name = alias_left_side_vmenu}
+		<resolved_id> :SE_SetProps {
 			event_handlers = [
 				{pad_back ui_destroy_net_preferences}
 				{pad_up net_preferences_up_or_down_action params = {action = up}}
@@ -93,37 +93,37 @@ script create_net_preferences_menu \{container_id = netprefinterface}
 			]
 		}
 		get_savegame_from_controller controller = <controller>
-		if NOT gotparam \{post_game_lobby}
+		if NOT GotParam \{post_game_lobby}
 			characters = []
 			get_musician_profile_size savegame = <savegame>
 			added_characters = 0
 			i = 0
-			<height> = 0
+			<Height> = 0
 			begin
 			get_musician_profile_struct_by_index index = <i> savegame = <savegame>
-			netprefinterface :gettags
-			getplayerinfo <player_num> part
+			NetPrefInterface :GetTags
+			GetPlayerInfo <player_num> part
 			if display_character_logic savegame = <savegame> profile_struct = <profile_struct> part = <part>
 				character_id = (<profile_struct>.name)
 				<new_character> = {
 					text = (<profile_struct>.fullname)
 					checksum = <character_id>
 				}
-				addarrayelement array = <characters> element = <new_character>
+				AddArrayElement array = <characters> element = <new_character>
 				<characters> = <array>
 				<added_characters> = (<added_characters> + 1)
-				<height> = (<height> + 42)
+				<Height> = (<Height> + 42)
 			endif
 			i = (<i> + 1)
 			repeat <array_size>
 			add_net_preferences_item {
 				vmenu_id = <resolved_id>
-				text = qs(0xdd110956)
+				text = qs("ROCKER")
 				msg_checksum = pref_character
 				choose_script = create_net_preferences_submenu
 				choose_script_params = {
-					name = qs(0xdd110956)
-					submenu_height = (<height> + 40)
+					name = qs("ROCKER")
+					submenu_height = (<Height> + 40)
 					submenu_type = character
 					choose_script = select_net_preferences_character
 					items = <characters>
@@ -131,34 +131,34 @@ script create_net_preferences_menu \{container_id = netprefinterface}
 				}
 			}
 		endif
-		netoptions :pref_get \{name = game_modes}
-		netprefinterface :gettags
+		NetOptions :Pref_Get \{name = game_modes}
+		NetPrefInterface :GetTags
 		if (<checksum> = p2_battle)
 			add_net_preferences_item {
 				vmenu_id = <resolved_id>
-				text = qs(0x9f281c76)
+				text = qs("DIFFICULTY")
 				msg_checksum = pref_difficulty
 				choose_script = create_net_preferences_submenu
 				choose_script_params = {
-					name = qs(0x9f281c76)
+					name = qs("DIFFICULTY")
 					submenu_type = difficulty
 					submenu_height = ((4 * 42) + 40)
 					choose_script = select_net_preferences_difficulty
 					items = [
 						{
-							text = qs(0x8d657387)
+							text = qs("EASY")
 							checksum = easy
 						}
 						{
-							text = qs(0x6ef11a01)
+							text = qs("MEDIUM")
 							checksum = medium
 						}
 						{
-							text = qs(0x51b06d2f)
+							text = qs("HARD")
 							checksum = hard
 						}
 						{
-							text = qs(0x334908ac)
+							text = qs("EXPERT")
 							checksum = expert
 						}
 					]
@@ -167,33 +167,33 @@ script create_net_preferences_menu \{container_id = netprefinterface}
 		else
 			add_net_preferences_item {
 				vmenu_id = <resolved_id>
-				text = qs(0x9f281c76)
+				text = qs("DIFFICULTY")
 				msg_checksum = pref_difficulty
 				choose_script = create_net_preferences_submenu
 				choose_script_params = {
-					name = qs(0x9f281c76)
+					name = qs("DIFFICULTY")
 					submenu_type = difficulty
 					submenu_height = ((5 * 42) + 40)
 					choose_script = select_net_preferences_difficulty
 					items = [
 						{
-							text = qs(0x74d6a0a0)
+							text = qs("BEGINNER")
 							checksum = easy_rhythm
 						}
 						{
-							text = qs(0x8d657387)
+							text = qs("EASY")
 							checksum = easy
 						}
 						{
-							text = qs(0x6ef11a01)
+							text = qs("MEDIUM")
 							checksum = medium
 						}
 						{
-							text = qs(0x51b06d2f)
+							text = qs("HARD")
 							checksum = hard
 						}
 						{
-							text = qs(0x334908ac)
+							text = qs("EXPERT")
 							checksum = expert
 						}
 					]
@@ -202,21 +202,21 @@ script create_net_preferences_menu \{container_id = netprefinterface}
 		endif
 		add_net_preferences_item {
 			vmenu_id = <resolved_id>
-			text = qs(0x2e9b1b43)
+			text = qs("LEFTY FLIP")
 			msg_checksum = pref_lefty_flip
 			choose_script = create_net_preferences_submenu
 			choose_script_params = {
-				name = qs(0x2e9b1b43)
+				name = qs("LEFTY FLIP")
 				submenu_type = lefty_flip
 				choose_script = select_net_preferences_lefty_flip
 				submenu_height = 122
 				items = [
 					{
-						text = qs(0x73360a03)
+						text = qs("ON")
 						checksum = on
 					}
 					{
-						text = qs(0xa86f0987)
+						text = qs("OFF")
 						checksum = off
 					}
 				]
@@ -225,50 +225,50 @@ script create_net_preferences_menu \{container_id = netprefinterface}
 		demo_mode_disable = <demo_mode_disable>
 		add_net_preferences_item {
 			vmenu_id = <resolved_id>
-			text = qs(0x589b1fee)
+			text = qs("VOCAL STYLE")
 			msg_checksum = pref_vocal_style
 			choose_script = create_net_preferences_submenu
 			choose_script_params = {
-				name = qs(0x589b1fee)
+				name = qs("VOCAL STYLE")
 				submenu_type = vocal_style
 				submenu_height = 122
 				choose_script = select_net_preferences_vocal_style
 				items = [
 					{
-						text = qs(0x737839f5)
+						text = qs("SCROLLING")
 						checksum = scrolling
 					}
 					{
-						text = qs(0x305014bd)
+						text = qs("STATIC")
 						checksum = static
 					}
 				]
 			}
 		}
-		assignalias id = <resolved_id> alias = net_preferences_popup
-		launchevent \{type = focus
+		AssignAlias id = <resolved_id> alias = net_preferences_popup
+		LaunchEvent \{type = focus
 			target = net_preferences_popup}
 	endif
 endscript
 
 script create_net_preferences_submenu \{selected_index = 0
 		submenu_height = 250}
-	if NOT gotparam \{submenu_type}
+	if NOT GotParam \{submenu_type}
 		return
 	endif
-	if NOT gotparam \{name}
+	if NOT GotParam \{name}
 		return
 	endif
-	launchevent \{type = unfocus
+	LaunchEvent \{type = unfocus
 		target = net_preferences_popup}
-	obj_getid
-	<objid> :se_getprops
+	Obj_GetID
+	<ObjID> :SE_GetProps
 	<z_priority> = (<z_priority> + 1)
-	if netprefinterface :desc_resolvealias \{name = alias_left_side_vscollingmenu}
-		<resolved_id> :se_setprops dims = (256.0, 1000.0) time = 0.2
-		resolvescreenelementid \{id = [
+	if NetPrefInterface :Desc_ResolveAlias \{name = alias_left_side_vscollingmenu}
+		<resolved_id> :SE_SetProps dims = (256.0, 1000.0) time = 0.2
+		ResolveScreenElementId \{id = [
 				{
-					id = netprefinterface
+					id = NetPrefInterface
 				}
 				{
 					local_id = lobby_menu
@@ -286,40 +286,40 @@ script create_net_preferences_submenu \{selected_index = 0
 		if (<dim_y> >= 575)
 			difference = (<dim_y> - 575)
 			<dim_y> = 575
-			<objid> :se_setprops dims = (385.0, 575.0)
-			<resolved_id> :se_setprops pos = {((0.0, 1.0) * <difference>) relative}
+			<ObjID> :SE_SetProps dims = (385.0, 575.0)
+			<resolved_id> :SE_SetProps pos = {((0.0, 1.0) * <difference>) relative}
 			break
 		endif
-		<objid> :se_setprops dims = ((0.0, 1.0) * <dim_y> + (385.0, 0.0))
-		<resolved_id> :se_setprops pos = {(0.0, 45.0) relative}
-		wait \{1
+		<ObjID> :SE_SetProps dims = ((0.0, 1.0) * <dim_y> + (385.0, 0.0))
+		<resolved_id> :SE_SetProps pos = {(0.0, 45.0) relative}
+		Wait \{1
 			gameframe}
 		repeat
 	endif
 	if (<submenu_height> > 425)
 		<submenu_height> = 425
 	endif
-	if screenelementexists \{id = net_preferences_submenu_container}
-		destroyscreenelement \{id = net_preferences_submenu_container}
+	if ScreenElementExists \{id = net_preferences_submenu_container}
+		DestroyScreenElement \{id = net_preferences_submenu_container}
 	endif
-	createscreenelement {
-		type = containerelement
-		parent = <objid>
+	CreateScreenElement {
+		type = ContainerElement
+		parent = <ObjID>
 		id = net_preferences_submenu_container
 		pos = (0.0, 0.0)
 		just = [left top]
 		z_priority = <z_priority>
 		tags = {
-			menu_items = 0
+			Menu_items = 0
 			menu_index = 0
 			scrollbar_id = net_pref_submenu_scrollbar
 		}
 	}
 	container_id = <id>
-	if gotparam \{scroll_bar}
-		printf \{qs(0x86641c92)}
-		createscreenelement {
-			type = descinterface
+	if GotParam \{scroll_bar}
+		printf \{qs("\Lcreating scroll bar")}
+		CreateScreenElement {
+			type = DescInterface
 			parent = <container_id>
 			desc = 'online_lobby_scrollbar'
 			pos = (325.0, 56.0)
@@ -330,15 +330,15 @@ script create_net_preferences_submenu \{selected_index = 0
 				scroll_increment = 0
 			}
 		}
-		net_pref_submenu_scrollbar :se_setprops \{scrollbar_bg_dims = (16.0, 415.0)
+		net_pref_submenu_scrollbar :SE_SetProps \{scrollbar_bg_dims = (16.0, 415.0)
 			scrollbar_arrow_down_pos = (-1.0, 400.0)
 			scrollbar_arrow_up_pos = {
 				(0.0, 5.0)
 				relative
 			}}
 	endif
-	createscreenelement {
-		type = spriteelement
+	CreateScreenElement {
+		type = SpriteElement
 		parent = <container_id>
 		texture = list_container
 		pos = (-35.0, 42.0)
@@ -347,8 +347,8 @@ script create_net_preferences_submenu \{selected_index = 0
 		alpha = 1.0
 		z_priority = (<z_priority> + 0.2)
 	}
-	createscreenelement {
-		type = vscrollingmenu
+	CreateScreenElement {
+		type = VScrollingMenu
 		parent = <container_id>
 		id = net_preferences_submenu_vscollingmenu
 		just = [left top]
@@ -356,8 +356,8 @@ script create_net_preferences_submenu \{selected_index = 0
 		pos = (15.0, 50.0)
 		z_priority = (<z_priority> + 0.4)
 	}
-	createscreenelement {
-		type = vmenu
+	CreateScreenElement {
+		type = VMenu
 		parent = <id>
 		just = [left top]
 		internal_just = [left center]
@@ -373,34 +373,34 @@ script create_net_preferences_submenu \{selected_index = 0
 		]
 	}
 	subvmenu_id = <id>
-	netprefinterface :settags submenu_id = <subvmenu_id>
-	setscreenelementprops {
+	NetPrefInterface :SetTags submenu_id = <subvmenu_id>
+	SetScreenElementProps {
 		id = <subvmenu_id>
 		event_handlers = [
 			{pad_back generic_menu_pad_back_sound}
 			{pad_back destroy_net_preferences_submenu}
 		]
 	}
-	netprefinterface :gettags
+	NetPrefInterface :GetTags
 	<current_checksum> = 0
 	switch (<submenu_type>)
 		case character
-		getplayerinfo <player_num> character_id
+		GetPlayerInfo <player_num> character_id
 		<current_checksum> = <character_id>
 		case difficulty
 		<current_checksum> = ($default_difficulty [<device_num>])
 		case lefty_flip
-		getplayerinfo <player_num> lefty_flip
+		GetPlayerInfo <player_num> lefty_flip
 		<current_checksum> = off
 		if (<lefty_flip> = 1)
 			<current_checksum> = on
 		endif
 		case vocal_style
-		getplayerinfo <player_num> vocals_highway_view
+		GetPlayerInfo <player_num> vocals_highway_view
 		<current_checksum> = <vocals_highway_view>
 	endswitch
 	<selected_index> = 0
-	getarraysize <items>
+	GetArraySize <items>
 	if (<array_size> > 0)
 		index = 0
 		begin
@@ -421,28 +421,28 @@ script create_net_preferences_submenu \{selected_index = 0
 		<index> = (<index> + 1)
 		repeat <array_size>
 	endif
-	net_preferences_submenu_container :gettags
-	if screenelementexists id = <scrollbar_id>
-		scroll_increment = (385 / (<menu_items> -1))
-		<scrollbar_id> :settags scroll_increment = <scroll_increment>
-		<scrollbar_id> :se_setprops scrollbar_thumb_pos = ((0.0, 10.0) + ((0.0, 1.0) * (<scroll_increment> * <selected_index>)))
+	net_preferences_submenu_container :GetTags
+	if ScreenElementExists id = <scrollbar_id>
+		scroll_increment = (385 / (<Menu_items> -1))
+		<scrollbar_id> :SetTags scroll_increment = <scroll_increment>
+		<scrollbar_id> :SE_SetProps scrollbar_thumb_pos = ((0.0, 10.0) + ((0.0, 1.0) * (<scroll_increment> * <selected_index>)))
 	endif
-	net_preferences_submenu_container :settags menu_index = <selected_index>
-	launchevent type = focus target = <subvmenu_id> data = {child_index = <selected_index>}
+	net_preferences_submenu_container :SetTags menu_index = <selected_index>
+	LaunchEvent type = focus target = <subvmenu_id> data = {child_index = <selected_index>}
 endscript
 
 script destroy_net_preferences_submenu 
-	if screenelementexists \{id = net_preferences_submenu_container}
-		destroyscreenelement \{id = net_preferences_submenu_container}
+	if ScreenElementExists \{id = net_preferences_submenu_container}
+		DestroyScreenElement \{id = net_preferences_submenu_container}
 	endif
-	netprefinterface :gettags
-	netprefinterface :settags \{submenu_id = null}
-	if netprefinterface :desc_resolvealias \{name = alias_left_side_vmenu}
+	NetPrefInterface :GetTags
+	NetPrefInterface :SetTags \{submenu_id = null}
+	if NetPrefInterface :Desc_ResolveAlias \{name = alias_left_side_vmenu}
 		menu_id = <resolved_id>
-		resolvescreenelementid \{param = info_container
+		ResolveScreenElementId \{param = info_container
 			id = [
 				{
-					id = netprefinterface
+					id = NetPrefInterface
 				}
 				{
 					local_id = lobby_menu
@@ -454,132 +454,132 @@ script destroy_net_preferences_submenu
 					local_id = info_pane_container
 				}
 			]}
-		resolvescreenelementid param = menu_item id = [
+		ResolveScreenElementId param = menu_item id = [
 			{id = <menu_id>}
 			{index = <menu_index>}
 		]
 		dim_y = 575
 		begin
-		if NOT screenelementexists id = <info_container>
+		if NOT ScreenElementExists id = <info_container>
 			break
 		endif
-		if NOT screenelementexists id = <menu_item>
+		if NOT ScreenElementExists id = <menu_item>
 			break
 		endif
 		<dim_y> = (<dim_y> - 45)
 		if (<dim_y> <= 42)
 			difference = (42 - <dim_y>)
 			<dim_y> = 42
-			<info_container> :se_setprops pos = {((0.0, -1.0) * <difference>) relative}
-			<menu_item> :se_setprops dims = (385.0, 42.0)
+			<info_container> :SE_SetProps pos = {((0.0, -1.0) * <difference>) relative}
+			<menu_item> :SE_SetProps dims = (385.0, 42.0)
 			break
 		endif
-		<menu_item> :se_setprops dims = (((0.0, 1.0) * <dim_y>) + (385.0, 0.0))
-		<info_container> :se_setprops pos = {(0.0, -45.0) relative}
-		wait \{1
+		<menu_item> :SE_SetProps dims = (((0.0, 1.0) * <dim_y>) + (385.0, 0.0))
+		<info_container> :SE_SetProps pos = {(0.0, -45.0) relative}
+		Wait \{1
 			gameframe}
 		repeat
-		if screenelementexists \{id = netprefinterface}
-			if netprefinterface :desc_resolvealias \{name = alias_left_side_vscollingmenu}
-				<resolved_id> :se_setprops dims = (256.0, 215.0)
+		if ScreenElementExists \{id = NetPrefInterface}
+			if NetPrefInterface :Desc_ResolveAlias \{name = alias_left_side_vscollingmenu}
+				<resolved_id> :SE_SetProps dims = (256.0, 215.0)
 			endif
-			launchevent type = focus target = <menu_id> data = {child_index = (<menu_index>)}
+			LaunchEvent type = focus target = <menu_id> data = {child_index = (<menu_index>)}
 		endif
 	endif
 endscript
 
 script net_preferences_submenu_up 
-	if screenelementexists \{id = net_preferences_submenu_container}
-		net_preferences_submenu_container :gettags
+	if ScreenElementExists \{id = net_preferences_submenu_container}
+		net_preferences_submenu_container :GetTags
 		printstruct <...>
 		if (<menu_index> = 0)
-			net_preferences_submenu_container :settags menu_index = (<menu_items> - 1)
-			if screenelementexists id = <scrollbar_id>
-				<scrollbar_id> :se_setprops scrollbar_thumb_pos = (0.0, 385.0)
+			net_preferences_submenu_container :SetTags menu_index = (<Menu_items> - 1)
+			if ScreenElementExists id = <scrollbar_id>
+				<scrollbar_id> :SE_SetProps scrollbar_thumb_pos = (0.0, 385.0)
 			endif
 		else
-			net_preferences_submenu_container :settags menu_index = (<menu_index> - 1)
-			if screenelementexists id = <scrollbar_id>
-				<scrollbar_id> :gettags
+			net_preferences_submenu_container :SetTags menu_index = (<menu_index> - 1)
+			if ScreenElementExists id = <scrollbar_id>
+				<scrollbar_id> :GetTags
 				pos = ((0.0, -1.0) * <scroll_increment>)
-				<scrollbar_id> :se_setprops scrollbar_thumb_pos = {<pos> relative}
+				<scrollbar_id> :SE_SetProps scrollbar_thumb_pos = {<pos> relative}
 			endif
 		endif
 	endif
 endscript
 
 script net_preferences_submenu_down 
-	if screenelementexists \{id = net_preferences_submenu_container}
-		net_preferences_submenu_container :gettags
-		if ((<menu_index> + 1) = <menu_items>)
-			net_preferences_submenu_container :settags \{menu_index = 0}
-			if screenelementexists id = <scrollbar_id>
-				<scrollbar_id> :se_setprops scrollbar_thumb_pos = (0.0, 10.0)
+	if ScreenElementExists \{id = net_preferences_submenu_container}
+		net_preferences_submenu_container :GetTags
+		if ((<menu_index> + 1) = <Menu_items>)
+			net_preferences_submenu_container :SetTags \{menu_index = 0}
+			if ScreenElementExists id = <scrollbar_id>
+				<scrollbar_id> :SE_SetProps scrollbar_thumb_pos = (0.0, 10.0)
 			endif
 		else
-			net_preferences_submenu_container :settags menu_index = (<menu_index> + 1)
-			if screenelementexists id = <scrollbar_id>
-				<scrollbar_id> :gettags
+			net_preferences_submenu_container :SetTags menu_index = (<menu_index> + 1)
+			if ScreenElementExists id = <scrollbar_id>
+				<scrollbar_id> :GetTags
 				pos = ((0.0, 1.0) * (<scroll_increment>))
-				<scrollbar_id> :se_setprops scrollbar_thumb_pos = {<pos> relative}
+				<scrollbar_id> :SE_SetProps scrollbar_thumb_pos = {<pos> relative}
 			endif
 		endif
 	endif
 endscript
 
 script net_preferences_up_or_down_action 
-	if NOT gotparam \{action}
+	if NOT GotParam \{action}
 		return
 	endif
-	if NOT screenelementexists \{id = net_preferences_popup}
+	if NOT ScreenElementExists \{id = net_preferences_popup}
 		return
 	endif
-	netprefinterface :gettags
+	NetPrefInterface :GetTags
 	if (<action> = up)
 		generic_menu_up_or_down_sound \{up}
 		if (<menu_index> = 0)
-			netprefinterface :settags menu_index = (<menu_items> - 1)
+			NetPrefInterface :SetTags menu_index = (<Menu_items> - 1)
 		else
-			netprefinterface :settags menu_index = (<menu_index> - 1)
+			NetPrefInterface :SetTags menu_index = (<menu_index> - 1)
 		endif
 	elseif (<action> = down)
 		generic_menu_up_or_down_sound \{down}
-		if (<menu_index> = (<menu_items> - 1))
-			netprefinterface :settags \{menu_index = 0}
+		if (<menu_index> = (<Menu_items> - 1))
+			NetPrefInterface :SetTags \{menu_index = 0}
 		else
-			netprefinterface :settags menu_index = (<menu_index> + 1)
+			NetPrefInterface :SetTags menu_index = (<menu_index> + 1)
 		endif
 	endif
 endscript
 
 script net_preferences_item_change_focus 
-	obj_getid
-	<objid> :gettags
+	Obj_GetID
+	<ObjID> :GetTags
 	set_net_preferences_helper_text msg_checksum = <msg_checksum>
-	resolvescreenelementid id = [
-		{id = <objid>}
+	ResolveScreenElementId id = [
+		{id = <ObjID>}
 		{local_id = text}
 	]
-	if gotparam \{focus}
+	if GotParam \{focus}
 		retail_menu_focus id = <resolved_id>
-	elseif gotparam \{unfocus}
+	elseif GotParam \{unfocus}
 		retail_menu_unfocus id = <resolved_id>
 	endif
 endscript
 
 script add_net_preferences_item \{vmenu_id = net_preferences_vmenu
 		z_priority = 6.2}
-	if NOT gotparam \{vmenu_id}
+	if NOT GotParam \{vmenu_id}
 		return
 	endif
-	if NOT gotparam \{text}
-		text = qs(0x134b7e69)
+	if NOT GotParam \{text}
+		text = qs("TEST")
 	endif
-	if NOT gotparam \{msg_checksum}
+	if NOT GotParam \{msg_checksum}
 		msg_checksum = none
 	endif
-	createscreenelement {
-		type = containerelement
+	CreateScreenElement {
+		type = ContainerElement
 		parent = <vmenu_id>
 		pos = (0.0, 0.0)
 		dims = (385.0, 42.0)
@@ -592,8 +592,8 @@ script add_net_preferences_item \{vmenu_id = net_preferences_vmenu
 		}
 	}
 	container_id = <id>
-	if gotparam \{choose_script}
-		setscreenelementprops {
+	if GotParam \{choose_script}
+		SetScreenElementProps {
 			id = <container_id>
 			event_handlers = [
 				{pad_choose ui_menu_select_sfx}
@@ -601,18 +601,18 @@ script add_net_preferences_item \{vmenu_id = net_preferences_vmenu
 			]
 		}
 	endif
-	if NOT gotparam \{sub_menu_item}
-		netprefinterface :gettags
-		netprefinterface :settags menu_items = (<menu_items> + 1)
-	elseif screenelementexists \{id = net_preferences_submenu_container}
-		net_preferences_submenu_container :gettags
-		net_preferences_submenu_container :settags menu_items = (<menu_items> + 1)
+	if NOT GotParam \{sub_menu_item}
+		NetPrefInterface :GetTags
+		NetPrefInterface :SetTags Menu_items = (<Menu_items> + 1)
+	elseif ScreenElementExists \{id = net_preferences_submenu_container}
+		net_preferences_submenu_container :GetTags
+		net_preferences_submenu_container :SetTags Menu_items = (<Menu_items> + 1)
 	endif
-	if NOT gotparam \{item_width}
+	if NOT GotParam \{item_width}
 		item_width = 285
 	endif
-	createscreenelement {
-		type = textblockelement
+	CreateScreenElement {
+		type = TextBlockElement
 		parent = <container_id>
 		local_id = text
 		font = fontgrid_text_a6
@@ -631,14 +631,14 @@ script add_net_preferences_item \{vmenu_id = net_preferences_vmenu
 endscript
 
 script select_net_preferences_character 
-	if NOT gotparam \{checksum}
+	if NOT GotParam \{checksum}
 		return
 	endif
-	netprefinterface :gettags
-	setplayerinfo <player_num> character_id = <checksum>
-	getplayerinfo <player_num> is_local_client
+	NetPrefInterface :GetTags
+	SetPlayerInfo <player_num> character_id = <checksum>
+	GetPlayerInfo <player_num> is_local_client
 	if (<is_local_client> = 1)
-		getplayerinfo <player_num> controller
+		GetPlayerInfo <player_num> controller
 		if (<controller> < 4)
 			get_savegame_from_controller controller = <controller>
 			set_band_character_id_globaltag savegame = <savegame> controller = <controller> character_id = <checksum> player = <player_num>
@@ -648,22 +648,22 @@ script select_net_preferences_character
 endscript
 
 script select_net_preferences_difficulty 
-	if NOT gotparam \{checksum}
+	if NOT GotParam \{checksum}
 		return
 	endif
-	netprefinterface :gettags
+	NetPrefInterface :GetTags
 	if ((<player_num> <= 4) && (<player_num> >= 1))
-		setplayerinfo <player_num> difficulty = <checksum>
-		setarrayelement arrayname = default_difficulty globalarray index = <device_num> newvalue = <checksum>
+		SetPlayerInfo <player_num> difficulty = <checksum>
+		SetArrayElement ArrayName = default_difficulty GlobalArray index = <device_num> newvalue = <checksum>
 	endif
 	destroy_net_preferences_submenu
 endscript
 
 script select_net_preferences_lefty_flip 
-	if NOT gotparam \{checksum}
+	if NOT GotParam \{checksum}
 		return
 	endif
-	netprefinterface :gettags
+	NetPrefInterface :GetTags
 	value = 0
 	switch (<checksum>)
 		case on
@@ -671,32 +671,32 @@ script select_net_preferences_lefty_flip
 		case off
 		<value> = 0
 	endswitch
-	setplayerinfo <player_num> lefty_flip = <value>
-	setplayerinfo <player_num> lefthanded_gems = <value>
-	setplayerinfo <player_num> lefthanded_button_ups = <value>
-	setplayerinfo <player_num> lefthanded_button_ups_flip_save = <value>
-	setplayerinfo <player_num> lefthanded_gems_flip_save = <value>
+	SetPlayerInfo <player_num> lefty_flip = <value>
+	SetPlayerInfo <player_num> lefthanded_gems = <value>
+	SetPlayerInfo <player_num> lefthanded_button_ups = <value>
+	SetPlayerInfo <player_num> lefthanded_button_ups_flip_save = <value>
+	SetPlayerInfo <player_num> lefthanded_gems_flip_save = <value>
 	get_savegame_from_controller controller = <device_num>
-	if isxenon
-		setglobaltags savegame = <savegame> user_options params = {lefty_flip_save = <value>}
+	if isXenon
+		SetGlobalTags savegame = <savegame> user_options params = {lefty_flip_save = <value>}
 	elseif (<device_num> = $primary_controller)
-		setglobaltags savegame = <savegame> user_options params = {lefty_flip_save = <value>}
+		SetGlobalTags savegame = <savegame> user_options params = {lefty_flip_save = <value>}
 	endif
-	monitorcontrollerstates
+	MonitorControllerStates
 	destroy_net_preferences_submenu
 endscript
 
 script select_net_preferences_vocal_style 
-	if NOT gotparam \{checksum}
+	if NOT GotParam \{checksum}
 		return
 	endif
-	netprefinterface :gettags
+	NetPrefInterface :GetTags
 	get_savegame_from_controller controller = <device_num>
-	setplayerinfo <player_num> vocals_highway_view = <checksum>
-	if isxenon
-		setglobaltags savegame = <savegame> user_options params = {vocals_highway_view_save = <checksum>}
+	SetPlayerInfo <player_num> vocals_highway_view = <checksum>
+	if isXenon
+		SetGlobalTags savegame = <savegame> user_options params = {vocals_highway_view_save = <checksum>}
 	elseif (<device_num> = $primary_controller)
-		setglobaltags savegame = <savegame> user_options params = {vocals_highway_view_save = <checksum>}
+		SetGlobalTags savegame = <savegame> user_options params = {vocals_highway_view_save = <checksum>}
 	endif
 	destroy_net_preferences_submenu
 endscript

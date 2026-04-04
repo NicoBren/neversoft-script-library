@@ -13,7 +13,7 @@ script ui_init_online_post_game_lobby
 endscript
 
 script ui_deinit_online_post_game_lobby 
-	spawnscriptlater \{kill_idle_for_post_game_lobby}
+	SpawnScriptLater \{kill_idle_for_post_game_lobby}
 endscript
 
 script kill_idle_for_post_game_lobby 
@@ -21,56 +21,56 @@ script kill_idle_for_post_game_lobby
 	destroy_crowd_models
 	destroy_bg_viewport
 	destroy_cameracuts
-	transition_killall
+	Transition_KillAll
 	change \{current_transition = none}
 endscript
 
 script idle_for_post_game_lobby 
-	resetyieldinfo \{yield = true}
-	printf \{qs(0x2fc96321)}
-	killspawnedscript \{name = yieldmonitor}
-	spawnscriptnow \{yieldmonitor}
-	yield
-	band_playtransitionidles
-	bandmanager_stopallanimiterators
-	kill_gem_scroller \{type = normal}
-	yield \{'kill_gem_scroller'}
+	ResetYieldInfo \{Yield = true}
+	printf \{qs("\Lloading_transition")}
+	KillSpawnedScript \{name = YieldMonitor}
+	spawnscriptnow \{YieldMonitor}
+	Yield
+	Band_PlayTransitionIdles
+	BandManager_StopAllAnimIterators
+	kill_gem_scroller \{type = Normal}
+	Yield \{'kill_gem_scroller'}
 	create_crowd_models
 	setup_bg_viewport
-	yield \{'setup_bg_viewport'}
+	Yield \{'setup_bg_viewport'}
 	create_cameracuts
 	change \{current_transition = intro}
-	transition_play \{type = loading}
-	yield
-	unpausegame
-	yield
+	Transition_Play \{type = loading}
+	Yield
+	UnPauseGame
+	Yield
 	startrendering
 endscript
 
 script ui_create_online_post_game_lobby 
-	netsessionfunc \{obj = voice
-		func = turnteamtalkoff}
-	getactivecontrollers
-	getarraysize <active_controllers>
+	NetSessionFunc \{obj = voice
+		func = TurnTeamTalkOff}
+	GetActiveControllers
+	GetArraySize <active_controllers>
 	ingame_controllers = []
 	i = 0
 	begin
-	if netsessionfunc func = iscontrolleringame params = {controller = <i>}
-		addarrayelement array = <ingame_controllers> element = <i>
+	if NetSessionFunc func = IsControllerInGame params = {controller = <i>}
+		AddArrayElement array = <ingame_controllers> element = <i>
 		<ingame_controllers> = <array>
 	endif
 	<i> = (<i> + 1)
 	repeat <array_size>
-	createscreenelement {
+	CreateScreenElement {
 		parent = root_window
-		id = onlinelobbyinterface
-		type = descinterface
+		id = OnlineLobbyInterface
+		type = DescInterface
 		desc = 'online_postgame_lobby'
 		pos = (0.0, -1000.0)
 		exclusive_device = <ingame_controllers>
 		tags = {
 			menu_index = 0
-			menu_items = 0
+			Menu_items = 0
 			loser_index = 0
 			loser_items = 0
 			loser_menu_id = null
@@ -88,24 +88,24 @@ script ui_create_online_post_game_lobby
 	spawnscriptnow \{menu_music_on}
 	set_focus_color rgba = ($online_lobby_item_text_color)
 	set_unfocus_color rgba = ($online_lobby_item_text_color)
-	onlinelobbyinterface :desc_checkversion \{desired = 3
-		assertif = mismatch}
+	OnlineLobbyInterface :Desc_CheckVersion \{desired = 3
+		AssertIf = Mismatch}
 	change \{network_game_postgame_lobby = 1}
 	create_postgame_lobby_menu
 	create_player_scores_postgame_container
-	onlinelobbyinterface :obj_spawnscriptnow \{online_post_game_lobby_animate_in}
+	OnlineLobbyInterface :Obj_SpawnScriptNow \{online_post_game_lobby_animate_in}
 	menu_finish
-	netoptions :pref_get \{name = game_modes}
+	NetOptions :Pref_Get \{name = game_modes}
 	if (<checksum> = p4_pro_faceoff || <checksum> = p2_quickplay || <checksum> = p4_quickplay || <checksum> = p8_pro_faceoff)
-		getactivecontrollers
-		getarraysize <active_controllers>
+		GetActiveControllers
+		GetArraySize <active_controllers>
 		i = 0
 		begin
 		if (<active_controllers> [<i>] = 1)
-			if netsessionfunc func = iscontrolleringame params = {controller = <i>}
+			if NetSessionFunc func = IsControllerInGame params = {controller = <i>}
 				get_controller_type controller_index = <i>
 				if (<controller_type> = guitar || <controller_type> = controller)
-					add_user_control_helper text = qs(0xfe21f453) button = orange z = 100000 controller = <i>
+					add_user_control_helper text = qs(0xfe21f453) button = Orange z = 100000 controller = <i>
 					break
 				endif
 			endif
@@ -116,33 +116,33 @@ script ui_create_online_post_game_lobby
 endscript
 
 script online_post_game_lobby_animate_in 
-	wait \{0.5
+	Wait \{0.5
 		second}
-	soundevent \{event = online_main_panel_in}
-	if screenelementexists \{id = onlinelobbyinterface}
-		onlinelobbyinterface :se_setprops \{pos = (0.0, 30.0)
+	SoundEvent \{event = Online_Main_Panel_In}
+	if ScreenElementExists \{id = OnlineLobbyInterface}
+		OnlineLobbyInterface :SE_SetProps \{pos = (0.0, 30.0)
 			time = 0.2
-			anim = gentle}
+			Anim = gentle}
 	else
 		return
 	endif
-	wait \{0.22
+	Wait \{0.22
 		second}
-	if screenelementexists \{id = onlinelobbyinterface}
-		onlinelobbyinterface :se_setprops \{pos = (0.0, 0.0)
+	if ScreenElementExists \{id = OnlineLobbyInterface}
+		OnlineLobbyInterface :SE_SetProps \{pos = (0.0, 0.0)
 			time = 0.1
-			anim = gentle}
+			Anim = gentle}
 	else
 		return
 	endif
-	launchevent \{type = focus
+	LaunchEvent \{type = focus
 		target = current_menu}
 endscript
 
 script ui_destroy_online_post_game_lobby 
 	destroy_player_drop_events
-	if screenelementexists \{id = onlinelobbyinterface}
-		destroyscreenelement \{id = onlinelobbyinterface}
+	if ScreenElementExists \{id = OnlineLobbyInterface}
+		DestroyScreenElement \{id = OnlineLobbyInterface}
 	endif
 	change \{network_game_postgame_lobby = 0}
 	generic_ui_destroy
@@ -153,20 +153,20 @@ script ui_return_online_post_game_lobby
 	set_unfocus_color rgba = ($online_lobby_item_text_color)
 	clean_up_user_control_helpers
 	menu_finish
-	if screenelementexists \{id = onlinelobbyinterface}
-		onlinelobbyinterface :gettags
+	if ScreenElementExists \{id = OnlineLobbyInterface}
+		OnlineLobbyInterface :GetTags
 		if (<locked_to_players> = 0)
-			netoptions :pref_get \{name = game_modes}
+			NetOptions :Pref_Get \{name = game_modes}
 			if (<checksum> = p4_pro_faceoff || <checksum> = p2_quickplay || <checksum> = p4_quickplay || <checksum> = p8_pro_faceoff)
-				getactivecontrollers
-				getarraysize <active_controllers>
+				GetActiveControllers
+				GetArraySize <active_controllers>
 				i = 0
 				begin
 				if (<active_controllers> [<i>] = 1)
-					if netsessionfunc func = iscontrolleringame params = {controller = <i>}
+					if NetSessionFunc func = IsControllerInGame params = {controller = <i>}
 						get_controller_type controller_index = <i>
 						if (<controller_type> = guitar || <controller_type> = controller)
-							add_user_control_helper text = qs(0xfe21f453) button = orange z = 100000 controller = <i>
+							add_user_control_helper text = qs(0xfe21f453) button = Orange z = 100000 controller = <i>
 							break
 						endif
 					endif
@@ -179,48 +179,48 @@ script ui_return_online_post_game_lobby
 endscript
 
 script postgame_lobby_transition_in 
-	if screenelementexists \{id = onlinelobbyinterface}
-		if onlinelobbyinterface :desc_resolvealias \{name = alias_left_side
+	if ScreenElementExists \{id = OnlineLobbyInterface}
+		if OnlineLobbyInterface :Desc_ResolveAlias \{name = alias_left_side
 				param = left_side}
-			<left_side> :se_setprops pos = {(0.0, 1000.0) relative} time = 0.15 anim = gentle
+			<left_side> :SE_SetProps pos = {(0.0, 1000.0) relative} time = 0.15 Anim = gentle
 		endif
 	else
 		return
 	endif
-	onlinelobbyinterface :gettags
+	OnlineLobbyInterface :GetTags
 	if (<locked_to_players> = 0)
 		ui_return_online_post_game_lobby
-		wait \{0.15
+		Wait \{0.15
 			second}
-		launchevent \{type = focus
+		LaunchEvent \{type = focus
 			target = current_menu}
 	endif
 endscript
 
 script postgame_lobby_transition_out 
-	if screenelementexists \{id = onlinelobbyinterface}
-		if onlinelobbyinterface :desc_resolvealias \{name = alias_left_side
+	if ScreenElementExists \{id = OnlineLobbyInterface}
+		if OnlineLobbyInterface :Desc_ResolveAlias \{name = alias_left_side
 				param = left_side}
-			<left_side> :se_setprops pos = {(0.0, -1000.0) relative} time = 0.15 anim = gentle
+			<left_side> :SE_SetProps pos = {(0.0, -1000.0) relative} time = 0.15 Anim = gentle
 		endif
 	else
 		return
 	endif
-	wait \{0.15
+	Wait \{0.15
 		second}
 endscript
 
 script create_postgame_lobby_menu 
-	if onlinelobbyinterface :desc_resolvealias \{name = alias_left_side
+	if OnlineLobbyInterface :Desc_ResolveAlias \{name = alias_left_side
 			param = left_side}
-		if <left_side> :desc_resolvealias name = alias_online_lobby_scrollbar param = scrollbar_id
-			<scrollbar_id> :die
+		if <left_side> :Desc_ResolveAlias name = alias_online_lobby_scrollbar param = scrollbar_id
+			<scrollbar_id> :Die
 		endif
-		if <left_side> :desc_resolvealias name = alias_left_side_vmenu param = left_side_menu
-			assignalias id = <left_side_menu> alias = current_menu
-			netoptions :pref_get \{name = game_modes}
+		if <left_side> :Desc_ResolveAlias name = alias_left_side_vmenu param = left_side_menu
+			AssignAlias id = <left_side_menu> alias = current_menu
+			NetOptions :Pref_Get \{name = game_modes}
 			if (<checksum> = p4_pro_faceoff || <checksum> = p2_quickplay || <checksum> = p4_quickplay || <checksum> = p8_pro_faceoff)
-				current_menu :se_setprops \{event_handlers = [
+				current_menu :SE_SetProps \{event_handlers = [
 						{
 							pad_back
 							postgame_lobby_quit
@@ -245,7 +245,7 @@ script create_postgame_lobby_menu
 						}
 					]}
 			else
-				current_menu :se_setprops \{event_handlers = [
+				current_menu :SE_SetProps \{event_handlers = [
 						{
 							pad_back
 							postgame_lobby_quit
@@ -266,48 +266,48 @@ script create_postgame_lobby_menu
 						}
 					]}
 			endif
-			<left_side> :se_setprops title_text = qs(0x84382872)
+			<left_side> :SE_SetProps title_text = qs("POST GAME")
 			getnumplayers
 			current_num_players = <num_players>
-			gamemode_getnumplayers
+			GameMode_GetNumPlayers
 			if (<current_num_players> = <num_players>)
 				add_matchmaking_item {
 					vmenu_id = <left_side_menu>
 					msg_checksum = postgame_play_again
-					text = qs(0x6bdab26c)
+					text = qs("CONTINUE TO SETLIST")
 					choose_script = postgame_lobby_to_setlist
 					focus_script = postgame_item_change_focus
 				}
-				onlinelobbyinterface :settags \{setlist_enabled = 1}
+				OnlineLobbyInterface :SetTags \{setlist_enabled = 1}
 			endif
 			add_matchmaking_item {
 				vmenu_id = <left_side_menu>
 				msg_checksum = preferences
-				text = qs(0xed494bd1)
+				text = qs("PREFERENCES")
 				choose_script = postgame_net_preferences
 				focus_script = postgame_item_change_focus
 			}
 			add_matchmaking_item {
 				vmenu_id = <left_side_menu>
 				msg_checksum = postgame_quit
-				text = qs(0x67d9c56d)
+				text = qs("QUIT")
 				choose_script = postgame_lobby_quit
 				focus_script = postgame_item_change_focus
 			}
-			onlinelobbyinterface :settags postgame_menu_id = <left_side_menu>
+			OnlineLobbyInterface :SetTags postgame_menu_id = <left_side_menu>
 		endif
 	endif
 endscript
 
 script local_player_is_choosing_song 
 	player_idx = 1
-	gamemode_getnumplayers
+	GameMode_GetNumPlayers
 	begin
-	getplayerinfo <player_idx> is_local_client
+	GetPlayerInfo <player_idx> is_local_client
 	if (<is_local_client> = 1)
-		getplayerinfo <player_idx> net_obj_id
+		GetPlayerInfo <player_idx> net_obj_id
 		if ($online_song_choice_id = <net_obj_id>)
-			printf qs(0xb21f476b) d = ($online_song_choice_id)
+			printf qs("\LLocal player id = %d is Choosing song") d = ($online_song_choice_id)
 			return \{true}
 		endif
 	endif
@@ -317,52 +317,52 @@ script local_player_is_choosing_song
 endscript
 
 script create_player_scores_postgame_container 
-	if NOT gamemode_iscooperative
+	if NOT GameMode_IsCooperative
 		determine_game_scores_and_winner
-		gamemode_getnumplayers
+		GameMode_GetNumPlayers
 		if (<opponent_team_score> > <team_score>)
 			setup_slot_menu menu = alias_winner_vmenu checksum = winner color = ($online_player_slot_bg_team1) score = <opponent_team_score> start_index = ((<num_players> / 2) + 1) num_players = (<num_players> / 2)
-			onlinelobbyinterface :settags winner_menu_id = <menu_id>
+			OnlineLobbyInterface :SetTags winner_menu_id = <menu_id>
 			setup_slot_menu menu = alias_loser_vmenu checksum = loser color = ($online_player_slot_bg_team2) score = <team_score> start_index = 1 num_players = (<num_players> / 2)
-			onlinelobbyinterface :settags loser_menu_id = <menu_id>
-			onlinelobbyinterface :settags {
+			OnlineLobbyInterface :SetTags loser_menu_id = <menu_id>
+			OnlineLobbyInterface :SetTags {
 				winner_items = (<num_players> / 2)
 				loser_items = (<num_players> / 2)
 			}
-			formattext textname = winner_score qs(0x48c6d14c) d = <opponent_team_score>
-			formattext textname = loser_score qs(0x48c6d14c) d = <team_score>
-			onlinelobbyinterface :se_setprops {
+			FormatText TextName = winner_score qs("%d") d = <opponent_team_score>
+			FormatText TextName = loser_score qs("%d") d = <team_score>
+			OnlineLobbyInterface :SE_SetProps {
 				winner_score = <winner_score>
 				loser_score = <loser_score>
 			}
 		else
 			setup_slot_menu menu = alias_winner_vmenu checksum = winner color = ($online_player_slot_bg_team1) score = <team_score> start_index = 1 num_players = (<num_players> / 2)
-			onlinelobbyinterface :settags winner_menu_id = <menu_id>
+			OnlineLobbyInterface :SetTags winner_menu_id = <menu_id>
 			setup_slot_menu menu = alias_loser_vmenu checksum = loser color = ($online_player_slot_bg_team2) score = <opponent_team_score> start_index = ((<num_players> / 2) + 1) num_players = (<num_players> / 2)
-			onlinelobbyinterface :settags loser_menu_id = <menu_id>
-			onlinelobbyinterface :settags {
+			OnlineLobbyInterface :SetTags loser_menu_id = <menu_id>
+			OnlineLobbyInterface :SetTags {
 				winner_items = (<num_players> / 2)
 				loser_items = (<num_players> / 2)
 			}
-			formattext textname = winner_score qs(0x48c6d14c) d = <team_score>
-			formattext textname = loser_score qs(0x48c6d14c) d = <opponent_team_score>
-			onlinelobbyinterface :se_setprops {
+			FormatText TextName = winner_score qs("%d") d = <team_score>
+			FormatText TextName = loser_score qs("%d") d = <opponent_team_score>
+			OnlineLobbyInterface :SE_SetProps {
 				winner_score = <winner_score>
 				loser_score = <loser_score>
 			}
 		endif
 		if (<tie> = true)
 			stamp_texture = stamp_tie
-			if french
+			if French
 				<stamp_texture> = stamp_tie_french
-			elseif spanish
+			elseif Spanish
 				<stamp_texture> = stamp_tie_spanish
-			elseif german
+			elseif German
 				<stamp_texture> = stamp_tie_german
-			elseif italian
+			elseif Italian
 				<stamp_texture> = stamp_tie_italian
 			endif
-			onlinelobbyinterface :se_setprops {
+			OnlineLobbyInterface :SE_SetProps {
 				menu_loser_texture = tie_bg_lowerpart
 				counter_winner_texture = counter_loser
 				counter_winner_dims = (256.0, 64.0)
@@ -373,48 +373,48 @@ script create_player_scores_postgame_container
 				winner_stamp_texture = <stamp_texture>
 				loser_stamp_texture = <stamp_texture>
 			}
-			if onlinelobbyinterface :desc_resolvealias \{name = alias_hand_devil_horn
+			if OnlineLobbyInterface :Desc_ResolveAlias \{name = alias_hand_devil_horn
 					param = winner_hand}
-				<winner_hand> :die
+				<winner_hand> :Die
 			endif
-			if onlinelobbyinterface :desc_resolvealias \{name = alias_hand_thumb_down
+			if OnlineLobbyInterface :Desc_ResolveAlias \{name = alias_hand_thumb_down
 					param = loser_hand}
-				<loser_hand> :die
+				<loser_hand> :Die
 			endif
 		else
 			stamp_texture = stamp
-			if french
+			if French
 				<stamp_texture> = stamp_winner_french
-			elseif spanish
+			elseif Spanish
 				<stamp_texture> = stamp_winner_spanish
-			elseif german
+			elseif German
 				<stamp_texture> = stamp_winner_german
-			elseif italian
+			elseif Italian
 				<stamp_texture> = stamp_winner_italian
 			endif
-			onlinelobbyinterface :se_setprops {
+			OnlineLobbyInterface :SE_SetProps {
 				winner_stamp_texture = <stamp_texture>
 				loser_stamp_texture = <stamp_texture>
 			}
 		endif
 	else
-		gamemode_getnumplayers
+		GameMode_GetNumPlayers
 		<team_score> = ($band1_status.score)
-		casttointeger \{team_score}
+		CastToInteger \{team_score}
 		setup_slot_menu menu = alias_winner_vmenu checksum = winner color = ($online_player_slot_bg_team1) score = <team_score> start_index = 1 num_players = <num_players>
-		onlinelobbyinterface :settags winner_menu_id = <menu_id>
-		formattext textname = winner_score qs(0x48c6d14c) d = <team_score>
-		onlinelobbyinterface :se_setprops {
+		OnlineLobbyInterface :SetTags winner_menu_id = <menu_id>
+		FormatText TextName = winner_score qs("%d") d = <team_score>
+		OnlineLobbyInterface :SE_SetProps {
 			winner_score = <winner_score>
 		}
-		onlinelobbyinterface :settags {
+		OnlineLobbyInterface :SetTags {
 			winner_items = <num_players>
 			loser_items = 0
 		}
-		resolvescreenelementid \{param = loser_container
+		ResolveScreenElementId \{param = loser_container
 			id = [
 				{
-					id = onlinelobbyinterface
+					id = OnlineLobbyInterface
 				}
 				{
 					local_id = winner_vs_loser_menu
@@ -423,13 +423,13 @@ script create_player_scores_postgame_container
 					local_id = loser
 				}
 			]}
-		if screenelementexists id = <loser_container>
-			destroyscreenelement id = <loser_container>
+		if ScreenElementExists id = <loser_container>
+			DestroyScreenElement id = <loser_container>
 		endif
-		resolvescreenelementid \{param = menu_chain_id
+		ResolveScreenElementId \{param = menu_chain_id
 			id = [
 				{
-					id = onlinelobbyinterface
+					id = OnlineLobbyInterface
 				}
 				{
 					local_id = winner_vs_loser_menu
@@ -441,13 +441,13 @@ script create_player_scores_postgame_container
 					local_id = menu_chain
 				}
 			]}
-		if screenelementexists id = <menu_chain_id>
-			destroyscreenelement id = <menu_chain_id>
+		if ScreenElementExists id = <menu_chain_id>
+			DestroyScreenElement id = <menu_chain_id>
 		endif
-		resolvescreenelementid \{param = stamp_id
+		ResolveScreenElementId \{param = stamp_id
 			id = [
 				{
-					id = onlinelobbyinterface
+					id = OnlineLobbyInterface
 				}
 				{
 					local_id = winner_vs_loser_menu
@@ -459,31 +459,31 @@ script create_player_scores_postgame_container
 					local_id = stamp
 				}
 			]}
-		if screenelementexists id = <stamp_id>
-			destroyscreenelement id = <stamp_id>
+		if ScreenElementExists id = <stamp_id>
+			DestroyScreenElement id = <stamp_id>
 		endif
 	endif
-	gamemode_gettype
+	GameMode_GetType
 	if (<type> = battle)
-		if onlinelobbyinterface :desc_resolvealias \{name = alias_winner_score_container
+		if OnlineLobbyInterface :Desc_ResolveAlias \{name = alias_winner_score_container
 				param = winner_score}
-			<winner_score> :die
+			<winner_score> :Die
 		endif
-		if onlinelobbyinterface :desc_resolvealias \{name = alias_loser_score_container
+		if OnlineLobbyInterface :Desc_ResolveAlias \{name = alias_loser_score_container
 				param = loser_score}
-			<loser_score> :die
+			<loser_score> :Die
 		endif
 	endif
 endscript
 
 script destroy_player_scores_postgame_container 
-	if screenelementexists \{id = onlinelobbyinterface}
-		onlinelobbyinterface :gettags
-		if screenelementexists id = <loser_menu_id>
-			destroyscreenelement id = <loser_menu_id> preserve_parent
+	if ScreenElementExists \{id = OnlineLobbyInterface}
+		OnlineLobbyInterface :GetTags
+		if ScreenElementExists id = <loser_menu_id>
+			DestroyScreenElement id = <loser_menu_id> preserve_parent
 		endif
-		if screenelementexists id = <winner_menu_id>
-			destroyscreenelement id = <winner_menu_id> preserve_parent
+		if ScreenElementExists id = <winner_menu_id>
+			DestroyScreenElement id = <winner_menu_id> preserve_parent
 		endif
 	endif
 endscript
@@ -492,7 +492,7 @@ script determine_game_scores_and_winner
 	team_score = 0
 	opponent_team_score = 0
 	tie = false
-	gamemode_getnumplayers
+	GameMode_GetNumPlayers
 	if (<num_players> > 2)
 		<opponent_team_score> = ($band2_status.score)
 		<team_score> = ($band1_status.score)
@@ -508,136 +508,136 @@ script determine_game_scores_and_winner
 	if (<team_score> = <opponent_team_score>)
 		<tie> = true
 	endif
-	casttointeger \{team_score}
-	casttointeger \{opponent_team_score}
+	CastToInteger \{team_score}
+	CastToInteger \{opponent_team_score}
 	return team_score = <team_score> opponent_team_score = <opponent_team_score> tie = <tie>
 endscript
 
 script refresh_player_scores_postgame_container 
-	printf \{qs(0x7de0e7be)}
-	onlinelobbyinterface :gettags
-	if screenelementexists id = <loser_menu_id>
-		if isscreenelementinfocus id = <loser_menu_id>
-			launchevent type = unfocus target = <loser_menu_id>
+	printf \{qs("\L---refresh_player_scores_postgame_container")}
+	OnlineLobbyInterface :GetTags
+	if ScreenElementExists id = <loser_menu_id>
+		if IsScreenElementInFocus id = <loser_menu_id>
+			LaunchEvent type = unfocus target = <loser_menu_id>
 			focus_id = <loser_menu_id>
 			focus_index = <loser_index>
 		endif
 	endif
-	if screenelementexists id = <winner_menu_id>
-		if isscreenelementinfocus id = <winner_menu_id>
-			launchevent type = unfocus target = <winner_menu_id>
+	if ScreenElementExists id = <winner_menu_id>
+		if IsScreenElementInFocus id = <winner_menu_id>
+			LaunchEvent type = unfocus target = <winner_menu_id>
 			focus_id = <winner_menu_id>
 			focus_index = <winner_index>
 		endif
 	endif
 	destroy_player_scores_postgame_container
 	create_player_scores_postgame_container
-	if gotparam \{locked}
-		onlinelobbyinterface :gettags
+	if GotParam \{locked}
+		OnlineLobbyInterface :GetTags
 		new_event_handlers = [
 			{pad_up postgame_lobby_up_down_action params = {action = up}}
 			{pad_down postgame_lobby_up_down_action params = {action = down}}
 		]
-		if screenelementexists id = <loser_menu_id>
-			setscreenelementprops {
+		if ScreenElementExists id = <loser_menu_id>
+			SetScreenElementProps {
 				id = <loser_menu_id>
 				event_handlers = []
 				replace_handlers
 			}
-			setscreenelementprops {
+			SetScreenElementProps {
 				id = <loser_menu_id>
 				event_handlers = <new_event_handlers>
 				replace_handlers
 			}
 		endif
-		if screenelementexists id = <winner_menu_id>
-			setscreenelementprops {
+		if ScreenElementExists id = <winner_menu_id>
+			SetScreenElementProps {
 				id = <winner_menu_id>
 				event_handlers = []
 				replace_handlers
 			}
-			setscreenelementprops {
+			SetScreenElementProps {
 				id = <winner_menu_id>
 				event_handlers = <new_event_handlers>
 				replace_handlers
 			}
 		endif
-		onlinelobbyinterface :settags \{locked_to_players = 1}
-		if screenelementexists \{id = netprefinterface}
+		OnlineLobbyInterface :SetTags \{locked_to_players = 1}
+		if ScreenElementExists \{id = NetPrefInterface}
 			ui_destroy_net_preferences
 		endif
 		ui_event_get_top
 		if (<base_name> = 'online_quit_warning')
 			generic_event_back
 		endif
-		if screenelementexists \{id = current_menu}
-			if isscreenelementinfocus \{id = current_menu}
-				launchevent \{type = unfocus
+		if ScreenElementExists \{id = current_menu}
+			if IsScreenElementInFocus \{id = current_menu}
+				LaunchEvent \{type = unfocus
 					target = current_menu}
 			endif
 		endif
-		if screenelementexists id = <winner_menu_id>
-			if NOT isscreenelementinfocus id = <winner_menu_id>
-				if NOT isscreenelementinfocus id = <loser_menu_id>
-					onlinelobbyinterface :settags \{winner_index = 0}
-					launchevent type = focus target = <winner_menu_id> data = {child_index = 0}
+		if ScreenElementExists id = <winner_menu_id>
+			if NOT IsScreenElementInFocus id = <winner_menu_id>
+				if NOT IsScreenElementInFocus id = <loser_menu_id>
+					OnlineLobbyInterface :SetTags \{winner_index = 0}
+					LaunchEvent type = focus target = <winner_menu_id> data = {child_index = 0}
 				endif
 			endif
 		endif
 		clean_up_user_control_helpers
 		menu_finish
-	elseif gotparam \{unlock}
-		onlinelobbyinterface :gettags
-		if screenelementexists id = <loser_menu_id>
+	elseif GotParam \{unlock}
+		OnlineLobbyInterface :GetTags
+		if ScreenElementExists id = <loser_menu_id>
 			<new_event_handlers> = [
 				{pad_back postgame_lobby_quit params = {id = <loser_menu_id>}}
 				{pad_up postgame_lobby_up_down_action params = {action = up}}
 				{pad_down postgame_lobby_up_down_action params = {action = down}}
 			]
-			setscreenelementprops {
+			SetScreenElementProps {
 				id = <loser_menu_id>
 				event_handlers = []
 				replace_handlers
 			}
-			setscreenelementprops {
+			SetScreenElementProps {
 				id = <loser_menu_id>
 				event_handlers = <new_event_handlers>
 				replace_handlers
 			}
 		endif
-		if screenelementexists id = <winner_menu_id>
+		if ScreenElementExists id = <winner_menu_id>
 			<new_event_handlers> = [
 				{pad_back postgame_lobby_quit params = {id = <winner_menu_id>}}
 				{pad_up postgame_lobby_up_down_action params = {action = up}}
 				{pad_down postgame_lobby_up_down_action params = {action = down}}
 			]
-			setscreenelementprops {
+			SetScreenElementProps {
 				id = <winner_menu_id>
 				event_handlers = []
 				replace_handlers
 			}
-			setscreenelementprops {
+			SetScreenElementProps {
 				id = <winner_menu_id>
 				event_handlers = <new_event_handlers>
 				replace_handlers
 			}
 		endif
 	endif
-	if gotparam \{focus_id}
-		launchevent type = focus target = <focus_id> data = {child_index = <focus_index>}
+	if GotParam \{focus_id}
+		LaunchEvent type = focus target = <focus_id> data = {child_index = <focus_index>}
 	endif
-	printf \{qs(0xbb30d99b)}
+	printf \{qs("\Lrefresh_player_scores_postgame_container---")}
 endscript
 
 script postgame_lobby_to_setlist 
-	if ishost
-		sendstructure \{callback = postgame_goto_setlist
+	if IsHost
+		SendStructure \{callback = postgame_goto_setlist
 			data_to_send = {
 				none
 			}}
-		onlinelobbyinterface :obj_spawnscriptlater \{song_being_selected}
+		OnlineLobbyInterface :Obj_SpawnScriptLater \{song_being_selected}
 	else
-		sendstructure \{callback = postgame_goto_setlist
+		SendStructure \{callback = postgame_goto_setlist
 			data_to_send = {
 				none
 			}}
@@ -645,69 +645,69 @@ script postgame_lobby_to_setlist
 endscript
 
 script postgame_goto_setlist 
-	if ishost
+	if IsHost
 		begin
-		if screenelementexists \{id = onlinelobbyinterface}
+		if ScreenElementExists \{id = OnlineLobbyInterface}
 			break
 		endif
-		wait \{1
+		Wait \{1
 			gameframe}
 		repeat
-		onlinelobbyinterface :obj_spawnscriptlater \{song_being_selected}
-		sendstructure \{callback = postgame_goto_setlist
+		OnlineLobbyInterface :Obj_SpawnScriptLater \{song_being_selected}
+		SendStructure \{callback = postgame_goto_setlist
 			data_to_send = {
 				none
 			}}
 	else
 		begin
-		if screenelementexists \{id = onlinelobbyinterface}
+		if ScreenElementExists \{id = OnlineLobbyInterface}
 			break
 		endif
-		wait \{1
+		Wait \{1
 			gameframe}
 		repeat
-		onlinelobbyinterface :obj_spawnscriptnow \{song_being_selected}
+		OnlineLobbyInterface :Obj_SpawnScriptNow \{song_being_selected}
 	endif
 endscript
 
 script song_being_selected 
-	if screenelementexists \{id = onlinelobbyinterface}
-		onlinelobbyinterface :gettags
-		onlinelobbyinterface :settags \{setlist_enabled = 0}
-		resolvescreenelementid id = {<postgame_menu_id> child = 0}
+	if ScreenElementExists \{id = OnlineLobbyInterface}
+		OnlineLobbyInterface :GetTags
+		OnlineLobbyInterface :SetTags \{setlist_enabled = 0}
+		ResolveScreenElementId id = {<postgame_menu_id> child = 0}
 		if (<menu_index> = 0)
-			if isscreenelementinfocus \{id = current_menu}
-				launchevent \{type = unfocus
+			if IsScreenElementInFocus \{id = current_menu}
+				LaunchEvent \{type = unfocus
 					target = current_menu}
-				launchevent \{type = focus
+				LaunchEvent \{type = focus
 					target = current_menu
 					data = {
 						child_index = 1
 					}}
 			endif
-			onlinelobbyinterface :settags \{menu_index = 0}
-			onlinelobbyinterface :settags menu_items = (<menu_items> - 1)
+			OnlineLobbyInterface :SetTags \{menu_index = 0}
+			OnlineLobbyInterface :SetTags Menu_items = (<Menu_items> - 1)
 		endif
-		<resolved_id> :se_setprops {not_focusable}
-		resolvescreenelementid id = {<resolved_id> child = text}
-		<resolved_id> :se_setprops {alpha = 0.5}
-		if iswinport
+		<resolved_id> :SE_SetProps {not_focusable}
+		ResolveScreenElementId id = {<resolved_id> child = text}
+		<resolved_id> :SE_SetProps {alpha = 0.5}
+		if IsWinPort
 			printf \{qs(0x501bc81f)}
-			onlinelobbyinterface :settags \{toggle_allowed = 0}
+			OnlineLobbyInterface :SetTags \{toggle_allowed = 0}
 			refresh_player_scores_postgame_container \{locked}
 		endif
 		index = ($online_to_setlist_count)
 		begin
-		formattext textname = timer_msg qs(0xbd40792a) d = <index>
-		printf qs(0x73307931) s = <timer_msg>
-		if screenelementexists \{id = onlinelobbyinterface}
-			if onlinelobbyinterface :desc_resolvealias \{name = alias_left_side
+		FormatText TextName = timer_msg qs("COUNTDOWN TO SETLIST %d") d = <index>
+		printf qs("\L%s") s = <timer_msg>
+		if ScreenElementExists \{id = OnlineLobbyInterface}
+			if OnlineLobbyInterface :Desc_ResolveAlias \{name = alias_left_side
 					param = left_side}
-				<left_side> :se_setprops info_text = <timer_msg>
+				<left_side> :SE_SetProps info_text = <timer_msg>
 			endif
 		endif
 		if (<index> = 5)
-			onlinelobbyinterface :settags \{toggle_allowed = 0}
+			OnlineLobbyInterface :SetTags \{toggle_allowed = 0}
 			refresh_player_scores_postgame_container \{locked}
 		elseif (<index> = 4)
 			host_start_player_settings_sync
@@ -716,7 +716,7 @@ script song_being_selected
 			break
 		endif
 		index = (<index> - 1)
-		wait \{1
+		Wait \{1
 			second}
 		repeat
 		generic_event_back \{state = uistate_setlist
@@ -724,18 +724,18 @@ script song_being_selected
 				no_jamsession
 			}}
 	else
-		printf \{qs(0xb8033e72)}
+		printf \{qs("\Lour matchmaking menu doesn't exist")}
 	endif
 endscript
 
 script postgame_lobby_quit 
-	if gotparam \{device_num}
+	if GotParam \{device_num}
 		if (<device_num> = $primary_controller)
-			if gotparam \{id}
-				launchevent type = unfocus target = <id>
+			if GotParam \{id}
+				LaunchEvent type = unfocus target = <id>
 			endif
 			ui_event_get_top
-			if gotparam \{is_popup}
+			if GotParam \{is_popup}
 				generic_event_replace \{state = uistate_online_quit_warning
 					data = {
 						is_popup
@@ -751,15 +751,15 @@ script postgame_lobby_quit
 endscript
 
 script postgame_net_preferences 
-	launchevent \{type = unfocus
+	LaunchEvent \{type = unfocus
 		target = current_menu}
 	postgame_lobby_transition_out
 	ui_create_net_preferences device_num = <device_num> exit_script = postgame_lobby_transition_in post_game_lobby
 endscript
 
-script postgame_lobby_add_player_slot \{cash_text = qs(0x6160dbf3)
+script postgame_lobby_add_player_slot \{cash_text = qs("0")
 		cash_icon_id = cash_milestone_icon_001}
-	requireparams \{[
+	RequireParams \{[
 			name
 			controller_texture
 			xuid
@@ -769,11 +769,11 @@ script postgame_lobby_add_player_slot \{cash_text = qs(0x6160dbf3)
 			player_num
 		]
 		all}
-	if screenelementexists \{id = onlinelobbyinterface}
-		onlinelobbyinterface :gettags
-		formattext checksumname = player_slot_id 'player_slot_p%p' p = <player_num> addtostringlookup
-		createscreenelement {
-			type = descinterface
+	if ScreenElementExists \{id = OnlineLobbyInterface}
+		OnlineLobbyInterface :GetTags
+		FormatText checksumname = player_slot_id 'player_slot_p%p' p = <player_num> AddToStringLookup
+		CreateScreenElement {
+			type = DescInterface
 			desc = 'online_lobby_player_slot_item'
 			id = <player_slot_id>
 			parent = <parent>
@@ -785,19 +785,19 @@ script postgame_lobby_add_player_slot \{cash_text = qs(0x6160dbf3)
 			]
 			tags = {local_player = 0}
 		}
-		if isxenon
-			if gotparam \{xuid}
-				<id> :se_setprops event_handlers = [{pad_choose ui_menu_select_sfx}
+		if isXenon
+			if GotParam \{xuid}
+				<id> :SE_SetProps event_handlers = [{pad_choose ui_menu_select_sfx}
 					{pad_choose menu_show_gamercard_from_netid params = {net_id = <xuid>}}
 				]
 			endif
 		endif
-		if isxenon
-			formattext checksumname = player_status 'player%d_status' d = (<player_num>)
-			<id> :obj_spawnscriptlater update_headset_status params = {obj_id = <id> uid = <xuid>}
+		if isXenon
+			FormatText checksumname = player_status 'player%d_status' d = (<player_num>)
+			<id> :Obj_SpawnScriptLater update_headset_status params = {obj_id = <id> uid = <xuid>}
 		endif
-		<id> :desc_checkversion desired = 2 assertif = mismatch
-		<id> :se_setprops {
+		<id> :Desc_CheckVersion desired = 2 AssertIf = Mismatch
+		<id> :SE_SetProps {
 			player_slot_name_text = <name>
 			player_instrument_logo_texture = <controller_texture>
 			player_slot_bg_rgba = <bg_rgba>
@@ -805,28 +805,28 @@ script postgame_lobby_add_player_slot \{cash_text = qs(0x6160dbf3)
 			cash_rank_text = <cash_text>
 			cash_icon_alpha = 1
 		}
-		if <id> :desc_resolvealias name = alias_sign_in_button param = signin_id
-			<signin_id> :die
+		if <id> :Desc_ResolveAlias name = alias_sign_in_button param = signin_id
+			<signin_id> :Die
 		endif
-		if NOT iswinport
-			<id> :settags msg_checksum = gamer_card
+		if NOT IsWinPort
+			<id> :SetTags msg_checksum = gamer_card
 		endif
-		<id> :settags local_player = <local>
+		<id> :SetTags local_player = <local>
 	endif
 endscript
 
 script setup_slot_menu menu = alias_winner_vmenu color = ($online_player_slot_bg_team1)
-	requireparams \{[
+	RequireParams \{[
 			score
 			start_index
 			num_players
 		]
 		all}
-	if screenelementexists \{id = onlinelobbyinterface}
-		if onlinelobbyinterface :desc_resolvealias name = <menu> param = slot_menu
-			netoptions :pref_get \{name = game_modes}
+	if ScreenElementExists \{id = OnlineLobbyInterface}
+		if OnlineLobbyInterface :Desc_ResolveAlias name = <menu> param = slot_menu
+			NetOptions :Pref_Get \{name = game_modes}
 			if (<checksum> = p4_pro_faceoff || <checksum> = p2_quickplay || <checksum> = p4_quickplay || <checksum> = p8_pro_faceoff)
-				<slot_menu> :se_setprops {
+				<slot_menu> :SE_SetProps {
 					replace_handlers
 					event_handlers = [
 						{pad_back postgame_lobby_quit params = {id = <slot_menu>}}
@@ -836,7 +836,7 @@ script setup_slot_menu menu = alias_winner_vmenu color = ($online_player_slot_bg
 					]
 				}
 			else
-				<slot_menu> :se_setprops {
+				<slot_menu> :SE_SetProps {
 					replace_handlers
 					event_handlers = [
 						{pad_back postgame_lobby_quit params = {id = <slot_menu>}}
@@ -846,32 +846,32 @@ script setup_slot_menu menu = alias_winner_vmenu color = ($online_player_slot_bg
 				}
 			endif
 			begin
-			getplayerinfo <start_index> net_id_first
-			getplayerinfo <start_index> net_id_second
-			getplayerinfo <start_index> part
-			getplayerinfo <start_index> is_local_client
+			GetPlayerInfo <start_index> net_id_first
+			GetPlayerInfo <start_index> net_id_second
+			GetPlayerInfo <start_index> part
+			GetPlayerInfo <start_index> is_local_client
 			switch (<part>)
 				case guitar
-				icon_texture = logo_guitar_grayscale
-				case bass
-				icon_texture = logo_bass_grayscale
+				icon_texture = Logo_Guitar_GrayScale
+				case Bass
+				icon_texture = Logo_Bass_GrayScale
 				case drum
-				icon_texture = logo_drum_grayscale
-				case vocals
-				icon_texture = logo_vocal_grayscale
+				icon_texture = Logo_Drum_GrayScale
+				case Vocals
+				icon_texture = Logo_Vocal_GrayScale
 			endswitch
-			formattext checksumname = gamertag 'gamertag_%d' d = (<start_index> - 1)
+			FormatText checksumname = gamertag 'gamertag_%d' d = (<start_index> - 1)
 			name = $<gamertag>
 			xuid = [0 0]
-			setarrayelement arrayname = xuid index = 0 newvalue = (<net_id_first>)
-			setarrayelement arrayname = xuid index = 1 newvalue = (<net_id_second>)
-			getplayerinfo <start_index> career_earnings
+			SetArrayElement ArrayName = xuid index = 0 newvalue = (<net_id_first>)
+			SetArrayElement ArrayName = xuid index = 1 newvalue = (<net_id_second>)
+			GetPlayerInfo <start_index> career_earnings
 			cash_get_info_from_earnings earnings = <career_earnings>
-			formattext textname = cash_text qs(0x48c6d14c) d = <rank>
-			getplayerinfo \{1
+			FormatText TextName = cash_text qs("%d") d = <rank>
+			GetPlayerInfo \{1
 				team}
 			yellow_team = <team>
-			getplayerinfo <start_index> team
+			GetPlayerInfo <start_index> team
 			color = $online_player_slot_bg_team1
 			if (<team> != <yellow_team>)
 				<color> = $online_player_slot_bg_team2
@@ -895,181 +895,181 @@ script setup_slot_menu menu = alias_winner_vmenu color = ($online_player_slot_bg
 endscript
 
 script postgame_item_change_focus 
-	obj_getid
-	<objid> :gettags
-	resolvescreenelementid id = [
-		{id = <objid>}
+	Obj_GetID
+	<ObjID> :GetTags
+	ResolveScreenElementId id = [
+		{id = <ObjID>}
 		{local_id = text}
 	]
-	if gotparam \{focus}
-		if gotparam \{msg_checksum}
+	if GotParam \{focus}
+		if GotParam \{msg_checksum}
 			set_postgame_dialog_message msg_checksum = <msg_checksum>
 		endif
 		retail_menu_focus id = <resolved_id>
-	elseif gotparam \{unfocus}
+	elseif GotParam \{unfocus}
 		retail_menu_unfocus id = <resolved_id>
 	endif
 endscript
 
 script postgame_player_slot_change_focus 
-	obj_getid
-	<objid> :gettags
-	resolvescreenelementid id = [
-		{id = <objid>}
+	Obj_GetID
+	<ObjID> :GetTags
+	ResolveScreenElementId id = [
+		{id = <ObjID>}
 		{local_id = online_player_slots_item}
 		{local_id = player_slot_name}
 	]
-	if gotparam \{focus}
-		if gotparam \{msg_checksum}
+	if GotParam \{focus}
+		if GotParam \{msg_checksum}
 			set_postgame_dialog_message msg_checksum = <msg_checksum>
 		endif
 		retail_menu_focus id = <resolved_id>
-	elseif gotparam \{unfocus}
+	elseif GotParam \{unfocus}
 		retail_menu_unfocus id = <resolved_id>
 	endif
 endscript
 
 script set_postgame_dialog_message 
-	if NOT gotparam \{msg_checksum}
+	if NOT GotParam \{msg_checksum}
 		return
 	endif
-	if isxenon
+	if isXenon
 		plat_helper_strings = net_helper_text_strings_ps3
-	elseif isps3
+	elseif IsPs3
 		plat_helper_strings = net_helper_text_strings_ps3
 	endif
-	appendsuffixtochecksum base = <msg_checksum> suffixstring = '_text'
-	if structurecontains structure = ($<plat_helper_strings>) <appended_id>
-		if screenelementexists \{id = onlinelobbyinterface}
-			if onlinelobbyinterface :desc_resolvealias \{name = alias_left_side
+	AppendSuffixToChecksum Base = <msg_checksum> SuffixString = '_text'
+	if StructureContains Structure = ($<plat_helper_strings>) <appended_id>
+		if ScreenElementExists \{id = OnlineLobbyInterface}
+			if OnlineLobbyInterface :Desc_ResolveAlias \{name = alias_left_side
 					param = left_side}
-				<left_side> :se_setprops info_text = ($<plat_helper_strings>.<appended_id>)
+				<left_side> :SE_SetProps info_text = ($<plat_helper_strings>.<appended_id>)
 			endif
 		endif
-	elseif structurecontains structure = ($net_helper_text_strings) <appended_id>
-		if screenelementexists \{id = onlinelobbyinterface}
-			if onlinelobbyinterface :desc_resolvealias \{name = alias_left_side
+	elseif StructureContains Structure = ($net_helper_text_strings) <appended_id>
+		if ScreenElementExists \{id = OnlineLobbyInterface}
+			if OnlineLobbyInterface :Desc_ResolveAlias \{name = alias_left_side
 					param = left_side}
-				<left_side> :se_setprops info_text = ($net_helper_text_strings.<appended_id>)
+				<left_side> :SE_SetProps info_text = ($net_helper_text_strings.<appended_id>)
 			endif
 		endif
 	endif
 endscript
 
 script postgame_lobby_up_down_action 
-	onlinelobbyinterface :gettags
-	if NOT gotparam \{action}
+	OnlineLobbyInterface :GetTags
+	if NOT GotParam \{action}
 		return
 	endif
-	if NOT screenelementexists \{id = current_menu}
+	if NOT ScreenElementExists \{id = current_menu}
 		return
 	endif
-	if NOT screenelementexists id = <winner_menu_id>
+	if NOT ScreenElementExists id = <winner_menu_id>
 		return
 	endif
 	generic_menu_up_or_down_sound
-	printf \{qs(0xdbdbcf54)}
-	if isscreenelementinfocus \{id = current_menu}
+	printf \{qs("\L---postgame_lobby_up_down_action")}
+	if IsScreenElementInFocus \{id = current_menu}
 		if (<action> = up)
 			generic_menu_up_or_down_sound \{up}
 			if (<menu_index> = 0)
 				if (<loser_items> > 0)
-					launchevent \{type = unfocus
+					LaunchEvent \{type = unfocus
 						target = current_menu}
-					launchevent type = focus target = <loser_menu_id> data = {child_index = (<loser_items> - 1)}
-					onlinelobbyinterface :settags loser_index = (<loser_items> - 1)
+					LaunchEvent type = focus target = <loser_menu_id> data = {child_index = (<loser_items> - 1)}
+					OnlineLobbyInterface :SetTags loser_index = (<loser_items> - 1)
 				else
-					launchevent \{type = unfocus
+					LaunchEvent \{type = unfocus
 						target = current_menu}
-					launchevent type = focus target = <winner_menu_id> data = {child_index = (<winner_items> - 1)}
-					onlinelobbyinterface :settags winner_index = (<winner_items> - 1)
+					LaunchEvent type = focus target = <winner_menu_id> data = {child_index = (<winner_items> - 1)}
+					OnlineLobbyInterface :SetTags winner_index = (<winner_items> - 1)
 				endif
 			else
-				onlinelobbyinterface :settags menu_index = (<menu_index> - 1)
+				OnlineLobbyInterface :SetTags menu_index = (<menu_index> - 1)
 			endif
 		elseif (<action> = down)
 			generic_menu_up_or_down_sound \{down}
-			if (<menu_index> = (<menu_items> - 1))
+			if (<menu_index> = (<Menu_items> - 1))
 				if (<winner_items> > 0)
-					launchevent \{type = unfocus
+					LaunchEvent \{type = unfocus
 						target = current_menu}
-					launchevent type = focus target = <winner_menu_id> data = {child_index = 0}
-					onlinelobbyinterface :settags \{winner_index = 0}
+					LaunchEvent type = focus target = <winner_menu_id> data = {child_index = 0}
+					OnlineLobbyInterface :SetTags \{winner_index = 0}
 				else
-					onlinelobbyinterface :settags \{menu_index = 0}
+					OnlineLobbyInterface :SetTags \{menu_index = 0}
 				endif
 			else
-				onlinelobbyinterface :settags menu_index = (<menu_index> + 1)
+				OnlineLobbyInterface :SetTags menu_index = (<menu_index> + 1)
 			endif
 		endif
-	elseif isscreenelementinfocus id = <winner_menu_id>
+	elseif IsScreenElementInFocus id = <winner_menu_id>
 		if (<action> = up)
 			generic_menu_up_or_down_sound \{up}
 			if (<winner_index> = 0)
 				if (<locked_to_players> = 0)
-					launchevent type = unfocus target = <winner_menu_id>
-					launchevent type = focus target = current_menu data = {child_index = (<menu_items> - 1)}
-					onlinelobbyinterface :settags menu_index = (<menu_items> - 1)
+					LaunchEvent type = unfocus target = <winner_menu_id>
+					LaunchEvent type = focus target = current_menu data = {child_index = (<Menu_items> - 1)}
+					OnlineLobbyInterface :SetTags menu_index = (<Menu_items> - 1)
 				elseif (<loser_items> > 0)
-					launchevent type = unfocus target = <winner_menu_id>
-					launchevent type = focus target = <loser_menu_id> data = {child_index = 0}
-					onlinelobbyinterface :settags \{loser_index = 0}
+					LaunchEvent type = unfocus target = <winner_menu_id>
+					LaunchEvent type = focus target = <loser_menu_id> data = {child_index = 0}
+					OnlineLobbyInterface :SetTags \{loser_index = 0}
 				else
-					onlinelobbyinterface :settags winner_index = (<winner_items> - 1)
+					OnlineLobbyInterface :SetTags winner_index = (<winner_items> - 1)
 				endif
 			else
-				onlinelobbyinterface :settags winner_index = (<winner_index> - 1)
+				OnlineLobbyInterface :SetTags winner_index = (<winner_index> - 1)
 			endif
 		elseif (<action> = down)
 			generic_menu_up_or_down_sound \{down}
 			if (<winner_index> = (<winner_items> - 1))
 				if (<loser_items> > 0)
-					launchevent type = unfocus target = <winner_menu_id>
-					launchevent type = focus target = <loser_menu_id> data = {child_index = 0}
-					onlinelobbyinterface :settags \{loser_index = 0}
+					LaunchEvent type = unfocus target = <winner_menu_id>
+					LaunchEvent type = focus target = <loser_menu_id> data = {child_index = 0}
+					OnlineLobbyInterface :SetTags \{loser_index = 0}
 				elseif (<locked_to_players> = 0)
-					launchevent type = unfocus target = <winner_menu_id>
-					launchevent \{type = focus
+					LaunchEvent type = unfocus target = <winner_menu_id>
+					LaunchEvent \{type = focus
 						target = current_menu
 						data = {
 							child_index = 0
 						}}
-					onlinelobbyinterface :settags \{menu_index = 0}
+					OnlineLobbyInterface :SetTags \{menu_index = 0}
 				else
-					onlinelobbyinterface :settags \{winner_index = 0}
+					OnlineLobbyInterface :SetTags \{winner_index = 0}
 				endif
 			else
-				onlinelobbyinterface :settags winner_index = (<winner_index> + 1)
+				OnlineLobbyInterface :SetTags winner_index = (<winner_index> + 1)
 			endif
 		endif
-	elseif isscreenelementinfocus id = <loser_menu_id>
+	elseif IsScreenElementInFocus id = <loser_menu_id>
 		if (<action> = up)
 			generic_menu_up_or_down_sound \{up}
 			if (<loser_index> = 0)
-				launchevent type = unfocus target = <loser_menu_id>
-				launchevent type = focus target = <winner_menu_id> data = {child_index = (<winner_items> - 1)}
-				onlinelobbyinterface :settags winner_index = (<winner_items> - 1)
+				LaunchEvent type = unfocus target = <loser_menu_id>
+				LaunchEvent type = focus target = <winner_menu_id> data = {child_index = (<winner_items> - 1)}
+				OnlineLobbyInterface :SetTags winner_index = (<winner_items> - 1)
 			else
-				onlinelobbyinterface :settags loser_index = (<loser_index> - 1)
+				OnlineLobbyInterface :SetTags loser_index = (<loser_index> - 1)
 			endif
 		elseif (<action> = down)
 			generic_menu_up_or_down_sound \{down}
 			if (<loser_index> = (<loser_items> - 1))
 				if (<locked_to_players> = 0)
-					launchevent type = unfocus target = <loser_menu_id>
-					launchevent \{type = focus
+					LaunchEvent type = unfocus target = <loser_menu_id>
+					LaunchEvent \{type = focus
 						target = current_menu
 						data = {
 							child_index = 0
 						}}
-					onlinelobbyinterface :settags \{menu_index = 0}
+					OnlineLobbyInterface :SetTags \{menu_index = 0}
 				else
-					launchevent type = unfocus target = <loser_menu_id>
-					launchevent type = focus target = <winner_menu_id> data = {child_index = 0}
-					onlinelobbyinterface :settags \{winner_index = 0}
+					LaunchEvent type = unfocus target = <loser_menu_id>
+					LaunchEvent type = focus target = <winner_menu_id> data = {child_index = 0}
+					OnlineLobbyInterface :SetTags \{winner_index = 0}
 				endif
 			else
-				onlinelobbyinterface :settags loser_index = (<loser_index> + 1)
+				OnlineLobbyInterface :SetTags loser_index = (<loser_index> + 1)
 			endif
 		endif
 	endif
@@ -1077,18 +1077,18 @@ endscript
 
 script post_game_toggle_guitar_part 
 	printf \{qs(0x6372c01e)}
-	onlinelobbyinterface :getsingletag \{toggle_allowed}
+	OnlineLobbyInterface :GetSingleTag \{toggle_allowed}
 	if (<toggle_allowed> = 0)
 		return
 	endif
-	requireparams \{[
+	RequireParams \{[
 			device_num
 		]
 		all}
 	info_index = 1
 	index = 1
 	begin
-	getplayerinfo <index> controller
+	GetPlayerInfo <index> controller
 	if (<device_num> = <controller>)
 		<info_index> = <index>
 		break
@@ -1097,41 +1097,41 @@ script post_game_toggle_guitar_part
 	repeat 8
 	get_controller_type controller_index = <device_num>
 	if (<controller_type> = guitar || <controller_type> = controller)
-		getplayerinfo <info_index> part
+		GetPlayerInfo <info_index> part
 		if (<part> = guitar)
-			setplayerinfo <info_index> part = bass
-			getplayerinfo <info_index> net_id_first
-			getplayerinfo <info_index> net_id_second
-			formattext checksumname = gamertag 'gamertag_%d' d = (<index> - 1)
-			sendstructure callback = update_postgame_part data_to_send = {first_id = <net_id_first> second_id = <net_id_second> name = ($<gamertag>) part = bass}
-			update_postgame_part first_id = <net_id_first> second_id = <net_id_second> name = ($<gamertag>) part = bass
-		elseif (<part> = bass)
-			setplayerinfo <info_index> part = guitar
-			getplayerinfo <info_index> net_id_first
-			getplayerinfo <info_index> net_id_second
-			formattext checksumname = gamertag 'gamertag_%d' d = (<index> - 1)
-			sendstructure callback = update_postgame_part data_to_send = {first_id = <net_id_first> second_id = <net_id_second> name = ($<gamertag>) part = guitar}
+			SetPlayerInfo <info_index> part = Bass
+			GetPlayerInfo <info_index> net_id_first
+			GetPlayerInfo <info_index> net_id_second
+			FormatText checksumname = gamertag 'gamertag_%d' d = (<index> - 1)
+			SendStructure callback = update_postgame_part data_to_send = {first_id = <net_id_first> second_id = <net_id_second> name = ($<gamertag>) part = Bass}
+			update_postgame_part first_id = <net_id_first> second_id = <net_id_second> name = ($<gamertag>) part = Bass
+		elseif (<part> = Bass)
+			SetPlayerInfo <info_index> part = guitar
+			GetPlayerInfo <info_index> net_id_first
+			GetPlayerInfo <info_index> net_id_second
+			FormatText checksumname = gamertag 'gamertag_%d' d = (<index> - 1)
+			SendStructure callback = update_postgame_part data_to_send = {first_id = <net_id_first> second_id = <net_id_second> name = ($<gamertag>) part = guitar}
 			update_postgame_part first_id = <net_id_first> second_id = <net_id_second> name = ($<gamertag>) part = guitar
 		endif
 	endif
 endscript
 
 script update_postgame_part 
-	if ishost
-		sendstructure callback = update_postgame_part data_to_send = <...>
+	if IsHost
+		SendStructure callback = update_postgame_part data_to_send = <...>
 	endif
-	printf \{qs(0x42b1f802)}
+	printf \{qs("\L---update_postgame_part")}
 	found = 0
 	info_index = 1
 	begin
-	getplayerinfo <info_index> net_id_first
-	getplayerinfo <info_index> net_id_second
-	formattext checksumname = gamertag 'gamertag_%d' d = (<info_index> - 1)
+	GetPlayerInfo <info_index> net_id_first
+	GetPlayerInfo <info_index> net_id_second
+	FormatText checksumname = gamertag 'gamertag_%d' d = (<info_index> - 1)
 	if ((<net_id_first> = <first_id>) && (<net_id_second> = <second_id>))
-		if isxenon
+		if isXenon
 			<found> = 1
 			break
-		elseif localizedstringequals a = <name> b = ($<gamertag>)
+		elseif LocalizedStringEquals a = <name> b = ($<gamertag>)
 			<found> = 1
 			break
 		endif
@@ -1139,100 +1139,100 @@ script update_postgame_part
 	info_index = (<info_index> + 1)
 	repeat 8
 	if (<found> = 1)
-		setplayerinfo <info_index> part = <part>
-		if screenelementexists \{id = onlinelobbyinterface}
+		SetPlayerInfo <info_index> part = <part>
+		if ScreenElementExists \{id = OnlineLobbyInterface}
 			refresh_player_scores_postgame_container
 		endif
 	endif
 endscript
 
 script lobby_drop_player_scr 
-	printf \{qs(0xd2c6f893)}
-	killspawnedscript \{name = postgame_goto_setlist}
-	if screenelementexists \{id = onlinelobbyinterface}
-		onlinelobbyinterface :gettags
-		onlinelobbyinterface :obj_killspawnedscript \{name = song_being_selected}
+	printf \{qs("\L---lobby_drop_player_scr")}
+	KillSpawnedScript \{name = postgame_goto_setlist}
+	if ScreenElementExists \{id = OnlineLobbyInterface}
+		OnlineLobbyInterface :GetTags
+		OnlineLobbyInterface :Obj_KillSpawnedScript \{name = song_being_selected}
 		if (<dropped_player_num> = 0)
-			if screenelementexists \{id = netprefinterface}
-				netprefinterface :gettags
-				if screenelementexists id = <submenu_id>
-					launchevent type = unfocus target = <submenu_id>
+			if ScreenElementExists \{id = NetPrefInterface}
+				NetPrefInterface :GetTags
+				if ScreenElementExists id = <submenu_id>
+					LaunchEvent type = unfocus target = <submenu_id>
 				else
-					launchevent \{type = unfocus
+					LaunchEvent \{type = unfocus
 						target = net_preferences_popup}
 				endif
 			else
-				launchevent \{type = unfocus
+				LaunchEvent \{type = unfocus
 					target = current_menu}
 			endif
-			formattext \{textname = popup_text}
-			create_net_popup \{title = qs(0x5ca2c535)
-				popup_text = qs(0x433296b8)}
-			wait \{3
+			FormatText \{TextName = popup_text}
+			create_net_popup \{title = qs("GAME OVER")
+				popup_text = qs("The host has quit.  Form another band to ROCK!")}
+			Wait \{3
 				seconds}
 			destroy_net_popup
 			set_focus_color rgba = ($online_lobby_item_text_color)
 			set_unfocus_color rgba = ($online_lobby_item_text_color)
-			if screenelementexists \{id = netprefinterface}
-				netprefinterface :gettags
-				if screenelementexists id = <submenu_id>
-					launchevent type = focus target = <submenu_id>
+			if ScreenElementExists \{id = NetPrefInterface}
+				NetPrefInterface :GetTags
+				if ScreenElementExists id = <submenu_id>
+					LaunchEvent type = focus target = <submenu_id>
 				else
-					launchevent \{type = focus
+					LaunchEvent \{type = focus
 						target = net_preferences_popup}
 				endif
 			else
-				launchevent \{type = focus
+				LaunchEvent \{type = focus
 					target = current_menu}
 			endif
 			if (<locked_to_players> = 1)
-				onlinelobbyinterface :settags \{locked_to_players = 0}
+				OnlineLobbyInterface :SetTags \{locked_to_players = 0}
 				refresh_player_scores_postgame_container \{unlock}
 			endif
 			player = 1
-			gamemode_getnumplayers
+			GameMode_GetNumPlayers
 			begin
-			formattext checksumname = player_slot_id 'player_slot_p%p' p = <player>
-			<player_slot_id> :gettags
+			FormatText checksumname = player_slot_id 'player_slot_p%p' p = <player>
+			<player_slot_id> :GetTags
 			if (<local_player> = 0)
-				<player_slot_id> :se_setprops {alpha = 0.35000002}
+				<player_slot_id> :SE_SetProps {alpha = 0.35000002}
 			endif
 			<player> = (<player> + 1)
 			repeat <num_players>
 		else
-			formattext checksumname = player_slot_id 'player_slot_p%p' p = <dropped_player_num>
-			<player_slot_id> :se_setprops {alpha = 0.35000002}
+			FormatText checksumname = player_slot_id 'player_slot_p%p' p = <dropped_player_num>
+			<player_slot_id> :SE_SetProps {alpha = 0.35000002}
 			if (<locked_to_players> = 1)
-				onlinelobbyinterface :settags \{locked_to_players = 0}
+				OnlineLobbyInterface :SetTags \{locked_to_players = 0}
 				refresh_player_scores_postgame_container \{unlock}
 			endif
 		endif
 		if (<setlist_enabled> = 1)
-			onlinelobbyinterface :settags \{setlist_enabled = 0}
-			onlinelobbyinterface :gettags
-			resolvescreenelementid id = {<postgame_menu_id> child = 0}
+			OnlineLobbyInterface :SetTags \{setlist_enabled = 0}
+			OnlineLobbyInterface :GetTags
+			ResolveScreenElementId id = {<postgame_menu_id> child = 0}
 			if (<menu_index> = 0)
-				launchevent \{type = unfocus
+				LaunchEvent \{type = unfocus
 					target = current_menu}
-				if NOT screenelementexists \{id = netprefinterface}
-					launchevent \{type = focus
+				if NOT ScreenElementExists \{id = NetPrefInterface}
+					LaunchEvent \{type = focus
 						target = current_menu
 						data = {
 							child_index = 1
 						}}
 				endif
-				onlinelobbyinterface :settags \{menu_index = 0}
+				OnlineLobbyInterface :SetTags \{menu_index = 0}
 			else
-				onlinelobbyinterface :settags menu_index = (<menu_index> - 1)
+				OnlineLobbyInterface :SetTags menu_index = (<menu_index> - 1)
 			endif
-			onlinelobbyinterface :settags menu_items = (<menu_items> - 1)
-			<resolved_id> :se_setprops {not_focusable}
-			resolvescreenelementid id = {<resolved_id> child = text}
-			<resolved_id> :se_setprops {alpha = 0.5}
+			OnlineLobbyInterface :SetTags Menu_items = (<Menu_items> - 1)
+			<resolved_id> :SE_SetProps {not_focusable}
+			ResolveScreenElementId id = {<resolved_id> child = text}
+			<resolved_id> :SE_SetProps {alpha = 0.5}
 		endif
 	endif
 endscript
 
 script lobby_end_game_scr 
-	printf \{qs(0xa6595096)}
+	printf \{qs("\LWe got an end game event and we don't need to do anything")}
 endscript

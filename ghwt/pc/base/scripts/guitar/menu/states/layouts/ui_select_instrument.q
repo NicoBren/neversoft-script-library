@@ -1,4 +1,4 @@
-0xf9695deb = 0
+winport_keyboard_instrument = 0
 
 script ui_create_select_instrument 
 	ui_select_instrument_continue <...>
@@ -9,40 +9,40 @@ script ui_destroy_select_instrument
 endscript
 instrument_list = {
 	guitar = {
-		text = qs(0x9504b94a)
+		text = qs("GUITAR")
 		text_nl = 'guitar'
 	}
-	bass = {
-		text = qs(0x7d4f9214)
+	Bass = {
+		text = qs("BASS")
 		text_nl = 'bass'
 	}
 	drum = {
-		text = qs(0xcf488ba5)
+		text = qs("DRUM")
 		text_nl = 'drum'
 	}
-	vocals = {
-		text = qs(0x1b9f6f84)
+	Vocals = {
+		text = qs("VOCALS")
 		text_nl = 'vocals'
 	}
-	band = {
-		text = qs(0xdabf99c0)
+	Band = {
+		text = qs("BAND")
 		text_nl = 'band'
 	}
 }
 
 script ui_select_instrument_continue 
 	change \{first_character_hub_enter = 1}
-	if gotparam \{from_hub}
-		title = qs(0xbeabd766)
+	if GotParam \{from_hub}
+		title = qs("CHANGE INSTRUMENT")
 	else
-		title = qs(0x8694014b)
+		title = qs("INSTRUMENT")
 	endif
-	if gotparam \{from_top_rocker}
-		screen = guitarist
+	if GotParam \{from_top_rocker}
+		screen = Guitarist
 	else
-		screen = drummer
+		screen = Drummer
 	endif
-	gamemode_getnumplayers
+	GameMode_GetNumPlayers
 	if (<num_players> = 1)
 		clear_exclusive_devices
 		add_exclusive_device device = ($primary_controller)
@@ -51,55 +51,55 @@ script ui_select_instrument_continue
 	allow_guitar = 0
 	allow_drum = 0
 	allow_vocal = 0
-	if gotparam \{from_top_rocker}
+	if GotParam \{from_top_rocker}
 		allow_guitar = 1
 		allow_drum = 1
 		allow_vocal = 1
 	endif
 	ui_get_controller_parts_allowed controller = ($primary_controller)
-	if structurecontains structure = <allowed> guitar
+	if StructureContains Structure = <allowed> guitar
 		allow_guitar = 1
 	endif
-	if structurecontains structure = <allowed> drum
+	if StructureContains Structure = <allowed> drum
 		allow_drum = 1
 	endif
-	if structurecontains structure = <allowed> vocals
+	if StructureContains Structure = <allowed> Vocals
 		allow_vocal = 1
 	endif
 	if (<allow_guitar> = 1)
 		add_menu_frontend_item {
-			text = ($band_mode_available_text.instruments [0])
+			text = ($band_mode_available_text.Instruments [0])
 			pad_choose_script = ui_select_instrument_done
 			pad_choose_params = {instrument = guitar from_hub = <from_hub> from_top_rocker = <from_top_rocker>}
 		}
 		add_menu_frontend_item {
-			text = ($band_mode_available_text.instruments [1])
+			text = ($band_mode_available_text.Instruments [1])
 			pad_choose_script = ui_select_instrument_done
-			pad_choose_params = {instrument = bass from_hub = <from_hub> from_top_rocker = <from_top_rocker>}
+			pad_choose_params = {instrument = Bass from_hub = <from_hub> from_top_rocker = <from_top_rocker>}
 		}
 	else
 		add_menu_frontend_item {
-			text = ($band_mode_available_text.instruments [0])
+			text = ($band_mode_available_text.Instruments [0])
 			choose_state = uistate_select_instrument_warning
 			choose_state_data = {instrument = guitar controller = ($primary_controller)}
 			rgba = [50 44 35 255]
 		}
 		add_menu_frontend_item {
-			text = ($band_mode_available_text.instruments [1])
+			text = ($band_mode_available_text.Instruments [1])
 			choose_state = uistate_select_instrument_warning
-			choose_state_data = {instrument = bass controller = ($primary_controller)}
+			choose_state_data = {instrument = Bass controller = ($primary_controller)}
 			rgba = [50 44 35 255]
 		}
 	endif
 	if (<allow_drum> = 1)
 		add_menu_frontend_item {
-			text = ($band_mode_available_text.instruments [2])
+			text = ($band_mode_available_text.Instruments [2])
 			pad_choose_script = ui_select_instrument_done
 			pad_choose_params = {instrument = drum from_hub = <from_hub> from_top_rocker = <from_top_rocker>}
 		}
 	else
 		add_menu_frontend_item {
-			text = ($band_mode_available_text.instruments [2])
+			text = ($band_mode_available_text.Instruments [2])
 			choose_state = uistate_select_instrument_warning
 			choose_state_data = {instrument = drum controller = ($primary_controller)}
 			rgba = [50 44 35 255]
@@ -107,33 +107,33 @@ script ui_select_instrument_continue
 	endif
 	if (<allow_vocal> = 1)
 		add_menu_frontend_item {
-			text = ($band_mode_available_text.instruments [3])
+			text = ($band_mode_available_text.Instruments [3])
 			pad_choose_script = ui_select_instrument_done
-			pad_choose_params = {instrument = vocals from_hub = <from_hub> from_top_rocker = <from_top_rocker>}
+			pad_choose_params = {instrument = Vocals from_hub = <from_hub> from_top_rocker = <from_top_rocker>}
 		}
 	else
 		add_menu_frontend_item {
-			text = ($band_mode_available_text.instruments [3])
+			text = ($band_mode_available_text.Instruments [3])
 			pad_choose_script = ui_select_instrument_done
-			pad_choose_params = {instrument = vocals from_hub = <from_hub> from_top_rocker = <from_top_rocker>}
+			pad_choose_params = {instrument = Vocals from_hub = <from_hub> from_top_rocker = <from_top_rocker>}
 			rgba = [50 44 35 255]
 		}
 	endif
-	if gotparam \{from_top_rocker}
+	if GotParam \{from_top_rocker}
 		add_menu_frontend_item {
-			text = qs(0xdabf99c0)
+			text = qs("BAND")
 			pad_choose_script = ui_select_instrument_done
-			pad_choose_params = {instrument = band from_hub = <from_hub> from_top_rocker = <from_top_rocker>}
+			pad_choose_params = {instrument = Band from_hub = <from_hub> from_top_rocker = <from_top_rocker>}
 		}
 	else
 		current_menu :obj_spawnscript ui_select_instrument_check_controllers params = {from_hub = <from_hub> from_top_rocker = <from_top_rocker>}
 	endif
-	if NOT gotparam \{old_base_name}
-		if NOT gotparam \{from_top_rocker}
+	if NOT GotParam \{old_base_name}
+		if NOT GotParam \{from_top_rocker}
 			initial_focus = 0
-			if isguitarcontroller controller = ($primary_controler)
+			if IsGuitarController controller = ($primary_controler)
 				<initial_focus> = 0
-			elseif isdrumcontroller controller = ($primary_controller)
+			elseif IsDrumController controller = ($primary_controller)
 				<initial_focus> = 2
 			else
 				if (<allow_guitar> = 0)
@@ -144,7 +144,7 @@ script ui_select_instrument_continue
 					endif
 				endif
 			endif
-			launchevent type = focus target = current_menu data = {child_index = <initial_focus>}
+			LaunchEvent type = focus target = current_menu data = {child_index = <initial_focus>}
 		endif
 	endif
 	menu_finish
@@ -154,104 +154,104 @@ career_last_chosen_part = guitar
 script ui_select_instrument_done \{player = 1
 		event = menu_change}
 	begin
-	if NOT is_ui_event_running
+	if NOT Is_ui_event_running
 		break
 	endif
-	wait \{1
+	Wait \{1
 		gameframe}
 	repeat
-	if gotparam \{from_top_rocker}
-		if (<instrument> = band)
+	if GotParam \{from_top_rocker}
+		if (<instrument> = Band)
 			change \{game_mode = p4_quickplay}
 		else
 			change \{game_mode = p1_quickplay}
 		endif
 	endif
-	if (<instrument> = vocals)
+	if (<instrument> = Vocals)
 		allow_vocal = 0
-		if gotparam \{from_top_rocker}
+		if GotParam \{from_top_rocker}
 			allow_vocal = 1
 		else
 		endif
 		ui_get_controller_parts_allowed controller = ($primary_controller)
-		if structurecontains structure = <allowed> vocals
+		if StructureContains Structure = <allowed> Vocals
 			allow_vocal = 1
 		endif
 		if (<allow_vocal> = 0)
-			generic_event_choose state = uistate_select_instrument_warning data = {instrument = vocals controller = ($primary_controller)}
+			generic_event_choose state = uistate_select_instrument_warning data = {instrument = Vocals controller = ($primary_controller)}
 			return
 		endif
 	else
 		ui_get_controller_parts_allowed controller = ($primary_controller)
-		if NOT gotparam \{from_top_rocker}
-			if NOT structurecontains structure = <allowed> <instrument>
+		if NOT GotParam \{from_top_rocker}
+			if NOT StructureContains Structure = <allowed> <instrument>
 				generic_event_choose state = uistate_select_instrument_warning data = {instrument = <instrument> controller = ($primary_controller)}
 			endif
 		endif
 	endif
 	change player1_device = ($primary_controller)
-	setplayerinfo <player> part = <instrument>
-	if iswinport
-		if 0x1c708d82 controller = ($primary_controller)
+	SetPlayerInfo <player> part = <instrument>
+	if IsWinPort
+		if WinPortIsKeyboardController controller = ($primary_controller)
 			switch <instrument>
 				case guitar
-				case bass
-				change \{0xf9695deb = 1}
+				case Bass
+				change \{winport_keyboard_instrument = 1}
 				case drum
-				change \{0xf9695deb = 3}
-				case vocals
-				change \{0xf9695deb = 4}
+				change \{winport_keyboard_instrument = 3}
+				case Vocals
+				change \{winport_keyboard_instrument = 4}
 			endswitch
 		endif
 	endif
 	change career_last_chosen_part = <instrument>
-	setplayerinfo <player> controller = ($primary_controller)
+	SetPlayerInfo <player> controller = ($primary_controller)
 	vocals_distribute_mics
 	if ($game_mode = p1_career)
 		player_status = player1_status
 		switch <instrument>
 			case guitar
-			change \{current_progression_flag = career_guitar}
+			change \{current_progression_flag = Career_Guitar}
 			change structurename = <player_status> part = guitar
-			case bass
-			change \{current_progression_flag = career_bass}
-			change structurename = <player_status> part = bass
+			case Bass
+			change \{current_progression_flag = Career_Bass}
+			change structurename = <player_status> part = Bass
 			case drum
-			change \{current_progression_flag = career_drum}
+			change \{current_progression_flag = Career_Drum}
 			change structurename = <player_status> part = drum
-			case vocals
-			change \{current_progression_flag = career_vocals}
-			change structurename = <player_status> part = vocals
+			case Vocals
+			change \{current_progression_flag = Career_Vocals}
+			change structurename = <player_status> part = Vocals
 		endswitch
 	endif
 	switch ($game_mode)
 		case p1_quickplay
 		check_for_first_play = 1
-		if gotparam \{from_top_rocker}
+		if GotParam \{from_top_rocker}
 			if (<from_top_rocker> = 1)
 				check_for_first_play = 0
 			endif
 		endif
 		if (<check_for_first_play> = 1)
 			get_current_band_info
-			getglobaltags <band_info>
+			GetGlobalTags <band_info>
 			if (<first_quickplay_setlist> = 1 && $is_network_game = 0)
-				generic_event_choose event = <event> state = uistate_setlist_prompt data = {from_top_rocker = <from_top_rocker>}
+				generic_event_choose event = <event> state = UIstate_setlist_prompt data = {from_top_rocker = <from_top_rocker>}
 				return
 			endif
 		endif
 		generic_event_choose event = <event> state = uistate_setlist data = {from_top_rocker = <from_top_rocker>}
 		case p2_pro_faceoff
 		case p2_battle
-		setplayerinfo 1 part = <instrument>
-		setplayerinfo 2 part = <instrument>
+		SetPlayerInfo 1 part = <instrument>
+		SetPlayerInfo 2 part = <instrument>
 		generic_event_choose event = <event> state = uistate_select_difficulty
 		default
-		if gotparam \{from_top_rocker}
+		if GotParam \{from_top_rocker}
 			generic_event_choose event = <event> state = uistate_setlist data = {from_top_rocker = <from_top_rocker>}
 		endif
-		if gotparam \{from_hub}
-			generic_event_back \{state = uistate_singleplayer_character_hub}
+		if GotParam \{from_hub}
+			generic_event_back \{state = UIstate_singleplayer_character_hub}
 		else
 			generic_event_choose event = <event> state = uistate_select_difficulty
 		endif
@@ -259,38 +259,38 @@ script ui_select_instrument_done \{player = 1
 endscript
 
 script ui_select_instrument_check_controllers 
-	obj_getid
+	Obj_GetID
 	begin
 	ui_get_controller_parts_allowed controller = ($primary_controller)
-	if gotparam \{allowed}
-		if structurecontains structure = <allowed> guitar
-			setscreenelementprops {
-				id = {<objid> child = 0}
+	if GotParam \{allowed}
+		if StructureContains Structure = <allowed> guitar
+			SetScreenElementProps {
+				id = {<ObjID> child = 0}
 				text_rgba = ($menu_unfocus_color)
 				event_handlers = [
 					{pad_choose ui_select_instrument_done params = {instrument = guitar from_hub = <from_hub> from_top_rocker = <from_top_rocker>}}
 				]
 				replace_handlers
 			}
-			setscreenelementprops {
-				id = {<objid> child = 1}
+			SetScreenElementProps {
+				id = {<ObjID> child = 1}
 				text_rgba = ($menu_unfocus_color)
 				event_handlers = [
-					{pad_choose ui_select_instrument_done params = {instrument = bass from_hub = <from_hub> from_top_rocker = <from_top_rocker>}}
+					{pad_choose ui_select_instrument_done params = {instrument = Bass from_hub = <from_hub> from_top_rocker = <from_top_rocker>}}
 				]
 				replace_handlers
 			}
 		else
-			setscreenelementprops {
-				id = {<objid> child = 0}
+			SetScreenElementProps {
+				id = {<ObjID> child = 0}
 				text_rgba = [50 44 35 255]
 				event_handlers = [
 					{pad_choose generic_event_choose params = {state = uistate_select_instrument_warning data = {instrument = guitar controller = ($primary_controller)}}}
 				]
 				replace_handlers
 			}
-			setscreenelementprops {
-				id = {<objid> child = 1}
+			SetScreenElementProps {
+				id = {<ObjID> child = 1}
 				text_rgba = [50 44 35 255]
 				event_handlers = [
 					{pad_choose generic_event_choose params = {state = uistate_select_instrument_warning data = {instrument = guitar controller = ($primary_controller)}}}
@@ -298,9 +298,9 @@ script ui_select_instrument_check_controllers
 				replace_handlers
 			}
 		endif
-		if structurecontains structure = <allowed> drum
-			setscreenelementprops {
-				id = {<objid> child = 2}
+		if StructureContains Structure = <allowed> drum
+			SetScreenElementProps {
+				id = {<ObjID> child = 2}
 				text_rgba = ($menu_unfocus_color)
 				event_handlers = [
 					{pad_choose ui_select_instrument_done params = {instrument = drum from_hub = <from_hub> from_top_rocker = <from_top_rocker>}}
@@ -308,8 +308,8 @@ script ui_select_instrument_check_controllers
 				replace_handlers
 			}
 		else
-			setscreenelementprops {
-				id = {<objid> child = 2}
+			SetScreenElementProps {
+				id = {<ObjID> child = 2}
 				text_rgba = [50 44 35 255]
 				event_handlers = [
 					{pad_choose generic_event_choose params = {state = uistate_select_instrument_warning data = {instrument = drum controller = ($primary_controller)}}}
@@ -317,20 +317,20 @@ script ui_select_instrument_check_controllers
 				replace_handlers
 			}
 		endif
-		if structurecontains structure = <allowed> vocals
-			setscreenelementprops {
-				id = {<objid> child = 3}
+		if StructureContains Structure = <allowed> Vocals
+			SetScreenElementProps {
+				id = {<ObjID> child = 3}
 				text_rgba = ($menu_unfocus_color)
 			}
 		else
-			setscreenelementprops {
-				id = {<objid> child = 3}
+			SetScreenElementProps {
+				id = {<ObjID> child = 3}
 				text_rgba = [50 44 35 255]
 			}
 		endif
 	endif
-	removeparameter \{allowed}
-	wait \{1
+	RemoveParameter \{allowed}
+	Wait \{1
 		gameframe}
 	repeat
 endscript

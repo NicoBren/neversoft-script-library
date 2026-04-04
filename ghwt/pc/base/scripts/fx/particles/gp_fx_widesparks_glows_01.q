@@ -1,50 +1,50 @@
-gp_fx_widesparks_glows_01 = {
+GP_FX_WideSparks_Glows_01 = {
 	pos = (-0.35424203, 9.340128, -3.357558)
 	angles = (0.0, 0.0, 0.0)
-	class = particleobject
-	particletype = flexparticle
+	Class = ParticleObject
+	ParticleType = FlexParticle
 	type = flat
 	active
-	emitrangedims = (5.0, 0.1, 0.1)
-	emit_target = (0.0, 1.0, 0.0)
-	emitangle = (0.0, 0.0, 0.0)
+	EmitRangeDims = (5.0, 0.1, 0.1)
+	emit_Target = (0.0, 1.0, 0.0)
+	EmitAngle = (0.0, 0.0, 0.0)
 	force = (0.0, 0.0, 0.0)
-	windcoeff = 0.0
-	localwindcoeff = 0.0
-	emittervelocityweight = 0.0
-	anglespread = 45.0
-	liferange = (0.3, 0.5)
+	WindCoeff = 0.0
+	LocalWindCoeff = 0.0
+	EmitterVelocityWeight = 0.0
+	AngleSpread = 45.0
+	LifeRange = (0.3, 0.5)
 	emit_rate = 20.0
 	max = 0
-	timeseed = 2.0
-	lifetime = 0.6
-	emitnum = 0
-	followemitter = 0.0
-	emitfunction = constant
-	emitperiod = 1.0
-	sizerange = [
+	TimeSeed = 2.0
+	lifeTime = 0.6
+	emitNum = 0
+	FollowEmitter = 0.0
+	EmitFunction = constant
+	EmitPeriod = 1.0
+	SizeRange = [
 		(8.0, 8.0)
 		(3.0, 3.0)
 	]
-	speedrange = (0.0, 0.0)
-	rotvel = (0.0, 0.0)
-	rotveltimescale = 0.0
-	emitdelaystart = 0.0
-	pathfollowtime = 0.0
-	history = 2
-	historylistcoordinatespace = world
+	SpeedRange = (0.0, 0.0)
+	RotVel = (0.0, 0.0)
+	RotVelTimeScale = 0.0
+	EmitDelayStart = 0.0
+	PathFollowTime = 0.0
+	History = 2
+	HistoryListCoordinateSpace = world
 	color = -742615809
-	lod_default
-	quickmaterial = {
-		diffusetextureenabled
-		diffusetexture = ph_radialglow_01
-		specularpower = 0
+	LOD_Default
+	QuickMaterial = {
+		DiffuseTextureEnabled
+		DiffuseTexture = PH_RadialGlow_01
+		SpecularPower = 0
 		fillburst
 		alphacutoff = 1
-		blendmode = add
-		quadanimationfps = 0
+		blendMode = Add
+		QuadAnimationFPS = 0
 	}
-	knot = [
+	Knot = [
 		(-0.371477, 0.0, -0.0)
 		(-0.371477, 0.0, -0.0)
 		(-0.157451, 0.0, -0.0)
@@ -55,7 +55,7 @@ gp_fx_widesparks_glows_01 = {
 		(0.490462, 0.0, -0.0)
 		(0.490462, 0.0, -0.0)
 	]
-	particlecolor = [
+	ParticleColor = [
 		-1
 		-1
 		-1
@@ -63,7 +63,7 @@ gp_fx_widesparks_glows_01 = {
 		-256
 		-256
 	]
-	vertexweight = [
+	VertexWeight = [
 		0.744924
 		1.0
 	]

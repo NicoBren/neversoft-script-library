@@ -179,9 +179,9 @@ total_special_event_time = 0
 
 script debug_fill_out_special_event_percentages 
 	i = 0
-	getarraysize \{$current_special_event_percentages}
+	GetArraySize \{$current_special_event_percentages}
 	begin
-	setarrayelement arrayname = current_special_event_percentages globalarray index = <i> newvalue = 100
+	SetArrayElement ArrayName = current_special_event_percentages GlobalArray index = <i> newvalue = 100
 	<i> = (<i> + 1)
 	repeat <array_size>
 endscript
@@ -189,51 +189,51 @@ endscript
 script debug_output_special_event_tags \{gignum = $current_gig_number}
 	get_progression_globals game_mode = ($game_mode) ($current_progression_flag)
 	format_globaltag_gigname setlist_prefix = ($<tier_global>.prefix) gignum = <gignum>
-	getglobaltags <gig_name>
+	GetGlobalTags <gig_name>
 	printstruct <...>
 endscript
 
 script debug_output_current_special_event_notes_total 
 	i = 0
-	getarraysize \{$current_special_event_notes_total}
+	GetArraySize \{$current_special_event_notes_total}
 	begin
-	printf qs(0xc8c3d86f) d = <i> a = ($current_special_event_notes_total [<i>])
+	printf qs("\Lcurrent_special_event_notes_total[%d] = %a") d = <i> a = ($current_special_event_notes_total [<i>])
 	<i> = (<i> + 1)
 	repeat <array_size>
 endscript
 
 script debug_output_current_special_event_completed 
 	i = 0
-	getarraysize \{$current_special_event_completed}
+	GetArraySize \{$current_special_event_completed}
 	begin
-	printf qs(0x351831cb) d = <i> a = ($current_special_event_completed [<i>])
+	printf qs("\Lcurrent_special_event_completed[%d] = %a") d = <i> a = ($current_special_event_completed [<i>])
 	<i> = (<i> + 1)
 	repeat <array_size>
 endscript
 
 script debug_output_current_special_event_percentages 
 	i = 0
-	getarraysize \{$current_special_event_percentages}
+	GetArraySize \{$current_special_event_percentages}
 	begin
-	printf qs(0x02da9de1) d = <i> a = ($current_special_event_percentages [<i>])
+	printf qs("\Lcurrent_special_event_percentages[%d] = %a") d = <i> a = ($current_special_event_percentages [<i>])
 	<i> = (<i> + 1)
 	repeat <array_size>
 endscript
 
 script debug_output_current_special_event_miss_notes 
 	i = 0
-	getarraysize \{$current_special_event_miss_notes}
+	GetArraySize \{$current_special_event_miss_notes}
 	begin
-	printf qs(0x0f6a530d) d = <i> a = ($current_special_event_miss_notes [<i>])
+	printf qs("\Lcurrent_special_event_miss_notes[%d] = %a") d = <i> a = ($current_special_event_miss_notes [<i>])
 	<i> = (<i> + 1)
 	repeat <array_size>
 endscript
-special_events_challenges = {
+Special_Events_Challenges = {
 	special_event1 = {
-		title = qs(0xd4253816)
+		title = qs("Studio Musician")
 		challenge1 = {
-			title = qs(0x853680de)
-			info = qs(0xfb921a5c)
+			title = qs("Bail us out!")
+			info = qs("Studio Musicians! I need you, we've just signed a new band, and the deadline for their first album is coming up. They've got a great sound, but we're having trouble recording a few sections of one song. A member of the band isn't comfortable with the studio. We need an experienced studio musician to nail a few key parts as soon as possible. Give me a call.")
 			state = uistate_select_song_section
 			guitar_songs = [
 				{
@@ -286,8 +286,8 @@ special_events_challenges = {
 			name = se1c1_touchupsong
 		}
 		challenge2 = {
-			title = qs(0x37df716d)
-			info = qs(0x779bd048)
+			title = qs("Insurance Policy Gig")
+			info = qs("Studio Musicians! My record company needs you to record parts of a song. We just don't have faith our artist will be able to record them in time. The album is going over budget, and before it gets cancelled we're trying to secure some quality recordings of some important sections of one song. We have limited studio time, and need your help badly. Please contact me ASAP!")
 			state = uistate_select_song_section
 			guitar_songs = [
 				{
@@ -348,8 +348,8 @@ special_events_challenges = {
 			name = se1c2_cleanuptwosongs
 		}
 		challenge3 = {
-			title = qs(0xd0137fd2)
-			info = qs(0xef0cfa4d)
+			title = qs("Ghost Player")
+			info = qs("Studio Musicians! I've been working with a high profile band on their latest album. We've got one track left to record on the new album, but one of the 'rock stars' had is in the hospital after a wild party mishap. I need you to record his entire part for the track. There will be no credit, but I'll make sure you're paid. Call my secretary today.")
 			state = uistate_select_song_section
 			guitar_songs = [
 				{
@@ -391,10 +391,10 @@ special_events_challenges = {
 		}
 	}
 	special_event2 = {
-		title = qs(0xd87a34c7)
+		title = qs("Tribute Artist")
 		challenge1 = {
-			title = qs(0xbd4a68d1)
-			info = qs(0xb8675cc4)
+			title = qs("Challenge 1")
+			info = qs("Being the first challenge, the player should be capable of beating it relatively easily. The player will be allowed to practice the song as much as they want and then be allowed to try the challenge. To make this challenge easier, the section of song will be slower and very repetitive.")
 			state = uistate_special_event_popup
 			guitar_songs = [
 				{
@@ -451,8 +451,8 @@ special_events_challenges = {
 			name = se2c1_tribute
 		}
 		challenge2 = {
-			title = qs(0x96673b12)
-			info = qs(0x63065a32)
+			title = qs("Challenge 2")
+			info = qs("The second challenge will give the player a more difficult task. The player will be allowed to practice the song as much as they want and then be allowed to try the challenge. This challenge will be made harder by picking a faster song with more notes but still very repetitive.")
 			state = uistate_special_event_popup
 			guitar_songs = [
 				{
@@ -509,8 +509,8 @@ special_events_challenges = {
 			name = se2c2_tribute
 		}
 		challenge3 = {
-			title = qs(0x8f7c0a53)
-			info = qs(0x14dfa9b9)
+			title = qs("Challenge 3")
+			info = qs("The final challenge will still allow the player to practice as much as they would like but will be a much more difficult song section. The section will be quick, have a lot of notes, and not be very repetitive (possibly a solo).")
 			state = uistate_special_event_popup
 			guitar_songs = [
 				{
@@ -568,12 +568,12 @@ special_events_challenges = {
 		}
 	}
 	special_event3 = {
-		title = qs(0x5d0fd332)
+		title = qs("Song Writer")
 		challenge1 = {
 			name = se3c1_songwriter
-			title = qs(0x9a5f5bd2)
-			info = qs(0x8ebf7775)
-			state = uistate_jam_songwriter_event
+			title = qs("Clean up this track!")
+			info = qs("Edit this song for your demo CD")
+			state = UIstate_jam_songwriter_event
 			guitar_songs = [
 			]
 			bass_songs = [
@@ -591,9 +591,9 @@ special_events_challenges = {
 			]
 		}
 		challenge2 = {
-			title = qs(0x18b5fb73)
-			info = qs(0xba63e947)
-			state = uistate_jam_songwriter_event
+			title = qs("Rerecord the Guitar")
+			info = qs("Your guitarist quit! Record a new Guitar track")
+			state = UIstate_jam_songwriter_event
 			guitar_songs = [
 			]
 			bass_songs = [
@@ -611,7 +611,7 @@ special_events_challenges = {
 			name = se3c2_songwriter
 		}
 		challenge3 = {
-			title = qs(0x8f7c0a53)
+			title = qs("Challenge 3")
 			guitar_songs = [
 			]
 			bass_songs = [
@@ -633,32 +633,32 @@ script is_special_event_completion_on \{index = 0}
 endscript
 
 script set_special_event_completion_on \{index = 0}
-	setarrayelement arrayname = current_special_event_completed globalarray index = <index> newvalue = 1
+	SetArrayElement ArrayName = current_special_event_completed GlobalArray index = <index> newvalue = 1
 endscript
 
 script reset_current_special_event_percentages 
-	getarraysize \{$current_special_event_percentages}
+	GetArraySize \{$current_special_event_percentages}
 	index = 0
 	begin
-	setarrayelement arrayname = current_special_event_completed globalarray index = <index> newvalue = 0
-	setarrayelement arrayname = current_special_event_percentages globalarray index = <index> newvalue = 0
-	setarrayelement arrayname = current_special_event_notes_total globalarray index = <index> newvalue = 0
-	setarrayelement arrayname = current_special_event_miss_notes globalarray index = <index> newvalue = 0
+	SetArrayElement ArrayName = current_special_event_completed GlobalArray index = <index> newvalue = 0
+	SetArrayElement ArrayName = current_special_event_percentages GlobalArray index = <index> newvalue = 0
+	SetArrayElement ArrayName = current_special_event_notes_total GlobalArray index = <index> newvalue = 0
+	SetArrayElement ArrayName = current_special_event_miss_notes GlobalArray index = <index> newvalue = 0
 	<index> = (<index> + 1)
 	repeat <array_size>
 endscript
 
 script reset_current_special_event_miss_notes 
-	getarraysize \{$current_special_event_percentages}
+	GetArraySize \{$current_special_event_percentages}
 	index = 0
 	begin
-	setarrayelement arrayname = current_special_event_miss_notes globalarray index = <index> newvalue = 0
+	SetArrayElement ArrayName = current_special_event_miss_notes GlobalArray index = <index> newvalue = 0
 	<index> = (<index> + 1)
 	repeat <array_size>
 endscript
 
 script special_event_copy_over_stats_at_index \{entry = 0}
-	getplayerinfo \{1
+	GetPlayerInfo \{1
 		current_song_section_array}
 	get_section_stats section_index = <entry> section_array = <current_song_section_array>
 	notes_hit = ((<notes_hit> [0]) * 1.0)
@@ -667,19 +667,19 @@ script special_event_copy_over_stats_at_index \{entry = 0}
 	new_note_percentage = 0
 	if (<notes_max> != 0)
 		new_note_percentage = ((<notes_hit> / <notes_max>) * 100)
-		casttointeger \{new_note_percentage}
+		CastToInteger \{new_note_percentage}
 	endif
-	getarraysize \{$current_special_event_percentages}
+	GetArraySize \{$current_special_event_percentages}
 	if (<entry> >= <array_size>)
-		scriptassert qs(0xc9ad0dea) a = <array_size> s = $current_song d = <entry>
+		ScriptAssert qs("\Lcurrent_special_event_percentages array of size %a not large enough for song %s with array entry of %d") a = <array_size> s = $current_song d = <entry>
 	endif
 	if (<new_note_percentage> > <note_hit_percentage>)
 		if (($current_special_event_miss_notes [<entry>]) < 1)
-			setarrayelement arrayname = current_special_event_percentages globalarray index = <entry> newvalue = <new_note_percentage>
+			SetArrayElement ArrayName = current_special_event_percentages GlobalArray index = <entry> newvalue = <new_note_percentage>
 			<note_hit_percentage> = <new_note_percentage>
 		endif
 	endif
-	getarraysize ($<current_song_section_array>)
+	GetArraySize ($<current_song_section_array>)
 	if ((<entry> + 1) < <array_size>)
 		section_time = (($<current_song_section_array> [(<entry> + 1)].time) - ($<current_song_section_array> [<entry>].time))
 	else
@@ -690,11 +690,11 @@ script special_event_copy_over_stats_at_index \{entry = 0}
 endscript
 
 script special_event_copy_over_stats 
-	getplayerinfo \{1
+	GetPlayerInfo \{1
 		current_song_section_array}
 	entry = 0
 	special_event_entry = 0
-	getarraysize ($<current_song_section_array>)
+	GetArraySize ($<current_song_section_array>)
 	section_array_size = <array_size>
 	begin
 	get_section_stats section_index = <entry> section_array = <current_song_section_array>
@@ -704,15 +704,15 @@ script special_event_copy_over_stats
 	new_note_percentage = 0
 	if (<notes_max> != 0)
 		new_note_percentage = ((<notes_hit> / <notes_max>) * 100)
-		casttointeger \{new_note_percentage}
+		CastToInteger \{new_note_percentage}
 	endif
-	getarraysize \{$current_special_event_percentages}
+	GetArraySize \{$current_special_event_percentages}
 	if (<entry> >= <array_size>)
-		scriptassert qs(0xc9ad0dea) a = <array_size> s = $current_song d = <entry>
+		ScriptAssert qs("\Lcurrent_special_event_percentages array of size %a not large enough for song %s with array entry of %d") a = <array_size> s = $current_song d = <entry>
 	endif
 	if (<new_note_percentage> > <note_hit_percentage>)
 		if (($current_special_event_miss_notes [<entry>]) < 1)
-			setarrayelement arrayname = current_special_event_percentages globalarray index = <entry> newvalue = <new_note_percentage>
+			SetArrayElement ArrayName = current_special_event_percentages GlobalArray index = <entry> newvalue = <new_note_percentage>
 		endif
 	endif
 	<entry> = (<entry> + 1)
@@ -720,27 +720,27 @@ script special_event_copy_over_stats
 endscript
 
 script check_current_special_event_percentages 
-	getplayerinfo \{1
+	GetPlayerInfo \{1
 		part}
-	formattext \{checksumname = event_num
+	FormatText \{checksumname = event_num
 		'special_event%d'
 		d = $current_special_event_num}
-	formattext \{checksumname = challenge_num
+	FormatText \{checksumname = challenge_num
 		'challenge%d'
 		d = $current_special_event_challenge_num}
-	formattext checksumname = songs_ar '%p_songs' p = ($part_list_props.<part>.text_nl)
-	getplayerinfo \{1
+	FormatText checksumname = songs_ar '%p_songs' p = ($part_list_props.<part>.text_nl)
+	GetPlayerInfo \{1
 		current_song_section_array}
-	getmarkerarraysize array = (<current_song_section_array>)
+	GetMarkerArraySize array = (<current_song_section_array>)
 	song_section_size = <array_size>
-	getarraysize ($special_events_challenges.<event_num>.<challenge_num>.<songs_ar> [$special_event_song_index].sections)
-	if structurecontains structure = ($special_events_challenges.<event_num>.<challenge_num>.<songs_ar> [$special_event_song_index]) allowedtomiss
-		num_allowed_to_miss = ($special_events_challenges.<event_num>.<challenge_num>.<songs_ar> [$special_event_song_index].allowedtomiss [0])
+	GetArraySize ($Special_Events_Challenges.<event_num>.<challenge_num>.<songs_ar> [$special_event_song_index].sections)
+	if StructureContains Structure = ($Special_Events_Challenges.<event_num>.<challenge_num>.<songs_ar> [$special_event_song_index]) allowedtomiss
+		num_allowed_to_miss = ($Special_Events_Challenges.<event_num>.<challenge_num>.<songs_ar> [$special_event_song_index].allowedtomiss [0])
 	endif
 	ret_val = true
 	note_missed = 0
 	total_time_left_in_sections = 0
-	if gotparam \{section_to_check}
+	if GotParam \{section_to_check}
 		if (($current_special_event_percentages [<section_to_check>]) != 100)
 			<ret_val> = false
 		endif
@@ -766,7 +766,7 @@ script check_current_special_event_percentages
 				<total_time_left_in_sections> = (<total_time_left_in_sections> + <time_left>)
 			endif
 		endif
-		if NOT gotparam \{dont_count_unplayed_sections}
+		if NOT GotParam \{dont_count_unplayed_sections}
 			if ($current_special_event_notes_total [<section_to_check>] = 0)
 				<ret_val> = true
 			endif
@@ -775,9 +775,9 @@ script check_current_special_event_percentages
 		index = 0
 		if (<array_size> > 0)
 			begin
-			index_to_use = ($special_events_challenges.<event_num>.<challenge_num>.<songs_ar> [$special_event_song_index].sections [<index>])
+			index_to_use = ($Special_Events_Challenges.<event_num>.<challenge_num>.<songs_ar> [$special_event_song_index].sections [<index>])
 			can_check = 1
-			if gotparam \{dont_count_unplayed_sections}
+			if GotParam \{dont_count_unplayed_sections}
 				if NOT (<index_to_use> >= $practice_start_index && <index_to_use> <= $practice_end_index)
 					<can_check> = 0
 				endif
@@ -786,8 +786,8 @@ script check_current_special_event_percentages
 				if (($current_special_event_percentages [<index_to_use>]) != 100)
 					<ret_val> = false
 				else
-					if gotparam \{dont_use_extra_notes}
-						setarrayelement arrayname = current_special_event_miss_notes globalarray index = <index_to_use> newvalue = -1
+					if GotParam \{dont_use_extra_notes}
+						SetArrayElement ArrayName = current_special_event_miss_notes GlobalArray index = <index_to_use> newvalue = -1
 					endif
 				endif
 				if ($current_special_event_num = 2)
@@ -859,12 +859,12 @@ endscript
 
 script setup_special_event num = ($current_special_event_num)
 	if (<num> = 1)
-		getspecialeventtimer
+		GetSpecialEventTimer
 		<time> = (<time> - ($special_event_total_expense_time / 1000))
 		if (<time> < 0)
 			<time> = 0
 		endif
-		setspecialeventtimer time = <time>
+		SetSpecialEventTimer time = <time>
 		reset_current_special_event_miss_notes
 	elseif (<num> = 2)
 		change \{practice_loop_section = 1}
@@ -891,22 +891,22 @@ script reset_all_special_events
 	change \{special_event_alpha_out_gems = 0}
 	change \{hide_hud_elements = 0}
 	change \{gray_gems = 0}
-	resetnongraymarkers
+	ResetNonGrayMarkers
 endscript
 
 script reset_special_event \{num = 1}
 	if (<num> = 1)
-		if screenelementexists \{id = special_event_recording_textp1}
-			setscreenelementprops \{id = special_event_recording_textp1
+		if ScreenElementExists \{id = special_event_recording_textp1}
+			SetScreenElementProps \{id = special_event_recording_textp1
 				hide}
 		endif
 	elseif (<num> = 2)
-		if screenelementexists \{id = special_event_question_markp1}
-			setscreenelementprops \{id = special_event_question_markp1
+		if ScreenElementExists \{id = special_event_question_markp1}
+			SetScreenElementProps \{id = special_event_question_markp1
 				hide}
 		endif
-		if screenelementexists \{id = special_event_missed_note_textp1}
-			setscreenelementprops \{id = special_event_missed_note_textp1
+		if ScreenElementExists \{id = special_event_missed_note_textp1}
+			SetScreenElementProps \{id = special_event_missed_note_textp1
 				hide}
 		endif
 		change \{special_event_alpha_out_gems = 0}
@@ -931,24 +931,24 @@ script get_and_set_special_event_time song = ($current_song)
 			default
 			time = 0
 		endswitch
-		casttointeger \{time}
+		CastToInteger \{time}
 		<time> = (<time> / 1000)
-		setspecialeventtimer time = <time>
+		SetSpecialEventTimer time = <time>
 	elseif ($special_event_stage = 2)
-		getspecialeventtimer
+		GetSpecialEventTimer
 	endif
 	return time = <time>
 endscript
 
 script format_time_from_seconds \{time = 0}
-	casttointeger \{time}
-	mod a = <time> b = 60
+	CastToInteger \{time}
+	Mod a = <time> b = 60
 	minutes = (<time> / 60)
-	seconds = <mod>
+	seconds = <Mod>
 	if (<seconds> < 10)
-		formattext textname = time_formatted qs(0xeacde407) a = <minutes> b = <seconds>
+		FormatText TextName = time_formatted qs("%a:0%b") a = <minutes> b = <seconds>
 	else
-		formattext textname = time_formatted qs(0xcc868dda) a = <minutes> b = <seconds>
+		FormatText TextName = time_formatted qs("%a:%b") a = <minutes> b = <seconds>
 	endif
 	return time_formatted = <time_formatted>
 endscript
@@ -971,40 +971,40 @@ script get_special_event_time song = ($current_song) event = se1c1_touchupsong
 		default
 		time = 0
 	endswitch
-	casttointeger \{time}
+	CastToInteger \{time}
 	return time = <time>
 endscript
 
 script focus_special_event_show_desc 
 	get_progression_globals <progression_flag>
-	formattext checksumname = tiernum 'tier%d' d = <gig_num>
-	getplayerinfo \{1
+	FormatText checksumname = tiernum 'tier%d' d = <gig_num>
+	GetPlayerInfo \{1
 		part}
-	formattext checksumname = special_event_num 'special_event%d' d = ($<tier_global>.<tiernum>.specialevent)
-	formattext checksumname = challenge 'challenge%d' d = <challenge_num>
-	formattext checksumname = songs_ar '%p_songs' p = ($part_list_props.<part>.text_nl)
+	FormatText checksumname = special_event_num 'special_event%d' d = ($<tier_global>.<tiernum>.specialevent)
+	FormatText checksumname = challenge 'challenge%d' d = <challenge_num>
+	FormatText checksumname = songs_ar '%p_songs' p = ($part_list_props.<part>.text_nl)
 	destroy_menu \{menu_id = special_events_container}
-	createscreenelement \{type = containerelement
+	CreateScreenElement \{type = ContainerElement
 		parent = gig_posters_menu
 		id = special_events_container
 		pos = (15.0, 10.0)}
-	getarraysize ($special_events_challenges.<special_event_num>.<challenge>.<songs_ar>)
+	GetArraySize ($Special_Events_Challenges.<special_event_num>.<challenge>.<songs_ar>)
 	song_size = <array_size>
 	total_time_left = 0
 	entry = 0
 	if (<song_size> > 0)
 		begin
-		song = ($special_events_challenges.<special_event_num>.<challenge>.<songs_ar> [<entry>].song)
-		get_special_event_time song = <song> event = ($special_events_challenges.<special_event_num>.<challenge>.name)
+		song = ($Special_Events_Challenges.<special_event_num>.<challenge>.<songs_ar> [<entry>].song)
+		get_special_event_time song = <song> event = ($Special_Events_Challenges.<special_event_num>.<challenge>.name)
 		<total_time_left> = (<total_time_left> + <time>)
 		<entry> = (<entry> + 1)
 		repeat <song_size>
 	endif
 	<total_time_left> = (<total_time_left> / 1000)
-	setspecialeventtimer time = <total_time_left>
+	SetSpecialEventTimer time = <total_time_left>
 	format_time_from_seconds time = <total_time_left>
-	createscreenelement {
-		type = textblockelement
+	CreateScreenElement {
+		type = TextBlockElement
 		parent = special_events_container
 		pos = <desc_pos>
 		dims = (620.0, 800.0)
@@ -1014,20 +1014,20 @@ script focus_special_event_show_desc
 		rgba = [20 200 20 255]
 		scale = 0.6
 	}
-	createscreenelement \{parent = special_events_container
+	CreateScreenElement \{parent = special_events_container
 		id = special_event_info_di
-		type = descinterface
+		type = DescInterface
 		desc = 'special_event_info'}
-	<id> :se_setprops {
+	<id> :SE_SetProps {
 		special_event_info_container_alpha = 0.0
-		special_event_info_text_text = ($special_events_challenges.<special_event_num>.<challenge>.info)
+		special_event_info_text_text = ($Special_Events_Challenges.<special_event_num>.<challenge>.info)
 	}
-	wait \{1
+	Wait \{1
 		gameframe}
-	<id> :se_setprops {
+	<id> :SE_SetProps {
 		special_event_info_container_alpha = 1.0
 		time = 0.75
 	}
-	wait \{0.75
+	Wait \{0.75
 		seconds}
 endscript

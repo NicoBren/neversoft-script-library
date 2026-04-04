@@ -1,6 +1,6 @@
 g_rockout_show_in_debug_menu = 1
-g_initial_ball_pos_l = (235.0, 300.0)
-g_initial_ball_pos_r = (977.0, 300.0)
+g_initial_ball_pos_L = (235.0, 300.0)
+g_initial_ball_pos_R = (977.0, 300.0)
 g_brick_width = 32
 g_brick_height = 64
 g_brick_collision_offset = (16.0, 32.0)
@@ -146,14 +146,14 @@ g_battle_paddle_used_p2 = [
 	0
 	0
 ]
-g_current_strum_sound = single_player_bad_note_guitar
+g_current_strum_sound = Single_Player_Bad_Note_Guitar
 
 script create_rockout_initial_popup 
 	create_menu_backdrop \{texture = rockout_bg}
 	create_popup_warning_menu \{no_background
-		title = qs(0xa83061c6)
+		title = qs("PLAYERS")
 		textblock = {
-			text = qs(0x9f80ee4c)
+			text = qs("How many players?")
 		}
 		options = [
 			{
@@ -163,7 +163,7 @@ script create_rockout_initial_popup
 				func_params = {
 					num_players = 1
 				}
-				text = qs(0x787beab2)
+				text = qs("1")
 			}
 			{
 				func = {
@@ -172,7 +172,7 @@ script create_rockout_initial_popup
 				func_params = {
 					num_players = 2
 				}
-				text = qs(0x5356b971)
+				text = qs("2")
 			}
 			{
 				func = {
@@ -181,23 +181,23 @@ script create_rockout_initial_popup
 				func_params = {
 					num_players = 0
 				}
-				text = qs(0x5fb58b89)
+				text = qs("Bot Play")
 			}
 		]}
 endscript
 
 script create_rockout_game \{num_players = 1}
 	destroy_popup_warning_menu
-	menu_music_off
+	Menu_Music_Off
 	create_menu_backdrop \{texture = rockout_bg}
-	creatematerial \{name = ball_particle_01
-		template = immediatemode_ui
-		technique = ui_col_tex_2d
-		blendmode = add
-		materialprops = [
+	CreateMaterial \{name = Ball_Particle_01
+		Template = ImmediateMode_UI
+		technique = UI_Col_Tex_2D
+		blendMode = Add
+		MaterialProps = [
 			{
-				name = m_pspass0materialcolor
-				vectorproperty = [
+				name = m_psPass0MaterialColor
+				VectorProperty = [
 					1.0
 					1.0
 					1.0
@@ -205,18 +205,18 @@ script create_rockout_game \{num_players = 1}
 				]
 			}
 			{
-				name = m_samppass0diffuse
-				textureproperty = ph_firepuffs
+				name = m_sampPass0Diffuse
+				TextureProperty = PH_FirePuffs
 			}
 		]}
-	creatematerial \{name = material_brickexplode
-		template = immediatemode_ui
-		technique = ui_col_tex_2d
-		blendmode = add
-		materialprops = [
+	CreateMaterial \{name = Material_BrickExplode
+		Template = ImmediateMode_UI
+		technique = UI_Col_Tex_2D
+		blendMode = Add
+		MaterialProps = [
 			{
-				name = m_pspass0materialcolor
-				vectorproperty = [
+				name = m_psPass0MaterialColor
+				VectorProperty = [
 					1.0
 					1.0
 					1.0
@@ -224,11 +224,11 @@ script create_rockout_game \{num_players = 1}
 				]
 			}
 			{
-				name = m_samppass0diffuse
-				textureproperty = jow_buttonstar01
+				name = m_sampPass0Diffuse
+				TextureProperty = JOW_ButtonStar01
 			}
 		]}
-	createscreenelement \{type = containerelement
+	CreateScreenElement \{type = ContainerElement
 		id = rockout_container
 		parent = root_window
 		pos = (0.0, 0.0)
@@ -238,12 +238,12 @@ script create_rockout_game \{num_players = 1}
 				rockout_pause_game
 			}
 		]}
-	launchevent \{type = focus
+	LaunchEvent \{type = focus
 		target = rockout_container}
-	rockout_container :settags \{current_particle = 0
+	rockout_container :SetTags \{current_particle = 0
 		current_brick = 0
 		max_bricks = 20}
-	createscreenelement \{type = spriteelement
+	CreateScreenElement \{type = SpriteElement
 		id = foreground
 		parent = rockout_container
 		texture = rockout_fg
@@ -254,8 +254,8 @@ script create_rockout_game \{num_players = 1}
 			top
 		]
 		z_priority = 30}
-	createscreenelement {
-		type = physicselement
+	CreateScreenElement {
+		type = PhysicsElement
 		id = ball_container
 		parent = rockout_container
 		pos = ($g_initial_ball_pos)
@@ -264,8 +264,8 @@ script create_rockout_game \{num_players = 1}
 		radius = 22.630001
 		elasticity = 1.0
 	}
-	ball_container :settags \{fireball_active = 0}
-	createscreenelement \{type = spriteelement
+	ball_container :SetTags \{fireball_active = 0}
+	CreateScreenElement \{type = SpriteElement
 		id = ball
 		parent = ball_container
 		texture = rockout_ball
@@ -276,9 +276,9 @@ script create_rockout_game \{num_players = 1}
 			top
 		]
 		z_priority = 30}
-	formattext textname = score_text qs(0x21379b76) n = ($g_player1_score)
-	createscreenelement {
-		type = textelement
+	FormatText TextName = score_text qs("SCORE: %n") n = ($g_player1_score)
+	CreateScreenElement {
+		type = TextElement
 		id = p1_score
 		parent = rockout_container
 		rgba = (($g_menu_colors).p1_orangey)
@@ -288,9 +288,9 @@ script create_rockout_game \{num_players = 1}
 		just = [left top]
 		z_priority = 31
 	}
-	formattext textname = score_text qs(0x21379b76) n = ($g_player2_score)
-	createscreenelement {
-		type = textelement
+	FormatText TextName = score_text qs("SCORE: %n") n = ($g_player2_score)
+	CreateScreenElement {
+		type = TextElement
 		id = p2_score
 		parent = rockout_container
 		rgba = (($g_menu_colors).p2_purpley)
@@ -300,25 +300,25 @@ script create_rockout_game \{num_players = 1}
 		just = [left top]
 		z_priority = 31
 	}
-	createscreenelement {
-		type = textelement
+	CreateScreenElement {
+		type = TextElement
 		id = p1_lives
 		parent = rockout_container
 		rgba = (($g_menu_colors).p1_orangey)
 		font = debug
 		pos = (250.0, 100.0)
-		text = qs(0xdf1ee302)
+		text = qs("LIVES: 0")
 		just = [left top]
 		z_priority = 31
 	}
-	createscreenelement {
-		type = textelement
+	CreateScreenElement {
+		type = TextElement
 		id = p2_lives
 		parent = rockout_container
 		rgba = (($g_menu_colors).p2_purpley)
 		font = debug
 		pos = (850.0, 100.0)
-		text = qs(0xdf1ee302)
+		text = qs("LIVES: 0")
 		just = [left top]
 		z_priority = 31
 	}
@@ -353,54 +353,54 @@ script create_rockout_game \{num_players = 1}
 			}}
 	endswitch
 	rockout_start_paddle_controls
-	setplayerinfo \{1
+	SetPlayerInfo \{1
 		jam_instrument = 0}
-	setsoundbussparams \{guitar_jammode = {
+	SetSoundBussParams \{Guitar_JamMode = {
 			vol = 0
 		}}
-	setsoundbussparams \{jammode_rhythmguitar = {
+	SetSoundBussParams \{JamMode_RhythmGuitar = {
 			vol = 0
 		}}
-	setsoundbussparams \{jammode_leadguitar = {
+	SetSoundBussParams \{JamMode_LeadGuitar = {
 			vol = 0
 		}}
-	setsoundbussparams \{jammode_bass = {
+	SetSoundBussParams \{JamMode_Bass = {
 			vol = 0
 		}}
 	jam_init_scales
-	destroyplayerserverjaminput \{player = 1}
-	add_user_control_helper \{text = qs(0x67d9c56d)
+	DestroyPlayerServerJamInput \{player = 1}
+	add_user_control_helper \{text = qs("QUIT")
 		button = start
 		z = 100}
 endscript
 
 script destroy_rockout_game 
-	killspawnedscript \{name = rockout_initialize_ball}
-	killspawnedscript \{name = rockout_check_brick_collisions}
-	killspawnedscript \{name = rockout_check_screen_collisions}
+	KillSpawnedScript \{name = rockout_initialize_ball}
+	KillSpawnedScript \{name = rockout_check_brick_collisions}
+	KillSpawnedScript \{name = rockout_check_screen_collisions}
 	clean_up_user_control_helpers
-	destroy_menu \{menu_id = scrolling_rockout_p1}
-	destroy_menu \{menu_id = scrolling_rockout_p2}
+	destroy_menu \{menu_id = scrolling_Rockout_p1}
+	destroy_menu \{menu_id = scrolling_Rockout_p2}
 	destroy_menu_backdrop
-	if screenelementexists \{id = rockout_container}
-		destroyscreenelement \{id = rockout_container}
+	if ScreenElementExists \{id = rockout_container}
+		DestroyScreenElement \{id = rockout_container}
 	endif
-	killspawnedscript \{name = rockout_watch_buttons}
-	killspawnedscript \{name = rockout_button_watcher}
-	killspawnedscript \{name = rockout_brick_spawner}
-	killspawnedscript \{name = rockout_fall_brick}
-	killspawnedscript \{name = rockout_check_paddle_collisions_right}
-	killspawnedscript \{name = rockout_check_paddle_collisions_left}
-	killspawnedscript \{name = rockout_do_speaker_punch}
-	killspawnedscript \{name = rockout_ai}
-	killspawnedscript \{name = rockout_ball_debug}
-	killspawnedscript \{name = rockout_debug_collision}
-	killspawnedscript \{name = rockout_guitar_strum}
-	killspawnedscript \{name = rockout_kill_strum}
-	killspawnedscript \{name = rockout_drum_hit}
-	killspawnedscript \{name = rockout_kill_drum_hit}
-	killspawnedscript \{name = rockout_show_goal_popup}
-	killspawnedscript \{name = rockout_show_score_popup}
+	KillSpawnedScript \{name = rockout_watch_buttons}
+	KillSpawnedScript \{name = rockout_button_watcher}
+	KillSpawnedScript \{name = rockout_brick_spawner}
+	KillSpawnedScript \{name = rockout_fall_brick}
+	KillSpawnedScript \{name = rockout_check_paddle_collisions_right}
+	KillSpawnedScript \{name = rockout_check_paddle_collisions_left}
+	KillSpawnedScript \{name = rockout_do_speaker_punch}
+	KillSpawnedScript \{name = rockout_ai}
+	KillSpawnedScript \{name = rockout_ball_debug}
+	KillSpawnedScript \{name = rockout_debug_collision}
+	KillSpawnedScript \{name = rockout_guitar_strum}
+	KillSpawnedScript \{name = rockout_kill_strum}
+	KillSpawnedScript \{name = rockout_drum_hit}
+	KillSpawnedScript \{name = rockout_kill_drum_hit}
+	KillSpawnedScript \{name = rockout_show_goal_popup}
+	KillSpawnedScript \{name = rockout_show_score_popup}
 	change \{g_p1_ai_active = 0}
 	change \{g_p2_ai_active = 0}
 	change \{g_player1_already_strummed = 0}
@@ -433,14 +433,14 @@ script destroy_rockout_game
 			0
 			0
 		]}
-	destroymaterial \{name = ball_particle_01}
-	destroymaterial \{name = material_brickexplode}
-	destroy2dparticlesystem \{id = ball_particles}
-	destroy2dparticlesystem \{id = fireball_particles}
-	destroy2dparticlesystem \{id = fireball_explosion}
-	killspawnedscript \{name = rockout_fireball_explosion}
-	killspawnedscript \{name = rockout_create_brick_particles}
-	killspawnedscript \{name = rockout_start_controls}
+	DestroyMaterial \{name = Ball_Particle_01}
+	DestroyMaterial \{name = Material_BrickExplode}
+	Destroy2DParticleSystem \{id = ball_particles}
+	Destroy2DParticleSystem \{id = fireball_particles}
+	Destroy2DParticleSystem \{id = fireball_explosion}
+	KillSpawnedScript \{name = rockout_fireball_explosion}
+	KillSpawnedScript \{name = rockout_create_brick_particles}
+	KillSpawnedScript \{name = rockout_start_controls}
 	rockout_cleanup_brick_particles
 	end_song
 	unload_songqpak
@@ -449,42 +449,42 @@ endscript
 
 script rockout_start_paddle_controls 
 	if ($g_p1_ai_active = 0)
-		if isguitarcontroller \{controller = 0}
-			spawnscript \{rockout_start_controls
+		if IsGuitarController \{controller = 0}
+			SpawnScript \{rockout_start_controls
 				params = {
 					type = guitar
 				}}
 			change \{g_rockout_controller_1 = guitar}
-		elseif isdrumcontroller \{controller = 0}
-			spawnscript \{rockout_start_controls
+		elseif IsDrumController \{controller = 0}
+			SpawnScript \{rockout_start_controls
 				params = {
-					type = drums
+					type = Drums
 				}}
-			change \{g_rockout_controller_1 = drums}
+			change \{g_rockout_controller_1 = Drums}
 		else
-			spawnscript \{rockout_start_controls}
+			SpawnScript \{rockout_start_controls}
 			change \{g_rockout_controller_1 = notguitar}
 		endif
 	endif
 	if ($g_p2_ai_active = 0)
-		if isguitarcontroller \{controller = 1}
-			spawnscript \{rockout_start_controls
+		if IsGuitarController \{controller = 1}
+			SpawnScript \{rockout_start_controls
 				params = {
 					type = guitar
 					player = 2
 					controller = 1
 				}}
 			change \{g_rockout_controller_2 = guitar}
-		elseif isdrumcontroller \{controller = 1}
-			spawnscript \{rockout_start_controls
+		elseif IsDrumController \{controller = 1}
+			SpawnScript \{rockout_start_controls
 				params = {
-					type = drums
+					type = Drums
 					player = 2
 					controller = 1
 				}}
-			change \{g_rockout_controller_2 = drums}
+			change \{g_rockout_controller_2 = Drums}
 		else
-			spawnscript \{rockout_start_controls
+			SpawnScript \{rockout_start_controls
 				params = {
 					player = 2
 					controller = 1
@@ -495,28 +495,28 @@ script rockout_start_paddle_controls
 endscript
 
 script rockout_create_battle_paddles 
-	createscreenelement \{type = containerelement
+	CreateScreenElement \{type = ContainerElement
 		id = paddle_container_p1
 		parent = rockout_container
 		pos = (0.0, 0.0)
 		exclusive_device = 0}
-	paddle_container_p1 :settags \{score = 0
+	paddle_container_p1 :SetTags \{score = 0
 		lives = 0
 		goals = 0}
-	createscreenelement \{type = containerelement
+	CreateScreenElement \{type = ContainerElement
 		id = paddle_container_p2
 		parent = rockout_container
 		pos = (0.0, 0.0)
 		exclusive_device = 1}
-	paddle_container_p2 :settags \{score = 0
+	paddle_container_p2 :SetTags \{score = 0
 		lives = 0
 		goals = 0}
 	<y> = 0
 	begin
-	formattext checksumname = paddle_id 'paddle_p1_%y' y = <y>
+	FormatText checksumname = paddle_id 'paddle_p1_%y' y = <y>
 	<new_pos> = (($g_initial_paddle_pos_left) + ((<y> * (95)) * (0.0, 1.0)))
-	createscreenelement {
-		type = spriteelement
+	CreateScreenElement {
+		type = SpriteElement
 		id = <paddle_id>
 		parent = paddle_container_p1
 		texture = rockout_paddle
@@ -530,10 +530,10 @@ script rockout_create_battle_paddles
 	repeat 5
 	<y> = 0
 	begin
-	formattext checksumname = paddle_id 'paddle_p2_%y' y = <y>
+	FormatText checksumname = paddle_id 'paddle_p2_%y' y = <y>
 	<new_pos> = (($g_initial_paddle_pos_right) + ((<y> * (95)) * (0.0, 1.0)))
-	createscreenelement {
-		type = spriteelement
+	CreateScreenElement {
+		type = SpriteElement
 		id = <paddle_id>
 		parent = paddle_container_p2
 		texture = rockout_paddle
@@ -589,27 +589,27 @@ script rockout_initialize_values
 			0
 			0
 		]}
-	ball_container :settags \{fireball_active = 0}
-	rockout_container :settags \{current_particle = 0
+	ball_container :SetTags \{fireball_active = 0}
+	rockout_container :SetTags \{current_particle = 0
 		current_brick = 0
 		max_bricks = 20}
 endscript
 
 script rockout_restart_game 
-	unpausegame
+	UnPauseGame
 	destroy_popup_warning_menu
 	create_menu_backdrop \{texture = rockout_bg}
-	killspawnedscript \{name = rockout_brick_spawner}
-	destroy2dparticlesystem \{id = ball_particles}
-	destroy2dparticlesystem \{id = fireball_particles}
-	destroy2dparticlesystem \{id = fireball_explosion}
-	killspawnedscript \{name = rockout_fireball_explosion}
-	killspawnedscript \{name = rockout_create_brick_particles}
-	killspawnedscript \{name = rockout_check_screen_collisions}
+	KillSpawnedScript \{name = rockout_brick_spawner}
+	Destroy2DParticleSystem \{id = ball_particles}
+	Destroy2DParticleSystem \{id = fireball_particles}
+	Destroy2DParticleSystem \{id = fireball_explosion}
+	KillSpawnedScript \{name = rockout_fireball_explosion}
+	KillSpawnedScript \{name = rockout_create_brick_particles}
+	KillSpawnedScript \{name = rockout_check_screen_collisions}
 	rockout_cleanup_brick_particles
 	rockout_kill_bricks
 	unload_songqpak
-	spawnscript \{rockout_check_screen_collisions
+	SpawnScript \{rockout_check_screen_collisions
 		params = {
 			id = ball_container
 		}}
@@ -620,29 +620,29 @@ script rockout_paddle_highlight \{unhighlight = 0
 		with_strum = 0
 		player = 1
 		no_pos_morph = 0}
-	formattext checksumname = paddle_id 'paddle_p%p_%y' p = <player> y = <paddle>
-	getscreenelementprops id = <paddle_id>
+	FormatText checksumname = paddle_id 'paddle_p%p_%y' p = <player> y = <paddle>
+	GetScreenElementProps id = <paddle_id>
 	if (<unhighlight> = 0)
 		if (<with_strum> = 0)
-			setscreenelementprops id = <paddle_id> rgba = (($g_brick_colors [<paddle>]).color)
+			SetScreenElementProps id = <paddle_id> rgba = (($g_brick_colors [<paddle>]).color)
 		else
-			setscreenelementprops id = <paddle_id> rgba = (($g_brick_colors [<paddle>]).color) alpha = 1.0
+			SetScreenElementProps id = <paddle_id> rgba = (($g_brick_colors [<paddle>]).color) alpha = 1.0
 			spawnscriptnow rockout_do_speaker_punch params = {paddle = <paddle> player = <player>}
 		endif
 	else
 		if (<no_pos_morph> = 1)
-			setscreenelementprops id = <paddle_id> rgba = [255 255 255 255] alpha = 0.25
+			SetScreenElementProps id = <paddle_id> rgba = [255 255 255 255] alpha = 0.25
 		else
 			if (<player> = 1)
 				<new_pos> = (($g_initial_paddle_pos_left) + ((<paddle> * (95)) * (0.0, 1.0)))
 			else
 				<new_pos> = (($g_initial_paddle_pos_right) + ((<paddle> * (95)) * (0.0, 1.0)))
 			endif
-			formattext checksumname = paddle_toggle 'g_battle_paddle_toggle_p%p' p = <player>
+			FormatText checksumname = paddle_toggle 'g_battle_paddle_toggle_p%p' p = <player>
 			if ($<paddle_toggle> [<paddle>] = 1)
-				setscreenelementprops id = <paddle_id> rgba = (($g_brick_colors [<paddle>]).color) alpha = 0.25 pos = <new_pos>
+				SetScreenElementProps id = <paddle_id> rgba = (($g_brick_colors [<paddle>]).color) alpha = 0.25 pos = <new_pos>
 			else
-				setscreenelementprops id = <paddle_id> rgba = [255 255 255 255] alpha = 0.25 pos = <new_pos>
+				SetScreenElementProps id = <paddle_id> rgba = [255 255 255 255] alpha = 0.25 pos = <new_pos>
 			endif
 		endif
 	endif
@@ -650,18 +650,18 @@ endscript
 
 script rockout_do_speaker_punch \{player = 1
 		time = 0.1}
-	formattext checksumname = paddle_id 'paddle_p%p_%y' p = <player> y = <paddle>
-	getscreenelementprops id = <paddle_id>
+	FormatText checksumname = paddle_id 'paddle_p%p_%y' p = <player> y = <paddle>
+	GetScreenElementProps id = <paddle_id>
 	<initial_pos> = <pos>
 	if (<player> = 1)
 		<dist> = 30
 	else
 		<dist> = -30
 	endif
-	setscreenelementprops id = <paddle_id> pos = (<pos> + (<dist> * (1.0, 0.0))) time = <time> motion = ease_in
-	wait <time> seconds
-	setscreenelementprops id = <paddle_id> pos = (<initial_pos>) time = (<time> * 2.0) motion = ease_out
-	formattext checksumname = already_strummed 'g_player%p_already_strummed' p = <player>
+	SetScreenElementProps id = <paddle_id> pos = (<pos> + (<dist> * (1.0, 0.0))) time = <time> motion = ease_in
+	Wait <time> seconds
+	SetScreenElementProps id = <paddle_id> pos = (<initial_pos>) time = (<time> * 2.0) motion = ease_out
+	FormatText checksumname = already_strummed 'g_player%p_already_strummed' p = <player>
 	change globalname = <already_strummed> newvalue = 0
 endscript
 
@@ -670,40 +670,40 @@ script rockout_drum_hit \{button = 0
 	if (<button> < 0 || <button> > 4)
 		return
 	endif
-	formattext checksumname = button_script_id 'paddle_%p_%b_script' p = <player> b = <button>
-	formattext checksumname = already_strummed 'g_player%p_already_strummed' p = <player>
+	FormatText checksumname = button_script_id 'paddle_%p_%b_script' p = <player> b = <button>
+	FormatText checksumname = already_strummed 'g_player%p_already_strummed' p = <player>
 	if ($<already_strummed>)
 		return
 	else
 		change globalname = <already_strummed> newvalue = 1
-		killspawnedscript id = <button_script_id>
+		KillSpawnedScript id = <button_script_id>
 	endif
 	rockout_launch_ball player = <player>
-	formattext checksumname = paddle_used 'g_battle_paddle_used_p%p' p = <player>
+	FormatText checksumname = paddle_used 'g_battle_paddle_used_p%p' p = <player>
 	<i> = 0
 	begin
-	setarrayelement arrayname = <paddle_used> globalarray index = <i> newvalue = 0
+	SetArrayElement ArrayName = <paddle_used> GlobalArray index = <i> newvalue = 0
 	<i> = (<i> + 1)
 	repeat 5
-	formattext checksumname = paddle_toggle 'g_battle_paddle_toggle_p%p' p = <player>
+	FormatText checksumname = paddle_toggle 'g_battle_paddle_toggle_p%p' p = <player>
 	if (($<paddle_used> [<button>]) = 0)
 		rockout_paddle_highlight paddle = <button> with_strum = 1 player = <player>
-		setarrayelement arrayname = <paddle_toggle> globalarray index = <button> newvalue = 1
-		setarrayelement arrayname = <paddle_used> globalarray index = <button> newvalue = 1
+		SetArrayElement ArrayName = <paddle_toggle> GlobalArray index = <button> newvalue = 1
+		SetArrayElement ArrayName = <paddle_used> GlobalArray index = <button> newvalue = 1
 	endif
 	change globalname = <already_strummed> newvalue = 0
-	spawnscript rockout_kill_drum_hit params = {<...>} id = <button_script_id>
+	SpawnScript rockout_kill_drum_hit params = {<...>} id = <button_script_id>
 endscript
 
 script rockout_kill_drum_hit \{time = 0.5
 		player = 1}
-	wait <time> seconds
-	setarrayelement arrayname = <paddle_toggle> globalarray index = <button> newvalue = 0
+	Wait <time> seconds
+	SetArrayElement ArrayName = <paddle_toggle> GlobalArray index = <button> newvalue = 0
 	rockout_clear_paddle_highlights <...>
 endscript
 
 script rockout_guitar_strum \{player = 1}
-	formattext checksumname = already_strummed 'g_player%p_already_strummed' p = <player>
+	FormatText checksumname = already_strummed 'g_player%p_already_strummed' p = <player>
 	if ($<already_strummed>)
 		return
 	else
@@ -711,10 +711,10 @@ script rockout_guitar_strum \{player = 1}
 		rockout_clear_paddle_highlights <...>
 	endif
 	rockout_launch_ball player = <player>
-	formattext checksumname = paddle_used 'g_battle_paddle_used_p%p' p = <player>
+	FormatText checksumname = paddle_used 'g_battle_paddle_used_p%p' p = <player>
 	<i> = 0
 	begin
-	setarrayelement arrayname = <paddle_used> globalarray index = <i> newvalue = 0
+	SetArrayElement ArrayName = <paddle_used> GlobalArray index = <i> newvalue = 0
 	<i> = (<i> + 1)
 	repeat 5
 	<ho_time> = 0.5
@@ -724,27 +724,27 @@ script rockout_guitar_strum \{player = 1}
 		if (<open_note> = 1)
 			change globalname = <already_strummed> newvalue = 0
 		endif
-		formattext checksumname = paddle_toggle 'g_battle_paddle_toggle_p%p' p = <player>
+		FormatText checksumname = paddle_toggle 'g_battle_paddle_toggle_p%p' p = <player>
 		begin
 		<i> = 0
 		begin
 		if (($<paddle_toggle> [<i>]) = 1)
 			if (($<paddle_used> [<i>]) = 0)
 				rockout_paddle_highlight paddle = <i> with_strum = 1 player = <player>
-				setarrayelement arrayname = <paddle_used> globalarray index = <i> newvalue = 1
-				formattext checksumname = button_script_id 'paddle_%p_%b' p = <player> b = <i>
-				killspawnedscript id = <button_script_id>
-				spawnscript rockout_kill_strum params = {player = <player>} id = <button_script_id>
+				SetArrayElement ArrayName = <paddle_used> GlobalArray index = <i> newvalue = 1
+				FormatText checksumname = button_script_id 'paddle_%p_%b' p = <player> b = <i>
+				KillSpawnedScript id = <button_script_id>
+				SpawnScript rockout_kill_strum params = {player = <player>} id = <button_script_id>
 			endif
 		endif
 		<i> = (<i> + 1)
 		repeat 5
-		getdeltatime
+		GetDeltaTime
 		<elapsed_time> = (<elapsed_time> + <delta_time>)
 		if (<elapsed_time> > <ho_time>)
 			break
 		endif
-		wait \{1
+		Wait \{1
 			gameframe}
 		repeat
 	else
@@ -754,7 +754,7 @@ endscript
 
 script rockout_kill_strum \{time = 0.8
 		player = 1}
-	wait <time> seconds
+	Wait <time> seconds
 	rockout_clear_paddle_highlights <...>
 endscript
 
@@ -772,14 +772,14 @@ endscript
 
 script rockout_strum_sound \{player = 1}
 	if issoundplaying ($g_current_strum_sound)
-		stopsound ($g_current_strum_sound) fade_type = linear fade_time = $jam_fade_time
+		StopSound ($g_current_strum_sound) fade_type = linear fade_time = $jam_fade_time
 	endif
 	<rhythm> = 0
 	<lead> = 1
-	formattext checksumname = player_status 'player%p_status' p = <player>
-	getheldpattern controller = (<player> - 1) nobrokenstring
-	formattext checksumname = player_ai 'g_p%p_ai_active' p = <player>
-	formattext checksumname = player_pad 'g_battle_paddle_toggle_p%p' p = <player>
+	FormatText checksumname = player_status 'player%p_status' p = <player>
+	GetHeldPattern controller = (<player> - 1) nobrokenstring
+	FormatText checksumname = player_ai 'g_p%p_ai_active' p = <player>
+	FormatText checksumname = player_pad 'g_battle_paddle_toggle_p%p' p = <player>
 	if ($<player_ai>)
 		<hold_pattern> = 0
 		<check_pattern> = 65536
@@ -840,24 +840,24 @@ endscript
 
 script rockout_check_paddle_collisions_left 
 	begin
-	getscreenelementprops id = <id>
+	GetScreenElementProps id = <id>
 	<i> = 0
 	begin
 	<n> = (<i>)
 	if (($g_battle_paddle_toggle_p1) [<i>] = 1)
-		formattext checksumname = paddle_id 'paddle_p1_%y' y = <i>
-		getscreenelementprops id = <paddle_id>
+		FormatText checksumname = paddle_id 'paddle_p1_%y' y = <i>
+		GetScreenElementProps id = <paddle_id>
 		if (<alpha> = 1)
-			<tl> = (<pos> + $g_paddle_collision_offset)
-			<br> = (<tl> + ((($g_paddle_width) - 1) * (1.0, 0.0)) + ((($g_paddle_height) - 1) * (0.0, 1.0)))
+			<TL> = (<pos> + $g_paddle_collision_offset)
+			<bR> = (<TL> + ((($g_paddle_width) - 1) * (1.0, 0.0)) + ((($g_paddle_height) - 1) * (0.0, 1.0)))
 			begin
 			<n> = (<n> + 1)
 			if (<n> < 5)
 				if (($g_battle_paddle_toggle_p1) [<n>] = 1)
-					formattext checksumname = paddle_id 'paddle_p1_%y' y = <n>
-					getscreenelementprops id = <paddle_id>
+					FormatText checksumname = paddle_id 'paddle_p1_%y' y = <n>
+					GetScreenElementProps id = <paddle_id>
 					if (<alpha> = 1)
-						<br> = ((<pos> + $g_paddle_collision_offset) + ((($g_paddle_width) - 1) * (1.0, 0.0)) + ((($g_paddle_height) - 1) * (0.0, 1.0)))
+						<bR> = ((<pos> + $g_paddle_collision_offset) + ((($g_paddle_width) - 1) * (1.0, 0.0)) + ((($g_paddle_height) - 1) * (0.0, 1.0)))
 					endif
 				else
 					break
@@ -866,7 +866,7 @@ script rockout_check_paddle_collisions_left
 				break
 			endif
 			repeat
-			rockout_check_ball_collision tl = <tl> br = <br>
+			rockout_check_ball_collision TL = <TL> bR = <bR>
 			if (<collision>)
 				if ($g_current_ball_owner = 2)
 					rockout_set_ball_owner \{player = 1}
@@ -880,18 +880,18 @@ script rockout_check_paddle_collisions_left
 				endif
 				rockout_show_multiplier
 				if ($g_launch_collision = 1)
-					ball_container :applyforce \{force = (250000.0, 0.0)}
+					ball_container :ApplyForce \{force = (250000.0, 0.0)}
 					change \{g_launch_collision = 0}
-					wait \{0.5
+					Wait \{0.5
 						seconds}
 				else
-					getscreenelementprops \{id = ball_container}
+					GetScreenElementProps \{id = ball_container}
 					if ((<linear_velocity> [1] < 10) && (<linear_velocity> [1] > -10))
 						<force> = ((0.0, 10000.0) * <linear_velocity> [1])
-						ball_container :applyforce force = <force>
+						ball_container :ApplyForce force = <force>
 					endif
-					ball_container :applyforce \{force = (50000.0, 0.0)}
-					wait \{0.5
+					ball_container :ApplyForce \{force = (50000.0, 0.0)}
+					Wait \{0.5
 						seconds}
 				endif
 			endif
@@ -902,29 +902,29 @@ script rockout_check_paddle_collisions_left
 		break
 	endif
 	repeat 5
-	wait \{1
+	Wait \{1
 		gameframe}
 	repeat
 endscript
 
 script rockout_check_paddle_collisions_right 
 	begin
-	getscreenelementprops id = <id>
+	GetScreenElementProps id = <id>
 	<i> = 0
 	begin
 	<n> = (<i>)
 	if (($g_battle_paddle_toggle_p2) [<i>] = 1)
-		formattext checksumname = paddle_id 'paddle_p2_%y' y = <i>
-		getscreenelementprops id = <paddle_id>
-		<tl> = (<pos> + $g_paddle_collision_offset)
-		<br> = (<tl> + ((($g_paddle_width) - 1) * (1.0, 0.0)) + ((($g_paddle_height) - 1) * (0.0, 1.0)))
+		FormatText checksumname = paddle_id 'paddle_p2_%y' y = <i>
+		GetScreenElementProps id = <paddle_id>
+		<TL> = (<pos> + $g_paddle_collision_offset)
+		<bR> = (<TL> + ((($g_paddle_width) - 1) * (1.0, 0.0)) + ((($g_paddle_height) - 1) * (0.0, 1.0)))
 		begin
 		<n> = (<n> + 1)
 		if (<n> < 5)
 			if (($g_battle_paddle_toggle_p2) [<n>] = 1)
-				formattext checksumname = paddle_id 'paddle_p2_%y' y = <n>
-				getscreenelementprops id = <paddle_id>
-				<br> = ((<pos> + $g_paddle_collision_offset) + ((($g_paddle_width) - 1) * (1.0, 0.0)) + ((($g_paddle_height) - 1) * (0.0, 1.0)))
+				FormatText checksumname = paddle_id 'paddle_p2_%y' y = <n>
+				GetScreenElementProps id = <paddle_id>
+				<bR> = ((<pos> + $g_paddle_collision_offset) + ((($g_paddle_width) - 1) * (1.0, 0.0)) + ((($g_paddle_height) - 1) * (0.0, 1.0)))
 			else
 				break
 			endif
@@ -932,7 +932,7 @@ script rockout_check_paddle_collisions_right
 			break
 		endif
 		repeat
-		rockout_check_ball_collision tl = <tl> br = <br>
+		rockout_check_ball_collision TL = <TL> bR = <bR>
 		if (<collision>)
 			if ($g_current_ball_owner = 1)
 				rockout_set_ball_owner \{player = 2}
@@ -946,18 +946,18 @@ script rockout_check_paddle_collisions_right
 			endif
 			rockout_show_multiplier
 			if ($g_launch_collision = 1)
-				ball_container :applyforce \{force = (-250000.0, 0.0)}
+				ball_container :ApplyForce \{force = (-250000.0, 0.0)}
 				change \{g_launch_collision = 0}
-				wait \{0.5
+				Wait \{0.5
 					seconds}
 			else
-				getscreenelementprops \{id = ball_container}
+				GetScreenElementProps \{id = ball_container}
 				if ((<linear_velocity> [1] < 10) && (<linear_velocity> [1] > -10))
 					<force> = ((0.0, 10000.0) * <linear_velocity> [1])
-					ball_container :applyforce force = <force>
+					ball_container :ApplyForce force = <force>
 				endif
-				ball_container :applyforce \{force = (-50000.0, 0.0)}
-				wait \{0.5
+				ball_container :ApplyForce \{force = (-50000.0, 0.0)}
+				Wait \{0.5
 					seconds}
 			endif
 		endif
@@ -967,30 +967,30 @@ script rockout_check_paddle_collisions_right
 		break
 	endif
 	repeat 5
-	wait \{1
+	Wait \{1
 		gameframe}
 	repeat
 endscript
 
 script rockout_initialize_rockout \{lives = 3}
-	if screenelementexists \{id = brick_container}
-		destroyscreenelement \{id = brick_container}
+	if ScreenElementExists \{id = brick_container}
+		DestroyScreenElement \{id = brick_container}
 	endif
 	change \{g_player1_score = 0}
 	change \{g_player2_score = 0}
 	change \{g_player1_goals = 0}
 	change \{g_player2_goals = 0}
 	rockout_set_ball_owner \{player = 1}
-	formattext textname = score_text qs(0x21379b76) n = ($g_player1_score)
-	setscreenelementprops id = p1_score text = <score_text>
-	formattext textname = score_text qs(0x21379b76) n = ($g_player2_score)
-	setscreenelementprops id = p2_score text = <score_text>
-	formattext textname = score_text qs(0x978cefda) n = (<lives>)
-	setscreenelementprops id = p1_lives text = <score_text>
-	paddle_container_p1 :settags lives = <lives>
-	formattext textname = score_text qs(0x978cefda) n = (<lives>)
-	setscreenelementprops id = p2_lives text = <score_text>
-	paddle_container_p2 :settags lives = <lives>
+	FormatText TextName = score_text qs("SCORE: %n") n = ($g_player1_score)
+	SetScreenElementProps id = p1_score text = <score_text>
+	FormatText TextName = score_text qs("SCORE: %n") n = ($g_player2_score)
+	SetScreenElementProps id = p2_score text = <score_text>
+	FormatText TextName = score_text qs("LIVES: %n") n = (<lives>)
+	SetScreenElementProps id = p1_lives text = <score_text>
+	paddle_container_p1 :SetTags lives = <lives>
+	FormatText TextName = score_text qs("LIVES: %n") n = (<lives>)
+	SetScreenElementProps id = p2_lives text = <score_text>
+	paddle_container_p2 :SetTags lives = <lives>
 	change \{g_bricks_hit = 0}
 	spawnscriptnow \{rockout_initialize_ball}
 	spawnscriptnow \{rockout_brick_spawner}
@@ -1002,11 +1002,11 @@ script rockout_initialize_ball \{player = 1}
 	change \{g_points_multiplier = 0}
 	rockout_deactivate_fireball
 	if (<player> = 1)
-		setscreenelementprops id = ball_container pos = ($g_initial_ball_pos_l)
+		SetScreenElementProps id = ball_container pos = ($g_initial_ball_pos_L)
 	else
-		setscreenelementprops id = ball_container pos = ($g_initial_ball_pos_r)
+		SetScreenElementProps id = ball_container pos = ($g_initial_ball_pos_R)
 	endif
-	ball_container :applyforce \{force = (0.0, -300000.0)}
+	ball_container :ApplyForce \{force = (0.0, -300000.0)}
 	change \{g_launch_collision = 1}
 	rockout_create_ball_particles
 endscript
@@ -1015,14 +1015,14 @@ script rockout_launch_ball \{player = 1}
 	if (($g_launched) = 0)
 		if ($g_current_ball_owner = <player>)
 			clean_up_user_control_helpers
-			killspawnedscript \{name = rockout_initialize_ball}
+			KillSpawnedScript \{name = rockout_initialize_ball}
 			change \{g_launched = 1}
 		endif
 	endif
 endscript
 
 script rockout_create_bricks 
-	createscreenelement \{type = containerelement
+	CreateScreenElement \{type = ContainerElement
 		id = brick_container
 		parent = rockout_container
 		pos = (0.0, 0.0)}
@@ -1030,10 +1030,10 @@ script rockout_create_bricks
 	begin
 	<x> = 0
 	begin
-	formattext checksumname = brick_id 'brick_%x_%y' x = <x> y = <y>
+	FormatText checksumname = brick_id 'brick_%x_%y' x = <x> y = <y>
 	<new_pos> = (($g_initial_brick_pos) + ((<x> * ($g_brick_width + $g_brick_spacing)) * (1.0, 0.0)) + ((<y> * ($g_brick_height + $g_brick_spacing)) * (0.0, 1.0)))
-	createscreenelement {
-		type = spriteelement
+	CreateScreenElement {
+		type = SpriteElement
 		id = <brick_id>
 		parent = brick_container
 		texture = rockout_brick
@@ -1061,24 +1061,24 @@ script rockout_brick_spawner \{move_time = 1.0
 	<old_column> = 0
 	load_songqpak song_name = <song>
 	get_song_prefix song = <song>
-	formattext checksumname = gem_array '%s_song_expert' s = <song_prefix>
-	preload_song song_name = <song> starttime = 0 fadeintime = 1.0
+	FormatText checksumname = gem_array '%s_song_expert' s = <song_prefix>
+	preload_song song_name = <song> StartTime = 0 fadeintime = 1.0
 	begin_song
-	getarraysize $<gem_array>
+	GetArraySize $<gem_array>
 	<i> = 0
 	<current_song_time> = 0
 	<move_time> = ($<gem_array> [0] / 1000)
 	reset_song_time
 	begin
-	getsongtimems
+	GetSongTimeMs
 	if (<time> >= $<gem_array> [<i>])
 		<c> = 0
 		begin
-		formattext checksumname = column_used 'g_used_%c' c = <c>
+		FormatText checksumname = column_used 'g_used_%c' c = <c>
 		change globalname = <column_used> newvalue = 0
 		<c> = (<c> + 1)
 		repeat 5
-		decompressnotevalue note_value = ($<gem_array> [<i> + 1])
+		DecompressNoteValue note_value = ($<gem_array> [<i> + 1])
 		<current_song_time> = ($<gem_array> [<i>])
 		<c> = 0
 		<note_check> = 1
@@ -1092,13 +1092,13 @@ script rockout_brick_spawner \{move_time = 1.0
 		repeat 5
 		<i> = (<i> + 2)
 	endif
-	wait \{1
+	Wait \{1
 		gameframe}
 	if (<i> > <array_size> - 1)
 		break
 	endif
 	repeat
-	wait \{2
+	Wait \{2
 		seconds}
 	unload_songqpak
 	repeat
@@ -1109,29 +1109,29 @@ script rockout_fall_brick \{move_time = 0.15
 	<y> = 0
 	begin
 	if (<y> > 0)
-		formattext checksumname = brick_id 'brick_%x_%y' x = <column> y = (<y> - 1)
-		setscreenelementprops id = <brick_id> alpha = 0.0
-		<brick_id> :gettags hit
+		FormatText checksumname = brick_id 'brick_%x_%y' x = <column> y = (<y> - 1)
+		SetScreenElementProps id = <brick_id> alpha = 0.0
+		<brick_id> :GetTags hit
 		if (<hit> = 1)
 			return
 		endif
 	endif
 	if (<y> < 6)
-		formattext checksumname = brick_id 'brick_%x_%y' x = <column> y = <y>
-		setscreenelementprops id = <brick_id> alpha = 1.0 time = <appear_time>
-		<brick_id> :settags hit = 0
+		FormatText checksumname = brick_id 'brick_%x_%y' x = <column> y = <y>
+		SetScreenElementProps id = <brick_id> alpha = 1.0 time = <appear_time>
+		<brick_id> :SetTags hit = 0
 	endif
-	wait <move_time> seconds
+	Wait <move_time> seconds
 	<y> = (<y> + 1)
 	repeat 7
 endscript
 
-script rockout_create_ball_particles z_priority = 3 pos = ($g_initial_ball_pos_l) parent = ball_container
-	destroy2dparticlesystem \{id = ball_particles}
-	create2dparticlesystem \{id = ball_particles
+script rockout_create_ball_particles z_priority = 3 pos = ($g_initial_ball_pos_L) parent = ball_container
+	Destroy2DParticleSystem \{id = ball_particles}
+	Create2DParticleSystem \{id = ball_particles
 		pos = (32.0, 32.0)
 		z_priority = 32
-		material = ball_particle_01
+		material = Ball_Particle_01
 		parent = ball_container
 		start_color = [
 			255
@@ -1166,20 +1166,20 @@ script rockout_check_brick_collisions
 	begin
 	<x> = 0
 	begin
-	formattext checksumname = brick_id 'brick_%x_%y' x = <x> y = <y>
-	getscreenelementprops id = <brick_id>
+	FormatText checksumname = brick_id 'brick_%x_%y' x = <x> y = <y>
+	GetScreenElementProps id = <brick_id>
 	if NOT (<alpha> = 0)
-		<tl> = (<pos> + $g_brick_collision_offset)
-		<br> = (<tl> + ((($g_brick_width) - 1) * (1.0, 0.0)) + ((($g_brick_height) - 1) * (0.0, 1.0)))
-		ball_container :gettags
+		<TL> = (<pos> + $g_brick_collision_offset)
+		<bR> = (<TL> + ((($g_brick_width) - 1) * (1.0, 0.0)) + ((($g_brick_height) - 1) * (0.0, 1.0)))
+		ball_container :GetTags
 		if (<fireball_active>)
-			rockout_check_ball_collision tl = <tl> br = <br> preserve_momentum = 1
+			rockout_check_ball_collision TL = <TL> bR = <bR> preserve_momentum = 1
 		else
-			rockout_check_ball_collision tl = <tl> br = <br>
+			rockout_check_ball_collision TL = <TL> bR = <bR>
 		endif
 		if (<collision>)
-			setscreenelementprops id = <brick_id> alpha = 0
-			<brick_id> :settags hit = 1
+			SetScreenElementProps id = <brick_id> alpha = 0
+			<brick_id> :SetTags hit = 1
 			change g_bricks_hit = (($g_bricks_hit) + 1)
 			rockout_calculate_score \{type = 'brick'}
 			if ($g_current_ball_owner = 1)
@@ -1187,29 +1187,29 @@ script rockout_check_brick_collisions
 			else
 				rockout_add_to_score player = 2 amount = (<score>)
 			endif
-			spawnscript rockout_show_score_popup params = {brick_pos = <pos> brick_color = <rgba> score = <score>}
-			<bass> = 2
+			SpawnScript rockout_show_score_popup params = {brick_pos = <pos> brick_color = <rgba> score = <score>}
+			<Bass> = 2
 		endif
 	endif
 	<x> = (<x> + 1)
 	repeat ($g_num_columns)
 	<y> = (<y> + 1)
 	repeat ($g_num_rows)
-	wait \{1
+	Wait \{1
 		gameframe}
 	repeat
 endscript
 
 script rockout_check_screen_collisions 
 	begin
-	<tl> = (0.0, 150.0)
-	<br> = (1280.0, 656.0)
-	<id> :circleaabbcollisioncheck tl = <tl> br = <br>
-	getscreenelementprops \{id = ball_container}
+	<TL> = (0.0, 150.0)
+	<bR> = (1280.0, 656.0)
+	<id> :CircleAABBCollisionCheck TL = <TL> bR = <bR>
+	GetScreenElementProps \{id = ball_container}
 	<ball_center> = (<pos> + (31.0, 31.0))
-	if ((<ball_center> [1] < (<tl> [1] - 10)) || (<ball_center> [1] > (<br> [1] + 10)))
+	if ((<ball_center> [1] < (<TL> [1] - 10)) || (<ball_center> [1] > (<bR> [1] + 10)))
 		change \{g_points_multiplier = 0}
-		killspawnedscript \{name = rockout_initialize_ball}
+		KillSpawnedScript \{name = rockout_initialize_ball}
 		if ($g_current_ball_owner = 1)
 			rockout_set_ball_owner \{player = 2}
 			spawnscriptnow \{rockout_initialize_ball
@@ -1224,7 +1224,7 @@ script rockout_check_screen_collisions
 				}}
 		endif
 	endif
-	if (<ball_center> [0] > (<br> [0] - 175))
+	if (<ball_center> [0] > (<bR> [0] - 175))
 		if ($g_current_ball_owner = 2)
 			change \{g_points_multiplier = 1}
 		endif
@@ -1232,21 +1232,21 @@ script rockout_check_screen_collisions
 		rockout_set_ball_owner \{player = 1}
 		rockout_add_to_score player = 1 amount = (<score>)
 		rockout_add_goal \{player = 1}
-		spawnscript \{rockout_update_lives
+		SpawnScript \{rockout_update_lives
 			params = {
 				player = 2
 				adjustment = -1
 			}}
-		spawnscript rockout_show_goal_popup params = {score = <score>}
+		SpawnScript rockout_show_goal_popup params = {score = <score>}
 		change \{g_points_multiplier = 0}
-		wait \{1.5
+		Wait \{1.5
 			seconds}
-		killspawnedscript \{name = rockout_initialize_ball}
+		KillSpawnedScript \{name = rockout_initialize_ball}
 		spawnscriptnow \{rockout_initialize_ball
 			params = {
 				player = 1
 			}}
-	elseif (<ball_center> [0] < (<tl> [0] + 175))
+	elseif (<ball_center> [0] < (<TL> [0] + 175))
 		if ($g_current_ball_owner = 1)
 			change \{g_points_multiplier = 1}
 		endif
@@ -1254,22 +1254,22 @@ script rockout_check_screen_collisions
 		rockout_set_ball_owner \{player = 2}
 		rockout_add_to_score player = 2 amount = (<score>)
 		rockout_add_goal \{player = 2}
-		spawnscript \{rockout_update_lives
+		SpawnScript \{rockout_update_lives
 			params = {
 				player = 1
 				adjustment = -1
 			}}
-		spawnscript rockout_show_goal_popup params = {score = <score>}
+		SpawnScript rockout_show_goal_popup params = {score = <score>}
 		change \{g_points_multiplier = 0}
-		wait \{1.5
+		Wait \{1.5
 			seconds}
-		killspawnedscript \{name = rockout_initialize_ball}
+		KillSpawnedScript \{name = rockout_initialize_ball}
 		spawnscriptnow \{rockout_initialize_ball
 			params = {
 				player = 2
 			}}
 	endif
-	wait \{1
+	Wait \{1
 		gameframe}
 	repeat
 endscript
@@ -1278,36 +1278,36 @@ script rockout_add_to_score \{player = 1
 		amount = 0}
 	if (<player> = 1)
 		change g_player1_score = ($g_player1_score + <amount>)
-		formattext textname = score_text qs(0x21379b76) n = ($g_player1_score)
-		setscreenelementprops id = p1_score text = <score_text>
+		FormatText TextName = score_text qs("SCORE: %n") n = ($g_player1_score)
+		SetScreenElementProps id = p1_score text = <score_text>
 	else
 		change g_player2_score = ($g_player2_score + <amount>)
-		formattext textname = score_text qs(0x21379b76) n = ($g_player2_score)
-		setscreenelementprops id = p2_score text = <score_text>
+		FormatText TextName = score_text qs("SCORE: %n") n = ($g_player2_score)
+		SetScreenElementProps id = p2_score text = <score_text>
 	endif
 endscript
 
 script rockout_set_ball_owner \{player = 1}
 	if (<player> = 1)
-		setscreenelementprops id = ball rgba = (($g_menu_colors).p1_orangey)
+		SetScreenElementProps id = ball rgba = (($g_menu_colors).p1_orangey)
 		change \{g_current_ball_owner = 1}
 	elseif (<player> = 2)
-		setscreenelementprops id = ball rgba = (($g_menu_colors).p2_purpley)
+		SetScreenElementProps id = ball rgba = (($g_menu_colors).p2_purpley)
 		change \{g_current_ball_owner = 2}
 	endif
 endscript
 
-script rockout_create_debug_collision_rect \{tl = (0.0, 0.0)
-		br = (0.0, 0.0)}
-	w = (<br>.(1.0, 0.0) - <tl>.(1.0, 0.0))
-	h = (<br>.(0.0, 1.0) - <tl>.(0.0, 1.0))
+script rockout_create_debug_collision_rect \{TL = (0.0, 0.0)
+		bR = (0.0, 0.0)}
+	w = (<bR>.(1.0, 0.0) - <TL>.(1.0, 0.0))
+	h = (<bR>.(0.0, 1.0) - <TL>.(0.0, 1.0))
 	dims = (<w> * (1.0, 0.0) + <h> * (0.0, 1.0))
-	createscreenelement {
-		type = spriteelement
+	CreateScreenElement {
+		type = SpriteElement
 		parent = rockout_container
 		rgba = [0 255 0 25]
 		texture = white
-		pos = (<tl>)
+		pos = (<TL>)
 		dims = <dims>
 		just = [left top]
 		z_priority = 31000
@@ -1318,15 +1318,15 @@ script rockout_display_ball_velocity
 	<time> = 1.0
 	<elapsed_time> = 0
 	begin
-	getdeltatime
+	GetDeltaTime
 	<elapsed_time> = (<elapsed_time> + <delta_time>)
 	if (<elapsed_time> > <time>)
-		getscreenelementprops \{id = ball_container}
-		setscreenelementprops \{id = ball_container
+		GetScreenElementProps \{id = ball_container}
+		SetScreenElementProps \{id = ball_container
 			linear_velocity = (0.0, 0.0)}
 		<elapsed_time> = 0
 	endif
-	wait \{1
+	Wait \{1
 		gameframe}
 	repeat
 endscript
@@ -1334,8 +1334,8 @@ endscript
 script rockout_show_score_popup brick_pos = (900.0, 900.0) brick_color = (($g_menu_colors).p2_purpley) score = ($g_points_per_brick)
 	<i> = 1
 	begin
-	formattext checksumname = element_id 'brick_hit_score_%n' n = <i>
-	if screenelementexists id = <element_id>
+	FormatText checksumname = element_id 'brick_hit_score_%n' n = <i>
+	if ScreenElementExists id = <element_id>
 		<i> = (<i> + 1)
 	else
 		break
@@ -1345,10 +1345,10 @@ script rockout_show_score_popup brick_pos = (900.0, 900.0) brick_color = (($g_me
 	endif
 	repeat
 	<brick_center> = (<brick_pos> + ($g_brick_width / 2) * (1.0, 0.0) + ($g_brick_height / 2) * (0.0, 1.0))
-	spawnscript rockout_create_brick_particles params = {pos = <brick_center> color = <brick_color>}
-	formattext textname = brick_hit_score_text qs(0x4fc4b28c) n = <score>
-	createscreenelement {
-		type = textelement
+	SpawnScript rockout_create_brick_particles params = {pos = <brick_center> color = <brick_color>}
+	FormatText TextName = brick_hit_score_text qs("+%n") n = <score>
+	CreateScreenElement {
+		type = TextElement
 		id = <element_id>
 		parent = rockout_container
 		rgba = (<brick_color>)
@@ -1358,24 +1358,24 @@ script rockout_show_score_popup brick_pos = (900.0, 900.0) brick_color = (($g_me
 		just = [center center]
 		z_priority = 31
 	}
-	runscriptonscreenelement id = <element_id> rockout_popup_move_to_score params = {element_id = <element_id>}
+	RunScriptOnScreenElement id = <element_id> rockout_popup_move_to_score params = {element_id = <element_id>}
 endscript
 
 script rockout_show_multiplier \{ball_pos = (400.0, 400.0)}
 	if ($g_points_multiplier = 1)
 		return
 	endif
-	if screenelementexists \{id = multiplier_popup}
-		destroyscreenelement \{id = multiplier_popup}
+	if ScreenElementExists \{id = multiplier_popup}
+		DestroyScreenElement \{id = multiplier_popup}
 	endif
-	getscreenelementprops \{id = ball_container}
+	GetScreenElementProps \{id = ball_container}
 	<ball_pos> = <pos>
-	getscreenelementprops \{id = rockout_container}
+	GetScreenElementProps \{id = rockout_container}
 	<rockout_pos> = <pos>
 	<ball_center> = (<ball_pos> + <rockout_pos> + (31.0, 31.0))
-	formattext textname = current_multiplier qs(0x2543b917) n = ($g_points_multiplier)
-	createscreenelement {
-		type = textelement
+	FormatText TextName = current_multiplier qs("%nx") n = ($g_points_multiplier)
+	CreateScreenElement {
+		type = TextElement
 		id = multiplier_popup
 		parent = rockout_container
 		rgba = [255 255 255 255]
@@ -1385,7 +1385,7 @@ script rockout_show_multiplier \{ball_pos = (400.0, 400.0)}
 		just = [center center]
 		z_priority = 31
 	}
-	runscriptonscreenelement \{id = multiplier_popup
+	RunScriptOnScreenElement \{id = multiplier_popup
 		rockout_popup_rise_and_fade
 		params = {
 			element_id = multiplier_popup
@@ -1393,15 +1393,15 @@ script rockout_show_multiplier \{ball_pos = (400.0, 400.0)}
 endscript
 
 script rockout_show_goal_popup score = ($g_points_per_goal)
-	if screenelementexists \{id = goal_popup}
-		destroyscreenelement \{id = goal_popup}
+	if ScreenElementExists \{id = goal_popup}
+		DestroyScreenElement \{id = goal_popup}
 	endif
-	formattext textname = score qs(0xd97d3750) n = (<score>)
-	getscreenelementprops \{id = ball_container}
+	FormatText TextName = score qs("+%n!!!") n = (<score>)
+	GetScreenElementProps \{id = ball_container}
 	<ball_pos> = <pos>
 	<ball_center> = (<ball_pos> + (31.0, 31.0))
-	createscreenelement {
-		type = textelement
+	CreateScreenElement {
+		type = TextElement
 		id = goal_popup
 		parent = rockout_container
 		rgba = [255 255 255 255]
@@ -1411,7 +1411,7 @@ script rockout_show_goal_popup score = ($g_points_per_goal)
 		just = [center center]
 		z_priority = 31
 	}
-	runscriptonscreenelement \{id = goal_popup
+	RunScriptOnScreenElement \{id = goal_popup
 		rockout_popup_move_to_score
 		params = {
 			element_id = goal_popup
@@ -1423,26 +1423,26 @@ endscript
 script rockout_popup_rise_and_fade \{element_id = rockout_score_popup_1
 		rise = 50
 		time = 0.5}
-	if screenelementexists id = <element_id>
-		getscreenelementprops id = <element_id>
+	if ScreenElementExists id = <element_id>
+		GetScreenElementProps id = <element_id>
 		<end_pos> = ((<pos>) + (0.0, -1.0) * <rise>)
-		legacydoscreenelementmorph id = <element_id> pos = <end_pos> alpha = 0 scale = 1.3 time = <time>
-		wait <time> seconds
-		destroyscreenelement id = <element_id>
+		LegacyDoScreenElementMorph id = <element_id> pos = <end_pos> alpha = 0 scale = 1.3 time = <time>
+		Wait <time> seconds
+		DestroyScreenElement id = <element_id>
 	endif
 endscript
 
 script rockout_popup_move_to_score \{element_id = rockout_score_popup_1
 		time = 1}
-	if screenelementexists id = <element_id>
+	if ScreenElementExists id = <element_id>
 		if ($g_current_ball_owner = 1)
 			<end_pos> = (350.0, 50.0)
 		else
 			<end_pos> = (950.0, 50.0)
 		endif
-		legacydoscreenelementmorph id = <element_id> pos = <end_pos> alpha = 0 scale = 0.8 time = <time>
-		wait <time> seconds
-		destroyscreenelement id = <element_id>
+		LegacyDoScreenElementMorph id = <element_id> pos = <end_pos> alpha = 0 scale = 0.8 time = <time>
+		Wait <time> seconds
+		DestroyScreenElement id = <element_id>
 	endif
 endscript
 
@@ -1468,131 +1468,131 @@ endscript
 script rockout_update_lives \{player = 1
 		adjustment = -1}
 	if (<player> = 1)
-		paddle_container_p1 :gettags
+		paddle_container_p1 :GetTags
 		<lives> = (<lives> + <adjustment>)
-		formattext textname = score_text qs(0x978cefda) n = (<lives>)
-		setscreenelementprops id = p1_lives text = <score_text>
-		paddle_container_p1 :settags lives = <lives>
+		FormatText TextName = score_text qs("LIVES: %n") n = (<lives>)
+		SetScreenElementProps id = p1_lives text = <score_text>
+		paddle_container_p1 :SetTags lives = <lives>
 	else
-		paddle_container_p2 :gettags
+		paddle_container_p2 :GetTags
 		<lives> = (<lives> + <adjustment>)
-		formattext textname = score_text qs(0x978cefda) n = (<lives>)
-		setscreenelementprops id = p2_lives text = <score_text>
-		paddle_container_p2 :settags lives = <lives>
+		FormatText TextName = score_text qs("LIVES: %n") n = (<lives>)
+		SetScreenElementProps id = p2_lives text = <score_text>
+		paddle_container_p2 :SetTags lives = <lives>
 	endif
 	if (<lives> < 1)
 		if (<player> = 1)
-			<victory_text> = qs(0x1fb2fb39)
+			<victory_text> = qs("PLAYER 2 WINS!")
 		else
-			<victory_text> = qs(0x63d3dee2)
+			<victory_text> = qs("PLAYER 1 WINS!")
 		endif
 		create_popup_warning_menu {
 			no_background
-			title = qs(0x0cd55360)
+			title = qs("VICTORY")
 			textblock = {
 				text = <victory_text>
 			}
 			options = [
 				{
 					func = {rockout_restart_game}
-					text = qs(0xdc30b4a9)
+					text = qs("NEW GAME")
 				}
 				{
 					func = {rockout_quit_game}
-					text = qs(0x67d9c56d)
+					text = qs("QUIT")
 				}
 			]
 		}
-		setscreenelementprops \{id = ball_container
+		SetScreenElementProps \{id = ball_container
 			linear_momentum = (0.0, 0.0)}
-		setscreenelementprops \{id = ball_container
+		SetScreenElementProps \{id = ball_container
 			linear_velocity = (0.0, 0.0)}
-		begin_song \{pause = 1}
-		pausegame
+		begin_song \{Pause = 1}
+		PauseGame
 	endif
 endscript
 
 script rockout_pause_game 
-	if NOT gameispaused
-		getscreenelementprops \{id = ball_container}
+	if NOT GameIsPaused
+		GetScreenElementProps \{id = ball_container}
 		create_popup_warning_menu {
 			no_background
-			title = qs(0x48a351fa)
+			title = qs("PAUSE")
 			textblock = {
-				text = qs(0x4e0fcb7a)
+				text = qs("Game Paused")
 			}
 			options = [
 				{
 					func = {rockout_unpause_game}
 					func_params = {momentum = <linear_momentum> velocity = <linear_velocity>}
-					text = qs(0x4f636726)
+					text = qs("RESUME")
 				}
 				{
 					func = {rockout_restart_game}
-					text = qs(0xb8790f2f)
+					text = qs("RESTART")
 				}
 				{
 					func = {rockout_quit_game}
-					text = qs(0x67d9c56d)
+					text = qs("QUIT")
 				}
 			]
 		}
-		setscreenelementprops \{id = ball_container
+		SetScreenElementProps \{id = ball_container
 			linear_momentum = (0.0, 0.0)}
-		setscreenelementprops \{id = ball_container
+		SetScreenElementProps \{id = ball_container
 			linear_velocity = (0.0, 0.0)}
-		begin_song \{pause = 1}
-		pausegame
+		begin_song \{Pause = 1}
+		PauseGame
 	endif
 endscript
 
 script rockout_unpause_game 
-	unpausegame
+	UnPauseGame
 	begin_song
 	destroy_popup_warning_menu
 	create_menu_backdrop \{texture = rockout_bg}
-	setscreenelementprops id = ball_container linear_momentum = <momentum>
-	setscreenelementprops id = ball_container linear_velocity = <velocity>
+	SetScreenElementProps id = ball_container linear_momentum = <momentum>
+	SetScreenElementProps id = ball_container linear_velocity = <velocity>
 endscript
 
 script rockout_quit_game 
-	unpausegame
+	UnPauseGame
 	destroy_popup_warning_menu
 	generic_event_back
 endscript
 
 script rockout_ai \{player = 2}
-	formattext checksumname = ai_id 'g_p%s_ai_active' s = <player>
+	FormatText checksumname = ai_id 'g_p%s_ai_active' s = <player>
 	change globalname = <ai_id> newvalue = 1
 	begin
 	<strum> = 0
-	getscreenelementprops \{id = ball_container}
+	GetScreenElementProps \{id = ball_container}
 	if (($g_current_ball_owner = <player>) && (<linear_velocity> [0] = 0))
 		<delay> = RandomFloat (2.0, 5.0)
-		wait <delay> seconds
+		Wait <delay> seconds
 	endif
-	getscreenelementprops \{id = ball_container}
+	GetScreenElementProps \{id = ball_container}
 	<ball_pos> = <pos>
 	<ball_center> = (<ball_pos> + (32.0, 32.0))
 	<i> = 0
 	begin
-	formattext checksumname = paddle_id 'paddle_p%s_%y' s = <player> y = <i>
-	formattext checksumname = paddle_container_id 'paddle_container_p%s' s = <player>
-	formattext checksumname = paddle_array_id 'g_battle_paddle_toggle_p%s' s = <player>
-	getscreenelementprops id = <paddle_container_id>
+	FormatText checksumname = paddle_id 'paddle_p%s_%y' s = <player> y = <i>
+	FormatText checksumname = paddle_container_id 'paddle_container_p%s' s = <player>
+	FormatText checksumname = paddle_array_id 'g_battle_paddle_toggle_p%s' s = <player>
+	GetScreenElementProps id = <paddle_container_id>
 	<paddle_container_pos> = <pos>
-	getscreenelementposition id = <paddle_id>
-	<paddle_tl> = (<screenelementpos> + $g_paddle_collision_offset)
-	<paddle_br> = (<paddle_tl> + ((($g_paddle_width) - 1) * (1.0, 0.0)) + ((($g_paddle_height) - 1) * (0.0, 1.0)))
-	<tl> = (<paddle_tl> - (48.0, 32.0) - (<linear_velocity> / ($framerate_value)))
-	<br> = (<paddle_br> + (48.0, 32.0) - (<linear_velocity> / ($framerate_value)))
-	if (((<tl> [0] < <ball_center> [0]) && (<br> [0] > <ball_center> [0])) || (($g_current_ball_owner = <player>) && (<linear_velocity> [0] = 0)))
-		if ((<tl> [1] < <ball_center> [1]) && (<br> [1] > <ball_center> [1]))
-			setarrayelement arrayname = <paddle_array_id> globalarray index = <i> newvalue = 1
+	GetScreenElementPosition id = <paddle_id>
+	<paddle_TL> = (<screenelementpos> + $g_paddle_collision_offset)
+	<paddle_BR> = (<paddle_TL> + ((($g_paddle_width) - 1) * (1.0, 0.0)) + ((($g_paddle_height) - 1) * (0.0, 1.0)))
+	<TL> = (<paddle_TL> - (48.0, 32.0) - (<linear_velocity> / ($framerate_value)))
+	<bR> = (<paddle_BR> + (48.0, 32.0) - (<linear_velocity> / ($framerate_value)))
+	if (((<TL> [0] < <ball_center> [0]) && (<bR> [0] > <ball_center> [0])) || (($g_current_ball_owner = <player>) && (<linear_velocity> [0] = 0)))
+		if ((<TL> [1] < <ball_center> [1]) && (<bR> [1] > <ball_center> [1]))
+			SetArrayElement ArrayName = <paddle_array_id> GlobalArray index = <i> newvalue = 1
 			spawnscriptnow rockout_drum_hit params = {player = <player> button = <i>}
 			<strum> = 1
 		else
-			setarrayelement arrayname = <paddle_array_id> globalarray index = <i> newvalue = 0
+			SetArrayElement ArrayName = <paddle_array_id> GlobalArray index = <i> newvalue = 0
 		endif
 	else
 		break
@@ -1600,10 +1600,10 @@ script rockout_ai \{player = 2}
 	<i> = (<i> + 1)
 	repeat 5
 	if (<strum>)
-		wait \{0.5
+		Wait \{0.5
 			seconds}
 	endif
-	wait \{1
+	Wait \{1
 		gameframe}
 	repeat
 endscript
@@ -1641,16 +1641,16 @@ script rockout_ball_debug
 			time = 0
 		}
 	]
-	ball :settags collision_pos = <collision_pos>
+	ball :SetTags collision_pos = <collision_pos>
 	begin
-	formattext checksumname = element_id 'debug_ball_path_node_%n' n = <i>
-	if screenelementexists id = <element_id>
-		destroyscreenelement id = <element_id>
+	FormatText checksumname = element_id 'debug_ball_path_node_%n' n = <i>
+	if ScreenElementExists id = <element_id>
+		DestroyScreenElement id = <element_id>
 	endif
-	getscreenelementprops \{id = ball_container}
+	GetScreenElementProps \{id = ball_container}
 	<ball_center> = (<pos> + (31.0, 31.0))
-	createscreenelement {
-		type = spriteelement
+	CreateScreenElement {
+		type = SpriteElement
 		id = <element_id>
 		parent = rockout_container
 		texture = rockout_ball
@@ -1663,30 +1663,30 @@ script rockout_ball_debug
 	if (<i> = <total_nodes>)
 		<i> = 0
 	endif
-	wait \{1
+	Wait \{1
 		gameframes}
 	repeat
 endscript
 
-script rockout_check_ball_collision \{br = (0.0, 0.0)
-		tl = (0.0, 0.0)
+script rockout_check_ball_collision \{bR = (0.0, 0.0)
+		TL = (0.0, 0.0)
 		preserve_momentum = 0}
-	getscreenelementprops \{id = ball_container}
-	<ball_tl> = (<pos> + (16.0, 16.0))
-	<ball_br> = (<ball_tl> + (32.0, 32.0))
+	GetScreenElementProps \{id = ball_container}
+	<ball_TL> = (<pos> + (16.0, 16.0))
+	<ball_BR> = (<ball_TL> + (32.0, 32.0))
 	<top_penetration> = 0
 	<right_penetration> = 0
 	<bottom_penetration> = 0
 	<left_penetration> = 0
 	<lowest_ratio> = 1000
 	<collision> = 0
-	if ((<tl> [1] < <ball_br> [1]) && (<br> [1] > <ball_tl> [1]))
-		if ((<tl> [0] < <ball_br> [0]) && (<br> [0] > <ball_tl> [0]))
+	if ((<TL> [1] < <ball_BR> [1]) && (<bR> [1] > <ball_TL> [1]))
+		if ((<TL> [0] < <ball_BR> [0]) && (<bR> [0] > <ball_TL> [0]))
 			<velocity_in_frames> = (<linear_velocity> / ($framerate_value))
-			<top_penetration> = (<ball_br> [1] - <tl> [1])
-			<right_penetration> = (<br> [0] - <ball_tl> [0])
-			<bottom_penetration> = (<br> [1] - <ball_tl> [1])
-			<left_penetration> = (<ball_br> [0] - <tl> [0])
+			<top_penetration> = (<ball_BR> [1] - <TL> [1])
+			<right_penetration> = (<bR> [0] - <ball_TL> [0])
+			<bottom_penetration> = (<bR> [1] - <ball_TL> [1])
+			<left_penetration> = (<ball_BR> [0] - <TL> [0])
 			if (<linear_velocity> [0] = 0)
 				if (<left_penetration> > <right_penetration>)
 					<collision> = 4
@@ -1744,23 +1744,23 @@ script rockout_check_ball_collision \{br = (0.0, 0.0)
 	if (<collision>)
 		if NOT (<preserve_momentum>)
 			<new_momentum> = (<new_velocity> [1] * (0.0, 10.0) + <new_velocity> [0] * (10.0, 0.0))
-			setscreenelementprops id = ball_container linear_velocity = <new_velocity>
-			setscreenelementprops id = ball_container linear_momentum = <new_momentum>
-			setscreenelementprops id = ball_container pos = <new_pos>
+			SetScreenElementProps id = ball_container linear_velocity = <new_velocity>
+			SetScreenElementProps id = ball_container linear_momentum = <new_momentum>
+			SetScreenElementProps id = ball_container pos = <new_pos>
 		endif
 	endif
 	return collision = <collision>
 endscript
 
 script rockout_activate_fireball 
-	ball_container :gettags
+	ball_container :GetTags
 	if NOT (<fireball_active>)
-		ball_container :settags \{fireball_active = 1}
-		destroy2dparticlesystem \{id = fireball_particles}
-		create2dparticlesystem \{id = fireball_particles
+		ball_container :SetTags \{fireball_active = 1}
+		Destroy2DParticleSystem \{id = fireball_particles}
+		Create2DParticleSystem \{id = fireball_particles
 			pos = (32.0, 32.0)
 			z_priority = 32
-			material = ball_particle_01
+			material = Ball_Particle_01
 			parent = ball_container
 			start_color = [
 				255
@@ -1787,16 +1787,16 @@ script rockout_activate_fireball
 			velocity = 0.0
 			friction = (0.0, 0.0)
 			time = 0.5}
-		spawnscript \{rockout_fireball_explosion}
+		SpawnScript \{rockout_fireball_explosion}
 	endif
 endscript
 
 script rockout_fireball_explosion 
-	destroy2dparticlesystem \{id = fireball_explosion}
-	create2dparticlesystem \{id = fireball_explosion
+	Destroy2DParticleSystem \{id = fireball_explosion}
+	Create2DParticleSystem \{id = fireball_explosion
 		pos = (32.0, 32.0)
 		z_priority = 32
-		material = ball_particle_01
+		material = Ball_Particle_01
 		parent = ball_container
 		start_color = [
 			255
@@ -1823,15 +1823,15 @@ script rockout_fireball_explosion
 		velocity = 4.0
 		friction = (0.0, 0.1)
 		time = 0.5}
-	wait \{10
+	Wait \{10
 		gameframes}
-	destroy2dparticlesystem \{id = fireball_explosion
+	Destroy2DParticleSystem \{id = fireball_explosion
 		kill_when_empty}
 endscript
 
 script rockout_deactivate_fireball 
-	ball_container :settags \{fireball_active = 0}
-	destroy2dparticlesystem \{id = fireball_particles
+	ball_container :SetTags \{fireball_active = 0}
+	Destroy2DParticleSystem \{id = fireball_particles
 		kill_when_empty}
 endscript
 
@@ -1841,24 +1841,24 @@ script rockout_create_brick_particles \{color = [
 			255
 			255
 		]}
-	rockout_container :gettags
+	rockout_container :GetTags
 	<max_num_brick_particle_systems> = 5
 	<end_color> = (<color>)
-	setarrayelement \{arrayname = end_color
+	SetArrayElement \{ArrayName = end_color
 		index = 3
 		newvalue = 100}
-	formattext checksumname = explosion_id 'brick_explosion_%y' y = <current_particle>
+	FormatText checksumname = explosion_id 'brick_explosion_%y' y = <current_particle>
 	<current_particle> = (<current_particle> + 1)
 	if (<current_particle> = <max_num_brick_particle_systems>)
 		<current_particle> = 0
 	endif
-	rockout_container :settags current_particle = <current_particle>
-	destroy2dparticlesystem id = <explosion_id>
-	create2dparticlesystem {
+	rockout_container :SetTags current_particle = <current_particle>
+	Destroy2DParticleSystem id = <explosion_id>
+	Create2DParticleSystem {
 		id = <explosion_id>
 		pos = (<pos>)
 		z_priority = 32
-		material = material_brickexplode
+		material = Material_BrickExplode
 		parent = rockout_container
 		start_color = <color>
 		end_color = <end_color>
@@ -1876,16 +1876,16 @@ script rockout_create_brick_particles \{color = [
 		friction = (0.0, 0.0)
 		time = 0.2
 	}
-	wait \{5
+	Wait \{5
 		gameframes}
-	destroy2dparticlesystem id = <explosion_id> kill_when_empty
+	Destroy2DParticleSystem id = <explosion_id> kill_when_empty
 endscript
 
 script rockout_cleanup_brick_particles 
 	<i> = 0
 	begin
-	formattext checksumname = explosion_id 'brick_explosion_%y' y = <i>
-	destroy2dparticlesystem id = <explosion_id>
+	FormatText checksumname = explosion_id 'brick_explosion_%y' y = <i>
+	Destroy2DParticleSystem id = <explosion_id>
 	<i> = (<i> + 1)
 	repeat 20
 endscript
@@ -1893,12 +1893,12 @@ endscript
 script rockout_load_songdata \{song = rebelyell}
 	load_songqpak song_name = <song>
 	get_song_prefix song = <song>
-	formattext checksumname = gem_array '%s_song_expert' s = <song_prefix>
-	getarraysize $<gem_array>
+	FormatText checksumname = gem_array '%s_song_expert' s = <song_prefix>
+	GetArraySize $<gem_array>
 	<i> = 0
 	begin
 	<i> = (<i> + 2)
-	decompressnotevalue note_value = ($<gem_array> [<i> + 1])
+	DecompressNoteValue note_value = ($<gem_array> [<i> + 1])
 	repeat (<array_size> / 2)
 	unload_songqpak
 endscript
@@ -1908,137 +1908,137 @@ script rockout_start_controls \{type = 0
 		player = 1}
 	switch <type>
 		case guitar
-		spawnscript rockout_button_watcher params = {controller = <controller> player = <player>}
-		<up_active> = 0
-		<down_active> = 0
+		SpawnScript rockout_button_watcher params = {controller = <controller> player = <player>}
+		<UP_active> = 0
+		<DOWN_active> = 0
 		begin
-		if controllerpressed up <controller>
-			if (<up_active> = 0)
-				spawnscript rockout_guitar_strum params = {player = <player>}
-				<up_active> = 1
+		if ControllerPressed up <controller>
+			if (<UP_active> = 0)
+				SpawnScript rockout_guitar_strum params = {player = <player>}
+				<UP_active> = 1
 			endif
-		elseif (<up_active> = 1)
-			<up_active> = 0
+		elseif (<UP_active> = 1)
+			<UP_active> = 0
 		endif
-		if controllerpressed down <controller>
-			if (<down_active> = 0)
-				spawnscript rockout_guitar_strum params = {player = <player>}
-				<down_active> = 1
+		if ControllerPressed down <controller>
+			if (<DOWN_active> = 0)
+				SpawnScript rockout_guitar_strum params = {player = <player>}
+				<DOWN_active> = 1
 			endif
-		elseif (<down_active> = 1)
-			<down_active> = 0
+		elseif (<DOWN_active> = 1)
+			<DOWN_active> = 0
 		endif
-		wait \{1
+		Wait \{1
 			gameframe}
 		repeat
-		case drums
-		<x_active> = 0
-		<circle_active> = 0
-		<square_active> = 0
-		<triangle_active> = 0
-		<r1_active> = 0
-		<l1_active> = 0
+		case Drums
+		<X_active> = 0
+		<CIRCLE_active> = 0
+		<SQUARE_active> = 0
+		<TRIANGLE_active> = 0
+		<R1_active> = 0
+		<L1_active> = 0
 		begin
-		if controllerpressed x <controller>
-			if (<x_active> = 0)
-				spawnscript rockout_drum_hit params = {player = <player> button = 4}
-				<x_active> = 1
+		if ControllerPressed x <controller>
+			if (<X_active> = 0)
+				SpawnScript rockout_drum_hit params = {player = <player> button = 4}
+				<X_active> = 1
 			endif
-		elseif (<x_active> = 1)
-			<x_active> = 0
+		elseif (<X_active> = 1)
+			<X_active> = 0
 		endif
-		if controllerpressed circle <controller>
-			if (<circle_active> = 0)
-				spawnscript rockout_drum_hit params = {player = <player> button = 0}
-				<circle_active> = 1
+		if ControllerPressed circle <controller>
+			if (<CIRCLE_active> = 0)
+				SpawnScript rockout_drum_hit params = {player = <player> button = 0}
+				<CIRCLE_active> = 1
 			endif
-		elseif (<circle_active> = 1)
-			<circle_active> = 0
+		elseif (<CIRCLE_active> = 1)
+			<CIRCLE_active> = 0
 		endif
-		if controllerpressed square <controller>
-			if (<square_active> = 0)
-				spawnscript rockout_drum_hit params = {player = <player> button = 2}
-				<square_active> = 1
+		if ControllerPressed square <controller>
+			if (<SQUARE_active> = 0)
+				SpawnScript rockout_drum_hit params = {player = <player> button = 2}
+				<SQUARE_active> = 1
 			endif
-		elseif (<square_active> = 1)
-			<square_active> = 0
+		elseif (<SQUARE_active> = 1)
+			<SQUARE_active> = 0
 		endif
-		if controllerpressed triangle <controller>
-			if (<triangle_active> = 0)
-				spawnscript rockout_drum_hit params = {player = <player> button = 1}
-				<triangle_active> = 1
+		if ControllerPressed triangle <controller>
+			if (<TRIANGLE_active> = 0)
+				SpawnScript rockout_drum_hit params = {player = <player> button = 1}
+				<TRIANGLE_active> = 1
 			endif
-		elseif (<triangle_active> = 1)
-			<triangle_active> = 0
+		elseif (<TRIANGLE_active> = 1)
+			<TRIANGLE_active> = 0
 		endif
-		if controllerpressed r1 <controller>
-			if (<r1_active> = 0)
-				spawnscript rockout_drum_hit params = {player = <player> button = 3}
-				<r1_active> = 1
+		if ControllerPressed R1 <controller>
+			if (<R1_active> = 0)
+				SpawnScript rockout_drum_hit params = {player = <player> button = 3}
+				<R1_active> = 1
 			endif
-		elseif (<r1_active> = 1)
-			<r1_active> = 0
+		elseif (<R1_active> = 1)
+			<R1_active> = 0
 		endif
-		if controllerpressed l1 <controller>
-			if (<l1_active> = 0)
-				spawnscript rockout_drum_hit params = {player = <player> button = 3}
-				<l1_active> = 1
+		if ControllerPressed L1 <controller>
+			if (<L1_active> = 0)
+				SpawnScript rockout_drum_hit params = {player = <player> button = 3}
+				<L1_active> = 1
 			endif
-		elseif (<l1_active> = 1)
-			<l1_active> = 0
+		elseif (<L1_active> = 1)
+			<L1_active> = 0
 		endif
-		wait \{1
+		Wait \{1
 			gameframe}
 		repeat
 		default
-		<x_active> = 0
-		<l1_active> = 0
-		<l2_active> = 0
-		<r1_active> = 0
-		<r2_active> = 0
-		spawnscript rockout_button_watcher params = {controller = <controller> player = <player>}
+		<X_active> = 0
+		<L1_active> = 0
+		<L2_active> = 0
+		<R1_active> = 0
+		<R2_active> = 0
+		SpawnScript rockout_button_watcher params = {controller = <controller> player = <player>}
 		begin
-		if controllerpressed x <controller>
-			if (<x_active> = 0)
-				spawnscript rockout_guitar_strum params = {player = <player>}
-				<x_active> = 1
+		if ControllerPressed x <controller>
+			if (<X_active> = 0)
+				SpawnScript rockout_guitar_strum params = {player = <player>}
+				<X_active> = 1
 			endif
-		elseif (<x_active> = 1)
-			<x_active> = 0
+		elseif (<X_active> = 1)
+			<X_active> = 0
 		endif
-		if controllerpressed r1 <controller>
-			if (<r1_active> = 0)
-				spawnscript rockout_guitar_strum params = {player = <player>}
-				<r1_active> = 1
+		if ControllerPressed R1 <controller>
+			if (<R1_active> = 0)
+				SpawnScript rockout_guitar_strum params = {player = <player>}
+				<R1_active> = 1
 			endif
-		elseif (<r1_active> = 1)
-			<r1_active> = 0
+		elseif (<R1_active> = 1)
+			<R1_active> = 0
 		endif
-		if controllerpressed r2 <controller>
-			if (<r2_active> = 0)
-				spawnscript rockout_guitar_strum params = {player = <player>}
-				<r2_active> = 1
+		if ControllerPressed R2 <controller>
+			if (<R2_active> = 0)
+				SpawnScript rockout_guitar_strum params = {player = <player>}
+				<R2_active> = 1
 			endif
-		elseif (<r2_active> = 1)
-			<r2_active> = 0
+		elseif (<R2_active> = 1)
+			<R2_active> = 0
 		endif
-		if controllerpressed l1 <controller>
-			if (<l1_active> = 0)
-				spawnscript rockout_guitar_strum params = {player = <player>}
-				<l1_active> = 1
+		if ControllerPressed L1 <controller>
+			if (<L1_active> = 0)
+				SpawnScript rockout_guitar_strum params = {player = <player>}
+				<L1_active> = 1
 			endif
-		elseif (<l1_active> = 1)
-			<l1_active> = 0
+		elseif (<L1_active> = 1)
+			<L1_active> = 0
 		endif
-		if controllerpressed l2 <controller>
-			if (<l2_active> = 0)
-				spawnscript rockout_guitar_strum params = {player = <player>}
-				<l2_active> = 1
+		if ControllerPressed L2 <controller>
+			if (<L2_active> = 0)
+				SpawnScript rockout_guitar_strum params = {player = <player>}
+				<L2_active> = 1
 			endif
-		elseif (<l2_active> = 1)
-			<l2_active> = 0
+		elseif (<L2_active> = 1)
+			<L2_active> = 0
 		endif
-		wait \{1
+		Wait \{1
 			gameframe}
 		repeat
 	endswitch
@@ -2047,30 +2047,30 @@ endscript
 script rockout_button_watcher \{controller = 0
 		player = 1}
 	begin
-	formattext checksumname = paddle_toggle 'g_battle_paddle_toggle_p%p' p = <player>
-	getheldpattern controller = (<controller>) nobrokenstring
+	FormatText checksumname = paddle_toggle 'g_battle_paddle_toggle_p%p' p = <player>
+	GetHeldPattern controller = (<controller>) nobrokenstring
 	check_button = 65536
 	array_count = 0
 	begin
 	if (<hold_pattern> && <check_button>)
 		if ($<paddle_toggle> [<array_count>] = 0)
-			setarrayelement arrayname = <paddle_toggle> globalarray index = <array_count> newvalue = 1
-			formattext checksumname = paddle_id 'paddle_p%p_%y' p = <player> y = <array_count>
-			getscreenelementprops id = <paddle_id>
+			SetArrayElement ArrayName = <paddle_toggle> GlobalArray index = <array_count> newvalue = 1
+			FormatText checksumname = paddle_id 'paddle_p%p_%y' p = <player> y = <array_count>
+			GetScreenElementProps id = <paddle_id>
 			rockout_paddle_highlight paddle = <array_count> no_pos_morph = 1 player = <player>
 		endif
 	else
 		if ($<paddle_toggle> [<array_count>] = 1)
-			formattext checksumname = paddle_id 'paddle_p%p_%y' p = <player> y = <array_count>
-			getscreenelementprops id = <paddle_id>
-			setarrayelement arrayname = <paddle_toggle> globalarray index = <array_count> newvalue = 0
+			FormatText checksumname = paddle_id 'paddle_p%p_%y' p = <player> y = <array_count>
+			GetScreenElementProps id = <paddle_id>
+			SetArrayElement ArrayName = <paddle_toggle> GlobalArray index = <array_count> newvalue = 0
 			rockout_paddle_highlight paddle = <array_count> unhighlight = 1 no_pos_morph = 1 player = <player>
 		endif
 	endif
 	<check_button> = (<check_button> / 16)
 	<array_count> = (<array_count> + 1)
 	repeat 5
-	wait \{1
+	Wait \{1
 		gameframe}
 	repeat
 endscript
@@ -2078,17 +2078,17 @@ endscript
 script rockout_create_brick \{current_brick = 1
 		column = 1
 		time = 5}
-	rockout_container :gettags
-	formattext checksumname = brick_id 'brick_%n' n = <current_brick>
+	rockout_container :GetTags
+	FormatText checksumname = brick_id 'brick_%n' n = <current_brick>
 	<current_brick> = (<current_brick> + 1)
 	if (<current_brick> > <max_bricks>)
 		<current_brick> = 0
 	endif
-	rockout_container :settags current_brick = <current_brick>
-	destroyscreenelement id = <brick_id>
+	rockout_container :SetTags current_brick = <current_brick>
+	DestroyScreenElement id = <brick_id>
 	<start_pos> = (($g_initial_brick_pos) + ((<column> * ($g_brick_width + $g_brick_spacing)) * (1.0, 0.0)) - (0.0, 150.0))
-	createscreenelement {
-		type = spriteelement
+	CreateScreenElement {
+		type = SpriteElement
 		id = <brick_id>
 		parent = rockout_container
 		texture = rockout_brick
@@ -2098,34 +2098,34 @@ script rockout_create_brick \{current_brick = 1
 		z_priority = 29
 		alpha = 1
 	}
-	runscriptonscreenelement id = <brick_id> rockout_check_single_brick_collision params = {column = <column> brick_id = <brick_id>}
-	setscreenelementprops id = <brick_id> pos = (<start_pos> + (0.0, 640.0)) time = <time>
-	wait <time> seconds
-	destroyscreenelement id = <brick_id>
+	RunScriptOnScreenElement id = <brick_id> rockout_check_single_brick_collision params = {column = <column> brick_id = <brick_id>}
+	SetScreenElementProps id = <brick_id> pos = (<start_pos> + (0.0, 640.0)) time = <time>
+	Wait <time> seconds
+	DestroyScreenElement id = <brick_id>
 endscript
 
 script rockout_kill_bricks 
-	rockout_container :gettags
+	rockout_container :GetTags
 	<i> = 0
 	begin
-	formattext checksumname = brick_id 'brick_%n' n = <i>
-	destroyscreenelement id = <brick_id>
+	FormatText checksumname = brick_id 'brick_%n' n = <i>
+	DestroyScreenElement id = <brick_id>
 	<i> = (<i> + 1)
 	repeat <max_bricks>
-	rockout_container :settags \{current_brick = 0}
+	rockout_container :SetTags \{current_brick = 0}
 endscript
 
 script rockout_check_single_brick_collision 
 	begin
-	obj_getid
-	getscreenelementprops id = <objid>
-	<tl> = (<pos> + $g_brick_collision_offset)
-	<br> = (<tl> + ((($g_brick_width) - 1) * (1.0, 0.0)) + ((($g_brick_height) - 1) * (0.0, 1.0)))
-	ball_container :gettags
+	Obj_GetID
+	GetScreenElementProps id = <ObjID>
+	<TL> = (<pos> + $g_brick_collision_offset)
+	<bR> = (<TL> + ((($g_brick_width) - 1) * (1.0, 0.0)) + ((($g_brick_height) - 1) * (0.0, 1.0)))
+	ball_container :GetTags
 	if (<fireball_active>)
-		rockout_check_ball_collision tl = <tl> br = <br> preserve_momentum = 1
+		rockout_check_ball_collision TL = <TL> bR = <bR> preserve_momentum = 1
 	else
-		rockout_check_ball_collision tl = <tl> br = <br>
+		rockout_check_ball_collision TL = <TL> bR = <bR>
 	endif
 	if (<collision>)
 		change g_bricks_hit = (($g_bricks_hit) + 1)
@@ -2135,12 +2135,12 @@ script rockout_check_single_brick_collision
 		else
 			rockout_add_to_score player = 2 amount = (<score>)
 		endif
-		spawnscript rockout_show_score_popup params = {brick_pos = <pos> brick_color = <rgba> score = <score>}
-		<bass> = 2
-		destroyscreenelement id = <objid>
+		SpawnScript rockout_show_score_popup params = {brick_pos = <pos> brick_color = <rgba> score = <score>}
+		<Bass> = 2
+		DestroyScreenElement id = <ObjID>
 		break
 	endif
-	wait \{1
+	Wait \{1
 		gameframe}
 	repeat
 endscript

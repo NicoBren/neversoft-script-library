@@ -10,8 +10,8 @@ difficulty_list_props = {
 		index = 0
 		text_nl = 'easy'
 		text_nl_real = 'easy_rhythm'
-		text = qs(0x74d6a0a0)
-		text_upper = qs(0x74d6a0a0)
+		text = qs("BEGINNER")
+		text_upper = qs("BEGINNER")
 		scroll_time = 3.5
 		game_speed = 1.5
 	}
@@ -19,8 +19,8 @@ difficulty_list_props = {
 		index = 1
 		text_nl = 'easy'
 		text_nl_real = 'easy'
-		text = qs(0x8d657387)
-		text_upper = qs(0x8d657387)
+		text = qs("EASY")
+		text_upper = qs("EASY")
 		scroll_time = 3.5
 		game_speed = 1.5
 	}
@@ -28,8 +28,8 @@ difficulty_list_props = {
 		index = 2
 		text_nl = 'medium'
 		text_nl_real = 'medium'
-		text = qs(0x6ef11a01)
-		text_upper = qs(0x6ef11a01)
+		text = qs("MEDIUM")
+		text_upper = qs("MEDIUM")
 		scroll_time = 3.0
 		game_speed = 2.0
 	}
@@ -37,8 +37,8 @@ difficulty_list_props = {
 		index = 3
 		text_nl = 'hard'
 		text_nl_real = 'hard'
-		text = qs(0x51b06d2f)
-		text_upper = qs(0x51b06d2f)
+		text = qs("HARD")
+		text_upper = qs("HARD")
 		scroll_time = 2.75
 		game_speed = 2.125
 	}
@@ -46,8 +46,8 @@ difficulty_list_props = {
 		index = 4
 		text_nl = 'expert'
 		text_nl_real = 'expert'
-		text = qs(0x334908ac)
-		text_upper = qs(0x334908ac)
+		text = qs("EXPERT")
+		text_upper = qs("EXPERT")
 		scroll_time = 2.5
 		game_speed = 2.25
 	}
@@ -60,10 +60,10 @@ script get_difficulty_text \{difficulty = easy}
 endscript
 
 script get_difficulty_text_nl 
-	if NOT gotparam \{difficulty}
+	if NOT GotParam \{difficulty}
 		difficulty = ($difficulty_list [<index>])
 	endif
-	if NOT gotparam \{no_rhythm}
+	if NOT GotParam \{no_rhythm}
 		return difficulty_text_nl = ($difficulty_list_props.<difficulty>.text_nl_real)
 	endif
 	return difficulty_text_nl = ($difficulty_list_props.<difficulty>.text_nl)
@@ -83,33 +83,33 @@ script difficulty_setup
 	endif
 	<hyperspeed_scale> = ($<player_status>.hyperspeed)
 	<hyperspeed_scale> = (<hyperspeed_scale> * $battle_do_or_die_speed_scale)
-	if (<hyperspeed_scale> < $hyperspeed_fastest)
-		<hyperspeed_scale> = $hyperspeed_fastest
+	if (<hyperspeed_scale> < $Hyperspeed_Fastest)
+		<hyperspeed_scale> = $Hyperspeed_Fastest
 	endif
 	if (<hyperspeed_scale> > 0)
 		scroll_time_factor = (<scroll_time_factor> * <hyperspeed_scale>)
 		game_speed_factor = (<game_speed_factor> * <hyperspeed_scale>)
 	endif
-	addparams ($difficulty_list_props.<difficulty>)
+	AddParams ($difficulty_list_props.<difficulty>)
 	change structurename = <player_status> scroll_time = (<scroll_time> * <scroll_time_factor>)
 	change structurename = <player_status> game_speed = (<game_speed> * <game_speed_factor>)
 endscript
 
 script get_current_difficulty 
-	requireparams \{[
+	RequireParams \{[
 			player
 		]
 		all}
-	getplayerinfo <player> difficulty
+	GetPlayerInfo <player> difficulty
 	return current_difficulty = <difficulty>
 endscript
 
 script get_band_difficulty 
-	gamemode_getnumplayers
+	GameMode_GetNumPlayers
 	<lowest_difficulty> = 4
 	<i> = 0
 	begin
-	getplayerinfo (<i> + 1) difficulty
+	GetPlayerInfo (<i> + 1) difficulty
 	<difficulty_index> = ($difficulty_list_props.<difficulty>.index)
 	if (<difficulty_index> < <lowest_difficulty>)
 		<lowest_difficulty> = <difficulty_index>

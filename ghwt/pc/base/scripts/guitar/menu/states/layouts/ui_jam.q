@@ -15,38 +15,38 @@ endscript
 script ui_deinit_jam 
 	destroy_band
 	destroy_bandname_viewport
-	skate8_sfx_backgrounds_new_area \{immediate = 1
-		bg_sfx_area = frontend_menu_music}
-	killcamanim \{name = jam_view_cam}
+	Skate8_SFX_Backgrounds_New_Area \{immediate = 1
+		BG_SFX_Area = FrontEnd_Menu_Music}
+	KillCamAnim \{name = jam_view_cam}
 	change \{jam_view_cam_created = 0}
 	jamsession_unload \{song_prefix = 'editable'}
-	clearjamsession
+	ClearJamSession
 	jam_clear_clipboards
-	formattext \{checksumname = undo_clipboard_array
+	FormatText \{checksumname = undo_clipboard_array
 		'undo_clipboard'}
-	if globalexists name = <undo_clipboard_array> type = array
+	if GlobalExists name = <undo_clipboard_array> type = array
 		printf \{channel = jam_mode
-			qs(0xfed3c437)}
-		destroyscriptarray name = <undo_clipboard_array>
+			qs("\Ldestroy undo clipboard")}
+		DestroyScriptArray name = <undo_clipboard_array>
 	endif
 	deinit_jam_audio
 	change \{cas_override_object = none}
 endscript
 
 script deinit_jam_audio 
-	destroysoundbusseffects \{jammode_rhythmguitar = [
+	DestroySoundBussEffects \{JamMode_RhythmGuitar = [
 			all
 		]
-		jammode_leadguitar = [
+		JamMode_LeadGuitar = [
 			all
 		]}
-	stopsoundsbybuss \{guitar_jammode}
-	stopsoundsbybuss \{drums_jammode}
-	stopsoundsbybuss \{bass_jammode}
-	stopsoundsbybuss \{jammode_vox}
+	StopSoundsByBuss \{Guitar_JamMode}
+	StopSoundsByBuss \{Drums_JamMode}
+	StopSoundsByBuss \{Bass_JamMode}
+	StopSoundsByBuss \{JamMode_Vox}
 	jam_deinit_reverb
-	if NOT gotparam \{keep_drumkit}
-		unloaddrumkitall
+	if NOT GotParam \{keep_drumkit}
+		UnLoadDrumKitAll
 	endif
-	unloadmelodykit
+	UnLoadMelodyKit
 endscript

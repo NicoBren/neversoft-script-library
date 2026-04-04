@@ -1,25 +1,25 @@
 
 script find_unlocked_guitar_info_by_id 
-	getarraysize ($secret_guitars)
+	GetArraySize ($Secret_Guitars)
 	i = 0
 	begin
-	if (<id> = ($secret_guitars [<i>].id))
-		return icon_texture = ($secret_guitars [<i>].icon_texture)
+	if (<id> = ($Secret_Guitars [<i>].id))
+		return icon_texture = ($Secret_Guitars [<i>].icon_texture)
 	endif
 	<i> = (<i> + 1)
 	repeat <array_size>
-	getarraysize ($secret_basses)
+	GetArraySize ($Secret_Basses)
 	i = 0
 	begin
-	if (<id> = ($secret_basses [<i>].id))
-		return icon_texture = ($secret_basses [<i>].icon_texture)
+	if (<id> = ($Secret_Basses [<i>].id))
+		return icon_texture = ($Secret_Basses [<i>].icon_texture)
 	endif
 	<i> = (<i> + 1)
 	repeat <array_size>
 endscript
 
 script create_unlock_menu 
-	createscreenelement \{type = containerelement
+	CreateScreenElement \{type = ContainerElement
 		parent = root_window
 		id = unlock_container
 		pos = (0.0, 0.0)}
@@ -28,13 +28,13 @@ script create_unlock_menu
 	change progression_unlocked_guitar = ($progression_unlocked_guitar2)
 	change \{progression_unlocked_guitar2 = -1}
 	unlock_item_tex = <icon_texture>
-	getuppercasestring <instrument_name>
-	unlock_item_name = <uppercasestring>
+	GetUpperCaseString <instrument_name>
+	unlock_item_name = <UpperCaseString>
 	unlock_font = fontgrid_text_a8
 	padlock_pos_start = (850.0, 430.0)
 	padlock_pos_end = (850.0, 412.0)
 	create_menu_backdrop \{texture = reward_unlock_bg}
-	createscreenelement \{type = spriteelement
+	CreateScreenElement \{type = SpriteElement
 		id = unlock_velvet_backdrop
 		parent = unlock_container
 		texture = reward_unlock_velvet
@@ -51,8 +51,8 @@ script create_unlock_menu
 			center
 		]
 		z_priority = -0.1}
-	createscreenelement {
-		type = spriteelement
+	CreateScreenElement {
+		type = SpriteElement
 		id = unlock_item
 		parent = unlock_container
 		texture = <unlock_item_tex>
@@ -61,9 +61,9 @@ script create_unlock_menu
 		dims = (650.0, 325.0)
 		just = [center center]
 	}
-	runscriptonscreenelement \{id = unlock_item
+	RunScriptOnScreenElement \{id = unlock_item
 		unlock_guitar_hover}
-	createscreenelement \{type = spriteelement
+	CreateScreenElement \{type = SpriteElement
 		id = unlock_dialog_backdrop
 		parent = unlock_container
 		texture = reward_unlock_dlogbg
@@ -78,8 +78,8 @@ script create_unlock_menu
 			center
 			center
 		]}
-	createscreenelement {
-		type = spriteelement
+	CreateScreenElement {
+		type = SpriteElement
 		id = unlock_dialog_padlock
 		parent = unlock_container
 		texture = reward_unlock_padlock
@@ -87,12 +87,12 @@ script create_unlock_menu
 		pos = <padlock_pos_start>
 		just = [center center]
 	}
-	createscreenelement {
-		type = textelement
+	CreateScreenElement {
+		type = TextElement
 		id = unlock_text_congrats
 		parent = unlock_container
 		scale = (1.0, 1.0)
-		text = qs(0x987236f1)
+		text = qs("CONGRATULATIONS!")
 		font_spacing = 0
 		font = <unlock_font>
 		rgba = [128 128 128 255]
@@ -102,12 +102,12 @@ script create_unlock_menu
 	fit_text_in_rectangle \{id = unlock_text_congrats
 		dims = (350.0, 32.0)
 		pos = (680.0, 483.0)}
-	createscreenelement {
-		type = textelement
+	CreateScreenElement {
+		type = TextElement
 		id = unlock_text_buyitinthestore
 		parent = unlock_container
 		scale = (1.0, 1.0)
-		text = qs(0x320fe855)
+		text = qs("BUY IT IN THE STORE")
 		font_spacing = 0
 		font = <unlock_font>
 		rgba = [128 128 128 255]
@@ -117,8 +117,8 @@ script create_unlock_menu
 	fit_text_in_rectangle \{id = unlock_text_buyitinthestore
 		dims = (350.0, 32.0)
 		pos = (680.0, 555.0)}
-	createscreenelement {
-		type = textelement
+	CreateScreenElement {
+		type = TextElement
 		id = unlock_text_name
 		parent = unlock_container
 		scale = (1.0, 1.0)
@@ -134,8 +134,8 @@ script create_unlock_menu
 		only_if_larger_x = 1
 		dims = (345.0, 64.0)
 		pos = (850.0, 497.0)}
-	createscreenelement {
-		type = textelement
+	CreateScreenElement {
+		type = TextElement
 		parent = unlock_container
 		id = continue_button
 		scale = 0.8
@@ -148,11 +148,11 @@ script create_unlock_menu
 			{pad_choose ui_win_song_career_continue}
 		]
 	}
-	wait \{2
+	Wait \{2
 		seconds}
-	legacydoscreenelementmorph id = unlock_dialog_padlock pos = <padlock_pos_end> time = 0.1 motion = ease_in
-	createscreenelement {
-		type = spriteelement
+	LegacyDoScreenElementMorph id = unlock_dialog_padlock pos = <padlock_pos_end> time = 0.1 motion = ease_in
+	CreateScreenElement {
+		type = SpriteElement
 		id = unlock_dialog_starburst
 		parent = unlock_container
 		texture = reward_unlock_starburst
@@ -166,10 +166,10 @@ script create_unlock_menu
 	rot = 180
 	scale = 5
 	alpha = 0.0
-	legacydoscreenelementmorph id = unlock_dialog_starburst rot_angle = <rot> scale = <scale> alpha = <alpha> pos = <padlock_pos_end> time = 0.7 motion = ease_out
-	launchevent \{type = focus
+	LegacyDoScreenElementMorph id = unlock_dialog_starburst rot_angle = <rot> scale = <scale> alpha = <alpha> pos = <padlock_pos_end> time = 0.7 motion = ease_out
+	LaunchEvent \{type = focus
 		target = continue_button}
-	createscreenelement \{type = spriteelement
+	CreateScreenElement \{type = SpriteElement
 		id = unlock_twinkle_1
 		parent = unlock_container
 		texture = reward_unlock_starburst
@@ -187,40 +187,40 @@ script create_unlock_menu
 		z_priority = 0
 		scale = 0.5
 		alpha = 0}
-	runscriptonscreenelement \{id = unlock_twinkle_1
+	RunScriptOnScreenElement \{id = unlock_twinkle_1
 		unlock_twinkle_anim}
-	add_user_control_helper \{text = qs(0x182f0173)
+	add_user_control_helper \{text = qs("CONTINUE")
 		button = green
 		z = 10000}
 endscript
 
 script unlock_guitar_hover 
-	if NOT screenelementexists \{id = unlock_item}
+	if NOT ScreenElementExists \{id = unlock_item}
 		return
 	endif
 	begin
-	unlock_item :legacydomorph \{pos = {
+	unlock_item :LegacyDoMorph \{pos = {
 			(0.0, -5.0)
 			relative
 		}
 		rot_angle = 0
 		motion = ease_out
 		time = 1}
-	unlock_item :legacydomorph \{pos = {
+	unlock_item :LegacyDoMorph \{pos = {
 			(0.0, 5.0)
 			relative
 		}
 		rot_angle = 1
 		motion = ease_in
 		time = 1}
-	unlock_item :legacydomorph \{pos = {
+	unlock_item :LegacyDoMorph \{pos = {
 			(0.0, -5.0)
 			relative
 		}
 		rot_angle = 2
 		motion = ease_out
 		time = 1}
-	unlock_item :legacydomorph \{pos = {
+	unlock_item :LegacyDoMorph \{pos = {
 			(0.0, 5.0)
 			relative
 		}
@@ -231,28 +231,28 @@ script unlock_guitar_hover
 endscript
 
 script unlock_twinkle_anim 
-	if NOT screenelementexists \{id = unlock_twinkle_1}
+	if NOT ScreenElementExists \{id = unlock_twinkle_1}
 		return
 	endif
 	twinkle_time = 0.3
-	printf \{qs(0xde14d0d7)}
+	printf \{qs("\Ltwinkling!")}
 	begin
-	unlock_twinkle_1 :legacydomorph \{pos = (350.0, 400.0)
+	unlock_twinkle_1 :LegacyDoMorph \{pos = (350.0, 400.0)
 		scale = 0
 		alpha = 0.5
 		rot_angle = 0}
-	unlock_twinkle_1 :legacydomorph rot_angle = -180 scale = 1 alpha = 0 motion = ease_out time = <twinkle_time>
-	unlock_twinkle_1 :legacydomorph \{pos = (600.0, 200.0)
+	unlock_twinkle_1 :LegacyDoMorph rot_angle = -180 scale = 1 alpha = 0 motion = ease_out time = <twinkle_time>
+	unlock_twinkle_1 :LegacyDoMorph \{pos = (600.0, 200.0)
 		scale = 0
 		alpha = 0.5
 		rot_angle = 0}
-	unlock_twinkle_1 :legacydomorph rot_angle = -180 scale = 1 alpha = 0 motion = ease_out time = <twinkle_time>
-	unlock_twinkle_1 :legacydomorph \{pos = (900.0, 250.0)
+	unlock_twinkle_1 :LegacyDoMorph rot_angle = -180 scale = 1 alpha = 0 motion = ease_out time = <twinkle_time>
+	unlock_twinkle_1 :LegacyDoMorph \{pos = (900.0, 250.0)
 		scale = 0
 		alpha = 0.5
 		rot_angle = 0}
-	unlock_twinkle_1 :legacydomorph rot_angle = -180 scale = 1 alpha = 0 motion = ease_out time = <twinkle_time>
-	wait \{3
+	unlock_twinkle_1 :LegacyDoMorph rot_angle = -180 scale = 1 alpha = 0 motion = ease_out time = <twinkle_time>
+	Wait \{3
 		seconds}
 	repeat
 endscript

@@ -1,2800 +1,2800 @@
 worst_female_guitar_appearance = {
-	cas_body = {
-		desc_id = gh4_car_female
+	CAS_Body = {
+		desc_id = GH4_CAR_Female
 		size = 528384
 	}
 	cas_body_alt1 = {
-		desc_id = gh4_car_johnny
+		desc_id = GH4_CAR_Johnny
 		size = 577536
 	}
 	cas_body_alt2 = {
-		desc_id = `bestbuy kid`
+		desc_id = `BestBuy Kid`
 		size = 577536
 	}
 	cas_body_alt3 = {
-		desc_id = gh4_car_eddie
+		desc_id = GH4_CAR_Eddie
 		size = 577536
 	}
 	cas_body_alt4 = {
-		desc_id = gh4_car_lars
+		desc_id = GH4_CAR_Lars
 		size = 577536
 	}
-	cas_female_hat = {
-		desc_id = f_pop_head_gasmask
+	CAS_Female_Hat = {
+		desc_id = F_Pop_Head_GasMask
 		size = 61440
 	}
-	cas_female_hat_alt1 = {
-		desc_id = f_bmtl_hat_skullhelmet
+	CAS_Female_Hat_alt1 = {
+		desc_id = F_Bmtl_Hat_SkullHelmet
 		size = 61440
 	}
-	cas_female_hat_alt2 = {
-		desc_id = f_bmtl_head_viking
+	CAS_Female_Hat_alt2 = {
+		desc_id = F_Bmtl_Head_Viking
 		size = 53248
 	}
-	cas_female_hat_alt3 = {
+	CAS_Female_Hat_alt3 = {
 		desc_id = f_clsc_hat_cowboy
 		size = 49152
 	}
-	cas_female_hat_alt4 = {
+	CAS_Female_Hat_alt4 = {
 		desc_id = f_bmtl_hat_chicken
 		size = 45056
 	}
-	cas_female_torso = {
+	CAS_Female_Torso = {
 		desc_id = f_goth_torso_halfstrap
 		size = 188416
 	}
-	cas_female_torso_alt1 = {
+	CAS_Female_Torso_alt1 = {
 		desc_id = f_goth_torso_frillybodice
 		size = 172032
 	}
-	cas_female_torso_alt2 = {
+	CAS_Female_Torso_alt2 = {
 		desc_id = f_punk_torso_leather
 		size = 167936
 	}
-	cas_female_torso_alt3 = {
+	CAS_Female_Torso_alt3 = {
 		desc_id = f_punk_torso_leather_03
 		size = 167936
 	}
-	cas_female_torso_alt4 = {
+	CAS_Female_Torso_alt4 = {
 		desc_id = f_bmtl_torso_spikeshirt
 		size = 167936
 	}
-	cas_female_legs = {
+	CAS_Female_Legs = {
 		desc_id = f_goth_legs_cyberstrap
 		size = 188416
 	}
-	cas_female_legs_alt1 = {
+	CAS_Female_Legs_alt1 = {
 		desc_id = f_punk_legs_skirt
 		size = 184320
 	}
-	cas_female_legs_alt2 = {
-		desc_id = f_pop_legs_baggypants
+	CAS_Female_Legs_alt2 = {
+		desc_id = F_Pop_Legs_BaggyPants
 		size = 172032
 	}
-	cas_female_legs_alt3 = {
+	CAS_Female_Legs_alt3 = {
 		desc_id = f_goth_legs_frillydress
 		size = 167936
 	}
-	cas_female_legs_alt4 = {
+	CAS_Female_Legs_alt4 = {
 		desc_id = f_bmtl_legs_ringskirt
 		size = 163840
 	}
-	cas_female_shoes = {
+	CAS_Female_Shoes = {
 		desc_id = f_metl_shoe_ltrring
 		size = 155648
 	}
-	cas_female_shoes_alt1 = {
-		desc_id = f_goth_shoe_cyberb
+	CAS_Female_Shoes_alt1 = {
+		desc_id = F_Goth_Shoe_CyberB
 		size = 147456
 	}
-	cas_female_shoes_alt2 = {
+	CAS_Female_Shoes_alt2 = {
 		desc_id = f_metl_shoes_studs01
 		size = 135168
 	}
-	cas_female_shoes_alt3 = {
-		desc_id = f_rock_shoe_buckles
+	CAS_Female_Shoes_alt3 = {
+		desc_id = F_Rock_Shoe_Buckles
 		size = 131072
 	}
-	cas_female_shoes_alt4 = {
+	CAS_Female_Shoes_alt4 = {
 		desc_id = f_bmtl_shoes_combatboots
 		size = 126976
 	}
-	cas_female_acc_left = {
+	CAS_Female_Acc_Left = {
 		desc_id = f_goth_acc_lstrapglove
 		size = 69632
 	}
-	cas_female_acc_left_alt1 = {
+	CAS_Female_Acc_Left_alt1 = {
 		desc_id = f_rock_acc_lglove
 		size = 65536
 	}
-	cas_female_acc_left_alt2 = {
+	CAS_Female_Acc_Left_alt2 = {
 		desc_id = f_goth_acc_laceglv_l
 		size = 49152
 	}
-	cas_female_acc_left_alt3 = {
+	CAS_Female_Acc_Left_alt3 = {
 		desc_id = f_rock_acc_lskullwatch
 		size = 40960
 	}
-	cas_female_acc_left_alt4 = {
-		desc_id = f_rock_acc_lchainstud
+	CAS_Female_Acc_Left_alt4 = {
+		desc_id = F_Rock_Acc_LChainStud
 		size = 36864
 	}
-	cas_female_acc_right = {
+	CAS_Female_Acc_Right = {
 		desc_id = f_bmtl_acc_rwristguard
 		size = 69632
 	}
-	cas_female_acc_right_alt1 = {
+	CAS_Female_Acc_Right_alt1 = {
 		desc_id = f_rock_acc_rglove
 		size = 65536
 	}
-	cas_female_acc_right_alt2 = {
+	CAS_Female_Acc_Right_alt2 = {
 		desc_id = f_goth_acc_rstrapglove
 		size = 65536
 	}
-	cas_female_acc_right_alt3 = {
-		desc_id = f_punk_acc_rbands
+	CAS_Female_Acc_Right_alt3 = {
+		desc_id = F_Punk_Acc_Rbands
 		size = 61440
 	}
-	cas_female_acc_right_alt4 = {
-		desc_id = f_clsc_accs_rbracelet
+	CAS_Female_Acc_Right_alt4 = {
+		desc_id = F_Clsc_Accs_RBracelet
 		size = 61440
 	}
-	cas_female_acc_face = {
+	CAS_Female_Acc_Face = {
 		desc_id = f_clsc_glasses_avtr
 		size = 36864
 	}
-	cas_female_acc_face_alt1 = {
+	CAS_Female_Acc_Face_alt1 = {
 		desc_id = f_clsc_glasses_round
 		size = 36864
 	}
-	cas_female_acc_face_alt2 = {
+	CAS_Female_Acc_Face_alt2 = {
 		desc_id = f_goth_glasses_ggls
 		size = 36864
 	}
-	cas_female_acc_face_alt3 = {
+	CAS_Female_Acc_Face_alt3 = {
 		desc_id = f_pop_glasses_libby
 		size = 32768
 	}
-	cas_female_acc_face_alt4 = {
+	CAS_Female_Acc_Face_alt4 = {
 		desc_id = f_pop_glasses_fieldings
 		size = 32768
 	}
-	cas_female_acc_ears = {
+	CAS_Female_Acc_Ears = {
 		desc_id = f_punk_acc_ring_03
 		size = 12288
 	}
-	cas_female_acc_ears_alt1 = {
+	CAS_Female_Acc_Ears_alt1 = {
 		desc_id = f_punk_acc_ring_02
 		size = 12288
 	}
-	cas_female_acc_ears_alt2 = {
+	CAS_Female_Acc_Ears_alt2 = {
 		desc_id = f_punk_acc_ring_04
 		size = 8192
 	}
-	cas_female_acc_ears_alt3 = {
+	CAS_Female_Acc_Ears_alt3 = {
 		desc_id = f_punk_acc_ring
 		size = 8192
 	}
-	cas_female_hat_hair = {
+	CAS_Female_Hat_Hair = {
 		desc_id = f_bmtl_hathair_overeyes
 		size = 86016
 	}
-	cas_female_hat_hair_alt1 = {
+	CAS_Female_Hat_Hair_alt1 = {
 		desc_id = f_metl_hathair_skunk
 		size = 77824
 	}
-	cas_female_hat_hair_alt2 = {
+	CAS_Female_Hat_Hair_alt2 = {
 		desc_id = f_clsc_hathair_farah
 		size = 69632
 	}
-	cas_female_hat_hair_alt3 = {
+	CAS_Female_Hat_Hair_alt3 = {
 		desc_id = f_pop_hathair_fergie
 		size = 69632
 	}
-	cas_female_hat_hair_alt4 = {
-		desc_id = f_bmtl_hathair_straight
+	CAS_Female_Hat_Hair_alt4 = {
+		desc_id = F_Bmtl_HatHair_Straight
 		size = 65536
 	}
-	cas_mic = {
-		desc_id = `black metal`
+	CAS_Mic = {
+		desc_id = `Black Metal`
 		size = 36864
 	}
-	cas_mic_alt1 = {
-		desc_id = rock
+	CAS_Mic_alt1 = {
+		desc_id = Rock
 		size = 28672
 	}
-	cas_mic_alt2 = {
-		desc_id = `classic rock`
+	CAS_Mic_alt2 = {
+		desc_id = `Classic Rock`
 		size = 28672
 	}
-	cas_mic_alt3 = {
-		desc_id = `glam rock`
+	CAS_Mic_alt3 = {
+		desc_id = `Glam Rock`
 		size = 20480
 	}
-	cas_mic_alt4 = {
-		desc_id = punk
+	CAS_Mic_alt4 = {
+		desc_id = Punk
 		size = 20480
 	}
-	cas_mic_stand = {
+	CAS_Mic_Stand = {
 		desc_id = mic_stand_metal
 		size = 69632
 	}
-	cas_mic_stand_alt1 = {
-		desc_id = goth
+	CAS_Mic_Stand_alt1 = {
+		desc_id = Goth
 		size = 49152
 	}
-	cas_mic_stand_alt2 = {
-		desc_id = rock
+	CAS_Mic_Stand_alt2 = {
+		desc_id = Rock
 		size = 36864
 	}
-	cas_mic_stand_alt3 = {
+	CAS_Mic_Stand_alt3 = {
 		desc_id = mic_stand_blackmetal
 		size = 36864
 	}
-	cas_mic_stand_alt4 = {
-		desc_id = twisted
+	CAS_Mic_Stand_alt4 = {
+		desc_id = Twisted
 		size = 36864
 	}
-	cas_guitar_body = {
-		desc_id = guitar_x_trident_10
+	CAS_Guitar_Body = {
+		desc_id = Guitar_X_Trident_10
 		size = 77824
 	}
-	cas_guitar_body_alt1 = {
-		desc_id = guitar_x_clear_12
+	CAS_Guitar_Body_alt1 = {
+		desc_id = Guitar_X_Clear_12
 		size = 65536
 	}
-	cas_guitar_body_alt2 = {
-		desc_id = guitar_x_freebird_09
+	CAS_Guitar_Body_alt2 = {
+		desc_id = Guitar_X_Freebird_09
 		size = 65536
 	}
-	cas_guitar_body_alt3 = {
-		desc_id = guitar_special_spider_02
+	CAS_Guitar_Body_alt3 = {
+		desc_id = Guitar_Special_Spider_02
 		size = 65536
 	}
-	cas_guitar_body_alt4 = {
-		desc_id = guitar_special_skull_01
+	CAS_Guitar_Body_alt4 = {
+		desc_id = Guitar_Special_Skull_01
 		size = 61440
 	}
-	cas_guitar_neck = {
-		desc_id = guitar_neck07
+	CAS_Guitar_Neck = {
+		desc_id = Guitar_Neck07
 		size = 12288
 	}
-	cas_guitar_neck_alt1 = {
-		desc_id = guitar_neck06
+	CAS_Guitar_Neck_alt1 = {
+		desc_id = Guitar_Neck06
 		size = 12288
 	}
-	cas_guitar_neck_alt2 = {
-		desc_id = guitar_neck04
+	CAS_Guitar_Neck_alt2 = {
+		desc_id = Guitar_Neck04
 		size = 12288
 	}
-	cas_guitar_neck_alt3 = {
-		desc_id = guitar_neck05
+	CAS_Guitar_Neck_alt3 = {
+		desc_id = Guitar_Neck05
 		size = 12288
 	}
-	cas_guitar_neck_alt4 = {
-		desc_id = guitar_neck01
+	CAS_Guitar_Neck_alt4 = {
+		desc_id = Guitar_Neck01
 		size = 12288
 	}
-	cas_guitar_head = {
-		desc_id = guitar_head_x_01
+	CAS_Guitar_Head = {
+		desc_id = Guitar_Head_X_01
 		size = 73728
 	}
-	cas_guitar_head_alt1 = {
-		desc_id = guitar_head16
+	CAS_Guitar_Head_alt1 = {
+		desc_id = Guitar_Head16
 		size = 61440
 	}
-	cas_guitar_head_alt2 = {
-		desc_id = headstock_x_handle_05
+	CAS_Guitar_Head_alt2 = {
+		desc_id = Headstock_X_Handle_05
 		size = 61440
 	}
-	cas_guitar_head_alt3 = {
-		desc_id = headstock_x_flame_08
+	CAS_Guitar_Head_alt3 = {
+		desc_id = Headstock_X_Flame_08
 		size = 61440
 	}
-	cas_guitar_head_alt4 = {
+	CAS_Guitar_Head_alt4 = {
 		desc_id = guitar_head_x_03
 		size = 61440
 	}
-	cas_guitar_pickguards = {
-		desc_id = gtr_x_fire_pickg01
+	CAS_Guitar_Pickguards = {
+		desc_id = GTR_X_Fire_PickG01
 		size = 28672
 	}
-	cas_guitar_pickguards_alt1 = {
-		desc_id = gtr_body8_pickg02
+	CAS_Guitar_Pickguards_alt1 = {
+		desc_id = GTR_Body8_PickG02
 		size = 20480
 	}
-	cas_guitar_pickguards_alt2 = {
-		desc_id = gtr_body2_pickg01
+	CAS_Guitar_Pickguards_alt2 = {
+		desc_id = GTR_Body2_PickG01
 		size = 20480
 	}
-	cas_guitar_pickguards_alt3 = {
-		desc_id = gtr_body14_pickg01
+	CAS_Guitar_Pickguards_alt3 = {
+		desc_id = GTR_Body14_PickG01
 		size = 20480
 	}
-	cas_guitar_pickguards_alt4 = {
+	CAS_Guitar_Pickguards_alt4 = {
 		desc_id = gtr_body17_pickg01
 		size = 20480
 	}
-	cas_guitar_pickups = {
-		desc_id = gtr_pickups_style_01c
+	CAS_Guitar_Pickups = {
+		desc_id = GTR_Pickups_Style_01c
 		size = 40960
 	}
-	cas_guitar_pickups_alt1 = {
-		desc_id = gtr_pickup_type1_blktan_3
+	CAS_Guitar_Pickups_alt1 = {
+		desc_id = GTR_Pickup_Type1_Blktan_3
 		size = 40960
 	}
-	cas_guitar_pickups_alt2 = {
-		desc_id = gtr_pickup_type1_blk_3
+	CAS_Guitar_Pickups_alt2 = {
+		desc_id = GTR_Pickup_Type1_Blk_3
 		size = 40960
 	}
-	cas_guitar_pickups_alt3 = {
-		desc_id = gtr_pickup_type1_blktan_2
+	CAS_Guitar_Pickups_alt3 = {
+		desc_id = GTR_Pickup_Type1_Blktan_2
 		size = 32768
 	}
-	cas_guitar_pickups_alt4 = {
-		desc_id = gtr_pickup_type1_blk_2
+	CAS_Guitar_Pickups_alt4 = {
+		desc_id = GTR_Pickup_Type1_Blk_2
 		size = 28672
 	}
-	cas_guitar_bridges = {
-		desc_id = gtr_hardware04a
+	CAS_Guitar_Bridges = {
+		desc_id = GTR_Hardware04a
 		size = 36864
 	}
-	cas_guitar_bridges_alt1 = {
-		desc_id = gtr_hardware01b
+	CAS_Guitar_Bridges_alt1 = {
+		desc_id = GTR_Hardware01b
 		size = 32768
 	}
-	cas_guitar_bridges_alt2 = {
-		desc_id = gtr_hardware06
+	CAS_Guitar_Bridges_alt2 = {
+		desc_id = GTR_Hardware06
 		size = 28672
 	}
-	cas_guitar_bridges_alt3 = {
-		desc_id = gtr8_hardware08a
+	CAS_Guitar_Bridges_alt3 = {
+		desc_id = GTR8_Hardware08a
 		size = 28672
 	}
-	cas_guitar_bridges_alt4 = {
-		desc_id = gtr_hardware03a
+	CAS_Guitar_Bridges_alt4 = {
+		desc_id = GTR_Hardware03a
 		size = 28672
 	}
-	cas_guitar_knobs = {
-		desc_id = gtr2_knob_type4_04
+	CAS_Guitar_Knobs = {
+		desc_id = GTR2_Knob_Type4_04
 		size = 28672
 	}
-	cas_guitar_knobs_alt1 = {
-		desc_id = gtr1_knob_type4_04
+	CAS_Guitar_Knobs_alt1 = {
+		desc_id = GTR1_Knob_Type4_04
 		size = 28672
 	}
-	cas_guitar_knobs_alt2 = {
-		desc_id = gtr4_knob_type4_04
+	CAS_Guitar_Knobs_alt2 = {
+		desc_id = GTR4_Knob_Type4_04
 		size = 28672
 	}
-	cas_guitar_knobs_alt3 = {
-		desc_id = gtr14_knob_type4_04
+	CAS_Guitar_Knobs_alt3 = {
+		desc_id = GTR14_Knob_Type4_04
 		size = 28672
 	}
-	cas_guitar_knobs_alt4 = {
-		desc_id = gtr12_knob_type4_04
+	CAS_Guitar_Knobs_alt4 = {
+		desc_id = GTR12_Knob_Type4_04
 		size = 28672
 	}
 }
 worst_female_bass_appearance = {
-	cas_body = {
-		desc_id = gh4_car_female
+	CAS_Body = {
+		desc_id = GH4_CAR_Female
 		size = 528384
 	}
 	cas_body_alt1 = {
-		desc_id = gh4_car_johnny
+		desc_id = GH4_CAR_Johnny
 		size = 577536
 	}
 	cas_body_alt2 = {
-		desc_id = `bestbuy kid`
+		desc_id = `BestBuy Kid`
 		size = 577536
 	}
 	cas_body_alt3 = {
-		desc_id = gh4_car_eddie
+		desc_id = GH4_CAR_Eddie
 		size = 577536
 	}
 	cas_body_alt4 = {
-		desc_id = gh4_car_lars
+		desc_id = GH4_CAR_Lars
 		size = 577536
 	}
-	cas_female_hat = {
-		desc_id = f_pop_head_gasmask
+	CAS_Female_Hat = {
+		desc_id = F_Pop_Head_GasMask
 		size = 61440
 	}
-	cas_female_hat_alt1 = {
-		desc_id = f_bmtl_hat_skullhelmet
+	CAS_Female_Hat_alt1 = {
+		desc_id = F_Bmtl_Hat_SkullHelmet
 		size = 61440
 	}
-	cas_female_hat_alt2 = {
-		desc_id = f_bmtl_head_viking
+	CAS_Female_Hat_alt2 = {
+		desc_id = F_Bmtl_Head_Viking
 		size = 53248
 	}
-	cas_female_hat_alt3 = {
+	CAS_Female_Hat_alt3 = {
 		desc_id = f_clsc_hat_cowboy
 		size = 49152
 	}
-	cas_female_hat_alt4 = {
+	CAS_Female_Hat_alt4 = {
 		desc_id = f_bmtl_hat_chicken
 		size = 45056
 	}
-	cas_female_torso = {
+	CAS_Female_Torso = {
 		desc_id = f_goth_torso_halfstrap
 		size = 188416
 	}
-	cas_female_torso_alt1 = {
+	CAS_Female_Torso_alt1 = {
 		desc_id = f_goth_torso_frillybodice
 		size = 172032
 	}
-	cas_female_torso_alt2 = {
+	CAS_Female_Torso_alt2 = {
 		desc_id = f_punk_torso_leather
 		size = 167936
 	}
-	cas_female_torso_alt3 = {
+	CAS_Female_Torso_alt3 = {
 		desc_id = f_punk_torso_leather_03
 		size = 167936
 	}
-	cas_female_torso_alt4 = {
+	CAS_Female_Torso_alt4 = {
 		desc_id = f_bmtl_torso_spikeshirt
 		size = 167936
 	}
-	cas_female_legs = {
+	CAS_Female_Legs = {
 		desc_id = f_goth_legs_cyberstrap
 		size = 188416
 	}
-	cas_female_legs_alt1 = {
+	CAS_Female_Legs_alt1 = {
 		desc_id = f_punk_legs_skirt
 		size = 184320
 	}
-	cas_female_legs_alt2 = {
-		desc_id = f_pop_legs_baggypants
+	CAS_Female_Legs_alt2 = {
+		desc_id = F_Pop_Legs_BaggyPants
 		size = 172032
 	}
-	cas_female_legs_alt3 = {
+	CAS_Female_Legs_alt3 = {
 		desc_id = f_goth_legs_frillydress
 		size = 167936
 	}
-	cas_female_legs_alt4 = {
+	CAS_Female_Legs_alt4 = {
 		desc_id = f_bmtl_legs_ringskirt
 		size = 163840
 	}
-	cas_female_shoes = {
+	CAS_Female_Shoes = {
 		desc_id = f_metl_shoe_ltrring
 		size = 155648
 	}
-	cas_female_shoes_alt1 = {
-		desc_id = f_goth_shoe_cyberb
+	CAS_Female_Shoes_alt1 = {
+		desc_id = F_Goth_Shoe_CyberB
 		size = 147456
 	}
-	cas_female_shoes_alt2 = {
+	CAS_Female_Shoes_alt2 = {
 		desc_id = f_metl_shoes_studs01
 		size = 135168
 	}
-	cas_female_shoes_alt3 = {
-		desc_id = f_rock_shoe_buckles
+	CAS_Female_Shoes_alt3 = {
+		desc_id = F_Rock_Shoe_Buckles
 		size = 131072
 	}
-	cas_female_shoes_alt4 = {
+	CAS_Female_Shoes_alt4 = {
 		desc_id = f_bmtl_shoes_combatboots
 		size = 126976
 	}
-	cas_female_acc_left = {
+	CAS_Female_Acc_Left = {
 		desc_id = f_goth_acc_lstrapglove
 		size = 69632
 	}
-	cas_female_acc_left_alt1 = {
+	CAS_Female_Acc_Left_alt1 = {
 		desc_id = f_rock_acc_lglove
 		size = 65536
 	}
-	cas_female_acc_left_alt2 = {
+	CAS_Female_Acc_Left_alt2 = {
 		desc_id = f_goth_acc_laceglv_l
 		size = 49152
 	}
-	cas_female_acc_left_alt3 = {
+	CAS_Female_Acc_Left_alt3 = {
 		desc_id = f_rock_acc_lskullwatch
 		size = 40960
 	}
-	cas_female_acc_left_alt4 = {
-		desc_id = f_rock_acc_lchainstud
+	CAS_Female_Acc_Left_alt4 = {
+		desc_id = F_Rock_Acc_LChainStud
 		size = 36864
 	}
-	cas_female_acc_right = {
+	CAS_Female_Acc_Right = {
 		desc_id = f_bmtl_acc_rwristguard
 		size = 69632
 	}
-	cas_female_acc_right_alt1 = {
+	CAS_Female_Acc_Right_alt1 = {
 		desc_id = f_rock_acc_rglove
 		size = 65536
 	}
-	cas_female_acc_right_alt2 = {
+	CAS_Female_Acc_Right_alt2 = {
 		desc_id = f_goth_acc_rstrapglove
 		size = 65536
 	}
-	cas_female_acc_right_alt3 = {
-		desc_id = f_punk_acc_rbands
+	CAS_Female_Acc_Right_alt3 = {
+		desc_id = F_Punk_Acc_Rbands
 		size = 61440
 	}
-	cas_female_acc_right_alt4 = {
-		desc_id = f_clsc_accs_rbracelet
+	CAS_Female_Acc_Right_alt4 = {
+		desc_id = F_Clsc_Accs_RBracelet
 		size = 61440
 	}
-	cas_female_acc_face = {
+	CAS_Female_Acc_Face = {
 		desc_id = f_clsc_glasses_avtr
 		size = 36864
 	}
-	cas_female_acc_face_alt1 = {
+	CAS_Female_Acc_Face_alt1 = {
 		desc_id = f_clsc_glasses_round
 		size = 36864
 	}
-	cas_female_acc_face_alt2 = {
+	CAS_Female_Acc_Face_alt2 = {
 		desc_id = f_goth_glasses_ggls
 		size = 36864
 	}
-	cas_female_acc_face_alt3 = {
+	CAS_Female_Acc_Face_alt3 = {
 		desc_id = f_pop_glasses_libby
 		size = 32768
 	}
-	cas_female_acc_face_alt4 = {
+	CAS_Female_Acc_Face_alt4 = {
 		desc_id = f_pop_glasses_fieldings
 		size = 32768
 	}
-	cas_female_acc_ears = {
+	CAS_Female_Acc_Ears = {
 		desc_id = f_punk_acc_ring_03
 		size = 12288
 	}
-	cas_female_acc_ears_alt1 = {
+	CAS_Female_Acc_Ears_alt1 = {
 		desc_id = f_punk_acc_ring_02
 		size = 12288
 	}
-	cas_female_acc_ears_alt2 = {
+	CAS_Female_Acc_Ears_alt2 = {
 		desc_id = f_punk_acc_ring_04
 		size = 8192
 	}
-	cas_female_acc_ears_alt3 = {
+	CAS_Female_Acc_Ears_alt3 = {
 		desc_id = f_punk_acc_ring
 		size = 8192
 	}
-	cas_female_hat_hair = {
+	CAS_Female_Hat_Hair = {
 		desc_id = f_bmtl_hathair_overeyes
 		size = 86016
 	}
-	cas_female_hat_hair_alt1 = {
+	CAS_Female_Hat_Hair_alt1 = {
 		desc_id = f_metl_hathair_skunk
 		size = 77824
 	}
-	cas_female_hat_hair_alt2 = {
+	CAS_Female_Hat_Hair_alt2 = {
 		desc_id = f_clsc_hathair_farah
 		size = 69632
 	}
-	cas_female_hat_hair_alt3 = {
+	CAS_Female_Hat_Hair_alt3 = {
 		desc_id = f_pop_hathair_fergie
 		size = 69632
 	}
-	cas_female_hat_hair_alt4 = {
-		desc_id = f_bmtl_hathair_straight
+	CAS_Female_Hat_Hair_alt4 = {
+		desc_id = F_Bmtl_HatHair_Straight
 		size = 65536
 	}
-	cas_mic = {
-		desc_id = `black metal`
+	CAS_Mic = {
+		desc_id = `Black Metal`
 		size = 36864
 	}
-	cas_mic_alt1 = {
-		desc_id = rock
+	CAS_Mic_alt1 = {
+		desc_id = Rock
 		size = 28672
 	}
-	cas_mic_alt2 = {
-		desc_id = `classic rock`
+	CAS_Mic_alt2 = {
+		desc_id = `Classic Rock`
 		size = 28672
 	}
-	cas_mic_alt3 = {
-		desc_id = `glam rock`
+	CAS_Mic_alt3 = {
+		desc_id = `Glam Rock`
 		size = 20480
 	}
-	cas_mic_alt4 = {
-		desc_id = punk
+	CAS_Mic_alt4 = {
+		desc_id = Punk
 		size = 20480
 	}
-	cas_mic_stand = {
+	CAS_Mic_Stand = {
 		desc_id = mic_stand_metal
 		size = 69632
 	}
-	cas_mic_stand_alt1 = {
-		desc_id = goth
+	CAS_Mic_Stand_alt1 = {
+		desc_id = Goth
 		size = 49152
 	}
-	cas_mic_stand_alt2 = {
-		desc_id = rock
+	CAS_Mic_Stand_alt2 = {
+		desc_id = Rock
 		size = 36864
 	}
-	cas_mic_stand_alt3 = {
+	CAS_Mic_Stand_alt3 = {
 		desc_id = mic_stand_blackmetal
 		size = 36864
 	}
-	cas_mic_stand_alt4 = {
-		desc_id = twisted
+	CAS_Mic_Stand_alt4 = {
+		desc_id = Twisted
 		size = 36864
 	}
-	cas_bass_body = {
-		desc_id = cab_body_bandera
+	CAS_Bass_Body = {
+		desc_id = CAB_Body_Bandera
 		size = 57344
 	}
-	cas_bass_body_alt1 = {
-		desc_id = cab_body_prediktor
+	CAS_Bass_Body_alt1 = {
+		desc_id = CAB_Body_Prediktor
 		size = 57344
 	}
-	cas_bass_body_alt2 = {
-		desc_id = cab_body_b2a
+	CAS_Bass_Body_alt2 = {
+		desc_id = CAB_Body_B2A
 		size = 49152
 	}
-	cas_bass_body_alt3 = {
-		desc_id = cab_skull
+	CAS_Bass_Body_alt3 = {
+		desc_id = CAB_Skull
 		size = 49152
 	}
-	cas_bass_body_alt4 = {
-		desc_id = cab_body_x_battleaxe
+	CAS_Bass_Body_alt4 = {
+		desc_id = CAB_Body_X_Battleaxe
 		size = 40960
 	}
-	cas_bass_neck = {
-		desc_id = cab_stnek_ebony
+	CAS_Bass_Neck = {
+		desc_id = CAB_StNek_Ebony
 		size = 8192
 	}
-	cas_bass_neck_alt1 = {
-		desc_id = cab_stnekf_rosewood
+	CAS_Bass_Neck_alt1 = {
+		desc_id = CAB_StNekF_Rosewood
 		size = 8192
 	}
-	cas_bass_neck_alt2 = {
-		desc_id = cab_neck_bn1a
+	CAS_Bass_Neck_alt2 = {
+		desc_id = CAB_Neck_BN1A
 		size = 8192
 	}
-	cas_bass_neck_alt3 = {
-		desc_id = cab_neck_bfretlss03
+	CAS_Bass_Neck_alt3 = {
+		desc_id = CAB_Neck_BFretlss03
 		size = 8192
 	}
-	cas_bass_neck_alt4 = {
-		desc_id = cab_stnek_maple
+	CAS_Bass_Neck_alt4 = {
+		desc_id = CAB_StNek_Maple
 		size = 8192
 	}
-	cas_bass_head = {
-		desc_id = cab_head_mlsplit
+	CAS_Bass_Head = {
+		desc_id = CAB_Head_MLSplit
 		size = 102400
 	}
-	cas_bass_head_alt1 = {
-		desc_id = cab_head_bh6a
+	CAS_Bass_Head_alt1 = {
+		desc_id = CAB_Head_BH6A
 		size = 98304
 	}
-	cas_bass_head_alt2 = {
-		desc_id = cab_head_bh4a
+	CAS_Bass_Head_alt2 = {
+		desc_id = CAB_Head_BH4A
 		size = 98304
 	}
-	cas_bass_head_alt3 = {
-		desc_id = cab_head_flay_rev
+	CAS_Bass_Head_alt3 = {
+		desc_id = CAB_Head_Flay_rev
 		size = 98304
 	}
-	cas_bass_head_alt4 = {
-		desc_id = cab_head_skull
+	CAS_Bass_Head_alt4 = {
+		desc_id = CAB_Head_Skull
 		size = 94208
 	}
-	cas_bass_pickguards = {
-		desc_id = cab_pg_6tz004
+	CAS_Bass_Pickguards = {
+		desc_id = CAB_PG_6TZ004
 		size = 28672
 	}
-	cas_bass_pickguards_alt1 = {
-		desc_id = cab_pickg_b_unos02
+	CAS_Bass_Pickguards_alt1 = {
+		desc_id = CAB_PickG_B_Unos02
 		size = 20480
 	}
-	cas_bass_pickguards_alt2 = {
-		desc_id = cab_pickg_b_unos03
+	CAS_Bass_Pickguards_alt2 = {
+		desc_id = CAB_PickG_B_Unos03
 		size = 20480
 	}
-	cas_bass_pickguards_alt3 = {
-		desc_id = cab_pickg_e1
+	CAS_Bass_Pickguards_alt3 = {
+		desc_id = CAB_PickG_E1
 		size = 20480
 	}
-	cas_bass_pickguards_alt4 = {
-		desc_id = cab_pgrdftsc
+	CAS_Bass_Pickguards_alt4 = {
+		desc_id = CAB_PGrdFtsC
 		size = 20480
 	}
-	cas_bass_pickups = {
-		desc_id = cab_jp_pickup_a
+	CAS_Bass_Pickups = {
+		desc_id = CAB_JP_Pickup_A
 		size = 36864
 	}
-	cas_bass_pickups_alt1 = {
-		desc_id = cab_jp_pickup_b
+	CAS_Bass_Pickups_alt1 = {
+		desc_id = CAB_JP_Pickup_B
 		size = 32768
 	}
-	cas_bass_pickups_alt2 = {
-		desc_id = cab_pbass_pickup_a
+	CAS_Bass_Pickups_alt2 = {
+		desc_id = CAB_PBass_Pickup_A
 		size = 32768
 	}
-	cas_bass_pickups_alt3 = {
-		desc_id = cab_pickups_bp1a2
+	CAS_Bass_Pickups_alt3 = {
+		desc_id = CAB_Pickups_BP1A2
 		size = 28672
 	}
-	cas_bass_pickups_alt4 = {
-		desc_id = cab_pickup_hack03
+	CAS_Bass_Pickups_alt4 = {
+		desc_id = CAB_pickup_Hack03
 		size = 20480
 	}
-	cas_bass_bridges = {
-		desc_id = cab_bridge_hack
+	CAS_Bass_Bridges = {
+		desc_id = CAB_Bridge_Hack
 		size = 32768
 	}
-	cas_bass_bridges_alt1 = {
-		desc_id = cab_bridge_bb1a
+	CAS_Bass_Bridges_alt1 = {
+		desc_id = CAB_Bridge_BB1A
 		size = 24576
 	}
-	cas_bass_bridges_alt2 = {
-		desc_id = cab_bridge_mls
+	CAS_Bass_Bridges_alt2 = {
+		desc_id = CAB_Bridge_MLS
 		size = 24576
 	}
-	cas_bass_bridges_alt3 = {
-		desc_id = cab_bridge_bb2a
+	CAS_Bass_Bridges_alt3 = {
+		desc_id = CAB_Bridge_BB2A
 		size = 20480
 	}
-	cas_bass_bridges_alt4 = {
-		desc_id = cab_bridge_bb3a
+	CAS_Bass_Bridges_alt4 = {
+		desc_id = CAB_Bridge_BB3A
 		size = 20480
 	}
-	cas_bass_knobs = {
+	CAS_Bass_Knobs = {
 		desc_id = cab_knob_spyt08
 		size = 28672
 	}
-	cas_bass_knobs_alt1 = {
-		desc_id = cab_knob_unos01
+	CAS_Bass_Knobs_alt1 = {
+		desc_id = CAB_Knob_Unos01
 		size = 28672
 	}
-	cas_bass_knobs_alt2 = {
+	CAS_Bass_Knobs_alt2 = {
 		desc_id = cab_knob_xrend01
 		size = 28672
 	}
-	cas_bass_knobs_alt3 = {
+	CAS_Bass_Knobs_alt3 = {
 		desc_id = cab_knob_hack04
 		size = 28672
 	}
-	cas_bass_knobs_alt4 = {
+	CAS_Bass_Knobs_alt4 = {
 		desc_id = cab_knob_xrend04
 		size = 28672
 	}
 }
 worst_female_drum_appearance = {
-	cas_body = {
-		desc_id = gh4_car_female
+	CAS_Body = {
+		desc_id = GH4_CAR_Female
 		size = 528384
 	}
 	cas_body_alt1 = {
-		desc_id = gh4_car_johnny
+		desc_id = GH4_CAR_Johnny
 		size = 577536
 	}
 	cas_body_alt2 = {
-		desc_id = `bestbuy kid`
+		desc_id = `BestBuy Kid`
 		size = 577536
 	}
 	cas_body_alt3 = {
-		desc_id = gh4_car_eddie
+		desc_id = GH4_CAR_Eddie
 		size = 577536
 	}
 	cas_body_alt4 = {
-		desc_id = gh4_car_lars
+		desc_id = GH4_CAR_Lars
 		size = 577536
 	}
-	cas_female_hat = {
-		desc_id = f_pop_head_gasmask
+	CAS_Female_Hat = {
+		desc_id = F_Pop_Head_GasMask
 		size = 61440
 	}
-	cas_female_hat_alt1 = {
-		desc_id = f_bmtl_hat_skullhelmet
+	CAS_Female_Hat_alt1 = {
+		desc_id = F_Bmtl_Hat_SkullHelmet
 		size = 61440
 	}
-	cas_female_hat_alt2 = {
-		desc_id = f_bmtl_head_viking
+	CAS_Female_Hat_alt2 = {
+		desc_id = F_Bmtl_Head_Viking
 		size = 53248
 	}
-	cas_female_hat_alt3 = {
+	CAS_Female_Hat_alt3 = {
 		desc_id = f_clsc_hat_cowboy
 		size = 49152
 	}
-	cas_female_hat_alt4 = {
+	CAS_Female_Hat_alt4 = {
 		desc_id = f_bmtl_hat_chicken
 		size = 45056
 	}
-	cas_female_torso = {
+	CAS_Female_Torso = {
 		desc_id = f_goth_torso_halfstrap
 		size = 188416
 	}
-	cas_female_torso_alt1 = {
+	CAS_Female_Torso_alt1 = {
 		desc_id = f_goth_torso_frillybodice
 		size = 172032
 	}
-	cas_female_torso_alt2 = {
+	CAS_Female_Torso_alt2 = {
 		desc_id = f_punk_torso_leather
 		size = 167936
 	}
-	cas_female_torso_alt3 = {
+	CAS_Female_Torso_alt3 = {
 		desc_id = f_punk_torso_leather_03
 		size = 167936
 	}
-	cas_female_torso_alt4 = {
+	CAS_Female_Torso_alt4 = {
 		desc_id = f_bmtl_torso_spikeshirt
 		size = 167936
 	}
-	cas_female_legs = {
+	CAS_Female_Legs = {
 		desc_id = f_goth_legs_cyberstrap
 		size = 188416
 	}
-	cas_female_legs_alt1 = {
+	CAS_Female_Legs_alt1 = {
 		desc_id = f_punk_legs_skirt
 		size = 184320
 	}
-	cas_female_legs_alt2 = {
-		desc_id = f_pop_legs_baggypants
+	CAS_Female_Legs_alt2 = {
+		desc_id = F_Pop_Legs_BaggyPants
 		size = 172032
 	}
-	cas_female_legs_alt3 = {
+	CAS_Female_Legs_alt3 = {
 		desc_id = f_goth_legs_frillydress
 		size = 167936
 	}
-	cas_female_legs_alt4 = {
+	CAS_Female_Legs_alt4 = {
 		desc_id = f_bmtl_legs_ringskirt
 		size = 163840
 	}
-	cas_female_shoes = {
+	CAS_Female_Shoes = {
 		desc_id = f_metl_shoe_ltrring
 		size = 155648
 	}
-	cas_female_shoes_alt1 = {
-		desc_id = f_goth_shoe_cyberb
+	CAS_Female_Shoes_alt1 = {
+		desc_id = F_Goth_Shoe_CyberB
 		size = 147456
 	}
-	cas_female_shoes_alt2 = {
+	CAS_Female_Shoes_alt2 = {
 		desc_id = f_metl_shoes_studs01
 		size = 135168
 	}
-	cas_female_shoes_alt3 = {
-		desc_id = f_rock_shoe_buckles
+	CAS_Female_Shoes_alt3 = {
+		desc_id = F_Rock_Shoe_Buckles
 		size = 131072
 	}
-	cas_female_shoes_alt4 = {
+	CAS_Female_Shoes_alt4 = {
 		desc_id = f_bmtl_shoes_combatboots
 		size = 126976
 	}
-	cas_female_acc_left = {
+	CAS_Female_Acc_Left = {
 		desc_id = f_goth_acc_lstrapglove
 		size = 69632
 	}
-	cas_female_acc_left_alt1 = {
+	CAS_Female_Acc_Left_alt1 = {
 		desc_id = f_rock_acc_lglove
 		size = 65536
 	}
-	cas_female_acc_left_alt2 = {
+	CAS_Female_Acc_Left_alt2 = {
 		desc_id = f_goth_acc_laceglv_l
 		size = 49152
 	}
-	cas_female_acc_left_alt3 = {
+	CAS_Female_Acc_Left_alt3 = {
 		desc_id = f_rock_acc_lskullwatch
 		size = 40960
 	}
-	cas_female_acc_left_alt4 = {
-		desc_id = f_rock_acc_lchainstud
+	CAS_Female_Acc_Left_alt4 = {
+		desc_id = F_Rock_Acc_LChainStud
 		size = 36864
 	}
-	cas_female_acc_right = {
+	CAS_Female_Acc_Right = {
 		desc_id = f_bmtl_acc_rwristguard
 		size = 69632
 	}
-	cas_female_acc_right_alt1 = {
+	CAS_Female_Acc_Right_alt1 = {
 		desc_id = f_rock_acc_rglove
 		size = 65536
 	}
-	cas_female_acc_right_alt2 = {
+	CAS_Female_Acc_Right_alt2 = {
 		desc_id = f_goth_acc_rstrapglove
 		size = 65536
 	}
-	cas_female_acc_right_alt3 = {
-		desc_id = f_punk_acc_rbands
+	CAS_Female_Acc_Right_alt3 = {
+		desc_id = F_Punk_Acc_Rbands
 		size = 61440
 	}
-	cas_female_acc_right_alt4 = {
-		desc_id = f_clsc_accs_rbracelet
+	CAS_Female_Acc_Right_alt4 = {
+		desc_id = F_Clsc_Accs_RBracelet
 		size = 61440
 	}
-	cas_female_acc_face = {
+	CAS_Female_Acc_Face = {
 		desc_id = f_clsc_glasses_avtr
 		size = 36864
 	}
-	cas_female_acc_face_alt1 = {
+	CAS_Female_Acc_Face_alt1 = {
 		desc_id = f_clsc_glasses_round
 		size = 36864
 	}
-	cas_female_acc_face_alt2 = {
+	CAS_Female_Acc_Face_alt2 = {
 		desc_id = f_goth_glasses_ggls
 		size = 36864
 	}
-	cas_female_acc_face_alt3 = {
+	CAS_Female_Acc_Face_alt3 = {
 		desc_id = f_pop_glasses_libby
 		size = 32768
 	}
-	cas_female_acc_face_alt4 = {
+	CAS_Female_Acc_Face_alt4 = {
 		desc_id = f_pop_glasses_fieldings
 		size = 32768
 	}
-	cas_female_acc_ears = {
+	CAS_Female_Acc_Ears = {
 		desc_id = f_punk_acc_ring_03
 		size = 12288
 	}
-	cas_female_acc_ears_alt1 = {
+	CAS_Female_Acc_Ears_alt1 = {
 		desc_id = f_punk_acc_ring_02
 		size = 12288
 	}
-	cas_female_acc_ears_alt2 = {
+	CAS_Female_Acc_Ears_alt2 = {
 		desc_id = f_punk_acc_ring_04
 		size = 8192
 	}
-	cas_female_acc_ears_alt3 = {
+	CAS_Female_Acc_Ears_alt3 = {
 		desc_id = f_punk_acc_ring
 		size = 8192
 	}
-	cas_female_hat_hair = {
+	CAS_Female_Hat_Hair = {
 		desc_id = f_bmtl_hathair_overeyes
 		size = 86016
 	}
-	cas_female_hat_hair_alt1 = {
+	CAS_Female_Hat_Hair_alt1 = {
 		desc_id = f_metl_hathair_skunk
 		size = 77824
 	}
-	cas_female_hat_hair_alt2 = {
+	CAS_Female_Hat_Hair_alt2 = {
 		desc_id = f_clsc_hathair_farah
 		size = 69632
 	}
-	cas_female_hat_hair_alt3 = {
+	CAS_Female_Hat_Hair_alt3 = {
 		desc_id = f_pop_hathair_fergie
 		size = 69632
 	}
-	cas_female_hat_hair_alt4 = {
-		desc_id = f_bmtl_hathair_straight
+	CAS_Female_Hat_Hair_alt4 = {
+		desc_id = F_Bmtl_HatHair_Straight
 		size = 65536
 	}
-	cas_drums = {
-		desc_id = monster
+	CAS_Drums = {
+		desc_id = Monster
 		size = 593920
 	}
-	cas_drums_alt1 = {
-		desc_id = doublebass
+	CAS_Drums_alt1 = {
+		desc_id = DoubleBass
 		size = 552960
 	}
-	cas_drums_alt2 = {
+	CAS_Drums_alt2 = {
 		desc_id = basic
 		size = 331776
 	}
-	cas_drums_sticks = {
-		desc_id = drumsticks_zildjian2
+	CAS_Drums_Sticks = {
+		desc_id = Drumsticks_Zildjian2
 		size = 12288
 	}
-	cas_drums_sticks_alt1 = {
-		desc_id = drumsticks1
+	CAS_Drums_Sticks_alt1 = {
+		desc_id = Drumsticks1
 		size = 12288
 	}
-	cas_drums_sticks_alt2 = {
-		desc_id = drumsticks_regal
+	CAS_Drums_Sticks_alt2 = {
+		desc_id = Drumsticks_Regal
 		size = 12288
 	}
-	cas_drums_sticks_alt3 = {
-		desc_id = drumsticks_zildjian1
+	CAS_Drums_Sticks_alt3 = {
+		desc_id = Drumsticks_Zildjian1
 		size = 12288
 	}
 }
 worst_female_vocals_appearance = {
-	cas_body = {
-		desc_id = gh4_car_female
+	CAS_Body = {
+		desc_id = GH4_CAR_Female
 		size = 528384
 	}
 	cas_body_alt1 = {
-		desc_id = gh4_car_johnny
+		desc_id = GH4_CAR_Johnny
 		size = 577536
 	}
 	cas_body_alt2 = {
-		desc_id = `bestbuy kid`
+		desc_id = `BestBuy Kid`
 		size = 577536
 	}
 	cas_body_alt3 = {
-		desc_id = gh4_car_eddie
+		desc_id = GH4_CAR_Eddie
 		size = 577536
 	}
 	cas_body_alt4 = {
-		desc_id = gh4_car_lars
+		desc_id = GH4_CAR_Lars
 		size = 577536
 	}
-	cas_female_hat = {
-		desc_id = f_pop_head_gasmask
+	CAS_Female_Hat = {
+		desc_id = F_Pop_Head_GasMask
 		size = 61440
 	}
-	cas_female_hat_alt1 = {
-		desc_id = f_bmtl_hat_skullhelmet
+	CAS_Female_Hat_alt1 = {
+		desc_id = F_Bmtl_Hat_SkullHelmet
 		size = 61440
 	}
-	cas_female_hat_alt2 = {
-		desc_id = f_bmtl_head_viking
+	CAS_Female_Hat_alt2 = {
+		desc_id = F_Bmtl_Head_Viking
 		size = 53248
 	}
-	cas_female_hat_alt3 = {
+	CAS_Female_Hat_alt3 = {
 		desc_id = f_clsc_hat_cowboy
 		size = 49152
 	}
-	cas_female_hat_alt4 = {
+	CAS_Female_Hat_alt4 = {
 		desc_id = f_bmtl_hat_chicken
 		size = 45056
 	}
-	cas_female_torso = {
+	CAS_Female_Torso = {
 		desc_id = f_goth_torso_halfstrap
 		size = 188416
 	}
-	cas_female_torso_alt1 = {
+	CAS_Female_Torso_alt1 = {
 		desc_id = f_goth_torso_frillybodice
 		size = 172032
 	}
-	cas_female_torso_alt2 = {
+	CAS_Female_Torso_alt2 = {
 		desc_id = f_punk_torso_leather
 		size = 167936
 	}
-	cas_female_torso_alt3 = {
+	CAS_Female_Torso_alt3 = {
 		desc_id = f_punk_torso_leather_03
 		size = 167936
 	}
-	cas_female_torso_alt4 = {
+	CAS_Female_Torso_alt4 = {
 		desc_id = f_bmtl_torso_spikeshirt
 		size = 167936
 	}
-	cas_female_legs = {
+	CAS_Female_Legs = {
 		desc_id = f_goth_legs_cyberstrap
 		size = 188416
 	}
-	cas_female_legs_alt1 = {
+	CAS_Female_Legs_alt1 = {
 		desc_id = f_punk_legs_skirt
 		size = 184320
 	}
-	cas_female_legs_alt2 = {
-		desc_id = f_pop_legs_baggypants
+	CAS_Female_Legs_alt2 = {
+		desc_id = F_Pop_Legs_BaggyPants
 		size = 172032
 	}
-	cas_female_legs_alt3 = {
+	CAS_Female_Legs_alt3 = {
 		desc_id = f_goth_legs_frillydress
 		size = 167936
 	}
-	cas_female_legs_alt4 = {
+	CAS_Female_Legs_alt4 = {
 		desc_id = f_bmtl_legs_ringskirt
 		size = 163840
 	}
-	cas_female_shoes = {
+	CAS_Female_Shoes = {
 		desc_id = f_metl_shoe_ltrring
 		size = 155648
 	}
-	cas_female_shoes_alt1 = {
-		desc_id = f_goth_shoe_cyberb
+	CAS_Female_Shoes_alt1 = {
+		desc_id = F_Goth_Shoe_CyberB
 		size = 147456
 	}
-	cas_female_shoes_alt2 = {
+	CAS_Female_Shoes_alt2 = {
 		desc_id = f_metl_shoes_studs01
 		size = 135168
 	}
-	cas_female_shoes_alt3 = {
-		desc_id = f_rock_shoe_buckles
+	CAS_Female_Shoes_alt3 = {
+		desc_id = F_Rock_Shoe_Buckles
 		size = 131072
 	}
-	cas_female_shoes_alt4 = {
+	CAS_Female_Shoes_alt4 = {
 		desc_id = f_bmtl_shoes_combatboots
 		size = 126976
 	}
-	cas_female_acc_left = {
+	CAS_Female_Acc_Left = {
 		desc_id = f_goth_acc_lstrapglove
 		size = 69632
 	}
-	cas_female_acc_left_alt1 = {
+	CAS_Female_Acc_Left_alt1 = {
 		desc_id = f_rock_acc_lglove
 		size = 65536
 	}
-	cas_female_acc_left_alt2 = {
+	CAS_Female_Acc_Left_alt2 = {
 		desc_id = f_goth_acc_laceglv_l
 		size = 49152
 	}
-	cas_female_acc_left_alt3 = {
+	CAS_Female_Acc_Left_alt3 = {
 		desc_id = f_rock_acc_lskullwatch
 		size = 40960
 	}
-	cas_female_acc_left_alt4 = {
-		desc_id = f_rock_acc_lchainstud
+	CAS_Female_Acc_Left_alt4 = {
+		desc_id = F_Rock_Acc_LChainStud
 		size = 36864
 	}
-	cas_female_acc_right = {
+	CAS_Female_Acc_Right = {
 		desc_id = f_bmtl_acc_rwristguard
 		size = 69632
 	}
-	cas_female_acc_right_alt1 = {
+	CAS_Female_Acc_Right_alt1 = {
 		desc_id = f_rock_acc_rglove
 		size = 65536
 	}
-	cas_female_acc_right_alt2 = {
+	CAS_Female_Acc_Right_alt2 = {
 		desc_id = f_goth_acc_rstrapglove
 		size = 65536
 	}
-	cas_female_acc_right_alt3 = {
-		desc_id = f_punk_acc_rbands
+	CAS_Female_Acc_Right_alt3 = {
+		desc_id = F_Punk_Acc_Rbands
 		size = 61440
 	}
-	cas_female_acc_right_alt4 = {
-		desc_id = f_clsc_accs_rbracelet
+	CAS_Female_Acc_Right_alt4 = {
+		desc_id = F_Clsc_Accs_RBracelet
 		size = 61440
 	}
-	cas_female_acc_face = {
+	CAS_Female_Acc_Face = {
 		desc_id = f_clsc_glasses_avtr
 		size = 36864
 	}
-	cas_female_acc_face_alt1 = {
+	CAS_Female_Acc_Face_alt1 = {
 		desc_id = f_clsc_glasses_round
 		size = 36864
 	}
-	cas_female_acc_face_alt2 = {
+	CAS_Female_Acc_Face_alt2 = {
 		desc_id = f_goth_glasses_ggls
 		size = 36864
 	}
-	cas_female_acc_face_alt3 = {
+	CAS_Female_Acc_Face_alt3 = {
 		desc_id = f_pop_glasses_libby
 		size = 32768
 	}
-	cas_female_acc_face_alt4 = {
+	CAS_Female_Acc_Face_alt4 = {
 		desc_id = f_pop_glasses_fieldings
 		size = 32768
 	}
-	cas_female_acc_ears = {
+	CAS_Female_Acc_Ears = {
 		desc_id = f_punk_acc_ring_03
 		size = 12288
 	}
-	cas_female_acc_ears_alt1 = {
+	CAS_Female_Acc_Ears_alt1 = {
 		desc_id = f_punk_acc_ring_02
 		size = 12288
 	}
-	cas_female_acc_ears_alt2 = {
+	CAS_Female_Acc_Ears_alt2 = {
 		desc_id = f_punk_acc_ring_04
 		size = 8192
 	}
-	cas_female_acc_ears_alt3 = {
+	CAS_Female_Acc_Ears_alt3 = {
 		desc_id = f_punk_acc_ring
 		size = 8192
 	}
-	cas_female_hat_hair = {
+	CAS_Female_Hat_Hair = {
 		desc_id = f_bmtl_hathair_overeyes
 		size = 86016
 	}
-	cas_female_hat_hair_alt1 = {
+	CAS_Female_Hat_Hair_alt1 = {
 		desc_id = f_metl_hathair_skunk
 		size = 77824
 	}
-	cas_female_hat_hair_alt2 = {
+	CAS_Female_Hat_Hair_alt2 = {
 		desc_id = f_clsc_hathair_farah
 		size = 69632
 	}
-	cas_female_hat_hair_alt3 = {
+	CAS_Female_Hat_Hair_alt3 = {
 		desc_id = f_pop_hathair_fergie
 		size = 69632
 	}
-	cas_female_hat_hair_alt4 = {
-		desc_id = f_bmtl_hathair_straight
+	CAS_Female_Hat_Hair_alt4 = {
+		desc_id = F_Bmtl_HatHair_Straight
 		size = 65536
 	}
-	cas_mic = {
-		desc_id = `black metal`
+	CAS_Mic = {
+		desc_id = `Black Metal`
 		size = 36864
 	}
-	cas_mic_alt1 = {
-		desc_id = rock
+	CAS_Mic_alt1 = {
+		desc_id = Rock
 		size = 28672
 	}
-	cas_mic_alt2 = {
-		desc_id = `classic rock`
+	CAS_Mic_alt2 = {
+		desc_id = `Classic Rock`
 		size = 28672
 	}
-	cas_mic_alt3 = {
-		desc_id = `glam rock`
+	CAS_Mic_alt3 = {
+		desc_id = `Glam Rock`
 		size = 20480
 	}
-	cas_mic_alt4 = {
-		desc_id = punk
+	CAS_Mic_alt4 = {
+		desc_id = Punk
 		size = 20480
 	}
-	cas_mic_stand = {
+	CAS_Mic_Stand = {
 		desc_id = mic_stand_metal
 		size = 69632
 	}
-	cas_mic_stand_alt1 = {
-		desc_id = goth
+	CAS_Mic_Stand_alt1 = {
+		desc_id = Goth
 		size = 49152
 	}
-	cas_mic_stand_alt2 = {
-		desc_id = rock
+	CAS_Mic_Stand_alt2 = {
+		desc_id = Rock
 		size = 36864
 	}
-	cas_mic_stand_alt3 = {
+	CAS_Mic_Stand_alt3 = {
 		desc_id = mic_stand_blackmetal
 		size = 36864
 	}
-	cas_mic_stand_alt4 = {
-		desc_id = twisted
+	CAS_Mic_Stand_alt4 = {
+		desc_id = Twisted
 		size = 36864
 	}
-	cas_guitar_body = {
-		desc_id = guitar_x_trident_10
+	CAS_Guitar_Body = {
+		desc_id = Guitar_X_Trident_10
 		size = 77824
 	}
-	cas_guitar_body_alt1 = {
-		desc_id = guitar_x_clear_12
+	CAS_Guitar_Body_alt1 = {
+		desc_id = Guitar_X_Clear_12
 		size = 65536
 	}
-	cas_guitar_body_alt2 = {
-		desc_id = guitar_x_freebird_09
+	CAS_Guitar_Body_alt2 = {
+		desc_id = Guitar_X_Freebird_09
 		size = 65536
 	}
-	cas_guitar_body_alt3 = {
-		desc_id = guitar_special_spider_02
+	CAS_Guitar_Body_alt3 = {
+		desc_id = Guitar_Special_Spider_02
 		size = 65536
 	}
-	cas_guitar_body_alt4 = {
-		desc_id = guitar_special_skull_01
+	CAS_Guitar_Body_alt4 = {
+		desc_id = Guitar_Special_Skull_01
 		size = 61440
 	}
-	cas_guitar_neck = {
-		desc_id = guitar_neck07
+	CAS_Guitar_Neck = {
+		desc_id = Guitar_Neck07
 		size = 12288
 	}
-	cas_guitar_neck_alt1 = {
-		desc_id = guitar_neck06
+	CAS_Guitar_Neck_alt1 = {
+		desc_id = Guitar_Neck06
 		size = 12288
 	}
-	cas_guitar_neck_alt2 = {
-		desc_id = guitar_neck04
+	CAS_Guitar_Neck_alt2 = {
+		desc_id = Guitar_Neck04
 		size = 12288
 	}
-	cas_guitar_neck_alt3 = {
-		desc_id = guitar_neck05
+	CAS_Guitar_Neck_alt3 = {
+		desc_id = Guitar_Neck05
 		size = 12288
 	}
-	cas_guitar_neck_alt4 = {
-		desc_id = guitar_neck01
+	CAS_Guitar_Neck_alt4 = {
+		desc_id = Guitar_Neck01
 		size = 12288
 	}
-	cas_guitar_head = {
-		desc_id = guitar_head_x_01
+	CAS_Guitar_Head = {
+		desc_id = Guitar_Head_X_01
 		size = 73728
 	}
-	cas_guitar_head_alt1 = {
-		desc_id = guitar_head16
+	CAS_Guitar_Head_alt1 = {
+		desc_id = Guitar_Head16
 		size = 61440
 	}
-	cas_guitar_head_alt2 = {
-		desc_id = headstock_x_handle_05
+	CAS_Guitar_Head_alt2 = {
+		desc_id = Headstock_X_Handle_05
 		size = 61440
 	}
-	cas_guitar_head_alt3 = {
-		desc_id = headstock_x_flame_08
+	CAS_Guitar_Head_alt3 = {
+		desc_id = Headstock_X_Flame_08
 		size = 61440
 	}
-	cas_guitar_head_alt4 = {
+	CAS_Guitar_Head_alt4 = {
 		desc_id = guitar_head_x_03
 		size = 61440
 	}
-	cas_guitar_pickguards = {
-		desc_id = gtr_x_fire_pickg01
+	CAS_Guitar_Pickguards = {
+		desc_id = GTR_X_Fire_PickG01
 		size = 28672
 	}
-	cas_guitar_pickguards_alt1 = {
-		desc_id = gtr_body8_pickg02
+	CAS_Guitar_Pickguards_alt1 = {
+		desc_id = GTR_Body8_PickG02
 		size = 20480
 	}
-	cas_guitar_pickguards_alt2 = {
-		desc_id = gtr_body2_pickg01
+	CAS_Guitar_Pickguards_alt2 = {
+		desc_id = GTR_Body2_PickG01
 		size = 20480
 	}
-	cas_guitar_pickguards_alt3 = {
-		desc_id = gtr_body14_pickg01
+	CAS_Guitar_Pickguards_alt3 = {
+		desc_id = GTR_Body14_PickG01
 		size = 20480
 	}
-	cas_guitar_pickguards_alt4 = {
+	CAS_Guitar_Pickguards_alt4 = {
 		desc_id = gtr_body17_pickg01
 		size = 20480
 	}
-	cas_guitar_pickups = {
-		desc_id = gtr_pickups_style_01c
+	CAS_Guitar_Pickups = {
+		desc_id = GTR_Pickups_Style_01c
 		size = 40960
 	}
-	cas_guitar_pickups_alt1 = {
-		desc_id = gtr_pickup_type1_blktan_3
+	CAS_Guitar_Pickups_alt1 = {
+		desc_id = GTR_Pickup_Type1_Blktan_3
 		size = 40960
 	}
-	cas_guitar_pickups_alt2 = {
-		desc_id = gtr_pickup_type1_blk_3
+	CAS_Guitar_Pickups_alt2 = {
+		desc_id = GTR_Pickup_Type1_Blk_3
 		size = 40960
 	}
-	cas_guitar_pickups_alt3 = {
-		desc_id = gtr_pickup_type1_blktan_2
+	CAS_Guitar_Pickups_alt3 = {
+		desc_id = GTR_Pickup_Type1_Blktan_2
 		size = 32768
 	}
-	cas_guitar_pickups_alt4 = {
-		desc_id = gtr_pickup_type1_blk_2
+	CAS_Guitar_Pickups_alt4 = {
+		desc_id = GTR_Pickup_Type1_Blk_2
 		size = 28672
 	}
-	cas_guitar_bridges = {
-		desc_id = gtr_hardware04a
+	CAS_Guitar_Bridges = {
+		desc_id = GTR_Hardware04a
 		size = 36864
 	}
-	cas_guitar_bridges_alt1 = {
-		desc_id = gtr_hardware01b
+	CAS_Guitar_Bridges_alt1 = {
+		desc_id = GTR_Hardware01b
 		size = 32768
 	}
-	cas_guitar_bridges_alt2 = {
-		desc_id = gtr_hardware06
+	CAS_Guitar_Bridges_alt2 = {
+		desc_id = GTR_Hardware06
 		size = 28672
 	}
-	cas_guitar_bridges_alt3 = {
-		desc_id = gtr8_hardware08a
+	CAS_Guitar_Bridges_alt3 = {
+		desc_id = GTR8_Hardware08a
 		size = 28672
 	}
-	cas_guitar_bridges_alt4 = {
-		desc_id = gtr_hardware03a
+	CAS_Guitar_Bridges_alt4 = {
+		desc_id = GTR_Hardware03a
 		size = 28672
 	}
-	cas_guitar_knobs = {
-		desc_id = gtr2_knob_type4_04
+	CAS_Guitar_Knobs = {
+		desc_id = GTR2_Knob_Type4_04
 		size = 28672
 	}
-	cas_guitar_knobs_alt1 = {
-		desc_id = gtr1_knob_type4_04
+	CAS_Guitar_Knobs_alt1 = {
+		desc_id = GTR1_Knob_Type4_04
 		size = 28672
 	}
-	cas_guitar_knobs_alt2 = {
-		desc_id = gtr4_knob_type4_04
+	CAS_Guitar_Knobs_alt2 = {
+		desc_id = GTR4_Knob_Type4_04
 		size = 28672
 	}
-	cas_guitar_knobs_alt3 = {
-		desc_id = gtr14_knob_type4_04
+	CAS_Guitar_Knobs_alt3 = {
+		desc_id = GTR14_Knob_Type4_04
 		size = 28672
 	}
-	cas_guitar_knobs_alt4 = {
-		desc_id = gtr12_knob_type4_04
+	CAS_Guitar_Knobs_alt4 = {
+		desc_id = GTR12_Knob_Type4_04
 		size = 28672
 	}
 }
 worst_male_guitar_appearance = {
-	cas_body = {
-		desc_id = gh4_car_male
+	CAS_Body = {
+		desc_id = GH4_CAR_Male
 		size = 577536
 	}
 	cas_body_alt1 = {
-		desc_id = gh4_car_johnny
+		desc_id = GH4_CAR_Johnny
 		size = 577536
 	}
 	cas_body_alt2 = {
-		desc_id = `bestbuy kid`
+		desc_id = `BestBuy Kid`
 		size = 577536
 	}
 	cas_body_alt3 = {
-		desc_id = gh4_car_eddie
+		desc_id = GH4_CAR_Eddie
 		size = 577536
 	}
 	cas_body_alt4 = {
-		desc_id = gh4_car_lars
+		desc_id = GH4_CAR_Lars
 		size = 577536
 	}
-	cas_male_hat = {
+	CAS_Male_Hat = {
 		desc_id = m_punk_hat_helmet
 		size = 86016
 	}
-	cas_male_hat_alt1 = {
-		desc_id = m_hat_gorilla
+	CAS_Male_Hat_alt1 = {
+		desc_id = M_Hat_Gorilla
 		size = 61440
 	}
-	cas_male_hat_alt2 = {
-		desc_id = m_bmtl_hat_skullhelmet
+	CAS_Male_Hat_alt2 = {
+		desc_id = M_Bmtl_Hat_SkullHelmet
 		size = 61440
 	}
-	cas_male_hat_alt3 = {
-		desc_id = m_pop_head_gasmask
+	CAS_Male_Hat_alt3 = {
+		desc_id = M_Pop_Head_GasMask
 		size = 57344
 	}
-	cas_male_hat_alt4 = {
-		desc_id = m_bmtl_hat_viking
+	CAS_Male_Hat_alt4 = {
+		desc_id = M_Bmtl_Hat_Viking
 		size = 53248
 	}
-	cas_male_facial_hair = {
-		desc_id = m_clsc_fhair_country
+	CAS_Male_Facial_Hair = {
+		desc_id = M_Clsc_Fhair_Country
 		size = 45056
 	}
-	cas_male_facial_hair_alt1 = {
-		desc_id = m_rock_fhair_stub
+	CAS_Male_Facial_Hair_alt1 = {
+		desc_id = M_Rock_Fhair_Stub
 		size = 32768
 	}
-	cas_male_facial_hair_alt2 = {
+	CAS_Male_Facial_Hair_alt2 = {
 		desc_id = m_bmtl_fhair_beard
 		size = 24576
 	}
-	cas_male_facial_hair_alt3 = {
+	CAS_Male_Facial_Hair_alt3 = {
 		desc_id = m_rock_fhair_goatee02
 		size = 24576
 	}
-	cas_male_facial_hair_alt4 = {
-		desc_id = m_clsc_fhair_burns01
+	CAS_Male_Facial_Hair_alt4 = {
+		desc_id = M_Clsc_Fhair_Burns01
 		size = 16384
 	}
-	cas_male_torso = {
-		desc_id = m_rock_torso_rockbot
+	CAS_Male_Torso = {
+		desc_id = M_Rock_Torso_RockBot
 		size = 188416
 	}
-	cas_male_torso_alt1 = {
+	CAS_Male_Torso_alt1 = {
 		desc_id = m_rock_torso_ozzycoat
 		size = 176128
 	}
-	cas_male_torso_alt2 = {
+	CAS_Male_Torso_alt2 = {
 		desc_id = m_bmtl_torso_skeleton
 		size = 176128
 	}
-	cas_male_torso_alt3 = {
+	CAS_Male_Torso_alt3 = {
 		desc_id = m_punk_torso_johnny1_02
 		size = 167936
 	}
-	cas_male_torso_alt4 = {
+	CAS_Male_Torso_alt4 = {
 		desc_id = m_punk_torso_johnny1_03
 		size = 167936
 	}
-	cas_male_legs = {
+	CAS_Male_Legs = {
 		desc_id = m_punk_legs_johnny1
 		size = 212992
 	}
-	cas_male_legs_alt1 = {
+	CAS_Male_Legs_alt1 = {
 		desc_id = m_punk_legs_johnny1_02
 		size = 212992
 	}
-	cas_male_legs_alt2 = {
+	CAS_Male_Legs_alt2 = {
 		desc_id = m_punk_legs_johnny1_03
 		size = 212992
 	}
-	cas_male_legs_alt3 = {
+	CAS_Male_Legs_alt3 = {
 		desc_id = m_rock_legs_cargoscarf
 		size = 192512
 	}
-	cas_male_legs_alt4 = {
+	CAS_Male_Legs_alt4 = {
 		desc_id = m_goth_legs_vinyl
 		size = 167936
 	}
-	cas_male_shoes = {
+	CAS_Male_Shoes = {
 		desc_id = m_goth_shoe_belts
 		size = 163840
 	}
-	cas_male_shoes_alt1 = {
+	CAS_Male_Shoes_alt1 = {
 		desc_id = m_goth_shoes_buckleb
 		size = 151552
 	}
-	cas_male_shoes_alt2 = {
-		desc_id = m_punk_shoe_buckleb
+	CAS_Male_Shoes_alt2 = {
+		desc_id = M_Punk_Shoe_BuckleB
 		size = 151552
 	}
-	cas_male_shoes_alt3 = {
+	CAS_Male_Shoes_alt3 = {
 		desc_id = m_goth_shoes_unzipbb
 		size = 139264
 	}
-	cas_male_shoes_alt4 = {
+	CAS_Male_Shoes_alt4 = {
 		desc_id = m_bmtl_shoes_cross
 		size = 135168
 	}
-	cas_male_acc_left = {
-		desc_id = m_punk_acc_lmetalskull
+	CAS_Male_Acc_Left = {
+		desc_id = M_Punk_Acc_LMetalskull
 		size = 65536
 	}
-	cas_male_acc_left_alt1 = {
+	CAS_Male_Acc_Left_alt1 = {
 		desc_id = m_glam_acc_lmadmax
 		size = 65536
 	}
-	cas_male_acc_left_alt2 = {
+	CAS_Male_Acc_Left_alt2 = {
 		desc_id = m_rock_acc_lbone
 		size = 61440
 	}
-	cas_male_acc_left_alt3 = {
+	CAS_Male_Acc_Left_alt3 = {
 		desc_id = m_goth_acc_lbuckleglove
 		size = 53248
 	}
-	cas_male_acc_left_alt4 = {
-		desc_id = m_goth_acc_lstrait
+	CAS_Male_Acc_Left_alt4 = {
+		desc_id = M_Goth_Acc_LStrait
 		size = 49152
 	}
-	cas_male_acc_right = {
+	CAS_Male_Acc_Right = {
 		desc_id = m_punk_acc_rspikeglove
 		size = 94208
 	}
-	cas_male_acc_right_alt1 = {
-		desc_id = m_clsc_accs_rbracelet
+	CAS_Male_Acc_Right_alt1 = {
+		desc_id = M_Clsc_Accs_RBracelet
 		size = 61440
 	}
-	cas_male_acc_right_alt2 = {
-		desc_id = m_punk_acc_rbands
+	CAS_Male_Acc_Right_alt2 = {
+		desc_id = M_Punk_Acc_RBands
 		size = 57344
 	}
-	cas_male_acc_right_alt3 = {
+	CAS_Male_Acc_Right_alt3 = {
 		desc_id = m_glam_acc_rmesh
 		size = 53248
 	}
-	cas_male_acc_right_alt4 = {
-		desc_id = m_punk_acc_rchain
+	CAS_Male_Acc_Right_alt4 = {
+		desc_id = M_Punk_Acc_RChain
 		size = 53248
 	}
-	cas_male_acc_face = {
-		desc_id = m_clsc_glasses_round
+	CAS_Male_Acc_Face = {
+		desc_id = M_Clsc_Glasses_Round
 		size = 65536
 	}
-	cas_male_acc_face_alt1 = {
-		desc_id = m_clsc_glasses_round2
+	CAS_Male_Acc_Face_alt1 = {
+		desc_id = M_Clsc_Glasses_Round2
 		size = 45056
 	}
-	cas_male_acc_face_alt2 = {
-		desc_id = m_clsc_glasses_avtr
+	CAS_Male_Acc_Face_alt2 = {
+		desc_id = M_Clsc_Glasses_Avtr
 		size = 45056
 	}
-	cas_male_acc_face_alt3 = {
+	CAS_Male_Acc_Face_alt3 = {
 		desc_id = m_goth_glasses_ggls
 		size = 36864
 	}
-	cas_male_acc_face_alt4 = {
-		desc_id = m_clsc_glasses_wtnose
+	CAS_Male_Acc_Face_alt4 = {
+		desc_id = M_Clsc_Glasses_WtNose
 		size = 24576
 	}
-	cas_male_acc_ears = {
-		desc_id = m_punk_acc_ring_02
+	CAS_Male_Acc_Ears = {
+		desc_id = M_Punk_Acc_Ring_02
 		size = 12288
 	}
-	cas_male_acc_ears_alt1 = {
+	CAS_Male_Acc_Ears_alt1 = {
 		desc_id = m_punk_acc_ring_03
 		size = 8192
 	}
-	cas_male_acc_ears_alt2 = {
-		desc_id = m_punk_acc_ring
+	CAS_Male_Acc_Ears_alt2 = {
+		desc_id = M_Punk_Acc_Ring
 		size = 8192
 	}
-	cas_male_acc_ears_alt3 = {
-		desc_id = m_punk_acc_ring_04
+	CAS_Male_Acc_Ears_alt3 = {
+		desc_id = M_Punk_Acc_Ring_04
 		size = 8192
 	}
-	cas_male_hat_hair = {
+	CAS_Male_Hat_Hair = {
 		desc_id = m_goth_hathair_dreads
 		size = 69632
 	}
-	cas_male_hat_hair_alt1 = {
+	CAS_Male_Hat_Hair_alt1 = {
 		desc_id = m_metl_hathair_midhigh
 		size = 65536
 	}
-	cas_male_hat_hair_alt2 = {
+	CAS_Male_Hat_Hair_alt2 = {
 		desc_id = m_bmtl_hathair_lars
 		size = 65536
 	}
-	cas_male_hat_hair_alt3 = {
+	CAS_Male_Hat_Hair_alt3 = {
 		desc_id = m_clsc_hathair_messy
 		size = 65536
 	}
-	cas_male_hat_hair_alt4 = {
+	CAS_Male_Hat_Hair_alt4 = {
 		desc_id = m_glam_hathair_gold
 		size = 65536
 	}
-	cas_mic = {
-		desc_id = `black metal`
+	CAS_Mic = {
+		desc_id = `Black Metal`
 		size = 36864
 	}
-	cas_mic_alt1 = {
-		desc_id = rock
+	CAS_Mic_alt1 = {
+		desc_id = Rock
 		size = 28672
 	}
-	cas_mic_alt2 = {
-		desc_id = `classic rock`
+	CAS_Mic_alt2 = {
+		desc_id = `Classic Rock`
 		size = 28672
 	}
-	cas_mic_alt3 = {
-		desc_id = `glam rock`
+	CAS_Mic_alt3 = {
+		desc_id = `Glam Rock`
 		size = 20480
 	}
-	cas_mic_alt4 = {
-		desc_id = punk
+	CAS_Mic_alt4 = {
+		desc_id = Punk
 		size = 20480
 	}
-	cas_mic_stand = {
+	CAS_Mic_Stand = {
 		desc_id = mic_stand_metal
 		size = 69632
 	}
-	cas_mic_stand_alt1 = {
-		desc_id = goth
+	CAS_Mic_Stand_alt1 = {
+		desc_id = Goth
 		size = 49152
 	}
-	cas_mic_stand_alt2 = {
-		desc_id = rock
+	CAS_Mic_Stand_alt2 = {
+		desc_id = Rock
 		size = 36864
 	}
-	cas_mic_stand_alt3 = {
+	CAS_Mic_Stand_alt3 = {
 		desc_id = mic_stand_blackmetal
 		size = 36864
 	}
-	cas_mic_stand_alt4 = {
-		desc_id = twisted
+	CAS_Mic_Stand_alt4 = {
+		desc_id = Twisted
 		size = 36864
 	}
-	cas_guitar_body = {
-		desc_id = guitar_x_trident_10
+	CAS_Guitar_Body = {
+		desc_id = Guitar_X_Trident_10
 		size = 77824
 	}
-	cas_guitar_body_alt1 = {
-		desc_id = guitar_x_clear_12
+	CAS_Guitar_Body_alt1 = {
+		desc_id = Guitar_X_Clear_12
 		size = 65536
 	}
-	cas_guitar_body_alt2 = {
-		desc_id = guitar_x_freebird_09
+	CAS_Guitar_Body_alt2 = {
+		desc_id = Guitar_X_Freebird_09
 		size = 65536
 	}
-	cas_guitar_body_alt3 = {
-		desc_id = guitar_special_spider_02
+	CAS_Guitar_Body_alt3 = {
+		desc_id = Guitar_Special_Spider_02
 		size = 65536
 	}
-	cas_guitar_body_alt4 = {
-		desc_id = guitar_special_skull_01
+	CAS_Guitar_Body_alt4 = {
+		desc_id = Guitar_Special_Skull_01
 		size = 61440
 	}
-	cas_guitar_neck = {
-		desc_id = guitar_neck07
+	CAS_Guitar_Neck = {
+		desc_id = Guitar_Neck07
 		size = 12288
 	}
-	cas_guitar_neck_alt1 = {
-		desc_id = guitar_neck06
+	CAS_Guitar_Neck_alt1 = {
+		desc_id = Guitar_Neck06
 		size = 12288
 	}
-	cas_guitar_neck_alt2 = {
-		desc_id = guitar_neck04
+	CAS_Guitar_Neck_alt2 = {
+		desc_id = Guitar_Neck04
 		size = 12288
 	}
-	cas_guitar_neck_alt3 = {
-		desc_id = guitar_neck05
+	CAS_Guitar_Neck_alt3 = {
+		desc_id = Guitar_Neck05
 		size = 12288
 	}
-	cas_guitar_neck_alt4 = {
-		desc_id = guitar_neck01
+	CAS_Guitar_Neck_alt4 = {
+		desc_id = Guitar_Neck01
 		size = 12288
 	}
-	cas_guitar_head = {
-		desc_id = guitar_head_x_01
+	CAS_Guitar_Head = {
+		desc_id = Guitar_Head_X_01
 		size = 73728
 	}
-	cas_guitar_head_alt1 = {
-		desc_id = guitar_head16
+	CAS_Guitar_Head_alt1 = {
+		desc_id = Guitar_Head16
 		size = 61440
 	}
-	cas_guitar_head_alt2 = {
-		desc_id = headstock_x_handle_05
+	CAS_Guitar_Head_alt2 = {
+		desc_id = Headstock_X_Handle_05
 		size = 61440
 	}
-	cas_guitar_head_alt3 = {
-		desc_id = headstock_x_flame_08
+	CAS_Guitar_Head_alt3 = {
+		desc_id = Headstock_X_Flame_08
 		size = 61440
 	}
-	cas_guitar_head_alt4 = {
+	CAS_Guitar_Head_alt4 = {
 		desc_id = guitar_head_x_03
 		size = 61440
 	}
-	cas_guitar_pickguards = {
-		desc_id = gtr_x_fire_pickg01
+	CAS_Guitar_Pickguards = {
+		desc_id = GTR_X_Fire_PickG01
 		size = 28672
 	}
-	cas_guitar_pickguards_alt1 = {
-		desc_id = gtr_body8_pickg02
+	CAS_Guitar_Pickguards_alt1 = {
+		desc_id = GTR_Body8_PickG02
 		size = 20480
 	}
-	cas_guitar_pickguards_alt2 = {
-		desc_id = gtr_body2_pickg01
+	CAS_Guitar_Pickguards_alt2 = {
+		desc_id = GTR_Body2_PickG01
 		size = 20480
 	}
-	cas_guitar_pickguards_alt3 = {
-		desc_id = gtr_body14_pickg01
+	CAS_Guitar_Pickguards_alt3 = {
+		desc_id = GTR_Body14_PickG01
 		size = 20480
 	}
-	cas_guitar_pickguards_alt4 = {
+	CAS_Guitar_Pickguards_alt4 = {
 		desc_id = gtr_body17_pickg01
 		size = 20480
 	}
-	cas_guitar_pickups = {
-		desc_id = gtr_pickups_style_01c
+	CAS_Guitar_Pickups = {
+		desc_id = GTR_Pickups_Style_01c
 		size = 40960
 	}
-	cas_guitar_pickups_alt1 = {
-		desc_id = gtr_pickup_type1_blktan_3
+	CAS_Guitar_Pickups_alt1 = {
+		desc_id = GTR_Pickup_Type1_Blktan_3
 		size = 40960
 	}
-	cas_guitar_pickups_alt2 = {
-		desc_id = gtr_pickup_type1_blk_3
+	CAS_Guitar_Pickups_alt2 = {
+		desc_id = GTR_Pickup_Type1_Blk_3
 		size = 40960
 	}
-	cas_guitar_pickups_alt3 = {
-		desc_id = gtr_pickup_type1_blktan_2
+	CAS_Guitar_Pickups_alt3 = {
+		desc_id = GTR_Pickup_Type1_Blktan_2
 		size = 32768
 	}
-	cas_guitar_pickups_alt4 = {
-		desc_id = gtr_pickup_type1_blk_2
+	CAS_Guitar_Pickups_alt4 = {
+		desc_id = GTR_Pickup_Type1_Blk_2
 		size = 28672
 	}
-	cas_guitar_bridges = {
-		desc_id = gtr_hardware04a
+	CAS_Guitar_Bridges = {
+		desc_id = GTR_Hardware04a
 		size = 36864
 	}
-	cas_guitar_bridges_alt1 = {
-		desc_id = gtr_hardware01b
+	CAS_Guitar_Bridges_alt1 = {
+		desc_id = GTR_Hardware01b
 		size = 32768
 	}
-	cas_guitar_bridges_alt2 = {
-		desc_id = gtr_hardware06
+	CAS_Guitar_Bridges_alt2 = {
+		desc_id = GTR_Hardware06
 		size = 28672
 	}
-	cas_guitar_bridges_alt3 = {
-		desc_id = gtr8_hardware08a
+	CAS_Guitar_Bridges_alt3 = {
+		desc_id = GTR8_Hardware08a
 		size = 28672
 	}
-	cas_guitar_bridges_alt4 = {
-		desc_id = gtr_hardware03a
+	CAS_Guitar_Bridges_alt4 = {
+		desc_id = GTR_Hardware03a
 		size = 28672
 	}
-	cas_guitar_knobs = {
-		desc_id = gtr2_knob_type4_04
+	CAS_Guitar_Knobs = {
+		desc_id = GTR2_Knob_Type4_04
 		size = 28672
 	}
-	cas_guitar_knobs_alt1 = {
-		desc_id = gtr1_knob_type4_04
+	CAS_Guitar_Knobs_alt1 = {
+		desc_id = GTR1_Knob_Type4_04
 		size = 28672
 	}
-	cas_guitar_knobs_alt2 = {
-		desc_id = gtr4_knob_type4_04
+	CAS_Guitar_Knobs_alt2 = {
+		desc_id = GTR4_Knob_Type4_04
 		size = 28672
 	}
-	cas_guitar_knobs_alt3 = {
-		desc_id = gtr14_knob_type4_04
+	CAS_Guitar_Knobs_alt3 = {
+		desc_id = GTR14_Knob_Type4_04
 		size = 28672
 	}
-	cas_guitar_knobs_alt4 = {
-		desc_id = gtr12_knob_type4_04
+	CAS_Guitar_Knobs_alt4 = {
+		desc_id = GTR12_Knob_Type4_04
 		size = 28672
 	}
 }
 worst_male_bass_appearance = {
-	cas_body = {
-		desc_id = gh4_car_male
+	CAS_Body = {
+		desc_id = GH4_CAR_Male
 		size = 577536
 	}
 	cas_body_alt1 = {
-		desc_id = gh4_car_johnny
+		desc_id = GH4_CAR_Johnny
 		size = 577536
 	}
 	cas_body_alt2 = {
-		desc_id = `bestbuy kid`
+		desc_id = `BestBuy Kid`
 		size = 577536
 	}
 	cas_body_alt3 = {
-		desc_id = gh4_car_eddie
+		desc_id = GH4_CAR_Eddie
 		size = 577536
 	}
 	cas_body_alt4 = {
-		desc_id = gh4_car_lars
+		desc_id = GH4_CAR_Lars
 		size = 577536
 	}
-	cas_male_hat = {
+	CAS_Male_Hat = {
 		desc_id = m_punk_hat_helmet
 		size = 86016
 	}
-	cas_male_hat_alt1 = {
-		desc_id = m_hat_gorilla
+	CAS_Male_Hat_alt1 = {
+		desc_id = M_Hat_Gorilla
 		size = 61440
 	}
-	cas_male_hat_alt2 = {
-		desc_id = m_bmtl_hat_skullhelmet
+	CAS_Male_Hat_alt2 = {
+		desc_id = M_Bmtl_Hat_SkullHelmet
 		size = 61440
 	}
-	cas_male_hat_alt3 = {
-		desc_id = m_pop_head_gasmask
+	CAS_Male_Hat_alt3 = {
+		desc_id = M_Pop_Head_GasMask
 		size = 57344
 	}
-	cas_male_hat_alt4 = {
-		desc_id = m_bmtl_hat_viking
+	CAS_Male_Hat_alt4 = {
+		desc_id = M_Bmtl_Hat_Viking
 		size = 53248
 	}
-	cas_male_facial_hair = {
-		desc_id = m_clsc_fhair_country
+	CAS_Male_Facial_Hair = {
+		desc_id = M_Clsc_Fhair_Country
 		size = 45056
 	}
-	cas_male_facial_hair_alt1 = {
-		desc_id = m_rock_fhair_stub
+	CAS_Male_Facial_Hair_alt1 = {
+		desc_id = M_Rock_Fhair_Stub
 		size = 32768
 	}
-	cas_male_facial_hair_alt2 = {
+	CAS_Male_Facial_Hair_alt2 = {
 		desc_id = m_bmtl_fhair_beard
 		size = 24576
 	}
-	cas_male_facial_hair_alt3 = {
+	CAS_Male_Facial_Hair_alt3 = {
 		desc_id = m_rock_fhair_goatee02
 		size = 24576
 	}
-	cas_male_facial_hair_alt4 = {
-		desc_id = m_clsc_fhair_burns01
+	CAS_Male_Facial_Hair_alt4 = {
+		desc_id = M_Clsc_Fhair_Burns01
 		size = 16384
 	}
-	cas_male_torso = {
-		desc_id = m_rock_torso_rockbot
+	CAS_Male_Torso = {
+		desc_id = M_Rock_Torso_RockBot
 		size = 188416
 	}
-	cas_male_torso_alt1 = {
+	CAS_Male_Torso_alt1 = {
 		desc_id = m_rock_torso_ozzycoat
 		size = 176128
 	}
-	cas_male_torso_alt2 = {
+	CAS_Male_Torso_alt2 = {
 		desc_id = m_bmtl_torso_skeleton
 		size = 176128
 	}
-	cas_male_torso_alt3 = {
+	CAS_Male_Torso_alt3 = {
 		desc_id = m_punk_torso_johnny1_02
 		size = 167936
 	}
-	cas_male_torso_alt4 = {
+	CAS_Male_Torso_alt4 = {
 		desc_id = m_punk_torso_johnny1_03
 		size = 167936
 	}
-	cas_male_legs = {
+	CAS_Male_Legs = {
 		desc_id = m_punk_legs_johnny1
 		size = 212992
 	}
-	cas_male_legs_alt1 = {
+	CAS_Male_Legs_alt1 = {
 		desc_id = m_punk_legs_johnny1_02
 		size = 212992
 	}
-	cas_male_legs_alt2 = {
+	CAS_Male_Legs_alt2 = {
 		desc_id = m_punk_legs_johnny1_03
 		size = 212992
 	}
-	cas_male_legs_alt3 = {
+	CAS_Male_Legs_alt3 = {
 		desc_id = m_rock_legs_cargoscarf
 		size = 192512
 	}
-	cas_male_legs_alt4 = {
+	CAS_Male_Legs_alt4 = {
 		desc_id = m_goth_legs_vinyl
 		size = 167936
 	}
-	cas_male_shoes = {
+	CAS_Male_Shoes = {
 		desc_id = m_goth_shoe_belts
 		size = 163840
 	}
-	cas_male_shoes_alt1 = {
+	CAS_Male_Shoes_alt1 = {
 		desc_id = m_goth_shoes_buckleb
 		size = 151552
 	}
-	cas_male_shoes_alt2 = {
-		desc_id = m_punk_shoe_buckleb
+	CAS_Male_Shoes_alt2 = {
+		desc_id = M_Punk_Shoe_BuckleB
 		size = 151552
 	}
-	cas_male_shoes_alt3 = {
+	CAS_Male_Shoes_alt3 = {
 		desc_id = m_goth_shoes_unzipbb
 		size = 139264
 	}
-	cas_male_shoes_alt4 = {
+	CAS_Male_Shoes_alt4 = {
 		desc_id = m_bmtl_shoes_cross
 		size = 135168
 	}
-	cas_male_acc_left = {
-		desc_id = m_punk_acc_lmetalskull
+	CAS_Male_Acc_Left = {
+		desc_id = M_Punk_Acc_LMetalskull
 		size = 65536
 	}
-	cas_male_acc_left_alt1 = {
+	CAS_Male_Acc_Left_alt1 = {
 		desc_id = m_glam_acc_lmadmax
 		size = 65536
 	}
-	cas_male_acc_left_alt2 = {
+	CAS_Male_Acc_Left_alt2 = {
 		desc_id = m_rock_acc_lbone
 		size = 61440
 	}
-	cas_male_acc_left_alt3 = {
+	CAS_Male_Acc_Left_alt3 = {
 		desc_id = m_goth_acc_lbuckleglove
 		size = 53248
 	}
-	cas_male_acc_left_alt4 = {
-		desc_id = m_goth_acc_lstrait
+	CAS_Male_Acc_Left_alt4 = {
+		desc_id = M_Goth_Acc_LStrait
 		size = 49152
 	}
-	cas_male_acc_right = {
+	CAS_Male_Acc_Right = {
 		desc_id = m_punk_acc_rspikeglove
 		size = 94208
 	}
-	cas_male_acc_right_alt1 = {
-		desc_id = m_clsc_accs_rbracelet
+	CAS_Male_Acc_Right_alt1 = {
+		desc_id = M_Clsc_Accs_RBracelet
 		size = 61440
 	}
-	cas_male_acc_right_alt2 = {
-		desc_id = m_punk_acc_rbands
+	CAS_Male_Acc_Right_alt2 = {
+		desc_id = M_Punk_Acc_RBands
 		size = 57344
 	}
-	cas_male_acc_right_alt3 = {
+	CAS_Male_Acc_Right_alt3 = {
 		desc_id = m_glam_acc_rmesh
 		size = 53248
 	}
-	cas_male_acc_right_alt4 = {
-		desc_id = m_punk_acc_rchain
+	CAS_Male_Acc_Right_alt4 = {
+		desc_id = M_Punk_Acc_RChain
 		size = 53248
 	}
-	cas_male_acc_face = {
-		desc_id = m_clsc_glasses_round
+	CAS_Male_Acc_Face = {
+		desc_id = M_Clsc_Glasses_Round
 		size = 65536
 	}
-	cas_male_acc_face_alt1 = {
-		desc_id = m_clsc_glasses_round2
+	CAS_Male_Acc_Face_alt1 = {
+		desc_id = M_Clsc_Glasses_Round2
 		size = 45056
 	}
-	cas_male_acc_face_alt2 = {
-		desc_id = m_clsc_glasses_avtr
+	CAS_Male_Acc_Face_alt2 = {
+		desc_id = M_Clsc_Glasses_Avtr
 		size = 45056
 	}
-	cas_male_acc_face_alt3 = {
+	CAS_Male_Acc_Face_alt3 = {
 		desc_id = m_goth_glasses_ggls
 		size = 36864
 	}
-	cas_male_acc_face_alt4 = {
-		desc_id = m_clsc_glasses_wtnose
+	CAS_Male_Acc_Face_alt4 = {
+		desc_id = M_Clsc_Glasses_WtNose
 		size = 24576
 	}
-	cas_male_acc_ears = {
-		desc_id = m_punk_acc_ring_02
+	CAS_Male_Acc_Ears = {
+		desc_id = M_Punk_Acc_Ring_02
 		size = 12288
 	}
-	cas_male_acc_ears_alt1 = {
+	CAS_Male_Acc_Ears_alt1 = {
 		desc_id = m_punk_acc_ring_03
 		size = 8192
 	}
-	cas_male_acc_ears_alt2 = {
-		desc_id = m_punk_acc_ring
+	CAS_Male_Acc_Ears_alt2 = {
+		desc_id = M_Punk_Acc_Ring
 		size = 8192
 	}
-	cas_male_acc_ears_alt3 = {
-		desc_id = m_punk_acc_ring_04
+	CAS_Male_Acc_Ears_alt3 = {
+		desc_id = M_Punk_Acc_Ring_04
 		size = 8192
 	}
-	cas_male_hat_hair = {
+	CAS_Male_Hat_Hair = {
 		desc_id = m_goth_hathair_dreads
 		size = 69632
 	}
-	cas_male_hat_hair_alt1 = {
+	CAS_Male_Hat_Hair_alt1 = {
 		desc_id = m_metl_hathair_midhigh
 		size = 65536
 	}
-	cas_male_hat_hair_alt2 = {
+	CAS_Male_Hat_Hair_alt2 = {
 		desc_id = m_bmtl_hathair_lars
 		size = 65536
 	}
-	cas_male_hat_hair_alt3 = {
+	CAS_Male_Hat_Hair_alt3 = {
 		desc_id = m_clsc_hathair_messy
 		size = 65536
 	}
-	cas_male_hat_hair_alt4 = {
+	CAS_Male_Hat_Hair_alt4 = {
 		desc_id = m_glam_hathair_gold
 		size = 65536
 	}
-	cas_mic = {
-		desc_id = `black metal`
+	CAS_Mic = {
+		desc_id = `Black Metal`
 		size = 36864
 	}
-	cas_mic_alt1 = {
-		desc_id = rock
+	CAS_Mic_alt1 = {
+		desc_id = Rock
 		size = 28672
 	}
-	cas_mic_alt2 = {
-		desc_id = `classic rock`
+	CAS_Mic_alt2 = {
+		desc_id = `Classic Rock`
 		size = 28672
 	}
-	cas_mic_alt3 = {
-		desc_id = `glam rock`
+	CAS_Mic_alt3 = {
+		desc_id = `Glam Rock`
 		size = 20480
 	}
-	cas_mic_alt4 = {
-		desc_id = punk
+	CAS_Mic_alt4 = {
+		desc_id = Punk
 		size = 20480
 	}
-	cas_mic_stand = {
+	CAS_Mic_Stand = {
 		desc_id = mic_stand_metal
 		size = 69632
 	}
-	cas_mic_stand_alt1 = {
-		desc_id = goth
+	CAS_Mic_Stand_alt1 = {
+		desc_id = Goth
 		size = 49152
 	}
-	cas_mic_stand_alt2 = {
-		desc_id = rock
+	CAS_Mic_Stand_alt2 = {
+		desc_id = Rock
 		size = 36864
 	}
-	cas_mic_stand_alt3 = {
+	CAS_Mic_Stand_alt3 = {
 		desc_id = mic_stand_blackmetal
 		size = 36864
 	}
-	cas_mic_stand_alt4 = {
-		desc_id = twisted
+	CAS_Mic_Stand_alt4 = {
+		desc_id = Twisted
 		size = 36864
 	}
-	cas_bass_body = {
-		desc_id = cab_body_bandera
+	CAS_Bass_Body = {
+		desc_id = CAB_Body_Bandera
 		size = 57344
 	}
-	cas_bass_body_alt1 = {
-		desc_id = cab_body_prediktor
+	CAS_Bass_Body_alt1 = {
+		desc_id = CAB_Body_Prediktor
 		size = 57344
 	}
-	cas_bass_body_alt2 = {
-		desc_id = cab_body_b2a
+	CAS_Bass_Body_alt2 = {
+		desc_id = CAB_Body_B2A
 		size = 49152
 	}
-	cas_bass_body_alt3 = {
-		desc_id = cab_skull
+	CAS_Bass_Body_alt3 = {
+		desc_id = CAB_Skull
 		size = 49152
 	}
-	cas_bass_body_alt4 = {
-		desc_id = cab_body_x_battleaxe
+	CAS_Bass_Body_alt4 = {
+		desc_id = CAB_Body_X_Battleaxe
 		size = 40960
 	}
-	cas_bass_neck = {
-		desc_id = cab_stnek_ebony
+	CAS_Bass_Neck = {
+		desc_id = CAB_StNek_Ebony
 		size = 8192
 	}
-	cas_bass_neck_alt1 = {
-		desc_id = cab_stnekf_rosewood
+	CAS_Bass_Neck_alt1 = {
+		desc_id = CAB_StNekF_Rosewood
 		size = 8192
 	}
-	cas_bass_neck_alt2 = {
-		desc_id = cab_neck_bn1a
+	CAS_Bass_Neck_alt2 = {
+		desc_id = CAB_Neck_BN1A
 		size = 8192
 	}
-	cas_bass_neck_alt3 = {
-		desc_id = cab_neck_bfretlss03
+	CAS_Bass_Neck_alt3 = {
+		desc_id = CAB_Neck_BFretlss03
 		size = 8192
 	}
-	cas_bass_neck_alt4 = {
-		desc_id = cab_stnek_maple
+	CAS_Bass_Neck_alt4 = {
+		desc_id = CAB_StNek_Maple
 		size = 8192
 	}
-	cas_bass_head = {
-		desc_id = cab_head_mlsplit
+	CAS_Bass_Head = {
+		desc_id = CAB_Head_MLSplit
 		size = 102400
 	}
-	cas_bass_head_alt1 = {
-		desc_id = cab_head_bh6a
+	CAS_Bass_Head_alt1 = {
+		desc_id = CAB_Head_BH6A
 		size = 98304
 	}
-	cas_bass_head_alt2 = {
-		desc_id = cab_head_bh4a
+	CAS_Bass_Head_alt2 = {
+		desc_id = CAB_Head_BH4A
 		size = 98304
 	}
-	cas_bass_head_alt3 = {
-		desc_id = cab_head_flay_rev
+	CAS_Bass_Head_alt3 = {
+		desc_id = CAB_Head_Flay_rev
 		size = 98304
 	}
-	cas_bass_head_alt4 = {
-		desc_id = cab_head_skull
+	CAS_Bass_Head_alt4 = {
+		desc_id = CAB_Head_Skull
 		size = 94208
 	}
-	cas_bass_pickguards = {
-		desc_id = cab_pg_6tz004
+	CAS_Bass_Pickguards = {
+		desc_id = CAB_PG_6TZ004
 		size = 28672
 	}
-	cas_bass_pickguards_alt1 = {
-		desc_id = cab_pickg_b_unos02
+	CAS_Bass_Pickguards_alt1 = {
+		desc_id = CAB_PickG_B_Unos02
 		size = 20480
 	}
-	cas_bass_pickguards_alt2 = {
-		desc_id = cab_pickg_b_unos03
+	CAS_Bass_Pickguards_alt2 = {
+		desc_id = CAB_PickG_B_Unos03
 		size = 20480
 	}
-	cas_bass_pickguards_alt3 = {
-		desc_id = cab_pickg_e1
+	CAS_Bass_Pickguards_alt3 = {
+		desc_id = CAB_PickG_E1
 		size = 20480
 	}
-	cas_bass_pickguards_alt4 = {
-		desc_id = cab_pgrdftsc
+	CAS_Bass_Pickguards_alt4 = {
+		desc_id = CAB_PGrdFtsC
 		size = 20480
 	}
-	cas_bass_pickups = {
-		desc_id = cab_jp_pickup_a
+	CAS_Bass_Pickups = {
+		desc_id = CAB_JP_Pickup_A
 		size = 36864
 	}
-	cas_bass_pickups_alt1 = {
-		desc_id = cab_jp_pickup_b
+	CAS_Bass_Pickups_alt1 = {
+		desc_id = CAB_JP_Pickup_B
 		size = 32768
 	}
-	cas_bass_pickups_alt2 = {
-		desc_id = cab_pbass_pickup_a
+	CAS_Bass_Pickups_alt2 = {
+		desc_id = CAB_PBass_Pickup_A
 		size = 32768
 	}
-	cas_bass_pickups_alt3 = {
-		desc_id = cab_pickups_bp1a2
+	CAS_Bass_Pickups_alt3 = {
+		desc_id = CAB_Pickups_BP1A2
 		size = 28672
 	}
-	cas_bass_pickups_alt4 = {
-		desc_id = cab_pickup_hack03
+	CAS_Bass_Pickups_alt4 = {
+		desc_id = CAB_pickup_Hack03
 		size = 20480
 	}
-	cas_bass_bridges = {
-		desc_id = cab_bridge_hack
+	CAS_Bass_Bridges = {
+		desc_id = CAB_Bridge_Hack
 		size = 32768
 	}
-	cas_bass_bridges_alt1 = {
-		desc_id = cab_bridge_bb1a
+	CAS_Bass_Bridges_alt1 = {
+		desc_id = CAB_Bridge_BB1A
 		size = 24576
 	}
-	cas_bass_bridges_alt2 = {
-		desc_id = cab_bridge_mls
+	CAS_Bass_Bridges_alt2 = {
+		desc_id = CAB_Bridge_MLS
 		size = 24576
 	}
-	cas_bass_bridges_alt3 = {
-		desc_id = cab_bridge_bb2a
+	CAS_Bass_Bridges_alt3 = {
+		desc_id = CAB_Bridge_BB2A
 		size = 20480
 	}
-	cas_bass_bridges_alt4 = {
-		desc_id = cab_bridge_bb3a
+	CAS_Bass_Bridges_alt4 = {
+		desc_id = CAB_Bridge_BB3A
 		size = 20480
 	}
-	cas_bass_knobs = {
+	CAS_Bass_Knobs = {
 		desc_id = cab_knob_spyt08
 		size = 28672
 	}
-	cas_bass_knobs_alt1 = {
-		desc_id = cab_knob_unos01
+	CAS_Bass_Knobs_alt1 = {
+		desc_id = CAB_Knob_Unos01
 		size = 28672
 	}
-	cas_bass_knobs_alt2 = {
+	CAS_Bass_Knobs_alt2 = {
 		desc_id = cab_knob_xrend01
 		size = 28672
 	}
-	cas_bass_knobs_alt3 = {
+	CAS_Bass_Knobs_alt3 = {
 		desc_id = cab_knob_hack04
 		size = 28672
 	}
-	cas_bass_knobs_alt4 = {
+	CAS_Bass_Knobs_alt4 = {
 		desc_id = cab_knob_xrend04
 		size = 28672
 	}
 }
 worst_male_drum_appearance = {
-	cas_body = {
-		desc_id = gh4_car_male
+	CAS_Body = {
+		desc_id = GH4_CAR_Male
 		size = 577536
 	}
 	cas_body_alt1 = {
-		desc_id = gh4_car_johnny
+		desc_id = GH4_CAR_Johnny
 		size = 577536
 	}
 	cas_body_alt2 = {
-		desc_id = `bestbuy kid`
+		desc_id = `BestBuy Kid`
 		size = 577536
 	}
 	cas_body_alt3 = {
-		desc_id = gh4_car_eddie
+		desc_id = GH4_CAR_Eddie
 		size = 577536
 	}
 	cas_body_alt4 = {
-		desc_id = gh4_car_lars
+		desc_id = GH4_CAR_Lars
 		size = 577536
 	}
-	cas_male_hat = {
+	CAS_Male_Hat = {
 		desc_id = m_punk_hat_helmet
 		size = 86016
 	}
-	cas_male_hat_alt1 = {
-		desc_id = m_hat_gorilla
+	CAS_Male_Hat_alt1 = {
+		desc_id = M_Hat_Gorilla
 		size = 61440
 	}
-	cas_male_hat_alt2 = {
-		desc_id = m_bmtl_hat_skullhelmet
+	CAS_Male_Hat_alt2 = {
+		desc_id = M_Bmtl_Hat_SkullHelmet
 		size = 61440
 	}
-	cas_male_hat_alt3 = {
-		desc_id = m_pop_head_gasmask
+	CAS_Male_Hat_alt3 = {
+		desc_id = M_Pop_Head_GasMask
 		size = 57344
 	}
-	cas_male_hat_alt4 = {
-		desc_id = m_bmtl_hat_viking
+	CAS_Male_Hat_alt4 = {
+		desc_id = M_Bmtl_Hat_Viking
 		size = 53248
 	}
-	cas_male_facial_hair = {
-		desc_id = m_clsc_fhair_country
+	CAS_Male_Facial_Hair = {
+		desc_id = M_Clsc_Fhair_Country
 		size = 45056
 	}
-	cas_male_facial_hair_alt1 = {
-		desc_id = m_rock_fhair_stub
+	CAS_Male_Facial_Hair_alt1 = {
+		desc_id = M_Rock_Fhair_Stub
 		size = 32768
 	}
-	cas_male_facial_hair_alt2 = {
+	CAS_Male_Facial_Hair_alt2 = {
 		desc_id = m_bmtl_fhair_beard
 		size = 24576
 	}
-	cas_male_facial_hair_alt3 = {
+	CAS_Male_Facial_Hair_alt3 = {
 		desc_id = m_rock_fhair_goatee02
 		size = 24576
 	}
-	cas_male_facial_hair_alt4 = {
-		desc_id = m_clsc_fhair_burns01
+	CAS_Male_Facial_Hair_alt4 = {
+		desc_id = M_Clsc_Fhair_Burns01
 		size = 16384
 	}
-	cas_male_torso = {
-		desc_id = m_rock_torso_rockbot
+	CAS_Male_Torso = {
+		desc_id = M_Rock_Torso_RockBot
 		size = 188416
 	}
-	cas_male_torso_alt1 = {
+	CAS_Male_Torso_alt1 = {
 		desc_id = m_rock_torso_ozzycoat
 		size = 176128
 	}
-	cas_male_torso_alt2 = {
+	CAS_Male_Torso_alt2 = {
 		desc_id = m_bmtl_torso_skeleton
 		size = 176128
 	}
-	cas_male_torso_alt3 = {
+	CAS_Male_Torso_alt3 = {
 		desc_id = m_punk_torso_johnny1_02
 		size = 167936
 	}
-	cas_male_torso_alt4 = {
+	CAS_Male_Torso_alt4 = {
 		desc_id = m_punk_torso_johnny1_03
 		size = 167936
 	}
-	cas_male_legs = {
+	CAS_Male_Legs = {
 		desc_id = m_punk_legs_johnny1
 		size = 212992
 	}
-	cas_male_legs_alt1 = {
+	CAS_Male_Legs_alt1 = {
 		desc_id = m_punk_legs_johnny1_02
 		size = 212992
 	}
-	cas_male_legs_alt2 = {
+	CAS_Male_Legs_alt2 = {
 		desc_id = m_punk_legs_johnny1_03
 		size = 212992
 	}
-	cas_male_legs_alt3 = {
+	CAS_Male_Legs_alt3 = {
 		desc_id = m_rock_legs_cargoscarf
 		size = 192512
 	}
-	cas_male_legs_alt4 = {
+	CAS_Male_Legs_alt4 = {
 		desc_id = m_goth_legs_vinyl
 		size = 167936
 	}
-	cas_male_shoes = {
+	CAS_Male_Shoes = {
 		desc_id = m_goth_shoe_belts
 		size = 163840
 	}
-	cas_male_shoes_alt1 = {
+	CAS_Male_Shoes_alt1 = {
 		desc_id = m_goth_shoes_buckleb
 		size = 151552
 	}
-	cas_male_shoes_alt2 = {
-		desc_id = m_punk_shoe_buckleb
+	CAS_Male_Shoes_alt2 = {
+		desc_id = M_Punk_Shoe_BuckleB
 		size = 151552
 	}
-	cas_male_shoes_alt3 = {
+	CAS_Male_Shoes_alt3 = {
 		desc_id = m_goth_shoes_unzipbb
 		size = 139264
 	}
-	cas_male_shoes_alt4 = {
+	CAS_Male_Shoes_alt4 = {
 		desc_id = m_bmtl_shoes_cross
 		size = 135168
 	}
-	cas_male_acc_left = {
-		desc_id = m_punk_acc_lmetalskull
+	CAS_Male_Acc_Left = {
+		desc_id = M_Punk_Acc_LMetalskull
 		size = 65536
 	}
-	cas_male_acc_left_alt1 = {
+	CAS_Male_Acc_Left_alt1 = {
 		desc_id = m_glam_acc_lmadmax
 		size = 65536
 	}
-	cas_male_acc_left_alt2 = {
+	CAS_Male_Acc_Left_alt2 = {
 		desc_id = m_rock_acc_lbone
 		size = 61440
 	}
-	cas_male_acc_left_alt3 = {
+	CAS_Male_Acc_Left_alt3 = {
 		desc_id = m_goth_acc_lbuckleglove
 		size = 53248
 	}
-	cas_male_acc_left_alt4 = {
-		desc_id = m_goth_acc_lstrait
+	CAS_Male_Acc_Left_alt4 = {
+		desc_id = M_Goth_Acc_LStrait
 		size = 49152
 	}
-	cas_male_acc_right = {
+	CAS_Male_Acc_Right = {
 		desc_id = m_punk_acc_rspikeglove
 		size = 94208
 	}
-	cas_male_acc_right_alt1 = {
-		desc_id = m_clsc_accs_rbracelet
+	CAS_Male_Acc_Right_alt1 = {
+		desc_id = M_Clsc_Accs_RBracelet
 		size = 61440
 	}
-	cas_male_acc_right_alt2 = {
-		desc_id = m_punk_acc_rbands
+	CAS_Male_Acc_Right_alt2 = {
+		desc_id = M_Punk_Acc_RBands
 		size = 57344
 	}
-	cas_male_acc_right_alt3 = {
+	CAS_Male_Acc_Right_alt3 = {
 		desc_id = m_glam_acc_rmesh
 		size = 53248
 	}
-	cas_male_acc_right_alt4 = {
-		desc_id = m_punk_acc_rchain
+	CAS_Male_Acc_Right_alt4 = {
+		desc_id = M_Punk_Acc_RChain
 		size = 53248
 	}
-	cas_male_acc_face = {
-		desc_id = m_clsc_glasses_round
+	CAS_Male_Acc_Face = {
+		desc_id = M_Clsc_Glasses_Round
 		size = 65536
 	}
-	cas_male_acc_face_alt1 = {
-		desc_id = m_clsc_glasses_round2
+	CAS_Male_Acc_Face_alt1 = {
+		desc_id = M_Clsc_Glasses_Round2
 		size = 45056
 	}
-	cas_male_acc_face_alt2 = {
-		desc_id = m_clsc_glasses_avtr
+	CAS_Male_Acc_Face_alt2 = {
+		desc_id = M_Clsc_Glasses_Avtr
 		size = 45056
 	}
-	cas_male_acc_face_alt3 = {
+	CAS_Male_Acc_Face_alt3 = {
 		desc_id = m_goth_glasses_ggls
 		size = 36864
 	}
-	cas_male_acc_face_alt4 = {
-		desc_id = m_clsc_glasses_wtnose
+	CAS_Male_Acc_Face_alt4 = {
+		desc_id = M_Clsc_Glasses_WtNose
 		size = 24576
 	}
-	cas_male_acc_ears = {
-		desc_id = m_punk_acc_ring_02
+	CAS_Male_Acc_Ears = {
+		desc_id = M_Punk_Acc_Ring_02
 		size = 12288
 	}
-	cas_male_acc_ears_alt1 = {
+	CAS_Male_Acc_Ears_alt1 = {
 		desc_id = m_punk_acc_ring_03
 		size = 8192
 	}
-	cas_male_acc_ears_alt2 = {
-		desc_id = m_punk_acc_ring
+	CAS_Male_Acc_Ears_alt2 = {
+		desc_id = M_Punk_Acc_Ring
 		size = 8192
 	}
-	cas_male_acc_ears_alt3 = {
-		desc_id = m_punk_acc_ring_04
+	CAS_Male_Acc_Ears_alt3 = {
+		desc_id = M_Punk_Acc_Ring_04
 		size = 8192
 	}
-	cas_male_hat_hair = {
+	CAS_Male_Hat_Hair = {
 		desc_id = m_goth_hathair_dreads
 		size = 69632
 	}
-	cas_male_hat_hair_alt1 = {
+	CAS_Male_Hat_Hair_alt1 = {
 		desc_id = m_metl_hathair_midhigh
 		size = 65536
 	}
-	cas_male_hat_hair_alt2 = {
+	CAS_Male_Hat_Hair_alt2 = {
 		desc_id = m_bmtl_hathair_lars
 		size = 65536
 	}
-	cas_male_hat_hair_alt3 = {
+	CAS_Male_Hat_Hair_alt3 = {
 		desc_id = m_clsc_hathair_messy
 		size = 65536
 	}
-	cas_male_hat_hair_alt4 = {
+	CAS_Male_Hat_Hair_alt4 = {
 		desc_id = m_glam_hathair_gold
 		size = 65536
 	}
-	cas_drums = {
-		desc_id = monster
+	CAS_Drums = {
+		desc_id = Monster
 		size = 593920
 	}
-	cas_drums_alt1 = {
-		desc_id = doublebass
+	CAS_Drums_alt1 = {
+		desc_id = DoubleBass
 		size = 552960
 	}
-	cas_drums_alt2 = {
+	CAS_Drums_alt2 = {
 		desc_id = basic
 		size = 331776
 	}
-	cas_drums_sticks = {
-		desc_id = drumsticks_zildjian2
+	CAS_Drums_Sticks = {
+		desc_id = Drumsticks_Zildjian2
 		size = 12288
 	}
-	cas_drums_sticks_alt1 = {
-		desc_id = drumsticks1
+	CAS_Drums_Sticks_alt1 = {
+		desc_id = Drumsticks1
 		size = 12288
 	}
-	cas_drums_sticks_alt2 = {
-		desc_id = drumsticks_regal
+	CAS_Drums_Sticks_alt2 = {
+		desc_id = Drumsticks_Regal
 		size = 12288
 	}
-	cas_drums_sticks_alt3 = {
-		desc_id = drumsticks_zildjian1
+	CAS_Drums_Sticks_alt3 = {
+		desc_id = Drumsticks_Zildjian1
 		size = 12288
 	}
 }
 worst_male_vocals_appearance = {
-	cas_body = {
-		desc_id = gh4_car_male
+	CAS_Body = {
+		desc_id = GH4_CAR_Male
 		size = 577536
 	}
 	cas_body_alt1 = {
-		desc_id = gh4_car_johnny
+		desc_id = GH4_CAR_Johnny
 		size = 577536
 	}
 	cas_body_alt2 = {
-		desc_id = `bestbuy kid`
+		desc_id = `BestBuy Kid`
 		size = 577536
 	}
 	cas_body_alt3 = {
-		desc_id = gh4_car_eddie
+		desc_id = GH4_CAR_Eddie
 		size = 577536
 	}
 	cas_body_alt4 = {
-		desc_id = gh4_car_lars
+		desc_id = GH4_CAR_Lars
 		size = 577536
 	}
-	cas_male_hat = {
+	CAS_Male_Hat = {
 		desc_id = m_punk_hat_helmet
 		size = 86016
 	}
-	cas_male_hat_alt1 = {
-		desc_id = m_hat_gorilla
+	CAS_Male_Hat_alt1 = {
+		desc_id = M_Hat_Gorilla
 		size = 61440
 	}
-	cas_male_hat_alt2 = {
-		desc_id = m_bmtl_hat_skullhelmet
+	CAS_Male_Hat_alt2 = {
+		desc_id = M_Bmtl_Hat_SkullHelmet
 		size = 61440
 	}
-	cas_male_hat_alt3 = {
-		desc_id = m_pop_head_gasmask
+	CAS_Male_Hat_alt3 = {
+		desc_id = M_Pop_Head_GasMask
 		size = 57344
 	}
-	cas_male_hat_alt4 = {
-		desc_id = m_bmtl_hat_viking
+	CAS_Male_Hat_alt4 = {
+		desc_id = M_Bmtl_Hat_Viking
 		size = 53248
 	}
-	cas_male_facial_hair = {
-		desc_id = m_clsc_fhair_country
+	CAS_Male_Facial_Hair = {
+		desc_id = M_Clsc_Fhair_Country
 		size = 45056
 	}
-	cas_male_facial_hair_alt1 = {
-		desc_id = m_rock_fhair_stub
+	CAS_Male_Facial_Hair_alt1 = {
+		desc_id = M_Rock_Fhair_Stub
 		size = 32768
 	}
-	cas_male_facial_hair_alt2 = {
+	CAS_Male_Facial_Hair_alt2 = {
 		desc_id = m_bmtl_fhair_beard
 		size = 24576
 	}
-	cas_male_facial_hair_alt3 = {
+	CAS_Male_Facial_Hair_alt3 = {
 		desc_id = m_rock_fhair_goatee02
 		size = 24576
 	}
-	cas_male_facial_hair_alt4 = {
-		desc_id = m_clsc_fhair_burns01
+	CAS_Male_Facial_Hair_alt4 = {
+		desc_id = M_Clsc_Fhair_Burns01
 		size = 16384
 	}
-	cas_male_torso = {
-		desc_id = m_rock_torso_rockbot
+	CAS_Male_Torso = {
+		desc_id = M_Rock_Torso_RockBot
 		size = 188416
 	}
-	cas_male_torso_alt1 = {
+	CAS_Male_Torso_alt1 = {
 		desc_id = m_rock_torso_ozzycoat
 		size = 176128
 	}
-	cas_male_torso_alt2 = {
+	CAS_Male_Torso_alt2 = {
 		desc_id = m_bmtl_torso_skeleton
 		size = 176128
 	}
-	cas_male_torso_alt3 = {
+	CAS_Male_Torso_alt3 = {
 		desc_id = m_punk_torso_johnny1_02
 		size = 167936
 	}
-	cas_male_torso_alt4 = {
+	CAS_Male_Torso_alt4 = {
 		desc_id = m_punk_torso_johnny1_03
 		size = 167936
 	}
-	cas_male_legs = {
+	CAS_Male_Legs = {
 		desc_id = m_punk_legs_johnny1
 		size = 212992
 	}
-	cas_male_legs_alt1 = {
+	CAS_Male_Legs_alt1 = {
 		desc_id = m_punk_legs_johnny1_02
 		size = 212992
 	}
-	cas_male_legs_alt2 = {
+	CAS_Male_Legs_alt2 = {
 		desc_id = m_punk_legs_johnny1_03
 		size = 212992
 	}
-	cas_male_legs_alt3 = {
+	CAS_Male_Legs_alt3 = {
 		desc_id = m_rock_legs_cargoscarf
 		size = 192512
 	}
-	cas_male_legs_alt4 = {
+	CAS_Male_Legs_alt4 = {
 		desc_id = m_goth_legs_vinyl
 		size = 167936
 	}
-	cas_male_shoes = {
+	CAS_Male_Shoes = {
 		desc_id = m_goth_shoe_belts
 		size = 163840
 	}
-	cas_male_shoes_alt1 = {
+	CAS_Male_Shoes_alt1 = {
 		desc_id = m_goth_shoes_buckleb
 		size = 151552
 	}
-	cas_male_shoes_alt2 = {
-		desc_id = m_punk_shoe_buckleb
+	CAS_Male_Shoes_alt2 = {
+		desc_id = M_Punk_Shoe_BuckleB
 		size = 151552
 	}
-	cas_male_shoes_alt3 = {
+	CAS_Male_Shoes_alt3 = {
 		desc_id = m_goth_shoes_unzipbb
 		size = 139264
 	}
-	cas_male_shoes_alt4 = {
+	CAS_Male_Shoes_alt4 = {
 		desc_id = m_bmtl_shoes_cross
 		size = 135168
 	}
-	cas_male_acc_left = {
-		desc_id = m_punk_acc_lmetalskull
+	CAS_Male_Acc_Left = {
+		desc_id = M_Punk_Acc_LMetalskull
 		size = 65536
 	}
-	cas_male_acc_left_alt1 = {
+	CAS_Male_Acc_Left_alt1 = {
 		desc_id = m_glam_acc_lmadmax
 		size = 65536
 	}
-	cas_male_acc_left_alt2 = {
+	CAS_Male_Acc_Left_alt2 = {
 		desc_id = m_rock_acc_lbone
 		size = 61440
 	}
-	cas_male_acc_left_alt3 = {
+	CAS_Male_Acc_Left_alt3 = {
 		desc_id = m_goth_acc_lbuckleglove
 		size = 53248
 	}
-	cas_male_acc_left_alt4 = {
-		desc_id = m_goth_acc_lstrait
+	CAS_Male_Acc_Left_alt4 = {
+		desc_id = M_Goth_Acc_LStrait
 		size = 49152
 	}
-	cas_male_acc_right = {
+	CAS_Male_Acc_Right = {
 		desc_id = m_punk_acc_rspikeglove
 		size = 94208
 	}
-	cas_male_acc_right_alt1 = {
-		desc_id = m_clsc_accs_rbracelet
+	CAS_Male_Acc_Right_alt1 = {
+		desc_id = M_Clsc_Accs_RBracelet
 		size = 61440
 	}
-	cas_male_acc_right_alt2 = {
-		desc_id = m_punk_acc_rbands
+	CAS_Male_Acc_Right_alt2 = {
+		desc_id = M_Punk_Acc_RBands
 		size = 57344
 	}
-	cas_male_acc_right_alt3 = {
+	CAS_Male_Acc_Right_alt3 = {
 		desc_id = m_glam_acc_rmesh
 		size = 53248
 	}
-	cas_male_acc_right_alt4 = {
-		desc_id = m_punk_acc_rchain
+	CAS_Male_Acc_Right_alt4 = {
+		desc_id = M_Punk_Acc_RChain
 		size = 53248
 	}
-	cas_male_acc_face = {
-		desc_id = m_clsc_glasses_round
+	CAS_Male_Acc_Face = {
+		desc_id = M_Clsc_Glasses_Round
 		size = 65536
 	}
-	cas_male_acc_face_alt1 = {
-		desc_id = m_clsc_glasses_round2
+	CAS_Male_Acc_Face_alt1 = {
+		desc_id = M_Clsc_Glasses_Round2
 		size = 45056
 	}
-	cas_male_acc_face_alt2 = {
-		desc_id = m_clsc_glasses_avtr
+	CAS_Male_Acc_Face_alt2 = {
+		desc_id = M_Clsc_Glasses_Avtr
 		size = 45056
 	}
-	cas_male_acc_face_alt3 = {
+	CAS_Male_Acc_Face_alt3 = {
 		desc_id = m_goth_glasses_ggls
 		size = 36864
 	}
-	cas_male_acc_face_alt4 = {
-		desc_id = m_clsc_glasses_wtnose
+	CAS_Male_Acc_Face_alt4 = {
+		desc_id = M_Clsc_Glasses_WtNose
 		size = 24576
 	}
-	cas_male_acc_ears = {
-		desc_id = m_punk_acc_ring_02
+	CAS_Male_Acc_Ears = {
+		desc_id = M_Punk_Acc_Ring_02
 		size = 12288
 	}
-	cas_male_acc_ears_alt1 = {
+	CAS_Male_Acc_Ears_alt1 = {
 		desc_id = m_punk_acc_ring_03
 		size = 8192
 	}
-	cas_male_acc_ears_alt2 = {
-		desc_id = m_punk_acc_ring
+	CAS_Male_Acc_Ears_alt2 = {
+		desc_id = M_Punk_Acc_Ring
 		size = 8192
 	}
-	cas_male_acc_ears_alt3 = {
-		desc_id = m_punk_acc_ring_04
+	CAS_Male_Acc_Ears_alt3 = {
+		desc_id = M_Punk_Acc_Ring_04
 		size = 8192
 	}
-	cas_male_hat_hair = {
+	CAS_Male_Hat_Hair = {
 		desc_id = m_goth_hathair_dreads
 		size = 69632
 	}
-	cas_male_hat_hair_alt1 = {
+	CAS_Male_Hat_Hair_alt1 = {
 		desc_id = m_metl_hathair_midhigh
 		size = 65536
 	}
-	cas_male_hat_hair_alt2 = {
+	CAS_Male_Hat_Hair_alt2 = {
 		desc_id = m_bmtl_hathair_lars
 		size = 65536
 	}
-	cas_male_hat_hair_alt3 = {
+	CAS_Male_Hat_Hair_alt3 = {
 		desc_id = m_clsc_hathair_messy
 		size = 65536
 	}
-	cas_male_hat_hair_alt4 = {
+	CAS_Male_Hat_Hair_alt4 = {
 		desc_id = m_glam_hathair_gold
 		size = 65536
 	}
-	cas_mic = {
-		desc_id = `black metal`
+	CAS_Mic = {
+		desc_id = `Black Metal`
 		size = 36864
 	}
-	cas_mic_alt1 = {
-		desc_id = rock
+	CAS_Mic_alt1 = {
+		desc_id = Rock
 		size = 28672
 	}
-	cas_mic_alt2 = {
-		desc_id = `classic rock`
+	CAS_Mic_alt2 = {
+		desc_id = `Classic Rock`
 		size = 28672
 	}
-	cas_mic_alt3 = {
-		desc_id = `glam rock`
+	CAS_Mic_alt3 = {
+		desc_id = `Glam Rock`
 		size = 20480
 	}
-	cas_mic_alt4 = {
-		desc_id = punk
+	CAS_Mic_alt4 = {
+		desc_id = Punk
 		size = 20480
 	}
-	cas_mic_stand = {
+	CAS_Mic_Stand = {
 		desc_id = mic_stand_metal
 		size = 69632
 	}
-	cas_mic_stand_alt1 = {
-		desc_id = goth
+	CAS_Mic_Stand_alt1 = {
+		desc_id = Goth
 		size = 49152
 	}
-	cas_mic_stand_alt2 = {
-		desc_id = rock
+	CAS_Mic_Stand_alt2 = {
+		desc_id = Rock
 		size = 36864
 	}
-	cas_mic_stand_alt3 = {
+	CAS_Mic_Stand_alt3 = {
 		desc_id = mic_stand_blackmetal
 		size = 36864
 	}
-	cas_mic_stand_alt4 = {
-		desc_id = twisted
+	CAS_Mic_Stand_alt4 = {
+		desc_id = Twisted
 		size = 36864
 	}
-	cas_guitar_body = {
-		desc_id = guitar_x_trident_10
+	CAS_Guitar_Body = {
+		desc_id = Guitar_X_Trident_10
 		size = 77824
 	}
-	cas_guitar_body_alt1 = {
-		desc_id = guitar_x_clear_12
+	CAS_Guitar_Body_alt1 = {
+		desc_id = Guitar_X_Clear_12
 		size = 65536
 	}
-	cas_guitar_body_alt2 = {
-		desc_id = guitar_x_freebird_09
+	CAS_Guitar_Body_alt2 = {
+		desc_id = Guitar_X_Freebird_09
 		size = 65536
 	}
-	cas_guitar_body_alt3 = {
-		desc_id = guitar_special_spider_02
+	CAS_Guitar_Body_alt3 = {
+		desc_id = Guitar_Special_Spider_02
 		size = 65536
 	}
-	cas_guitar_body_alt4 = {
-		desc_id = guitar_special_skull_01
+	CAS_Guitar_Body_alt4 = {
+		desc_id = Guitar_Special_Skull_01
 		size = 61440
 	}
-	cas_guitar_neck = {
-		desc_id = guitar_neck07
+	CAS_Guitar_Neck = {
+		desc_id = Guitar_Neck07
 		size = 12288
 	}
-	cas_guitar_neck_alt1 = {
-		desc_id = guitar_neck06
+	CAS_Guitar_Neck_alt1 = {
+		desc_id = Guitar_Neck06
 		size = 12288
 	}
-	cas_guitar_neck_alt2 = {
-		desc_id = guitar_neck04
+	CAS_Guitar_Neck_alt2 = {
+		desc_id = Guitar_Neck04
 		size = 12288
 	}
-	cas_guitar_neck_alt3 = {
-		desc_id = guitar_neck05
+	CAS_Guitar_Neck_alt3 = {
+		desc_id = Guitar_Neck05
 		size = 12288
 	}
-	cas_guitar_neck_alt4 = {
-		desc_id = guitar_neck01
+	CAS_Guitar_Neck_alt4 = {
+		desc_id = Guitar_Neck01
 		size = 12288
 	}
-	cas_guitar_head = {
-		desc_id = guitar_head_x_01
+	CAS_Guitar_Head = {
+		desc_id = Guitar_Head_X_01
 		size = 73728
 	}
-	cas_guitar_head_alt1 = {
-		desc_id = guitar_head16
+	CAS_Guitar_Head_alt1 = {
+		desc_id = Guitar_Head16
 		size = 61440
 	}
-	cas_guitar_head_alt2 = {
-		desc_id = headstock_x_handle_05
+	CAS_Guitar_Head_alt2 = {
+		desc_id = Headstock_X_Handle_05
 		size = 61440
 	}
-	cas_guitar_head_alt3 = {
-		desc_id = headstock_x_flame_08
+	CAS_Guitar_Head_alt3 = {
+		desc_id = Headstock_X_Flame_08
 		size = 61440
 	}
-	cas_guitar_head_alt4 = {
+	CAS_Guitar_Head_alt4 = {
 		desc_id = guitar_head_x_03
 		size = 61440
 	}
-	cas_guitar_pickguards = {
-		desc_id = gtr_x_fire_pickg01
+	CAS_Guitar_Pickguards = {
+		desc_id = GTR_X_Fire_PickG01
 		size = 28672
 	}
-	cas_guitar_pickguards_alt1 = {
-		desc_id = gtr_body8_pickg02
+	CAS_Guitar_Pickguards_alt1 = {
+		desc_id = GTR_Body8_PickG02
 		size = 20480
 	}
-	cas_guitar_pickguards_alt2 = {
-		desc_id = gtr_body2_pickg01
+	CAS_Guitar_Pickguards_alt2 = {
+		desc_id = GTR_Body2_PickG01
 		size = 20480
 	}
-	cas_guitar_pickguards_alt3 = {
-		desc_id = gtr_body14_pickg01
+	CAS_Guitar_Pickguards_alt3 = {
+		desc_id = GTR_Body14_PickG01
 		size = 20480
 	}
-	cas_guitar_pickguards_alt4 = {
+	CAS_Guitar_Pickguards_alt4 = {
 		desc_id = gtr_body17_pickg01
 		size = 20480
 	}
-	cas_guitar_pickups = {
-		desc_id = gtr_pickups_style_01c
+	CAS_Guitar_Pickups = {
+		desc_id = GTR_Pickups_Style_01c
 		size = 40960
 	}
-	cas_guitar_pickups_alt1 = {
-		desc_id = gtr_pickup_type1_blktan_3
+	CAS_Guitar_Pickups_alt1 = {
+		desc_id = GTR_Pickup_Type1_Blktan_3
 		size = 40960
 	}
-	cas_guitar_pickups_alt2 = {
-		desc_id = gtr_pickup_type1_blk_3
+	CAS_Guitar_Pickups_alt2 = {
+		desc_id = GTR_Pickup_Type1_Blk_3
 		size = 40960
 	}
-	cas_guitar_pickups_alt3 = {
-		desc_id = gtr_pickup_type1_blktan_2
+	CAS_Guitar_Pickups_alt3 = {
+		desc_id = GTR_Pickup_Type1_Blktan_2
 		size = 32768
 	}
-	cas_guitar_pickups_alt4 = {
-		desc_id = gtr_pickup_type1_blk_2
+	CAS_Guitar_Pickups_alt4 = {
+		desc_id = GTR_Pickup_Type1_Blk_2
 		size = 28672
 	}
-	cas_guitar_bridges = {
-		desc_id = gtr_hardware04a
+	CAS_Guitar_Bridges = {
+		desc_id = GTR_Hardware04a
 		size = 36864
 	}
-	cas_guitar_bridges_alt1 = {
-		desc_id = gtr_hardware01b
+	CAS_Guitar_Bridges_alt1 = {
+		desc_id = GTR_Hardware01b
 		size = 32768
 	}
-	cas_guitar_bridges_alt2 = {
-		desc_id = gtr_hardware06
+	CAS_Guitar_Bridges_alt2 = {
+		desc_id = GTR_Hardware06
 		size = 28672
 	}
-	cas_guitar_bridges_alt3 = {
-		desc_id = gtr8_hardware08a
+	CAS_Guitar_Bridges_alt3 = {
+		desc_id = GTR8_Hardware08a
 		size = 28672
 	}
-	cas_guitar_bridges_alt4 = {
-		desc_id = gtr_hardware03a
+	CAS_Guitar_Bridges_alt4 = {
+		desc_id = GTR_Hardware03a
 		size = 28672
 	}
-	cas_guitar_knobs = {
-		desc_id = gtr2_knob_type4_04
+	CAS_Guitar_Knobs = {
+		desc_id = GTR2_Knob_Type4_04
 		size = 28672
 	}
-	cas_guitar_knobs_alt1 = {
-		desc_id = gtr1_knob_type4_04
+	CAS_Guitar_Knobs_alt1 = {
+		desc_id = GTR1_Knob_Type4_04
 		size = 28672
 	}
-	cas_guitar_knobs_alt2 = {
-		desc_id = gtr4_knob_type4_04
+	CAS_Guitar_Knobs_alt2 = {
+		desc_id = GTR4_Knob_Type4_04
 		size = 28672
 	}
-	cas_guitar_knobs_alt3 = {
-		desc_id = gtr14_knob_type4_04
+	CAS_Guitar_Knobs_alt3 = {
+		desc_id = GTR14_Knob_Type4_04
 		size = 28672
 	}
-	cas_guitar_knobs_alt4 = {
-		desc_id = gtr12_knob_type4_04
+	CAS_Guitar_Knobs_alt4 = {
+		desc_id = GTR12_Knob_Type4_04
 		size = 28672
 	}
 }

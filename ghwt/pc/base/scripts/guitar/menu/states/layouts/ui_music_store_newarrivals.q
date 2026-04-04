@@ -1,11 +1,11 @@
 
 script ui_create_music_store_newarrivals 
-	if gotparam \{selected_index}
+	if GotParam \{selected_index}
 		do_not_animate = {do_not_animate}
 	endif
-	music_store_set_previous_history previous_history = [] new_entry = qs(0xad0d2e6d) <do_not_animate>
+	music_store_set_previous_history previous_history = [] new_entry = qs("\LNEW") <do_not_animate>
 	music_store_pre_sort_list list = <list> state_list = [alpha artist date type price]
-	getarraysize <list>
+	GetArraySize <list>
 	if (<array_size> > 0)
 		i = 0
 		begin
@@ -22,10 +22,10 @@ script ui_create_music_store_newarrivals
 		repeat <array_size>
 	endif
 	spawnscriptnow \{music_store_fade_in_options}
-	add_user_control_helper \{text = qs(0x52d4ae3c)
+	add_user_control_helper \{text = qs("\LSELECT")
 		button = green
 		z = 100000}
-	add_user_control_helper \{text = qs(0x0c4db477)
+	add_user_control_helper \{text = qs("\LBACK")
 		button = red
 		z = 100000}
 	music_store_add_sort_info state_list = [alpha artist date type price] previous_history = <previous_history> list = <list>
@@ -41,13 +41,13 @@ endscript
 
 script music_store_new_arrivals_decide_action 
 	if ((<option_struct>.type) = song)
-		generic_blocking_execute_script pad_script = generic_event_choose pad_params = {state = uistate_music_store_songs_details data = {<...> song_struct = <option_struct> full_list = <list>}}
+		generic_blocking_execute_script pad_script = generic_event_choose pad_params = {state = UIstate_music_store_songs_details data = {<...> song_struct = <option_struct> full_list = <list>}}
 	elseif ((<option_struct>.type) = pack)
-		generic_blocking_execute_script pad_script = generic_event_choose pad_params = {state = uistate_music_store_specialpacks_details data = {<...> pack_struct = <option_struct>}}
+		generic_blocking_execute_script pad_script = generic_event_choose pad_params = {state = UIstate_music_store_specialpacks_details data = {<...> pack_struct = <option_struct>}}
 	elseif ((<option_struct>.type) = album)
-		generic_blocking_execute_script pad_script = generic_event_choose pad_params = {state = uistate_music_store_albums_details data = {<...> album_struct = <option_struct>}}
+		generic_blocking_execute_script pad_script = generic_event_choose pad_params = {state = UIstate_music_store_albums_details data = {<...> album_struct = <option_struct>}}
 	else
-		scriptassert qs(0x4ea75a1f) i = (<option_struct>.name) donotresolve
+		ScriptAssert qs("\Lmusic_store_new_arrivals_decide_action was given an invalid type for item %i") i = (<option_struct>.name) DoNotResolve
 	endif
 endscript
 
@@ -59,7 +59,7 @@ script music_store_new_arrivals_decide_focus
 	elseif ((<option_struct>.type) = album)
 		music_store_album_focus option_struct = <option_struct>
 	else
-		scriptassert qs(0x8b439d7c) i = (<option_struct>.name) donotresolve
+		ScriptAssert qs("\L\music_store_new_arrivals_decide_action was given an invalid type for item %i") i = (<option_struct>.name) DoNotResolve
 	endif
 endscript
 

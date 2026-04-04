@@ -1,37 +1,37 @@
-se_brightness = 5
-currenttodsettings = default_tod_manager
+SE_Brightness = 5
+currentTODSettings = Default_tod_manager
 
-script tod_proxim_create_lightfx 
-	screenfx_clearfxinstances \{viewport = 0}
-	if insplitscreengame
-		screenfx_clearfxinstances \{viewport = 0}
+script TOD_Proxim_Create_LightFX 
+	ScreenFX_ClearFXInstances \{viewport = 0}
+	if InSplitScreenGame
+		ScreenFX_ClearFXInstances \{viewport = 0}
 	endif
-	tod_proxim_update_lightfx \{viewport = bg_viewport
+	TOD_Proxim_Update_LightFX \{viewport = bg_viewport
 		time = 0}
 endscript
 
-script tod_proxim_update_lightfx 
-	tod_proxim_update_lightfx_viewport viewport = 0 <...>
-	if insplitscreengame
-		tod_proxim_update_lightfx_viewport viewport = 0 <...>
+script TOD_Proxim_Update_LightFX 
+	TOD_Proxim_Update_LightFX_Viewport viewport = 0 <...>
+	if InSplitScreenGame
+		TOD_Proxim_Update_LightFX_Viewport viewport = 0 <...>
 	endif
 endscript
 
 script toggle_default_sceenfx 
-	tod_proxim_update_lightfx_viewport
+	TOD_Proxim_Update_LightFX_Viewport
 	toggle_screenfx_instances
 endscript
 
-script tod_proxim_update_lightfx_viewport \{fxparam = $default_tod_manager
+script TOD_Proxim_Update_LightFX_Viewport \{fxParam = $Default_tod_manager
 		viewport = 0
 		time = 1}
-	printf \{qs(0x449d27d9)}
-	screenfx_clearfxinstances viewport = <viewport>
-	if structurecontains \{structure = fxparam
+	printf \{qs("\LRestore Fullscreen To Default")}
+	ScreenFX_ClearFXInstances viewport = <viewport>
+	if StructureContains \{Structure = fxParam
 			screen_fx}
 		begin
-		if getnextarrayelement (<fxparam>.screen_fx)
-			screenfx_addfxinstance {
+		if GetNextArrayElement (<fxParam>.screen_fx)
+			ScreenFX_AddFXInstance {
 				viewport = <viewport>
 				<element>
 			}
@@ -40,17 +40,17 @@ script tod_proxim_update_lightfx_viewport \{fxparam = $default_tod_manager
 		endif
 		repeat
 	endif
-	getpakmancurrentname \{map = zones}
-	if gotparam \{pakname}
-		formattext checksumname = zone_screenfx '%s_SetupScreenFX' s = <pakname>
-		if scriptexists <zone_screenfx>
-			printf \{qs(0x81f59b33)}
+	GetPakManCurrentName \{map = zones}
+	if GotParam \{pakname}
+		FormatText checksumname = zone_screenfx '%s_SetupScreenFX' s = <pakname>
+		if ScriptExists <zone_screenfx>
+			printf \{qs("\LCalling zone_SetupScreenFX")}
 			spawnscriptnow <zone_screenfx>
 		endif
 	endif
 endscript
 
-script tod_proxim_reapply_lightfx 
-	tod_proxim_update_lightfx \{fxparam = $currenttodsettings
+script TOD_Proxim_Reapply_LightFX 
+	TOD_Proxim_Update_LightFX \{fxParam = $currentTODSettings
 		time = 0.0}
 endscript

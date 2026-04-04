@@ -1,6 +1,6 @@
 
 script ui_create_cag_custom_strings 
-	requireparams \{[
+	RequireParams \{[
 			part
 		]
 		all}
@@ -13,7 +13,7 @@ script ui_create_cag_custom_strings
 	get_part_current_desc_id part = <part>
 	current_part = 0
 	num_parts_added = 0
-	getarraysize ($<part>)
+	GetArraySize ($<part>)
 	i = 0
 	begin
 	if cas_item_is_visible part = <part> part_index = <i>
@@ -35,41 +35,41 @@ script ui_create_cag_custom_strings
 	clean_up_user_control_helpers
 	menu_finish \{car_helper_text_cancel
 		no_rotate_zoom_text}
-	launchevent type = focus target = create_cag_custom_strings_vmenu data = {child_index = <current_part>}
+	LaunchEvent type = focus target = create_cag_custom_strings_vmenu data = {child_index = <current_part>}
 endscript
 
 script ui_destroy_cag_custom_strings 
 	generic_list_destroy
-	if screenelementexists \{id = string_preview}
-		destroyscreenelement \{id = string_preview}
+	if ScreenElementExists \{id = string_preview}
+		DestroyScreenElement \{id = string_preview}
 	endif
 endscript
 
 script ui_init_cag_custom_strings 
-	pushtemporarycasappearance
+	PushTemporaryCASAppearance
 endscript
 
 script ui_deinit_cag_custom_strings 
-	poptemporarycasappearance
+	PopTemporaryCASAppearance
 endscript
 
 script select_strings_focus_change 
-	if screenelementexists \{id = string_preview}
-		destroyscreenelement \{id = string_preview}
+	if ScreenElementExists \{id = string_preview}
+		DestroyScreenElement \{id = string_preview}
 	endif
-	if NOT getactualcasoptionstruct part = <part> desc_id = (($<part>) [<index>].desc_id)
-		scriptassert '%s %t not found' s = <part> t = (($<part>) [<index>].desc_id)
+	if NOT GetActualCASOptionStruct part = <part> desc_id = (($<part>) [<index>].desc_id)
+		ScriptAssert '%s %t not found' s = <part> t = (($<part>) [<index>].desc_id)
 	endif
-	pushassetcontext \{context = z_soundcheck}
-	createscreenelement {
+	PushAssetContext \{context = z_soundcheck}
+	CreateScreenElement {
 		id = string_preview
-		type = spriteelement
+		type = SpriteElement
 		parent = root_window
 		texture = <preview_texture>
 		pos = (750.0, 200.0)
 		just = [-1.0 -1.0]
 		dims = (256.0, 256.0)
 	}
-	popassetcontext \{context = z_soundcheck}
-	editcasappearance target = setpart targetparams = {part = <part> desc_id = <desc_id>}
+	PopAssetContext \{context = z_soundcheck}
+	EditCASAppearance target = SetPart targetParams = {part = <part> desc_id = <desc_id>}
 endscript

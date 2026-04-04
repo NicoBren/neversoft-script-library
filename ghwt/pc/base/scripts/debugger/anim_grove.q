@@ -1,192 +1,192 @@
-animpreviewbasetree = {
-	type = degenerateblend
-	id = previewtreeanimnode
+AnimPreviewBaseTree = {
+	type = DegenerateBlend
+	id = PreviewTreeAnimNode
 }
 
-script animgrove_control_script 
-	printf \{qs(0x4f175157)}
+script AnimGrove_Control_Script 
+	printf \{qs("\LLaunching AnimGrove Control Script.")}
 	begin
-	animinfo_getallactivevaluesources
-	if scriptexists \{animgrove_user_generated_control_script}
-		animgrove_user_generated_control_script <...>
+	AnimInfo_GetAllActiveValueSources
+	if ScriptExists \{AnimGrove_user_generated_control_script}
+		AnimGrove_user_generated_control_script <...>
 	endif
-	animpreview_setsourcevalues <...>
-	wait \{1
+	AnimPreview_SetSourceValues <...>
+	Wait \{1
 		gameframe}
 	repeat
-	printf \{qs(0x2d5a982c)}
+	printf \{qs("\LExiting AnimGrove Control Script.")}
 endscript
 
-script animtreepreview_updateblendvalues 
-	if compositeobjectexists \{name = animtreepreviewobject}
-		animtreepreviewobject :animpreview_setsourcevalues <...>
+script AnimTreePreview_UpdateBlendValues 
+	if CompositeObjectExists \{name = AnimTreePreviewObject}
+		AnimTreePreviewObject :AnimPreview_SetSourceValues <...>
 	endif
 endscript
 
-script testanimscript 
-	anim_command target = previewtreeanimnode command = degenerateblend_addbranch params = {tree = <tree> params = <tree_params>}
-	obj_forceupdate
-	animgrove_control_script
+script TestAnimScript 
+	Anim_Command target = PreviewTreeAnimNode command = DegenerateBlend_AddBranch params = {Tree = <Tree> params = <Tree_Params>}
+	Obj_ForceUpdate
+	AnimGrove_Control_Script
 endscript
 
-script animtreepreview_nxcommon \{targetobject = skater
-		modelbuilderheap = debugheap}
-	if compositeobjectexists \{name = animtreepreviewobject}
-		animtreepreviewrestore
+script AnimTreePreview_NxCommon \{targetObject = skater
+		modelBuilderHeap = DebugHeap}
+	if CompositeObjectExists \{name = AnimTreePreviewObject}
+		AnimTreePreviewRestore
 	endif
-	dump <tree>
-	loadpak \{'pak/animgrove_preview.pak'
+	dump <Tree>
+	LoadPak \{'pak/animgrove_preview.pak'
 		heap = heap_debug}
-	if NOT gotparam \{skeleton}
-		<targetobject> :skeleton_getskeletonname
-		skeleton = <skeletonname>
+	if NOT GotParam \{skeleton}
+		<targetObject> :Skeleton_GetSkeletonName
+		skeleton = <SkeletonName>
 	endif
-	if NOT gotparam \{ragdoll}
-		if <targetobject> :containscomponent name = ragdoll
-			if <targetobject> :ragdoll_getragdollname
-				ragdoll = <ragdollname>
+	if NOT GotParam \{ragdoll}
+		if <targetObject> :ContainsComponent name = ragdoll
+			if <targetObject> :ragdoll_getragdollname
+				ragdoll = <ragdollName>
 			endif
 		endif
 	endif
-	setsearchallassetcontexts
-	createfakeplayer positionfrom = <targetobject> clonefrom = <targetobject> model = <model> ragdoll = <ragdoll> skeleton = <skeleton> active_value_sources = <active_value_sources> modelbuilderheap = <modelbuilderheap>
-	animtreepreviewobject :anim_inittree \{tree = $animpreviewbasetree
-		nodeiddeclaration = [
-			previewtreeanimnode
+	SetSearchAllAssetContexts
+	CreateFakePlayer PositionFrom = <targetObject> CloneFrom = <targetObject> Model = <Model> ragdoll = <ragdoll> skeleton = <skeleton> active_value_sources = <active_value_sources> modelBuilderHeap = <modelBuilderHeap>
+	AnimTreePreviewObject :Anim_InitTree \{Tree = $AnimPreviewBaseTree
+		NodeIdDeclaration = [
+			PreviewTreeAnimNode
 		]}
-	if gotparam \{blend_values}
-		animtreepreviewobject :animpreview_setsourcevalues <blend_values>
+	if GotParam \{blend_values}
+		AnimTreePreviewObject :AnimPreview_SetSourceValues <blend_values>
 	endif
-	if animtreepreviewobject :anim_loadanims tree = <tree> params = <tree_params>
-		animtreepreviewobject :obj_switchscript testanimscript params = {tree = <tree> tree_params = <tree_params>}
-		<targetobject> :hide
-		<targetobject> :pause
+	if AnimTreePreviewObject :anim_loadanims Tree = <Tree> params = <Tree_Params>
+		AnimTreePreviewObject :Obj_SwitchScript TestAnimScript params = {Tree = <Tree> Tree_Params = <Tree_Params>}
+		<targetObject> :hide
+		<targetObject> :Pause
 	else
-		animtreepreviewobject :die
+		AnimTreePreviewObject :Die
 	endif
-	dump <tree>
+	dump <Tree>
 endscript
 
-script animtreepreviewrestore_nxcommon 
-	unloadpak \{'pak/animgrove_preview.pak'}
+script AnimTreePreviewRestore_NxCommon 
+	UnloadPak \{'pak/animgrove_preview.pak'}
 endscript
 
-script animtreepreview_reregisteranimevents 
-	printf \{qs(0xa2fc79d0)}
-	initanimeventmap
+script AnimTreePreview_ReregisterAnimEvents 
+	printf \{qs("\LUpdating anim events.")}
+	InitAnimEventMap
 	i = 0
-	getarraysize \{track_names}
+	GetArraySize \{track_names}
 	begin
 	track_name = (<track_globals> [<i>])
 	track_global = (<track_globals> [<i>])
-	registeranimevents track = <track_name> anim_events = $<track_global>
+	RegisterAnimEvents track = <track_name> anim_events = $<track_global>
 	i = (<i> + 1)
 	repeat <array_size>
 endscript
 
-script createfakeplayer 
-	if NOT compositeobjectexists <clonefrom>
+script CreateFakePlayer 
+	if NOT CompositeObjectExists <CloneFrom>
 		return
 	endif
-	if NOT compositeobjectexists <positionfrom>
+	if NOT CompositeObjectExists <PositionFrom>
 		return
 	endif
-	if compositeobjectexists \{animtreepreviewobject}
-		animtreepreviewobject :die
-		flushdeadobjects
+	if CompositeObjectExists \{AnimTreePreviewObject}
+		AnimTreePreviewObject :Die
+		FlushDeadObjects
 	endif
-	<positionfrom> :obj_getposition
-	<positionfrom> :obj_getquat
-	formattext checksumname = appearance '%s' s = <model>
-	if globalexists name = <appearance> type = structure
-		removeparameter \{model}
+	<PositionFrom> :Obj_GetPosition
+	<PositionFrom> :Obj_GetQuat
+	FormatText checksumname = appearance '%s' s = <Model>
+	if GlobalExists name = <appearance> type = Structure
+		RemoveParameter \{Model}
 	else
-		removeparameter \{appearance}
+		RemoveParameter \{appearance}
 	endif
-	components = []
-	if gotparam \{ragdoll}
-		ragdollcomponents = [
+	Components = []
+	if GotParam \{ragdoll}
+		RagdollComponents = [
 			{
-				component = ragdoll
-				ragdollname = <ragdoll>
+				Component = ragdoll
+				ragdollName = <ragdoll>
 				initialize_empty = false
 			}
 		]
-		components = (<components> + <ragdollcomponents>)
+		Components = (<Components> + <RagdollComponents>)
 	endif
-	basiccomponents = [
+	BasicComponents = [
 		{
-			component = modelbuilder
-			allocator = simple
-			heap = <modelbuilderheap>
+			Component = ModelBuilder
+			Allocator = simple
+			heap = <modelBuilderHeap>
 		}
 		{
-			component = input
+			Component = Input
 			controller = 1
 			dontusedpadasleftanalog
 		}
 		{
-			component = animpreview
+			Component = AnimPreview
 			active_value_source_list = <active_value_sources>
-			preload_model = <model>
-			geom_heap = <modelbuilderheap>
+			preload_model = <Model>
+			geom_heap = <modelBuilderHeap>
 		}
 		{
-			component = animinfo
+			Component = AnimInfo
 			active_value_set = preview
 		}
 		{
-			component = animtree
-			referencechecksum = <skeleton>
+			Component = AnimTree
+			ReferenceChecksum = <skeleton>
 		}
 		{
-			component = skeleton
+			Component = skeleton
 			allow_reset
 		}
 		{
-			component = setdisplaymatrix
+			Component = SetDisplayMatrix
 		}
 	]
-	components = (<components> + <basiccomponents>)
-	if gotparam \{model}
-		modelcomponent = [
+	Components = (<Components> + <BasicComponents>)
+	if GotParam \{Model}
+		ModelComponent = [
 			{
-				component = model
-				model = <model>
+				Component = Model
+				Model = <Model>
 			}
 		]
-	elseif gotparam \{appearance}
-		modelcomponent = [
+	elseif GotParam \{appearance}
+		ModelComponent = [
 			{
-				component = model
+				Component = Model
 			}
 		]
 	else
-		modelcomponent = [
+		ModelComponent = [
 			{
-				component = model
-				clonefrom = <clonefrom>
+				Component = Model
+				CloneFrom = <CloneFrom>
 			}
 		]
 	endif
-	components = (<components> + <modelcomponent>)
-	createcompositeobject {
-		components = <components>
+	Components = (<Components> + <ModelComponent>)
+	CreateCompositeObject {
+		Components = <Components>
 		params = {
-			skeletonname = <skeleton>
-			name = animtreepreviewobject
+			SkeletonName = <skeleton>
+			name = AnimTreePreviewObject
 			pos = <pos>
-			orientation = <quat>
-			assetcontext = animpreviewobject
+			Orientation = <Quat>
+			assetcontext = AnimPreviewObject
 			$<appearance>
 		}
 	}
-	if gotparam \{appearance}
-		if NOT structurecontains structure = $<appearance> model
+	if GotParam \{appearance}
+		if NOT StructureContains Structure = $<appearance> Model
 			build_params = {appearance = $<appearance> buildscriptparams = {$<appearance> async = 0}}
-			animtreepreviewobject :modelbuilder_preload <build_params>
-			animtreepreviewobject :modelbuilder_loadassets <build_params>
-			animtreepreviewobject :modelbuilder_build <build_params>
+			AnimTreePreviewObject :ModelBuilder_Preload <build_params>
+			AnimTreePreviewObject :ModelBuilder_LoadAssets <build_params>
+			AnimTreePreviewObject :ModelBuilder_Build <build_params>
 		endif
 	endif
 endscript

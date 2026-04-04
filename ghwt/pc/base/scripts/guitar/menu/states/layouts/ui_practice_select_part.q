@@ -1,35 +1,35 @@
 
 script ui_create_practice_select_part 
 	ui_get_controller_parts_allowed controller = ($primary_controller)
-	make_generic_menu \{title = qs(0x6117f9fc)}
+	make_generic_menu \{title = qs("PRACTICE PART")}
 	get_song_rhythm_track song = ($current_song)
 	<parts> = [
-		{text = qs(0x9504b94a)
-			rhythm_text = qs(0x0cc7d9b2)
+		{text = qs("GUITAR")
+			rhythm_text = qs("LEAD")
 			id = cpp_guitar
 			part = guitar
 		}
-		{text = qs(0x7d4f9214)
-			rhythm_text = qs(0x1f0659c1)
+		{text = qs("BASS")
+			rhythm_text = qs("RHYTHM")
 			id = cpp_bass
-			part = bass
+			part = Bass
 		}
-		{text = qs(0x388cd3db)
+		{text = qs("DRUMS")
 			id = cpp_drum
 			part = drum
 		}
-		{text = qs(0x1b9f6f84)
+		{text = qs("VOCALS")
 			id = cpp_vocals
-			part = vocals
+			part = Vocals
 		}
 	]
 	<num_not_focusable> = 0
-	getarraysize <parts>
+	GetArraySize <parts>
 	<i> = 0
 	begin
 	<part_struct> = (<parts> [<i>])
 	focus = {}
-	if NOT structurecontains structure = <allowed> (<part_struct>.part)
+	if NOT StructureContains Structure = <allowed> (<part_struct>.part)
 		focus = {not_focusable}
 		<num_not_focusable> = (<num_not_focusable> + 1)
 	endif
@@ -48,12 +48,12 @@ script ui_create_practice_select_part
 	repeat <array_size>
 	menu_finish
 	if (<num_not_focusable> = 4)
-		if iswinport
-			warning_text = qs(0x588788f4)
-		elseif isxenon
-			warning_text = qs(0xec4dbd17)
+		if IsWinPort
+			warning_text = qs("You must connect a microphone to continue.")
+		elseif isXenon
+			warning_text = qs("You must connect a microphone or Xbox 360 Headset to continue.")
 		else
-			warning_text = qs(0x588788f4)
+			warning_text = qs("You must connect a microphone to continue.")
 		endif
 		create_popup_warning_menu {
 			textblock = {
@@ -63,7 +63,7 @@ script ui_create_practice_select_part
 			options = [
 				{
 					func = generic_event_back
-					text = qs(0x320a8d1c)
+					text = qs("GO BACK")
 					no_sound
 				}
 			]
@@ -73,7 +73,7 @@ script ui_create_practice_select_part
 endscript
 
 script ui_destroy_practice_select_part 
-	if screenelementexists \{id = popup_warning_container}
+	if ScreenElementExists \{id = popup_warning_container}
 		destroy_popup_warning_menu
 	endif
 	generic_ui_destroy
@@ -81,20 +81,20 @@ endscript
 
 script ui_practice_select_part 
 	ui_get_controller_parts_allowed controller = ($primary_controller)
-	if NOT structurecontains structure = <allowed> <part>
+	if NOT StructureContains Structure = <allowed> <part>
 		generic_event_choose state = uistate_select_instrument_warning data = {instrument = <part> controller = ($primary_controller)}
 	endif
 	change structurename = player1_status part = <part>
-	if iswinport
-		if 0x1c708d82 controller = ($primary_controller)
+	if IsWinPort
+		if WinPortIsKeyboardController controller = ($primary_controller)
 			switch <part>
 				case guitar
-				case bass
-				change \{0xf9695deb = 1}
+				case Bass
+				change \{winport_keyboard_instrument = 1}
 				case drum
-				change \{0xf9695deb = 3}
-				case vocals
-				change \{0xf9695deb = 4}
+				change \{winport_keyboard_instrument = 3}
+				case Vocals
+				change \{winport_keyboard_instrument = 4}
 			endswitch
 		endif
 	endif

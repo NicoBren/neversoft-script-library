@@ -1,7 +1,7 @@
 
 script ui_init_pausemenu_quit_warning 
 	if ($is_network_game)
-		enableallinput \{off}
+		EnableAllInput \{off}
 	endif
 endscript
 
@@ -15,6 +15,6 @@ endscript
 
 script ui_deinit_pausemenu_quit_warning 
 	if ($is_network_game)
-		enableallinput
+		EnableAllInput
 	endif
 endscript

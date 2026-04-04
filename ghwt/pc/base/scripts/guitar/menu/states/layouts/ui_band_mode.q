@@ -25,7 +25,7 @@ net_encore_msg_start_sent = 0
 net_breakdown_continue_msg_sent = 0
 net_career_selected_song = none
 net_career_selected_gig = 1
-0x026fef04 = 0
+winport_force_career_band_vocals = 0
 
 script ui_init_band_mode 
 	sanity_check_fix_deleted_characters
@@ -33,20 +33,20 @@ script ui_init_band_mode
 	if ($band_mode_menu_tags = none)
 		change \{band_mode_previous_leader = -1}
 	endif
-	if (($is_network_game = 1) && (netsessionfunc obj = party func = is_host))
-		if ($net_band_mode_menu = host)
-			netsessionfunc \{obj = party
+	if (($is_network_game = 1) && (NetSessionFunc obj = party func = is_host))
+		if ($net_band_mode_menu = HOST)
+			NetSessionFunc \{obj = party
 				func = set_joiner_mode
 				params = {
 					mode = career_join
 				}}
-			netsessionfunc \{obj = party
+			NetSessionFunc \{obj = party
 				func = set_party_joinable
 				params = {
 					joinable = 1
 				}}
 		elseif ($net_band_mode_menu = join)
-			netsessionfunc \{obj = party
+			NetSessionFunc \{obj = party
 				func = set_party_joinable
 				params = {
 					joinable = 0
@@ -62,10 +62,10 @@ script ui_create_band_mode
 	change \{net_num_player_settings_ack = 0}
 	change \{net_encore_msg_start_sent = 0}
 	change \{net_breakdown_continue_msg_sent = 0}
-	set_cas_loading_setup \{setup = band}
+	set_cas_loading_setup \{setup = Band}
 	change \{ui_band_mode_hit_force_completion = 0}
 	change \{player_drop_in_setting_sync = 0}
-	spawnscriptlater \{menu_music_on}
+	SpawnScriptLater \{menu_music_on}
 	if NOT ($net_band_mode_menu = lobby)
 		band_mode_remap_controllers_1_to_4
 		clear_temp_net_id_array
@@ -89,35 +89,35 @@ endscript
 
 script band_mode_remap_controllers_1_to_4 
 	character_id_controller = [none none none none none none none none]
-	getmaxplayers
+	GetMaxPlayers
 	i = 0
 	begin
-	iplayer = (<i> + 1)
-	getplayerinfo (<iplayer>) controller
-	getplayerinfo (<iplayer>) character_id
+	iPlayer = (<i> + 1)
+	GetPlayerInfo (<iPlayer>) controller
+	GetPlayerInfo (<iPlayer>) character_id
 	if ((<controller> >= 0) && (<controller> < 8))
-		setarrayelement arrayname = character_id_controller index = <controller> newvalue = <character_id>
-		printf 'Player %p, controller %d used to use %c' p = <iplayer> d = <controller> c = <character_id>
+		SetArrayElement ArrayName = character_id_controller index = <controller> newvalue = <character_id>
+		printf 'Player %p, controller %d used to use %c' p = <iPlayer> d = <controller> c = <character_id>
 	endif
 	i = (<i> + 1)
 	repeat <max_players>
-	setplayerinfo \{1
+	SetPlayerInfo \{1
 		controller = 0}
-	setplayerinfo \{2
+	SetPlayerInfo \{2
 		controller = 1}
-	setplayerinfo \{3
+	SetPlayerInfo \{3
 		controller = 2}
-	setplayerinfo \{4
+	SetPlayerInfo \{4
 		controller = 3}
 	i = 0
 	begin
-	iplayer = (<i> + 1)
+	iPlayer = (<i> + 1)
 	if (<character_id_controller> [<i>] != none)
-		setplayerinfo (<iplayer>) character_id = (<character_id_controller> [<i>])
-		printf 'Player %p, controller %d now using %c' p = <iplayer> d = <i> c = (<character_id_controller> [<i>])
+		SetPlayerInfo (<iPlayer>) character_id = (<character_id_controller> [<i>])
+		printf 'Player %p, controller %d now using %c' p = <iPlayer> d = <i> c = (<character_id_controller> [<i>])
 	else
-		setplayerinfo (<iplayer>) character_id = judy
-		printf 'Player %p, controller %d had no previous character, defaulting to judy' p = <iplayer> d = <i>
+		SetPlayerInfo (<iPlayer>) character_id = judy
+		printf 'Player %p, controller %d had no previous character, defaulting to judy' p = <iPlayer> d = <i>
 	endif
 	i = (<i> + 1)
 	repeat 4
@@ -134,7 +134,7 @@ script ui_create_band_mode_spawned
 		change \{respond_to_signin_changed = 1}
 		if (($net_band_mode_menu = lobby) || ($net_band_mode_menu = invite))
 			change \{respond_to_signin_changed_all_players = 1}
-		elseif (($net_band_mode_menu = host) || ($net_band_mode_menu = join))
+		elseif (($net_band_mode_menu = HOST) || ($net_band_mode_menu = join))
 			change \{respond_to_signin_changed = 0}
 			change \{respond_to_signin_changed_all_players = 0}
 		else
@@ -148,47 +148,47 @@ script ui_create_band_mode_spawned
 	band_builder_clear_random_appearances \{cpu_only}
 	band_builder_clear_setup
 	cas_set_object_node_pos \{player = 1
-		node = z_soundcheck_trg_waypoint_player1_start}
+		node = z_Soundcheck_TRG_Waypoint_Player1_Start}
 	cas_set_object_node_pos \{player = 2
-		node = z_soundcheck_trg_waypoint_player2_start}
+		node = z_Soundcheck_TRG_Waypoint_Player2_Start}
 	cas_set_object_node_pos \{player = 3
-		node = z_soundcheck_trg_waypoint_player3_start}
+		node = z_Soundcheck_TRG_Waypoint_Player3_Start}
 	cas_set_object_node_pos \{player = 4
-		node = z_soundcheck_trg_waypoint_player4_start}
+		node = z_Soundcheck_TRG_Waypoint_Player4_Start}
 	reset_band_mode
 	if NOT (($net_band_mode_menu = lobby) || ($net_band_mode_menu = invite))
-		netsessionfunc \{func = match_init}
+		NetSessionFunc \{func = match_init}
 	endif
 	set_focus_color
 	set_unfocus_color
-	getactivecontrollers
+	GetActiveControllers
 	controller_num = 0
-	createscreenelement \{parent = root_window
-		id = myinterfaceelement
-		type = descinterface
+	CreateScreenElement \{parent = root_window
+		id = MyInterfaceElement
+		type = DescInterface
 		desc = 'band_play'}
-	myinterfaceelement :se_getprops
+	MyInterfaceElement :SE_GetProps
 	array = [
 		{pad_start ui_band_mode_continue}
 		{pad_start ui_band_mode_save_tags}
 	]
 	if (($is_network_game = 0))
-		addarrayelement array = <array> element = {pad_option ui_band_mode_choose_leader}
+		AddArrayElement array = <array> element = {pad_option ui_band_mode_choose_leader}
 	elseif ($is_network_game = 1)
 		if (($net_band_mode_menu = lobby) || ($net_band_mode_menu = invite))
 			array = []
-			if ishost
-				addarrayelement array = <array> element = {pad_start net_ui_band_mode_continue}
+			if IsHost
+				AddArrayElement array = <array> element = {pad_start net_ui_band_mode_continue}
 			endif
 		endif
-		if isps3
-			addarrayelement array = <array> element = {pad_option2 ui_band_mode_ps3_invite_received}
+		if IsPs3
+			AddArrayElement array = <array> element = {pad_option2 ui_band_mode_ps3_invite_received}
 		endif
 	endif
-	myinterfaceelement :setprops event_handlers = <array>
+	MyInterfaceElement :SetProps event_handlers = <array>
 	menu_array = []
 	desc_array = []
-	if myinterfaceelement :desc_resolvealias \{name = alias_hmenu}
+	if MyInterfaceElement :Desc_ResolveAlias \{name = alias_hmenu}
 		band_hmenu = <resolved_id>
 	endif
 	total_guitar = 2
@@ -203,7 +203,7 @@ script ui_create_band_mode_spawned
 		total_drum = 2
 		total_mic = 0
 	endif
-	myinterfaceelement :settags {
+	MyInterfaceElement :SetTags {
 		total_guitar = <total_guitar>
 		total_drum = <total_drum>
 		total_mic = <total_mic>
@@ -217,20 +217,20 @@ script ui_create_band_mode_spawned
 	}
 	i = 0
 	begin
-	resolvescreenelementid id = [
+	ResolveScreenElementId id = [
 		{id = <band_hmenu>}
 		{index = <i>}
 	]
 	current_desc_item = <resolved_id>
-	addarrayelement array = <desc_array> element = <resolved_id>
+	AddArrayElement array = <desc_array> element = <resolved_id>
 	desc_array = <array>
-	if <resolved_id> :desc_resolvealias name = alias_menu
+	if <resolved_id> :Desc_ResolveAlias name = alias_menu
 		if ($is_network_game = 1)
 			switch ($net_band_mode_menu)
 				case invite
 				net_get_invite_menu_tags index = <i> desc_id = <current_desc_item> init
 				add_gamertag_to_band_lobby index = <i> name = <name> menu = <menu> desc_item = <current_desc_item>
-				<resolved_id> :settags {
+				<resolved_id> :SetTags {
 					menu = <menu>
 					instrument = <part>
 					difficulty = none
@@ -243,7 +243,7 @@ script ui_create_band_mode_spawned
 				case lobby
 				net_get_root_menu_tags index = <i> desc_id = <current_desc_item>
 				add_gamertag_to_band_lobby index = <i> menu = <menu> desc_item = <current_desc_item>
-				<resolved_id> :settags {
+				<resolved_id> :SetTags {
 					menu = <menu>
 					instrument = <part>
 					difficulty = <difficulty>
@@ -252,18 +252,18 @@ script ui_create_band_mode_spawned
 					band_leader = <band_leader>
 					index = <i>
 				}
-				case host
+				case HOST
 				if ($primary_controller = <i>)
 					menu = net_local_join
 				else
-					if netsessionfunc func = iscontrolleringame params = {controller = <i>}
+					if NetSessionFunc func = IsControllerInGame params = {controller = <i>}
 						menu = net_local_join
 					else
 						menu = join
 					endif
 				endif
 				ui_get_controller_parts_allowed controller = <i> filter_by_character
-				<resolved_id> :settags {
+				<resolved_id> :SetTags {
 					menu = <menu>
 					instrument = none
 					difficulty = easy
@@ -274,11 +274,11 @@ script ui_create_band_mode_spawned
 					index = <i>
 				}
 				if NOT ($primary_controller = <i>)
-					<resolved_id> :obj_spawnscriptlater ui_band_mode_check_disconnect
+					<resolved_id> :Obj_SpawnScriptLater ui_band_mode_check_disconnect
 				endif
 				case join
 				ui_get_controller_parts_allowed controller = <i> filter_by_character
-				<resolved_id> :settags {
+				<resolved_id> :SetTags {
 					menu = join
 					instrument = none
 					difficulty = easy
@@ -287,13 +287,13 @@ script ui_create_band_mode_spawned
 					allowed = <allowed>
 					index = <i>
 				}
-				<resolved_id> :obj_spawnscriptlater ui_band_mode_check_disconnect
+				<resolved_id> :Obj_SpawnScriptLater ui_band_mode_check_disconnect
 				default
-				scriptassert 'unhandled $net_band_mode_menu=%n' n = ($net_band_mode_menu)
+				ScriptAssert 'unhandled $net_band_mode_menu=%n' n = ($net_band_mode_menu)
 			endswitch
 		else
 			ui_get_controller_parts_allowed controller = <i> filter_by_character
-			<resolved_id> :settags {
+			<resolved_id> :SetTags {
 				menu = join
 				instrument = none
 				difficulty = easy
@@ -301,19 +301,19 @@ script ui_create_band_mode_spawned
 				allowed = <allowed>
 				index = <i>
 			}
-			<resolved_id> :obj_spawnscriptlater ui_band_mode_check_disconnect
+			<resolved_id> :Obj_SpawnScriptLater ui_band_mode_check_disconnect
 		endif
 		get_player_num_from_controller controller_index = <i>
 		if NOT ($band_mode_menu_tags = none)
-			<resolved_id> :settags {
+			<resolved_id> :SetTags {
 				($band_mode_menu_tags [<i>])
 			}
-			<resolved_id> :getsingletag menu
+			<resolved_id> :GetSingleTag menu
 			if (<player_num> >= 0)
 				if (<menu> = join)
 					cas_queue_kill_player player = <player_num>
 				elseif (<menu> = net_remote_root)
-					<resolved_id> :obj_killspawnedscript name = ui_band_mode_check_disconnect
+					<resolved_id> :Obj_KillSpawnedScript name = ui_band_mode_check_disconnect
 				else
 					ui_band_mode_show_character player = <player_num> use_existing
 				endif
@@ -321,49 +321,49 @@ script ui_create_band_mode_spawned
 		else
 			if (<player_num> >= 0)
 				cas_queue_kill_player player = <player_num>
-				<resolved_id> :getsingletag menu
+				<resolved_id> :GetSingleTag menu
 				if (<menu> = net_local_join)
 					ui_band_mode_show_character player = <player_num>
 				endif
 			endif
 		endif
-		<resolved_id> :setprops event_handlers = [
+		<resolved_id> :SetProps event_handlers = [
 			{pad_up ui_band_mode_scroll_sound params = {up controller = <controller> device_num = <device_num>}}
 			{pad_down ui_band_mode_scroll_sound params = {down controller = <controller> device_num = <device_num>}}
 		]
-		if <resolved_id> :getsingletag menu
-			addarrayelement array = <menu_array> element = <resolved_id>
+		if <resolved_id> :GetSingleTag menu
+			AddArrayElement array = <menu_array> element = <resolved_id>
 			menu_array = <array>
 		else
-			scriptassert \{'Expected menu tag'}
+			ScriptAssert \{'Expected menu tag'}
 		endif
 		if (($is_network_game = 1) && ($net_band_leader_player_num > -1) && ($net_band_leader_player_num = (<i> + 1)))
-			<current_desc_item> :se_setprops leader_indicator_alpha = 1.0
+			<current_desc_item> :SE_SetProps leader_indicator_alpha = 1.0
 		endif
 	endif
 	i = (<i> + 1)
 	repeat 4
-	myinterfaceelement :settags {
+	MyInterfaceElement :SetTags {
 		menus = <menu_array>
 		descs = <desc_array>
 	}
-	getarraysize \{menu_array}
+	GetArraySize \{menu_array}
 	if (<array_size> > 0)
 		i = 0
 		begin
 		curr_id = (<menu_array> [<i>])
-		runscriptonscreenelement id = <curr_id> ui_band_mode_create_menu
+		RunScriptOnScreenElement id = <curr_id> ui_band_mode_create_menu
 		i = (<i> + 1)
 		repeat <array_size>
 	endif
 	if NOT ($band_mode_menu_tags = none)
-		myinterfaceelement :settags {
+		MyInterfaceElement :SetTags {
 			($band_mode_menu_tags [4])
 		}
 	endif
 	net_setup_band_lobby_ticker
 	if ($is_network_game = 1)
-		if ($net_band_mode_menu = host)
+		if ($net_band_mode_menu = HOST)
 			update_network_ticker \{msg_checksum = menu_host}
 		endif
 		if ($net_band_mode_menu = join)
@@ -372,14 +372,14 @@ script ui_create_band_mode_spawned
 		if ($net_band_mode_menu = invite)
 			update_network_ticker \{msg_checksum = menu_invite}
 		endif
-		if isps3
-			if NOT netsessionfunc \{obj = voice
+		if IsPs3
+			if NOT NetSessionFunc \{obj = voice
 					func = voice_allowed}
 				update_network_ticker \{msg_checksum = ps3_chat}
 			endif
 		endif
-		if (($net_band_mode_menu = host) || ($net_band_mode_menu = invite))
-			myinterfaceelement :obj_spawnscriptlater \{career_poll_party_for_joiners}
+		if (($net_band_mode_menu = HOST) || ($net_band_mode_menu = invite))
+			MyInterfaceElement :Obj_SpawnScriptLater \{career_poll_party_for_joiners}
 		endif
 		if (($net_band_mode_menu = lobby) && ($career_matchmaking_complete = 0))
 			change \{net_matchmaking_search_window = cancel_only}
@@ -387,73 +387,73 @@ script ui_create_band_mode_spawned
 				change \{net_matchmaking_search_window = invites}
 			endif
 			net_ui_band_mode_create_searching_menu options_type = ($net_matchmaking_search_window)
-			if screenelementexists \{id = myinterfaceelement}
-				myinterfaceelement :obj_spawnscriptnow \{check_num_matchmaking_players_loop}
+			if ScreenElementExists \{id = MyInterfaceElement}
+				MyInterfaceElement :Obj_SpawnScriptNow \{check_num_matchmaking_players_loop}
 			endif
 		endif
 	endif
-	assignalias \{id = myinterfaceelement
+	AssignAlias \{id = MyInterfaceElement
 		alias = band_mode_menu}
 	ui_band_mode_helper_text
 	change \{band_mode_menu_tags = none}
 	change \{band_mode_previous_leader = -1}
 	ui_band_mode_choose_leader device_num = <new_leader>
-	launchevent \{type = focus
+	LaunchEvent \{type = focus
 		target = band_mode_menu}
 endscript
 
 script ui_band_mode_signin_changed 
-	printf \{qs(0xb2103122)}
+	printf \{qs("\Lui_band_mode_signin_changed")}
 	if (($primary_controller = <controller>) && ($is_network_game = 1))
 		handle_signin_changed
 		return
 	endif
-	removecontentfiles playerid = <controller>
+	RemoveContentFiles playerid = <controller>
 	reset_globaltags savegame = <controller>
 	cheat_turnoffalllocked
 	get_player_num_from_controller controller_index = <controller>
 	ui_band_mode_kill_character player = <player_num>
-	myinterfaceelement :gettags
+	MyInterfaceElement :GetTags
 	controller_signin = <controller>
 	index = 0
-	getarraysize <menus>
+	GetArraySize <menus>
 	begin
 	current_menu = (<menus> [<index>])
-	<current_menu> :getsingletag controller
+	<current_menu> :GetSingleTag controller
 	if (<controller> = <controller_signin>)
 		break
 	endif
 	index = (<index> + 1)
 	repeat <array_size>
-	<current_menu> :getsingletag menu
+	<current_menu> :GetSingleTag menu
 	if (($is_network_game = 1) && (<menu> = net_remote_root))
 		menu = net_remote_root
 	else
 		menu = join
 	endif
-	<current_menu> :settags {menu = <menu> instrument = none difficulty = none marked_in = 0}
+	<current_menu> :SetTags {menu = <menu> instrument = none difficulty = none marked_in = 0}
 	ui_band_mode_helper_text
-	<current_menu> :obj_spawnscriptnow ui_band_mode_update_menu
-	<current_menu> :getsingletag controller_instrument
+	<current_menu> :Obj_SpawnScriptNow ui_band_mode_update_menu
+	<current_menu> :GetSingleTag controller_instrument
 	switch <controller_instrument>
 		case guitar
-		myinterfaceelement :settags {current_guitar = (<current_guitar> - 1)}
+		MyInterfaceElement :SetTags {current_guitar = (<current_guitar> - 1)}
 		case drum
-		myinterfaceelement :settags {current_drum = (<current_drum> - 1)}
+		MyInterfaceElement :SetTags {current_drum = (<current_drum> - 1)}
 		case mic
 		if (($allow_controller_for_all_instruments) = 0)
-			myinterfaceelement :settags {current_mic = (<current_mic> - 1)}
+			MyInterfaceElement :SetTags {current_mic = (<current_mic> - 1)}
 		endif
 	endswitch
-	<current_menu> :settags controller_instrument = none
-	myinterfaceelement :getsingletag \{descs}
+	<current_menu> :SetTags controller_instrument = none
+	MyInterfaceElement :GetSingleTag \{descs}
 	current_desc = (<descs> [<index>])
-	<current_desc> :se_setprops reposition_pos = (0.0, 0.0) ready_banner_pos = (0.0, 500.0) time = 0.1 motion = ease_in
+	<current_desc> :SE_SetProps reposition_pos = (0.0, 0.0) ready_banner_pos = (0.0, 500.0) time = 0.1 motion = ease_in
 endscript
 
 script ui_destroy_band_mode 
-	if screenelementexists \{id = myinterfaceelement}
-		myinterfaceelement :die
+	if ScreenElementExists \{id = MyInterfaceElement}
+		MyInterfaceElement :Die
 	endif
 	clean_up_user_control_helpers
 	setup_bg_viewport
@@ -482,17 +482,17 @@ script ui_return_band_mode
 			}}
 		destroy_loading_screen
 		startrendering
-		if screenelementexists \{id = myinterfaceelement}
-			myinterfaceelement :se_setprops \{alpha = 1.0}
-			band_mode_menu :getsingletag \{menus}
+		if ScreenElementExists \{id = MyInterfaceElement}
+			MyInterfaceElement :SE_SetProps \{alpha = 1.0}
+			band_mode_menu :GetSingleTag \{menus}
 			i = 0
-			getarraysize <menus>
+			GetArraySize <menus>
 			begin
-			if screenelementexists id = (<menus> [<i>])
-				(<menus> [<i>]) :getsingletag menu
+			if ScreenElementExists id = (<menus> [<i>])
+				(<menus> [<i>]) :GetSingleTag menu
 				if (<menu> = ready)
 					get_savegame_from_controller controller = ($primary_controller)
-					getplayerinfo (<i> + 1) character_id
+					GetPlayerInfo (<i> + 1) character_id
 					get_musician_profile_struct_by_id id = <character_id> savegame = <savegame>
 					cas_queue_add_request appearance = (<profile_struct>.appearance) player = (<i> + 1)
 				endif
@@ -509,9 +509,9 @@ script ui_return_band_mode
 endscript
 
 script is_band_character_select_up 
-	if screenelementexists \{id = myinterfaceelement}
-		myinterfaceelement :getsingletag \{menus}
-		getarraysize <menus>
+	if ScreenElementExists \{id = MyInterfaceElement}
+		MyInterfaceElement :GetSingleTag \{menus}
+		GetArraySize <menus>
 	else
 		array_size = 0
 	endif
@@ -521,7 +521,7 @@ script is_band_character_select_up
 	if (<array_size> > 0)
 		begin
 		<curr_id> = (<menus> [<i>])
-		<curr_id> :gettags
+		<curr_id> :GetTags
 		if (<menu> = character)
 			return \{true}
 		endif
@@ -532,9 +532,9 @@ script is_band_character_select_up
 endscript
 
 script band_kill_character_select_menus 
-	if screenelementexists \{id = myinterfaceelement}
-		myinterfaceelement :getsingletag \{menus}
-		getarraysize <menus>
+	if ScreenElementExists \{id = MyInterfaceElement}
+		MyInterfaceElement :GetSingleTag \{menus}
+		GetArraySize <menus>
 	else
 		array_size = 0
 	endif
@@ -544,17 +544,17 @@ script band_kill_character_select_menus
 	if (<array_size> > 0)
 		begin
 		<curr_id> = (<menus> [<i>])
-		if <curr_id> :getsingletag menu
+		if <curr_id> :GetSingleTag menu
 			if (<menu> = character)
-				<curr_id> :obj_spawnscriptnow ui_band_mode_back
-				removeparameter \{menu}
+				<curr_id> :Obj_SpawnScriptNow ui_band_mode_back
+				RemoveParameter \{menu}
 				killed_something = 1
 			endif
 		endif
 		i = (<i> + 1)
 		repeat <array_size>
 	endif
-	if gotparam \{killed_something}
+	if GotParam \{killed_something}
 		return \{true}
 	endif
 	return \{false}
@@ -569,19 +569,19 @@ script ui_band_mode_choose_leader
 	elseif ($game_mode = p2_faceoff || $game_mode = p2_pro_faceoff || ($game_mode = p2_battle))
 		return \{false}
 	endif
-	myinterfaceelement :gettags
+	MyInterfaceElement :GetTags
 	<i> = 0
 	begin
 	current_desc = (<descs> [<i>])
 	if (<i> = <device_num>)
-		<current_desc> :se_setprops leader_indicator_alpha = 1
+		<current_desc> :SE_SetProps leader_indicator_alpha = 1
 		change band_mode_current_leader = <i>
 		if NOT ($band_mode_previous_leader = <device_num>)
-			soundevent \{event = select_band_leader}
+			SoundEvent \{event = select_band_leader}
 			change band_mode_previous_leader = <device_num>
 		endif
 	else
-		<current_desc> :se_setprops leader_indicator_alpha = 0
+		<current_desc> :SE_SetProps leader_indicator_alpha = 0
 	endif
 	<i> = (<i> + 1)
 	repeat 4
@@ -589,11 +589,11 @@ script ui_band_mode_choose_leader
 endscript
 
 script ui_band_mode_create_menu 
-	gettags
-	obj_getid
-	<objid> :setprops exclusive_device = <controller> event_handlers = [{pad_back ui_band_mode_back}]
+	GetTags
+	Obj_GetID
+	<ObjID> :SetProps exclusive_device = <controller> event_handlers = [{pad_back ui_band_mode_back}]
 	if NOT (($net_band_mode_menu = lobby) || ($net_band_mode_menu = invite) || (<menu> = net_remote_root))
-		if gotparam \{player_index}
+		if GotParam \{player_index}
 			obj_spawnscript ui_band_mode_update_name params = {controller = <controller> player_index = <player_index>}
 		else
 			obj_spawnscript ui_band_mode_update_name params = {controller = <controller>}
@@ -603,15 +603,15 @@ script ui_band_mode_create_menu
 endscript
 
 script ui_band_mode_update_name 
-	myinterfaceelement :gettags
-	getsingletag \{index}
+	MyInterfaceElement :GetTags
+	GetSingleTag \{index}
 	current_desc = (<descs> [<index>])
-	if isxenon
+	if isXenon
 		begin
 		if ($band_mode_active = 0)
-			name = qs(0x03ac90f0)
-			netsessionfunc func = get_gamertag params = {controller = <controller>}
-			if gotparam \{name}
+			name = qs("\L")
+			NetSessionFunc func = get_gamertag params = {controller = <controller>}
+			if GotParam \{name}
 				band_gamertag_rename gamertag = <name> index = <index>
 			endif
 			if ($is_network_game)
@@ -620,12 +620,12 @@ script ui_band_mode_update_name
 				<check_cont> = $band_mode_current_leader
 			endif
 			if (<controller> = <check_cont>)
-				<current_desc> :se_setprops leader_indicator_alpha = 1
+				<current_desc> :SE_SetProps leader_indicator_alpha = 1
 			else
-				<current_desc> :se_setprops leader_indicator_alpha = 0
+				<current_desc> :SE_SetProps leader_indicator_alpha = 0
 			endif
 		endif
-		wait \{1
+		Wait \{1
 			second
 			ignoreslomo}
 		repeat
@@ -638,31 +638,31 @@ script ui_band_mode_update_name
 				<check_cont> = $band_mode_current_leader
 			endif
 			if (<controller> = <check_cont>)
-				<current_desc> :se_setprops leader_indicator_alpha = 1
+				<current_desc> :SE_SetProps leader_indicator_alpha = 1
 			else
-				<current_desc> :se_setprops leader_indicator_alpha = 0
+				<current_desc> :SE_SetProps leader_indicator_alpha = 0
 			endif
 			get_player_num_from_controller controller_index = <controller>
 			if band_mode_has_player_joined player = <index>
-				formattext textname = gamertag_text qs(0x90b7ca0b) a = <player_num>
+				FormatText TextName = gamertag_text qs("Controller %a") a = <player_num>
 				band_gamertag_rename gamertag = <gamertag_text> index = <index>
 			else
-				band_gamertag_rename index = <index> gamertag = qs(0x03ac90f0)
+				band_gamertag_rename index = <index> gamertag = qs("\L")
 			endif
 		endif
-		wait \{5
+		Wait \{5
 			gameframes}
 		repeat
 	endif
 endscript
 
 script band_mode_has_player_joined 
-	screenelement_get_tags \{id = myinterfaceelement}
-	if structurecontains structure = <tags> menus
+	screenelement_get_tags \{id = MyInterfaceElement}
+	if StructureContains Structure = <tags> menus
 		menu_id = (<tags>.menus [<player>])
-		if gotparam \{menu_id}
-			if screenelementexists id = <menu_id>
-				<menu_id> :gettags
+		if GotParam \{menu_id}
+			if ScreenElementExists id = <menu_id>
+				<menu_id> :GetTags
 				if (<menu> = join)
 					return \{false}
 				endif
@@ -679,28 +679,28 @@ script band_mode_has_player_joined
 endscript
 
 script ui_band_menu_occlude_character 
-	myinterfaceelement :gettags
-	if gotparam \{descs}
-		requireparams \{[
+	MyInterfaceElement :GetTags
+	if GotParam \{descs}
+		RequireParams \{[
 				index
 			]
 			all}
 		current_desc = (<descs> [<index>])
-		if gotparam \{revert}
-			<current_desc> :se_setprops menu_player_bg_alpha = 0.8 scrollbar_alpha = 0.0 scrolling_menu_dims = (200.0, 200.0) name_arrow_up_pos = (-3.685994, -14.62645)
-			<current_desc> :se_setprops reposition_pos = (0.0, 0.0) ready_banner_pos = (0.0, 500.0) time = 0.2 motion = ease_in
-			if <current_desc> :desc_resolvealias name = alias_scrolling_menu param = band_play_smenu
-				setscreenelementprops id = <band_play_smenu> top_selection = false
+		if GotParam \{revert}
+			<current_desc> :SE_SetProps Menu_Player_bg_alpha = 0.8 scrollbar_alpha = 0.0 scrolling_menu_dims = (200.0, 200.0) name_arrow_up_pos = (-3.685994, -14.62645)
+			<current_desc> :SE_SetProps reposition_pos = (0.0, 0.0) ready_banner_pos = (0.0, 500.0) time = 0.2 motion = ease_in
+			if <current_desc> :Desc_ResolveAlias name = alias_scrolling_menu param = band_play_smenu
+				SetScreenElementProps id = <band_play_smenu> top_selection = false
 			else
-				scriptassert \{qs(0x400b5d01)}
+				ScriptAssert \{qs("\Lui_band_menu_occlude_character was unable to create alias_scrolling_menu alias")}
 			endif
 		else
-			<current_desc> :se_setprops menu_player_bg_alpha = 1.0 scrollbar_alpha = 1.0 scrolling_menu_dims = (200.0, 500.0) name_arrow_up_pos = (-3.685994, 285.0)
-			<current_desc> :se_setprops reposition_pos = (0.0, -275.0) time = 0.2 motion = ease_out
-			if <current_desc> :desc_resolvealias name = alias_scrolling_menu param = band_play_smenu
-				setscreenelementprops id = <band_play_smenu> top_selection = true
+			<current_desc> :SE_SetProps Menu_Player_bg_alpha = 1.0 scrollbar_alpha = 1.0 scrolling_menu_dims = (200.0, 500.0) name_arrow_up_pos = (-3.685994, 285.0)
+			<current_desc> :SE_SetProps reposition_pos = (0.0, -275.0) time = 0.2 motion = ease_out
+			if <current_desc> :Desc_ResolveAlias name = alias_scrolling_menu param = band_play_smenu
+				SetScreenElementProps id = <band_play_smenu> top_selection = true
 			else
-				scriptassert \{qs(0x400b5d01)}
+				ScriptAssert \{qs("\Lui_band_menu_occlude_character was unable to create alias_scrolling_menu alias")}
 			endif
 		endif
 	endif
@@ -709,14 +709,14 @@ endscript
 script ui_band_mode_update_menu 
 	destroy_loading_screen
 	startrendering
-	gettags
-	obj_getid
-	launchevent type = unfocus target = <objid>
-	destroyscreenelement id = <objid> preserve_parent
-	se_getparentid
-	<parent_id> :se_setprops reset_window_top
+	GetTags
+	Obj_GetID
+	LaunchEvent type = unfocus target = <ObjID>
+	DestroyScreenElement id = <ObjID> preserve_parent
+	SE_GetParentId
+	<parent_id> :SE_SetProps reset_window_top
 	child_index = 0
-	<objid> :setprops {
+	<ObjID> :SetProps {
 		replace_handlers event_handlers = [
 			{pad_up ui_band_mode_scroll_sound params = {up controller = <controller> device_num = <device_num>}}
 			{pad_down ui_band_mode_scroll_sound params = {down controller = <controller> device_num = <device_num>}}
@@ -724,22 +724,22 @@ script ui_band_mode_update_menu
 		alpha = 0.0
 	}
 	ui_band_menu_occlude_character revert index = <index>
-	printf \{qs(0xd4a09ac5)}
+	printf \{qs("\Lui_band_mode_update_menu")}
 	switch <menu>
 		case instrument
 		ui_band_mode_create_menu_instrument
 		case lefty
 		ui_band_mode_create_menu_lefty
-		<objid> :getsingletag instrument
+		<ObjID> :GetSingleTag instrument
 		get_savegame_from_controller controller = <controller>
 		focus_index = 0
-		if (<instrument> = vocals)
-			getglobaltags savegame = <savegame> user_options param = vocals_highway_view_save
+		if (<instrument> = Vocals)
+			GetGlobalTags savegame = <savegame> user_options param = vocals_highway_view_save
 			if (<vocals_highway_view_save> = scrolling)
 				focus_index = 1
 			endif
 		else
-			getglobaltags savegame = <savegame> user_options param = lefty_flip_save
+			GetGlobalTags savegame = <savegame> user_options param = lefty_flip_save
 			if (<lefty_flip_save> = 1)
 				focus_index = 1
 			endif
@@ -751,7 +751,7 @@ script ui_band_mode_update_menu
 			difficulty = ($default_difficulty [<controller>])
 		endif
 		focus_index = 0
-		if gotparam \{difficulty}
+		if GotParam \{difficulty}
 			switch (<difficulty>)
 				case easy
 				focus_index = 1
@@ -770,8 +770,8 @@ script ui_band_mode_update_menu
 		case root
 		case p2_root
 		ui_band_mode_create_menu_root menu = <menu>
-		if getscreenelementchildren id = <objid>
-			getarraysize <children>
+		if GetScreenElementChildren id = <ObjID>
+			GetArraySize <children>
 			child_index = (<array_size> - 1)
 		endif
 		case ready
@@ -786,68 +786,68 @@ script ui_band_mode_update_menu
 			ui_band_mode_choose_sound instrument = <instrument> ready = 1 controller = <controller>
 		endif
 		ui_band_mode_create_menu_ready
-		<objid> :setprops replace_handlers event_handlers = [
+		<ObjID> :SetProps replace_handlers event_handlers = [
 			{pad_up nullscript}
 			{pad_down nullscript}
 		]
 		case join
 		ui_band_mode_create_menu_join <...>
-		<objid> :setprops replace_handlers event_handlers = [
+		<ObjID> :SetProps replace_handlers event_handlers = [
 			{pad_up nullscript}
 			{pad_down nullscript}
 		]
 		case net_remote_open
 		ui_band_mode_create_menu_net_remote_open
-		<objid> :setprops replace_handlers event_handlers = [
+		<ObjID> :SetProps replace_handlers event_handlers = [
 			{pad_up nullscript}
 			{pad_down nullscript}
 		]
 		case net_remote_root
 		ui_band_mode_create_menu_net_remote_root
-		<objid> :setprops replace_handlers event_handlers = [
+		<ObjID> :SetProps replace_handlers event_handlers = [
 			{pad_up nullscript}
 			{pad_down nullscript}
 		]
 		case net_local_join
 		ui_band_mode_create_menu_net_local_join
-		if getscreenelementchildren id = <objid>
-			getarraysize <children>
+		if GetScreenElementChildren id = <ObjID>
+			GetArraySize <children>
 			child_index = (<array_size> - 1)
 		endif
 		case net_local_root
 		ui_band_mode_create_menu_net_local_root
-		myinterfaceelement :getsingletag \{net_gig_ready}
-		if iswinport
-			if 0x1c708d82 controller = <controller>
+		MyInterfaceElement :GetSingleTag \{net_gig_ready}
+		if IsWinPort
+			if WinPortIsKeyboardController controller = <controller>
 				printf qs(0xdf33c978) c = <controller> i = <instrument>
 				switch <instrument>
 					case guitar
-					case bass
-					change \{0xf9695deb = 1}
+					case Bass
+					change \{winport_keyboard_instrument = 1}
 					case drum
-					change \{0xf9695deb = 3}
-					case vocals
-					change \{0xf9695deb = 4}
+					change \{winport_keyboard_instrument = 3}
+					case Vocals
+					change \{winport_keyboard_instrument = 4}
 					default
-					if ismicrophonepluggedin
-						change \{0xf9695deb = 4}
+					if IsMicrophonePluggedIn
+						change \{winport_keyboard_instrument = 4}
 					else
-						change \{0xf9695deb = 1}
+						change \{winport_keyboard_instrument = 1}
 					endif
 				endswitch
 			endif
 		endif
-		if ((<net_gig_ready> = 0) && (ishost) && ($primary_controller = <controller>))
+		if ((<net_gig_ready> = 0) && (IsHost) && ($primary_controller = <controller>))
 			child_index = 0
 		elseif (<instrument> = none)
-			if isxenon
+			if isXenon
 				child_index = 2
 			else
 				child_index = 1
 			endif
 		else
-			if getscreenelementchildren id = <objid>
-				getarraysize <children>
+			if GetScreenElementChildren id = <ObjID>
+				GetArraySize <children>
 				child_index = (<array_size> - 1)
 			endif
 		endif
@@ -860,41 +860,41 @@ script ui_band_mode_update_menu
 		case invites
 		ui_band_mode_create_invite
 	endswitch
-	if NOT gotparam \{skip_update_wait}
-		wait \{5
+	if NOT GotParam \{skip_update_wait}
+		Wait \{5
 			gameframes}
 	endif
-	if NOT gotparam \{init}
+	if NOT GotParam \{init}
 		ui_band_mode_check_menus
 	endif
-	<objid> :setprops alpha = 1.0
-	myinterfaceelement :gettags
-	if gotparam \{descs}
+	<ObjID> :SetProps alpha = 1.0
+	MyInterfaceElement :GetTags
+	if GotParam \{descs}
 		current_desc = (<descs> [<index>])
 		if NOT (<menu> = gigs)
 			ui_band_mode_show_arrows id = <current_desc>
 		endif
 		switch <instrument>
 			case guitar
-			<current_desc> :se_setprops instrument_alpha = 1.0 instrument_texture = logo_guitar
-			case bass
-			<current_desc> :se_setprops instrument_alpha = 1.0 instrument_texture = logo_bass
+			<current_desc> :SE_SetProps instrument_alpha = 1.0 instrument_texture = logo_guitar
+			case Bass
+			<current_desc> :SE_SetProps instrument_alpha = 1.0 instrument_texture = logo_bass
 			case drum
-			<current_desc> :se_setprops instrument_alpha = 1.0 instrument_texture = logo_drum
-			case vocals
-			<current_desc> :se_setprops instrument_alpha = 1.0 instrument_texture = logo_vocal
+			<current_desc> :SE_SetProps instrument_alpha = 1.0 instrument_texture = logo_drum
+			case Vocals
+			<current_desc> :SE_SetProps instrument_alpha = 1.0 instrument_texture = logo_vocal
 			default
-			<current_desc> :se_setprops instrument_alpha = 0.0 instrument_texture = logo_guitar
+			<current_desc> :SE_SetProps instrument_alpha = 0.0 instrument_texture = logo_guitar
 		endswitch
 		curr_index = <index>
 		if (<menu> = join)
 			band_character_rename index = <index>
 		else
-			getarraysize <menus>
+			GetArraySize <menus>
 			i = 0
 			begin
 			curr_menu = (<menus> [<i>])
-			<curr_menu> :getsingletag index
+			<curr_menu> :GetSingleTag index
 			if (<index> = <curr_index>)
 				break
 			endif
@@ -905,8 +905,8 @@ script ui_band_mode_update_menu
 			endif
 		endif
 		if ($is_network_game = 1)
-			getplayerinfo (<curr_index> + 1) net_obj_id
-			getplayerinfo (<curr_index> + 1) is_local_client
+			GetPlayerInfo (<curr_index> + 1) net_obj_id
+			GetPlayerInfo (<curr_index> + 1) is_local_client
 			if ($net_band_mode_menu = lobby)
 				if (<is_local_client> = 1)
 					band_character_rename index = <curr_index> player = (<curr_index> + 1)
@@ -917,66 +917,66 @@ script ui_band_mode_update_menu
 					band_character_rename index = <index>
 				endif
 				if (($career_matchmaking_complete = 1) && (<net_obj_id> < 0) && (<menu> = net_remote_open))
-					(<descs> [<index>]) :se_setprops reposition_pos = (0.0, 220.0) time = 0.1 motion = ease_out
-					(<descs> [<index>]) :se_waitprops
-					(<descs> [<index>]) :se_setprops reposition_pos = (0.0, 450.0) time = 0.1 alpha = 0
+					(<descs> [<index>]) :SE_SetProps reposition_pos = (0.0, 220.0) time = 0.1 motion = ease_out
+					(<descs> [<index>]) :SE_WaitProps
+					(<descs> [<index>]) :SE_SetProps reposition_pos = (0.0, 450.0) time = 0.1 alpha = 0
 				endif
 			endif
 		endif
 	endif
 	if ((<menu> = net_remote_open) || (<menu> = net_remote_root) || ($net_career_data_sync_done = 0))
-		if ((<menu> = net_remote_root) && ($net_band_mode_menu = host))
-			printf \{qs(0x71140bc3)}
+		if ((<menu> = net_remote_root) && ($net_band_mode_menu = HOST))
+			printf \{qs("\Lgive focus like normal")}
 		else
 			return
 		endif
 	endif
-	if gotparam \{given_focus}
-		printf 'Give focus %s %d' s = <objid> d = <given_focus>
-		launchevent type = focus target = <objid> data = {child_index = <given_focus>}
+	if GotParam \{given_focus}
+		printf 'Give focus %s %d' s = <ObjID> d = <given_focus>
+		LaunchEvent type = focus target = <ObjID> data = {child_index = <given_focus>}
 	else
-		launchevent type = focus target = <objid> data = {child_index = <child_index>}
+		LaunchEvent type = focus target = <ObjID> data = {child_index = <child_index>}
 	endif
 endscript
 
 script ui_band_mode_show_arrows 
-	requireparams \{[
+	RequireParams \{[
 			id
 		]
 		all}
-	if screenelementexists id = <id>
-		<id> :se_setprops scroll_arrow_alpha = 1.0
+	if ScreenElementExists id = <id>
+		<id> :SE_SetProps scroll_arrow_alpha = 1.0
 	endif
 endscript
 
 script ui_band_mode_hide_arrows 
-	requireparams \{[
+	RequireParams \{[
 			id
 		]
 		all}
-	if screenelementexists id = <id>
-		<id> :se_setprops scroll_arrow_alpha = 0.0
+	if ScreenElementExists id = <id>
+		<id> :SE_SetProps scroll_arrow_alpha = 0.0
 	endif
 endscript
 
 script net_ui_band_mode_quit 
-	printf \{qs(0x56d3a9c1)}
-	if ishost
-		printf \{qs(0xd9e7e49e)}
-		sendstructure callback = net_ui_band_mode_quit data_to_send = {<...>}
+	printf \{qs("\Lnet_ui_band_mode_quit")}
+	if IsHost
+		printf \{qs("\La client dropped and I'm the host notify everyone else")}
+		SendStructure callback = net_ui_band_mode_quit data_to_send = {<...>}
 	endif
-	if gotparam \{is_host}
-		printf \{qs(0x6e0e4939)}
+	if GotParam \{is_host}
+		printf \{qs("\Lhost quit career lobby go back to join lobby")}
 		quit_network_game_early
 		change \{net_band_mode_menu = join}
 		quit_career_back_to_lobby
 	else
-		printf \{qs(0x3b258d22)}
+		printf \{qs("\Lclient quit career lobby drop the ui and keep waiting")}
 		change num_players_in_band = ($num_players_in_band - 1)
-		myinterfaceelement :gettags
+		MyInterfaceElement :GetTags
 		current_desc = (<descs> [(<player_num> - 1)])
-		band_gamertag_rename index = (<player_num> - 1) gamertag = qs(0x03ac90f0)
-		(<menus> [(<player_num> - 1)]) :settags {menu = net_remote_open
+		band_gamertag_rename index = (<player_num> - 1) gamertag = qs("\L")
+		(<menus> [(<player_num> - 1)]) :SetTags {menu = net_remote_open
 			instrument = none
 			difficulty = none}
 		(<menus> [(<player_num> - 1)]) :obj_spawnscript ui_band_mode_update_menu
@@ -985,29 +985,29 @@ script net_ui_band_mode_quit
 endscript
 
 script net_ui_host_quit_lobby 
-	printf \{qs(0xdf59b79a)}
-	sendstructure \{callback = net_ui_band_mode_quit
+	printf \{qs("\L---net_ui_host_quit_lobby")}
+	SendStructure \{callback = net_ui_band_mode_quit
 		data_to_send = {
 			is_host = 1
 		}}
 endscript
 
 script net_ui_client_quit_lobby 
-	printf \{qs(0xd98c6e80)}
-	sendstructure callback = net_ui_band_mode_quit data_to_send = {player_num = <player_num>}
+	printf \{qs("\L---net_ui_client_quit_lobby")}
+	SendStructure callback = net_ui_band_mode_quit data_to_send = {player_num = <player_num>}
 endscript
 
 script correct_allowed_parts 
-	if NOT arraycontains array = <allowed_parts> contains = <part>
-		if structurecontains structure = <allowed> <part>
-			removeparameter <part> struct_name = allowed
+	if NOT ArrayContains array = <allowed_parts> contains = <part>
+		if StructureContains Structure = <allowed> <part>
+			RemoveParameter <part> struct_name = allowed
 		endif
 	endif
 	return allowed = <allowed>
 endscript
 
 script filter_allowed_parts_by_character_type 
-	requireparams \{[
+	RequireParams \{[
 			allowed
 			controller
 		]
@@ -1017,31 +1017,31 @@ script filter_allowed_parts_by_character_type
 	if (<player_num> < 0)
 		return allowed = <allowed>
 	endif
-	formattext checksumname = player_status 'player%p_status' p = <player_num>
+	FormatText checksumname = player_status 'player%p_status' p = <player_num>
 	character_id = ($<player_status>.character_id)
 	get_savegame_from_controller controller = <controller>
 	get_musician_profile_struct_by_id id = <character_id> savegame = <savegame>
 	allowed_parts = (<profile_struct>.allowed_parts)
 	correct_allowed_parts allowed_parts = <allowed_parts> allowed = <allowed> part = drum
-	correct_allowed_parts allowed_parts = <allowed_parts> allowed = <allowed> part = bass
-	correct_allowed_parts allowed_parts = <allowed_parts> allowed = <allowed> part = vocals
+	correct_allowed_parts allowed_parts = <allowed_parts> allowed = <allowed> part = Bass
+	correct_allowed_parts allowed_parts = <allowed_parts> allowed = <allowed> part = Vocals
 	correct_allowed_parts allowed_parts = <allowed_parts> allowed = <allowed> part = guitar
 	return allowed = <allowed>
 endscript
 
 script ui_band_mode_create_menu_instrument 
-	obj_getid
-	gettags
+	Obj_GetID
+	GetTags
 	fit_width = `scale each line if larger`
 	fit_height = `scale down if larger`
 	printstruct <...>
-	createscreenelement {
-		type = textblockelement
+	CreateScreenElement {
+		type = TextBlockElement
 		fit_width = `scale each line if larger`
 		fit_height = `scale down if larger`
 		dims = (200.0, 40.0)
-		parent = <objid>
-		text = qs(0x9504b94a)
+		parent = <ObjID>
+		text = qs("GUITAR")
 		font = fontgrid_text_a6
 		rgba = ($menu_unfocus_color)
 		event_handlers = [
@@ -1053,37 +1053,37 @@ script ui_band_mode_create_menu_instrument
 		just = [center bottom]
 		internal_just = [center center]
 	}
-	if NOT structurecontains structure = <allowed> name = guitar
-		<id> :setprops not_focusable rgba = [64 64 64 255]
+	if NOT StructureContains Structure = <allowed> name = guitar
+		<id> :SetProps not_focusable rgba = [64 64 64 255]
 	endif
-	createscreenelement {
-		type = textblockelement
+	CreateScreenElement {
+		type = TextBlockElement
 		fit_width = `scale each line if larger`
 		fit_height = `scale down if larger`
 		dims = (200.0, 40.0)
-		parent = <objid>
-		text = qs(0x7d4f9214)
+		parent = <ObjID>
+		text = qs("BASS")
 		font = fontgrid_text_a6
 		rgba = ($menu_unfocus_color)
 		event_handlers = [
 			{focus retail_menu_focus}
 			{unfocus retail_menu_unfocus}
-			{pad_choose ui_band_mode_choose params = {instrument = bass}}
+			{pad_choose ui_band_mode_choose params = {instrument = Bass}}
 		]
 		internal_scale = 0.75
 		just = [center bottom]
 		internal_just = [center center]
 	}
-	if NOT structurecontains structure = <allowed> name = bass
-		<id> :setprops not_focusable rgba = [64 64 64 255]
+	if NOT StructureContains Structure = <allowed> name = Bass
+		<id> :SetProps not_focusable rgba = [64 64 64 255]
 	endif
-	createscreenelement {
-		type = textblockelement
+	CreateScreenElement {
+		type = TextBlockElement
 		fit_width = `scale each line if larger`
 		fit_height = `scale down if larger`
 		dims = (200.0, 40.0)
-		parent = <objid>
-		text = qs(0x388cd3db)
+		parent = <ObjID>
+		text = qs("DRUMS")
 		font = fontgrid_text_a6
 		rgba = ($menu_unfocus_color)
 		event_handlers = [
@@ -1095,56 +1095,56 @@ script ui_band_mode_create_menu_instrument
 		just = [center bottom]
 		internal_just = [center center]
 	}
-	if NOT structurecontains structure = <allowed> name = drum
-		<id> :setprops not_focusable rgba = [64 64 64 255]
+	if NOT StructureContains Structure = <allowed> name = drum
+		<id> :SetProps not_focusable rgba = [64 64 64 255]
 	endif
-	createscreenelement {
-		type = textblockelement
+	CreateScreenElement {
+		type = TextBlockElement
 		fit_width = `scale each line if larger`
 		fit_height = `scale down if larger`
 		dims = (200.0, 40.0)
-		parent = <objid>
-		text = qs(0x1b9f6f84)
+		parent = <ObjID>
+		text = qs("VOCALS")
 		font = fontgrid_text_a6
 		rgba = ($menu_unfocus_color)
 		event_handlers = [
 			{focus retail_menu_focus}
 			{unfocus retail_menu_unfocus}
-			{pad_choose ui_band_mode_choose params = {instrument = vocals}}
+			{pad_choose ui_band_mode_choose params = {instrument = Vocals}}
 		]
 		tags = {has_mic = 1}
 		internal_scale = 0.75
 		just = [center bottom]
 		internal_just = [center center]
 	}
-	if iswinport
-		gamemode_getproperty \{prop = faceoff}
+	if IsWinPort
+		GameMode_GetProperty \{prop = faceoff}
 		if (<faceoff> = true)
-			<id> :setprops not_focusable rgba = [64 64 64 255]
+			<id> :SetProps not_focusable rgba = [64 64 64 255]
 			return
 		endif
 	endif
 	if is_regular_controller controller = <controller>
-		<id> :setprops tags = {has_mic = 0}
-	elseif NOT structurecontains structure = <allowed> name = vocals
-		<id> :setprops not_focusable rgba = [64 64 64 255]
+		<id> :SetProps tags = {has_mic = 0}
+	elseif NOT StructureContains Structure = <allowed> name = Vocals
+		<id> :SetProps not_focusable rgba = [64 64 64 255]
 	endif
-	runscriptonscreenelement id = <id> ui_band_mode_mic_check params = {controller = <controller>}
+	RunScriptOnScreenElement id = <id> ui_band_mode_mic_check params = {controller = <controller>}
 endscript
 
 script ui_band_mode_create_menu_lefty 
-	obj_getid
-	gettags
+	Obj_GetID
+	GetTags
 	fit_width = `scale each line if larger`
 	fit_height = `scale down if larger`
-	if (<instrument> = vocals)
-		createscreenelement {
-			type = textblockelement
+	if (<instrument> = Vocals)
+		CreateScreenElement {
+			type = TextBlockElement
 			fit_width = `scale each line if larger`
 			fit_height = `scale down if larger`
 			dims = (200.0, 40.0)
-			parent = <objid>
-			text = qs(0x305014bd)
+			parent = <ObjID>
+			text = qs("STATIC")
 			font = fontgrid_text_a6
 			rgba = ($menu_unfocus_color)
 			event_handlers = [
@@ -1156,13 +1156,13 @@ script ui_band_mode_create_menu_lefty
 			just = [center bottom]
 			internal_just = [center center]
 		}
-		createscreenelement {
-			type = textblockelement
+		CreateScreenElement {
+			type = TextBlockElement
 			fit_width = `scale each line if larger`
 			fit_height = `scale down if larger`
 			dims = (200.0, 40.0)
-			parent = <objid>
-			text = qs(0x737839f5)
+			parent = <ObjID>
+			text = qs("SCROLLING")
 			font = fontgrid_text_a6
 			rgba = ($menu_unfocus_color)
 			event_handlers = [
@@ -1175,13 +1175,13 @@ script ui_band_mode_create_menu_lefty
 			internal_just = [center center]
 		}
 	else
-		createscreenelement {
-			type = textblockelement
+		CreateScreenElement {
+			type = TextBlockElement
 			fit_width = `scale each line if larger`
 			fit_height = `scale down if larger`
 			dims = (200.0, 40.0)
-			parent = <objid>
-			text = qs(0x7b0518c0)
+			parent = <ObjID>
+			text = qs("STANDARD")
 			font = fontgrid_text_a6
 			rgba = ($menu_unfocus_color)
 			event_handlers = [
@@ -1193,13 +1193,13 @@ script ui_band_mode_create_menu_lefty
 			just = [center bottom]
 			internal_just = [center center]
 		}
-		createscreenelement {
-			type = textblockelement
+		CreateScreenElement {
+			type = TextBlockElement
 			fit_width = `scale each line if larger`
 			fit_height = `scale down if larger`
 			dims = (200.0, 40.0)
-			parent = <objid>
-			text = qs(0x2e9b1b43)
+			parent = <ObjID>
+			text = qs("LEFTY FLIP")
 			font = fontgrid_text_a6
 			rgba = ($menu_unfocus_color)
 			event_handlers = [
@@ -1215,7 +1215,7 @@ script ui_band_mode_create_menu_lefty
 endscript
 
 script ui_band_mode_mic_check 
-	requireparams \{[
+	RequireParams \{[
 			controller
 		]
 		all}
@@ -1223,45 +1223,45 @@ script ui_band_mode_mic_check
 		return
 	endif
 	if (($allow_controller_for_all_instruments) = 1)
-		setprops \{tags = {
+		SetProps \{tags = {
 				has_mic = 1
 			}}
 		return
 	endif
-	gamemode_getproperty \{prop = faceoff}
+	GameMode_GetProperty \{prop = faceoff}
 	if (<faceoff> = true)
 		get_player_num_from_controller controller_index = <controller>
 		if (<player_num> = -1)
-			scriptassert 'Controller %c has not been assigned to a player.' c = <controller>
+			ScriptAssert 'Controller %c has not been assigned to a player.' c = <controller>
 		endif
 	endif
-	obj_getid
+	Obj_GetID
 	begin
 	<has_mic> = 0
 	if (<faceoff> = true)
 	else
 		if controller_has_headset controller = <controller>
 			<has_mic> = 1
-		elseif ismicrophonepluggedin
+		elseif IsMicrophonePluggedIn
 			<has_mic> = 1
 		endif
 	endif
-	setprops tags = {has_mic = <has_mic>}
-	wait \{1
+	SetProps tags = {has_mic = <has_mic>}
+	Wait \{1
 		gameframe}
 	repeat
 endscript
 
 script ui_band_mode_create_menu_difficulty 
-	obj_getid
+	Obj_GetID
 	if ($game_mode != p2_battle)
-		createscreenelement {
-			type = textblockelement
+		CreateScreenElement {
+			type = TextBlockElement
 			fit_width = `scale each line if larger`
 			fit_height = `scale down if larger`
 			dims = (200.0, 40.0)
-			parent = <objid>
-			text = qs(0x74d6a0a0)
+			parent = <ObjID>
+			text = qs("BEGINNER")
 			font = fontgrid_text_a6
 			rgba = ($menu_unfocus_color)
 			event_handlers = [
@@ -1274,13 +1274,13 @@ script ui_band_mode_create_menu_difficulty
 			internal_just = [center center]
 		}
 	else
-		createscreenelement {
-			type = textblockelement
+		CreateScreenElement {
+			type = TextBlockElement
 			fit_width = `scale each line if larger`
 			fit_height = `scale down if larger`
 			dims = (200.0, 40.0)
-			parent = <objid>
-			text = qs(0x74d6a0a0)
+			parent = <ObjID>
+			text = qs("BEGINNER")
 			font = fontgrid_text_a6
 			rgba = [64 64 64 255]
 			internal_scale = 0.75
@@ -1289,13 +1289,13 @@ script ui_band_mode_create_menu_difficulty
 			not_focusable
 		}
 	endif
-	createscreenelement {
-		type = textblockelement
+	CreateScreenElement {
+		type = TextBlockElement
 		fit_width = `scale each line if larger`
 		fit_height = `scale down if larger`
 		dims = (200.0, 40.0)
-		parent = <objid>
-		text = qs(0x8d657387)
+		parent = <ObjID>
+		text = qs("EASY")
 		font = fontgrid_text_a6
 		rgba = ($menu_unfocus_color)
 		event_handlers = [
@@ -1307,13 +1307,13 @@ script ui_band_mode_create_menu_difficulty
 		just = [center bottom]
 		internal_just = [center center]
 	}
-	createscreenelement {
-		type = textblockelement
+	CreateScreenElement {
+		type = TextBlockElement
 		fit_width = `scale each line if larger`
 		fit_height = `scale down if larger`
 		dims = (200.0, 40.0)
-		parent = <objid>
-		text = qs(0x6ef11a01)
+		parent = <ObjID>
+		text = qs("MEDIUM")
 		font = fontgrid_text_a6
 		rgba = ($menu_unfocus_color)
 		event_handlers = [
@@ -1325,13 +1325,13 @@ script ui_band_mode_create_menu_difficulty
 		just = [center bottom]
 		internal_just = [center center]
 	}
-	createscreenelement {
-		type = textblockelement
+	CreateScreenElement {
+		type = TextBlockElement
 		fit_width = `scale each line if larger`
 		fit_height = `scale down if larger`
 		dims = (200.0, 40.0)
-		parent = <objid>
-		text = qs(0x51b06d2f)
+		parent = <ObjID>
+		text = qs("HARD")
 		font = fontgrid_text_a6
 		rgba = ($menu_unfocus_color)
 		event_handlers = [
@@ -1343,13 +1343,13 @@ script ui_band_mode_create_menu_difficulty
 		just = [center bottom]
 		internal_just = [center center]
 	}
-	createscreenelement {
-		type = textblockelement
+	CreateScreenElement {
+		type = TextBlockElement
 		fit_width = `scale each line if larger`
 		fit_height = `scale down if larger`
 		dims = (200.0, 40.0)
-		parent = <objid>
-		text = qs(0x334908ac)
+		parent = <ObjID>
+		text = qs("EXPERT")
 		font = fontgrid_text_a6
 		rgba = ($menu_unfocus_color)
 		event_handlers = [
@@ -1364,68 +1364,68 @@ script ui_band_mode_create_menu_difficulty
 endscript
 
 script ui_band_mode_create_menu_ready 
-	obj_getid
-	se_getparentid
-	<parent_id> :se_getparentid
-	gettags
-	myinterfaceelement :getsingletag \{descs}
+	Obj_GetID
+	SE_GetParentId
+	<parent_id> :SE_GetParentId
+	GetTags
+	MyInterfaceElement :GetSingleTag \{descs}
 	current_desc = (<descs> [<index>])
-	if french
-		<current_desc> :se_setprops ready_banner_texture = ready_banner_french
-	elseif german
-		<current_desc> :se_setprops ready_banner_texture = ready_banner_german
-	elseif italian
-		<current_desc> :se_setprops ready_banner_texture = ready_banner_italian
-	elseif spanish
-		<current_desc> :se_setprops ready_banner_texture = ready_banner_spanish
+	if French
+		<current_desc> :SE_SetProps ready_banner_texture = ready_banner_french
+	elseif German
+		<current_desc> :SE_SetProps ready_banner_texture = ready_banner_german
+	elseif Italian
+		<current_desc> :SE_SetProps ready_banner_texture = ready_banner_italian
+	elseif Spanish
+		<current_desc> :SE_SetProps ready_banner_texture = ready_banner_spanish
 	endif
 	ui_band_mode_animate_ready current_desc = <current_desc>
 endscript
 
 script ui_band_mode_animate_ready 
-	requireparams \{[
+	RequireParams \{[
 			current_desc
 		]
 		all}
-	<current_desc> :se_setprops reposition_pos = (0.0, 220.0) ready_banner_pos = (0.0, -130.0) time = 0.1 motion = ease_out
-	<current_desc> :se_waitprops
-	<current_desc> :se_setprops reposition_pos = (0.0, 210.0) time = 0.1 motion = ease_out
-	<current_desc> :se_waitprops
-	<current_desc> :se_setprops ready_banner_scale = 1.8 time = 0.1 motion = ease_out
-	<current_desc> :se_waitprops
-	<current_desc> :se_setprops ready_banner_scale = 1.4 time = 0.1 motion = ease_in
-	<current_desc> :se_waitprops
-	<current_desc> :se_setprops ready_banner_scale = 1.6 time = 0.1 motion = ease_out
-	<current_desc> :se_waitprops
-	<current_desc> :se_setprops ready_banner_scale = 1.5 time = 0.1 motion = ease_in
+	<current_desc> :SE_SetProps reposition_pos = (0.0, 220.0) ready_banner_pos = (0.0, -130.0) time = 0.1 motion = ease_out
+	<current_desc> :SE_WaitProps
+	<current_desc> :SE_SetProps reposition_pos = (0.0, 210.0) time = 0.1 motion = ease_out
+	<current_desc> :SE_WaitProps
+	<current_desc> :SE_SetProps ready_banner_scale = 1.8 time = 0.1 motion = ease_out
+	<current_desc> :SE_WaitProps
+	<current_desc> :SE_SetProps ready_banner_scale = 1.4 time = 0.1 motion = ease_in
+	<current_desc> :SE_WaitProps
+	<current_desc> :SE_SetProps ready_banner_scale = 1.6 time = 0.1 motion = ease_out
+	<current_desc> :SE_WaitProps
+	<current_desc> :SE_SetProps ready_banner_scale = 1.5 time = 0.1 motion = ease_in
 endscript
 
 script ui_band_mode_animate_unready 
-	requireparams \{[
+	RequireParams \{[
 			current_desc
 		]
 		all}
-	<current_desc> :se_setprops reposition_pos = (0.0, -20.0) ready_banner_pos = (0.0, 500.0) time = 0.1 motion = ease_in
-	<current_desc> :se_waitprops
-	<current_desc> :se_setprops reposition_pos = (0.0, 0.0) time = 0.05 motion = ease_in
+	<current_desc> :SE_SetProps reposition_pos = (0.0, -20.0) ready_banner_pos = (0.0, 500.0) time = 0.1 motion = ease_in
+	<current_desc> :SE_WaitProps
+	<current_desc> :SE_SetProps reposition_pos = (0.0, 0.0) time = 0.05 motion = ease_in
 endscript
 
 script ui_band_mode_create_menu_root 
-	obj_getid
-	se_getparentid
-	<parent_id> :se_getparentid
-	gettags
+	Obj_GetID
+	SE_GetParentId
+	<parent_id> :SE_GetParentId
+	GetTags
 	get_savegame_from_controller controller = <controller>
 	change \{rich_presence_context = presence_gigboard_and_setlist}
-	gamemode_gettype
+	GameMode_GetType
 	if (<type> = career)
-		createscreenelement {
-			type = textblockelement
+		CreateScreenElement {
+			type = TextBlockElement
 			fit_width = `scale each line if larger`
 			fit_height = `scale down if larger`
 			dims = (200.0, 40.0)
-			parent = <objid>
-			text = qs(0xaf4d8fe7)
+			parent = <ObjID>
+			text = qs("VIEW GIGS")
 			font = fontgrid_text_a6
 			rgba = ($menu_unfocus_color)
 			event_handlers = [
@@ -1439,13 +1439,13 @@ script ui_band_mode_create_menu_root
 		}
 	endif
 	get_player_num_from_controller controller_index = <controller>
-	createscreenelement {
-		type = textblockelement
+	CreateScreenElement {
+		type = TextBlockElement
 		fit_width = `scale each line if larger`
 		fit_height = `scale down if larger`
 		dims = (200.0, 40.0)
-		parent = <objid>
-		text = qs(0x095895d6)
+		parent = <ObjID>
+		text = qs("RANDOM ROCKER")
 		font = fontgrid_text_a6
 		rgba = ($menu_unfocus_color)
 		event_handlers = [
@@ -1461,13 +1461,13 @@ script ui_band_mode_create_menu_root
 	if (<menu> = p2_root)
 		root = p2_character
 	endif
-	createscreenelement {
-		type = textblockelement
+	CreateScreenElement {
+		type = TextBlockElement
 		fit_width = `scale each line if larger`
 		fit_height = `scale down if larger`
 		dims = (200.0, 40.0)
-		parent = <objid>
-		text = qs(0xebd11692)
+		parent = <ObjID>
+		text = qs("SELECT ROCKER")
 		font = fontgrid_text_a6
 		rgba = ($menu_unfocus_color)
 		event_handlers = [
@@ -1480,12 +1480,12 @@ script ui_band_mode_create_menu_root
 		internal_just = [center center]
 	}
 	get_player_num_from_controller controller_index = <controller>
-	formattext checksumname = player_status 'player%p_status' p = <player_num>
+	FormatText checksumname = player_status 'player%p_status' p = <player_num>
 	if profile_can_be_modified id = ($<player_status>.character_id) savegame = <savegame>
 		<show_edit_hero> = 1
 		if NOT ($is_network_game)
-			if isxenon
-				if NOT checkforsignin local controller_index = <controller>
+			if isXenon
+				if NOT CheckForSignIn local controller_index = <controller>
 					<show_edit_hero> = 0
 				endif
 			endif
@@ -1494,13 +1494,13 @@ script ui_band_mode_create_menu_root
 			endif
 		endif
 		if (<show_edit_hero>)
-			createscreenelement {
-				type = textblockelement
+			CreateScreenElement {
+				type = TextBlockElement
 				fit_width = `scale each line if larger`
 				fit_height = `scale down if larger`
 				dims = (200.0, 40.0)
-				parent = <objid>
-				text = qs(0x67bd7527)
+				parent = <ObjID>
+				text = qs("EDIT ROCKER")
 				font = fontgrid_text_a6
 				rgba = ($menu_unfocus_color)
 				event_handlers = [
@@ -1517,21 +1517,21 @@ script ui_band_mode_create_menu_root
 		endif
 	endif
 	not_signed_in = 0
-	if isxenon
-		if NOT islocallysignedin controller = <controller>
+	if isXenon
+		if NOT IsLocallySignedIn controller = <controller>
 			not_signed_in = 1
 		endif
 	endif
 	if (<not_signed_in> = 0)
 		if NOT (($game_mode = p2_faceoff) || ($game_mode = p2_pro_faceoff) || ($game_mode = p2_battle))
 			if current_band_has_band_name controller = <controller>
-				createscreenelement {
-					type = textblockelement
+				CreateScreenElement {
+					type = TextBlockElement
 					fit_width = `scale each line if larger`
 					fit_height = `scale down if larger`
 					dims = (200.0, 40.0)
-					parent = <objid>
-					text = qs(0x9baf87e5)
+					parent = <ObjID>
+					text = qs("BAND INFO")
 					font = fontgrid_text_a6
 					rgba = ($menu_unfocus_color)
 					event_handlers = [
@@ -1548,16 +1548,16 @@ script ui_band_mode_create_menu_root
 			endif
 		endif
 	endif
-	if isxenon
+	if isXenon
 		if (<not_signed_in> = 0)
 			if NOT (($game_mode = p2_faceoff) || ($game_mode = p2_pro_faceoff) || ($game_mode = p2_battle))
-				createscreenelement {
-					type = textblockelement
+				CreateScreenElement {
+					type = TextBlockElement
 					fit_width = `scale each line if larger`
 					fit_height = `scale down if larger`
 					dims = (200.0, 40.0)
-					parent = <objid>
-					text = qs(0x05dd2fa3)
+					parent = <ObjID>
+					text = qs("BAND MEMBERS")
 					font = fontgrid_text_a6
 					rgba = ($menu_unfocus_color)
 					event_handlers = [
@@ -1575,13 +1575,13 @@ script ui_band_mode_create_menu_root
 	if (<menu> = p2_root)
 		ready = p2_ready
 	endif
-	createscreenelement {
-		type = textblockelement
+	CreateScreenElement {
+		type = TextBlockElement
 		fit_width = `scale each line if larger`
 		fit_height = `scale down if larger`
 		dims = (200.0, 40.0)
-		parent = <objid>
-		text = qs(0x7be2fdcb)
+		parent = <ObjID>
+		text = qs("READY")
 		font = fontgrid_text_a6
 		rgba = ($menu_unfocus_color)
 		event_handlers = [
@@ -1594,13 +1594,13 @@ script ui_band_mode_create_menu_root
 		internal_just = [center center]
 	}
 	if NOT ($is_network_game)
-		if ((isxenon) && ((iswinport) = false))
+		if ((isXenon) && ((IsWinPort) = false))
 			if ($band_mode_current_leader != -1)
-				if checkforsignin local controller_index = ($band_mode_current_leader)
+				if CheckForSignIn local controller_index = ($band_mode_current_leader)
 					return
 				endif
 			endif
-			if checkforsignin local controller_index = <controller>
+			if CheckForSignIn local controller_index = <controller>
 				change \{band_mode_can_choose_leader = 1}
 				ui_band_mode_choose_leader device_num = <controller>
 				change \{band_mode_can_choose_leader = 0}
@@ -1616,47 +1616,47 @@ script ui_band_mode_create_menu_root
 endscript
 
 script ui_band_mode_save_tags 
-	myinterfaceelement :getsingletag \{menus}
+	MyInterfaceElement :GetSingleTag \{menus}
 	change \{band_mode_menu_tags = none}
-	getarraysize <menus>
+	GetArraySize <menus>
 	array = []
 	i = 0
 	begin
 	curr_id = (<menus> [<i>])
 	screenelement_get_tags id = <curr_id>
-	removeparameter \{struct_name = tags
+	RemoveParameter \{struct_name = tags
 		tag_selected_id}
-	removeparameter \{struct_name = tags
+	RemoveParameter \{struct_name = tags
 		tag_selected_index}
-	removeparameter \{struct_name = tags
+	RemoveParameter \{struct_name = tags
 		tag_selected_childs_grid_index}
-	if structurecontains structure = <tags> menu
+	if StructureContains Structure = <tags> menu
 		if (<tags>.menu = character)
 			tags = {<tags> menu = root}
 		endif
 		if (<tags>.menu = invites)
-			if isps3
+			if IsPs3
 				tags = {<tags> menu = net_local_root}
 			else
 				tags = {<tags> menu = friends}
 			endif
 		endif
 	endif
-	addarrayelement array = <array> index = <i> element = <tags>
+	AddArrayElement array = <array> index = <i> element = <tags>
 	i = (<i> + 1)
 	repeat <array_size>
 	if (<array_size> < 4)
 		begin
-		addarrayelement array = <array> index = <i> element = {}
+		AddArrayElement array = <array> index = <i> element = {}
 		i = (<i> + 1)
 		repeat (4 - <array_size>)
 	endif
-	screenelement_get_tags \{id = myinterfaceelement}
-	removeparameter \{struct_name = tags
+	screenelement_get_tags \{id = MyInterfaceElement}
+	RemoveParameter \{struct_name = tags
 		menus}
-	removeparameter \{struct_name = tags
+	RemoveParameter \{struct_name = tags
 		descs}
-	addarrayelement array = <array> index = <i> element = <tags>
+	AddArrayElement array = <array> index = <i> element = <tags>
 	change band_mode_menu_tags = <array>
 endscript
 disallow_band_edit_char_spam = 0
@@ -1670,12 +1670,12 @@ script band_edit_character
 endscript
 
 script ui_band_mode_create_menu_character 
-	obj_getid
-	<objid> :gettags
+	Obj_GetID
+	<ObjID> :GetTags
 	ui_band_menu_occlude_character index = <index>
 	get_player_num_from_controller controller_index = <controller>
 	player = <player_num>
-	formattext checksumname = player_status 'player%p_status' p = <player_num>
+	FormatText checksumname = player_status 'player%p_status' p = <player_num>
 	current_character_id = ($<player_status>.character_id)
 	if band_builder_is_finalized_random character_id = <current_character_id>
 		current_character_id = ($<player_status>.original_character_id)
@@ -1694,10 +1694,10 @@ script ui_band_mode_create_menu_character
 			if (<current_character_id> = <character_id>)
 				focus_index = <menu_index>
 			endif
-			createscreenelement {
-				type = descinterface
+			CreateScreenElement {
+				type = DescInterface
 				desc = 'band_play_menu_char'
-				parent = <objid>
+				parent = <ObjID>
 				band_play_menu_char_icon_texture = <icon>
 				event_handlers = [
 					{pad_choose band_character_select_choose params = {price = <price> player = <player> character_id = <character_id> menu = <menu> savegame = <character_savegame> borrowed_from_band_leader = <borrowed_from_band_leader>}}
@@ -1705,7 +1705,7 @@ script ui_band_mode_create_menu_character
 				just = [center bottom]
 				dims = (80.0, 80.0)
 			}
-			setscreenelementprops {
+			SetScreenElementProps {
 				id = <id>
 				event_handlers = [
 					{focus band_character_select_focus params = {id = <id> character_name = (<profile_struct>.fullname) index = <index> player = <player_num>}}
@@ -1725,10 +1725,10 @@ script ui_band_mode_create_menu_character
 		character_id = (<profile_struct>.name)
 		if is_profile_purchased id = <character_id> savegame = <savegame>
 			get_car_photo_icon profile_struct = <profile_struct> savegame = <character_savegame> character_id = <character_id>
-			createscreenelement {
-				type = descinterface
+			CreateScreenElement {
+				type = DescInterface
 				desc = 'band_play_menu_char'
-				parent = <objid>
+				parent = <ObjID>
 				band_play_menu_char_icon_texture = <icon>
 				just = [center bottom]
 				dims = (80.0, 80.0)
@@ -1742,37 +1742,37 @@ script ui_band_mode_create_menu_character
 endscript
 
 script band_character_select_focus 
-	if gotparam \{character_name}
+	if GotParam \{character_name}
 		band_character_rename index = <index> character_name = <character_name>
 	endif
-	<id> :se_setprops scale = 1.2 pos = {relative (0.0, -10.0)} band_play_menu_char_highlight_alpha = 1.0
+	<id> :SE_SetProps scale = 1.2 pos = {relative (0.0, -10.0)} band_play_menu_char_highlight_alpha = 1.0
 endscript
 
 script band_character_rename 
-	requireparams \{[
+	RequireParams \{[
 			index
 		]
 		all}
-	myinterfaceelement :gettags
-	if gotparam \{descs}
+	MyInterfaceElement :GetTags
+	if GotParam \{descs}
 		current_desc = (<descs> [<index>])
-		<current_desc> :se_getprops
-		if NOT gotparam \{character_name}
-			character_name = qs(0x03ac90f0)
-			if gotparam \{player}
-				formattext checksumname = player_status 'player%p_status' p = <player>
+		<current_desc> :SE_GetProps
+		if NOT GotParam \{character_name}
+			character_name = qs("\L")
+			if GotParam \{player}
+				FormatText checksumname = player_status 'player%p_status' p = <player>
 				get_savegame_from_player_status player_status = <player_status>
 				character_id = ($<player_status>.character_id)
 				get_fullname_of_character id = <character_id> savegame = <savegame> profanity_allowed
 				character_name = <fullname>
 			endif
 		endif
-		name = qs(0x03ac90f0)
-		if NOT (<character_name> = qs(0x03ac90f0))
-			stringlength string = <character_name>
-			mod a = <str_len> b = (2)
-			if (<mod> = 1)
-				character_name = (<character_name> + qs(0x713755f7))
+		name = qs("\L")
+		if NOT (<character_name> = qs("\L"))
+			StringLength string = <character_name>
+			Mod a = <str_len> b = (2)
+			if (<Mod> = 1)
+				character_name = (<character_name> + qs("\L "))
 				str_len = (<str_len> + 1)
 			endif
 			total = 0
@@ -1788,7 +1788,7 @@ script band_character_rename
 					break
 				endif
 			endif
-			formattext textname = name qs(0x2ad20d67) n = <name> c = <character_name>
+			FormatText TextName = name qs("\L%n     %c") n = <name> c = <character_name>
 			i = (<i> + 1)
 			if (<i> = 2)
 				i = 0
@@ -1798,54 +1798,54 @@ script band_character_rename
 		if (<name_text> = <name>)
 			return
 		endif
-		<current_desc> :obj_killspawnedscript name = band_character_name_scroll
-		<current_desc> :se_setprops name_text = <character_name> name_dims = (0.0, 39.0) name_pos = (0.0, -19.28137)
-		<current_desc> :se_getprops
+		<current_desc> :Obj_KillSpawnedScript name = band_character_name_scroll
+		<current_desc> :SE_SetProps name_text = <character_name> name_dims = (0.0, 39.0) name_pos = (0.0, -19.28137)
+		<current_desc> :SE_GetProps
 		if ((<name_dims> [0]) < 240)
 			x = ((248 - (<name_dims> [0])) / 2)
-			<current_desc> :se_setprops name_pos = ((0.0, 19.28137) + ((1.0, 0.0) * <x>))
+			<current_desc> :SE_SetProps name_pos = ((0.0, 19.28137) + ((1.0, 0.0) * <x>))
 			return
 		endif
-		<current_desc> :se_setprops name_text = qs(0x03ac90f0) name_dims = (0.0, 39.0) name_pos = (0.0, 19.28137)
-		<current_desc> :se_setprops name_text = <name>
-		<current_desc> :se_getprops
-		<current_desc> :obj_spawnscriptnow band_character_name_scroll params = {width = (<name_dims> [0])}
+		<current_desc> :SE_SetProps name_text = qs("\L") name_dims = (0.0, 39.0) name_pos = (0.0, 19.28137)
+		<current_desc> :SE_SetProps name_text = <name>
+		<current_desc> :SE_GetProps
+		<current_desc> :Obj_SpawnScriptNow band_character_name_scroll params = {width = (<name_dims> [0])}
 	endif
 endscript
 
 script band_character_name_scroll 
-	requireparams \{[
+	RequireParams \{[
 			width
 		]
 		all}
 	time = (4.0 * (<width> / 500.0))
-	se_setprops name_pos = {((-0.125, 0.0) * <width>) relative}
+	SE_SetProps name_pos = {((-0.125, 0.0) * <width>) relative}
 	begin
-	se_setprops name_pos = {((-0.5, 0.0) * <width>) relative} time = <time>
-	wait <time> seconds ignoreslomo
-	se_setprops name_pos = {((0.5, 0.0) * <width>) relative}
+	SE_SetProps name_pos = {((-0.5, 0.0) * <width>) relative} time = <time>
+	Wait <time> seconds ignoreslomo
+	SE_SetProps name_pos = {((0.5, 0.0) * <width>) relative}
 	repeat
 endscript
 
 script band_gamertag_rename 
-	requireparams \{[
+	RequireParams \{[
 			gamertag
 			index
 		]
 		all}
-	myinterfaceelement :gettags
-	if gotparam \{descs}
+	MyInterfaceElement :GetTags
+	if GotParam \{descs}
 		current_desc = (<descs> [<index>])
-	elseif gotparam \{desc_item}
+	elseif GotParam \{desc_item}
 		current_desc = <desc_item>
 	endif
-	if ((gotparam descs) || (gotparam desc_item))
-		name = qs(0x03ac90f0)
-		if NOT (<gamertag> = qs(0x03ac90f0))
-			stringlength string = <gamertag>
-			mod a = <str_len> b = (2)
-			if (<mod> = 1)
-				gamertag = (<gamertag> + qs(0x713755f7))
+	if ((GotParam descs) || (GotParam desc_item))
+		name = qs("\L")
+		if NOT (<gamertag> = qs("\L"))
+			StringLength string = <gamertag>
+			Mod a = <str_len> b = (2)
+			if (<Mod> = 1)
+				gamertag = (<gamertag> + qs("\L "))
 				str_len = (<str_len> + 1)
 			endif
 			total = 0
@@ -1861,52 +1861,52 @@ script band_gamertag_rename
 					break
 				endif
 			endif
-			formattext textname = name qs(0x2ad20d67) n = <name> c = <gamertag>
+			FormatText TextName = name qs("\L%n     %c") n = <name> c = <gamertag>
 			i = (<i> + 1)
 			if (<i> = 2)
 				i = 0
 			endif
 			repeat
 		endif
-		<current_desc> :se_getprops
+		<current_desc> :SE_GetProps
 		if (<gamertag_text> = <name>)
 			return
 		endif
-		<current_desc> :obj_killspawnedscript name = band_gamertag_scroll
-		<current_desc> :se_setprops gamertag_text = <gamertag> gamertag_dims = (0.0, 39.0) gamertag_pos = (0.0, -19.28137)
-		<current_desc> :se_getprops
+		<current_desc> :Obj_KillSpawnedScript name = band_gamertag_scroll
+		<current_desc> :SE_SetProps gamertag_text = <gamertag> gamertag_dims = (0.0, 39.0) GamerTag_pos = (0.0, -19.28137)
+		<current_desc> :SE_GetProps
 		if ((<gamertag_dims> [0]) < 240)
 			x = ((248 - (<gamertag_dims> [0])) / 2)
-			<current_desc> :se_setprops gamertag_pos = ((0.0, -19.28137) + ((1.0, 0.0) * <x>))
+			<current_desc> :SE_SetProps GamerTag_pos = ((0.0, -19.28137) + ((1.0, 0.0) * <x>))
 			return
 		endif
-		<current_desc> :se_setprops gamertag_text = qs(0x03ac90f0) gamertag_dims = (0.0, 39.0) gamertag_pos = (0.0, -19.28137)
-		<current_desc> :se_setprops gamertag_text = <name>
-		<current_desc> :se_getprops
-		<current_desc> :obj_spawnscriptnow band_gamertag_scroll params = {width = (<gamertag_dims> [0])}
+		<current_desc> :SE_SetProps gamertag_text = qs("\L") gamertag_dims = (0.0, 39.0) GamerTag_pos = (0.0, -19.28137)
+		<current_desc> :SE_SetProps gamertag_text = <name>
+		<current_desc> :SE_GetProps
+		<current_desc> :Obj_SpawnScriptNow band_gamertag_scroll params = {width = (<gamertag_dims> [0])}
 	endif
 endscript
 
 script band_gamertag_scroll 
-	requireparams \{[
+	RequireParams \{[
 			width
 		]
 		all}
 	time = (5.0 * (<width> / 500.0))
-	se_setprops gamertag_pos = {((-0.125, 0.0) * <width>) relative}
+	SE_SetProps GamerTag_pos = {((-0.125, 0.0) * <width>) relative}
 	begin
-	se_setprops gamertag_pos = {((-0.5, 0.0) * <width>) relative} time = <time>
-	wait <time> seconds ignoreslomo
-	se_setprops gamertag_pos = {((0.5, 0.0) * <width>) relative}
+	SE_SetProps GamerTag_pos = {((-0.5, 0.0) * <width>) relative} time = <time>
+	Wait <time> seconds ignoreslomo
+	SE_SetProps GamerTag_pos = {((0.5, 0.0) * <width>) relative}
 	repeat
 endscript
 
 script band_character_select_unfocus 
-	<id> :se_setprops scale = 1.0 pos = (0.0, 0.0) band_play_menu_char_highlight_alpha = 0.0
+	<id> :SE_SetProps scale = 1.0 pos = (0.0, 0.0) band_play_menu_char_highlight_alpha = 0.0
 endscript
 
 script band_resolve_guest_characters 
-	requireparams \{[
+	RequireParams \{[
 			player
 			character_id
 			savegame
@@ -1915,8 +1915,8 @@ script band_resolve_guest_characters
 		all}
 	if profile_can_be_modified id = <character_id> savegame = <savegame>
 		if NOT is_completely_custom_musician id = <character_id> savegame = <savegame>
-			if NOT searchmusicianprofilearray array_name = preset_musician_profiles_modifiable id = <character_id>
-				scriptassert '%s not found' s = <character_id>
+			if NOT SearchMusicianProfileArray array_name = Preset_Musician_Profiles_Modifiable id = <character_id>
+				ScriptAssert '%s not found' s = <character_id>
 			endif
 			if globaltag_check_preset_musician_modified index = <index> savegame = <borrowed_from_band_leader>
 				savegame = <borrowed_from_band_leader>
@@ -1927,11 +1927,11 @@ script band_resolve_guest_characters
 		endif
 		get_musician_profile_struct_by_id id = <character_id> savegame = <savegame>
 		force_set_random_appearance player = <player> appearance = (<profile_struct>.appearance)
-		updatestructelement struct = $guest_character_fullnames element = <new_character_id> value = (<profile_struct>.fullname)
+		UpdateStructElement struct = $guest_character_fullnames element = <new_character_id> value = (<profile_struct>.fullname)
 		change guest_character_fullnames = <newstruct>
-		updatestructelement struct = $guest_character_names element = <new_character_id> value = (<profile_struct>.name)
+		UpdateStructElement struct = $guest_character_names element = <new_character_id> value = (<profile_struct>.name)
 		change guest_character_names = <newstruct>
-		formattext checksumname = player_status 'player%p_status' p = <player>
+		FormatText checksumname = player_status 'player%p_status' p = <player>
 		change structurename = <player_status> original_character_id = <character_id>
 		character_id = <new_character_id>
 	endif
@@ -1939,11 +1939,11 @@ script band_resolve_guest_characters
 endscript
 
 script band_character_select_choose 
-	formattext checksumname = player_status 'player%p_status' p = <player>
+	FormatText checksumname = player_status 'player%p_status' p = <player>
 	if (($<player_status>.controller) < 4)
-		setarrayelement arrayname = band_builder_random_preset_used globalarray index = ($<player_status>.controller) newvalue = <character_id>
+		SetArrayElement ArrayName = band_builder_random_preset_used GlobalArray index = ($<player_status>.controller) newvalue = <character_id>
 	endif
-	if gotparam \{borrowed_from_band_leader}
+	if GotParam \{borrowed_from_band_leader}
 		if NOT (<borrowed_from_band_leader> = <savegame>)
 			set_band_character_id_globaltag savegame = <savegame> controller = ($<player_status>.controller) character_id = <character_id> player = <player>
 		endif
@@ -1964,35 +1964,35 @@ script band_character_select_choose
 endscript
 
 script band_character_select_back_out 
-	requireparams \{[
+	RequireParams \{[
 			player
 			controller
 		]
 		all}
-	formattext checksumname = player_status 'player%p_status' p = <player>
+	FormatText checksumname = player_status 'player%p_status' p = <player>
 	character_id = ($<player_status>.character_id)
 	get_savegame_from_controller controller = <controller>
 	cas_queue_new_character_profile player = <player> id = <character_id> savegame = <savegame>
 endscript
 
 script ui_band_mode_create_menu_join 
-	obj_getid
-	gettags
-	printf \{qs(0x5448addd)}
+	Obj_GetID
+	GetTags
+	printf \{qs("\Lui_band_mode_create_menu_join")}
 	change \{rich_presence_context = presence_gigboard_and_setlist}
 	array = [
 		{unfocus retail_menu_unfocus}
 		{pad_choose ui_band_mode_choose params = {join}}
 	]
-	if 0x1c708d82 controller = <controller>
-		buttonchar = qs(0x0433a81f)
+	if WinPortIsKeyboardController controller = <controller>
+		buttonchar = qs("\L\bp")
 	else
 		user_control_helper_get_buttonchar button = green controller = <controller>
 	endif
-	createscreenelement {
-		type = textblockelement
-		parent = <objid>
-		text = (<buttonchar> + qs(0x3bf1e078))
+	CreateScreenElement {
+		type = TextBlockElement
+		parent = <ObjID>
+		text = (<buttonchar> + qs("\_JOIN"))
 		font = fontgrid_text_a6
 		dims = (200.0, 0.0)
 		allow_expansion
@@ -2003,27 +2003,27 @@ script ui_band_mode_create_menu_join
 		internal_just = [left center]
 		not_focusable
 	}
-	if 0x1c708d82 controller = <controller>
-		0xeb08ac72 \{actionnum = 0}
-		if german
-			pos = ((3.5, 1.0) + <0x3a15b5b9>)
-		elseif spanish
-			pos = ((7.0, 5.0) + <0x3a15b5b9>)
-		elseif french
-			pos = ((3.5, 1.0) + <0x3a15b5b9>)
-		elseif italian
-			pos = ((3.5, 1.0) + <0x3a15b5b9>)
+	if WinPortIsKeyboardController controller = <controller>
+		winport_get_keyboard_text \{actionNum = 0}
+		if German
+			pos = ((3.5, 1.0) + <keyPosOffset>)
+		elseif Spanish
+			pos = ((7.0, 5.0) + <keyPosOffset>)
+		elseif French
+			pos = ((3.5, 1.0) + <keyPosOffset>)
+		elseif Italian
+			pos = ((3.5, 1.0) + <keyPosOffset>)
 		else
-			pos = ((8.5, 7.5) + <0x3a15b5b9>)
+			pos = ((8.5, 7.5) + <keyPosOffset>)
 		endif
-		0xb0228c73 = 0.65000004
-		createscreenelement {
+		scaleDown = 0.65000004
+		CreateScreenElement {
 			parent = <id>
-			type = textblockelement
-			text = <0x5d165c12>
-			font = <0xb609f307>
-			font_spacing = <0x5765a514>
-			internal_scale = (<0xc89b71a9> * <0xb0228c73>)
+			type = TextBlockElement
+			text = <keyText>
+			font = <keyFont>
+			font_spacing = <keyFontSpacing>
+			internal_scale = (<keyScale> * <scaleDown>)
 			pos = <pos>
 			dims = (20.0, 20.0)
 			single_line = true
@@ -2032,34 +2032,34 @@ script ui_band_mode_create_menu_join
 			z_priority = 50
 		}
 	endif
-	if iswinport
-		text = qs(0x03ac90f0)
+	if IsWinPort
+		text = qs("\L")
 	else
-		user_control_helper_get_buttonchar button = yellow controller = <controller>
-		if isxenon
+		user_control_helper_get_buttonchar button = Yellow controller = <controller>
+		if isXenon
 			if ($is_network_game = 1)
-				if checkforsignin controller_index = <controller>
-					text = qs(0x03ac90f0)
+				if CheckForSignIn controller_index = <controller>
+					text = qs("\L")
 				else
-					text = (<buttonchar> + qs(0x2932ee66))
-					addarrayelement array = <array> element = {pad_option2 ui_band_mode_choose params = {join change_profile}}
+					text = (<buttonchar> + qs("\_SIGN\_IN"))
+					AddArrayElement array = <array> element = {pad_option2 ui_band_mode_choose params = {join change_profile}}
 				endif
 			else
-				if islocallysignedin controller = <controller>
-					text = (<buttonchar> + qs(0x7816cbd4))
-					addarrayelement array = <array> element = {pad_option2 ui_band_mode_choose params = {join change_profile}}
+				if IsLocallySignedIn controller = <controller>
+					text = (<buttonchar> + qs("\_gamer\_profile"))
+					AddArrayElement array = <array> element = {pad_option2 ui_band_mode_choose params = {join change_profile}}
 				else
-					text = (<buttonchar> + qs(0x2932ee66))
-					addarrayelement array = <array> element = {pad_option2 ui_band_mode_choose params = {join change_profile}}
+					text = (<buttonchar> + qs("\_SIGN\_IN"))
+					AddArrayElement array = <array> element = {pad_option2 ui_band_mode_choose params = {join change_profile}}
 				endif
 			endif
 		else
-			text = qs(0x03ac90f0)
+			text = qs("\L")
 		endif
 	endif
-	createscreenelement {
-		type = textblockelement
-		parent = <objid>
+	CreateScreenElement {
+		type = TextBlockElement
+		parent = <ObjID>
 		text = <text>
 		font = fontgrid_text_a6
 		dims = (200.0, 0.0)
@@ -2071,18 +2071,18 @@ script ui_band_mode_create_menu_join
 		internal_just = [center center]
 	}
 	if ($is_network_game = 1)
-		netsessionfunc func = removecontroller params = {controller = <controller>}
+		NetSessionFunc func = RemoveController params = {controller = <controller>}
 	endif
 endscript
 
 script ui_band_mode_create_menu_net_remote_open 
-	obj_getid
-	createscreenelement {
-		type = textblockelement
-		parent = <objid>
+	Obj_GetID
+	CreateScreenElement {
+		type = TextBlockElement
+		parent = <ObjID>
 		local_id = text
 		fit_height = `scale down if larger`
-		text = qs(0x496fc06c)
+		text = qs("Waiting for players")
 		font = fontgrid_text_a6
 		dims = (200.0, 40.0)
 		allow_expansion
@@ -2094,39 +2094,39 @@ script ui_band_mode_create_menu_net_remote_open
 endscript
 
 script ui_band_mode_create_menu_net_remote_root 
-	obj_getid
-	se_getparentid
-	<parent_id> :se_getparentid
-	gettags
-	myinterfaceelement :gettags
-	getsingletag \{index}
+	Obj_GetID
+	SE_GetParentId
+	<parent_id> :SE_GetParentId
+	GetTags
+	MyInterfaceElement :GetTags
+	GetSingleTag \{index}
 	current_desc = (<descs> [<index>])
 	switch <instrument>
 		case guitar
-		<current_desc> :se_setprops instrument_alpha = 1.0 instrument_texture = logo_guitar
-		case bass
-		<current_desc> :se_setprops instrument_alpha = 1.0 instrument_texture = logo_bass
+		<current_desc> :SE_SetProps instrument_alpha = 1.0 instrument_texture = logo_guitar
+		case Bass
+		<current_desc> :SE_SetProps instrument_alpha = 1.0 instrument_texture = logo_bass
 		case drum
-		<current_desc> :se_setprops instrument_alpha = 1.0 instrument_texture = logo_drum
-		case vocals
-		<current_desc> :se_setprops instrument_alpha = 1.0 instrument_texture = logo_vocal
+		<current_desc> :SE_SetProps instrument_alpha = 1.0 instrument_texture = logo_drum
+		case Vocals
+		<current_desc> :SE_SetProps instrument_alpha = 1.0 instrument_texture = logo_vocal
 		default
-		<current_desc> :se_setprops instrument_alpha = 0.0 instrument_texture = logo_guitar
+		<current_desc> :SE_SetProps instrument_alpha = 0.0 instrument_texture = logo_guitar
 	endswitch
-	if ($net_band_mode_menu = host)
+	if ($net_band_mode_menu = HOST)
 		event_handlers = [
 			{unfocus retail_menu_unfocus}
 			{pad_choose ui_band_mode_choose params = {join = net_remote_root}}
 		]
 		user_control_helper_get_buttonchar button = green controller = <controller>
-		if checkforsignin controller_index = <controller>
-			text = (qs(0x5af62a36) + <buttonchar> + qs(0x3bf1e078))
+		if CheckForSignIn controller_index = <controller>
+			text = (qs("Changing Settings\n") + <buttonchar> + qs("\_JOIN"))
 		else
-			text = (qs(0x5af62a36) + <buttonchar> + qs(0x2932ee66))
+			text = (qs("Changing Settings\n") + <buttonchar> + qs("\_SIGN\_IN"))
 		endif
-		netsessionfunc \{obj = party
+		NetSessionFunc \{obj = party
 			func = get_party_members}
-		getarraysize <connections>
+		GetArraySize <connections>
 		i = 0
 		begin
 		if ((<connections> [<i>].user_id [0]) = (<user_id> [0]) && (<connections> [<i>].user_id [1]) = (<user_id> [1]))
@@ -2137,7 +2137,7 @@ script ui_band_mode_create_menu_net_remote_root
 		add_gamertag_to_band_lobby index = <index> name = <name> menu = <menu>
 	else
 		get_savegame_from_controller controller = ($primary_controller)
-		getplayerinfo (<index> + 1) character_id
+		GetPlayerInfo (<index> + 1) character_id
 		get_musician_profile_struct_by_id id = <character_id> savegame = <savegame>
 		if is_current_state_band_mode
 			cas_queue_add_request appearance = (<profile_struct>.appearance) player = (<index> + 1)
@@ -2146,11 +2146,11 @@ script ui_band_mode_create_menu_net_remote_root
 			{focus retail_menu_focus}
 			{unfocus retail_menu_unfocus}
 		]
-		text = qs(0x138adb74)
+		text = qs("Changing Settings")
 	endif
-	createscreenelement {
-		type = textblockelement
-		parent = <objid>
+	CreateScreenElement {
+		type = TextBlockElement
+		parent = <ObjID>
 		text = <text>
 		font = fontgrid_text_a6
 		dims = (200.0, 0.0)
@@ -2164,81 +2164,81 @@ script ui_band_mode_create_menu_net_remote_root
 endscript
 
 script ui_band_mode_create_menu_net_local_join 
-	printf \{qs(0xe24deabe)}
-	obj_getid
-	gettags
+	printf \{qs("\L--- ui_band_mode_create_menu_net_local_join ---")}
+	Obj_GetID
+	GetTags
 	change \{rich_presence_context = presence_gigboard_and_setlist}
-	if ($net_band_mode_menu = host)
-		se_getparentid
-		getsingletag \{marked_in}
+	if ($net_band_mode_menu = HOST)
+		SE_GetParentId
+		GetSingleTag \{marked_in}
 		if (<marked_in> = 0)
-			myinterfaceelement :gettags
-			if iswinport
+			MyInterfaceElement :GetTags
+			if IsWinPort
 				get_player_num_from_controller controller_index = <controller>
-				if isguitarcontroller controller = <controller>
-					setplayerinfo <player_num> part = guitar
-					settags \{controller_instrument = guitar}
-					myinterfaceelement :settags {current_guitar = (<current_guitar> + 1)}
-				elseif isdrumcontroller controller = <controller>
-					setplayerinfo <player_num> part = drum
-					settags \{controller_instrument = drum}
-					myinterfaceelement :settags {current_drum = (<current_drum> + 1)}
-				elseif 0x1c708d82 controller = <controller>
-					if ismicrophonepluggedin
-						setplayerinfo <player_num> part = vocals
-						change \{0xf9695deb = 4}
-						settags \{controller_instrument = mic}
-						myinterfaceelement :settags {current_mic = (<current_mic> + 1)}
+				if IsGuitarController controller = <controller>
+					SetPlayerInfo <player_num> part = guitar
+					SetTags \{controller_instrument = guitar}
+					MyInterfaceElement :SetTags {current_guitar = (<current_guitar> + 1)}
+				elseif IsDrumController controller = <controller>
+					SetPlayerInfo <player_num> part = drum
+					SetTags \{controller_instrument = drum}
+					MyInterfaceElement :SetTags {current_drum = (<current_drum> + 1)}
+				elseif WinPortIsKeyboardController controller = <controller>
+					if IsMicrophonePluggedIn
+						SetPlayerInfo <player_num> part = Vocals
+						change \{winport_keyboard_instrument = 4}
+						SetTags \{controller_instrument = mic}
+						MyInterfaceElement :SetTags {current_mic = (<current_mic> + 1)}
 					else
-						setplayerinfo <player_num> part = guitar
-						change \{0xf9695deb = 1}
-						settags \{controller_instrument = guitar}
-						myinterfaceelement :settags {current_guitar = (<current_guitar> + 1)}
+						SetPlayerInfo <player_num> part = guitar
+						change \{winport_keyboard_instrument = 1}
+						SetTags \{controller_instrument = guitar}
+						MyInterfaceElement :SetTags {current_guitar = (<current_guitar> + 1)}
 					endif
 				endif
 			else
-				if isguitarcontroller controller = <controller>
-					settags \{controller_instrument = guitar}
-					myinterfaceelement :settags {current_guitar = (<current_guitar> + 1)}
-				elseif isdrumcontroller controller = <controller>
-					settags \{controller_instrument = drum}
-					myinterfaceelement :settags {current_drum = (<current_drum> + 1)}
+				if IsGuitarController controller = <controller>
+					SetTags \{controller_instrument = guitar}
+					MyInterfaceElement :SetTags {current_guitar = (<current_guitar> + 1)}
+				elseif IsDrumController controller = <controller>
+					SetTags \{controller_instrument = drum}
+					MyInterfaceElement :SetTags {current_drum = (<current_drum> + 1)}
 				elseif (($allow_controller_for_all_instruments) = 0)
-					settags \{controller_instrument = mic}
-					myinterfaceelement :settags {current_mic = (<current_mic> + 1)}
+					SetTags \{controller_instrument = mic}
+					MyInterfaceElement :SetTags {current_mic = (<current_mic> + 1)}
 				endif
 			endif
-			settags \{marked_in = 1}
-			netsessionfunc func = get_user_id params = {controller_index = <controller>}
-			settags user_id = <user_id>
+			SetTags \{marked_in = 1}
+			NetSessionFunc func = get_user_id params = {controller_index = <controller>}
+			SetTags user_id = <user_id>
 		endif
 	endif
 	if ($net_band_mode_menu = invite)
 		get_player_num_from_controller controller_index = <controller>
 		ui_band_mode_show_character player = <player_num>
 	endif
-	myinterfaceelement :getsingletag \{descs}
-	netsessionfunc func = get_user_id params = {controller_index = <controller>}
-	if NOT iswinport
-		if isxenon
-			(<descs> [<index>]) :obj_spawnscriptlater update_headset_status params = {obj_id = (<descs> [<index>]) uid = <user_id>}
+	MyInterfaceElement :GetSingleTag \{descs}
+	NetSessionFunc func = get_user_id params = {controller_index = <controller>}
+	if NOT IsWinPort
+		if isXenon
+			(<descs> [<index>]) :Obj_SpawnScriptLater update_headset_status params = {obj_id = (<descs> [<index>]) uid = <user_id>}
 		endif
 	endif
-	if (($net_band_mode_menu = host) || ($net_band_mode_menu = invite))
-		if isxenon
-			invites_text = qs(0xf41fb4ee)
+	if (($net_band_mode_menu = HOST) || ($net_band_mode_menu = invite))
+		if isXenon
+			invites_text = qs("FRIENDS")
 			params = {root = friends}
 		else
-			invites_text = qs(0x306229d7)
+			invites_text = qs("INVITES")
 			params = {friends = invite}
 		endif
-		if NOT iswinport
-			createscreenelement {
-				type = textblockelement
+		if NOT IsWinPort
+			CreateScreenElement {
+				type = TextBlockElement
 				fit_width = `scale each line if larger`
 				fit_height = `scale down if larger`
 				dims = (200.0, 40.0)
-				parent = <objid>
+				parent = <ObjID>
 				text = <invites_text>
 				font = fontgrid_text_a6
 				rgba = ($menu_unfocus_color)
@@ -2253,14 +2253,14 @@ script ui_band_mode_create_menu_net_local_join
 			}
 		endif
 	endif
-	if isxenon
-		createscreenelement {
-			type = textblockelement
+	if isXenon
+		CreateScreenElement {
+			type = TextBlockElement
 			fit_width = `scale each line if larger`
 			fit_height = `scale down if larger`
 			dims = (200.0, 40.0)
-			parent = <objid>
-			text = qs(0x05dd2fa3)
+			parent = <ObjID>
+			text = qs("BAND MEMBERS")
 			font = fontgrid_text_a6
 			rgba = ($menu_unfocus_color)
 			event_handlers = [
@@ -2274,13 +2274,13 @@ script ui_band_mode_create_menu_net_local_join
 		}
 	endif
 	get_player_num_from_controller controller_index = <controller>
-	createscreenelement {
-		type = textblockelement
+	CreateScreenElement {
+		type = TextBlockElement
 		fit_width = `scale each line if larger`
 		fit_height = `scale down if larger`
 		dims = (200.0, 40.0)
-		parent = <objid>
-		text = qs(0x095895d6)
+		parent = <ObjID>
+		text = qs("RANDOM ROCKER")
 		font = fontgrid_text_a6
 		rgba = ($menu_unfocus_color)
 		event_handlers = [
@@ -2292,13 +2292,13 @@ script ui_band_mode_create_menu_net_local_join
 		just = [center bottom]
 		internal_just = [center center]
 	}
-	createscreenelement {
-		type = textblockelement
+	CreateScreenElement {
+		type = TextBlockElement
 		fit_width = `scale each line if larger`
 		fit_height = `scale down if larger`
 		dims = (200.0, 40.0)
-		parent = <objid>
-		text = qs(0xebd11692)
+		parent = <ObjID>
+		text = qs("SELECT ROCKER")
 		font = fontgrid_text_a6
 		rgba = ($menu_unfocus_color)
 		event_handlers = [
@@ -2310,23 +2310,23 @@ script ui_band_mode_create_menu_net_local_join
 		just = [center bottom]
 		internal_just = [center center]
 	}
-	if iswinport
-		if 0x1c708d82 controller = <controller>
-			if ismicrophonepluggedin
-				change \{0x026fef04 = 1}
-				createscreenelement {
-					type = textblockelement
+	if IsWinPort
+		if WinPortIsKeyboardController controller = <controller>
+			if IsMicrophonePluggedIn
+				change \{winport_force_career_band_vocals = 1}
+				CreateScreenElement {
+					type = TextBlockElement
 					fit_width = `scale each line if larger`
 					fit_height = `scale down if larger`
 					dims = (200.0, 40.0)
-					parent = <objid>
+					parent = <ObjID>
 					text = qs(0xfe21f453)
 					font = fontgrid_text_a6
 					rgba = [73 64 53 255]
 					event_handlers = [
 						{focus retail_menu_focus}
 						{unfocus retail_menu_unfocus}
-						{pad_choose 0x68bf6c8c params = {controller = <controller>}}
+						{pad_choose ui_band_mode_toggle_next_instrument params = {controller = <controller>}}
 					]
 					not_focusable
 					internal_scale = 0.4
@@ -2334,19 +2334,19 @@ script ui_band_mode_create_menu_net_local_join
 					internal_just = [center center]
 				}
 			else
-				createscreenelement {
-					type = textblockelement
+				CreateScreenElement {
+					type = TextBlockElement
 					fit_width = `scale each line if larger`
 					fit_height = `scale down if larger`
 					dims = (200.0, 40.0)
-					parent = <objid>
+					parent = <ObjID>
 					text = qs(0xfe21f453)
 					font = fontgrid_text_a6
 					rgba = ($menu_unfocus_color)
 					event_handlers = [
 						{focus retail_menu_focus}
 						{unfocus retail_menu_unfocus}
-						{pad_choose 0x68bf6c8c params = {controller = <controller>}}
+						{pad_choose ui_band_mode_toggle_next_instrument params = {controller = <controller>}}
 					]
 					internal_scale = 0.4
 					just = [center bottom]
@@ -2355,13 +2355,13 @@ script ui_band_mode_create_menu_net_local_join
 			endif
 		endif
 	endif
-	createscreenelement {
-		type = textblockelement
+	CreateScreenElement {
+		type = TextBlockElement
 		fit_width = `scale each line if larger`
 		fit_height = `scale down if larger`
 		dims = (160.0, 40.0)
-		parent = <objid>
-		text = qs(0x7be2fdcb)
+		parent = <ObjID>
+		text = qs("READY")
 		font = fontgrid_text_a6
 		rgba = ($menu_unfocus_color)
 		event_handlers = [
@@ -2373,7 +2373,7 @@ script ui_band_mode_create_menu_net_local_join
 		just = [center bottom]
 		internal_just = [center center]
 	}
-	if iswinport
+	if IsWinPort
 		get_controller_part controller = <controller>
 		controller_type = <controller_part>
 	else
@@ -2381,24 +2381,24 @@ script ui_band_mode_create_menu_net_local_join
 	endif
 	if (<controller_type> = controller)
 		if controller_has_headset controller = <controller>
-			controller_type = vocals
+			controller_type = Vocals
 		endif
 	endif
-	settags instrument = <controller_type>
+	SetTags instrument = <controller_type>
 	return instrument = <controller_type>
 endscript
 
 script ui_band_mode_create_menu_net_local_root 
-	obj_getid
-	se_getparentid
-	<parent_id> :se_getparentid
-	gettags
-	myinterfaceelement :gettags
-	getsingletag \{index}
+	Obj_GetID
+	SE_GetParentId
+	<parent_id> :SE_GetParentId
+	GetTags
+	MyInterfaceElement :GetTags
+	GetSingleTag \{index}
 	change \{rich_presence_context = presence_gigboard_and_setlist}
 	get_player_num_from_controller controller_index = <controller>
 	ui_band_mode_show_character player = <player_num>
-	if scriptisrunning \{net_ui_band_mode_countdown_to_gig}
+	if ScriptIsRunning \{net_ui_band_mode_countdown_to_gig}
 		countdown_active = 1
 	else
 		countdown_active = 0
@@ -2406,37 +2406,37 @@ script ui_band_mode_create_menu_net_local_root
 	current_desc = (<descs> [<index>])
 	switch <instrument>
 		case guitar
-		<current_desc> :se_setprops instrument_alpha = 1.0 instrument_texture = logo_guitar
-		case bass
-		<current_desc> :se_setprops instrument_alpha = 1.0 instrument_texture = logo_bass
+		<current_desc> :SE_SetProps instrument_alpha = 1.0 instrument_texture = logo_guitar
+		case Bass
+		<current_desc> :SE_SetProps instrument_alpha = 1.0 instrument_texture = logo_bass
 		case drum
-		<current_desc> :se_setprops instrument_alpha = 1.0 instrument_texture = logo_drum
-		case vocals
-		<current_desc> :se_setprops instrument_alpha = 1.0 instrument_texture = logo_vocal
+		<current_desc> :SE_SetProps instrument_alpha = 1.0 instrument_texture = logo_drum
+		case Vocals
+		<current_desc> :SE_SetProps instrument_alpha = 1.0 instrument_texture = logo_vocal
 		default
-		<current_desc> :se_setprops instrument_alpha = 0.0 instrument_texture = logo_guitar
+		<current_desc> :SE_SetProps instrument_alpha = 0.0 instrument_texture = logo_guitar
 	endswitch
-	if ((ishost) && (<band_leader> = 1) && (<countdown_active> = 0) && ($net_popup_active = 0))
-		gig_text = qs(0xdd815a67)
+	if ((IsHost) && (<band_leader> = 1) && (<countdown_active> = 0) && ($net_popup_active = 0))
+		gig_text = qs("SELECT GIG")
 		event_handlers = [
 			{focus retail_menu_focus}
 			{unfocus retail_menu_unfocus}
 			{pad_choose net_career_goto_gig_board}
 		]
 	else
-		gig_text = qs(0xaf4d8fe7)
+		gig_text = qs("VIEW GIGS")
 		event_handlers = [
 			{focus retail_menu_focus}
 			{unfocus retail_menu_unfocus}
 			{pad_choose ui_band_mode_choose params = {root = gigs}}
 		]
 	endif
-	createscreenelement {
-		type = textblockelement
+	CreateScreenElement {
+		type = TextBlockElement
 		fit_width = `scale each line if larger`
 		fit_height = `scale down if larger`
 		dims = (200.0, 40.0)
-		parent = <objid>
+		parent = <ObjID>
 		text = <gig_text>
 		font = fontgrid_text_a6
 		rgba = ($menu_unfocus_color)
@@ -2445,14 +2445,14 @@ script ui_band_mode_create_menu_net_local_root
 		just = [center bottom]
 		internal_just = [center center]
 	}
-	if isxenon
-		createscreenelement {
-			type = textblockelement
+	if isXenon
+		CreateScreenElement {
+			type = TextBlockElement
 			fit_width = `scale each line if larger`
 			fit_height = `scale down if larger`
 			dims = (200.0, 40.0)
-			parent = <objid>
-			text = qs(0x05dd2fa3)
+			parent = <ObjID>
+			text = qs("BAND MEMBERS")
 			font = fontgrid_text_a6
 			rgba = ($menu_unfocus_color)
 			event_handlers = [
@@ -2465,14 +2465,14 @@ script ui_band_mode_create_menu_net_local_root
 			internal_just = [center center]
 		}
 	endif
-	if NOT (($0x026fef04 = 1) || (<instrument> = drum))
-		createscreenelement {
-			type = textblockelement
+	if NOT (($winport_force_career_band_vocals = 1) || (<instrument> = drum))
+		CreateScreenElement {
+			type = TextBlockElement
 			fit_width = `scale each line if larger`
 			fit_height = `scale down if larger`
 			dims = (200.0, 40.0)
-			parent = <objid>
-			text = qs(0x8694014b)
+			parent = <ObjID>
+			text = qs("INSTRUMENT")
 			font = fontgrid_text_a6
 			rgba = ($menu_unfocus_color)
 			event_handlers = [
@@ -2485,14 +2485,14 @@ script ui_band_mode_create_menu_net_local_root
 			internal_just = [center center]
 		}
 	endif
-	if (<instrument> = vocals)
-		createscreenelement {
-			type = textblockelement
+	if (<instrument> = Vocals)
+		CreateScreenElement {
+			type = TextBlockElement
 			fit_width = `scale each line if larger`
 			fit_height = `scale down if larger`
 			dims = (200.0, 40.0)
-			parent = <objid>
-			text = qs(0xaedf49cb)
+			parent = <ObjID>
+			text = qs("VOCAL VIEW")
 			font = fontgrid_text_a6
 			rgba = ($menu_unfocus_color)
 			event_handlers = [
@@ -2505,13 +2505,13 @@ script ui_band_mode_create_menu_net_local_root
 			internal_just = [center center]
 		}
 	else
-		createscreenelement {
-			type = textblockelement
+		CreateScreenElement {
+			type = TextBlockElement
 			fit_width = `scale each line if larger`
 			fit_height = `scale down if larger`
 			dims = (200.0, 40.0)
-			parent = <objid>
-			text = qs(0x2e9b1b43)
+			parent = <ObjID>
+			text = qs("LEFTY FLIP")
 			font = fontgrid_text_a6
 			rgba = ($menu_unfocus_color)
 			event_handlers = [
@@ -2524,13 +2524,13 @@ script ui_band_mode_create_menu_net_local_root
 			internal_just = [center center]
 		}
 	endif
-	createscreenelement {
-		type = textblockelement
+	CreateScreenElement {
+		type = TextBlockElement
 		fit_width = `scale each line if larger`
 		fit_height = `scale down if larger`
 		dims = (200.0, 40.0)
-		parent = <objid>
-		text = qs(0x9f281c76)
+		parent = <ObjID>
+		text = qs("DIFFICULTY")
 		font = fontgrid_text_a6
 		rgba = ($menu_unfocus_color)
 		event_handlers = [
@@ -2542,13 +2542,13 @@ script ui_band_mode_create_menu_net_local_root
 		just = [center bottom]
 		internal_just = [center center]
 	}
-	createscreenelement {
-		type = textblockelement
+	CreateScreenElement {
+		type = TextBlockElement
 		fit_width = `scale each line if larger`
 		fit_height = `scale down if larger`
 		dims = (200.0, 40.0)
-		parent = <objid>
-		text = qs(0x7be2fdcb)
+		parent = <ObjID>
+		text = qs("READY")
 		font = fontgrid_text_a6
 		rgba = ($menu_unfocus_color)
 		event_handlers = [
@@ -2560,29 +2560,29 @@ script ui_band_mode_create_menu_net_local_root
 		just = [center bottom]
 		internal_just = [center center]
 	}
-	if ((ishost) && ($primary_controller = <controller>))
-		myinterfaceelement :gettags
+	if ((IsHost) && ($primary_controller = <controller>))
+		MyInterfaceElement :GetTags
 		if (<net_gig_ready> = 0)
-			<id> :se_setprops not_focusable rgba = [50 44 35 255]
+			<id> :SE_SetProps not_focusable rgba = [50 44 35 255]
 		endif
 	endif
 endscript
 
 script ui_band_mode_create_friends_list 
-	gettags
+	GetTags
 	generic_menu_pad_choose_sound
-	netsessionfunc obj = friends func = begin_retrieve_friends_list params = {callback = career_friendslist_callback device_num = <controller> callback_params = {menu_index = <index>}}
+	NetSessionFunc obj = friends func = begin_retrieve_friends_list params = {callback = career_friendslist_callback device_num = <controller> callback_params = {menu_index = <index>}}
 endscript
 
 script ui_band_mode_create_invite 
-	obj_getid
-	gettags
-	createscreenelement {
-		type = textblockelement
+	Obj_GetID
+	GetTags
+	CreateScreenElement {
+		type = TextBlockElement
 		fit_width = `scale each line if larger`
 		fit_height = `scale down if larger`
 		dims = (200.0, 30.0)
-		parent = <objid>
+		parent = <ObjID>
 		text = <friend_name>
 		font = fontgrid_text_a6
 		rgba = [200 0 0 255]
@@ -2595,8 +2595,8 @@ script ui_band_mode_create_invite
 		just = [center bottom]
 		internal_just = [center top]
 	}
-	if NOT iswinport
-		if isxenon
+	if NOT IsWinPort
+		if isXenon
 			switch <friend_friendstate>
 				case online
 				status_texture = friendslist_online
@@ -2607,18 +2607,18 @@ script ui_band_mode_create_invite
 				case busy
 				status_texture = friendslist_busy
 			endswitch
-			createscreenelement {
-				type = spriteelement
-				parent = <objid>
+			CreateScreenElement {
+				type = SpriteElement
+				parent = <ObjID>
 				texture = <status_texture>
 				dims = (32.0, 32.0)
 				just = [center top]
 				not_focusable
 			}
-			createscreenelement {
-				type = textblockelement
-				parent = <objid>
-				text = qs(0xfcc51f45)
+			CreateScreenElement {
+				type = TextBlockElement
+				parent = <ObjID>
+				text = qs("VIEW GAMER CARD")
 				font = fontgrid_text_a6
 				fit_width = `scale each line if larger`
 				fit_height = `scale down if larger`
@@ -2636,19 +2636,19 @@ script ui_band_mode_create_invite
 			}
 		endif
 	endif
-	dont_show_invite_options = 0
-	if gotparam \{cant_invite}
-		if (1 = <cant_invite>)
-			<dont_show_invite_options> = 1
+	DONT_SHOW_INVITE_OPTIONS = 0
+	if GotParam \{CANT_INVITE}
+		if (1 = <CANT_INVITE>)
+			<DONT_SHOW_INVITE_OPTIONS> = 1
 		endif
 	endif
-	if NOT isps3
-		if (0 = <dont_show_invite_options>)
+	if NOT IsPs3
+		if (0 = <DONT_SHOW_INVITE_OPTIONS>)
 			if (<friend_sentfriendrequest> = true)
-				createscreenelement {
-					type = textblockelement
-					parent = <objid>
-					text = qs(0xda79f6f2)
+				CreateScreenElement {
+					type = TextBlockElement
+					parent = <ObjID>
+					text = qs("FRIEND REQUEST PENDING")
 					font = fontgrid_text_a6
 					fit_height = `scale down if larger`
 					dims = (200.0, 90.0)
@@ -2662,15 +2662,15 @@ script ui_band_mode_create_invite
 					just = [center bottom]
 					internal_just = [center center]
 				}
-				<objid> :setprops replace_handlers event_handlers = [
+				<ObjID> :SetProps replace_handlers event_handlers = [
 					{pad_up nullscript}
 					{pad_down nullscript}
 				]
 			else
-				createscreenelement {
-					type = textblockelement
-					parent = <objid>
-					text = qs(0xee572b68)
+				CreateScreenElement {
+					type = TextBlockElement
+					parent = <ObjID>
+					text = qs("INVITE AS GUITAR")
 					font = fontgrid_text_a6
 					fit_width = `scale each line if larger`
 					fit_height = `scale down if larger`
@@ -2686,10 +2686,10 @@ script ui_band_mode_create_invite
 					just = [center bottom]
 					internal_just = [center center]
 				}
-				createscreenelement {
-					type = textblockelement
-					parent = <objid>
-					text = qs(0x6268475a)
+				CreateScreenElement {
+					type = TextBlockElement
+					parent = <ObjID>
+					text = qs("INVITE AS DRUM")
 					font = fontgrid_text_a6
 					fit_width = `scale each line if larger`
 					fit_height = `scale down if larger`
@@ -2705,10 +2705,10 @@ script ui_band_mode_create_invite
 					just = [center bottom]
 					internal_just = [center center]
 				}
-				createscreenelement {
-					type = textblockelement
-					parent = <objid>
-					text = qs(0x60ccfda6)
+				CreateScreenElement {
+					type = TextBlockElement
+					parent = <ObjID>
+					text = qs("INVITE AS VOCALS")
 					font = fontgrid_text_a6
 					fit_width = `scale each line if larger`
 					fit_height = `scale down if larger`
@@ -2727,10 +2727,10 @@ script ui_band_mode_create_invite
 			endif
 		endif
 	else
-		createscreenelement {
-			type = textblockelement
-			parent = <objid>
-			text = qs(0xee572b68)
+		CreateScreenElement {
+			type = TextBlockElement
+			parent = <ObjID>
+			text = qs("INVITE AS GUITAR")
 			font = fontgrid_text_a6
 			fit_width = `scale each line if larger`
 			fit_height = `scale down if larger`
@@ -2746,10 +2746,10 @@ script ui_band_mode_create_invite
 			just = [center bottom]
 			internal_just = [center center]
 		}
-		createscreenelement {
-			type = textblockelement
-			parent = <objid>
-			text = qs(0x6268475a)
+		CreateScreenElement {
+			type = TextBlockElement
+			parent = <ObjID>
+			text = qs("INVITE AS DRUM")
 			font = fontgrid_text_a6
 			fit_width = `scale each line if larger`
 			fit_height = `scale down if larger`
@@ -2765,10 +2765,10 @@ script ui_band_mode_create_invite
 			just = [center bottom]
 			internal_just = [center center]
 		}
-		createscreenelement {
-			type = textblockelement
-			parent = <objid>
-			text = qs(0x60ccfda6)
+		CreateScreenElement {
+			type = TextBlockElement
+			parent = <ObjID>
+			text = qs("INVITE AS VOCALS")
 			font = fontgrid_text_a6
 			fit_width = `scale each line if larger`
 			fit_height = `scale down if larger`
@@ -2785,34 +2785,34 @@ script ui_band_mode_create_invite
 			internal_just = [center center]
 		}
 	endif
-	removetags \{[
+	RemoveTags \{[
 			friend_name
 			friend_id
 			friend_sentfriendrequest
 			friend_sentinvite
 			friend_friendstate
-			cant_invite
+			CANT_INVITE
 		]}
 endscript
 
 script ui_band_mode_create_gigs 
-	obj_getid
-	se_getparentid
-	<parent_id> :se_getparentid
-	gettags
+	Obj_GetID
+	SE_GetParentId
+	<parent_id> :SE_GetParentId
+	GetTags
 	event_handlers = [
 		{focus ui_band_mode_create_gigs_focus}
 		{unfocus ui_band_mode_create_gigs_unfocus}
 	]
-	createscreenelement {
-		type = containerelement
-		parent = <objid>
+	CreateScreenElement {
+		type = ContainerElement
+		parent = <ObjID>
 		just = [center center]
 		not_focusable
 		dims = (128.0, 32.0)
 	}
-	createscreenelement {
-		type = spriteelement
+	CreateScreenElement {
+		type = SpriteElement
 		parent = <id>
 		texture = name_arrow_up
 		just = [center bottom]
@@ -2821,27 +2821,27 @@ script ui_band_mode_create_gigs
 		scale = 1.15
 	}
 	i = ($current_gig_number)
-	if ((<i> < 1) || (<i> > (($gh4_career_band_songs.num_tiers) -2)))
+	if ((<i> < 1) || (<i> > (($GH4_Career_Band_Songs.num_tiers) -2)))
 		i = 1
 	endif
-	formattext checksumname = tier 'tier%i' i = <i>
-	format_globaltag_gigname setlist_prefix = ($gh4_career_band_songs.prefix) gignum = <i>
+	FormatText checksumname = tier 'tier%i' i = <i>
+	format_globaltag_gigname setlist_prefix = ($GH4_Career_Band_Songs.prefix) gignum = <i>
 	get_savegame_from_controller controller = <controller>
-	getglobaltags <gig_name> savegame = <savegame>
+	GetGlobalTags <gig_name> savegame = <savegame>
 	if (<i> < 10)
-		formattext checksumname = texture 'gig_poster_small_0%i' i = <i>
+		FormatText checksumname = texture 'gig_poster_small_0%i' i = <i>
 	else
-		formattext checksumname = texture 'gig_poster_small_%i' i = <i>
+		FormatText checksumname = texture 'gig_poster_small_%i' i = <i>
 	endif
-	if NOT gotparam \{first_texture}
+	if NOT GotParam \{first_texture}
 		first_texture = <texture>
 		if (<completed> = 1 || <completed> = 2)
 			first_complete = 1
 		endif
 	endif
-	createscreenelement {
-		type = containerelement
-		parent = <objid>
+	CreateScreenElement {
+		type = ContainerElement
+		parent = <ObjID>
 		dims = (100.0, 125.0)
 		event_handlers = <event_handlers>
 		just = [center center]
@@ -2850,8 +2850,8 @@ script ui_band_mode_create_gigs
 			controller = <controller>
 		}
 	}
-	createscreenelement {
-		type = spriteelement
+	CreateScreenElement {
+		type = SpriteElement
 		parent = <id>
 		texture = <texture>
 		dims = (100.0, 125.0)
@@ -2863,24 +2863,24 @@ script ui_band_mode_create_gigs
 	if (<completed> = 1 || <completed> = 2)
 		diff_alpha = 1
 	endif
-	createscreenelement {
-		type = spriteelement
+	CreateScreenElement {
+		type = SpriteElement
 		parent = <id>
-		texture = gig_poster_checkmark_128
+		texture = Gig_poster_checkmark_128
 		just = [center center]
 		pos_anchor = [center center]
 		pos = (0.0, 0.0)
 		alpha = <diff_alpha>
 	}
-	createscreenelement {
-		type = containerelement
-		parent = <objid>
+	CreateScreenElement {
+		type = ContainerElement
+		parent = <ObjID>
 		just = [center center]
 		not_focusable
 		dims = (128.0, 32.0)
 	}
-	createscreenelement {
-		type = spriteelement
+	CreateScreenElement {
+		type = SpriteElement
 		parent = <id>
 		texture = name_arrow_dn
 		just = [center top]
@@ -2888,71 +2888,71 @@ script ui_band_mode_create_gigs
 		scale = 1.15
 		pos = (0.0, 0.0)
 	}
-	<objid> :setprops event_handlers = [
+	<ObjID> :SetProps event_handlers = [
 		{pad_up ui_band_mode_create_gigs_scroll}
 		{pad_down ui_band_mode_create_gigs_scroll params = {down}}
 	]
-	myinterfaceelement :gettags
-	if gotparam \{descs}
+	MyInterfaceElement :GetTags
+	if GotParam \{descs}
 		current_desc = (<descs> [<index>])
 		ui_band_mode_hide_arrows id = <current_desc>
 	endif
 endscript
 
 script ui_band_mode_create_gigs_scroll 
-	setspawninstancelimits \{max = 1
+	SetSpawnInstanceLimits \{max = 1
 		management = ignore_spawn_request}
-	gettags
-	obj_getid
-	resolvescreenelementid id = {<objid> child = {1 child = 0}}
-	<resolved_id> :gettags
+	GetTags
+	Obj_GetID
+	ResolveScreenElementId id = {<ObjID> child = {1 child = 0}}
+	<resolved_id> :GetTags
 	if (<index> < 1)
 		index = 1
-	elseif (<index> > (($gh4_career_band_songs.num_tiers) -2))
-		index = (($gh4_career_band_songs.num_tiers) -2)
+	elseif (<index> > (($GH4_Career_Band_Songs.num_tiers) -2))
+		index = (($GH4_Career_Band_Songs.num_tiers) -2)
 	endif
-	if gotparam \{down}
+	if GotParam \{down}
 		i = (<index> + 1)
-		runscriptonscreenelement id = {<objid> child = {2 child = 0}} ui_band_mode_create_gigs_blink_arrow
+		RunScriptOnScreenElement id = {<ObjID> child = {2 child = 0}} ui_band_mode_create_gigs_blink_arrow
 	else
 		i = (<index> - 1)
-		runscriptonscreenelement id = {<objid> child = {0 child = 0}} ui_band_mode_create_gigs_blink_arrow
+		RunScriptOnScreenElement id = {<ObjID> child = {0 child = 0}} ui_band_mode_create_gigs_blink_arrow
 	endif
 	begin
 	if (<i> < 1)
-		i = (($gh4_career_band_songs.num_tiers) -2)
-	elseif (<i> > (($gh4_career_band_songs.num_tiers) -2))
+		i = (($GH4_Career_Band_Songs.num_tiers) -2)
+	elseif (<i> > (($GH4_Career_Band_Songs.num_tiers) -2))
 		i = 1
 	endif
 	if (<i> = <index>)
 		break
 	endif
-	formattext checksumname = tier 'tier%i' i = <i>
-	format_globaltag_gigname setlist_prefix = ($gh4_career_band_songs.prefix) gignum = <i>
+	FormatText checksumname = tier 'tier%i' i = <i>
+	format_globaltag_gigname setlist_prefix = ($GH4_Career_Band_Songs.prefix) gignum = <i>
 	get_savegame_from_controller controller = <controller>
-	getglobaltags <gig_name> savegame = <savegame>
+	GetGlobalTags <gig_name> savegame = <savegame>
 	if (<unlocked> = 1)
 		if (<i> < 10)
-			formattext checksumname = texture 'gig_poster_small_0%i' i = <i>
+			FormatText checksumname = texture 'gig_poster_small_0%i' i = <i>
 		else
-			formattext checksumname = texture 'gig_poster_small_%i' i = <i>
+			FormatText checksumname = texture 'gig_poster_small_%i' i = <i>
 		endif
-		<resolved_id> :se_setprops texture = <texture>
+		<resolved_id> :SE_SetProps texture = <texture>
 		if (<completed> = 1 || <completed> = 2)
-			setscreenelementprops id = {<resolved_id> child = 0} alpha = 1.0
+			SetScreenElementProps id = {<resolved_id> child = 0} alpha = 1.0
 		else
-			setscreenelementprops id = {<resolved_id> child = 0} alpha = 0.0
+			SetScreenElementProps id = {<resolved_id> child = 0} alpha = 0.0
 		endif
 		break
 	endif
-	if gotparam \{down}
+	if GotParam \{down}
 		i = (<i> + 1)
 	else
 		i = (<i> - 1)
 	endif
 	repeat
-	<resolved_id> :settags index = <i>
-	if gotparam \{down}
+	<resolved_id> :SetTags index = <i>
+	if GotParam \{down}
 		<resolved_id> :obj_spawnscript ui_band_mode_create_gigs_move_poster params = {down}
 	else
 		i = (<index> + 1)
@@ -2961,41 +2961,41 @@ script ui_band_mode_create_gigs_scroll
 endscript
 
 script ui_band_mode_create_gigs_choose 
-	setspawninstancelimits \{max = 1
+	SetSpawnInstanceLimits \{max = 1
 		management = ignore_spawn_request}
-	gettags
-	band_mode_menu :settags \{net_gig_ready = 1}
+	GetTags
+	band_mode_menu :SetTags \{net_gig_ready = 1}
 	generic_menu_pad_choose_sound
-	change \{current_progression_flag = career_band}
+	change \{current_progression_flag = Career_Band}
 	change current_gig_number = <index>
 	ui_band_mode_choose \{gigs}
 endscript
 
 script ui_band_mode_create_gigs_blink_arrow 
-	setspawninstancelimits \{max = 1
+	SetSpawnInstanceLimits \{max = 1
 		management = kill_oldest}
-	se_setprops \{scale = 1.3499999
+	SE_SetProps \{scale = 1.3499999
 		time = 0.1
 		motion = ease_in}
-	se_waitprops
-	se_setprops \{scale = 1.15
+	SE_WaitProps
+	SE_SetProps \{scale = 1.15
 		time = 0.1
 		motion = ease_out}
 endscript
 
 script ui_band_mode_create_gigs_move_poster 
-	setspawninstancelimits \{max = 1
+	SetSpawnInstanceLimits \{max = 1
 		management = kill_oldest}
-	se_setprops \{alpha = 0.0}
-	if gotparam \{down}
-		se_setprops \{pos = (0.0, -10.0)}
-		se_setprops \{alpha = 1.0
+	SE_SetProps \{alpha = 0.0}
+	if GotParam \{down}
+		SE_SetProps \{pos = (0.0, -10.0)}
+		SE_SetProps \{alpha = 1.0
 			pos = (0.0, 0.0)
 			time = 0.1
 			motion = ease_out}
 	else
-		se_setprops \{pos = (0.0, 10.0)}
-		se_setprops \{alpha = 1.0
+		SE_SetProps \{pos = (0.0, 10.0)}
+		SE_SetProps \{alpha = 1.0
 			pos = (0.0, 0.0)
 			time = 0.1
 			motion = ease_out}
@@ -3009,23 +3009,23 @@ script ui_band_mode_create_gigs_unfocus
 endscript
 
 script ui_band_mode_create_menu_gamer_cards 
-	obj_getid
+	Obj_GetID
 	if ($is_network_game = 1)
 		if NOT ($net_band_mode_menu = lobby)
-			netsessionfunc \{obj = party
+			NetSessionFunc \{obj = party
 				func = get_party_members}
-			getarraysize <connections>
+			GetArraySize <connections>
 			i = 0
 			begin
-			createscreenelement {
-				type = containerelement
-				parent = <objid>
+			CreateScreenElement {
+				type = ContainerElement
+				parent = <ObjID>
 				dims = (200.0, 40.0)
 				just = [center bottom]
 			}
 			container_id = <id>
-			createscreenelement {
-				type = textblockelement
+			CreateScreenElement {
+				type = TextBlockElement
 				fit_width = `expand dims`
 				fit_height = `scale down if larger`
 				parent = <id>
@@ -3045,16 +3045,16 @@ script ui_band_mode_create_menu_gamer_cards
 				pos_anchor = [left bottom]
 				pos = (0.0, 0.0)
 			}
-			getscreenelementdims id = <id>
+			GetScreenElementDims id = <id>
 			if NOT (<width> > 200)
-				<id> :se_setprops {
+				<id> :SE_SetProps {
 					just = [center bottom]
 					internal_just = [center center]
 					pos_anchor = [center bottom]
 					pos = (0.0, 0.0)
 				}
 			endif
-			<container_id> :se_setprops {
+			<container_id> :SE_SetProps {
 				focusable_child = <id>
 				event_handlers = [
 					{pad_choose menu_show_gamercard_from_netid params = {net_id = (<connections> [<i>].user_id)}}
@@ -3067,17 +3067,17 @@ script ui_band_mode_create_menu_gamer_cards
 			i = 0
 			begin
 			net_id = [0 0]
-			getplayerinfo (<i> + 1) net_id_first
-			getplayerinfo (<i> + 1) net_id_second
-			setarrayelement arrayname = net_id index = 0 newvalue = <net_id_first>
-			setarrayelement arrayname = net_id index = 1 newvalue = <net_id_second>
-			getplayerinfo (<i> + 1) gamertag
+			GetPlayerInfo (<i> + 1) net_id_first
+			GetPlayerInfo (<i> + 1) net_id_second
+			SetArrayElement ArrayName = net_id index = 0 newvalue = <net_id_first>
+			SetArrayElement ArrayName = net_id index = 1 newvalue = <net_id_second>
+			GetPlayerInfo (<i> + 1) gamertag
 			name = $<gamertag>
-			createscreenelement {
-				type = textblockelement
+			CreateScreenElement {
+				type = TextBlockElement
 				fit_width = `scale each line if larger`
 				fit_height = `scale down if larger`
-				parent = <objid>
+				parent = <ObjID>
 				text = <name>
 				font = fontgrid_text_a6
 				dims = (200.0, 40.0)
@@ -3096,22 +3096,22 @@ script ui_band_mode_create_menu_gamer_cards
 			repeat ($current_num_players)
 		endif
 	else
-		printf \{qs(0xb375e132)}
-		myinterfaceelement :gettags
-		getarraysize \{menus}
+		printf \{qs("\Lnot too sure if game side guys will use this")}
+		MyInterfaceElement :GetTags
+		GetArraySize \{menus}
 		i = 0
 		begin
 		curr_menu = (<menus> [<i>])
-		<curr_menu> :gettags
+		<curr_menu> :GetTags
 		if NOT (<menu> = join)
-			netsessionfunc obj = match func = get_gamertag params = {controller = <controller>}
-			netsessionfunc func = get_user_id params = {controller_index = <controller>}
-			if (<name> = qs(0x03ac90f0))
-				formattext textname = name qs(0x260b41e9) n = (<controller> + 1)
+			NetSessionFunc obj = match func = get_gamertag params = {controller = <controller>}
+			NetSessionFunc func = get_user_id params = {controller_index = <controller>}
+			if (<name> = qs("\L"))
+				FormatText TextName = name qs("Controller\_%n") n = (<controller> + 1)
 			endif
-			createscreenelement {
-				type = textblockelement
-				parent = <objid>
+			CreateScreenElement {
+				type = TextBlockElement
+				parent = <ObjID>
 				text = <name>
 				font = fontgrid_text_a6
 				dims = (200.0, 40.0)
@@ -3134,66 +3134,66 @@ script ui_band_mode_create_menu_gamer_cards
 endscript
 
 script ui_band_mode_show_gamertag 
-	if NOT gotparam \{device_num}
+	if NOT GotParam \{device_num}
 		return
 	endif
-	if islocallysignedin controller = <device_num>
-		if gotparam \{net_id}
-			netsessionfunc func = showgamercard params = {player_xuid = <net_id> controller_index = <device_num>}
+	if IsLocallySignedIn controller = <device_num>
+		if GotParam \{net_id}
+			NetSessionFunc func = showGamerCard params = {player_xuid = <net_id> controller_index = <device_num>}
 		endif
 	endif
 endscript
 
 script ui_band_mode_choose 
-	se_getparentid
+	SE_GetParentId
 	if (($is_network_game = 1) && ($net_band_mode_menu = lobby))
 		get_player_num_from_controller controller_index = <device_num>
-		myinterfaceelement :getsingletag \{menus}
-		if NOT isscreenelementinfocus id = (<menus> [(<player_num> - 1)])
+		MyInterfaceElement :GetSingleTag \{menus}
+		if NOT IsScreenElementInFocus id = (<menus> [(<player_num> - 1)])
 			return
 		endif
 	endif
-	if gotparam \{instrument}
-		setspawninstancelimits \{max = 1
+	if GotParam \{instrument}
+		SetSpawnInstanceLimits \{max = 1
 			management = ignore_spawn_request}
 		if ($is_network_game = 1)
-			<parent_id> :getsingletag controller
+			<parent_id> :GetSingleTag controller
 		else
 			get_player_num_from_controller controller_index = <device_num>
-			getplayerinfo <player_num> controller
+			GetPlayerInfo <player_num> controller
 		endif
 		ui_get_controller_parts_allowed controller = <controller>
-		if NOT structurecontains structure = <allowed> <instrument>
+		if NOT StructureContains Structure = <allowed> <instrument>
 			generic_event_choose state = uistate_select_instrument_warning data = {instrument = <instrument> controller = <controller>}
 			return
-		elseif getsingletag \{has_mic}
-			if ((<instrument> = vocals) && (<has_mic> = 0))
+		elseif GetSingleTag \{has_mic}
+			if ((<instrument> = Vocals) && (<has_mic> = 0))
 				generic_event_choose state = uistate_select_instrument_warning data = {instrument = <instrument> controller = <controller>}
 				return
 			endif
 		endif
-		if iswinport
-			if 0x1c708d82 controller = <controller>
+		if IsWinPort
+			if WinPortIsKeyboardController controller = <controller>
 				switch <instrument>
 					case guitar
-					case bass
-					change \{0xf9695deb = 1}
+					case Bass
+					change \{winport_keyboard_instrument = 1}
 					case drum
-					change \{0xf9695deb = 3}
-					case vocals
-					change \{0xf9695deb = 4}
+					change \{winport_keyboard_instrument = 3}
+					case Vocals
+					change \{winport_keyboard_instrument = 4}
 				endswitch
 			endif
 		endif
 		temp_instrument = <instrument>
-		myinterfaceelement :getsingletag \{menus}
-		getarraysize <menus>
-		<parent_id> :getsingletag index
+		MyInterfaceElement :GetSingleTag \{menus}
+		GetArraySize <menus>
+		<parent_id> :GetSingleTag index
 		i = 0
 		begin
 		if NOT (<i> = <index>)
 			curr_menu = (<menus> [<i>])
-			<curr_menu> :getsingletag instrument
+			<curr_menu> :GetSingleTag instrument
 			if NOT (<instrument> = none)
 				if ($game_mode = p2_faceoff || $game_mode = p2_pro_faceoff || ($game_mode = p2_battle))
 					if NOT (<instrument> = <temp_instrument>)
@@ -3211,226 +3211,226 @@ script ui_band_mode_choose
 		instrument = <temp_instrument>
 		switch <instrument>
 			case guitar
-			anim = guitar
+			Anim = guitar
 			ui_band_mode_choose_sound controller = <controller>
-			case bass
-			anim = bass
+			case Bass
+			Anim = Bass
 			ui_band_mode_choose_sound controller = <controller>
 			case drum
-			anim = drums
+			Anim = Drums
 			ui_band_mode_choose_sound controller = <controller>
-			case vocals
-			anim = vocals
+			case Vocals
+			Anim = Vocals
 			ui_band_mode_choose_sound controller = <controller>
 		endswitch
 		if ($is_network_game = 0)
 			hacky_fix_band_celebrity_character player = <player_num>
 		endif
 		if cas_player_has_character_object player = (<device_num> + 1)
-			band_playanim name = <character_object> anim = <anim> no_wait
+			Band_PlayAnim name = <character_object> Anim = <Anim> no_wait
 		endif
-		<parent_id> :settags {instrument = <instrument>}
+		<parent_id> :SetTags {instrument = <instrument>}
 		if ($is_network_game = 1)
-			<parent_id> :settags {menu = net_local_root}
+			<parent_id> :SetTags {menu = net_local_root}
 			get_player_num_from_controller controller_index = <device_num>
-			sendstructure callback = spawn_net_ui_band_mode_choose data_to_send = {instrument = <instrument> player_num = <player_num> spawn_script_now}
+			SendStructure callback = spawn_net_ui_band_mode_choose data_to_send = {instrument = <instrument> player_num = <player_num> spawn_script_now}
 		else
-			<parent_id> :settags {menu = lefty}
+			<parent_id> :SetTags {menu = lefty}
 		endif
-	elseif gotparam \{lefty}
+	elseif GotParam \{lefty}
 		if ($is_network_game = 1)
-			<parent_id> :settags {menu = net_local_root}
+			<parent_id> :SetTags {menu = net_local_root}
 		else
-			<parent_id> :settags {menu = difficulty}
+			<parent_id> :SetTags {menu = difficulty}
 		endif
 		get_player_num_from_controller controller_index = <device_num>
 		ui_band_mode_choose_sound instrument = `default` controller = <controller>
 		switch (<lefty>)
 			case standard
-			setplayerinfo <player_num> lefty_flip = 0
-			setplayerinfo <player_num> lefthanded_gems = 0
-			setplayerinfo <player_num> lefthanded_button_ups = 0
-			setplayerinfo <player_num> lefthanded_button_ups_flip_save = 0
-			setplayerinfo <player_num> lefthanded_gems_flip_save = 0
+			SetPlayerInfo <player_num> lefty_flip = 0
+			SetPlayerInfo <player_num> lefthanded_gems = 0
+			SetPlayerInfo <player_num> lefthanded_button_ups = 0
+			SetPlayerInfo <player_num> lefthanded_button_ups_flip_save = 0
+			SetPlayerInfo <player_num> lefthanded_gems_flip_save = 0
 			case lefty
-			setplayerinfo <player_num> lefty_flip = 1
-			setplayerinfo <player_num> lefthanded_gems = 1
-			setplayerinfo <player_num> lefthanded_button_ups = 1
-			setplayerinfo <player_num> lefthanded_button_ups_flip_save = 1
-			setplayerinfo <player_num> lefthanded_gems_flip_save = 1
+			SetPlayerInfo <player_num> lefty_flip = 1
+			SetPlayerInfo <player_num> lefthanded_gems = 1
+			SetPlayerInfo <player_num> lefthanded_button_ups = 1
+			SetPlayerInfo <player_num> lefthanded_button_ups_flip_save = 1
+			SetPlayerInfo <player_num> lefthanded_gems_flip_save = 1
 			default
 			<has_mic> = 0
 			if controller_has_headset controller = <device_num>
 				<has_mic> = 1
-			elseif ismicrophonepluggedin
+			elseif IsMicrophonePluggedIn
 				<has_mic> = 1
 			endif
 			if (<has_mic> = 0)
-				generic_event_choose state = uistate_select_instrument_warning data = {instrument = vocals controller = <device_num>}
+				generic_event_choose state = uistate_select_instrument_warning data = {instrument = Vocals controller = <device_num>}
 				return
 			endif
-			setplayerinfo <player_num> vocals_highway_view = <lefty>
+			SetPlayerInfo <player_num> vocals_highway_view = <lefty>
 		endswitch
-	elseif gotparam \{difficulty}
-		if <parent_id> :getsingletag instrument
-			if (<instrument> = vocals)
+	elseif GotParam \{difficulty}
+		if <parent_id> :GetSingleTag instrument
+			if (<instrument> = Vocals)
 				<has_mic> = 0
 				if controller_has_headset controller = <device_num>
 					<has_mic> = 1
-				elseif ismicrophonepluggedin
+				elseif IsMicrophonePluggedIn
 					<has_mic> = 1
 				endif
 				if (<has_mic> = 0)
-					generic_event_choose state = uistate_select_instrument_warning data = {instrument = vocals controller = <device_num>}
+					generic_event_choose state = uistate_select_instrument_warning data = {instrument = Vocals controller = <device_num>}
 					return
 				endif
 			endif
 		endif
-		<parent_id> :settags {difficulty = <difficulty>}
+		<parent_id> :SetTags {difficulty = <difficulty>}
 		ui_band_mode_choose_sound instrument = `default` controller = <controller>
-		setarrayelement arrayname = default_difficulty globalarray index = <device_num> newvalue = <difficulty>
+		SetArrayElement ArrayName = default_difficulty GlobalArray index = <device_num> newvalue = <difficulty>
 		if ($is_network_game = 1)
-			<parent_id> :settags {menu = net_local_root}
+			<parent_id> :SetTags {menu = net_local_root}
 			get_player_num_from_controller controller_index = <device_num>
-			sendstructure callback = spawn_net_ui_band_mode_choose data_to_send = {difficulty = <difficulty> player_num = <player_num> spawn_script_now}
+			SendStructure callback = spawn_net_ui_band_mode_choose data_to_send = {difficulty = <difficulty> player_num = <player_num> spawn_script_now}
 		else
-			<parent_id> :settags {menu = ready2}
-			myinterfaceelement :obj_spawnscript \{ui_band_difficulty_continue}
+			<parent_id> :SetTags {menu = ready2}
+			MyInterfaceElement :obj_spawnscript \{ui_band_difficulty_continue}
 		endif
-	elseif gotparam \{root}
+	elseif GotParam \{root}
 		if (<root> = instrument)
 			ui_band_mode_choose_sound instrument = `default` controller = <controller>
-			<parent_id> :settags {menu = instrument}
+			<parent_id> :SetTags {menu = instrument}
 			if ($is_network_game = 1)
-				<parent_id> :settags {instrument = none}
-				myinterfaceelement :settags \{net_instruments_ready = 0}
+				<parent_id> :SetTags {instrument = none}
+				MyInterfaceElement :SetTags \{net_instruments_ready = 0}
 				get_player_num_from_controller controller_index = <device_num>
-				sendstructure callback = spawn_net_ui_band_mode_choose data_to_send = {instrument = none player_num = <player_num> spawn_script_now}
+				SendStructure callback = spawn_net_ui_band_mode_choose data_to_send = {instrument = none player_num = <player_num> spawn_script_now}
 			endif
 		elseif (<root> = lefty)
 			ui_band_mode_choose_sound instrument = `default` controller = <controller>
-			<parent_id> :settags {menu = lefty}
+			<parent_id> :SetTags {menu = lefty}
 		elseif (<root> = difficulty)
 			ui_band_mode_choose_sound instrument = `default` controller = <controller>
-			<parent_id> :settags {menu = difficulty}
+			<parent_id> :SetTags {menu = difficulty}
 		elseif (<root> = character)
-			<parent_id> :settags {menu = character}
+			<parent_id> :SetTags {menu = character}
 			ui_band_mode_choose_sound instrument = `default` controller = <controller>
 		elseif (<root> = p2_character)
 			ui_band_mode_choose_sound instrument = `default` controller = <controller>
-			<parent_id> :settags {menu = p2_character}
+			<parent_id> :SetTags {menu = p2_character}
 		elseif (<root> = friends)
-			<parent_id> :settags {menu = friends}
+			<parent_id> :SetTags {menu = friends}
 		elseif (<root> = gigs)
 			ui_band_mode_choose_sound instrument = `default` controller = <controller>
-			<parent_id> :settags {menu = gigs}
+			<parent_id> :SetTags {menu = gigs}
 		elseif (<root> = gamer_cards)
 			ui_band_mode_choose_sound instrument = `default` controller = <controller>
-			<parent_id> :settags {menu = gamer_cards}
+			<parent_id> :SetTags {menu = gamer_cards}
 		endif
-	elseif gotparam \{ready}
+	elseif GotParam \{ready}
 		if (<ready> = ready)
-			<parent_id> :settags {menu = ready}
+			<parent_id> :SetTags {menu = ready}
 			if ($net_band_mode_menu = lobby)
 				get_player_num_from_controller controller_index = <device_num>
-				sendstructure callback = spawn_net_ui_band_mode_choose data_to_send = {ready = ready player_num = <player_num> spawn_script_now}
-			elseif (($net_band_mode_menu = invite) || ($net_band_mode_menu = host))
-				<parent_id> :getsingletag user_id
+				SendStructure callback = spawn_net_ui_band_mode_choose data_to_send = {ready = ready player_num = <player_num> spawn_script_now}
+			elseif (($net_band_mode_menu = invite) || ($net_band_mode_menu = HOST))
+				<parent_id> :GetSingleTag user_id
 				career_update_party_data user_id = <user_id> menu = ready
 			endif
 		elseif (<ready> = p2_ready)
-			<parent_id> :settags {menu = p2_ready}
-			myinterfaceelement :obj_spawnscript \{ui_character_hub_continue}
+			<parent_id> :SetTags {menu = p2_ready}
+			MyInterfaceElement :obj_spawnscript \{ui_character_hub_continue}
 		endif
-	elseif gotparam \{join}
+	elseif GotParam \{join}
 		ui_band_mode_choose_sound controller = <device_num>
 		if ($is_network_game = 1)
-			if (($net_band_mode_menu = host) || ($net_band_mode_menu = join))
-				if isxenon
-					if NOT (checkforsignin controller_index = <device_num>)
+			if (($net_band_mode_menu = HOST) || ($net_band_mode_menu = join))
+				if isXenon
+					if NOT (CheckForSignIn controller_index = <device_num>)
 						ui_band_mode_signin device_num = <device_num>
 						net_career_wait_until_menu_update_is_done
 						<parent_id> :obj_spawnscript ui_band_mode_update_menu
 						return
 					endif
 				else
-					printf \{qs(0x84627f2d)}
+					printf \{qs("\Lps3 stuff")}
 				endif
 			endif
-			if ($net_band_mode_menu = host)
-				netsessionfunc \{obj = party
+			if ($net_band_mode_menu = HOST)
+				NetSessionFunc \{obj = party
 					func = get_party_members}
-				getarraysize <connections>
+				GetArraySize <connections>
 				if (<array_size> > 3)
 					update_network_ticker \{msg_checksum = full}
 					return
 				endif
 			endif
 		else
-			if gotparam \{change_profile}
-				if NOT isanycontrollersignedin
+			if GotParam \{change_profile}
+				if NOT IsAnyControllerSignedIn
 					ui_band_mode_signin device_num = <device_num>
 					return
 				endif
 			endif
 		endif
-		<parent_id> :gettags
-		myinterfaceelement :gettags
-		if iswinport
+		<parent_id> :GetTags
+		MyInterfaceElement :GetTags
+		if IsWinPort
 			get_player_num_from_controller controller_index = <device_num>
-			if isguitarcontroller controller = <controller>
-				<parent_id> :settags {instrument = guitar}
-				setplayerinfo <player_num> part = guitar
+			if IsGuitarController controller = <controller>
+				<parent_id> :SetTags {instrument = guitar}
+				SetPlayerInfo <player_num> part = guitar
 				if (<current_guitar> = <total_guitar>)
 					update_network_ticker \{msg_checksum = max_guitars}
 					return
 				endif
-				<parent_id> :settags controller_instrument = guitar
-				myinterfaceelement :settags {current_guitar = (<current_guitar> + 1)}
-			elseif isdrumcontroller controller = <controller>
-				<parent_id> :settags {instrument = drum}
-				setplayerinfo <player_num> part = drum
+				<parent_id> :SetTags controller_instrument = guitar
+				MyInterfaceElement :SetTags {current_guitar = (<current_guitar> + 1)}
+			elseif IsDrumController controller = <controller>
+				<parent_id> :SetTags {instrument = drum}
+				SetPlayerInfo <player_num> part = drum
 				if (<current_drum> = <total_drum>)
 					update_network_ticker \{msg_checksum = max_drum}
 					return
 				endif
-				<parent_id> :settags controller_instrument = drum
-				myinterfaceelement :settags {current_drum = (<current_drum> + 1)}
-			elseif 0x1c708d82 controller = <controller>
-				<parent_id> :getsingletag instrument
+				<parent_id> :SetTags controller_instrument = drum
+				MyInterfaceElement :SetTags {current_drum = (<current_drum> + 1)}
+			elseif WinPortIsKeyboardController controller = <controller>
+				<parent_id> :GetSingleTag instrument
 				current_instrument = <instrument>
 				mic = 0
-				0xcb21c246 = 0
-				if ismicrophonepluggedin
+				foundInstrument = 0
+				if IsMicrophonePluggedIn
 					mic = 1
 					if (<current_mic> = <total_mic>)
 					else
-						current_instrument = vocals
-						0xcb21c246 = 1
-						change \{0xf9695deb = 4}
+						current_instrument = Vocals
+						foundInstrument = 1
+						change \{winport_keyboard_instrument = 4}
 						printf \{qs(0xc10a763f)}
 					endif
 				endif
-				if (0 = <0xcb21c246>)
+				if (0 = <foundInstrument>)
 					if (<current_guitar> = <total_guitar>)
 						if (<current_drum> = <total_drum>)
 						else
 							current_instrument = drum
-							0xcb21c246 = 1
-							change \{0xf9695deb = 3}
-							<parent_id> :settags controller_instrument = drum
-							myinterfaceelement :settags {current_drum = (<current_drum> + 1)}
+							foundInstrument = 1
+							change \{winport_keyboard_instrument = 3}
+							<parent_id> :SetTags controller_instrument = drum
+							MyInterfaceElement :SetTags {current_drum = (<current_drum> + 1)}
 						endif
 					else
 						current_instrument = guitar
-						0xcb21c246 = 1
-						change \{0xf9695deb = 1}
-						<parent_id> :settags controller_instrument = guitar
-						myinterfaceelement :settags {current_guitar = (<current_guitar> + 1)}
+						foundInstrument = 1
+						change \{winport_keyboard_instrument = 1}
+						<parent_id> :SetTags controller_instrument = guitar
+						MyInterfaceElement :SetTags {current_guitar = (<current_guitar> + 1)}
 					endif
 				endif
 				if (0 = <mic>)
-					if (0 = <0xcb21c246>)
+					if (0 = <foundInstrument>)
 						update_network_ticker \{msg_checksum = no_mic}
 						return
 					endif
@@ -3439,35 +3439,35 @@ script ui_band_mode_choose
 						update_network_ticker \{msg_checksum = max_vocals}
 						return
 					endif
-					<parent_id> :settags controller_instrument = mic
-					myinterfaceelement :settags {current_mic = (<current_mic> + 1)}
+					<parent_id> :SetTags controller_instrument = mic
+					MyInterfaceElement :SetTags {current_mic = (<current_mic> + 1)}
 				endif
 				instrument = <current_instrument>
-				<parent_id> :settags {instrument = <instrument>}
+				<parent_id> :SetTags {instrument = <instrument>}
 				printf qs(0xfcb488ec) i = <instrument>
-				setplayerinfo <player_num> part = <instrument>
+				SetPlayerInfo <player_num> part = <instrument>
 			else
 				return
 			endif
 		else
-			if isguitarcontroller controller = <controller>
+			if IsGuitarController controller = <controller>
 				if (<current_guitar> = <total_guitar>)
 					update_network_ticker \{msg_checksum = max_guitars}
 					return
 				endif
-				<parent_id> :settags controller_instrument = guitar
-				myinterfaceelement :settags {current_guitar = (<current_guitar> + 1)}
-			elseif isdrumcontroller controller = <controller>
+				<parent_id> :SetTags controller_instrument = guitar
+				MyInterfaceElement :SetTags {current_guitar = (<current_guitar> + 1)}
+			elseif IsDrumController controller = <controller>
 				if (<current_drum> = <total_drum>)
 					update_network_ticker \{msg_checksum = max_drum}
 					return
 				endif
-				<parent_id> :settags controller_instrument = drum
-				myinterfaceelement :settags {current_drum = (<current_drum> + 1)}
+				<parent_id> :SetTags controller_instrument = drum
+				MyInterfaceElement :SetTags {current_drum = (<current_drum> + 1)}
 			elseif (($allow_controller_for_all_instruments) = 0)
 				if ($is_network_game = 1)
 					mic = 0
-					if ismicrophonepluggedin
+					if IsMicrophonePluggedIn
 						mic = 1
 					endif
 					if is_regular_controller controller = <controller>
@@ -3484,102 +3484,102 @@ script ui_band_mode_choose
 					update_network_ticker \{msg_checksum = max_vocals}
 					return
 				endif
-				<parent_id> :settags controller_instrument = mic
-				myinterfaceelement :settags {current_mic = (<current_mic> + 1)}
+				<parent_id> :SetTags controller_instrument = mic
+				MyInterfaceElement :SetTags {current_mic = (<current_mic> + 1)}
 			endif
 		endif
 		if ($is_network_game = 1)
-			netsessionfunc func = addcontrollers params = {controller = <controller>}
-			netsessionfunc func = get_user_id params = {controller_index = <controller>}
-			<parent_id> :settags marked_in = 1
+			NetSessionFunc func = AddControllers params = {controller = <controller>}
+			NetSessionFunc func = get_user_id params = {controller_index = <controller>}
+			<parent_id> :SetTags marked_in = 1
 			update_network_ticker msg_checksum = join controller = <device_num>
 			if (<menu> = net_remote_root)
 				net_move_invite_player_to_open_menu menu_id = <parent_id>
 				<parent_id> :obj_spawnscript ui_band_mode_update_name params = {controller = <device_num>}
 				<parent_id> :obj_spawnscript ui_band_mode_check_disconnect
 			endif
-			<parent_id> :settags user_id = <user_id>
+			<parent_id> :SetTags user_id = <user_id>
 			menu = net_local_join
 		else
 			menu = root
 		endif
 		get_player_num_from_controller controller_index = <controller>
 		ui_band_mode_show_character player = <player_num>
-		<parent_id> :settags {menu = <menu>}
+		<parent_id> :SetTags {menu = <menu>}
 		isguest = false
-		if isxenon
-			if netsessionfunc func = xenonisguest params = {controller_index = <device_num>}
+		if isXenon
+			if NetSessionFunc func = XenonIsGuest params = {controller_index = <device_num>}
 				isguest = true
 			endif
 		endif
 		ui_band_mode_save_tags controller = <device_num>
-		if gotparam \{change_profile}
-			if NOT isanycontrollersignedin
+		if GotParam \{change_profile}
+			if NOT IsAnyControllerSignedIn
 				ui_band_mode_signin device_num = <device_num>
 			else
 				change \{signin_glitch_protect = 1}
-				generic_event_replace state = uistate_signin data = {device_num = <device_num> new_data = {controller = <device_num>} allow_back = 1 new_state = uistate_band_mode primary = 0 force_signin = 1}
+				generic_event_replace state = uistate_signin data = {device_num = <device_num> new_data = {controller = <device_num>} allow_back = 1 new_state = UIstate_band_mode primary = 0 force_signin = 1}
 			endif
 		else
-			if islocallysignedin controller = <device_num>
+			if IsLocallySignedIn controller = <device_num>
 				if (<isguest> = false)
 					if NOT current_band_has_band_name controller = <device_num>
 						change \{signin_glitch_protect = 1}
-						generic_event_replace no_sound state = uistate_signin data = {device_num = <device_num> new_data = {controller = <device_num>} allow_back = 1 new_state = uistate_band_mode primary = 0}
+						generic_event_replace no_sound state = uistate_signin data = {device_num = <device_num> new_data = {controller = <device_num>} allow_back = 1 new_state = UIstate_band_mode primary = 0}
 					endif
 				endif
 			else
 			endif
 		endif
-	elseif gotparam \{character}
+	elseif GotParam \{character}
 		if (<character> = character)
-			<parent_id> :settags {menu = root}
+			<parent_id> :SetTags {menu = root}
 		elseif (<character> = p2_character)
 			if ($is_network_game = 1)
-				<parent_id> :settags {menu = net_local_join}
+				<parent_id> :SetTags {menu = net_local_join}
 			else
-				<parent_id> :settags {menu = p2_root}
+				<parent_id> :SetTags {menu = p2_root}
 			endif
 		endif
-	elseif gotparam \{gigs}
+	elseif GotParam \{gigs}
 		if ($is_network_game = 1)
-			<parent_id> :settags {menu = net_local_root}
+			<parent_id> :SetTags {menu = net_local_root}
 		else
-			<parent_id> :settags {menu = root}
+			<parent_id> :SetTags {menu = root}
 		endif
-	elseif gotparam \{net_local_join}
+	elseif GotParam \{net_local_join}
 		ui_band_mode_choose_sound instrument = `default` controller = <controller>
-		<parent_id> :settags {menu = gamer_cards}
-	elseif gotparam \{friends}
+		<parent_id> :SetTags {menu = gamer_cards}
+	elseif GotParam \{friends}
 		ui_band_mode_choose_sound back controller = <controller>
-		<parent_id> :settags {
+		<parent_id> :SetTags {
 			menu = invites
 			friend_name = <name>
 			friend_id = <id>
 			friend_sentfriendrequest = <sentfriendrequest>
 			friend_sentinvite = <sentinvite>
 			friend_friendstate = <friendstate>
-			cant_invite = <cant_invite>
+			CANT_INVITE = <CANT_INVITE>
 		}
-	elseif gotparam \{invites}
-		if NOT isps3
-			<parent_id> :settags {menu = friends}
+	elseif GotParam \{invites}
+		if NOT IsPs3
+			<parent_id> :SetTags {menu = friends}
 		else
-			<parent_id> :settags {menu = invites}
+			<parent_id> :SetTags {menu = invites}
 		endif
 		invite_to_game net_id = <net_id> name = <name> instrument = <instrument_type> menu_index = <index>
-	elseif gotparam \{edit_hero}
+	elseif GotParam \{edit_hero}
 		ui_band_mode_choose_sound instrument = `default` controller = <controller>
 		band_edit_character player = <player>
-	elseif gotparam \{band_info}
+	elseif GotParam \{band_info}
 		ui_band_mode_choose_sound instrument = `default` controller = <controller>
 		menu_choose_band_make_selection band_index = <band_index> from_options = <from_options>
 	endif
 	begin
-	if NOT scriptisrunning \{ui_band_mode_update_menu}
+	if NOT ScriptIsRunning \{ui_band_mode_update_menu}
 		break
 	endif
-	wait \{1
+	Wait \{1
 		gameframe}
 	repeat
 	<parent_id> :obj_spawnscript ui_band_mode_update_menu
@@ -3594,8 +3594,8 @@ script ui_band_mode_choose
 endscript
 
 script spawn_net_ui_band_mode_choose 
-	if screenelementexists \{id = myinterfaceelement}
-		myinterfaceelement :obj_spawnscriptnow net_ui_band_mode_choose params = {<...>}
+	if ScreenElementExists \{id = MyInterfaceElement}
+		MyInterfaceElement :Obj_SpawnScriptNow net_ui_band_mode_choose params = {<...>}
 	endif
 endscript
 
@@ -3603,37 +3603,37 @@ script net_ui_band_mode_choose
 	i = 0
 	begin
 	if (<player_num> = <i>)
-		getplayerinfo <player_num> is_local_client
+		GetPlayerInfo <player_num> is_local_client
 		if (<is_local_client> = 1)
 			return
 		endif
 	endif
 	i = (<i> + 1)
 	repeat 8
-	myinterfaceelement :getsingletag \{menus}
-	if gotparam \{instrument}
-		(<menus> [(<player_num> - 1)]) :settags {instrument = <instrument>}
+	MyInterfaceElement :GetSingleTag \{menus}
+	if GotParam \{instrument}
+		(<menus> [(<player_num> - 1)]) :SetTags {instrument = <instrument>}
 		data_to_send = {instrument = <instrument> player_num = <player_num> spawn_script_now}
 		if (<instrument> = none)
-			myinterfaceelement :settags \{net_instruments_ready = 0}
+			MyInterfaceElement :SetTags \{net_instruments_ready = 0}
 		endif
-	elseif gotparam \{difficulty}
-		(<menus> [(<player_num> - 1)]) :settags {difficulty = <difficulty>}
+	elseif GotParam \{difficulty}
+		(<menus> [(<player_num> - 1)]) :SetTags {difficulty = <difficulty>}
 		data_to_send = {difficulty = <difficulty> player_num = <player_num> spawn_script_now}
-	elseif gotparam \{ready}
-		(<menus> [(<player_num> - 1)]) :settags {menu = ready}
+	elseif GotParam \{ready}
+		(<menus> [(<player_num> - 1)]) :SetTags {menu = ready}
 		data_to_send = {ready = ready player_num = <player_num> spawn_script_now}
-	elseif gotparam \{character}
+	elseif GotParam \{character}
 		data_to_send = {character = <character> character_id = <character_id> player_num = <player_num> spawn_script_now}
 	endif
-	if ishost
-		sendstructure callback = spawn_net_ui_band_mode_choose data_to_send = <data_to_send>
+	if IsHost
+		SendStructure callback = spawn_net_ui_band_mode_choose data_to_send = <data_to_send>
 	endif
 	begin
-	if NOT scriptisrunning \{ui_band_mode_update_menu}
+	if NOT ScriptIsRunning \{ui_band_mode_update_menu}
 		break
 	endif
-	wait \{1
+	Wait \{1
 		gameframe}
 	repeat
 	(<menus> [(<player_num> - 1)]) :obj_spawnscript ui_band_mode_update_menu
@@ -3644,19 +3644,19 @@ script net_ui_band_mode_choose
 endscript
 
 script ui_band_mode_back 
-	gettags
-	se_getparentid
+	GetTags
+	SE_GetParentId
 	if (($is_network_game = 1) && ($net_band_mode_menu = lobby))
 		get_player_num_from_controller controller_index = <device_num>
-		myinterfaceelement :getsingletag \{menus}
-		if NOT isscreenelementinfocus id = (<menus> [(<player_num> - 1)])
+		MyInterfaceElement :GetSingleTag \{menus}
+		if NOT IsScreenElementInFocus id = (<menus> [(<player_num> - 1)])
 			return
 		endif
 	endif
 	switch <menu>
 		case instrument
 		if ($is_network_game = 1)
-			settags \{menu = net_local_root}
+			SetTags \{menu = net_local_root}
 			ui_band_mode_choose_sound back controller = <controller>
 		else
 			generic_event_back \{nosound}
@@ -3664,52 +3664,52 @@ script ui_band_mode_back
 		endif
 		case lefty
 		if ($is_network_game = 1)
-			settags \{menu = net_local_root}
+			SetTags \{menu = net_local_root}
 		else
-			settags \{menu = instrument
+			SetTags \{menu = instrument
 				instrument = none}
 		endif
 		ui_band_mode_choose_sound back controller = <controller>
 		case difficulty
 		if ($is_network_game = 1)
-			settags \{menu = net_local_root}
+			SetTags \{menu = net_local_root}
 			ui_band_mode_choose_sound back controller = <controller>
 		else
-			settags \{menu = lefty}
+			SetTags \{menu = lefty}
 			ui_band_mode_choose_sound back controller = <controller>
 		endif
 		case character
 		get_player_num_from_controller controller_index = <controller>
 		band_character_select_back_out player = <player_num> controller = <controller>
-		settags \{menu = root}
+		SetTags \{menu = root}
 		ui_band_mode_choose_sound back controller = <controller>
 		case p2_character
 		if ($is_network_game = 1)
 			ui_band_mode_choose_sound back controller = <controller>
 			get_player_num_from_controller controller_index = <controller>
 			band_character_select_back_out player = <player_num> controller = <controller>
-			settags \{menu = net_local_join}
+			SetTags \{menu = net_local_join}
 		else
-			settags \{menu = p2_root}
+			SetTags \{menu = p2_root}
 		endif
 		case root
 		get_player_num_from_controller controller_index = <controller>
 		ui_band_mode_kill_character player = <player_num>
-		myinterfaceelement :gettags
+		MyInterfaceElement :GetTags
 		ui_band_mode_choose_sound back controller = <controller>
-		getsingletag \{controller_instrument}
+		GetSingleTag \{controller_instrument}
 		switch <controller_instrument>
 			case guitar
-			myinterfaceelement :settags {current_guitar = (<current_guitar> - 1)}
+			MyInterfaceElement :SetTags {current_guitar = (<current_guitar> - 1)}
 			case drum
-			myinterfaceelement :settags {current_drum = (<current_drum> - 1)}
+			MyInterfaceElement :SetTags {current_drum = (<current_drum> - 1)}
 			case mic
 			if (($allow_controller_for_all_instruments) = 0)
-				myinterfaceelement :settags {current_mic = (<current_mic> - 1)}
+				MyInterfaceElement :SetTags {current_mic = (<current_mic> - 1)}
 			endif
 		endswitch
-		settags \{controller_instrument = none}
-		settags \{menu = join
+		SetTags \{controller_instrument = none}
+		SetTags \{menu = join
 			instrument = none
 			difficulty = none}
 		case p2_root
@@ -3718,7 +3718,7 @@ script ui_band_mode_back
 		case join
 		if ($is_network_game = 1)
 			if ($primary_controller = <controller>)
-				if NOT (($net_band_mode_menu = host))
+				if NOT (($net_band_mode_menu = HOST))
 					ui_band_mode_choose_sound back controller = <controller>
 				endif
 				cas_destroy_all_characters
@@ -3737,24 +3737,24 @@ script ui_band_mode_back
 		case ready
 		if ($is_network_game = 1)
 			if ($net_band_mode_menu = lobby)
-				settags \{menu = net_local_root}
+				SetTags \{menu = net_local_root}
 				get_player_num_from_controller controller_index = <device_num>
-				sendstructure callback = spawn_net_ui_band_mode_back data_to_send = {player_num = <player_num> spawn_script_now}
+				SendStructure callback = spawn_net_ui_band_mode_back data_to_send = {player_num = <player_num> spawn_script_now}
 			else
-				<parent_id> :getsingletag user_id
+				<parent_id> :GetSingleTag user_id
 				career_update_party_data user_id = <user_id> menu = net_local_join
-				settags \{menu = net_local_join}
+				SetTags \{menu = net_local_join}
 			endif
 		else
-			settags \{menu = root}
+			SetTags \{menu = root}
 		endif
 		ui_band_mode_choose_sound back controller = <controller>
-		myinterfaceelement :getsingletag \{descs}
+		MyInterfaceElement :GetSingleTag \{descs}
 		current_desc = (<descs> [<index>])
 		ui_band_mode_animate_unready current_desc = <current_desc>
 		case net_local_root
 		if ($net_popup_active = 0)
-			if NOT scriptisrunning \{net_ui_band_mode_countdown_to_gig}
+			if NOT ScriptIsRunning \{net_ui_band_mode_countdown_to_gig}
 				ui_event_get_top
 				if (<base_name> = 'band_mode')
 					generic_blocking_execute_script pad_script = generic_event_choose pad_params = {data = {state = uistate_online_quit_warning is_popup player_device = <device_num>}}
@@ -3763,8 +3763,8 @@ script ui_band_mode_back
 		endif
 		return
 		case net_local_join
-		if ((($net_band_mode_menu = host) && ($primary_controller = <controller>)) || ($net_band_mode_menu = invite))
-			if netsessionfunc \{obj = party
+		if ((($net_band_mode_menu = HOST) && ($primary_controller = <controller>)) || ($net_band_mode_menu = invite))
+			if NetSessionFunc \{obj = party
 					func = is_host}
 				confirm_script = net_career_host_disband_party
 			else
@@ -3778,72 +3778,72 @@ script ui_band_mode_back
 		ui_band_mode_choose_sound back controller = <controller>
 		get_player_num_from_controller controller_index = <controller>
 		ui_band_mode_kill_character player = <player_num>
-		myinterfaceelement :gettags
-		getsingletag \{controller_instrument}
+		MyInterfaceElement :GetTags
+		GetSingleTag \{controller_instrument}
 		switch <controller_instrument>
 			case guitar
-			myinterfaceelement :settags {current_guitar = (<current_guitar> - 1)}
+			MyInterfaceElement :SetTags {current_guitar = (<current_guitar> - 1)}
 			case drum
-			myinterfaceelement :settags {current_drum = (<current_drum> - 1)}
+			MyInterfaceElement :SetTags {current_drum = (<current_drum> - 1)}
 			case mic
 			if (($allow_controller_for_all_instruments) = 0)
-				myinterfaceelement :settags {current_mic = (<current_mic> - 1)}
+				MyInterfaceElement :SetTags {current_mic = (<current_mic> - 1)}
 			endif
 		endswitch
-		settags \{controller_instrument = none}
-		if isxenon
-			(<descs> [<index>]) :obj_killspawnedscript name = update_headset_status
+		SetTags \{controller_instrument = none}
+		if isXenon
+			(<descs> [<index>]) :Obj_KillSpawnedScript name = update_headset_status
 		endif
-		(<descs> [<index>]) :se_setprops headset_icon_alpha = (0.0)
-		netsessionfunc func = removecontroller params = {controller = <controller>}
-		settags \{menu = join
+		(<descs> [<index>]) :SE_SetProps headset_icon_alpha = (0.0)
+		NetSessionFunc func = RemoveController params = {controller = <controller>}
+		SetTags \{menu = join
 			instrument = none
 			difficulty = none
 			marked_in = 0}
 		update_network_ticker \{msg_checksum = signin_change}
 		case friends
 		ui_band_mode_choose_sound back controller = <controller>
-		settags \{menu = net_local_join}
+		SetTags \{menu = net_local_join}
 		case invites
 		ui_band_mode_choose_sound back controller = <controller>
-		if NOT isps3
-			settags \{menu = friends}
+		if NOT IsPs3
+			SetTags \{menu = friends}
 		else
-			settags \{menu = net_local_join}
+			SetTags \{menu = net_local_join}
 		endif
 		case gigs
 		if ($is_network_game = 1)
-			settags \{menu = net_local_root}
+			SetTags \{menu = net_local_root}
 		else
-			settags \{menu = root}
+			SetTags \{menu = root}
 		endif
 		ui_band_mode_choose_sound back controller = <controller>
 		case ready2
 		ui_band_mode_choose_sound back controller = <controller>
-		settags \{menu = difficulty}
-		myinterfaceelement :getsingletag \{descs}
+		SetTags \{menu = difficulty}
+		MyInterfaceElement :GetSingleTag \{descs}
 		current_desc = (<descs> [<index>])
-		<current_desc> :se_setprops reposition_pos = (0.0, -20.0) ready_banner_pos = (0.0, 500.0) time = 0.1 motion = ease_in
-		<current_desc> :se_waitprops
-		<current_desc> :se_setprops reposition_pos = (0.0, 0.0) time = 0.05 motion = ease_in
+		<current_desc> :SE_SetProps reposition_pos = (0.0, -20.0) ready_banner_pos = (0.0, 500.0) time = 0.1 motion = ease_in
+		<current_desc> :SE_WaitProps
+		<current_desc> :SE_SetProps reposition_pos = (0.0, 0.0) time = 0.05 motion = ease_in
 		case p2_ready
-		settags \{menu = p2_root}
+		SetTags \{menu = p2_root}
 		ui_band_mode_choose_sound back controller = <controller>
-		myinterfaceelement :getsingletag \{descs}
+		MyInterfaceElement :GetSingleTag \{descs}
 		current_desc = (<descs> [<index>])
-		<current_desc> :se_setprops reposition_pos = (0.0, -20.0) ready_banner_pos = (0.0, 500.0) time = 0.1 motion = ease_in
-		<current_desc> :se_waitprops
-		<current_desc> :se_setprops reposition_pos = (0.0, 0.0) time = 0.05 motion = ease_in
+		<current_desc> :SE_SetProps reposition_pos = (0.0, -20.0) ready_banner_pos = (0.0, 500.0) time = 0.1 motion = ease_in
+		<current_desc> :SE_WaitProps
+		<current_desc> :SE_SetProps reposition_pos = (0.0, 0.0) time = 0.05 motion = ease_in
 		case gamer_cards
 		ui_band_mode_choose_sound back controller = <controller>
 		if ($is_network_game = 1)
 			if NOT ($net_band_mode_menu = lobby)
-				settags \{menu = net_local_join}
+				SetTags \{menu = net_local_join}
 			else
-				settags \{menu = net_local_root}
+				SetTags \{menu = net_local_root}
 			endif
 		else
-			settags \{menu = root}
+			SetTags \{menu = root}
 		endif
 	endswitch
 	ui_band_mode_helper_text
@@ -3851,8 +3851,8 @@ script ui_band_mode_back
 endscript
 
 script spawn_net_ui_band_mode_back 
-	if screenelementexists \{id = myinterfaceelement}
-		myinterfaceelement :obj_spawnscriptnow net_ui_band_mode_back params = {<...>}
+	if ScreenElementExists \{id = MyInterfaceElement}
+		MyInterfaceElement :Obj_SpawnScriptNow net_ui_band_mode_back params = {<...>}
 	endif
 endscript
 
@@ -3860,40 +3860,40 @@ script net_ui_band_mode_back
 	i = 0
 	begin
 	if (<player_num> = <i>)
-		getplayerinfo <player_num> is_local_client
+		GetPlayerInfo <player_num> is_local_client
 		if (<is_local_client> = 1)
 			return
 		endif
 	endif
 	i = (<i> + 1)
 	repeat 8
-	myinterfaceelement :getsingletag \{menus}
-	(<menus> [(<player_num> - 1)]) :gettags
+	MyInterfaceElement :GetSingleTag \{menus}
+	(<menus> [(<player_num> - 1)]) :GetTags
 	switch <menu>
 		case ready
-		(<menus> [(<player_num> - 1)]) :settags {menu = net_remote_root}
-		myinterfaceelement :getsingletag \{descs}
+		(<menus> [(<player_num> - 1)]) :SetTags {menu = net_remote_root}
+		MyInterfaceElement :GetSingleTag \{descs}
 		current_desc = (<descs> [(<player_num> - 1)])
-		<current_desc> :se_setprops reposition_pos = (0.0, -20.0) ready_banner_pos = (0.0, 500.0) time = 0.1 motion = ease_in
-		<current_desc> :se_waitprops
-		<current_desc> :se_setprops reposition_pos = (0.0, 0.0) time = 0.05 motion = ease_in
+		<current_desc> :SE_SetProps reposition_pos = (0.0, -20.0) ready_banner_pos = (0.0, 500.0) time = 0.1 motion = ease_in
+		<current_desc> :SE_WaitProps
+		<current_desc> :SE_SetProps reposition_pos = (0.0, 0.0) time = 0.05 motion = ease_in
 		data_to_send = {menu = ready player_num = <player_num> spawn_script_now}
 		case net_local_root
-		printf \{qs(0xfa66dc4b)}
+		printf \{qs("\Lmight need this for getting quit messages")}
 		case character
-		printf \{qs(0x93b07ac8)}
+		printf \{qs("\Lgoing to need this for character select stuff")}
 		case net_remote_root
-		printf \{qs(0x211268a4)}
+		printf \{qs("\Lwe're in a bad state, some how lost a ready message")}
 		return
 	endswitch
-	if ishost
-		sendstructure callback = spawn_net_ui_band_mode_back data_to_send = <data_to_send>
+	if IsHost
+		SendStructure callback = spawn_net_ui_band_mode_back data_to_send = <data_to_send>
 	endif
 	begin
-	if NOT scriptisrunning \{ui_band_mode_update_menu}
+	if NOT ScriptIsRunning \{ui_band_mode_update_menu}
 		break
 	endif
-	wait \{1
+	Wait \{1
 		gameframe}
 	repeat
 	(<menus> [(<player_num> - 1)]) :obj_spawnscript ui_band_mode_update_menu
@@ -3905,24 +3905,24 @@ script net_ui_band_mode_back
 endscript
 
 script ui_band_mode_continue 
-	if is_ui_event_running
+	if Is_ui_event_running
 		return
 	endif
-	if (($is_network_game = 1) && ($net_band_mode_menu = host))
+	if (($is_network_game = 1) && ($net_band_mode_menu = HOST))
 		if NOT (<device_num> = ($primary_controller))
-			soundevent \{event = ui_sfx_negative_select}
+			SoundEvent \{event = UI_SFX_Negative_Select}
 			update_network_ticker \{msg_checksum = non_primary_post}
 			return
 		endif
 	endif
 	if ($is_network_game = 0)
 		if (<device_num> != $band_mode_current_leader)
-			soundevent \{event = ui_sfx_negative_select}
+			SoundEvent \{event = UI_SFX_Negative_Select}
 			update_network_ticker \{msg_checksum = non_primary_post}
 			return
 		endif
 	endif
-	gettags
+	GetTags
 	num_ready = 0
 	player = 1
 	real_player = 1
@@ -3931,18 +3931,18 @@ script ui_band_mode_continue
 	array = []
 	temp_characters = [arse arse arse arse]
 	band_controller_types = [0 0 0 0]
-	getarraysize <menus>
+	GetArraySize <menus>
 	i = 0
 	begin
 	<curr_id> = (<menus> [<i>])
-	<curr_id> :gettags
+	<curr_id> :GetTags
 	add_player = 0
 	if (<menu> = ready)
 		add_player = 1
 	endif
 	if (<add_player> = 1)
 		<num_ready> = (<num_ready> + 1)
-		setarrayelement arrayname = temp_devices index = (<real_player> - 1) newvalue = <controller>
+		SetArrayElement ArrayName = temp_devices index = (<real_player> - 1) newvalue = <controller>
 		if ($is_network_game)
 			<check_cont> = ($primary_controller)
 		else
@@ -3951,43 +3951,43 @@ script ui_band_mode_continue
 		if (<controller> = <check_cont>)
 			primary_controller_ready = 1
 		endif
-		getplayerinfo (<i> + 1) character_id
-		setarrayelement arrayname = temp_characters index = (<real_player> - 1) newvalue = <character_id>
-		if NOT netsessionfunc obj = match func = get_gamertag params = {controller = <i>}
-			name = qs(0x03ac90f0)
+		GetPlayerInfo (<i> + 1) character_id
+		SetArrayElement ArrayName = temp_characters index = (<real_player> - 1) newvalue = <character_id>
+		if NOT NetSessionFunc obj = match func = get_gamertag params = {controller = <i>}
+			name = qs("\L")
 		endif
-		addarrayelement array = <array> element = <name>
-		if iswinport
+		AddArrayElement array = <array> element = <name>
+		if IsWinPort
 			get_controller_part controller = <controller>
 			switch <controller_part>
 				case guitar
-				case bass
-				setarrayelement arrayname = band_controller_types index = (<real_player> - 1) newvalue = 1
+				case Bass
+				SetArrayElement ArrayName = band_controller_types index = (<real_player> - 1) newvalue = 1
 				case drum
-				setarrayelement arrayname = band_controller_types index = (<real_player> - 1) newvalue = 2
-				case vocals
+				SetArrayElement ArrayName = band_controller_types index = (<real_player> - 1) newvalue = 2
+				case Vocals
 				default
-				setarrayelement arrayname = band_controller_types index = (<real_player> - 1) newvalue = 3
+				SetArrayElement ArrayName = band_controller_types index = (<real_player> - 1) newvalue = 3
 			endswitch
 		else
-			if isguitarcontroller controller = <controller>
-				setarrayelement arrayname = band_controller_types index = (<real_player> - 1) newvalue = 1
-			elseif isdrumcontroller controller = <controller>
-				setarrayelement arrayname = band_controller_types index = (<real_player> - 1) newvalue = 2
+			if IsGuitarController controller = <controller>
+				SetArrayElement ArrayName = band_controller_types index = (<real_player> - 1) newvalue = 1
+			elseif IsDrumController controller = <controller>
+				SetArrayElement ArrayName = band_controller_types index = (<real_player> - 1) newvalue = 2
 			else
-				setarrayelement arrayname = band_controller_types index = (<real_player> - 1) newvalue = 3
+				SetArrayElement ArrayName = band_controller_types index = (<real_player> - 1) newvalue = 3
 			endif
 		endif
 		<real_player> = (<real_player> + 1)
 	else
-		setarrayelement arrayname = temp_devices_remove index = <i> newvalue = <controller>
+		SetArrayElement ArrayName = temp_devices_remove index = <i> newvalue = <controller>
 	endif
 	i = (<i> + 1)
 	repeat <array_size>
 	printstruct <temp_devices>
 	printstruct <temp_characters>
 	if ($is_network_game = 1)
-		getarraysize <temp_devices>
+		GetArraySize <temp_devices>
 		controller_index = 0
 		begin
 		if ((<temp_devices> [<controller_index>]) = <device_num>)
@@ -3995,16 +3995,16 @@ script ui_band_mode_continue
 		endif
 		controller_index = (<controller_index> + 1)
 		repeat <array_size>
-		if NOT gotparam \{ok_to_start_search}
+		if NOT GotParam \{ok_to_start_search}
 			return
 		endif
 		get_player_num_from_controller controller_index = <device_num>
-		if NOT isscreenelementinfocus id = (<menus> [(<player_num> - 1)])
+		if NOT IsScreenElementInFocus id = (<menus> [(<player_num> - 1)])
 			return
 		endif
-		if isxenon
-			if netsessionfunc func = xenonisguest params = {controller_index = <device_num>}
-				soundevent \{event = ui_sfx_negative_select}
+		if isXenon
+			if NetSessionFunc func = XenonIsGuest params = {controller_index = <device_num>}
+				SoundEvent \{event = UI_SFX_Negative_Select}
 				spawnscriptnow \{update_network_ticker
 					params = {
 						msg_checksum = guest_continue
@@ -4012,7 +4012,7 @@ script ui_band_mode_continue
 				return
 			endif
 		endif
-		if NOT gotparam \{primary_controller_ready}
+		if NOT GotParam \{primary_controller_ready}
 			spawnscriptnow \{update_network_ticker
 				params = {
 					msg_checksum = band_leader
@@ -4020,73 +4020,73 @@ script ui_band_mode_continue
 			return
 		endif
 		if (<num_ready> > 0)
-			change \{current_progression_flag = career_band}
+			change \{current_progression_flag = Career_Band}
 		else
 			return
 		endif
 	elseif (<num_ready> < 2)
 		spawnscriptnow \{ui_band_mode_warning
 			params = {
-				text = qs(0xf5f5bb37)
+				text = qs("More players are needed for band play.")
 			}}
 		return
-	elseif NOT gotparam \{primary_controller_ready}
-		if NOT isxenon
-			<text> = qs(0x6143626e)
+	elseif NOT GotParam \{primary_controller_ready}
+		if NOT isXenon
+			<text> = qs("Band leader needs to be part of the band.")
 		else
-			<text> = qs(0x5bed4924)
+			<text> = qs("One of the players must press BLUE to become the band leader.")
 		endif
 		spawnscriptnow ui_band_mode_warning params = {text = <text>}
 		return
 	else
-		change \{current_progression_flag = career_band}
+		change \{current_progression_flag = Career_Band}
 	endif
 	<player> = 1
 	begin
 	if ((<temp_devices> [(<player> - 1)]) < 0)
-		scriptassert \{'Some player didnt get a controller set correctly'}
+		ScriptAssert \{'Some player didnt get a controller set correctly'}
 	endif
 	if ((<temp_characters> [(<player> - 1)]) = arse)
-		scriptassert \{'Some player didnt get a character set correctly'}
+		ScriptAssert \{'Some player didnt get a character set correctly'}
 	endif
-	formattext checksumname = player_device 'player%d_device' d = <player>
+	FormatText checksumname = player_device 'player%d_device' d = <player>
 	change globalname = <player_device> newvalue = (<temp_devices> [(<player> - 1)])
-	formattext checksumname = gamertag 'gamertag_%d' d = (<player> - 1)
+	FormatText checksumname = gamertag 'gamertag_%d' d = (<player> - 1)
 	change globalname = <gamertag> newvalue = (<array> [(<player> - 1)])
-	setplayerinfo <player> gamertag = <gamertag>
-	setplayerinfo <player> controller = (<temp_devices> [(<player> - 1)])
-	setplayerinfo <player> character_id = (<temp_characters> [(<player> - 1)])
-	setplayerinfo <player> is_local_client = 1
-	setplayerinfo <player> difficulty = ($default_difficulty [(<temp_devices> [(<player> - 1)])])
+	SetPlayerInfo <player> gamertag = <gamertag>
+	SetPlayerInfo <player> controller = (<temp_devices> [(<player> - 1)])
+	SetPlayerInfo <player> character_id = (<temp_characters> [(<player> - 1)])
+	SetPlayerInfo <player> is_local_client = 1
+	SetPlayerInfo <player> difficulty = ($default_difficulty [(<temp_devices> [(<player> - 1)])])
 	if ($is_network_game = 1)
-		getnetid controller_index = (<temp_devices> [(<player> - 1)])
-		netsessionfunc func = get_gamertag params = {controller = (<temp_devices> [(<player> - 1)])}
-		setarrayelement arrayname = temp_net_id globalarray index = (<temp_devices> [(<player> - 1)]) newvalue = {net_id_first = <net_id_first> net_id_second = <net_id_second> name = <name>}
+		GetNetID controller_index = (<temp_devices> [(<player> - 1)])
+		NetSessionFunc func = get_gamertag params = {controller = (<temp_devices> [(<player> - 1)])}
+		SetArrayElement ArrayName = temp_net_id GlobalArray index = (<temp_devices> [(<player> - 1)]) newvalue = {net_id_first = <net_id_first> net_id_second = <net_id_second> name = <name>}
 	endif
 	<player> = (<player> + 1)
 	repeat (<real_player> - 1)
-	if (($is_network_game = 1) && ($net_band_mode_menu = host))
-		netsessionfunc \{obj = party
+	if (($is_network_game = 1) && ($net_band_mode_menu = HOST))
+		NetSessionFunc \{obj = party
 			func = get_party_members}
-		getarraysize <connections>
+		GetArraySize <connections>
 		if (<array_size> > 0)
 			c = 0
 			begin
 			if ((<connections> [<c>].is_local) = 0)
 				switch (<connections> [<c>].instrument)
-					case eguitar
+					case eGUITAR
 					part = guitar
-					case edrums
+					case eDRUMS
 					part = drum
-					case emicrophone
-					part = vocals
+					case eMICROPHONE
+					part = Vocals
 				endswitch
-				setplayerinfo <player> is_local_client = 0
-				setplayerinfo <player> part = <part>
-				setplayerinfo <player> difficulty = easy
-				formattext checksumname = gamertag 'gamertag_%d' d = (<player> - 1)
+				SetPlayerInfo <player> is_local_client = 0
+				SetPlayerInfo <player> part = <part>
+				SetPlayerInfo <player> difficulty = easy
+				FormatText checksumname = gamertag 'gamertag_%d' d = (<player> - 1)
 				change globalname = <gamertag> newvalue = (<connections> [<c>].gamertag)
-				setplayerinfo <player> gamertag = <gamertag>
+				SetPlayerInfo <player> gamertag = <gamertag>
 				player = (<player> + 1)
 				num_ready = (<num_ready> + 1)
 			endif
@@ -4094,11 +4094,11 @@ script ui_band_mode_continue
 			repeat <array_size>
 		endif
 	endif
-	getarraysize <temp_devices_remove>
+	GetArraySize <temp_devices_remove>
 	i = 0
 	begin
 	if NOT ((<temp_devices_remove> [<i>]) = -1)
-		netsessionfunc func = removecontroller params = {controller = (<temp_devices_remove> [<i>])}
+		NetSessionFunc func = RemoveController params = {controller = (<temp_devices_remove> [<i>])}
 		cas_queue_kill_player player = (<i> + 1)
 	endif
 	i = (<i> + 1)
@@ -4106,22 +4106,22 @@ script ui_band_mode_continue
 	if (($is_network_game = 1) && (<num_ready> < 4))
 		remote_player = (<num_ready> + 1)
 		begin
-		setplayerinfo <remote_player> is_local_client = 0
+		SetPlayerInfo <remote_player> is_local_client = 0
 		remote_player = (<remote_player> + 1)
 		repeat (4 - <num_ready>)
 	endif
 	if ($band_mode_mode = quickplay || $band_mode_mode = none)
-		formattext checksumname = mode 'p%d_quickplay' d = <num_ready>
+		FormatText checksumname = mode 'p%d_quickplay' d = <num_ready>
 	elseif ($is_network_game = 1)
 		mode = p4_career
-		netoptions :pref_choose \{name = game_modes
+		NetOptions :Pref_Choose \{name = game_modes
 			checksum = p4_career}
-		netoptions :pref_choose \{name = ranked
+		NetOptions :Pref_Choose \{name = ranked
 			checksum = player}
 		change num_players_in_band = <num_ready>
 		set_network_preferences
 	else
-		formattext checksumname = mode 'p%d_career' d = <num_ready>
+		FormatText checksumname = mode 'p%d_career' d = <num_ready>
 	endif
 	change game_mode = <mode>
 	change current_num_players = <num_ready>
@@ -4141,37 +4141,37 @@ script ui_band_mode_continue
 		change primary_controller = ($band_mode_current_leader)
 		change last_start_pressed_device = ($band_mode_current_leader)
 		generic_event_choose no_sound state = uistate_setlist data = {use_all_controllers num_band_players = <num_ready> band_controller_types = <band_controller_types>}
-		soundevent \{event = band_mode_career_ready}
+		SoundEvent \{event = Band_Mode_Career_Ready}
 	elseif ($is_network_game = 1)
 		change \{respond_to_signin_changed_all_players = 1}
-		soundevent \{event = band_mode_career_ready}
+		SoundEvent \{event = Band_Mode_Career_Ready}
 		if ($net_band_mode_menu = join)
-			printf qs(0xa9e5ed51) d = ($current_num_players)
+			printf qs("\Lcurrent_num_players = %d") d = ($current_num_players)
 			ui_band_mode_change_menu_focus_all \{focus_type = unfocus}
 			ui_create_net_career_join_popup device_num = <device_num>
-		elseif ($net_band_mode_menu = host)
-			requireparams \{[
+		elseif ($net_band_mode_menu = HOST)
+			RequireParams \{[
 					device_num
 				]
 				all}
-			netsessionfunc \{obj = party
+			NetSessionFunc \{obj = party
 				func = set_party_joinable
 				params = {
 					joinable = 0
 				}}
-			netsessionfunc \{obj = match
+			NetSessionFunc \{obj = match
 				func = set_server_list_mode
 				params = {
 					host_only
 				}}
-			netsessionfunc obj = match func = start_server_list params = {controller = <device_num>}
-			setservermode
-			startserver
-			setjoinmode \{$join_mode_play}
-			joinserver
+			NetSessionFunc obj = match func = start_server_list params = {controller = <device_num>}
+			SetServerMode
+			StartServer
+			SetJoinMode \{$JOIN_MODE_PLAY}
+			JoinServer
 			change \{net_band_mode_menu = lobby}
 			generic_event_choose \{no_sound
-				state = uistate_band_mode}
+				state = UIstate_band_mode}
 		endif
 	else
 		change primary_controller = ($band_mode_current_leader)
@@ -4183,53 +4183,53 @@ script ui_band_mode_continue
 					state = uistate_gig_posters
 				}
 			}}
-		soundevent \{event = band_mode_career_ready}
+		SoundEvent \{event = Band_Mode_Career_Ready}
 	endif
 endscript
 
 script net_ui_band_mode_continue 
-	printf qs(0x97b9ba50) d = ($num_players_in_band)
+	printf qs("\Lwe have %d players in the band") d = ($num_players_in_band)
 	if ($career_matchmaking_complete = 0)
 		update_network_ticker \{msg_checksum = matchmaking_complete}
 		return
 	endif
 	if ($num_players_in_band > 1)
-		if (screenelementexists id = myinterfaceelement)
+		if (ScreenElementExists id = MyInterfaceElement)
 			get_player_num_from_controller controller_index = <device_num>
-			myinterfaceelement :getsingletag \{menus}
-			myinterfaceelement :getsingletag \{net_gig_ready}
-			(<menus> [(<player_num> - 1)]) :getsingletag menu
+			MyInterfaceElement :GetSingleTag \{menus}
+			MyInterfaceElement :GetSingleTag \{net_gig_ready}
+			(<menus> [(<player_num> - 1)]) :GetSingleTag menu
 			if NOT (<menu> = ready)
 				update_network_ticker \{msg_checksum = host_ready_up}
 				return
 			endif
 			if (<net_gig_ready> = 1)
-				if NOT scriptisrunning \{net_ui_band_mode_countdown_to_gig}
+				if NOT ScriptIsRunning \{net_ui_band_mode_countdown_to_gig}
 					if NOT (($net_career_selected_song = $current_song) || ($net_career_selected_gig = $current_gig_number))
 						change current_song = ($net_career_selected_song)
 						change current_gig_number = ($net_career_selected_gig)
 					endif
 					generic_menu_pad_choose_sound
-					sendstructure \{callback = spawn_net_ui_band_mode_countdown_to_gig
+					SendStructure \{callback = spawn_net_ui_band_mode_countdown_to_gig
 						data_to_send = {
 							none
 						}}
-					myinterfaceelement :obj_spawnscriptnow \{net_ui_band_mode_countdown_to_gig}
+					MyInterfaceElement :Obj_SpawnScriptNow \{net_ui_band_mode_countdown_to_gig}
 				endif
 			else
 				update_network_ticker \{msg_checksum = no_gig_selected}
 			endif
 		endif
 	else
-		soundevent \{event = ui_sfx_negative_select}
+		SoundEvent \{event = UI_SFX_Negative_Select}
 		update_network_ticker \{msg_checksum = more_players_needed}
 	endif
 endscript
 
 script net_career_invite_continue_to_lobby 
-	netsessionfunc \{obj = party
+	NetSessionFunc \{obj = party
 		func = get_party_members}
-	getarraysize \{connections}
+	GetArraySize \{connections}
 	array = []
 	remote_players = []
 	num_players = 0
@@ -4239,22 +4239,22 @@ script net_career_invite_continue_to_lobby
 		if ((<connections> [<i>].is_local) = 1)
 			num_players = (<num_players> + 1)
 			find_party_member_menu member_id = (<connections> [<i>].user_id)
-			if (gotparam party_member_menu_checksum)
-				<party_member_menu_checksum> :getsingletag controller
-				addarrayelement array = <array> element = <controller>
+			if (GotParam party_member_menu_checksum)
+				<party_member_menu_checksum> :GetSingleTag controller
+				AddArrayElement array = <array> element = <controller>
 			endif
 			break
 		endif
 		i = (<i> + 1)
 		repeat <array_size>
 	else
-		scriptassert \{qs(0xe1d3e581)}
+		ScriptAssert \{qs("\LSomehow our party object got cleared?!?")}
 	endif
 endscript
 
 script spawn_net_ui_band_mode_countdown_to_gig 
-	if screenelementexists \{id = myinterfaceelement}
-		myinterfaceelement :obj_spawnscriptnow \{net_ui_band_mode_countdown_to_gig}
+	if ScreenElementExists \{id = MyInterfaceElement}
+		MyInterfaceElement :Obj_SpawnScriptNow \{net_ui_band_mode_countdown_to_gig}
 	endif
 endscript
 
@@ -4270,36 +4270,36 @@ script net_ui_band_mode_countdown_to_gig
 	generic_menu_up_or_down_sound \{down}
 	if (<i> = 4)
 		get_local_players_in_game
-		getsingletag \{menus}
-		getarraysize \{menus}
+		GetSingleTag \{menus}
+		GetArraySize \{menus}
 		j = 0
 		begin
-		if screenelementexists id = (<menus> [<j>])
-			getplayerinfo (<j> + 1) net_obj_id
+		if ScreenElementExists id = (<menus> [<j>])
+			GetPlayerInfo (<j> + 1) net_obj_id
 			if (<net_obj_id> >= 0)
-				(<menus> [<j>]) :settags {menu = ready}
-				runscriptonobject id = (<menus> [<j>]) ui_band_mode_update_menu
-				launchevent type = unfocus target = (<menus> [<j>])
+				(<menus> [<j>]) :SetTags {menu = ready}
+				RunScriptOnObject id = (<menus> [<j>]) ui_band_mode_update_menu
+				LaunchEvent type = unfocus target = (<menus> [<j>])
 			else
-				(<menus> [<j>]) :settags {menu = net_remote_open}
+				(<menus> [<j>]) :SetTags {menu = net_remote_open}
 			endif
 		endif
-		launchevent \{type = unfocus
-			target = myinterfaceelement}
+		LaunchEvent \{type = unfocus
+			target = MyInterfaceElement}
 		j = (<j> + 1)
 		repeat <array_size>
 		clean_up_user_control_helpers
-		printf qs(0x255a3dcf) d = ($num_players_in_band)
+		printf qs("\L--- num_players_in_band = %d ---") d = ($num_players_in_band)
 		j = 0
 		begin
-		(<menus> [<j>]) :getsingletag instrument
-		(<menus> [<j>]) :getsingletag difficulty
+		(<menus> [<j>]) :GetSingleTag instrument
+		(<menus> [<j>]) :GetSingleTag difficulty
 		if (<instrument> = controller)
-			instrument = vocals
+			instrument = Vocals
 		endif
-		setplayerinfo (<j> + 1) part = <instrument>
+		SetPlayerInfo (<j> + 1) part = <instrument>
 		if NOT (<difficulty> = none)
-			setplayerinfo (<j> + 1) difficulty = <difficulty>
+			SetPlayerInfo (<j> + 1) difficulty = <difficulty>
 		endif
 		j = (<j> + 1)
 		repeat ($num_players_in_band)
@@ -4307,15 +4307,15 @@ script net_ui_band_mode_countdown_to_gig
 		host_start_player_settings_sync
 	endif
 	i = (<i> -1)
-	wait \{1
+	Wait \{1
 		second}
 	repeat 11
 	vocals_distribute_mics
 	change \{career_matchmaking_complete = 0}
-	soundevent \{event = band_mode_career_ready}
+	SoundEvent \{event = Band_Mode_Career_Ready}
 	if ($num_players_in_band = <num_local_players>)
-		if ishost
-			if NOT (sessionisover)
+		if IsHost
+			if NOT (SessionIsOver)
 				net_career_check_instruments
 				host_proceed_to_online_play
 			endif
@@ -4328,10 +4328,10 @@ script net_career_wait_to_proceed_to_online_play
 	starting_players = (<num_players> + ($net_dropped_players_flag))
 	begin
 	getnumplayers
-	if NOT scriptisrunning \{net_ui_band_mode_countdown_to_gig}
+	if NOT ScriptIsRunning \{net_ui_band_mode_countdown_to_gig}
 		break
 	endif
-	wait \{0.25
+	Wait \{0.25
 		seconds}
 	repeat
 	begin
@@ -4346,17 +4346,17 @@ script net_career_wait_to_proceed_to_online_play
 		change \{player_drop_in_setting_sync = 1}
 		break
 	endif
-	wait \{0.25
+	Wait \{0.25
 		seconds}
 	repeat
 	session_over = 0
-	if (sessionisover)
+	if (SessionIsOver)
 		<session_over> = 1
 	endif
-	if ((ishost) && (<num_players> = <starting_players>) || (($player_drop_in_setting_sync = 1) && (<session_over> = 0)))
+	if ((IsHost) && (<num_players> = <starting_players>) || (($player_drop_in_setting_sync = 1) && (<session_over> = 0)))
 		host_proceed_to_online_play
 	else
-		printf \{qs(0x5d8111d1)}
+		printf \{qs("\L could do cleanup here but drop handlers should take care of the rest, we just don't want wonky shit happening if we have some erroneous error ")}
 		return
 	endif
 endscript
@@ -4367,25 +4367,25 @@ script ui_band_mode_show_character
 		printf 'WARNING: INVALID PLAYER NUMBER %p' p = <player>
 		return
 	endif
-	formattext checksumname = player_status 'player%p_status' p = <player>
+	FormatText checksumname = player_status 'player%p_status' p = <player>
 	get_savegame_from_player_status band_character_select player_status = <player_status>
 	controller = ($<player_status>.controller)
-	if NOT gotparam \{use_existing}
+	if NOT GotParam \{use_existing}
 		if (($band_mode_mode = career) || ($is_network_game = 1) || (($game_mode = p2_battle) || ($game_mode = p2_faceoff) || ($game_mode = p2_pro_faceoff)))
 			get_controller_part controller = <controller>
 			get_last_band_character_recorded player = <player> part = <controller_part>
 			if NOT (<character_id> = none)
 				if (<controller> < 4)
-					setarrayelement arrayname = band_builder_random_preset_used globalarray index = <controller> newvalue = <character_id>
+					SetArrayElement ArrayName = band_builder_random_preset_used GlobalArray index = <controller> newvalue = <character_id>
 				endif
-				if gotparam \{borrowed_from_band_leader}
+				if GotParam \{borrowed_from_band_leader}
 					band_resolve_guest_characters player = <player> character_id = <character_id> savegame = <savegame> borrowed_from_band_leader = <borrowed_from_band_leader>
 				endif
 				change structurename = <player_status> character_id = <character_id>
 				got_from_globaltags = 1
 			endif
 		endif
-		if NOT gotparam \{got_from_globaltags}
+		if NOT GotParam \{got_from_globaltags}
 			random_band_mode_character player = <player>
 			set_band_character_id_globaltag savegame = <savegame> controller = <controller> character_id = <character_id> player = <player>
 		endif
@@ -4394,17 +4394,17 @@ script ui_band_mode_show_character
 endscript
 
 script random_band_mode_character 
-	requireparams \{[
+	RequireParams \{[
 			player
 		]}
 	printf 'random_band_mode_character %d' d = <player>
-	formattext checksumname = player_status 'player%p_status' p = <player>
+	FormatText checksumname = player_status 'player%p_status' p = <player>
 	get_savegame_from_player_status band_character_select player_status = <player_status>
 	controller = ($<player_status>.controller)
 	get_controller_part controller = <controller>
 	if (<controller_part> = guitar)
 		if (Random (@ 0 @ 1 )= 0)
-			controller_part = bass
+			controller_part = Bass
 		endif
 	endif
 	if (Random (@ 0 @ 1 @ 2 )= 0)
@@ -4415,7 +4415,7 @@ script random_band_mode_character
 		cas_get_random_preset_character savegame = <savegame> controller = <controller> part = <controller_part>
 	endif
 	set_band_character_id_globaltag savegame = <savegame> controller = <controller> character_id = <character_id> player = <player>
-	if gotparam \{borrowed_from_band_leader}
+	if GotParam \{borrowed_from_band_leader}
 		get_player_num_from_controller controller_index = <controller>
 		band_resolve_guest_characters player = <player_num> character_id = <character_id> savegame = <savegame> borrowed_from_band_leader = <borrowed_from_band_leader>
 	endif
@@ -4423,89 +4423,89 @@ script random_band_mode_character
 	return character_id = <character_id>
 endscript
 
-script 0x68bf6c8c 
-	requireparams \{[
+script ui_band_mode_toggle_next_instrument 
+	RequireParams \{[
 			controller
 		]}
-	se_getparentid
-	<parent_id> :gettags
-	myinterfaceelement :gettags
-	if 0x1c708d82 controller = <controller>
+	SE_GetParentId
+	<parent_id> :GetTags
+	MyInterfaceElement :GetTags
+	if WinPortIsKeyboardController controller = <controller>
 		get_player_num_from_controller controller_index = <controller>
-		getplayerinfo (<player_num>) part
+		GetPlayerInfo (<player_num>) part
 		next_part = part
 		switch <part>
 			case guitar
-			case bass
+			case Bass
 			next_part = drum
 			case drum
-			if ((ismicrophonepluggedin) && (<current_mic> != <total_mic>))
-				next_part = vocals
+			if ((IsMicrophonePluggedIn) && (<current_mic> != <total_mic>))
+				next_part = Vocals
 			else
 				next_part = guitar
 			endif
-			case vocals
+			case Vocals
 			default
 			next_part = guitar
 		endswitch
 		switch <part>
 			case guitar
-			case bass
-			myinterfaceelement :settags {current_guitar = (<current_guitar> - 1)}
+			case Bass
+			MyInterfaceElement :SetTags {current_guitar = (<current_guitar> - 1)}
 			case drum
-			myinterfaceelement :settags {current_drum = (<current_drum> - 1)}
-			case vocals
+			MyInterfaceElement :SetTags {current_drum = (<current_drum> - 1)}
+			case Vocals
 			default
-			myinterfaceelement :settags {current_mic = (<current_mic> - 1)}
+			MyInterfaceElement :SetTags {current_mic = (<current_mic> - 1)}
 		endswitch
 		switch <next_part>
 			case guitar
-			case bass
-			<parent_id> :settags {instrument = guitar}
-			change \{0xf9695deb = 1}
-			setplayerinfo <player_num> part = guitar
-			settags \{controller_instrument = guitar}
-			myinterfaceelement :settags {current_guitar = (<current_guitar> + 1)}
+			case Bass
+			<parent_id> :SetTags {instrument = guitar}
+			change \{winport_keyboard_instrument = 1}
+			SetPlayerInfo <player_num> part = guitar
+			SetTags \{controller_instrument = guitar}
+			MyInterfaceElement :SetTags {current_guitar = (<current_guitar> + 1)}
 			case drum
-			<parent_id> :settags {instrument = drum}
-			change \{0xf9695deb = 3}
-			setplayerinfo <player_num> part = drum
-			settags \{controller_instrument = drum}
-			myinterfaceelement :settags {current_drum = (<current_drum> + 1)}
-			case vocals
+			<parent_id> :SetTags {instrument = drum}
+			change \{winport_keyboard_instrument = 3}
+			SetPlayerInfo <player_num> part = drum
+			SetTags \{controller_instrument = drum}
+			MyInterfaceElement :SetTags {current_drum = (<current_drum> + 1)}
+			case Vocals
 			default
-			<parent_id> :settags {instrument = vocals}
-			change \{0xf9695deb = 4}
-			setplayerinfo <player_num> part = vocals
-			settags \{controller_instrument = mic}
-			myinterfaceelement :settags {current_mic = (<current_mic> + 1)}
+			<parent_id> :SetTags {instrument = Vocals}
+			change \{winport_keyboard_instrument = 4}
+			SetPlayerInfo <player_num> part = Vocals
+			SetTags \{controller_instrument = mic}
+			MyInterfaceElement :SetTags {current_mic = (<current_mic> + 1)}
 		endswitch
 		generic_menu_pad_choose_sound
 		current_desc = (<descs> [<index>])
 		switch <next_part>
 			case guitar
-			<current_desc> :se_setprops instrument_alpha = 1.0 instrument_texture = logo_guitar
-			case bass
-			<current_desc> :se_setprops instrument_alpha = 1.0 instrument_texture = logo_bass
+			<current_desc> :SE_SetProps instrument_alpha = 1.0 instrument_texture = logo_guitar
+			case Bass
+			<current_desc> :SE_SetProps instrument_alpha = 1.0 instrument_texture = logo_bass
 			case drum
-			<current_desc> :se_setprops instrument_alpha = 1.0 instrument_texture = logo_drum
-			case vocals
-			<current_desc> :se_setprops instrument_alpha = 1.0 instrument_texture = logo_vocal
+			<current_desc> :SE_SetProps instrument_alpha = 1.0 instrument_texture = logo_drum
+			case Vocals
+			<current_desc> :SE_SetProps instrument_alpha = 1.0 instrument_texture = logo_vocal
 			default
-			<current_desc> :se_setprops instrument_alpha = 0.0 instrument_texture = logo_guitar
+			<current_desc> :SE_SetProps instrument_alpha = 0.0 instrument_texture = logo_guitar
 		endswitch
 	endif
 endscript
 
 script ui_band_mode_random_character 
 	printf \{'ui_band_mode_random_character'}
-	formattext checksumname = player_status 'player%p_status' p = <player>
+	FormatText checksumname = player_status 'player%p_status' p = <player>
 	get_savegame_from_player_status player_status = <player_status>
 	controller = ($<player_status>.controller)
 	ui_band_mode_choose_sound instrument = `default` controller = <controller>
 	random_band_mode_character player = <player>
 	cas_queue_new_character_profile player = <player> id = ($<player_status>.character_id) savegame = <savegame>
-	se_getparentid
+	SE_GetParentId
 	band_character_rename index = <index> player = <player>
 	if ($net_band_mode_menu = none)
 		if (($game_mode = p2_battle) || ($game_mode = p2_faceoff) || ($game_mode = p2_pro_faceoff))
@@ -4518,7 +4518,7 @@ script ui_band_mode_random_character
 	else
 		given_focus = 2
 	endif
-	<parent_id> :obj_spawnscriptnow ui_band_mode_update_menu params = {given_focus = <given_focus> skip_update_wait}
+	<parent_id> :Obj_SpawnScriptNow ui_band_mode_update_menu params = {given_focus = <given_focus> skip_update_wait}
 endscript
 
 script ui_band_mode_kill_character 
@@ -4526,66 +4526,66 @@ script ui_band_mode_kill_character
 	switch <player>
 		case 1
 		if cas_player_has_character_object \{player = 2}
-			band_playanim name = <character_object> anim = backoutr no_wait
+			Band_PlayAnim name = <character_object> Anim = BackOutR no_wait
 		endif
 		case 2
 		if cas_player_has_character_object \{player = 1}
-			band_playanim name = <character_object> anim = backoutl no_wait
+			Band_PlayAnim name = <character_object> Anim = BackOutL no_wait
 		endif
 		if cas_player_has_character_object \{player = 3}
-			band_playanim name = <character_object> anim = backoutr no_wait
+			Band_PlayAnim name = <character_object> Anim = BackOutR no_wait
 		endif
 		case 3
 		if cas_player_has_character_object \{player = 2}
-			band_playanim name = <character_object> anim = backoutl no_wait
+			Band_PlayAnim name = <character_object> Anim = BackOutL no_wait
 		endif
 		if cas_player_has_character_object \{player = 4}
-			band_playanim name = <character_object> anim = backoutr no_wait
+			Band_PlayAnim name = <character_object> Anim = BackOutR no_wait
 		endif
 		case 4
 		if cas_player_has_character_object \{player = 3}
-			band_playanim name = <character_object> anim = backoutl no_wait
+			Band_PlayAnim name = <character_object> Anim = BackOutL no_wait
 		endif
 	endswitch
 	cas_queue_kill_player player = <player>
 endscript
 
 script ui_band_mode_check_menus 
-	myinterfaceelement :gettags
-	getarraysize <menus>
-	obj_getid
+	MyInterfaceElement :GetTags
+	GetArraySize <menus>
+	Obj_GetID
 	count = <array_size>
-	if NOT iswinport
+	if NOT IsWinPort
 		printscriptinfo
 	endif
 	i = 0
 	begin
-	if screenelementexists id = (<menus> [<i>])
+	if ScreenElementExists id = (<menus> [<i>])
 		<curr_id> = (<menus> [<i>])
-		<curr_id> :gettags
+		<curr_id> :GetTags
 		if (<menu> = instrument)
-			if NOT (<objid> = (<menus> [<i>]))
+			if NOT (<ObjID> = (<menus> [<i>]))
 			endif
-			getscreenelementchildren id = (<menus> [<i>])
-			getarraysize <children>
+			GetScreenElementChildren id = (<menus> [<i>])
+			GetArraySize <children>
 			j = 0
 			begin
 			switch <j>
 				case 0
-				if structurecontains structure = <allowed> name = guitar
-					setscreenelementprops id = {(<menus> [<i>]) child = <j>} rgba = ($menu_unfocus_color) focusable
+				if StructureContains Structure = <allowed> name = guitar
+					SetScreenElementProps id = {(<menus> [<i>]) child = <j>} rgba = ($menu_unfocus_color) focusable
 				endif
 				case 1
-				if structurecontains structure = <allowed> name = bass
-					setscreenelementprops id = {(<menus> [<i>]) child = <j>} rgba = ($menu_unfocus_color) focusable
+				if StructureContains Structure = <allowed> name = Bass
+					SetScreenElementProps id = {(<menus> [<i>]) child = <j>} rgba = ($menu_unfocus_color) focusable
 				endif
 				case 2
-				if structurecontains structure = <allowed> name = drum
-					setscreenelementprops id = {(<menus> [<i>]) child = <j>} rgba = ($menu_unfocus_color) focusable
+				if StructureContains Structure = <allowed> name = drum
+					SetScreenElementProps id = {(<menus> [<i>]) child = <j>} rgba = ($menu_unfocus_color) focusable
 				endif
 				case 3
-				if structurecontains structure = <allowed> name = vocals
-					setscreenelementprops id = {(<menus> [<i>]) child = <j>} rgba = ($menu_unfocus_color) focusable
+				if StructureContains Structure = <allowed> name = Vocals
+					SetScreenElementProps id = {(<menus> [<i>]) child = <j>} rgba = ($menu_unfocus_color) focusable
 				endif
 			endswitch
 			j = (<j> + 1)
@@ -4598,23 +4598,23 @@ script ui_band_mode_check_menus
 		i = 0
 		begin
 		<curr_id> = (<menus> [<i>])
-		<curr_id> :gettags
+		<curr_id> :GetTags
 		check_instrument = <instrument>
 		j = 0
 		begin
 		curr_id_2 = (<menus> [<j>])
 		if NOT (<curr_id> = <curr_id_2>)
-			<curr_id_2> :gettags
+			<curr_id_2> :GetTags
 			index = -1
 			if (<menu> = instrument)
 				switch <check_instrument>
 					case guitar
 					index = 0
-					case bass
+					case Bass
 					index = 1
 					case drum
 					index = 2
-					case vocals
+					case Vocals
 					index = 3
 					default
 				endswitch
@@ -4622,29 +4622,29 @@ script ui_band_mode_check_menus
 					k = 0
 					begin
 					if NOT (<k> = <index>)
-						if screenelementexists id = {<curr_id_2> child = <k>}
-							setscreenelementprops id = {<curr_id_2> child = <k>} rgba = [64 64 64 255] font = fontgrid_text_a6 material = null not_focusable
+						if ScreenElementExists id = {<curr_id_2> child = <k>}
+							SetScreenElementProps id = {<curr_id_2> child = <k>} rgba = [64 64 64 255] font = fontgrid_text_a6 material = null not_focusable
 						endif
 					endif
 					k = (<k> + 1)
 					repeat 4
-					if NOT (<curr_id_2> = <objid>)
-						if NOT <curr_id_2> :menu_selectedindexis <index>
-							<curr_id_2> :menu_changeselection
+					if NOT (<curr_id_2> = <ObjID>)
+						if NOT <curr_id_2> :Menu_SelectedIndexIs <index>
+							<curr_id_2> :Menu_ChangeSelection
 						endif
 					endif
 					k = 0
 					begin
 					if NOT (<k> = <index>)
-						if screenelementexists id = {<curr_id_2> child = <k>}
-							setscreenelementprops id = {<curr_id_2> child = <k>} rgba = [64 64 64 255] font = fontgrid_text_a6 material = null not_focusable
+						if ScreenElementExists id = {<curr_id_2> child = <k>}
+							SetScreenElementProps id = {<curr_id_2> child = <k>} rgba = [64 64 64 255] font = fontgrid_text_a6 material = null not_focusable
 						endif
 					endif
 					k = (<k> + 1)
 					repeat 4
 				endif
-				removeparameter \{index}
-				removeparameter \{menu}
+				RemoveParameter \{index}
+				RemoveParameter \{menu}
 			endif
 		endif
 		j = (<j> + 1)
@@ -4656,39 +4656,39 @@ script ui_band_mode_check_menus
 	i = 0
 	begin
 	<curr_id> = (<menus> [<i>])
-	<curr_id> :gettags
+	<curr_id> :GetTags
 	check_instrument = <instrument>
 	j = 0
 	begin
 	curr_id_2 = (<menus> [<j>])
 	if NOT (<curr_id> = <curr_id_2>)
-		<curr_id_2> :gettags
+		<curr_id_2> :GetTags
 		index = -1
 		if (<menu> = instrument)
 			switch <check_instrument>
 				case guitar
 				index = 0
-				case bass
+				case Bass
 				index = 1
 				case drum
 				index = 2
-				case vocals
+				case Vocals
 				index = 3
 				default
 			endswitch
 			if (<index> != -1)
-				if screenelementexists id = {<curr_id_2> child = <index>}
-					setscreenelementprops id = {<curr_id_2> child = <index>} rgba = [64 64 64 255] font = fontgrid_text_a6 material = null not_focusable
+				if ScreenElementExists id = {<curr_id_2> child = <index>}
+					SetScreenElementProps id = {<curr_id_2> child = <index>} rgba = [64 64 64 255] font = fontgrid_text_a6 material = null not_focusable
 				endif
-				if <curr_id_2> :menu_selectedindexis <index>
-					<curr_id_2> :menu_changeselection
+				if <curr_id_2> :Menu_SelectedIndexIs <index>
+					<curr_id_2> :Menu_ChangeSelection
 				endif
-				if screenelementexists id = {<curr_id_2> child = <index>}
-					setscreenelementprops id = {<curr_id_2> child = <index>} rgba = [64 64 64 255] font = fontgrid_text_a6 material = null not_focusable
+				if ScreenElementExists id = {<curr_id_2> child = <index>}
+					SetScreenElementProps id = {<curr_id_2> child = <index>} rgba = [64 64 64 255] font = fontgrid_text_a6 material = null not_focusable
 				endif
 			endif
-			removeparameter \{index}
-			removeparameter \{menu}
+			RemoveParameter \{index}
+			RemoveParameter \{menu}
 		endif
 	endif
 	j = (<j> + 1)
@@ -4702,28 +4702,28 @@ script ui_band_mode_check_menus
 endscript
 
 script ui_band_mode_check_disconnect 
-	myinterfaceelement :getsingletag \{menus}
-	gettags
+	MyInterfaceElement :GetSingleTag \{menus}
+	GetTags
 	begin
-	getactivecontrollers
+	GetActiveControllers
 	begin
-	if NOT scriptisrunning \{ui_band_mode_check_menus}
+	if NOT ScriptIsRunning \{ui_band_mode_check_menus}
 		break
 	endif
-	wait \{1
+	Wait \{1
 		gameframe}
 	repeat
 	if (<active_controllers> [<index>] = 0)
 		curr_menu = (<menus> [<index>])
-		<curr_menu> :getsingletag menu
+		<curr_menu> :GetSingleTag menu
 		if NOT (<menu> = join)
-			<curr_menu> :settags {menu = root}
+			<curr_menu> :SetTags {menu = root}
 			<curr_menu> :obj_spawnscript ui_band_mode_back
-			removeparameter \{curr_menu}
-			removeparameter \{menu}
+			RemoveParameter \{curr_menu}
+			RemoveParameter \{menu}
 		endif
 	endif
-	wait \{1
+	Wait \{1
 		gameframes}
 	repeat
 endscript
@@ -4731,22 +4731,22 @@ endscript
 script ui_band_mode_warning \{text_scale = 1
 		time = 3}
 	if ($is_network_game = 1)
-		if gotparam \{press_start_to_proceed}
+		if GotParam \{press_start_to_proceed}
 			update_network_ticker \{msg_checksum = press_start_to_proceed}
 		else
-			if gotparam \{text}
+			if GotParam \{text}
 				update_network_ticker msg = <text> no_checksum
 			else
-				soundevent \{event = ui_sfx_negative_select}
+				SoundEvent \{event = UI_SFX_Negative_Select}
 				update_network_ticker \{msg_checksum = more_players_needed}
 			endif
 		endif
 	else
-		if iswinport
-			if gotparam \{press_start_to_proceed}
-				0xc3ef6d02 = 1
+		if IsWinPort
+			if GotParam \{press_start_to_proceed}
+				showKey = 1
 			endif
-			net_ticker_update_msg msg_type = vert msg = <text> 0xc3ef6d02 = <0xc3ef6d02>
+			net_ticker_update_msg msg_type = vert msg = <text> showKey = <showKey>
 		else
 			net_ticker_update_msg msg_type = vert msg = <text>
 		endif
@@ -4754,33 +4754,33 @@ script ui_band_mode_warning \{text_scale = 1
 endscript
 
 script ui_band_mode_signin 
-	requireparams \{[
+	RequireParams \{[
 			device_num
 		]
 		all}
 	change \{respond_to_signin_changed_func = none}
-	myinterfaceelement :se_setprops \{block_events}
-	if isxenon
+	MyInterfaceElement :SE_SetProps \{block_events}
+	if isXenon
 		if ($band_mode_show_signin = 1)
 			call_blade = 0
 			if ($is_network_game = 1)
-				if (checkforsignin local controller_index = <device_num>)
-					if NOT (checkforsignin controller_index = <device_num>)
-						netsessionfunc \{func = showsigninui
+				if (CheckForSignIn local controller_index = <device_num>)
+					if NOT (CheckForSignIn controller_index = <device_num>)
+						NetSessionFunc \{func = showsigninui
 							params = {
 								convert_offline_to_guest
 							}}
 						call_blade = 1
 					endif
 				else
-					netsessionfunc \{func = showsigninui4pane
+					NetSessionFunc \{func = ShowSignInUI4Pane
 						params = {
 							online_only
 						}}
 					call_blade = 1
 				endif
 			else
-				netsessionfunc \{func = showsigninui4pane}
+				NetSessionFunc \{func = ShowSignInUI4Pane}
 				call_blade = 1
 			endif
 			if (<call_blade> = 1)
@@ -4792,13 +4792,13 @@ script ui_band_mode_signin
 		endif
 	endif
 	change \{respond_to_signin_changed_func = ui_band_mode_signin_changed}
-	myinterfaceelement :se_setprops \{unblock_events}
+	MyInterfaceElement :SE_SetProps \{unblock_events}
 endscript
 
 script ui_band_mode_helper_text 
-	if screenelementexists \{id = myinterfaceelement}
-		myinterfaceelement :getsingletag \{menus}
-		getarraysize <menus>
+	if ScreenElementExists \{id = MyInterfaceElement}
+		MyInterfaceElement :GetSingleTag \{menus}
+		GetArraySize <menus>
 	else
 		array_size = 0
 	endif
@@ -4808,14 +4808,14 @@ script ui_band_mode_helper_text
 	if (<array_size> > 0)
 		begin
 		<curr_id> = (<menus> [<i>])
-		<curr_id> :gettags
+		<curr_id> :GetTags
 		if (<menu> = ready)
 			num = (<num> + 1)
 		endif
 		if (<menu> = join)
 			if ($band_mode_current_leader = <i>)
-				if isxenon
-					if NOT iswinport
+				if isXenon
+					if NOT IsWinPort
 						band_kill_character_select_menus
 					endif
 				endif
@@ -4832,91 +4832,91 @@ script ui_band_mode_helper_text
 	if ($is_network_game = 1)
 		if ($net_career_invite_flag = 0)
 			add_user_control_helper \{all_buttons
-				text = qs(0xc18d5e76)
+				text = qs("SELECT")
 				button = green
 				z = 100000}
 		endif
 		if ($num_players_in_band = 0)
 			if (<num> >= 1)
-				if ($net_band_mode_menu = host)
-					add_user_control_helper \{text = qs(0xc776b8b9)
+				if ($net_band_mode_menu = HOST)
+					add_user_control_helper \{text = qs("POST BAND")
 						button = start
 						z = 100000}
 				elseif ($net_band_mode_menu = join)
-					add_user_control_helper \{text = qs(0x6968900b)
+					add_user_control_helper \{text = qs("FIND BAND")
 						button = start
 						z = 100000}
 				endif
 			endif
 			if NOT (($net_band_mode_menu = lobby) || ($net_band_mode_menu = invite))
-				if isxenon
-					if NOT iswinport
+				if isXenon
+					if NOT IsWinPort
 						add_user_control_helper \{all_buttons
-							text = qs(0x17df5913)
-							button = yellow
+							text = qs("SIGN IN")
+							button = Yellow
 							z = 100000}
 					endif
 				endif
 			endif
-			if isps3
+			if IsPs3
 				add_user_control_helper \{all_buttons
-					text = qs(0x306229d7)
-					button = yellow
+					text = qs("INVITES")
+					button = Yellow
 					z = 100000}
 			endif
 			add_user_control_helper \{all_buttons
-				text = qs(0xaf4d5dd2)
+				text = qs("BACK")
 				button = red
 				z = 100000}
 		else
-			if NOT (scriptisrunning check_num_matchmaking_players_loop)
-				if ishost
-					add_user_control_helper \{text = qs(0x182f0173)
+			if NOT (ScriptIsRunning check_num_matchmaking_players_loop)
+				if IsHost
+					add_user_control_helper \{text = qs("CONTINUE")
 						button = start
 						z = 100000}
 				endif
-				if isps3
+				if IsPs3
 					add_user_control_helper \{all_buttons
-						text = qs(0x306229d7)
-						button = yellow
+						text = qs("INVITES")
+						button = Yellow
 						z = 100000}
 				endif
 				add_user_control_helper \{all_buttons
-					text = qs(0xaf4d5dd2)
+					text = qs("BACK")
 					button = red
 					z = 100000}
 			else
-				if isps3
+				if IsPs3
 					add_user_control_helper \{all_buttons
-						text = qs(0x306229d7)
-						button = yellow
+						text = qs("INVITES")
+						button = Yellow
 						z = 100000}
 				endif
 			endif
 		endif
 	else
-		if gotparam \{root}
+		if GotParam \{root}
 			if (<root> = gigs)
-				if ishost
+				if IsHost
 					add_user_control_helper \{all_buttons
-						text = qs(0xc18d5e76)
+						text = qs("SELECT")
 						button = green
 						z = 100000}
 				endif
 			else
 				add_user_control_helper \{all_buttons
-					text = qs(0xc18d5e76)
+					text = qs("SELECT")
 					button = green
 					z = 100000}
 			endif
 		else
 			add_user_control_helper \{all_buttons
-				text = qs(0xc18d5e76)
+				text = qs("SELECT")
 				button = green
 				z = 100000}
 		endif
 		if (<num> >= 2)
-			add_user_control_helper \{text = qs(0x182f0173)
+			add_user_control_helper \{text = qs("CONTINUE")
 				button = start
 				controller = $band_mode_current_leader
 				z = 100000}
@@ -4925,7 +4925,7 @@ script ui_band_mode_helper_text
 				else
 					user_control_helper_get_buttonchar \{button = start
 						controller = $band_mode_current_leader}
-					formattext textname = button_text qs(0x72f9ae62) b = <buttonchar>
+					FormatText TextName = button_text qs("Press %b to proceed.") b = <buttonchar>
 					spawnscriptnow ui_band_mode_warning params = {press_start_to_proceed text = <button_text> text_scale = 2 time = 5}
 				endif
 			endif
@@ -4937,35 +4937,35 @@ script ui_band_mode_helper_text
 		endif
 		ui_event_get_stack
 		if NOT ((<stack> [0].base_name) = 'band_mode')
-			removeparameter \{try_leader}
+			RemoveParameter \{try_leader}
 		endif
 		change \{band_mode_can_choose_leader = 0}
-		if gotparam \{try_leader}
+		if GotParam \{try_leader}
 			if NOT is_band_character_select_up
 				add_user_control_helper \{all_buttons
-					text = qs(0x6f9fb401)
-					button = blue
+					text = qs("BAND LEADER")
+					button = Blue
 					z = 100000}
 				change \{band_mode_can_choose_leader = 1}
 			endif
 		endif
-		if isxenon
-			if NOT isanycontrollersignedin
+		if isXenon
+			if NOT IsAnyControllerSignedIn
 			endif
 		endif
 		add_user_control_helper \{all_buttons
-			text = qs(0xaf4d5dd2)
+			text = qs("BACK")
 			button = red
 			z = 100000}
 	endif
 	change band_mode_last_num_ready = <num>
 endscript
 
-script isanycontrollersignedin 
-	getmaxcontrollersignins
+script IsAnyControllerSignedIn 
+	GetMaxControllerSignins
 	i = 0
 	begin
-	if islocallysignedin controller = <i>
+	if IsLocallySignedIn controller = <i>
 		return \{true}
 	endif
 	i = (<i> + 1)
@@ -4974,14 +4974,14 @@ script isanycontrollersignedin
 endscript
 
 script ui_band_mode_scroll_sound 
-	gettags
+	GetTags
 	get_player_num_from_controller controller_index = <controller>
-	spawnscriptnow band_screen_ui_sound params = {sound_type = scroll <...> controller = <player_num>}
+	spawnscriptnow Band_Screen_UI_Sound params = {sound_type = scroll <...> controller = <player_num>}
 endscript
 
 script ui_band_mode_choose_sound \{ready = 0
 		controller = 0}
-	gettags
+	GetTags
 	get_player_num_from_controller controller_index = <controller>
 	if (<player_num> < 0)
 		player_num = 1
@@ -5021,147 +5021,147 @@ script ui_band_mode_choose_sound \{ready = 0
 			<pan2y> = 1
 		endif
 	endif
-	if NOT gotparam \{back}
+	if NOT GotParam \{back}
 		if (<ready> = 1)
 			switch <instrument>
 				case drum
-				playsound drum_select_affirmation_01 vol = -2 buss = front_end pan1x = <pan1x> pan1y = <pan1y> pan2x = <pan2x> pan2y = <pan2y>
+				PlaySound Drum_Select_Affirmation_01 vol = -2 buss = front_end pan1x = <pan1x> pan1y = <pan1y> pan2x = <pan2x> pan2y = <pan2y>
 				case guitar
-				playsound guitar_select_affirmation_1 vol = -13 buss = front_end pan1x = <pan1x> pan1y = <pan1y> pan2x = <pan2x> pan2y = <pan2y>
-				case vocals
-				playsound mic_select_affirmation_01 vol = 15 buss = front_end pan1x = <pan1x> pan1y = <pan1y> pan2x = <pan2x> pan2y = <pan2y>
-				case bass
-				playsound bass_select_affirmation_02 vol = -1 buss = front_end pan1x = <pan1x> pan1y = <pan1y> pan2x = <pan2x> pan2y = <pan2y>
+				PlaySound Guitar_Select_Affirmation_1 vol = -13 buss = front_end pan1x = <pan1x> pan1y = <pan1y> pan2x = <pan2x> pan2y = <pan2y>
+				case Vocals
+				PlaySound Mic_Select_Affirmation_01 vol = 15 buss = front_end pan1x = <pan1x> pan1y = <pan1y> pan2x = <pan2x> pan2y = <pan2y>
+				case Bass
+				PlaySound Bass_Select_Affirmation_02 vol = -1 buss = front_end pan1x = <pan1x> pan1y = <pan1y> pan2x = <pan2x> pan2y = <pan2y>
 				default
-				playsound checkbox_check_sfx vol = 2 buss = front_end pan1x = <pan1x> pan1y = <pan1y> pan2x = <pan2x> pan2y = <pan2y>
+				PlaySound CheckBox_Check_SFX vol = 2 buss = front_end pan1x = <pan1x> pan1y = <pan1y> pan2x = <pan2x> pan2y = <pan2y>
 			endswitch
 		else
 			switch <instrument>
 				case drum
-				playsound ui_sound_05 vol = -6 buss = front_end pan1x = <pan1x> pan1y = <pan1y> pan2x = <pan2x> pan2y = <pan2y>
+				PlaySound ui_sound_05 vol = -6 buss = front_end pan1x = <pan1x> pan1y = <pan1y> pan2x = <pan2x> pan2y = <pan2y>
 				case guitar
-				playsound ui_sound_05 vol = -6 buss = front_end pan1x = <pan1x> pan1y = <pan1y> pan2x = <pan2x> pan2y = <pan2y>
-				case vocals
-				playsound ui_sound_05 vol = -6 buss = front_end pan1x = <pan1x> pan1y = <pan1y> pan2x = <pan2x> pan2y = <pan2y>
-				case bass
-				playsound ui_sound_05 vol = -6 buss = front_end pan1x = <pan1x> pan1y = <pan1y> pan2x = <pan2x> pan2y = <pan2y>
+				PlaySound ui_sound_05 vol = -6 buss = front_end pan1x = <pan1x> pan1y = <pan1y> pan2x = <pan2x> pan2y = <pan2y>
+				case Vocals
+				PlaySound ui_sound_05 vol = -6 buss = front_end pan1x = <pan1x> pan1y = <pan1y> pan2x = <pan2x> pan2y = <pan2y>
+				case Bass
+				PlaySound ui_sound_05 vol = -6 buss = front_end pan1x = <pan1x> pan1y = <pan1y> pan2x = <pan2x> pan2y = <pan2y>
 				default
-				playsound ui_sound_05 vol = -6 buss = front_end pan1x = <pan1x> pan1y = <pan1y> pan2x = <pan2x> pan2y = <pan2y>
+				PlaySound ui_sound_05 vol = -6 buss = front_end pan1x = <pan1x> pan1y = <pan1y> pan2x = <pan2x> pan2y = <pan2y>
 			endswitch
 		endif
-	else gotparam \{back}
-		playsound ui_sound_09 vol = -7.5 buss = front_end pan1x = <pan1x> pan1y = <pan1y> pan2x = <pan2x> pan2y = <pan2y>
+	else GotParam \{back}
+		PlaySound UI_Sound_09 vol = -7.5 buss = front_end pan1x = <pan1x> pan1y = <pan1y> pan2x = <pan2x> pan2y = <pan2y>
 	endif
 endscript
 
 script ui_get_controller_parts_allowed 
-	requireparams \{[
+	RequireParams \{[
 			controller
 		]
 		all}
 	if (($allow_controller_for_all_instruments) = 0)
 		allowed = {}
-		if isguitarcontroller controller = <controller>
-			allowed = {guitar bass}
-		elseif isdrumcontroller controller = <controller>
+		if IsGuitarController controller = <controller>
+			allowed = {guitar Bass}
+		elseif IsDrumController controller = <controller>
 			allowed = {drum}
-		elseif ismicrophonepluggedin
-			allowed = {vocals}
-		elseif 0x1c708d82 controller = <controller>
-			allowed = {guitar bass drum}
+		elseif IsMicrophonePluggedIn
+			allowed = {Vocals}
+		elseif WinPortIsKeyboardController controller = <controller>
+			allowed = {guitar Bass drum}
 		endif
 	else
-		if iswinport
-			allowed = {guitar bass drum}
+		if IsWinPort
+			allowed = {guitar Bass drum}
 		else
-			allowed = {guitar bass drum vocals}
+			allowed = {guitar Bass drum Vocals}
 		endif
-		if isguitarcontroller controller = <controller>
-			allowed = {guitar bass}
-		elseif isdrumcontroller controller = <controller>
+		if IsGuitarController controller = <controller>
+			allowed = {guitar Bass}
+		elseif IsDrumController controller = <controller>
 			allowed = {drum}
-		elseif ismicrophonepluggedin
-			allowed = {guitar bass drum vocals}
+		elseif IsMicrophonePluggedIn
+			allowed = {guitar Bass drum Vocals}
 		endif
 	endif
 	if is_regular_controller controller = <controller>
 		if controller_has_headset controller = <controller>
-			allowed = {<allowed> vocals}
+			allowed = {<allowed> Vocals}
 		endif
 	endif
-	gamemode_gettype
+	GameMode_GetType
 	if (<type> = battle)
-		removeparameter \{vocals
+		RemoveParameter \{Vocals
 			struct_name = allowed}
 	endif
-	if iswinport
+	if IsWinPort
 		if is_regular_controller controller = <controller>
-			gamemode_getproperty \{prop = faceoff}
+			GameMode_GetProperty \{prop = faceoff}
 			if (<faceoff> = true)
-				allowed = {guitar bass drum}
+				allowed = {guitar Bass drum}
 			endif
 		endif
 	endif
-	if gotparam \{filter_by_character}
+	if GotParam \{filter_by_character}
 		filter_allowed_parts_by_character_type allowed = <allowed> controller = <controller>
 	endif
 	return allowed = <allowed>
 endscript
 
 script proceed_to_band_lobby 
-	printf \{qs(0x618cce00)}
+	printf \{qs("\Lproceed_to_band_lobby")}
 	change \{net_band_mode_menu = lobby}
 	ui_destroy_net_career_join_popup
 	ui_event \{event = menu_change
 		data = {
-			state = uistate_band_mode
+			state = UIstate_band_mode
 		}}
 endscript
 
 script add_gamertag_to_band_lobby 
-	printf \{qs(0xcfaf4832)}
+	printf \{qs("\Ladd_gamertag_to_band_lobby")}
 	band_leader = 0
-	if NOT gotparam \{name}
-		getplayerinfo (<index> + 1) controller
-		getplayerinfo (<index> + 1) gamertag
+	if NOT GotParam \{name}
+		GetPlayerInfo (<index> + 1) controller
+		GetPlayerInfo (<index> + 1) gamertag
 		name = $<gamertag>
-		if (<name> = qs(0x00000000))
-			name = qs(0x03ac90f0)
+		if (<name> = qs(""))
+			name = qs("\L")
 		endif
 	else
 		controller = -1
 	endif
-	if myinterfaceelement :desc_resolvealias \{name = alias_hmenu}
-		resolvescreenelementid id = [
+	if MyInterfaceElement :Desc_ResolveAlias \{name = alias_hmenu}
+		ResolveScreenElementId id = [
 			{id = <resolved_id>}
 			{index = <index>}
 		]
-		if gotparam \{name}
+		if GotParam \{name}
 			band_gamertag_rename gamertag = <name> index = <index> desc_item = <desc_item>
 		endif
-		if ((<controller> = $primary_controller) && (ishost) && (<menu> = net_local_root))
+		if ((<controller> = $primary_controller) && (IsHost) && (<menu> = net_local_root))
 			band_leader = 1
-			<resolved_id> :se_setprops leader_indicator_alpha = 1
+			<resolved_id> :SE_SetProps leader_indicator_alpha = 1
 		endif
 	endif
 	return band_leader = <band_leader>
 endscript
 
 script net_add_player_to_career_ui 
-	if ishost
+	if IsHost
 		get_party_member_status net_id_first = <net_id_first> net_id_second = <net_id_second>
 		if (<local_client> = 0)
 			if (<is_party_member> = 0)
 				change num_players_in_band = (($num_players_in_band) + 1)
-				printf qs(0x695a6a7a) d = ($num_players_in_band)
+				printf qs("\Lnum_players_in_band = %d") d = ($num_players_in_band)
 			endif
-			myinterfaceelement :getsingletag \{menus}
-			myinterfaceelement :getsingletag \{descs}
-			if gotparam \{descs}
+			MyInterfaceElement :GetSingleTag \{menus}
+			MyInterfaceElement :GetSingleTag \{descs}
+			if GotParam \{descs}
 				xuid = [0 0]
-				setarrayelement arrayname = xuid index = 0 newvalue = <net_id_first>
-				setarrayelement arrayname = xuid index = 1 newvalue = <net_id_second>
-				if isxenon
+				SetArrayElement ArrayName = xuid index = 0 newvalue = <net_id_first>
+				SetArrayElement ArrayName = xuid index = 1 newvalue = <net_id_second>
+				if isXenon
 					(<descs> [(<player_num> - 1)]) :obj_spawnscript update_headset_status params = {obj_id = (<descs> [(<player_num> - 1)]) uid = <xuid>}
 				endif
 			endif
@@ -5171,7 +5171,7 @@ script net_add_player_to_career_ui
 			if (<part> = guitar)
 				part = none
 			endif
-			(<menus> [(<player_num> - 1)]) :settags {
+			(<menus> [(<player_num> - 1)]) :SetTags {
 				instrument = <part>
 				difficulty = <difficulty>
 				menu = net_remote_root
@@ -5184,46 +5184,46 @@ script net_add_player_to_career_ui
 				get_party_member_status net_id_first = <net_id_first> net_id_second = <net_id_second>
 				if (<is_party_member> = 0)
 					change num_players_in_band = (($num_players_in_band) + 1)
-					printf qs(0x695a6a7a) d = ($num_players_in_band)
+					printf qs("\Lnum_players_in_band = %d") d = ($num_players_in_band)
 				endif
 			endif
 		else
 			if (<local_client> = 0)
 				change num_players_in_band = (($num_players_in_band) + 1)
-				printf qs(0x695a6a7a) d = ($num_players_in_band)
+				printf qs("\Lnum_players_in_band = %d") d = ($num_players_in_band)
 			endif
 		endif
 	endif
 endscript
 
 script net_career_goto_band_lobby 
-	printf \{qs(0x02555b76)}
+	printf \{qs("\Lnet_career_goto_band_lobby")}
 	end_singleplayer_game
-	killspawnedscript \{name = loading_screen_crowd_swell}
-	killspawnedscript \{name = crowd_loading_whistle}
-	if gotparam \{from_encore}
+	KillSpawnedScript \{name = Loading_Screen_Crowd_Swell}
+	KillSpawnedScript \{name = Crowd_Loading_Whistle}
+	if GotParam \{from_encore}
 		kill_gem_scroller
 	endif
 	change \{career_matchmaking_complete = 1}
-	getglobaltags \{user_options}
+	GetGlobalTags \{user_options}
 	if (<autosave> = 1)
 		ui_memcard_autosave \{event = menu_back
-			state = uistate_band_mode
+			state = UIstate_band_mode
 			data = {
 				all_active_players = true
 			}}
 	else
 		ui_event \{event = menu_back
 			data = {
-				state = uistate_band_mode
+				state = UIstate_band_mode
 			}}
 	endif
 endscript
 
 script net_career_goto_gig_board 
-	if screenelementexists \{id = myinterfaceelement}
+	if ScreenElementExists \{id = MyInterfaceElement}
 		generic_menu_pad_choose_sound
-		myinterfaceelement :se_setprops \{alpha = 0.0}
+		MyInterfaceElement :SE_SetProps \{alpha = 0.0}
 		clean_up_user_control_helpers
 		ui_event event = menu_change data = {state = uistate_gig_posters controller = <device_num> is_popup}
 	endif
@@ -5231,7 +5231,7 @@ endscript
 
 script is_current_state_band_mode 
 	ui_event_get_stack
-	getarraysize <stack>
+	GetArraySize <stack>
 	if (<array_size> > 0)
 		if ((<stack> [0].base_name) = 'band_mode')
 			return \{true}
@@ -5244,9 +5244,9 @@ script is_current_state_band_mode
 endscript
 
 script net_setup_band_lobby_ticker 
-	resolvescreenelementid \{id = [
+	ResolveScreenElementId \{id = [
 			{
-				id = myinterfaceelement
+				id = MyInterfaceElement
 			}
 			{
 				local_id = band_menu_container
@@ -5255,11 +5255,11 @@ script net_setup_band_lobby_ticker
 				local_id = online_ticker_window_element
 			}
 		]}
-	if screenelementexists id = <resolved_id>
+	if ScreenElementExists id = <resolved_id>
 	endif
-	resolvescreenelementid \{id = [
+	ResolveScreenElementId \{id = [
 			{
-				id = myinterfaceelement
+				id = MyInterfaceElement
 			}
 			{
 				local_id = band_menu_container
@@ -5271,17 +5271,17 @@ script net_setup_band_lobby_ticker
 				local_id = online_ticker_vert_text
 			}
 		]}
-	if screenelementexists id = <resolved_id>
-		<resolved_id> :se_getprops
-		<resolved_id> :settags {
+	if ScreenElementExists id = <resolved_id>
+		<resolved_id> :SE_GetProps
+		<resolved_id> :SetTags {
 			msg_pending = 0
 			orgin_pos = <pos>
 		}
-		<resolved_id> :obj_spawnscriptlater net_ticker_msg_loop params = {msg_type = vert}
+		<resolved_id> :Obj_SpawnScriptLater net_ticker_msg_loop params = {msg_type = vert}
 	endif
-	resolvescreenelementid \{id = [
+	ResolveScreenElementId \{id = [
 			{
-				id = myinterfaceelement
+				id = MyInterfaceElement
 			}
 			{
 				local_id = band_menu_container
@@ -5293,39 +5293,39 @@ script net_setup_band_lobby_ticker
 				local_id = online_ticker_horiz_text
 			}
 		]}
-	if screenelementexists id = <resolved_id>
-		<resolved_id> :se_getprops
-		<resolved_id> :settags {
+	if ScreenElementExists id = <resolved_id>
+		<resolved_id> :SE_GetProps
+		<resolved_id> :SetTags {
 			msg_pending = 0
 			orgin_pos = <pos>
 		}
-		<resolved_id> :obj_spawnscriptlater net_ticker_msg_loop params = {msg_type = horiz}
+		<resolved_id> :Obj_SpawnScriptLater net_ticker_msg_loop params = {msg_type = horiz}
 	endif
 endscript
 
 script net_ticker_msg_loop 
 	begin
-	getsingletag \{msg_pending}
+	GetSingleTag \{msg_pending}
 	if (<msg_pending>)
-		settags \{msg_pending = 0}
+		SetTags \{msg_pending = 0}
 		if (<msg_type> = vert)
-			obj_killspawnedscript \{name = net_ticker_vert_scroll}
+			Obj_KillSpawnedScript \{name = net_ticker_vert_scroll}
 		elseif (<msg_type> = horiz)
-			obj_killspawnedscript \{name = net_ticker_horiz_scroll}
+			Obj_KillSpawnedScript \{name = net_ticker_horiz_scroll}
 		endif
 		if (<msg_type> = vert)
-			obj_spawnscriptnow \{net_ticker_vert_scroll}
+			Obj_SpawnScriptNow \{net_ticker_vert_scroll}
 		elseif (<msg_type> = horiz)
-			obj_spawnscriptnow \{net_ticker_horiz_scroll}
+			Obj_SpawnScriptNow \{net_ticker_horiz_scroll}
 		endif
 	endif
-	wait \{0.25
+	Wait \{0.25
 		seconds}
 	repeat
 endscript
 
 script net_ticker_update_msg 
-	if NOT gotparam \{msg}
+	if NOT GotParam \{msg}
 		return
 	endif
 	if (<msg_type> = vert)
@@ -5333,39 +5333,39 @@ script net_ticker_update_msg
 	elseif (<msg_type> = horiz)
 		text_id = online_ticker_horiz_text
 	endif
-	resolvescreenelementid id = [
-		{id = myinterfaceelement}
+	ResolveScreenElementId id = [
+		{id = MyInterfaceElement}
 		{local_id = band_menu_container}
 		{local_id = online_ticker_window_element}
 		{local_id = <text_id>}
 	]
-	if screenelementexists id = <resolved_id>
-		<resolved_id> :se_setprops text = <msg> alpha = 0.0
-		<resolved_id> :settags msg_pending = 1
-		if 0x1c708d82 \{controller = $band_mode_current_leader}
-			if gotparam \{0xc3ef6d02}
-				if (<0xc3ef6d02> = 1)
-					if NOT screenelementexists \{id = 0x3ea804cd}
-						0xeb08ac72 \{actionnum = 7}
-						if german
-							pos = ((325.0, 13.5) + <0x3a15b5b9>)
-						elseif spanish
-							pos = ((340.0, 13.5) + <0x3a15b5b9>)
-						elseif french
-							pos = ((418.0, 13.5) + <0x3a15b5b9>)
-						elseif italian
-							pos = ((350.0, 13.5) + <0x3a15b5b9>)
+	if ScreenElementExists id = <resolved_id>
+		<resolved_id> :SE_SetProps text = <msg> alpha = 0.0
+		<resolved_id> :SetTags msg_pending = 1
+		if WinPortIsKeyboardController \{controller = $band_mode_current_leader}
+			if GotParam \{showKey}
+				if (<showKey> = 1)
+					if NOT ScreenElementExists \{id = WinPort_key_label}
+						winport_get_keyboard_text \{actionNum = 7}
+						if German
+							pos = ((325.0, 13.5) + <keyPosOffset>)
+						elseif Spanish
+							pos = ((340.0, 13.5) + <keyPosOffset>)
+						elseif French
+							pos = ((418.0, 13.5) + <keyPosOffset>)
+						elseif Italian
+							pos = ((350.0, 13.5) + <keyPosOffset>)
 						else
-							pos = ((410.0, 13.5) + <0x3a15b5b9>)
+							pos = ((410.0, 13.5) + <keyPosOffset>)
 						endif
-						createscreenelement {
+						CreateScreenElement {
 							parent = <resolved_id>
-							type = textblockelement
-							id = 0x3ea804cd
-							text = <0x5d165c12>
-							font = <0xb609f307>
-							font_spacing = <0x5765a514>
-							internal_scale = <0xc89b71a9>
+							type = TextBlockElement
+							id = WinPort_key_label
+							text = <keyText>
+							font = <keyFont>
+							font_spacing = <keyFontSpacing>
+							internal_scale = <keyScale>
 							pos = <pos>
 							dims = (20.0, 20.0)
 							single_line = true
@@ -5376,8 +5376,8 @@ script net_ticker_update_msg
 					endif
 				endif
 			else
-				if screenelementexists \{id = 0x3ea804cd}
-					destroyscreenelement \{id = 0x3ea804cd}
+				if ScreenElementExists \{id = WinPort_key_label}
+					DestroyScreenElement \{id = WinPort_key_label}
 				endif
 			endif
 		endif
@@ -5385,67 +5385,67 @@ script net_ticker_update_msg
 endscript
 
 script net_ticker_vert_scroll 
-	myinterfaceelement :se_setprops \{online_ticker_window_element_alpha = 1.0
+	MyInterfaceElement :SE_SetProps \{online_ticker_window_element_alpha = 1.0
 		time = 0.1}
-	if screenelementexists \{id = scrolling_msg_container}
-		scrolling_msg_container :se_setprops \{alpha = 0.0}
+	if ScreenElementExists \{id = scrolling_msg_container}
+		scrolling_msg_container :SE_SetProps \{alpha = 0.0}
 	endif
-	obj_getid
-	getsingletag \{orgin_pos}
-	<objid> :se_setprops alpha = 1.0 pos = <orgin_pos>
-	<objid> :setprops pos = (<orgin_pos> + (0.0, -55.0)) time = 0.2
-	<objid> :se_waitprops
-	wait \{4
+	Obj_GetID
+	GetSingleTag \{orgin_pos}
+	<ObjID> :SE_SetProps alpha = 1.0 pos = <orgin_pos>
+	<ObjID> :SetProps pos = (<orgin_pos> + (0.0, -55.0)) time = 0.2
+	<ObjID> :SE_WaitProps
+	Wait \{4
 		second}
-	<objid> :setprops alpha = (0.0) time = 0.5
-	<objid> :se_waitprops
-	<objid> :se_setprops pos = <orgin_pos>
-	if screenelementexists \{id = scrolling_msg_container}
-		scrolling_msg_container :setprops \{alpha = 1.0
+	<ObjID> :SetProps alpha = (0.0) time = 0.5
+	<ObjID> :SE_WaitProps
+	<ObjID> :SE_SetProps pos = <orgin_pos>
+	if ScreenElementExists \{id = scrolling_msg_container}
+		scrolling_msg_container :SetProps \{alpha = 1.0
 			time = 0.5}
-		scrolling_msg_container :se_waitprops
+		scrolling_msg_container :SE_WaitProps
 	endif
-	if NOT scriptisrunning \{net_ticker_horiz_scroll}
-		myinterfaceelement :se_setprops \{online_ticker_window_element_alpha = 0.0
+	if NOT ScriptIsRunning \{net_ticker_horiz_scroll}
+		MyInterfaceElement :SE_SetProps \{online_ticker_window_element_alpha = 0.0
 			time = 0.1}
 	endif
 endscript
 
 script net_ticker_horiz_scroll \{scroll_time = 6}
-	printf \{qs(0xaa1952d2)}
-	myinterfaceelement :se_setprops \{online_ticker_window_element_alpha = 1.0
+	printf \{qs("\Lnet_ticker_horiz_scroll")}
+	MyInterfaceElement :SE_SetProps \{online_ticker_window_element_alpha = 1.0
 		time = 0.1}
-	obj_getid
-	<objid> :se_getprops
-	createscreenelement {
-		type = textelement
-		parent = <objid>
+	Obj_GetID
+	<ObjID> :SE_GetProps
+	CreateScreenElement {
+		type = TextElement
+		parent = <ObjID>
 		scale = <scale>
-		text = qs(0x713755f7)
+		text = qs("\L ")
 		font = <font>
 	}
-	getscreenelementdims id = <id>
+	GetScreenElementDims id = <id>
 	space_width = <width>
-	destroyscreenelement id = <id>
-	<objid> :se_getparentid
-	if screenelementexists \{id = scrolling_msg_container}
-		destroyscreenelement \{id = scrolling_msg_container}
+	DestroyScreenElement id = <id>
+	<ObjID> :SE_GetParentId
+	if ScreenElementExists \{id = scrolling_msg_container}
+		DestroyScreenElement \{id = scrolling_msg_container}
 	endif
-	createscreenelement {
-		type = containerelement
+	CreateScreenElement {
+		type = ContainerElement
 		parent = <parent_id>
 		id = scrolling_msg_container
 	}
-	getscreenelementchildren id = <objid>
-	getarraysize (<children>)
+	GetScreenElementChildren id = <ObjID>
+	GetArraySize (<children>)
 	i = 0
 	orgin_end_pos = (0.0, -6.0)
 	begin
 	(<children> [<i>]) :text_getstring
 	printf <string>
-	formattext checksumname = ticker_text 'ticker_text_%i' i = <i>
-	createscreenelement {
-		type = textelement
+	FormatText checksumname = ticker_text 'ticker_text_%i' i = <i>
+	CreateScreenElement {
+		type = TextElement
 		parent = scrolling_msg_container
 		id = <ticker_text>
 		just = [left top]
@@ -5455,7 +5455,7 @@ script net_ticker_horiz_scroll \{scroll_time = 6}
 		rgba = <rgba>
 		z_priority = <z_priority>
 	}
-	getscreenelementdims id = <id>
+	GetScreenElementDims id = <id>
 	new_width = (<width> + <space_width>)
 	orgin_end_pos = (<orgin_end_pos> - (<new_width> * (1.0, 0.0)))
 	<i> = (<i> + 1)
@@ -5468,34 +5468,34 @@ script net_ticker_horiz_scroll \{scroll_time = 6}
 	end_pos = <orgin_end_pos>
 	<i> = 0
 	begin
-	formattext checksumname = ticker_text 'ticker_text_%i' i = <i>
-	<objid> :obj_spawnscriptnow scroll_ticker_each_line params = {id = <ticker_text> start_pos = <start_pos> end_pos = <end_pos> scroll_time = <scroll_time>}
-	getscreenelementdims id = <ticker_text>
+	FormatText checksumname = ticker_text 'ticker_text_%i' i = <i>
+	<ObjID> :Obj_SpawnScriptNow scroll_ticker_each_line params = {id = <ticker_text> start_pos = <start_pos> end_pos = <end_pos> scroll_time = <scroll_time>}
+	GetScreenElementDims id = <ticker_text>
 	<new_width> = (<width> + <space_width>)
 	start_pos = (<start_pos> + (<new_width> * (1.0, 0.0)))
 	end_pos = (<end_pos> + (<new_width> * (1.0, 0.0)))
 	<i> = (<i> + 1)
 	repeat <array_size>
-	wait <scroll_time> seconds
+	Wait <scroll_time> seconds
 	repeat
-	if NOT scriptisrunning \{net_ticker_vert_scroll}
-		myinterfaceelement :se_setprops \{online_ticker_window_element_alpha = 0.0
+	if NOT ScriptIsRunning \{net_ticker_vert_scroll}
+		MyInterfaceElement :SE_SetProps \{online_ticker_window_element_alpha = 0.0
 			time = 0.1}
 	endif
 endscript
 
 script scroll_ticker_each_line 
-	if screenelementexists id = <id>
-		<id> :se_setprops pos = <start_pos>
-		<id> :se_setprops pos = <end_pos> time = <scroll_time>
-		<id> :se_waitprops
+	if ScreenElementExists id = <id>
+		<id> :SE_SetProps pos = <start_pos>
+		<id> :SE_SetProps pos = <end_pos> time = <scroll_time>
+		<id> :SE_WaitProps
 	endif
 endscript
 
 script update_network_ticker 
-	printf \{qs(0x83820b7f)}
-	if NOT gotparam \{no_checksum}
-		if NOT (gotparam msg_checksum)
+	printf \{qs("\Lupdate_network_ticker")}
+	if NOT GotParam \{no_checksum}
+		if NOT (GotParam msg_checksum)
 			return
 		endif
 	else
@@ -5505,190 +5505,190 @@ script update_network_ticker
 	switch <msg_checksum>
 		case waiting_for_data
 		msg_type = horiz
-		msg = qs(0x3cc23f45)
+		msg = qs("Waiting for player data.")
 		replace = 1
 		case menu_invite
 		msg_type = horiz
-		msg = qs(0x54c0d409)
+		msg = qs("Waiting for the band leader to post the band.")
 		append = 1
 		case max_guitars
 		msg_type = vert
-		msg = qs(0x715f83ca)
+		msg = qs("There are already a maximum number of guitar controllers being used.")
 		replace = 1
 		case max_vocals
 		msg_type = vert
-		if iswinport
+		if IsWinPort
 			msg = qs(0x9e021e59)
-		elseif isxenon
-			msg = qs(0x1ffdf92f)
+		elseif isXenon
+			msg = qs("There are already a maximum number of Xbox 360 Controllers being used.")
 		else
-			msg = qs(0xe4ecd396)
+			msg = qs("There are already a maximum number of wireless controllers being used.")
 		endif
 		replace = 1
 		case max_drum
 		msg_type = vert
-		msg = qs(0x8cda971e)
+		msg = qs("There are already a maximum number of drum controllers being used.")
 		replace = 1
 		case no_mic
 		msg_type = vert
-		if iswinport
-			msg = qs(0xa0a4ab6b)
-		elseif isxenon
-			msg = qs(0xc81bf63c)
+		if IsWinPort
+			msg = qs("A microphone must be plugged in to join the band.")
+		elseif isXenon
+			msg = qs("A microphone or Xbox 360 Headset must be plugged in to join the band.")
 		else
-			msg = qs(0xa0a4ab6b)
+			msg = qs("A microphone must be plugged in to join the band.")
 		endif
 		replace = 1
 		case band_leader
 		msg_type = vert
-		msg = qs(0x9f054016)
+		msg = qs("Band leader needs to be part of the band")
 		replace = 1
 		case menu_host
 		msg_type = horiz
 		user_control_helper_get_buttonchar \{button = start}
-		if iswinport
-			if (0x1c708d82 controller = $primary_controller)
-				formattext \{textname = msg
+		if IsWinPort
+			if (WinPortIsKeyboardController controller = $primary_controller)
+				FormatText \{TextName = msg
 					qs(0xc5276cf4)}
 			else
-				formattext textname = msg qs(0xdefdeda1) d = <buttonchar>
+				FormatText TextName = msg qs(0xdefdeda1) d = <buttonchar>
 			endif
 		else
-			formattext textname = msg qs(0x9115c4fd) d = <buttonchar>
+			FormatText TextName = msg qs("Invite friends or press %d to post the band.") d = <buttonchar>
 		endif
 		append = 1
-		0xc3ef6d02 = 1
+		showKey = 1
 		case menu_join
 		msg_type = horiz
 		user_control_helper_get_buttonchar \{button = green}
 		green = <buttonchar>
 		user_control_helper_get_buttonchar \{button = start}
-		if iswinport
-			if (0x1c708d82 controller = $primary_controller)
-				formattext \{textname = msg
+		if IsWinPort
+			if (WinPortIsKeyboardController controller = $primary_controller)
+				FormatText \{TextName = msg
 					qs(0xd93cf0b3)}
 			else
-				formattext textname = msg qs(0xf55e812a) d = <green> e = <buttonchar>
+				FormatText TextName = msg qs("Press %d to join. Press %e to search for a band with all members who are ready.") d = <green> e = <buttonchar>
 			endif
 		else
-			formattext textname = msg qs(0xf55e812a) d = <green> e = <buttonchar>
+			FormatText TextName = msg qs("Press %d to join. Press %e to search for a band with all members who are ready.") d = <green> e = <buttonchar>
 		endif
 		append = 1
-		0xc3ef6d02 = 1
+		showKey = 1
 		case guitarist_roles
 		msg_type = vert
-		msg = qs(0xecb5e393)
+		msg = qs("Guitarists have not choosen their roles yet.")
 		replace = 1
 		case ps3_chat
 		msg_type = horiz
-		msg = qs(0x925535f4)
+		msg = qs("Chat is disabled on your PLAYSTATION®Network account due to parental control restrictions.")
 		append = 1
 		case full
 		msg_type = horiz
-		msg = qs(0xe5668284)
+		msg = qs("Band is now full.")
 		replace = 1
 		case non_primary_post
 		msg_type = vert
 		if NOT ($net_band_mode_menu = none)
-			msg = qs(0xbbe54193)
+			msg = qs("Only the band leader can post the band.")
 		else
-			msg = qs(0xce4db331)
+			msg = qs("Only the band leader can select to continue.")
 		endif
 		replace = 1
 		case guest_continue
 		msg_type = vert
-		if ($net_band_mode_menu = host)
-			msg = qs(0xff17a488)
+		if ($net_band_mode_menu = HOST)
+			msg = qs("Xbox LIVE guests can not post a band.")
 		elseif ($net_band_mode_menu = join)
-			msg = qs(0x17a405da)
+			msg = qs("Xbox LIVE guests can not search for bands.")
 		endif
 		replace = 1
 		case matchmaking_complete
 		msg_type = vert
-		msg = qs(0x9efc7426)
+		msg = qs("Lets wait a little longer to get some joiners first.")
 		replace = 1
 		case host_ready_up
 		msg_type = vert
-		msg = qs(0x98bf8dc2)
+		msg = qs("Host needs to ready up before starting gig.")
 		replace = 1
 		case count_down
 		msg_type = vert
-		get_progression_globals \{career_band}
-		formattext \{checksumname = tiername
+		get_progression_globals \{Career_Band}
+		FormatText \{checksumname = tiername
 			'tier%d'
 			d = $current_gig_number}
 		level_checksum = ($<tier_global>.<tiername>.level)
-		if structurecontains structure = $levelzones <level_checksum>
+		if StructureContains Structure = $LevelZones <level_checksum>
 			if (<level_checksum> = load_z_tool)
-				formattext textname = msg qs(0x5a26279f) v = ($levelzones.<level_checksum>.title) d = <index>
-			elseif (<level_checksum> = load_z_newyork || <level_checksum> = load_z_ballpark || <level_checksum> = load_z_scifi || <level_checksum> = load_z_metalfest)
-				formattext textname = msg qs(0x57eca7a3) v = ($levelzones.<level_checksum>.title) d = <index>
+				FormatText TextName = msg qs("Rocking out at the %v Venue in %d") v = ($LevelZones.<level_checksum>.title) d = <index>
+			elseif (<level_checksum> = load_z_newyork || <level_checksum> = load_z_Ballpark || <level_checksum> = load_z_Scifi || <level_checksum> = load_z_metalfest)
+				FormatText TextName = msg qs("Rocking out at %v in %d") v = ($LevelZones.<level_checksum>.title) d = <index>
 			else
-				formattext textname = msg qs(0x39d1ec9b) v = ($levelzones.<level_checksum>.title) d = <index>
+				FormatText TextName = msg qs("Rocking out at the %v in %d") v = ($LevelZones.<level_checksum>.title) d = <index>
 			endif
 		else
-			formattext textname = msg qs(0xe175cbb7) d = <index>
+			FormatText TextName = msg qs("Rocking out in %d") d = <index>
 		endif
 		replace = 1
 		case count_down_no_quit
 		msg_type = vert
-		msg = qs(0x60c100ac)
+		msg = qs("You can not quit once the host has started the countdown.")
 		replace = 1
 		case gig_selected
 		msg_type = horiz
-		msg = qs(0xd893031e)
+		msg = qs("Gig has been selected.")
 		replace = 1
 		case no_gig_selected
 		msg_type = vert
 		replace = 1
-		msg = qs(0xac8fa306)
+		msg = qs("Host needs to select a gig.")
 		case signin_request
 		msg_type = vert
 		replace = 1
-		formattext textname = msg qs(0x194c3652) d = (<device_num> + 1)
+		FormatText TextName = msg qs("Player %d needs to sign into an Xbox LIVE multiplayer enabled gamer profile.") d = (<device_num> + 1)
 		case more_players_needed
 		msg_type = vert
 		replace = 1
-		msg = qs(0xf5f5bb37)
+		msg = qs("More players are needed for band play.")
 		case press_start_to_proceed
 		msg_type = vert
 		replace = 1
 		user_control_helper_get_buttonchar \{button = start
 			controller = $band_mode_current_leader}
-		formattext textname = msg qs(0x72f9ae62) b = <buttonchar>
-		0xc3ef6d02 = 1
+		FormatText TextName = msg qs("Press %b to proceed.") b = <buttonchar>
+		showKey = 1
 		case join
 		msg_type = horiz
 		append = 1
-		if (isxenon)
-			if NOT (checkforsignin controller_index = <controller>)
-				msg = qs(0xa7e21434)
+		if (isXenon)
+			if NOT (CheckForSignIn controller_index = <controller>)
+				msg = qs("Players need to sign into an Xbox LIVE multiplayer enabled gamer profile to join band.")
 			endif
 		endif
 		case signin_change
 		msg_type = horiz
 		replace = 1
-		if (isxenon)
-			myinterfaceelement :getsingletag \{menus}
-			getarraysize <menus>
+		if (isXenon)
+			MyInterfaceElement :GetSingleTag \{menus}
+			GetArraySize <menus>
 			count = 0
 			i = 0
 			begin
-			(<menus> [<i>]) :getsingletag menu
+			(<menus> [<i>]) :GetSingleTag menu
 			if NOT (<menu> = join)
-				if NOT (checkforsignin controller_index = <i>)
+				if NOT (CheckForSignIn controller_index = <i>)
 					count = (<count> + 1)
-					msg = qs(0xa7e21434)
+					msg = qs("Players need to sign into an Xbox LIVE multiplayer enabled gamer profile to join band.")
 				endif
 			endif
 			i = (<i> + 1)
 			repeat <array_size>
 			if (<count> = 0)
-				msg = qs(0x00000000)
+				msg = qs("")
 			endif
 		endif
 	endswitch
-	if (gotparam msg)
+	if (GotParam msg)
 		if (<msg_type> = vert)
 			msg_text_id = online_ticker_vert_text
 		elseif (<msg_type> = horiz)
@@ -5696,23 +5696,23 @@ script update_network_ticker
 		else
 			msg_text_id = online_ticker_vert_text
 		endif
-		resolvescreenelementid id = [
-			{id = myinterfaceelement}
+		ResolveScreenElementId id = [
+			{id = MyInterfaceElement}
 			{local_id = band_menu_container}
 			{local_id = online_ticker_window_element}
 			{local_id = <msg_text_id>}
 		]
-		if screenelementexists id = <resolved_id>
-			if (gotparam append)
-				<resolved_id> :se_getprops
-				formattext textname = new_msg qs(0x307c5a2f) d = <text> t = <msg>
-			elseif (gotparam replace)
-				formattext textname = new_msg qs(0x0204c31d) t = <msg>
-			elseif (gotparam clear)
-				new_msg = qs(0x00000000)
+		if ScreenElementExists id = <resolved_id>
+			if (GotParam append)
+				<resolved_id> :SE_GetProps
+				FormatText TextName = new_msg qs("%d\n%t") d = <text> t = <msg>
+			elseif (GotParam replace)
+				FormatText TextName = new_msg qs("%t") t = <msg>
+			elseif (GotParam Clear)
+				new_msg = qs("")
 			endif
-			if iswinport
-				net_ticker_update_msg msg_type = <msg_type> msg = <new_msg> 0xc3ef6d02 = <0xc3ef6d02>
+			if IsWinPort
+				net_ticker_update_msg msg_type = <msg_type> msg = <new_msg> showKey = <showKey>
 			else
 				net_ticker_update_msg msg_type = <msg_type> msg = <new_msg>
 			endif
@@ -5722,41 +5722,41 @@ endscript
 
 script net_get_root_menu_tags 
 	if (<index> < ($num_players_in_band))
-		getplayerinfo (<index> + 1) is_local_client
+		GetPlayerInfo (<index> + 1) is_local_client
 		if (<is_local_client> = 1)
-			getplayerinfo (<index> + 1) controller
-			if iswinport
+			GetPlayerInfo (<index> + 1) controller
+			if IsWinPort
 				get_controller_part controller = <controller>
 				controller_type = <controller_part>
 			else
 				get_controller_type controller_index = <controller>
 			endif
 			if (<controller_type> = controller)
-				controller_type = vocals
+				controller_type = Vocals
 			endif
 			part = <controller_type>
 			ui_get_controller_parts_allowed controller = <controller> filter_by_character
-			netsessionfunc func = get_user_id params = {controller_index = <controller>}
+			NetSessionFunc func = get_user_id params = {controller_index = <controller>}
 			xuid = <user_id>
 			menu = net_local_root
 		else
-			getplayerinfo (<index> + 1) part
+			GetPlayerInfo (<index> + 1) part
 			controller = 10
 			allowed = {}
 			xuid = [0 0]
-			getplayerinfo (<index> + 1) net_id_first
-			getplayerinfo (<index> + 1) net_id_second
-			setarrayelement arrayname = xuid index = 0 newvalue = <net_id_first>
-			setarrayelement arrayname = xuid index = 1 newvalue = <net_id_second>
+			GetPlayerInfo (<index> + 1) net_id_first
+			GetPlayerInfo (<index> + 1) net_id_second
+			SetArrayElement ArrayName = xuid index = 0 newvalue = <net_id_first>
+			SetArrayElement ArrayName = xuid index = 1 newvalue = <net_id_second>
 			menu = net_remote_root
 		endif
-		if isxenon
+		if isXenon
 			<desc_id> :obj_spawnscript update_headset_status params = {obj_id = <desc_id> uid = <xuid>}
 		endif
 		if (<part> = guitar || <part> = controller)
 			part = none
 		endif
-		getplayerinfo (<index> + 1) difficulty
+		GetPlayerInfo (<index> + 1) difficulty
 	else
 		is_local_client = 0
 		controller = 10
@@ -5779,42 +5779,42 @@ script net_get_root_menu_tags
 endscript
 
 script net_get_invite_menu_tags 
-	printf \{qs(0xf807785e)}
-	netsessionfunc \{obj = party
+	printf \{qs("\Lnet_get_invite_menu_tags")}
+	NetSessionFunc \{obj = party
 		func = get_party_members}
-	getarraysize \{connections}
+	GetArraySize \{connections}
 	if (<index> < <array_size>)
 		if ((<connections> [<index>].is_local) = 1)
 			menu = net_local_join
 			controller = (<connections> [<index>].controller_index)
-			netsessionfunc func = addcontrollers params = {controller = <controller>}
-			setarrayelement arrayname = temp_net_id globalarray index = <controller> newvalue = {net_id_first = (<connections> [<index>].user_id [0]) net_id_second = (<connections> [<index>].user_id [1]) name = (<connections> [<index>].gamertag)}
+			NetSessionFunc func = AddControllers params = {controller = <controller>}
+			SetArrayElement ArrayName = temp_net_id GlobalArray index = <controller> newvalue = {net_id_first = (<connections> [<index>].user_id [0]) net_id_second = (<connections> [<index>].user_id [1]) name = (<connections> [<index>].gamertag)}
 		else
 			menu = net_remote_root
 			controller = <index>
 		endif
 		switch (<connections> [<index>].instrument)
-			case eguitar
+			case eGUITAR
 			part = guitar
-			case edrums
+			case eDRUMS
 			part = drum
-			case emicrophone
-			part = vocals
+			case eMICROPHONE
+			part = Vocals
 		endswitch
 		name = (<connections> [<index>].gamertag)
 		user_id = (<connections> [<index>].user_id)
 		player_array = [{user_id = (<connections> [<index>].user_id) is_local = (<connections> [<index>].is_local) controller_index = (<connections> [<index>].controller_index)}]
 		change net_band_members = (($net_band_members) + <player_array>)
-		if gotparam \{init}
+		if GotParam \{init}
 			change net_num_joiners = (($net_num_joiners) + 1)
 		endif
-		if isxenon
+		if isXenon
 			<desc_id> :obj_spawnscript update_headset_status params = {obj_id = <desc_id> uid = <user_id>}
 		endif
 	else
 		menu = net_remote_open
 		part = none
-		name = qs(0x03ac90f0)
+		name = qs("\L")
 		user_id = [0 0]
 		controller = <index>
 	endif
@@ -5828,16 +5828,16 @@ script net_get_invite_menu_tags
 endscript
 
 script career_update_party_data 
-	netsessionfunc \{obj = party
+	NetSessionFunc \{obj = party
 		func = get_shared_data}
 	i = 0
 	num_players = 0
 	begin
-	formattext checksumname = player 'player_%d' d = <i>
-	if structurecontains structure = <party_shared_data> <player>
+	FormatText checksumname = player 'player_%d' d = <i>
+	if StructureContains Structure = <party_shared_data> <player>
 		if (((<party_shared_data>.<player>.user_id [0]) = (<user_id> [0])) &&
 				((<party_shared_data>.<player>.user_id [1]) = (<user_id> [1])))
-			printf \{qs(0xe41a701d)}
+			printf \{qs("\Lupdating our already existing data")}
 			break
 		endif
 		num_players = (<num_players> + 1)
@@ -5875,30 +5875,30 @@ script career_update_party_data
 				}
 			}
 		endswitch
-		netsessionfunc obj = party func = append_shared_data params = {data = <data>}
+		NetSessionFunc obj = party func = append_shared_data params = {data = <data>}
 	endif
 endscript
 
 script career_poll_party_data 
 	begin
-	netsessionfunc \{obj = party
+	NetSessionFunc \{obj = party
 		func = get_shared_data}
 	i = 0
 	begin
-	formattext checksumname = player 'player_%d' d = <i>
-	if structurecontains structure = <party_shared_data> <player>
+	FormatText checksumname = player 'player_%d' d = <i>
+	if StructureContains Structure = <party_shared_data> <player>
 		get_party_member_status member_id = (<party_shared_data>.<player>.user_id)
 		if (<is_party_member> = 1)
 			if (<is_local> = 0)
 				find_party_member_menu member_id = (<party_shared_data>.<player>.user_id)
-				if gotparam \{party_member_menu_index}
-					getsingletag \{menus}
-					(<menus> [<party_member_menu_index>]) :getsingletag menu
+				if GotParam \{party_member_menu_index}
+					GetSingleTag \{menus}
+					(<menus> [<party_member_menu_index>]) :GetSingleTag menu
 					if (<menu> = net_local_join)
 						menu = net_remote_root
 					endif
 					if NOT (<menu> = (<party_shared_data>.<player>.menu))
-						(<menus> [<party_member_menu_index>]) :settags {
+						(<menus> [<party_member_menu_index>]) :SetTags {
 							menu = (<party_shared_data>.<player>.menu)
 						}
 						(<menus> [<party_member_menu_index>]) :obj_spawnscript ui_band_mode_update_menu
@@ -5910,74 +5910,74 @@ script career_poll_party_data
 	endif
 	i = (<i> + 1)
 	repeat 4
-	wait \{1
+	Wait \{1
 		second}
 	repeat
 endscript
 
 script career_poll_party_for_joiners 
-	getsingletag \{menus}
+	GetSingleTag \{menus}
 	begin
-	if ((isxenon) && ($wait_for_sysnotify_unpause_flag = 0))
+	if ((isXenon) && ($wait_for_sysnotify_unpause_flag = 0))
 		wait_for_sysnotify_unpause
 	endif
-	netsessionfunc \{obj = party
+	NetSessionFunc \{obj = party
 		func = get_party_members}
-	getarraysize <connections>
+	GetArraySize <connections>
 	if (<array_size> > ($net_num_joiners))
 		joiner = 1
 	elseif (<array_size> < ($net_num_joiners))
 		quitter = 1
 	endif
 	change net_num_joiners = <array_size>
-	if gotparam \{joiner}
+	if GotParam \{joiner}
 		net_add_party_joiner menus = <menus>
-		removeparameter \{joiner}
+		RemoveParameter \{joiner}
 	endif
-	if gotparam \{quitter}
+	if GotParam \{quitter}
 		net_remove_party_joiner menus = <menus>
-		removeparameter \{quitter}
+		RemoveParameter \{quitter}
 	endif
-	wait \{1
+	Wait \{1
 		second}
 	repeat
 endscript
 
 script net_add_party_joiner 
-	printf \{qs(0x285aace0)}
-	requireparams \{[
+	printf \{qs("\L--- net_add_party_joiner ---")}
+	RequireParams \{[
 			menus
 		]
 		all}
-	netsessionfunc \{obj = party
+	NetSessionFunc \{obj = party
 		func = get_party_members}
 	i = 0
 	begin
 	is_new_player user_id = (<connections> [<i>].user_id) controller_index = (<connections> [<i>].controller_index)
 	if (<new_player> = 1)
 		if ((<connections> [<i>]).is_local = 0)
-			getarraysize <menus>
+			GetArraySize <menus>
 			if ($net_band_mode_menu = invite)
 				goal_menu = net_remote_open
-			elseif ($net_band_mode_menu = host)
+			elseif ($net_band_mode_menu = HOST)
 				goal_menu = join
 			endif
 			m = 0
 			begin
-			(<menus> [<m>]) :getsingletag menu
+			(<menus> [<m>]) :GetSingleTag menu
 			if (<goal_menu> = <menu>)
 				open_menu = <m>
 				break
 			endif
 			m = (<m> + 1)
 			repeat <array_size>
-			if gotparam \{open_menu}
-				myinterfaceelement :getsingletag \{descs}
+			if GotParam \{open_menu}
+				MyInterfaceElement :GetSingleTag \{descs}
 				net_get_invite_menu_tags index = <i> desc_id = (<descs> [<open_menu>])
-				(<menus> [<open_menu>]) :obj_killspawnedscript name = ui_band_mode_update_name
-				(<menus> [<open_menu>]) :obj_killspawnedscript name = ui_band_mode_check_disconnect
+				(<menus> [<open_menu>]) :Obj_KillSpawnedScript name = ui_band_mode_update_name
+				(<menus> [<open_menu>]) :Obj_KillSpawnedScript name = ui_band_mode_check_disconnect
 				add_gamertag_to_band_lobby index = <open_menu> name = <name> menu = <menu>
-				(<menus> [<open_menu>]) :settags {
+				(<menus> [<open_menu>]) :SetTags {
 					menu = <menu>
 					instrument = <part>
 					difficulty = none
@@ -5986,20 +5986,20 @@ script net_add_party_joiner
 				(<menus> [<open_menu>]) :obj_spawnscript ui_band_mode_update_menu
 				switch (<part>)
 					case guitar
-					case bass
-					myinterfaceelement :getsingletag \{current_guitar}
-					myinterfaceelement :settags current_guitar = (<current_guitar> + 1)
+					case Bass
+					MyInterfaceElement :GetSingleTag \{current_guitar}
+					MyInterfaceElement :SetTags current_guitar = (<current_guitar> + 1)
 					case drum
-					myinterfaceelement :getsingletag \{current_drum}
-					myinterfaceelement :settags current_drum = (<current_drum> + 1)
-					case vocals
-					myinterfaceelement :getsingletag \{current_mic}
-					myinterfaceelement :settags current_mic = (<current_mic> + 1)
+					MyInterfaceElement :GetSingleTag \{current_drum}
+					MyInterfaceElement :SetTags current_drum = (<current_drum> + 1)
+					case Vocals
+					MyInterfaceElement :GetSingleTag \{current_mic}
+					MyInterfaceElement :SetTags current_mic = (<current_mic> + 1)
 				endswitch
 				ui_band_mode_show_character player = (<open_menu> + 1)
 			else
 				printstruct ($net_band_members)
-				scriptassert \{qs(0xa5bd3017)}
+				ScriptAssert \{qs("\Lwe did not find an open spot for our new party memeber")}
 			endif
 		elseif ((<connections> [<i>]).is_local = 1)
 			player_array = [{user_id = (<connections> [<i>].user_id) is_local = (<connections> [<i>].is_local) controller_index = (<connections> [<i>].controller_index)}]
@@ -6011,40 +6011,40 @@ script net_add_party_joiner
 endscript
 
 script net_remove_party_joiner 
-	printf \{qs(0xda27331a)}
-	requireparams \{[
+	printf \{qs("\L--- net_remove_party_joiner ---")}
+	RequireParams \{[
 			menus
 		]
 		all}
-	netsessionfunc \{obj = party
+	NetSessionFunc \{obj = party
 		func = get_party_members}
 	array = []
-	getarraysize ($net_band_members)
+	GetArraySize ($net_band_members)
 	net_num_band_memebers = <array_size>
 	j = 0
 	begin
 	is_quitter user_id = ($net_band_members [<j>].user_id) controller_index = ($net_band_members [<j>].controller_index)
 	if (<quitter> = 1)
-		addarrayelement array = <array> element = <j>
+		AddArrayElement array = <array> element = <j>
 		find_party_member_menu member_id = ($net_band_members [<j>].user_id)
-		if gotparam \{party_member_menu_index}
+		if GotParam \{party_member_menu_index}
 			quitter_menu = <party_member_menu_index>
-			(<menus> [<quitter_menu>]) :getsingletag menu
-			(<menus> [<quitter_menu>]) :getsingletag instrument
+			(<menus> [<quitter_menu>]) :GetSingleTag menu
+			(<menus> [<quitter_menu>]) :GetSingleTag instrument
 			switch (<instrument>)
 				case guitar
-				case bass
-				myinterfaceelement :getsingletag \{current_guitar}
-				myinterfaceelement :settags current_guitar = (<current_guitar> - 1)
+				case Bass
+				MyInterfaceElement :GetSingleTag \{current_guitar}
+				MyInterfaceElement :SetTags current_guitar = (<current_guitar> - 1)
 				case drum
-				myinterfaceelement :getsingletag \{current_drum}
-				myinterfaceelement :settags current_drum = (<current_drum> - 1)
-				case vocals
-				myinterfaceelement :getsingletag \{current_mic}
-				myinterfaceelement :settags current_mic = (<current_mic> - 1)
+				MyInterfaceElement :GetSingleTag \{current_drum}
+				MyInterfaceElement :SetTags current_drum = (<current_drum> - 1)
+				case Vocals
+				MyInterfaceElement :GetSingleTag \{current_mic}
+				MyInterfaceElement :SetTags current_mic = (<current_mic> - 1)
 			endswitch
 			if ($net_band_mode_menu = invite)
-				(<menus> [<quitter_menu>]) :settags {
+				(<menus> [<quitter_menu>]) :SetTags {
 					menu = net_remote_open
 					instrument = none
 					difficulty = none
@@ -6053,10 +6053,10 @@ script net_remove_party_joiner
 				}
 				ui_band_mode_kill_character player = (<quitter_menu> + 1)
 				band_character_rename index = <quitter_menu>
-				add_gamertag_to_band_lobby index = <quitter_menu> name = qs(0x00000000) menu = net_remote_open
+				add_gamertag_to_band_lobby index = <quitter_menu> name = qs("") menu = net_remote_open
 				(<menus> [<quitter_menu>]) :obj_spawnscript ui_band_mode_update_menu
-			elseif ($net_band_mode_menu = host)
-				(<menus> [<quitter_menu>]) :settags {
+			elseif ($net_band_mode_menu = HOST)
+				(<menus> [<quitter_menu>]) :SetTags {
 					menu = join
 					instrument = none
 					difficulty = none
@@ -6072,17 +6072,17 @@ script net_remove_party_joiner
 			endif
 		else
 			printstruct ($net_band_members)
-			scriptassert \{qs(0x9e76980c)}
+			ScriptAssert \{qs("\Lwe did not find the quitters old menu")}
 		endif
 	endif
 	j = (<j> + 1)
 	repeat <net_num_band_memebers>
 	index_array = <array>
-	getarraysize \{index_array}
+	GetArraySize \{index_array}
 	if (<array_size> > 0)
 		a = (<array_size> - 1)
 		begin
-		removearrayelement array = ($net_band_members) index = (<index_array> [<a>])
+		RemoveArrayElement array = ($net_band_members) index = (<index_array> [<a>])
 		change net_band_members = <array>
 		a = (<a> - 1)
 		repeat <array_size>
@@ -6090,12 +6090,12 @@ script net_remove_party_joiner
 endscript
 
 script find_party_member_menu 
-	if screenelementexists \{id = myinterfaceelement}
-		myinterfaceelement :getsingletag \{menus}
-		getarraysize \{menus}
+	if ScreenElementExists \{id = MyInterfaceElement}
+		MyInterfaceElement :GetSingleTag \{menus}
+		GetArraySize \{menus}
 		i = 0
 		begin
-		(<menus> [<i>]) :getsingletag user_id
+		(<menus> [<i>]) :GetSingleTag user_id
 		if ((<member_id> [0]) = (<user_id> [0]) &&
 				(<member_id> [1]) = (<user_id> [1]))
 			return party_member_menu_index = <i> part_member_menu_checksum = (<menus> [<i>])
@@ -6106,17 +6106,17 @@ script find_party_member_menu
 endscript
 
 script get_party_member_status 
-	if ((gotparam net_id_first) && (gotparam net_id_second))
+	if ((GotParam net_id_first) && (GotParam net_id_second))
 		array = []
-		addarrayelement array = <array> element = <net_id_first>
-		addarrayelement array = <array> element = <net_id_second>
+		AddArrayElement array = <array> element = <net_id_first>
+		AddArrayElement array = <array> element = <net_id_second>
 		member_id = <array>
 	endif
 	is_local = 0
 	is_party_member = 0
-	netsessionfunc \{obj = party
+	NetSessionFunc \{obj = party
 		func = get_party_members}
-	getarraysize <connections>
+	GetArraySize <connections>
 	if (<array_size> > 0)
 		i = 0
 		begin
@@ -6135,18 +6135,18 @@ script get_party_member_status
 endscript
 
 script is_new_player 
-	requireparams \{[
+	RequireParams \{[
 			user_id
 		]
 		all}
-	getarraysize ($net_band_members)
+	GetArraySize ($net_band_members)
 	new_player = 1
 	if (<array_size> > 0)
 		i = 0
 		begin
 		if (($net_band_members [<i>].user_id [0]) = (<user_id> [0]) &&
 				($net_band_members [<i>].user_id [1]) = (<user_id> [1]))
-			if ((isps3) || (iswinport))
+			if ((IsPs3) || (IsWinPort))
 				if (($net_band_members [<i>].controller_index) = <controller_index>)
 					new_player = 0
 					break
@@ -6163,20 +6163,20 @@ script is_new_player
 endscript
 
 script is_quitter 
-	requireparams \{[
+	RequireParams \{[
 			user_id
 		]
 		all}
-	netsessionfunc \{obj = party
+	NetSessionFunc \{obj = party
 		func = get_party_members}
-	getarraysize <connections>
+	GetArraySize <connections>
 	quitter = 1
 	if (<array_size> > 0)
 		i = 0
 		begin
 		if ((<connections> [<i>].user_id [0]) = (<user_id> [0]) &&
 				(<connections> [<i>].user_id [1]) = (<user_id> [1]))
-			if ((isps3) || (iswinport))
+			if ((IsPs3) || (IsWinPort))
 				if ((<connections> [<i>].controller_index) = <controller_index>)
 					quitter = 0
 					break
@@ -6193,11 +6193,11 @@ script is_quitter
 endscript
 
 script net_get_invite_controller_by_user_id 
-	requireparams \{[
+	RequireParams \{[
 			user_id
 		]
 		all}
-	getarraysize ($temp_net_id)
+	GetArraySize ($temp_net_id)
 	controller = 0
 	if (<array_size> > 0)
 		begin
@@ -6212,26 +6212,26 @@ script net_get_invite_controller_by_user_id
 endscript
 
 script cancel_career_search_early 
-	if netsessionfunc \{obj = match
+	if NetSessionFunc \{obj = match
 			func = cancel_join_server}
-		onexitrun \{destroy_flaming_wait}
-		launchevent \{type = unfocus
+		OnExitRun \{destroy_flaming_wait}
+		LaunchEvent \{type = unfocus
 			target = band_mode_searching_menu}
 		create_flaming_wait
-		wait \{5
+		Wait \{5
 			gameframes}
 		change \{num_players_in_band = 0}
 		change \{net_band_members = [
 			]}
 		change \{net_num_joiners = 0}
 		change \{career_matchmaking_complete = 0}
-		if gotparam \{menu_mode}
+		if GotParam \{menu_mode}
 			change net_band_mode_menu = <menu_mode>
 		else
-			change \{net_band_mode_menu = host}
+			change \{net_band_mode_menu = HOST}
 		endif
-		if ($net_band_mode_menu = host)
-			netsessionfunc \{obj = party
+		if ($net_band_mode_menu = HOST)
+			NetSessionFunc \{obj = party
 				func = set_party_joinable
 				params = {
 					joinable = 1
@@ -6243,29 +6243,29 @@ endscript
 ui_band_mode_hit_force_completion = 0
 
 script career_proceed_with_current_reservations 
-	netsessionfunc \{obj = match
+	NetSessionFunc \{obj = match
 		func = get_num_matchmaking_players}
 	if (<num_matchmaking_players> > 1)
 		change \{ui_band_mode_hit_force_completion = 1}
-		netsessionfunc \{obj = match
+		NetSessionFunc \{obj = match
 			func = force_completion}
 	endif
 	ui_band_mode_helper_text
 endscript
 
 script check_num_matchmaking_players_loop 
-	getsingletag \{menus}
+	GetSingleTag \{menus}
 	begin
-	if NOT scriptisrunning \{ui_band_mode_update_menu}
+	if NOT ScriptIsRunning \{ui_band_mode_update_menu}
 		break
 	endif
-	wait \{1
+	Wait \{1
 		gameframe}
 	repeat
 	ui_band_mode_change_menu_focus_all \{focus_type = unfocus}
 	current_players = ($num_players_in_band)
-	getactivecontrollers
-	getarraysize <active_controllers>
+	GetActiveControllers
+	GetArraySize <active_controllers>
 	starting_controllers = <active_controllers>
 	begin
 	if ($career_matchmaking_complete = 1)
@@ -6274,10 +6274,10 @@ script check_num_matchmaking_players_loop
 		ui_band_mode_helper_text
 		break
 	endif
-	netsessionfunc \{obj = match
+	NetSessionFunc \{obj = match
 		func = get_num_matchmaking_players}
-	getactivecontrollers
-	if gotparam \{num_matchmaking_players}
+	GetActiveControllers
+	if GotParam \{num_matchmaking_players}
 		if ($net_career_invite_flag = 0)
 			if ((<num_matchmaking_players> > 1) && ($net_matchmaking_search_window = cancel_only))
 				change \{net_matchmaking_search_window = both_options}
@@ -6295,41 +6295,41 @@ script check_num_matchmaking_players_loop
 	begin
 	if NOT ((<active_controllers> [<controller_index>]) = (<starting_controllers> [<controller_index>]))
 		if ($net_career_invite_flag = 0)
-			netsessionfunc \{obj = party
+			NetSessionFunc \{obj = party
 				func = disband_party_session}
-			cancel_career_search_early \{menu_mode = host}
+			cancel_career_search_early \{menu_mode = HOST}
 		else
-			netsessionfunc \{obj = party
+			NetSessionFunc \{obj = party
 				func = leave_party}
 			cancel_career_search_early \{menu_mode = join}
 		endif
 	endif
 	controller_index = (<controller_index> + 1)
 	repeat <array_size>
-	wait \{1
+	Wait \{1
 		second}
 	repeat
 endscript
 
 script net_update_remote_menu_text 
-	if screenelementexists \{id = myinterfaceelement}
-		myinterfaceelement :getsingletag \{menus}
-		if (netsessionfunc {obj = match
+	if ScreenElementExists \{id = MyInterfaceElement}
+		MyInterfaceElement :GetSingleTag \{menus}
+		if (NetSessionFunc {obj = match
 					func = get_num_matchmaking_players})
 			if ($num_players_in_band < 4)
 				i = ($num_players_in_band)
 				begin
 				if ((<num_matchmaking_players> - <i>) > 0)
-					msg = qs(0xb81382c3)
+					msg = qs("Found Player")
 				else
-					msg = qs(0x496fc06c)
+					msg = qs("Waiting for players")
 				endif
-				resolvescreenelementid id = [
+				ResolveScreenElementId id = [
 					{id = (<menus> [<i>])}
 					{local_id = text}
 				]
-				if screenelementexists id = <resolved_id>
-					<resolved_id> :se_setprops text = <msg>
+				if ScreenElementExists id = <resolved_id>
+					<resolved_id> :SE_SetProps text = <msg>
 				endif
 				i = (<i> + 1)
 				repeat (4 - ($num_players_in_band))
@@ -6344,67 +6344,67 @@ script net_update_remote_menu_text
 endscript
 
 script ui_band_mode_change_menu_focus_all 
-	requireparams \{[
+	RequireParams \{[
 			focus_type
 		]
 		all}
-	if screenelementexists \{id = myinterfaceelement}
-		myinterfaceelement :getsingletag \{menus}
-		getarraysize <menus>
+	if ScreenElementExists \{id = MyInterfaceElement}
+		MyInterfaceElement :GetSingleTag \{menus}
+		GetArraySize <menus>
 		i = 0
 		begin
-		if gotparam \{local_only}
-			(<menus> [<i>]) :getsingletag menu
+		if GotParam \{local_only}
+			(<menus> [<i>]) :GetSingleTag menu
 			if ((<menu> = net_local_root) || (<menu> = net_local_join))
-				launchevent target = (<menus> [<i>]) type = <focus_type>
+				LaunchEvent target = (<menus> [<i>]) type = <focus_type>
 			endif
 		else
-			launchevent target = (<menus> [<i>]) type = <focus_type>
+			LaunchEvent target = (<menus> [<i>]) type = <focus_type>
 		endif
 		i = (<i> + 1)
 		repeat <array_size>
-		launchevent target = myinterfaceelement type = <focus_type>
+		LaunchEvent target = MyInterfaceElement type = <focus_type>
 	endif
 endscript
 
 script net_ui_band_mode_create_searching_menu 
-	requireparams \{[
+	RequireParams \{[
 			options_type
 		]
 		all}
-	title = qs(0x9b97c7b2)
+	title = qs("Searching")
 	options = [
 		{
 			func = cancel_career_search_early
-			text = qs(0xf7723015)
+			text = qs("CANCEL")
 		}
 	]
 	msg_txt_blck = {
-		text = qs(0x3e65697f)
+		text = qs("Looking for band members. You can not continue unless you have at least 2 band members.")
 	}
 	if (<options_type> = both_options)
 		options = [
 			{
 				func = career_proceed_with_current_reservations
-				text = qs(0x182f0173)
+				text = qs("CONTINUE")
 			}
 			{
 				func = cancel_career_search_early
-				text = qs(0xf7723015)
+				text = qs("CANCEL")
 			}
 		]
 		msg_txt_blck = {
-			text = qs(0xc6ba87af)
+			text = qs("Looking for more band members.")
 		}
 	elseif (<options_type> = invites)
-		removeparameter \{options}
-		title = qs(0xd121e6da)
+		RemoveParameter \{options}
+		title = qs("Joining")
 		msg_txt_blck = {
-			text = qs(0x352fb8a5)
+			text = qs("Band Found! Waiting for Host to begin the match.")
 		}
 	endif
 	destroy_popup_warning_menu
-	if gotparam \{options}
+	if GotParam \{options}
 		create_popup_warning_menu {
 			title = <title>
 			textblock = <msg_txt_blck>
@@ -6415,7 +6415,7 @@ script net_ui_band_mode_create_searching_menu
 				{pad_down generic_menu_up_or_down_sound params = {down}}
 			]
 		}
-		assignalias id = <menu_id> alias = band_mode_searching_menu
+		AssignAlias id = <menu_id> alias = band_mode_searching_menu
 		gradient_parent = dlog_master_container
 	else
 		create_popup_warning_menu {
@@ -6430,80 +6430,80 @@ script net_ui_band_mode_create_searching_menu
 		gradient_parent = alert_master_container
 	endif
 	ui_band_mode_helper_text
-	resolvescreenelementid id = [
-		{id = popupelement}
+	ResolveScreenElementId id = [
+		{id = PopupElement}
 		{local_id = <gradient_parent>}
 		{local_id = gradient_256}
 	]
-	if screenelementexists \{id = popup_warning_container}
-		popup_warning_container :se_setprops \{scale = (0.87, 0.7)
+	if ScreenElementExists \{id = popup_warning_container}
+		popup_warning_container :SE_SetProps \{scale = (0.87, 0.7)
 			pos = (80.0, 15.0)}
 	endif
-	if screenelementexists \{id = popupelement}
-		popupelement :se_setprops \{scale = (0.87, 0.7)
+	if ScreenElementExists \{id = PopupElement}
+		PopupElement :SE_SetProps \{scale = (0.87, 0.7)
 			pos = (80.0, 15.0)}
 	endif
-	if screenelementexists id = <resolved_id>
-		<resolved_id> :se_setprops alpha = 0.0
+	if ScreenElementExists id = <resolved_id>
+		<resolved_id> :SE_SetProps alpha = 0.0
 	endif
 endscript
 
 script get_controller_part 
-	requireparams \{[
+	RequireParams \{[
 			controller
 		]
 		all}
-	if iswinport
+	if IsWinPort
 		get_player_num_from_controller controller_index = <controller>
-		getplayerinfo <player_num> part
+		GetPlayerInfo <player_num> part
 		return controller_part = <part>
 	else
-		if isguitarcontroller controller = <controller>
+		if IsGuitarController controller = <controller>
 			return \{controller_part = guitar}
-		elseif isdrumcontroller controller = <controller>
+		elseif IsDrumController controller = <controller>
 			return \{controller_part = drum}
 		else
-			return \{controller_part = vocals}
+			return \{controller_part = Vocals}
 		endif
 	endif
 endscript
 
 script career_friendslist_callback 
-	printf \{qs(0x786596cd)}
-	requireparams \{[
+	printf \{qs("\L--- career_friendlist_callback ---")}
+	RequireParams \{[
 			params
 		]
 		all}
-	if gotparam \{friendlist}
-		if screenelementexists \{id = myinterfaceelement}
-			myinterfaceelement :getsingletag \{menus}
-			if screenelementexists id = (<menus> [(<params>.menu_index)])
-				(<menus> [(<params>.menu_index)]) :getsingletag menu
+	if GotParam \{friendList}
+		if ScreenElementExists \{id = MyInterfaceElement}
+			MyInterfaceElement :GetSingleTag \{menus}
+			if ScreenElementExists id = (<menus> [(<params>.menu_index)])
+				(<menus> [(<params>.menu_index)]) :GetSingleTag menu
 				if (<menu> = friends)
-					getarraysize <friendlist>
+					GetArraySize <friendList>
 					if (<array_size> > 0)
 						i = 0
 						begin
-						if (0 != <friendlist> [<i>].localplayer)
-							cant_invite = 1
-						elseif (0 != <friendlist> [<i>].alreadyingame)
-							cant_invite = 1
+						if (0 != <friendList> [<i>].LocalPlayer)
+							CANT_INVITE = 1
+						elseif (0 != <friendList> [<i>].AlreadyInGame)
+							CANT_INVITE = 1
 						else
-							cant_invite = 0
+							CANT_INVITE = 0
 						endif
-						createscreenelement {
-							type = containerelement
+						CreateScreenElement {
+							type = ContainerElement
 							parent = (<menus> [(<params>.menu_index)])
 							dims = (200.0, 40.0)
 							just = [center bottom]
 						}
 						container_id = <id>
-						createscreenelement {
-							type = textblockelement
+						CreateScreenElement {
+							type = TextBlockElement
 							fit_width = `expand dims`
 							fit_height = `scale down if larger`
 							parent = <id>
-							text = (<friendlist> [<i>].name)
+							text = (<friendList> [<i>].name)
 							font = fontgrid_text_a6
 							dims = (0.0, 40.0)
 							rgba = ($menu_unfocus_color)
@@ -6519,26 +6519,26 @@ script career_friendslist_callback
 							pos_anchor = [left bottom]
 							pos = (0.0, 0.0)
 						}
-						getscreenelementdims id = <id>
+						GetScreenElementDims id = <id>
 						if NOT (<width> > 200)
-							<id> :se_setprops {
+							<id> :SE_SetProps {
 								just = [center bottom]
 								internal_just = [center center]
 								pos_anchor = [center bottom]
 								pos = (0.0, 0.0)
 							}
 						endif
-						<container_id> :se_setprops {
+						<container_id> :SE_SetProps {
 							focusable_child = <id>
 							event_handlers = [
 								{pad_choose ui_band_mode_choose params = {
 										friends = invite
-										name = (<friendlist> [<i>].name)
-										id = (<friendlist> [<i>].id)
-										sentfriendrequest = (<friendlist> [<i>].sentfriendrequest)
-										sentinvite = (<friendlist> [<i>].sentinvite)
-										friendstate = (<friendlist> [<i>].friendstate)
-										cant_invite = <cant_invite>
+										name = (<friendList> [<i>].name)
+										id = (<friendList> [<i>].id)
+										sentfriendrequest = (<friendList> [<i>].sentfriendrequest)
+										sentinvite = (<friendList> [<i>].sentinvite)
+										friendstate = (<friendList> [<i>].friendstate)
+										CANT_INVITE = <CANT_INVITE>
 									}
 								}
 							]
@@ -6546,12 +6546,12 @@ script career_friendslist_callback
 						<i> = (<i> + 1)
 						repeat <array_size>
 					else
-						createscreenelement {
-							type = textblockelement
+						CreateScreenElement {
+							type = TextBlockElement
 							fit_width = `scale each line if larger`
 							fit_height = `scale down if larger`
 							parent = (<menus> [(<params>.menu_index)])
-							text = qs(0xf5e6fa4e)
+							text = qs("EMPTY")
 							font = fontgrid_text_a6
 							dims = (170.0, 40.0)
 							rgba = ($menu_unfocus_color)
@@ -6571,53 +6571,53 @@ script career_friendslist_callback
 endscript
 
 script career_friendslist_scroll 
-	obj_getid
-	getscreenelementdims id = <objid>
+	Obj_GetID
+	GetScreenElementDims id = <ObjID>
 	if (<width> <= 200)
 		return
 	endif
 	x = (<width> - 200)
 	begin
-	wait \{0.5
+	Wait \{0.5
 		seconds}
-	se_setprops pos = ((-1.0, 0.0) * <x>) time = (10 * <x> / 200)
-	se_waitprops
-	wait \{0.5
+	SE_SetProps pos = ((-1.0, 0.0) * <x>) time = (10 * <x> / 200)
+	SE_WaitProps
+	Wait \{0.5
 		seconds}
-	se_setprops pos = (0.0, 0.0) time = (10 * <x> / 200)
-	se_waitprops
+	SE_SetProps pos = (0.0, 0.0) time = (10 * <x> / 200)
+	SE_WaitProps
 	repeat
 endscript
 
 script career_friendslist_stop_scroll 
-	obj_killspawnedscript \{name = career_friendslist_scroll}
-	se_setprops \{pos = (0.0, 0.0)}
+	Obj_KillSpawnedScript \{name = career_friendslist_scroll}
+	SE_SetProps \{pos = (0.0, 0.0)}
 endscript
 
 script net_move_invite_player_to_open_menu 
-	requireparams \{[
+	RequireParams \{[
 			menu_id
 		]
 		all}
-	<menu_id> :gettags
-	if screenelementexists \{id = myinterfaceelement}
-		myinterfaceelement :getsingletag \{menus}
+	<menu_id> :GetTags
+	if ScreenElementExists \{id = MyInterfaceElement}
+		MyInterfaceElement :GetSingleTag \{menus}
 		m = 0
-		getarraysize \{menus}
+		GetArraySize \{menus}
 		begin
-		(<menus> [<m>]) :getsingletag menu
+		(<menus> [<m>]) :GetSingleTag menu
 		if (join = <menu>)
 			open_menu = <m>
 			break
 		endif
 		m = (<m> + 1)
 		repeat <array_size>
-		if gotparam \{open_menu}
-			(<menus> [<open_menu>]) :obj_killspawnedscript name = ui_band_mode_update_name
-			(<menus> [<open_menu>]) :obj_killspawnedscript name = ui_band_mode_check_disconnect
-			netsessionfunc \{obj = party
+		if GotParam \{open_menu}
+			(<menus> [<open_menu>]) :Obj_KillSpawnedScript name = ui_band_mode_update_name
+			(<menus> [<open_menu>]) :Obj_KillSpawnedScript name = ui_band_mode_check_disconnect
+			NetSessionFunc \{obj = party
 				func = get_party_members}
-			getarraysize <connections>
+			GetArraySize <connections>
 			i = 0
 			begin
 			if ((<connections> [<i>].user_id [0]) = (<user_id> [0]) && (<connections> [<i>].user_id [1]) = (<user_id> [1]))
@@ -6627,7 +6627,7 @@ script net_move_invite_player_to_open_menu
 			repeat <array_size>
 			add_gamertag_to_band_lobby index = <open_menu> name = <name> menu = net_remote_root
 			ui_band_mode_show_character player = (<open_menu> + 1)
-			(<menus> [<open_menu>]) :settags {
+			(<menus> [<open_menu>]) :SetTags {
 				menu = net_remote_root
 				instrument = <instrument>
 				difficulty = none
@@ -6636,123 +6636,123 @@ script net_move_invite_player_to_open_menu
 			(<menus> [<open_menu>]) :obj_spawnscript ui_band_mode_update_menu
 			return open_menu = <open_menu>
 		else
-			scriptassert \{qs(0xa5bd3017)}
+			ScriptAssert \{qs("\Lwe did not find an open spot for our new party memeber")}
 		endif
 	endif
 endscript
 
 script net_career_memcard_drop_player 
-	printf \{qs(0x62a85a96)}
+	printf \{qs("\L--- net_career_memcard_drop_player ---")}
 	spawnscriptnow wait_for_net_career_drop_player params = {<...>}
 endscript
 
 script wait_for_net_career_drop_player 
-	printf \{qs(0x7fb478bc)}
+	printf \{qs("\L--- wait_for_net_career_drop_player ---")}
 	begin
 	if ($memcard_state_active = 0)
 		ui_event_get_top
 		if (<base_name> = 'band_mode')
-			if screenelementexists \{id = myinterfaceelement}
+			if ScreenElementExists \{id = MyInterfaceElement}
 				break
 			endif
 		elseif (<base_name> = 'group_play')
 			return
 		endif
 	endif
-	wait \{1
+	Wait \{1
 		second}
 	repeat
 	net_career_drop_player <...>
 endscript
 
 script net_career_memcard_end_game 
-	printf \{qs(0x4e6b3c84)}
+	printf \{qs("\L--- net_career_memcard_end_game ---")}
 	spawnscriptnow wait_for_net_career_end_game params = {<...>}
 endscript
 
 script wait_for_net_career_end_game 
-	printf \{qs(0x0307fc4c)}
+	printf \{qs("\L--- wait_for_net_career_end_game ---")}
 	begin
 	if ($memcard_state_active = 0)
 		ui_event_get_top
 		if (<base_name> = 'band_mode')
-			if screenelementexists \{id = myinterfaceelement}
+			if ScreenElementExists \{id = MyInterfaceElement}
 				break
 			endif
 		elseif (<base_name> = 'group_play')
 			return
 		endif
 	endif
-	wait \{1
+	Wait \{1
 		second}
 	repeat
 	net_career_end_game <...>
 endscript
 
 script net_career_drop_player 
-	printf \{qs(0x615e8129)}
+	printf \{qs("\L--- net_career_drop_player ---")}
 	printstruct <...>
 	if (<is_game_over> = 0)
 		change net_num_players = (($net_num_players) - 1)
 		change current_num_players = (($current_num_players) - 1)
 		change num_players_in_band = (($num_players_in_band) - 1)
-		formattext checksumname = mode 'p%d_career' d = ($current_num_players)
+		FormatText checksumname = mode 'p%d_career' d = ($current_num_players)
 		change game_mode = <mode>
-		setplayerinfo <dropped_player_num> is_local_client = 0
-		setplayerinfo <dropped_player_num> net_id_first = 0
-		setplayerinfo <dropped_player_num> net_id_second = 0
-		setplayerinfo <dropped_player_num> net_obj_id = -1
-		setplayerinfo <dropped_player_num> team = 0
-		setplayerinfo <dropped_player_num> party_id = -1
+		SetPlayerInfo <dropped_player_num> is_local_client = 0
+		SetPlayerInfo <dropped_player_num> net_id_first = 0
+		SetPlayerInfo <dropped_player_num> net_id_second = 0
+		SetPlayerInfo <dropped_player_num> net_obj_id = -1
+		SetPlayerInfo <dropped_player_num> team = 0
+		SetPlayerInfo <dropped_player_num> party_id = -1
 		change net_dropped_players_flag = (($net_dropped_players_flag) + 1)
 		switch <drop_reason>
 			case net_message_player_quit
-			formattext textname = drop_msg qs(0xafcc55cd) s = <name_string>
+			FormatText TextName = drop_msg qs("%s has quit.\n") s = <name_string>
 			case net_message_player_dropped
 			case net_message_player_timed_out
-			formattext textname = drop_msg qs(0xc11e11da) s = <name_string>
+			FormatText TextName = drop_msg qs("Lost connection to %s.\n") s = <name_string>
 			default
-			drop_msg = qs(0x00000000)
+			drop_msg = qs("")
 		endswitch
-		if screenelementexists \{id = myinterfaceelement}
-			net_create_player_drop_message_box parent_element = myinterfaceelement drop_msg = <drop_msg>
-			myinterfaceelement :gettags
-			(<menus> [(<dropped_player_num> - 1)]) :settags {
+		if ScreenElementExists \{id = MyInterfaceElement}
+			net_create_player_drop_message_box parent_element = MyInterfaceElement drop_msg = <drop_msg>
+			MyInterfaceElement :GetTags
+			(<menus> [(<dropped_player_num> - 1)]) :SetTags {
 				menu = net_remote_open
 				instrument = none
 				difficulty = none
 			}
 			ui_band_mode_kill_character player = <dropped_player_num>
-			(<descs> [(<dropped_player_num> - 1)]) :se_setprops reposition_pos = (0.0, 220.0) time = 0.1 motion = ease_out
-			(<descs> [(<dropped_player_num> - 1)]) :se_waitprops
-			(<descs> [(<dropped_player_num> - 1)]) :se_setprops reposition_pos = (0.0, 450.0) time = 0.1 alpha = 0
+			(<descs> [(<dropped_player_num> - 1)]) :SE_SetProps reposition_pos = (0.0, 220.0) time = 0.1 motion = ease_out
+			(<descs> [(<dropped_player_num> - 1)]) :SE_WaitProps
+			(<descs> [(<dropped_player_num> - 1)]) :SE_SetProps reposition_pos = (0.0, 450.0) time = 0.1 alpha = 0
 		endif
 	endif
 endscript
 
 script net_career_end_game 
-	printf \{qs(0x51763a0d)}
+	printf \{qs("\L--- net_career_end_game ---")}
 	ui_band_mode_change_menu_focus_all \{focus_type = unfocus}
 	switch <drop_reason>
 		case net_message_player_quit
-		formattext textname = first_msg qs(0x567f10d8) s = <name_string>
+		FormatText TextName = first_msg qs("%s has quit.") s = <name_string>
 		case net_message_player_dropped
 		case net_message_player_timed_out
-		formattext textname = first_msg qs(0xd4b272d7) s = <name_string>
+		FormatText TextName = first_msg qs("Lost connection to %s.") s = <name_string>
 		default
-		first_msg = qs(0x00000000)
+		first_msg = qs("")
 	endswitch
-	formattext textname = msg qs(0x78bb855f) s = <first_msg>
-	create_net_popup title = qs(0x5ca2c535) popup_text = <msg>
-	if screenelementexists \{id = popupelement}
-		popupelement :se_setprops \{z_priority = 1500.2}
+	FormatText TextName = msg qs("%s\nThere are not enough players to continue.") s = <first_msg>
+	create_net_popup title = qs("GAME OVER") popup_text = <msg>
+	if ScreenElementExists \{id = PopupElement}
+		PopupElement :SE_SetProps \{z_priority = 1500.2}
 	endif
-	wait \{3
+	Wait \{3
 		seconds}
 	destroy_net_popup
-	if ishost
-		change \{net_band_mode_menu = host}
-		netsessionfunc \{obj = party
+	if IsHost
+		change \{net_band_mode_menu = HOST}
+		NetSessionFunc \{obj = party
 			func = set_party_joinable
 			params = {
 				joinable = 1
@@ -6782,7 +6782,7 @@ script net_career_end_game
 endscript
 
 script fix_deleted_character_player_status 
-	formattext checksumname = player_status 'player%d_status' d = <player>
+	FormatText checksumname = player_status 'player%d_status' d = <player>
 	if ($<player_status>.is_local_client = 0)
 		return
 	endif
@@ -6804,20 +6804,20 @@ script sanity_check_fix_deleted_characters
 endscript
 
 script hacky_fix_band_celebrity_character 
-	requireparams \{[
+	RequireParams \{[
 			player
 		]
 		all}
 	printf 'hacky_fix_band_celebrity_character p=%p' p = <player>
-	getplayerinfo <player> character_id
-	getplayerinfo <player> controller
-	getplayerinfo <player> is_local_client
+	GetPlayerInfo <player> character_id
+	GetPlayerInfo <player> controller
+	GetPlayerInfo <player> is_local_client
 	if (<is_local_client> = 1)
 		get_savegame_from_controller band_character_select controller = <controller>
 		get_controller_part controller = <controller>
 		if NOT fix_disallowed_character_choice character_id = <character_id> savegame = <savegame> part = <controller_part>
-			printf qs(0x39675789) a = <character_id> b = <controller_part>
-			setplayerinfo <player> character_id = <character_id>
+			printf qs("\L%a not allowed on %b") a = <character_id> b = <controller_part>
+			SetPlayerInfo <player> character_id = <character_id>
 			if (<controller> <= 4)
 				cas_queue_new_character_profile id = <character_id> player = (<controller> + 1) savegame = <savegame>
 				band_character_rename index = (<player> -1) player = <player>
@@ -6827,51 +6827,51 @@ script hacky_fix_band_celebrity_character
 endscript
 
 script net_career_get_band_leader_difficulty 
-	if screenelementexists \{id = myinterfaceelement}
-		myinterfaceelement :getsingletag \{menus}
-		getarraysize <menus>
+	if ScreenElementExists \{id = MyInterfaceElement}
+		MyInterfaceElement :GetSingleTag \{menus}
+		GetArraySize <menus>
 		i = 0
 		begin
-		(<menus> [<i>]) :gettags
+		(<menus> [<i>]) :GetTags
 		if (<band_leader> = 1)
 			return band_difficulty = <difficulty>
 		endif
 		i = (<i> + 1)
 		repeat <array_size>
 	endif
-	scriptassert \{qs(0x00c66753)}
+	ScriptAssert \{qs("\Lno band leader found. Is this function getting called on a client machine?")}
 endscript
 
 script net_career_wait_until_menu_update_is_done 
 	begin
-	if NOT scriptisrunning \{ui_band_mode_update_menu}
+	if NOT ScriptIsRunning \{ui_band_mode_update_menu}
 		break
 	endif
-	wait \{1
+	Wait \{1
 		gameframe}
 	repeat
 endscript
 
 script net_career_asign_band_leader_icon 
-	requireparams \{[
+	RequireParams \{[
 			player_num
 		]
 		all}
 	begin
-	if screenelementexists \{id = myinterfaceelement}
+	if ScreenElementExists \{id = MyInterfaceElement}
 		break
 	endif
-	wait \{1
+	Wait \{1
 		second}
 	repeat
 	change net_band_leader_player_num = <player_num>
-	myinterfaceelement :getsingletag \{descs}
-	(<descs> [(<player_num> - 1)]) :se_setprops leader_indicator_alpha = 1.0
+	MyInterfaceElement :GetSingleTag \{descs}
+	(<descs> [(<player_num> - 1)]) :SE_SetProps leader_indicator_alpha = 1.0
 endscript
 
 script net_career_check_instruments 
-	printf \{qs(0x3eb05458)}
-	gamemode_gettype
+	printf \{qs("\L--- net_career_check_instruments ---")}
+	GameMode_GetType
 	if (<type> = career)
 		loop_count = 4
 	else
@@ -6886,52 +6886,52 @@ script net_career_check_instruments
 	array = []
 	i = 1
 	begin
-	getplayerinfo <i> net_obj_id
+	GetPlayerInfo <i> net_obj_id
 	if (<net_obj_id> >= 0)
-		getplayerinfo <i> part
+		GetPlayerInfo <i> part
 		switch <part>
 			case guitar
 			guitar_count = (<guitar_count> + 1)
-			addarrayelement array = <array> element = <i>
-			case bass
+			AddArrayElement array = <array> element = <i>
+			case Bass
 			bass_count = (<bass_count> + 1)
-			addarrayelement array = <array> element = <i>
+			AddArrayElement array = <array> element = <i>
 			case drum
 			drum_count = (<drum_count> + 1)
-			case vocals
+			case Vocals
 			vocals_count = (<vocals_count> + 1)
 			default
 			non_asigned_count = (<non_asigned_count> + 1)
-			addarrayelement array = <array> element = <i>
+			AddArrayElement array = <array> element = <i>
 		endswitch
 	endif
 	i = (<i> + 1)
 	repeat <loop_count>
 	if (<type> = career)
-		getarraysize <array>
+		GetArraySize <array>
 		if (<array_size> > 0)
 			if ((<guitar_count> > 1) || (<bass_count> > 1))
 				net_career_set_instruments player_num_array = <array>
 			elseif (<non_asigned_count> = 2)
 				net_career_set_instruments player_num_array = <array>
 			elseif (<non_asigned_count> = 1)
-				getarraysize <array>
+				GetArraySize <array>
 				if (<array_size> = 2)
-					getplayerinfo (<array> [0]) part
+					GetPlayerInfo (<array> [0]) part
 					player1_part = <part>
-					getplayerinfo (<array> [1]) part
+					GetPlayerInfo (<array> [1]) part
 					player2_part = <part>
 					if (<player1_part> = guitar)
-						setplayerinfo (<array> [1]) part = bass
-					elseif (<player1_part> = bass)
-						setplayerinfo (<array> [1]) part = guitar
+						SetPlayerInfo (<array> [1]) part = Bass
+					elseif (<player1_part> = Bass)
+						SetPlayerInfo (<array> [1]) part = guitar
 					elseif (<player2_part> = guitar)
-						setplayerinfo (<array> [0]) part = bass
-					elseif (<player2_part> = bass)
-						setplayerinfo (<array> [0]) part = guitar
+						SetPlayerInfo (<array> [0]) part = Bass
+					elseif (<player2_part> = Bass)
+						SetPlayerInfo (<array> [0]) part = guitar
 					endif
 				else
-					setplayerinfo (<array> [0]) part = guitar
+					SetPlayerInfo (<array> [0]) part = guitar
 				endif
 			endif
 		endif
@@ -6939,18 +6939,18 @@ script net_career_check_instruments
 endscript
 
 script net_career_set_instruments 
-	requireparams \{[
+	RequireParams \{[
 			player_num_array
 		]
 		all}
 	part = guitar
-	getarraysize <player_num_array>
+	GetArraySize <player_num_array>
 	i = 0
 	begin
-	setplayerinfo (<player_num_array> [<i>]) part = <part>
+	SetPlayerInfo (<player_num_array> [<i>]) part = <part>
 	if (<part> = guitar)
-		part = bass
-	elseif (<part> = bass)
+		part = Bass
+	elseif (<part> = Bass)
 		part = guitar
 	endif
 	i = (<i> + 1)
@@ -6958,7 +6958,7 @@ script net_career_set_instruments
 endscript
 
 script ui_band_mode_ps3_invite_received 
-	if gotparam \{device_num}
+	if GotParam \{device_num}
 		if ($primary_controller = <device_num>)
 			ps3_display_invites_received
 		endif
@@ -6966,14 +6966,14 @@ script ui_band_mode_ps3_invite_received
 endscript
 
 script net_career_host_finalize_menu_ui 
-	wait \{1
+	Wait \{1
 		second}
-	getsingletag \{menus}
+	GetSingleTag \{menus}
 	i = 0
 	begin
-	getplayerinfo (<i> + 1) net_obj_id
+	GetPlayerInfo (<i> + 1) net_obj_id
 	if (<net_obj_id> < 0)
-		(<menus> [<i>]) :obj_spawnscriptlater ui_band_mode_update_menu
+		(<menus> [<i>]) :Obj_SpawnScriptLater ui_band_mode_update_menu
 	endif
 	i = (<i> + 1)
 	repeat 4

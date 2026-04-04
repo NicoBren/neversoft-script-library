@@ -4,11 +4,11 @@ respond_to_signin_changed_all_players = 0
 respond_to_signin_changed_func = none
 
 script start_checking_for_signin_change 
-	printf \{qs(0x08e4bedc)}
-	printscriptinfo \{qs(0x08e4bedc)}
-	printf \{qs(0x329c888b)}
-	killspawnedscript \{name = sysnotify_handle_signin_change}
-	printf \{qs(0x80fc902c)}
+	printf \{qs("\Lstart_checking_for_signin_change")}
+	printscriptinfo \{qs("\Lstart_checking_for_signin_change")}
+	printf \{qs("\Lstart_checking_for_signin_change - killing sysnotifys")}
+	KillSpawnedScript \{name = sysnotify_handle_signin_change}
+	printf \{qs("\Lstart_checking_for_signin_change - begin")}
 	change \{respond_to_signin_changed = 1}
 	change \{menu_select_difficulty_first_time = 1}
 endscript
@@ -34,11 +34,11 @@ script create_autologin_prompt_menu
 		options = [
 			{
 				func = set_autologin_yes_result
-				text = qs(0x58e0a1fb)
+				text = qs("YES")
 			}
 			{
 				func = set_autologin_no_result
-				text = qs(0xd2915c27)
+				text = qs("NO")
 			}
 		]}
 endscript
@@ -48,52 +48,52 @@ script destroy_autologin_prompt_menu
 endscript
 
 script set_autologin_yes_result 
-	netsessionfunc \{func = setautologinsetting
+	NetSessionFunc \{func = SetAutoLoginSetting
 		params = {
-			autologinsetting = autologinon
+			autoLoginSetting = autoLoginOn
 		}}
 	ui_flow_manager_respond_to_action \{action = continue}
 endscript
 
 script set_autologin_no_result 
-	netsessionfunc \{func = setautologinsetting
+	NetSessionFunc \{func = SetAutoLoginSetting
 		params = {
-			autologinsetting = autologinoff
+			autoLoginSetting = autoLoginOff
 		}}
 	ui_flow_manager_respond_to_action \{action = continue}
 endscript
 
 script set_autologin_prompt_result 
-	netsessionfunc \{func = setautologinsetting
+	NetSessionFunc \{func = SetAutoLoginSetting
 		params = {
-			autologinsetting = autologinprompt
+			autoLoginSetting = autoLoginPrompt
 		}}
 	ui_flow_manager_respond_to_action \{action = continue}
 endscript
 
-script create_signin_warning_menu player_device = ($memcardcontroller)
+script create_signin_warning_menu player_device = ($MemcardController)
 	memcard_cleanup_messages
-	if NOT iswinport
-		getplatform
+	if NOT IsWinPort
+		GetPlatform
 		switch <platform>
 			case ps3
-			<error_string_when_too_young_for_online> = qs(0x2b61175b)
-			if NOT gotparam \{require_live}
+			<error_string_when_too_young_for_online> = qs("Online service is disabled on your PLAYSTATION®Network account due to parental control restrictions.")
+			if NOT GotParam \{require_live}
 				array = [
 					{
 						func = signin_warning_select_continue
-						text = qs(0x182f0173)
+						text = qs("CONTINUE")
 						scale = (1.0, 1.0)
 					}
 				]
-				if gotparam \{allow_back}
-					addarrayelement array = <array> element = {func = ui_signin_warning_back text = qs(0xf7723015)}
+				if GotParam \{allow_back}
+					AddArrayElement array = <array> element = {func = ui_signin_warning_back text = qs("CANCEL")}
 				endif
-				if netsessionfunc \{func = isoldenoughforonline}
-					if checkforsignin \{network_platform_only}
-						text = qs(0xf6ab5df3)
+				if NetSessionFunc \{func = IsOldEnoughForOnline}
+					if CheckForSignIn \{network_platform_only}
+						text = qs("The game servers are currently unavailable. You will be unable to write statistics.")
 					else
-						text = qs(0xffd30168)
+						text = qs("You are not signed in to the PLAYSTATION®Network. You will be unable to write statistics.")
 					endif
 				else
 					text = <error_string_when_too_young_for_online>
@@ -101,15 +101,15 @@ script create_signin_warning_menu player_device = ($memcardcontroller)
 			else
 				array = [
 				]
-				addarrayelement array = <array> element = {func = ui_signin_warning_back text = qs(0xf7723015)}
-				if netsessionfunc \{func = isoldenoughforonline}
-					if netsessionfunc \{func = iscableunplugged}
-						text = qs(0x7b5606a9)
+				AddArrayElement array = <array> element = {func = ui_signin_warning_back text = qs("CANCEL")}
+				if NetSessionFunc \{func = IsOldEnoughForOnline}
+					if NetSessionFunc \{func = IsCableUnplugged}
+						text = qs("You are not connected to the PLAYSTATION®Network. Please connect and try again.")
 					else
-						if checkforsignin \{network_platform_only}
-							text = qs(0x0f686da5)
+						if CheckForSignIn \{network_platform_only}
+							text = qs("The game servers are currently unavailable. Please try again later.")
 						else
-							text = qs(0x2fc14a97)
+							text = qs("You are not signed in to the PLAYSTATION®Network. You must sign in to continue.")
 						endif
 					endif
 				else
@@ -127,61 +127,61 @@ script create_signin_warning_menu player_device = ($memcardcontroller)
 			array = [
 				{
 					func = {signin_warning_select_signin params = {allow_back = <allow_back> jam = <jam> require_live = <require_live> downloads = <downloads> leaderboards = <leaderboards> force_signin = 1}}
-					text = qs(0x17df5913)
+					text = qs("SIGN IN")
 				}
 			]
 			<continue_without_save> = 0
-			if NOT gotparam \{downloads}
-				if NOT gotparam \{leaderboards}
-					if NOT gotparam \{require_live}
+			if NOT GotParam \{downloads}
+				if NOT GotParam \{leaderboards}
+					if NOT GotParam \{require_live}
 						<continue_without_save> = 1
 					endif
 				endif
 			endif
-			if ((gotparam jam) || (gotparam boot))
+			if ((GotParam jam) || (GotParam boot))
 				<continue_without_save> = 1
 			endif
-			if gotparam \{jam}
+			if GotParam \{jam}
 				if (<jam> = 2)
 					<continue_without_save> = 0
 				endif
 			endif
 			if (<continue_without_save> = 1)
-				addarrayelement array = <array> element = {func = signin_warning_select_cws text = qs(0x06d0b6b0)}
+				AddArrayElement array = <array> element = {func = signin_warning_select_cws text = qs("CONTINUE WITHOUT SAVING")}
 			endif
-			if gotparam \{allow_back}
-				addarrayelement array = <array> element = {func = ui_signin_warning_back text = qs(0xf7723015) require_live = <require_live>}
+			if GotParam \{allow_back}
+				AddArrayElement array = <array> element = {func = ui_signin_warning_back text = qs("CANCEL") require_live = <require_live>}
 			endif
-			text = qs(0xf97bd659)
-			if gotparam \{downloads}
-				text = qs(0xb586f45b)
-			elseif gotparam \{leaderboards}
-				text = qs(0x3f6f5d6a)
-				if checkforsignin local controller_index = ($primary_controller)
+			text = qs("You are not signed in to a gamer profile. You will be unable to save any game content until you sign in.")
+			if GotParam \{downloads}
+				text = qs("You are not signed in to a gamer profile. You will be unable to access any downloadable content until you sign into a gamer profile.")
+			elseif GotParam \{leaderboards}
+				text = qs("You are not signed in to a gamer profile. You will be unable to access any leaderboards until you sign into a gamer profile.")
+				if CheckForSignIn local controller_index = ($primary_controller)
 					text = qs(0x4eeafe45)
 				endif
 			endif
-			if gotparam \{require_live}
+			if GotParam \{require_live}
 				<signed_in> = 0
 				<multiplayer_allowed> = 0
 				<live_enabled> = 0
-				if netsessionfunc func = isliveenabled params = {controller_index = ($primary_controller)}
+				if NetSessionFunc func = IsLiveEnabled params = {controller_index = ($primary_controller)}
 					<live_enabled> = 1
 				endif
-				if checkforsignin local controller_index = ($primary_controller)
+				if CheckForSignIn local controller_index = ($primary_controller)
 					<signed_in> = 1
-					if netsessionfunc func = ismultiplayerallowed params = {controller_index = ($primary_controller)}
+					if NetSessionFunc func = IsMultiplayerAllowed params = {controller_index = ($primary_controller)}
 						<multiplayer_allowed> = 1
 					endif
 				endif
-				if netsessionfunc \{func = iscableunplugged}
-					text = qs(0xab79bf04)
-				elseif netsessionfunc func = xenonisguest params = {controller_index = ($primary_controller)}
-					text = qs(0xb9fd7c2c)
+				if NetSessionFunc \{func = IsCableUnplugged}
+					text = qs("You are not currently connected to Xbox LIVE. Please connect and try again.")
+				elseif NetSessionFunc func = XenonIsGuest params = {controller_index = ($primary_controller)}
+					text = qs("You are currently signed into a guest gamer profile. In order to use this feature, you must be signed into Xbox LIVE, and not a guest of a multiplayer enabled gamer profile.")
 				elseif (<signed_in> = 0)
-					text = qs(0xee63bbfc)
+					text = qs("No gamer profile currently signed in. Please sign into an Xbox LIVE multiplayer enabled gamer profile to continue.")
 				elseif (<signed_in> = 1 && <multiplayer_allowed> = 0)
-					text = qs(0xd840d20c)
+					text = qs("The current gamer profile is not enabled for Xbox LIVE multiplayer game play or the network connection has been lost.")
 				endif
 			endif
 			create_popup_warning_menu {
@@ -197,13 +197,13 @@ script create_signin_warning_menu player_device = ($memcardcontroller)
 	else
 		array = [
 		]
-		addarrayelement array = <array> element = {func = signin_warning_select_continue text = qs(0x182f0173)}
-		if netsessionfunc \{func = iscableunplugged}
+		AddArrayElement array = <array> element = {func = signin_warning_select_continue text = qs("CONTINUE")}
+		if NetSessionFunc \{func = IsCableUnplugged}
 			text = qs(0x3e9c918a)
-		elseif NOT (netsessionfunc func = isloggedin)
+		elseif NOT (NetSessionFunc func = IsLoggedIn)
 			text = qs(0x97c6f367)
 		else
-			text = qs(0x0f686da5)
+			text = qs("The game servers are currently unavailable. Please try again later.")
 		endif
 		create_popup_warning_menu {
 			textblock = {
@@ -226,7 +226,7 @@ endscript
 script signin_warning_select_cws 
 	start_checking_for_signin_change
 	change \{enable_saving = 0}
-	setglobaltags \{user_options
+	SetGlobalTags \{user_options
 		params = {
 			autosave = 0
 		}}
@@ -242,7 +242,7 @@ endscript
 script signin_warning_select_continue_done 
 	destroy_popup_warning_menu
 	if NOT (($signin_continue_state) = uistate_boot_guitar)
-		scriptassert \{'$signin_continue_state != uistate_boot_guitar'}
+		ScriptAssert \{'$signin_continue_state != uistate_boot_guitar'}
 	endif
 	ui_event \{event = menu_replace
 		data = {
@@ -253,7 +253,7 @@ endscript
 script do_ps3_memcard_warning 
 	create_popup_warning_menu {
 		textblock = {
-			text = qs(0xcefbc6d3)
+			text = qs("This game saves data automatically at certain points. Do not switch off the power when the HDD access indicator is flashing.")
 			pos = (640.0, 380.0)
 			scale = 0.6
 		}
@@ -262,16 +262,16 @@ script do_ps3_memcard_warning
 			{
 				func = do_ps3_memcard_warning_helper
 				func_params = {func = <func> params = <func_params>}
-				text = qs(0x0e41fe46)
+				text = qs("OK")
 				scale = (1.0, 1.0)
 			}
 		]
-		player_device = ($memcardcontroller)
+		player_device = ($MemcardController)
 	}
 endscript
 
 script do_ps3_memcard_warning_helper 
-	<func> <params> controller = ($memcardcontroller)
+	<func> <params> controller = ($MemcardController)
 endscript
 
 script create_signin_complete_menu 
@@ -296,15 +296,15 @@ endscript
 
 script create_online_signin_warning_menu 
 	memcard_cleanup_messages
-	if iswinport
+	if IsWinPort
 		<text> = qs(0xd2c5ff2f)
-	elseif isxenon
-		<text> = qs(0xdb7f408b)
+	elseif isXenon
+		<text> = qs("You must be signed in to Xbox Live.")
 	else
-		<text> = qs(0x808a0d79)
+		<text> = qs("You must be signed in to access PLAYSTATION®Network features.")
 	endif
 	create_popup_warning_menu {
-		player_device = ($memcardcontroller)
+		player_device = ($MemcardController)
 		textblock = {
 			text = <text>
 		}
@@ -312,7 +312,7 @@ script create_online_signin_warning_menu
 		options = [
 			{
 				func = {ui_flow_manager_respond_to_action params = {action = continue}}
-				text = qs(0x182f0173)
+				text = qs("CONTINUE")
 				scale = (1.0, 1.0)
 			}
 		]
@@ -326,33 +326,33 @@ endscript
 script create_storagedevice_warning_menu 
 	mark_safe_for_shutdown
 	memcard_cleanup_messages
-	if isps3
+	if IsPs3
 		memcard_sequence_quit
 	else
-		if NOT checkforsignin local controller_index = ($memcardcontroller)
+		if NOT CheckForSignIn local controller_index = ($MemcardController)
 			memcard_sequence_quit
 		endif
-		if ($memcardsavingorloading = saving)
-			if ($memcardjamordefault = jam)
-				desc_text = qs(0xacd4569d)
+		if ($MemcardSavingOrLoading = Saving)
+			if ($MemcardJamOrDefault = jam)
+				desc_text = qs("No storage device selected or found. If no storage device is available, songs cannot be saved or deleted.")
 			else
-				desc_text = qs(0x55dfedef)
+				desc_text = qs("No storage device selected or found. If no storage device is available, progress will not be saved.")
 			endif
-			continue_text = qs(0x06d0b6b0)
+			continue_text = qs("CONTINUE WITHOUT SAVING")
 			continue_func = memcard_disable_saves_and_quit
 		else
-			if ($memcardjamordefault = jam)
-				desc_text = qs(0x4e114193)
+			if ($MemcardJamOrDefault = jam)
+				desc_text = qs("No storage device selected or found. If no storage device is available, songs will not be loaded and autosaving will be disabled.")
 			else
-				desc_text = qs(0x300c4bf5)
+				desc_text = qs("No storage device selected or found. If no storage device is available, progress will not be loaded and autosaving will be disabled.")
 			endif
-			continue_text = qs(0x182f0173)
+			continue_text = qs("CONTINUE")
 			continue_func = memcard_disable_saves_and_quit
 		endif
 		<options_array> = [
 			{
-				func = {memcard_sequence_retry params = {storageselectorforce = 1}}
-				text = qs(0x727bdc99)
+				func = {memcard_sequence_retry params = {StorageSelectorForce = 1}}
+				text = qs("SELECT STORAGE DEVICE")
 			}
 			{
 				func = <continue_func>
@@ -360,13 +360,13 @@ script create_storagedevice_warning_menu
 			}
 		]
 		if ($signin_jam_mode = 1)
-			desc_text = qs(0x86e75bd0)
-			continue_text = qs(0x06d0b6b0)
+			desc_text = qs("No storage device selected or found. You will be unable to create save data in the Music Studio without selecting a storage device.")
+			continue_text = qs("CONTINUE WITHOUT SAVING")
 			continue_func = memcard_disable_saves_and_quit
 			<options_array> = [
 				{
-					func = {memcard_sequence_retry params = {storageselectorforce = 1}}
-					text = qs(0x727bdc99)
+					func = {memcard_sequence_retry params = {StorageSelectorForce = 1}}
+					text = qs("SELECT STORAGE DEVICE")
 				}
 				{
 					func = <continue_func>
@@ -374,7 +374,7 @@ script create_storagedevice_warning_menu
 				}
 				{
 					func = generic_event_back
-					text = qs(0xf7723015)
+					text = qs("CANCEL")
 				}
 			]
 		endif
@@ -384,7 +384,7 @@ script create_storagedevice_warning_menu
 				pos = (640.0, 380.0)
 				scale = 0.6
 			}
-			player_device = ($memcardcontroller)
+			player_device = ($MemcardController)
 			menu_pos = (640.0, 465.0)
 			dialog_pos = (640.0, 455.0)
 			dialgo
@@ -395,20 +395,20 @@ endscript
 
 script create_checking_memory_card_screen 
 	memcard_cleanup_messages
-	getplatform
+	GetPlatform
 	switch <platform>
 		case ps3
 		create_popup_warning_menu {
-			player_device = ($memcardcontroller)
-			title = qs(0x232eed4e)
+			player_device = ($MemcardController)
+			title = qs("CHECKING...")
 			textblock = {
-				text = qs(0x2ccef527)
+				text = qs("Checking data. Please do not reset/switch off your system.")
 			}
 		}
 		case xenon
 		create_popup_warning_menu {
-			player_device = ($memcardcontroller)
-			title = qs(0x232eed4e)
+			player_device = ($MemcardController)
+			title = qs("CHECKING...")
 			textblock = {
 				text = qs(0xd9a0b023)
 			}
@@ -419,14 +419,14 @@ endscript
 script create_confirm_overwrite_menu 
 	mark_safe_for_shutdown
 	memcard_cleanup_messages
-	getplatform
+	GetPlatform
 	switch <platform>
 		case ps3
-		text = qs(0xc0da9b99)
+		text = qs("Are you sure you want to overwrite this save data? All progress within this save data will be lost.")
 		case xenon
-		text = qs(0xd13a6074)
+		text = qs("Are you sure you want to overwrite this content? All progress within this save content will be lost.")
 	endswitch
-	if ($memcardjamordefault = jam)
+	if ($MemcardJamOrDefault = jam)
 		<save_func> = memcard_save_jam
 	else
 		<save_func> = memcard_save_file
@@ -436,16 +436,16 @@ script create_confirm_overwrite_menu
 			text = <text>
 			pos = (640.0, 370.0)
 		}
-		player_device = ($memcardcontroller)
+		player_device = ($MemcardController)
 		menu_pos = (640.0, 465.0)
 		options = [
 			{
-				func = {<save_func> params = {overwriteconfirmed = 1}}
-				text = qs(0xf77909ae)
+				func = {<save_func> params = {OverwriteConfirmed = 1}}
+				text = qs("OVERWRITE")
 			}
 			{
 				func = {memcard_sequence_quit}
-				text = qs(0xf7723015)
+				text = qs("CANCEL")
 			}
 		]
 	}
@@ -454,78 +454,78 @@ endscript
 script create_confirm_load_menu 
 	mark_safe_for_shutdown
 	memcard_cleanup_messages
-	getplatform
+	GetPlatform
 	switch <platform>
 		case ps3
-		text = qs(0x03ff95e6)
+		text = qs("Are you sure you want to load this save data? All progress since your last save will be lost.")
 		case xenon
-		text = qs(0xde509f6c)
+		text = qs("Are you sure you want to load this content? All progress since your last save will be lost.")
 	endswitch
 	create_popup_warning_menu {
 		textblock = {
 			text = <text>
 			pos = (640.0, 370.0)
 		}
-		player_device = ($memcardcontroller)
+		player_device = ($MemcardController)
 		menu_pos = (640.0, 465.0)
 		options = [
 			{
-				func = {memcard_load_file params = {loadconfirmed = 1}}
-				text = qs(0xad5cfad4)
+				func = {memcard_load_file params = {LoadConfirmed = 1}}
+				text = qs("LOAD")
 			}
 			{
 				func = {memcard_sequence_quit}
-				text = qs(0xf7723015)
+				text = qs("CANCEL")
 			}
 		]
-		player_device = ($memcardcontroller)
+		player_device = ($MemcardController)
 	}
 endscript
 
 script create_no_save_found_menu 
 	mark_safe_for_shutdown
 	memcard_cleanup_messages
-	if NOT iswinport
-		getplatform
+	if NOT IsWinPort
+		GetPlatform
 		switch <platform>
 			case ps3
-			if ($memcardjamordefault = jam)
-				<textblock> = {text = qs(0x48156aca)}
+			if ($MemcardJamOrDefault = jam)
+				<textblock> = {text = qs("No GUITAR HERO WORLD TOUR custom song save data found on HDD.")}
 			else
-				<textblock> = {text = qs(0x0b4f6a4e)}
+				<textblock> = {text = qs("No GUITAR HERO WORLD TOUR save data found on HDD.")}
 			endif
 			create_popup_warning_menu {
-				player_device = ($memcardcontroller)
+				player_device = ($MemcardController)
 				textblock = <textblock>
 				menu_pos = (640.0, 480.0)
 				options = [
 					{
 						func = memcard_sequence_quit
-						text = qs(0x182f0173)
+						text = qs("CONTINUE")
 						scale = (1.0, 1.0)
 					}
 				]
 			}
 			case xenon
-			if ($memcardjamordefault = jam)
-				<textblock> = {text = qs(0x96c1586b)}
+			if ($MemcardJamOrDefault = jam)
+				<textblock> = {text = qs("No GUITAR HERO WORLD TOUR custom song saves present.")}
 			else
-				<textblock> = {text = qs(0x4d5bb0dc)}
+				<textblock> = {text = qs("No GUITAR HERO WORLD TOUR saves present.")}
 			endif
 			create_popup_warning_menu {
-				player_device = ($memcardcontroller)
-				title = qs(0x423b9e4e)
+				player_device = ($MemcardController)
+				title = qs("NO SAVES")
 				textblock = <textblock>
 				menu_pos = (640.0, 465.0)
 				dialog_pos = (640.0, 450.0)
 				options = [
 					{
-						func = {memcard_sequence_retry params = {storageselectorforce = 1}}
-						text = qs(0xa647ca8f)
+						func = {memcard_sequence_retry params = {StorageSelectorForce = 1}}
+						text = qs("TRY ANOTHER DEVICE")
 					}
 					{
 						func = memcard_sequence_quit
-						text = qs(0xf7723015)
+						text = qs("CANCEL")
 					}
 				]
 			}
@@ -536,46 +536,46 @@ endscript
 script create_corrupted_data_menu \{file_type = `default`}
 	mark_safe_for_shutdown
 	memcard_cleanup_messages
-	getplatform
+	GetPlatform
 	switch <platform>
 		case ps3
 		if (<file_type> = jam_file)
-			text = qs(0xfb455ec5)
+			text = qs("Custom song data is damaged and cannot be used. Do you want to delete this save data? All song data within this save will be lost.")
 		else
-			text = qs(0x601ed76f)
+			text = qs("Progression data is damaged and cannot be used. Do you want to delete this save data? All progress within this save data will be lost.")
 		endif
 		case xenon
 		if (<file_type> = jam_file)
-			text = qs(0x3996dc6e)
+			text = qs("Custom song content is damaged and cannot be used. Do you want to delete this content? All song data within this save content will be lost.")
 		else
-			text = qs(0x972c83ff)
+			text = qs("Progression content is damaged and cannot be used. Do you want to delete this content? All progress within this save content will be lost.")
 		endif
 	endswitch
-	if ($memcardsavingorloading = saving)
+	if ($MemcardSavingOrLoading = Saving)
 		options = [
 			{
 				func = memcard_delete_file
-				text = qs(0x271a1633)
+				text = qs("DELETE")
 				scale = 1
 				func_params = <...>
 			}
 			{
 				func = memcard_disable_saves_and_quit
-				text = qs(0x06d0b6b0)
+				text = qs("CONTINUE WITHOUT SAVING")
 				scale = 1
 			}
 		]
-	elseif ($memcardinitialboot = true)
+	elseif ($MemcardInitialBoot = true)
 		options = [
 			{
 				func = memcard_delete_file
-				text = qs(0x271a1633)
+				text = qs("DELETE")
 				scale = 1
 				func_params = <...>
 			}
 			{
 				func = memcard_disable_saves_and_quit
-				text = qs(0x06d0b6b0)
+				text = qs("CONTINUE WITHOUT SAVING")
 				scale = 1
 			}
 		]
@@ -583,19 +583,19 @@ script create_corrupted_data_menu \{file_type = `default`}
 		options = [
 			{
 				func = memcard_delete_file
-				text = qs(0x271a1633)
+				text = qs("DELETE")
 				scale = 1
 				func_params = <...>
 			}
 			{
 				func = memcard_sequence_quit
-				text = qs(0xf7723015)
+				text = qs("CANCEL")
 				scale = 1
 			}
 		]
 	endif
 	create_popup_warning_menu {
-		player_device = ($memcardcontroller)
+		player_device = ($MemcardController)
 		textblock = {
 			text = <text>
 			pos = (640.0, 375.0)
@@ -608,20 +608,20 @@ endscript
 
 script create_delete_file_menu 
 	memcard_cleanup_messages
-	getplatform
+	GetPlatform
 	switch <platform>
 		case ps3
 		create_popup_warning_menu {
-			player_device = ($memcardcontroller)
-			title = qs(0x6b122c30)
+			player_device = ($MemcardController)
+			title = qs("DELETING...")
 			textblock = {
-				text = qs(0xb7450831)
+				text = qs("Deleting save data. Do not switch off power during this time.")
 			}
 		}
 		case xenon
 		create_popup_warning_menu {
-			player_device = ($memcardcontroller)
-			title = qs(0x6b122c30)
+			player_device = ($MemcardController)
+			title = qs("DELETING...")
 			textblock = {
 				text = qs(0x5036f8b2)
 			}
@@ -631,22 +631,22 @@ endscript
 
 script create_load_success_menu 
 	memcard_cleanup_messages
-	getplatform
+	GetPlatform
 	switch <platform>
 		case ps3
 		create_popup_warning_menu {
-			player_device = ($memcardcontroller)
-			title = qs(0x9853e050)
+			player_device = ($MemcardController)
+			title = qs("SUCCESSFUL")
 			textblock = {
-				text = qs(0xeae1a950)
+				text = qs("Load successful.")
 			}
 		}
 		case xenon
 		create_popup_warning_menu {
-			player_device = ($memcardcontroller)
-			title = qs(0x9853e050)
+			player_device = ($MemcardController)
+			title = qs("SUCCESSFUL")
 			textblock = {
-				text = qs(0xeae1a950)
+				text = qs("Load successful.")
 			}
 		}
 	endswitch
@@ -654,22 +654,22 @@ endscript
 
 script create_rename_success_menu 
 	memcard_cleanup_messages
-	getplatform
+	GetPlatform
 	switch <platform>
 		case ps3
 		create_popup_warning_menu {
-			player_device = ($memcardcontroller)
-			title = qs(0x9853e050)
+			player_device = ($MemcardController)
+			title = qs("SUCCESSFUL")
 			textblock = {
-				text = qs(0xe546315d)
+				text = qs("Save successful.")
 			}
 		}
 		case xenon
 		create_popup_warning_menu {
-			player_device = ($memcardcontroller)
-			title = qs(0x9853e050)
+			player_device = ($MemcardController)
+			title = qs("SUCCESSFUL")
 			textblock = {
-				text = qs(0xe546315d)
+				text = qs("Save successful.")
 			}
 		}
 	endswitch
@@ -677,22 +677,22 @@ endscript
 
 script create_delete_success_menu 
 	memcard_cleanup_messages
-	getplatform
+	GetPlatform
 	switch <platform>
 		case ps3
 		create_popup_warning_menu {
-			player_device = ($memcardcontroller)
-			title = qs(0x9853e050)
+			player_device = ($MemcardController)
+			title = qs("SUCCESSFUL")
 			textblock = {
-				text = qs(0x78f0a884)
+				text = qs("Delete successful.")
 			}
 		}
 		case xenon
 		create_popup_warning_menu {
-			player_device = ($memcardcontroller)
-			title = qs(0x9853e050)
+			player_device = ($MemcardController)
+			title = qs("SUCCESSFUL")
 			textblock = {
-				text = qs(0x78f0a884)
+				text = qs("Delete successful.")
 			}
 		}
 	endswitch
@@ -700,22 +700,22 @@ endscript
 
 script create_save_success_menu 
 	memcard_cleanup_messages
-	getplatform
+	GetPlatform
 	switch <platform>
 		case ps3
 		create_popup_warning_menu {
-			player_device = ($memcardcontroller)
-			title = qs(0x9853e050)
+			player_device = ($MemcardController)
+			title = qs("SUCCESSFUL")
 			textblock = {
-				text = qs(0xe546315d)
+				text = qs("Save successful.")
 			}
 		}
 		case xenon
 		create_popup_warning_menu {
-			player_device = ($memcardcontroller)
-			title = qs(0x9853e050)
+			player_device = ($MemcardController)
+			title = qs("SUCCESSFUL")
 			textblock = {
-				text = qs(0xe546315d)
+				text = qs("Save successful.")
 			}
 		}
 	endswitch
@@ -724,22 +724,22 @@ endscript
 script create_overwrite_success_menu 
 	memcard_cleanup_messages
 	printscriptinfo
-	getplatform
+	GetPlatform
 	switch <platform>
 		case ps3
 		create_popup_warning_menu {
-			player_device = ($memcardcontroller)
-			title = qs(0x9853e050)
+			player_device = ($MemcardController)
+			title = qs("SUCCESSFUL")
 			textblock = {
-				text = qs(0x6a3945f4)
+				text = qs("Overwrite successful.")
 			}
 		}
 		case xenon
 		create_popup_warning_menu {
-			player_device = ($memcardcontroller)
-			title = qs(0x9853e050)
+			player_device = ($MemcardController)
+			title = qs("SUCCESSFUL")
 			textblock = {
-				text = qs(0x6a3945f4)
+				text = qs("Overwrite successful.")
 			}
 		}
 	endswitch
@@ -748,43 +748,43 @@ endscript
 script create_delete_failed_menu 
 	mark_safe_for_shutdown
 	memcard_cleanup_messages
-	getplatform
+	GetPlatform
 	switch <platform>
 		case ps3
 		create_popup_warning_menu {
-			title = qs(0x1aa397cd)
+			title = qs("DELETE FAILED!")
 			textblock = {
-				text = qs(0xba04b3d6)
+				text = qs("Delete failed!  Please exit the game and delete this game data.")
 			}
-			player_device = ($memcardcontroller)
+			player_device = ($MemcardController)
 			menu_pos = (640.0, 465.0)
 			options = [
 				{
 					func = memcard_sequence_retry
-					text = qs(0x5d8b66a0)
+					text = qs("RETRY")
 				}
 				{
 					func = memcard_sequence_quit
-					text = qs(0x182f0173)
+					text = qs("CONTINUE")
 				}
 			]
 		}
 		case xenon
 		create_popup_warning_menu {
-			title = qs(0x1aa397cd)
+			title = qs("DELETE FAILED!")
 			textblock = {
-				text = qs(0x3605b1df)
+				text = qs("UNABLE TO DELETE.")
 			}
-			player_device = ($memcardcontroller)
+			player_device = ($MemcardController)
 			menu_pos = (640.0, 465.0)
 			options = [
 				{
 					func = memcard_sequence_retry
-					text = qs(0x5d8b66a0)
+					text = qs("RETRY")
 				}
 				{
 					func = memcard_sequence_quit
-					text = qs(0x182f0173)
+					text = qs("CONTINUE")
 				}
 			]
 		}
@@ -794,43 +794,43 @@ endscript
 script create_load_failed_menu 
 	mark_safe_for_shutdown
 	memcard_cleanup_messages
-	getplatform
+	GetPlatform
 	switch <platform>
 		case ps3
 		create_popup_warning_menu {
 			textblock = {
-				text = qs(0x02f65e0b)
+				text = qs("Failed to load. The save appears to be corrupt.")
 				pos = (640.0, 380.0)
 			}
-			player_device = ($memcardcontroller)
+			player_device = ($MemcardController)
 			menu_pos = (640.0, 465.0)
 			options = [
 				{
 					func = memcard_sequence_retry
-					text = qs(0x5d8b66a0)
+					text = qs("RETRY")
 				}
 				{
 					func = memcard_sequence_quit
-					text = qs(0x182f0173)
+					text = qs("CONTINUE")
 				}
 			]
 		}
 		case xenon
 		create_popup_warning_menu {
 			textblock = {
-				text = qs(0xd82f86b3)
+				text = qs("Failed trying to load.")
 				pos = (640.0, 380.0)
 			}
-			player_device = ($memcardcontroller)
+			player_device = ($MemcardController)
 			menu_pos = (640.0, 465.0)
 			options = [
 				{
-					func = {memcard_sequence_retry params = {storageselectorforce = 1}}
-					text = qs(0x5d8b66a0)
+					func = {memcard_sequence_retry params = {StorageSelectorForce = 1}}
+					text = qs("RETRY")
 				}
 				{
 					func = memcard_sequence_quit
-					text = qs(0x182f0173)
+					text = qs("CONTINUE")
 				}
 			]
 		}
@@ -840,43 +840,43 @@ endscript
 script create_save_failed_menu 
 	mark_safe_for_shutdown
 	memcard_cleanup_messages
-	getplatform
+	GetPlatform
 	switch <platform>
 		case ps3
 		create_popup_warning_menu {
 			textblock = {
-				text = qs(0x451503a2)
+				text = qs("Process failed.")
 				pos = (640.0, 380.0)
 			}
-			player_device = ($memcardcontroller)
+			player_device = ($MemcardController)
 			menu_pos = (640.0, 465.0)
 			options = [
 				{
 					func = memcard_sequence_retry
-					text = qs(0x5d8b66a0)
+					text = qs("RETRY")
 				}
 				{
 					func = memcard_sequence_quit
-					text = qs(0x182f0173)
+					text = qs("CONTINUE")
 				}
 			]
 		}
 		case xenon
 		create_popup_warning_menu {
 			textblock = {
-				text = qs(0x36e7d810)
+				text = qs("Process failed.\nNo storage device was selected or the in-use storage device is unavailable.")
 				pos = (640.0, 380.0)
 			}
-			player_device = ($memcardcontroller)
+			player_device = ($MemcardController)
 			menu_pos = (640.0, 465.0)
 			options = [
 				{
-					func = {memcard_sequence_retry params = {storageselectorforce = 1}}
-					text = qs(0x5d8b66a0)
+					func = {memcard_sequence_retry params = {StorageSelectorForce = 1}}
+					text = qs("RETRY")
 				}
 				{
 					func = memcard_sequence_quit
-					text = qs(0x182f0173)
+					text = qs("CONTINUE")
 				}
 			]
 		}
@@ -886,43 +886,43 @@ endscript
 script create_overwrite_failed_menu 
 	mark_safe_for_shutdown
 	memcard_cleanup_messages
-	getplatform
+	GetPlatform
 	switch <platform>
 		case ps3
 		create_popup_warning_menu {
 			textblock = {
-				text = qs(0xf03a8927)
+				text = qs("Failed trying to overwrite.")
 				pos = (640.0, 380.0)
 			}
-			player_device = ($memcardcontroller)
+			player_device = ($MemcardController)
 			menu_pos = (640.0, 465.0)
 			options = [
 				{
 					func = memcard_sequence_retry
-					text = qs(0x5d8b66a0)
+					text = qs("RETRY")
 				}
 				{
 					func = memcard_sequence_quit
-					text = qs(0x182f0173)
+					text = qs("CONTINUE")
 				}
 			]
 		}
 		case xenon
 		create_popup_warning_menu {
 			textblock = {
-				text = qs(0xbf8a9615)
+				text = qs("Overwrite failed.\nNo storage device was selected or the in-use storage device is unavailable.")
 				pos = (640.0, 380.0)
 			}
-			player_device = ($memcardcontroller)
+			player_device = ($MemcardController)
 			menu_pos = (640.0, 465.0)
 			options = [
 				{
 					func = memcard_sequence_retry
-					text = qs(0x5d8b66a0)
+					text = qs("RETRY")
 				}
 				{
 					func = memcard_sequence_quit
-					text = qs(0x182f0173)
+					text = qs("CONTINUE")
 				}
 			]
 		}
@@ -932,46 +932,46 @@ endscript
 script create_out_of_space_menu \{message_type = `default`}
 	mark_safe_for_shutdown
 	memcard_cleanup_messages
-	getplatform
+	GetPlatform
 	switch <platform>
 		case ps3
-		mc_spacefornewfolder \{desc = guitarcontent}
-		formattext textname = message qs(0xe2aca40f) d = <spacerequired>
+		MC_SpaceForNewFolder \{desc = GuitarContent}
+		FormatText TextName = message qs("Insufficient HDD space to save. GUITAR HERO WORLD TOUR requires %dKB HDD space to save data.") d = <SpaceRequired>
 		create_popup_warning_menu {
 			textblock = {
 				text = <message>
 				pos = (640.0, 390.0)
 				scale = 0.5
 			}
-			player_device = ($memcardcontroller)
+			player_device = ($MemcardController)
 			menu_pos = (640.0, 465.0)
 			options = [
 				{
 					func = memcard_delete_file
-					text = qs(0x0b690d61)
+					text = qs("DELETE FILES")
 				}
 				{
 					func = memcard_disable_saves_and_quit
-					text = qs(0x06d0b6b0)
+					text = qs("CONTINUE WITHOUT SAVING")
 				}
 			]
 		}
 		case xenon
-		if ($memcardsavingorloading = saving)
-			if ($memcardjamordefault = `default`)
+		if ($MemcardSavingOrLoading = Saving)
+			if ($MemcardJamOrDefault = `default`)
 				text = [
-					qs(0x924e0051)
-					qs(0x9a6bfa3b)
-					qs(0x4bb7edcb)
+					qs("No space left to save progress.")
+					qs("\L\n")
+					qs("Please return to the Xbox Dashboard and delete some existing data, or you will not be able to save future progress.")
 				]
-				continue_text = qs(0x182f0173)
+				continue_text = qs("CONTINUE")
 			else
 				text = [
-					qs(0x33709e0a)
-					qs(0x9a6bfa3b)
-					qs(0xb5e140a8)
+					qs("No space to save.")
+					qs("\L\n")
+					qs("Please return to the Xbox Dashboard and delete some existing data.")
 				]
-				continue_text = qs(0x06d0b6b0)
+				continue_text = qs("CONTINUE WITHOUT SAVING")
 			endif
 			create_popup_warning_menu {
 				textblock = {
@@ -979,12 +979,12 @@ script create_out_of_space_menu \{message_type = `default`}
 					pos = (640.0, 390.0)
 					scale = 0.5
 				}
-				player_device = ($memcardcontroller)
+				player_device = ($MemcardController)
 				menu_pos = (640.0, 465.0)
 				options = [
 					{
-						func = {memcard_sequence_retry params = {storageselectorforce = 1}}
-						text = qs(0x727bdc99)
+						func = {memcard_sequence_retry params = {StorageSelectorForce = 1}}
+						text = qs("SELECT STORAGE DEVICE")
 					}
 					{
 						func = memcard_disable_saves_and_quit
@@ -1000,20 +1000,20 @@ endscript
 
 script create_load_file_menu 
 	memcard_cleanup_messages
-	getplatform
+	GetPlatform
 	switch <platform>
 		case ps3
 		create_popup_warning_menu {
-			player_device = ($memcardcontroller)
-			title = qs(0xfab8f6e7)
+			player_device = ($MemcardController)
+			title = qs("LOADING...")
 			textblock = {
-				text = qs(0xc4412f98)
+				text = qs("Loading data. Please do not reset/switch off your system.")
 			}
 		}
 		case xenon
 		create_popup_warning_menu {
-			player_device = ($memcardcontroller)
-			title = qs(0xfab8f6e7)
+			player_device = ($MemcardController)
+			title = qs("LOADING...")
 			textblock = {
 				text = qs(0xd25299d8)
 			}
@@ -1023,21 +1023,21 @@ endscript
 
 script create_overwrite_menu 
 	memcard_cleanup_messages
-	getplatform
+	GetPlatform
 	switch <platform>
 		case ps3
 		create_popup_warning_menu {
-			player_device = ($memcardcontroller)
-			title = qs(0xd99906d4)
+			player_device = ($MemcardController)
+			title = qs("OVERWRITING...")
 			textblock = {
-				text = qs(0xdcc10e42)
+				text = qs("Overwriting previous save data. Please do not reset/switch off your system.")
 			}
 		}
 		case xenon
 		default
 		create_popup_warning_menu {
-			player_device = ($memcardcontroller)
-			title = qs(0xc13ee209)
+			player_device = ($MemcardController)
+			title = qs("SAVING...")
 			textblock = {
 				text = qs(0x891f30b2)
 			}
@@ -1047,20 +1047,20 @@ endscript
 
 script create_save_menu 
 	memcard_cleanup_messages
-	getplatform
+	GetPlatform
 	switch <platform>
 		case ps3
 		create_popup_warning_menu {
-			player_device = ($memcardcontroller)
-			title = qs(0xc13ee209)
+			player_device = ($MemcardController)
+			title = qs("SAVING...")
 			textblock = {
-				text = qs(0x01b18d92)
+				text = qs("Saving to the HDD. Please do not reset/switch off your system.")
 			}
 		}
 		case xenon
 		create_popup_warning_menu {
-			player_device = ($memcardcontroller)
-			title = qs(0xc13ee209)
+			player_device = ($MemcardController)
+			title = qs("SAVING...")
 			textblock = {
 				text = qs(0x891f30b2)
 			}
@@ -1070,31 +1070,31 @@ endscript
 
 script create_delete_menu 
 	memcard_cleanup_messages
-	getplatform
+	GetPlatform
 	switch <platform>
 		case ps3
 		create_popup_warning_menu {
-			player_device = ($memcardcontroller)
-			title = qs(0x6b122c30)
+			player_device = ($MemcardController)
+			title = qs("DELETING...")
 			textblock = {
-				text = qs(0x57d417a1)
+				text = qs("Deleting content from the HDD. Please do not reset/switch off your system.")
 			}
 		}
 		case xenon
-		if iswinport
+		if IsWinPort
 			create_popup_warning_menu {
-				player_device = ($memcardcontroller)
-				title = qs(0x6b122c30)
+				player_device = ($MemcardController)
+				title = qs("DELETING...")
 				textblock = {
 					text = qs(0xf2b63b86)
 				}
 			}
 		else
 			create_popup_warning_menu {
-				player_device = ($memcardcontroller)
-				title = qs(0x6b122c30)
+				player_device = ($MemcardController)
+				title = qs("DELETING...")
 				textblock = {
-					text = qs(0x7ff39530)
+					text = qs("Deleting content.\nPlease don't turn off the Xbox 360 console.")
 				}
 			}
 		endif

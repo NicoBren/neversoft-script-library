@@ -2,31 +2,31 @@
 script ui_create_save_changes_dialogue 
 	prompt_for_save_or_confirm = save
 	cas_get_player_status
-	if NOT iswinport
-		if isxenon
-			if netsessionfunc func = xenonisguest params = {controller_index = ($<player_status>.controller)}
+	if NOT IsWinPort
+		if isXenon
+			if NetSessionFunc func = XenonIsGuest params = {controller_index = ($<player_status>.controller)}
 				prompt_for_save_or_confirm = confirm
 			endif
-			if NOT checkforsignin local controller_index = ($<player_status>.controller)
+			if NOT CheckForSignIn local controller_index = ($<player_status>.controller)
 				prompt_for_save_or_confirm = confirm
 			endif
 		endif
 	endif
-	getglobaltags \{user_options}
+	GetGlobalTags \{user_options}
 	if (<autosave> = 0)
 		prompt_for_save_or_confirm = confirm
 	endif
 	switch <prompt_for_save_or_confirm>
 		case save
-		confirm_title_text = qs(0x32541dc7)
-		confirm_option_text = qs(0xe618e644)
+		confirm_title_text = qs("Save Changes?")
+		confirm_option_text = qs("SAVE")
 		confirm_func = exit_save_changes
-		confirm_dialog_text = qs(0x18ab2f3d)
+		confirm_dialog_text = qs("Do you want to save the changes made to your appearance? Selecting DISCARD will cause all unsaved appearance changes to be lost.")
 		case confirm
-		confirm_title_text = qs(0xc1fb7e7c)
-		confirm_option_text = qs(0xb177602e)
+		confirm_title_text = qs("Retain Changes?")
+		confirm_option_text = qs("RETAIN")
 		confirm_func = exit_skip_save
-		confirm_dialog_text = qs(0x70d0fab3)
+		confirm_dialog_text = qs("Do you want to retain the changes made to your appearance? Selecting DISCARD will cause all unsaved appearance changes to be lost.")
 	endswitch
 	create_popup_warning_menu {
 		title = <confirm_title_text>
@@ -41,11 +41,11 @@ script ui_create_save_changes_dialogue
 			}
 			{
 				func = exit_discard_changes
-				text = qs(0x1fbf1f17)
+				text = qs("DISCARD")
 			}
 			{
 				func = generic_event_back
-				text = qs(0xf7723015)
+				text = qs("CANCEL")
 			}
 		]
 		popup_event_handlers = [
@@ -53,7 +53,7 @@ script ui_create_save_changes_dialogue
 			{pad_down generic_menu_up_or_down_sound params = {down}}
 			{pad_back generic_event_back}]
 	}
-	add_user_control_helper \{text = qs(0xf7723015)
+	add_user_control_helper \{text = qs("CANCEL")
 		button = red
 		z = 100000}
 endscript
@@ -63,25 +63,25 @@ script ui_destroy_save_changes_dialogue
 endscript
 
 script exit_save_changes 
-	destroyscreenelement \{id = pu_warning_vmenu
+	DestroyScreenElement \{id = pu_warning_vmenu
 		preserve_parent}
 	if is_completely_custom_musician id = ($cas_current_profile) savegame = ($cas_current_savegame)
 		cas_save_photo_of_car character_name = ($cas_current_profile) savegame = ($cas_current_savegame)
 	endif
 	destroy_popup_warning_menu
 	clean_up_menu_history_screen_elements
-	getcasappearance
+	GetCASAppearance
 	modify_custom_profile_appearance id = ($cas_current_profile) appearance = <appearance> savegame = ($cas_current_savegame)
 	cas_get_player_status
 	change structurename = <player_status> character_id = ($cas_current_profile)
 	if is_from_singleplayer_hub
-		setglobaltags savegame = ($cas_current_savegame) last_singleplayer_character params = {last_singleplayer_character = ($cas_current_profile)}
+		SetGlobalTags savegame = ($cas_current_savegame) last_singleplayer_character params = {last_singleplayer_character = ($cas_current_profile)}
 	endif
-	if ($achievements_creating_character = 1)
-		if ((<appearance>.cas_physique.desc_id) = femalephysique)
-			achievements_rock_maiden controller = ($primary_controller)
-		elseif ((<appearance>.cas_physique.desc_id) = malephysique)
-			achievements_warrior_of_rock controller = ($primary_controller)
+	if ($Achievements_creating_character = 1)
+		if ((<appearance>.cas_physique.desc_id) = FemalePhysique)
+			Achievements_ROCK_MAIDEN controller = ($primary_controller)
+		elseif ((<appearance>.cas_physique.desc_id) = MalePhysique)
+			Achievements_WARRIOR_OF_ROCK controller = ($primary_controller)
 		endif
 	endif
 	if ($cas_from_main_menu = 1)
@@ -90,26 +90,26 @@ script exit_save_changes
 	ui_event_get_stack
 	data = {savegame = ($cas_current_savegame) requested_autosave = 1}
 	autosave_type = ui_memcard_autosave_replace
-	if gotparam \{not_replace}
+	if GotParam \{not_replace}
 		autosave_type = ui_memcard_autosave
 	endif
 	i = 0
 	begin
 	if ((<stack> [<i>].base_name) = 'character_hub')
-		cas_set_object_node_pos player = ($cas_current_player) node = z_soundcheck_trg_waypoint_player1_start
+		cas_set_object_node_pos player = ($cas_current_player) node = z_Soundcheck_TRG_Waypoint_Player1_Start
 		<autosave_type> event = menu_back state = uistate_character_hub data = <data>
 		return
 	elseif ((<stack> [<i>].base_name) = 'singleplayer_character_hub')
-		cas_set_object_node_pos player = ($cas_current_player) node = z_soundcheck_trg_waypoint_player1_start
-		<autosave_type> event = menu_back state = uistate_singleplayer_character_hub data = <data>
+		cas_set_object_node_pos player = ($cas_current_player) node = z_Soundcheck_TRG_Waypoint_Player1_Start
+		<autosave_type> event = menu_back state = UIstate_singleplayer_character_hub data = <data>
 		return
 	elseif ((<stack> [<i>].base_name) = 'band_mode')
-		<autosave_type> event = menu_back state = uistate_band_mode data = <data>
+		<autosave_type> event = menu_back state = UIstate_band_mode data = <data>
 		return
 	endif
 	i = (<i> + 1)
 	repeat <stack_size>
-	printf \{qs(0x37675c66)}
+	printf \{qs("\L#################### exit_save_changes didn't find a state to go back to, go to character selection ####################")}
 	<autosave_type> event = menu_back state = uistate_character_selection data = <data>
 endscript
 
@@ -127,7 +127,7 @@ script exit_discard_changes
 			change structurename = <player_status> character_id = ($charselect_previous_character_id)
 		endif
 	else
-		if gotparam \{no_changes}
+		if GotParam \{no_changes}
 			if ($cas_from_main_menu = 1)
 				cas_destroy_all_characters
 			endif
@@ -141,37 +141,37 @@ script exit_discard_changes
 	i = 0
 	begin
 	if ((<stack> [<i>].base_name) = 'character_hub')
-		cas_set_object_node_pos player = ($cas_current_player) node = z_soundcheck_trg_waypoint_player1_start
+		cas_set_object_node_pos player = ($cas_current_player) node = z_Soundcheck_TRG_Waypoint_Player1_Start
 		generic_event_back \{state = uistate_character_hub}
 		return
 	elseif ((<stack> [<i>].base_name) = 'singleplayer_character_hub')
-		cas_set_object_node_pos player = ($cas_current_player) node = z_soundcheck_trg_waypoint_player1_start
-		generic_event_back \{state = uistate_singleplayer_character_hub}
+		cas_set_object_node_pos player = ($cas_current_player) node = z_Soundcheck_TRG_Waypoint_Player1_Start
+		generic_event_back \{state = UIstate_singleplayer_character_hub}
 		return
 	elseif ((<stack> [<i>].base_name) = 'band_mode')
-		generic_event_back \{state = uistate_band_mode}
+		generic_event_back \{state = UIstate_band_mode}
 		return
 	endif
 	i = (<i> + 1)
 	repeat <stack_size>
-	printf \{qs(0xeb1b08ac)}
+	printf \{qs("\L#################### exit_discard_changes didn't find a state to go back to, go to character selection ####################")}
 	generic_event_back \{state = uistate_character_selection}
 endscript
 
 script exit_skip_save 
-	destroyscreenelement \{id = pu_warning_vmenu
+	DestroyScreenElement \{id = pu_warning_vmenu
 		preserve_parent}
 	if is_completely_custom_musician id = ($cas_current_profile) savegame = ($cas_current_savegame)
 		cas_save_photo_of_car character_name = ($cas_current_profile) savegame = ($cas_current_savegame)
 	endif
 	destroy_popup_warning_menu
 	clean_up_menu_history_screen_elements
-	getcasappearance
+	GetCASAppearance
 	modify_custom_profile_appearance id = ($cas_current_profile) appearance = <appearance> savegame = ($cas_current_savegame)
 	cas_get_player_status
 	change structurename = <player_status> character_id = ($cas_current_profile)
 	if is_from_singleplayer_hub
-		setglobaltags savegame = ($cas_current_savegame) last_singleplayer_character params = {last_singleplayer_character = ($cas_current_profile)}
+		SetGlobalTags savegame = ($cas_current_savegame) last_singleplayer_character params = {last_singleplayer_character = ($cas_current_profile)}
 	endif
 	if ($cas_from_main_menu = 1)
 		cas_destroy_all_characters
@@ -180,15 +180,15 @@ script exit_skip_save
 	i = 0
 	begin
 	if ((<stack> [<i>].base_name) = 'character_hub')
-		cas_set_object_node_pos player = ($cas_current_player) node = z_soundcheck_trg_waypoint_player1_start
+		cas_set_object_node_pos player = ($cas_current_player) node = z_Soundcheck_TRG_Waypoint_Player1_Start
 		generic_event_back \{state = uistate_character_hub}
 		return
 	elseif ((<stack> [<i>].base_name) = 'singleplayer_character_hub')
-		cas_set_object_node_pos player = ($cas_current_player) node = z_soundcheck_trg_waypoint_player1_start
-		generic_event_back \{state = uistate_singleplayer_character_hub}
+		cas_set_object_node_pos player = ($cas_current_player) node = z_Soundcheck_TRG_Waypoint_Player1_Start
+		generic_event_back \{state = UIstate_singleplayer_character_hub}
 		return
 	elseif ((<stack> [<i>].base_name) = 'band_mode')
-		generic_event_back \{state = uistate_band_mode}
+		generic_event_back \{state = UIstate_band_mode}
 		return
 	endif
 	i = (<i> + 1)

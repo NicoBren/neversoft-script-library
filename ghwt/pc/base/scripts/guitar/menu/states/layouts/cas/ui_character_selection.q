@@ -13,10 +13,10 @@ endscript
 
 script ui_create_character_selection_spawned 
 	change \{rich_presence_context = presence_menus}
-	change \{achievements_creating_character = 0}
+	change \{Achievements_creating_character = 0}
 	change \{respond_to_signin_changed = 1}
 	change \{respond_to_signin_changed_func = none}
-	if gotparam \{from_main_menu}
+	if GotParam \{from_main_menu}
 		change \{cas_from_main_menu = 1}
 	else
 		change \{cas_from_main_menu = 0}
@@ -25,22 +25,22 @@ script ui_create_character_selection_spawned
 	if ($customize_char_popup = 1)
 		change \{customize_char_popup = 0}
 		begin
-		if NOT screenelementexists \{id = popup_warning_container}
+		if NOT ScreenElementExists \{id = popup_warning_container}
 			break
 		endif
-		wait \{1
+		Wait \{1
 			gameframe}
 		repeat
 	endif
 	cas_get_player_status
 	get_savegame_from_player_status player_status = <player_status>
 	printf 'savegame=%s' s = <savegame>
-	cas_set_object_node_pos player = ($cas_current_player) node = z_soundcheck_trg_waypoint_car_select
-	printf 'Current character is %s' s = ($<player_status>.character_id) donotresolve
+	cas_set_object_node_pos player = ($cas_current_player) node = Z_Soundcheck_TRG_Waypoint_CAR_Select
+	printf 'Current character is %s' s = ($<player_status>.character_id) DoNotResolve
 	if ($ss_focus_on_create_new_character = 1)
 		change \{ss_focus_on_create_new_character = 0}
 	else
-		if NOT gotparam \{from_main_menu}
+		if NOT GotParam \{from_main_menu}
 			current_character_id = ($<player_status>.character_id)
 		endif
 	endif
@@ -53,14 +53,14 @@ script ui_create_character_selection_spawned
 	}
 	menu_index = 0
 	globaltag_getarraysize savegame = <savegame> array_name = custom_profiles
-	if screenelementexists \{id = character_select_num_custom_profiles}
-		destroyscreenelement \{id = character_select_num_custom_profiles}
+	if ScreenElementExists \{id = character_select_num_custom_profiles}
+		DestroyScreenElement \{id = character_select_num_custom_profiles}
 	endif
-	formattext textname = num_profiles_text qs(0x83493791) a = <array_size> b = $max_num_create_a_rockers
-	createscreenelement {
+	FormatText TextName = num_profiles_text qs("%a of %b Rockstars Created") a = <array_size> b = $max_num_create_a_rockers
+	CreateScreenElement {
 		id = character_select_num_custom_profiles
 		parent = root_window
-		type = textblockelement
+		type = TextBlockElement
 		pos = (1115.0, 280.0)
 		text = <num_profiles_text>
 		font = fontgrid_text_a8
@@ -73,8 +73,8 @@ script ui_create_character_selection_spawned
 	<can_create_new_character> = 0
 	if (<array_size> < $max_num_create_a_rockers)
 		add_character_selection_item {
-			name = qs(0xa1ea347f)
-			bio = qs(0x637a176a)
+			name = qs("CREATE NEW")
+			bio = qs("Create your own rocker to show these posers how it's done!")
 			pad_choose_script = create_new_custom_character
 			pad_choose_params = {savegame = <savegame>}
 			additional_focus_script = new_custom_char_focus
@@ -89,14 +89,14 @@ script ui_create_character_selection_spawned
 	get_musician_profile_struct_by_index index = <i> savegame = <savegame>
 	this_id = (<profile_struct>.name)
 	choose_script = choose_character_to_play
-	if gotparam \{from_main_menu}
+	if GotParam \{from_main_menu}
 		if profile_can_be_modified id = <this_id> savegame = <savegame>
 			choose_script = choose_character_to_edit
 		else
 			choose_script = nullscript
 		endif
 	else
-		if structurecontains structure = <profile_struct> price
+		if StructureContains Structure = <profile_struct> price
 			if NOT is_profile_purchased id = <this_id> savegame = <savegame>
 				price = (<profile_struct>.price)
 				choose_script = purchase_character_to_play
@@ -108,8 +108,8 @@ script ui_create_character_selection_spawned
 		bio = (<profile_struct>.blurb)
 		if is_completely_custom_musician id = <this_id> savegame = <savegame>
 			get_current_band_name
-			printf \{qs(0x47c3df3d)}
-			get_custom_musician_bio name = (<profile_struct>.fullname) band = <band_name> genre = ((<profile_struct>.appearance).genre)
+			printf \{qs("\LCUSTOM MUSICIAN!")}
+			get_custom_musician_bio name = (<profile_struct>.fullname) Band = <band_name> genre = ((<profile_struct>.appearance).genre)
 		endif
 		add_character_selection_item {
 			price = <price>
@@ -121,15 +121,15 @@ script ui_create_character_selection_spawned
 			additional_focus_script = change_character_focus
 			additional_focus_params = {character_id = <this_id> from_main_menu = <from_main_menu> savegame = <savegame>}
 		}
-		if gotparam \{current_character_id}
+		if GotParam \{current_character_id}
 			if (<this_id> = <current_character_id>)
 				focus_index = <menu_index>
 			endif
 		endif
 		menu_index = (<menu_index> + 1)
 	endif
-	if gotparam \{price}
-		removeparameter \{price}
+	if GotParam \{price}
+		RemoveParameter \{price}
 	endif
 	i = (<i> + 1)
 	repeat <array_size>
@@ -154,27 +154,27 @@ script ui_create_character_selection_spawned
 	i = (<i> + 1)
 	repeat <array_size>
 	menu_finish \{no_helper_text = 1}
-	add_user_control_helper \{text = qs(0xc18d5e76)
+	add_user_control_helper \{text = qs("SELECT")
 		button = green
 		z = 100000}
-	add_user_control_helper \{text = qs(0xaf4d5dd2)
+	add_user_control_helper \{text = qs("BACK")
 		button = red
 		z = 100000}
-	if NOT gotparam \{from_main_menu}
-		add_user_control_helper \{text = qs(0x57a22b82)
-			button = yellow
+	if NOT GotParam \{from_main_menu}
+		add_user_control_helper \{text = qs("EDIT")
+			button = Yellow
 			z = 100000}
 	endif
-	launchevent type = focus target = create_character_selection_vmenu data = {child_index = <focus_index>}
+	LaunchEvent type = focus target = create_character_selection_vmenu data = {child_index = <focus_index>}
 	character_selection_animate_in
-	soundevent \{event = menu_character_bio_panel}
+	SoundEvent \{event = Menu_Character_Bio_Panel}
 	if ($autolaunch_cas_soak_test = 1)
-		spawnscriptlater \{cas_soak_test}
+		SpawnScriptLater \{cas_soak_test}
 	endif
 endscript
 
 script character_select_back_out_and_fix_cam 
-	if gotparam \{from_difficulty}
+	if GotParam \{from_difficulty}
 		change \{first_character_hub_enter = 1}
 		generic_event_back \{nosound
 			state = uistate_select_difficulty}
@@ -184,24 +184,24 @@ script character_select_back_out_and_fix_cam
 endscript
 
 script get_car_photo_icon 
-	requireparams \{[
+	RequireParams \{[
 			profile_struct
 			character_id
 			savegame
 		]
 		all}
 	icon = axel_mug
-	if structurecontains structure = <profile_struct> preset_icon
+	if StructureContains Structure = <profile_struct> preset_icon
 		icon = (<profile_struct>.preset_icon)
 	else
-		if photoexistsinglobaltags savegame = <savegame> character_name = <character_id>
-			formattext textname = savegamename '_%i' i = <savegame>
-			extendcrc <character_id> <savegamename> out = custom_char_icon
-			if NOT isassetloaded name = <custom_char_icon>
-				if NOT gotparam \{skip_add}
-					mempushcontext \{bottomupheap}
-					photocreateimageasset savegame = <savegame> character_name = <character_id> asset_name = <custom_char_icon>
-					mempopcontext
+		if PhotoExistsInGlobalTags savegame = <savegame> character_name = <character_id>
+			FormatText TextName = savegamename '_%i' i = <savegame>
+			ExtendCRC <character_id> <savegamename> out = custom_char_icon
+			if NOT IsAssetLoaded name = <custom_char_icon>
+				if NOT GotParam \{skip_add}
+					MemPushContext \{BottomUpHeap}
+					PhotoCreateImageAsset savegame = <savegame> character_name = <character_id> asset_name = <custom_char_icon>
+					MemPopContext
 				endif
 			endif
 			icon = <custom_char_icon>
@@ -211,7 +211,7 @@ script get_car_photo_icon
 endscript
 
 script cleanup_photo_assets 
-	requireparams \{[
+	RequireParams \{[
 			savegame
 		]
 		all}
@@ -221,16 +221,16 @@ script cleanup_photo_assets
 	begin
 	get_musician_profile_struct_by_index index = <i> savegame = <savegame>
 	this_id = (<profile_struct>.name)
-	formattext textname = savegamename '_%i' i = <savegame>
-	extendcrc <this_id> <savegamename> out = custom_char_icon
-	printf 'deleting photo %d' d = <custom_char_icon> donotresolve
-	photodeleteimageasset asset_name = <custom_char_icon>
+	FormatText TextName = savegamename '_%i' i = <savegame>
+	ExtendCRC <this_id> <savegamename> out = custom_char_icon
+	printf 'deleting photo %d' d = <custom_char_icon> DoNotResolve
+	PhotoDeleteImageAsset asset_name = <custom_char_icon>
 	i = (<i> + 1)
 	repeat <array_size>
 endscript
 
 script cleanup_all_photo_assets 
-	if isxenon
+	if isXenon
 		i = 0
 		begin
 		cleanup_photo_assets savegame = <i>
@@ -242,8 +242,8 @@ script cleanup_all_photo_assets
 endscript
 
 script ui_destroy_character_selection 
-	if screenelementexists \{id = character_select_num_custom_profiles}
-		destroyscreenelement \{id = character_select_num_custom_profiles}
+	if ScreenElementExists \{id = character_select_num_custom_profiles}
+		DestroyScreenElement \{id = character_select_num_custom_profiles}
 	endif
 	destroy_character_selection_menu
 	cas_get_player_status
@@ -252,9 +252,9 @@ script ui_destroy_character_selection
 endscript
 
 script ui_init_character_selection 
-	if gotparam \{player}
+	if GotParam \{player}
 		change cas_current_player = <player>
-		formattext checksumname = player_name 'cas_player%i' i = <player>
+		FormatText checksumname = player_name 'cas_player%i' i = <player>
 		change cas_current_player_name = <player_name>
 	else
 		change \{cas_current_player = 1}
@@ -266,16 +266,16 @@ script ui_init_character_selection
 	create_frontend_lock_targets
 	if NOT get_musician_profile_struct_by_id dont_assert id = ($charselect_previous_character_id) savegame = <savegame>
 		stars
-		printf \{qs(0x24c718cb)}
+		printf \{qs("\Lui_init_character_selection was unable to find the profile currently in the player status. Setting charselect_previous_character_id to Axel.")}
 		stars
 		change \{charselect_previous_character_id = axel}
 	endif
-	if gotparam \{from_main_menu}
+	if GotParam \{from_main_menu}
 		cas_queue_kill_player player = ($cas_current_player)
 		change \{ss_focus_on_create_new_character = 1}
 	else
 		part = ($<player_status>.part)
-		getglobaltags savegame = <savegame> last_singleplayer_character
+		GetGlobalTags savegame = <savegame> last_singleplayer_character
 		if NOT (<last_singleplayer_character> = none)
 			if profile_exists id = <last_singleplayer_character> savegame = <savegame>
 				cas_get_player_status
@@ -287,22 +287,22 @@ script ui_init_character_selection
 			change \{ss_focus_on_create_new_character = 1}
 		endif
 	endif
-	if NOT iswinport
-		if isxenon
-			if NOT checkforsignin local controller_index = ($<player_status>.controller)
-				create_popup_warning_menu \{title = qs(0xe458967a)
+	if NOT IsWinPort
+		if isXenon
+			if NOT CheckForSignIn local controller_index = ($<player_status>.controller)
+				create_popup_warning_menu \{title = qs("Controller not signed in")
 					textblock = {
-						text = qs(0x635a9ead)
+						text = qs("Any changes will not be saved. If using multiple controllers, use a signed in controller to edit and save changes.")
 					}
 					options = [
 						{
 							func = destroy_popup_warning_menu
-							text = qs(0x182f0173)
+							text = qs("CONTINUE")
 						}
 					]
 					no_background}
 				clean_up_user_control_helpers
-				add_user_control_helper \{text = qs(0xc18d5e76)
+				add_user_control_helper \{text = qs("SELECT")
 					button = green
 					z = 100000}
 				change \{customize_char_popup = 1}
@@ -326,14 +326,14 @@ endscript
 script create_new_custom_character 
 	hide_glitch \{num_frames = 20}
 	if ($cas_heap_state = in_cas)
-		scriptassert \{'Should in in_game heap state!'}
+		ScriptAssert \{'Should in in_game heap state!'}
 	endif
 	cas_destroy_all_characters
 	destroy_character_selection_menu
 	cas_queue_block
 	cas_get_player_status
 	if NOT ($cas_override_object = none)
-		scriptassert \{'cas_override_object != none'}
+		ScriptAssert \{'cas_override_object != none'}
 	endif
 	cas_load_and_setup_resources
 	new_custom_character_name savegame = <savegame>
@@ -360,39 +360,39 @@ script create_new_custom_character
 	change \{cas_editing_new_character = true}
 	ui_event \{event = menu_change
 		data = {
-			state = uistate_create_character_gender
+			state = UIstate_create_character_gender
 		}}
 endscript
 
 script choose_character_to_edit \{event = menu_change}
 	if ($cas_heap_state = in_cas)
-		scriptassert \{'Should in in_game heap state!'}
+		ScriptAssert \{'Should in in_game heap state!'}
 	endif
-	if NOT gotparam \{no_charsel}
+	if NOT GotParam \{no_charsel}
 		destroy_character_selection_menu
 	endif
 	cas_queue_block
 	cas_edit_character_profile character_id = <character_id> savegame = <savegame>
 	if NOT ($cas_override_object = none)
-		scriptassert \{'cas_override_object != none'}
+		ScriptAssert \{'cas_override_object != none'}
 	endif
 	cas_load_and_setup_resources
 	change \{cas_editing_new_character = false}
-	if gotparam \{state}
+	if GotParam \{state}
 		data = {<data> state = <state>}
 	endif
 	begin
 	if is_menu_camera_finished
-		ui_event_wait event = <event> data = {state = uistate_customize_character}
+		ui_event_wait event = <event> data = {state = UIstate_customize_character}
 		return
 	endif
-	wait \{1
+	Wait \{1
 		gameframe}
 	repeat
 endscript
 
 script purchase_character_to_edit 
-	generic_event_choose data = {state = uistate_character_purchase is_popup choose_yes_script = purchase_character_continue_to_edit choose_yes_params = {<...>} <...>}
+	generic_event_choose data = {state = UIstate_character_purchase is_popup choose_yes_script = purchase_character_continue_to_edit choose_yes_params = {<...>} <...>}
 endscript
 
 script purchase_character_continue_to_edit 
@@ -401,7 +401,7 @@ script purchase_character_continue_to_edit
 endscript
 
 script purchase_character_to_play 
-	generic_event_choose data = {state = uistate_character_purchase is_popup choose_yes_script = purchase_character_continue_to_play choose_yes_params = {<...>} <...>}
+	generic_event_choose data = {state = UIstate_character_purchase is_popup choose_yes_script = purchase_character_continue_to_play choose_yes_params = {<...>} <...>}
 endscript
 
 script purchase_character_continue_to_play 
@@ -415,31 +415,31 @@ script choose_character_to_play \{num_states = 1}
 	cas_queue_block
 	cas_get_player_status
 	change structurename = <player_status> character_id = <character_id>
-	setglobaltags savegame = <savegame> last_singleplayer_character params = {last_singleplayer_character = <character_id>}
+	SetGlobalTags savegame = <savegame> last_singleplayer_character params = {last_singleplayer_character = <character_id>}
 	generic_event_back nosound data = {num_states = <num_states>}
 endscript
 
 script change_character_focus 
-	setspawninstancelimits \{max = 1
+	SetSpawnInstanceLimits \{max = 1
 		management = ignore_spawn_request}
-	requireparams \{[
+	RequireParams \{[
 			savegame
 			character_id
 		]
 		all}
 	get_musician_profile_struct_by_id id = <character_id> savegame = <savegame>
 	if is_completely_custom_musician id = <character_id> savegame = <savegame>
-		setscreenelementprops {
+		SetScreenElementProps {
 			id = create_character_selection_vmenu
 			event_handlers =
 			[
 				{pad_option ui_event params = {
 						event = menu_change
 						data = {
-							state = uistate_generic_dialogue
+							state = UIstate_generic_dialogue
 							is_popup
-							title = qs(0xfce67210)
-							text = qs(0x5223ae70)
+							title = qs("Delete Character?")
+							text = qs("Are you sure you want to delete this character?")
 							choose_yes_func = {
 								delete_character_profile
 								params = {character_id = <character_id> savegame = <savegame>}
@@ -453,38 +453,38 @@ script change_character_focus
 			replace_handlers
 		}
 		clean_up_user_control_helpers
-		add_user_control_helper \{text = qs(0xc18d5e76)
+		add_user_control_helper \{text = qs("SELECT")
 			button = green
 			z = 100000}
-		add_user_control_helper \{text = qs(0xaf4d5dd2)
+		add_user_control_helper \{text = qs("BACK")
 			button = red
 			z = 100000}
-		if NOT gotparam \{from_main_menu}
-			add_user_control_helper \{text = qs(0x57a22b82)
-				button = yellow
+		if NOT GotParam \{from_main_menu}
+			add_user_control_helper \{text = qs("EDIT")
+				button = Yellow
 				z = 100000}
 		endif
-		add_user_control_helper \{text = qs(0x271a1633)
-			button = blue
+		add_user_control_helper \{text = qs("DELETE")
+			button = Blue
 			z = 100000}
 	else
 		if profile_can_be_modified id = <character_id> savegame = <savegame>
-			if gotparam \{from_main_menu}
+			if GotParam \{from_main_menu}
 				<pad> = pad_option2
 			else
 				<pad> = pad_l1
 			endif
-			setscreenelementprops {
+			SetScreenElementProps {
 				id = create_character_selection_vmenu
 				event_handlers =
 				[
 					{<pad> ui_event params = {
 							event = menu_change
 							data = {
-								state = uistate_generic_dialogue
+								state = UIstate_generic_dialogue
 								is_popup
-								title = qs(0x96c60d0f)
-								text = qs(0x63d56c13)
+								title = qs("Reset Character?")
+								text = qs("Are you sure you want to reset this character?")
 								choose_yes_func = {
 									reset_preset_character
 									params = {character_id = <character_id> savegame = <savegame>}
@@ -501,45 +501,45 @@ script change_character_focus
 			cleanup_character_select_handlers
 		endif
 		clean_up_user_control_helpers
-		if gotparam \{from_main_menu}
+		if GotParam \{from_main_menu}
 			if profile_can_be_modified id = <character_id> savegame = <savegame>
-				add_user_control_helper \{text = qs(0xc18d5e76)
+				add_user_control_helper \{text = qs("SELECT")
 					button = green
 					z = 100000}
 			endif
 		else
-			add_user_control_helper \{text = qs(0xc18d5e76)
+			add_user_control_helper \{text = qs("SELECT")
 				button = green
 				z = 100000}
 		endif
-		add_user_control_helper \{text = qs(0xaf4d5dd2)
+		add_user_control_helper \{text = qs("BACK")
 			button = red
 			z = 100000}
 		if profile_can_be_modified id = <character_id> savegame = <savegame>
-			if gotparam \{from_main_menu}
-				<instrument_button> = yellow
-				<pad_button> = yellow
+			if GotParam \{from_main_menu}
+				<instrument_button> = Yellow
+				<pad_button> = Yellow
 			else
-				add_user_control_helper \{text = qs(0x57a22b82)
-					button = yellow
+				add_user_control_helper \{text = qs("EDIT")
+					button = Yellow
 					z = 100000}
-				<instrument_button> = orange
-				<pad_button> = lb
+				<instrument_button> = Orange
+				<pad_button> = LB
 			endif
 			<controller> = ($primary_controller)
 			if NOT (($menu_over_ride_exclusive_device) = -1)
 				<controller> = ($menu_over_ride_exclusive_device)
 			endif
-			if ((isguitarcontroller controller = <controller>) || (isdrumcontroller controller = <controller>))
-				add_user_control_helper text = qs(0x38ee4773) button = <instrument_button> z = 100000
+			if ((IsGuitarController controller = <controller>) || (IsDrumController controller = <controller>))
+				add_user_control_helper text = qs("RESET") button = <instrument_button> z = 100000
 			else
-				add_user_control_helper text = qs(0x38ee4773) button = <pad_button> z = 100000
+				add_user_control_helper text = qs("RESET") button = <pad_button> z = 100000
 			endif
 		endif
 	endif
-	if NOT gotparam \{from_main_menu}
+	if NOT GotParam \{from_main_menu}
 		if profile_can_be_modified id = <character_id> savegame = <savegame>
-			setscreenelementprops {
+			SetScreenElementProps {
 				id = create_character_selection_vmenu
 				event_handlers = [
 					{pad_option2 ($character_select_edit_sound)}
@@ -553,11 +553,11 @@ script change_character_focus
 endscript
 
 script character_select_back_out 
-	cascancelloading
-	if gotparam \{from_difficulty}
+	CasCancelLoading
+	if GotParam \{from_difficulty}
 		cas_destroy_all_characters
 	else
-		if NOT gotparam \{from_main_menu}
+		if NOT GotParam \{from_main_menu}
 			if profile_exists id = ($charselect_previous_character_id) savegame = <savegame>
 				cas_get_player_status
 				change structurename = <player_status> character_id = ($charselect_previous_character_id)
@@ -570,7 +570,7 @@ endscript
 
 script delete_character_profile 
 	cas_destroy_all_characters
-	requireparams \{[
+	RequireParams \{[
 			character_id
 			savegame
 		]
@@ -578,13 +578,13 @@ script delete_character_profile
 	delete_custom_profile id = <character_id> savegame = <savegame>
 	cas_get_player_status
 	change structurename = <player_status> character_id = ($charselect_previous_character_id)
-	photoremovefromglobaltags character_name = <character_id> savegame = <savegame>
+	PhotoRemoveFromGlobalTags character_name = <character_id> savegame = <savegame>
 	ui_memcard_autosave_replace event = menu_back state = uistate_character_selection data = {savegame = <savegame>}
 endscript
 
 script reset_preset_character 
 	cas_destroy_all_characters
-	requireparams \{[
+	RequireParams \{[
 			savegame
 			character_id
 		]
@@ -597,7 +597,7 @@ script reset_preset_character
 endscript
 
 script cleanup_character_select_handlers 
-	setscreenelementprops \{id = create_character_selection_vmenu
+	SetScreenElementProps \{id = create_character_selection_vmenu
 		event_handlers = [
 			{
 				pad_option
@@ -614,42 +614,42 @@ script cleanup_character_select_handlers
 		]
 		replace_handlers}
 	clean_up_user_control_helpers
-	add_user_control_helper \{text = qs(0xc18d5e76)
+	add_user_control_helper \{text = qs("SELECT")
 		button = green
 		z = 100000}
-	add_user_control_helper \{text = qs(0xaf4d5dd2)
+	add_user_control_helper \{text = qs("BACK")
 		button = red
 		z = 100000}
 endscript
 
 script new_custom_char_focus 
-	requireparams \{[
+	RequireParams \{[
 			savegame
 		]
 		all}
 	cleanup_character_select_handlers
-	if gotparam \{from_main_menu}
+	if GotParam \{from_main_menu}
 		switch RandomInteger (0.0, 4.0)
 			case 0
-			printf \{qs(0xda03be22)}
-			cas_queue_new_character_profile id = drummer player = ($cas_current_player) savegame = <savegame>
+			printf \{qs("\LDummer")}
+			cas_queue_new_character_profile id = Drummer player = ($cas_current_player) savegame = <savegame>
 			case 1
-			printf \{qs(0xa8cc1633)}
+			printf \{qs("\LBassist")}
 			cas_queue_new_character_profile id = bassist player = ($cas_current_player) savegame = <savegame>
 			case 2
-			printf \{qs(0x016ac53c)}
-			cas_queue_new_character_profile id = guitarist player = ($cas_current_player) savegame = <savegame>
+			printf \{qs("\LGuitarist")}
+			cas_queue_new_character_profile id = Guitarist player = ($cas_current_player) savegame = <savegame>
 			default
-			printf \{qs(0xb005ffb2)}
+			printf \{qs("\LSinger")}
 			cas_queue_new_character_profile id = singer player = ($cas_current_player) savegame = <savegame>
 		endswitch
 	else
-		if (($current_progression_flag) = career_guitar)
-			cas_queue_new_character_profile id = guitarist player = ($cas_current_player) savegame = <savegame>
-		elseif (($current_progression_flag) = career_bass)
+		if (($current_progression_flag) = Career_Guitar)
+			cas_queue_new_character_profile id = Guitarist player = ($cas_current_player) savegame = <savegame>
+		elseif (($current_progression_flag) = Career_Bass)
 			cas_queue_new_character_profile id = bassist player = ($cas_current_player) savegame = <savegame>
-		elseif (($current_progression_flag) = career_drum)
-			cas_queue_new_character_profile id = drummer player = ($cas_current_player) savegame = <savegame>
+		elseif (($current_progression_flag) = Career_Drum)
+			cas_queue_new_character_profile id = Drummer player = ($cas_current_player) savegame = <savegame>
 		else
 			cas_queue_new_character_profile id = singer player = ($cas_current_player) savegame = <savegame>
 		endif
@@ -657,20 +657,20 @@ script new_custom_char_focus
 endscript
 
 script display_character_logic 
-	requireparams \{[
+	RequireParams \{[
 			savegame
 			profile_struct
 			part
 		]
 		all}
-	if checksumequals a = (<profile_struct>.name) b = jimi
+	if ChecksumEquals a = (<profile_struct>.name) b = Jimi
 		return \{false}
 	endif
-	if NOT gotparam \{from_main_menu}
+	if NOT GotParam \{from_main_menu}
 		if NOT is_allowed_part profile_struct = <profile_struct> part = <part>
-			if gotparam \{bandplay}
+			if GotParam \{bandplay}
 				if (<part> = guitar)
-					if NOT is_allowed_part profile_struct = <profile_struct> part = bass
+					if NOT is_allowed_part profile_struct = <profile_struct> part = Bass
 						return \{false}
 					endif
 				else
@@ -683,7 +683,7 @@ script display_character_logic
 	endif
 	if is_profile_unlocked savegame = <savegame> profile_struct = <profile_struct>
 		if is_selectable_profile profile_struct = <profile_struct>
-			if NOT gotparam \{from_main_menu}
+			if NOT GotParam \{from_main_menu}
 				return \{true}
 			else
 				if profile_can_be_modified id = (<profile_struct>.name) savegame = <savegame>
@@ -699,42 +699,42 @@ script display_character_logic
 endscript
 
 script get_custom_musician_bio 
-	requireparams \{[
+	RequireParams \{[
 			name
-			band
+			Band
 			genre
 		]
 		all}
 	switch <genre>
-		case rock
-		formattext textname = blurb qs(0x5a4d6743) n = <name> b = <band>
-		case punk
-		formattext textname = blurb qs(0x77dac650) n = <name> b = <band>
-		case `heavy metal`
-		formattext textname = blurb qs(0xeb850fa8) n = <name> b = <band>
-		case `glam rock`
-		formattext textname = blurb qs(0x2a0d24e3) n = <name> b = <band>
-		case `black metal`
-		formattext textname = blurb qs(0x21ee9b88) n = <name> b = <band>
-		case `classic rock`
-		formattext textname = blurb qs(0x387d262c) n = <name> b = <band>
-		case goth
-		formattext textname = blurb qs(0x6b7f497f) n = <name> b = <band>
-		case pop
-		formattext textname = blurb qs(0xe34331a2) n = <name> b = <band>
+		case Rock
+		FormatText TextName = blurb qs("%n was raised on rock-n-roll, pure and simple. It's not about the clothes, the fans, or even the money... it's about the music, man! It's also about the thrill of playing live with your friends, it doesn't matter where. %b aims to do just that. Play out, and play loud, play Forever!") n = <name> b = <Band>
+		case Punk
+		FormatText TextName = blurb qs("Stick it to the man! Music is about the experience, not the merchandise! %b doesn't have any T-shirts. %b doesnt press any albums. You want those things? Well make them yourself. While you're at it, give them away to all your friends or better yet tell them to make their own! ") n = <name> b = <Band>
+		case `Heavy Metal`
+		FormatText TextName = blurb qs("METAL!!!! Metal isn't just music, it's a way of life, and all those whacko poseurs out on the boulevard will never understand what it's all about!  For little %n, it was the life of choice. with a hard and heavy style, a razor sharp wit and a taste for the extreme, there was no other choice. Mess with the Bull... you get the HORNS!") n = <name> b = <Band>
+		case `Glam Rock`
+		FormatText TextName = blurb qs("Let's face it, music isn't just about music. It's 10 percent how you play and 90 percent how you LOOK, and %n's got all the looks babe! You know it! You think all those losers who get up on stage in t-shirts and jeans know anything about putting on a good show? It's a privilege to be up there man, not a right... you got fans to entertain!") n = <name> b = <Band>
+		case `Black Metal`
+		FormatText TextName = blurb qs("We are the children of the frost, the keepers of the mountains... let it be known to all who bear witness, that %b is the coming of doom and %n is its master!") n = <name> b = <Band>
+		case `Classic Rock`
+		FormatText TextName = blurb qs("FM rock, man! That was where it was at! Remember the good ole' days of hard rock radio? Back when they didn't butcher a song just so you could hear the next commercial? Life's a strange trip, baby, and %n's along for the ride!") n = <name> b = <Band>
+		case Goth
+		FormatText TextName = blurb qs("Life is dark, and %n always felt an uncontrollable pull to all the things that were weird and taboo. To the children of the dark, the strange and fantastic are things to explore and experience, not ignore.") n = <name> b = <Band>
+		case Pop
+		FormatText TextName = blurb qs("I am a superstar! Well, I'm almost a superstar! One day you're gonna see %n's face all over the TV, on billboards, or anywhere my fine products are sold! Don't like it? Tough!") n = <name> b = <Band>
 		case any
-		formattext textname = blurb qs(0x4df79733) n = <name> b = <band>
+		FormatText TextName = blurb qs("Rover, Wanderer, free spirit. All these things describe what it's like to be %n. Early in life, %n learned that limiting ones self to labels and preconceived notions lead to nothing but shackled creativity and a life lived inside boxes. No boundaries, no rules, no limits... Own the drums, Be the beat.") n = <name> b = <Band>
 		default
-		scriptassert qs(0x8ae50da8) g = <genre> donotresolve
+		ScriptAssert qs("\Lget_custom_musician_bio was passed an unrecognized Genre %g!") g = <genre> DoNotResolve
 	endswitch
 	return bio = <blurb>
 endscript
 
 script external_edit_character 
 	change \{cas_from_main_menu = 0}
-	if gotparam \{player}
+	if GotParam \{player}
 		change cas_current_player = <player>
-		formattext checksumname = player_name 'cas_player%i' i = <player>
+		FormatText checksumname = player_name 'cas_player%i' i = <player>
 		change cas_current_player_name = <player_name>
 	else
 		change \{cas_current_player = 1}
@@ -744,7 +744,7 @@ script external_edit_character
 	cas_get_player_status
 	get_savegame_from_player_status player_status = <player_status>
 	change charselect_previous_character_id = ($<player_status>.character_id)
-	cas_set_object_node_pos player = ($cas_current_player) node = z_soundcheck_trg_waypoint_car_select
+	cas_set_object_node_pos player = ($cas_current_player) node = Z_Soundcheck_TRG_Waypoint_CAR_Select
 	current_character_id = ($<player_status>.character_id)
 	cas_queue_new_character_profile id = <current_character_id> player = ($cas_current_player) savegame = <savegame>
 	change menu_over_ride_exclusive_device = ($<player_status>.controller)
@@ -752,7 +752,7 @@ script external_edit_character
 endscript
 
 script is_custom_modified 
-	requireparams \{[
+	RequireParams \{[
 			savegame
 			id
 		]
@@ -764,12 +764,12 @@ script is_custom_modified
 		else
 			get_musician_profile_struct_by_index index = <index> savegame = <savegame>
 			index = (<index> - <array_size>)
-			getarraysize \{$preset_musician_profiles_modifiable}
+			GetArraySize \{$Preset_Musician_Profiles_Modifiable}
 			if (<index> < <array_size>)
-				struct1 = ($preset_musician_profiles_modifiable [<index>].appearance)
+				struct1 = ($Preset_Musician_Profiles_Modifiable [<index>].appearance)
 				struct2 = (<profile_struct>.appearance)
 				printstruct <...>
-				if (comparestructs struct1 = <struct1> struct2 = <struct2>)
+				if (CompareStructs struct1 = <struct1> struct2 = <struct2>)
 					return \{false}
 				else
 					return \{true}

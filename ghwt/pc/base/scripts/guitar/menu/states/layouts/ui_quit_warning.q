@@ -1,5 +1,5 @@
 
-script 0xd87a0fd7 
+script ui_create_quit_warning 
 	printstruct <...>
 	create_popup_warning_menu \{textblock = {
 			text = qs(0xbec817a7)
@@ -11,28 +11,28 @@ script 0xd87a0fd7
 		menu_pos = (640.0, 520.0)
 		options = [
 			{
-				func = 0x5749bbbf
-				text = qs(0xf7723015)
+				func = quit_warning_select_no
+				text = qs("CANCEL")
 			}
 			{
-				func = 0x71039a5f
-				text = qs(0x23b6e962)
+				func = quit_warning_select_yes
+				text = qs("EXIT")
 			}
 		]}
 endscript
 
-script 0xca8a1e65 
+script ui_destroy_quit_warning 
 	destroy_popup_warning_menu
 endscript
 
-script 0x5749bbbf 
-	0x31a98615
+script quit_warning_select_no 
+	ui_go_back
 endscript
 
-script 0x71039a5f 
-	0xbd306dc1
+script quit_warning_select_yes 
+	WinPortExitGame
 endscript
 
-script 0x31a98615 
+script ui_go_back 
 	generic_event_back
 endscript

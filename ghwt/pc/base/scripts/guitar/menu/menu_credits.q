@@ -8,7 +8,7 @@ endscript
 
 script ui_create_end_credits_spawned 
 	kill_gem_scroller
-	progression_endcredits
+	Progression_EndCredits
 endscript
 
 script ui_destroy_end_credits 
@@ -22,11 +22,11 @@ script create_credits_menu
 		disable_pause
 		create_loading_screen
 		change \{current_level = load_z_credits}
-		load_venue \{async = 1}
+		Load_Venue \{async = 1}
 		destroy_loading_screen
 	endif
-	pushassetcontext \{context = z_credits}
-	createscreenelement \{type = containerelement
+	PushAssetContext \{context = z_credits}
+	CreateScreenElement \{type = ContainerElement
 		parent = root_window
 		id = credits_backdrop_container
 		pos = (0.0, 0.0)
@@ -35,7 +35,7 @@ script create_credits_menu
 			top
 		]}
 	if NOT ($end_credits = 1)
-		createscreenelement \{type = spriteelement
+		CreateScreenElement \{type = SpriteElement
 			id = credits_backdrop
 			parent = credits_backdrop_container
 			texture = credits_bg
@@ -54,34 +54,34 @@ script create_credits_menu
 			z_priority = 0
 			alpha = 1}
 	endif
-	tilesprite \{parent = credits_backdrop_container
+	TileSprite \{parent = credits_backdrop_container
 		texture = credits_bg
 		tile_dims = (5120.0, 720.0)
 		dims = (2560.0, 720.0)
 		pos = (-2560.0, 0.0)}
-	runscriptonscreenelement tilespriteloop id = <id> params = {move_x = 5 move_y = 0}
-	popassetcontext
+	RunScriptOnScreenElement TileSpriteLoop id = <id> params = {move_x = 5 move_y = 0}
+	PopAssetContext
 	if NOT ($end_credits = 1)
 		event_handlers = [
 			{pad_back end_credits_button params = <...>}
 		]
 		new_menu scrollid = mc_scroll vmenuid = current_menu event_handlers = <event_handlers>
-		add_user_control_helper \{text = qs(0xaf4d5dd2)
+		add_user_control_helper \{text = qs("BACK")
 			button = red
 			z = 1001}
 	else
 		new_menu \{scrollid = mc_scroll
 			vmenuid = current_menu}
 	endif
-	runscriptonscreenelement \{id = credits_backdrop_container
+	RunScriptOnScreenElement \{id = credits_backdrop_container
 		scrolling_list_begin}
-	launchevent \{target = current_menu
+	LaunchEvent \{target = current_menu
 		type = focus}
 endscript
 
 script end_credits_button 
 	destroy_credits_menu
-	if gotparam \{soundcheck}
+	if GotParam \{soundcheck}
 		frontend_load_soundcheck \{loadingscreen}
 	endif
 	generic_event_back
@@ -89,27 +89,27 @@ endscript
 
 script destroy_credits_menu 
 	if ($shutdown_game_for_signin_change_flag = 1)
-		killspawnedscript \{name = create_credits_menu}
-		if screenelementexists \{id = credits_list_container}
-			destroyscreenelement \{id = credits_list_container}
+		KillSpawnedScript \{name = create_credits_menu}
+		if ScreenElementExists \{id = credits_list_container}
+			DestroyScreenElement \{id = credits_list_container}
 		endif
-		killspawnedscript \{name = scrolling_list_begin}
+		KillSpawnedScript \{name = scrolling_list_begin}
 	endif
 	clean_up_user_control_helpers
-	killspawnedscript \{name = tilespriteloop}
-	if screenelementexists \{id = credits_backdrop_container}
-		destroyscreenelement \{id = credits_backdrop_container}
+	KillSpawnedScript \{name = TileSpriteLoop}
+	if ScreenElementExists \{id = credits_backdrop_container}
+		DestroyScreenElement \{id = credits_backdrop_container}
 	endif
-	if screenelementexists \{id = mc_scroll}
-		destroyscreenelement \{id = mc_scroll}
+	if ScreenElementExists \{id = mc_scroll}
+		DestroyScreenElement \{id = mc_scroll}
 	endif
 endscript
 
 script scrolling_list_begin 
 	if ($end_credits = 1)
-		wait \{2
+		Wait \{2
 			seconds}
-		createscreenelement \{type = containerelement
+		CreateScreenElement \{type = ContainerElement
 			parent = root_window
 			id = credits_backdrop_container
 			pos = (0.0, 0.0)
@@ -128,24 +128,24 @@ script scrolling_list_add_item \{i = 0}
 			<i> = 6
 		endif
 	endif
-	getarraysize ($credits)
+	GetArraySize ($credits)
 	if (<i> = <array_size>)
-		printf \{qs(0xb58d18b7)}
-		wait <time> seconds
-		if screenelementexists \{id = credits_list_container}
-			destroyscreenelement \{id = credits_list_container}
+		printf \{qs("\L** END OF CREDITS **")}
+		Wait <time> seconds
+		if ScreenElementExists \{id = credits_list_container}
+			DestroyScreenElement \{id = credits_list_container}
 		endif
 		if NOT ($end_credits = 1)
 			end_credits_button \{soundcheck}
 		endif
 		return
 	endif
-	if structurecontains structure = ($credits [<i>]) item
+	if StructureContains Structure = ($credits [<i>]) item
 		text = (($credits [<i>]).item)
 	else
-		text = qs(0x2ba2c9a2)
+		text = qs(" ")
 	endif
-	if structurecontains structure = ($credits [<i>]) heading
+	if StructureContains Structure = ($credits [<i>]) heading
 		scale = <scale_head>
 		color = <color_head>
 		color_shadow = [20 10 5 90]
@@ -156,21 +156,21 @@ script scrolling_list_add_item \{i = 0}
 		color_shadow = [0 0 0 255]
 		shadow_offs = (3.0, 3.0)
 	endif
-	if structurecontains structure = ($credits [<i>]) title
+	if StructureContains Structure = ($credits [<i>]) title
 		scale = <scale_title>
 		color = <color_title>
 		color_shadow = [20 10 5 90]
 		shadow_offs = (3.0, 3.0)
 	endif
-	if structurecontains structure = ($credits [<i>]) small
+	if StructureContains Structure = ($credits [<i>]) small
 		scale = 0.5
 		color = <color_body>
 		color_shadow = [0 0 0 255]
 		shadow_offs = (1.0, 1.0)
 	endif
-	formattext checksumname = item_id 'item_%n' n = <i>
-	if screenelementexists id = <item_id>
-		destroyscreenelement id = <item_id>
+	FormatText checksumname = item_id 'item_%n' n = <i>
+	if ScreenElementExists id = <item_id>
+		DestroyScreenElement id = <item_id>
 	endif
 	if ($credits_menu_scroll = vertical)
 		<fit_width> = `scale each line if larger`
@@ -179,8 +179,8 @@ script scrolling_list_add_item \{i = 0}
 		<fit_width> = `expand dims`
 		<fit_height> = `scale down if larger`
 	endif
-	createscreenelement {
-		type = textblockelement
+	CreateScreenElement {
+		type = TextBlockElement
 		id = <item_id>
 		parent = credits_list_container
 		font = fontgrid_text_a8
@@ -200,48 +200,48 @@ script scrolling_list_add_item \{i = 0}
 		shadow_rgba = <color_shadow>
 		z_priority = <z_priority_credits>
 	}
-	getscreenelementdims id = <item_id>
+	GetScreenElementDims id = <item_id>
 	if ($credits_menu_scroll = vertical)
-		<item_height> = (<height> + <spacer>)
+		<item_height> = (<Height> + <spacer>)
 		<item_pos> = (<base_pos> + (<item_height> * (0.0, 1.0)))
 	else
 		<item_width> = (<width> + <spacer>)
-		if gotparam \{prev_dim_x}
+		if GotParam \{prev_dim_x}
 			<item_pos> = (<base_pos> + ((<prev_dim_x> + <spacer>) * (1.0, 0.0)))
 		else
 			<item_pos> = (<base_pos> + (<item_width> * (1.0, 0.0)))
 		endif
 	endif
-	<item_id> :se_setprops pos = <item_pos>
+	<item_id> :SE_SetProps pos = <item_pos>
 	if ($credits_menu_scroll = vertical)
 		<distance> = (<screen_height> + ((<item_pos>.(0.0, 1.0)) - <screen_height>))
 	else
 		<distance> = (<screen_width> + ((<item_pos>.(1.0, 0.0)) - <screen_width> + <width>))
 	endif
 	<time> = (<distance> / <rate>)
-	if screenelementexists id = <item_id>
-		runscriptonscreenelement id = <item_id> scrolling_list_move_item params = {<...>}
+	if ScreenElementExists id = <item_id>
+		RunScriptOnScreenElement id = <item_id> scrolling_list_move_item params = {<...>}
 	endif
 endscript
 
 script scrolling_list_move_item 
-	runscriptonscreenelement id = credits_backdrop_container scrolling_list_queue_next_item params = {<...>}
+	RunScriptOnScreenElement id = credits_backdrop_container scrolling_list_queue_next_item params = {<...>}
 	if ($credits_menu_scroll = vertical)
 		<target_pos> = (<item_pos> - ((0.0, 1.0) * <distance>))
 	else
 		<target_pos> = (<item_pos> - ((1.0, 0.0) * <distance>))
 	endif
-	se_setprops time = <time> pos = <target_pos>
-	se_waitprops
-	if screenelementexists id = <item_id>
-		destroyscreenelement id = <item_id>
+	SE_SetProps time = <time> pos = <target_pos>
+	SE_WaitProps
+	if ScreenElementExists id = <item_id>
+		DestroyScreenElement id = <item_id>
 	endif
 endscript
 
 script scrolling_list_queue_next_item 
 	begin
-	if screenelementexists id = <item_id>
-		getscreenelementprops id = <item_id>
+	if ScreenElementExists id = <item_id>
+		GetScreenElementProps id = <item_id>
 	endif
 	if ($credits_menu_scroll = vertical)
 		pos_y = (<pos>.(0.0, 1.0))
@@ -259,7 +259,7 @@ script scrolling_list_queue_next_item
 			return
 		endif
 	endif
-	wait \{1
+	Wait \{1
 		gameframe}
 	repeat
 endscript
@@ -303,10 +303,10 @@ script scrolling_list_init_credits
 		<our_dims> = ((<column_height> * (0.0, 1.0)) + (70.0, 0.0))
 		<spacer> = 15
 	endif
-	if screenelementexists \{id = credits_list_container}
-		destroyscreenelement \{id = credits_list_container}
+	if ScreenElementExists \{id = credits_list_container}
+		DestroyScreenElement \{id = credits_list_container}
 	endif
-	createscreenelement \{type = containerelement
+	CreateScreenElement \{type = ContainerElement
 		parent = credits_backdrop_container
 		id = credits_list_container
 		pos = (0.0, 0.0)}
@@ -315,11 +315,11 @@ endscript
 credits = [
 	{
 		title
-		item = qs(0x3c507e8b)
+		item = qs("You've unlocked")
 	}
 	{
 		heading
-		item = qs(0x868db38d)
+		item = qs("\LPull Me Under\nDream Theater, 1992")
 	}
 	{
 		emptyspace
@@ -335,207 +335,207 @@ credits = [
 	}
 	{
 		heading
-		item = qs(0x58858026)
+		item = qs("\LDesigned and Developed by Neversoft")
 	}
 	{
-		item = qs(0x9340148a)
+		item = qs("\LAaron Habibipour\nAaron Williams\nAdam Micciulla\nAlan Flores")
 	}
 	{
-		item = qs(0xe1d891be)
+		item = qs("\LAllen Freese\nAndy Gentile\nAndy Lee\nAndy Marchal")
 	}
 	{
-		item = qs(0x472a29a4)
+		item = qs("\LAndy Warwick\nAnet Hambarsumian\nAnthony Campos\nAnthony Carotenuto")
 	}
 	{
-		item = qs(0x3e911e56)
+		item = qs("\LAnthony Pesch\nAnthony Saunders\nBenjamin Kutcher\nBernard Corrigan")
 	}
 	{
-		item = qs(0xde844cdb)
+		item = qs("\LBeth Cowling\nByeong Gyu Park\nBill Buckley\nBrad Bulkley")
 	}
 	{
-		item = qs(0x15af9b23)
+		item = qs("\LBrandon Riggs\nBrendan Wiuff\nBrian Bright\nBrian Marvin")
 	}
 	{
-		item = qs(0x35c793b3)
+		item = qs("\LBrian Oles\nCameron Davis\nChad Findley\nChad Sundman")
 	}
 	{
-		item = qs(0xb39fd4ce)
+		item = qs("\LChris Barnes\nChristopher George\nChris Myers\nChris Parise")
 	}
 	{
-		item = qs(0x9eb27c40)
+		item = qs("\LChris Vance\nChris Ward\nClark Wen\nClive Burdon")
 	}
 	{
-		item = qs(0xae335c22)
+		item = qs("\LCody Pierson\nColin Crenshaw\nDana Delalla\nDaniel Nelson")
 	}
 	{
-		item = qs(0x3286d992)
+		item = qs("\LDan Savage\nDaryl Kimoto\nDave Cowling\nDave Hernandez")
 	}
 	{
-		item = qs(0xc43c746b)
+		item = qs("\LDavid Hind\nDave Rowe\nDavid Nilsen\nDavid Stowater")
 	}
 	{
-		item = qs(0xfe5a4240)
+		item = qs("\Ldavidicus\nDonovan Keele\nDongWoo Thomas Shin\nFrancisco Mora")
 	}
 	{
-		item = qs(0xaaf96bf3)
+		item = qs("\LGarrett Jost\nGary Jesdanun\nGavin Pugh\nGenna Habibipour")
 	}
 	{
-		item = qs(0x8d31e982)
+		item = qs("\LGeoffrey Inkel\nGiancarlo Surla\nGideon Stocek\nGreg Lopez")
 	}
 	{
-		item = qs(0x6aca987a)
+		item = qs("\LGregory Kopina\nHari Khalsa\nIli Chiang\nJake Geiger")
 	}
 	{
-		item = qs(0xd591e880)
+		item = qs("\LJason Greenberg\nJason Maynard\nJason Uyeda\nJeff Morgan")
 	}
 	{
-		item = qs(0x275878b9)
+		item = qs("\LJeff Swenty\nJeremiah Roa\nJeremy Page\nJeremy Rogers")
 	}
 	{
-		item = qs(0x487d138d)
+		item = qs("\LJiwon Son\nJody Coglianese\nJoe Pease\nJoe Kirchoff")
 	}
 	{
-		item = qs(0x551506c7)
+		item = qs("\LJoel Jewett\nJohn ''Bunny'' Knutson\nJohn Sahas\nJohn Webb")
 	}
 	{
-		item = qs(0x75cd5f65)
+		item = qs("\LJohn Zagorski\nJohnny Ow\nJon Bailey\nJordan Leckner")
 	}
 	{
-		item = qs(0x0cba5d5b)
+		item = qs("\LJosh Lord\nJun Hyuck Chang\nJun Park\nJustin Rote")
 	}
 	{
-		item = qs(0x71a6ad28)
+		item = qs("\LJustin Parish\nKarl Drown\nKen Moodie\nKendall Harrison")
 	}
 	{
-		item = qs(0xc4a83a4d)
+		item = qs("\LKevin Chung\nKevin Mulhall\nKristin Gallagher\nKristina Adelmeyer")
 	}
 	{
-		item = qs(0xe138ff76)
+		item = qs("\LKyle Johnson\nLars Kendall\nLee Ross\nLisa Davies-Perissi")
 	}
 	{
-		item = qs(0x5ca1aff1)
+		item = qs("\LLisa Perez\nLucy Andonian\nMarc DePeo\nMario Sanchez")
 	}
 	{
-		item = qs(0x53c4b142)
+		item = qs("\LMark L. Scott\nMark Storie\nMark Wojtowicz\nMatt Canale")
 	}
 	{
-		item = qs(0x751a630a)
+		item = qs("\LMatthew Jackowski\nMax Davidian\nMichael Bilodeau\nMichael Esposito")
 	}
 	{
-		item = qs(0x59d1cfd7)
+		item = qs("\LMichael Friedrich\nMichael Velasquez\nNathan Sisler\nNolan Nelson")
 	}
 	{
-		item = qs(0x4d2d1ab2)
+		item = qs("\LOlin Georgescu\nOmar Kendall\nOrion Brown\nPam Detrich")
 	}
 	{
-		item = qs(0x09a56e42)
+		item = qs("\LPat Connole\nPatrick Hagar\nPaul Robinson\nPeter Day")
 	}
 	{
-		item = qs(0xb4bcf561)
+		item = qs("\LPeter Pon\nRandy Guillote\nRandy Mills\nRH Shih")
 	}
 	{
-		item = qs(0x71789832)
+		item = qs("\LRiley Jewett\nRob T. Miller\nRobert Espinoza\nRock Gropper")
 	}
 	{
-		item = qs(0x09febe07)
+		item = qs("\LRulon Raymond\nRyan Ligon\nRyan Magid\nRyan Palser")
 	}
 	{
-		item = qs(0xa2e5d28e)
+		item = qs("\LSam Ware\nSandy Jewett\nScott Pease\nSean Watson")
 	}
 	{
-		item = qs(0xa41534a3)
+		item = qs("\LSergio Gil\nShane Calnan\nSimon Ebejer\nSimon Ko")
 	}
 	{
-		item = qs(0x1e4bc031)
+		item = qs("\LSivarak ''Kai'' Tawarotip\nSkye Kang\nStuart Scandrett\nTakashi Matsubara")
 	}
 	{
-		item = qs(0xbad80090)
+		item = qs("\LTed Barber\nThai Tran\nTim Stasica\nTimothy Rapp")
 	}
 	{
-		item = qs(0xb367e397)
+		item = qs("\LTina Stevenson\nTom Parker\nThomas Gawrys\nTony Solis")
 	}
 	{
-		item = qs(0xbfd6b803)
-	}
-	{
-		heading
-		item = qs(0x458e3979)
-	}
-	{
-		item = qs(0x9aed1ade)
-	}
-	{
-		item = qs(0x8d785b03)
+		item = qs("\LTravis Chen\nWeichen Wu\nZac Drake\nZach Parr")
 	}
 	{
 		heading
-		item = qs(0xa1e48a6e)
+		item = qs("\LAdditional Development:")
 	}
 	{
-		item = qs(0x6df6c912)
+		item = qs("\LArt Usher\nAlex Leffelman\nJames Barker\nJohn Dobbie\nMichelle Pierson")
 	}
 	{
-		item = qs(0xac6e137c)
-	}
-	{
-		item = qs(0x003a0682)
-	}
-	{
-		item = qs(0x1c0458ea)
-	}
-	{
-		item = qs(0x03f6ec9e)
-	}
-	{
-		item = qs(0xd62c941d)
-	}
-	{
-		item = qs(0x571748d0)
-	}
-	{
-		item = qs(0xba6b5128)
-	}
-	{
-		item = qs(0x8bc862bf)
-	}
-	{
-		item = qs(0x25e4150c)
+		item = qs("\LRobert Kim\nSteve Gallacher\nTae Kuen Kim\nNick Covington\nRob Rampley")
 	}
 	{
 		heading
-		item = qs(0x0a030e88)
+		item = qs("\LHardcore Testers:")
 	}
 	{
-		item = qs(0x367264c8)
+		item = qs("\LAdam Nelson\nAdry Walsh\nAlexander Taubman\nAndrew Lee\nBrandon Tepezano")
+	}
+	{
+		item = qs("\LBrandyn Betton\nChris Self\nChris Watkins\nClint Baptiste\nCurt Markwardt")
+	}
+	{
+		item = qs("\LDaniel Bancroft\nDaniel Farina\nDaniel Lopez\nDanny Wapner\nDavid Delanty")
+	}
+	{
+		item = qs("\LDavid Hyatt\nErica Travers\nEvan Bereny\nGareth Davies\nJacob Karesh")
+	}
+	{
+		item = qs("\LJames Gobert\nJarod Long\nJeff Brys\nJennifer Sills\nJermaine Shockley")
+	}
+	{
+		item = qs("\LJessie Reimer\nJonathan Green\nJoseph Arco\nJustin Hiscocks\nKami Talebi")
+	}
+	{
+		item = qs("\LKenneth Ellis\nKyle Leonard\nKyle Novelli\nKyle Thompson\nLee Ware")
+	}
+	{
+		item = qs("\LMatthew Bravos\nMatthew Cutting\nMaxwell Lewin\nMichael Winte\nNathan Makaryk")
+	}
+	{
+		item = qs("\LNeil Cortez\nPat O'Riley\nRobert Keating\nRobert Byrd\nRon Williams")
+	}
+	{
+		item = qs("\LSean Nagasawa\nSergio Pacheco\nTiffani Burkett\nTristan Clark\nWilliam Widger")
 	}
 	{
 		heading
-		item = qs(0xf6c146f1)
+		item = qs("Special Thanks:")
 	}
 	{
-		item = qs(0x91249a1b)
-	}
-	{
-		item = qs(0x39c9228f)
-	}
-	{
-		item = qs(0x6a8d67e0)
-	}
-	{
-		item = qs(0x2f2b3692)
-	}
-	{
-		item = qs(0x1de28da8)
+		item = qs("\LMarcus Ryle\nErik Tarkianinen\nRob Rampley\nThe Team at AgoraGames")
 	}
 	{
 		heading
-		item = qs(0xf424ffa9)
+		item = qs("\LData Capture Performers:")
 	}
 	{
-		item = qs(0x6ce84a73)
+		item = qs("\LAdam Jennings\nAlex Rodriquez\nAlla Garkusha\nKris Lezetc")
 	}
 	{
-		item = qs(0x221a3137)
+		item = qs("\LJosh Ballard\nDan Ballard\nDaniel Dempsey\nSam Gallagher")
+	}
+	{
+		item = qs("\LJoe Hursley\nJoe Robinson\nJoe Stiteler\nPatrick Hursley")
+	}
+	{
+		item = qs("\LNatalie Bolanos\nClaudia Rossi\nGinger Reyes\nJudita Wignall")
+	}
+	{
+		item = qs("\LRob 'RA' Arvizu\nSonny Mayo\nJimi Taylor\nMatthias Kraneiss")
+	}
+	{
+		heading
+		item = qs("\LVO Actors:")
+	}
+	{
+		item = qs("\LLiam O'Brien\nTroy Baker\nMichelle Ruff\nJulian Stone")
+	}
+	{
+		item = qs("\L\c5Voice Casting:\n\c0PCB Productions\n\c5Talent Coordination:\n\c0Keith Arem")
 	}
 	{
 		heading
@@ -675,1841 +675,1841 @@ credits = [
 	}
 	{
 		heading
-		item = qs(0x55e515b4)
+		item = qs("\LPartners:")
 	}
 	{
 		heading
-		item = qs(0x107b2913)
+		item = qs("\LAT&T")
 	}
 	{
-		item = qs(0xf3488f70)
+		item = qs("\LAT&T, AT&T Park\nand the AT&T logo\nare trademarks\nof AT&T Intellectual Property")
 	}
 	{
 		heading
-		item = qs(0x7aad20f2)
+		item = qs("\LCoca-Cola")
 	}
 	{
-		item = qs(0x046a9ddb)
+		item = qs("\L2008 The Coca-Cola Company.\n''Coca-Cola classic'', ''Sprite'',\n''Coke Side of Life'',the Contour Bottle design,\nthe Dynamic Ribbon are trademarks of The Coca-Cola Company.")
 	}
 	{
 		heading
-		item = qs(0xc1dbc765)
+		item = qs("\LKFC")
 	}
 	{
-		item = qs(0x642ed048)
+		item = qs("\LThe image of\nColonel Sanders\nand KFC are registered\nof KFC Corporation (C) 2008.")
 	}
 	{
 		heading
-		item = qs(0x22cee176)
+		item = qs("\LWrigley's")
 	}
 	{
-		item = qs(0xc1c762b0)
+		item = qs("\L5TM is a\ntrademark of\nthe Wm. Wrigley Jr.\nCompany")
 	}
 	{
 		heading
-		item = qs(0x2497f415)
+		item = qs("\LAmoeba")
 	}
 	{
-		item = qs(0xa2df9a8c)
+		item = qs("\LAmoeba Music name and logo provided courtesy of Amoeba Music, Inc.\nAmoeba and the Amoeba Music mark and logo are\ntrademarks of Amoeba Music, Inc.\nHollywood, California. www.amoeba.com")
 	}
 	{
 		heading
-		item = qs(0x0123089d)
+		item = qs("\LAmpeg")
 	}
 	{
-		item = qs(0x440a6b8b)
+		item = qs("\L''Ampeg'', ''SVT''\nand the Ampeg Logo are\nregistered trademarks of\nLOUD, Technologies, Inc.")
 	}
 	{
 		heading
-		item = qs(0x1bb8dc8f)
+		item = qs("\LAudio-Technica")
 	}
 	{
-		item = qs(0x81c15397)
+		item = qs("\L©2008 Audio-Technica U.S., Inc.,\nthe Audio-Technica name and logo are\ntrademarks of  Audio-Technica U.S., Inc.\nAll Rights Reserved.")
 	}
 	{
 		heading
-		item = qs(0x7f4e4c4f)
+		item = qs("\LEMG Pick-up")
 	}
 	{
-		item = qs(0x06fc5f80)
+		item = qs("\LEMG is a\nregistered\ntrademark\nof EMG Inc.\n")
 	}
 	{
 		heading
-		item = qs(0x97ac6d41)
+		item = qs("\LErnie Ball")
 	}
 	{
-		item = qs(0x9502ba28)
+		item = qs("\LErnie Ball\nis a registered\ntrademark of\nErnie Ball Inc.\n")
 	}
 	{
 		heading
-		item = qs(0x5a5a4dac)
+		item = qs("\LEvans Drum Heads")
 	}
 	{
-		item = qs(0x0ee2db5f)
+		item = qs("\LEvans is a registered trademark\nof D'Addario & company, Inc.\nor its affiliates in the United States\nand/or other countries.")
 	}
 	{
 		heading
-		item = qs(0xafc1c6ea)
+		item = qs("\LGuitar Center")
 	}
 	{
-		item = qs(0xedc67296)
+		item = qs("\LGuitar Center® and the Guitar Center® logo\nare registered trademarks of Guitar Center, Inc.\nand are used by permission,\nall rights reserved")
 	}
 	{
 		heading
-		item = qs(0x00a4a2e0)
+		item = qs("\LKrank")
 	}
 	{
-		item = qs(0x30873e85)
+		item = qs("\LKrank Amplification is\na registered\ntrademark of\nKrank Amplification L.L.C.")
 	}
 	{
 		heading
-		item = qs(0xbb9e0e3a)
+		item = qs("\LLine 6")
 	}
 	{
-		item = qs(0x066d3e72)
+		item = qs("\LLine 6 and POD are\nregistered trademarks of\nLine 6, Inc. POD modeling technology is the exclusive property of\nLine 6, Inc. All rights reserved. Used under license.")
 	}
 	{
 		heading
-		item = qs(0x15207e2e)
+		item = qs("\LLive Nation")
 	}
 	{
-		item = qs(0x9fdeb5be)
+		item = qs("\LHouse of Blues and the Flaming Heart logo are\nregistered trademarks of House of Blues Brands Corp.\nLive Nation and The Fillmore are registered\ntrademarks of Live Nation Worldwide, Inc.")
 	}
 	{
 		heading
-		item = qs(0x6158800c)
+		item = qs("\LMACKIE")
 	}
 	{
-		item = qs(0x9120f593)
+		item = qs("\LMACKIE loudspeakers, mixers\nand guitar amps make\nGuitar Heroes out of anyone:\nwww.mackie.com.")
 	}
 	{
 		heading
-		item = qs(0xcba1ab2d)
+		item = qs("\LMarshall")
 	}
 	{
-		item = qs(0x4ac53b21)
+		item = qs("\LMarshall and the Marshall logo\nare trademarks or \nregistered trademarks\nof Marshall Amplification plc.")
 	}
 	{
 		heading
-		item = qs(0x086c055d)
+		item = qs("\LPork Pie")
 	}
 	{
-		item = qs(0xdab2b62a)
+		item = qs("\LPork Pie\nis a registered\ntrademark of Pork Pie\nPercussion Incorporated.\n")
 	}
 	{
 		heading
-		item = qs(0x73e510b6)
+		item = qs("\LRegal Tip")
 	}
 	{
-		item = qs(0x5b0a0baa)
+		item = qs("\LRegal Tip\nis a registered\ntrademark inc.\n")
 	}
 	{
 		heading
-		item = qs(0xaaad5230)
+		item = qs("\LVOX")
 	}
 	{
-		item = qs(0x5f58347f)
+		item = qs("\LVOX is a\nregistered trademark of\nVOX R&D Limited,\nMilton Keynes, England")
 	}
 	{
 		heading
-		item = qs(0xad57e8cc)
+		item = qs("\LZildjian")
 	}
 	{
-		item = qs(0xbb908bff)
+		item = qs("\LZildjian, and the stylized\nZildjian logo are registered\ntrademarks of the\nAvedis Zildjian Company")
 	}
 	{
 		heading
-		item = qs(0xa7620173)
+		item = qs("\LSabian")
 	}
 	{
 		heading
-		item = qs(0xfc7ec7c2)
+		item = qs("\LSennheiser")
 	}
 	{
 		heading
-		item = qs(0x3abe6b7c)
+		item = qs("\LOC Drums")
 	}
 	{
 		heading
-		item = qs(0x4bbb0da3)
+		item = qs("\LActivision Production:")
 	}
 	{
-		item = qs(0xf848483c)
+		item = qs("\L\c5Senior Producer\n\c0Jeremiah Maza\n\n")
 	}
 	{
-		item = qs(0x26237cc4)
+		item = qs("\L\c5Associate Producers\n\c0Patrick Bowman\nTed Lange\n")
 	}
 	{
-		item = qs(0xf814f815)
+		item = qs("\L\c5Production Coordinators\n\c0Casimero Agustin\nAndrew Hoffacker\nJames Norris")
 	}
 	{
-		item = qs(0x02ca4338)
+		item = qs("\LAlex Ortiz\nRaul Renteria\n\n")
 	}
 	{
-		item = qs(0xbc0fd41b)
+		item = qs("\L\c5Production Interns\n\c0Billy Kaplan\nAntonio Villaraigosa Jr.\n")
 	}
 	{
-		item = qs(0x411a976e)
+		item = qs("\L\c5Producer\n\c0Chuck Park\n\n")
 	}
 	{
-		item = qs(0x5c671be4)
+		item = qs("\L\c5Executive Producer\n\c0Jeff Matsushita\n\n")
 	}
 	{
-		item = qs(0x16071a19)
+		item = qs("\L\c5Vice President Production\n\c0Steve Ackrich\n\n")
 	}
 	{
-		item = qs(0x1f565e48)
+		item = qs("\L\c5Sr. Vice President Production\n\c0Laird Malamed\n\n")
 	}
 	{
 		heading
-		item = qs(0xe66ec149)
+		item = qs("\LRedOctane Marketing:")
 	}
 	{
-		item = qs(0x0c07888d)
+		item = qs("\L\c5Sr. Director\nGBM\n\c0Tom Silk\n")
 	}
 	{
-		item = qs(0xea7d00d1)
+		item = qs("\L\c5Senior GBMs\n\c0Ryan Wener\nDoug McCracken\n")
 	}
 	{
-		item = qs(0x79048593)
+		item = qs("\L\c5Associate Brand Managers\n\c0Emily Uyehara\nChris Enock\nBrandon Zien")
 	}
 	{
-		item = qs(0x2f907ff3)
+		item = qs("\L\c5Marketing Associates\n\c0Jesse Wan\n\n")
 	}
 	{
-		item = qs(0xff831e22)
+		item = qs("\L\c5Marketing Coordinator\n\c0Letty Cadena\n\n")
 	}
 	{
 		heading
-		item = qs(0x894c374a)
+		item = qs("\LPR:")
 	}
 	{
-		item = qs(0x4a3abcdf)
+		item = qs("\L\c5PR Director\n\c0Ryh-Ming C. Poon\n\n")
 	}
 	{
-		item = qs(0x699a2e0c)
+		item = qs("\L\c5PR Manager\n\c0Aaron Grant\n\n")
 	}
 	{
-		item = qs(0xb86d8a00)
+		item = qs("\L\c5PR Coordinators\n\c0Jordan Dodge\nAndrew Meyer\n")
 	}
 	{
-		item = qs(0xb8f24072)
+		item = qs("\L\c5Global Asset Manager\n\c0Karen Yi\n\n")
 	}
 	{
 		heading
-		item = qs(0xafc5b578)
+		item = qs("\LBrand Activation:")
 	}
 	{
-		item = qs(0x339e59a4)
+		item = qs("\L\c5VP, Brand Activation\n\c0Stacey Hirata\n\n")
 	}
 	{
-		item = qs(0x02fd56a7)
+		item = qs("\L\c5Sr. Brand Activation Manager\n\c0Jon Estanislao\n\n")
 	}
 	{
-		item = qs(0x80c405b9)
+		item = qs("\L\c5Brand Activation Assistant\n\c0Kyle Rechsteiner\n\n")
 	}
 	{
-		item = qs(0x05a42813)
+		item = qs("\L\c5Brand Activation Associate\n\c0Megan Ferguson\n\n")
 	}
 	{
 		heading
-		item = qs(0xa7cf531d)
+		item = qs("\LCreative Services:")
 	}
 	{
-		item = qs(0x608ab445)
+		item = qs("\L\c5Creative Services Manager\n\c0Mike Doan\n\n")
 	}
 	{
-		item = qs(0x747dac9f)
+		item = qs("\L\c5Graphic Designers\n\c0Maly Bun\nMinna Hu\n")
 	}
 	{
-		item = qs(0x190e8ed3)
+		item = qs("\L\c5Web Designer\n\c0Jennifer Nakamura\n\n")
 	}
 	{
 		heading
-		item = qs(0xd0325e23)
+		item = qs("\LRedOctane:")
 	}
 	{
-		item = qs(0x8ead72b3)
+		item = qs("\L\c5President\n\c0Kai Huang\n\n")
 	}
 	{
-		item = qs(0x70867e0d)
+		item = qs("\L\c5Head of Publishing\n\c0Dusty Welch\n\n")
 	}
 	{
-		item = qs(0x683bac6c)
+		item = qs("\L\c5Executive VP\n\c0Charles Huang\n\n")
 	}
 	{
-		item = qs(0xda85a0f6)
+		item = qs("\L\c5European Marketing Manager\nRedOctane Europe\n\c0Anders Rinaldo\n")
 	}
 	{
-		item = qs(0x895d4da2)
+		item = qs("\L\c5Executive Assistant\n\c0Trina Deakin\n\n")
 	}
 	{
-		item = qs(0xd79ea5af)
+		item = qs("\L\c5Licensing Associate\n\c0Chris Larkin\n\n")
 	}
 	{
-		item = qs(0xff4bddbf)
+		item = qs("\L\c5VP Finance\n\c0Richard Santiago\n\n")
 	}
 	{
-		item = qs(0x4374bbbe)
+		item = qs("\L\c5Controller\n\c0Monika Agarwal\n\n")
 	}
 	{
-		item = qs(0x3dc761a9)
+		item = qs("\L\c5Sr. Financial Analyst\n\c0Kevin Lurie\n\n")
 	}
 	{
-		item = qs(0x2f03a224)
+		item = qs("\L\c5Sr. Accountant\n\c0Tina Xu\n\n")
 	}
 	{
-		item = qs(0xb0185232)
+		item = qs("\L\c5Logistics Manager\n\c0Candy Lu\n\n")
 	}
 	{
-		item = qs(0x986b6495)
+		item = qs("\L\c5Inventory Analyst\n\c0Scott Yang\n\n")
 	}
 	{
-		item = qs(0x8a4cdf2c)
+		item = qs("\L\c5HR Generalist\n\c0Kathryn Fernandez\n\n")
 	}
 	{
 		heading
-		item = qs(0x4a8ca6c7)
+		item = qs("\LHardware:")
 	}
 	{
-		item = qs(0x906ef1ba)
+		item = qs("\L\c5VP Hardware\n\c0Lee Guinchard\n\n")
 	}
 	{
-		item = qs(0x860d08ef)
+		item = qs("\L\c5Product Manager, UK\n\c0Steve Withers\n\n")
 	}
 	{
-		item = qs(0xcbe15b86)
+		item = qs("\L\c5Director of Hardware\n\c0Carter Lee\n\n")
 	}
 	{
-		item = qs(0xf13a89cf)
+		item = qs("\L\c5Hardware Associate\n\c0Mark Johnson\n\n")
 	}
 	{
-		item = qs(0x54b1e346)
+		item = qs("\L\c5Hardware Program Director\n\c0David Dykes\n\n")
 	}
 	{
-		item = qs(0x74c70655)
+		item = qs("\L\c5Production Engineering Manager\n\c0Jared Chan\n\n")
 	}
 	{
-		item = qs(0xfefe88ab)
+		item = qs("\L\c5Lead Programmer\nDrums\n\c0Tim Clark\n")
 	}
 	{
-		item = qs(0xa9468d63)
+		item = qs("\L\c5Programmer\n\c0Tom Perme\n\n")
 	}
 	{
-		item = qs(0x27c775b9)
+		item = qs("\L\c5Lead Programmer\nGuitar\n\c0Nozumu Tan\n")
 	}
 	{
-		item = qs(0x70f4a485)
+		item = qs("\L\c5Program Manager\nGuitar & Drums\n\c0Yuki Aiyama\n")
 	}
 	{
-		item = qs(0xa868e7e7)
+		item = qs("\L\c5Lead Programmer\nGuitar\n\c0Koji Kamyia\n")
 	}
 	{
-		item = qs(0xeebe0a51)
+		item = qs("\L\c5Director\nof R&D\n\c0Jack McCauley\n")
 	}
 	{
-		item = qs(0x7e1ac40e)
+		item = qs("\L\c5Programmer\n\c0Mike Philbin\n\n")
 	}
 	{
-		item = qs(0x0d008208)
+		item = qs("\L\c5Product Designer\n\c0Cody Lee\n\n")
 	}
 	{
 		heading
-		item = qs(0xe56b344f)
+		item = qs("\LE-Commerce:")
 	}
 	{
-		item = qs(0x67b2ea57)
+		item = qs("\L\c5E-Commerce Manager\n\c0Michael Pan\n\n")
 	}
 	{
-		item = qs(0xb356aca2)
+		item = qs("\L\c5Online\nMarketing Specialist\n\c0David Hsu\n")
 	}
 	{
-		item = qs(0x9adc0edd)
+		item = qs("\L\c5E-Commerce\nAssistants\n\c0Amanda Amezcua\nHana Sakamoto")
 	}
 	{
-		item = qs(0xc8109eb0)
+		item = qs("\L\c5Customer Service\nManager\n\c0Joe Mijares\n")
 	}
 	{
-		item = qs(0x95de7721)
+		item = qs("\L\c5Customer Support Team\n\c0Mike Dangerfield\nMasai Davis\nMelanie Porzio")
 	}
 	{
-		item = qs(0xfa1d0a2f)
+		item = qs("\L\c5Shipping\n\c0Lincoln Jalique\n\n")
 	}
 	{
-		item = qs(0xf34775f5)
+		item = qs("\L\c5Webmaster\n\c0Suky Wong\n\n")
 	}
 	{
 		heading
-		item = qs(0x721d0f75)
+		item = qs("\LRedOctane Thanks:")
 	}
 	{
-		item = qs(0xba9496e1)
+		item = qs("\LLillian Qian\nKaylan Huang\nCharley Huang\nSimon Huang\nLily Huang")
 	}
 	{
-		item = qs(0x0ffa544a)
+		item = qs("\LEthan Huang\nVictoria Bowman\nSamantha Chien\nJoshua Bowman\nSharon Maza")
 	}
 	{
-		item = qs(0xac8bc788)
+		item = qs("\LMadison ''The Monster'' Maza\nSkye Lange\nDream Lange\nDorothy Yang\nThe San Jose Sharks")
 	}
 	{
-		item = qs(0x970abca4)
+		item = qs("\LThe Juco Family\nMB&GB\nDa Bears\nThe Larkin Family\nFreddie Arnott")
 	}
 	{
-		item = qs(0xefb4553e)
+		item = qs("\LGrey Hawke\nRed Octane India Crew\nDennis Goh\nEskander Matta\nAlex Mahlke")
 	}
 	{
-		item = qs(0xbf5971a8)
+		item = qs("\LTom Knudsen\nJen Fox\nIvoline Lee\nJohn Devecka\nSwami Venkat")
 	}
 	{
 		heading
-		item = qs(0xdca042cc)
+		item = qs("\LActivision Music Department:")
 	}
 	{
-		item = qs(0x18261268)
+		item = qs("\L\c5Vice President,\nMusic Affairs\n\c0Tim Riley\n")
 	}
 	{
-		item = qs(0x3021a6ae)
+		item = qs("\L\c5Sr. Manager,\nMusic Affairs\n\c0Brandon Young\n")
 	}
 	{
-		item = qs(0x47b187eb)
+		item = qs("\L\c5Music Supervisor\n\c0Scott McDaniel\n\n")
 	}
 	{
-		item = qs(0x8e100471)
+		item = qs("\L\c5Audio\nAsset Specialist\n\c0David Iscove\n")
 	}
 	{
-		item = qs(0x9904659d)
+		item = qs("\L\c5Music and\nLicensing Specialists\n\c0Jeremy Volk\nMike Phegley")
 	}
 	{
-		item = qs(0xaec3b89b)
+		item = qs("\L\c5Music Coordinator\n\c0Jonathan Bodell\n\n")
 	}
 	{
 		heading
-		item = qs(0xe125b026)
+		item = qs("\LMusic Thanks:")
 	}
 	{
-		item = qs(0xe746b798)
+		item = qs("\LIsaiah Abolin\nTyler Arend\nIrving Azoff\nChris Baker\nTravis Barker")
 	}
 	{
-		item = qs(0xc2948518)
+		item = qs("\LJoe Barresi\nCliff Bernstein\nSat Bisla\nMike Boila\nDave Bottrill")
 	}
 	{
-		item = qs(0x05f38132)
+		item = qs("\LKathryn Braddick\nRon Broitman\nThom Cadley\nKevin Carson\nJames Cassidy")
 	}
 	{
-		item = qs(0x24353686)
+		item = qs("\LAnn Chien\nCarla Clark\nMichael Closter\nMatthew Cohen\nStewart Copeland")
 	}
 	{
-		item = qs(0x67db9399)
+		item = qs("\LBilly Corgan\nRich Costey\nJohn Cuniberti\nEric Custer\nJoe D'Ambrosio")
 	}
 	{
-		item = qs(0x0c033a9a)
+		item = qs("\LBernie Fischbach\nAnthony Fox\nWolfgang Frank\nMarti Frederiksen\nBrigitte Green")
 	}
 	{
-		item = qs(0x1f10a50a)
+		item = qs("\LNathan Gregory\nMichael Guarracino\nLauren Haber\nCecilia Harvey\nKrisstina Hawks")
 	}
 	{
-		item = qs(0x0efccce9)
+		item = qs("\LWill Hensley\nNancy Jeffries\nAli Johnson\nAdam Jones\nAlan Jones")
 	}
 	{
-		item = qs(0xd2de21a9)
+		item = qs("\LTamera Kearney\nKato Khandwala\nKeith Koenig\nBob Koszela\nRod Kotler")
 	}
 	{
-		item = qs(0xc92d913c)
+		item = qs("\LEddie Kramer\nMargaret Kramer\nWayne Kramer\nRichard Lancaster\nMichael Lutz")
 	}
 	{
-		item = qs(0xe857095e)
+		item = qs("\LMatt Marshall\nHector Martinez\nGabe Mason\nJohn McDermott\nMichael Meisel")
 	}
 	{
-		item = qs(0x8970b08d)
+		item = qs("\LPeter Mench\nMark Mercado\nGary Miller\nSteve Morgan\nMelissa Munana")
 	}
 	{
-		item = qs(0x14b653d7)
+		item = qs("\LJames Murray\nSteve Nice\nTed Nugent\nOzzy Osbourne\nSharon Osbourne")
 	}
 	{
-		item = qs(0x7efccd0f)
+		item = qs("\LSteve Ouimette\nJared Paul\nJeanette Perez\nDave Pettigrew\nJon Phillips")
 	}
 	{
-		item = qs(0x16491688)
+		item = qs("\LMark Pinkus\nLisa Power\nJo Pusateri\nPete Readling\nMarc Reiter")
 	}
 	{
-		item = qs(0x124c2ab0)
+		item = qs("\LBob Ringe\nJack Rovner\nPaula Salvatore\nDave Sandford\nKathy Schenker")
 	}
 	{
-		item = qs(0xad906d54)
+		item = qs("\LCynthia Sexton\nJohn Silva\nAndie Simon\nTodd Singerman\nSting")
 	}
 	{
-		item = qs(0x3dafe356)
+		item = qs("\LMike Swartz\nEli Tirado\nClaus Trelby\nBryan Van Dyk\nKevin Vanbergen")
 	}
 	{
-		item = qs(0xcc6d65bf)
+		item = qs("\LLarry Vavra\nJake Voulgarides\nBrant Weil\nGreg Weisman\nKristen Welsh")
 	}
 	{
-		item = qs(0x01c36743)
+		item = qs("\LJames Willetts\nHayley Williams\nGary Wishik\nMissy Worth\nHenry Wrenn-Meleck")
 	}
 	{
-		item = qs(0x5102ed44)
+		item = qs("\LZakk Wylde\nQ-Prime\nDave Steunebrink\nMallory Zumbach\nChad Smith")
 	}
 	{
-		item = qs(0x71ea95b2)
+		item = qs("\Land anyone\nwe may\nhave missed\n... thank you!\n")
 	}
 	{
 		heading
-		item = qs(0xec2ac4da)
+		item = qs("\LActivision Business\n& Legal Affairs:")
 	}
 	{
-		item = qs(0x10546f58)
+		item = qs("\L\c5VP Business\n& Legal Affairs\n\c0Greg Deutsch\n")
 	}
 	{
-		item = qs(0x8bd52cc8)
+		item = qs("\L\c5Director\nGovernment and\nLegislative Affairs\n\c0Philip Terzian")
 	}
 	{
-		item = qs(0xc4d331e5)
+		item = qs("\L\c5Transactional Counsel\n\c0Travis Stansbury\n\n")
 	}
 	{
-		item = qs(0x5b9baf80)
+		item = qs("\L\c5Senior Paralegal\n\c0Kap Kang\n\n")
 	}
 	{
-		item = qs(0xdcf88a28)
+		item = qs("\L\c5Sr. Director of\nProduction Services\n\c0Suzan Rude\n")
 	}
 	{
 		heading
-		item = qs(0x3e802d06)
+		item = qs("\LActivision Central Design\nand Playtesting:")
 	}
 	{
-		item = qs(0x5fb9261f)
+		item = qs("\L\c5Sr. Director,\nGame Design\n\c0Carl Schnurr\n")
 	}
 	{
-		item = qs(0x12dcf84f)
+		item = qs("\L\c5Manager of\nUser Testing\n\c0Ray Kowalewski\n")
 	}
 	{
-		item = qs(0xa2ce1725)
+		item = qs("\L\c5Senior Designer\n\c0Derek Daniels\n\n")
 	}
 	{
-		item = qs(0x96661057)
+		item = qs("\L\c5Senior Designer\n\c0Danny Koo\n\n")
 	}
 	{
-		item = qs(0xf1c2de3f)
+		item = qs("\L\c5Game Design Analyst\n\c0Jeff Chen\n\n")
 	}
 	{
-		item = qs(0x934b4d61)
+		item = qs("\L\c5Game Designer\n\c0Thomas Wells\n\n")
 	}
 	{
-		item = qs(0x5c988351)
+		item = qs("\L\c5Sr. Director,\nTechnology\n\c0Matt Wilkinson\n")
 	}
 	{
-		item = qs(0x41dcfc4d)
+		item = qs("\L\c5Sr. VP\nof Technology\n\c0Steve Pearce\n")
 	}
 	{
-		item = qs(0x65ab141e)
+		item = qs("\L\c5User Testing Intern\n\c0Henry Liu\n\n")
 	}
 	{
 		heading
-		item = qs(0xf17b99ff)
+		item = qs("\LCentral Audio:")
 	}
 	{
-		item = qs(0x29f80179)
+		item = qs("\L\c5Director,\nCentral Audio\n\c0Adam Levenson\n")
 	}
 	{
-		item = qs(0xbad51b56)
+		item = qs("\L\c5Central\nAudio Coordinator\n\c0Noah Sarid\n")
 	}
 	{
 		heading
-		item = qs(0xd1f03d27)
+		item = qs("\LActivision Special Thanks:")
 	}
 	{
-		item = qs(0x10cf83b3)
+		item = qs("\LMike Griffith\nRon Doornink\nThomas Tippl\nBrian Kelly\nBobby Kotick")
 	}
 	{
-		item = qs(0xbf560571)
+		item = qs("\LRobin Kaminsky\nBrian Ward\nBrian Hodous\nDave Stohl\nMaria Stipp")
 	}
 	{
-		item = qs(0xb03b9ae8)
+		item = qs("\LJoerg Trouvain\nJohn Watts\nSteve Young\nJosh Taub\nLaura Hoegler")
 	}
 	{
-		item = qs(0xfead43fe)
+		item = qs("\LJennifer Sullivan\nBeverly Liggett\nWade Pottinger\nSean Dexheimer\nDan Schaffer")
 	}
 	{
-		item = qs(0x7552abba)
+		item = qs("\LMolly Hinchey\nGeorge Rose\nMary Tuck\nDave Anderson\nJohn Dillulo")
 	}
 	{
-		item = qs(0xf6abf4b0)
+		item = qs("\LMaryanne Lataif\nMichelle Schroder\nBlake Hennon\nVic Lopez\nJay Komas")
 	}
 	{
-		item = qs(0x7b6dc123)
+		item = qs("\LNeil Armstrong\nPeter Oey\nSteve Wereb\nTodd Szalla\nNikunj Dalal")
 	}
 	{
-		item = qs(0x7cca0384)
+		item = qs("\LKathryn Murray\nChris Cosby\n''Music Guru Dan Block''\nTina Kwon\n")
 	}
 	{
 		heading
-		item = qs(0x5693ea98)
+		item = qs("\LQuality\nAssurance:")
 	}
 	{
-		item = qs(0x02688910)
+		item = qs("\L\c5VP Quality Assurance/\nCustomer Service\n\c0Rich Robinson\n")
 	}
 	{
-		item = qs(0xa45d80fa)
+		item = qs("\L\c5Director,\nQuality Assurance\n\c0Marilena Morini\n")
 	}
 	{
-		item = qs(0x3f0d4e7d)
+		item = qs("\L\c5Manager,\nQA Operations\n\c0Chris Keim\n")
 	}
 	{
 		heading
-		item = qs(0x39a29dd8)
+		item = qs("\LQA, Functionality:")
 	}
 	{
-		item = qs(0x9c9c43d4)
+		item = qs("\L\c5QA Project Lead,\nDayshift\n\c0Mike Ryan\n")
 	}
 	{
-		item = qs(0xacdf0279)
+		item = qs("\L\c5QA Project Lead,\nNight Shift\n\c0José Juan Ornelas\n")
 	}
 	{
-		item = qs(0x227f99ca)
+		item = qs("\L\c5QA Project Lead,\nMusic Studio\n\c0David Lara\n")
 	}
 	{
-		item = qs(0xd030926f)
+		item = qs("\L\c5QA Project Lead,\nDownloadable Content\n\c0Albert Yao\n")
 	}
 	{
-		item = qs(0xfc9e37e9)
+		item = qs("\L\c5QA Floor Leads, Dayshift\n\c0Ivan Arzate\nLee Cheramie\nRamon Ramirez")
 	}
 	{
-		item = qs(0xa2adf0c0)
+		item = qs("\L\c5QA Floor Leads, Nightshift\n\c0Trevor Page\nJulius Hipolito\nRon Ruhl, Wei Zhao")
 	}
 	{
-		item = qs(0x20dc230b)
+		item = qs("\L\c5QA Floor Lead,\nMusic Studio\n\c0Dan Ludwig\n")
 	}
 	{
-		item = qs(0xb75beaaf)
+		item = qs("\L\c5QA Database\nAdministrator,\nDayshift\n\c0Dong Fan")
 	}
 	{
-		item = qs(0x49d3f377)
+		item = qs("\L\c5QA Database\nAdministrator,\nNightshift\n\c0Osvaldo Mejia")
 	}
 	{
-		item = qs(0x10637717)
+		item = qs("\L\c5QA Testers,\nDayshift\n\c0Alan Garcia\nAlbert Jacobs")
 	}
 	{
-		item = qs(0xd14aee59)
+		item = qs("\LAmir Ali\nAndrew Ganzon\nAndrew Linstrom\nAnthony Randolph")
 	}
 	{
-		item = qs(0x96b2f544)
+		item = qs("\LBen Muller\nBradley Buller\nBrandon Rojo\nBrandon Willis")
 	}
 	{
-		item = qs(0x25edc2a5)
+		item = qs("\LBrent Gothold\nBrian Hibbard\nCalvin Mendoza\nCharles Moore")
 	}
 	{
-		item = qs(0x3c529e94)
+		item = qs("\LChris Reinhart\nChris Staples\nChristian Velasquez\nCiji Thornton")
 	}
 	{
-		item = qs(0xf052cbf1)
+		item = qs("\LClarence Weaver\nDaniel Brown\nDanny Reynoso\nDavid Greene")
 	}
 	{
-		item = qs(0x57d6117a)
+		item = qs("\LDavid Nordstad\nDavid Oberlin\nDavid Perea\nDavid Storey")
 	}
 	{
-		item = qs(0x4048253f)
+		item = qs("\LDemetrius Hoston\nDillon Chance\nDustin Daves\nElieser Quintero")
 	}
 	{
-		item = qs(0x7a72dace)
+		item = qs("\LEnrique Roldan\nEvan Akutagawa\nFrankie Ludena\nGiovanni Funes")
 	}
 	{
-		item = qs(0x1fe5207a)
+		item = qs("\LGrant Asay\nHector Garcia\nIan Camacho\nIan Whaley")
 	}
 	{
-		item = qs(0xa27ce93b)
+		item = qs("\LIsmael Camberos\nJacob Goldman\nJames Hooper\nJames Stickley")
 	}
 	{
-		item = qs(0x8e61005f)
+		item = qs("\LJason Ralya\nJean Medina\nJebediah Dylan Jester\nJoel Lee")
 	}
 	{
-		item = qs(0x87c2ebf3)
+		item = qs("\LJonathan Ernest\nJonathan Ventura\nJordan Bhondus\nJosh Chandler")
 	}
 	{
-		item = qs(0x4d743b80)
+		item = qs("\LJosh Green\nJosh Mendoza\nKeith Dator\nKevin Tucker")
 	}
 	{
-		item = qs(0xd462061a)
+		item = qs("\LKhalin Mikkelsen\nLee Staples\nLola Riverwalker\nLou Studdert")
 	}
 	{
-		item = qs(0x8d84d51f)
+		item = qs("\LMarc Williams\nMark Todd\nMatt Smith\nMichael Bolduc")
 	}
 	{
-		item = qs(0xa45598ad)
+		item = qs("\LMichael Buller\nMichael Stella\nMichael Taing\nMike Cook")
 	}
 	{
-		item = qs(0xdbcd565d)
+		item = qs("\LMike Hunau\nNathan Kinney\nNicholas Chavez\nOrlando Morales")
 	}
 	{
-		item = qs(0xf28b9444)
+		item = qs("\LOscar Arias\nPatrick Garcia\nPedro Aguilar\nPhillip Needham")
 	}
 	{
-		item = qs(0xde00d4fe)
+		item = qs("\LRichard Dicks\nRichard Reza\nRichard Rodriquez\nRobert Bruce")
 	}
 	{
-		item = qs(0x9b227f07)
+		item = qs("\LRobert Chaplan\nRobert Tai\nRoderick Erwin\nRudy Ibarra")
 	}
 	{
-		item = qs(0x78669cca)
+		item = qs("\LRyan Badin\nSam Cividonis\nSam Cohn\nSean Moline")
 	}
 	{
-		item = qs(0xc7f21592)
+		item = qs("\LShawn Belew\nT'Challa Dion Jackson\nThomas Sonntag\nTimothy Reichenbach")
 	}
 	{
-		item = qs(0x3c8d2db9)
+		item = qs("\LTodd Carrigan\nTyler Robinson\nValerie Hilgenfeldt\nVince Torres")
 	}
 	{
-		item = qs(0xf64a9395)
+		item = qs("\L\c5QA Testers, Nightshift\n\c0Alan Rivas\nAdam Grodin\nAlex Gellerman")
 	}
 	{
-		item = qs(0xb6f10645)
+		item = qs("\LAlexander Embray\nAmanda Rose\nAndre Haftevani\nAnthony Bellisario")
 	}
 	{
-		item = qs(0x2c107aa3)
+		item = qs("\LAnthony Gorski\nBenjamin Deutsch\nBenjamin Johnson\nBenjamin Plunk")
 	}
 	{
-		item = qs(0xe93c1e5b)
+		item = qs("\LBrandon Garrett\nBrandon Ramos\nBryan Chice\nBryan Wilson")
 	}
 	{
-		item = qs(0xb5bfdcc0)
+		item = qs("\LChris Gerfen\nChristian Bachman\nChristian Murillo\nChristopher Carnell")
 	}
 	{
-		item = qs(0x43b50ac7)
+		item = qs("\LColin Tistaert\nDavid Marcus\nDee Kevin\nAce Gibson")
 	}
 	{
-		item = qs(0x5594a013)
+		item = qs("\LDerek Heiland\nDidier Benitez\nDomenique Pineda\nDro Surmenian")
 	}
 	{
-		item = qs(0x878b88e9)
+		item = qs("\LEdwin Payen\nElmer De Leon\nEmilio Rossal\nEric Burson")
 	}
 	{
-		item = qs(0xa073be4b)
+		item = qs("\LEric Hernandez\nEric Kelly\nEric Valentin\nErik Steinmetz")
 	}
 	{
-		item = qs(0xb48f58f8)
+		item = qs("\LErika Rodriguez\nGary Davidson\nGerald Becker\nHugo Felix")
 	}
 	{
-		item = qs(0x0022e071)
+		item = qs("\LIan Page\nIan Pepple\nIsara (Jay) Nareesrisawatdi\nIsrael Barco")
 	}
 	{
-		item = qs(0xd789d7a0)
+		item = qs("\LJaime Segovia\nJake Siegel\nJames Davis\nJames Hass")
 	}
 	{
-		item = qs(0x86167772)
+		item = qs("\LJeff Hartney\nJeff Mitchell\nJerome Li\nJess Sparks")
 	}
 	{
-		item = qs(0x907d7b79)
+		item = qs("\LJimmy Yang\nJoah Ferchak\nJohn Garcia\nJoseph Chaves")
 	}
 	{
-		item = qs(0x74f684a9)
+		item = qs("\LJoshua Munson\nJovani Banuelos\nJovany Zuniga\nJuan Arias")
 	}
 	{
-		item = qs(0xf39e5347)
+		item = qs("\LJuan Valencia\nJules Lewis\nJustin Huthmacher\nKerwin Munsell")
 	}
 	{
-		item = qs(0x3a62417d)
+		item = qs("\LKevin Berger\nKevin Smith\nKhamil Davis\nLa Vonce Ervin")
 	}
 	{
-		item = qs(0x79d7899c)
+		item = qs("\LLovely Morata\nLuke Saville\nMarc Hughley\nMatt Hartley")
 	}
 	{
-		item = qs(0x6d64fe47)
+		item = qs("\LMichael Chinn\nMichael Hustis\nMichael Roberts\nMike Chaja")
 	}
 	{
-		item = qs(0x8b14b7cf)
+		item = qs("\LNeal Nikaido\nOscar Rodriguez\nRigo Garcia\nRoberto Benites")
 	}
 	{
-		item = qs(0x8d0fdc66)
+		item = qs("\LRoberto Dominguez\nScott Williams\nSean Belloso\nSean Urner")
 	}
 	{
-		item = qs(0x965cf3d9)
+		item = qs("\LSteve Tippett\nTiffany Beh-john Asghary\nVicente Gutierrez\nWilliam Kelly")
 	}
 	{
-		item = qs(0x8ff40a03)
+		item = qs("\L\c5QA Senior\nProject Lead\nDayshift\n\c0Paul Williams")
 	}
 	{
-		item = qs(0x549fc11d)
+		item = qs("\L\c5QA Senior \nProject Lead\nNightshift\n\c0Frank So")
 	}
 	{
-		item = qs(0xb706e347)
+		item = qs("\L\c5QA Manager,\nDayshift\n\c0John Rosser\n")
 	}
 	{
-		item = qs(0x93a393ad)
+		item = qs("\L\c5QA Manager,\nNightshift\n\c0Adam Hartsfield\n")
 	}
 	{
 		heading
-		item = qs(0xa9c7a812)
+		item = qs("\LTechnical\nRequirements\nGroup:")
 	}
 	{
-		item = qs(0xece39fe9)
+		item = qs("\L\c5TRG Senior Manager\n\c0Christopher Wilson\n\n")
 	}
 	{
-		item = qs(0x5468e18f)
+		item = qs("\L\c5TRG Submissions Leads\n\c0Dan Nichols\nChristopher Norman\n")
 	}
 	{
-		item = qs(0xf9398f0a)
+		item = qs("\L\c5Sr. TRG Platform Leads\n\c0Marc Villanueva\nTeak Holley\n")
 	}
 	{
-		item = qs(0x90ae6c56)
+		item = qs("\L\c5TRG Platform Leads\n\c0James Rose\nJared Baca\nBenjamin Abel")
 	}
 	{
-		item = qs(0xdcfe1878)
+		item = qs("\L\c5TRG Testers\n\c0Alex Hirsch\nChristian Haile\nDaniel Fehskens")
 	}
 	{
-		item = qs(0xf68c6f96)
+		item = qs("\LJacob Zwirn\nJason Garza\nJonathan Butcher\nMark Ruzicka")
 	}
 	{
-		item = qs(0xfc6172a1)
+		item = qs("\LPisoth Chham\nRhonda Ramirez\nWilliam Camacho\n")
 	}
 	{
-		item = qs(0xfd8ae8ed)
+		item = qs("\L\c5Sr. TRG Platform Leads\n\c0Kyle Carey\nJason Harris\n")
 	}
 	{
-		item = qs(0x5b355643)
+		item = qs("\L\c5TRG Platform Leads\n\c0Paul Carrion\nBrian Bensi\nTomo Shikami")
 	}
 	{
-		item = qs(0x6c6f443d)
+		item = qs("\L\c5TRG Testers\n\c0Alyssa Delhotal\nBrian Baker\nKeith Kodama")
 	}
 	{
-		item = qs(0x565bd658)
+		item = qs("\LColin Kawakami\nStefan Goodreau\nJohn McCurry\nKirt Sanchez")
 	}
 	{
-		item = qs(0x7196877a)
+		item = qs("\LElizabeth Hickey-McCoy\nMelvin Allen\nScott Borakove\nScott Winslow")
 	}
 	{
 		heading
-		item = qs(0x6da38be8)
+		item = qs("\LQA\nNetwork\nLab:")
 	}
 	{
-		item = qs(0xd0fadac1)
+		item = qs("\L\c5QA Network Lab\nSenior Project Lead\n\c0Francis Jimenez\n")
 	}
 	{
-		item = qs(0x870b4741)
+		item = qs("\L\c5QA\nNetwork\nLab Testers\n\c0Leonard Rodriguez\nShamen'e Childress\n")
 	}
 	{
 		heading
-		item = qs(0x05f70cf2)
+		item = qs("\LQA\nMultiplayer Lab:")
 	}
 	{
-		item = qs(0xf9d57b74)
+		item = qs("\L\c5QA-MPL Project Lead\n\c0Garrett Oshiro\n\n")
 	}
 	{
-		item = qs(0xf6fe127b)
+		item = qs("\L\c5QA-MPL Floor Leads\n\c0Jessie Jones\nMario Ibarra\nJulio Medina")
 	}
 	{
-		item = qs(0x235dec91)
+		item = qs("\L\c5QA-MPL Testers\n\c0Matt Fawbush\nJaemin Kang\nJonathan Mack\nHyun ''Andy'' Kim")
 	}
 	{
-		item = qs(0x27532628)
+		item = qs("\LBobby Jones\nBrian Lay\nEmmanuel Salva Cruz\nRyan Rigg\n")
 	}
 	{
 		heading
-		item = qs(0xedc6fdb6)
+		item = qs("\LQA Audio\nVisual Lab:")
 	}
 	{
-		item = qs(0xd7cb824c)
+		item = qs("\L\c5QA-AVL Project Lead\n\c0Victor Durling\n\n")
 	}
 	{
 		heading
-		item = qs(0x98dbb6d6)
+		item = qs("\LQA\nBurnroom:")
 	}
 	{
-		item = qs(0xc69fd4b0)
+		item = qs("\L\c5Burn Room Supervisor\n\c0Joule Middleton\n\n")
 	}
 	{
-		item = qs(0xd072f2e7)
+		item = qs("\L\c5Burn Room Technicians\n\c0Danny Feng\nKai Hsu\nSean Kim, Rodrigo Magana")
 	}
 	{
 		heading
-		item = qs(0x54d0eb4b)
+		item = qs("\LQA-MIS:")
 	}
 	{
-		item = qs(0x5aa92252)
+		item = qs("\L\c5Senior Manager\nQA Technologies\n\c0Indra Yee\n")
 	}
 	{
-		item = qs(0x035f13b0)
+		item = qs("\L\c5QA-MIS Manager\n\c0Dave Garcia-Gomez\n\n")
 	}
 	{
-		item = qs(0x28171ddb)
+		item = qs("\L\c5QA-MIS Technicians\n\c0Teddy Hwan\nBrian Martin\nJeremy Torres")
 	}
 	{
-		item = qs(0xed3ed18f)
+		item = qs("\LLawrence Wei\nSean Olson\n\n")
 	}
 	{
-		item = qs(0x4f4ddb77)
+		item = qs("\L\c5QA-MIS\nEquipment Coordinators\n\c0Long Le\nColeman Thaxton\n")
 	}
 	{
 		heading
-		item = qs(0xb45c800b)
+		item = qs("\LQA Database\nAdministration Group:")
 	}
 	{
-		item = qs(0xfd778fcd)
+		item = qs("\L\c5QA Lead\nDatabase Administrator\n\c0Jeremy Richards\n")
 	}
 	{
-		item = qs(0x44052ce5)
+		item = qs("\L\c5Floor Lead\nDatabase Administrator\n\c0Kelly Huffine\n")
 	}
 	{
-		item = qs(0x71eb32b4)
+		item = qs("\L\c5DBA Senior Testers\n\c0Timothy Toledo\nChristopher Shanley\nWayne Williams")
 	}
 	{
-		item = qs(0x2e83f426)
+		item = qs("\L\c5DBA Tester\n\c0Jon Luce\n\n")
 	}
 	{
 		heading
-		item = qs(0x43694413)
+		item = qs("\LCS/QA\nThanks:")
 	}
 	{
-		item = qs(0x83e0885c)
+		item = qs("\LNadine Theuzillot\nRachel Overton\nAileen Paul\nJeremy Shortell")
 	}
 	{
-		item = qs(0x145a3694)
+		item = qs("\LDenise Luce\nMarc Williams\nRichard Pearson\nJake Ryan")
 	}
 	{
 		heading
-		item = qs(0xdf6b1f76)
+		item = qs("\LCustomer\nSupport:")
 	}
 	{
-		item = qs(0x0753adac)
+		item = qs("\L\c5Phone Support Manager\n\c0Gary Bolduc\n\n")
 	}
 	{
-		item = qs(0x70713fef)
+		item = qs("\L\c5E-Mail Support Manager\n\c0Michael Hill\n\n")
 	}
 	{
 		heading
-		item = qs(0xd1427b06)
+		item = qs("\LLocalisations:")
 	}
 	{
-		item = qs(0x7872ac5a)
+		item = qs("\L\c5Director of Production Services\nEurope\n\c0Barry Kehoe\n")
 	}
 	{
-		item = qs(0x35e8d7e7)
+		item = qs("\L\c5Senior Localisation\nProject Manager\n\c0Fiona Ebbs\n")
 	}
 	{
-		item = qs(0x69fab07f)
+		item = qs("\L\c5Localisation\nProject Manager\n\c0David Cooper\n")
 	}
 	{
-		item = qs(0x47c11621)
+		item = qs("\L\c5Localisation\nCoordinators\n\c0Jonas Anderson\nChristian Held")
 	}
 	{
-		item = qs(0x36df25ac)
+		item = qs("\L\c5Localisation\nQA Manager\n\c0David Hickey\n")
 	}
 	{
-		item = qs(0x681bdf8a)
+		item = qs("\L\c5Localisation\nQA Lead\n\c0Dominik Hilse\n")
 	}
 	{
-		item = qs(0xdaa6968a)
+		item = qs("\L\c5Localisation\nQA Testers\n\c0Adrian Murphy\nAindreas Kugler")
 	}
 	{
-		item = qs(0xa74f0025)
+		item = qs("\LChristoph Stammler\nCormac O'Sullivan\nEdoardo Malingambi\nEduardo Surian")
 	}
 	{
-		item = qs(0xd7afe7db)
+		item = qs("\LEric Fabvre-Meltser\nJustin Neumann\nLoic Moisan\nLorenzo Poncia")
 	}
 	{
-		item = qs(0x54882c41)
+		item = qs("\LRichard McCormack\nRoger Hennessy\nRuben Santiago\nSergio Sampalo")
 	}
 	{
-		item = qs(0xb8feb3fd)
+		item = qs("\L\c5Burn Lab Technicians\n\c0Derek Brangan\nMark Smith\n")
 	}
 	{
-		item = qs(0x0590c142)
+		item = qs("\L\c5IT Network Technician\n\c0Fergus Lindsay\n\n ")
 	}
 	{
-		item = qs(0x2f38c010)
+		item = qs("\L\c5Localization Consultant\n\c0Stephanie O'Malley Deming\n\c5Localization Tools and Support\n\c0Provided by Xloc Inc.")
 	}
 	{
 		heading
-		item = qs(0xea196508)
+		item = qs("\LDemonWare:")
 	}
 	{
-		item = qs(0xabc2dc01)
+		item = qs("\LNadia Alramli\nDavid Brennan\nMorgan Brickley\nLuke Burden")
 	}
 	{
-		item = qs(0x3863684e)
+		item = qs("\LAaron Burt\nMichael Collins\nTim Czerniak\nBrendan Dillon")
 	}
 	{
-		item = qs(0x5b49c40e)
+		item = qs("\LMalcolm Dowse\nEoghan Gaffney\nSteffen Higel\nTony Kelly")
 	}
 	{
-		item = qs(0xc54c45df)
+		item = qs("\LJohn Kirk\nCraig McInnes\nEoin O'Fearghail\nByron Pile")
 	}
 	{
-		item = qs(0x2aea8e20)
+		item = qs("\LRuaidhrí Power\nTilman Schäefer\nAmy Smith\nEmmanuel Stone")
 	}
 	{
 		heading
-		item = qs(0x59dc6dff)
+		item = qs("\LAnimated sequences\nby Titmouse, Inc.:")
 	}
 	{
-		item = qs(0x52d9dfb9)
+		item = qs("\L\c5Creative Producer\n\c0Keith Fay\n\c5Director\n\c0Juno Lee")
 	}
 	{
-		item = qs(0x45f5a29b)
+		item = qs("\L\c5Background Supervisor\n\c0Antonio Cannobio\n\c5Lead Designer\n\c0Junpei Takayama")
 	}
 	{
-		item = qs(0x0cfdd183)
+		item = qs("\L\c5Lead Animator\n\c0Jeremy Polgar\n\c5Animator\n\c0Tony Andrade")
 	}
 	{
-		item = qs(0xcdca68bf)
+		item = qs("\L\c5Animator\n\c0Ryan DeLuca\n\c5Background Paint and Design\n\c0Sung Jin Ahn")
 	}
 	{
-		item = qs(0x24590af0)
+		item = qs("\L\c5Background Painter\n\c0Keyoei Takayama\n\c5Background Painter\n\c0Pam Friend")
 	}
 	{
-		item = qs(0xa7e90578)
+		item = qs("\L\c5Background Painter\n\c0Snakebite\n\c5Background Design\n\c0Roger Oda")
 	}
 	{
-		item = qs(0x6eeb6df2)
+		item = qs("\L\c5Background Design\n\c0Rev. Dave Johnson\n\c5Ink & Paint\n\c0Brian Kim")
 	}
 	{
-		item = qs(0x11a8cbb0)
+		item = qs("\L\c5Assistant Character Design\n\c0Gabe Lee\n\c5Digital Compositing\n\c0Keith Kin Yan")
 	}
 	{
 		heading
-		item = qs(0xa8c17f6d)
+		item = qs("\LMusic:")
 	}
 	{
 		heading
-		item = qs(0x5e608444)
+		item = qs("\L''About A Girl\n(Unplugged)''")
 	}
 	{
-		item = qs(0x823208be)
+		item = qs("\LWritten by Kurt Cobain\nCourtesy of Geffen Records\nunder license from\nUniversal Music Enterprises")
 	}
 	{
-		item = qs(0x703f4f45)
+		item = qs("\LPerformed by Nirvana\nPublished by EMI Virgin Songs,Inc.\nAll Rights Reserved.\nUsed by Permission.")
 	}
 	{
 		heading
-		item = qs(0x225dbcb1)
+		item = qs("\L''Aggro''")
 	}
 	{
-		item = qs(0x3994086a)
+		item = qs("\LWritten by Thomas Clarke\nPerformed by The Enemy\nCourtesy of Warner Music UK\nBy arrangement with ")
 	}
 	{
-		item = qs(0xaf6b472c)
+		item = qs("\LWarner Music Group Video Game Licensing\n(P) 2007 Warner Music UK\nPublished by EMI April Music Inc.\nAll Rights Reserved. Used by Permission.")
 	}
 	{
 		heading
-		item = qs(0x0d601396)
+		item = qs("\L''American Woman''")
 	}
 	{
-		item = qs(0x6de232b7)
+		item = qs("\LWritten by Randy Bachman, Burton Cummings\nJim Kale, Garry Peterson\nPerformed by The Guess Who\nPublished by SHILLELAGH MUSIC (BMI)")
 	}
 	{
-		item = qs(0xed37d22f)
+		item = qs("\Ladministered by Bug Music, Inc.\nCourtesy of The RCA Records Label\nBy arrangement with \nSONY BMG MUSIC ENTERTAINMENT")
 	}
 	{
 		heading
-		item = qs(0xc2307b37)
+		item = qs("\L''Antisocial''")
 	}
 	{
-		item = qs(0xd58f69a3)
+		item = qs("\LWritten by Norbert Krief, Bernard Bonvoisin\nPerformed by Trust\nCourtesy of SONY BMG MUSIC ENTERTAINMENT FRANCE, S.A.\nBy arrangement with SONY BMG MUSIC ENTERTAINMENT")
 	}
 	{
-		item = qs(0x0213632b)
+		item = qs("\LPublished by EMI April Music Inc.\nAll Rights Reserved.\nUsed by Permission.\n")
 	}
 	{
 		heading
-		item = qs(0xd2706646)
+		item = qs("\L''Are You Gonna Go My Way''")
 	}
 	{
-		item = qs(0x8fdafc51)
+		item = qs("\LMusic by Lenny Kravitz, Craig Ross\nWords by Lenny Kravitz\nPerformed by Lenny Kravitz\nCourtesy of Virgin Records America, Inc.")
 	}
 	{
-		item = qs(0x9336af27)
+		item = qs("\LUnder license from\nEMI Film & Television Music\nPublished by Miss Bessie Music (ASCAP)\nand Wigged Music (BMI)")
 	}
 	{
 		heading
-		item = qs(0x5be59ddc)
+		item = qs("\L''Assassin''")
 	}
 	{
-		item = qs(0x1d8b3104)
+		item = qs("\LWritten by Matt Bellamy\nPerformed by Muse\nCourtesy of Warner Music UK\nBy arrangement with Warner Music Group Video Game Licensing")
 	}
 	{
-		item = qs(0xb09f04ac)
+		item = qs("\L(P) 2006 A&E Records  (C) 2006 LOOSECHORD LIMITED (NS)\nALL RIGHTS ADMINISTERED BY\nWARNER/CHAPPELL MUSIC PUBLISHING LTD\nALL RIGHTS RESERVED")
 	}
 	{
 		heading
-		item = qs(0xcffeadfc)
+		item = qs("\L''Band on the Run''")
 	}
 	{
-		item = qs(0x85750058)
+		item = qs("\LWritten by Paul McCartney, Linda McCartney\nPerformed by Wings\nCourtesy of MPL Communications, Inc\nPublished by MPL Communications, Inc")
 	}
 	{
 		heading
-		item = qs(0x0ecceb3e)
+		item = qs("\L''Beat It''")
 	}
 	{
-		item = qs(0x5e267e35)
+		item = qs("\LWritten by Michael Jackson\nPerformed by Michael Jackson\nCourtesy of Epic Records\nBy arrangement with SONY BMG MUSIC ENTERTAINMENT")
 	}
 	{
-		item = qs(0x74d4ee9b)
+		item = qs("\L(C) 1982 MIJAC MUSIC (BMI)\nALL RIGHTS ADMINISTERED BY\nWARNER-TAMERLANE PUBLISHING CORP.\nALL RIGHTS RESERVED")
 	}
 	{
 		heading
-		item = qs(0x71b2f566)
+		item = qs("\L''Beautiful Disaster''")
 	}
 	{
-		item = qs(0xfa643021)
+		item = qs("\LWritten by Nick Hexum/311\nPerformed by 311\nCourtesy of\nVolcano Entertainment III, L.L.C.")
 	}
 	{
-		item = qs(0x3b97274f)
+		item = qs("\LBy arrangement with\nSONY BMG MUSIC ENTERTAINMENT\nPublished by\nHydroponic Music")
 	}
 	{
 		heading
-		item = qs(0x91e5b3c2)
+		item = qs("\L''B.Y.O.B.''")
 	}
 	{
-		item = qs(0x5287c1d3)
+		item = qs("\LWritten by Daron Malakian, Serj Tankian, Casey Chmielinski\nPerformed by System Of A Down\nCourtesy of Columbia Records By arrangement with\nSONY BMG MUSIC ENTERTAINMENT Published by Sony ATV")
 	}
 	{
 		heading
-		item = qs(0x90191301)
+		item = qs("\L''Crazy Train''")
 	}
 	{
-		item = qs(0x3af1df8a)
+		item = qs("\LWritten by Bob Daisley, Ozzy Osbourne, Randy Rhoads\nPerformed by Ozzy Osbourne\nCourtesy of Epic Records By arrangement with SONY BMG MUSIC ENTERTAINMENT\nPublished by Blizzard Music Ltd")
 	}
 	{
 		heading
-		item = qs(0x17b0271c)
+		item = qs("\L''Dammit''")
 	}
 	{
-		item = qs(0x2d4e91d6)
+		item = qs("\LWritten by Tom DeLonge, Mark Hoppus, Scott Raynor\nPerformed by blink-182\nCourtesy of Geffen Records under license from Universal Music Enterprises\nPublished by EMI April Music Inc.All Rights Reserved. Used by Permission.")
 	}
 	{
 		heading
-		item = qs(0xb4e9bcc7)
+		item = qs("\L''Demolition Man (Live)''")
 	}
 	{
-		item = qs(0xeb1ce6ff)
+		item = qs("\LWritten by Sting\nPerformed by Sting\nCourtesy of\nA&M Records under license")
 	}
 	{
-		item = qs(0x270bd872)
+		item = qs("\Lfrom Universal Music Enterprises\nPublished by EMI Blackwood Music Inc.\nAll Rights Reserved.\nUsed by Permission.")
 	}
 	{
 		heading
-		item = qs(0x006b2639)
+		item = qs("\L''Do It Again''")
 	}
 	{
-		item = qs(0xb1f76091)
+		item = qs("\LWritten by Walter Carl Becker, Donald Fagen\nPerformed by Steely Dan\nCourtesy of Geffen Records under license from Universal Music Enterprises\n© 1972 Red Giant, Inc. (ASCAP), ")
 	}
 	{
-		item = qs(0xb99a02c7)
+		item = qs("\LAmerican Broadcasting Music, Inc. (ASCAP)\nAll rights on behalf of\nRed Giant, Inc.(ASCAP) and\nAmerican Broadcasting Music, Inc.")
 	}
 	{
-		item = qs(0x689f40eb)
+		item = qs("\L(ASCAP) administered by\nUniversal Music Corp. (ASCAP)\nAll rights reserved.\nUsed by permission")
 	}
 	{
 		heading
-		item = qs(0x2bd1aac8)
+		item = qs("\L''Escuela De Calor''")
 	}
 	{
-		item = qs(0xb19726e0)
+		item = qs("\LWritten by Santiago Auseron Marruedo, Luis Gregorio, Auseron Marruedo, Enrique Sierra Egea, Juan Carlos Velazques\nPerformed by Radio Futura\nCourtesy of SONY BMG MUSIC ENTERTAINMENT SPAIN, S.A.\nBy arrangement with SONY BMG MUSIC ENTERTAINMENT")
 	}
 	{
-		item = qs(0x6a93cd19)
+		item = qs("\L© 1984 Universal Music Publ. MGB Spain S.A. (SGAE)\nNSL Nueva Sociedad Lirica S.L. (SGAE)\nAll rights on behalf of\nUniversal Music Publ. MGB Spain S.A. (SGAE), ")
 	}
 	{
-		item = qs(0x03c486ec)
+		item = qs("\LNSL Nueva Sociedad Lirica S.L. (SGAE)\nadministered by Universal Music - MGB Songs (ASCAP)\nAll rights reserved.\nUsed by permission")
 	}
 	{
 		heading
-		item = qs(0x30431295)
+		item = qs("\L''Everlong''")
 	}
 	{
-		item = qs(0xa49009d8)
+		item = qs("\LWritten by David Grohl\nPerformed by Foo Fighters\nCourtesy of Roswell Records Published by EMI Virgin Songs, Inc.\nAll Rights Reserved. Used by Permission.")
 	}
 	{
 		heading
-		item = qs(0xbdf75e0a)
+		item = qs("\L''Eye of\nthe Tiger''")
 	}
 	{
-		item = qs(0x99ecf233)
+		item = qs("\LWritten by Jim Peterik, Frank Sullivan\nPerformed by Survivor\nCourtesy of Volcano Entertainment III, L.L.C.\nBy arrangement with SONY BMG MUSIC ENTERTAINMENT")
 	}
 	{
-		item = qs(0x24f391e8)
+		item = qs("\LPublished by Sony ATV and (C) 1982 WB MUSIC CORP. (ASCAP),\nEASY ACTION MUSIC (ASCAP),THREE WISE BOYS MUSIC LLC (BMI)\nAND RUDE MUSIC INC (BMI)\nALL RIGHTS ON BEHALF OF ITSELF")
 	}
 	{
-		item = qs(0x5db431c4)
+		item = qs("\LAND EASY ACTION MUSIC\nADMINISTERED BY\nWB MUSIC CORP.\nALL RIGHTS RESERVED")
 	}
 	{
 		heading
-		item = qs(0x95c699e0)
+		item = qs("\L''Feel The Pain''")
 	}
 	{
-		item = qs(0xf5049637)
+		item = qs("\LWritten by J. Mascis, Jr.\nPerformed by Dinosaur Jr.\nCourtesy of Warner Music UK\nBy Arrangement with Warner Music Group Video Game Licensing\n")
 	}
 	{
-		item = qs(0x1798b23a)
+		item = qs("\L(P) 1994 Warner Music UK\nPublished by\nChrysalis Songs\no/b/o Spam As The Bread Music (BMI)")
 	}
 	{
 		heading
-		item = qs(0x3ada917c)
+		item = qs("\L''Float On''")
 	}
 	{
-		item = qs(0x48cc513e)
+		item = qs("\LWritten by Isaac Brock, Dann Gallucci, Eric Judy\nPerformed by Modest Mouse\nCourtesy of Epic Records by arrangement\nwith SONY BMG MUSIC ENTERTAINMENT Published by Sony ATV")
 	}
 	{
 		heading
-		item = qs(0xd5411171)
+		item = qs("\L''Freak on\na Leash''")
 	}
 	{
-		item = qs(0x25718df8)
+		item = qs("\LWritten by Jonathan Davis, Reginald Arvizu\nJames Shaffer, David Silveria, Brian Welch\nPerformed by Korn\nCourtesy of Epic Records")
 	}
 	{
-		item = qs(0x62e56488)
+		item = qs("\LBy arrangement with SONY BMG MUSIC ENTERTAINMENT\n(C) 1998 WB MUSIC CORP. (ASCAP)\nAND GOATHEAD? MUSIC (ASCAP)\nALL RIGHTS ADMINISTERED BY WB MUSIC CORP. ALL RIGHTS RESERVED ")
 	}
 	{
 		heading
-		item = qs(0x3055017f)
+		item = qs("\L''Go Your\nOwn Way''")
 	}
 	{
-		item = qs(0x82b69331)
+		item = qs("\LWritten by Lindsey Buckingham\nPerformed by Fleetwood Mac\nBy arrangement with\nWarner Music Group Video Game Licensing")
 	}
 	{
-		item = qs(0x1a65fd12)
+		item = qs("\LCourtesy of\nWarner Bros Records Inc.\n(P) 1977 Warner Bros. Records Inc.\nPublished by Now Sounds Music")
 	}
 	{
 		heading
-		item = qs(0x6533267f)
+		item = qs("\L''Good God''")
 	}
 	{
-		item = qs(0xe6854537)
+		item = qs("\LWritten by Remon Stotijn, Anouk Teeuwe\nPerformed by Anouk\nCourtesy of EMI Records\nUnder license from EMI Film & Television Music")
 	}
 	{
-		item = qs(0xd87b8833)
+		item = qs("\LPublished by\nEMI Blackwood Music Inc.\nAll Rights Reserved.\nUsed by Permission.")
 	}
 	{
 		heading
-		item = qs(0xf93cc763)
+		item = qs("\L''Hail To The Freaks''")
 	}
 	{
-		item = qs(0x3616ef4c)
+		item = qs("\LWritten by Arnim Teutoburg-Weiss, Peter Baumann Duese\nBernd Kurtzke, Torsten Scholz, Thomas Goetz\nPerformed by Beatsteaks\nCourtesy of Warner Music Germany")
 	}
 	{
-		item = qs(0x51d5ddc3)
+		item = qs("\LBy arrangement with Warner Music Group Video Game Licensing\n(P) 2007 Warner Music Germany\n(C) 2007 ATZE & KEULE MUSIK (NS)\nAND HANSEATIC MUSIKVERLAG GMBH & CO KG (GEMA) ALL RIGHTS RESERVED")
 	}
 	{
 		heading
-		item = qs(0xc8c67726)
+		item = qs("\L''Heartbreaker''")
 	}
 	{
-		item = qs(0x9b989e88)
+		item = qs("\LWritten by Geoff Gill, Clint Wade\nPerformed by Pat Benatar\nCourtesy of Capitol Records, Inc.\nUnder license from EMI Film & Television Music")
 	}
 	{
-		item = qs(0x22e47769)
+		item = qs("\L© 1978 G. G. A. Music Ltd. (PRS) All rights on behalf\nof G. G. A. Music Ltd. (PRS) administered by Universal\nPolyGram Int. Publ., Inc. (ASCAP)\nAll rights reserved.  Used by permission ")
 	}
 	{
 		heading
-		item = qs(0x67db2ef6)
+		item = qs("\L''Hey Man, Nice Shot''")
 	}
 	{
-		item = qs(0xd9aabdc5)
+		item = qs("\LWritten by Richard Patrick\nPerformed by Filter\nCourtesy of Warner Bros. Records\nBy arrangement with")
 	}
 	{
-		item = qs(0x4fffe72b)
+		item = qs("\LWarner Music Group Video Game Licensing\n(P) 1995 Reprise Records\nPublished by EMI Blackwood Music Inc\nAll Rights Reserved. Used by Permission")
 	}
 	{
 		heading
-		item = qs(0xb659c21c)
+		item = qs("\L''Hollywood Nights''")
 	}
 	{
-		item = qs(0x052bf703)
+		item = qs("\LWritten by Bob Seger\nPerformed by Bob Seger  & The Silver Bullet Band\nCourtesy of Capitol Records, Inc.\nUnder license from EMI Film & Television Music")
 	}
 	{
-		item = qs(0x1c776ebe)
+		item = qs("\LPublished by\n Hideout Records &\nDistributors, Inc.,\nGear Publishing")
 	}
 	{
 		heading
-		item = qs(0xcdd6f007)
+		item = qs("\L''Hot For Teacher''")
 	}
 	{
-		item = qs(0xcf6c8aed)
+		item = qs("\LWritten by David Lee Roth, Eddie Van Halen, Alex Van Halen\nPerformed by Van Halen\nCourtesy of Warner Bros. Records Inc.\nBy arrangement with Warner Music Group Video Game Licensing")
 	}
 	{
-		item = qs(0x87078cdb)
+		item = qs("\LALL RIGHTS\nADMINISTERED BY\nWB MUSIC CORP.\nALL RIGHTS RESERVED")
 	}
 	{
 		heading
-		item = qs(0x1ba5a60d)
+		item = qs("\L''Hotel California''")
 	}
 	{
-		item = qs(0x7c534617)
+		item = qs("\LWritten by Don Felder, Glenn Frey, Don Henley\nPerformed by The Eagles\nCourtesy of Elektra Entertainment Group\nBy arrangement with Warner Music Group Video Game Licensing")
 	}
 	{
-		item = qs(0x92997ef9)
+		item = qs("\L(P) 1976 Elektra Entertainment/\nAsylum Records/Nonesuch Records\nPublished by Cass Country Music (BMI),\nRed Cloud Music (BMI), Fingers Music (ASCAP)")
 	}
 	{
 		heading
-		item = qs(0xe0bbc8e6)
+		item = qs("\L''The Joker''")
 	}
 	{
-		item = qs(0x158f98a7)
+		item = qs("\LWritten by Steven H. Miller, Eddie Curtis, Ahmet Ertegun\nPerformed by Steve Miller Band\nCourtesy of Capitol Records, Inc.\nUnder license from EMI Film & Television Music")
 	}
 	{
-		item = qs(0xe0e2c44a)
+		item = qs("\L© 1973 Sailor Music, Warner-Tamerlane Music,\nJim Rooster Music. Administered Worldwide by\nSailor Music All Rights Reserved.\nUsed by Permission")
 	}
 	{
 		heading
-		item = qs(0x9b3befa6)
+		item = qs("\L''Kick Out\nthe Jams''")
 	}
 	{
-		item = qs(0xa8909d86)
+		item = qs("\LWritten by Michael Davis, Wayne Kramer\nFrederick Smith, Dennis Tomich, Robert Derminer\nPerformed by Wayne Kramer, Gilby Clarke,\nJerry Cantrell, Doug Lunn, Eric Gardner")
 	}
 	{
-		item = qs(0x2ada7f8c)
+		item = qs("\LCourtesy of Wayne Kramer\nRob Tyner vocal courtesy of Elektra Entertainment\nBy arrangement with Warner Music Group\nVideo Game Licensing")
 	}
 	{
-		item = qs(0x37c883aa)
+		item = qs("\LPublished by Derminer and (C) 1969 (RENEWED)\nWARNER-TAMERLANE PUBLISHING CORP.\n(BMI) AND UNKNOWN PUBLISHER (NS)\nALL RIGHTS RESERVED")
 	}
 	{
 		heading
-		item = qs(0x8d41994d)
+		item = qs("\L''The Kill\n(Bury Me)''")
 	}
 	{
-		item = qs(0xbf9e348d)
+		item = qs("\LWritten by Jared Leto\nPerformed by 30 Seconds To Mars\nCourtesy of Virgin Records America, Inc.\nUnder license from EMI Film & Television Music")
 	}
 	{
-		item = qs(0x7fdd1d48)
+		item = qs("\L© 2007 Universal Music - Z Tunes (ASCAP)\nApocraphex Music (ASCAP)\nAll rights on behalf of Apocraphex Music (ASCAP)\nadministered by Universal Music- Z Tunes (ASCAP)\nAll rights reserved. Used by permission")
 	}
 	{
 		heading
-		item = qs(0xfa43ffdb)
+		item = qs("\L''L'Via\nL'Viaquez''")
 	}
 	{
-		item = qs(0xaee7d11b)
+		item = qs("\LWritten by Cedric Bixler, Omar Rodriguez\nPerformed by The Mars Volta\nCourtesy of Universal Records under license\nfrom Universal Music Enterprises")
 	}
 	{
-		item = qs(0x05dd1020)
+		item = qs("\LPublished by\nEMI April Music Inc.\nAll Rights Reserved.\nUsed by Permission.")
 	}
 	{
 		heading
-		item = qs(0xe32fe1c4)
+		item = qs("\L''La Bamba''")
 	}
 	{
-		item = qs(0x622a76a4)
+		item = qs("\LAdapted and arranged by Ritchie Valens\nPerformed by Los Lobos\nCourtesy of Slash Records\nLondon-Sire Records Ltd.  By arrangement with")
 	}
 	{
-		item = qs(0xa537b7be)
+		item = qs("\LWarner Music Group Video Game Licensing\n(P) 1987 Slash Records\nPublished by EMI Virgin Songs, Inc. d/b/a\nEMI Longitude Music in the United States and")
 	}
 	{
-		item = qs(0x2fe2b56a)
+		item = qs("\L(C) 1987 WARNER-TAMERLANE\nPUBLISHING CORP. (BMI)\nAll Rights Reserved.\nUsed by Permission. ")
 	}
 	{
 		heading
-		item = qs(0x76273b05)
+		item = qs("\L''Lazy Eye''")
 	}
 	{
-		item = qs(0xbca220bf)
+		item = qs("\LWritten by Brian Aubert, Christopher Guanlao, Joseph Lester, Nicole Monninger\nPerformed by Silversun Pickups\nCourtesy of Dangerbird Records\nPublished Silversun Pickups Music (ASCAP)")
 	}
 	{
 		heading
-		item = qs(0x81b31855)
+		item = qs("\L''Livin' on\na Prayer''")
 	}
 	{
-		item = qs(0xe71c0964)
+		item = qs("\LWritten by Jon Bon Jovi, Desmond Child, Richard Sambora\nPerformed by Bon Jovi\nCourtesy of The Island Def Jam Music Group under license\nfrom Universal Music Enterprises")
 	}
 	{
-		item = qs(0x720e7768)
+		item = qs("\LPublished by Sony ATV, EMI April Music Inc. and\n© 1987 Universal-PolyGram Int. Publ., Inc. (ASCAP)\nBon Jovi Publ. (ASCAP)\nAll rights on behalf of Bon Jovi Publ. (ASCAP)")
 	}
 	{
-		item = qs(0xd8b25a90)
+		item = qs("\Ladministered by\nUniversal-Polygram Int. Publ., Inc. (ASCAP)\nAll Rights Reserved.\nUsed by Permission.")
 	}
 	{
 		heading
-		item = qs(0x8a53c98c)
+		item = qs("\L''Love Me\nTwo Times''")
 	}
 	{
-		item = qs(0x83843095)
+		item = qs("\LWritten by John Densmore, Robbie Krieger,\nRay Manzarek, Jim Morrison\nPerformed by The Doors\nCourtesy of Elektra Entertainment Group")
 	}
 	{
-		item = qs(0xc107105f)
+		item = qs("\LBy arrangement with\nWarner Music Group Video Game Licensing\n(P) 1967 Elektra Entertainment Group\nPublished by Doors Music Co. c/o Wixen Music Publishing, Inc.")
 	}
 	{
 		heading
-		item = qs(0x13690963)
+		item = qs("\L''Love Removal Machine''")
 	}
 	{
-		item = qs(0xdf22e4ce)
+		item = qs("\LWritten by Ian Astbury, William Duffy\nPerformed by The Cult\n(P) 1987 Beggars Banquet Records Limited\n(C) 1987 TAYMINSTER ASTBURY MUS (NS) AND")
 	}
 	{
-		item = qs(0x3822435f)
+		item = qs("\LSCREEN CHOICE LTD\nALL RIGHTS ADMINISTERED BY\nWARNER/CHAPPELL MUSIC LTD\nALL RIGHTS RESERVED")
 	}
 	{
 		heading
-		item = qs(0x9c46a02b)
+		item = qs("\L''Love Spreads''")
 	}
 	{
-		item = qs(0xbee55cfa)
+		item = qs("\LWritten by John Squire\nPerformed by The Stone Roses\nCourtesy of Geffen Records\nunder license from")
 	}
 	{
-		item = qs(0x57001c9c)
+		item = qs("\LUniversal\nMusic Enterprises\nPublished by\nSony ATV")
 	}
 	{
 		heading
-		item = qs(0xf49283c4)
+		item = qs("\L''The Middle''")
 	}
 	{
-		item = qs(0xc1fed5c7)
+		item = qs("\LWritten by James Adkins, Richard Burch,\nZachary Lind, Thomas Linton\nPerformed by Jimmy Eat World\nCourtesy of Interscope Records under license from")
 	}
 	{
-		item = qs(0xa188b6e9)
+		item = qs("\LUniversal Music Enterprises\nPublished by\nFSMGI (IMRO), administered by\nState One Songs America.")
 	}
 	{
 		heading
-		item = qs(0xab6945e0)
+		item = qs("\L''Misery Business''")
 	}
 	{
-		item = qs(0x62ba6cf7)
+		item = qs("\LWritten by Hayley Williams, Josh Farro\nPerformed by Paramore\nCourtesy of Atlantic Recording Corp./ Fueled By Ramen\nBy arrangement with Warner Music Group Video Game Licensing")
 	}
 	{
-		item = qs(0x670731f4)
+		item = qs("\L(P) 2007 Atlantic Recording Group (C) 2007 WB MUSIC CORP. (ASCAP),\n BUT FATHER, I JUST WANT TO SING MUSIC (ASCAP)\nFBR MUSIC (ASCAP) AND JOSH'S MUSIC (ASCAP)\nALL RIGHTS ADMINISTERED BY WB MUSIC CORP. ALL RIGHTS RESERVED")
 	}
 	{
 		heading
-		item = qs(0x49ffff40)
+		item = qs("\L''Monsoon'' a/k/a ''Durch Den Monsun''")
 	}
 	{
-		item = qs(0x3cc697fa)
+		item = qs("\LWritten by Patrick Benzer, Peter Hoffmann, David Jost, Bill Kaulitz, Dave Roth\nPerformed by Tokio Hotel\nCourtesy of Universal Music GmbH (Austria)\nunder license from Universal Music Enterprises")
 	}
 	{
-		item = qs(0x3e39a624)
+		item = qs("\LPublished by EMI Blackwood Music Inc./ Bill Kaulitz/\n© Arabella Musikverlag GmbH (GEMA), Wolffsongs Musikverlag (GEMA)\nAll rights on behalf of Arabella Musikverlag GmbH (GEMA) and\nWolffsongs Musikverlag (GEMA) administered by")
 	}
 	{
-		item = qs(0x7824367d)
+		item = qs("\LUniversal Music - MGB Songs (ASCAP)/ and\nEdition Hotelbar & Capellmeister Musikverlag\nAll Rights Reserved.\nUsed by Permission.")
 	}
 	{
 		heading
-		item = qs(0x8b00d125)
+		item = qs("\L''Mountain Song''")
 	}
 	{
-		item = qs(0x7a11236e)
+		item = qs("\LWritten by Eric Avery, Perry Farrell, Dave Navarro, Stephen Perkins\nPerformed by Jane's Addiction\nCourtesy of Warner Bros. Records Inc.\nBy arrangement with Warner Music Group Video Game Licensing")
 	}
 	{
-		item = qs(0x3c8dd9cc)
+		item = qs("\L(P) 1988 Warner Bros. Records Inc.\n© 1988 I'll Hit You Back Music (BMI), Embryotic Music (BMI), Swizzlestick Music (BMI)\nAll rights on behalf of I'll Hit You Back Music (BMI),\nEmbryotic Music (BMI), and Swizzlestick Music (BMI)")
 	}
 	{
-		item = qs(0x0e39d0a5)
+		item = qs("\Ladministered by Irving Music, Inc. (BMI)\nEMI Blackwood Music Inc.\nAll Rights Reserved.\nUsed by Permission.")
 	}
 	{
 		heading
-		item = qs(0x80471bb3)
+		item = qs("\L''Mr. Crowley''")
 	}
 	{
-		item = qs(0x10ef22a5)
+		item = qs("\LWritten by Bob Daisley, Ozzy Osbourne, Randy Rhoads\nPublished by Blizzard Music Ltd\nPerformed by Ozzy Osbourne\nCourtesy of Epic Records")
 	}
 	{
-		item = qs(0xbf822fdc)
+		item = qs("\LBy arrangement\nwith\nSONY BMG\nMUSIC ENTERTAINMENT\n")
 	}
 	{
 		heading
-		item = qs(0x39128a4c)
+		item = qs("\L''Never Too Late''")
 	}
 	{
-		item = qs(0xfa2528d4)
+		item = qs("\LWritten by Cormac Neeson, Michael Waters, James Heatley, Paul Mahon\nPerformed by The Answer\nCourtesy of J Albert & Son UK Limited\nPublished by J Albert & Son UK Limited")
 	}
 	{
 		heading
-		item = qs(0x6add8dcb)
+		item = qs("\L''No Sleep 'Till Brooklyn''")
 	}
 	{
-		item = qs(0x7bcc5511)
+		item = qs("\LWritten by Michael Diamond, Adam Horovitz, Rick Rubin, Adam Yauch\nPerformed by Beastie Boys\nCourtesy of The Island Def Jam Music Group\nunder license from Universal Music Enterprises")
 	}
 	{
-		item = qs(0x0846214f)
+		item = qs("\LPublished by Sony ATV and © Universal-PolyGram Int. Publ., Inc. (ASCAP),\nBrooklyn Dust Music (ASCAP) All rights on behalf of\nBrooklyn Dust Music (ASCAP) administered by Universal-Polygram Int. Publ., Inc. (ASCAP)\nAll rights reserved. Used by permission")
 	}
 	{
 		heading
-		item = qs(0xd8145db5)
+		item = qs("\L''Nuvole e Lenzuola''")
 	}
 	{
-		item = qs(0x1d77c41d)
+		item = qs("\LWritten by Giuliano Sangiorgi\nPerformed by Negramaro\nCourtesy of Sugar S.r.l.\n© & (p) Sugar S.r.l")
 	}
 	{
 		heading
-		item = qs(0x0f53b9cc)
+		item = qs("\L''Obstacle 1''")
 	}
 	{
-		item = qs(0x49f5e51b)
+		item = qs("\LWritten by Paul Julian Banks, Carlos Andres Dengler,\nSamuel J. Fogarino, Daniel Alexander Kessler\nPerformed by Interpol\nLicensed courtesy of Matador Records")
 	}
 	{
-		item = qs(0xf2440926)
+		item = qs("\L(P) 2002\nMatador Records\nPublished by\nKobalt Music Publishing America, Inc.")
 	}
 	{
 		heading
-		item = qs(0xe65fd49d)
+		item = qs("\L''On The\nRoad Again'' (Live)")
 	}
 	{
-		item = qs(0xad739ec0)
+		item = qs("\LWritten by Willie Nelson\nPerformed by Willie Nelson\nCourtesy of Columbia Records\nBy arrangement with SONY BMG MUSIC ENTERTAINMENT")
 	}
 	{
-		item = qs(0x382772e5)
+		item = qs("\LPublished by EMI Virgin Songs, Inc.\nd/b/a EMI Longitude Music\nAll Rights Reserved.\nUsed by Permission.")
 	}
 	{
 		heading
-		item = qs(0x4c97e31d)
+		item = qs("\L''One Armed Scissor''")
 	}
 	{
-		item = qs(0x9b2d0081)
+		item = qs("\LWritten by Cedric Bixler, Tony Hajjar,\nPaul Hinojos, Omar Rodriguez, Jim Ward\nPerformed by At the Drive-In\nCourtesy of Fearless Records")
 	}
 	{
-		item = qs(0x1bd93b62)
+		item = qs("\LPublished by EMI April Music Inc.\nand Foray Music\nAll Rights Reserved.\nUsed by Permission.")
 	}
 	{
 		heading
-		item = qs(0xfb8dd742)
+		item = qs("\L''The One\nI Love''")
 	}
 	{
-		item = qs(0xedbef372)
+		item = qs("\LWritten by William Berry, Peter Buck, Mike Mills, Michael Stipe\nPerformed by R.E.M.\nCourtesy of Capitol Records, Inc.\nUnder license from EMI Film & Television Music")
 	}
 	{
-		item = qs(0x3fa4f531)
+		item = qs("\L(C) 1987 NIGHT GARDEN MUSIC (BMI)\nALL RIGHTS ON BEHALF OF NIGHT GARDEN MUSIC (BMI)\nADMINISTERED BY WARNER-TAMERLANE PUBLISHING CORP. (BMI)\nALL RIGHTS RESERVED")
 	}
 	{
 		heading
-		item = qs(0x3679d414)
+		item = qs("\L''One Way\nor Another''")
 	}
 	{
-		item = qs(0x272d10c1)
+		item = qs("\LWritten by Nigel Harrison, Debbie Harry\nPerformed by Blondie\nCourtesy of Capitol Records, Inc.\nUnder license from EMI Film & Television Music")
 	}
 	{
-		item = qs(0x2f27ac08)
+		item = qs("\LPublished by\nChrysalis Songs (BMI)\n& Chrysalis Music o/b/o itself\nand Monster Island Music Publishing Corp. (ASCAP)")
 	}
 	{
 		heading
-		item = qs(0x44c8d6fe)
+		item = qs("\L''Our Truth''")
 	}
 	{
-		item = qs(0xc5dff45a)
+		item = qs("\LWritten by Zelati Marco, Cristina Scabbia, Andrea Ferro,\nChristiano Migliore, Biazzi Marco,\nMozzati Cristiano, Waldemar Sorychcta\nPerformed by Lacuna Coil")
 	}
 	{
-		item = qs(0x8edc4192)
+		item = qs("\LCourtesy of\nCentury Media Records\nPublished by\nMagic Arts Publishing (ASCAP)")
 	}
 	{
 		heading
-		item = qs(0x3632dcdd)
+		item = qs("\L''Overkill''")
 	}
 	{
-		item = qs(0x765ef574)
+		item = qs("\LWritten by Ian Kilmister, Eddie Clarke, Philip Taylor\nPerformed by Motorhead\nCourtesy of Belle Vue Sunshine Touring Inc Published by EMI Intertrax Music Inc.\nAll Rights Reserved. Used by Permission")
 	}
 	{
 		heading
-		item = qs(0x48c2d7f1)
+		item = qs("\L''Parabola''")
 	}
 	{
-		item = qs(0x1e40502b)
+		item = qs("\LWritten by Daniel Carey, Justin Chancellor, Adam Jones, Maynard James Keenan\nPerformed by Tool\nCourtesy of Tool Dissectional L.L.C./ Volcano Entertainment III, L.L.C.\nBy arrangement with SONY BMG MUSIC ENTERTAINMENT")
 	}
 	{
-		item = qs(0xe7c8ff41)
+		item = qs("\LPublished by\nEMI Virgin Music, Inc.\nAll Rights Reserved.\nUsed by Permission.")
 	}
 	{
 		heading
-		item = qs(0x2f68d718)
+		item = qs("\L''Pretty Vacant''")
 	}
 	{
-		item = qs(0x74cd16e6)
+		item = qs("\LWritten by Paul Cook, Steve Jones, Glen Matlock, John Lydon\nPerformed by Sex Pistols\n(c)(P) Sex Pistols Residuals.\nControlled exclusively by Sex Pistols Residuals in US/Canada")
 	}
 	{
-		item = qs(0x47f1f50e)
+		item = qs("\Lunder exclusive license outside of US/Canada to Virgin Music Ltd.© 1977\nUniversal Music - Careers (BMI) Three Shadows Music c/o Cherry Lane Music\nPublishing, Warner/Chappell Music Publishing (ASCAP)\nAll rights reserved.  Used by permission")
 	}
 	{
 		heading
-		item = qs(0xfd9bf6fa)
+		item = qs("\L''Prisoner of Society''")
 	}
 	{
-		item = qs(0x9cca4bdd)
+		item = qs("\LWritten by Chris Cheney\nPerformed by The Living End\nCourtesy of Reprise Records\nBy arrangement with Warner Music Group Video Game Licensing")
 	}
 	{
-		item = qs(0x3ec42521)
+		item = qs("\L(P) 1999 Reprise Records\nPublished by EMI April Music Inc.\nAll Rights Reserved.\nUsed by Permission.")
 	}
 	{
 		heading
-		item = qs(0x2cb33326)
+		item = qs("\L''Pull Me Under''")
 	}
 	{
-		item = qs(0x7cc5886c)
+		item = qs("\LWritten by James Labrie, Kevin Moore,\nJohn Myung, John Petrucci, Michael Portnoy\nPerformed by Dream Theater\nCourtesy of Atlantic Recording Corp.")
 	}
 	{
-		item = qs(0xa96a6e4c)
+		item = qs("\LBy arrangement with Warner Music Group\nVideo Game Licensing\n(P) 1992 Atlantic Recording Corp.\n(C) 1992 WB MUSIC CORP. (ASCAP)")
 	}
 	{
-		item = qs(0xff97bc94)
+		item = qs("\L& YTSE JAMS, INC. (ASCAP)\nALL RIGHTS ON BEHALF OF YTSE JAMS, INC. (ASCAP)\nADMINISTERED BY WB MUSIC CORP. (ASCAP)\nALL RIGHTS RESERVED")
 	}
 	{
 		heading
-		item = qs(0xe3655077)
+		item = qs("\L''Purple Haze'' (Live)")
 	}
 	{
-		item = qs(0x06afcf18)
+		item = qs("\LWritten by Jimi Hendrix\nPerformed by Jimi Hendrix\nCourtesy of Geffen Records under license from Universal Music Enterprises\nPublished by Experience Hendrix LLC")
 	}
 	{
 		heading
-		item = qs(0x9df65ebb)
+		item = qs("\L''Ramblin' Man''")
 	}
 	{
-		item = qs(0x64719742)
+		item = qs("\LWritten by Dickey Betts\nPerformed by The Allman Brothers Band\nCourtesy of The Island Def Jam Music Group under\nlicense from Universal Music Enterprises")
 	}
 	{
-		item = qs(0x5308eaec)
+		item = qs("\L(C) 1973 (RENEWED) UNICHAPPELL MUSIC INC. (BMI)AND FORREST\nRICHARD BETTS MUSIC (BMI)\nALL RIGHTS ADMINISTERED\nBY UNICHAPPELL MUSIC INC. ALL RIGHTS RESERVED")
 	}
 	{
 		heading
-		item = qs(0x1da55801)
+		item = qs("\L''Rebel Yell''")
 	}
 	{
-		item = qs(0x9b9ed50e)
+		item = qs("\LWritten by Billy Idol, Steve Stevens\nPerformed by Billy Idol\nCourtesy of  Capitol Records, Inc.\nUnder license from EMI Film & Television Music")
 	}
 	{
-		item = qs(0x98b60d22)
+		item = qs("\LPublished by Chrysalis Music o/b/o itself\nand Boneidol Music (ASCAP) and(C) 1983 WB MUSIC CORP. (ASCAP),\nBONEIDOL MUSIC (ASCAP) AND RARE BLUE MUSIC, INC. (ASCAP)\nALL RIGHTS RESERVED")
 	}
 	{
 		heading
-		item = qs(0x67d14ce9)
+		item = qs("\L''Re-Education\nThrough Labor''")
 	}
 	{
-		item = qs(0x7b560376)
+		item = qs("\LWritten by Joe Principe, Tim McIlrath,\nBrandon Barnes, Zach Blair\nPerformed by Rise Against\nCourtesy of Geffen Records")
 	}
 	{
-		item = qs(0x31134e9f)
+		item = qs("\Lunder license from\nUniversal Music Enterprises\nPublished by\nSony ATV")
 	}
 	{
 		heading
-		item = qs(0xd2ab3d6d)
+		item = qs("\L''Rooftops (A Liberation Broadcast)''")
 	}
 	{
-		item = qs(0x44e92820)
+		item = qs("\LWritten by Lee Gaze, Michael Lewis,\nRichard Oliver, Stuart Richardson, Ian Watkins\nPerformed by Lostprophets\nCourtesy of Visible Noise Limited/Columbia Records")
 	}
 	{
-		item = qs(0xac033259)
+		item = qs("\LBy arrangement with SONY BMG MUSIC ENTERTAINMENT\nPublished by EMI April Music Inc.\nAll Rights Reserved.\nUsed by Permission.")
 	}
 	{
 		heading
-		item = qs(0xaa57c8df)
+		item = qs("\L''Santeria''")
 	}
 	{
-		item = qs(0xa97bfaf3)
+		item = qs("\LWritten by Floyd Gaugh, Bradley Nowell, Eric Wilson\nPerformed by Sublime\nCourtesy of Geffen Records under license from\nUniversal Music Enterprises ©1996 Music Corp. Of America, Inc. (BMI)")
 	}
 	{
-		item = qs(0x159dba1f)
+		item = qs("\LGasoline Alley Music (BMI),\nLou Dog Publ. (BMI), Floyd I. Gaugh, IIII Publ. (BMI),\nEric John Wilson Publ.\nAll rights on behalf of Music Corp. Of America, Inc. (BMI)")
 	}
 	{
-		item = qs(0xb98ae411)
+		item = qs("\LGasoline Alley Music (BMI)\nLou Dog Publ. (BMI), Floyd I. Gaugh, IIII Publ. (BMI), Eric John Wilson Publ.\nadministered by Songs Of Universal, Inc. (BMI)\nAll rights reserved. Used by permission")
 	}
 	{
 		heading
-		item = qs(0xca1c738a)
+		item = qs("\L''Satch Boogie''")
 	}
 	{
-		item = qs(0xa7b6c592)
+		item = qs("\LWritten by Joe Satriani\n© 1987 Published by Strange Beautiful Music (ASCAP)\nPerformed by Joe Satriani\nCourtesy of Epic Records")
 	}
 	{
-		item = qs(0x4c762b36)
+		item = qs("\LBy arrangement\nwith SONY BMG\nMUSIC ENTERTAINMENT\n")
 	}
 	{
 		heading
-		item = qs(0xb5ea8c80)
+		item = qs("\L''Schism''")
 	}
 	{
-		item = qs(0x85bced9f)
+		item = qs("\LWritten by Daniel Carey, Justin Chancellor,\nAdam Jones, Maynard James Keenan\nPerformed by Tool\nCourtesy of Tool Dissectional L.L.C./ Volcano Entertainment III, L.L.C.")
 	}
 	{
-		item = qs(0x7a877104)
+		item = qs("\LBy arrangement with SONY BMG MUSIC ENTERTAINMENT\nPublished by EMI Virgin Music, Inc.\nAll Rights Reserved.\nUsed by Permission.")
 	}
 	{
 		heading
-		item = qs(0xaaf5bc61)
+		item = qs("\L''Scream Aim Fire''")
 	}
 	{
-		item = qs(0x83f64531)
+		item = qs("\LWritten by Jason James, Michael Paget,\nMichael Thomas, Matthew Tuck\nPerformed by Bullet for My Valentine\nCourtesy of 20-20 Entertainment, L.L.C./Jive Records")
 	}
 	{
-		item = qs(0xb0cc2f8b)
+		item = qs("\LBy arrangement with\nSONY BMG MUSIC ENTERTAINMENT\nPublished by EMI Blackwood Music Inc.\nAll Rights Reserved. Used by Permission.")
 	}
 	{
 		heading
-		item = qs(0xff86a985)
+		item = qs("\L''Shiver''")
 	}
 	{
-		item = qs(0x0b82d2c1)
+		item = qs("\LWritten by Guy Berryman, Jon Buckland,\nWill Champion, Chris Martin\nPerformed by Coldplay\nCourtesy of EMI Records")
 	}
 	{
-		item = qs(0x75d8d670)
+		item = qs("\LUnder license from EMI Film & Television Music\n© Universal Music Publ MGB Ltd. (PRS)\nAll rights on behalf of\nUniversal Music Publ MGB Ltd.")
 	}
 	{
-		item = qs(0x404ddc87)
+		item = qs("\L(PRS) administered by Universal Music\n- MGB Songs (ASCAP)\nAll rights reserved. \nUsed by permission")
 	}
 	{
 		heading
-		item = qs(0xba746163)
+		item = qs("\L''Some Might Say''")
 	}
 	{
-		item = qs(0x1c85acc6)
+		item = qs("\LWritten by Noel Gallagher\nPerformed by Oasis\nCourtesy of SONY BMG\nMUSIC ENTERTAINMENT UK/Epic Records")
 	}
 	{
-		item = qs(0x4afa294e)
+		item = qs("\LBy arrangement with SONY BMG\nMUSIC ENTERTAINMENT\nPublished by\nSony ATV")
 	}
 	{
 		heading
-		item = qs(0xc88a6235)
+		item = qs("\L''Soul Doubt''")
 	}
 	{
-		item = qs(0x959b4d49)
+		item = qs("\LWritten by Michael Burkett\nPerformed by NOFX\nCourtesy of Epitaph Records, a California Corporation\n© 1992 Westbeach Music (BMI)")
 	}
 	{
-		item = qs(0x63f72a99)
+		item = qs("\LAll rights on behalf of Westbeach Music (BMI)\nadministered by\nSongs Of Universal, Inc. (BMI)\nAll rights reserved. Used by permission")
 	}
 	{
 		heading
-		item = qs(0xaeca064a)
+		item = qs("\L''Spiderwebs''")
 	}
 	{
-		item = qs(0x81ce2313)
+		item = qs("\LWritten by Gwen Stefani, Tony Kanal\nPerformed by No Doubt\nCourtesy of Interscope Records under license\nfrom Universal Music Enterprises")
 	}
 	{
-		item = qs(0x0be60cd3)
+		item = qs("\L© 1995 Universal Music Corp. (ASCAP),\nKnock Yourself Out Music (ASCAP)\nAll rights on behalf of\nKnock Yourself Out Music (ASCAP)")
 	}
 	{
-		item = qs(0x9f38ef4a)
+		item = qs("\Ladministered by\nUniversal Music Corp. (ASCAP)\nAll rights reserved.\nUsed by permission")
 	}
 	{
 		heading
-		item = qs(0x83bf5478)
+		item = qs("\L''Stillborn''")
 	}
 	{
-		item = qs(0x9798a3fc)
+		item = qs("\LWritten by Zachary P. Wylde\nPerformed by Black Label Society\nCourtesy of Black Label Society\nPublished by Bellbottoms and Beer Music (BMI),")
 	}
 	{
-		item = qs(0x50e79053)
+		item = qs("\Ladministered by Reach Global Songs,\na division of Reach Global, Inc.\nUsed by permission.\nAll rights reserved.")
 	}
 	{
 		heading
-		item = qs(0xed53474d)
+		item = qs("\L''Stranglehold''")
 	}
 	{
-		item = qs(0x24fe6e86)
+		item = qs("\LWritten by Ted Nugent\nPerformed by Ted Nugent\nCourtesy of Magicland Music\nPublished by Magicland Music")
 	}
 	{
 		heading
-		item = qs(0x014d8eab)
+		item = qs("\L''Sweet Home Alabama'' (Live)")
 	}
 	{
-		item = qs(0x254d7e81)
+		item = qs("\LWritten by Edward C. King, Gary Rossington, Ronnie Van Zant\nPerformed by Lynyrd Skynyrd\nCourtesy of Geffen Records under license from Universal Music Enterprises\n© 1974 Songs Of Universal, Inc. (BMI), Longitude Music Co. (BMI),")
 	}
 	{
-		item = qs(0x881fe967)
+		item = qs("\LUniversal Music Corp. (ASCAP),\nFull Keel Music Co.(ASCAP)\nAll rights on behalf of Longitude Music Co. (BMI)\nadministered by Songs Of Universal, Inc. (BMI)")
 	}
 	{
-		item = qs(0x9d38317e)
+		item = qs("\LAll rights on behalf of Full Keel Music Co. (ASCAP)\nadministered by and Universal Music Corp. (ASCAP)\nAll rights reserved.\nUsed by permission")
 	}
 	{
 		heading
-		item = qs(0x0accf403)
+		item = qs("\L''Today''")
 	}
 	{
-		item = qs(0x0899727a)
+		item = qs("\LWritten by William Corgan\nPerformed by The Smashing Pumpkins\nCourtesy of\nVirgin Records America, Inc.")
 	}
 	{
-		item = qs(0xbc294a29)
+		item = qs("\LUnder license from\nEMI Film &\nTelevision Music\n©1993 Cinderful Music (BMI)")
 	}
 	{
 		heading
-		item = qs(0x09fecc8c)
+		item = qs("\L''Too Much,\nToo Young, Too Fast''")
 	}
 	{
-		item = qs(0x19c26512)
+		item = qs("\LWritten by Joel O'Keeffe\nPerformed by Airbourne\n(P) 2006 Roadrunner Records, Inc &\nEMI Music Australia Pty Limited (Australia and New Zealand)")
 	}
 	{
-		item = qs(0x2757da63)
+		item = qs("\LLicensed courtesy of\nRoadrunner Records, Inc.\nand EMI Music Australia Pty\nPublished by Mushroom Music")
 	}
 	{
 		heading
-		item = qs(0xe6a35ee4)
+		item = qs("\L''Toy Boy''")
 	}
 	{
-		item = qs(0xf2b5549e)
+		item = qs("\LWritten by Emmanuel Barichasse,\nArnaud Bordas, Francois Ernie,\nJose Fontao, Romain Della Valle\nPerformed by Stuck in the Sound")
 	}
 	{
-		item = qs(0xf937268c)
+		item = qs("\LCourtesy of\nDiscograph\nPublished by\nDiscograph")
 	}
 	{
 		heading
-		item = qs(0x113995e1)
+		item = qs("\L''Trapped Under Ice''")
 	}
 	{
-		item = qs(0x7e20828b)
+		item = qs("\LWritten by James Hetfield, Kirk Hammett, Lars Ulrich\nPerformed by Metallica\nCourtesy of We're Only In It For The Music and\nElektra Entertainment Group")
 	}
 	{
-		item = qs(0x76a8202d)
+		item = qs("\LBy arrangement with\nWarner Music Group Video Game Licensing\n(P) 1988 E/M Ventures\n© 1985 Creeping Death Music (ASCAP)")
 	}
 	{
 		heading
-		item = qs(0xf3668474)
+		item = qs("\L''Up Around the Bend''")
 	}
 	{
-		item = qs(0x6a42e112)
+		item = qs("\LWritten by John Fogerty\nPerformed by Creedence Clearwater Revival\nCourtesy of Concord Music Group, Inc. o/b/o Jondora Music\nPublished by Concord Music Group, Inc.")
 	}
 	{
 		heading
-		item = qs(0xec585c58)
+		item = qs("\L''Vicarious''")
 	}
 	{
-		item = qs(0xd3a8f21f)
+		item = qs("\LWritten by Daniel Carey, Justin Chancellor,\nAdam Jones, Maynard James Keenan\nPerformed by Tool\nCourtesy of Tool Dissectional, L.L.C./ Volcano Entertainment III, L.L.C.")
 	}
 	{
-		item = qs(0x1d94e2d6)
+		item = qs("\LBy arrangement with\nSONY BMG MUSIC ENTERTAINMENT\nPublished by EMI Virgin Music, Inc.\nAll Rights Reserved. Used by Permission.")
 	}
 	{
 		heading
-		item = qs(0x977f36cc)
+		item = qs("\L''Vinternoll2''")
 	}
 	{
-		item = qs(0x44be4299)
+		item = qs("\LWritten by Joakim Herbert Berg, Harri Kalervo Manty,\nMarkus Mikael Mustonen, Sami Petteri Sirvio, Martin Harry Skold\nPerformed by Kent\nCourtesy of SONY BMG MUSIC ENTERTAINMENT SWEDEN AB")
 	}
 	{
-		item = qs(0xc2bb4154)
+		item = qs("\LBy arrangement with SONY BMG MUSIC ENTERTAINMENT\n© Cannoli Songs (STIM) All rights on behalf of Cannoli Songs (STIM)\nadministered by Universal Music - MGB Songs (ASCAP)\nAll rights reserved.  Used by permission ")
 	}
 	{
 		heading
-		item = qs(0xc0ca750b)
+		item = qs("\L''Weapon of Choice''")
 	}
 	{
-		item = qs(0xf38f57de)
+		item = qs("\LWritten by Robert Been, Peter Hayes\nPerformed by Black Rebel Motorcycle Club\nCourtesy of The RCA Records Label and\nUniversal Music Group Ltd")
 	}
 	{
-		item = qs(0x36d0c4cb)
+		item = qs("\LBy arrangement with\nSONY BMG MUSIC ENTERTAINMENT\nPublished by Chrysalis Music\no/b/o itself and BRMC Music (ASCAP).")
 	}
 	{
 		heading
-		item = qs(0x4af942d8)
+		item = qs("\L''What I've Done''")
 	}
 	{
-		item = qs(0x8f06536f)
+		item = qs("\LWritten by Chester Bennington, Robert Bourdon,\nBrad Delson, David Farrell,\nJoseph Hahn, Mike Shinoda\nPerformed by Linkin Park")
 	}
 	{
-		item = qs(0x5cce0689)
+		item = qs("\LCourtesy of Warner Bros. Records Inc.\nBy arrangement with Warner Music Group Video Game Licensing\n(P) 2007 Warner Bros. Records Inc.\n© 2007 Universal Music - Z Songs (BMI)/ ")
 	}
 	{
-		item = qs(0x0c4fa5f7)
+		item = qs("\LChesterchaz Publ.(BMI)/ Rob Bourdon Music (BMI)/\n Nondisclosure Agreement Music (BMI)/ Kenji Kobayashi Music (BMI)/\n Pancakey Cakes Music (BMI)/ Big Bad Mr. Hahn Music (BMI)\nElektra Entertainment Group")
 	}
 	{
-		item = qs(0xf0cbf69e)
+		item = qs("\LBy arrangement with\nWarner Music Group Video Game Licensing\n (P) 1988 E/M Ventures\n© 1985 Creeping Death Music (ASCAP)")
 	}
 	{
 		heading
-		item = qs(0xf35fa855)
+		item = qs("\L''The Wind\nCries Mary''")
 	}
 	{
-		item = qs(0x9920205e)
+		item = qs("\LWritten by Jimi Hendrix\nPerformed by Jimi Hendrix\nCourtesy of\nGeffen Records")
 	}
 	{
-		item = qs(0x0fd1b166)
+		item = qs("\Lunder license from\nUniversal Music Enterprises\nPublished by\nExperience Hendrix LLC")
 	}
 	{
 		heading
-		item = qs(0x6dd915e3)
+		item = qs("\L''You're Gonna\nSay Yeah!''")
 	}
 	{
-		item = qs(0x3022122e)
+		item = qs("\LWritten and Composed by Oliver Jourdan,\nWilfried Jourdan,Guillaume Le Guen,\nCyrille Sudraud, Franck Pompidor\nPerformed by HushPuppies")
 	}
 	{
-		item = qs(0x6fd36845)
+		item = qs("\LCourtesy of\nDiamondtraxx\nPublished by\nChut Le Caniche")
 	}
 ]

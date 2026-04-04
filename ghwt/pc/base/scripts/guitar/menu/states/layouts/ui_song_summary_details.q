@@ -2,21 +2,21 @@ song_summary_details_row_count = 0
 
 script ui_create_song_summary_details \{for_transition = 0}
 	change \{song_summary_details_row_count = 0}
-	gamemode_getnumplayersshown
+	GameMode_GetNumPlayersShown
 	trim_boss_from_num_players_show
-	gamemode_gettype
+	GameMode_GetType
 	song_details_set_mins_and_maxes
 	gig_details = ($gig_detailed_stats)
-	getarraysize <gig_details>
+	GetArraySize <gig_details>
 	if (<array_size> = 0)
-		scriptassert \{qs(0x6b7fb6d2)}
+		ScriptAssert \{qs("\LThere are no details in the global gig_detailed_stats")}
 	endif
 	get_song_title song = ((<gig_details> [0] [0]).song)
 	get_all_exclusive_devices
-	createscreenelement {
+	CreateScreenElement {
 		parent = root_window
 		id = my_detailed_id
-		type = descinterface
+		type = DescInterface
 		desc = 'song_summary_details'
 		pos = {(-1200.0, 0.0) relative}
 		event_handlers = [
@@ -25,23 +25,23 @@ script ui_create_song_summary_details \{for_transition = 0}
 		song_title_text = <song_title>
 		exclusive_device = <exclusive_device>
 	}
-	if my_detailed_id :desc_resolvealias \{name = alias_song_summary_details_list
+	if my_detailed_id :Desc_ResolveAlias \{name = alias_song_summary_details_list
 			param = details_list_alias}
 	else
-		scriptassert \{qs(0xf31b08af)}
+		ScriptAssert \{qs("\LProblem resolving alias in detailed stats")}
 	endif
 	p = 1
 	begin
-	getplayerinfo <p> part
-	getplayerinfo <p> difficulty
+	GetPlayerInfo <p> part
+	GetPlayerInfo <p> difficulty
 	switch (<part>)
 		case guitar
 		icon_texture = mixer_icon_guitar
-		case bass
+		case Bass
 		icon_texture = mixer_icon_bass
 		case drum
 		icon_texture = mixer_icon_drums
-		case vocals
+		case Vocals
 		icon_texture = mixer_icon_vox
 	endswitch
 	switch (<difficulty>)
@@ -56,135 +56,135 @@ script ui_create_song_summary_details \{for_transition = 0}
 		case expert
 		diff_texture = icon_difficulty_expert
 	endswitch
-	formattext checksumname = alpha_check 'icons_p%d_alpha' d = <p>
-	formattext checksumname = inst_check 'instrument_p%d_texture' d = <p>
-	formattext checksumname = diff_check 'DIFFICULTY_p%d_texture' d = <p>
+	FormatText checksumname = alpha_check 'icons_p%d_alpha' d = <p>
+	FormatText checksumname = inst_check 'instrument_p%d_texture' d = <p>
+	FormatText checksumname = diff_check 'DIFFICULTY_p%d_texture' d = <p>
 	my_struct = {}
-	addparam structure_name = my_struct name = <alpha_check> value = 1
-	addparam structure_name = my_struct name = <inst_check> value = <icon_texture>
-	addparam structure_name = my_struct name = <diff_check> value = <diff_texture>
-	<details_list_alias> :se_setprops <my_struct>
+	AddParam structure_name = my_struct name = <alpha_check> value = 1
+	AddParam structure_name = my_struct name = <inst_check> value = <icon_texture>
+	AddParam structure_name = my_struct name = <diff_check> value = <diff_texture>
+	<details_list_alias> :SE_SetProps <my_struct>
 	p = (<p> + 1)
 	repeat <num_players_shown>
 	song_details_create_scrolling_menu for_transition = <for_transition>
 	vocalist = 0
 	non_vocalist = 0
-	getarraysize (<gig_details> [0])
+	GetArraySize (<gig_details> [0])
 	num_songs = <array_size>
 	song_indx = 0
 	begin
 	get_song_title song = ((<gig_details> [0] [<song_indx>]).song)
-	createscreenelement \{parent = list_menu
-		type = descinterface
-		autosizedims = true
+	CreateScreenElement \{parent = list_menu
+		type = DescInterface
+		autoSizeDims = true
 		desc = 'song_summary_details_song_header'}
 	change song_summary_details_row_count = (($song_summary_details_row_count) + 3)
 	i = 1
 	begin
-	getplayerinfo <i> part
-	getplayerinfo <i> difficulty
-	if (<part> = vocals)
+	GetPlayerInfo <i> part
+	GetPlayerInfo <i> difficulty
+	if (<part> = Vocals)
 		vocalist = <i>
 	elseif (<non_vocalist> = 0)
 		non_vocalist = <i>
 	endif
 	player_data = (<gig_details> [(<i> -1)] [<song_indx>])
-	if (<part> = vocals)
+	if (<part> = Vocals)
 		vocal_phrase_max_qual = (<player_data>.vocal_phrase_max_qual)
 		vocal_phrase_quality = (<player_data>.vocal_phrase_quality)
 		vocal_phrase_pct = 0
 		if (<vocal_phrase_max_qual> > 0)
 			vocal_phrase_pct = (((<vocal_phrase_quality>) / <vocal_phrase_max_qual>) * 100.0)
-			formattext textname = notes_hit_entry qs(0xa1b58a0a) p = <vocal_phrase_pct> decimalplaces = 0
+			FormatText TextName = notes_hit_entry qs("\L%p/100") p = <vocal_phrase_pct> DecimalPlaces = 0
 		else
-			<notes_hit_entry> = qs(0x4c1271a9)
+			<notes_hit_entry> = qs("NA")
 		endif
-		<sp_entry> = qs(0x4c1271a9)
+		<sp_entry> = qs("NA")
 	else
 		if (<type> = battle || <type> = training)
-			<sp_entry> = qs(0x4c1271a9)
+			<sp_entry> = qs("NA")
 		else
-			formattext textname = sp_entry qs(0x2ba0d6d6) g = (<player_data>.sp_phrases_hit) p = (<player_data>.sp_phrases_total)
+			FormatText TextName = sp_entry qs("\L%g/%p") g = (<player_data>.sp_phrases_hit) p = (<player_data>.sp_phrases_total)
 		endif
 		if (<type> = training)
-			formattext textname = notes_hit_entry qs(0x2ba0d6d6) g = (<player_data>.notes_hit) p = (<player_data>.total_notes)
+			FormatText TextName = notes_hit_entry qs("\L%g/%p") g = (<player_data>.notes_hit) p = (<player_data>.total_notes)
 		else
-			formattext textname = notes_hit_entry qs(0x2ba0d6d6) g = (<player_data>.notes_hit) p = (<player_data>.max_notes)
+			FormatText TextName = notes_hit_entry qs("\L%g/%p") g = (<player_data>.notes_hit) p = (<player_data>.max_notes)
 		endif
 	endif
-	formattext textname = mult_entry qs(0x1ad7e10a) p = (<player_data>.avg_multiplier)
-	formattext textname = score_entry qs(0x5d9eae64) g = (<player_data>.score)
-	formattext checksumname = notes_hit_cs 'notes_hit_entry_text_p%j' j = <i>
-	formattext checksumname = sp_phrases_cs 'sp_phrases_entry_text_p%j' j = <i>
-	formattext checksumname = avg_mult_cs 'avg_multiplier_entry_text_p%j' j = <i>
-	formattext checksumname = score_cs 'score_entry_text_p%j' j = <i>
-	addparam name = <score_cs> structure_name = header_struct value = <score_entry>
-	addparam name = <notes_hit_cs> structure_name = header_struct value = <notes_hit_entry>
-	addparam name = <sp_phrases_cs> structure_name = header_struct value = <sp_entry>
+	FormatText TextName = mult_entry qs("\L%px") p = (<player_data>.avg_multiplier)
+	FormatText TextName = score_entry qs("\L%g") g = (<player_data>.score)
+	FormatText checksumname = notes_hit_cs 'notes_hit_entry_text_p%j' j = <i>
+	FormatText checksumname = sp_phrases_cs 'sp_phrases_entry_text_p%j' j = <i>
+	FormatText checksumname = avg_mult_cs 'avg_multiplier_entry_text_p%j' j = <i>
+	FormatText checksumname = score_cs 'score_entry_text_p%j' j = <i>
+	AddParam name = <score_cs> structure_name = header_struct value = <score_entry>
+	AddParam name = <notes_hit_cs> structure_name = header_struct value = <notes_hit_entry>
+	AddParam name = <sp_phrases_cs> structure_name = header_struct value = <sp_entry>
 	if NOT (<type> = training || <type> = battle)
-		addparam name = <avg_mult_cs> structure_name = header_struct value = <mult_entry>
+		AddParam name = <avg_mult_cs> structure_name = header_struct value = <mult_entry>
 	endif
-	<id> :se_setprops <header_struct>
+	<id> :SE_SetProps <header_struct>
 	i = (<i> + 1)
 	repeat (<num_players_shown>)
 	i = (<num_players_shown> + 1)
 	if NOT (4 = <num_players_shown>)
 		begin
-		formattext checksumname = entry_alpha 'entries_p%i_alpha' i = <i>
-		addparam name = <entry_alpha> structure_name = entry_alpha_struct value = 0.0
-		<id> :se_setprops <entry_alpha_struct>
+		FormatText checksumname = entry_alpha 'entries_p%i_alpha' i = <i>
+		AddParam name = <entry_alpha> structure_name = entry_alpha_struct value = 0.0
+		<id> :SE_SetProps <entry_alpha_struct>
 		i = (<i> + 1)
 		repeat (4 - <num_players_shown>)
 	endif
 	if NOT (<type> = training || <type> = battle)
 		song_details_add_space_to_table
 	else
-		<id> :se_setprops {avg_multiplier_alpha = 0}
+		<id> :SE_SetProps {avg_multiplier_alpha = 0}
 	endif
 	if (<non_vocalist> > 0)
 		<sections> = ((<gig_details> [(<non_vocalist> -1)] [<song_indx>]).section_names)
-		getarraysize <sections>
+		GetArraySize <sections>
 		i = 0
 		begin
-		createscreenelement {
+		CreateScreenElement {
 			parent = list_menu
-			type = descinterface
-			autosizedims = true
+			type = DescInterface
+			autoSizeDims = true
 			desc = 'song_summary_details_list_entry'
 			verse_text = (<sections> [<i>])
-			percent_p1_text = qs(0x877d65b8)
-			percent_p2_text = qs(0x877d65b8)
-			percent_p3_text = qs(0x877d65b8)
-			percent_p4_text = qs(0x877d65b8)
+			percent_p1_text = qs("---")
+			percent_p2_text = qs("---")
+			percent_p3_text = qs("---")
+			percent_p4_text = qs("---")
 		}
 		change song_summary_details_row_count = (($song_summary_details_row_count) + 1)
 		player = 1
 		begin
-		getplayerinfo <player> part
-		if (<part> = vocals)
+		GetPlayerInfo <player> part
+		if (<part> = Vocals)
 		else
 			section_hits = (((<gig_details> [(<player> -1)] [<song_indx>]).detailed_stats) [<i>] * 1.0)
 			section_possibles = (((<gig_details> [(<player> -1)] [<song_indx>]).detailed_stats_max) [<i>] * 1.0)
 			section_hits = (<section_hits> * 1.0)
 			my_struct = {}
 			if (<section_possibles> = 0)
-				formattext \{textname = player_percent
-					qs(0x72675d42)}
-				formattext checksumname = field_name 'percent_p%d_text' d = <player>
-				addparam name = <field_name> structure_name = my_struct value = <player_percent>
-				<id> :se_setprops <my_struct>
+				FormatText \{TextName = player_percent
+					qs("\LNA")}
+				FormatText checksumname = field_name 'percent_p%d_text' d = <player>
+				AddParam name = <field_name> structure_name = my_struct value = <player_percent>
+				<id> :SE_SetProps <my_struct>
 			else
 				percent = (((<section_hits> * 1.0) / <section_possibles>) * 100)
-				mathfloor <percent>
-				casttointeger \{percent}
+				MathFloor <percent>
+				CastToInteger \{percent}
 				my_color_interp val = <floor> player = <player>
-				formattext textname = player_percent qs(0x76b3fda7) d = <floor>
-				player_percent = (<player_percent> + qs(0x0c40a1b2))
-				formattext checksumname = field_name 'percent_p%d_text' d = <player>
-				formattext checksumname = field_name_rgba 'percent_p%d_rgba' d = <player>
-				addparam name = <field_name> structure_name = my_struct value = <player_percent>
-				addparam name = <field_name_rgba> structure_name = my_struct value = <color>
-				<id> :se_setprops <my_struct>
+				FormatText TextName = player_percent qs("\L%d") d = <floor>
+				player_percent = (<player_percent> + qs("\L%"))
+				FormatText checksumname = field_name 'percent_p%d_text' d = <player>
+				FormatText checksumname = field_name_rgba 'percent_p%d_rgba' d = <player>
+				AddParam name = <field_name> structure_name = my_struct value = <player_percent>
+				AddParam name = <field_name_rgba> structure_name = my_struct value = <color>
+				<id> :SE_SetProps <my_struct>
 			endif
 		endif
 		player = (<player> + 1)
@@ -192,9 +192,9 @@ script ui_create_song_summary_details \{for_transition = 0}
 		player = (<num_players_shown> + 1)
 		if NOT (4 = <num_players_shown>)
 			begin
-			formattext checksumname = entry_alpha 'percent_P%i_alpha' i = <player>
-			addparam name = <entry_alpha> structure_name = entry_alpha_struct value = 0.0
-			<id> :se_setprops <entry_alpha_struct>
+			FormatText checksumname = entry_alpha 'percent_P%i_alpha' i = <player>
+			AddParam name = <entry_alpha> structure_name = entry_alpha_struct value = 0.0
+			<id> :SE_SetProps <entry_alpha_struct>
 			player = (<player> + 1)
 			repeat (4 - <num_players_shown>)
 		endif
@@ -205,56 +205,56 @@ script ui_create_song_summary_details \{for_transition = 0}
 	if NOT (<vocalist> = 0)
 		vocal_sections = ((<gig_details> [(<vocalist> -1)] [<song_indx>]).section_names)
 		i = 0
-		getarraysize <vocal_sections>
+		GetArraySize <vocal_sections>
 		if (<array_size> > 0)
 			begin
-			shortenuistring {
+			ShortenUIString {
 				ui_string = (<vocal_sections> [<i>])
 				max_len = 24
 			}
-			if localizedstringequals a = (<vocal_sections> [<i>]) b = $vocal_marker_freeform
+			if LocalizedStringEquals a = (<vocal_sections> [<i>]) b = $vocal_marker_freeform
 				<verse_rgba> = $vocal_marker_freeform_rgba
 			else
-				removeparameter \{verse_rgba}
+				RemoveParameter \{verse_rgba}
 			endif
-			createscreenelement {
+			CreateScreenElement {
 				parent = list_menu
-				type = descinterface
-				autosizedims = true
+				type = DescInterface
+				autoSizeDims = true
 				desc = 'song_summary_details_list_entry'
 				verse_text = <short_ui_string>
 				verse_rgba = <verse_rgba>
-				percent_p1_text = qs(0x877d65b8)
-				percent_p2_text = qs(0x877d65b8)
-				percent_p3_text = qs(0x877d65b8)
-				percent_p4_text = qs(0x877d65b8)
+				percent_p1_text = qs("---")
+				percent_p2_text = qs("---")
+				percent_p3_text = qs("---")
+				percent_p4_text = qs("---")
 			}
 			change song_summary_details_row_count = (($song_summary_details_row_count) + 1)
 			player_index = 1
 			begin
-			getplayerinfo <player_index> part
-			if (<part> = vocals)
+			GetPlayerInfo <player_index> part
+			if (<part> = Vocals)
 				section_hits = (((<gig_details> [(<player_index> -1)] [<song_indx>]).detailed_stats) [<i>] * 1.0)
 				section_possibles = (((<gig_details> [(<player_index> -1)] [<song_indx>]).detailed_stats_max) [<i>] * 1.0)
 				my_struct = {}
 				if (<section_possibles> = 0)
-					formattext \{textname = player_percent
-						qs(0x72675d42)}
-					formattext checksumname = field_name 'percent_p%d_text' d = <player_index>
-					addparam name = <field_name> structure_name = my_struct value = <player_percent>
-					<id> :se_setprops <my_struct>
+					FormatText \{TextName = player_percent
+						qs("\LNA")}
+					FormatText checksumname = field_name 'percent_p%d_text' d = <player_index>
+					AddParam name = <field_name> structure_name = my_struct value = <player_percent>
+					<id> :SE_SetProps <my_struct>
 				else
 					percent = (((<section_hits> * 1.0) / <section_possibles>) * 100)
-					mathfloor <percent>
-					casttointeger \{percent}
+					MathFloor <percent>
+					CastToInteger \{percent}
 					my_color_interp val = <floor> player = <player_index>
-					formattext textname = player_percent qs(0x76b3fda7) d = <floor>
-					player_percent = (<player_percent> + qs(0x0c40a1b2))
-					formattext checksumname = field_name 'percent_p%d_text' d = <player_index>
-					formattext checksumname = field_name_rgba 'percent_p%d_rgba' d = <player_index>
-					addparam name = <field_name> structure_name = my_struct value = <player_percent>
-					addparam name = <field_name_rgba> structure_name = my_struct value = <color>
-					<id> :se_setprops <my_struct>
+					FormatText TextName = player_percent qs("\L%d") d = <floor>
+					player_percent = (<player_percent> + qs("\L%"))
+					FormatText checksumname = field_name 'percent_p%d_text' d = <player_index>
+					FormatText checksumname = field_name_rgba 'percent_p%d_rgba' d = <player_index>
+					AddParam name = <field_name> structure_name = my_struct value = <player_percent>
+					AddParam name = <field_name_rgba> structure_name = my_struct value = <color>
+					<id> :SE_SetProps <my_struct>
 				endif
 			endif
 			<player_index> = (<player_index> + 1)
@@ -262,9 +262,9 @@ script ui_create_song_summary_details \{for_transition = 0}
 			player = (<num_players_shown> + 1)
 			if NOT (4 = <num_players_shown>)
 				begin
-				formattext checksumname = entry_alpha 'percent_P%i_alpha' i = <player>
-				addparam name = <entry_alpha> structure_name = entry_alpha_struct value = 0.0
-				<id> :se_setprops <entry_alpha_struct>
+				FormatText checksumname = entry_alpha 'percent_P%i_alpha' i = <player>
+				AddParam name = <entry_alpha> structure_name = entry_alpha_struct value = 0.0
+				<id> :SE_SetProps <entry_alpha_struct>
 				player = (<player> + 1)
 				repeat (4 - <num_players_shown>)
 			endif
@@ -276,21 +276,21 @@ script ui_create_song_summary_details \{for_transition = 0}
 	song_indx = (<song_indx> + 1)
 	repeat <num_songs>
 	ui_song_details_add_cash_stats
-	setscreenelementprops {
+	SetScreenElementProps {
 		id = my_current_menu
 		tags = {current = 0 fit = 10 total = ($song_summary_details_row_count)}
 	}
 	if should_use_all_buttons
 		all_button_params = {all_buttons}
 	endif
-	add_user_control_helper text = qs(0xaf4d5dd2) button = red <all_button_params> z = 100000
-	launchevent \{type = focus
+	add_user_control_helper text = qs("BACK") button = red <all_button_params> z = 100000
+	LaunchEvent \{type = focus
 		target = my_current_menu}
 endscript
 
 script ui_destroy_song_summary_details 
 	clean_up_user_control_helpers
-	destroyscreenelement \{id = my_detailed_id}
+	DestroyScreenElement \{id = my_detailed_id}
 endscript
 
 script my_color_interp \{val = 100
@@ -322,14 +322,14 @@ script song_details_set_mins_and_maxes
 	gig_details = ($gig_detailed_stats)
 	local_mins = [101 101 101 101]
 	local_maxs = [-1 -1 -1 -1]
-	gamemode_getnumplayersshown
+	GameMode_GetNumPlayersShown
 	trim_boss_from_num_players_show
 	i = 0
 	begin
 	sections = ((<gig_details> [<i>] [0]).section_names)
 	section_hits_array = ((<gig_details> [<i>] [0]).detailed_stats)
 	section_max_array = ((<gig_details> [<i>] [0]).detailed_stats_max)
-	getarraysize <sections>
+	GetArraySize <sections>
 	if (<array_size> > 0)
 		j = 0
 		begin
@@ -337,13 +337,13 @@ script song_details_set_mins_and_maxes
 		if NOT (<section_max> <= 0)
 			section_hits = (<section_hits_array> [<j>] * 1.0)
 			percent = (((<section_hits> * 1.0) / (<section_max> * 1.0)) * 100)
-			mathfloor <percent>
-			casttointeger \{percent}
+			MathFloor <percent>
+			CastToInteger \{percent}
 			if (<percent> < <local_mins> [<i>])
-				setarrayelement arrayname = local_mins index = <i> newvalue = <percent>
+				SetArrayElement ArrayName = local_mins index = <i> newvalue = <percent>
 			endif
 			if (<percent> > <local_maxs> [<i>])
-				setarrayelement arrayname = local_maxs index = <i> newvalue = <percent>
+				SetArrayElement ArrayName = local_maxs index = <i> newvalue = <percent>
 			endif
 		endif
 		j = (<j> + 1)
@@ -358,11 +358,11 @@ endscript
 script my_find_max_and_min 
 	t_max = -1
 	t_min = -1
-	requireparams \{[
+	RequireParams \{[
 			array
 		]
 		all}
-	getarraysize \{array}
+	GetArraySize \{array}
 	if (<array_size> > 0)
 		t_max = <array> [0]
 		t_min = <array> [0]
@@ -381,7 +381,7 @@ script my_find_max_and_min
 endscript
 
 script ui_song_details_add_cash_stats 
-	gamemode_gettype
+	GameMode_GetType
 	if NOT (<type> = career || <type> = quickplay)
 		return
 	endif
@@ -392,7 +392,7 @@ endscript
 
 script ui_details_add_compiled_results_to_table 
 	collection = ($compiled_individual_cash_rewards)
-	getarraysize <collection>
+	GetArraySize <collection>
 	if (<array_size> > 0)
 		i = 0
 		begin
@@ -400,31 +400,31 @@ script ui_details_add_compiled_results_to_table
 		mstone = (<temp_struct>.milestone)
 		<label> = ($cash_milestones.<mstone>.text)
 		row_props = {verse_text = <label>}
-		if structurecontains structure = <temp_struct> player1_cash
-			formattext textname = foo qs(0x447de8d3) d = (<temp_struct>.player1_cash)
-			addparam structure_name = row_props name = percent_p1_text value = <foo>
+		if StructureContains Structure = <temp_struct> player1_cash
+			FormatText TextName = Foo qs("$%d") d = (<temp_struct>.player1_cash)
+			AddParam structure_name = row_props name = percent_p1_text value = <Foo>
 		endif
-		if structurecontains structure = <temp_struct> player2_cash
-			formattext textname = foo qs(0x447de8d3) d = (<temp_struct>.player2_cash)
-			addparam structure_name = row_props name = percent_p2_text value = <foo>
+		if StructureContains Structure = <temp_struct> player2_cash
+			FormatText TextName = Foo qs("$%d") d = (<temp_struct>.player2_cash)
+			AddParam structure_name = row_props name = percent_p2_text value = <Foo>
 		endif
-		if structurecontains structure = <temp_struct> player3_cash
-			formattext textname = foo qs(0x447de8d3) d = (<temp_struct>.player3_cash)
-			addparam structure_name = row_props name = percent_p3_text value = <foo>
+		if StructureContains Structure = <temp_struct> player3_cash
+			FormatText TextName = Foo qs("$%d") d = (<temp_struct>.player3_cash)
+			AddParam structure_name = row_props name = percent_p3_text value = <Foo>
 		endif
-		if structurecontains structure = <temp_struct> player4_cash
-			formattext textname = foo qs(0x447de8d3) d = (<temp_struct>.player4_cash)
-			addparam structure_name = row_props name = percent_p4_text value = <foo>
+		if StructureContains Structure = <temp_struct> player4_cash
+			FormatText TextName = Foo qs("$%d") d = (<temp_struct>.player4_cash)
+			AddParam structure_name = row_props name = percent_p4_text value = <Foo>
 		endif
-		createscreenelement \{parent = list_menu
-			type = descinterface
-			autosizedims = true
+		CreateScreenElement \{parent = list_menu
+			type = DescInterface
+			autoSizeDims = true
 			desc = 'song_summary_details_list_entry'
-			verse_text = qs(0x00000000)
-			percent_p1_text = qs(0x00000000)
-			percent_p2_text = qs(0x00000000)
-			percent_p3_text = qs(0x00000000)
-			percent_p4_text = qs(0x00000000)
+			verse_text = qs("")
+			percent_p1_text = qs("")
+			percent_p2_text = qs("")
+			percent_p3_text = qs("")
+			percent_p4_text = qs("")
 			percent_p1_rgba = [
 				0
 				128
@@ -450,7 +450,7 @@ script ui_details_add_compiled_results_to_table
 				255
 			]}
 		change song_summary_details_row_count = (($song_summary_details_row_count) + 1)
-		<id> :se_setprops <row_props>
+		<id> :SE_SetProps <row_props>
 		i = (<i> + 1)
 		repeat <array_size>
 	endif
@@ -469,10 +469,10 @@ script ui_details_update_song_milestones_data
 endscript
 
 script ui_details_sum_up_milestone_earnings 
-	gamemode_getnumplayersshown
+	GameMode_GetNumPlayersShown
 	trim_boss_from_num_players_show
 	collection = ($compiled_individual_cash_rewards)
-	getarraysize <collection>
+	GetArraySize <collection>
 	i = 0
 	if (<array_size> > 0)
 		begin
@@ -480,8 +480,8 @@ script ui_details_sum_up_milestone_earnings
 		award_milestone = 1
 		j = 0
 		begin
-		formattext checksumname = my_check 'player%d_cash' d = (<j> + 1)
-		if structurecontains structure = <temp_struct> <my_check>
+		FormatText checksumname = my_check 'player%d_cash' d = (<j> + 1)
+		if StructureContains Structure = <temp_struct> <my_check>
 			amt = (<temp_struct>.<my_check>)
 		endif
 		j = (<j> + 1)
@@ -492,14 +492,14 @@ script ui_details_sum_up_milestone_earnings
 endscript
 
 script ui_details_compile_cash_rewards 
-	gamemode_getnumplayersshown
+	GameMode_GetNumPlayersShown
 	trim_boss_from_num_players_show
 	change \{compiled_individual_cash_rewards = [
 		]}
 	player = 1
 	begin
 	collection = ($cash_milestones_collection_per_song [(<player> -1)])
-	getarraysize <collection>
+	GetArraySize <collection>
 	if (<array_size> > 0)
 		i = 0
 		begin
@@ -507,20 +507,20 @@ script ui_details_compile_cash_rewards
 		compiled_cash_get_duplicate_milestone_index milestone = (<m>.milestone) collection = ($compiled_individual_cash_rewards)
 		if (<duplicate_milestone_index> = -1)
 			my_struct = {milestone = (<m>.milestone)}
-			formattext checksumname = player_cash 'player%d_cash' d = <player> addtostringlookup = true
-			addparam name = <player_cash> structure_name = my_struct value = (<m>.cash)
-			addarrayelement array = ($compiled_individual_cash_rewards) element = <my_struct>
+			FormatText checksumname = player_cash 'player%d_cash' d = <player> AddToStringLookup = true
+			AddParam name = <player_cash> structure_name = my_struct value = (<m>.Cash)
+			AddArrayElement array = ($compiled_individual_cash_rewards) element = <my_struct>
 			change compiled_individual_cash_rewards = <array>
 		else
-			formattext checksumname = player_cash 'player%d_cash' d = <player> addtostringlookup = true
+			FormatText checksumname = player_cash 'player%d_cash' d = <player> AddToStringLookup = true
 			old_struct = ($compiled_individual_cash_rewards [<duplicate_milestone_index>])
-			if structurecontains structure = <old_struct> <player_cash>
+			if StructureContains Structure = <old_struct> <player_cash>
 				amt = (<old_struct>.<player_cash>)
-				addparam name = <player_cash> structure_name = old_struct value = ((<m>.cash) + <amt>)
-				setarrayelement arrayname = compiled_individual_cash_rewards globalarray index = <duplicate_milestone_index> newvalue = <old_struct>
+				AddParam name = <player_cash> structure_name = old_struct value = ((<m>.Cash) + <amt>)
+				SetArrayElement ArrayName = compiled_individual_cash_rewards GlobalArray index = <duplicate_milestone_index> newvalue = <old_struct>
 			else
-				addparam name = <player_cash> structure_name = old_struct value = (<m>.cash)
-				setarrayelement arrayname = compiled_individual_cash_rewards globalarray index = <duplicate_milestone_index> newvalue = <old_struct>
+				AddParam name = <player_cash> structure_name = old_struct value = (<m>.Cash)
+				SetArrayElement ArrayName = compiled_individual_cash_rewards GlobalArray index = <duplicate_milestone_index> newvalue = <old_struct>
 			endif
 		endif
 		i = (<i> + 1)
@@ -531,19 +531,19 @@ script ui_details_compile_cash_rewards
 endscript
 
 script compiled_cash_get_duplicate_milestone_index 
-	requireparams \{[
+	RequireParams \{[
 			milestone
 			collection
 		]
 		all}
 	<duplicate_milestone_index> = -1
-	getarraysize <collection>
+	GetArraySize <collection>
 	if (<array_size> > 0)
 		<i> = 0
 		begin
 		<milestone_struct> = (<collection> [<i>])
-		if structurecontains structure = <milestone_struct> milestone
-			if checksumequals a = (<milestone_struct>.milestone) b = <milestone>
+		if StructureContains Structure = <milestone_struct> milestone
+			if ChecksumEquals a = (<milestone_struct>.milestone) b = <milestone>
 				<duplicate_milestone_index> = <i>
 				break
 			endif
@@ -557,38 +557,38 @@ script compiled_cash_get_duplicate_milestone_index
 endscript
 
 script song_summary_details_add_band_reward 
-	if NOT (<band> = false)
+	if NOT (<Band> = false)
 		<label> = ($cash_milestones.<milestone>.text)
-		formattext textname = reward_name qs(0x4d4555da) s = <label>
-		formattext textname = cash_value qs(0x447de8d3) d = <cash>
-		createscreenelement {
+		FormatText TextName = reward_name qs("%s") s = <label>
+		FormatText TextName = cash_value qs("$%d") d = <Cash>
+		CreateScreenElement {
 			parent = list_menu
-			type = descinterface
-			autosizedims = true
+			type = DescInterface
+			autoSizeDims = true
 			desc = 'song_summary_details_list_entry'
 			verse_text = <reward_name>
-			percent_p1_text = qs(0x00000000)
-			percent_p2_text = qs(0x00000000)
-			percent_p3_text = qs(0x00000000)
-			percent_p4_text = qs(0x00000000)
+			percent_p1_text = qs("")
+			percent_p2_text = qs("")
+			percent_p3_text = qs("")
+			percent_p4_text = qs("")
 		}
-		gamemode_getnumplayersshown
+		GameMode_GetNumPlayersShown
 		i = 1
 		begin
-		formattext checksumname = cash_val 'percent_p%d_text' d = <i>
-		addparam name = <cash_val> structure_name = my_struct value = <cash_value>
+		FormatText checksumname = cash_val 'percent_p%d_text' d = <i>
+		AddParam name = <cash_val> structure_name = my_struct value = <cash_value>
 		i = (<i> + 1)
 		repeat <num_players_shown>
-		<id> :se_setprops <my_struct>
+		<id> :SE_SetProps <my_struct>
 		change song_summary_details_row_count = (($song_summary_details_row_count) + 1)
 	endif
 endscript
 
 script song_details_create_scrolling_menu 
-	if my_detailed_id :desc_resolvealias \{name = alias_song_summary_details_list
+	if my_detailed_id :Desc_ResolveAlias \{name = alias_song_summary_details_list
 			param = details_list_alias}
 	else
-		scriptassert \{qs(0xf31b08af)}
+		ScriptAssert \{qs("\LProblem resolving alias in detailed stats")}
 	endif
 	array = [
 		{pad_up ui_song_details_shift params = {up}}
@@ -596,7 +596,7 @@ script song_details_create_scrolling_menu
 		{pad_back generic_event_back}
 	]
 	if (<for_transition> = 1)
-		setarrayelement \{arrayname = array
+		SetArrayElement \{ArrayName = array
 			index = 2
 			newvalue = {
 				pad_back
@@ -608,8 +608,8 @@ script song_details_create_scrolling_menu
 				}
 			}}
 	endif
-	createscreenelement {
-		type = windowelement
+	CreateScreenElement {
+		type = WindowElement
 		parent = <details_list_alias>
 		id = my_current_menu
 		dims = (970.0, 350.0)
@@ -619,7 +619,7 @@ script song_details_create_scrolling_menu
 		event_handlers = <array>
 		tags = {current = 0 fit = 11 total = 9}
 	}
-	createscreenelement \{type = vmenu
+	CreateScreenElement \{type = VMenu
 		parent = my_current_menu
 		id = list_menu
 		dims = (100.0, 385.0)
@@ -632,87 +632,87 @@ script song_details_create_scrolling_menu
 			top
 		]
 		spacing_between = 0}
-	setscreenelementprops \{id = my_detailed_id
+	SetScreenElementProps \{id = my_detailed_id
 		arrow_top_alpha = 0}
 endscript
 
 script song_details_add_space_to_table 
-	createscreenelement \{parent = list_menu
-		type = descinterface
-		autosizedims = true
+	CreateScreenElement \{parent = list_menu
+		type = DescInterface
+		autoSizeDims = true
 		desc = 'song_summary_details_list_entry'
-		verse_text = qs(0x00000000)
-		percent_p1_text = qs(0x00000000)
-		percent_p2_text = qs(0x00000000)
-		percent_p3_text = qs(0x00000000)
-		percent_p4_text = qs(0x00000000)}
+		verse_text = qs("")
+		percent_p1_text = qs("")
+		percent_p2_text = qs("")
+		percent_p3_text = qs("")
+		percent_p4_text = qs("")}
 	change song_summary_details_row_count = (($song_summary_details_row_count) + 1)
 endscript
 
 script ui_song_details_shift 
-	setspawninstancelimits \{max = 1
+	SetSpawnInstanceLimits \{max = 1
 		management = ignore_spawn_request}
-	gettags
-	if gotparam \{down}
+	GetTags
+	if GotParam \{down}
 		if (<current> >= (<total> - <fit>))
 			return
 		endif
-		list_menu :setprops \{pos = {
+		list_menu :SetProps \{pos = {
 				(0.0, -35.0)
 				relative
 			}
 			time = 0.05}
-		settags current = (<current> + 1)
+		SetTags current = (<current> + 1)
 		generic_menu_up_or_down_sound \{down}
 	else
 		if (<current> <= 0)
 			return
 		endif
-		list_menu :setprops \{pos = {
+		list_menu :SetProps \{pos = {
 				(0.0, 35.0)
 				relative
 			}
 			time = 0.05}
-		settags current = (<current> - 1)
+		SetTags current = (<current> - 1)
 		generic_menu_up_or_down_sound \{up}
 	endif
-	gettags
+	GetTags
 	max = ((<total> - <fit>) + 1)
 	dx = (197.0 / <max>)
 	pos = ((358.0, -194.0) + ((0.0, 1.0) * (<current> * <dx>)))
-	my_detailed_id :se_setprops setlist_popup_scroll_thumb_pos = <pos> time = 0.1
+	my_detailed_id :SE_SetProps setlist_popup_scroll_thumb_pos = <pos> time = 0.1
 endscript
 
 script ui_song_summary_details_anim_in 
 	startrendering \{reason = menu_transition}
-	soundevent \{event = menu_song_complete_in}
+	SoundEvent \{event = Menu_Song_Complete_In}
 	printf \{channel = mychannel
-		qs(0x69a79a5b)}
-	if screenelementexists \{id = my_detailed_id}
-		setscreenelementprops \{id = my_detailed_id
+		qs("\Ldetails anim in")}
+	if ScreenElementExists \{id = my_detailed_id}
+		SetScreenElementProps \{id = my_detailed_id
 			pos = {
 				(1200.0, 0.0)
 				relative
 			}
 			time = 0.1}
-		wait \{0.2
+		Wait \{0.2
 			second}
 	endif
 endscript
 
 script ui_song_summary_details_anim_out 
-	soundevent \{event = menu_song_complete_out}
+	SoundEvent \{event = Menu_Song_Complete_Out}
 	printf \{channel = mychannel
-		qs(0x53871813)}
+		qs("\Ldetails anim out")}
 	startrendering \{reason = menu_transition}
-	if screenelementexists \{id = my_detailed_id}
-		setscreenelementprops \{id = my_detailed_id
+	if ScreenElementExists \{id = my_detailed_id}
+		SetScreenElementProps \{id = my_detailed_id
 			pos = {
 				(1200.0, 0.0)
 				relative
 			}
 			time = 0.1}
-		wait \{0.2
+		Wait \{0.2
 			second}
 	endif
 endscript

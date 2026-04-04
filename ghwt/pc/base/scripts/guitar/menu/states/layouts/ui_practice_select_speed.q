@@ -1,8 +1,8 @@
 
 script ui_create_practice_select_speed 
-	if gotparam \{from_pause}
+	if GotParam \{from_pause}
 		make_generic_menu {
-			title = qs(0x452d8770)
+			title = qs("PRACTICE SPEED")
 			exclusive_device = <player_device>
 			centered
 			extra_z = 1000
@@ -10,40 +10,40 @@ script ui_create_practice_select_speed
 			title_bg_pos = (620.0, 50.0)
 		}
 	else
-		make_generic_menu \{title = qs(0x452d8770)}
+		make_generic_menu \{title = qs("PRACTICE SPEED")}
 	endif
 	<speeds> = [
 		{
-			text = qs(0xe73aac0d)
-			speed = full
+			text = qs("Full Speed")
+			Speed = full
 		}
 		{
-			text = qs(0x3d7913f6)
-			speed = slow
+			text = qs("Slow")
+			Speed = Slow
 		}
 		{
-			text = qs(0x0a09c6b9)
-			speed = slower
+			text = qs("Slower")
+			Speed = slower
 		}
 		{
-			text = qs(0xb4efa3ea)
-			speed = slowest
+			text = qs("Slowest")
+			Speed = slowest
 		}
 	]
-	getplayerinfo \{1
+	GetPlayerInfo \{1
 		part}
-	getarraysize <speeds>
+	GetArraySize <speeds>
 	i = 0
 	begin
-	if (<part> = vocals && (<speeds> [<i>].speed) != full)
+	if (<part> = Vocals && (<speeds> [<i>].Speed) != full)
 		focusable = {not_focusable}
 	else
-		removeparameter \{focusable}
+		RemoveParameter \{focusable}
 	endif
 	add_generic_menu_text_item {
 		text = (<speeds> [<i>].text)
 		pad_choose_script = menu_choose_practice_speed_set_speed
-		pad_choose_params = {speed = (<speeds> [<i>].speed) from_pause = <from_pause> from_song_breakdown = <from_song_breakdown>}
+		pad_choose_params = {Speed = (<speeds> [<i>].Speed) from_pause = <from_pause> from_song_breakdown = <from_song_breakdown>}
 		<focusable>
 	}
 	i = (<i> + 1)
@@ -55,21 +55,21 @@ script ui_destroy_practice_select_speed
 	generic_ui_destroy
 endscript
 
-script menu_choose_practice_speed_set_speed \{speed = full}
-	switch <speed>
+script menu_choose_practice_speed_set_speed \{Speed = full}
+	switch <Speed>
 		case full
 		change \{current_speedfactor = 1.0}
-		case slow
+		case Slow
 		change \{current_speedfactor = 0.8}
 		case slower
 		change \{current_speedfactor = 0.66666675}
 		case slowest
 		change \{current_speedfactor = 0.5}
 	endswitch
-	if gotparam \{from_song_breakdown}
+	if GotParam \{from_song_breakdown}
 		practice_restart_song
 		generic_event_back \{state = uistate_gameplay}
-	elseif NOT gotparam \{from_pause}
+	elseif NOT GotParam \{from_pause}
 		generic_event_choose \{state = uistate_play_song}
 	else
 		restart_warning_select_restart \{dont_save_song_data}

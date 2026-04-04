@@ -1,101 +1,101 @@
 
 script flashsounds 
-	enableremovesoundentry \{enable}
+	EnableRemoveSoundEntry \{enable}
 	stars
-	printf \{qs(0x1565cdb1)}
-	unloadpak \{'zones/global/global_sfx.pak'
+	printf \{qs("\LFlashing global_sfx pak")}
+	UnloadPak \{'zones/global/global_sfx.pak'
 		heap = heap_audio}
-	waitunloadpak \{'zones/global/global_sfx.pak'}
-	loadpak \{'zones/global/global_sfx.pak'
+	WaitUnloadPak \{'zones/global/global_sfx.pak'}
+	LoadPak \{'zones/global/global_sfx.pak'
 		no_vram
 		heap = heap_audio}
 	stars
-	printf \{qs(0x2f7fe05d)}
+	printf \{qs("\LSfx Pak flashing done.")}
 endscript
-sfxprevieweventtree_fam = {
-	type = fam
+SfxPreviewEventTree_FAM = {
+	type = FAM
 	[
 		{
-			type = source
-			anim = sk9_skater_default
+			type = Source
+			Anim = sk9_skater_Default
 		}
 	]
 }
 
-script sfxcreatetestfamobject 
-	if compositeobjectexists \{sfxprevieweventobject}
-		sfxprevieweventobject :die
+script SfxCreateTestFAMObject 
+	if CompositeObjectExists \{SfxPreviewEventObject}
+		SfxPreviewEventObject :Die
 	endif
-	skater :obj_getposition
-	skater :obj_getquat
-	createcompositeobject priority = coim_priority_permanent heap = generic {
-		components = [{component = setdisplaymatrix} {component = animtree}
-			{component = skeleton} {component = model}
-			{component = agent} {component = fam}]
-		params = {name = sfxprevieweventobject pos = <pos> orientation = <quat> clonefrom = skater
-			skeletonname = sk9_skater species = human voice_profile = teenmaleskater1 sex = male
+	skater :Obj_GetPosition
+	skater :Obj_GetQuat
+	CreateCompositeObject priority = COIM_Priority_Permanent heap = generic {
+		Components = [{Component = SetDisplayMatrix} {Component = AnimTree}
+			{Component = skeleton} {Component = Model}
+			{Component = Agent} {Component = FAM}]
+		params = {name = SfxPreviewEventObject pos = <pos> Orientation = <Quat> CloneFrom = skater
+			SkeletonName = sk9_skater species = human voice_profile = TeenMaleSkater1 sex = Male
 			notice_radius = 6.0 agent_stats = stats_player faction = $faction_test}
 	}
-	sfxprevieweventobject :anim_inittree \{tree = sfxprevieweventtree_fam
-		nodeiddeclaration = [
-			fam
+	SfxPreviewEventObject :Anim_InitTree \{Tree = SfxPreviewEventTree_FAM
+		NodeIdDeclaration = [
+			FAM
 		]}
 endscript
 
-script sfxcreatetestobject 
-	if compositeobjectexists \{sfxprevieweventobject}
-		sfxprevieweventobject :die
+script SfxCreateTestObject 
+	if CompositeObjectExists \{SfxPreviewEventObject}
+		SfxPreviewEventObject :Die
 	endif
-	getcurrentcameraobject
-	<camid> :obj_getposition
-	<camid> :obj_getquat
-	pos = (<pos> + (10 * <quat>))
-	createcompositeobject priority = coim_priority_permanent heap = generic {
-		components = [{component = sound}]
-		params = {name = sfxprevieweventobject pos = <pos> orientation = <quat>}
+	GetCurrentCameraObject
+	<camid> :Obj_GetPosition
+	<camid> :Obj_GetQuat
+	pos = (<pos> + (10 * <Quat>))
+	CreateCompositeObject priority = COIM_Priority_Permanent heap = generic {
+		Components = [{Component = Sound}]
+		params = {name = SfxPreviewEventObject pos = <pos> Orientation = <Quat>}
 	}
 endscript
 
-script sfxdestroytestobject 
-	if compositeobjectexists \{sfxprevieweventobject}
-		sfxprevieweventobject :die
+script SfxDestroyTestObject 
+	if CompositeObjectExists \{SfxPreviewEventObject}
+		SfxPreviewEventObject :Die
 	endif
 endscript
 
-script previewsoundevent 
-	extendcrc <event> '_container' out = container_name
-	if structurecontains structure = $<container_name> command
-		printf qs(0xf80d42ac) s = <event>
-		if checksumequals a = ($<container_name>.command) b = playsound
-			printf \{qs(0xf19fe69b)}
-			soundevent event = <event>
-		elseif checksumequals a = ($<container_name>.command) b = obj_playsound
-			printf \{qs(0xfb51125d)}
-			sfxcreatetestobject
-			soundevent event = <event> object = sfxprevieweventobject
-		elseif checksumequals a = ($<container_name>.command) b = agent_playvo
-			printf \{qs(0x5b7098dd)}
-			<buss> = master
-			sfxcreatetestfamobject
-			soundevent event = <event> object = sfxprevieweventobject <...>
+script PreviewSoundEvent 
+	ExtendCRC <event> '_container' out = container_name
+	if StructureContains Structure = $<container_name> command
+		printf qs("\LPreviewing SoundEvent %s") s = <event>
+		if ChecksumEquals a = ($<container_name>.command) b = PlaySound
+			printf \{qs("\LPlaysound!")}
+			SoundEvent event = <event>
+		elseif ChecksumEquals a = ($<container_name>.command) b = Obj_PlaySound
+			printf \{qs("\LObj_Playsound!")}
+			SfxCreateTestObject
+			SoundEvent event = <event> object = SfxPreviewEventObject
+		elseif ChecksumEquals a = ($<container_name>.command) b = Agent_PlayVO
+			printf \{qs("\LAgent_PlayVO!")}
+			<buss> = Master
+			SfxCreateTestFAMObject
+			SoundEvent event = <event> object = SfxPreviewEventObject <...>
 		else
-			printf \{qs(0x06a01c00)}
+			printf \{qs("\LSound Event Command is invalid")}
 		endif
 		waittime = 0
 		begin
-		if NOT (issoundeventplaying <event>)
+		if NOT (isSoundEventPlaying <event>)
 			break
 		endif
 		if (<waittime> > 200)
-			stopsoundevent <event>
+			StopSoundEvent <event>
 			break
 		endif
-		wait \{0.1
+		Wait \{0.1
 			seconds}
 		waittime = (<waittime> + 1)
 		repeat
-		sfxdestroytestobject
+		SfxDestroyTestObject
 	else
-		printf qs(0x3154d6a7) s = <container_name>
+		printf qs("\Lsound event does not exist: %s") s = <container_name>
 	endif
 endscript

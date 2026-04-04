@@ -1,420 +1,420 @@
-defaultloddist1 = 20
-defautsuspenddistance = 65
-defaultrenderdistance = 65
+DefaultLodDist1 = 20
+DefautSuspendDistance = 65
+DefaultRenderDistance = 65
 human_creation_params = {
-	skeletonname = gh3_ped_skinny
-	suspenddistance = $defautsuspenddistance
-	lod_dist1 = $defaultloddist1
-	lod_dist2 = $defaultrenderdistance
-	behavior_style = bv_agent
+	SkeletonName = GH3_ped_skinny
+	SuspendDistance = $DefautSuspendDistance
+	lod_dist1 = $DefaultLodDist1
+	lod_dist2 = $DefaultRenderDistance
+	behavior_style = Bv_Agent
 	agent_stats = stats_civilian
 	targeting = $targeting_human
 	navigation = $nav_ped
-	char_collision = agent
+	char_collision = Agent
 	char_collision_height = 1.8
 	char_collision_radius = 0.3
 	anim_class = human
 	species = human
 	inventory = $inventory_fist
-	maxbonepriority = 9
-	voice_profile = teenmaleskater1
+	MaxBonePriority = 9
+	voice_profile = TeenMaleSkater1
 	faction = $faction_human
-	sex = male
+	sex = Male
 	notice_radius = 6.0
-	animlodinterleave2 = 6
-	ps3_animlodinterleave2 = 10
-	xenon_animlodinterleave2 = 10
+	AnimLODInterleave2 = 6
+	PS3_AnimLODInterleave2 = 10
+	Xenon_AnimLODInterleave2 = 10
 }
-obj_ped_skinny_creation_params = {
-	skeletonname = gh3_ped_skinny
-	tree = $gameobj_animtree
-	animtargets = [
-		body
-		bodytimer
+obj_Ped_Skinny_creation_params = {
+	SkeletonName = GH3_ped_skinny
+	Tree = $GameObj_AnimTree
+	AnimTargets = [
+		Body
+		BodyTimer
 	]
 	zones = [
 		global
 	]
 }
 obj_testlevel_creation_params = {
-	tree = $gameobj_animtree
-	animtargets = [
-		body
-		bodytimer
+	Tree = $GameObj_AnimTree
+	AnimTargets = [
+		Body
+		BodyTimer
 	]
 	zones = [
 		global
 	]
 }
-obj_ven_camera_creation_params = {
-	skeletonname = gh4_camera
-	tree = $gameobj_animtree
-	animtargets = [
-		body
-		bodytimer
+obj_Ven_Camera_creation_params = {
+	SkeletonName = gh4_camera
+	Tree = $GameObj_AnimTree
+	AnimTargets = [
+		Body
+		BodyTimer
 	]
 	zones = [
 		global
 	]
 }
-obj_ven_tentacle_creation_params = {
-	skeletonname = gh_encore_tentacles
-	tree = $gameobj_animtree
-	animtargets = [
-		body
-		bodytimer
+obj_Ven_Tentacle_creation_params = {
+	SkeletonName = GH_Encore_Tentacles
+	Tree = $GameObj_AnimTree
+	AnimTargets = [
+		Body
+		BodyTimer
 	]
 	zones = [
 		global
 	]
 }
-obj_ven_skull_creation_params = {
-	skeletonname = skel_encore_skull
-	tree = $gameobj_animtree
-	animtargets = [
-		body
-		bodytimer
+obj_Ven_Skull_creation_params = {
+	SkeletonName = Skel_Encore_Skull
+	Tree = $GameObj_AnimTree
+	AnimTargets = [
+		Body
+		BodyTimer
 	]
 	zones = [
 		global
 	]
 }
-obj_ven_jet01_creation_params = {
-	skeletonname = skel_encore_jet01
-	tree = $gameobj_animtree
-	animtargets = [
-		body
-		bodytimer
+obj_Ven_Jet01_creation_params = {
+	SkeletonName = Skel_Encore_Jet01
+	Tree = $GameObj_AnimTree
+	AnimTargets = [
+		Body
+		BodyTimer
 	]
 	zones = [
 		global
 	]
 }
-obj_ven_jet02_creation_params = {
-	skeletonname = skel_encore_jet02
-	tree = $gameobj_animtree
-	animtargets = [
-		body
-		bodytimer
+obj_Ven_Jet02_creation_params = {
+	SkeletonName = Skel_Encore_Jet02
+	Tree = $GameObj_AnimTree
+	AnimTargets = [
+		Body
+		BodyTimer
 	]
 	zones = [
 		global
 	]
 }
-obj_ven_jet03_creation_params = {
-	skeletonname = skel_encore_jet03
-	tree = $gameobj_animtree
-	animtargets = [
-		body
-		bodytimer
+obj_Ven_Jet03_creation_params = {
+	SkeletonName = Skel_Encore_Jet03
+	Tree = $GameObj_AnimTree
+	AnimTargets = [
+		Body
+		BodyTimer
 	]
 	zones = [
 		global
 	]
 }
-obj_ven_jet04_creation_params = {
-	skeletonname = skel_encore_jet04
-	tree = $gameobj_animtree
-	animtargets = [
-		body
-		bodytimer
+obj_Ven_Jet04_creation_params = {
+	SkeletonName = Skel_Encore_Jet04
+	Tree = $GameObj_AnimTree
+	AnimTargets = [
+		Body
+		BodyTimer
 	]
 	zones = [
 		global
 	]
 }
-obj_ven_altar_creation_params = {
-	skeletonname = skel_encore_altar
-	tree = $gameobj_animtree
-	animtargets = [
-		body
-		bodytimer
+obj_Ven_Altar_creation_params = {
+	SkeletonName = Skel_Encore_Altar
+	Tree = $GameObj_AnimTree
+	AnimTargets = [
+		Body
+		BodyTimer
 	]
 	zones = [
 		global
 	]
 }
-obj_ven_farriswheel_creation_params = {
-	skeletonname = skel_encore_farriswheel
-	tree = $gameobj_animtree
-	animtargets = [
-		body
-		bodytimer
+obj_Ven_FarrisWheel_creation_params = {
+	SkeletonName = Skel_Encore_FarrisWheel
+	Tree = $GameObj_AnimTree
+	AnimTargets = [
+		Body
+		BodyTimer
 	]
 	zones = [
 		global
 	]
 }
-obj_ven_mainball_creation_params = {
-	skeletonname = skel_encore_mainball
-	tree = $gameobj_animtree
-	animtargets = [
-		body
-		bodytimer
+obj_Ven_MainBall_creation_params = {
+	SkeletonName = Skel_Encore_MainBall
+	Tree = $GameObj_AnimTree
+	AnimTargets = [
+		Body
+		BodyTimer
 	]
 	zones = [
 		global
 	]
 }
-obj_ven_ball01_creation_params = {
-	skeletonname = skel_encore_ball01
-	tree = $gameobj_animtree
-	animtargets = [
-		body
-		bodytimer
+obj_Ven_Ball01_creation_params = {
+	SkeletonName = Skel_Encore_Ball01
+	Tree = $GameObj_AnimTree
+	AnimTargets = [
+		Body
+		BodyTimer
 	]
 	zones = [
 		global
 	]
 }
-obj_ven_ball02_creation_params = {
-	skeletonname = skel_encore_ball02
-	tree = $gameobj_animtree
-	animtargets = [
-		body
-		bodytimer
+obj_Ven_Ball02_creation_params = {
+	SkeletonName = Skel_Encore_Ball02
+	Tree = $GameObj_AnimTree
+	AnimTargets = [
+		Body
+		BodyTimer
 	]
 	zones = [
 		global
 	]
 }
-obj_ven_ball03_creation_params = {
-	skeletonname = skel_encore_ball03
-	tree = $gameobj_animtree
-	animtargets = [
-		body
-		bodytimer
+obj_Ven_Ball03_creation_params = {
+	SkeletonName = Skel_Encore_Ball03
+	Tree = $GameObj_AnimTree
+	AnimTargets = [
+		Body
+		BodyTimer
 	]
 	zones = [
 		global
 	]
 }
-obj_ven_buffalo_creation_params = {
-	skeletonname = gh_buffalo
-	tree = $gameobj_animtree
-	animtargets = [
-		body
-		bodytimer
+obj_Ven_Buffalo_creation_params = {
+	SkeletonName = GH_Buffalo
+	Tree = $GameObj_AnimTree
+	AnimTargets = [
+		Body
+		BodyTimer
 	]
 	zones = [
 		global
 	]
 }
-obj_ven_pingpong_creation_params = {
-	skeletonname = skel_encore_pingpong
-	tree = $gameobj_animtree
-	animtargets = [
-		body
-		bodytimer
+obj_Ven_PingPong_creation_params = {
+	SkeletonName = Skel_Encore_PingPong
+	Tree = $GameObj_AnimTree
+	AnimTargets = [
+		Body
+		BodyTimer
 	]
 	zones = [
 		global
 	]
 }
-obj_ven_cup_creation_params = {
-	skeletonname = skel_encore_cup
-	tree = $gameobj_animtree
-	animtargets = [
-		body
-		bodytimer
+obj_Ven_Cup_creation_params = {
+	SkeletonName = Skel_Encore_Cup
+	Tree = $GameObj_AnimTree
+	AnimTargets = [
+		Body
+		BodyTimer
 	]
 	zones = [
 		global
 	]
 }
-obj_ven_arrows01_creation_params = {
-	skeletonname = skel_encore_arrows01
-	tree = $gameobj_animtree
-	animtargets = [
-		body
-		bodytimer
+obj_Ven_Arrows01_creation_params = {
+	SkeletonName = Skel_Encore_Arrows01
+	Tree = $GameObj_AnimTree
+	AnimTargets = [
+		Body
+		BodyTimer
 	]
 	zones = [
 		global
 	]
 }
-obj_ven_arrows02_creation_params = {
-	skeletonname = skel_encore_arrows02
-	tree = $gameobj_animtree
-	animtargets = [
-		body
-		bodytimer
+obj_Ven_Arrows02_creation_params = {
+	SkeletonName = Skel_Encore_Arrows02
+	Tree = $GameObj_AnimTree
+	AnimTargets = [
+		Body
+		BodyTimer
 	]
 	zones = [
 		global
 	]
 }
-obj_ven_arrows03_creation_params = {
-	skeletonname = skel_encore_arrows03
-	tree = $gameobj_animtree
-	animtargets = [
-		body
-		bodytimer
+obj_Ven_Arrows03_creation_params = {
+	SkeletonName = Skel_Encore_Arrows03
+	Tree = $GameObj_AnimTree
+	AnimTargets = [
+		Body
+		BodyTimer
 	]
 	zones = [
 		global
 	]
 }
-obj_ven_arrows04_creation_params = {
-	skeletonname = skel_encore_arrows04
-	tree = $gameobj_animtree
-	animtargets = [
-		body
-		bodytimer
+obj_Ven_Arrows04_creation_params = {
+	SkeletonName = Skel_Encore_Arrows04
+	Tree = $GameObj_AnimTree
+	AnimTargets = [
+		Body
+		BodyTimer
 	]
 	zones = [
 		global
 	]
 }
-obj_ven_arrows05_creation_params = {
-	skeletonname = skel_encore_arrows05
-	tree = $gameobj_animtree
-	animtargets = [
-		body
-		bodytimer
+obj_Ven_Arrows05_creation_params = {
+	SkeletonName = Skel_Encore_Arrows05
+	Tree = $GameObj_AnimTree
+	AnimTargets = [
+		Body
+		BodyTimer
 	]
 	zones = [
 		global
 	]
 }
-obj_ven_arrows06_creation_params = {
-	skeletonname = skel_encore_arrows06
-	tree = $gameobj_animtree
-	animtargets = [
-		body
-		bodytimer
+obj_Ven_Arrows06_creation_params = {
+	SkeletonName = Skel_Encore_Arrows06
+	Tree = $GameObj_AnimTree
+	AnimTargets = [
+		Body
+		BodyTimer
 	]
 	zones = [
 		global
 	]
 }
-obj_ven_arrows07_creation_params = {
-	skeletonname = skel_encore_arrows07
-	tree = $gameobj_animtree
-	animtargets = [
-		body
-		bodytimer
+obj_Ven_Arrows07_creation_params = {
+	SkeletonName = Skel_Encore_Arrows07
+	Tree = $GameObj_AnimTree
+	AnimTargets = [
+		Body
+		BodyTimer
 	]
 	zones = [
 		global
 	]
 }
-obj_ven_arrow01_creation_params = {
-	skeletonname = skel_encore_arrow01
-	tree = $gameobj_animtree
-	animtargets = [
-		body
-		bodytimer
+obj_Ven_Arrow01_creation_params = {
+	SkeletonName = Skel_Encore_Arrow01
+	Tree = $GameObj_AnimTree
+	AnimTargets = [
+		Body
+		BodyTimer
 	]
 	zones = [
 		global
 	]
 }
-obj_ven_cauldron_creation_params = {
-	skeletonname = skel_encore_cauldron
-	tree = $gameobj_animtree
-	animtargets = [
-		body
-		bodytimer
+obj_Ven_Cauldron_creation_params = {
+	SkeletonName = Skel_Encore_Cauldron
+	Tree = $GameObj_AnimTree
+	AnimTargets = [
+		Body
+		BodyTimer
 	]
 	zones = [
 		global
 	]
 }
-obj_ven_bandart_creation_params = {
-	skeletonname = skel_encore_bandart
-	tree = $gameobj_animtree
-	animtargets = [
-		body
-		bodytimer
+obj_Ven_BandArt_creation_params = {
+	SkeletonName = Skel_Encore_BandArt
+	Tree = $GameObj_AnimTree
+	AnimTargets = [
+		Body
+		BodyTimer
 	]
 	zones = [
 		global
 	]
 }
-obj_ven_record_creation_params = {
-	skeletonname = skel_encore_record
-	tree = $gameobj_animtree
-	animtargets = [
-		body
-		bodytimer
+obj_Ven_Record_creation_params = {
+	SkeletonName = Skel_Encore_Record
+	Tree = $GameObj_AnimTree
+	AnimTargets = [
+		Body
+		BodyTimer
 	]
 	zones = [
 		global
 	]
 }
-obj_ven_bar_creation_params = {
-	skeletonname = skel_encore_bar
-	tree = $gameobj_animtree
-	animtargets = [
-		body
-		bodytimer
+obj_Ven_Bar_creation_params = {
+	SkeletonName = Skel_Encore_Bar
+	Tree = $GameObj_AnimTree
+	AnimTargets = [
+		Body
+		BodyTimer
 	]
 	zones = [
 		global
 	]
 }
-obj_ven_chandelier_creation_params = {
-	skeletonname = skel_encore_chandelier
-	tree = $gameobj_animtree
-	animtargets = [
-		body
-		bodytimer
+obj_Ven_Chandelier_creation_params = {
+	SkeletonName = Skel_Encore_Chandelier
+	Tree = $GameObj_AnimTree
+	AnimTargets = [
+		Body
+		BodyTimer
 	]
 	zones = [
 		global
 	]
 }
-obj_ven_can01_creation_params = {
-	skeletonname = skel_encore_can01
-	tree = $gameobj_animtree
-	animtargets = [
-		body
-		bodytimer
+obj_Ven_Can01_creation_params = {
+	SkeletonName = Skel_Encore_Can01
+	Tree = $GameObj_AnimTree
+	AnimTargets = [
+		Body
+		BodyTimer
 	]
 	zones = [
 		global
 	]
 }
-obj_ven_can02_creation_params = {
-	skeletonname = skel_encore_can02
-	tree = $gameobj_animtree
-	animtargets = [
-		body
-		bodytimer
+obj_Ven_Can02_creation_params = {
+	SkeletonName = Skel_Encore_Can02
+	Tree = $GameObj_AnimTree
+	AnimTargets = [
+		Body
+		BodyTimer
 	]
 	zones = [
 		global
 	]
 }
-obj_ven_ceilinglight_creation_params = {
-	skeletonname = skel_encore_ceilinglight
-	tree = $gameobj_animtree
-	animtargets = [
-		body
-		bodytimer
+obj_Ven_CeilingLight_creation_params = {
+	SkeletonName = Skel_Encore_CeilingLight
+	Tree = $GameObj_AnimTree
+	AnimTargets = [
+		Body
+		BodyTimer
 	]
 	zones = [
 		global
 	]
 }
-obj_ven_bottle_creation_params = {
-	skeletonname = skel_encore_bottle
-	tree = $gameobj_animtree
-	animtargets = [
-		body
-		bodytimer
+obj_Ven_Bottle_creation_params = {
+	SkeletonName = Skel_Encore_Bottle
+	Tree = $GameObj_AnimTree
+	AnimTargets = [
+		Body
+		BodyTimer
 	]
 	zones = [
 		global
 	]
 }
-obj_ven_griffin_creation_params = {
-	skeletonname = skel_newyork_outro_griffin
-	tree = $gameobj_animtree
-	animtargets = [
-		body
-		bodytimer
+obj_Ven_griffin_creation_params = {
+	SkeletonName = Skel_NewYork_Outro_Griffin
+	Tree = $GameObj_AnimTree
+	AnimTargets = [
+		Body
+		BodyTimer
 	]
 	zones = [
 		global

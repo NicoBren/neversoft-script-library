@@ -1,258 +1,258 @@
 cache_build_band_members = 0
 nondrummer_anim_node_ids = [
-	body
-	bodytimer
+	Body
+	BodyTimer
 	moment_blend
 	moment_branch
 	momenttimer
-	strumtimer
-	frettimer
-	fingertimer
-	facialtimer
-	ik
-	lefthandpartial
-	leftarm
-	lefthand
-	rightarm
-	face
+	StrumTimer
+	FretTimer
+	FingerTimer
+	FacialTimer
+	Ik
+	LeftHandPartial
+	LeftArm
+	LeftHand
+	RightArm
+	Face
 	strum_anim_mod
 	fret_anim_mod
 	chord_anim_mod
-	maleanimadjust
-	maleanimadjust_moment
-	tweakbonesnode
-	mirrornode
-	femalediff
+	MaleAnimAdjust
+	MaleAnimAdjust_Moment
+	TweakBonesNode
+	MirrorNode
+	FemaleDiff
 	vocal_face_mod
-	heel
+	Heel
 ]
 drummer_anim_node_ids = [
-	body
-	bodytimer
-	facialtimer
-	ik
-	lefthandpartial
-	leftarm
-	lefthand
-	rightarm
-	face
-	femalediff
-	drumkit
+	Body
+	BodyTimer
+	FacialTimer
+	Ik
+	LeftHandPartial
+	LeftArm
+	LeftHand
+	RightArm
+	Face
+	FemaleDiff
+	DrumKit
 	moment_branch
 	moment_blend
 	moment_timer
 	faceoff_blend
 	faceoff_branch
 	faceoff_timer
-	tweakbonesnode
-	mirrornode
-	heel
+	TweakBonesNode
+	MirrorNode
+	Heel
 ]
 
-script create_band_member \{name = guitarist
-		lightgroup = band
+script create_band_member \{name = Guitarist
+		lightgroup = Band
 		async = 0
 		pos = (0.0, 0.0, 0.0)
 		dir = (0.0, 0.0, 1.0)}
-	removeparameter \{profile_struct}
+	RemoveParameter \{profile_struct}
 	create_band_member_wait_for_lock
-	printf qs(0xc143fb65) a = <name>
-	if gotparam \{start_node}
-		if doeswaypointexist name = <start_node>
-			getwaypointpos name = <start_node>
-			getwaypointdir name = <start_node>
+	printf qs("\LCreate_Band_Member name=%a.............") a = <name>
+	if GotParam \{start_node}
+		if DoesWayPointExist name = <start_node>
+			GetWaypointPos name = <start_node>
+			GetWaypointDir name = <start_node>
 		endif
 	endif
-	if compositeobjectexists <name>
-		scriptassert '%s already exists' s = <name>
+	if CompositeObjectExists <name>
+		ScriptAssert '%s already exists' s = <name>
 	endif
-	if (<name> = guitarist)
-		if compositeobjectexists \{name = bassist}
+	if (<name> = Guitarist)
+		if CompositeObjectExists \{name = bassist}
 			bassist :hero_pause_anim
 		endif
 	elseif (<name> = bassist)
-		if compositeobjectexists \{name = guitarist}
-			guitarist :hero_pause_anim
+		if CompositeObjectExists \{name = Guitarist}
+			Guitarist :hero_pause_anim
 		endif
 	endif
-	if NOT gotparam \{asset_heap}
+	if NOT GotParam \{asset_heap}
 		get_best_heap_for_appearance appearance = (<profile>.appearance)
 		asset_heap = <best_heap>
 	endif
 	anim_asset_context = <asset_heap>
 	if get_body_key_from_appearance key = anim_struct appearance = (<profile>.appearance)
-		if gotparam \{loading_into_song}
+		if GotParam \{loading_into_song}
 			get_anim_struct_member anim_struct = <anim_struct> loading_into_song = <loading_into_song> member = <instrument>
 		else
 		endif
-		if NOT structurecontains structure = ($<anim_struct>) anim_asset_context
-			scriptassert \{'anim_asset_context missing!'}
+		if NOT StructureContains Structure = ($<anim_struct>) anim_asset_context
+			ScriptAssert \{'anim_asset_context missing!'}
 		endif
 		anim_asset_context = (($<anim_struct>).anim_asset_context)
 	else
-		scriptassert \{'anim_struct not found in appearance'}
+		ScriptAssert \{'anim_struct not found in appearance'}
 	endif
-	removeparameter \{highway_texture}
-	if gotparam \{loading_into_song}
-		if gotparam \{player_status}
-			if NOT (<instrument> = vocals)
+	RemoveParameter \{highway_texture}
+	if GotParam \{loading_into_song}
+		if GotParam \{player_status}
+			if NOT (<instrument> = Vocals)
 				if NOT get_highway_struct_from_appearance part = <instrument> appearance = (<profile>.appearance)
-					scriptassert \{'Problem grabbing highway struct'}
+					ScriptAssert \{'Problem grabbing highway struct'}
 				endif
-				if (($is_attract_mode = 1) || ((<profile>.name) = emptyguy))
+				if (($is_attract_mode = 1) || ((<profile>.name) = EmptyGuy))
 					highway_pak = highway_axel
-					highway_texture = `tex\models\highway\highway_axel_fm_01.dds`
+					highway_texture = `tex\models\Highway\Highway_Axel_fm_01.dds`
 				endif
 				mpm_object_load_pak pak = <highway_pak> owner = <name> async = <async>
 			endif
 		else
-			if ((<profile>.name) = jimi)
+			if ((<profile>.name) = Jimi)
 				if (<name> = vocalist)
 					if NOT get_highway_struct_from_appearance part = <instrument> appearance = (<profile>.appearance)
-						scriptassert \{'Problem grabbing highway struct'}
+						ScriptAssert \{'Problem grabbing highway struct'}
 					endif
-					mpm_object_unload_paks owner = guitarist async = <async>
+					mpm_object_unload_paks owner = Guitarist async = <async>
 					mpm_object_load_pak pak = <highway_pak> owner = <name> async = <async>
 					get_band_member_player_status \{part = guitar}
-					if gotparam \{band_member_player_status}
+					if GotParam \{band_member_player_status}
 						change structurename = <band_member_player_status> highway_texture = <highway_texture>
 						change structurename = <band_member_player_status> band_member = vocalist
 					endif
-					removeparameter \{highway_texture}
+					RemoveParameter \{highway_texture}
 				endif
 			endif
 			if ((<profile>.name) = travis)
-				if (<name> = drummer)
+				if (<name> = Drummer)
 					if NOT get_highway_struct_from_appearance part = <instrument> appearance = (<profile>.appearance)
-						scriptassert \{'Problem grabbing highway struct'}
+						ScriptAssert \{'Problem grabbing highway struct'}
 					endif
-					mpm_object_unload_paks owner = drummer async = <async>
+					mpm_object_unload_paks owner = Drummer async = <async>
 					mpm_object_load_pak pak = <highway_pak> owner = <name> async = <async>
 					get_band_member_player_status \{part = drum}
-					if gotparam \{band_member_player_status}
+					if GotParam \{band_member_player_status}
 						change structurename = <band_member_player_status> highway_texture = <highway_texture>
-						change structurename = <band_member_player_status> band_member = drummer
+						change structurename = <band_member_player_status> band_member = Drummer
 					endif
-					removeparameter \{highway_texture}
+					RemoveParameter \{highway_texture}
 				endif
 			endif
 		endif
 	endif
-	if (<name> = guitarist)
-		if compositeobjectexists \{name = bassist}
+	if (<name> = Guitarist)
+		if CompositeObjectExists \{name = bassist}
 			bassist :hero_unpause_anim
 		endif
 	elseif (<name> = bassist)
-		if compositeobjectexists \{name = guitarist}
-			guitarist :hero_unpause_anim
+		if CompositeObjectExists \{name = Guitarist}
+			Guitarist :hero_unpause_anim
 		endif
 	endif
-	getpakmancurrent \{map = zones}
+	GetPakManCurrent \{map = zones}
 	switch <pak>
 		case z_viewer
 		lightgroup = none
 		default
 		switch <name>
-			case drummer
+			case Drummer
 			case drummer2
-			lightgroup = [band drummer]
+			lightgroup = [Band Drummer]
 			case bassist
-			lightgroup = [band alt_band bassist]
-			case guitarist
+			lightgroup = [Band Alt_Band bassist]
+			case Guitarist
 			case guitarist2
-			lightgroup = [band alt_band guitarist]
+			lightgroup = [Band Alt_Band Guitarist]
 			case vocalist
 			case vocalist2
-			lightgroup = [band alt_band vocalist]
+			lightgroup = [Band Alt_Band vocalist]
 			default
-			lightgroup = [band alt_band]
+			lightgroup = [Band Alt_Band]
 		endswitch
 	endswitch
-	ik_params = hero_ik_params
+	ik_params = Hero_Ik_params
 	if NOT get_body_key_from_appearance key = skeleton appearance = (<profile>.appearance)
-		scriptassert \{'Missing skeleton in appearance'}
+		ScriptAssert \{'Missing skeleton in appearance'}
 	endif
 	if NOT get_body_key_from_appearance key = skeleton_path appearance = (<profile>.appearance)
-		scriptassert \{'Missing skeleton_path in appearance'}
+		ScriptAssert \{'Missing skeleton_path in appearance'}
 	endif
 	if NOT get_body_key_from_appearance key = ragdoll appearance = (<profile>.appearance)
-		scriptassert \{'Missing ragdoll in appearance'}
+		ScriptAssert \{'Missing ragdoll in appearance'}
 	endif
 	if NOT get_body_key_from_appearance key = ragdoll_path appearance = (<profile>.appearance)
-		scriptassert \{'Missing ragdoll_path in appearance'}
+		ScriptAssert \{'Missing ragdoll_path in appearance'}
 	endif
 	if NOT get_body_key_from_appearance key = ragdoll_collision_group appearance = (<profile>.appearance)
-		scriptassert \{'Missing ragdoll_collision_group in appearance'}
+		ScriptAssert \{'Missing ragdoll_collision_group in appearance'}
 	endif
 	if NOT get_body_key_from_appearance key = accessory_bones appearance = (<profile>.appearance)
-		scriptassert \{'Missing accessory_bones in appearance'}
+		ScriptAssert \{'Missing accessory_bones in appearance'}
 	endif
 	get_body_key_from_appearance key = ik_params appearance = (<profile>.appearance)
-	if gotparam \{loading_into_song}
+	if GotParam \{loading_into_song}
 		switch (<instrument>)
-			case vocals
+			case Vocals
 			if get_body_key_from_appearance key = ik_params_vocals appearance = (<profile>.appearance)
 				ik_params = <ik_params_vocals>
-				printf 'Using ik_params_vocals - %s' s = <ik_params> donotresolve
+				printf 'Using ik_params_vocals - %s' s = <ik_params> DoNotResolve
 			endif
 			case drum
 			if get_body_key_from_appearance key = ik_params_drum appearance = (<profile>.appearance)
 				ik_params = <ik_params_drum>
-				printf 'Using ik_params_drum - %s' s = <ik_params> donotresolve
+				printf 'Using ik_params_drum - %s' s = <ik_params> DoNotResolve
 			endif
 			default
 			if get_body_key_from_appearance key = ik_params_guitar appearance = (<profile>.appearance)
 				ik_params = <ik_params_guitar>
-				printf 'Using ik_params_guitar - %s' s = <ik_params> donotresolve
+				printf 'Using ik_params_guitar - %s' s = <ik_params> DoNotResolve
 			endif
 		endswitch
 	else
 		if get_body_key_from_appearance key = ik_params_frontend appearance = (<profile>.appearance)
 			ik_params = <ik_params_frontend>
-			printf 'Using ik_params_frontend - %s' s = <ik_params> donotresolve
+			printf 'Using ik_params_frontend - %s' s = <ik_params> DoNotResolve
 		endif
 	endif
-	if gotparam \{player_status}
-		if gotparam \{highway_texture}
+	if GotParam \{player_status}
+		if GotParam \{highway_texture}
 			change structurename = <player_status> highway_texture = <highway_texture>
 		endif
 		change structurename = <player_status> band_member = <name>
 	endif
-	createcompositeobject {
-		components = [
+	CreateCompositeObject {
+		Components = [
 			{
-				component = skeleton
+				Component = skeleton
 				uniqueskeletonpath = <skeleton_path>
-				skeletonname = <skeleton>
+				SkeletonName = <skeleton>
 				allow_reset
 				heap = heap_ragskel
 			}
 			{
-				component = ragdoll
+				Component = ragdoll
 				initialize_empty = false
 				disable_collision_callbacks
 				useuniqueskeleton
-				ragdollname = <ragdoll>
+				ragdollName = <ragdoll>
 				uniqueragdollpath = <ragdoll_path>
-				ragdollcollisiongroup = $<ragdoll_collision_group>
+				RagdollCollisionGroup = $<ragdoll_collision_group>
 				heap = heap_ragskel
 				accessory_bones = $<accessory_bones>
 			}
 			{
-				component = setdisplaymatrix
+				Component = SetDisplayMatrix
 			}
 			{
-				component = animtree
+				Component = AnimTree
 			}
 			{
-				component = model
+				Component = Model
 				lightgroup = <lightgroup>
 			}
 			{
-				component = motion
+				Component = motion
 			}
 			{
-				component = modelbuilder
+				Component = ModelBuilder
 				global_storage = <asset_heap>
 			}
 		]
@@ -265,12 +265,12 @@ script create_band_member \{name = guitarist
 			name = <name>
 		}
 	}
-	<name> :obj_setorientation dir = <dir>
+	<name> :Obj_SetOrientation dir = <dir>
 	get_body_checksum_from_appearance appearance = (<profile>.appearance)
 	get_is_female_from_appearance appearance = (<profile>.appearance)
-	<name> :settags asset_heap = <asset_heap>
-	<name> :settags body_checksum = <body_checksum>
-	<name> :settags is_female = <is_female>
+	<name> :SetTags asset_heap = <asset_heap>
+	<name> :SetTags body_checksum = <body_checksum>
+	<name> :SetTags is_female = <is_female>
 	switch <name>
 		case cas_musician1
 		case cas_musician2
@@ -279,7 +279,7 @@ script create_band_member \{name = guitarist
 		desired_tree = frontend_static_tree
 		default
 		switch (<instrument>)
-			case vocals
+			case Vocals
 			desired_tree = vocalist_static_tree
 			case drum
 			desired_tree = drummer_static_tree
@@ -292,39 +292,39 @@ script create_band_member \{name = guitarist
 	else
 		node_ids = $nondrummer_anim_node_ids
 	endif
-	<name> :anim_inittree {
-		tree = $<desired_tree>
-		nodeiddeclaration = <node_ids>
+	<name> :Anim_InitTree {
+		Tree = $<desired_tree>
+		NodeIdDeclaration = <node_ids>
 		params = {
 			ik_params = <ik_params>
 		}
 	}
 	if (<instrument> = drum)
 		if (<is_female> = 1)
-			<name> :anim_command target = femalediff command = applyfemaledrummerdifference_setanim params = {anim = gh_rocker_female_drummer_d}
+			<name> :Anim_Command target = FemaleDiff command = ApplyFemaleDrummerDifference_SetAnim params = {Anim = GH_Rocker_Female_Drummer_D}
 		endif
 	endif
 	printf \{'Backing up bones'}
-	<name> :obj_resetbones
+	<name> :Obj_ResetBones
 	printf \{'Done backing up bones'}
 	with_mic = 0
-	if gotparam \{loading_into_song}
+	if GotParam \{loading_into_song}
 		get_song_struct song = <loading_into_song>
-		if structurecontains structure = <song_struct> parts_with_mic
-			if arraycontains array = (<song_struct>.parts_with_mic) contains = <name>
+		if StructureContains Structure = <song_struct> parts_with_mic
+			if ArrayContains array = (<song_struct>.parts_with_mic) contains = <name>
 				with_mic = 1
 			endif
 		endif
 	endif
 	if (<name> = vocalist)
-		if (<instrument> = guitar || <instrument> = bass)
+		if (<instrument> = guitar || <instrument> = Bass)
 			with_mic = 1
 		endif
 	endif
-	extendcrc <name> '_Info' out = info_struct
+	ExtendCRC <name> '_Info' out = info_struct
 	change structurename = <info_struct> part = <instrument>
 	change structurename = <info_struct> playing = true
-	<name> :settags instrument = <instrument> lightgroup = <lightgroup>
+	<name> :SetTags instrument = <instrument> lightgroup = <lightgroup>
 	if NOT <name> :build_band_member_from_appearance {
 			appearance = (<profile>.appearance)
 			lightgroup = <lightgroup>
@@ -338,51 +338,51 @@ script create_band_member \{name = guitarist
 	endif
 	printf 'anim_asset_context context=%c' c = <anim_asset_context>
 	create_band_member_unlock
-	if gotparam \{cancelled}
+	if GotParam \{cancelled}
 		return \{false}
 	endif
 	return \{true}
 endscript
 
 script get_body_checksum_from_appearance 
-	if structurecontains structure = <appearance> cas_body
-		return body_checksum = ((<appearance>.cas_body).desc_id)
+	if StructureContains Structure = <appearance> CAS_Body
+		return body_checksum = ((<appearance>.CAS_Body).desc_id)
 	endif
-	if structurecontains structure = <appearance> cas_full_body
-		return body_checksum = ((<appearance>.cas_full_body).desc_id)
+	if StructureContains Structure = <appearance> CAS_Full_Body
+		return body_checksum = ((<appearance>.CAS_Full_Body).desc_id)
 	endif
 	printstruct <appearance>
-	scriptassert \{'Character has no body!'}
+	ScriptAssert \{'Character has no body!'}
 endscript
 
 script get_is_female_from_appearance 
-	if structurecontains structure = <appearance> cas_body
-		getactualcasoptionstruct part = cas_body desc_id = ((<appearance>.cas_body).desc_id)
+	if StructureContains Structure = <appearance> CAS_Body
+		GetActualCASOptionStruct part = CAS_Body desc_id = ((<appearance>.CAS_Body).desc_id)
 	endif
-	if structurecontains structure = <appearance> cas_full_body
-		getactualcasoptionstruct part = cas_full_body desc_id = ((<appearance>.cas_full_body).desc_id)
+	if StructureContains Structure = <appearance> CAS_Full_Body
+		GetActualCASOptionStruct part = CAS_Full_Body desc_id = ((<appearance>.CAS_Full_Body).desc_id)
 	endif
-	if NOT gotparam \{is_female}
-		scriptassert \{'Character has no body!'}
+	if NOT GotParam \{is_female}
+		ScriptAssert \{'Character has no body!'}
 	endif
 	return is_female = <is_female>
 endscript
 
 script build_band_member_from_appearance \{instrument = guitar
 		with_mic = 0}
-	if NOT gotparam \{loading_into_song}
+	if NOT GotParam \{loading_into_song}
 		instrument = none
 	endif
 	if (<with_mic> = 1)
 		if (<instrument> = guitar)
-			instrument = guitar_and_vocals
-		elseif (<instrument> = bass)
-			instrument = bass_and_vocals
-		elseif (<instrument> = vocals)
-			instrument = guitar_and_vocals
+			instrument = Guitar_And_Vocals
+		elseif (<instrument> = Bass)
+			instrument = Bass_And_Vocals
+		elseif (<instrument> = Vocals)
+			instrument = Guitar_And_Vocals
 		endif
 	endif
-	if buildcasmodel {
+	if BuildCASModel {
 			appearance = <appearance>
 			async = <async>
 			buildscriptparams = {
@@ -391,9 +391,9 @@ script build_band_member_from_appearance \{instrument = guitar
 				loading_into_song = <loading_into_song>
 			}
 		}
-		obj_getid
-		if (<with_mic> = 1 && <objid> != vocalist)
-			if NOT (<instrument> = vocals)
+		Obj_GetID
+		if (<with_mic> = 1 && <ObjID> != vocalist)
+			if NOT (<instrument> = Vocals)
 				hide_mic
 			endif
 		endif
@@ -403,43 +403,43 @@ script build_band_member_from_appearance \{instrument = guitar
 endscript
 
 script get_anim_struct_member 
-	if gotparam \{loading_into_song}
+	if GotParam \{loading_into_song}
 		get_song_prefix song = <loading_into_song>
-		extendcrc <anim_struct> '_' out = song_anim_struct
-		extendcrc <song_anim_struct> <song_prefix> out = song_anim_struct
-		if globalexists name = <song_anim_struct> type = structure
-			if structurecontains structure = ($<song_anim_struct>) <member>
-				printf 'get_anim_struct_member - Using song anim struct : %s' s = <song_anim_struct> donotresolve
+		ExtendCRC <anim_struct> '_' out = song_anim_struct
+		ExtendCRC <song_anim_struct> <song_prefix> out = song_anim_struct
+		if GlobalExists name = <song_anim_struct> type = Structure
+			if StructureContains Structure = ($<song_anim_struct>) <member>
+				printf 'get_anim_struct_member - Using song anim struct : %s' s = <song_anim_struct> DoNotResolve
 				printstruct <...>
 				return true anim_struct_member = (($<song_anim_struct>).<member>)
-			elseif (<member> = bass)
+			elseif (<member> = Bass)
 				printf \{'get_anim_struct_member - Dropping from bass to guitar struct'}
-				if structurecontains structure = ($<song_anim_struct>) guitar
-					printf 'get_anim_struct_member - Using song anim struct : %s' s = <song_anim_struct> donotresolve
+				if StructureContains Structure = ($<song_anim_struct>) guitar
+					printf 'get_anim_struct_member - Using song anim struct : %s' s = <song_anim_struct> DoNotResolve
 					return true anim_struct_member = (($<song_anim_struct>).guitar)
 				endif
 			endif
 		endif
 	endif
-	if globalexists name = <anim_struct> type = structure
-		if structurecontains structure = ($<anim_struct>) <member>
-			printf 'get_anim_struct_member - Using global anim struct : %s' s = <anim_struct> donotresolve
+	if GlobalExists name = <anim_struct> type = Structure
+		if StructureContains Structure = ($<anim_struct>) <member>
+			printf 'get_anim_struct_member - Using global anim struct : %s' s = <anim_struct> DoNotResolve
 			printstruct <...>
 			return true anim_struct_member = (($<anim_struct>).<member>)
-		elseif (<member> = bass)
+		elseif (<member> = Bass)
 			printf \{'get_anim_struct_member - Dropping from bass to guitar struct'}
-			if structurecontains structure = ($<anim_struct>) guitar
-				printf 'get_anim_struct_member - Using global anim struct : %s' s = <anim_struct> donotresolve
+			if StructureContains Structure = ($<anim_struct>) guitar
+				printf 'get_anim_struct_member - Using global anim struct : %s' s = <anim_struct> DoNotResolve
 				return true anim_struct_member = (($<anim_struct>).guitar)
 			endif
 		endif
 	endif
-	printf 'get_anim_struct_member - Failed! : %s' s = <anim_struct> donotresolve
+	printf 'get_anim_struct_member - Failed! : %s' s = <anim_struct> DoNotResolve
 	printstruct <...>
 	return \{false}
 endscript
 
-script preload_band_member \{name = guitarist
+script preload_band_member \{name = Guitarist
 		async = 0}
 	create_band_member_wait_for_lock
 	filename_crc = none
@@ -448,7 +448,7 @@ script preload_band_member \{name = guitarist
 	return filename_crc = <filename_crc> instrument_crc = <instrument_crc> true
 endscript
 
-script preload_band_member_finish \{name = guitarist
+script preload_band_member_finish \{name = Guitarist
 		async = 0}
 	create_band_member_wait_for_lock
 	create_band_member_unlock
@@ -465,7 +465,7 @@ script create_band_member_wait_for_lock
 	if ($create_band_member_lock_queue = 0)
 		break
 	endif
-	wait \{1
+	Wait \{1
 		gameframe}
 	repeat
 	change \{create_band_member_lock_queue = 1}
@@ -473,7 +473,7 @@ script create_band_member_wait_for_lock
 	if ($create_band_member_lock = 0)
 		break
 	endif
-	wait \{1
+	Wait \{1
 		gameframe}
 	repeat
 	change \{create_band_member_lock_queue = 0}
@@ -482,76 +482,76 @@ endscript
 
 script destroy_band 
 	if ($in_tutorial_mode = 1)
-		scriptassert \{'should not destroy band in tutorial mode'}
+		ScriptAssert \{'should not destroy band in tutorial mode'}
 	endif
 	cas_destroy_all_characters
 	band_stop_anims
-	destroy_band_member \{name = guitarist}
+	destroy_band_member \{name = Guitarist}
 	destroy_band_member \{name = guitarist2}
 	destroy_band_member \{name = bassist}
 	destroy_band_member \{name = bassist2}
-	destroy_band_member \{name = drummer}
+	destroy_band_member \{name = Drummer}
 	destroy_band_member \{name = drummer2}
 	destroy_band_member \{name = vocalist}
 	destroy_band_member \{name = vocalist2}
 	band_unload_anim_paks
-	if gotparam \{unload_paks}
+	if GotParam \{unload_paks}
 		mpm_flush_all_paks
 	endif
 endscript
 
 script destroy_band_member 
-	if compositeobjectexists name = <name>
-		bandmanager_removecharacter name = <name>
-		<name> :die
+	if CompositeObjectExists name = <name>
+		BandManager_RemoveCharacter name = <name>
+		<name> :Die
 		mpm_object_unload_paks owner = <name>
-		flushdeadobjects
+		FlushDeadObjects
 	endif
 endscript
 
 script kill_character_scripts 
-	printf \{qs(0x2498acb7)}
-	if compositeobjectexists \{name = guitarist}
-		guitarist :obj_switchscript \{emptyscript}
+	printf \{qs("\Lkill character scripts.......")}
+	if CompositeObjectExists \{name = Guitarist}
+		Guitarist :Obj_SwitchScript \{EmptyScript}
 	endif
-	if compositeobjectexists \{name = bassist}
-		bassist :obj_switchscript \{emptyscript}
+	if CompositeObjectExists \{name = bassist}
+		bassist :Obj_SwitchScript \{EmptyScript}
 	endif
-	if compositeobjectexists \{name = vocalist}
-		vocalist :obj_switchscript \{emptyscript}
+	if CompositeObjectExists \{name = vocalist}
+		vocalist :Obj_SwitchScript \{EmptyScript}
 	endif
-	if compositeobjectexists \{name = drummer}
-		drummer :obj_switchscript \{emptyscript}
+	if CompositeObjectExists \{name = Drummer}
+		Drummer :Obj_SwitchScript \{EmptyScript}
 	endif
 endscript
 
-script emptyscript 
+script EmptyScript 
 endscript
 
 script hero_pause_anim 
-	if anim_animnodeexists \{id = bodytimer}
-		anim_command \{target = bodytimer
-			command = timer_setspeed
+	if Anim_AnimNodeExists \{id = BodyTimer}
+		Anim_Command \{target = BodyTimer
+			command = Timer_SetSpeed
 			params = {
-				speed = 0.0
+				Speed = 0.0
 			}}
 	endif
 endscript
 
 script hero_unpause_anim 
-	if anim_animnodeexists \{id = bodytimer}
-		anim_command \{target = bodytimer
-			command = timer_setspeed
+	if Anim_AnimNodeExists \{id = BodyTimer}
+		Anim_Command \{target = BodyTimer
+			command = Timer_SetSpeed
 			params = {
-				speed = 1.0
+				Speed = 1.0
 			}}
 	endif
 endscript
 
 script hero_enable_mirroring 
-	if anim_animnodeexists \{id = mirrornode}
-		anim_command \{target = mirrornode
-			command = mirror_setstate
+	if Anim_AnimNodeExists \{id = MirrorNode}
+		Anim_Command \{target = MirrorNode
+			command = Mirror_SetState
 			params = {
 				on
 			}}
@@ -559,25 +559,25 @@ script hero_enable_mirroring
 endscript
 
 script hero_disable_mirroring 
-	if anim_animnodeexists \{id = mirrornode}
-		anim_command \{target = mirrornode
-			command = mirror_setstate
+	if Anim_AnimNodeExists \{id = MirrorNode}
+		Anim_Command \{target = MirrorNode
+			command = Mirror_SetState
 			params = {
 				off
 			}}
 	endif
 endscript
 
-script hero_play_strum_anim \{blendduration = 0.0}
-	if anim_animnodeexists \{id = rightarm}
-		anim_command {
-			target = rightarm
-			command = degenerateblend_addbranch
+script hero_play_strum_anim \{BlendDuration = 0.0}
+	if Anim_AnimNodeExists \{id = RightArm}
+		Anim_Command {
+			target = RightArm
+			command = DegenerateBlend_AddBranch
 			params = {
-				tree = $hero_strumming_branch
-				blendduration = $strum_anim_blend_time
+				Tree = $hero_strumming_branch
+				BlendDuration = $strum_anim_blend_time
 				params = {
-					strum_name = <anim>
+					strum_name = <Anim>
 				}
 			}
 		}
@@ -585,21 +585,21 @@ script hero_play_strum_anim \{blendduration = 0.0}
 endscript
 
 script band_play_strum_anim 
-	if compositeobjectexists name = <name>
-		<name> :hero_play_strum_anim anim = <anim>
+	if CompositeObjectExists name = <name>
+		<name> :hero_play_strum_anim Anim = <Anim>
 	endif
 endscript
 
-script hero_play_fret_anim \{blendduration = $fret_blend_time}
-	if anim_animnodeexists \{id = leftarm}
-		anim_command {
-			target = leftarm
-			command = degenerateblend_addbranch
+script hero_play_fret_anim \{BlendDuration = $fret_blend_time}
+	if Anim_AnimNodeExists \{id = LeftArm}
+		Anim_Command {
+			target = LeftArm
+			command = DegenerateBlend_AddBranch
 			params = {
-				tree = $hero_fret_branch
-				blendduration = <blendduration>
+				Tree = $hero_fret_branch
+				BlendDuration = <BlendDuration>
 				params = {
-					fret_anim = <anim>
+					fret_anim = <Anim>
 				}
 			}
 		}
@@ -607,21 +607,21 @@ script hero_play_fret_anim \{blendduration = $fret_blend_time}
 endscript
 
 script band_play_fret_anim 
-	if compositeobjectexists name = <name>
-		<name> :hero_play_fret_anim anim = <anim>
+	if CompositeObjectExists name = <name>
+		<name> :hero_play_fret_anim Anim = <Anim>
 	endif
 endscript
 
-script hero_play_finger_anim \{blendduration = 0.2}
-	if anim_animnodeexists \{id = lefthand}
-		anim_command {
-			target = lefthand
-			command = degenerateblend_addbranch
+script hero_play_finger_anim \{BlendDuration = 0.2}
+	if Anim_AnimNodeExists \{id = LeftHand}
+		Anim_Command {
+			target = LeftHand
+			command = DegenerateBlend_AddBranch
 			params = {
-				tree = $hero_finger_branch
-				blendduration = <blendduration>
+				Tree = $hero_finger_branch
+				BlendDuration = <BlendDuration>
 				params = {
-					finger_anim = <anim>
+					finger_anim = <Anim>
 				}
 			}
 		}
@@ -629,68 +629,68 @@ script hero_play_finger_anim \{blendduration = 0.2}
 endscript
 
 script band_play_finger_anim 
-	if compositeobjectexists name = <name>
-		<name> :hero_play_finger_anim anim = <anim>
+	if CompositeObjectExists name = <name>
+		<name> :hero_play_finger_anim Anim = <Anim>
 	endif
 endscript
 
-script hero_play_facial_anim \{blendduration = 0.0}
-	if anim_animnodeexists \{id = face}
-		obj_getid
-		if ((<objid> = vocalist) || (<objid> = vocalist2))
-			tree = $vocalist_face_branch
+script hero_play_facial_anim \{BlendDuration = 0.0}
+	if Anim_AnimNodeExists \{id = Face}
+		Obj_GetID
+		if ((<ObjID> = vocalist) || (<ObjID> = vocalist2))
+			Tree = $vocalist_face_branch
 		else
-			tree = $hero_face_branch
+			Tree = $hero_face_branch
 		endif
-		anim_command {
-			target = face
-			command = degenerateblend_addbranch
+		Anim_Command {
+			target = Face
+			command = DegenerateBlend_AddBranch
 			params = {
-				tree = <tree>
-				blendduration = <blendduration>
+				Tree = <Tree>
+				BlendDuration = <BlendDuration>
 				params = {
-					facial_anim = <anim>
+					facial_anim = <Anim>
 				}
 			}
 		}
 	endif
 endscript
 
-script hero_clear_facial_anim \{blendduration = 0.0}
-	if anim_animnodeexists \{id = face}
-		anim_command {
-			target = face
-			command = degenerateblend_addbranch
+script hero_clear_facial_anim \{BlendDuration = 0.0}
+	if Anim_AnimNodeExists \{id = Face}
+		Anim_Command {
+			target = Face
+			command = DegenerateBlend_AddBranch
 			params = {
-				tree = $hero_empty_branch
-				blendduration = <blendduration>
+				Tree = $hero_empty_branch
+				BlendDuration = <BlendDuration>
 			}
 		}
 	endif
 endscript
 
 script hero_add_clothing_difference_anim 
-	if NOT gotparam \{anim}
+	if NOT GotParam \{Anim}
 		return
 	endif
-	anim_command target = heel command = applyheeldifference_setanim params = {anim = <anim>}
+	Anim_Command target = Heel command = ApplyHeelDifference_SetAnim params = {Anim = <Anim>}
 endscript
 
-script hero_wait_until_anim_finished \{timer = bodytimer}
+script hero_wait_until_anim_finished \{Timer = BodyTimer}
 	begin
-	if hero_anim_complete timer = <timer>
+	if hero_anim_complete Timer = <Timer>
 		break
 	endif
-	wait \{1
+	Wait \{1
 		gameframe}
 	repeat
 endscript
 
-script hero_anim_complete \{timer = bodytimer}
-	if NOT anim_animnodeexists id = <timer>
+script hero_anim_complete \{Timer = BodyTimer}
+	if NOT Anim_AnimNodeExists id = <Timer>
 		return \{true}
 	else
-		if anim_command target = <timer> command = timer_isanimcomplete
+		if Anim_Command target = <Timer> command = Timer_IsAnimComplete
 			return \{true}
 		else
 			return \{false}
@@ -698,22 +698,22 @@ script hero_anim_complete \{timer = bodytimer}
 	endif
 endscript
 
-script hero_wait_until_anim_near_end \{timer = bodytimer
+script hero_wait_until_anim_near_end \{Timer = BodyTimer
 		time_from_end = 0.2}
 	begin
-	if hero_anim_near_end timer = <timer> time_from_end = <time_from_end>
+	if hero_anim_near_end Timer = <Timer> time_from_end = <time_from_end>
 		break
 	endif
-	wait \{1
+	Wait \{1
 		gameframe}
 	repeat
 endscript
 
-script hero_anim_near_end \{timer = bodytimer}
-	if NOT anim_animnodeexists id = <timer>
+script hero_anim_near_end \{Timer = BodyTimer}
+	if NOT Anim_AnimNodeExists id = <Timer>
 		return \{true}
 	else
-		if anim_command target = <timer> command = timer_wait params = {secondsfromend = <time_from_end>}
+		if Anim_Command target = <Timer> command = Timer_Wait params = {SecondsFromEnd = <time_from_end>}
 			return \{true}
 		else
 			return \{false}
@@ -722,14 +722,14 @@ script hero_anim_near_end \{timer = bodytimer}
 endscript
 
 script hero_disable_arms \{blend_time = 0.0}
-	obj_getid
-	band_setikchain name = <objid> chain = slave
+	Obj_GetID
+	Band_SetIKChain name = <ObjID> chain = slave
 	return
 endscript
 
 script hero_enable_arms \{blend_time = 0.0}
-	obj_getid
-	band_setikchain name = <objid> chain = guitar
+	Obj_GetID
+	Band_SetIKChain name = <ObjID> chain = guitar
 	return
 endscript
 
@@ -760,77 +760,77 @@ script hero_toggle_arms \{num_arms = 2
 			enable_right_arm = true
 		endif
 	endif
-	if anim_animnodeexists \{id = ik}
-		if anim_command \{target = ik
-				command = ik_haschain
+	if Anim_AnimNodeExists \{id = Ik}
+		if Anim_Command \{target = Ik
+				command = IK_HasChain
 				params = {
-					chain = bone_ik_hand_slave_l
+					chain = Bone_IK_Hand_Slave_L
 				}}
-			left_hand_bone = bone_ik_hand_slave_l
-			right_hand_bone = bone_ik_hand_slave_r
-		elseif anim_command \{target = ik
-				command = ik_haschain
+			left_hand_bone = Bone_IK_Hand_Slave_L
+			right_hand_bone = Bone_IK_Hand_Slave_R
+		elseif Anim_Command \{target = Ik
+				command = IK_HasChain
 				params = {
-					chain = bone_ik_hand_guitar_l
+					chain = Bone_IK_Hand_Guitar_L
 				}}
-			left_hand_bone = bone_ik_hand_guitar_l
-			right_hand_bone = bone_ik_hand_guitar_r
+			left_hand_bone = Bone_IK_Hand_Guitar_L
+			right_hand_bone = Bone_IK_Hand_Guitar_R
 		else
-			scriptassert \{'No valid IK chain to work with'}
+			ScriptAssert \{'No valid IK chain to work with'}
 		endif
 	endif
 	if (<disable_left_arm> = true)
 		printf \{channel = newdebug
-			qs(0xf9e6434b)}
-		if anim_animnodeexists \{id = ik}
-			anim_command {
-				target = ik
-				command = ik_setchainstrength
+			qs("\Ldisable_left_arm is true ")}
+		if Anim_AnimNodeExists \{id = Ik}
+			Anim_Command {
+				target = Ik
+				command = IK_SetChainStrength
 				params = {
 					strength = 0.0
-					blendduration = <blend_time>
+					BlendDuration = <blend_time>
 					chain = <left_hand_bone>
 				}
 			}
 		else
 			printf \{channel = newdebug
-				qs(0x3e3968e0)}
+				qs("\Lik node doesn't exist.......")}
 		endif
 	endif
 	if (<disable_right_arm> = true)
-		if anim_animnodeexists \{id = ik}
-			anim_command {
-				target = ik
-				command = ik_setchainstrength
+		if Anim_AnimNodeExists \{id = Ik}
+			Anim_Command {
+				target = Ik
+				command = IK_SetChainStrength
 				params = {
 					strength = 0.0
-					blendduration = <blend_time>
+					BlendDuration = <blend_time>
 					chain = <right_hand_bone>
 				}
 			}
 		endif
 	endif
 	if (<enable_left_arm> = true)
-		if anim_animnodeexists \{id = ik}
-			anim_command {
-				target = ik
-				command = ik_setchainstrength
+		if Anim_AnimNodeExists \{id = Ik}
+			Anim_Command {
+				target = Ik
+				command = IK_SetChainStrength
 				params = {
 					strength = 1.0
-					blendduration = <blend_time>
+					BlendDuration = <blend_time>
 					chain = <left_hand_bone>
 				}
 			}
 		endif
 	endif
 	if (<enable_right_arm> = true)
-		if anim_animnodeexists \{id = ik}
-			anim_command {
-				target = ik
-				command = ik_setchainstrength
+		if Anim_AnimNodeExists \{id = Ik}
+			Anim_Command {
+				target = Ik
+				command = IK_SetChainStrength
 				params = {
 					strength = 1.0
-					blendduration = <blend_time>
+					BlendDuration = <blend_time>
 					chain = <right_hand_bone>
 				}
 			}
@@ -839,101 +839,101 @@ script hero_toggle_arms \{num_arms = 2
 endscript
 
 script killanim 
-	skeleton_getskeletonname
-	extendcrc <skeletonname> '_default' out = anim
+	Skeleton_GetSkeletonName
+	ExtendCRC <SkeletonName> '_default' out = Anim
 	obj_killallspawnedscripts
-	hero_play_anim anim = <anim> blendduration = 0.0
+	hero_play_anim Anim = <Anim> BlendDuration = 0.0
 endscript
 
 script handle_moment_anim_blending 
-	obj_getid
-	anim_command \{target = moment_blend
-		command = partialswitch_setstate
+	Obj_GetID
+	Anim_Command \{target = moment_blend
+		command = PartialSwitch_SetState
 		params = {
 			on
-			blendduration = 0.0
+			BlendDuration = 0.0
 		}}
-	anim_command \{target = bodytimer
-		command = tempomatch_pause}
+	Anim_Command \{target = BodyTimer
+		command = TempoMatch_Pause}
 	ragdoll_markforreset
-	stop_loop_cameras name = <objid>
-	anim_command \{target = momenttimer
-		command = timer_waitanimcomplete}
-	wait \{2
+	stop_loop_cameras name = <ObjID>
+	Anim_Command \{target = momenttimer
+		command = Timer_WaitAnimComplete}
+	Wait \{2
 		gameframes}
 	end_moment_anim
 endscript
 
 script end_moment_anim 
-	obj_getid
-	obj_killspawnedscript \{name = handle_drummer_moment_anim_blending}
-	if anim_animnodeexists \{id = moment_blend}
-		anim_command \{target = moment_blend
-			command = partialswitch_setstate
+	Obj_GetID
+	Obj_KillSpawnedScript \{name = handle_drummer_moment_anim_blending}
+	if Anim_AnimNodeExists \{id = moment_blend}
+		Anim_Command \{target = moment_blend
+			command = PartialSwitch_SetState
 			params = {
 				off
-				blendduration = 0.0
+				BlendDuration = 0.0
 			}}
 	endif
-	if anim_animnodeexists \{id = bodytimer}
-		anim_command \{target = bodytimer
-			command = tempomatch_unpause}
+	if Anim_AnimNodeExists \{id = BodyTimer}
+		Anim_Command \{target = BodyTimer
+			command = TempoMatch_Unpause}
 	endif
-	extendcrc <objid> '_Info' out = info_struct
+	ExtendCRC <ObjID> '_Info' out = info_struct
 	part = ($<info_struct>.part)
-	if (<part> = guitar || <part> = bass)
-		band_setikchain name = <objid> chain = guitar
+	if (<part> = guitar || <part> = Bass)
+		Band_SetIKChain name = <ObjID> chain = guitar
 	else
-		band_setikchain name = <objid> chain = slave
+		Band_SetIKChain name = <ObjID> chain = slave
 	endif
 	ragdoll_markforreset
-	start_loop_cameras name = <objid>
-	if compositeobjectexists \{name = guitarist}
-		guitarist :obj_setboundingsphere \{10}
+	start_loop_cameras name = <ObjID>
+	if CompositeObjectExists \{name = Guitarist}
+		Guitarist :Obj_SetBoundingSphere \{10}
 	endif
-	if compositeobjectexists \{name = bassist}
-		bassist :obj_setboundingsphere \{10}
+	if CompositeObjectExists \{name = bassist}
+		bassist :Obj_SetBoundingSphere \{10}
 	endif
-	if compositeobjectexists \{name = vocalist}
-		vocalist :obj_setboundingsphere \{10}
+	if CompositeObjectExists \{name = vocalist}
+		vocalist :Obj_SetBoundingSphere \{10}
 	endif
-	wait \{1
+	Wait \{1
 		gameframe}
-	getpakmancurrent \{map = zones}
+	GetPakManCurrent \{map = zones}
 	if (<pak> != z_soundcheck)
-		band_movetostartnode name = <objid>
+		Band_MoveToStartNode name = <ObjID>
 	endif
 endscript
 
 script stop_loop_cameras 
-	if (<name> = drummer)
+	if (<name> = Drummer)
 		return
 	endif
-	extendcrc <name> '_mocap_lock_target_01' out = camera1
-	if compositeobjectexists name = <camera1>
-		if <camera1> :anim_animnodeexists id = bodytimer
-			<camera1> :anim_command target = bodytimer command = tempomatch_pause
+	ExtendCRC <name> '_mocap_lock_target_01' out = camera1
+	if CompositeObjectExists name = <camera1>
+		if <camera1> :Anim_AnimNodeExists id = BodyTimer
+			<camera1> :Anim_Command target = BodyTimer command = TempoMatch_Pause
 		endif
 	endif
-	extendcrc <name> '_mocap_lock_target_02' out = camera2
-	if compositeobjectexists name = <camera2>
-		if <camera2> :anim_animnodeexists id = bodytimer
-			<camera2> :anim_command target = bodytimer command = tempomatch_pause
+	ExtendCRC <name> '_mocap_lock_target_02' out = camera2
+	if CompositeObjectExists name = <camera2>
+		if <camera2> :Anim_AnimNodeExists id = BodyTimer
+			<camera2> :Anim_Command target = BodyTimer command = TempoMatch_Pause
 		endif
 	endif
 endscript
 
 script start_loop_cameras 
-	extendcrc <name> '_mocap_lock_target_01' out = camera1
-	if compositeobjectexists name = <camera1>
-		if <camera1> :anim_animnodeexists id = bodytimer
-			<camera1> :anim_command target = bodytimer command = tempomatch_unpause
+	ExtendCRC <name> '_mocap_lock_target_01' out = camera1
+	if CompositeObjectExists name = <camera1>
+		if <camera1> :Anim_AnimNodeExists id = BodyTimer
+			<camera1> :Anim_Command target = BodyTimer command = TempoMatch_Unpause
 		endif
 	endif
-	extendcrc <name> '_mocap_lock_target_02' out = camera2
-	if compositeobjectexists name = <camera2>
-		if <camera2> :anim_animnodeexists id = bodytimer
-			<camera2> :anim_command target = bodytimer command = tempomatch_unpause
+	ExtendCRC <name> '_mocap_lock_target_02' out = camera2
+	if CompositeObjectExists name = <camera2>
+		if <camera2> :Anim_AnimNodeExists id = BodyTimer
+			<camera2> :Anim_Command target = BodyTimer command = TempoMatch_Unpause
 		endif
 	endif
 endscript
@@ -942,177 +942,177 @@ script set_timer_node_speed
 endscript
 
 script handle_drummer_moment_anim_blending 
-	anim_command \{target = moment_blend
-		command = partialswitch_setstate
+	Anim_Command \{target = moment_blend
+		command = PartialSwitch_SetState
 		params = {
 			on
-			blendduration = 0.1
+			BlendDuration = 0.1
 		}}
-	anim_command \{target = moment_timer
-		command = timer_waitanimcomplete}
-	anim_command \{target = moment_blend
-		command = partialswitch_setstate
+	Anim_Command \{target = moment_timer
+		command = Timer_WaitAnimComplete}
+	Anim_Command \{target = moment_blend
+		command = PartialSwitch_SetState
 		params = {
 			off
-			blendduration = 0.1
+			BlendDuration = 0.1
 		}}
 endscript
 
 script end_drummer_moment_anim 
-	obj_killspawnedscript \{name = handle_drummer_moment_anim_blending}
-	anim_command \{target = moment_blend
-		command = partialswitch_setstate
+	Obj_KillSpawnedScript \{name = handle_drummer_moment_anim_blending}
+	Anim_Command \{target = moment_blend
+		command = PartialSwitch_SetState
 		params = {
 			off
-			blendduration = 0.0
+			BlendDuration = 0.0
 		}}
 endscript
 
 script drummer_faceoff_rest 
-	anim = drum_hth_loop_notempo
-	anim_command {
+	Anim = Drum_HTH_Loop_NoTempo
+	Anim_Command {
 		target = faceoff_branch
-		command = degenerateblend_addbranch
+		command = DegenerateBlend_AddBranch
 		params = {
-			tree = $faceoff_drummer_notempo
-			blendduration = 0.0
+			Tree = $faceoff_drummer_notempo
+			BlendDuration = 0.0
 			params = {
-				anim = <anim>
+				Anim = <Anim>
 			}
 		}
 	}
-	anim_command \{target = faceoff_blend
-		command = partialswitch_setstate
+	Anim_Command \{target = faceoff_blend
+		command = PartialSwitch_SetState
 		params = {
 			on
-			blendduration = 0.3
+			BlendDuration = 0.3
 		}}
 endscript
 
 script drummer_faceoff_play 
-	anim_command \{target = faceoff_blend
-		command = partialswitch_setstate
+	Anim_Command \{target = faceoff_blend
+		command = PartialSwitch_SetState
 		params = {
 			off
-			blendduration = 0.3
+			BlendDuration = 0.3
 		}}
 endscript
 faceoff_drummer_notempo = {
-	type = cycle
+	type = Cycle
 	id = faceoff_timer
-	anim = anim
+	Anim = Anim
 	[
 		{
-			type = source
-			anim = anim
+			type = Source
+			Anim = Anim
 		}
 	]
 }
 
 script hide_mic 
-	switchoffatomic \{cas_mic}
-	switchoffatomic \{cas_mic_stand}
+	SwitchOffAtomic \{CAS_Mic}
+	SwitchOffAtomic \{CAS_Mic_Stand}
 endscript
 
 script show_mic 
-	switchonatomic \{cas_mic}
-	switchonatomic \{cas_mic_stand}
+	SwitchOnAtomic \{CAS_Mic}
+	SwitchOnAtomic \{CAS_Mic_Stand}
 endscript
 
 script hide_mic_stand 
-	switchoffatomic \{cas_mic_stand}
+	SwitchOffAtomic \{CAS_Mic_Stand}
 endscript
 
 script show_mic_stand 
-	switchonatomic \{cas_mic_stand}
+	SwitchOnAtomic \{CAS_Mic_Stand}
 endscript
 
 script hide_mic_microphone 
-	switchoffatomic \{cas_mic}
+	SwitchOffAtomic \{CAS_Mic}
 endscript
 
 script show_mic_microphone 
-	switchonatomic \{cas_mic}
+	SwitchOnAtomic \{CAS_Mic}
 endscript
 
-script hide_drumkit 
-	switchoffatomic \{cas_drums}
+script hide_Drumkit 
+	SwitchOffAtomic \{CAS_Drums}
 endscript
 
-script show_drumkit 
-	switchonatomic \{cas_drums}
+script show_Drumkit 
+	SwitchOnAtomic \{CAS_Drums}
 endscript
 
-script vocalist_facial_animations_start \{blendtime = 0.3}
-	anim_command target = vocal_face_mod command = modulate_startblend params = {blendtime = <blendtime> blendcurve = [1 0]}
+script vocalist_facial_animations_start \{Blendtime = 0.3}
+	Anim_Command target = vocal_face_mod command = Modulate_StartBlend params = {Blendtime = <Blendtime> blendcurve = [1 0]}
 endscript
 
-script vocalist_facial_animations_stop \{blendtime = 0.3}
-	anim_command target = vocal_face_mod command = modulate_startblend params = {blendtime = <blendtime> blendcurve = [0 1]}
+script vocalist_facial_animations_stop \{Blendtime = 0.3}
+	Anim_Command target = vocal_face_mod command = Modulate_StartBlend params = {Blendtime = <Blendtime> blendcurve = [0 1]}
 endscript
 generic_static_tree = {
-	type = degenerateblend
-	id = body
+	type = DegenerateBlend
+	id = Body
 }
 guitarist_static_tree = {
-	type = constraintbones
-	constraintbones = hero_constraintbones
+	type = ConstraintBones
+	ConstraintBones = hero_ConstraintBones
 	[
 		{
 			type = ragdoll
 			[
 				{
-					type = applyheeldifference
-					id = heel
+					type = ApplyHeelDifference
+					id = Heel
 					[
 						{
-							type = ik
+							type = Ik
 							two_bone_chains = ik_params
-							id = ik
+							id = Ik
 							[
 								{
-									type = tweakbones
-									id = tweakbonesnode
+									type = TweakBones
+									id = TweakBonesNode
 									[
 										{
-											type = partialswitch
+											type = PartialSwitch
 											state = on
 											[
 												{
-													type = degenerateblend
-													id = face
+													type = DegenerateBlend
+													id = Face
 												}
 												{
 													type = applydifference
-													id = lefthandpartial
+													id = LeftHandPartial
 													[
 														{
 															$hero_arm_branch
 														}
 														{
-															type = switch
+															type = Switch
 															state = off
 															id = moment_blend
 															[
 																{
-																	type = applyfemaledifference
-																	id = maleanimadjust_moment
-																	anim = gh_rocker_female_guitarraise_d
+																	type = ApplyFemaleDifference
+																	id = MaleAnimAdjust_Moment
+																	Anim = GH_Rocker_Female_GuitarRaise_D
 																	[
 																		{
-																			type = degenerateblend
+																			type = DegenerateBlend
 																			id = moment_branch
 																		}
 																	]
 																}
 																{
-																	type = applyfemaledifference
-																	id = maleanimadjust
-																	anim = gh_rocker_female_guitarraise_d
+																	type = ApplyFemaleDifference
+																	id = MaleAnimAdjust
+																	Anim = GH_Rocker_Female_GuitarRaise_D
 																	[
 																		{
-																			type = degenerateblend
-																			id = body
+																			type = DegenerateBlend
+																			id = Body
 																		}
 																	]
 																}
@@ -1133,62 +1133,62 @@ guitarist_static_tree = {
 	]
 }
 frontend_static_tree = {
-	type = constraintbones
-	constraintbones = hero_constraintbones
+	type = ConstraintBones
+	ConstraintBones = hero_ConstraintBones
 	[
 		{
 			type = ragdoll
 			[
 				{
-					type = applyheeldifference
-					id = heel
+					type = ApplyHeelDifference
+					id = Heel
 					[
 						{
-							type = ik
+							type = Ik
 							two_bone_chains = ik_params
-							id = ik
+							id = Ik
 							[
 								{
-									type = applyfemaledifference
-									id = maleanimadjust
-									anim = gh_rocker_female_guitarraise_d
+									type = ApplyFemaleDifference
+									id = MaleAnimAdjust
+									Anim = GH_Rocker_Female_GuitarRaise_D
 									[
 										{
-											type = applyfemaledrummerdifference
-											id = femalediff
+											type = ApplyFemaleDrummerDifference
+											id = FemaleDiff
 											[
 												{
-													type = tweakbones
-													id = tweakbonesnode
+													type = TweakBones
+													id = TweakBonesNode
 													[
 														{
-															type = partialswitch
+															type = PartialSwitch
 															state = on
 															[
 																{
-																	type = degenerateblend
-																	id = face
+																	type = DegenerateBlend
+																	id = Face
 																}
 																{
 																	type = applydifference
-																	id = lefthandpartial
+																	id = LeftHandPartial
 																	[
 																		{
 																			$hero_arm_branch
 																		}
 																		{
-																			type = degenerateblend
-																			type = partialswitch
+																			type = DegenerateBlend
+																			type = PartialSwitch
 																			state = off
 																			id = moment_blend
 																			[
 																				{
-																					type = degenerateblend
+																					type = DegenerateBlend
 																					id = moment_branch
 																				}
 																				{
-																					type = degenerateblend
-																					id = body
+																					type = DegenerateBlend
+																					id = Body
 																				}
 																			]
 																		}
@@ -1211,10 +1211,10 @@ frontend_static_tree = {
 	]
 }
 hero_arm_branch = {
-	type = add
+	type = Add
 	[
 		{
-			type = add
+			type = Add
 			[
 				{
 					type = modulate
@@ -1222,8 +1222,8 @@ hero_arm_branch = {
 					id = fret_anim_mod
 					[
 						{
-							type = degenerateblend
-							id = leftarm
+							type = DegenerateBlend
+							id = LeftArm
 						}
 					]
 				}
@@ -1233,8 +1233,8 @@ hero_arm_branch = {
 					id = chord_anim_mod
 					[
 						{
-							type = degenerateblend
-							id = lefthand
+							type = DegenerateBlend
+							id = LeftHand
 						}
 					]
 				}
@@ -1246,8 +1246,8 @@ hero_arm_branch = {
 			id = strum_anim_mod
 			[
 				{
-					type = degenerateblend
-					id = rightarm
+					type = DegenerateBlend
+					id = RightArm
 				}
 			]
 		}
@@ -1255,9 +1255,9 @@ hero_arm_branch = {
 }
 hero_body_branch = {
 	type = timer_type
-	id = bodytimer
-	anim = anim_name
-	speed = speed
+	id = BodyTimer
+	Anim = anim_name
+	Speed = Speed
 	start = start
 	end = end
 	tempo_anim = tempo_anim
@@ -1269,15 +1269,15 @@ hero_body_branch = {
 	[
 		{
 			type = source_type
-			anim = anim_name
+			Anim = anim_name
 		}
 	]
 }
 hero_moment_branch = {
 	type = timer_type
 	id = momenttimer
-	anim = anim_name
-	speed = speed
+	Anim = anim_name
+	Speed = Speed
 	start = start
 	end = end
 	tempo_anim = tempo_anim
@@ -1289,118 +1289,118 @@ hero_moment_branch = {
 	[
 		{
 			type = source_type
-			anim = anim_name
+			Anim = anim_name
 		}
 	]
 }
 hero_strumming_branch = {
-	type = play
-	id = strumtimer
-	anim = strum_name
+	type = Play
+	id = StrumTimer
+	Anim = strum_name
 	[
 		{
-			type = source
-			anim = strum_name
+			type = Source
+			Anim = strum_name
 		}
 	]
 }
 hero_fret_branch = {
-	type = play
-	id = frettimer
-	anim = fret_anim
+	type = Play
+	id = FretTimer
+	Anim = fret_anim
 	[
 		{
-			type = source
-			anim = fret_anim
+			type = Source
+			Anim = fret_anim
 		}
 	]
 }
 hero_finger_branch = {
-	type = play
-	id = fingertimer
-	anim = finger_anim
+	type = Play
+	id = FingerTimer
+	Anim = finger_anim
 	[
 		{
-			type = source
-			anim = finger_anim
+			type = Source
+			Anim = finger_anim
 		}
 	]
 }
 hero_face_branch = {
-	type = play
-	id = facialtimer
-	anim = facial_anim
+	type = Play
+	id = FacialTimer
+	Anim = facial_anim
 	[
 		{
-			type = facialhacksource
-			anim = facial_anim
+			type = FacialHackSource
+			Anim = facial_anim
 		}
 	]
 }
 vocalist_face_branch = {
-	type = playnodurationblending
-	id = facialtimer
-	anim = facial_anim
+	type = PlayNoDurationBlending
+	id = FacialTimer
+	Anim = facial_anim
 	[
 		{
-			type = facialhacksource
-			anim = facial_anim
+			type = FacialHackSource
+			Anim = facial_anim
 		}
 	]
 }
 hero_play_branch = {
-	type = play
+	type = Play
 	id = timer_id
-	anim = anim_name
+	Anim = anim_name
 	[
 		{
-			type = source
-			anim = anim_name
+			type = Source
+			Anim = anim_name
 		}
 	]
 }
 hero_empty_branch = {
-	type = blank
+	type = Blank
 }
 hero_drumming_branch = {
 	type = timer_type
 	id = timer_id
-	anim = anim_name
-	speed = speed
+	Anim = anim_name
+	Speed = Speed
 	[
 		{
-			type = source
-			anim = anim_name
+			type = Source
+			Anim = anim_name
 		}
 	]
 }
 vocalist_static_tree = {
-	type = constraintbones
-	constraintbones = hero_constraintbones
+	type = ConstraintBones
+	ConstraintBones = hero_ConstraintBones
 	[
 		{
 			type = ragdoll
 			[
 				{
-					type = ik
-					two_bone_chains = singer_ik_params_arms
-					id = ik
+					type = Ik
+					two_bone_chains = Singer_IK_Params_Arms
+					id = Ik
 					[
 						{
-							type = applyheeldifference
-							id = heel
+							type = ApplyHeelDifference
+							id = Heel
 							[
 								{
-									type = ik
-									two_bone_chains = singer_ik_params_legs
-									id = ik
+									type = Ik
+									two_bone_chains = Singer_IK_Params_Legs
+									id = Ik
 									[
 										{
-											type = tweakbones
-											id = tweakbonesnode
+											type = TweakBones
+											id = TweakBonesNode
 											[
 												{
-													type = partialswitch
+													type = PartialSwitch
 													state = on
 													[
 														{
@@ -1409,23 +1409,23 @@ vocalist_static_tree = {
 															strength = 1
 															[
 																{
-																	type = degenerateblend
-																	id = face
+																	type = DegenerateBlend
+																	id = Face
 																}
 															]
 														}
 														{
-															type = switch
+															type = Switch
 															state = off
 															id = moment_blend
 															[
 																{
-																	type = degenerateblend
+																	type = DegenerateBlend
 																	id = moment_branch
 																}
 																{
-																	type = degenerateblend
-																	id = body
+																	type = DegenerateBlend
+																	id = Body
 																}
 															]
 														}
@@ -1444,63 +1444,63 @@ vocalist_static_tree = {
 	]
 }
 drummer_static_tree = {
-	type = constraintbones
-	constraintbones = hero_constraintbones
+	type = ConstraintBones
+	ConstraintBones = hero_ConstraintBones
 	[
 		{
 			type = ragdoll
 			[
 				{
-					type = applyheeldifference
-					id = heel
+					type = ApplyHeelDifference
+					id = Heel
 					[
 						{
-							type = ik
-							two_bone_chains = drummer_ik_params
-							id = ik
+							type = Ik
+							two_bone_chains = drummer_IK_params
+							id = Ik
 							[
 								{
-									type = applyfemaledrummerdifference
-									id = femalediff
+									type = ApplyFemaleDrummerDifference
+									id = FemaleDiff
 									[
 										{
-											type = tweakbones
-											id = tweakbonesnode
+											type = TweakBones
+											id = TweakBonesNode
 											[
 												{
-													type = partialswitch
+													type = PartialSwitch
 													state = on
 													[
 														{
-															type = degenerateblend
-															id = face
+															type = DegenerateBlend
+															id = Face
 														}
 														{
-															type = switch
+															type = Switch
 															state = off
 															id = faceoff_blend
 															[
 																{
-																	type = degenerateblend
+																	type = DegenerateBlend
 																	id = faceoff_branch
 																}
 																{
-																	type = applydrumkitdifference
-																	id = drumkit
+																	type = ApplyDrumKitDifference
+																	id = DrumKit
 																	drum_kit_channel_list = $drum_kit_channel_list
 																	[
 																		{
-																			type = switch
+																			type = Switch
 																			state = off
 																			id = moment_blend
 																			[
 																				{
-																					type = degenerateblend
+																					type = DegenerateBlend
 																					id = moment_branch
 																				}
 																				{
-																					type = degenerateblend
-																					id = body
+																					type = DegenerateBlend
+																					id = Body
 																				}
 																			]
 																		}
@@ -1525,8 +1525,8 @@ drummer_static_tree = {
 drummer_moment_branch = {
 	type = timer_type
 	id = moment_timer
-	anim = anim_name
-	speed = speed
+	Anim = anim_name
+	Speed = Speed
 	start = start
 	end = end
 	skip_beats = skip_beats
@@ -1535,18 +1535,18 @@ drummer_moment_branch = {
 	[
 		{
 			type = source_type
-			anim = anim_name
+			Anim = anim_name
 		}
 	]
 }
 hero_cymbal_branch = {
-	type = play
+	type = Play
 	id = cymbal_timer_id
-	anim = cymbal_anim
+	Anim = cymbal_anim
 	[
 		{
-			type = source
-			anim = cymbal_anim
+			type = Source
+			Anim = cymbal_anim
 		}
 	]
 }
@@ -1554,372 +1554,372 @@ drum_kit_channel_list = [
 	{
 		name = tom_1
 		bones = [
-			bone_mic_adjust_height
+			Bone_Mic_Adjust_Height
 		]
 	}
 	{
 		name = tom_2
 		bones = [
-			bone_mic_adjust_angle
+			Bone_Mic_Adjust_Angle
 		]
 	}
 	{
 		name = snare
 		bones = [
-			bone_mic_stand
+			Bone_Mic_Stand
 		]
 	}
 	{
 		name = cymbal_hh
 		bones = [
-			bone_guitar_string_2
-			bone_guitar_string_3
-			bone_guitar_string_4
+			Bone_Guitar_String_2
+			Bone_Guitar_String_3
+			Bone_Guitar_String_4
 		]
 	}
 	{
 		name = cymbal_1
 		bones = [
-			bone_ik_hand_guitar_l
+			Bone_IK_Hand_Guitar_L
 		]
 	}
 	{
 		name = cymbal_2
 		bones = [
-			bone_ik_hand_guitar_r
+			Bone_IK_Hand_Guitar_R
 		]
 	}
 	{
 		name = cymbal_3
 		bones = [
-			bone_guitar_string_1
+			Bone_Guitar_String_1
 		]
 	}
 	{
 		name = kick
 		bones = [
-			bone_thigh_r
-			bone_toe_r
-			bone_ik_foot_slave_r
-			bone_guitar_string_5
-			bone_guitar_string_6
-			bone_mic_adjust_height
-			bone_mic_adjust_angle
-			bone_mic_microphone
+			Bone_Thigh_R
+			Bone_Toe_R
+			Bone_IK_Foot_Slave_R
+			Bone_Guitar_String_5
+			Bone_Guitar_String_6
+			Bone_Mic_Adjust_Height
+			Bone_Mic_Adjust_Angle
+			Bone_Mic_Microphone
 		]
 	}
 ]
 empty_ik_params = [
 ]
-car_ik_params = [
+CAR_IK_Params = [
 	{
-		bone0 = bone_bicep_r
-		bone1 = bone_forearm_r
-		bone2 = bone_palm_r
-		hingeaxis = (0.0, 0.0, -1.0)
-		cosmaxhingeangle = -0.96999997
-		cosminhingeangle = 0.96999997
-		bonetarget = bone_ik_hand_slave_r
+		bone0 = Bone_Bicep_R
+		bone1 = Bone_Forearm_R
+		bone2 = Bone_Palm_R
+		HingeAxis = (0.0, 0.0, -1.0)
+		CosMaxHingeAngle = -0.96999997
+		CosMinHingeAngle = 0.96999997
+		boneTarget = Bone_IK_Hand_Slave_R
 	}
 	{
-		bone0 = bone_bicep_l
-		bone1 = bone_forearm_l
-		bone2 = bone_palm_l
-		hingeaxis = (0.0, 0.0, -1.0)
-		cosmaxhingeangle = -0.96999997
-		cosminhingeangle = 0.96999997
-		bonetarget = bone_ik_hand_slave_l
+		bone0 = Bone_Bicep_L
+		bone1 = Bone_Forearm_L
+		bone2 = Bone_Palm_L
+		HingeAxis = (0.0, 0.0, -1.0)
+		CosMaxHingeAngle = -0.96999997
+		CosMinHingeAngle = 0.96999997
+		boneTarget = Bone_IK_Hand_Slave_L
 	}
 	{
-		bone0 = bone_thigh_l
-		bone1 = bone_knee_l
-		bone2 = bone_ankle_l
-		hingeaxis = (0.0, 0.0, 1.0)
-		cosmaxhingeangle = -0.98999995
-		cosminhingeangle = 0.96999997
-		bonetarget = bone_ik_foot_slave_l
+		bone0 = Bone_Thigh_L
+		bone1 = Bone_Knee_L
+		bone2 = Bone_Ankle_L
+		HingeAxis = (0.0, 0.0, 1.0)
+		CosMaxHingeAngle = -0.98999995
+		CosMinHingeAngle = 0.96999997
+		boneTarget = Bone_IK_Foot_Slave_L
 	}
 	{
-		bone0 = bone_thigh_r
-		bone1 = bone_knee_r
-		bone2 = bone_ankle_r
-		hingeaxis = (0.0, 0.0, 1.0)
-		cosmaxhingeangle = -0.98999995
-		cosminhingeangle = 0.96999997
-		bonetarget = bone_ik_foot_slave_r
-	}
-]
-hero_ik_params = [
-	{
-		bone0 = bone_bicep_r
-		bone1 = bone_forearm_r
-		bone2 = bone_palm_r
-		hingeaxis = (0.0, 0.0, -1.0)
-		cosmaxhingeangle = -0.96999997
-		cosminhingeangle = 0.96999997
-		bonetarget = bone_ik_hand_guitar_r
-		newtarget = bone_ik_hand_slave_r
-		stretch = 1.0
-	}
-	{
-		bone0 = bone_bicep_l
-		bone1 = bone_forearm_l
-		bone2 = bone_palm_l
-		hingeaxis = (0.0, 0.0, -1.0)
-		cosmaxhingeangle = -0.96999997
-		cosminhingeangle = 0.96999997
-		bonetarget = bone_ik_hand_guitar_l
-		newtarget = bone_ik_hand_slave_l
-		stretch = 1.0
-	}
-	{
-		bone0 = bone_thigh_l
-		bone1 = bone_knee_l
-		bone2 = bone_ankle_l
-		hingeaxis = (0.0, 0.0, 1.0)
-		cosmaxhingeangle = -0.98999995
-		cosminhingeangle = 0.96999997
-		bonetarget = bone_ik_foot_slave_l
-	}
-	{
-		bone0 = bone_thigh_r
-		bone1 = bone_knee_r
-		bone2 = bone_ankle_r
-		hingeaxis = (0.0, 0.0, 1.0)
-		cosmaxhingeangle = -0.98999995
-		cosminhingeangle = 0.96999997
-		bonetarget = bone_ik_foot_slave_r
+		bone0 = Bone_Thigh_R
+		bone1 = Bone_Knee_R
+		bone2 = Bone_Ankle_R
+		HingeAxis = (0.0, 0.0, 1.0)
+		CosMaxHingeAngle = -0.98999995
+		CosMinHingeAngle = 0.96999997
+		boneTarget = Bone_IK_Foot_Slave_R
 	}
 ]
-hero_feet_ik_params = [
+Hero_Ik_params = [
 	{
-		bone0 = bone_thigh_l
-		bone1 = bone_knee_l
-		bone2 = bone_ankle_l
-		hingeaxis = (0.0, 0.0, 1.0)
-		cosmaxhingeangle = -0.98999995
-		cosminhingeangle = 0.96999997
-		bonetarget = bone_ik_foot_slave_l
+		bone0 = Bone_Bicep_R
+		bone1 = Bone_Forearm_R
+		bone2 = Bone_Palm_R
+		HingeAxis = (0.0, 0.0, -1.0)
+		CosMaxHingeAngle = -0.96999997
+		CosMinHingeAngle = 0.96999997
+		boneTarget = Bone_IK_Hand_Guitar_R
+		NewTarget = Bone_IK_Hand_Slave_R
+		stretch = 1.0
 	}
 	{
-		bone0 = bone_thigh_r
-		bone1 = bone_knee_r
-		bone2 = bone_ankle_r
-		hingeaxis = (0.0, 0.0, 1.0)
-		cosmaxhingeangle = -0.98999995
-		cosminhingeangle = 0.96999997
-		bonetarget = bone_ik_foot_slave_r
+		bone0 = Bone_Bicep_L
+		bone1 = Bone_Forearm_L
+		bone2 = Bone_Palm_L
+		HingeAxis = (0.0, 0.0, -1.0)
+		CosMaxHingeAngle = -0.96999997
+		CosMinHingeAngle = 0.96999997
+		boneTarget = Bone_IK_Hand_Guitar_L
+		NewTarget = Bone_IK_Hand_Slave_L
+		stretch = 1.0
+	}
+	{
+		bone0 = Bone_Thigh_L
+		bone1 = Bone_Knee_L
+		bone2 = Bone_Ankle_L
+		HingeAxis = (0.0, 0.0, 1.0)
+		CosMaxHingeAngle = -0.98999995
+		CosMinHingeAngle = 0.96999997
+		boneTarget = Bone_IK_Foot_Slave_L
+	}
+	{
+		bone0 = Bone_Thigh_R
+		bone1 = Bone_Knee_R
+		bone2 = Bone_Ankle_R
+		HingeAxis = (0.0, 0.0, 1.0)
+		CosMaxHingeAngle = -0.98999995
+		CosMinHingeAngle = 0.96999997
+		boneTarget = Bone_IK_Foot_Slave_R
 	}
 ]
-singer_ik_params_arms = [
+Hero_Feet_IK_Params = [
 	{
-		bone0 = bone_bicep_r
-		bone1 = bone_forearm_r
-		bone2 = bone_palm_r
-		hingeaxis = (0.0, 0.0, -1.0)
-		cosmaxhingeangle = -0.96999997
-		cosminhingeangle = 0.96999997
-		bonetarget = bone_ik_hand_slave_r
+		bone0 = Bone_Thigh_L
+		bone1 = Bone_Knee_L
+		bone2 = Bone_Ankle_L
+		HingeAxis = (0.0, 0.0, 1.0)
+		CosMaxHingeAngle = -0.98999995
+		CosMinHingeAngle = 0.96999997
+		boneTarget = Bone_IK_Foot_Slave_L
+	}
+	{
+		bone0 = Bone_Thigh_R
+		bone1 = Bone_Knee_R
+		bone2 = Bone_Ankle_R
+		HingeAxis = (0.0, 0.0, 1.0)
+		CosMaxHingeAngle = -0.98999995
+		CosMinHingeAngle = 0.96999997
+		boneTarget = Bone_IK_Foot_Slave_R
+	}
+]
+Singer_IK_Params_Arms = [
+	{
+		bone0 = Bone_Bicep_R
+		bone1 = Bone_Forearm_R
+		bone2 = Bone_Palm_R
+		HingeAxis = (0.0, 0.0, -1.0)
+		CosMaxHingeAngle = -0.96999997
+		CosMinHingeAngle = 0.96999997
+		boneTarget = Bone_IK_Hand_Slave_R
 		stretch = 1.0
 	}
 	{
-		bone0 = bone_bicep_l
-		bone1 = bone_forearm_l
-		bone2 = bone_palm_l
-		hingeaxis = (0.0, 0.0, -1.0)
-		cosmaxhingeangle = -0.96999997
-		cosminhingeangle = 0.96999997
-		bonetarget = bone_ik_hand_slave_l
+		bone0 = Bone_Bicep_L
+		bone1 = Bone_Forearm_L
+		bone2 = Bone_Palm_L
+		HingeAxis = (0.0, 0.0, -1.0)
+		CosMaxHingeAngle = -0.96999997
+		CosMinHingeAngle = 0.96999997
+		boneTarget = Bone_IK_Hand_Slave_L
 		stretch = 1.0
 	}
 ]
-singer_ik_params_legs = [
+Singer_IK_Params_Legs = [
 	{
-		bone0 = bone_thigh_l
-		bone1 = bone_knee_l
-		bone2 = bone_ankle_l
-		hingeaxis = (0.0, 0.0, 1.0)
-		cosmaxhingeangle = -0.98999995
-		cosminhingeangle = 0.96999997
-		bonetarget = bone_ik_foot_slave_l
+		bone0 = Bone_Thigh_L
+		bone1 = Bone_Knee_L
+		bone2 = Bone_Ankle_L
+		HingeAxis = (0.0, 0.0, 1.0)
+		CosMaxHingeAngle = -0.98999995
+		CosMinHingeAngle = 0.96999997
+		boneTarget = Bone_IK_Foot_Slave_L
 	}
 	{
-		bone0 = bone_thigh_r
-		bone1 = bone_knee_r
-		bone2 = bone_ankle_r
-		hingeaxis = (0.0, 0.0, 1.0)
-		cosmaxhingeangle = -0.98999995
-		cosminhingeangle = 0.96999997
-		bonetarget = bone_ik_foot_slave_r
-	}
-]
-drummer_ik_params = [
-	{
-		bone0 = bone_bicep_r
-		bone1 = bone_forearm_r
-		bone2 = bone_palm_r
-		hingeaxis = (0.0, 0.0, -1.0)
-		cosmaxhingeangle = -0.96999997
-		cosminhingeangle = 0.96999997
-		bonetarget = bone_ik_hand_slave_r
-		stretch = 1.0
-	}
-	{
-		bone0 = bone_bicep_l
-		bone1 = bone_forearm_l
-		bone2 = bone_palm_l
-		hingeaxis = (0.0, 0.0, -1.0)
-		cosmaxhingeangle = -0.96999997
-		cosminhingeangle = 0.96999997
-		bonetarget = bone_ik_hand_slave_l
-		stretch = 1.0
-	}
-	{
-		bone0 = bone_thigh_l
-		bone1 = bone_knee_l
-		bone2 = bone_ankle_l
-		hingeaxis = (0.0, 0.0, 1.0)
-		cosmaxhingeangle = -0.98999995
-		cosminhingeangle = 0.96999997
-		bonetarget = bone_ik_foot_slave_l
-	}
-	{
-		bone0 = bone_thigh_r
-		bone1 = bone_knee_r
-		bone2 = bone_ankle_r
-		hingeaxis = (0.0, 0.0, 1.0)
-		cosmaxhingeangle = -0.98999995
-		cosminhingeangle = 0.96999997
-		bonetarget = bone_ik_foot_slave_r
+		bone0 = Bone_Thigh_R
+		bone1 = Bone_Knee_R
+		bone2 = Bone_Ankle_R
+		HingeAxis = (0.0, 0.0, 1.0)
+		CosMaxHingeAngle = -0.98999995
+		CosMinHingeAngle = 0.96999997
+		boneTarget = Bone_IK_Foot_Slave_R
 	}
 ]
-guitar_ik_params = [
+drummer_IK_params = [
 	{
-		bone0 = bone_bicep_r
-		bone1 = bone_forearm_r
-		bone2 = bone_palm_r
-		hingeaxis = (0.0, 0.0, -1.0)
-		cosmaxhingeangle = -0.96999997
-		cosminhingeangle = 0.96999997
-		bonetarget = bone_ik_hand_guitar_r
-		newtarget = bone_ik_hand_slave_r
+		bone0 = Bone_Bicep_R
+		bone1 = Bone_Forearm_R
+		bone2 = Bone_Palm_R
+		HingeAxis = (0.0, 0.0, -1.0)
+		CosMaxHingeAngle = -0.96999997
+		CosMinHingeAngle = 0.96999997
+		boneTarget = Bone_IK_Hand_Slave_R
 		stretch = 1.0
 	}
 	{
-		bone0 = bone_bicep_l
-		bone1 = bone_forearm_l
-		bone2 = bone_palm_l
-		hingeaxis = (0.0, 0.0, -1.0)
-		cosmaxhingeangle = -0.96999997
-		cosminhingeangle = 0.96999997
-		bonetarget = bone_ik_hand_guitar_l
-		newtarget = bone_ik_hand_slave_l
+		bone0 = Bone_Bicep_L
+		bone1 = Bone_Forearm_L
+		bone2 = Bone_Palm_L
+		HingeAxis = (0.0, 0.0, -1.0)
+		CosMaxHingeAngle = -0.96999997
+		CosMinHingeAngle = 0.96999997
+		boneTarget = Bone_IK_Hand_Slave_L
 		stretch = 1.0
 	}
 	{
-		bone0 = bone_thigh_l
-		bone1 = bone_knee_l
-		bone2 = bone_ankle_l
-		hingeaxis = (0.0, 0.0, 1.0)
-		cosmaxhingeangle = -0.98999995
-		cosminhingeangle = 0.96999997
-		bonetarget = bone_ik_foot_slave_l
+		bone0 = Bone_Thigh_L
+		bone1 = Bone_Knee_L
+		bone2 = Bone_Ankle_L
+		HingeAxis = (0.0, 0.0, 1.0)
+		CosMaxHingeAngle = -0.98999995
+		CosMinHingeAngle = 0.96999997
+		boneTarget = Bone_IK_Foot_Slave_L
 	}
 	{
-		bone0 = bone_thigh_r
-		bone1 = bone_knee_r
-		bone2 = bone_ankle_r
-		hingeaxis = (0.0, 0.0, 1.0)
-		cosmaxhingeangle = -0.98999995
-		cosminhingeangle = 0.96999997
-		bonetarget = bone_ik_foot_slave_r
+		bone0 = Bone_Thigh_R
+		bone1 = Bone_Knee_R
+		bone2 = Bone_Ankle_R
+		HingeAxis = (0.0, 0.0, 1.0)
+		CosMaxHingeAngle = -0.98999995
+		CosMinHingeAngle = 0.96999997
+		boneTarget = Bone_IK_Foot_Slave_R
 	}
 ]
-hero_constraintbones = [
+Guitar_IK_Params = [
 	{
-		type = twistchild
-		bone = bone_twist_wrist_l
-		target = bone_palm_l
+		bone0 = Bone_Bicep_R
+		bone1 = Bone_Forearm_R
+		bone2 = Bone_Palm_R
+		HingeAxis = (0.0, 0.0, -1.0)
+		CosMaxHingeAngle = -0.96999997
+		CosMinHingeAngle = 0.96999997
+		boneTarget = Bone_IK_Hand_Guitar_R
+		NewTarget = Bone_IK_Hand_Slave_R
+		stretch = 1.0
+	}
+	{
+		bone0 = Bone_Bicep_L
+		bone1 = Bone_Forearm_L
+		bone2 = Bone_Palm_L
+		HingeAxis = (0.0, 0.0, -1.0)
+		CosMaxHingeAngle = -0.96999997
+		CosMinHingeAngle = 0.96999997
+		boneTarget = Bone_IK_Hand_Guitar_L
+		NewTarget = Bone_IK_Hand_Slave_L
+		stretch = 1.0
+	}
+	{
+		bone0 = Bone_Thigh_L
+		bone1 = Bone_Knee_L
+		bone2 = Bone_Ankle_L
+		HingeAxis = (0.0, 0.0, 1.0)
+		CosMaxHingeAngle = -0.98999995
+		CosMinHingeAngle = 0.96999997
+		boneTarget = Bone_IK_Foot_Slave_L
+	}
+	{
+		bone0 = Bone_Thigh_R
+		bone1 = Bone_Knee_R
+		bone2 = Bone_Ankle_R
+		HingeAxis = (0.0, 0.0, 1.0)
+		CosMaxHingeAngle = -0.98999995
+		CosMinHingeAngle = 0.96999997
+		boneTarget = Bone_IK_Foot_Slave_R
+	}
+]
+hero_ConstraintBones = [
+	{
+		type = Twistchild
+		bone = Bone_Twist_Wrist_L
+		target = Bone_Palm_L
 		amount = 0.5
 	}
 	{
-		type = twistchild
-		bone = bone_twist_wrist_r
-		target = bone_palm_r
+		type = Twistchild
+		bone = Bone_Twist_Wrist_R
+		target = Bone_Palm_R
 		amount = 0.5
 	}
 	{
-		type = twist
-		bone = bone_twist_bicep_mid_r
-		target = bone_bicep_r
+		type = Twist
+		bone = Bone_Twist_Bicep_Mid_R
+		target = Bone_Bicep_R
 		amount = 0.5
 	}
 	{
-		type = twist
-		bone = bone_twist_bicep_mid_l
-		target = bone_bicep_l
+		type = Twist
+		bone = Bone_Twist_Bicep_Mid_L
+		target = Bone_Bicep_L
 		amount = 0.5
 	}
 	{
-		type = twist
-		bone = bone_twist_bicep_top_r
-		target = bone_bicep_r
+		type = Twist
+		bone = Bone_Twist_Bicep_Top_R
+		target = Bone_Bicep_R
 		amount = 1.0
 	}
 	{
-		type = twist
-		bone = bone_twist_bicep_top_l
-		target = bone_bicep_l
+		type = Twist
+		bone = Bone_Twist_Bicep_Top_L
+		target = Bone_Bicep_L
 		amount = 1.0
 	}
 	{
-		type = twist
-		bone = bone_twist_thigh_r
-		target = bone_thigh_r
+		type = Twist
+		bone = Bone_Twist_Thigh_R
+		target = Bone_Thigh_R
 		amount = 1.0
 	}
 	{
-		type = twist
-		bone = bone_twist_thigh_l
-		target = bone_thigh_l
+		type = Twist
+		bone = Bone_Twist_Thigh_L
+		target = Bone_Thigh_L
 		amount = 1.0
 	}
 ]
 car_female_facial_bones = [
-	bone_jaw
-	bone_mouth_l
-	bone_mouth_r
-	bone_lip_lower_mid
-	bone_lip_upper_mid
-	bone_lip_lower_corner_l
-	bone_lip_lower_corner_r
-	bone_lip_lower_l
-	bone_lip_lower_r
-	bone_lip_upper_corner_l
-	bone_lip_upper_corner_r
-	bone_lip_upper_l
-	bone_lip_upper_r
-	bone_tongue
+	Bone_Jaw
+	Bone_Mouth_L
+	Bone_Mouth_R
+	Bone_Lip_Lower_Mid
+	Bone_Lip_Upper_Mid
+	Bone_Lip_Lower_Corner_L
+	Bone_Lip_Lower_Corner_R
+	Bone_Lip_Lower_L
+	Bone_Lip_Lower_R
+	Bone_Lip_Upper_Corner_L
+	Bone_Lip_Upper_Corner_R
+	Bone_Lip_Upper_L
+	Bone_Lip_Upper_R
+	Bone_Tongue
 ]
 car_female_facial_bone_anim_scale = 0.75
 car_female_facial_scale_apply = [
-	gh4_singer_male_ozzyface_1
-	gh4_singer_male_ozzyface_2
-	gh4_singer_male_ozzyface_3
-	gh4_singer_male_aboutagirl_1
-	gh4_singer_male_aboutagirl_2
-	gh4_singer_male_aboutagirl_3
-	gh4_singer_male_aggro_1
-	gh4_singer_male_aggro_2
-	gh4_singer_male_aggro_3
-	gh4_singer_male_aggro_4
-	gh4_singer_male_aggro_5
-	gh4_singer_male_americanwoman_1
-	gh4_singer_male_americanwoman_2
-	gh4_singer_male_americanwoman_3
-	gh4_singer_male_americanwoman_4
-	gh4_singer_male_americanwoman_5
-	gh4_singer_male_americanwoman_6
+	GH4_Singer_Male_OzzyFace_1
+	GH4_Singer_Male_OzzyFace_2
+	GH4_Singer_Male_OzzyFace_3
+	GH4_Singer_Male_AboutAGirl_1
+	GH4_Singer_Male_AboutAGirl_2
+	GH4_Singer_Male_AboutAGirl_3
+	GH4_Singer_Male_Aggro_1
+	GH4_Singer_Male_Aggro_2
+	GH4_Singer_Male_Aggro_3
+	GH4_Singer_Male_Aggro_4
+	GH4_Singer_Male_Aggro_5
+	GH4_Singer_Male_AmericanWoman_1
+	GH4_Singer_Male_AmericanWoman_2
+	GH4_Singer_Male_AmericanWoman_3
+	GH4_Singer_Male_AmericanWoman_4
+	GH4_Singer_Male_AmericanWoman_5
+	GH4_Singer_Male_AmericanWoman_6
 	gh3_singer_male_antisocial_1
 	gh3_singer_male_antisocial_2
 	gh3_singer_male_antisocial_3
@@ -1934,36 +1934,36 @@ car_female_facial_scale_apply = [
 	gh4_singer_male_antisocial_5
 	gh4_singer_male_antisocial_6
 	gh4_singer_male_antisocial_7
-	gh4_singer_male_areyougonnago_1
-	gh4_singer_male_areyougonnago_1b
-	gh4_singer_male_areyougonnago_2
-	gh4_singer_male_areyougonnago_2b
-	gh4_singer_male_areyougonnago_3
-	gh4_singer_male_areyougonnago_4
-	gh4_singer_male_areyougonnago_5
-	gh4_singer_male_assassin_1
-	gh4_singer_male_assassin_1b
-	gh4_singer_male_assassin_2
-	gh4_singer_male_assassin_2b
-	gh4_singer_male_assassin_3
-	gh4_singer_male_assassin_3b
+	GH4_Singer_Male_AreYouGonnaGo_1
+	GH4_Singer_Male_AreYouGonnaGo_1B
+	GH4_Singer_Male_AreYouGonnaGo_2
+	GH4_Singer_Male_AreYouGonnaGo_2B
+	GH4_Singer_Male_AreYouGonnaGo_3
+	GH4_Singer_Male_AreYouGonnaGo_4
+	GH4_Singer_Male_AreYouGonnaGo_5
+	GH4_Singer_Male_Assassin_1
+	GH4_Singer_Male_Assassin_1b
+	GH4_Singer_Male_Assassin_2
+	GH4_Singer_Male_Assassin_2b
+	GH4_Singer_Male_Assassin_3
+	GH4_Singer_Male_Assassin_3b
 	gh4_singer_male_badtothebone_1
 	gh4_singer_male_badtothebone_2
 	gh4_singer_male_badtothebone_3
 	gh4_singer_male_badtothebone_4
-	gh4_singer_male_bandontherun_1
-	gh4_singer_male_bandontherun_2
-	gh4_singer_male_bandontherun_2b
-	gh4_singer_male_bandontherun_3
-	gh4_singer_male_bandontherun_3b
-	gh4_singer_male_bandontherun_4
-	gh4_singer_male_bandontherun_4b
-	gh4_singer_male_bandontherun_5
-	gh4_singer_male_bandontherun_5b
-	gh4_singer_male_bandontherun_6
-	gh4_singer_male_bandontherun_6b
-	gh4_singer_male_bandontherun_7
-	gh4_singer_male_bandontherun_8
+	GH4_Singer_Male_BandOnTheRun_1
+	GH4_Singer_Male_BandOnTheRun_2
+	GH4_Singer_Male_BandOnTheRun_2b
+	GH4_Singer_Male_BandOnTheRun_3
+	GH4_Singer_Male_BandOnTheRun_3b
+	GH4_Singer_Male_BandOnTheRun_4
+	GH4_Singer_Male_BandOnTheRun_4b
+	GH4_Singer_Male_BandOnTheRun_5
+	GH4_Singer_Male_BandOnTheRun_5b
+	GH4_Singer_Male_BandOnTheRun_6
+	GH4_Singer_Male_BandOnTheRun_6b
+	GH4_Singer_Male_BandOnTheRun_7
+	GH4_Singer_Male_BandOnTheRun_8
 	gh4_singer_male_beatit_1
 	gh4_singer_male_beatit_1b
 	gh4_singer_male_beatit_2
@@ -1974,133 +1974,133 @@ car_female_facial_scale_apply = [
 	gh4_singer_male_beatit_5
 	gh4_singer_male_beatit_6
 	gh4_singer_male_beatit_7
-	gh4_singer_male_beautifuldis_1
-	gh4_singer_male_beautifuldis_1b
-	gh4_singer_male_beautifuldis_2
-	gh4_singer_male_beautifuldis_2b
-	gh4_singer_male_beautifuldis_3
-	gh4_singer_male_beautifuldis_3b
-	gh4_singer_male_beautifuldis_4
-	gh4_singer_male_beautifuldis_4b
-	gh4_singer_male_beautifuldis_5
-	gh4_singer_male_beautifuldis_5b
-	gh4_singer_male_byob_1
-	gh4_singer_male_byob_1b
-	gh4_singer_male_byob_2
-	gh4_singer_male_byob_2b
-	gh4_singer_male_byob_3
-	gh4_singer_male_byob_3b
-	gh4_singer_male_byob_4
-	gh4_singer_male_byob_4b
-	gh4_singer_male_byob_5
-	gh4_singer_male_byob_5b
-	gh4_singer_male_byob_6
-	gh4_singer_male_byob_6b
-	gh4_singer_male_byob_7
-	gh4_singer_male_byob_7b
-	gh4_singer_male_byob_8
-	gh4_singer_male_byob_8b
-	gh4_singer_male_crazytrain_1
-	gh4_singer_male_crazytrain_2
-	gh4_singer_male_crazytrain_3
-	gh4_singer_male_crazytrain_4
-	gh4_singer_male_crazytrain_5
-	gh4_singer_male_crazytrain_6
+	GH4_Singer_Male_BeautifulDis_1
+	GH4_Singer_Male_BeautifulDis_1b
+	GH4_Singer_Male_BeautifulDis_2
+	GH4_Singer_Male_BeautifulDis_2b
+	GH4_Singer_Male_BeautifulDis_3
+	GH4_Singer_Male_BeautifulDis_3b
+	GH4_Singer_Male_BeautifulDis_4
+	GH4_Singer_Male_BeautifulDis_4b
+	GH4_Singer_Male_BeautifulDis_5
+	GH4_Singer_Male_BeautifulDis_5b
+	GH4_Singer_Male_BYOB_1
+	GH4_Singer_Male_BYOB_1B
+	GH4_Singer_Male_BYOB_2
+	GH4_Singer_Male_BYOB_2B
+	GH4_Singer_Male_BYOB_3
+	GH4_Singer_Male_BYOB_3B
+	GH4_Singer_Male_BYOB_4
+	GH4_Singer_Male_BYOB_4B
+	GH4_Singer_Male_BYOB_5
+	GH4_Singer_Male_BYOB_5B
+	GH4_Singer_Male_BYOB_6
+	GH4_Singer_Male_BYOB_6B
+	GH4_Singer_Male_BYOB_7
+	GH4_Singer_Male_BYOB_7B
+	GH4_Singer_Male_BYOB_8
+	GH4_Singer_Male_BYOB_8B
+	GH4_Singer_Male_CrazyTrain_1
+	GH4_Singer_Male_CrazyTrain_2
+	GH4_Singer_Male_CrazyTrain_3
+	GH4_Singer_Male_CrazyTrain_4
+	GH4_Singer_Male_CrazyTrain_5
+	GH4_Singer_Male_CrazyTrain_6
 	gh4_singer_male_dammit_1
 	gh4_singer_male_dammit_2
-	gh4_singer_male_demolitionman_1
-	gh4_singer_male_demolitionman_2
-	gh4_singer_male_demolitionman_2b
-	gh4_singer_male_demolitionman_3
-	gh4_singer_male_demolitionman_3b
-	gh4_singer_male_demolitionman_4
-	gh4_singer_male_demolitionman_4b
-	gh4_singer_male_demolitionman_5
-	gh4_singer_male_demolitionman_6
-	gh4_singer_male_doitagain_1
-	gh4_singer_male_doitagain_2
-	gh4_singer_male_doitagain_3
-	gh4_singer_male_electrorock_1
-	gh4_singer_male_electrorock_2
-	gh4_singer_male_electrorock_3
-	gh4_singer_male_electrorock_4
-	gh4_singer_male_electrorock_5
-	gh4_singer_male_electrorock_6
-	gh4_singer_male_electrorock_7
-	gh4_singer_male_electrorock_8
-	gh4_singer_male_electrorock_9
-	gh4_singer_male_escueladecalor_1
-	gh4_singer_male_escueladecalor_2
-	gh4_singer_male_escueladecalor_3
-	gh4_singer_male_escueladecalor_4
-	gh4_singer_male_escueladecalor_5
-	gh4_singer_male_escueladecalor_6
-	gh4_singer_male_escueladecalor_6b
-	gh4_singer_male_escueladecalor_7
-	gh4_singer_male_everlong_1
-	gh4_singer_male_everlong_2
-	gh4_singer_male_everlong_3
-	gh4_singer_male_everlong_4
-	gh4_singer_male_everlong_5
+	GH4_Singer_Male_DemolitionMan_1
+	GH4_Singer_Male_DemolitionMan_2
+	GH4_Singer_Male_DemolitionMan_2b
+	GH4_Singer_Male_DemolitionMan_3
+	GH4_Singer_Male_DemolitionMan_3b
+	GH4_Singer_Male_DemolitionMan_4
+	GH4_Singer_Male_DemolitionMan_4b
+	GH4_Singer_Male_DemolitionMan_5
+	GH4_Singer_Male_DemolitionMan_6
+	GH4_Singer_Male_DoItAgain_1
+	GH4_Singer_Male_DoItAgain_2
+	GH4_Singer_Male_DoItAgain_3
+	GH4_Singer_Male_ElectroRock_1
+	GH4_Singer_Male_ElectroRock_2
+	GH4_Singer_Male_ElectroRock_3
+	GH4_Singer_Male_ElectroRock_4
+	GH4_Singer_Male_ElectroRock_5
+	GH4_Singer_Male_ElectroRock_6
+	GH4_Singer_Male_ElectroRock_7
+	GH4_Singer_Male_ElectroRock_8
+	GH4_Singer_Male_ElectroRock_9
+	GH4_Singer_Male_EscuelaDeCalor_1
+	GH4_Singer_Male_EscuelaDeCalor_2
+	GH4_Singer_Male_EscuelaDeCalor_3
+	GH4_Singer_Male_EscuelaDeCalor_4
+	GH4_Singer_Male_EscuelaDeCalor_5
+	GH4_Singer_Male_EscuelaDeCalor_6
+	GH4_Singer_Male_EscuelaDeCalor_6b
+	GH4_Singer_Male_EscuelaDeCalor_7
+	GH4_Singer_Male_Everlong_1
+	GH4_Singer_Male_Everlong_2
+	GH4_Singer_Male_Everlong_3
+	GH4_Singer_Male_Everlong_4
+	GH4_Singer_Male_Everlong_5
 	gh4_singer_male_eyeofthetiger_1
 	gh4_singer_male_eyeofthetiger_2
 	gh4_singer_male_eyeofthetiger_3
 	gh4_singer_male_eyeofthetiger_4
 	gh4_singer_male_eyeofthetiger_5
-	gh4_singer_male_feelthepain_1
-	gh4_singer_male_feelthepain_2
-	gh4_singer_male_feelthepain_3
-	gh4_singer_male_feelthepain_4
-	gh4_singer_male_feelthepain_5
-	gh4_singer_male_floaton_1
-	gh4_singer_male_floaton_2
-	gh4_singer_male_floaton_2b
-	gh4_singer_male_floaton_3
-	gh4_singer_male_floaton_4
-	gh4_singer_male_floaton_4b
-	gh4_singer_male_floaton_5
-	gh4_singer_male_floaton_5b
-	gh4_singer_male_floaton_6b
-	gh4_singer_male_floaton_7b
-	gh4_singer_male_freakonaleash_1
-	gh4_singer_male_freakonaleash_1b
-	gh4_singer_male_freakonaleash_2
-	gh4_singer_male_freakonaleash_2b
-	gh4_singer_male_freakonaleash_3
-	gh4_singer_male_freakonaleash_3b
-	gh4_singer_male_freakonaleash_4
-	gh4_singer_male_freakonaleash_5
-	gh4_singer_male_freakonaleash_6
-	gh4_singer_male_goyourownway_1
-	gh4_singer_male_goyourownway_1b
-	gh4_singer_male_goyourownway_2
-	gh4_singer_male_goyourownway_2b
-	gh4_singer_male_goyourownway_3
-	gh4_singer_male_goyourownway_3b
-	gh4_singer_male_goyourownway_4
-	gh4_singer_male_hailtothefreaks_1
-	gh4_singer_male_hailtothefreaks_2
-	gh4_singer_male_hailtothefreaks_2b
-	gh4_singer_male_hailtothefreaks_3
-	gh4_singer_male_hailtothefreaks_3b
-	gh4_singer_male_hailtothefreaks_4
-	gh4_singer_male_hailtothefreaks_4b
-	gh4_singer_male_heymanniceshot_1
-	gh4_singer_male_heymanniceshot_2
-	gh4_singer_male_heymanniceshot_3
-	gh4_singer_male_heymanniceshot_4
-	gh4_singer_male_heymanniceshot_5
-	gh4_singer_male_heymanniceshot_6
-	gh4_singer_male_hollywoodnights_1
-	gh4_singer_male_hollywoodnights_1b
-	gh4_singer_male_hollywoodnights_2
-	gh4_singer_male_hollywoodnights_2b
-	gh4_singer_male_hollywoodnights_3
-	gh4_singer_male_hollywoodnights_4
-	gh4_singer_male_hollywoodnights_5
-	gh4_singer_male_hollywoodnights_6
-	gh4_singer_male_hollywoodnights_7
-	gh4_singer_male_hollywoodnights_8
+	GH4_Singer_Male_FeelThePain_1
+	GH4_Singer_Male_FeelThePain_2
+	GH4_Singer_Male_FeelThePain_3
+	GH4_Singer_Male_FeelThePain_4
+	GH4_Singer_Male_FeelThePain_5
+	GH4_Singer_Male_FloatOn_1
+	GH4_Singer_Male_FloatOn_2
+	GH4_Singer_Male_FloatOn_2b
+	GH4_Singer_Male_FloatOn_3
+	GH4_Singer_Male_FloatOn_4
+	GH4_Singer_Male_FloatOn_4b
+	GH4_Singer_Male_FloatOn_5
+	GH4_Singer_Male_FloatOn_5b
+	GH4_Singer_Male_FloatOn_6b
+	GH4_Singer_Male_FloatOn_7b
+	GH4_Singer_Male_FreakOnALeash_1
+	GH4_Singer_Male_FreakOnALeash_1b
+	GH4_Singer_Male_FreakOnALeash_2
+	GH4_Singer_Male_FreakOnALeash_2b
+	GH4_Singer_Male_FreakOnALeash_3
+	GH4_Singer_Male_FreakOnALeash_3b
+	GH4_Singer_Male_FreakOnALeash_4
+	GH4_Singer_Male_FreakOnALeash_5
+	GH4_Singer_Male_FreakOnALeash_6
+	GH4_Singer_Male_GoYourOwnWay_1
+	GH4_Singer_Male_GoYourOwnWay_1b
+	GH4_Singer_Male_GoYourOwnWay_2
+	GH4_Singer_Male_GoYourOwnWay_2b
+	GH4_Singer_Male_GoYourOwnWay_3
+	GH4_Singer_Male_GoYourOwnWay_3b
+	GH4_Singer_Male_GoYourOwnWay_4
+	GH4_Singer_Male_HailToTheFreaks_1
+	GH4_Singer_Male_HailToTheFreaks_2
+	GH4_Singer_Male_HailToTheFreaks_2b
+	GH4_Singer_Male_HailToTheFreaks_3
+	GH4_Singer_Male_HailToTheFreaks_3b
+	GH4_Singer_Male_HailToTheFreaks_4
+	GH4_Singer_Male_HailToTheFreaks_4b
+	GH4_Singer_Male_HeyManNiceShot_1
+	GH4_Singer_Male_HeyManNiceShot_2
+	GH4_Singer_Male_HeyManNiceShot_3
+	GH4_Singer_Male_HeyManNiceShot_4
+	GH4_Singer_Male_HeyManNiceShot_5
+	GH4_Singer_Male_HeyManNiceShot_6
+	GH4_Singer_Male_HollywoodNights_1
+	GH4_Singer_Male_HollywoodNights_1b
+	GH4_Singer_Male_HollywoodNights_2
+	GH4_Singer_Male_HollywoodNights_2b
+	GH4_Singer_Male_HollywoodNights_3
+	GH4_Singer_Male_HollywoodNights_4
+	GH4_Singer_Male_HollywoodNights_5
+	GH4_Singer_Male_HollywoodNights_6
+	GH4_Singer_Male_HollywoodNights_7
+	GH4_Singer_Male_HollywoodNights_8
 	gh4_singer_male_hotblooded_1
 	gh4_singer_male_hotblooded_1b
 	gh4_singer_male_hotblooded_2
@@ -2110,229 +2110,229 @@ car_female_facial_scale_apply = [
 	gh4_singer_male_hotblooded_4
 	gh4_singer_male_hotblooded_4b
 	gh4_singer_male_hotblooded_5
-	gh4_singer_male_hotelcalifornia_1
-	gh4_singer_male_hotelcalifornia_1b
-	gh4_singer_male_hotelcalifornia_2
-	gh4_singer_male_hotelcalifornia_2b
-	gh4_singer_male_hotforteacher_1
-	gh4_singer_male_hotforteacher_1b
-	gh4_singer_male_hotforteacher_2
-	gh4_singer_male_hotforteacher_2b
-	gh4_singer_male_hotforteacher_3
-	gh4_singer_male_hotforteacher_3b
-	gh4_singer_male_hotforteacher_4
-	gh4_singer_male_hotforteacher_5
-	gh4_singer_male_hotforteacher_6
-	gh4_singer_male_hotforteacher_7
-	gh4_singer_male_hotforteacher_8
-	gh4_singer_male_hotforteacher_9
-	gh4_singer_male_jessiesgirl_1
-	gh4_singer_male_jessiesgirl_1b
-	gh4_singer_male_jessiesgirl_2
-	gh4_singer_male_jessiesgirl_2b
-	gh4_singer_male_jessiesgirl_3
-	gh4_singer_male_jessiesgirl_3b
-	gh4_singer_male_jessiesgirl_4
-	gh4_singer_male_jessiesgirl_4b
-	gh4_singer_male_jessiesgirl_5
-	gh4_singer_male_jessiesgirl_6
-	gh4_singer_male_jessiesgirl_7
-	gh4_singer_male_jimi_1
-	gh4_singer_male_jimi_2
-	gh4_singer_male_jimi_2b
-	gh4_singer_male_kickoutthejams_1
-	gh4_singer_male_kickoutthejams_1b
-	gh4_singer_male_kickoutthejams_2
-	gh4_singer_male_kickoutthejams_2b
-	gh4_singer_male_kickoutthejams_3
-	gh4_singer_male_kickoutthejams_3b
-	gh4_singer_male_kickoutthejams_4
-	gh4_singer_male_kickoutthejams_4b
-	gh4_singer_male_kickoutthejams_5
-	gh4_singer_male_kickoutthejams_5b
-	gh4_singer_male_kickoutthejams_6
-	gh4_singer_male_kickoutthejams_6b
-	gh4_singer_male_kickoutthejams_7
-	gh4_singer_male_kickoutthejams_7b
-	gh4_singer_male_kickoutthejams_8
-	gh4_singer_male_kickoutthejams_9
-	gh3_singer_male_knightsofcydonia_1
-	gh3_singer_male_knightsofcydonia_2
-	gh4_singer_male_labamba_1
-	gh4_singer_male_labamba_1b
-	gh4_singer_male_labamba_2
-	gh4_singer_male_labamba_2b
-	gh4_singer_male_labamba_3
-	gh4_singer_male_labamba_4
-	gh4_singer_male_lazyeye_1
-	gh4_singer_male_lazyeye_1b
-	gh4_singer_male_lazyeye_2
-	gh4_singer_male_lazyeye_2b
-	gh4_singer_male_lazyeye_3
-	gh4_singer_male_lazyeye_4
-	gh4_singer_male_lazyeye_5
-	gh4_singer_male_lazyeye_6
-	gh4_singer_male_lazyeye_7
-	gh4_singer_male_livingonaprayer_1
-	gh4_singer_male_livingonaprayer_1b
-	gh4_singer_male_livingonaprayer_2
-	gh4_singer_male_livingonaprayer_2b
-	gh4_singer_male_livingonaprayer_3
-	gh4_singer_male_livingonaprayer_3b
-	gh4_singer_male_livingonaprayer_4
-	gh4_singer_male_livingonaprayer_4b
-	gh4_singer_male_livingonaprayer_5
-	gh4_singer_male_livingonaprayer_5b
-	gh4_singer_male_livingonaprayer_6
-	gh4_singer_male_livingonaprayer_7
+	GH4_Singer_Male_HotelCalifornia_1
+	GH4_Singer_Male_HotelCalifornia_1b
+	GH4_Singer_Male_HotelCalifornia_2
+	GH4_Singer_Male_HotelCalifornia_2b
+	GH4_Singer_Male_HotForTeacher_1
+	GH4_Singer_Male_HotForTeacher_1b
+	GH4_Singer_Male_HotForTeacher_2
+	GH4_Singer_Male_HotForTeacher_2b
+	GH4_Singer_Male_HotForTeacher_3
+	GH4_Singer_Male_HotForTeacher_3b
+	GH4_Singer_Male_HotForTeacher_4
+	GH4_Singer_Male_HotForTeacher_5
+	GH4_Singer_Male_HotForTeacher_6
+	GH4_Singer_Male_HotForTeacher_7
+	GH4_Singer_Male_HotForTeacher_8
+	GH4_Singer_Male_HotForTeacher_9
+	GH4_Singer_Male_JessiesGirl_1
+	GH4_Singer_Male_JessiesGirl_1B
+	GH4_Singer_Male_JessiesGirl_2
+	GH4_Singer_Male_JessiesGirl_2B
+	GH4_Singer_Male_JessiesGirl_3
+	GH4_Singer_Male_JessiesGirl_3B
+	GH4_Singer_Male_JessiesGirl_4
+	GH4_Singer_Male_JessiesGirl_4B
+	GH4_Singer_Male_JessiesGirl_5
+	GH4_Singer_Male_JessiesGirl_6
+	GH4_Singer_Male_JessiesGirl_7
+	GH4_Singer_Male_Jimi_1
+	GH4_Singer_Male_Jimi_2
+	GH4_Singer_Male_Jimi_2B
+	GH4_Singer_Male_KickOutTheJams_1
+	GH4_Singer_Male_KickOutTheJams_1b
+	GH4_Singer_Male_KickOutTheJams_2
+	GH4_Singer_Male_KickOutTheJams_2b
+	GH4_Singer_Male_KickOutTheJams_3
+	GH4_Singer_Male_KickOutTheJams_3b
+	GH4_Singer_Male_KickOutTheJams_4
+	GH4_Singer_Male_KickOutTheJams_4b
+	GH4_Singer_Male_KickOutTheJams_5
+	GH4_Singer_Male_KickOutTheJams_5b
+	GH4_Singer_Male_KickOutTheJams_6
+	GH4_Singer_Male_KickOutTheJams_6b
+	GH4_Singer_Male_KickOutTheJams_7
+	GH4_Singer_Male_KickOutTheJams_7b
+	GH4_Singer_Male_KickOutTheJams_8
+	GH4_Singer_Male_KickOutTheJams_9
+	GH3_Singer_Male_KnightsofCydonia_1
+	GH3_Singer_Male_KnightsofCydonia_2
+	GH4_Singer_Male_LaBamba_1
+	GH4_Singer_Male_LaBamba_1B
+	GH4_Singer_Male_LaBamba_2
+	GH4_Singer_Male_LaBamba_2B
+	GH4_Singer_Male_LaBamba_3
+	GH4_Singer_Male_LaBamba_4
+	GH4_Singer_Male_LazyEye_1
+	GH4_Singer_Male_LazyEye_1b
+	GH4_Singer_Male_LazyEye_2
+	GH4_Singer_Male_LazyEye_2b
+	GH4_Singer_Male_LazyEye_3
+	GH4_Singer_Male_LazyEye_4
+	GH4_Singer_Male_LazyEye_5
+	GH4_Singer_Male_LazyEye_6
+	GH4_Singer_Male_LazyEye_7
+	GH4_Singer_Male_LivingOnAPrayer_1
+	GH4_Singer_Male_LivingOnAPrayer_1b
+	GH4_Singer_Male_LivingOnAPrayer_2
+	GH4_Singer_Male_LivingOnAPrayer_2b
+	GH4_Singer_Male_LivingOnAPrayer_3
+	GH4_Singer_Male_LivingOnAPrayer_3b
+	GH4_Singer_Male_LivingOnAPrayer_4
+	GH4_Singer_Male_LivingOnAPrayer_4b
+	GH4_Singer_Male_LivingOnAPrayer_5
+	GH4_Singer_Male_LivingOnAPrayer_5b
+	GH4_Singer_Male_LivingOnAPrayer_6
+	GH4_Singer_Male_LivingOnAPrayer_7
 	gh4_singer_male_lovemetwotimes_1
 	gh4_singer_male_lovemetwotimes_2
 	gh4_singer_male_lovemetwotimes_3
 	gh4_singer_male_lovemetwotimes_4
-	gh4_singer_male_loveremoval_1
-	gh4_singer_male_loveremoval_1b
-	gh4_singer_male_loveremoval_2
-	gh4_singer_male_loveremoval_2b
-	gh4_singer_male_loveremoval_3
-	gh4_singer_male_loveremoval_3b
-	gh4_singer_male_loveremoval_4
-	gh4_singer_male_loveremoval_5
-	gh4_singer_male_loveremoval_6
-	gh4_singer_male_loveremoval_7
-	gh4_singer_male_loveremoval_8
-	gh4_singer_male_lovespreads_1
-	gh4_singer_male_lovespreads_1b
-	gh4_singer_male_lovespreads_2
-	gh4_singer_male_lovespreads_3
-	gh4_singer_male_lovespreads_3b
-	gh4_singer_male_lovespreads_4
-	gh4_singer_male_lovespreads_5
-	gh4_singer_male_lovespreads_5b
-	gh4_singer_male_lovespreads_5c
-	gh4_singer_male_lvialviaquez_1
-	gh4_singer_male_lvialviaquez_10
-	gh4_singer_male_lvialviaquez_1b
-	gh4_singer_male_lvialviaquez_2
-	gh4_singer_male_lvialviaquez_2b
-	gh4_singer_male_lvialviaquez_3
-	gh4_singer_male_lvialviaquez_3b
-	gh4_singer_male_lvialviaquez_4
-	gh4_singer_male_lvialviaquez_4b
-	gh4_singer_male_lvialviaquez_5
-	gh4_singer_male_lvialviaquez_5b
-	gh4_singer_male_lvialviaquez_6
-	gh4_singer_male_lvialviaquez_6b
-	gh4_singer_male_lvialviaquez_7
-	gh4_singer_male_lvialviaquez_7b
-	gh4_singer_male_lvialviaquez_8
-	gh4_singer_male_lvialviaquez_8b
-	gh4_singer_male_lvialviaquez_9
-	gh4_singer_male_monsoon_1
-	gh4_singer_male_monsoon_10
-	gh4_singer_male_monsoon_1b
-	gh4_singer_male_monsoon_2
-	gh4_singer_male_monsoon_2b
-	gh4_singer_male_monsoon_3
-	gh4_singer_male_monsoon_3b
-	gh4_singer_male_monsoon_4
-	gh4_singer_male_monsoon_5
-	gh4_singer_male_monsoon_6
-	gh4_singer_male_monsoon_7
-	gh4_singer_male_monsoon_8
-	gh4_singer_male_monsoon_9
-	gh4_singer_male_mountainsong_1
-	gh4_singer_male_mountainsong_10
-	gh4_singer_male_mountainsong_2
-	gh4_singer_male_mountainsong_3
-	gh4_singer_male_mountainsong_4
-	gh4_singer_male_mountainsong_5
-	gh4_singer_male_mountainsong_6
-	gh4_singer_male_mountainsong_7
-	gh4_singer_male_mountainsong_8
-	gh4_singer_male_mountainsong_9
-	gh4_singer_male_mrcrowley_1
-	gh4_singer_male_mrcrowley_2
-	gh4_singer_male_mrcrowley_3
-	gh3_singer_male_mycurse_1
-	gh3_singer_male_mycurse_1b
-	gh3_singer_male_mycurse_2
-	gh3_singer_male_mycurse_2b
-	gh3_singer_male_mycurse_3
-	gh3_singer_male_mycurse_4
-	gh3_singer_male_mycurse_5
-	gh4_singer_male_nevertoolate_1
-	gh4_singer_male_nevertoolate_1b
-	gh4_singer_male_nevertoolate_2
-	gh4_singer_male_nevertoolate_2b
-	gh4_singer_male_nevertoolate_3
-	gh4_singer_male_nevertoolate_3b
-	gh4_singer_male_nevertoolate_4
-	gh4_singer_male_nevertoolate_4b
-	gh4_singer_male_nevertoolate_5
-	gh4_singer_male_nevertoolate_5b
-	gh4_singer_male_nevertoolate_6
-	gh4_singer_male_nevertoolate_6b
-	gh4_singer_male_nevertoolate_7
-	gh4_singer_male_norain_1
-	gh4_singer_male_norain_1b
-	gh4_singer_male_norain_2
-	gh4_singer_male_norain_2b
-	gh4_singer_male_norain_3
-	gh4_singer_male_norain_3b
-	gh4_singer_male_norain_4
-	gh4_singer_male_norain_4b
-	gh4_singer_male_norain_5
-	gh4_singer_male_nosleeptill_1
-	gh4_singer_male_nosleeptill_1b
-	gh4_singer_male_nosleeptill_2
-	gh4_singer_male_nosleeptill_2b
-	gh4_singer_male_nosleeptill_3
-	gh4_singer_male_nosleeptill_3b
-	gh4_singer_male_nosleeptill_4
-	gh4_singer_male_nosleeptill_4b
-	gh4_singer_male_nosleeptill_5
-	gh4_singer_male_nosleeptill_5b
-	gh4_singer_male_nosleeptill_6
-	gh4_singer_male_nosleeptill_6b
-	gh4_singer_male_nosleeptill_7
-	gh4_singer_male_nosleeptill_7b
-	gh4_singer_male_nosleeptill_8
-	gh4_singer_male_nosleeptill_8b
-	gh4_singer_male_nuvole_1
-	gh4_singer_male_nuvole_1b
-	gh4_singer_male_nuvole_2
-	gh4_singer_male_nuvole_2b
-	gh4_singer_male_nuvole_3
-	gh4_singer_male_nuvole_4
-	gh4_singer_male_nuvole_5
-	gh4_singer_male_obstacle1_1
-	gh4_singer_male_obstacle1_1b
-	gh4_singer_male_obstacle1_2
-	gh4_singer_male_obstacle1_2b
-	gh4_singer_male_obstacle1_3
-	gh4_singer_male_obstacle1_4
-	gh4_singer_male_obstacle1_5
-	gh4_singer_male_obstacle1_6
-	gh4_singer_male_obstacle1_7
-	gh4_singer_male_onearmedscissor_1
-	gh4_singer_male_onearmedscissor_1b
-	gh4_singer_male_onearmedscissor_2
-	gh4_singer_male_onearmedscissor_2b
-	gh4_singer_male_onearmedscissor_3
-	gh4_singer_male_onearmedscissor_3b
-	gh4_singer_male_onearmedscissor_4
-	gh4_singer_male_onearmedscissor_4b
-	gh4_singer_male_onearmedscissor_5
-	gh4_singer_male_onearmedscissor_6
-	gh4_singer_male_ontheroad_1
-	gh4_singer_male_ontheroad_2
-	gh4_singer_male_ontheroad_2b
-	gh4_singer_male_ontheroad_3
-	gh4_singer_male_ontheroad_3b
-	gh4_singer_male_ontheroad_4
-	gh4_singer_male_overkill_1
-	gh4_singer_male_overkill_2
-	gh4_singer_male_overkill_3
+	GH4_Singer_Male_LoveRemoval_1
+	GH4_Singer_Male_LoveRemoval_1B
+	GH4_Singer_Male_LoveRemoval_2
+	GH4_Singer_Male_LoveRemoval_2B
+	GH4_Singer_Male_LoveRemoval_3
+	GH4_Singer_Male_LoveRemoval_3B
+	GH4_Singer_Male_LoveRemoval_4
+	GH4_Singer_Male_LoveRemoval_5
+	GH4_Singer_Male_LoveRemoval_6
+	GH4_Singer_Male_LoveRemoval_7
+	GH4_Singer_Male_LoveRemoval_8
+	GH4_Singer_Male_LoveSpreads_1
+	GH4_Singer_Male_LoveSpreads_1b
+	GH4_Singer_Male_LoveSpreads_2
+	GH4_Singer_Male_LoveSpreads_3
+	GH4_Singer_Male_LoveSpreads_3b
+	GH4_Singer_Male_LoveSpreads_4
+	GH4_Singer_Male_LoveSpreads_5
+	GH4_Singer_Male_LoveSpreads_5b
+	GH4_Singer_Male_LoveSpreads_5c
+	GH4_Singer_Male_LViaLViaquez_1
+	GH4_Singer_Male_LViaLViaquez_10
+	GH4_Singer_Male_LViaLViaquez_1b
+	GH4_Singer_Male_LViaLViaquez_2
+	GH4_Singer_Male_LViaLViaquez_2b
+	GH4_Singer_Male_LViaLViaquez_3
+	GH4_Singer_Male_LViaLViaquez_3b
+	GH4_Singer_Male_LViaLViaquez_4
+	GH4_Singer_Male_LViaLViaquez_4b
+	GH4_Singer_Male_LViaLViaquez_5
+	GH4_Singer_Male_LViaLViaquez_5b
+	GH4_Singer_Male_LViaLViaquez_6
+	GH4_Singer_Male_LViaLViaquez_6b
+	GH4_Singer_Male_LViaLViaquez_7
+	GH4_Singer_Male_LViaLViaquez_7b
+	GH4_Singer_Male_LViaLViaquez_8
+	GH4_Singer_Male_LViaLViaquez_8b
+	GH4_Singer_Male_LViaLViaquez_9
+	GH4_Singer_Male_Monsoon_1
+	GH4_Singer_Male_Monsoon_10
+	GH4_Singer_Male_Monsoon_1b
+	GH4_Singer_Male_Monsoon_2
+	GH4_Singer_Male_Monsoon_2b
+	GH4_Singer_Male_Monsoon_3
+	GH4_Singer_Male_Monsoon_3b
+	GH4_Singer_Male_Monsoon_4
+	GH4_Singer_Male_Monsoon_5
+	GH4_Singer_Male_Monsoon_6
+	GH4_Singer_Male_Monsoon_7
+	GH4_Singer_Male_Monsoon_8
+	GH4_Singer_Male_Monsoon_9
+	GH4_Singer_Male_MountainSong_1
+	GH4_Singer_Male_MountainSong_10
+	GH4_Singer_Male_MountainSong_2
+	GH4_Singer_Male_MountainSong_3
+	GH4_Singer_Male_MountainSong_4
+	GH4_Singer_Male_MountainSong_5
+	GH4_Singer_Male_MountainSong_6
+	GH4_Singer_Male_MountainSong_7
+	GH4_Singer_Male_MountainSong_8
+	GH4_Singer_Male_MountainSong_9
+	GH4_Singer_Male_MrCrowley_1
+	GH4_Singer_Male_MrCrowley_2
+	GH4_Singer_Male_MrCrowley_3
+	GH3_Singer_Male_MyCurse_1
+	GH3_Singer_Male_MyCurse_1b
+	GH3_Singer_Male_MyCurse_2
+	GH3_Singer_Male_MyCurse_2b
+	GH3_Singer_Male_MyCurse_3
+	GH3_Singer_Male_MyCurse_4
+	GH3_Singer_Male_MyCurse_5
+	GH4_Singer_Male_NeverTooLate_1
+	GH4_Singer_Male_NeverTooLate_1b
+	GH4_Singer_Male_NeverTooLate_2
+	GH4_Singer_Male_NeverTooLate_2b
+	GH4_Singer_Male_NeverTooLate_3
+	GH4_Singer_Male_NeverTooLate_3b
+	GH4_Singer_Male_NeverTooLate_4
+	GH4_Singer_Male_NeverTooLate_4b
+	GH4_Singer_Male_NeverTooLate_5
+	GH4_Singer_Male_NeverTooLate_5b
+	GH4_Singer_Male_NeverTooLate_6
+	GH4_Singer_Male_NeverTooLate_6b
+	GH4_Singer_Male_NeverTooLate_7
+	GH4_Singer_Male_NoRain_1
+	GH4_Singer_Male_NoRain_1B
+	GH4_Singer_Male_NoRain_2
+	GH4_Singer_Male_NoRain_2B
+	GH4_Singer_Male_NoRain_3
+	GH4_Singer_Male_NoRain_3B
+	GH4_Singer_Male_NoRain_4
+	GH4_Singer_Male_NoRain_4B
+	GH4_Singer_Male_NoRain_5
+	GH4_Singer_Male_NoSleepTill_1
+	GH4_Singer_Male_NoSleepTill_1b
+	GH4_Singer_Male_NoSleepTill_2
+	GH4_Singer_Male_NoSleepTill_2b
+	GH4_Singer_Male_NoSleepTill_3
+	GH4_Singer_Male_NoSleepTill_3b
+	GH4_Singer_Male_NoSleepTill_4
+	GH4_Singer_Male_NoSleepTill_4b
+	GH4_Singer_Male_NoSleepTill_5
+	GH4_Singer_Male_NoSleepTill_5b
+	GH4_Singer_Male_NoSleepTill_6
+	GH4_Singer_Male_NoSleepTill_6b
+	GH4_Singer_Male_NoSleepTill_7
+	GH4_Singer_Male_NoSleepTill_7b
+	GH4_Singer_Male_NoSleepTill_8
+	GH4_Singer_Male_NoSleepTill_8b
+	GH4_Singer_Male_Nuvole_1
+	GH4_Singer_Male_Nuvole_1b
+	GH4_Singer_Male_Nuvole_2
+	GH4_Singer_Male_Nuvole_2b
+	GH4_Singer_Male_Nuvole_3
+	GH4_Singer_Male_Nuvole_4
+	GH4_Singer_Male_Nuvole_5
+	GH4_Singer_Male_Obstacle1_1
+	GH4_Singer_Male_Obstacle1_1b
+	GH4_Singer_Male_Obstacle1_2
+	GH4_Singer_Male_Obstacle1_2b
+	GH4_Singer_Male_Obstacle1_3
+	GH4_Singer_Male_Obstacle1_4
+	GH4_Singer_Male_Obstacle1_5
+	GH4_Singer_Male_Obstacle1_6
+	GH4_Singer_Male_Obstacle1_7
+	GH4_Singer_Male_OneArmedScissor_1
+	GH4_Singer_Male_OneArmedScissor_1b
+	GH4_Singer_Male_OneArmedScissor_2
+	GH4_Singer_Male_OneArmedScissor_2b
+	GH4_Singer_Male_OneArmedScissor_3
+	GH4_Singer_Male_OneArmedScissor_3b
+	GH4_Singer_Male_OneArmedScissor_4
+	GH4_Singer_Male_OneArmedScissor_4b
+	GH4_Singer_Male_OneArmedScissor_5
+	GH4_Singer_Male_OneArmedScissor_6
+	GH4_Singer_Male_OnTheRoad_1
+	GH4_Singer_Male_OnTheRoad_2
+	GH4_Singer_Male_OnTheRoad_2B
+	GH4_Singer_Male_OnTheRoad_3
+	GH4_Singer_Male_OnTheRoad_3B
+	GH4_Singer_Male_OnTheRoad_4
+	GH4_Singer_Male_Overkill_1
+	GH4_Singer_Male_Overkill_2
+	GH4_Singer_Male_Overkill_3
 	gh4_singer_male_prettyvacant_1
 	gh4_singer_male_prettyvacant_1b
 	gh4_singer_male_prettyvacant_2
@@ -2342,228 +2342,228 @@ car_female_facial_scale_apply = [
 	gh4_singer_male_prettyvacant_4
 	gh4_singer_male_prettyvacant_4b
 	gh4_singer_male_prettyvacant_5
-	gh4_singer_male_prisonersociety_1
-	gh4_singer_male_prisonersociety_1b
-	gh4_singer_male_prisonersociety_2
-	gh4_singer_male_prisonersociety_2b
-	gh4_singer_male_prisonersociety_3
-	gh4_singer_male_prisonersociety_3b
-	gh4_singer_male_prisonersociety_4
-	gh4_singer_male_prisonersociety_4b
-	gh4_singer_male_prisonersociety_5
-	gh4_singer_male_prisonersociety_5b
-	gh4_singer_male_pullmeunder_1
-	gh4_singer_male_pullmeunder_2
-	gh4_singer_male_pullmeunder_3
-	gh4_singer_male_pullmeunder_4
-	gh4_singer_male_pullmeunder_5
-	gh4_singer_male_pullmeunder_6
-	gh4_singer_male_pullmeunder_7
-	gh4_singer_male_pullmeunder_8
-	gh4_singer_male_purplehaze_1
-	gh4_singer_male_purplehaze_2
-	gh4_singer_male_purplehaze_3
-	gh4_singer_male_purplehaze_4
-	gh4_singer_male_ramblinman_1
-	gh4_singer_male_ramblinman_1b
-	gh4_singer_male_ramblinman_2
-	gh4_singer_male_ramblinman_2b
-	gh4_singer_male_ramblinman_3
-	gh4_singer_male_ramblinman_4
-	gh4_singer_male_rebelyell_1
-	gh4_singer_male_rebelyell_2
-	gh4_singer_male_rebelyell_3
-	gh4_singer_male_rebelyell_4
-	gh4_singer_male_rebelyell_5
-	gh4_singer_male_reedthroughlabor_1
-	gh4_singer_male_reedthroughlabor_2
-	gh4_singer_male_reedthroughlabor_3
-	gh4_singer_male_reedthroughlabor_4
-	gh4_singer_male_reedthroughlabor_5
-	gh4_singer_male_revolution_1
-	gh4_singer_male_revolution_2
+	GH4_Singer_Male_PrisonerSociety_1
+	GH4_Singer_Male_PrisonerSociety_1B
+	GH4_Singer_Male_PrisonerSociety_2
+	GH4_Singer_Male_PrisonerSociety_2B
+	GH4_Singer_Male_PrisonerSociety_3
+	GH4_Singer_Male_PrisonerSociety_3B
+	GH4_Singer_Male_PrisonerSociety_4
+	GH4_Singer_Male_PrisonerSociety_4B
+	GH4_Singer_Male_PrisonerSociety_5
+	GH4_Singer_Male_PrisonerSociety_5B
+	GH4_Singer_Male_PullMeUnder_1
+	GH4_Singer_Male_PullMeUnder_2
+	GH4_Singer_Male_PullMeUnder_3
+	GH4_Singer_Male_PullMeUnder_4
+	GH4_Singer_Male_PullMeUnder_5
+	GH4_Singer_Male_PullMeUnder_6
+	GH4_Singer_Male_PullMeUnder_7
+	GH4_Singer_Male_PullMeUnder_8
+	GH4_Singer_Male_PurpleHaze_1
+	GH4_Singer_Male_PurpleHaze_2
+	GH4_Singer_Male_PurpleHaze_3
+	GH4_Singer_Male_PurpleHaze_4
+	GH4_Singer_Male_RamblinMan_1
+	GH4_Singer_Male_RamblinMan_1B
+	GH4_Singer_Male_RamblinMan_2
+	GH4_Singer_Male_RamblinMan_2B
+	GH4_Singer_Male_RamblinMan_3
+	GH4_Singer_Male_RamblinMan_4
+	GH4_Singer_Male_RebelYell_1
+	GH4_Singer_Male_RebelYell_2
+	GH4_Singer_Male_RebelYell_3
+	GH4_Singer_Male_RebelYell_4
+	GH4_Singer_Male_RebelYell_5
+	GH4_Singer_Male_ReEdThroughLabor_1
+	GH4_Singer_Male_ReEdThroughLabor_2
+	GH4_Singer_Male_ReEdThroughLabor_3
+	GH4_Singer_Male_ReEdThroughLabor_4
+	GH4_Singer_Male_ReEdThroughLabor_5
+	GH4_Singer_Male_Revolution_1
+	GH4_Singer_Male_Revolution_2
 	gh4_singer_male_revolutiongeorge_1
 	gh4_singer_male_revolutiongeorge_2
 	gh4_singer_male_revolutiongeorge_3
-	gh4_singer_male_revolutionpaul_1
-	gh4_singer_male_revolutionpaul_2
-	gh4_singer_male_revolutionpaul_3
+	GH4_Singer_Male_RevolutionPaul_1
+	GH4_Singer_Male_RevolutionPaul_2
+	GH4_Singer_Male_RevolutionPaul_3
 	gh4_singer_male_rockandrollband_1
 	gh4_singer_male_rockandrollband_2
 	gh4_singer_male_rockandrollband_3
 	gh4_singer_male_rockandrollband_4
 	gh4_singer_male_rockandrollband_5
 	gh4_singer_male_rockandrollband_6
-	gh4_singer_male_rooftops_1
-	gh4_singer_male_rooftops_2
-	gh4_singer_male_rooftops_2b
-	gh4_singer_male_rooftops_3
-	gh4_singer_male_rooftops_3b
-	gh4_singer_male_rooftops_4
-	gh4_singer_male_rooftops_4b
-	gh4_singer_male_rooftops_5
-	gh4_singer_male_santeria_1
-	gh4_singer_male_santeria_2
-	gh4_singer_male_screamaimfire_1
-	gh4_singer_male_screamaimfire_1b
-	gh4_singer_male_screamaimfire_2
-	gh4_singer_male_screamaimfire_3
-	gh4_singer_male_screamaimfire_4
-	gh4_singer_male_screamaimfire_5
-	gh4_singer_male_screamaimfire_6
-	gh4_singer_male_sgtpeppers_1
-	gh4_singer_male_sgtpeppers_2
-	gh4_singer_male_sgtpeppersgeorge_1
-	gh4_singer_male_sgtpeppersjohn_1
-	gh4_singer_male_sgtpeppersjohn_2
-	gh4_singer_male_shiver_1
-	gh4_singer_male_shiver_2
-	gh4_singer_male_shiver_3
-	gh4_singer_male_shiver_4
-	gh4_singer_male_shiver_5
-	gh4_singer_male_shiver_6
-	gh4_singer_male_shiver_7
-	gh4_singer_male_somemightsay_1
-	gh4_singer_male_somemightsay_1b
-	gh4_singer_male_somemightsay_2
-	gh4_singer_male_somemightsay_2b
-	gh4_singer_male_somemightsay_3
-	gh4_singer_male_somemightsay_3b
-	gh4_singer_male_somemightsay_4
-	gh4_singer_male_somemightsay_5
+	GH4_Singer_Male_Rooftops_1
+	GH4_Singer_Male_Rooftops_2
+	GH4_Singer_Male_Rooftops_2b
+	GH4_Singer_Male_Rooftops_3
+	GH4_Singer_Male_Rooftops_3b
+	GH4_Singer_Male_Rooftops_4
+	GH4_Singer_Male_Rooftops_4b
+	GH4_Singer_Male_Rooftops_5
+	GH4_Singer_Male_Santeria_1
+	GH4_Singer_Male_Santeria_2
+	GH4_Singer_Male_ScreamAimFire_1
+	GH4_Singer_Male_ScreamAimFire_1b
+	GH4_Singer_Male_ScreamAimFire_2
+	GH4_Singer_Male_ScreamAimFire_3
+	GH4_Singer_Male_ScreamAimFire_4
+	GH4_Singer_Male_ScreamAimFire_5
+	GH4_Singer_Male_ScreamAimFire_6
+	GH4_Singer_Male_SgtPeppers_1
+	GH4_Singer_Male_SgtPeppers_2
+	GH4_Singer_Male_SgtPeppersGeorge_1
+	GH4_Singer_Male_SgtPeppersJohn_1
+	GH4_Singer_Male_SgtPeppersJohn_2
+	GH4_Singer_Male_Shiver_1
+	GH4_Singer_Male_Shiver_2
+	GH4_Singer_Male_Shiver_3
+	GH4_Singer_Male_Shiver_4
+	GH4_Singer_Male_Shiver_5
+	GH4_Singer_Male_Shiver_6
+	GH4_Singer_Male_Shiver_7
+	GH4_Singer_Male_SomeMightSay_1
+	GH4_Singer_Male_SomeMightSay_1b
+	GH4_Singer_Male_SomeMightSay_2
+	GH4_Singer_Male_SomeMightSay_2b
+	GH4_Singer_Male_SomeMightSay_3
+	GH4_Singer_Male_SomeMightSay_3b
+	GH4_Singer_Male_SomeMightSay_4
+	GH4_Singer_Male_SomeMightSay_5
 	gh4_singer_male_songname_1
-	gh4_singer_male_souldoubt_1
-	gh4_singer_male_souldoubt_1b
-	gh4_singer_male_souldoubt_2
-	gh4_singer_male_souldoubt_2b
-	gh4_singer_male_souldoubt_3
-	gh4_singer_male_souldoubt_3b
-	gh4_singer_male_souldoubt_4
-	gh4_singer_male_souldoubt_4b
-	gh4_singer_male_souldoubt_5
-	gh4_singer_male_stillborn_1
-	gh4_singer_male_stillborn_2
-	gh4_singer_male_stillborn_3
-	gh4_singer_male_stranglehold_1
-	gh4_singer_male_stranglehold_2
-	gh4_singer_male_stranglehold_3
-	gh4_singer_male_stranglehold_4
-	gh4_singer_male_stranglehold_5
-	gh4_singer_male_stranglehold_6
-	gh4_singer_male_sweethome_1
-	gh4_singer_male_sweethome_2
-	gh4_singer_male_sweethome_2b
-	gh4_singer_male_sweethome_3
-	gh4_singer_male_sweethome_3b
-	gh4_singer_male_sweethome_4
-	gh4_singer_male_sweethome_4b
-	gh4_singer_male_sweethome_5
-	gh4_singer_male_sweethome_6
-	gh4_singer_male_sweethome_6b
-	gh4_singer_male_sweethome_7
-	gh4_singer_male_sweethome_8
-	gh4_singer_male_sweethome_9
-	gh4_singer_male_thejoker_1
-	gh4_singer_male_thejoker_2
-	gh4_singer_male_thejoker_3
-	gh4_singer_male_thejoker_4
-	gh4_singer_male_thejoker_5
-	gh4_singer_male_thekill_1
-	gh4_singer_male_thekill_1b
-	gh4_singer_male_thekill_2
-	gh4_singer_male_thekill_2b
-	gh4_singer_male_thekill_3
-	gh4_singer_male_thekill_3b
-	gh4_singer_male_thekill_4
-	gh4_singer_male_thekill_4b
-	gh4_singer_male_thekill_5
-	gh4_singer_male_thekill_5b
-	gh4_singer_male_themiddle_1
-	gh4_singer_male_themiddle_1b
-	gh4_singer_male_themiddle_2
-	gh4_singer_male_themiddle_2b
-	gh4_singer_male_themiddle_3b
-	gh4_singer_male_themiddle_4b
-	gh4_singer_male_theoneilove_1
-	gh4_singer_male_theoneilove_1b
-	gh4_singer_male_theoneilove_2
-	gh4_singer_male_theoneilove_2b
-	gh4_singer_male_theoneilove_3
-	gh4_singer_male_today_1
-	gh4_singer_male_today_2
-	gh4_singer_male_today_3
-	gh4_singer_male_today_4
-	gh4_singer_male_toomuchtoo_1
-	gh4_singer_male_toomuchtoo_2
-	gh4_singer_male_toomuchtoo_2b
-	gh4_singer_male_toomuchtoo_3
-	gh4_singer_male_toomuchtoo_4
-	gh4_singer_male_toomuchtoo_4b
-	gh4_singer_male_toomuchtoo_4c
-	gh4_singer_male_toomuchtoo_5
-	gh4_singer_male_toomuchtoo_5b
-	gh4_singer_male_toyboy_1
-	gh4_singer_male_toyboy_2
-	gh4_singer_male_toyboy_3
-	gh4_singer_male_toyboy_4
-	gh4_singer_male_toyboy_5
-	gh4_singer_male_toyboy_6
-	gh4_singer_male_toyboy_7
-	gh4_singer_male_toyboy_8
-	gh4_singer_male_trappedunderice_1
-	gh4_singer_male_trappedunderice_1b
-	gh4_singer_male_trappedunderice_2
-	gh4_singer_male_trappedunderice_2b
-	gh4_singer_male_trappedunderice_3
-	gh4_singer_male_trappedunderice_3b
-	gh4_singer_male_trappedunderice_4
-	gh4_singer_male_trappedunderice_4b
-	gh4_singer_male_twistandshout_1
-	gh4_singer_male_twistandshout_1b
-	gh4_singer_male_twistandshout_2
-	gh4_singer_male_twistandshout_2b
-	gh4_singer_male_twistandshout_3b
-	gh4_singer_male_uparoundthebend_1
-	gh4_singer_male_uparoundthebend_1b
-	gh4_singer_male_uparoundthebend_2
-	gh4_singer_male_uparoundthebend_2b
-	gh4_singer_male_uparoundthebend_3
-	gh4_singer_male_uparoundthebend_4
-	gh4_singer_male_uparoundthebend_5
-	gh4_singer_male_vinternoll2_1
-	gh4_singer_male_vinternoll2_1b
-	gh4_singer_male_vinternoll2_2
-	gh4_singer_male_vinternoll2_2b
-	gh4_singer_male_vinternoll2_3
-	gh4_singer_male_vinternoll2_3b
-	gh4_singer_male_vinternoll2_4
-	gh4_singer_male_vinternoll2_5
-	gh4_singer_male_vinternoll2_6
-	gh4_singer_male_vinternoll2_7
-	gh4_singer_male_vinternoll2_8
-	gh4_singer_male_weaponofchoice_1
-	gh4_singer_male_weaponofchoice_2
-	gh4_singer_male_weaponofchoice_3
-	gh4_singer_male_weaponofchoice_4
-	gh4_singer_male_whativedone_1
-	gh4_singer_male_whativedone_1b
-	gh4_singer_male_whativedone_2
-	gh4_singer_male_windcriesmary_1
-	gh4_singer_male_windcriesmary_2
-	gh4_singer_male_windcriesmary_3
-	gh4_singer_male_windcriesmary_4
-	gh4_singer_male_youregonnasay_1
-	gh4_singer_male_youregonnasay_2
-	gh4_singer_male_youregonnasay_3
-	gh4_singer_male_youregonnasay_4
-	gh4_singer_male_youregonnasay_5
-	gh4_singer_male_youregonnasay_6
-	gh4_singer_male_yourface_1
-	gh4_singer_male_yourface_2
-	gh4_singer_male_yourface_3
-	gh4_singer_male_yourface_4
-	gh4_singer_male_yourface_5
-	gh4_singer_male_yourface_6
+	GH4_Singer_Male_SoulDoubt_1
+	GH4_Singer_Male_SoulDoubt_1b
+	GH4_Singer_Male_SoulDoubt_2
+	GH4_Singer_Male_SoulDoubt_2b
+	GH4_Singer_Male_SoulDoubt_3
+	GH4_Singer_Male_SoulDoubt_3b
+	GH4_Singer_Male_SoulDoubt_4
+	GH4_Singer_Male_SoulDoubt_4b
+	GH4_Singer_Male_SoulDoubt_5
+	GH4_Singer_Male_Stillborn_1
+	GH4_Singer_Male_Stillborn_2
+	GH4_Singer_Male_Stillborn_3
+	GH4_Singer_Male_Stranglehold_1
+	GH4_Singer_Male_Stranglehold_2
+	GH4_Singer_Male_Stranglehold_3
+	GH4_Singer_Male_Stranglehold_4
+	GH4_Singer_Male_Stranglehold_5
+	GH4_Singer_Male_Stranglehold_6
+	GH4_Singer_Male_SweetHome_1
+	GH4_Singer_Male_SweetHome_2
+	GH4_Singer_Male_SweetHome_2B
+	GH4_Singer_Male_SweetHome_3
+	GH4_Singer_Male_SweetHome_3B
+	GH4_Singer_Male_SweetHome_4
+	GH4_Singer_Male_SweetHome_4B
+	GH4_Singer_Male_SweetHome_5
+	GH4_Singer_Male_SweetHome_6
+	GH4_Singer_Male_SweetHome_6B
+	GH4_Singer_Male_SweetHome_7
+	GH4_Singer_Male_SweetHome_8
+	GH4_Singer_Male_SweetHome_9
+	GH4_Singer_Male_TheJoker_1
+	GH4_Singer_Male_TheJoker_2
+	GH4_Singer_Male_TheJoker_3
+	GH4_Singer_Male_TheJoker_4
+	GH4_Singer_Male_TheJoker_5
+	GH4_Singer_Male_TheKill_1
+	GH4_Singer_Male_TheKill_1b
+	GH4_Singer_Male_TheKill_2
+	GH4_Singer_Male_TheKill_2b
+	GH4_Singer_Male_TheKill_3
+	GH4_Singer_Male_TheKill_3b
+	GH4_Singer_Male_TheKill_4
+	GH4_Singer_Male_TheKill_4b
+	GH4_Singer_Male_TheKill_5
+	GH4_Singer_Male_TheKill_5b
+	GH4_Singer_Male_TheMiddle_1
+	GH4_Singer_Male_TheMiddle_1B
+	GH4_Singer_Male_TheMiddle_2
+	GH4_Singer_Male_TheMiddle_2B
+	GH4_Singer_Male_TheMiddle_3B
+	GH4_Singer_Male_TheMiddle_4B
+	GH4_Singer_Male_TheOneILove_1
+	GH4_Singer_Male_TheOneILove_1B
+	GH4_Singer_Male_TheOneILove_2
+	GH4_Singer_Male_TheOneILove_2B
+	GH4_Singer_Male_TheOneILove_3
+	GH4_Singer_Male_Today_1
+	GH4_Singer_Male_Today_2
+	GH4_Singer_Male_Today_3
+	GH4_Singer_Male_Today_4
+	GH4_Singer_Male_TooMuchToo_1
+	GH4_Singer_Male_TooMuchToo_2
+	GH4_Singer_Male_TooMuchToo_2b
+	GH4_Singer_Male_TooMuchToo_3
+	GH4_Singer_Male_TooMuchToo_4
+	GH4_Singer_Male_TooMuchToo_4b
+	GH4_Singer_Male_TooMuchToo_4c
+	GH4_Singer_Male_TooMuchToo_5
+	GH4_Singer_Male_TooMuchToo_5b
+	GH4_Singer_Male_ToyBoy_1
+	GH4_Singer_Male_ToyBoy_2
+	GH4_Singer_Male_ToyBoy_3
+	GH4_Singer_Male_ToyBoy_4
+	GH4_Singer_Male_ToyBoy_5
+	GH4_Singer_Male_ToyBoy_6
+	GH4_Singer_Male_ToyBoy_7
+	GH4_Singer_Male_ToyBoy_8
+	GH4_Singer_Male_TrappedUnderIce_1
+	GH4_Singer_Male_TrappedUnderIce_1b
+	GH4_Singer_Male_TrappedUnderIce_2
+	GH4_Singer_Male_TrappedUnderIce_2b
+	GH4_Singer_Male_TrappedUnderIce_3
+	GH4_Singer_Male_TrappedUnderIce_3b
+	GH4_Singer_Male_TrappedUnderIce_4
+	GH4_Singer_Male_TrappedUnderIce_4b
+	GH4_Singer_Male_TwistAndShout_1
+	GH4_Singer_Male_TwistAndShout_1B
+	GH4_Singer_Male_TwistAndShout_2
+	GH4_Singer_Male_TwistAndShout_2B
+	GH4_Singer_Male_TwistAndShout_3B
+	GH4_Singer_Male_UpAroundTheBend_1
+	GH4_Singer_Male_UpAroundTheBend_1B
+	GH4_Singer_Male_UpAroundTheBend_2
+	GH4_Singer_Male_UpAroundTheBend_2B
+	GH4_Singer_Male_UpAroundTheBend_3
+	GH4_Singer_Male_UpAroundTheBend_4
+	GH4_Singer_Male_UpAroundTheBend_5
+	GH4_Singer_Male_Vinternoll2_1
+	GH4_Singer_Male_Vinternoll2_1b
+	GH4_Singer_Male_Vinternoll2_2
+	GH4_Singer_Male_Vinternoll2_2b
+	GH4_Singer_Male_Vinternoll2_3
+	GH4_Singer_Male_Vinternoll2_3b
+	GH4_Singer_Male_Vinternoll2_4
+	GH4_Singer_Male_Vinternoll2_5
+	GH4_Singer_Male_Vinternoll2_6
+	GH4_Singer_Male_Vinternoll2_7
+	GH4_Singer_Male_Vinternoll2_8
+	GH4_Singer_Male_WeaponOfChoice_1
+	GH4_Singer_Male_WeaponOfChoice_2
+	GH4_Singer_Male_WeaponOfChoice_3
+	GH4_Singer_Male_WeaponOfChoice_4
+	GH4_Singer_Male_WhatIveDone_1
+	GH4_Singer_Male_WhatIveDone_1b
+	GH4_Singer_Male_WhatIveDone_2
+	GH4_Singer_Male_WindCriesMary_1
+	GH4_Singer_Male_WindCriesMary_2
+	GH4_Singer_Male_WindCriesMary_3
+	GH4_Singer_Male_WindCriesMary_4
+	GH4_Singer_Male_YoureGonnaSay_1
+	GH4_Singer_Male_YoureGonnaSay_2
+	GH4_Singer_Male_YoureGonnaSay_3
+	GH4_Singer_Male_YoureGonnaSay_4
+	GH4_Singer_Male_YoureGonnaSay_5
+	GH4_Singer_Male_YoureGonnaSay_6
+	GH4_Singer_Male_YourFace_1
+	GH4_Singer_Male_YourFace_2
+	GH4_Singer_Male_YourFace_3
+	GH4_Singer_Male_YourFace_4
+	GH4_Singer_Male_YourFace_5
+	GH4_Singer_Male_YourFace_6
 	gh_rocker_male_hardrockface_2
 	gh_rocker_male_hardrockface_4
 	gh_rocker_male_hardrockface_5

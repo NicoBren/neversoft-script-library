@@ -1,19 +1,19 @@
 
 script create_wuss_out_menu 
 	change \{boss_wuss_out = 0}
-	if iswinport
+	if IsWinPort
 		player_device = ($primary_controller)
 	else
 		player_device = ($last_start_pressed_device)
 		if ($current_song = bosstom)
-			warning_text = qs(0x4b62c0f9)
+			warning_text = qs("Wow, Tom Morello is really kicking your butt. Are you O.K.? Do you want to just skip past him? You'll always know that he got the better of you, but don't worry. You can always come back. He'll be waiting.")
 		elseif ($current_song = bossslash)
-			warning_text = qs(0x497bd4be)
+			warning_text = qs("Man, is Slash taking advantage of you? Do you need a hug? Maybe you should stick to playing bass. You wanna just pass him?  Maybe later you'll have what it takes to hang with a real guitar hero.")
 		endif
 	endif
 	disable_pause
 	create_popup_warning_menu {
-		title = qs(0xb0799d7a)
+		title = qs("WUSS OUT?")
 		textblock = {
 			text = <warning_text>
 			dims = (880.0, 600.0)
@@ -26,11 +26,11 @@ script create_wuss_out_menu
 		options = [
 			{
 				func = wuss_out_menu_continue
-				text = qs(0x182f0173)
+				text = qs("CONTINUE")
 			}
 			{
 				func = wuss_out_menu_wuss_out
-				text = qs(0xb9f629d3)
+				text = qs("WUSS OUT")
 			}
 		]
 	}

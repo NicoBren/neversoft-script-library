@@ -1,54 +1,54 @@
-gp_party_goodsmoke01 = {
+GP_Party_GoodSmoke01 = {
 	pos = (-4.3247395, -1.878418, 8.874164)
 	angles = (0.0, 0.0, 0.0)
-	class = particleobject
-	particletype = flexparticle
+	Class = ParticleObject
+	ParticleType = FlexParticle
 	type = flat
 	active
-	createdatstart
-	emitrangedims = (0.3, 0.0, 0.3)
-	docircularemit
-	emit_target = (0.0, 1.0, 0.0)
-	emitangle = (0.0, 0.0, 0.0)
+	CreatedAtStart
+	EmitRangeDims = (0.3, 0.0, 0.3)
+	DoCircularEmit
+	emit_Target = (0.0, 1.0, 0.0)
+	EmitAngle = (0.0, 0.0, 0.0)
 	force = (0.0, 0.5, 0.0)
-	windcoeff = 0.0
-	localwindcoeff = 0.0
-	emittervelocityweight = 0.0
-	anglespread = 15.0
-	liferange = (0.8, 1.2)
+	WindCoeff = 0.0
+	LocalWindCoeff = 0.0
+	EmitterVelocityWeight = 0.0
+	AngleSpread = 15.0
+	LifeRange = (0.8, 1.2)
 	emit_rate = 4.0
 	max = 0
-	timeseed = 0.4
-	lifetime = 0.0
-	emitnum = 0
-	followemitter = 0.0
-	emitfunction = constant
-	emitperiod = 1.0
-	sizerange = [
+	TimeSeed = 0.4
+	lifeTime = 0.0
+	emitNum = 0
+	FollowEmitter = 0.0
+	EmitFunction = constant
+	EmitPeriod = 1.0
+	SizeRange = [
 		(2.0, 2.0)
 		(3.0, 3.0)
 	]
-	speedrange = (2.5, 3.0)
-	rotvel = (-0.2, 0.2)
-	rotveltimescale = 0.5
-	emitdelaystart = 0.0
-	pathfollowtime = 0.0
-	history = 2
-	historylistcoordinatespace = world
+	SpeedRange = (2.5, 3.0)
+	RotVel = (-0.2, 0.2)
+	RotVelTimeScale = 0.5
+	EmitDelayStart = 0.0
+	PathFollowTime = 0.0
+	History = 2
+	HistoryListCoordinateSpace = world
 	color = 1077952767
-	lod_distances = (20.0, 30.0)
-	novisibilitytest
-	lodminparticles = 6
-	quickmaterial = {
-		texturelayout = layout2x2
-		diffusetextureenabled
-		diffusetexture = jow_steam02
-		specularpower = 0
+	LOD_Distances = (20.0, 30.0)
+	NoVisibilityTest
+	LodMinParticles = 6
+	QuickMaterial = {
+		TextureLayout = Layout2x2
+		DiffuseTextureEnabled
+		DiffuseTexture = JOW_Steam02
+		SpecularPower = 0
 		alphacutoff = 12
-		blendmode = blend
-		quadanimationfps = 0
+		blendMode = blend
+		QuadAnimationFPS = 0
 	}
-	knot = [
+	Knot = [
 		(-0.38947403, 0.0, -0.0)
 		(-0.38947403, 0.0, -0.0)
 		(-0.273684, 0.0, -0.0)
@@ -59,7 +59,7 @@ gp_party_goodsmoke01 = {
 		(0.431579, 0.0, -0.0)
 		(0.431579, 0.0, -0.0)
 	]
-	particlecolor = [
+	ParticleColor = [
 		-4817011
 		-135
 		-4541185
@@ -67,7 +67,7 @@ gp_party_goodsmoke01 = {
 		-256
 		-256
 	]
-	vertexweight = [
+	VertexWeight = [
 		0.423078
 		1.0
 	]

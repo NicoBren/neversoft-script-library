@@ -1,12 +1,12 @@
-crowd_blendtime_tempochange = 0.67
-crowd_blendtime_bad = 0.5
-crowd_blendtime_special = 0.4
-crowd_blendtime_slow = 0.6
-crowd_blendtime_med = 0.4
-crowd_blendtime_fast = 0.2
-crowd_profiles = {
+Crowd_BlendTime_TempoChange = 0.67
+Crowd_BlendTime_Bad = 0.5
+Crowd_BlendTime_Special = 0.4
+Crowd_BlendTime_Slow = 0.6
+Crowd_BlendTime_Med = 0.4
+Crowd_BlendTime_Fast = 0.2
+Crowd_Profiles = {
 	crowd1 = {
-		anim_set = crowd_animations_colin
+		anim_set = crowd_animations_Colin
 	}
 	crowd2 = {
 		anim_set = crowd_animations_jerod
@@ -15,7 +15,7 @@ crowd_profiles = {
 		anim_set = crowd_animations_rick
 	}
 	crowd4 = {
-		anim_set = crowd_animations_bill
+		anim_set = crowd_animations_Bill
 	}
 	crowd5 = {
 		anim_set = crowd_animations_becki
@@ -24,1101 +24,1101 @@ crowd_profiles = {
 		anim_set = crowd_animations_genna
 	}
 	crowd7 = {
-		anim_set = crowd_animations_colin
+		anim_set = crowd_animations_Colin
 	}
 	crowd8 = {
 		anim_set = crowd_animations_jerod
 	}
 }
 crowd_animations_jerod = {
-	idle = {
+	Idle = {
 		good = {
-			fast = [
-				gh3xp1_crowd_genna_good_fast5
-				gh3xp1_crowd_genna_good_fast6
+			Fast = [
+				GH3xp1_Crowd_Genna_Good_Fast5
+				GH3xp1_Crowd_Genna_Good_Fast6
 			]
-			med = [
-				gh3xp1_crowd_jerod_good_med4
-				gh3xp1_crowd_jerod_good_med5
+			Med = [
+				GH3xp1_Crowd_Jerod_Good_Med4
+				GH3xp1_Crowd_Jerod_Good_Med5
 			]
-			slow = [
-				gh3xp1_crowd_jerod_good_slow4
-				gh3xp1_crowd_jerod_good_slow5
-			]
-		}
-		normal = {
-			fast = [
-				gh3xp1_crowd_jerod_reg_fast1
-				gh3xp1_crowd_jerod_reg_fast3
-				gh3xp1_crowd_jerod_reg_fast5
-			]
-			med = [
-				gh3xp1_crowd_jerod_reg_med6
-				gh3xp1_crowd_jerod_reg_med6
-				gh3xp1_crowd_jerod_reg_med7
-			]
-			slow = [
-				gh3xp1_crowd_becki_reg_slow3
-				gh3xp1_crowd_becki_reg_slow4
-				gh3xp1_crowd_becki_reg_slow5
+			Slow = [
+				GH3xp1_Crowd_Jerod_Good_Slow4
+				GH3xp1_Crowd_Jerod_Good_Slow5
 			]
 		}
-		bad = {
-			fast = [
-				gh3xp1_crowd_jerod_bad4
-				gh3xp1_crowd_jerod_bad5
-				gh3xp1_crowd_jerod_bad6
-				gh3xp1_crowd_jerod_bad1
+		Normal = {
+			Fast = [
+				GH3xp1_Crowd_Jerod_Reg_Fast1
+				GH3xp1_Crowd_Jerod_Reg_Fast3
+				GH3xp1_Crowd_Jerod_Reg_Fast5
 			]
-			med = [
-				gh3xp1_crowd_jerod_bad4
-				gh3xp1_crowd_jerod_bad5
-				gh3xp1_crowd_jerod_bad6
-				gh3xp1_crowd_jerod_bad3
+			Med = [
+				GH3xp1_Crowd_Jerod_Reg_Med6
+				GH3xp1_Crowd_Jerod_Reg_Med6
+				GH3xp1_Crowd_Jerod_Reg_Med7
 			]
-			slow = [
-				gh3xp1_crowd_jerod_bad4
-				gh3xp1_crowd_jerod_bad5
-				gh3xp1_crowd_jerod_bad6
-				gh3xp1_crowd_jerod_bad3
+			Slow = [
+				GH3xp1_Crowd_Becki_Reg_Slow3
+				GH3xp1_Crowd_Becki_Reg_Slow4
+				GH3xp1_Crowd_Becki_Reg_Slow5
+			]
+		}
+		Bad = {
+			Fast = [
+				GH3xp1_Crowd_Jerod_Bad4
+				GH3xp1_Crowd_Jerod_Bad5
+				GH3xp1_Crowd_Jerod_Bad6
+				GH3xp1_Crowd_Jerod_Bad1
+			]
+			Med = [
+				GH3xp1_Crowd_Jerod_Bad4
+				GH3xp1_Crowd_Jerod_Bad5
+				GH3xp1_Crowd_Jerod_Bad6
+				GH3xp1_Crowd_Jerod_Bad3
+			]
+			Slow = [
+				GH3xp1_Crowd_Jerod_Bad4
+				GH3xp1_Crowd_Jerod_Bad5
+				GH3xp1_Crowd_Jerod_Bad6
+				GH3xp1_Crowd_Jerod_Bad3
 			]
 		}
 	}
 	special = {
 		good = {
-			fast = [
-				gh3xp1_crowd_jerod_special_fast1
-				gh3xp1_crowd_jerod_special_fast4
+			Fast = [
+				GH3xp1_Crowd_Jerod_Special_Fast1
+				GH3xp1_Crowd_Jerod_Special_Fast4
 			]
-			med = [
-				gh3xp1_crowd_genna_special_med1
-				gh3xp1_crowd_genna_special_med2
+			Med = [
+				GH3xp1_Crowd_Genna_Special_Med1
+				GH3xp1_Crowd_Genna_Special_Med2
 			]
-			slow = [
-				gh3xp1_crowd_jerod_special_slow1
-				gh3xp1_crowd_jerod_special_slow2
-				gh3xp1_crowd_jerod_special_slow3
-			]
-		}
-		normal = {
-			fast = [
-				gh3xp1_crowd_jerod_special_fast1
-				gh3xp1_crowd_jerod_special_fast4
-			]
-			med = [
-				gh3xp1_crowd_genna_special_med1
-				gh3xp1_crowd_genna_special_med2
-			]
-			slow = [
-				gh3xp1_crowd_jerod_special_slow1
-				gh3xp1_crowd_jerod_special_slow2
-				gh3xp1_crowd_jerod_special_slow3
+			Slow = [
+				GH3xp1_Crowd_Jerod_Special_Slow1
+				GH3xp1_Crowd_Jerod_Special_Slow2
+				GH3xp1_Crowd_Jerod_Special_Slow3
 			]
 		}
-		bad = {
-			fast = [
-				gh3xp1_crowd_jerod_bad4
-				gh3xp1_crowd_jerod_bad5
-				gh3xp1_crowd_jerod_bad6
-				gh3xp1_crowd_jerod_bad1
+		Normal = {
+			Fast = [
+				GH3xp1_Crowd_Jerod_Special_Fast1
+				GH3xp1_Crowd_Jerod_Special_Fast4
 			]
-			med = [
-				gh3xp1_crowd_jerod_bad4
-				gh3xp1_crowd_jerod_bad5
-				gh3xp1_crowd_jerod_bad6
-				gh3xp1_crowd_jerod_bad3
+			Med = [
+				GH3xp1_Crowd_Genna_Special_Med1
+				GH3xp1_Crowd_Genna_Special_Med2
 			]
-			slow = [
-				gh3xp1_crowd_jerod_bad4
-				gh3xp1_crowd_jerod_bad5
-				gh3xp1_crowd_jerod_bad6
-				gh3xp1_crowd_jerod_bad3
+			Slow = [
+				GH3xp1_Crowd_Jerod_Special_Slow1
+				GH3xp1_Crowd_Jerod_Special_Slow2
+				GH3xp1_Crowd_Jerod_Special_Slow3
+			]
+		}
+		Bad = {
+			Fast = [
+				GH3xp1_Crowd_Jerod_Bad4
+				GH3xp1_Crowd_Jerod_Bad5
+				GH3xp1_Crowd_Jerod_Bad6
+				GH3xp1_Crowd_Jerod_Bad1
+			]
+			Med = [
+				GH3xp1_Crowd_Jerod_Bad4
+				GH3xp1_Crowd_Jerod_Bad5
+				GH3xp1_Crowd_Jerod_Bad6
+				GH3xp1_Crowd_Jerod_Bad3
+			]
+			Slow = [
+				GH3xp1_Crowd_Jerod_Bad4
+				GH3xp1_Crowd_Jerod_Bad5
+				GH3xp1_Crowd_Jerod_Bad6
+				GH3xp1_Crowd_Jerod_Bad3
 			]
 		}
 	}
 	starpower = {
 		good = {
-			fast = [
-				gh3xp1_crowd_becki_starpower_fast3
+			Fast = [
+				GH3xp1_Crowd_Becki_Starpower_Fast3
 			]
-			med = [
-				gh3xp1_crowd_becki_starpower_med1
+			Med = [
+				GH3xp1_Crowd_Becki_Starpower_Med1
 			]
-			slow = [
-				gh3xp1_crowd_becki_starpower_slow3
-				gh3xp1_crowd_becki_starpower_slow1
-			]
-		}
-		normal = {
-			fast = [
-				gh3xp1_crowd_becki_starpower_fast3
-			]
-			med = [
-				gh3xp1_crowd_becki_starpower_med1
-			]
-			slow = [
-				gh3xp1_crowd_becki_starpower_slow3
-				gh3xp1_crowd_becki_starpower_slow1
+			Slow = [
+				GH3xp1_Crowd_Becki_Starpower_Slow3
+				GH3xp1_Crowd_Becki_Starpower_Slow1
 			]
 		}
-		bad = {
-			fast = [
-				gh3xp1_crowd_jerod_bad4
-				gh3xp1_crowd_jerod_bad5
-				gh3xp1_crowd_jerod_bad6
-				gh3xp1_crowd_jerod_bad1
+		Normal = {
+			Fast = [
+				GH3xp1_Crowd_Becki_Starpower_Fast3
 			]
-			med = [
-				gh3xp1_crowd_jerod_bad4
-				gh3xp1_crowd_jerod_bad5
-				gh3xp1_crowd_jerod_bad6
-				gh3xp1_crowd_jerod_bad3
+			Med = [
+				GH3xp1_Crowd_Becki_Starpower_Med1
 			]
-			slow = [
-				gh3xp1_crowd_jerod_bad4
-				gh3xp1_crowd_jerod_bad5
-				gh3xp1_crowd_jerod_bad6
-				gh3xp1_crowd_jerod_bad1
+			Slow = [
+				GH3xp1_Crowd_Becki_Starpower_Slow3
+				GH3xp1_Crowd_Becki_Starpower_Slow1
+			]
+		}
+		Bad = {
+			Fast = [
+				GH3xp1_Crowd_Jerod_Bad4
+				GH3xp1_Crowd_Jerod_Bad5
+				GH3xp1_Crowd_Jerod_Bad6
+				GH3xp1_Crowd_Jerod_Bad1
+			]
+			Med = [
+				GH3xp1_Crowd_Jerod_Bad4
+				GH3xp1_Crowd_Jerod_Bad5
+				GH3xp1_Crowd_Jerod_Bad6
+				GH3xp1_Crowd_Jerod_Bad3
+			]
+			Slow = [
+				GH3xp1_Crowd_Jerod_Bad4
+				GH3xp1_Crowd_Jerod_Bad5
+				GH3xp1_Crowd_Jerod_Bad6
+				GH3xp1_Crowd_Jerod_Bad1
 			]
 		}
 	}
 }
 crowd_animations_rick = {
-	idle = {
+	Idle = {
 		good = {
-			fast = [
-				gh3xp1_crowd_bill_starpower_fast3
-				gh3xp1_crowd_bill_starpower_fast4
+			Fast = [
+				GH3xp1_Crowd_Bill_Starpower_Fast3
+				GH3xp1_Crowd_Bill_Starpower_Fast4
 			]
-			med = [
-				gh3xp1_crowd_bill_starpower_med4
-				gh3xp1_crowd_bill_starpower_med5
+			Med = [
+				GH3xp1_Crowd_Bill_Starpower_Med4
+				GH3xp1_Crowd_Bill_Starpower_Med5
 			]
-			slow = [
-				gh3xp1_crowd_bill_starpower_slow3
-				gh3xp1_crowd_bill_starpower_slow4
-			]
-		}
-		normal = {
-			fast = [
-				gh3xp1_crowd_colin_reg_fast1
-			]
-			med = [
-				gh3xp1_crowd_rick_reg_med1
-				gh3xp1_crowd_rick_reg_med2
-			]
-			slow = [
-				gh3xp1_crowd_rick_reg_slow1
-				gh3xp1_crowd_rick_reg_slow2
-				gh3xp1_crowd_rick_reg_slow3
+			Slow = [
+				GH3xp1_Crowd_Bill_Starpower_Slow3
+				GH3xp1_Crowd_Bill_Starpower_Slow4
 			]
 		}
-		bad = {
-			fast = [
-				gh3xp1_crowd_rick_bad1
-				gh3xp1_crowd_rick_bad2
-				gh3xp1_crowd_rick_bad3
+		Normal = {
+			Fast = [
+				GH3xp1_Crowd_Colin_Reg_Fast1
 			]
-			med = [
-				gh3xp1_crowd_rick_bad1
-				gh3xp1_crowd_rick_bad2
-				gh3xp1_crowd_rick_bad3
+			Med = [
+				GH3xp1_Crowd_Rick_Reg_Med1
+				GH3xp1_Crowd_Rick_Reg_Med2
 			]
-			slow = [
-				gh3xp1_crowd_rick_bad1
-				gh3xp1_crowd_rick_bad2
-				gh3xp1_crowd_rick_bad3
+			Slow = [
+				GH3xp1_Crowd_Rick_Reg_Slow1
+				GH3xp1_Crowd_Rick_Reg_Slow2
+				GH3xp1_Crowd_Rick_Reg_Slow3
+			]
+		}
+		Bad = {
+			Fast = [
+				GH3xp1_Crowd_Rick_Bad1
+				GH3xp1_Crowd_Rick_Bad2
+				GH3xp1_Crowd_Rick_Bad3
+			]
+			Med = [
+				GH3xp1_Crowd_Rick_Bad1
+				GH3xp1_Crowd_Rick_Bad2
+				GH3xp1_Crowd_Rick_Bad3
+			]
+			Slow = [
+				GH3xp1_Crowd_Rick_Bad1
+				GH3xp1_Crowd_Rick_Bad2
+				GH3xp1_Crowd_Rick_Bad3
 			]
 		}
 	}
 	special = {
 		good = {
-			fast = [
-				gh3xp1_crowd_genna_special_fast3
-				gh3xp1_crowd_genna_special_fast4
+			Fast = [
+				GH3xp1_Crowd_Genna_Special_Fast3
+				GH3xp1_Crowd_Genna_Special_Fast4
 			]
-			med = [
-				gh3xp1_crowd_becki_special_med1
+			Med = [
+				GH3xp1_Crowd_Becki_Special_Med1
 			]
-			slow = [
-				gh3xp1_crowd_becki_special_slow2
-			]
-		}
-		normal = {
-			fast = [
-				gh3xp1_crowd_genna_special_fast3
-				gh3xp1_crowd_genna_special_fast4
-			]
-			med = [
-				gh3xp1_crowd_becki_special_med1
-			]
-			slow = [
-				gh3xp1_crowd_becki_special_slow2
+			Slow = [
+				GH3xp1_Crowd_Becki_Special_Slow2
 			]
 		}
-		bad = {
-			fast = [
-				gh3xp1_crowd_rick_bad1
-				gh3xp1_crowd_rick_bad2
-				gh3xp1_crowd_rick_bad3
+		Normal = {
+			Fast = [
+				GH3xp1_Crowd_Genna_Special_Fast3
+				GH3xp1_Crowd_Genna_Special_Fast4
 			]
-			med = [
-				gh3xp1_crowd_rick_bad1
-				gh3xp1_crowd_rick_bad2
-				gh3xp1_crowd_rick_bad3
+			Med = [
+				GH3xp1_Crowd_Becki_Special_Med1
 			]
-			slow = [
-				gh3xp1_crowd_rick_bad1
-				gh3xp1_crowd_rick_bad2
-				gh3xp1_crowd_rick_bad3
+			Slow = [
+				GH3xp1_Crowd_Becki_Special_Slow2
+			]
+		}
+		Bad = {
+			Fast = [
+				GH3xp1_Crowd_Rick_Bad1
+				GH3xp1_Crowd_Rick_Bad2
+				GH3xp1_Crowd_Rick_Bad3
+			]
+			Med = [
+				GH3xp1_Crowd_Rick_Bad1
+				GH3xp1_Crowd_Rick_Bad2
+				GH3xp1_Crowd_Rick_Bad3
+			]
+			Slow = [
+				GH3xp1_Crowd_Rick_Bad1
+				GH3xp1_Crowd_Rick_Bad2
+				GH3xp1_Crowd_Rick_Bad3
 			]
 		}
 	}
 	starpower = {
 		good = {
-			fast = [
-				gh3xp1_crowd_bill_starpower_fast3
-				gh3xp1_crowd_bill_starpower_fast4
+			Fast = [
+				GH3xp1_Crowd_Bill_Starpower_Fast3
+				GH3xp1_Crowd_Bill_Starpower_Fast4
 			]
-			med = [
-				gh3xp1_crowd_becki_starpower_slow2
-				gh3xp1_crowd_becki_starpower_slow3
+			Med = [
+				GH3xp1_Crowd_Becki_Starpower_Slow2
+				GH3xp1_Crowd_Becki_Starpower_Slow3
 			]
-			slow = [
-				gh3xp1_crowd_genna_starpower_med3
-			]
-		}
-		normal = {
-			fast = [
-				gh3xp1_crowd_bill_starpower_fast3
-				gh3xp1_crowd_bill_starpower_fast4
-			]
-			med = [
-				gh3xp1_crowd_becki_starpower_slow2
-				gh3xp1_crowd_becki_starpower_slow3
-			]
-			slow = [
-				gh3xp1_crowd_genna_starpower_med3
+			Slow = [
+				GH3xp1_Crowd_Genna_Starpower_Med3
 			]
 		}
-		bad = {
-			fast = [
-				gh3xp1_crowd_rick_bad1
-				gh3xp1_crowd_rick_bad2
-				gh3xp1_crowd_rick_bad3
+		Normal = {
+			Fast = [
+				GH3xp1_Crowd_Bill_Starpower_Fast3
+				GH3xp1_Crowd_Bill_Starpower_Fast4
 			]
-			med = [
-				gh3xp1_crowd_rick_bad1
-				gh3xp1_crowd_rick_bad2
-				gh3xp1_crowd_rick_bad3
+			Med = [
+				GH3xp1_Crowd_Becki_Starpower_Slow2
+				GH3xp1_Crowd_Becki_Starpower_Slow3
 			]
-			slow = [
-				gh3xp1_crowd_rick_bad1
-				gh3xp1_crowd_rick_bad2
-				gh3xp1_crowd_rick_bad3
+			Slow = [
+				GH3xp1_Crowd_Genna_Starpower_Med3
+			]
+		}
+		Bad = {
+			Fast = [
+				GH3xp1_Crowd_Rick_Bad1
+				GH3xp1_Crowd_Rick_Bad2
+				GH3xp1_Crowd_Rick_Bad3
+			]
+			Med = [
+				GH3xp1_Crowd_Rick_Bad1
+				GH3xp1_Crowd_Rick_Bad2
+				GH3xp1_Crowd_Rick_Bad3
+			]
+			Slow = [
+				GH3xp1_Crowd_Rick_Bad1
+				GH3xp1_Crowd_Rick_Bad2
+				GH3xp1_Crowd_Rick_Bad3
 			]
 		}
 	}
 }
-crowd_animations_colin = {
-	idle = {
+crowd_animations_Colin = {
+	Idle = {
 		good = {
-			fast = [
-				gh3xp1_crowd_bill_starpower_fast1
-				gh3xp1_crowd_bill_starpower_fast2
-				gh3xp1_crowd_bill_starpower_fast3
+			Fast = [
+				GH3xp1_Crowd_Bill_Starpower_Fast1
+				GH3xp1_Crowd_Bill_Starpower_Fast2
+				GH3xp1_Crowd_Bill_Starpower_Fast3
 			]
-			med = [
-				gh3xp1_crowd_bill_starpower_med1
-				gh3xp1_crowd_bill_starpower_med2
-				gh3xp1_crowd_bill_starpower_med3
+			Med = [
+				GH3xp1_Crowd_Bill_Starpower_Med1
+				GH3xp1_Crowd_Bill_Starpower_Med2
+				GH3xp1_Crowd_Bill_Starpower_Med3
 			]
-			slow = [
-				gh3xp1_crowd_bill_starpower_slow1
-				gh3xp1_crowd_bill_starpower_slow2
-				gh3xp1_crowd_bill_starpower_slow3
-			]
-		}
-		normal = {
-			fast = [
-				gh3xp1_crowd_colin_reg_fast3
-			]
-			med = [
-				gh3xp1_crowd_bill_reg_med3
-				gh3xp1_crowd_bill_reg_med4
-			]
-			slow = [
-				gh3xp1_crowd_jerod_reg_slow1
-				gh3xp1_crowd_jerod_reg_slow2
-				gh3xp1_crowd_jerod_reg_slow3
+			Slow = [
+				GH3xp1_Crowd_Bill_Starpower_Slow1
+				GH3xp1_Crowd_Bill_Starpower_Slow2
+				GH3xp1_Crowd_Bill_Starpower_Slow3
 			]
 		}
-		bad = {
-			fast = [
-				gh3xp1_crowd_colin_bad2
-				gh3xp1_crowd_colin_bad3
-				gh3xp1_crowd_colin_bad4
-				gh3xp1_crowd_colin_bad1
+		Normal = {
+			Fast = [
+				GH3xp1_Crowd_Colin_Reg_Fast3
 			]
-			med = [
-				gh3xp1_crowd_colin_bad2
-				gh3xp1_crowd_colin_bad3
-				gh3xp1_crowd_colin_bad4
-				gh3xp1_crowd_colin_bad1
+			Med = [
+				GH3xp1_Crowd_Bill_Reg_Med3
+				GH3xp1_Crowd_Bill_Reg_Med4
 			]
-			slow = [
-				gh3xp1_crowd_colin_bad2
-				gh3xp1_crowd_colin_bad3
-				gh3xp1_crowd_colin_bad4
-				gh3xp1_crowd_colin_bad1
+			Slow = [
+				GH3xp1_Crowd_Jerod_Reg_Slow1
+				GH3xp1_Crowd_Jerod_Reg_Slow2
+				GH3xp1_Crowd_Jerod_Reg_Slow3
+			]
+		}
+		Bad = {
+			Fast = [
+				GH3xp1_Crowd_Colin_Bad2
+				GH3xp1_Crowd_Colin_Bad3
+				GH3xp1_Crowd_Colin_Bad4
+				GH3xp1_Crowd_Colin_Bad1
+			]
+			Med = [
+				GH3xp1_Crowd_Colin_Bad2
+				GH3xp1_Crowd_Colin_Bad3
+				GH3xp1_Crowd_Colin_Bad4
+				GH3xp1_Crowd_Colin_Bad1
+			]
+			Slow = [
+				GH3xp1_Crowd_Colin_Bad2
+				GH3xp1_Crowd_Colin_Bad3
+				GH3xp1_Crowd_Colin_Bad4
+				GH3xp1_Crowd_Colin_Bad1
 			]
 		}
 	}
 	special = {
 		good = {
-			fast = [
-				gh3xp1_crowd_colin_special_fast1
-				gh3xp1_crowd_colin_special_fast2
+			Fast = [
+				GH3xp1_Crowd_Colin_Special_Fast1
+				GH3xp1_Crowd_Colin_Special_Fast2
 			]
-			med = [
-				gh3xp1_crowd_colin_special_med1
-				gh3xp1_crowd_colin_special_med2
-				gh3xp1_crowd_colin_special_med3
+			Med = [
+				GH3xp1_Crowd_Colin_Special_Med1
+				GH3xp1_Crowd_Colin_Special_Med2
+				GH3xp1_Crowd_Colin_Special_Med3
 			]
-			slow = [
-				gh3xp1_crowd_colin_special_slow1
-				gh3xp1_crowd_colin_special_slow2
-			]
-		}
-		normal = {
-			fast = [
-				gh3xp1_crowd_colin_special_fast1
-				gh3xp1_crowd_colin_special_fast2
-			]
-			med = [
-				gh3xp1_crowd_colin_special_med1
-				gh3xp1_crowd_colin_special_med2
-				gh3xp1_crowd_colin_special_med3
-			]
-			slow = [
-				gh3xp1_crowd_colin_special_slow1
-				gh3xp1_crowd_colin_special_slow2
+			Slow = [
+				GH3xp1_Crowd_Colin_Special_Slow1
+				GH3xp1_Crowd_Colin_Special_Slow2
 			]
 		}
-		bad = {
-			fast = [
-				gh3xp1_crowd_colin_bad2
-				gh3xp1_crowd_colin_bad3
-				gh3xp1_crowd_colin_bad4
-				gh3xp1_crowd_colin_bad1
+		Normal = {
+			Fast = [
+				GH3xp1_Crowd_Colin_Special_Fast1
+				GH3xp1_Crowd_Colin_Special_Fast2
 			]
-			med = [
-				gh3xp1_crowd_colin_bad2
-				gh3xp1_crowd_colin_bad3
-				gh3xp1_crowd_colin_bad4
-				gh3xp1_crowd_colin_bad1
+			Med = [
+				GH3xp1_Crowd_Colin_Special_Med1
+				GH3xp1_Crowd_Colin_Special_Med2
+				GH3xp1_Crowd_Colin_Special_Med3
 			]
-			slow = [
-				gh3xp1_crowd_colin_bad2
-				gh3xp1_crowd_colin_bad3
-				gh3xp1_crowd_colin_bad4
-				gh3xp1_crowd_colin_bad1
+			Slow = [
+				GH3xp1_Crowd_Colin_Special_Slow1
+				GH3xp1_Crowd_Colin_Special_Slow2
+			]
+		}
+		Bad = {
+			Fast = [
+				GH3xp1_Crowd_Colin_Bad2
+				GH3xp1_Crowd_Colin_Bad3
+				GH3xp1_Crowd_Colin_Bad4
+				GH3xp1_Crowd_Colin_Bad1
+			]
+			Med = [
+				GH3xp1_Crowd_Colin_Bad2
+				GH3xp1_Crowd_Colin_Bad3
+				GH3xp1_Crowd_Colin_Bad4
+				GH3xp1_Crowd_Colin_Bad1
+			]
+			Slow = [
+				GH3xp1_Crowd_Colin_Bad2
+				GH3xp1_Crowd_Colin_Bad3
+				GH3xp1_Crowd_Colin_Bad4
+				GH3xp1_Crowd_Colin_Bad1
 			]
 		}
 	}
 	starpower = {
 		good = {
-			fast = [
-				gh3xp1_crowd_genna_starpower_med3
+			Fast = [
+				GH3xp1_Crowd_Genna_Starpower_Med3
 			]
-			med = [
-				gh3xp1_crowd_genna_starpower_med1
-				gh3xp1_crowd_genna_starpower_med2
+			Med = [
+				GH3xp1_Crowd_Genna_Starpower_Med1
+				GH3xp1_Crowd_Genna_Starpower_Med2
 			]
-			slow = [
-				gh3xp1_crowd_becki_starpower_slow1
-				gh3xp1_crowd_becki_starpower_slow2
-			]
-		}
-		normal = {
-			fast = [
-				gh3xp1_crowd_genna_starpower_med3
-			]
-			med = [
-				gh3xp1_crowd_genna_starpower_med1
-				gh3xp1_crowd_genna_starpower_med2
-			]
-			slow = [
-				gh3xp1_crowd_becki_starpower_slow1
-				gh3xp1_crowd_becki_starpower_slow2
+			Slow = [
+				GH3xp1_Crowd_Becki_Starpower_Slow1
+				GH3xp1_Crowd_Becki_Starpower_Slow2
 			]
 		}
-		bad = {
-			fast = [
-				gh3xp1_crowd_colin_bad2
-				gh3xp1_crowd_colin_bad3
-				gh3xp1_crowd_colin_bad4
-				gh3xp1_crowd_colin_bad1
+		Normal = {
+			Fast = [
+				GH3xp1_Crowd_Genna_Starpower_Med3
 			]
-			med = [
-				gh3xp1_crowd_colin_bad2
-				gh3xp1_crowd_colin_bad3
-				gh3xp1_crowd_colin_bad4
-				gh3xp1_crowd_colin_bad1
+			Med = [
+				GH3xp1_Crowd_Genna_Starpower_Med1
+				GH3xp1_Crowd_Genna_Starpower_Med2
 			]
-			slow = [
-				gh3xp1_crowd_colin_bad2
-				gh3xp1_crowd_colin_bad3
-				gh3xp1_crowd_colin_bad4
-				gh3xp1_crowd_colin_bad1
+			Slow = [
+				GH3xp1_Crowd_Becki_Starpower_Slow1
+				GH3xp1_Crowd_Becki_Starpower_Slow2
+			]
+		}
+		Bad = {
+			Fast = [
+				GH3xp1_Crowd_Colin_Bad2
+				GH3xp1_Crowd_Colin_Bad3
+				GH3xp1_Crowd_Colin_Bad4
+				GH3xp1_Crowd_Colin_Bad1
+			]
+			Med = [
+				GH3xp1_Crowd_Colin_Bad2
+				GH3xp1_Crowd_Colin_Bad3
+				GH3xp1_Crowd_Colin_Bad4
+				GH3xp1_Crowd_Colin_Bad1
+			]
+			Slow = [
+				GH3xp1_Crowd_Colin_Bad2
+				GH3xp1_Crowd_Colin_Bad3
+				GH3xp1_Crowd_Colin_Bad4
+				GH3xp1_Crowd_Colin_Bad1
 			]
 		}
 	}
 }
-crowd_animations_bill = {
-	idle = {
+crowd_animations_Bill = {
+	Idle = {
 		good = {
-			fast = [
-				gh3xp1_crowd_bill_good_fast1
-				gh3xp1_crowd_bill_good_fast2
-				gh3xp1_crowd_bill_good_fast3
-				gh3xp1_crowd_bill_good_fast4
+			Fast = [
+				GH3xp1_Crowd_Bill_Good_Fast1
+				GH3xp1_Crowd_Bill_Good_Fast2
+				GH3xp1_Crowd_Bill_Good_Fast3
+				GH3xp1_Crowd_Bill_Good_Fast4
 			]
-			med = [
-				gh3xp1_crowd_genna_good_med1
-				gh3xp1_crowd_genna_good_med2
-				gh3xp1_crowd_genna_good_med4
+			Med = [
+				GH3xp1_Crowd_Genna_Good_Med1
+				GH3xp1_Crowd_Genna_Good_Med2
+				GH3xp1_Crowd_Genna_Good_Med4
 			]
-			slow = [
-				gh3xp1_crowd_genna_good_slow4
-				gh3xp1_crowd_genna_good_slow4
-				gh3xp1_crowd_genna_good_slow4
-				gh3xp1_crowd_genna_good_slow5
-				gh3xp1_crowd_genna_good_slow2
-				gh3xp1_crowd_genna_good_slow2
-			]
-		}
-		normal = {
-			fast = [
-				gh3xp1_crowd_bill_reg_fast1
-				gh3xp1_crowd_bill_reg_fast2
-				gh3xp1_crowd_bill_reg_fast3
-			]
-			med = [
-				gh3xp1_crowd_bill_reg_med1
-				gh3xp1_crowd_bill_reg_med2
-			]
-			slow = [
-				gh3xp1_crowd_bill_reg_slow1
-				gh3xp1_crowd_bill_reg_slow2
-				gh3xp1_crowd_bill_reg_slow3
-				gh3xp1_crowd_bill_reg_slow4
-				gh3xp1_crowd_bill_reg_slow5
+			Slow = [
+				GH3xp1_Crowd_Genna_Good_Slow4
+				GH3xp1_Crowd_Genna_Good_Slow4
+				GH3xp1_Crowd_Genna_Good_Slow4
+				GH3xp1_Crowd_Genna_Good_Slow5
+				GH3xp1_Crowd_Genna_Good_Slow2
+				GH3xp1_Crowd_Genna_Good_Slow2
 			]
 		}
-		bad = {
-			fast = [
-				gh3xp1_crowd_jerod_bad5
-				gh3xp1_crowd_jerod_bad4
-				gh3xp1_crowd_rick_bad3
-				gh3xp1_crowd_bill_bad1
+		Normal = {
+			Fast = [
+				GH3xp1_Crowd_Bill_Reg_Fast1
+				GH3xp1_Crowd_Bill_Reg_Fast2
+				GH3xp1_Crowd_Bill_Reg_Fast3
 			]
-			med = [
-				gh3xp1_crowd_jerod_bad4
-				gh3xp1_crowd_jerod_bad5
-				gh3xp1_crowd_rick_bad2
-				gh3xp1_crowd_rick_bad2
-				gh3xp1_crowd_bill_bad3
+			Med = [
+				GH3xp1_Crowd_Bill_Reg_Med1
+				GH3xp1_Crowd_Bill_Reg_Med2
 			]
-			slow = [
-				gh3xp1_crowd_jerod_bad5
-				gh3xp1_crowd_jerod_bad4
-				gh3xp1_crowd_rick_bad1
-				gh3xp1_crowd_bill_bad2
+			Slow = [
+				GH3xp1_Crowd_Bill_Reg_Slow1
+				GH3xp1_Crowd_Bill_Reg_Slow2
+				GH3xp1_Crowd_Bill_Reg_Slow3
+				GH3xp1_Crowd_Bill_Reg_Slow4
+				GH3xp1_Crowd_Bill_Reg_Slow5
+			]
+		}
+		Bad = {
+			Fast = [
+				GH3xp1_Crowd_Jerod_Bad5
+				GH3xp1_Crowd_Jerod_Bad4
+				GH3xp1_Crowd_Rick_Bad3
+				GH3xp1_Crowd_Bill_Bad1
+			]
+			Med = [
+				GH3xp1_Crowd_Jerod_Bad4
+				GH3xp1_Crowd_Jerod_Bad5
+				GH3xp1_Crowd_Rick_Bad2
+				GH3xp1_Crowd_Rick_Bad2
+				GH3xp1_Crowd_Bill_Bad3
+			]
+			Slow = [
+				GH3xp1_Crowd_Jerod_Bad5
+				GH3xp1_Crowd_Jerod_Bad4
+				GH3xp1_Crowd_Rick_Bad1
+				GH3xp1_Crowd_Bill_Bad2
 			]
 		}
 	}
 	special = {
 		good = {
-			fast = [
-				gh3xp1_crowd_becki_special_fast1
-				gh3xp1_crowd_becki_special_fast2
-				gh3xp1_crowd_becki_special_fast3
-				gh3xp1_crowd_becki_special_fast4
+			Fast = [
+				GH3xp1_Crowd_Becki_Special_Fast1
+				GH3xp1_Crowd_Becki_Special_Fast2
+				GH3xp1_Crowd_Becki_Special_Fast3
+				GH3xp1_Crowd_Becki_Special_Fast4
 			]
-			med = [
-				gh3xp1_crowd_becki_special_med1
-				gh3xp1_crowd_becki_special_med2
-				gh3xp1_crowd_becki_special_med3
-				gh3xp1_crowd_becki_special_med4
+			Med = [
+				GH3xp1_Crowd_Becki_Special_Med1
+				GH3xp1_Crowd_Becki_Special_Med2
+				GH3xp1_Crowd_Becki_Special_Med3
+				GH3xp1_Crowd_Becki_Special_Med4
 			]
-			slow = [
-				gh3xp1_crowd_becki_special_slow1
-				gh3xp1_crowd_becki_special_slow2
-				gh3xp1_crowd_becki_special_slow3
-			]
-		}
-		normal = {
-			fast = [
-				gh3xp1_crowd_becki_special_fast1
-				gh3xp1_crowd_becki_special_fast2
-				gh3xp1_crowd_becki_special_fast3
-				gh3xp1_crowd_becki_special_fast4
-			]
-			med = [
-				gh3xp1_crowd_becki_special_med1
-				gh3xp1_crowd_becki_special_med2
-				gh3xp1_crowd_becki_special_med3
-				gh3xp1_crowd_becki_special_med4
-			]
-			slow = [
-				gh3xp1_crowd_becki_special_slow1
-				gh3xp1_crowd_becki_special_slow2
-				gh3xp1_crowd_becki_special_slow3
+			Slow = [
+				GH3xp1_Crowd_Becki_Special_Slow1
+				GH3xp1_Crowd_Becki_Special_Slow2
+				GH3xp1_Crowd_Becki_Special_Slow3
 			]
 		}
-		bad = {
-			fast = [
-				gh3xp1_crowd_jerod_bad5
-				gh3xp1_crowd_rick_bad3
-				gh3xp1_crowd_colin_bad2
-				gh3xp1_crowd_bill_bad1
+		Normal = {
+			Fast = [
+				GH3xp1_Crowd_Becki_Special_Fast1
+				GH3xp1_Crowd_Becki_Special_Fast2
+				GH3xp1_Crowd_Becki_Special_Fast3
+				GH3xp1_Crowd_Becki_Special_Fast4
 			]
-			med = [
-				gh3xp1_crowd_jerod_bad4
-				gh3xp1_crowd_rick_bad2
-				gh3xp1_crowd_colin_bad4
-				gh3xp1_crowd_bill_bad3
+			Med = [
+				GH3xp1_Crowd_Becki_Special_Med1
+				GH3xp1_Crowd_Becki_Special_Med2
+				GH3xp1_Crowd_Becki_Special_Med3
+				GH3xp1_Crowd_Becki_Special_Med4
 			]
-			slow = [
-				gh3xp1_crowd_jerod_bad5
-				gh3xp1_crowd_rick_bad1
-				gh3xp1_crowd_colin_bad4
-				gh3xp1_crowd_bill_bad2
+			Slow = [
+				GH3xp1_Crowd_Becki_Special_Slow1
+				GH3xp1_Crowd_Becki_Special_Slow2
+				GH3xp1_Crowd_Becki_Special_Slow3
+			]
+		}
+		Bad = {
+			Fast = [
+				GH3xp1_Crowd_Jerod_Bad5
+				GH3xp1_Crowd_Rick_Bad3
+				GH3xp1_Crowd_Colin_Bad2
+				GH3xp1_Crowd_Bill_Bad1
+			]
+			Med = [
+				GH3xp1_Crowd_Jerod_Bad4
+				GH3xp1_Crowd_Rick_Bad2
+				GH3xp1_Crowd_Colin_Bad4
+				GH3xp1_Crowd_Bill_Bad3
+			]
+			Slow = [
+				GH3xp1_Crowd_Jerod_Bad5
+				GH3xp1_Crowd_Rick_Bad1
+				GH3xp1_Crowd_Colin_Bad4
+				GH3xp1_Crowd_Bill_Bad2
 			]
 		}
 	}
 	starpower = {
 		good = {
-			fast = [
-				gh3xp1_crowd_bill_starpower_fast3
-				gh3xp1_crowd_bill_starpower_fast4
+			Fast = [
+				GH3xp1_Crowd_Bill_Starpower_Fast3
+				GH3xp1_Crowd_Bill_Starpower_Fast4
 			]
-			med = [
-				gh3xp1_crowd_bill_starpower_fast3
-				gh3xp1_crowd_bill_starpower_fast4
+			Med = [
+				GH3xp1_Crowd_Bill_Starpower_Fast3
+				GH3xp1_Crowd_Bill_Starpower_Fast4
 			]
-			slow = [
-				gh3xp1_crowd_genna_starpower_slow2
-				gh3xp1_crowd_genna_starpower_slow3
-			]
-		}
-		normal = {
-			fast = [
-				gh3xp1_crowd_bill_starpower_fast3
-				gh3xp1_crowd_bill_starpower_fast4
-			]
-			med = [
-				gh3xp1_crowd_bill_starpower_fast3
-				gh3xp1_crowd_bill_starpower_fast4
-			]
-			slow = [
-				gh3xp1_crowd_genna_starpower_slow2
-				gh3xp1_crowd_genna_starpower_slow3
+			Slow = [
+				GH3xp1_Crowd_Genna_Starpower_Slow2
+				GH3xp1_Crowd_Genna_Starpower_Slow3
 			]
 		}
-		bad = {
-			fast = [
-				gh3xp1_crowd_jerod_bad5
-				gh3xp1_crowd_rick_bad3
-				gh3xp1_crowd_colin_bad2
-				gh3xp1_crowd_bill_bad1
+		Normal = {
+			Fast = [
+				GH3xp1_Crowd_Bill_Starpower_Fast3
+				GH3xp1_Crowd_Bill_Starpower_Fast4
 			]
-			med = [
-				gh3xp1_crowd_jerod_bad4
-				gh3xp1_crowd_rick_bad2
-				gh3xp1_crowd_colin_bad4
-				gh3xp1_crowd_bill_bad3
+			Med = [
+				GH3xp1_Crowd_Bill_Starpower_Fast3
+				GH3xp1_Crowd_Bill_Starpower_Fast4
 			]
-			slow = [
-				gh3xp1_crowd_jerod_bad5
-				gh3xp1_crowd_rick_bad1
-				gh3xp1_crowd_colin_bad4
-				gh3xp1_crowd_bill_bad2
+			Slow = [
+				GH3xp1_Crowd_Genna_Starpower_Slow2
+				GH3xp1_Crowd_Genna_Starpower_Slow3
+			]
+		}
+		Bad = {
+			Fast = [
+				GH3xp1_Crowd_Jerod_Bad5
+				GH3xp1_Crowd_Rick_Bad3
+				GH3xp1_Crowd_Colin_Bad2
+				GH3xp1_Crowd_Bill_Bad1
+			]
+			Med = [
+				GH3xp1_Crowd_Jerod_Bad4
+				GH3xp1_Crowd_Rick_Bad2
+				GH3xp1_Crowd_Colin_Bad4
+				GH3xp1_Crowd_Bill_Bad3
+			]
+			Slow = [
+				GH3xp1_Crowd_Jerod_Bad5
+				GH3xp1_Crowd_Rick_Bad1
+				GH3xp1_Crowd_Colin_Bad4
+				GH3xp1_Crowd_Bill_Bad2
 			]
 		}
 	}
 }
 crowd_animations_genna = {
-	idle = {
+	Idle = {
 		good = {
-			fast = [
-				gh3xp1_crowd_genna_good_fast1
-				gh3xp1_crowd_genna_good_fast2
-				gh3xp1_crowd_genna_good_fast2
-				gh3xp1_crowd_genna_good_fast3
-				gh3xp1_crowd_genna_good_fast4
-				gh3xp1_crowd_genna_good_fast4
+			Fast = [
+				GH3xp1_Crowd_Genna_Good_Fast1
+				GH3xp1_Crowd_Genna_Good_Fast2
+				GH3xp1_Crowd_Genna_Good_Fast2
+				GH3xp1_Crowd_Genna_Good_Fast3
+				GH3xp1_Crowd_Genna_Good_Fast4
+				GH3xp1_Crowd_Genna_Good_Fast4
 			]
-			med = [
-				gh3xp1_crowd_genna_good_med3
-				gh3xp1_crowd_genna_good_med5
+			Med = [
+				GH3xp1_Crowd_Genna_Good_Med3
+				GH3xp1_Crowd_Genna_Good_Med5
 			]
-			slow = [
-				gh3xp1_crowd_genna_good_slow1
-				gh3xp1_crowd_genna_good_slow1
-				gh3xp1_crowd_genna_good_slow3
-			]
-		}
-		normal = {
-			fast = [
-				gh3xp1_crowd_genna_reg_fast2
-				gh3xp1_crowd_genna_reg_fast4
-			]
-			med = [
-				gh3xp1_crowd_genna_reg_med1
-				gh3xp1_crowd_genna_reg_med2
-			]
-			slow = [
-				gh3xp1_crowd_genna_reg_slow1
-				gh3xp1_crowd_genna_reg_slow2
-				gh3xp1_crowd_genna_reg_slow3
+			Slow = [
+				GH3xp1_Crowd_Genna_Good_Slow1
+				GH3xp1_Crowd_Genna_Good_Slow1
+				GH3xp1_Crowd_Genna_Good_Slow3
 			]
 		}
-		bad = {
-			fast = [
-				gh3xp1_crowd_rick_bad1
-				gh3xp1_crowd_rick_bad2
-				gh3xp1_crowd_rick_bad3
-				gh3xp1_crowd_genna_bad1
+		Normal = {
+			Fast = [
+				GH3xp1_Crowd_Genna_Reg_Fast2
+				GH3xp1_Crowd_Genna_Reg_Fast4
 			]
-			med = [
-				gh3xp1_crowd_rick_bad1
-				gh3xp1_crowd_rick_bad2
-				gh3xp1_crowd_rick_bad3
-				gh3xp1_crowd_genna_bad2
+			Med = [
+				GH3xp1_Crowd_Genna_Reg_Med1
+				GH3xp1_Crowd_Genna_Reg_Med2
 			]
-			slow = [
-				gh3xp1_crowd_rick_bad1
-				gh3xp1_crowd_rick_bad2
-				gh3xp1_crowd_rick_bad3
-				gh3xp1_crowd_genna_bad3
+			Slow = [
+				GH3xp1_Crowd_Genna_Reg_Slow1
+				GH3xp1_Crowd_Genna_Reg_Slow2
+				GH3xp1_Crowd_Genna_Reg_Slow3
+			]
+		}
+		Bad = {
+			Fast = [
+				GH3xp1_Crowd_Rick_Bad1
+				GH3xp1_Crowd_Rick_Bad2
+				GH3xp1_Crowd_Rick_Bad3
+				GH3xp1_Crowd_Genna_Bad1
+			]
+			Med = [
+				GH3xp1_Crowd_Rick_Bad1
+				GH3xp1_Crowd_Rick_Bad2
+				GH3xp1_Crowd_Rick_Bad3
+				GH3xp1_Crowd_Genna_Bad2
+			]
+			Slow = [
+				GH3xp1_Crowd_Rick_Bad1
+				GH3xp1_Crowd_Rick_Bad2
+				GH3xp1_Crowd_Rick_Bad3
+				GH3xp1_Crowd_Genna_Bad3
 			]
 		}
 	}
 	special = {
 		good = {
-			fast = [
-				gh3xp1_crowd_genna_special_fast1
-				gh3xp1_crowd_genna_special_fast2
-				gh3xp1_crowd_genna_special_fast5
+			Fast = [
+				GH3xp1_Crowd_Genna_Special_Fast1
+				GH3xp1_Crowd_Genna_Special_Fast2
+				GH3xp1_Crowd_Genna_Special_Fast5
 			]
-			med = [
-				gh3xp1_crowd_genna_special_med3
-				gh3xp1_crowd_genna_special_med4
+			Med = [
+				GH3xp1_Crowd_Genna_Special_Med3
+				GH3xp1_Crowd_Genna_Special_Med4
 			]
-			slow = [
-				gh3xp1_crowd_genna_special_slow1
-				gh3xp1_crowd_genna_special_slow2
-				gh3xp1_crowd_genna_special_slow3
-				gh3xp1_crowd_genna_special_slow4
-			]
-		}
-		normal = {
-			fast = [
-				gh3xp1_crowd_genna_special_fast1
-				gh3xp1_crowd_genna_special_fast2
-				gh3xp1_crowd_genna_special_fast5
-			]
-			med = [
-				gh3xp1_crowd_genna_special_med3
-				gh3xp1_crowd_genna_special_med4
-			]
-			slow = [
-				gh3xp1_crowd_genna_special_slow1
-				gh3xp1_crowd_genna_special_slow2
-				gh3xp1_crowd_genna_special_slow3
-				gh3xp1_crowd_genna_special_slow4
+			Slow = [
+				GH3xp1_Crowd_Genna_Special_Slow1
+				GH3xp1_Crowd_Genna_Special_Slow2
+				GH3xp1_Crowd_Genna_Special_Slow3
+				GH3xp1_Crowd_Genna_Special_Slow4
 			]
 		}
-		bad = {
-			fast = [
-				gh3xp1_crowd_rick_bad1
-				gh3xp1_crowd_rick_bad2
-				gh3xp1_crowd_rick_bad3
-				gh3xp1_crowd_genna_bad3
+		Normal = {
+			Fast = [
+				GH3xp1_Crowd_Genna_Special_Fast1
+				GH3xp1_Crowd_Genna_Special_Fast2
+				GH3xp1_Crowd_Genna_Special_Fast5
 			]
-			med = [
-				gh3xp1_crowd_rick_bad1
-				gh3xp1_crowd_rick_bad2
-				gh3xp1_crowd_rick_bad3
-				gh3xp1_crowd_genna_bad2
+			Med = [
+				GH3xp1_Crowd_Genna_Special_Med3
+				GH3xp1_Crowd_Genna_Special_Med4
 			]
-			slow = [
-				gh3xp1_crowd_rick_bad1
-				gh3xp1_crowd_rick_bad2
-				gh3xp1_crowd_rick_bad3
-				gh3xp1_crowd_genna_bad1
+			Slow = [
+				GH3xp1_Crowd_Genna_Special_Slow1
+				GH3xp1_Crowd_Genna_Special_Slow2
+				GH3xp1_Crowd_Genna_Special_Slow3
+				GH3xp1_Crowd_Genna_Special_Slow4
+			]
+		}
+		Bad = {
+			Fast = [
+				GH3xp1_Crowd_Rick_Bad1
+				GH3xp1_Crowd_Rick_Bad2
+				GH3xp1_Crowd_Rick_Bad3
+				GH3xp1_Crowd_Genna_Bad3
+			]
+			Med = [
+				GH3xp1_Crowd_Rick_Bad1
+				GH3xp1_Crowd_Rick_Bad2
+				GH3xp1_Crowd_Rick_Bad3
+				GH3xp1_Crowd_Genna_Bad2
+			]
+			Slow = [
+				GH3xp1_Crowd_Rick_Bad1
+				GH3xp1_Crowd_Rick_Bad2
+				GH3xp1_Crowd_Rick_Bad3
+				GH3xp1_Crowd_Genna_Bad1
 			]
 		}
 	}
 	starpower = {
 		good = {
-			fast = [
-				gh3xp1_crowd_genna_starpower_fast1
-				gh3xp1_crowd_genna_starpower_fast2
+			Fast = [
+				GH3xp1_Crowd_Genna_Starpower_Fast1
+				GH3xp1_Crowd_Genna_Starpower_Fast2
 			]
-			med = [
-				gh3xp1_crowd_genna_starpower_med3
+			Med = [
+				GH3xp1_Crowd_Genna_Starpower_Med3
 			]
-			slow = [
-				gh3xp1_crowd_genna_starpower_slow1
-				gh3xp1_crowd_genna_starpower_slow2
-			]
-		}
-		normal = {
-			fast = [
-				gh3xp1_crowd_genna_starpower_fast1
-				gh3xp1_crowd_genna_starpower_fast2
-			]
-			med = [
-				gh3xp1_crowd_genna_starpower_med3
-			]
-			slow = [
-				gh3xp1_crowd_genna_starpower_slow1
-				gh3xp1_crowd_genna_starpower_slow2
+			Slow = [
+				GH3xp1_Crowd_Genna_Starpower_Slow1
+				GH3xp1_Crowd_Genna_Starpower_Slow2
 			]
 		}
-		bad = {
-			fast = [
-				gh3xp1_crowd_rick_bad1
-				gh3xp1_crowd_rick_bad2
-				gh3xp1_crowd_rick_bad3
-				gh3xp1_crowd_genna_bad3
+		Normal = {
+			Fast = [
+				GH3xp1_Crowd_Genna_Starpower_Fast1
+				GH3xp1_Crowd_Genna_Starpower_Fast2
 			]
-			med = [
-				gh3xp1_crowd_rick_bad1
-				gh3xp1_crowd_rick_bad2
-				gh3xp1_crowd_rick_bad3
-				gh3xp1_crowd_genna_bad2
+			Med = [
+				GH3xp1_Crowd_Genna_Starpower_Med3
 			]
-			slow = [
-				gh3xp1_crowd_rick_bad1
-				gh3xp1_crowd_rick_bad2
-				gh3xp1_crowd_rick_bad3
-				gh3xp1_crowd_genna_bad1
+			Slow = [
+				GH3xp1_Crowd_Genna_Starpower_Slow1
+				GH3xp1_Crowd_Genna_Starpower_Slow2
+			]
+		}
+		Bad = {
+			Fast = [
+				GH3xp1_Crowd_Rick_Bad1
+				GH3xp1_Crowd_Rick_Bad2
+				GH3xp1_Crowd_Rick_Bad3
+				GH3xp1_Crowd_Genna_Bad3
+			]
+			Med = [
+				GH3xp1_Crowd_Rick_Bad1
+				GH3xp1_Crowd_Rick_Bad2
+				GH3xp1_Crowd_Rick_Bad3
+				GH3xp1_Crowd_Genna_Bad2
+			]
+			Slow = [
+				GH3xp1_Crowd_Rick_Bad1
+				GH3xp1_Crowd_Rick_Bad2
+				GH3xp1_Crowd_Rick_Bad3
+				GH3xp1_Crowd_Genna_Bad1
 			]
 		}
 	}
 }
 crowd_animations_tabledancer = {
-	idle = {
+	Idle = {
 		good = {
-			fast = [
-				gh3_crowd_tabledancer_fast_idle1
-				gh3_crowd_tabledancer_fast_idle3
+			Fast = [
+				GH3_crowd_tabledancer_fast_idle1
+				GH3_crowd_tabledancer_fast_idle3
 			]
-			med = [
-				gh3_crowd_tabledancer_med_idle1
-				gh3_crowd_tabledancer_med_idle3
-				gh3_crowd_tabledancer_med_idle2
+			Med = [
+				GH3_crowd_tabledancer_med_idle1
+				GH3_crowd_tabledancer_med_idle3
+				GH3_crowd_tabledancer_med_idle2
 			]
-			slow = [
-				gh3_crowd_tabledancer_slow_idle1
-				gh3_crowd_tabledancer_slow_idle2
-				gh3_crowd_tabledancer_slow_idle3
-				gh3_crowd_tabledancer_slow_idle4
-			]
-		}
-		normal = {
-			fast = [
-				gh3_crowd_tabledancer_fast_idle1
-				gh3_crowd_tabledancer_fast_idle3
-			]
-			med = [
-				gh3_crowd_tabledancer_med_idle1
-				gh3_crowd_tabledancer_med_idle3
-				gh3_crowd_tabledancer_med_idle2
-			]
-			slow = [
-				gh3_crowd_tabledancer_slow_idle1
-				gh3_crowd_tabledancer_slow_idle2
-				gh3_crowd_tabledancer_slow_idle3
-				gh3_crowd_tabledancer_slow_idle4
+			Slow = [
+				GH3_crowd_tabledancer_slow_idle1
+				GH3_crowd_tabledancer_slow_idle2
+				GH3_crowd_tabledancer_slow_idle3
+				GH3_crowd_tabledancer_slow_idle4
 			]
 		}
-		bad = {
-			fast = [
-				gh3_crowd_tabledancer_fast_idle1
+		Normal = {
+			Fast = [
+				GH3_crowd_tabledancer_fast_idle1
+				GH3_crowd_tabledancer_fast_idle3
 			]
-			med = [
-				gh3_crowd_tabledancer_med_idle3
+			Med = [
+				GH3_crowd_tabledancer_med_idle1
+				GH3_crowd_tabledancer_med_idle3
+				GH3_crowd_tabledancer_med_idle2
 			]
-			slow = [
-				gh3_crowd_tabledancer_slow_idle4
+			Slow = [
+				GH3_crowd_tabledancer_slow_idle1
+				GH3_crowd_tabledancer_slow_idle2
+				GH3_crowd_tabledancer_slow_idle3
+				GH3_crowd_tabledancer_slow_idle4
+			]
+		}
+		Bad = {
+			Fast = [
+				GH3_crowd_tabledancer_fast_idle1
+			]
+			Med = [
+				GH3_crowd_tabledancer_med_idle3
+			]
+			Slow = [
+				GH3_crowd_tabledancer_slow_idle4
 			]
 		}
 	}
 	special = {
 		good = {
-			fast = [
-				gh3_crowd_tabledancer_fast_spec1
-				gh3_crowd_tabledancer_fast_spec2
-				gh3_crowd_tabledancer_fast_spec3
-				gh3_crowd_tabledancer_fast_spec4
+			Fast = [
+				GH3_crowd_tabledancer_fast_spec1
+				GH3_crowd_tabledancer_fast_spec2
+				GH3_crowd_tabledancer_fast_spec3
+				GH3_crowd_tabledancer_fast_spec4
 			]
-			med = [
-				gh3_crowd_tabledancer_med_special2
-				gh3_crowd_tabledancer_med_special3
-				gh3_crowd_tabledancer_med_special1
-				gh3_crowd_tabledancer_med_special4
+			Med = [
+				GH3_crowd_tabledancer_med_special2
+				GH3_crowd_tabledancer_med_special3
+				GH3_crowd_tabledancer_med_special1
+				GH3_crowd_tabledancer_med_special4
 			]
-			slow = [
-				gh3_crowd_tabledancer_slow_spec1
-				gh3_crowd_tabledancer_slow_spec3
-				gh3_crowd_tabledancer_slow_spec4
-				gh3_crowd_tabledancer_slow_spec2
-			]
-		}
-		normal = {
-			fast = [
-				gh3_crowd_tabledancer_fast_spec1
-				gh3_crowd_tabledancer_fast_spec2
-				gh3_crowd_tabledancer_fast_spec3
-				gh3_crowd_tabledancer_fast_spec4
-			]
-			med = [
-				gh3_crowd_tabledancer_med_special2
-				gh3_crowd_tabledancer_med_special3
-				gh3_crowd_tabledancer_med_special1
-				gh3_crowd_tabledancer_med_special4
-			]
-			slow = [
-				gh3_crowd_tabledancer_slow_spec1
-				gh3_crowd_tabledancer_slow_spec3
-				gh3_crowd_tabledancer_slow_spec4
-				gh3_crowd_tabledancer_slow_spec2
+			Slow = [
+				GH3_crowd_tabledancer_slow_spec1
+				GH3_crowd_tabledancer_slow_spec3
+				GH3_crowd_tabledancer_slow_spec4
+				GH3_crowd_tabledancer_slow_spec2
 			]
 		}
-		bad = {
-			fast = [
-				gh3_crowd_tabledancer_fast_spec1
-				gh3_crowd_tabledancer_fast_spec2
-				gh3_crowd_tabledancer_fast_spec3
-				gh3_crowd_tabledancer_fast_spec4
+		Normal = {
+			Fast = [
+				GH3_crowd_tabledancer_fast_spec1
+				GH3_crowd_tabledancer_fast_spec2
+				GH3_crowd_tabledancer_fast_spec3
+				GH3_crowd_tabledancer_fast_spec4
 			]
-			med = [
-				gh3_crowd_tabledancer_med_special2
-				gh3_crowd_tabledancer_med_special3
-				gh3_crowd_tabledancer_med_special1
-				gh3_crowd_tabledancer_med_special4
+			Med = [
+				GH3_crowd_tabledancer_med_special2
+				GH3_crowd_tabledancer_med_special3
+				GH3_crowd_tabledancer_med_special1
+				GH3_crowd_tabledancer_med_special4
 			]
-			slow = [
-				gh3_crowd_tabledancer_slow_spec1
-				gh3_crowd_tabledancer_slow_spec3
-				gh3_crowd_tabledancer_slow_spec4
-				gh3_crowd_tabledancer_slow_spec2
+			Slow = [
+				GH3_crowd_tabledancer_slow_spec1
+				GH3_crowd_tabledancer_slow_spec3
+				GH3_crowd_tabledancer_slow_spec4
+				GH3_crowd_tabledancer_slow_spec2
+			]
+		}
+		Bad = {
+			Fast = [
+				GH3_crowd_tabledancer_fast_spec1
+				GH3_crowd_tabledancer_fast_spec2
+				GH3_crowd_tabledancer_fast_spec3
+				GH3_crowd_tabledancer_fast_spec4
+			]
+			Med = [
+				GH3_crowd_tabledancer_med_special2
+				GH3_crowd_tabledancer_med_special3
+				GH3_crowd_tabledancer_med_special1
+				GH3_crowd_tabledancer_med_special4
+			]
+			Slow = [
+				GH3_crowd_tabledancer_slow_spec1
+				GH3_crowd_tabledancer_slow_spec3
+				GH3_crowd_tabledancer_slow_spec4
+				GH3_crowd_tabledancer_slow_spec2
 			]
 		}
 	}
-	no_tempo = {
+	No_tempo = {
 		good = {
-			fast = [
-				gh3_crowd_tabledancer_notemp1
-				gh3_crowd_tabledancer_notemp3
+			Fast = [
+				GH3_crowd_tabledancer_notemp1
+				GH3_crowd_tabledancer_notemp3
 			]
-			med = [
-				gh3_crowd_tabledancer_notemp1
-				gh3_crowd_tabledancer_notemp3
+			Med = [
+				GH3_crowd_tabledancer_notemp1
+				GH3_crowd_tabledancer_notemp3
 			]
-			slow = [
-				gh3_crowd_tabledancer_notemp1
-				gh3_crowd_tabledancer_notemp3
-			]
-		}
-		normal = {
-			fast = [
-				gh3_crowd_tabledancer_notemp1
-				gh3_crowd_tabledancer_notemp3
-			]
-			med = [
-				gh3_crowd_tabledancer_notemp1
-				gh3_crowd_tabledancer_notemp3
-			]
-			slow = [
-				gh3_crowd_tabledancer_notemp1
-				gh3_crowd_tabledancer_notemp3
+			Slow = [
+				GH3_crowd_tabledancer_notemp1
+				GH3_crowd_tabledancer_notemp3
 			]
 		}
-		bad = {
-			fast = [
-				gh3_crowd_tabledancer_notemp1
-				gh3_crowd_tabledancer_notemp3
+		Normal = {
+			Fast = [
+				GH3_crowd_tabledancer_notemp1
+				GH3_crowd_tabledancer_notemp3
 			]
-			med = [
-				gh3_crowd_tabledancer_notemp1
-				gh3_crowd_tabledancer_notemp3
+			Med = [
+				GH3_crowd_tabledancer_notemp1
+				GH3_crowd_tabledancer_notemp3
 			]
-			slow = [
-				gh3_crowd_tabledancer_notemp1
-				gh3_crowd_tabledancer_notemp3
+			Slow = [
+				GH3_crowd_tabledancer_notemp1
+				GH3_crowd_tabledancer_notemp3
+			]
+		}
+		Bad = {
+			Fast = [
+				GH3_crowd_tabledancer_notemp1
+				GH3_crowd_tabledancer_notemp3
+			]
+			Med = [
+				GH3_crowd_tabledancer_notemp1
+				GH3_crowd_tabledancer_notemp3
+			]
+			Slow = [
+				GH3_crowd_tabledancer_notemp1
+				GH3_crowd_tabledancer_notemp3
 			]
 		}
 	}
 }
 crowd_animations_becki = {
-	idle = {
+	Idle = {
 		good = {
-			fast = [
-				gh3xp1_crowd_becki_good_fast1
-				gh3xp1_crowd_becki_good_fast2
+			Fast = [
+				GH3xp1_Crowd_Becki_Good_Fast1
+				GH3xp1_Crowd_Becki_Good_Fast2
 			]
-			med = [
-				gh3xp1_crowd_genna_special_med1
-				gh3xp1_crowd_genna_special_med2
-				gh3xp1_crowd_genna_special_med3
+			Med = [
+				GH3xp1_Crowd_Genna_Special_Med1
+				GH3xp1_Crowd_Genna_Special_Med2
+				GH3xp1_Crowd_Genna_Special_Med3
 			]
-			slow = [
-				gh3xp1_crowd_becki_good_slow1
-				gh3xp1_crowd_becki_good_slow2
-			]
-		}
-		normal = {
-			fast = [
-				gh3xp1_crowd_becki_reg_fast2
-				gh3xp1_crowd_becki_reg_fast3
-			]
-			med = [
-				gh3xp1_crowd_becki_reg_med1
-				gh3xp1_crowd_becki_reg_med2
-				gh3xp1_crowd_becki_reg_med3
-			]
-			slow = [
-				gh3xp1_crowd_becki_reg_slow1
-				gh3xp1_crowd_becki_reg_slow2
-				gh3xp1_crowd_becki_reg_slow3
+			Slow = [
+				GH3xp1_Crowd_Becki_Good_Slow1
+				GH3xp1_Crowd_Becki_Good_Slow2
 			]
 		}
-		bad = {
-			fast = [
-				gh3xp1_crowd_becki_bad2
-				gh3xp1_crowd_becki_bad3
-				gh3xp1_crowd_becki_bad4
-				gh3xp1_crowd_becki_bad1
+		Normal = {
+			Fast = [
+				GH3xp1_Crowd_Becki_Reg_Fast2
+				GH3xp1_Crowd_Becki_Reg_Fast3
 			]
-			med = [
-				gh3xp1_crowd_becki_bad2
-				gh3xp1_crowd_becki_bad3
-				gh3xp1_crowd_becki_bad4
-				gh3xp1_crowd_becki_bad1
+			Med = [
+				GH3xp1_Crowd_Becki_Reg_Med1
+				GH3xp1_Crowd_Becki_Reg_Med2
+				GH3xp1_Crowd_Becki_Reg_Med3
 			]
-			slow = [
-				gh3xp1_crowd_becki_bad2
-				gh3xp1_crowd_becki_bad3
-				gh3xp1_crowd_becki_bad4
-				gh3xp1_crowd_becki_bad1
+			Slow = [
+				GH3xp1_Crowd_Becki_Reg_Slow1
+				GH3xp1_Crowd_Becki_Reg_Slow2
+				GH3xp1_Crowd_Becki_Reg_Slow3
+			]
+		}
+		Bad = {
+			Fast = [
+				GH3xp1_Crowd_Becki_Bad2
+				GH3xp1_Crowd_Becki_Bad3
+				GH3xp1_Crowd_Becki_Bad4
+				GH3xp1_Crowd_Becki_Bad1
+			]
+			Med = [
+				GH3xp1_Crowd_Becki_Bad2
+				GH3xp1_Crowd_Becki_Bad3
+				GH3xp1_Crowd_Becki_Bad4
+				GH3xp1_Crowd_Becki_Bad1
+			]
+			Slow = [
+				GH3xp1_Crowd_Becki_Bad2
+				GH3xp1_Crowd_Becki_Bad3
+				GH3xp1_Crowd_Becki_Bad4
+				GH3xp1_Crowd_Becki_Bad1
 			]
 		}
 	}
 	special = {
 		good = {
-			fast = [
-				gh3xp1_crowd_becki_special_fast1
-				gh3xp1_crowd_becki_special_fast2
-				gh3xp1_crowd_becki_special_fast3
-				gh3xp1_crowd_becki_special_fast4
+			Fast = [
+				GH3xp1_Crowd_Becki_Special_Fast1
+				GH3xp1_Crowd_Becki_Special_Fast2
+				GH3xp1_Crowd_Becki_Special_Fast3
+				GH3xp1_Crowd_Becki_Special_Fast4
 			]
-			med = [
-				gh3xp1_crowd_becki_special_med2
-				gh3xp1_crowd_becki_special_med3
-				gh3xp1_crowd_becki_special_med4
+			Med = [
+				GH3xp1_Crowd_Becki_Special_Med2
+				GH3xp1_Crowd_Becki_Special_Med3
+				GH3xp1_Crowd_Becki_Special_Med4
 			]
-			slow = [
-				gh3xp1_crowd_becki_special_slow1
-				gh3xp1_crowd_becki_special_slow3
-			]
-		}
-		normal = {
-			fast = [
-				gh3xp1_crowd_becki_special_fast1
-				gh3xp1_crowd_becki_special_fast2
-				gh3xp1_crowd_becki_special_fast3
-				gh3xp1_crowd_becki_special_fast4
-			]
-			med = [
-				gh3xp1_crowd_becki_special_med2
-				gh3xp1_crowd_becki_special_med3
-				gh3xp1_crowd_becki_special_med4
-			]
-			slow = [
-				gh3xp1_crowd_becki_special_slow1
-				gh3xp1_crowd_becki_special_slow3
+			Slow = [
+				GH3xp1_Crowd_Becki_Special_Slow1
+				GH3xp1_Crowd_Becki_Special_Slow3
 			]
 		}
-		bad = {
-			fast = [
-				gh3xp1_crowd_becki_bad2
-				gh3xp1_crowd_becki_bad3
-				gh3xp1_crowd_becki_bad4
-				gh3xp1_crowd_becki_bad1
+		Normal = {
+			Fast = [
+				GH3xp1_Crowd_Becki_Special_Fast1
+				GH3xp1_Crowd_Becki_Special_Fast2
+				GH3xp1_Crowd_Becki_Special_Fast3
+				GH3xp1_Crowd_Becki_Special_Fast4
 			]
-			med = [
-				gh3xp1_crowd_becki_bad2
-				gh3xp1_crowd_becki_bad3
-				gh3xp1_crowd_becki_bad4
-				gh3xp1_crowd_becki_bad1
+			Med = [
+				GH3xp1_Crowd_Becki_Special_Med2
+				GH3xp1_Crowd_Becki_Special_Med3
+				GH3xp1_Crowd_Becki_Special_Med4
 			]
-			slow = [
-				gh3xp1_crowd_becki_bad2
-				gh3xp1_crowd_becki_bad3
-				gh3xp1_crowd_becki_bad4
-				gh3xp1_crowd_becki_bad1
+			Slow = [
+				GH3xp1_Crowd_Becki_Special_Slow1
+				GH3xp1_Crowd_Becki_Special_Slow3
+			]
+		}
+		Bad = {
+			Fast = [
+				GH3xp1_Crowd_Becki_Bad2
+				GH3xp1_Crowd_Becki_Bad3
+				GH3xp1_Crowd_Becki_Bad4
+				GH3xp1_Crowd_Becki_Bad1
+			]
+			Med = [
+				GH3xp1_Crowd_Becki_Bad2
+				GH3xp1_Crowd_Becki_Bad3
+				GH3xp1_Crowd_Becki_Bad4
+				GH3xp1_Crowd_Becki_Bad1
+			]
+			Slow = [
+				GH3xp1_Crowd_Becki_Bad2
+				GH3xp1_Crowd_Becki_Bad3
+				GH3xp1_Crowd_Becki_Bad4
+				GH3xp1_Crowd_Becki_Bad1
 			]
 		}
 	}
 	starpower = {
 		good = {
-			fast = [
-				gh3xp1_crowd_becki_starpower_fast1
+			Fast = [
+				GH3xp1_Crowd_Becki_Starpower_Fast1
 			]
-			med = [
-				gh3xp1_crowd_becki_starpower_med2
+			Med = [
+				GH3xp1_Crowd_Becki_Starpower_Med2
 			]
-			slow = [
-				gh3xp1_crowd_becki_starpower_slow2
-				gh3xp1_crowd_becki_starpower_slow3
-			]
-		}
-		normal = {
-			fast = [
-				gh3xp1_crowd_becki_starpower_fast1
-			]
-			med = [
-				gh3xp1_crowd_becki_starpower_med2
-			]
-			slow = [
-				gh3xp1_crowd_becki_starpower_slow2
-				gh3xp1_crowd_becki_starpower_slow3
+			Slow = [
+				GH3xp1_Crowd_Becki_Starpower_Slow2
+				GH3xp1_Crowd_Becki_Starpower_Slow3
 			]
 		}
-		bad = {
-			fast = [
-				gh3xp1_crowd_becki_bad2
-				gh3xp1_crowd_becki_bad3
-				gh3xp1_crowd_becki_bad4
-				gh3xp1_crowd_becki_bad1
+		Normal = {
+			Fast = [
+				GH3xp1_Crowd_Becki_Starpower_Fast1
 			]
-			med = [
-				gh3xp1_crowd_becki_bad2
-				gh3xp1_crowd_becki_bad3
-				gh3xp1_crowd_becki_bad4
-				gh3xp1_crowd_becki_bad1
+			Med = [
+				GH3xp1_Crowd_Becki_Starpower_Med2
 			]
-			slow = [
-				gh3xp1_crowd_becki_bad2
-				gh3xp1_crowd_becki_bad3
-				gh3xp1_crowd_becki_bad4
-				gh3xp1_crowd_becki_bad1
+			Slow = [
+				GH3xp1_Crowd_Becki_Starpower_Slow2
+				GH3xp1_Crowd_Becki_Starpower_Slow3
+			]
+		}
+		Bad = {
+			Fast = [
+				GH3xp1_Crowd_Becki_Bad2
+				GH3xp1_Crowd_Becki_Bad3
+				GH3xp1_Crowd_Becki_Bad4
+				GH3xp1_Crowd_Becki_Bad1
+			]
+			Med = [
+				GH3xp1_Crowd_Becki_Bad2
+				GH3xp1_Crowd_Becki_Bad3
+				GH3xp1_Crowd_Becki_Bad4
+				GH3xp1_Crowd_Becki_Bad1
+			]
+			Slow = [
+				GH3xp1_Crowd_Becki_Bad2
+				GH3xp1_Crowd_Becki_Bad3
+				GH3xp1_Crowd_Becki_Bad4
+				GH3xp1_Crowd_Becki_Bad1
 			]
 		}
 	}

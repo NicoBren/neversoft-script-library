@@ -1,50 +1,50 @@
-gp_fx_bayou_rockets_01 = {
+GP_FX_Bayou_Rockets_01 = {
 	pos = (-3.356732, -0.081971996, 5.134254)
 	angles = (0.0, 0.0, 0.0)
-	class = particleobject
-	particletype = flexparticle
+	Class = ParticleObject
+	ParticleType = FlexParticle
 	type = textureribbontrail
 	active
-	emitrangedims = (0.05, 0.0, 0.05)
-	emit_target = (0.0, 1.0, 0.0)
-	emitangle = (0.0, 0.0, 0.0)
+	EmitRangeDims = (0.05, 0.0, 0.05)
+	emit_Target = (0.0, 1.0, 0.0)
+	EmitAngle = (0.0, 0.0, 0.0)
 	force = (0.0, -6.0, 0.0)
-	windcoeff = 0.0
-	localwindcoeff = 0.0
-	emittervelocityweight = 0.0
-	anglespread = 45.0
-	liferange = (0.5, 1.3)
+	WindCoeff = 0.0
+	LocalWindCoeff = 0.0
+	EmitterVelocityWeight = 0.0
+	AngleSpread = 45.0
+	LifeRange = (0.5, 1.3)
 	emit_rate = 50.0
 	max = 0
-	timeseed = 0.0
-	lifetime = 1.3
-	emitnum = 0
-	followemitter = 0.0
-	emitfunction = constant
-	emitperiod = 1.0
-	sizerange = [
+	TimeSeed = 0.0
+	lifeTime = 1.3
+	emitNum = 0
+	FollowEmitter = 0.0
+	EmitFunction = constant
+	EmitPeriod = 1.0
+	SizeRange = [
 		(0.1, 0.3)
 		(0.02, 0.1)
 	]
-	speedrange = (3.0, 7.0)
-	rotvel = (0.0, 0.0)
-	rotveltimescale = 0.0
-	emitdelaystart = 0.0
-	pathfollowtime = 0.62
-	history = 20
-	historylistcoordinatespace = world
+	SpeedRange = (3.0, 7.0)
+	RotVel = (0.0, 0.0)
+	RotVelTimeScale = 0.0
+	EmitDelayStart = 0.0
+	PathFollowTime = 0.62
+	History = 20
+	HistoryListCoordinateSpace = world
 	color = -6016033
-	lod_default
-	quickmaterial = {
-		diffusetextureenabled
-		diffusetexture = jow_spark01
-		specularpower = 0
+	LOD_Default
+	QuickMaterial = {
+		DiffuseTextureEnabled
+		DiffuseTexture = JOW_Spark01
+		SpecularPower = 0
 		bloom
 		alphacutoff = 1
-		blendmode = add
-		quadanimationfps = 0
+		blendMode = Add
+		QuadAnimationFPS = 0
 	}
-	knot = [
+	Knot = [
 		(-0.78973395, 0.0, -0.0)
 		(-0.78973395, 0.0, -0.0)
 		(-0.68621796, 0.0, -0.0)
@@ -58,7 +58,7 @@ gp_fx_bayou_rockets_01 = {
 		(0.83136, 0.0, -0.0)
 		(0.83136, 0.0, -0.0)
 	]
-	particlecolor = [
+	ParticleColor = [
 		865206271
 		-9145089
 		865206271
@@ -68,7 +68,7 @@ gp_fx_bayou_rockets_01 = {
 		865206016
 		-9145344
 	]
-	vertexweight = [
+	VertexWeight = [
 		0.18583299
 		0.9265729
 		1.0

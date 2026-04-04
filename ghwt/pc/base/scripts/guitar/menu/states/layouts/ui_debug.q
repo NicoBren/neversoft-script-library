@@ -13,12 +13,12 @@ script ui_destroy_debug
 endscript
 
 script ui_deinit_debug 
-	if NOT cd
+	if NOT CD
 		ui_event_get_stack
 		i = 0
 		begin
 		if ((<stack> [<i>].base_name) = 'debug')
-			if gotparam \{hit}
+			if GotParam \{hit}
 				return
 			endif
 			hit = 1

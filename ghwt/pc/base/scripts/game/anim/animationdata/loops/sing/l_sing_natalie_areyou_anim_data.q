@@ -1,37 +1,37 @@
-l_sing_natalie_areyou_anims_set = {
-	stance_a = {
-		idle = {
+L_SING_Natalie_AreYou_anims_set = {
+	Stance_A = {
+		Idle = {
 			good = {
-				slow = [
-					sing_natalie_areyou_075_1
+				Slow = [
+					Sing_Natalie_AreYou_075_1
 				]
-				med = [
-					sing_natalie_areyou_100_1
+				Med = [
+					Sing_Natalie_AreYou_100_1
 				]
-				fast = [
-					sing_natalie_areyou_120_1
-				]
-			}
-			normal = {
-				slow = [
-					sing_natalie_areyou_075_1
-				]
-				med = [
-					sing_natalie_areyou_100_1
-				]
-				fast = [
-					sing_natalie_areyou_120_1
+				Fast = [
+					Sing_Natalie_AreYou_120_1
 				]
 			}
-			bad = {
-				slow = [
-					sing_natalie_areyou_075_1
+			Normal = {
+				Slow = [
+					Sing_Natalie_AreYou_075_1
 				]
-				med = [
-					sing_natalie_areyou_100_1
+				Med = [
+					Sing_Natalie_AreYou_100_1
 				]
-				fast = [
-					sing_natalie_areyou_120_1
+				Fast = [
+					Sing_Natalie_AreYou_120_1
+				]
+			}
+			Bad = {
+				Slow = [
+					Sing_Natalie_AreYou_075_1
+				]
+				Med = [
+					Sing_Natalie_AreYou_100_1
+				]
+				Fast = [
+					Sing_Natalie_AreYou_120_1
 				]
 			}
 		}

@@ -1,22 +1,22 @@
 guitar_hand_event_time_offset = -100
 
-script strum_iterator \{song_name = qs(0x7b277b30)
-		difficulty = qs(0xe50976de)
-		array_type = qs(0x13e59f9f)
+script Strum_iterator \{song_name = qs("\Ltest")
+		difficulty = qs("\Leasy")
+		array_type = qs("\Lsong")
 		part = ''}
-	if NOT gotparam \{target}
-		printf \{qs(0x624b4bef)}
+	if NOT GotParam \{target}
+		printf \{qs("\LStrum_iterator called without target!")}
 		return
 	endif
 	get_song_prefix song = <song_name>
-	formattext checksumname = song '%s_song_%pexpert' s = <song_prefix> p = <part> addtostringlookup
+	FormatText checksumname = song '%s_song_%pexpert' s = <song_prefix> p = <part> AddToStringLookup
 	array_entry = 0
-	getarraysize $<song>
+	GetArraySize $<song>
 	if (<array_size> = 0)
 		return
 	endif
 	song_array_size = (<array_size> / $num_song_columns)
-	getsongtimems time_offset = <time_offset>
+	GetSongTimeMs time_offset = <time_offset>
 	if NOT (<song_array_size> = 0)
 		begin
 		if ((<time> - <skipleadin>) < ($<song> [<array_entry>]))
@@ -30,43 +30,43 @@ script strum_iterator \{song_name = qs(0x7b277b30)
 	if (<song_array_size> = 0)
 		break
 	endif
-	timemarkerreached_setparams time_offset = <time_offset> array = <song> array_entry = <array_entry>
+	TimeMarkerReached_SetParams time_offset = <time_offset> array = <song> array_entry = <array_entry>
 	begin
-	if timemarkerreached
-		getsongtimems time_offset = <time_offset>
+	if TimeMarkerReached
+		GetSongTimeMs time_offset = <time_offset>
 		break
 	endif
-	wait \{1
+	Wait \{1
 		gameframe}
 	repeat
-	timemarkerreached_clearparams
+	TimeMarkerReached_ClearParams
 	note_value = ($<song> [(<array_entry> + 1)])
 	note_length = (<note_value> && 65535)
 	if (<note_length> > 0)
-		launchevent type = strum_guitar target = <target> data = {note_length = <note_length>}
+		LaunchEvent type = strum_guitar target = <target> data = {note_length = <note_length>}
 	endif
 	<array_entry> = (<array_entry> + $num_song_columns)
 	repeat <song_array_size>
 endscript
 
-script fretpos_iterator 
-	if NOT gotparam \{target}
-		printf \{qs(0xaa5a03bd)}
+script FretPos_iterator 
+	if NOT GotParam \{target}
+		printf \{qs("\LFretPos_iterator called without target!")}
 		return
 	endif
 	if ($disable_band = 1)
 		return
 	endif
 	get_song_prefix song = <song_name>
-	formattext checksumname = event_array '%s_anim_notes' s = <song_prefix> addtostringlookup
-	if NOT globalexists name = <event_array> type = array
-		printf \{qs(0x85088784)}
+	FormatText checksumname = event_array '%s_anim_notes' s = <song_prefix> AddToStringLookup
+	if NOT GlobalExists name = <event_array> type = array
+		printf \{qs("\LFRETPOS ANIMS DISABLED: No midi events found for this song")}
 		return
 	endif
 	array_entry = 0
-	getarraysize $<event_array>
+	GetArraySize $<event_array>
 	array_size = (<array_size> / 2)
-	getsongtimems time_offset = <time_offset>
+	GetSongTimeMs time_offset = <time_offset>
 	if NOT (<array_size> = 0)
 		begin
 		if ((<time> - <skipleadin>) < $<event_array> [<array_entry>])
@@ -79,25 +79,25 @@ script fretpos_iterator
 			return
 		endif
 		begin
-		timemarkerreached_setparams time_offset = <time_offset> array = <event_array> array_entry = <array_entry>
+		TimeMarkerReached_SetParams time_offset = <time_offset> array = <event_array> array_entry = <array_entry>
 		begin
-		if timemarkerreached
-			getsongtimems time_offset = <time_offset>
+		if TimeMarkerReached
+			GetSongTimeMs time_offset = <time_offset>
 			break
 		endif
-		wait \{1
+		Wait \{1
 			gameframe}
 		repeat
-		timemarkerreached_clearparams
-		decompressnotevalue note_value = ($<event_array> [(<array_entry> + 1)])
-		if compositeobjectexists name = <target>
+		TimeMarkerReached_ClearParams
+		DecompressNoteValue note_value = ($<event_array> [(<array_entry> + 1)])
+		if CompositeObjectExists name = <target>
 			if (<part> = guitar)
 				if ((<note> >= 118) && (<note> <= 127))
-					launchevent type = pose_fret target = <target> data = {note = <note> note_length = <length>}
+					LaunchEvent type = pose_fret target = <target> data = {note = <note> note_length = <length>}
 				endif
 			else
 				if ((<note> >= 101) && (<note> <= 110))
-					launchevent type = pose_fret target = <target> data = {note = <note> note_length = <length>}
+					LaunchEvent type = pose_fret target = <target> data = {note = <note> note_length = <length>}
 				endif
 			endif
 		endif
@@ -106,50 +106,50 @@ script fretpos_iterator
 	endif
 endscript
 
-script fretfingers_iterator \{part = ''}
-	fretfingers_iterator_cfunc_setup
+script FretFingers_iterator \{part = ''}
+	FretFingers_iterator_CFunc_Setup
 	begin
-	if fretfingers_iterator_cfunc
+	if FretFingers_iterator_CFunc
 		break
 	endif
-	wait \{1
+	Wait \{1
 		gameframe}
 	repeat
-	fretfingers_iterator_cfunc_cleanup
+	FretFingers_iterator_CFunc_Cleanup
 endscript
 
-script watchforstartplaying_iterator 
+script WatchForStartPlaying_iterator 
 	begin
-	getsongtimems time_offset = <time_offset>
+	GetSongTimeMs time_offset = <time_offset>
 	if (<time> >= 0)
-		wait \{1
+		Wait \{1
 			gameframe}
-		bandmanager_endintroanims
-		bandmanager_startallfacialanims
+		BandManager_EndIntroAnims
+		BandManager_StartAllFacialAnims
 		return
 	endif
-	wait \{1
+	Wait \{1
 		gameframe}
 	repeat
 endscript
 
-script faceoff_anim_iterator \{song_name = qs(0x7b277b30)
-		difficulty = qs(0xe50976de)
-		array_type = qs(0x13e59f9f)
+script Faceoff_Anim_iterator \{song_name = qs("\Ltest")
+		difficulty = qs("\Leasy")
+		array_type = qs("\Lsong")
 		part = ''}
-	if NOT gotparam \{player}
-		printf \{qs(0xe010aef4)}
+	if NOT GotParam \{player}
+		printf \{qs("\LFaceoff_Anim_iterator called without param 'player'!")}
 		return
 	endif
 	get_song_prefix song = <song_name>
 	get_notetrack_part_text player_status = <player_status> song_name = <song_name>
-	formattext checksumname = event_array '%s_%ifaceoff%p' s = <song_prefix> i = <part> p = <player_text> addtostringlookup
+	FormatText checksumname = event_array '%s_%ifaceoff%p' s = <song_prefix> i = <part> p = <player_text> AddToStringLookup
 	array_entry = 0
-	getarraysize $<event_array>
+	GetArraySize $<event_array>
 	if (<array_size> = 0)
 		return
 	endif
-	getsongtimems time_offset = <time_offset>
+	GetSongTimeMs time_offset = <time_offset>
 	begin
 	if ((<time> - <skipleadin>) < ($<event_array> [<array_entry>]) [0])
 		break
@@ -160,69 +160,69 @@ script faceoff_anim_iterator \{song_name = qs(0x7b277b30)
 	if (<array_size> = 0)
 		return
 	endif
-	if ($player1_status.part = vocals)
+	if ($player1_status.part = Vocals)
 		is_singing = true
 	else
 		is_singing = false
 	endif
 	begin
 	begin
-	getsongtimems time_offset = <time_offset>
+	GetSongTimeMs time_offset = <time_offset>
 	if (<time> >= $<event_array> [<array_entry>] [0])
 		break
 	endif
-	wait \{1
+	Wait \{1
 		gameframe}
 	repeat
 	target = ($<player_status>.band_member)
-	extendcrc <target> '_Info' out = info_struct
+	ExtendCRC <target> '_Info' out = info_struct
 	change structurename = <info_struct> playing = true
 	if (<is_singing> = true)
 	else
-		band_changefacialanims name = <target> ff_anims = facial_anims_female_rocker_rocking mf_anims = facial_anims_male_rocker_rocking
+		Band_ChangeFacialAnims name = <target> ff_anims = facial_anims_female_rocker_rocking Mf_anims = facial_anims_male_rocker_rocking
 	endif
 	play_time = ($<event_array> [<array_entry>] [1])
 	stop_playing_time = (($<event_array> [<array_entry>] [0]) + ($<event_array> [<array_entry>] [1]))
 	begin
-	getsongtimems time_offset = <time_offset>
+	GetSongTimeMs time_offset = <time_offset>
 	if (<time> >= <stop_playing_time>)
 		break
 	endif
-	wait \{1
+	Wait \{1
 		gameframe}
 	repeat
 	change structurename = <info_struct> playing = false
 	if (<is_singing> = true)
 	else
-		band_changefacialanims name = <target> ff_anims = facial_anims_female_rocker mf_anims = facial_anims_male_rocker
+		Band_ChangeFacialAnims name = <target> ff_anims = facial_anims_female_rocker Mf_anims = facial_anims_male_rocker
 	endif
 	<array_entry> = (<array_entry> + 1)
 	repeat <array_size>
 endscript
 
-script drumkit_anim_iterator 
-	<id> :anim_command target = drumkit command = applydrumkitdifference_prepareanims params = {anims = [
-			gh_drum_tom_1
-			gh_drum_tom_2
-			gh_drum_snare
-			gh_drum_cymbal_1
-			gh_drum_cymbal_2
-			gh_drum_cymbal_3
-			gh_drum_kick
-			gh_drum_cymbal_hh_open
-			gh_drum_cymbal_hh_closed
-		] hold_list = [gh_drum_cymbal_hh_closed]}
-	extendcrc <id> '_Info' out = info_struct
+script Drumkit_anim_iterator 
+	<id> :Anim_Command target = DrumKit command = ApplyDrumKitDifference_PrepareAnims params = {anims = [
+			GH_Drum_Tom_1
+			GH_Drum_Tom_2
+			GH_Drum_Snare
+			GH_Drum_Cymbal_1
+			GH_Drum_Cymbal_2
+			GH_Drum_Cymbal_3
+			GH_Drum_Kick
+			GH_Drum_Cymbal_HH_Open
+			GH_Drum_Cymbal_HH_Closed
+		] hold_list = [GH_Drum_Cymbal_HH_Closed]}
+	ExtendCRC <id> '_Info' out = info_struct
 	get_song_prefix song = <song_name>
-	formattext checksumname = event_array '%s_drums_notes' s = <song_prefix> addtostringlookup
-	if NOT globalexists name = <event_array> type = array
-		printf \{qs(0x85088784)}
+	FormatText checksumname = event_array '%s_drums_notes' s = <song_prefix> AddToStringLookup
+	if NOT GlobalExists name = <event_array> type = array
+		printf \{qs("\LFRETPOS ANIMS DISABLED: No midi events found for this song")}
 		return
 	endif
 	array_entry = 0
-	getarraysize $<event_array>
+	GetArraySize $<event_array>
 	array_size = (<array_size> / 2)
-	getsongtimems time_offset = <time_offset>
+	GetSongTimeMs time_offset = <time_offset>
 	if NOT (<array_size> = 0)
 		begin
 		if ((<time> - <skipleadin>) < $<event_array> [<array_entry>])
@@ -235,44 +235,44 @@ script drumkit_anim_iterator
 			return
 		endif
 		begin
-		timemarkerreached_setparams time_offset = <time_offset> array = <event_array> array_entry = <array_entry>
+		TimeMarkerReached_SetParams time_offset = <time_offset> array = <event_array> array_entry = <array_entry>
 		begin
-		if timemarkerreached
-			getsongtimems time_offset = <time_offset>
+		if TimeMarkerReached
+			GetSongTimeMs time_offset = <time_offset>
 			break
 		endif
-		wait \{1
+		Wait \{1
 			gameframe}
 		repeat
-		timemarkerreached_clearparams
+		TimeMarkerReached_ClearParams
 		if ($game_mode = p2_faceoff)
 			<playing> = (($<info_struct>).playing)
 		else
 			<playing> = true
 		endif
-		if compositeobjectexists name = <id>
+		if CompositeObjectExists name = <id>
 			if (<playing> = true)
-				decompressnotevalue note_value = ($<event_array> [(<array_entry> + 1)])
+				DecompressNoteValue note_value = ($<event_array> [(<array_entry> + 1)])
 				if (<note> >= 73 && <note> <= 82)
 					switch (<note>)
 						case 73
-						<id> :anim_command target = drumkit command = applydrumkitdifference_playanim params = {anim = ($drumkit_anims [0]) blend_period = $drum_kit_blend_time}
+						<id> :Anim_Command target = DrumKit command = ApplyDrumKitDifference_PlayAnim params = {Anim = ($drumkit_anims [0]) blend_period = $drum_kit_blend_time}
 						case 75
-						<id> :anim_command target = drumkit command = applydrumkitdifference_playanim params = {anim = ($drumkit_anims [2]) blend_period = $drum_kit_blend_time}
+						<id> :Anim_Command target = DrumKit command = ApplyDrumKitDifference_PlayAnim params = {Anim = ($drumkit_anims [2]) blend_period = $drum_kit_blend_time}
 						case 76
-						<id> :anim_command target = drumkit command = applydrumkitdifference_playanim params = {anim = ($drumkit_anims [3]) blend_period = $drum_kit_blend_time}
+						<id> :Anim_Command target = DrumKit command = ApplyDrumKitDifference_PlayAnim params = {Anim = ($drumkit_anims [3]) blend_period = $drum_kit_blend_time}
 						case 77
-						<id> :anim_command target = drumkit command = applydrumkitdifference_playanim params = {anim = ($drumkit_anims [4]) blend_period = $drum_kit_blend_time}
+						<id> :Anim_Command target = DrumKit command = ApplyDrumKitDifference_PlayAnim params = {Anim = ($drumkit_anims [4]) blend_period = $drum_kit_blend_time}
 						case 78
-						<id> :anim_command target = drumkit command = applydrumkitdifference_playanim params = {anim = ($drumkit_anims [5]) blend_period = $drum_kit_blend_time}
+						<id> :Anim_Command target = DrumKit command = ApplyDrumKitDifference_PlayAnim params = {Anim = ($drumkit_anims [5]) blend_period = $drum_kit_blend_time}
 						case 79
-						<id> :anim_command target = drumkit command = applydrumkitdifference_playanim params = {anim = ($drumkit_anims [6]) blend_period = $drum_kit_blend_time}
+						<id> :Anim_Command target = DrumKit command = ApplyDrumKitDifference_PlayAnim params = {Anim = ($drumkit_anims [6]) blend_period = $drum_kit_blend_time}
 						case 80
-						<id> :anim_command target = drumkit command = applydrumkitdifference_playanim params = {anim = ($drumkit_anims [7]) blend_period = $drum_kit_blend_time}
+						<id> :Anim_Command target = DrumKit command = ApplyDrumKitDifference_PlayAnim params = {Anim = ($drumkit_anims [7]) blend_period = $drum_kit_blend_time}
 						case 81
-						<id> :anim_command target = drumkit command = applydrumkitdifference_playanim params = {anim = ($drumkit_anims [8]) blend_period = $drum_kit_blend_time}
+						<id> :Anim_Command target = DrumKit command = ApplyDrumKitDifference_PlayAnim params = {Anim = ($drumkit_anims [8]) blend_period = $drum_kit_blend_time}
 						case 82
-						<id> :anim_command target = drumkit command = applydrumkitdifference_playanim params = {anim = ($drumkit_anims [9]) blend_period = $drum_kit_blend_time}
+						<id> :Anim_Command target = DrumKit command = ApplyDrumKitDifference_PlayAnim params = {Anim = ($drumkit_anims [9]) blend_period = $drum_kit_blend_time}
 					endswitch
 				endif
 			endif
@@ -285,120 +285,120 @@ endscript
 script drumkit_input_playanim 
 	switch <drum_index>
 		case 0
-		drummer :anim_command target = drumkit command = applydrumkitdifference_playanim params = {anim = ($drumkit_anims [2]) blend_period = $drum_kit_blend_time}
+		Drummer :Anim_Command target = DrumKit command = ApplyDrumKitDifference_PlayAnim params = {Anim = ($drumkit_anims [2]) blend_period = $drum_kit_blend_time}
 		case 1
-		drummer :anim_command target = drumkit command = applydrumkitdifference_playanim params = {anim = ($drumkit_anims [4]) blend_period = $drum_kit_blend_time}
+		Drummer :Anim_Command target = DrumKit command = ApplyDrumKitDifference_PlayAnim params = {Anim = ($drumkit_anims [4]) blend_period = $drum_kit_blend_time}
 		case 2
-		drummer :anim_command target = drumkit command = applydrumkitdifference_playanim params = {anim = ($drumkit_anims [6]) blend_period = $drum_kit_blend_time}
+		Drummer :Anim_Command target = DrumKit command = ApplyDrumKitDifference_PlayAnim params = {Anim = ($drumkit_anims [6]) blend_period = $drum_kit_blend_time}
 		case 3
-		drummer :anim_command target = drumkit command = applydrumkitdifference_playanim params = {anim = ($drumkit_anims [3]) blend_period = $drum_kit_blend_time}
+		Drummer :Anim_Command target = DrumKit command = ApplyDrumKitDifference_PlayAnim params = {Anim = ($drumkit_anims [3]) blend_period = $drum_kit_blend_time}
 		case 4
-		drummer :anim_command target = drumkit command = applydrumkitdifference_playanim params = {anim = ($drumkit_anims [9]) blend_period = $drum_kit_blend_time}
+		Drummer :Anim_Command target = DrumKit command = ApplyDrumKitDifference_PlayAnim params = {Anim = ($drumkit_anims [9]) blend_period = $drum_kit_blend_time}
 		case 5
-		drummer :anim_command target = drumkit command = applydrumkitdifference_playanim params = {anim = ($drumkit_anims [0]) blend_period = $drum_kit_blend_time}
+		Drummer :Anim_Command target = DrumKit command = ApplyDrumKitDifference_PlayAnim params = {Anim = ($drumkit_anims [0]) blend_period = $drum_kit_blend_time}
 	endswitch
 endscript
 
-script ae_drumkit_play_hihat 
-	drummer :anim_command target = drumkit command = applydrumkitdifference_playanim params = {anim = ($drumkit_anims [5]) blend_period = $drum_kit_blend_time}
+script AE_DrumKit_play_hiHat 
+	Drummer :Anim_Command target = DrumKit command = ApplyDrumKitDifference_PlayAnim params = {Anim = ($drumkit_anims [5]) blend_period = $drum_kit_blend_time}
 endscript
 
-script ae_drumkit_play_snare 
-	drummer :anim_command target = drumkit command = applydrumkitdifference_playanim params = {anim = ($drumkit_anims [4]) blend_period = $drum_kit_blend_time}
+script AE_DrumKit_play_Snare 
+	Drummer :Anim_Command target = DrumKit command = ApplyDrumKitDifference_PlayAnim params = {Anim = ($drumkit_anims [4]) blend_period = $drum_kit_blend_time}
 endscript
 
-script ae_drumkit_play_crash1 
-	drummer :anim_command target = drumkit command = applydrumkitdifference_playanim params = {anim = ($drumkit_anims [8]) blend_period = $drum_kit_blend_time}
+script AE_DrumKit_play_Crash1 
+	Drummer :Anim_Command target = DrumKit command = ApplyDrumKitDifference_PlayAnim params = {Anim = ($drumkit_anims [8]) blend_period = $drum_kit_blend_time}
 endscript
 
-script ae_drumkit_play_crash2 
-	drummer :anim_command target = drumkit command = applydrumkitdifference_playanim params = {anim = ($drumkit_anims [9]) blend_period = $drum_kit_blend_time}
+script AE_DrumKit_play_Crash2 
+	Drummer :Anim_Command target = DrumKit command = ApplyDrumKitDifference_PlayAnim params = {Anim = ($drumkit_anims [9]) blend_period = $drum_kit_blend_time}
 endscript
 
-script ae_drumkit_play_tom1 
-	drummer :anim_command target = drumkit command = applydrumkitdifference_playanim params = {anim = ($drumkit_anims [3]) blend_period = $drum_kit_blend_time}
+script AE_DrumKit_play_Tom1 
+	Drummer :Anim_Command target = DrumKit command = ApplyDrumKitDifference_PlayAnim params = {Anim = ($drumkit_anims [3]) blend_period = $drum_kit_blend_time}
 endscript
 
-script ae_drumkit_play_tom2 
-	drummer :anim_command target = drumkit command = applydrumkitdifference_playanim params = {anim = ($drumkit_anims [2]) blend_period = $drum_kit_blend_time}
+script AE_DrumKit_play_tom2 
+	Drummer :Anim_Command target = DrumKit command = ApplyDrumKitDifference_PlayAnim params = {Anim = ($drumkit_anims [2]) blend_period = $drum_kit_blend_time}
 endscript
 
-script ae_drumkit_play_ride 
-	drummer :anim_command target = drumkit command = applydrumkitdifference_playanim params = {anim = ($drumkit_anims [7]) blend_period = $drum_kit_blend_time}
+script AE_DrumKit_play_Ride 
+	Drummer :Anim_Command target = DrumKit command = ApplyDrumKitDifference_PlayAnim params = {Anim = ($drumkit_anims [7]) blend_period = $drum_kit_blend_time}
 endscript
 
-script ae_drumkit_stop_crash1 
-	drummer :anim_command target = drumkit command = applydrumkitdifference_playanim params = {anim = ($drumkit_anims [10]) blend_period = $drum_kit_blend_time}
+script AE_DrumKit_Stop_Crash1 
+	Drummer :Anim_Command target = DrumKit command = ApplyDrumKitDifference_PlayAnim params = {Anim = ($drumkit_anims [10]) blend_period = $drum_kit_blend_time}
 endscript
 
-script ae_drumkit_stop_crash2 
-	drummer :anim_command target = drumkit command = applydrumkitdifference_playanim params = {anim = ($drumkit_anims [11]) blend_period = $drum_kit_blend_time}
+script AE_DrumKit_Stop_Crash2 
+	Drummer :Anim_Command target = DrumKit command = ApplyDrumKitDifference_PlayAnim params = {Anim = ($drumkit_anims [11]) blend_period = $drum_kit_blend_time}
 endscript
 
 script handle_strum_event 
-	obj_killspawnedscript \{name = hero_strum_guitar}
-	obj_spawnscriptnow hero_strum_guitar params = {note_length = <note_length>}
+	Obj_KillSpawnedScript \{name = hero_strum_guitar}
+	Obj_SpawnScriptNow hero_strum_guitar params = {note_length = <note_length>}
 endscript
 
 script handle_missed_strum_event 
-	obj_killspawnedscript \{name = hero_strum_guitar}
-	obj_spawnscriptnow hero_strum_guitar params = {note_length = <note_length>}
+	Obj_KillSpawnedScript \{name = hero_strum_guitar}
+	Obj_SpawnScriptNow hero_strum_guitar params = {note_length = <note_length>}
 endscript
 
 script handle_start_playing 
-	obj_getid
-	extendcrc <objid> '_Info' out = info_struct
+	Obj_GetID
+	ExtendCRC <ObjID> '_Info' out = info_struct
 	if (<info_struct>.stance = intro || <info_struct>.stance = intro_smstg)
-		handle_change_stance \{stance = stance_a}
+		handle_change_stance \{stance = Stance_A}
 	endif
 endscript
 
 script handle_fret_event 
-	obj_getid
-	extendcrc <objid> '_Info' out = info_struct
-	formattext checksumname = track 'track_%n' n = <note>
+	Obj_GetID
+	ExtendCRC <ObjID> '_Info' out = info_struct
+	FormatText checksumname = track 'track_%n' n = <note>
 	fret_anims = ($<info_struct>.fret_anims)
 	if ((<note> >= 109) && (<note> <= 127))
-		anim = ($<fret_anims>.<track>)
+		Anim = ($<fret_anims>.<track>)
 	elseif ((<note> >= 85) && (<note> <= 103))
-		anim = ($<fret_anims>.<track>)
+		Anim = ($<fret_anims>.<track>)
 	else
 		return
 	endif
-	obj_killspawnedscript \{name = hero_play_fret_anim}
-	obj_spawnscriptnow hero_play_fret_anim params = {anim = <anim>}
+	Obj_KillSpawnedScript \{name = hero_play_fret_anim}
+	Obj_SpawnScriptNow hero_play_fret_anim params = {Anim = <Anim>}
 endscript
 
 script handle_finger_event 
-	obj_killspawnedscript \{name = hero_play_chord}
-	obj_spawnscriptnow hero_play_chord params = {chord = <chord>}
+	Obj_KillSpawnedScript \{name = hero_play_chord}
+	Obj_SpawnScriptNow hero_play_chord params = {chord = <chord>}
 endscript
 
 script handle_missed_note 
-	obj_getid
-	extendcrc <objid> '_Info' out = info_struct
+	Obj_GetID
+	ExtendCRC <ObjID> '_Info' out = info_struct
 	if ($<info_struct>.playing_missed_note = false)
 		change structurename = <info_struct> playing_missed_note = true
 	endif
 endscript
 
 script handle_hit_note 
-	obj_getid
-	handle_hit_note_cfunc
+	Obj_GetID
+	handle_hit_note_CFunc
 endscript
 
-script handle_change_stance \{speed = 1.0}
-	obj_getid
-	extendcrc <objid> '_Info' out = info_struct
+script handle_change_stance \{Speed = 1.0}
+	Obj_GetID
+	ExtendCRC <ObjID> '_Info' out = info_struct
 	display_debug_info = false
 	if (should_display_debug_info)
 		display_debug_info = true
 	endif
-	if gotparam \{no_wait}
+	if GotParam \{no_wait}
 		anim_set = ($<info_struct>.anim_set)
 		old_stance = ($<info_struct>.stance)
 		if play_stance_transition_cfunc anim_set = <anim_set> old_stance = <old_stance> new_stance = <stance>
-			hero_play_anim anim = <anim_to_run> speed = <speed>
+			hero_play_anim Anim = <anim_to_run> Speed = <Speed>
 			ragdoll_markforreset
 			hero_wait_until_anim_finished
 		else
@@ -407,9 +407,9 @@ script handle_change_stance \{speed = 1.0}
 		change structurename = <info_struct> stance = <stance>
 		change structurename = <info_struct> next_stance = <stance>
 		if (<display_debug_info> = true)
-			printf channel = animinfo qs(0x260a7380) a = <objid> b = <stance>
+			printf channel = AnimInfo qs("\L%a stance is immediately changing to %b ....") a = <ObjID> b = <stance>
 		endif
-		if (<objid> = guitarist || <objid> = bassist)
+		if (<ObjID> = Guitarist || <ObjID> = bassist)
 			if (<stance> = intro || <stance> = intro_smstg || <stance> = stance_frontend || <stance> = stance_frontend_guitar)
 				change structurename = <info_struct> disable_arms = 2
 				change structurename = <info_struct> next_anim_disable_arms = 2
@@ -417,16 +417,16 @@ script handle_change_stance \{speed = 1.0}
 				change structurename = <info_struct> disable_arms = 0
 				change structurename = <info_struct> next_anim_disable_arms = 0
 			endif
-			obj_switchscript \{guitarist_idle}
+			Obj_SwitchScript \{guitarist_idle}
 		else
-			obj_switchscript \{bandmember_idle}
+			Obj_SwitchScript \{BandMember_Idle}
 		endif
 	else
 		if (<display_debug_info> = true)
-			printf channel = animinfo qs(0x508e8bf5) a = <objid> b = <stance>
+			printf channel = AnimInfo qs("\L%a is queuing stance change to %b.............") a = <ObjID> b = <stance>
 		endif
 		change structurename = <info_struct> next_stance = <stance>
-		if (<objid> = guitarist || <objid> = bassist)
+		if (<ObjID> = Guitarist || <ObjID> = bassist)
 			if (<stance> = intro || <stance> = intro_smstg || <stance> = stance_frontend || <stance> = stance_frontend_guitar)
 				change structurename = <info_struct> next_anim_disable_arms = 2
 			else
@@ -438,71 +438,71 @@ script handle_change_stance \{speed = 1.0}
 endscript
 
 script queue_change_stance 
-	obj_getid
-	extendcrc <objid> '_Info' out = info_struct
+	Obj_GetID
+	ExtendCRC <ObjID> '_Info' out = info_struct
 	change structurename = <info_struct> next_stance = <stance>
 endscript
 
 script handle_play_anim \{blend_time = 0.2}
-	obj_getid
-	extendcrc <objid> '_Info' out = info_struct
+	Obj_GetID
+	ExtendCRC <ObjID> '_Info' out = info_struct
 	anim_set = ($<info_struct>.anim_set)
 	stance = ($<info_struct>.stance)
 	display_debug_info = false
 	if (should_display_debug_info)
 		display_debug_info = true
 	endif
-	if gotparam \{no_wait}
+	if GotParam \{no_wait}
 		if (<display_debug_info> = true)
-			printf channel = animinfo qs(0x01d2a3d5) a = <objid> b = <anim>
+			printf channel = AnimInfo qs("\L%a will immediately start the %b anim........") a = <ObjID> b = <Anim>
 		endif
-		change structurename = <info_struct> current_anim = <anim>
+		change structurename = <info_struct> current_anim = <Anim>
 		change structurename = <info_struct> next_anim = none
-		if gotparam \{repeat_count}
+		if GotParam \{repeat_count}
 			change structurename = <info_struct> anim_repeat_count = <repeat_count>
 		else
 			change structurename = <info_struct> anim_repeat_count = 1
 		endif
-		if gotparam \{cycle}
+		if GotParam \{Cycle}
 			change structurename = <info_struct> cycle_anim = true
 		else
 			change structurename = <info_struct> cycle_anim = false
 		endif
-		if (<name> = guitarist || <name> = bassist)
-			if gotparam \{disable_auto_arms}
+		if (<name> = Guitarist || <name> = bassist)
+			if GotParam \{disable_auto_arms}
 				change structurename = <info_struct> disable_arms = 2
-			elseif gotparam \{disable_auto_strum}
+			elseif GotParam \{disable_auto_strum}
 				change structurename = <info_struct> disable_arms = 1
 			else
 				change structurename = <info_struct> disable_arms = 0
 			endif
 		endif
 		ragdoll_markforreset
-		obj_killspawnedscript \{name = hero_play_adjusting_random_anims}
-		obj_spawnscriptnow hero_play_adjusting_random_anims params = {anim = <anim> blend_time = <blend_time>}
+		Obj_KillSpawnedScript \{name = hero_play_adjusting_random_anims}
+		Obj_SpawnScriptNow hero_play_adjusting_random_anims params = {Anim = <Anim> blend_time = <blend_time>}
 	else
 		if (<display_debug_info> = true)
 			if (<info_struct>.next_anim != none)
-				printf channel = animinfo qs(0x35476340) a = <objid> b = (<info_struct>.next_anim) c = <anim>
+				printf channel = AnimInfo qs("\L******* %a is replacing queued anim %b with %c ******* ") a = <ObjID> b = (<info_struct>.next_anim) c = <Anim>
 			else
-				printf channel = animinfo qs(0x54c8d8ad) a = <objid> b = <anim>
+				printf channel = AnimInfo qs("\L%a is queueing the %b anim........") a = <ObjID> b = <Anim>
 			endif
 		endif
-		change structurename = <info_struct> next_anim = <anim>
-		if gotparam \{repeat_count}
+		change structurename = <info_struct> next_anim = <Anim>
+		if GotParam \{repeat_count}
 			change structurename = <info_struct> next_anim_repeat_count = <repeat_count>
 		else
 			change structurename = <info_struct> next_anim_repeat_count = 1
 		endif
-		if gotparam \{cycle}
+		if GotParam \{Cycle}
 			change structurename = <info_struct> cycle_next_anim = true
 		else
 			change structurename = <info_struct> cycle_next_anim = false
 		endif
-		if (<name> = guitarist || <name> = bassist)
-			if gotparam \{disable_auto_arms}
+		if (<name> = Guitarist || <name> = bassist)
+			if GotParam \{disable_auto_arms}
 				change structurename = <info_struct> next_anim_disable_arms = 2
-			elseif gotparam \{disable_auto_strum}
+			elseif GotParam \{disable_auto_strum}
 				change structurename = <info_struct> next_anim_disable_arms = 1
 			else
 				change structurename = <info_struct> next_anim_disable_arms = 0
@@ -511,72 +511,72 @@ script handle_play_anim \{blend_time = 0.2}
 	endif
 endscript
 
-script output_camera_sync_warnings 
-	printf \{qs(0x1037ac58)}
-	printf \{qs(0xc99410ae)
+script Output_Camera_Sync_Warnings 
+	printf \{qs("\LOutput_Camera_Sync_Warnings")}
+	printf \{qs("\LCurrent song %a")
 		a = $current_song}
 	get_song_prefix song = ($current_song)
-	formattext checksumname = event_array '%s_cameras_notes' s = <song_prefix> addtostringlookup
-	sync_cameras_to_performance song_name = ($current_song) camera_array = <event_array> output_results = 1
+	FormatText checksumname = event_array '%s_cameras_notes' s = <song_prefix> AddToStringLookup
+	Sync_Cameras_To_Performance song_name = ($current_song) Camera_Array = <event_array> output_results = 1
 endscript
 
-script print_camera_sync_warning 
-	if NOT gotparam \{output_results}
+script Print_Camera_Sync_Warning 
+	if NOT GotParam \{output_results}
 		return
 	endif
 	if (<output_results> = 1)
-		textoutput text = <warning>
+		TextOutput text = <warning>
 	endif
 	printf channel = camera_warnings <warning>
 endscript
 
-script show_playclip_time 
+script Show_PlayClip_Time 
 	if (<playclip_time_displayed> = 1)
 		return
 	endif
 	if (<end_frame> = -1)
-		formattext textname = warning qs(0x7ed36967) a = <next_anim_time>
+		FormatText TextName = warning qs("%a: Band_PlayClip") a = <next_anim_time>
 	else
 		length_in_frames = (<end_frame> - <start_frame>)
-		formattext textname = warning qs(0x73ea14fe) a = <next_anim_time> b = <start_frame> c = <end_frame> d = <length_in_frames>
+		FormatText TextName = warning qs("%a: Band_PlayClip start-%b end-%c (length %d)  ") a = <next_anim_time> b = <start_frame> c = <end_frame> d = <length_in_frames>
 	endif
-	print_camera_sync_warning <...>
+	Print_Camera_Sync_Warning <...>
 	return \{playclip_time_displayed = 1}
 endscript
 
-script show_camera_warnings_found 
+script Show_Camera_Warnings_Found 
 	if (<warnings> = 0)
-		text = qs(0x383ac615)
+		text = qs("\L  no problems found")
 		if (<output_results> = 1)
-			textoutput text = <text>
+			TextOutput text = <text>
 		endif
 		printf channel = camera_warnings <text>
 	endif
 endscript
 
-script sync_cameras_to_performance \{output_results = 0}
-	if NOT gotparam \{camera_array}
+script Sync_Cameras_To_Performance \{output_results = 0}
+	if NOT GotParam \{Camera_Array}
 		return
 	endif
-	if NOT globalexists name = <camera_array> type = array
+	if NOT GlobalExists name = <Camera_Array> type = array
 		return
 	endif
-	getarraysize $<camera_array>
+	GetArraySize $<Camera_Array>
 	if (<array_size> = 0)
 		printf \{channel = clip
-			qs(0xe6cf20ae)}
+			qs("\Lcamera array is empty!")}
 		return
 	endif
 	camera_array_size = <array_size>
 	get_song_prefix song = <song_name>
-	formattext checksumname = anim_array '%s_performance' s = <song_prefix> addtostringlookup
-	if NOT globalexists name = <anim_array> type = array
+	FormatText checksumname = anim_array '%s_performance' s = <song_prefix> AddToStringLookup
+	if NOT GlobalExists name = <anim_array> type = array
 		return
 	endif
-	getarraysize $<anim_array>
+	GetArraySize $<anim_array>
 	if (<array_size> = 0)
 		printf \{channel = clip
-			qs(0x7d03b8a6)}
+			qs("\Lperformance array is empty!")}
 		return
 	endif
 	anim_array_size = <array_size>
@@ -586,76 +586,76 @@ script sync_cameras_to_performance \{output_results = 0}
 	next_anim_time = 0
 	last_end_frame_time = -1
 	last_camera_adjusted_index = -1
-	print_camera_sync_warning warning = qs(0x1f54751f) output_results = <output_results>
+	Print_Camera_Sync_Warning warning = qs("\LCAMERA WARNINGS:") output_results = <output_results>
 	warnings = 0
-	threshold = $camera_snap_threshold
+	THRESHOLD = $camera_snap_threshold
 	begin
 	start_frame = 0
 	end_frame = -1
 	playclip_time_displayed = 0
 	begin
-	if ((($<anim_array> [<anim_index>]).scr) = band_playclip)
+	if ((($<anim_array> [<anim_index>]).Scr) = band_playclip)
 		next_anim_time = (($<anim_array> [<anim_index>]).time)
 		params = (($<anim_array> [<anim_index>]).params)
 		clip = (<params>.clip)
-		if structurecontains structure = <params> name = startframe
-			start_frame = (<params>.startframe)
+		if StructureContains Structure = <params> name = startFrame
+			start_frame = (<params>.startFrame)
 		endif
-		if structurecontains structure = <params> name = endframe
-			end_frame = (<params>.endframe)
+		if StructureContains Structure = <params> name = EndFrame
+			end_frame = (<params>.EndFrame)
 		endif
 		break
 	endif
 	anim_index = (<anim_index> + 1)
 	if (<anim_index> = <anim_array_size>)
-		show_camera_warnings_found output_results = <output_results> warnings = <warnings>
+		Show_Camera_Warnings_Found output_results = <output_results> warnings = <warnings>
 		return
 	endif
 	repeat
 	saved_camera_index = <camera_index>
 	begin
-	next_camera_time = ($<camera_array> [<camera_index>])
+	next_camera_time = ($<Camera_Array> [<camera_index>])
 	time_diff = (<next_anim_time> - <next_camera_time>)
 	if (<time_diff> < 0)
 		time_diff = (<time_diff> * -1)
 	endif
-	if (<time_diff> < <threshold>)
+	if (<time_diff> < <THRESHOLD>)
 		if (<time_diff> = 0)
 		else
 			if (<camera_index> = <last_camera_adjusted_index>)
-				show_playclip_time {
+				Show_PlayClip_Time {
 					output_results = <output_results>
 					playclip_time_displayed = <playclip_time_displayed>
 					start_frame = <start_frame>
 					end_frame = <end_frame>
 					next_anim_time = <next_anim_time>
 				}
-				formattext \{textname = warning
-					qs(0x053d4951)}
-				print_camera_sync_warning warning = <warning> output_results = <output_results>
+				FormatText \{TextName = warning
+					qs("\L  The start of this clip is not aligned with the end of the previous clip!")}
+				Print_Camera_Sync_Warning warning = <warning> output_results = <output_results>
 				warnings = (<warnings> + 1)
 			endif
 			camera_time_difference = (<next_anim_time> - <next_camera_time>)
-			setarrayelement arrayname = <camera_array> globalarray index = <camera_index> newvalue = <next_anim_time>
-			decompressnotevalue note_value = ($<camera_array> [(<camera_index> + 1)])
+			SetArrayElement ArrayName = <Camera_Array> GlobalArray index = <camera_index> newvalue = <next_anim_time>
+			DecompressNoteValue note_value = ($<Camera_Array> [(<camera_index> + 1)])
 			length = (<length> - <camera_time_difference>)
-			compressnotevalue length = <length> note = <note> velocity = <velocity>
-			setarrayelement arrayname = <camera_array> globalarray index = (<camera_index> + 1) newvalue = <note_value>
+			CompressNoteValue length = <length> note = <note> velocity = <velocity>
+			SetArrayElement ArrayName = <Camera_Array> GlobalArray index = (<camera_index> + 1) newvalue = <note_value>
 			last_camera_adjusted_index = <camera_index>
 		endif
 		break
 	endif
 	camera_index = (<camera_index> + 2)
 	if (<camera_index> >= <camera_array_size>)
-		show_playclip_time {
+		Show_PlayClip_Time {
 			output_results = <output_results>
 			playclip_time_displayed = <playclip_time_displayed>
 			start_frame = <start_frame>
 			end_frame = <end_frame>
 			next_anim_time = <next_anim_time>
 		}
-		formattext textname = warning qs(0x68233f30) a = <threshold>
-		print_camera_sync_warning warning = <warning> output_results = <output_results>
+		FormatText TextName = warning qs("\L  No camera found within %ams of start of clip!") a = <THRESHOLD>
+		Print_Camera_Sync_Warning warning = <warning> output_results = <output_results>
 		warnings = (<warnings> + 1)
 		break
 	endif
@@ -664,42 +664,42 @@ script sync_cameras_to_performance \{output_results = 0}
 	if (<end_frame> != -1)
 		length_in_frames = (<end_frame> - <start_frame>)
 		length_in_ms = ((<length_in_frames> / 30.0) * 1000)
-		casttointeger \{length_in_ms}
+		CastToInteger \{length_in_ms}
 		end_time = (<next_anim_time> + <length_in_ms>)
 		if check_for_short_anims_in_clip clip = <clip> endtime = (<length_in_frames> / 30.0) <...>
 			playclip_time_displayed = 1
 			warnings = (<warnings> + 1)
 		endif
 		begin
-		next_camera_time = ($<camera_array> [<camera_index>])
+		next_camera_time = ($<Camera_Array> [<camera_index>])
 		time_diff = (<end_time> - <next_camera_time>)
 		if (<time_diff> < 0)
 			time_diff = (<time_diff> * -1)
 		endif
-		if (<time_diff> < <threshold>)
+		if (<time_diff> < <THRESHOLD>)
 			if (<time_diff> = 0)
 			else
 				camera_time_difference = (<end_time> - <next_camera_time>)
-				setarrayelement arrayname = <camera_array> globalarray index = <camera_index> newvalue = <end_time>
-				decompressnotevalue note_value = ($<camera_array> [(<camera_index> + 1)])
+				SetArrayElement ArrayName = <Camera_Array> GlobalArray index = <camera_index> newvalue = <end_time>
+				DecompressNoteValue note_value = ($<Camera_Array> [(<camera_index> + 1)])
 				length = (<length> - <camera_time_difference>)
-				compressnotevalue length = <length> note = <note> velocity = <velocity>
-				setarrayelement arrayname = <camera_array> globalarray index = (<camera_index> + 1) newvalue = <note_value>
+				CompressNoteValue length = <length> note = <note> velocity = <velocity>
+				SetArrayElement ArrayName = <Camera_Array> GlobalArray index = (<camera_index> + 1) newvalue = <note_value>
 				last_camera_adjusted_index = <camera_index>
 			endif
 			break
 		endif
 		camera_index = (<camera_index> + 2)
 		if (<camera_index> >= <camera_array_size>)
-			show_playclip_time {
+			Show_PlayClip_Time {
 				output_results = <output_results>
 				playclip_time_displayed = <playclip_time_displayed>
 				start_frame = <start_frame>
 				end_frame = <end_frame>
 				next_anim_time = <next_anim_time>
 			}
-			formattext textname = warning qs(0x41e5dd6f) a = <threshold>
-			print_camera_sync_warning warning = <warning> output_results = <output_results>
+			FormatText TextName = warning qs("  No camera found within %ams of end of clip!") a = <THRESHOLD>
+			Print_Camera_Sync_Warning warning = <warning> output_results = <output_results>
 			warnings = (<warnings> + 1)
 			break
 		endif
@@ -710,24 +710,24 @@ script sync_cameras_to_performance \{output_results = 0}
 	camera_index = <saved_camera_index>
 	anim_index = (<anim_index> + 1)
 	if (<anim_index> = <anim_array_size>)
-		show_camera_warnings_found output_results = <output_results> warnings = <warnings>
+		Show_Camera_Warnings_Found output_results = <output_results> warnings = <warnings>
 		return
 	endif
 	repeat
 endscript
 
 script check_for_short_anims_in_clip 
-	if NOT globalexists name = <clip> type = structure
+	if NOT GlobalExists name = <clip> type = Structure
 		return
 	endif
-	if NOT structurecontains structure = $<clip> name = anims
+	if NOT StructureContains Structure = $<clip> name = anims
 		return
 	endif
 	found_problem = false
-	check_anim_length clip = <clip> name = guitarist endtime = <endtime> <...>
+	check_anim_length clip = <clip> name = Guitarist endtime = <endtime> <...>
 	check_anim_length clip = <clip> name = bassist endtime = <endtime> <...>
 	check_anim_length clip = <clip> name = vocalist endtime = <endtime> <...>
-	check_anim_length clip = <clip> name = drummer endtime = <endtime> <...>
+	check_anim_length clip = <clip> name = Drummer endtime = <endtime> <...>
 	if (<found_problem> = true)
 		return \{true}
 	endif
@@ -735,20 +735,20 @@ script check_for_short_anims_in_clip
 endscript
 
 script check_anim_length 
-	if structurecontains structure = ($<clip>.anims) name = <name>
-		anim = ($<clip>.anims.<name>)
-		if anim_animexists anim = <anim>
-			anim_getanimlength anim = <anim>
+	if StructureContains Structure = ($<clip>.anims) name = <name>
+		Anim = ($<clip>.anims.<name>)
+		if Anim_AnimExists Anim = <Anim>
+			anim_Getanimlength Anim = <Anim>
 			if (<length> < <endtime>)
-				show_playclip_time {
+				Show_PlayClip_Time {
 					output_results = <output_results>
 					playclip_time_displayed = <playclip_time_displayed>
 					start_frame = <start_frame>
 					end_frame = <end_frame>
 					next_anim_time = <next_anim_time>
 				}
-				formattext textname = warning qs(0xd2acb46c) a = <anim> b = <length> c = <endtime>
-				print_camera_sync_warning warning = <warning> output_results = <output_results>
+				FormatText TextName = warning qs("  Am anim has a length %b which is shorter than clip length %c ") a = <Anim> b = <length> c = <endtime>
+				Print_Camera_Sync_Warning warning = <warning> output_results = <output_results>
 				found_problem = true
 			endif
 		endif

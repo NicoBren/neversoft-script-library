@@ -13,38 +13,38 @@ script create_final_set_list_menu {
 	new_menu scrollid = <menu_id> vmenuid = <vmenu_id> use_backdrop = (1) menu_pos = <pos> event_handlers = <online_final_setlist_event_handlers>
 	array_entry = 0
 	begin
-	if (($finalsonglist [<array_entry>]) = -1)
-		<newtext> = qs(0xa3b37472)
+	if (($FinalSongList [<array_entry>]) = -1)
+		<newText> = qs("\L--------")
 	else
-		get_songlist_checksum index = ($finalsonglist [<array_entry>])
+		get_songlist_checksum index = ($FinalSongList [<array_entry>])
 		get_song_title song = <song_checksum>
-		<newtext> = <song_title>
+		<newText> = <song_title>
 	endif
-	formattext checksumname = item_id 'final_setlist_item_%s' s = <array_entry>
-	createscreenelement {
-		type = textelement
+	FormatText checksumname = item_id 'final_setlist_item_%s' s = <array_entry>
+	CreateScreenElement {
+		type = TextElement
 		parent = <vmenu_id>
 		id = <item_id>
 		font = fontgrid_text_a3
 		scale = 0.75
 		rgba = [210 210 210 250]
-		text = <newtext>
+		text = <newText>
 		just = [left top]
 	}
 	<array_entry> = (<array_entry> + 1)
-	repeat (($numberofsongsinfo [($numberofsongs [($menucontrol)].value)]).value)
-	if ishost
-		createscreenelement {
-			type = textelement
+	repeat (($NumberOfSongsInfo [($NumberOfSongs [($MenuControl)].value)]).value)
+	if IsHost
+		CreateScreenElement {
+			type = TextElement
 			parent = <vmenu_id>
 			font = fontgrid_text_a3
 			scale = 0.75
 			rgba = [210 210 210 250]
-			text = qs(0xa31edcdd)
+			text = qs("Press A when the final song is selected")
 			just = [left top]
 		}
 	endif
-	launchevent type = focus target = <vmenu_id>
+	LaunchEvent type = focus target = <vmenu_id>
 	check_final_setlist_ready
 endscript
 
@@ -55,10 +55,10 @@ script destroy_final_set_list_menu
 endscript
 
 script check_back_action_final_setlist 
-	if (($numberofsongsinfo [($numberofsongs [($menucontrol)].value)].value) = 1)
+	if (($NumberOfSongsInfo [($NumberOfSongs [($MenuControl)].value)].value) = 1)
 		check_for_final_song_selection
 		if (<can_select_final_song> = false)
-			sendnetmessage \{type = song_selection
+			SendNetMessage \{type = song_selection
 				song_index = -1
 				selection_value = 0
 				final_selection = -1
@@ -74,27 +74,27 @@ script network_player_change_final_setlist \{type = select
 		tie_breaker_song = false}
 	if (<type> = select)
 		if (<tie_breaker_song> = true)
-			formattext checksumname = id 'final_setlist_item_%s' s = (($numberofsongsinfo [($numberofsongs [($menucontrol)].value)].value) -1)
-			get_song_title song = ($gh_songlist [($finalsonglist [(($numberofsongsinfo [($numberofsongs [($menucontrol)].value)].value) -1)])])
+			FormatText checksumname = id 'final_setlist_item_%s' s = (($NumberOfSongsInfo [($NumberOfSongs [($MenuControl)].value)].value) -1)
+			get_song_title song = ($gh_songlist [($FinalSongList [(($NumberOfSongsInfo [($NumberOfSongs [($MenuControl)].value)].value) -1)])])
 		endif
-		if ishost
-			formattext checksumname = id 'final_setlist_item_%s' s = ((($remoteplayersongselections) * 2) + 1)
-			get_song_title song = ($gh_songlist [($finalsonglist [((($remoteplayersongselections) * 2) + 1)])])
+		if IsHost
+			FormatText checksumname = id 'final_setlist_item_%s' s = ((($RemotePlayerSongSelections) * 2) + 1)
+			get_song_title song = ($gh_songlist [($FinalSongList [((($RemotePlayerSongSelections) * 2) + 1)])])
 		else
-			formattext checksumname = id 'final_setlist_item_%s' s = (($remoteplayersongselections) * 2)
-			get_song_title song = ($gh_songlist [($finalsonglist [(($remoteplayersongselections) * 2)])])
+			FormatText checksumname = id 'final_setlist_item_%s' s = (($RemotePlayerSongSelections) * 2)
+			get_song_title song = ($gh_songlist [($FinalSongList [(($RemotePlayerSongSelections) * 2)])])
 		endif
 		new_text = <song_title>
 	else
-		new_text = qs(0xa3b37472)
+		new_text = qs("\L--------")
 		if (<tie_breaker_song> = true)
-			formattext checksumname = id 'final_setlist_item_%s' s = (($numberofsongsinfo [($numberofsongs [($menucontrol)].value)].value) -1)
+			FormatText checksumname = id 'final_setlist_item_%s' s = (($NumberOfSongsInfo [($NumberOfSongs [($MenuControl)].value)].value) -1)
 		endif
-		if ishost
-			formattext checksumname = id 'final_setlist_item_%s' s = ((($remoteplayersongselections) * 2) + 1)
+		if IsHost
+			FormatText checksumname = id 'final_setlist_item_%s' s = ((($RemotePlayerSongSelections) * 2) + 1)
 		else
-			formattext checksumname = id 'final_setlist_item_%s' s = (($remoteplayersongselections) * 2)
+			FormatText checksumname = id 'final_setlist_item_%s' s = (($RemotePlayerSongSelections) * 2)
 		endif
 	endif
-	<id> :se_setprops text = <new_text>
+	<id> :SE_SetProps text = <new_text>
 endscript

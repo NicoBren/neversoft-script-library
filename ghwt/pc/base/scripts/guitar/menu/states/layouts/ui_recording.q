@@ -6,7 +6,7 @@ endscript
 script ui_destroy_recording 
 	destroy_jam_recording_menu
 	jam_force_kill_tutorial \{status = force_exit}
-	destroyscreenelement \{id = training_container}
+	DestroyScreenElement \{id = training_container}
 endscript
 
 script ui_deinit_recording 

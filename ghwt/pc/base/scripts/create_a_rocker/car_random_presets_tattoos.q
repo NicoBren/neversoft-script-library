@@ -5,12 +5,12 @@ cas_preset_tattoo_female = [
 	{
 		cap = [
 			{
-				base_tex = `tex\models\characters\car\female\car_female_body_tat_o_dnc.dds`
-				material = car_female_body
-				cas_1
+				base_tex = `tex\models\Characters\CAR\female\CAR_female_BODY_tat_O_dnc.dds`
+				material = CAR_Female_BODY
+				Cas_1
 				layers = [
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_graphics_spiral.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_graphics_spiral.img`
 						color = navy_1
 						x_trans = -1
 						y_trans = -23
@@ -20,7 +20,7 @@ cas_preset_tattoo_female = [
 						a = 55
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_icons047.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_icons047.img`
 						color = navy_1
 						x_trans = 50
 						y_trans = -28
@@ -32,12 +32,12 @@ cas_preset_tattoo_female = [
 				]
 			}
 			{
-				base_tex = `tex\models\characters\car\female\car_female_armr_tat_o_dnc.dds`
-				material = car_female_armr
-				cas_1
+				base_tex = `tex\models\Characters\CAR\female\CAR_female_ARMR_tat_O_dnc.dds`
+				material = CAR_female_ArmR
+				Cas_1
 				layers = [
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_icon_insect001.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_Icon_Insect001.img`
 						color = navy_1
 						x_trans = 3
 						y_trans = 43
@@ -60,12 +60,12 @@ cas_preset_tattoo_female = [
 				]
 			}
 			{
-				base_tex = `tex\models\characters\car\female\car_female_arml_tat_o_dnc.dds`
-				material = car_female_arml
-				cas_1
+				base_tex = `tex\models\Characters\CAR\female\CAR_female_ARML_tat_O_dnc.dds`
+				material = CAR_female_ArmL
+				Cas_1
 				layers = [
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_icon_insect003.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_Icon_Insect003.img`
 						color = red_1
 						a = 65
 						x_trans = -7
@@ -81,13 +81,13 @@ cas_preset_tattoo_female = [
 	{
 		cap = [
 			{
-				base_tex = `tex\models\characters\car\female\car_female_body_tat_o_dnc.dds`
-				material = car_female_body
-				cas_1
+				base_tex = `tex\models\Characters\CAR\female\CAR_female_BODY_tat_O_dnc.dds`
+				material = CAR_Female_BODY
+				Cas_1
 				layers = [
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_005.img`
-						color = black_1guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_005.img`
+						color = Black_1guitar
 						x_trans = 35
 						y_trans = -19
 						x_scale = 5
@@ -96,18 +96,18 @@ cas_preset_tattoo_female = [
 						rot = 6103
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_005.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_005.img`
 						x_trans = 39
 						y_trans = -19
 						x_scale = 5
 						y_scale = 12
 						rot = 180
 						flags = 3
-						color = black_1guitar
+						color = Black_1guitar
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_017.img`
-						color = black_1guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_017.img`
+						color = Black_1guitar
 						x_trans = 42
 						y_trans = -23
 						x_scale = 15
@@ -116,7 +116,7 @@ cas_preset_tattoo_female = [
 						y_scale = 13
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_017.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_017.img`
 						x_trans = 42
 						y_trans = -23
 						x_scale = 11
@@ -126,7 +126,7 @@ cas_preset_tattoo_female = [
 						color = red_4
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_017.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_017.img`
 						x_trans = 42
 						y_trans = -23
 						x_scale = 8
@@ -136,8 +136,8 @@ cas_preset_tattoo_female = [
 						color = violet_1
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_017.img`
-						color = black_1guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_017.img`
+						color = Black_1guitar
 						x_trans = 42
 						y_trans = -30
 						x_scale = 15
@@ -146,7 +146,7 @@ cas_preset_tattoo_female = [
 						y_scale = 13
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_017.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_017.img`
 						x_trans = 42
 						y_trans = -30
 						x_scale = 13
@@ -156,7 +156,7 @@ cas_preset_tattoo_female = [
 						color = violet_4
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_017.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_017.img`
 						color = red_3
 						x_trans = 42
 						y_trans = -30
@@ -166,8 +166,8 @@ cas_preset_tattoo_female = [
 						y_scale = 8
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_017.img`
-						color = black_1guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_017.img`
+						color = Black_1guitar
 						x_trans = 33
 						y_trans = -30
 						x_scale = 15
@@ -176,7 +176,7 @@ cas_preset_tattoo_female = [
 						y_scale = 13
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_017.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_017.img`
 						color = violet_4
 						x_trans = 33
 						y_trans = -30
@@ -186,7 +186,7 @@ cas_preset_tattoo_female = [
 						x_scale = 13
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_017.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_017.img`
 						color = red_3
 						x_trans = 33
 						y_trans = -30
@@ -196,8 +196,8 @@ cas_preset_tattoo_female = [
 						y_scale = 6
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_017.img`
-						color = black_1guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_017.img`
+						color = Black_1guitar
 						x_trans = 32
 						y_trans = -24
 						x_scale = 15
@@ -206,7 +206,7 @@ cas_preset_tattoo_female = [
 						y_scale = 13
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_017.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_017.img`
 						color = red_4
 						x_trans = 32
 						y_trans = -24
@@ -216,7 +216,7 @@ cas_preset_tattoo_female = [
 						x_scale = 13
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_017.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_017.img`
 						x_trans = 32
 						y_trans = -24
 						x_scale = 9
@@ -226,8 +226,8 @@ cas_preset_tattoo_female = [
 						color = violet_1
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_001.img`
-						color = black_1guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_001.img`
+						color = Black_1guitar
 						x_trans = 37
 						y_trans = -28
 						x_scale = 3
@@ -235,7 +235,7 @@ cas_preset_tattoo_female = [
 						y_scale = 13
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_001.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_001.img`
 						color = yellow_orange_1
 						x_trans = 37
 						y_trans = -28
@@ -244,8 +244,8 @@ cas_preset_tattoo_female = [
 						y_scale = 11
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_001.img`
-						color = black_1guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_001.img`
+						color = Black_1guitar
 						x_trans = 33
 						y_trans = -16
 						x_scale = 3
@@ -253,17 +253,17 @@ cas_preset_tattoo_female = [
 						y_scale = 3
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_001.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_001.img`
 						x_trans = 41
 						y_trans = -16
 						x_scale = 3
 						y_scale = 3
 						flags = 3
-						color = black_1guitar
+						color = Black_1guitar
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_021.img`
-						color = black_1guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_021.img`
+						color = Black_1guitar
 						x_trans = 37
 						x_scale = 5
 						y_scale = 2
@@ -271,8 +271,8 @@ cas_preset_tattoo_female = [
 						y_trans = -26
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_021.img`
-						color = black_1guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_021.img`
+						color = Black_1guitar
 						x_trans = 37
 						x_scale = 5
 						y_scale = 2
@@ -280,8 +280,8 @@ cas_preset_tattoo_female = [
 						y_trans = -28
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_021.img`
-						color = black_1guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_021.img`
+						color = Black_1guitar
 						x_trans = 37
 						x_scale = 5
 						y_scale = 2
@@ -295,13 +295,13 @@ cas_preset_tattoo_female = [
 	{
 		cap = [
 			{
-				base_tex = `tex\models\characters\car\female\car_female_body_tat_o_dnc.dds`
-				material = car_female_body
-				cas_1
+				base_tex = `tex\models\Characters\CAR\female\CAR_female_BODY_tat_O_dnc.dds`
+				material = CAR_Female_BODY
+				Cas_1
 				layers = [
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_icon006.img`
-						color = black_1guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_Icon006.img`
+						color = Black_1guitar
 						x_trans = 17
 						x_scale = 38
 						y_scale = 47
@@ -310,8 +310,8 @@ cas_preset_tattoo_female = [
 						y_trans = -24
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_icon005.img`
-						color = black_1guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_Icon005.img`
+						color = Black_1guitar
 						y_trans = 3
 						x_scale = 20
 						y_scale = 20
@@ -320,8 +320,8 @@ cas_preset_tattoo_female = [
 						x_trans = 23
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_icons044.img`
-						color = black_1guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_icons044.img`
+						color = Black_1guitar
 						y_trans = -20
 						x_scale = 3
 						y_scale = 4
@@ -330,8 +330,8 @@ cas_preset_tattoo_female = [
 						x_trans = -16
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_icons044.img`
-						color = black_1guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_icons044.img`
+						color = Black_1guitar
 						x_trans = -22
 						y_trans = -15
 						x_scale = 3
@@ -340,8 +340,8 @@ cas_preset_tattoo_female = [
 						rot = 420
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_icons044.img`
-						color = black_1guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_icons044.img`
+						color = Black_1guitar
 						x_trans = -20
 						y_trans = -29
 						x_scale = 5
@@ -350,8 +350,8 @@ cas_preset_tattoo_female = [
 						rot = 240
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_icon007.img`
-						color = black_1guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_Icon007.img`
+						color = Black_1guitar
 						y_trans = -20
 						x_scale = 20
 						y_scale = 20
@@ -360,8 +360,8 @@ cas_preset_tattoo_female = [
 						x_trans = 31
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_icon007.img`
-						color = black_1guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_Icon007.img`
+						color = Black_1guitar
 						y_trans = -30
 						x_scale = 20
 						y_scale = 20
@@ -370,7 +370,7 @@ cas_preset_tattoo_female = [
 						x_trans = 29
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_icons055.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_icons055.img`
 						color = violet_1
 						y_trans = -42
 						x_scale = 11
@@ -379,7 +379,7 @@ cas_preset_tattoo_female = [
 						x_trans = -14
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_icons055.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_icons055.img`
 						color = violet_1
 						y_trans = -43
 						x_scale = 11
@@ -389,8 +389,8 @@ cas_preset_tattoo_female = [
 						x_trans = 12
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_icon008.img`
-						color = black_1guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_Icon008.img`
+						color = Black_1guitar
 						x_trans = 56
 						x_scale = 20
 						y_scale = 20
@@ -399,8 +399,8 @@ cas_preset_tattoo_female = [
 						y_trans = -37
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_icon008.img`
-						color = black_1guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_Icon008.img`
+						color = Black_1guitar
 						x_trans = 44
 						y_trans = -37
 						x_scale = 20
@@ -415,12 +415,12 @@ cas_preset_tattoo_female = [
 	{
 		cap = [
 			{
-				base_tex = `tex\models\characters\car\female\car_female_body_tat_o_dnc.dds`
-				material = car_female_body
-				cas_1
+				base_tex = `tex\models\Characters\CAR\female\CAR_female_BODY_tat_O_dnc.dds`
+				material = CAR_Female_BODY
+				Cas_1
 				layers = [
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_icon_wing006.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_Icon_Wing006.img`
 						color = navy_5
 						y_trans = 2
 						x_skew = 0
@@ -431,7 +431,7 @@ cas_preset_tattoo_female = [
 						x_trans = 61
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_icon_wing006.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_Icon_Wing006.img`
 						x_trans = 40
 						y_trans = 2
 						x_skew = 0
@@ -448,20 +448,20 @@ cas_preset_tattoo_female = [
 	{
 		cap = [
 			{
-				base_tex = `tex\models\characters\car\female\car_female_body_tat_o_dnc.dds`
-				material = car_female_body
-				cas_1
+				base_tex = `tex\models\Characters\CAR\female\CAR_female_BODY_tat_O_dnc.dds`
+				material = CAR_Female_BODY
+				Cas_1
 				layers = [
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_icons058.img`
-						color = black_1guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_icons058.img`
+						color = Black_1guitar
 						x_scale = 20
 						y_scale = 20
 						flags = 3
 						a = 70
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_icon_creature007.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_Icon_Creature007.img`
 						x_trans = 50
 						x_scale = 20
 						y_scale = 20
@@ -469,7 +469,7 @@ cas_preset_tattoo_female = [
 						y_trans = -32
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_icons044.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_icons044.img`
 						color = red_1
 						x_trans = 24
 						y_trans = -32
@@ -478,7 +478,7 @@ cas_preset_tattoo_female = [
 						flags = 3
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_icons044.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_icons044.img`
 						color = red_1
 						x_trans = 24
 						y_trans = -23
@@ -487,7 +487,7 @@ cas_preset_tattoo_female = [
 						flags = 3
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_icons044.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_icons044.img`
 						color = red_1
 						x_trans = 24
 						y_trans = -13
@@ -496,7 +496,7 @@ cas_preset_tattoo_female = [
 						flags = 3
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_icons044.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_icons044.img`
 						color = red_1
 						y_trans = -13
 						x_scale = 10
@@ -505,7 +505,7 @@ cas_preset_tattoo_female = [
 						x_trans = -23
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_icons044.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_icons044.img`
 						color = red_1
 						y_trans = -23
 						x_scale = 10
@@ -514,7 +514,7 @@ cas_preset_tattoo_female = [
 						x_trans = -23
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_icons044.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_icons044.img`
 						color = red_1
 						y_trans = -33
 						x_scale = 10
@@ -523,24 +523,24 @@ cas_preset_tattoo_female = [
 						x_trans = -23
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_icon_creature002.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_Icon_Creature002.img`
 						x_trans = 10
 						y_trans = -37
 						x_scale = 20
 						y_scale = 20
 						flags = 3
-						color = black_1guitar
+						color = Black_1guitar
 					}
 				]
 			}
 			{
-				base_tex = `tex\models\characters\car\female\car_female_armr_tat_o_dnc.dds`
-				material = car_female_armr
-				cas_1
+				base_tex = `tex\models\Characters\CAR\female\CAR_female_ARMR_tat_O_dnc.dds`
+				material = CAR_female_ArmR
+				Cas_1
 				layers = [
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_icon013.img`
-						color = black_1guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_Icon013.img`
+						color = Black_1guitar
 						x_trans = 0
 						y_trans = 38
 						x_scale = 30
@@ -554,12 +554,12 @@ cas_preset_tattoo_female = [
 	{
 		cap = [
 			{
-				base_tex = `tex\models\characters\car\female\car_female_body_tat_o_dnc.dds`
-				material = car_female_body
-				cas_1
+				base_tex = `tex\models\Characters\CAR\female\CAR_female_BODY_tat_O_dnc.dds`
+				material = CAR_Female_BODY
+				Cas_1
 				layers = [
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_graphics_punkskull.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_graphics_punkskull.img`
 						x_trans = 9
 						y_trans = -35
 						x_scale = 20
@@ -568,7 +568,7 @@ cas_preset_tattoo_female = [
 						flags = 3
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_graphics_punkskull.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_graphics_punkskull.img`
 						x_trans = -8
 						y_trans = -35
 						x_scale = 20
@@ -579,12 +579,12 @@ cas_preset_tattoo_female = [
 				]
 			}
 			{
-				base_tex = `tex\models\characters\car\female\car_female_armr_tat_o_dnc.dds`
-				material = car_female_armr
-				cas_1
+				base_tex = `tex\models\Characters\CAR\female\CAR_female_ARMR_tat_O_dnc.dds`
+				material = CAR_female_ArmR
+				Cas_1
 				layers = [
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_graphics015.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_graphics015.img`
 						y_trans = -26
 						x_scale = 30
 						y_scale = 30
@@ -594,13 +594,13 @@ cas_preset_tattoo_female = [
 				]
 			}
 			{
-				base_tex = `tex\models\characters\car\female\car_female_arml_tat_o_dnc.dds`
-				material = car_female_arml
-				cas_1
+				base_tex = `tex\models\Characters\CAR\female\CAR_female_ARML_tat_O_dnc.dds`
+				material = CAR_female_ArmL
+				Cas_1
 				layers = [
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_icon026.img`
-						color = black_1guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_Icon026.img`
+						color = Black_1guitar
 						x_trans = 15
 						x_scale = 30
 						y_scale = 26
@@ -608,8 +608,8 @@ cas_preset_tattoo_female = [
 						y_trans = -24
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_icon026.img`
-						color = black_1guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_Icon026.img`
+						color = Black_1guitar
 						x_trans = 8
 						y_trans = -2
 						x_scale = 15
@@ -617,8 +617,8 @@ cas_preset_tattoo_female = [
 						flags = 3
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_icon026.img`
-						color = black_1guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_Icon026.img`
+						color = Black_1guitar
 						x_trans = 19
 						x_scale = 26
 						y_scale = 22
@@ -626,8 +626,8 @@ cas_preset_tattoo_female = [
 						y_trans = 25
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_icon026.img`
-						color = black_1guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_Icon026.img`
+						color = Black_1guitar
 						x_trans = 3
 						y_trans = 9
 						x_scale = 15
@@ -635,8 +635,8 @@ cas_preset_tattoo_female = [
 						flags = 3
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_icon026.img`
-						color = black_1guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_Icon026.img`
+						color = Black_1guitar
 						x_trans = -15
 						x_scale = 15
 						y_scale = 13
@@ -644,8 +644,8 @@ cas_preset_tattoo_female = [
 						y_trans = -5
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_icon026.img`
-						color = black_1guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_Icon026.img`
+						color = Black_1guitar
 						x_trans = 3
 						y_trans = 9
 						x_scale = 15
@@ -653,8 +653,8 @@ cas_preset_tattoo_female = [
 						flags = 3
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_icon026.img`
-						color = black_1guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_Icon026.img`
+						color = Black_1guitar
 						x_trans = -4
 						y_trans = 20
 						x_scale = 15
@@ -662,8 +662,8 @@ cas_preset_tattoo_female = [
 						flags = 3
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_icon026.img`
-						color = black_1guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_Icon026.img`
+						color = Black_1guitar
 						x_trans = -26
 						y_trans = 10
 						x_scale = 31
@@ -671,8 +671,8 @@ cas_preset_tattoo_female = [
 						flags = 3
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_icon026.img`
-						color = black_1guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_Icon026.img`
+						color = Black_1guitar
 						x_trans = -15
 						y_trans = -19
 						x_scale = 31
@@ -680,8 +680,8 @@ cas_preset_tattoo_female = [
 						flags = 3
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_icon026.img`
-						color = black_1guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_Icon026.img`
+						color = Black_1guitar
 						x_trans = -14
 						y_trans = -38
 						x_scale = 20
@@ -689,8 +689,8 @@ cas_preset_tattoo_female = [
 						y_scale = 14
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_icon026.img`
-						color = black_1guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_Icon026.img`
+						color = Black_1guitar
 						y_trans = -19
 						x_scale = 31
 						y_scale = 26
@@ -698,8 +698,8 @@ cas_preset_tattoo_female = [
 						x_trans = -15
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_icon_mammal001.img`
-						color = black_1guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_Icon_Mammal001.img`
+						color = Black_1guitar
 						x_scale = 30
 						y_scale = 30
 						flags = 3
@@ -712,12 +712,12 @@ cas_preset_tattoo_female = [
 	{
 		cap = [
 			{
-				base_tex = `tex\models\characters\car\female\car_female_body_tat_o_dnc.dds`
-				material = car_female_body
-				cas_1
+				base_tex = `tex\models\Characters\CAR\female\CAR_female_BODY_tat_O_dnc.dds`
+				material = CAR_Female_BODY
+				Cas_1
 				layers = [
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_icons046.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_icons046.img`
 						y_trans = -25
 						x_scale = 33
 						y_scale = 33
@@ -725,7 +725,7 @@ cas_preset_tattoo_female = [
 						color = red_orange_2
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_icons046.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_icons046.img`
 						color = yellow_2guitar
 						y_trans = -25
 						x_scale = 33
@@ -735,7 +735,7 @@ cas_preset_tattoo_female = [
 						a = 50
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_icon008.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_Icon008.img`
 						color = green_1guitar
 						a = 55
 						y_trans = -38
@@ -746,7 +746,7 @@ cas_preset_tattoo_female = [
 						x_trans = -14
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_icon008.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_Icon008.img`
 						color = green_1guitar
 						a = 55
 						x_trans = 14
@@ -757,7 +757,7 @@ cas_preset_tattoo_female = [
 						y_trans = -39
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_035.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_035.img`
 						color = green_1guitar
 						y_trans = -42
 						x_scale = 13
@@ -768,12 +768,12 @@ cas_preset_tattoo_female = [
 				]
 			}
 			{
-				base_tex = `tex\models\characters\car\female\car_female_armr_tat_o_dnc.dds`
-				material = car_female_armr
-				cas_1
+				base_tex = `tex\models\Characters\CAR\female\CAR_female_ARMR_tat_O_dnc.dds`
+				material = CAR_female_ArmR
+				Cas_1
 				layers = [
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_graphics104.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_graphics104.img`
 						y_trans = 30
 						x_scale = 55
 						y_scale = 35
@@ -783,13 +783,13 @@ cas_preset_tattoo_female = [
 				]
 			}
 			{
-				base_tex = `tex\models\characters\car\female\car_female_arml_tat_o_dnc.dds`
-				material = car_female_arml
-				cas_1
+				base_tex = `tex\models\Characters\CAR\female\CAR_female_ARML_tat_O_dnc.dds`
+				material = CAR_female_ArmL
+				Cas_1
 				layers = [
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_icon015.img`
-						color = black_1guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_Icon015.img`
+						color = Black_1guitar
 						a = 65
 						x_trans = -2
 						y_trans = 22
@@ -799,8 +799,8 @@ cas_preset_tattoo_female = [
 						x_scale = 13
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_icon015.img`
-						color = black_1guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_Icon015.img`
+						color = Black_1guitar
 						a = 65
 						x_trans = -2
 						x_scale = 13
@@ -816,36 +816,36 @@ cas_preset_tattoo_female = [
 	{
 		cap = [
 			{
-				base_tex = `tex/models/characters/global/global_blank_head_dnc.dds`
-				material = car_female_head
-				cas_1
+				base_tex = `tex/models/Characters/Global/Global_Blank_Head_dnc.dds`
+				material = CAR_female_head
+				Cas_1
 				post_layer = [
 					{
-						texture = `tex/models/characters/layers/car/female/makeup/car_female_makeup06.img`
+						texture = `tex/models/Characters/Layers/CAR/female/Makeup/CAR_female_Makeup06.img`
 						flags = 4
 					}
 					{
-						texture = `tex/models/characters/layers/car/female/makeup/car_female_makeup_lip03.img`
+						texture = `tex/models/Characters/Layers/CAR/female/Makeup/CAR_female_Makeup_lip03.img`
 						flags = 4
 					}
 				]
 			}
 			{
-				base_tex = `tex\models\characters\car\female\car_female_armr_tat_o_dnc.dds`
-				material = car_female_armr
-				cas_1
+				base_tex = `tex\models\Characters\CAR\female\CAR_female_ARMR_tat_O_dnc.dds`
+				material = CAR_female_ArmR
+				Cas_1
 				layers = [
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_035.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_035.img`
 						x_trans = 1
 						y_trans = 35
 						x_scale = 40
 						y_scale = 30
 						flags = 3
-						color = black_1guitar
+						color = Black_1guitar
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_035.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_035.img`
 						x_trans = 1
 						y_trans = 35
 						x_scale = 32
@@ -854,16 +854,16 @@ cas_preset_tattoo_female = [
 						color = red_2
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_035.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_035.img`
 						x_trans = 1
 						y_trans = 35
 						x_scale = 22
 						y_scale = 18
 						flags = 3
-						color = black_1guitar
+						color = Black_1guitar
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_035.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_035.img`
 						x_trans = 1
 						y_trans = 35
 						x_scale = 16
@@ -872,23 +872,23 @@ cas_preset_tattoo_female = [
 						color = red_2
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_035.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_035.img`
 						x_trans = 1
 						y_trans = 35
 						x_scale = 10
 						y_scale = 8
 						flags = 3
-						color = black_1guitar
+						color = Black_1guitar
 					}
 				]
 			}
 			{
-				base_tex = `tex\models\characters\car\female\car_female_arml_tat_o_dnc.dds`
-				material = car_female_arml
-				cas_1
+				base_tex = `tex\models\Characters\CAR\female\CAR_female_ARML_tat_O_dnc.dds`
+				material = CAR_female_ArmL
+				Cas_1
 				layers = [
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_graphics100.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_graphics100.img`
 						x_trans = -2
 						y_trans = 32
 						y_scale = 30
@@ -896,7 +896,7 @@ cas_preset_tattoo_female = [
 						x_scale = 52
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_011.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_011.img`
 						color = red_3
 						y_trans = -44
 						x_scale = 23
@@ -905,8 +905,8 @@ cas_preset_tattoo_female = [
 						x_trans = -2
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_011.img`
-						color = black_1guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_011.img`
+						color = Black_1guitar
 						x_trans = -2
 						x_scale = 16
 						y_scale = 3
@@ -914,7 +914,7 @@ cas_preset_tattoo_female = [
 						y_trans = -44
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_011.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_011.img`
 						color = red_3
 						x_trans = -2
 						x_scale = 23
@@ -923,8 +923,8 @@ cas_preset_tattoo_female = [
 						y_trans = -41
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_011.img`
-						color = black_1guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_011.img`
+						color = Black_1guitar
 						x_trans = -2
 						y_trans = -41
 						x_scale = 17
@@ -934,13 +934,13 @@ cas_preset_tattoo_female = [
 				]
 			}
 			{
-				base_tex = `tex\models\characters\car\female\car_female_body_tat_o_dnc.dds`
-				material = car_female_body
-				cas_1
+				base_tex = `tex\models\Characters\CAR\female\CAR_female_BODY_tat_O_dnc.dds`
+				material = CAR_Female_BODY
+				Cas_1
 				layers = [
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_plant_001.img`
-						color = black_1guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_plant_001.img`
+						color = Black_1guitar
 						a = 75
 						x_trans = 8
 						y_trans = 23
@@ -951,14 +951,14 @@ cas_preset_tattoo_female = [
 						rot = 0
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_icon_mammal001.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_Icon_Mammal001.img`
 						x_trans = -49
 						y_trans = 41
 						x_scale = 31
 						y_scale = 16
 						rot = 210
 						flags = 3
-						color = black_1guitar
+						color = Black_1guitar
 					}
 				]
 			}
@@ -967,13 +967,13 @@ cas_preset_tattoo_female = [
 	{
 		cap = [
 			{
-				base_tex = `tex\models\characters\car\female\car_female_body_tat_o_dnc.dds`
-				material = car_female_body
-				cas_1
+				base_tex = `tex\models\Characters\CAR\female\CAR_female_BODY_tat_O_dnc.dds`
+				material = CAR_Female_BODY
+				Cas_1
 				layers = [
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_icon_creature002.img`
-						color = black_1guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_Icon_Creature002.img`
+						color = Black_1guitar
 						a = 100
 						y_trans = 0
 						x_skew = 0
@@ -983,7 +983,7 @@ cas_preset_tattoo_female = [
 						x_trans = 53
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_icons055.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_icons055.img`
 						color = red_1
 						x_trans = 1
 						y_trans = -36
@@ -995,7 +995,7 @@ cas_preset_tattoo_female = [
 						x_scale = 6
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_icons055.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_icons055.img`
 						color = red_1
 						y_trans = -36
 						x_skew = 0
@@ -1007,7 +1007,7 @@ cas_preset_tattoo_female = [
 						x_trans = -7
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_icons055.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_icons055.img`
 						color = red_1
 						y_trans = -36
 						x_skew = 0
@@ -1019,8 +1019,8 @@ cas_preset_tattoo_female = [
 						x_trans = 9
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshapegradient_003.img`
-						color = black_1guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShapeGradient_003.img`
+						color = Black_1guitar
 						y_trans = 24
 						x_skew = -6
 						x_scale = 9
@@ -1031,13 +1031,13 @@ cas_preset_tattoo_female = [
 				]
 			}
 			{
-				base_tex = `tex\models\characters\car\female\car_female_arml_tat_o_dnc.dds`
-				material = car_female_arml
-				cas_1
+				base_tex = `tex\models\Characters\CAR\female\CAR_female_ARML_tat_O_dnc.dds`
+				material = CAR_female_ArmL
+				Cas_1
 				layers = [
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_icon_creature003.img`
-						color = black_1guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_Icon_Creature003.img`
+						color = Black_1guitar
 						x_trans = -1
 						x_scale = 43
 						y_scale = 28
@@ -1045,7 +1045,7 @@ cas_preset_tattoo_female = [
 						y_trans = 28
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_icon032.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_Icon032.img`
 						x_trans = 1
 						y_trans = 32
 						x_scale = 30
@@ -1057,13 +1057,13 @@ cas_preset_tattoo_female = [
 				]
 			}
 			{
-				base_tex = `tex\models\characters\car\female\car_female_armr_tat_o_dnc.dds`
-				material = car_female_armr
-				cas_1
+				base_tex = `tex\models\Characters\CAR\female\CAR_female_ARMR_tat_O_dnc.dds`
+				material = CAR_female_ArmR
+				Cas_1
 				layers = [
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_icon016.img`
-						color = black_1guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_Icon016.img`
+						color = Black_1guitar
 						x_trans = 4
 						y_trans = -38
 						x_scale = 20
@@ -1072,8 +1072,8 @@ cas_preset_tattoo_female = [
 						y_scale = 8
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_icon016.img`
-						color = black_1guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_Icon016.img`
+						color = Black_1guitar
 						y_trans = -38
 						x_scale = 20
 						y_scale = 8
@@ -1082,8 +1082,8 @@ cas_preset_tattoo_female = [
 						x_trans = 22
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_icon016.img`
-						color = black_1guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_Icon016.img`
+						color = Black_1guitar
 						y_trans = -38
 						x_scale = 20
 						y_scale = 8
@@ -1092,8 +1092,8 @@ cas_preset_tattoo_female = [
 						x_trans = -14
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_icons046.img`
-						color = black_1guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_icons046.img`
+						color = Black_1guitar
 						y_trans = 37
 						x_scale = 30
 						y_scale = 19
@@ -1101,8 +1101,8 @@ cas_preset_tattoo_female = [
 						x_trans = 5
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_icons046.img`
-						color = black_1guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_icons046.img`
+						color = Black_1guitar
 						x_trans = 5
 						y_trans = 37
 						y_scale = 19
@@ -1117,12 +1117,12 @@ cas_preset_tattoo_female = [
 	{
 		cap = [
 			{
-				base_tex = `tex\models\characters\car\female\car_female_body_tat_o_dnc.dds`
-				material = car_female_body
-				cas_1
+				base_tex = `tex\models\Characters\CAR\female\CAR_female_BODY_tat_O_dnc.dds`
+				material = CAR_Female_BODY
+				Cas_1
 				layers = [
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_graphics035.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_graphics035.img`
 						y_trans = -44
 						x_scale = 37
 						y_scale = 35
@@ -1130,7 +1130,7 @@ cas_preset_tattoo_female = [
 						a = 70
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_elemental003.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_elemental003.img`
 						x_trans = -9
 						y_trans = 20
 						x_scale = 27
@@ -1139,7 +1139,7 @@ cas_preset_tattoo_female = [
 						a = 75
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_plant_003.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_plant_003.img`
 						x_trans = -50
 						y_trans = -30
 						x_scale = 20
@@ -1154,24 +1154,24 @@ cas_preset_tattoo_female = [
 	{
 		cap = [
 			{
-				base_tex = `tex/models/characters/global/global_blank_head_dnc.dds`
-				material = car_female_head
-				cas_1
+				base_tex = `tex/models/Characters/Global/Global_Blank_Head_dnc.dds`
+				material = CAR_female_head
+				Cas_1
 				post_layer = [
 					{
-						texture = `tex/models/characters/layers/car/female/makeup/car_female_makeup02.img`
+						texture = `tex/models/Characters/Layers/CAR/Female/Makeup/CAR_female_Makeup02.img`
 						flags = 4
 					}
 				]
 			}
 			{
-				base_tex = `tex\models\characters\car\female\car_female_body_tat_o_dnc.dds`
-				material = car_female_body
-				cas_1
+				base_tex = `tex\models\Characters\CAR\female\CAR_female_BODY_tat_O_dnc.dds`
+				material = CAR_Female_BODY
+				Cas_1
 				layers = [
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_icon_mammal001.img`
-						color = black_1guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_Icon_Mammal001.img`
+						color = Black_1guitar
 						y_trans = -16
 						x_scale = 25
 						y_scale = 25
@@ -1179,8 +1179,8 @@ cas_preset_tattoo_female = [
 						x_trans = 11
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_icon_mammal001.img`
-						color = black_1guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_Icon_Mammal001.img`
+						color = Black_1guitar
 						y_trans = -22
 						y_skew = -33
 						x_scale = 21
@@ -1190,8 +1190,8 @@ cas_preset_tattoo_female = [
 						x_trans = 28
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_icon_mammal001.img`
-						color = black_1guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_Icon_Mammal001.img`
+						color = Black_1guitar
 						y_trans = -11
 						y_skew = -33
 						x_scale = 10
@@ -1201,8 +1201,8 @@ cas_preset_tattoo_female = [
 						x_trans = 27
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_icon_mammal001.img`
-						color = black_1guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_Icon_Mammal001.img`
+						color = Black_1guitar
 						y_trans = -7
 						x_skew = 60
 						y_skew = -48
@@ -1213,8 +1213,8 @@ cas_preset_tattoo_female = [
 						x_trans = 13
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_icon_mammal001.img`
-						color = black_1guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_Icon_Mammal001.img`
+						color = Black_1guitar
 						y_trans = -15
 						x_scale = 27
 						y_scale = 30
@@ -1223,8 +1223,8 @@ cas_preset_tattoo_female = [
 						x_trans = -8
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_icon_wing002.img`
-						color = black_1guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_Icon_Wing002.img`
+						color = Black_1guitar
 						y_trans = -8
 						x_scale = 20
 						y_scale = 20
@@ -1233,8 +1233,8 @@ cas_preset_tattoo_female = [
 						x_trans = -4
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_icon_wing002.img`
-						color = black_1guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_Icon_Wing002.img`
+						color = Black_1guitar
 						y_trans = -17
 						x_scale = 20
 						y_scale = 20
@@ -1243,8 +1243,8 @@ cas_preset_tattoo_female = [
 						x_trans = -16
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_icon_mammal001.img`
-						color = black_1guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_Icon_Mammal001.img`
+						color = Black_1guitar
 						y_trans = -16
 						x_skew = -48
 						x_scale = 12
@@ -1254,8 +1254,8 @@ cas_preset_tattoo_female = [
 						x_trans = 41
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_icon_mammal001.img`
-						color = black_1guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_Icon_Mammal001.img`
+						color = Black_1guitar
 						y_trans = -25
 						x_skew = -6
 						x_scale = 8
@@ -1265,8 +1265,8 @@ cas_preset_tattoo_female = [
 						x_trans = 36
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_icon_mammal001.img`
-						color = black_1guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_Icon_Mammal001.img`
+						color = Black_1guitar
 						y_trans = -30
 						x_skew = -6
 						x_scale = 5
@@ -1276,8 +1276,8 @@ cas_preset_tattoo_female = [
 						x_trans = 43
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_icon_mammal001.img`
-						color = black_1guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_Icon_Mammal001.img`
+						color = Black_1guitar
 						y_trans = -25
 						x_skew = -6
 						y_skew = -36
@@ -1288,8 +1288,8 @@ cas_preset_tattoo_female = [
 						x_trans = 44
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_icon_mammal001.img`
-						color = black_1guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_Icon_Mammal001.img`
+						color = Black_1guitar
 						x_trans = 46
 						y_trans = -32
 						x_skew = -6
@@ -1305,13 +1305,13 @@ cas_preset_tattoo_female = [
 	{
 		cap = [
 			{
-				base_tex = `tex\models\characters\car\female\car_female_body_tat_o_dnc.dds`
-				material = car_female_body
-				cas_1
+				base_tex = `tex\models\Characters\CAR\female\CAR_female_BODY_tat_O_dnc.dds`
+				material = CAR_Female_BODY
+				Cas_1
 				layers = [
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_icon010.img`
-						color = black_1guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_Icon010.img`
+						color = Black_1guitar
 						y_trans = -21
 						x_scale = 20
 						y_scale = 20
@@ -1320,8 +1320,8 @@ cas_preset_tattoo_female = [
 						x_trans = -1
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_icon010.img`
-						color = black_1guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_Icon010.img`
+						color = Black_1guitar
 						x_trans = 9
 						x_scale = 20
 						y_scale = 20
@@ -1330,8 +1330,8 @@ cas_preset_tattoo_female = [
 						y_trans = -23
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_icon007.img`
-						color = black_1guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_Icon007.img`
+						color = Black_1guitar
 						x_trans = 7
 						x_scale = 13
 						y_scale = 10
@@ -1340,8 +1340,8 @@ cas_preset_tattoo_female = [
 						y_trans = -15
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_icon007.img`
-						color = black_1guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_Icon007.img`
+						color = Black_1guitar
 						x_trans = 9
 						y_trans = -7
 						x_scale = 11
@@ -1350,8 +1350,8 @@ cas_preset_tattoo_female = [
 						rot = 150
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_icon001.img`
-						color = black_1guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_Icon001.img`
+						color = Black_1guitar
 						x_trans = 3
 						x_scale = 10
 						y_scale = 17
@@ -1360,8 +1360,8 @@ cas_preset_tattoo_female = [
 						y_trans = -24
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_icon029.img`
-						color = black_1guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_Icon029.img`
+						color = Black_1guitar
 						y_trans = -35
 						x_scale = 6
 						y_scale = 8
@@ -1370,8 +1370,8 @@ cas_preset_tattoo_female = [
 						x_trans = 9
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_icon029.img`
-						color = black_1guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_Icon029.img`
+						color = Black_1guitar
 						x_trans = -5
 						x_scale = 6
 						y_scale = 8
@@ -1380,8 +1380,8 @@ cas_preset_tattoo_female = [
 						y_trans = -32
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_icon029.img`
-						color = black_1guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_Icon029.img`
+						color = Black_1guitar
 						x_trans = -3
 						y_trans = -32
 						y_scale = 8
@@ -1390,8 +1390,8 @@ cas_preset_tattoo_female = [
 						x_scale = 4
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_icon029.img`
-						color = black_1guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_Icon029.img`
+						color = Black_1guitar
 						y_trans = -33
 						x_scale = 4
 						y_scale = 8
@@ -1400,8 +1400,8 @@ cas_preset_tattoo_female = [
 						x_trans = 7
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_004.img`
-						color = black_1guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_004.img`
+						color = Black_1guitar
 						y_trans = -5
 						x_scale = 10
 						y_scale = 8
@@ -1410,8 +1410,8 @@ cas_preset_tattoo_female = [
 						x_trans = 4
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_icon004.img`
-						color = black_1guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_Icon004.img`
+						color = Black_1guitar
 						y_trans = -5
 						x_scale = 4
 						y_scale = 5
@@ -1422,13 +1422,13 @@ cas_preset_tattoo_female = [
 				]
 			}
 			{
-				base_tex = `tex\models\characters\car\female\car_female_armr_tat_o_dnc.dds`
-				material = car_female_armr
-				cas_1
+				base_tex = `tex\models\Characters\CAR\female\CAR_female_ARMR_tat_O_dnc.dds`
+				material = CAR_female_ArmR
+				Cas_1
 				layers = [
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_icon007.img`
-						color = black_1guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_Icon007.img`
+						color = Black_1guitar
 						y_trans = 22
 						x_scale = 30
 						y_scale = 30
@@ -1437,8 +1437,8 @@ cas_preset_tattoo_female = [
 						x_trans = 4
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_icon007.img`
-						color = black_1guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_Icon007.img`
+						color = Black_1guitar
 						x_trans = 21
 						x_scale = 30
 						y_scale = 30
@@ -1447,8 +1447,8 @@ cas_preset_tattoo_female = [
 						y_trans = 23
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_icon007.img`
-						color = black_1guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_Icon007.img`
+						color = Black_1guitar
 						x_trans = -14
 						x_scale = 30
 						y_scale = 30
@@ -1459,21 +1459,21 @@ cas_preset_tattoo_female = [
 				]
 			}
 			{
-				base_tex = `tex\models\characters\car\female\car_female_arml_tat_o_dnc.dds`
-				material = car_female_arml
-				cas_1
+				base_tex = `tex\models\Characters\CAR\female\CAR_female_ARML_tat_O_dnc.dds`
+				material = CAR_female_ArmL
+				Cas_1
 				layers = [
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_icon007.img`
-						color = black_1guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_Icon007.img`
+						color = Black_1guitar
 						x_scale = 30
 						y_scale = 30
 						flags = 3
 						rot = 5593
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_icon007.img`
-						color = black_1guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_Icon007.img`
+						color = Black_1guitar
 						x_trans = 23
 						x_scale = 30
 						y_scale = 30
@@ -1482,8 +1482,8 @@ cas_preset_tattoo_female = [
 						y_trans = -14
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_icon007.img`
-						color = black_1guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_Icon007.img`
+						color = Black_1guitar
 						x_trans = -21
 						x_scale = 30
 						y_scale = 30
@@ -1503,12 +1503,12 @@ cas_preset_tattoo_male = [
 	{
 		cap = [
 			{
-				base_tex = `tex\models\characters\car\female\car_female_arml_tat_o_dnc.dds`
-				material = car_male_arml
-				cas_1
+				base_tex = `tex\models\Characters\CAR\female\CAR_female_ARML_tat_O_dnc.dds`
+				material = CAR_male_ArmL
+				Cas_1
 				layers = [
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_graphics_spiral.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_graphics_spiral.img`
 						color = grey_2guitar
 						a = 70
 						x_trans = 17
@@ -1517,7 +1517,7 @@ cas_preset_tattoo_male = [
 						x_scale = 48
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_icon005.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_Icon005.img`
 						color = grey_2guitar
 						x_trans = -3
 						y_trans = 21
@@ -1527,7 +1527,7 @@ cas_preset_tattoo_male = [
 						rot = 4603
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_icon023.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_Icon023.img`
 						color = grey_2guitar
 						x_trans = -6
 						y_trans = -39
@@ -1537,7 +1537,7 @@ cas_preset_tattoo_male = [
 						x_scale = 5
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_icon023.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_Icon023.img`
 						color = grey_2guitar
 						a = 100
 						x_trans = -6
@@ -1548,7 +1548,7 @@ cas_preset_tattoo_male = [
 						y_trans = -35
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_icon023.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_Icon023.img`
 						color = grey_2guitar
 						a = 100
 						x_trans = -6
@@ -1559,7 +1559,7 @@ cas_preset_tattoo_male = [
 						y_trans = -31
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_icon023.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_Icon023.img`
 						color = grey_2guitar
 						a = 100
 						x_trans = -6
@@ -1570,7 +1570,7 @@ cas_preset_tattoo_male = [
 						y_trans = -27
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_icon023.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_Icon023.img`
 						color = grey_2guitar
 						a = 100
 						x_trans = -6
@@ -1581,7 +1581,7 @@ cas_preset_tattoo_male = [
 						y_trans = -23
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_icon020.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_Icon020.img`
 						color = grey_2guitar
 						x_trans = -16
 						x_scale = 29
@@ -1590,7 +1590,7 @@ cas_preset_tattoo_male = [
 						y_trans = -44
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_icon020.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_Icon020.img`
 						color = grey_2guitar
 						y_trans = -44
 						x_scale = 29
@@ -1599,7 +1599,7 @@ cas_preset_tattoo_male = [
 						x_trans = 14
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_055.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_055.img`
 						color = grey_2guitar
 						x_trans = -29
 						y_trans = -5
@@ -1618,7 +1618,7 @@ cas_preset_tattoo_male = [
 						x_trans = -19
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_icon004.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_Icon004.img`
 						color = grey_2guitar
 						x_trans = -1
 						y_trans = 37
@@ -1628,7 +1628,7 @@ cas_preset_tattoo_male = [
 						rot = 150
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_026.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_026.img`
 						color = grey_2guitar
 						x_trans = 8
 						y_trans = 33
@@ -1643,19 +1643,19 @@ cas_preset_tattoo_male = [
 	{
 		cap = [
 			{
-				base_tex = `tex\models\characters\car\female\car_female_arml_tat_o_dnc.dds`
-				material = car_male_arml
-				cas_1
+				base_tex = `tex\models\Characters\CAR\female\CAR_female_ARML_tat_O_dnc.dds`
+				material = CAR_male_ArmL
+				Cas_1
 				layers = [
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_006.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_006.img`
 						color = grey_2guitar
 						y_scale = 6
 						flags = 3
 						x_scale = 1
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_006.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_006.img`
 						color = grey_2guitar
 						x_scale = 1
 						y_scale = 6
@@ -1663,7 +1663,7 @@ cas_preset_tattoo_male = [
 						x_trans = -2
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_006.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_006.img`
 						color = grey_2guitar
 						x_scale = 1
 						y_scale = 6
@@ -1671,7 +1671,7 @@ cas_preset_tattoo_male = [
 						x_trans = -4
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_006.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_006.img`
 						color = grey_2guitar
 						y_trans = 0
 						x_scale = 1
@@ -1680,7 +1680,7 @@ cas_preset_tattoo_male = [
 						x_trans = -6
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_006.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_006.img`
 						color = grey_2guitar
 						y_trans = 0
 						x_scale = 2
@@ -1689,7 +1689,7 @@ cas_preset_tattoo_male = [
 						x_trans = 2
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_006.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_006.img`
 						color = grey_2guitar
 						y_trans = 0
 						x_scale = 1
@@ -1698,7 +1698,7 @@ cas_preset_tattoo_male = [
 						x_trans = 4
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_006.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_006.img`
 						color = grey_2guitar
 						y_trans = 0
 						x_scale = 1
@@ -1707,7 +1707,7 @@ cas_preset_tattoo_male = [
 						x_trans = 6
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_006.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_006.img`
 						color = grey_2guitar
 						y_trans = 0
 						x_scale = 1
@@ -1757,8 +1757,8 @@ cas_preset_tattoo_male = [
 						x_trans = 5
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_006.img`
-						color = black_1guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_006.img`
+						color = Black_1guitar
 						a = 50
 						x_scale = 150
 						y_scale = 2
@@ -1766,8 +1766,8 @@ cas_preset_tattoo_male = [
 						y_trans = -25
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_006.img`
-						color = black_1guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_006.img`
+						color = Black_1guitar
 						a = 50
 						y_trans = -28
 						x_scale = 150
@@ -1777,19 +1777,19 @@ cas_preset_tattoo_male = [
 				]
 			}
 			{
-				base_tex = `tex\models\characters\car\female\car_female_armr_tat_o_dnc.dds`
-				material = car_male_armr
-				cas_1
+				base_tex = `tex\models\Characters\CAR\female\CAR_female_ARMR_tat_O_dnc.dds`
+				material = CAR_male_ArmR
+				Cas_1
 				layers = [
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_006.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_006.img`
 						color = grey_2guitar
 						y_scale = 6
 						flags = 3
 						x_scale = 1
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_006.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_006.img`
 						color = grey_2guitar
 						x_scale = 1
 						y_scale = 6
@@ -1797,7 +1797,7 @@ cas_preset_tattoo_male = [
 						x_trans = -2
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_006.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_006.img`
 						color = grey_2guitar
 						x_scale = 1
 						y_scale = 6
@@ -1805,7 +1805,7 @@ cas_preset_tattoo_male = [
 						x_trans = -4
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_006.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_006.img`
 						color = grey_2guitar
 						y_trans = 0
 						x_scale = 1
@@ -1814,7 +1814,7 @@ cas_preset_tattoo_male = [
 						x_trans = -6
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_006.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_006.img`
 						color = grey_2guitar
 						y_trans = 0
 						x_scale = 2
@@ -1823,7 +1823,7 @@ cas_preset_tattoo_male = [
 						x_trans = 2
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_006.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_006.img`
 						color = grey_2guitar
 						y_trans = 0
 						x_scale = 1
@@ -1832,7 +1832,7 @@ cas_preset_tattoo_male = [
 						x_trans = 4
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_006.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_006.img`
 						color = grey_2guitar
 						y_trans = 0
 						x_scale = 1
@@ -1841,7 +1841,7 @@ cas_preset_tattoo_male = [
 						x_trans = 6
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_006.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_006.img`
 						color = grey_2guitar
 						y_trans = 0
 						x_scale = 1
@@ -1891,8 +1891,8 @@ cas_preset_tattoo_male = [
 						x_trans = 5
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_006.img`
-						color = black_1guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_006.img`
+						color = Black_1guitar
 						a = 50
 						x_trans = 0
 						x_scale = 150
@@ -1901,8 +1901,8 @@ cas_preset_tattoo_male = [
 						y_trans = -27
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_006.img`
-						color = black_1guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_006.img`
+						color = Black_1guitar
 						a = 50
 						x_trans = 0
 						y_trans = -30
@@ -1913,12 +1913,12 @@ cas_preset_tattoo_male = [
 				]
 			}
 			{
-				base_tex = `tex\models\characters\car\female\car_female_body_tat_o_dnc.dds`
-				material = car_male_body
-				cas_1
+				base_tex = `tex\models\Characters\CAR\female\CAR_female_BODY_tat_O_dnc.dds`
+				material = CAR_Male_Body
+				Cas_1
 				layers = [
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_007.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_007.img`
 						color = grey_2guitar
 						x_trans = 13
 						x_scale = 8
@@ -1977,7 +1977,7 @@ cas_preset_tattoo_male = [
 						x_trans = 16
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_006.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_006.img`
 						color = grey_2guitar
 						y_trans = 45
 						x_scale = 1
@@ -1986,7 +1986,7 @@ cas_preset_tattoo_male = [
 						x_trans = 44
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_006.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_006.img`
 						color = grey_2guitar
 						y_trans = 45
 						x_scale = 1
@@ -1995,7 +1995,7 @@ cas_preset_tattoo_male = [
 						x_trans = 46
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_006.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_006.img`
 						color = grey_2guitar
 						y_trans = 45
 						x_scale = 2
@@ -2004,7 +2004,7 @@ cas_preset_tattoo_male = [
 						x_trans = 48
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_006.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_006.img`
 						color = grey_2guitar
 						y_trans = 45
 						x_scale = 1
@@ -2013,7 +2013,7 @@ cas_preset_tattoo_male = [
 						x_trans = 50
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_006.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_006.img`
 						color = grey_2guitar
 						y_trans = 45
 						x_scale = 1
@@ -2022,7 +2022,7 @@ cas_preset_tattoo_male = [
 						x_trans = 52
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_006.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_006.img`
 						color = grey_2guitar
 						y_trans = 45
 						x_scale = 1
@@ -2031,7 +2031,7 @@ cas_preset_tattoo_male = [
 						x_trans = 54
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_006.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_006.img`
 						color = grey_2guitar
 						y_trans = 41
 						x_scale = 1
@@ -2041,7 +2041,7 @@ cas_preset_tattoo_male = [
 						x_trans = 49
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_006.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_006.img`
 						color = grey_2guitar
 						x_scale = 19
 						y_scale = 3
@@ -2049,7 +2049,7 @@ cas_preset_tattoo_male = [
 						y_trans = 42
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_006.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_006.img`
 						color = grey_2guitar
 						y_trans = 42
 						x_scale = 19
@@ -2057,7 +2057,7 @@ cas_preset_tattoo_male = [
 						flags = 3
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_006.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_006.img`
 						color = grey_2guitar
 						x_scale = 19
 						y_scale = 1
@@ -2065,7 +2065,7 @@ cas_preset_tattoo_male = [
 						y_trans = 39
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_006.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_006.img`
 						color = grey_2guitar
 						x_scale = 19
 						y_scale = 1
@@ -2113,7 +2113,7 @@ cas_preset_tattoo_male = [
 						x_trans = 6
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_006.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_006.img`
 						color = grey_2guitar
 						y_trans = -11
 						x_scale = 30
@@ -2122,7 +2122,7 @@ cas_preset_tattoo_male = [
 						x_trans = -18
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_006.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_006.img`
 						color = grey_2guitar
 						x_trans = -18
 						x_scale = 30
@@ -2137,12 +2137,12 @@ cas_preset_tattoo_male = [
 	{
 		cap = [
 			{
-				base_tex = `tex\models\characters\car\female\car_female_body_tat_o_dnc.dds`
-				material = car_male_body
-				cas_1
+				base_tex = `tex\models\Characters\CAR\female\CAR_female_BODY_tat_O_dnc.dds`
+				material = CAR_Male_Body
+				Cas_1
 				layers = [
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_graphics_zombieface.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_graphics_zombieface.img`
 						x_trans = 50
 						y_trans = 13
 						x_scale = 29
@@ -2150,8 +2150,8 @@ cas_preset_tattoo_male = [
 						y_scale = 53
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_icon_wing003.img`
-						color = black_1guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_Icon_Wing003.img`
+						color = Black_1guitar
 						x_trans = 41
 						y_trans = 28
 						x_scale = 14
@@ -2160,8 +2160,8 @@ cas_preset_tattoo_male = [
 						flags = 11
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_icon_wing003.img`
-						color = black_1guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_Icon_Wing003.img`
+						color = Black_1guitar
 						x_trans = 60
 						y_trans = 28
 						y_scale = 22
@@ -2172,12 +2172,12 @@ cas_preset_tattoo_male = [
 				]
 			}
 			{
-				base_tex = `tex\models\characters\car\female\car_female_armr_tat_o_dnc.dds`
-				material = car_male_armr
-				cas_1
+				base_tex = `tex\models\Characters\CAR\female\CAR_female_ARMR_tat_O_dnc.dds`
+				material = CAR_male_ArmR
+				Cas_1
 				layers = [
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_graphics073.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_graphics073.img`
 						x_trans = -18
 						y_trans = 0
 						x_scale = 70
@@ -2187,12 +2187,12 @@ cas_preset_tattoo_male = [
 				]
 			}
 			{
-				base_tex = `tex\models\characters\car\female\car_female_arml_tat_o_dnc.dds`
-				material = car_male_arml
-				cas_1
+				base_tex = `tex\models\Characters\CAR\female\CAR_female_ARML_tat_O_dnc.dds`
+				material = CAR_male_ArmL
+				Cas_1
 				layers = [
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_graphics073.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_graphics073.img`
 						x_trans = 20
 						x_scale = 60
 						flags = 3
@@ -2205,44 +2205,44 @@ cas_preset_tattoo_male = [
 	{
 		cap = [
 			{
-				base_tex = `tex\models\characters\car\female\car_female_body_tat_o_dnc.dds`
-				material = car_male_body
-				cas_1
+				base_tex = `tex\models\Characters\CAR\female\CAR_female_BODY_tat_O_dnc.dds`
+				material = CAR_Male_Body
+				Cas_1
 				layers = [
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshapegradient_010.img`
-						color = black_1guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShapeGradient_010.img`
+						color = Black_1guitar
 						x_scale = 30
 						y_scale = 30
 						flags = 3
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshapegradient_010.img`
-						color = black_1guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShapeGradient_010.img`
+						color = Black_1guitar
 						y_trans = 21
 						x_scale = 30
 						y_scale = 20
 						flags = 3
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshapegradient_010.img`
-						color = black_1guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShapeGradient_010.img`
+						color = Black_1guitar
 						x_scale = 30
 						y_scale = 20
 						flags = 3
 						y_trans = -19
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshapegradient_010.img`
-						color = black_1guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShapeGradient_010.img`
+						color = Black_1guitar
 						y_trans = -37
 						x_scale = 30
 						y_scale = 20
 						flags = 3
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshapegradient_010.img`
-						color = black_1guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShapeGradient_010.img`
+						color = Black_1guitar
 						x_trans = -50
 						y_trans = -36
 						x_scale = 15
@@ -2250,8 +2250,8 @@ cas_preset_tattoo_male = [
 						flags = 3
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshapegradient_010.img`
-						color = black_1guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShapeGradient_010.img`
+						color = Black_1guitar
 						x_trans = -50
 						x_scale = 15
 						y_scale = 13
@@ -2259,8 +2259,8 @@ cas_preset_tattoo_male = [
 						y_trans = -24
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshapegradient_010.img`
-						color = black_1guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShapeGradient_010.img`
+						color = Black_1guitar
 						x_trans = -50
 						x_scale = 15
 						y_scale = 13
@@ -2268,8 +2268,8 @@ cas_preset_tattoo_male = [
 						y_trans = 5
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshapegradient_010.img`
-						color = black_1guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShapeGradient_010.img`
+						color = Black_1guitar
 						x_trans = -50
 						y_trans = 20
 						y_scale = 13
@@ -2277,8 +2277,8 @@ cas_preset_tattoo_male = [
 						x_scale = 18
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshapegradient_010.img`
-						color = black_1guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShapeGradient_010.img`
+						color = Black_1guitar
 						x_trans = -50
 						x_scale = 15
 						y_scale = 13
@@ -2286,7 +2286,7 @@ cas_preset_tattoo_male = [
 						y_trans = -10
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_icon023.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_Icon023.img`
 						color = yellow_green_4guitar
 						x_trans = 0
 						x_scale = 44
@@ -2295,8 +2295,8 @@ cas_preset_tattoo_male = [
 						y_trans = 26
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_icon008.img`
-						color = black_1guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_Icon008.img`
+						color = Black_1guitar
 						a = 95
 						x_trans = 15
 						y_trans = 21
@@ -2305,8 +2305,8 @@ cas_preset_tattoo_male = [
 						flags = 3
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_icon008.img`
-						color = black_1guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_Icon008.img`
+						color = Black_1guitar
 						a = 95
 						y_trans = 21
 						x_scale = 9
@@ -2315,8 +2315,8 @@ cas_preset_tattoo_male = [
 						x_trans = -15
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_icon008.img`
-						color = black_1guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_Icon008.img`
+						color = Black_1guitar
 						x_trans = 62
 						y_trans = -37
 						x_scale = 13
@@ -2324,8 +2324,8 @@ cas_preset_tattoo_male = [
 						flags = 3
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_icon008.img`
-						color = black_1guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_Icon008.img`
+						color = Black_1guitar
 						y_trans = -37
 						x_scale = 13
 						y_scale = 26
@@ -2335,21 +2335,21 @@ cas_preset_tattoo_male = [
 				]
 			}
 			{
-				base_tex = `tex\models\characters\car\female\car_female_arml_tat_o_dnc.dds`
-				material = car_male_arml
-				cas_1
+				base_tex = `tex\models\Characters\CAR\female\CAR_female_ARML_tat_O_dnc.dds`
+				material = CAR_male_ArmL
+				Cas_1
 				layers = [
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_055.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_055.img`
 						x_trans = -7
 						y_trans = 39
 						x_scale = 30
 						y_scale = 18
 						flags = 3
-						color = black_1guitar
+						color = Black_1guitar
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_006.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_006.img`
 						x_trans = 12
 						y_trans = 24
 						x_scale = 147
@@ -2357,8 +2357,8 @@ cas_preset_tattoo_male = [
 						flags = 3
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_006.img`
-						color = black_1guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_006.img`
+						color = Black_1guitar
 						x_trans = 12
 						y_trans = 13
 						x_scale = 147
@@ -2366,8 +2366,8 @@ cas_preset_tattoo_male = [
 						flags = 3
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_006.img`
-						color = black_1guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_006.img`
+						color = Black_1guitar
 						x_trans = 12
 						x_scale = 147
 						y_scale = 13
@@ -2375,7 +2375,7 @@ cas_preset_tattoo_male = [
 						y_trans = -9
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_006.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_006.img`
 						x_trans = 12
 						y_trans = 2
 						x_scale = 147
@@ -2383,7 +2383,7 @@ cas_preset_tattoo_male = [
 						flags = 3
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_006.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_006.img`
 						x_trans = 12
 						x_scale = 147
 						y_scale = 13
@@ -2391,7 +2391,7 @@ cas_preset_tattoo_male = [
 						y_trans = -20
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_006.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_006.img`
 						x_trans = 12
 						y_trans = 2
 						x_scale = 147
@@ -2399,29 +2399,29 @@ cas_preset_tattoo_male = [
 						flags = 3
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_006.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_006.img`
 						x_trans = 12
 						y_trans = -31
 						x_scale = 147
 						y_scale = 13
 						flags = 3
-						color = black_1guitar
+						color = Black_1guitar
 					}
 				]
 			}
 			{
-				base_tex = `tex\models\characters\car\female\car_female_armr_tat_o_dnc.dds`
-				material = car_male_armr
-				cas_1
+				base_tex = `tex\models\Characters\CAR\female\CAR_female_ARMR_tat_O_dnc.dds`
+				material = CAR_male_ArmR
+				Cas_1
 				layers = [
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_055.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_055.img`
 						x_trans = 8
 						y_trans = 39
 						x_scale = 30
 						y_scale = 20
 						flags = 3
-						color = black_1guitar
+						color = Black_1guitar
 					}
 				]
 			}
@@ -2430,12 +2430,12 @@ cas_preset_tattoo_male = [
 	{
 		cap = [
 			{
-				base_tex = `tex\models\characters\car\female\car_female_body_tat_o_dnc.dds`
-				material = car_male_body
-				cas_1
+				base_tex = `tex\models\Characters\CAR\female\CAR_female_BODY_tat_O_dnc.dds`
+				material = CAR_Male_Body
+				Cas_1
 				layers = [
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_icon008.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_Icon008.img`
 						color = navy_3
 						x_trans = -2
 						x_scale = 40
@@ -2445,7 +2445,7 @@ cas_preset_tattoo_male = [
 						y_trans = 17
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_icon008.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_Icon008.img`
 						color = navy_3
 						x_trans = -5
 						y_trans = 14
@@ -2455,7 +2455,7 @@ cas_preset_tattoo_male = [
 						y_scale = 22
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_icon008.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_Icon008.img`
 						color = navy_3
 						x_trans = 14
 						y_trans = 16
@@ -2465,7 +2465,7 @@ cas_preset_tattoo_male = [
 						y_scale = 19
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_icon008.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_Icon008.img`
 						color = navy_3
 						x_trans = -13
 						y_trans = 23
@@ -2475,7 +2475,7 @@ cas_preset_tattoo_male = [
 						y_scale = 28
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_icon008.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_Icon008.img`
 						color = navy_3
 						x_trans = -2
 						y_trans = 19
@@ -2485,7 +2485,7 @@ cas_preset_tattoo_male = [
 						y_scale = 42
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_icon008.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_Icon008.img`
 						x_trans = 5
 						y_trans = 13
 						x_scale = 15
@@ -2495,7 +2495,7 @@ cas_preset_tattoo_male = [
 						color = navy_3
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_icon008.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_Icon008.img`
 						x_trans = -5
 						y_trans = 14
 						x_scale = 16
@@ -2505,7 +2505,7 @@ cas_preset_tattoo_male = [
 						color = navy_3
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_icon008.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_Icon008.img`
 						x_trans = 20
 						y_trans = 25
 						x_scale = 14
@@ -2515,7 +2515,7 @@ cas_preset_tattoo_male = [
 						color = navy_3
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_icon008.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_Icon008.img`
 						x_trans = 20
 						y_trans = 25
 						x_scale = 11
@@ -2525,7 +2525,7 @@ cas_preset_tattoo_male = [
 						color = grey_5guitar
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_icon008.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_Icon008.img`
 						x_trans = -5
 						y_trans = 14
 						x_scale = 11
@@ -2535,7 +2535,7 @@ cas_preset_tattoo_male = [
 						color = grey_5guitar
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_icon008.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_Icon008.img`
 						x_trans = 5
 						y_trans = 13
 						x_scale = 11
@@ -2545,7 +2545,7 @@ cas_preset_tattoo_male = [
 						color = grey_5guitar
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_icon008.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_Icon008.img`
 						x_trans = 14
 						y_trans = 16
 						x_scale = 11
@@ -2555,7 +2555,7 @@ cas_preset_tattoo_male = [
 						color = grey_5guitar
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_icon008.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_Icon008.img`
 						x_trans = -13
 						y_trans = 23
 						x_scale = 15
@@ -2565,7 +2565,7 @@ cas_preset_tattoo_male = [
 						color = grey_5guitar
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_icon008.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_Icon008.img`
 						x_trans = -2
 						y_trans = 19
 						x_scale = 40
@@ -2581,29 +2581,29 @@ cas_preset_tattoo_male = [
 	{
 		cap = [
 			{
-				base_tex = `tex\models\characters\car\female\car_female_body_tat_o_dnc.dds`
-				material = car_male_body
-				cas_1
+				base_tex = `tex\models\Characters\CAR\female\CAR_female_BODY_tat_O_dnc.dds`
+				material = CAR_Male_Body
+				Cas_1
 				layers = [
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_icon022.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_Icon022.img`
 						y_trans = -4
 						x_scale = 30
 						y_scale = 46
 						flags = 3
-						color = black_1guitar
+						color = Black_1guitar
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_icon026.img`
-						color = black_1guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_Icon026.img`
+						color = Black_1guitar
 						x_scale = 30
 						y_scale = 21
 						flags = 3
 						y_trans = -23
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_icon002.img`
-						color = black_1guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_Icon002.img`
+						color = Black_1guitar
 						x_trans = -23
 						x_scale = 67
 						y_scale = 47
@@ -2612,8 +2612,8 @@ cas_preset_tattoo_male = [
 						y_trans = -24
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_icon005.img`
-						color = black_1guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_Icon005.img`
+						color = Black_1guitar
 						y_trans = -32
 						x_scale = 38
 						y_scale = 44
@@ -2622,8 +2622,8 @@ cas_preset_tattoo_male = [
 						x_trans = 25
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_icon012.img`
-						color = black_1guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_Icon012.img`
+						color = Black_1guitar
 						x_trans = 31
 						x_scale = 30
 						y_scale = 30
@@ -2631,8 +2631,8 @@ cas_preset_tattoo_male = [
 						y_trans = 14
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_icon011.img`
-						color = black_1guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_Icon011.img`
+						color = Black_1guitar
 						x_trans = 34
 						x_scale = 30
 						y_scale = 30
@@ -2647,21 +2647,21 @@ cas_preset_tattoo_male = [
 	{
 		cap = [
 			{
-				base_tex = `tex\models\characters\car\female\car_female_armr_tat_o_dnc.dds`
-				material = car_male_armr
-				cas_1
+				base_tex = `tex\models\Characters\CAR\female\CAR_female_ARMR_tat_O_dnc.dds`
+				material = CAR_male_ArmR
+				Cas_1
 				layers = [
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_icon018.img`
-						color = black_1guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_Icon018.img`
+						color = Black_1guitar
 						x_scale = 61
 						y_scale = 41
 						flags = 3
 						y_trans = 32
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_006.img`
-						color = black_1guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_006.img`
+						color = Black_1guitar
 						y_trans = -46
 						x_scale = 73
 						y_scale = 10
@@ -2669,24 +2669,24 @@ cas_preset_tattoo_male = [
 						x_trans = -39
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_006.img`
-						color = black_1guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_006.img`
+						color = Black_1guitar
 						x_scale = 73
 						y_scale = 10
 						flags = 3
 						y_trans = -46
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_graphics073.img`
-						color = black_1guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_graphics073.img`
+						color = Black_1guitar
 						x_trans = -23
 						y_scale = 31
 						flags = 3
 						x_scale = 57
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_icon002.img`
-						color = black_1guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_Icon002.img`
+						color = Black_1guitar
 						y_trans = -38
 						x_scale = 15
 						y_scale = 140
@@ -2695,8 +2695,8 @@ cas_preset_tattoo_male = [
 						x_trans = 37
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_icon002.img`
-						color = black_1guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_Icon002.img`
+						color = Black_1guitar
 						y_trans = -38
 						x_scale = 14
 						y_scale = 99
@@ -2705,7 +2705,7 @@ cas_preset_tattoo_male = [
 						x_trans = -27
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_graphics011.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_graphics011.img`
 						y_trans = 34
 						x_scale = 51
 						y_scale = 31
@@ -2719,13 +2719,13 @@ cas_preset_tattoo_male = [
 	{
 		cap = [
 			{
-				base_tex = `tex\models\characters\car\female\car_female_armr_tat_o_dnc.dds`
-				material = car_male_armr
-				cas_1
+				base_tex = `tex\models\Characters\CAR\female\CAR_female_ARMR_tat_O_dnc.dds`
+				material = CAR_male_ArmR
+				Cas_1
 				layers = [
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_022.img`
-						color = black_1guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_022.img`
+						color = Black_1guitar
 						a = 50
 						x_scale = 30
 						y_scale = 17
@@ -2733,8 +2733,8 @@ cas_preset_tattoo_male = [
 						y_trans = -37
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_022.img`
-						color = black_1guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_022.img`
+						color = Black_1guitar
 						a = 50
 						y_trans = -30
 						x_scale = 30
@@ -2743,8 +2743,8 @@ cas_preset_tattoo_male = [
 						x_trans = 9
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_022.img`
-						color = black_1guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_022.img`
+						color = Black_1guitar
 						a = 50
 						y_trans = -37
 						x_scale = 30
@@ -2753,8 +2753,8 @@ cas_preset_tattoo_male = [
 						x_trans = 18
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_022.img`
-						color = black_1guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_022.img`
+						color = Black_1guitar
 						a = 50
 						y_trans = -30
 						x_scale = 30
@@ -2763,8 +2763,8 @@ cas_preset_tattoo_male = [
 						x_trans = -9
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_022.img`
-						color = black_1guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_022.img`
+						color = Black_1guitar
 						a = 50
 						x_scale = 30
 						y_scale = 17
@@ -2772,8 +2772,8 @@ cas_preset_tattoo_male = [
 						y_trans = -23
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_022.img`
-						color = black_1guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_022.img`
+						color = Black_1guitar
 						a = 50
 						x_trans = 9
 						x_scale = 30
@@ -2782,8 +2782,8 @@ cas_preset_tattoo_male = [
 						y_trans = -16
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_022.img`
-						color = black_1guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_022.img`
+						color = Black_1guitar
 						a = 50
 						y_trans = -30
 						x_scale = 30
@@ -2792,8 +2792,8 @@ cas_preset_tattoo_male = [
 						x_trans = 28
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_022.img`
-						color = black_1guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_022.img`
+						color = Black_1guitar
 						a = 50
 						x_trans = 18
 						x_scale = 30
@@ -2802,8 +2802,8 @@ cas_preset_tattoo_male = [
 						y_trans = -23
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_022.img`
-						color = black_1guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_022.img`
+						color = Black_1guitar
 						a = 50
 						x_trans = -4
 						y_trans = -12
@@ -2812,8 +2812,8 @@ cas_preset_tattoo_male = [
 						x_scale = 21
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_022.img`
-						color = black_1guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_022.img`
+						color = Black_1guitar
 						a = 50
 						x_trans = -12
 						y_trans = -18
@@ -2822,8 +2822,8 @@ cas_preset_tattoo_male = [
 						y_scale = 8
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_022.img`
-						color = black_1guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_022.img`
+						color = Black_1guitar
 						a = 50
 						x_trans = 5
 						x_scale = 15
@@ -2832,8 +2832,8 @@ cas_preset_tattoo_male = [
 						y_trans = -5
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_022.img`
-						color = black_1guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_022.img`
+						color = Black_1guitar
 						a = 50
 						x_trans = 21
 						x_scale = 21
@@ -2844,23 +2844,23 @@ cas_preset_tattoo_male = [
 				]
 			}
 			{
-				base_tex = `tex\models\characters\car\female\car_female_arml_tat_o_dnc.dds`
-				material = car_male_arml
-				cas_1
+				base_tex = `tex\models\Characters\CAR\female\CAR_female_ARML_tat_O_dnc.dds`
+				material = CAR_male_ArmL
+				Cas_1
 				layers = [
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_022.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_022.img`
 						a = 50
 						x_trans = -9
 						y_trans = 22
 						x_scale = 30
 						y_scale = 17
 						flags = 3
-						color = black_1guitar
+						color = Black_1guitar
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_022.img`
-						color = black_1guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_022.img`
+						color = Black_1guitar
 						a = 50
 						y_trans = 31
 						x_scale = 19
@@ -2869,8 +2869,8 @@ cas_preset_tattoo_male = [
 						x_trans = 0
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_022.img`
-						color = black_1guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_022.img`
+						color = Black_1guitar
 						a = 50
 						x_trans = -9
 						y_trans = 39
@@ -2879,8 +2879,8 @@ cas_preset_tattoo_male = [
 						y_scale = 9
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_022.img`
-						color = black_1guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_022.img`
+						color = Black_1guitar
 						a = 50
 						y_trans = 22
 						x_scale = 30
@@ -2889,8 +2889,8 @@ cas_preset_tattoo_male = [
 						x_trans = 9
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_022.img`
-						color = black_1guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_022.img`
+						color = Black_1guitar
 						a = 50
 						y_trans = 15
 						x_scale = 30
@@ -2899,8 +2899,8 @@ cas_preset_tattoo_male = [
 						x_trans = 0
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_022.img`
-						color = black_1guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_022.img`
+						color = Black_1guitar
 						a = 50
 						y_trans = 15
 						x_scale = 30
@@ -2909,8 +2909,8 @@ cas_preset_tattoo_male = [
 						x_trans = -18
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_022.img`
-						color = black_1guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_022.img`
+						color = Black_1guitar
 						a = 50
 						x_trans = -9
 						x_scale = 30
@@ -2919,8 +2919,8 @@ cas_preset_tattoo_male = [
 						y_trans = 8
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_022.img`
-						color = black_1guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_022.img`
+						color = Black_1guitar
 						a = 50
 						y_trans = 8
 						x_scale = 30
@@ -2929,8 +2929,8 @@ cas_preset_tattoo_male = [
 						x_trans = 9
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_022.img`
-						color = black_1guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_022.img`
+						color = Black_1guitar
 						a = 50
 						x_trans = -15
 						y_trans = 0
@@ -2939,8 +2939,8 @@ cas_preset_tattoo_male = [
 						x_scale = 22
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_022.img`
-						color = black_1guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_022.img`
+						color = Black_1guitar
 						a = 50
 						x_trans = -10
 						x_scale = 17
@@ -2949,8 +2949,8 @@ cas_preset_tattoo_male = [
 						y_trans = -6
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_022.img`
-						color = black_1guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_022.img`
+						color = Black_1guitar
 						a = 50
 						x_trans = -14
 						x_scale = 11
@@ -2965,13 +2965,13 @@ cas_preset_tattoo_male = [
 	{
 		cap = [
 			{
-				base_tex = `tex\models\characters\car\female\car_female_body_tat_o_dnc.dds`
-				material = car_male_body
-				cas_1
+				base_tex = `tex\models\Characters\CAR\female\CAR_female_BODY_tat_O_dnc.dds`
+				material = CAR_Male_Body
+				Cas_1
 				layers = [
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_graphics_spiral.img`
-						color = black_1guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_graphics_spiral.img`
+						color = Black_1guitar
 						y_trans = 22
 						x_scale = 38
 						y_scale = 30
@@ -2979,8 +2979,8 @@ cas_preset_tattoo_male = [
 						a = 65
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_icon_wing002.img`
-						color = black_1guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_Icon_Wing002.img`
+						color = Black_1guitar
 						x_trans = 60
 						y_trans = 20
 						x_scale = 15
@@ -2989,8 +2989,8 @@ cas_preset_tattoo_male = [
 						a = 65
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_icon_wing002.img`
-						color = black_1guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_Icon_Wing002.img`
+						color = Black_1guitar
 						x_trans = 40
 						y_trans = 20
 						x_scale = 15
@@ -2999,7 +2999,7 @@ cas_preset_tattoo_male = [
 						a = 65
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_graphics097.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_graphics097.img`
 						x_trans = -50
 						y_trans = 18
 						x_scale = 30
@@ -3008,8 +3008,8 @@ cas_preset_tattoo_male = [
 						a = 95
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_icon006.img`
-						color = black_1guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_Icon006.img`
+						color = Black_1guitar
 						y_trans = 42
 						x_scale = 146
 						y_scale = 30
@@ -3019,12 +3019,12 @@ cas_preset_tattoo_male = [
 				]
 			}
 			{
-				base_tex = `tex\models\characters\car\female\car_female_armr_tat_o_dnc.dds`
-				material = car_male_armr
-				cas_1
+				base_tex = `tex\models\Characters\CAR\female\CAR_female_ARMR_tat_O_dnc.dds`
+				material = CAR_male_ArmR
+				Cas_1
 				layers = [
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_graphics088.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_graphics088.img`
 						x_trans = 4
 						y_trans = 29
 						x_scale = 45
@@ -3035,12 +3035,12 @@ cas_preset_tattoo_male = [
 				]
 			}
 			{
-				base_tex = `tex\models\characters\car\female\car_female_arml_tat_o_dnc.dds`
-				material = car_male_arml
-				cas_1
+				base_tex = `tex\models\Characters\CAR\female\CAR_female_ARML_tat_O_dnc.dds`
+				material = CAR_male_ArmL
+				Cas_1
 				layers = [
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_graphics077.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_graphics077.img`
 						color = yellow_orange_3
 						a = 75
 						y_trans = 39
@@ -3050,7 +3050,7 @@ cas_preset_tattoo_male = [
 						x_trans = -2
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_graphics035.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_graphics035.img`
 						color = grey_5guitar
 						x_trans = 21
 						x_scale = 44
@@ -3065,12 +3065,12 @@ cas_preset_tattoo_male = [
 	{
 		cap = [
 			{
-				base_tex = `tex\models\characters\car\female\car_female_armr_tat_o_dnc.dds`
-				material = car_male_armr
-				cas_1
+				base_tex = `tex\models\Characters\CAR\female\CAR_female_ARMR_tat_O_dnc.dds`
+				material = CAR_male_ArmR
+				Cas_1
 				layers = [
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_icon_creature005.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_Icon_Creature005.img`
 						x_trans = -6
 						y_trans = 31
 						x_scale = 29
@@ -3079,7 +3079,7 @@ cas_preset_tattoo_male = [
 						a = 70
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_icon_creature006.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_Icon_Creature006.img`
 						x_trans = 6
 						y_trans = 35
 						x_scale = 30
@@ -3088,7 +3088,7 @@ cas_preset_tattoo_male = [
 						a = 65
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_icon002.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_Icon002.img`
 						color = navy_1
 						a = 55
 						y_trans = -30
@@ -3099,7 +3099,7 @@ cas_preset_tattoo_male = [
 						x_trans = 2
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_icon002.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_Icon002.img`
 						color = navy_1
 						a = 55
 						y_trans = -30
@@ -3110,7 +3110,7 @@ cas_preset_tattoo_male = [
 						x_trans = 23
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_icon002.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_Icon002.img`
 						color = navy_1
 						a = 55
 						y_trans = -30
@@ -3121,7 +3121,7 @@ cas_preset_tattoo_male = [
 						x_trans = 55
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_icon002.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_Icon002.img`
 						color = navy_1
 						a = 55
 						y_trans = -30
@@ -3134,12 +3134,12 @@ cas_preset_tattoo_male = [
 				]
 			}
 			{
-				base_tex = `tex\models\characters\car\female\car_female_body_tat_o_dnc.dds`
-				material = car_male_body
-				cas_1
+				base_tex = `tex\models\Characters\CAR\female\CAR_female_BODY_tat_O_dnc.dds`
+				material = CAR_Male_Body
+				Cas_1
 				layers = [
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_graphics008.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_graphics008.img`
 						x_trans = 12
 						y_trans = 18
 						x_scale = 25
@@ -3148,7 +3148,7 @@ cas_preset_tattoo_male = [
 						a = 85
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_graphics051.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_graphics051.img`
 						x_trans = -13
 						y_trans = 20
 						x_scale = 25
@@ -3157,7 +3157,7 @@ cas_preset_tattoo_male = [
 						a = 75
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_graphics074.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_graphics074.img`
 						x_trans = 50
 						y_trans = 22
 						y_scale = 30
@@ -3167,12 +3167,12 @@ cas_preset_tattoo_male = [
 				]
 			}
 			{
-				base_tex = `tex\models\characters\car\female\car_female_arml_tat_o_dnc.dds`
-				material = car_male_arml
-				cas_1
+				base_tex = `tex\models\Characters\CAR\female\CAR_female_ARML_tat_O_dnc.dds`
+				material = CAR_male_ArmL
+				Cas_1
 				layers = [
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_graphics_nativetat005.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_graphics_nativetat005.img`
 						y_trans = 39
 						x_scale = 30
 						y_scale = 30
@@ -3186,9 +3186,9 @@ cas_preset_tattoo_male = [
 	{
 		cap = [
 			{
-				base_tex = `tex\models\characters\car\female\car_female_arml_tat_o_dnc.dds`
-				material = car_male_arml
-				cas_1
+				base_tex = `tex\models\Characters\CAR\female\CAR_female_ARML_tat_O_dnc.dds`
+				material = CAR_male_ArmL
+				Cas_1
 				layers = [
 					{
 						font = fontgrid_title_a1
@@ -3597,12 +3597,12 @@ cas_preset_tattoo_male = [
 	{
 		cap = [
 			{
-				base_tex = `tex\models\characters\car\female\car_female_armr_tat_o_dnc.dds`
-				material = car_male_armr
-				cas_1
+				base_tex = `tex\models\Characters\CAR\female\CAR_female_ARMR_tat_O_dnc.dds`
+				material = CAR_male_ArmR
+				Cas_1
 				layers = [
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_icons044.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_icons044.img`
 						x_trans = 9
 						y_trans = 38
 						x_scale = 30
@@ -3611,7 +3611,7 @@ cas_preset_tattoo_male = [
 						color = red_2
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_banners008.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_banners008.img`
 						color = yellow_orange_5
 						x_trans = 9
 						x_scale = 35
@@ -3622,7 +3622,7 @@ cas_preset_tattoo_male = [
 					{
 						font = fontgrid_text_a6
 						text = 'y'
-						color = black_1guitar
+						color = Black_1guitar
 						x_trans = -5
 						x_scale = 30
 						y_scale = 30
@@ -3633,7 +3633,7 @@ cas_preset_tattoo_male = [
 					{
 						font = fontgrid_text_a6
 						text = 'o'
-						color = black_1guitar
+						color = Black_1guitar
 						x_trans = -2
 						x_scale = 30
 						y_scale = 28
@@ -3644,7 +3644,7 @@ cas_preset_tattoo_male = [
 					{
 						font = fontgrid_text_a6
 						text = 'u'
-						color = black_1guitar
+						color = Black_1guitar
 						y_trans = 38
 						x_scale = 30
 						y_scale = 30
@@ -3655,7 +3655,7 @@ cas_preset_tattoo_male = [
 					{
 						font = fontgrid_text_a6
 						text = 'r'
-						color = black_1guitar
+						color = Black_1guitar
 						y_trans = 38
 						x_scale = 30
 						y_scale = 30
@@ -3665,7 +3665,7 @@ cas_preset_tattoo_male = [
 					{
 						font = fontgrid_text_a6
 						text = 'M'
-						color = black_1guitar
+						color = Black_1guitar
 						x_trans = 10
 						y_trans = 39
 						x_scale = 30
@@ -3676,7 +3676,7 @@ cas_preset_tattoo_male = [
 					{
 						font = fontgrid_text_a6
 						text = 'O'
-						color = black_1guitar
+						color = Black_1guitar
 						y_trans = 38
 						x_scale = 30
 						y_scale = 30
@@ -3687,7 +3687,7 @@ cas_preset_tattoo_male = [
 					{
 						font = fontgrid_text_a6
 						text = 'M'
-						color = black_1guitar
+						color = Black_1guitar
 						x_trans = 20
 						y_trans = 37
 						x_scale = 30
@@ -3702,12 +3702,12 @@ cas_preset_tattoo_male = [
 	{
 		cap = [
 			{
-				base_tex = `tex\models\characters\car\female\car_female_body_tat_o_dnc.dds`
-				material = car_male_body
-				cas_1
+				base_tex = `tex\models\Characters\CAR\female\CAR_female_BODY_tat_O_dnc.dds`
+				material = CAR_Male_Body
+				Cas_1
 				layers = [
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_elemental006.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_elemental006.img`
 						x_trans = 51
 						y_trans = 8
 						x_scale = 46
@@ -3716,7 +3716,7 @@ cas_preset_tattoo_male = [
 						color = yellow_5guitar
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_banners008.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_banners008.img`
 						color = grey_4guitar
 						x_trans = -50
 						y_trans = -8
@@ -3727,7 +3727,7 @@ cas_preset_tattoo_male = [
 					{
 						font = fontgrid_title_a1
 						text = 'B'
-						color = black_1guitar
+						color = Black_1guitar
 						y_trans = -9
 						x_scale = 44
 						y_scale = 28
@@ -3738,7 +3738,7 @@ cas_preset_tattoo_male = [
 					{
 						font = fontgrid_title_a1
 						text = 'U'
-						color = black_1guitar
+						color = Black_1guitar
 						x_trans = 48
 						x_scale = 51
 						y_scale = 29
@@ -3749,7 +3749,7 @@ cas_preset_tattoo_male = [
 					{
 						font = fontgrid_title_a1
 						text = 'L'
-						color = black_1guitar
+						color = Black_1guitar
 						x_trans = 53
 						y_trans = -10
 						y_scale = 30
@@ -3759,7 +3759,7 @@ cas_preset_tattoo_male = [
 					{
 						font = fontgrid_title_a1
 						text = 'L'
-						color = black_1guitar
+						color = Black_1guitar
 						y_trans = -9
 						x_scale = 37
 						y_scale = 24
@@ -3767,7 +3767,7 @@ cas_preset_tattoo_male = [
 						x_trans = 56
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_graphics015.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_graphics015.img`
 						y_trans = 3
 						x_scale = 15
 						y_scale = 29
@@ -3776,7 +3776,7 @@ cas_preset_tattoo_male = [
 						x_trans = 54
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_graphics015.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_graphics015.img`
 						a = 100
 						x_trans = 46
 						x_skew = 0
@@ -3787,17 +3787,17 @@ cas_preset_tattoo_male = [
 						y_trans = 3
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_icon022.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_Icon022.img`
 						x_trans = -50
 						y_trans = 11
 						x_scale = 36
 						y_scale = 56
 						flags = 3
-						color = black_1guitar
+						color = Black_1guitar
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_icon_creature003.img`
-						color = black_1guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_Icon_Creature003.img`
+						color = Black_1guitar
 						a = 70
 						y_trans = -27
 						x_scale = 30
@@ -3807,8 +3807,8 @@ cas_preset_tattoo_male = [
 						x_trans = 14
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_icon_creature003.img`
-						color = black_1guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_Icon_Creature003.img`
+						color = Black_1guitar
 						a = 70
 						x_trans = -14
 						y_trans = -27
@@ -3818,8 +3818,8 @@ cas_preset_tattoo_male = [
 						x_scale = 30
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_icon014.img`
-						color = black_1guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_Icon014.img`
+						color = Black_1guitar
 						a = 80
 						x_trans = 0
 						x_scale = 105
@@ -3829,7 +3829,7 @@ cas_preset_tattoo_male = [
 						y_trans = -1
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_graphics097.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_graphics097.img`
 						a = 100
 						y_trans = 6
 						x_scale = 34
@@ -3840,12 +3840,12 @@ cas_preset_tattoo_male = [
 				]
 			}
 			{
-				base_tex = `tex\models\characters\car\female\car_female_armr_tat_o_dnc.dds`
-				material = car_male_armr
-				cas_1
+				base_tex = `tex\models\Characters\CAR\female\CAR_female_ARMR_tat_O_dnc.dds`
+				material = CAR_male_ArmR
+				Cas_1
 				layers = [
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_graphics070.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_graphics070.img`
 						color = red_orange_2
 						a = 85
 						x_trans = 9
@@ -3856,8 +3856,8 @@ cas_preset_tattoo_male = [
 						y_trans = 33
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_icon_creature002.img`
-						color = black_1guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_Icon_Creature002.img`
+						color = Black_1guitar
 						a = 70
 						x_trans = 8
 						x_scale = 30
@@ -3868,13 +3868,13 @@ cas_preset_tattoo_male = [
 				]
 			}
 			{
-				base_tex = `tex\models\characters\car\female\car_female_arml_tat_o_dnc.dds`
-				material = car_male_arml
-				cas_1
+				base_tex = `tex\models\Characters\CAR\female\CAR_female_ARML_tat_O_dnc.dds`
+				material = CAR_male_ArmL
+				Cas_1
 				layers = [
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_elemental002.img`
-						color = black_1guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_elemental002.img`
+						color = Black_1guitar
 						x_trans = -7
 						y_trans = 32
 						x_scale = 30
@@ -3883,16 +3883,16 @@ cas_preset_tattoo_male = [
 						a = 75
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_006.img`
-						color = black_1guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_006.img`
+						color = Black_1guitar
 						x_scale = 142
 						y_scale = 19
 						flags = 3
 						a = 60
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_006.img`
-						color = black_1guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_006.img`
+						color = Black_1guitar
 						a = 60
 						y_trans = -39
 						x_scale = 142
@@ -3900,8 +3900,8 @@ cas_preset_tattoo_male = [
 						y_scale = 1
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_006.img`
-						color = black_1guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_006.img`
+						color = Black_1guitar
 						a = 60
 						x_scale = 142
 						y_scale = 1
@@ -3909,8 +3909,8 @@ cas_preset_tattoo_male = [
 						y_trans = -37
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_icon014.img`
-						color = black_1guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_Icon014.img`
+						color = Black_1guitar
 						x_trans = -20
 						y_trans = -23
 						x_scale = 32
@@ -3920,8 +3920,8 @@ cas_preset_tattoo_male = [
 						a = 70
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_icon014.img`
-						color = black_1guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_Icon014.img`
+						color = Black_1guitar
 						a = 70
 						x_trans = -8
 						x_scale = 32
@@ -3931,8 +3931,8 @@ cas_preset_tattoo_male = [
 						y_trans = -23
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_icon014.img`
-						color = black_1guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_Icon014.img`
+						color = Black_1guitar
 						a = 70
 						y_trans = -22
 						x_scale = 32
@@ -3942,8 +3942,8 @@ cas_preset_tattoo_male = [
 						x_trans = -35
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_icon014.img`
-						color = black_1guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_Icon014.img`
+						color = Black_1guitar
 						a = 70
 						x_trans = 5
 						x_scale = 32

@@ -1,87 +1,87 @@
 
 script cas_rotate_skater_left 
-	killspawnedscript \{name = cas_rotate_skater}
-	playsound \{menu_colorwheel_rotate
+	KillSpawnedScript \{name = cas_rotate_skater}
+	PlaySound \{Menu_ColorWheel_Rotate
 		vol = -5
 		pitch = 0.5
 		buss = front_end}
-	spawnscriptlater \{cas_rotate_skater
+	SpawnScriptLater \{cas_rotate_skater
 		params = {
-			angle = -3
-			button = l1
+			Angle = -3
+			button = L1
 		}}
 endscript
 
 script cas_rotate_skater_option 
-	killspawnedscript \{name = cas_rotate_skater}
-	if isps3
+	KillSpawnedScript \{name = cas_rotate_skater}
+	if IsPs3
 		button = triangle
 	else
 		button = square
 	endif
-	spawnscriptlater cas_rotate_skater params = {angle = -3 button = <button>}
+	SpawnScriptLater cas_rotate_skater params = {Angle = -3 button = <button>}
 endscript
 
 script cas_rotate_skater_right 
-	killspawnedscript \{name = cas_rotate_skater}
-	playsound \{menu_colorwheel_rotate
+	KillSpawnedScript \{name = cas_rotate_skater}
+	PlaySound \{Menu_ColorWheel_Rotate
 		vol = -5
 		pitch = -0.5
 		buss = front_end}
-	spawnscriptlater \{cas_rotate_skater
+	SpawnScriptLater \{cas_rotate_skater
 		params = {
-			angle = 3
-			button = r1
+			Angle = 3
+			button = R1
 		}}
 endscript
 
 script cas_rotate_skater 
 	begin
-	if controllerpressed <button>
-		if getcurrentcasobject
-			if NOT (<cas_object> = bandlogoobject)
-				<cas_object> :obj_rotate relative = ((<angle> * (0.0, 1.0, 0.0)))
+	if ControllerPressed <button>
+		if GetCurrentCASObject
+			if NOT (<cas_object> = BandLogoObject)
+				<cas_object> :Obj_Rotate relative = ((<Angle> * (0.0, 1.0, 0.0)))
 			endif
 		endif
 	else
 		break
 	endif
-	wait \{1
+	Wait \{1
 		frame}
 	repeat
 endscript
 
-script cas_setup_rotating_camera \{fov = 70}
+script cas_setup_rotating_camera \{FOV = 70}
 	printf \{'cas_setup_rotating_camera'}
 	cas_parts_pos_script = cas_get_part_camera_pos_bedroom
-	if gotparam \{cam_anim}
+	if GotParam \{cam_anim}
 		<cas_parts_pos_script> cam_anim = <cam_anim>
 	else
 		<cas_parts_pos_script> cam_anim = none
 	endif
-	killskatercamanim \{all}
-	playigccam {
+	KillSkaterCamAnim \{all}
+	PlayIGCCam {
 		viewport = bg_viewport
-		lockto = world
+		LockTo = world
 		pos = <cam_pos>
-		quat = <cam_quat>
-		fov = <cam_fov>
-		play_hold = 1
+		Quat = <cam_quat>
+		FOV = <cam_fov>
+		Play_hold = 1
 		interrupt_current
-		name = cascamera
+		name = CASCamera
 	}
 endscript
 cas_override_camera_time = -1
 
-script cas_pull_back_camera \{button = r2}
+script cas_pull_back_camera \{button = R2}
 	printf \{'cas_pull_back_camera'}
-	requireparams \{[
+	RequireParams \{[
 			zoom_camera
 		]
 		all}
-	setspawninstancelimits \{max = 1
+	SetSpawnInstanceLimits \{max = 1
 		management = ignore_spawn_request}
-	if NOT scriptisrunning \{task_menu_default_anim_in}
+	if NOT ScriptIsRunning \{task_menu_default_anim_in}
 		change \{pulled_back = 1}
 		task_menu_retrieve_camera_base_name
 		if (<zoom_camera> = <camera_name>)
@@ -92,13 +92,13 @@ script cas_pull_back_camera \{button = r2}
 		task_menu_default_anim_in base_name = <zoom_camera> do_not_hide ignore_time = 1
 		change \{generic_menu_block_input = 0}
 		generic_menu_up_or_down_sound \{up}
-		wait \{0.1
+		Wait \{0.1
 			seconds}
 		begin
-		if NOT controllerpressed <button> <device_num>
+		if NOT ControllerPressed <button> <device_num>
 			break
 		endif
-		wait \{1
+		Wait \{1
 			gameframe}
 		repeat
 		change \{generic_menu_block_input = 1}
@@ -111,15 +111,15 @@ script cas_pull_back_camera \{button = r2}
 endscript
 cas_pull_back_camera_base = 'none'
 
-script cas_pull_back_camera_gh \{button = r2}
+script cas_pull_back_camera_gh \{button = R2}
 	printf \{'cas_pull_back_camera_gh'}
-	requireparams \{[
+	RequireParams \{[
 			zoom_camera
 		]
 		all}
-	setspawninstancelimits \{max = 1
+	SetSpawnInstanceLimits \{max = 1
 		management = ignore_spawn_request}
-	if NOT scriptisrunning \{task_menu_default_anim_in}
+	if NOT ScriptIsRunning \{task_menu_default_anim_in}
 		if ($pulled_back = 0)
 			task_menu_retrieve_camera_base_name
 			if (<zoom_camera> = <camera_name>)
@@ -146,57 +146,57 @@ script cas_pull_back_camera_gh \{button = r2}
 	endif
 endscript
 
-script cas_pull_back_camera_adaptive \{button = r2
+script cas_pull_back_camera_adaptive \{button = R2
 		pull_back_distance = 1.0}
-	setspawninstancelimits \{max = 1
+	SetSpawnInstanceLimits \{max = 1
 		management = ignore_spawn_request}
 	change \{pulled_back = 1}
 	task_menu_retrieve_camera_base_name
 	task_menu_retrieve_camera_params camera_name = <camera_name>
-	task_menu_retrieve_camera_dof_params camera_name = <camera_name>
-	if gotparam \{camera_params}
+	task_menu_retrieve_camera_DOF_params camera_name = <camera_name>
+	if GotParam \{camera_params}
 		pos = (<camera_params>.pos)
-		quat = (<camera_params>.quat)
-		rotatevector vector = (0.0, 0.0, -1.0) quat = <quat>
+		Quat = (<camera_params>.Quat)
+		RotateVector vector = (0.0, 0.0, -1.0) Quat = <Quat>
 		back_pos = (<pos> + <pull_back_distance> * <result_vector>)
-		playigccam {
+		PlayIGCCam {
 			id = cs_view_cam_id
 			name = menu_view_cam_pullback
 			viewport = bg_viewport
-			lockto = world
+			LockTo = world
 			pos = <back_pos>
-			quat = <quat>
-			fov = (<camera_params>.fov)
-			play_hold = 1
+			Quat = <Quat>
+			FOV = (<camera_params>.FOV)
+			Play_hold = 1
 			interrupt_current
 		}
-		if gotparam \{dof_params}
-			getdistance posa = <pos> posb = <back_pos>
+		if GotParam \{dof_params}
+			GetDistance posA = <pos> PosB = <back_pos>
 			increase_dof_distance distance = <dist_atob> dof_params = <dof_params>
 		endif
-		soundevent \{event = menu_car_zoomout}
-		wait \{0.3
+		SoundEvent \{event = Menu_CAR_ZoomOut}
+		Wait \{0.3
 			seconds}
 		begin
-		if NOT controllerpressed <button> <device_num>
+		if NOT ControllerPressed <button> <device_num>
 			break
 		endif
-		wait \{1
+		Wait \{1
 			gameframe}
 		repeat
-		killcamanim \{name = menu_view_cam_pullback}
-		if gotparam \{dof_params}
-			spawnscriptnow applymenudof params = {dofparam = <dof_params>}
+		KillCamAnim \{name = menu_view_cam_pullback}
+		if GotParam \{dof_params}
+			spawnscriptnow ApplyMenuDOF params = {dofParam = <dof_params>}
 		endif
-		soundevent \{event = menu_car_zoomin}
-		wait \{0.3
+		SoundEvent \{event = Menu_CAR_ZoomIn}
+		Wait \{0.3
 			seconds}
 	endif
 	change \{pulled_back = 0}
 endscript
 
 script increase_dof_distance 
-	requireparams \{[
+	RequireParams \{[
 			distance
 			dof_params
 		]
@@ -206,26 +206,26 @@ script increase_dof_distance
 		farblurbegin = ((<dof_params>.farblurbegin) + <distance>)
 		farblurend = ((<dof_params>.farblurend) + <distance>)
 	}
-	spawnscriptnow applymenudof params = {dofparam = <new_dof_params>}
+	spawnscriptnow ApplyMenuDOF params = {dofParam = <new_dof_params>}
 endscript
 
 script cleanup_cas_menu_handlers 
 	printf \{'cleanup_cas_menu_handlers'}
-	if scriptisrunning \{cas_pull_back_camera_adaptive}
-		killspawnedscript \{name = cas_pull_back_camera_adaptive}
+	if ScriptIsRunning \{cas_pull_back_camera_adaptive}
+		KillSpawnedScript \{name = cas_pull_back_camera_adaptive}
 	endif
-	if scriptisrunning \{cas_pull_back_camera}
-		killspawnedscript \{name = cas_pull_back_camera}
+	if ScriptIsRunning \{cas_pull_back_camera}
+		KillSpawnedScript \{name = cas_pull_back_camera}
 	endif
-	if scriptisrunning \{cas_pull_back_camera_gh}
-		killspawnedscript \{name = cas_pull_back_camera_gh}
+	if ScriptIsRunning \{cas_pull_back_camera_gh}
+		KillSpawnedScript \{name = cas_pull_back_camera_gh}
 	endif
 	change \{generic_menu_block_input = 0}
 	cas_pull_back_camera_base = 'none'
 	change \{cas_override_camera_time = -1}
 	change \{pulled_back = 0}
-	killcamanim \{name = menu_view_cam_pullback}
-	killcamanim \{name = cascamera}
+	KillCamAnim \{name = menu_view_cam_pullback}
+	KillCamAnim \{name = CASCamera}
 	change \{current_camera_cut_num = 0}
 endscript
 
@@ -234,30 +234,30 @@ script generic_pause_exit_sound
 endscript
 
 script generic_menu_update_arrows \{menu_id = current_menu}
-	if NOT objectexists id = <up_arrow_id>
+	if NOT ObjectExists id = <up_arrow_id>
 		return
 	endif
-	if NOT objectexists id = <down_arrow_id>
+	if NOT ObjectExists id = <down_arrow_id>
 		return
 	endif
-	if <menu_id> :menu_selectedindexis first
-		setscreenelementprops {
+	if <menu_id> :Menu_SelectedIndexIs first
+		SetScreenElementProps {
 			id = <up_arrow_id>
 			rgba = [128 128 128 0]
 		}
 	else
-		setscreenelementprops {
+		SetScreenElementProps {
 			id = <up_arrow_id>
 			rgba = [128 128 128 128]
 		}
 	endif
-	if <menu_id> :menu_selectedindexis last
-		setscreenelementprops {
+	if <menu_id> :Menu_SelectedIndexIs last
+		SetScreenElementProps {
 			id = <down_arrow_id>
 			rgba = [128 128 128 0]
 		}
 	else
-		setscreenelementprops {
+		SetScreenElementProps {
 			id = <down_arrow_id>
 			rgba = [128 128 128 128]
 		}
@@ -272,21 +272,21 @@ script cas_toggle_free_cam
 		change \{cas_free_cam_active = 0}
 	endif
 	printf \{'cas_toggle_free_cam'}
-	if NOT cd
-		if NOT isguitarcontroller controller = <device_num>
+	if NOT CD
+		if NOT IsGuitarController controller = <device_num>
 			change \{toggleviewmode_enabled = 1}
 			if ($view_mode = 0)
-				toggleviewmode \{no_reload}
+				ToggleViewMode \{no_reload}
 			else
 				change \{view_mode = 2}
-				toggleviewmode \{no_reload}
+				ToggleViewMode \{no_reload}
 			endif
 		endif
 	endif
 endscript
 
 script setup_cas_menu_handlers controller = ($primary_controller)
-	requireparams \{[
+	RequireParams \{[
 			vmenu_id
 		]
 		all}
@@ -294,45 +294,45 @@ script setup_cas_menu_handlers controller = ($primary_controller)
 		controller = ($menu_over_ride_exclusive_device)
 	endif
 	event_handlers = []
-	if ((isguitarcontroller controller = <controller>) || (0x1c708d82 controller = <controller>))
-		if NOT gotparam \{no_rotate}
-			if gotparam \{camera_list}
-				addarrayelement array = <event_handlers> element = {pad_option cas_change_camera_cut params = {camera_list = <camera_list> right}}
+	if ((IsGuitarController controller = <controller>) || (WinPortIsKeyboardController controller = <controller>))
+		if NOT GotParam \{no_rotate}
+			if GotParam \{camera_list}
+				AddArrayElement array = <event_handlers> element = {pad_option cas_change_camera_cut params = {camera_list = <camera_list> right}}
 				event_handlers = <array>
 			else
-				addarrayelement array = <event_handlers> element = {pad_option cas_rotate_skater_option}
+				AddArrayElement array = <event_handlers> element = {pad_option cas_rotate_skater_option}
 				event_handlers = <array>
 			endif
 		endif
-		if NOT gotparam \{no_zoom}
-			if gotparam \{zoom_camera}
-				addarrayelement array = <event_handlers> element = {pad_l1 cas_pull_back_camera params = {button = l1 zoom_camera = <zoom_camera>}}
+		if NOT GotParam \{no_zoom}
+			if GotParam \{zoom_camera}
+				AddArrayElement array = <event_handlers> element = {pad_l1 cas_pull_back_camera params = {button = L1 zoom_camera = <zoom_camera>}}
 				event_handlers = <array>
 			else
-				addarrayelement array = <event_handlers> element = {pad_l1 cas_pull_back_camera_adaptive params = {button = l1 pull_back_distance = <pull_back_distance>}}
+				AddArrayElement array = <event_handlers> element = {pad_l1 cas_pull_back_camera_adaptive params = {button = L1 pull_back_distance = <pull_back_distance>}}
 				event_handlers = <array>
 			endif
 		endif
-	elseif isdrumcontroller controller = <controller>
-		if NOT gotparam \{no_rotate}
-			if gotparam \{camera_list}
-				addarrayelement array = <event_handlers> element = {pad_option cas_change_camera_cut params = {camera_list = <camera_list> right}}
+	elseif IsDrumController controller = <controller>
+		if NOT GotParam \{no_rotate}
+			if GotParam \{camera_list}
+				AddArrayElement array = <event_handlers> element = {pad_option cas_change_camera_cut params = {camera_list = <camera_list> right}}
 				event_handlers = <array>
 			else
-				addarrayelement array = <event_handlers> element = {pad_option cas_rotate_skater_option}
+				AddArrayElement array = <event_handlers> element = {pad_option cas_rotate_skater_option}
 				event_handlers = <array>
 			endif
 		endif
-		if NOT gotparam \{no_zoom}
-			if gotparam \{zoom_camera}
-				if isrbdrum controller = <controller>
-					addarrayelement array = <event_handlers> element = {pad_l1 cas_pull_back_camera params = {button = l1 zoom_camera = <zoom_camera>}}
+		if NOT GotParam \{no_zoom}
+			if GotParam \{zoom_camera}
+				if isRBDrum controller = <controller>
+					AddArrayElement array = <event_handlers> element = {pad_l1 cas_pull_back_camera params = {button = L1 zoom_camera = <zoom_camera>}}
 				else
-					addarrayelement array = <event_handlers> element = {pad_l1 cas_pull_back_camera_gh params = {button = l1 zoom_camera = <zoom_camera>}}
+					AddArrayElement array = <event_handlers> element = {pad_l1 cas_pull_back_camera_gh params = {button = L1 zoom_camera = <zoom_camera>}}
 				endif
 				event_handlers = <array>
 			else
-				addarrayelement array = <event_handlers> element = {pad_l1 cas_pull_back_camera_adaptive params = {button = l1 pull_back_distance = <pull_back_distance>}}
+				AddArrayElement array = <event_handlers> element = {pad_l1 cas_pull_back_camera_adaptive params = {button = L1 pull_back_distance = <pull_back_distance>}}
 				event_handlers = <array>
 			endif
 		endif
@@ -341,30 +341,30 @@ script setup_cas_menu_handlers controller = ($primary_controller)
 			{pad_l3 cas_artist_flush}
 			{pad_alt2 cas_toggle_free_cam}
 		]
-		if NOT gotparam \{no_rotate}
-			if gotparam \{camera_list}
-				addarrayelement array = <event_handlers> element = {pad_r1 cas_change_camera_cut params = {camera_list = <camera_list> right}}
-				addarrayelement array = <array> element = {pad_l1 cas_change_camera_cut params = {camera_list = <camera_list> left}}
+		if NOT GotParam \{no_rotate}
+			if GotParam \{camera_list}
+				AddArrayElement array = <event_handlers> element = {pad_r1 cas_change_camera_cut params = {camera_list = <camera_list> right}}
+				AddArrayElement array = <array> element = {pad_l1 cas_change_camera_cut params = {camera_list = <camera_list> left}}
 				event_handlers = <array>
 			else
-				addarrayelement array = <event_handlers> element = {pad_l1 cas_rotate_skater_left}
-				addarrayelement array = <array> element = {pad_r1 cas_rotate_skater_right}
+				AddArrayElement array = <event_handlers> element = {pad_l1 cas_rotate_skater_left}
+				AddArrayElement array = <array> element = {pad_r1 cas_rotate_skater_right}
 				event_handlers = <array>
 			endif
 		endif
-		if NOT gotparam \{no_zoom}
-			if gotparam \{zoom_camera}
-				addarrayelement array = <event_handlers> element = {pad_r2 cas_pull_back_camera params = {button = r2 zoom_camera = <zoom_camera>}}
+		if NOT GotParam \{no_zoom}
+			if GotParam \{zoom_camera}
+				AddArrayElement array = <event_handlers> element = {pad_r2 cas_pull_back_camera params = {button = R2 zoom_camera = <zoom_camera>}}
 				event_handlers = <array>
 			else
-				addarrayelement array = <event_handlers> element = {pad_r2 cas_pull_back_camera_adaptive params = {button = r2 pull_back_distance = <pull_back_distance>}}
+				AddArrayElement array = <event_handlers> element = {pad_r2 cas_pull_back_camera_adaptive params = {button = R2 pull_back_distance = <pull_back_distance>}}
 				event_handlers = <array>
 			endif
 		endif
 	endif
-	getarraysize \{event_handlers}
+	GetArraySize \{event_handlers}
 	if (<array_size> > 0)
-		setscreenelementprops {
+		SetScreenElementProps {
 			id = <vmenu_id>
 			event_handlers = <event_handlers>
 			replace_handlers
@@ -374,22 +374,22 @@ endscript
 current_camera_cut_num = 0
 
 script cas_change_camera_cut 
-	requireparams \{[
+	RequireParams \{[
 			camera_list
 		]
 		all}
 	printf \{'cas_change_camera_cut'}
-	if NOT ((scriptisrunning task_menu_default_anim_in) || (scriptisrunning cas_pull_back_camera) || (scriptisrunning cas_pull_back_camera_gh))
+	if NOT ((ScriptIsRunning task_menu_default_anim_in) || (ScriptIsRunning cas_pull_back_camera) || (ScriptIsRunning cas_pull_back_camera_gh))
 		change \{cas_override_camera_time = -1}
-		getarraysize <camera_list>
+		GetArraySize <camera_list>
 		if (<array_size> = 0)
 			return
 		endif
-		if gotparam \{right}
-			soundevent \{event = gigboard_zoom_right}
+		if GotParam \{right}
+			SoundEvent \{event = GigBoard_Zoom_right}
 			change current_camera_cut_num = (($current_camera_cut_num) + 1)
 		else
-			soundevent \{event = gigboard_zoom_left}
+			SoundEvent \{event = GigBoard_Zoom_Left}
 			change current_camera_cut_num = (($current_camera_cut_num) -1)
 		endif
 		if (($current_camera_cut_num) > (<array_size> -1))
@@ -404,11 +404,11 @@ script cas_change_camera_cut
 endscript
 
 script setup_cas_menu_handlers_restricted 
-	requireparams \{[
+	RequireParams \{[
 			vmenu_id
 		]
 		all}
-	setscreenelementprops {
+	SetScreenElementProps {
 		id = <vmenu_id>
 		event_handlers =
 		[
@@ -421,25 +421,25 @@ script setup_cas_menu_handlers_restricted
 	}
 endscript
 
-script getinstrumentnodename 
+script GetInstrumentNodeName 
 	if (<instrument> = none)
 		return \{false}
 	endif
-	node = z_soundcheck_trg_waypoint_guitar_start
+	node = z_SoundCheck_TRG_Waypoint_Guitar_Start
 	switch (<instrument>)
 		case guitar
-		case bass
-		<node> = z_soundcheck_trg_waypoint_guitar_start
+		case Bass
+		<node> = z_SoundCheck_TRG_Waypoint_Guitar_Start
 		case drum
-		<node> = z_soundcheck_trg_waypoint_drum_start
-		case vocals
-		<node> = z_soundcheck_trg_waypoint_microphone_start
+		<node> = Z_Soundcheck_TRG_Waypoint_Drum_Start
+		case Vocals
+		<node> = Z_Soundcheck_TRG_Waypoint_Microphone_Start
 	endswitch
 	return instrument_node_name = <node> true
 endscript
 
 script is_female_char 
-	getcurrentcasobject
+	GetCurrentCASObject
 	cas_get_is_female player = ($cas_current_player)
 	if (<is_female> = 1)
 		return \{true}
@@ -449,21 +449,21 @@ script is_female_char
 endscript
 
 script create_font_arrays 
-	getarraysize ($car_font_list)
+	GetArraySize ($car_font_list)
 	font_list_size = <array_size>
 	i = 0
 	begin
-	formattext checksumname = new_global_name 'car_%i' i = ((($car_font_list) [<i>]).font)
+	FormatText checksumname = new_global_name 'car_%i' i = ((($car_font_list) [<i>]).font)
 	new_global_value = ($car_char_list)
-	getarraysize (<new_global_value>)
+	GetArraySize (<new_global_value>)
 	j = 0
 	begin
-	formattext checksumname = font '%i' i = ((($car_font_list) [<i>]).font)
+	FormatText checksumname = font '%i' i = ((($car_font_list) [<i>]).font)
 	newstruct = {(<new_global_value> [<j>]) font = <font>}
-	setarrayelement arrayname = new_global_value index = <j> newvalue = <newstruct>
+	SetArrayElement ArrayName = new_global_value index = <j> newvalue = <newstruct>
 	j = (<j> + 1)
 	repeat <array_size>
-	newglobal name = <new_global_name> value = <new_global_value>
+	NewGlobal name = <new_global_name> value = <new_global_value>
 	i = (<i> + 1)
 	repeat <font_list_size>
 endscript

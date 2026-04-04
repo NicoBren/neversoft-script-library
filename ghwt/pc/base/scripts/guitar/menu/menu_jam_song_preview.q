@@ -1,20 +1,20 @@
 
 script create_song_preview_menu \{ghtunes = 0
 		num_ratings = 0}
-	menu_music_off
+	Menu_Music_Off
 	clean_up_user_control_helpers
-	if screenelementexists \{id = song_preview_element}
-		destroyscreenelement \{id = song_preview_element}
+	if ScreenElementExists \{id = song_preview_element}
+		DestroyScreenElement \{id = song_preview_element}
 	endif
 	if (<ghtunes> = 0)
-		launchevent \{type = unfocus
+		LaunchEvent \{type = unfocus
 			target = current_menu}
 	endif
 	if (<ghtunes> = 0)
-		createscreenelement {
+		CreateScreenElement {
 			parent = root_window
 			id = song_preview_element
-			type = descinterface
+			type = DescInterface
 			desc = 'gh_tunes_preview'
 			event_handlers = [
 				{pad_back song_preview_menu_back params = {ghtunes = <ghtunes>}}
@@ -36,10 +36,10 @@ script create_song_preview_menu \{ghtunes = 0
 			{pad_start song_preview_show_gamercard params = {user_id = <user_id>}}
 			{pad_l1 ghtunes_show_terms_of_service params = {parent_menu = song_preview_element user_id = <user_id> selected_index = <selected_index>}}
 		]
-		createscreenelement {
+		CreateScreenElement {
 			parent = root_window
 			id = song_preview_element
-			type = descinterface
+			type = DescInterface
 			desc = 'gh_tunes_preview'
 			event_handlers = <event_handlers>
 			exclusive_device = ($primary_controller)
@@ -49,51 +49,51 @@ script create_song_preview_menu \{ghtunes = 0
 			rot_angle = 90
 		}
 	endif
-	launchevent \{type = unfocus
+	LaunchEvent \{type = unfocus
 		target = song_preview_element}
-	if NOT gotparam \{file_id}
-		getsonginfo
+	if NOT GotParam \{file_id}
+		GetSongInfo
 	endif
 	create_jam_song_info_text parent = song_preview_element pos = (485.0, 332.0) column_offset = (215.0, 0.0) z_priority = 60 filename = <filename> file_id = <file_id> num_ratings = <num_ratings>
 	song_preview_draw_album_cover
 	if (<ghtunes> = 0)
 		jam_publish_draw_album_cover
 	endif
-	if screenelementexists \{id = song_preview_element}
-		soundevent \{event = ghtunes_on}
-		song_preview_element :setprops \{playbar_dims = (0.0, 14.0)}
-		song_preview_element :setprops \{rot_angle = -1
+	if ScreenElementExists \{id = song_preview_element}
+		SoundEvent \{event = GHTunes_On}
+		song_preview_element :SetProps \{playbar_dims = (0.0, 14.0)}
+		song_preview_element :SetProps \{rot_angle = -1
 			time = 0.2}
-		song_preview_element :se_waitprops
-		song_preview_element :setprops \{rot_angle = 1
+		song_preview_element :SE_WaitProps
+		song_preview_element :SetProps \{rot_angle = 1
 			time = 0.02}
-		song_preview_element :se_waitprops
-		song_preview_element :setprops \{rot_angle = -0.5
+		song_preview_element :SE_WaitProps
+		song_preview_element :SetProps \{rot_angle = -0.5
 			time = 0.02}
-		song_preview_element :se_waitprops
-		song_preview_element :setprops \{rot_angle = 0.5
+		song_preview_element :SE_WaitProps
+		song_preview_element :SetProps \{rot_angle = 0.5
 			time = 0.02}
-		song_preview_element :se_waitprops
-		song_preview_element :setprops \{rot_angle = 0
+		song_preview_element :SE_WaitProps
+		song_preview_element :SetProps \{rot_angle = 0
 			time = 0.02}
-		song_preview_element :se_waitprops
+		song_preview_element :SE_WaitProps
 	endif
-	getsonginfo
-	getarraysize \{$drum_kits}
-	printf channel = jam_mode qs(0xdf0adb60) s = <drum_kit>
+	GetSongInfo
+	GetArraySize \{$drum_kits}
+	printf channel = jam_mode qs("\Ldrum kit %s") s = <drum_kit>
 	if ((<drum_kit> >= <array_size>) || (<drum_kit> < 0))
 		<drum_kit> = 0
 	endif
 	change jam_current_drum_kit = <drum_kit>
-	loaddrumkitall drum_kit = ($drum_kits [<drum_kit>].string_id) percussion_kit = ($drum_kits [<drum_kit>].percussion_string_id) async = 0
-	wait \{1
+	LoadDrumKitAll drum_kit = ($drum_kits [<drum_kit>].string_id) percussion_kit = ($drum_kits [<drum_kit>].percussion_string_id) async = 0
+	Wait \{1
 		gameframe}
-	getarraysize \{$pause_melody_kit_options}
+	GetArraySize \{$pause_melody_kit_options}
 	if ((<melody_kit> >= <array_size>) || (<melody_kit> < 0))
 		<melody_kit> = 0
 	endif
 	change jam_current_melody_kit = <melody_kit>
-	loadmelodykit melody_kit = <melody_kit>
+	LoadMelodyKit melody_kit = <melody_kit>
 	spawnscriptnow \{guitar_jam_playback_recording
 		params = {
 			jam_instrument = 0
@@ -124,52 +124,52 @@ script create_song_preview_menu \{ghtunes = 0
 		}}
 	spawnscriptnow song_preview_update_playbar params = {song_length = <song_length>}
 	change song_preview_curr_song_length = <song_length>
-	if screenelementexists \{id = song_preview_element}
-		song_preview_element :setprops \{timer_text = qs(0x959c9972)}
+	if ScreenElementExists \{id = song_preview_element}
+		song_preview_element :SetProps \{Timer_text = qs("0:00")}
 	endif
 	clean_up_user_control_helpers
 	if (<ghtunes> = 0)
-		add_user_control_helper \{text = qs(0xb458b767)
+		add_user_control_helper \{text = qs("PLAY/PAUSE")
 			button = green
 			z = 100000}
-		add_user_control_helper \{text = qs(0xaf4d5dd2)
+		add_user_control_helper \{text = qs("BACK")
 			button = red
 			z = 100000}
 	else
-		add_user_control_helper \{text = qs(0xb458b767)
+		add_user_control_helper \{text = qs("PLAY/PAUSE")
 			button = green
 			z = 100000}
 		if current_band_has_band_name controller = ($primary_controller)
-			add_user_control_helper \{text = qs(0xe618e644)
-				button = yellow
+			add_user_control_helper \{text = qs("SAVE")
+				button = Yellow
 				z = 100000}
 		endif
-		add_user_control_helper \{text = qs(0xb7bb830d)
-			button = orange
+		add_user_control_helper \{text = qs("TERMS OF USE")
+			button = Orange
 			z = 100000}
-		if NOT iswinport
-			if isxenon
-				if gotparam \{user_id}
-					add_user_control_helper \{text = qs(0x9a7d1fe5)
+		if NOT IsWinPort
+			if isXenon
+				if GotParam \{user_id}
+					add_user_control_helper \{text = qs("GAMER CARD")
 						button = start
 						z = 100000}
 				endif
 			endif
 		endif
-		add_user_control_helper \{text = qs(0xd9bf4807)
-			button = blue
+		add_user_control_helper \{text = qs("VIEW ALL BY ARTIST")
+			button = Blue
 			z = 100000}
 	endif
-	launchevent \{type = focus
+	LaunchEvent \{type = focus
 		target = song_preview_element}
 endscript
 
 script song_preview_show_gamercard 
 	printf \{channel = jam_mode
 		'song_preview_show_gamercard'}
-	if isxenon
-		if gotparam \{user_id}
-			netsessionfunc func = showgamercard params = {player_xuid = (<user_id>.user_id)}
+	if isXenon
+		if GotParam \{user_id}
+			NetSessionFunc func = showGamerCard params = {player_xuid = (<user_id>.user_id)}
 		endif
 	endif
 endscript
@@ -179,16 +179,16 @@ script song_preview_save_song
 		return
 	endif
 	printf \{channel = jam_mode
-		qs(0xa6dda4fd)}
-	if screenelementexists \{id = song_preview_element}
-		launchevent \{type = unfocus
+		qs("\Lsong_preview_save_song")}
+	if ScreenElementExists \{id = song_preview_element}
+		LaunchEvent \{type = unfocus
 			target = song_preview_element}
 	endif
 	if (<ghtunes> = 0)
 		return
 	endif
 	directorylisting = $jam_curr_directory_listing
-	getarraysize <directorylisting>
+	GetArraySize <directorylisting>
 	if (<array_size> > 0)
 		index = 0
 		begin
@@ -199,31 +199,31 @@ script song_preview_save_song
 		<index> = (<index> + 1)
 		repeat <array_size>
 	endif
-	soundevent \{event = ghtunes_ui_select}
+	SoundEvent \{event = GHTunes_UI_Select}
 	destroy_song_preview_menu \{ghtunes = 1}
 	change \{memcard_after_func = song_preview_unload}
 	change memcard_jamsession_file_name = <filename>
-	ui_memcard_save_jam event = menu_back data = {state = uistate_jam_ghtunes straight_to_leaderbrd = {index = <board_index> start_at = <start_at>}}
-	achievements_this_is_totally_legal controller = ($primary_controller)
+	ui_memcard_save_jam event = menu_back data = {state = UIstate_jam_ghtunes straight_to_leaderbrd = {index = <board_index> start_at = <start_at>}}
+	Achievements_THIS_IS_TOTALLY_LEGAL controller = ($primary_controller)
 endscript
 
 script song_preview_save_song_failed \{dialog = 0}
-	launchevent \{type = unfocus
+	LaunchEvent \{type = unfocus
 		target = song_preview_element}
-	soundevent \{event = menu_warning_sfx}
+	SoundEvent \{event = Menu_Warning_SFX}
 	clean_up_user_control_helpers
 	jam_stop_all_sound
-	killspawnedscript \{name = guitar_jam_playback_recording}
-	killspawnedscript \{name = guitar_jam_drum_playback}
-	killspawnedscript \{name = song_preview_update_playbar}
+	KillSpawnedScript \{name = guitar_jam_playback_recording}
+	KillSpawnedScript \{name = guitar_jam_drum_playback}
+	KillSpawnedScript \{name = song_preview_update_playbar}
 	switch <dialog>
 		case 0
-		formattext \{textname = dialog
-			qs(0xbcf241ef)}
+		FormatText \{TextName = dialog
+			qs("GHTunes Save failed. You already have a song with the same filename as the one you are attempting to save. Please delete or rename this song before trying again.")}
 	endswitch
 	destroy_popup_warning_menu
 	create_popup_warning_menu {
-		title = qs(0x86289d11)
+		title = qs("SAVE FAILED")
 		textblock = {
 			text = <dialog>
 			pos = (640.0, 370.0)
@@ -233,36 +233,36 @@ script song_preview_save_song_failed \{dialog = 0}
 			{
 				func = {song_preview_menu_back}
 				func_params = {<...>}
-				text = qs(0x320a8d1c)
+				text = qs("GO BACK")
 			}
 		]
 	}
 endscript
 
-script song_preview_play_pause \{0x071c4498 = 0}
-	if iswinport
-		if (<0x071c4498> = 1)
-			0x071c4498 = 0
-			if (((scriptisrunning guitar_jam_playback_recording) = 0) && ((scriptisrunning guitar_jam_drum_playback) = 0))
+script song_preview_play_pause \{sppp_pause_only = 0}
+	if IsWinPort
+		if (<sppp_pause_only> = 1)
+			sppp_pause_only = 0
+			if (((ScriptIsRunning guitar_jam_playback_recording) = 0) && ((ScriptIsRunning guitar_jam_drum_playback) = 0))
 				return
 			endif
 		endif
 	endif
 	printf \{channel = jam_mode
-		qs(0xe0524aa4)}
-	soundevent \{event = ghtunes_ui_select}
-	if scriptisrunning \{guitar_jam_playback_recording}
-		getsongtimems
+		qs("\LSong Preview Play Pause")}
+	SoundEvent \{event = GHTunes_UI_Select}
+	if ScriptIsRunning \{guitar_jam_playback_recording}
+		GetSongTimeMs
 		change song_preview_curr_song_time = <time>
-		killspawnedscript \{name = guitar_jam_playback_recording}
-		killspawnedscript \{name = guitar_jam_drum_playback}
-		killspawnedscript \{name = song_preview_update_playbar}
-	elseif scriptisrunning \{guitar_jam_drum_playback}
-		getsongtimems
+		KillSpawnedScript \{name = guitar_jam_playback_recording}
+		KillSpawnedScript \{name = guitar_jam_drum_playback}
+		KillSpawnedScript \{name = song_preview_update_playbar}
+	elseif ScriptIsRunning \{guitar_jam_drum_playback}
+		GetSongTimeMs
 		change song_preview_curr_song_time = <time>
-		killspawnedscript \{name = guitar_jam_playback_recording}
-		killspawnedscript \{name = guitar_jam_drum_playback}
-		killspawnedscript \{name = song_preview_update_playbar}
+		KillSpawnedScript \{name = guitar_jam_playback_recording}
+		KillSpawnedScript \{name = guitar_jam_drum_playback}
+		KillSpawnedScript \{name = song_preview_update_playbar}
 	else
 		spawnscriptnow \{guitar_jam_playback_recording
 			params = {
@@ -297,103 +297,103 @@ script song_preview_play_pause \{0x071c4498 = 0}
 				song_length = $song_preview_curr_song_length
 			}}
 	endif
-	stopsound unique_id = ($jam_input_current_chord) fade_type = linear fade_time = $jam_fade_time
-	stopsound unique_id = ($jam_input_current_lead) fade_type = log_fast fade_time = 0.3
-	stopsound unique_id = ($jam_input_current_bass) fade_type = linear fade_time = $jam_fade_time
-	stopsound unique_id = ($jam_input_current_melody) fade_type = linear fade_time = $jam_fade_time
+	StopSound unique_id = ($jam_input_current_chord) fade_type = linear fade_time = $jam_fade_time
+	StopSound unique_id = ($jam_input_current_lead) fade_type = log_fast fade_time = 0.3
+	StopSound unique_id = ($jam_input_current_bass) fade_type = linear fade_time = $jam_fade_time
+	StopSound unique_id = ($jam_input_current_melody) fade_type = linear fade_time = $jam_fade_time
 endscript
 song_preview_curr_song_length = 0
 song_preview_curr_song_time = 0
 
 script song_preview_update_playbar 
-	if NOT screenelementexists \{id = song_preview_element}
+	if NOT ScreenElementExists \{id = song_preview_element}
 		return
 	endif
-	song_preview_element :setprops \{playbar_dims = (0.0, 14.0)}
+	song_preview_element :SetProps \{playbar_dims = (0.0, 14.0)}
 	playbar_max_x = 344
 	begin
-	getsongtimems
+	GetSongTimeMs
 	if (<time> >= <song_length>)
 		change \{song_preview_curr_song_time = 0}
 		break
 	endif
 	playbar_x = ((<time> / <song_length>) * <playbar_max_x>)
-	song_preview_element :setprops playbar_dims = ((0.0, 14.0) + ((1.0, 0.0) * <playbar_x>))
-	casttointeger \{time}
-	mod a = <time> b = 60000
-	<seconds> = (<mod> / 1000)
+	song_preview_element :SetProps playbar_dims = ((0.0, 14.0) + ((1.0, 0.0) * <playbar_x>))
+	CastToInteger \{time}
+	Mod a = <time> b = 60000
+	<seconds> = (<Mod> / 1000)
 	<minutes> = (<time> / 60000)
 	<sec_check> = (<seconds> / 10)
 	if (<sec_check> < 1)
-		formattext textname = song_time_text qs(0xeacde407) a = <minutes> b = <seconds>
+		FormatText TextName = song_time_text qs("%a:0%b") a = <minutes> b = <seconds>
 	else
-		formattext textname = song_time_text qs(0xcc868dda) a = <minutes> b = <seconds>
+		FormatText TextName = song_time_text qs("%a:%b") a = <minutes> b = <seconds>
 	endif
-	song_preview_element :setprops timer_text = <song_time_text>
-	wait \{1
+	song_preview_element :SetProps Timer_text = <song_time_text>
+	Wait \{1
 		gameframe}
 	repeat
 endscript
 
 script song_preview_draw_album_cover 
 	cas_update_band_logo \{album_art}
-	pushassetcontext context = ($cas_band_logo_details.assetcontext)
-	if screenelementexists \{id = jam_preview_album_cover}
-		destroyscreenelement \{id = jam_preview_album_cover}
+	PushAssetContext context = ($CAS_Band_Logo_Details.assetcontext)
+	if ScreenElementExists \{id = jam_preview_album_cover}
+		DestroyScreenElement \{id = jam_preview_album_cover}
 	endif
-	createscreenelement {
-		type = spriteelement
+	CreateScreenElement {
+		type = SpriteElement
 		parent = song_preview_element
 		id = jam_preview_album_cover
-		texture = ($cas_band_logo_details.textureasset)
+		texture = ($CAS_Band_Logo_Details.textureasset)
 		dims = (256.0, 256.0)
 		pos = (346.0, 353.0)
 		just = [center center]
 		z_priority = 60
 	}
-	popassetcontext
+	PopAssetContext
 endscript
 
 script song_preview_menu_back 
 	destroy_popup_warning_menu
-	killspawnedscript \{name = song_preview_update_playbar}
-	soundevent \{event = ghtunes_off}
+	KillSpawnedScript \{name = song_preview_update_playbar}
+	SoundEvent \{event = GHTunes_off}
 	clean_up_user_control_helpers
-	if screenelementexists \{id = song_preview_element}
-		song_preview_element :setprops \{rot_angle = 90
+	if ScreenElementExists \{id = song_preview_element}
+		song_preview_element :SetProps \{rot_angle = 90
 			time = 0.2}
-		song_preview_element :se_waitprops
+		song_preview_element :SE_WaitProps
 	endif
 	destroy_song_preview_menu ghtunes = <ghtunes>
 	if (<ghtunes> = 1)
 		song_preview_unload
-		ui_event event = menu_back state = uistate_jam_ghtunes data = {straight_to_leaderbrd = {index = <board_index> start_at = <start_at>}}
+		ui_event event = menu_back state = UIstate_jam_ghtunes data = {straight_to_leaderbrd = {index = <board_index> start_at = <start_at>}}
 	endif
 endscript
 
 script song_preview_unload 
 	jamsession_unload \{song_prefix = 'editable'}
-	clearjamsession
+	ClearJamSession
 endscript
 
 script destroy_song_preview_menu \{ghtunes = 0}
 	jam_stop_all_sound
-	if screenelementexists \{id = song_preview_element}
-		destroyscreenelement \{id = song_preview_element}
+	if ScreenElementExists \{id = song_preview_element}
+		DestroyScreenElement \{id = song_preview_element}
 	endif
-	killspawnedscript \{name = guitar_jam_playback_recording}
-	killspawnedscript \{name = guitar_jam_drum_playback}
-	killspawnedscript \{name = song_preview_update_playbar}
+	KillSpawnedScript \{name = guitar_jam_playback_recording}
+	KillSpawnedScript \{name = guitar_jam_drum_playback}
+	KillSpawnedScript \{name = song_preview_update_playbar}
 	if (<ghtunes> = 0)
-		if screenelementexists \{id = current_menu}
-			launchevent \{type = focus
+		if ScreenElementExists \{id = current_menu}
+			LaunchEvent \{type = focus
 				target = current_menu}
 		endif
 		clean_up_user_control_helpers
-		add_user_control_helper \{text = qs(0xc18d5e76)
+		add_user_control_helper \{text = qs("SELECT")
 			button = green
 			z = 100}
-		add_user_control_helper \{text = qs(0xaf4d5dd2)
+		add_user_control_helper \{text = qs("BACK")
 			button = red
 			z = 100}
 	endif

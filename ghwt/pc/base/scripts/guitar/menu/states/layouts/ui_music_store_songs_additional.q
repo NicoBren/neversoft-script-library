@@ -1,16 +1,16 @@
 
 script ui_create_music_store_songs_additional 
-	if gotparam \{selected_index}
+	if GotParam \{selected_index}
 		do_not_animate = {do_not_animate}
 	endif
-	if gotparam \{pack_list}
-		formattext textname = hist_text qs(0x344aa009) a = <pack_list>
+	if GotParam \{pack_list}
+		FormatText TextName = hist_text qs("\L%a SONGS") a = <pack_list>
 		music_store_set_previous_history previous_history = <previous_history> new_entry = <hist_text> <do_not_animate>
-	elseif gotparam \{album_list}
-		formattext textname = hist_text qs(0x344aa009) a = <album_list>
+	elseif GotParam \{album_list}
+		FormatText TextName = hist_text qs("\L%a SONGS") a = <album_list>
 		music_store_set_previous_history previous_history = <previous_history> new_entry = <hist_text> <do_not_animate>
 	endif
-	getarraysize <list>
+	GetArraySize <list>
 	if (<array_size> > 0)
 		i = 0
 		begin
@@ -21,12 +21,12 @@ script ui_create_music_store_songs_additional
 		i = (<i> + 1)
 		repeat <array_size>
 	else
-		if NOT cd
-			add_music_store_item \{text = qs(0x434e83fa)}
+		if NOT CD
+			add_music_store_item \{text = qs("\LNO SONG LIST! FILL THIS OUT!")}
 		endif
 	endif
 	spawnscriptnow \{music_store_fade_in_options}
-	add_user_control_helper \{text = qs(0x0c4db477)
+	add_user_control_helper \{text = qs("\LBACK")
 		button = red
 		z = 100000}
 endscript

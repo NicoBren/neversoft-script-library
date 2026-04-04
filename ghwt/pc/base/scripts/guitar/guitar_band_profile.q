@@ -1,192 +1,192 @@
 default_custom_musician_profile_female = {
 	allowed_parts = [
 		drum
-		vocals
+		Vocals
 		guitar
-		bass
+		Bass
 	]
-	blurb = qs(0x03ac90f0)
+	blurb = qs("\L")
 	appearance = {
-		cas_body = {
-			desc_id = gh4_car_female
+		CAS_Body = {
+			desc_id = GH4_CAR_Female
 		}
 		cas_physique = {
-			desc_id = femalephysique
+			desc_id = FemalePhysique
 		}
-		cas_guitar_body = {
+		CAS_Guitar_Body = {
 			desc_id = guitar_body01
 		}
-		cas_guitar_neck = {
-			desc_id = guitar_neck01
+		CAS_Guitar_Neck = {
+			desc_id = Guitar_Neck01
 			cap = [
 				{
-					base_tex = `tex/models/car_instruments/guitars/neck_maple_tb_01.dds`
-					material = guitar_neck1_primary
+					base_tex = `tex/models/Car_Instruments/Guitars/neck_maple_tb_01.dds`
+					material = Guitar_Neck1_Primary
 					diffuse
 					pre_layer = [
 						{
-							texture = `tex/models/characters/layers/cag/neck1_inlay_dots1_d_01.img`
+							texture = `tex/models/Characters/Layers/CAG/neck1_inlay_dots1_d_01.img`
 						}
 					]
 				}
 			]
 		}
-		cas_guitar_head = {
-			desc_id = guitar_head01
+		CAS_Guitar_Head = {
+			desc_id = Guitar_Head01
 		}
-		cas_guitar_pickguards = {
-			desc_id = guitar_pickg01
+		CAS_Guitar_Pickguards = {
+			desc_id = Guitar_PickG01
 		}
-		cas_guitar_pickups = {
-			desc_id = gtr_pickups_style_01a
+		CAS_Guitar_Pickups = {
+			desc_id = GTR_Pickups_Style_01a
 		}
-		cas_guitar_knobs = {
-			desc_id = gtr_knobs_style_01a
+		CAS_Guitar_Knobs = {
+			desc_id = GTR_Knobs_Style_01a
 		}
-		cas_guitar_bridges = {
-			desc_id = gtr_hardware01a
+		CAS_Guitar_Bridges = {
+			desc_id = GTR_Hardware01a
 		}
-		cas_bass_body = {
-			desc_id = cab_body_b2a
+		CAS_Bass_Body = {
+			desc_id = CAB_Body_B2A
 		}
-		cas_bass_neck = {
-			desc_id = cab_neck_bn1a
+		CAS_Bass_Neck = {
+			desc_id = CAB_Neck_BN1A
 		}
-		cas_bass_head = {
-			desc_id = cab_head_bh6a
+		CAS_Bass_Head = {
+			desc_id = CAB_Head_BH6A
 		}
-		cas_bass_pickguards = {
-			desc_id = cab_pickg_e1
+		CAS_Bass_Pickguards = {
+			desc_id = CAB_PickG_E1
 		}
-		cas_bass_pickups = {
-			desc_id = cab_hbuck_pickup_a2
+		CAS_Bass_Pickups = {
+			desc_id = CAB_HBuck_pickup_A2
 		}
-		cas_bass_knobs = {
+		CAS_Bass_Knobs = {
 			desc_id = cab_knob_chndr05
 		}
-		cas_bass_bridges = {
-			desc_id = cab_bridge_bb3a
+		CAS_Bass_Bridges = {
+			desc_id = CAB_Bridge_BB3A
 		}
-		cas_mic = {
-			desc_id = rock
+		CAS_Mic = {
+			desc_id = Rock
 		}
-		cas_mic_stand = {
-			desc_id = rock
+		CAS_Mic_Stand = {
+			desc_id = Rock
 		}
-		cas_drums = {
+		CAS_Drums = {
 			desc_id = basic
 		}
-		cas_female_win_anim = {
-			desc_id = win_hype
+		CAS_Female_Win_Anim = {
+			desc_id = Win_Hype
 		}
-		cas_female_lose_anim = {
-			desc_id = lose_angryatcrowd
+		CAS_Female_Lose_Anim = {
+			desc_id = Lose_AngryAtCrowd
 		}
-		cas_female_intro_anim = {
-			desc_id = intro_hype
+		CAS_Female_Intro_Anim = {
+			desc_id = Intro_Hype
 		}
-		genre = rock
+		genre = Rock
 	}
 }
 default_custom_musician_profile_male = {
 	allowed_parts = [
 		drum
-		vocals
+		Vocals
 		guitar
-		bass
+		Bass
 	]
-	blurb = qs(0x03ac90f0)
+	blurb = qs("\L")
 	appearance = {
-		cas_body = {
-			desc_id = gh4_car_male
+		CAS_Body = {
+			desc_id = GH4_CAR_Male
 		}
 		cas_physique = {
-			desc_id = malephysique
+			desc_id = MalePhysique
 		}
-		cas_guitar_body = {
+		CAS_Guitar_Body = {
 			desc_id = guitar_body01
 		}
-		cas_guitar_neck = {
-			desc_id = guitar_neck01
+		CAS_Guitar_Neck = {
+			desc_id = Guitar_Neck01
 			cap = [
 				{
-					base_tex = `tex/models/car_instruments/guitars/neck_maple_tb_01.dds`
-					material = guitar_neck1_primary
+					base_tex = `tex/models/Car_Instruments/Guitars/neck_maple_tb_01.dds`
+					material = Guitar_Neck1_Primary
 					diffuse
 					pre_layer = [
 						{
-							texture = `tex/models/characters/layers/cag/neck1_inlay_dots1_d_01.img`
+							texture = `tex/models/Characters/Layers/CAG/neck1_inlay_dots1_d_01.img`
 						}
 					]
 				}
 			]
 		}
-		cas_guitar_head = {
-			desc_id = guitar_head01
+		CAS_Guitar_Head = {
+			desc_id = Guitar_Head01
 		}
-		cas_guitar_pickguards = {
-			desc_id = guitar_pickg01
+		CAS_Guitar_Pickguards = {
+			desc_id = Guitar_PickG01
 		}
-		cas_guitar_pickups = {
-			desc_id = gtr_pickups_style_01a
+		CAS_Guitar_Pickups = {
+			desc_id = GTR_Pickups_Style_01a
 		}
-		cas_guitar_knobs = {
-			desc_id = gtr_knobs_style_01a
+		CAS_Guitar_Knobs = {
+			desc_id = GTR_Knobs_Style_01a
 		}
-		cas_guitar_bridges = {
-			desc_id = gtr_hardware01a
+		CAS_Guitar_Bridges = {
+			desc_id = GTR_Hardware01a
 		}
-		cas_bass_body = {
-			desc_id = cab_body_b2a
+		CAS_Bass_Body = {
+			desc_id = CAB_Body_B2A
 		}
-		cas_bass_neck = {
-			desc_id = cab_neck_bn1a
+		CAS_Bass_Neck = {
+			desc_id = CAB_Neck_BN1A
 		}
-		cas_bass_head = {
-			desc_id = cab_head_bh6a
+		CAS_Bass_Head = {
+			desc_id = CAB_Head_BH6A
 		}
-		cas_bass_pickguards = {
-			desc_id = cab_pickg_e1
+		CAS_Bass_Pickguards = {
+			desc_id = CAB_PickG_E1
 		}
-		cas_bass_pickups = {
-			desc_id = cab_hbuck_pickup_a2
+		CAS_Bass_Pickups = {
+			desc_id = CAB_HBuck_pickup_A2
 		}
-		cas_bass_knobs = {
+		CAS_Bass_Knobs = {
 			desc_id = cab_knob_chndr05
 		}
-		cas_bass_bridges = {
-			desc_id = cab_bridge_bb3a
+		CAS_Bass_Bridges = {
+			desc_id = CAB_Bridge_BB3A
 		}
-		cas_mic = {
-			desc_id = paramore
+		CAS_Mic = {
+			desc_id = Paramore
 		}
-		cas_mic_stand = {
-			desc_id = poptastic
+		CAS_Mic_Stand = {
+			desc_id = Poptastic
 		}
-		cas_drums = {
+		CAS_Drums = {
 			desc_id = basic
 		}
-		cas_male_intro_anim = {
-			desc_id = intro_waving
+		CAS_Male_Intro_Anim = {
+			desc_id = Intro_Waving
 		}
-		cas_male_win_anim = {
-			desc_id = win_robot
+		CAS_Male_Win_Anim = {
+			desc_id = Win_Robot
 		}
-		cas_male_lose_anim = {
-			desc_id = lose_angryatcrowd
+		CAS_Male_Lose_Anim = {
+			desc_id = Lose_AngryAtCrowd
 		}
-		genre = rock
+		genre = Rock
 	}
 }
-net_musician_profiles = [
+Net_Musician_Profiles = [
 	{
 		name = netappearance1
-		fullname = qs(0xa038ae98)
+		fullname = qs("\Lnetappearance1")
 		allowed_parts = [
 			drum
-			vocals
+			Vocals
 			guitar
-			bass
+			Bass
 		]
 		selection_not_allowed
 		appearance = {
@@ -194,12 +194,12 @@ net_musician_profiles = [
 	}
 	{
 		name = netappearance2
-		fullname = qs(0x8b15fd5b)
+		fullname = qs("\Lnetappearance2")
 		allowed_parts = [
 			drum
-			vocals
+			Vocals
 			guitar
-			bass
+			Bass
 		]
 		selection_not_allowed
 		appearance = {
@@ -207,12 +207,12 @@ net_musician_profiles = [
 	}
 	{
 		name = netappearance3
-		fullname = qs(0x920ecc1a)
+		fullname = qs("\Lnetappearance3")
 		allowed_parts = [
 			drum
-			vocals
+			Vocals
 			guitar
-			bass
+			Bass
 		]
 		selection_not_allowed
 		appearance = {
@@ -220,12 +220,12 @@ net_musician_profiles = [
 	}
 	{
 		name = netappearance4
-		fullname = qs(0xdd4f5add)
+		fullname = qs("\Lnetappearance4")
 		allowed_parts = [
 			drum
-			vocals
+			Vocals
 			guitar
-			bass
+			Bass
 		]
 		selection_not_allowed
 		appearance = {
@@ -233,156 +233,156 @@ net_musician_profiles = [
 	}
 ]
 modifiable_preset_musician_parts = [
-	cas_female_hair
-	cas_female_hat_hair
-	cas_female_hat
-	cas_female_facial_hair
-	cas_female_torso
-	cas_female_legs
-	cas_female_shoes
-	cas_female_acc_left
-	cas_female_acc_right
-	cas_female_acc_face
-	cas_female_acc_ears
-	cas_male_hair
-	cas_male_hat_hair
-	cas_male_hat
-	cas_male_facial_hair
-	cas_male_torso
-	cas_male_legs
-	cas_male_shoes
-	cas_male_acc_left
-	cas_male_acc_right
-	cas_male_acc_face
-	cas_male_acc_ears
+	CAS_Female_Hair
+	CAS_Female_Hat_Hair
+	CAS_Female_Hat
+	CAS_Female_Facial_Hair
+	CAS_Female_Torso
+	CAS_Female_Legs
+	CAS_Female_Shoes
+	CAS_Female_Acc_Left
+	CAS_Female_Acc_Right
+	CAS_Female_Acc_Face
+	CAS_Female_Acc_Ears
+	CAS_Male_Hair
+	CAS_Male_Hat_Hair
+	CAS_Male_Hat
+	CAS_Male_Facial_Hair
+	CAS_Male_Torso
+	CAS_Male_Legs
+	CAS_Male_Shoes
+	CAS_Male_Acc_Left
+	CAS_Male_Acc_Right
+	CAS_Male_Acc_Face
+	CAS_Male_Acc_Ears
 ]
 modifiable_preset_musician_instrument_parts = [
-	cas_full_instrument
-	cas_guitar_body
-	cas_guitar_neck
-	cas_guitar_head
-	cas_guitar_pickguards
-	cas_guitar_bridges
-	cas_guitar_knobs
-	cas_guitar_pickups
-	cas_guitar_strings
-	cas_guitar_highway
-	cas_bass_body
-	cas_bass_neck
-	cas_bass_head
-	cas_bass_pickguards
-	cas_bass_pickups
-	cas_bass_bridges
-	cas_bass_knobs
-	cas_bass_strings
-	cas_bass_highway
-	cas_drums
-	cas_drums_sticks
-	cas_drums_highway
-	cas_mic
-	cas_mic_stand
+	CAS_Full_Instrument
+	CAS_Guitar_Body
+	CAS_Guitar_Neck
+	CAS_Guitar_Head
+	CAS_Guitar_Pickguards
+	CAS_Guitar_Bridges
+	CAS_Guitar_Knobs
+	CAS_Guitar_Pickups
+	CAS_Guitar_Strings
+	CAS_Guitar_Highway
+	CAS_Bass_Body
+	CAS_Bass_Neck
+	CAS_Bass_Head
+	CAS_Bass_Pickguards
+	CAS_Bass_Pickups
+	CAS_Bass_Bridges
+	CAS_Bass_Knobs
+	CAS_Bass_Strings
+	CAS_Bass_Highway
+	CAS_Drums
+	CAS_Drums_Sticks
+	CAS_Drums_Highway
+	CAS_Mic
+	CAS_Mic_Stand
 ]
 default_band = {
-	guitarist = randomcharacter
-	bassist = randomcharacter
-	vocalist = randomcharacter
-	drummer = randomcharacter
+	Guitarist = RandomCharacter
+	bassist = RandomCharacter
+	vocalist = RandomCharacter
+	Drummer = RandomCharacter
 }
 worst_female_band = {
-	guitarist = worstfemaleguitarist
-	bassist = worstfemalebassist
-	vocalist = worstfemalevocalist
-	drummer = worstfemaledrummer
+	Guitarist = WorstFemaleGuitarist
+	bassist = WorstFemaleBassist
+	vocalist = WorstFemaleVocalist
+	Drummer = WorstFemaleDrummer
 }
 worst_male_band = {
-	guitarist = worstmaleguitarist
-	bassist = worstmalebassist
-	vocalist = worstmalevocalist
-	drummer = worstmaledrummer
+	Guitarist = WorstmaleGuitarist
+	bassist = WorstmaleBassist
+	vocalist = WorstmaleVocalist
+	Drummer = WorstmaleDrummer
 }
-band_zakkbossbattle = {
-	guitarist = randomcharacter
-	bassist = zakkwylde
-	vocalist = randomcharacter
-	drummer = randomcharacter
+Band_ZakkBossBattle = {
+	Guitarist = RandomCharacter
+	bassist = ZakkWylde
+	vocalist = RandomCharacter
+	Drummer = RandomCharacter
 }
-band_stillborn = {
-	guitarist = zakkwylde
-	bassist = randomcharacter
-	vocalist = zakkwylde
-	drummer = randomcharacter
+Band_Stillborn = {
+	Guitarist = ZakkWylde
+	bassist = RandomCharacter
+	vocalist = ZakkWylde
+	Drummer = RandomCharacter
 }
-band_crazytrain = {
-	guitarist = zakkwylde
-	bassist = randomcharacter
-	vocalist = ozzy
-	drummer = randomcharacter
+Band_CrazyTrain = {
+	Guitarist = ZakkWylde
+	bassist = RandomCharacter
+	vocalist = Ozzy
+	Drummer = RandomCharacter
 }
-band_mrcrowley = {
-	guitarist = zakkwylde
-	bassist = randomcharacter
-	vocalist = ozzy
-	drummer = randomcharacter
+Band_MrCrowley = {
+	Guitarist = ZakkWylde
+	bassist = RandomCharacter
+	vocalist = Ozzy
+	Drummer = RandomCharacter
 }
-band_tedbossbattle = {
-	guitarist = randomcharacter
-	bassist = tednugent
-	vocalist = randomcharacter
-	drummer = randomcharacter
+Band_TedBossBattle = {
+	Guitarist = RandomCharacter
+	bassist = TedNugent
+	vocalist = RandomCharacter
+	Drummer = RandomCharacter
 }
-band_stranglehold = {
-	guitarist = tednugent
-	bassist = randomcharacter
-	vocalist = randomcharacter
-	drummer = randomcharacter
+Band_Stranglehold = {
+	Guitarist = TedNugent
+	bassist = RandomCharacter
+	vocalist = RandomCharacter
+	Drummer = RandomCharacter
 }
-band_miserybusiness = {
-	guitarist = randomcharacter
-	bassist = randomcharacter
-	vocalist = hayley
-	drummer = randomcharacter
+Band_MiseryBusiness = {
+	Guitarist = RandomCharacter
+	bassist = RandomCharacter
+	vocalist = Hayley
+	Drummer = RandomCharacter
 }
-band_hendrix = {
-	guitarist = jimi
-	bassist = randomcharacter
-	vocalist = jimi
-	drummer = randomcharacter
+Band_Hendrix = {
+	Guitarist = Jimi
+	bassist = RandomCharacter
+	vocalist = Jimi
+	Drummer = RandomCharacter
 	allow_player_selected_characters = false
 }
-band_dammit = {
-	guitarist = randomcharacter
-	bassist = randomcharacter
-	vocalist = randomcharacter
-	drummer = travis
+Band_Dammit = {
+	Guitarist = RandomCharacter
+	bassist = RandomCharacter
+	vocalist = RandomCharacter
+	Drummer = travis
 }
-band_today = {
-	guitarist = billy
-	bassist = randomcharacter
-	vocalist = billy
-	drummer = randomcharacter
+Band_Today = {
+	Guitarist = Billy
+	bassist = RandomCharacter
+	vocalist = Billy
+	Drummer = RandomCharacter
 }
-band_demolitionman = {
-	guitarist = randomcharacter
-	bassist = sting
-	vocalist = sting
-	drummer = randomcharacter
+Band_DemolitionMan = {
+	Guitarist = RandomCharacter
+	bassist = Sting
+	vocalist = Sting
+	Drummer = RandomCharacter
 }
-band_finalgig_male_singer = {
-	guitarist = zakkwylde
-	bassist = sting
-	vocalist = ozzy
-	drummer = travis
+Band_FinalGig_Male_Singer = {
+	Guitarist = ZakkWylde
+	bassist = Sting
+	vocalist = Ozzy
+	Drummer = travis
 }
-band_finalgig_female_singer = {
-	guitarist = tednugent
-	bassist = sting
-	vocalist = hayley
-	drummer = travis
+Band_FinalGig_Female_Singer = {
+	Guitarist = TedNugent
+	bassist = Sting
+	vocalist = Hayley
+	Drummer = travis
 }
 jam_mode_band = 0
 jam_mode_band_profiles = {
-	guitarist = guitarist
+	Guitarist = Guitarist
 	bassist = bassist
 	vocalist = singer
-	drummer = drummer
+	Drummer = Drummer
 }

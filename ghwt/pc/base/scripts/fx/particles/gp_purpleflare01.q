@@ -1,54 +1,54 @@
-gp_purpleflare01 = {
+GP_PurpleFlare01 = {
 	pos = (-0.54124, 0.0, 0.257512)
 	angles = (0.0, 0.0, 0.0)
-	class = particleobject
-	particletype = flexparticle
+	Class = ParticleObject
+	ParticleType = FlexParticle
 	type = flat
 	active
-	createdatstart
+	CreatedAtStart
 	attach
-	bone = bone_head
-	emitrangedims = (0.2, 0.2, 0.0)
-	emit_target = (0.0, 1.0, 0.0)
-	emitangle = (0.0, 0.0, 0.0)
+	bone = Bone_Head
+	EmitRangeDims = (0.2, 0.2, 0.0)
+	emit_Target = (0.0, 1.0, 0.0)
+	EmitAngle = (0.0, 0.0, 0.0)
 	force = (0.0, 0.0, 0.0)
-	windcoeff = 0.0
-	localwindcoeff = 0.0
-	emittervelocityweight = 0.0
-	elevspread = (90.0, 270.0)
-	sweepspread = (0.0, 360.0)
-	liferange = (0.5, 0.5)
+	WindCoeff = 0.0
+	LocalWindCoeff = 0.0
+	EmitterVelocityWeight = 0.0
+	ElevSpread = (90.0, 270.0)
+	SweepSpread = (0.0, 360.0)
+	LifeRange = (0.5, 0.5)
 	emit_rate = 200.0
 	max = 1
-	timeseed = 0.0
-	lifetime = 0.5
-	emitnum = 0
-	followemitter = 1.0
-	emitfunction = constant
-	emitperiod = 1.0
-	sizerange = [
+	TimeSeed = 0.0
+	lifeTime = 0.5
+	emitNum = 0
+	FollowEmitter = 1.0
+	EmitFunction = constant
+	EmitPeriod = 1.0
+	SizeRange = [
 		(2.0, 2.0)
 		(2.0, 2.0)
 	]
-	speedrange = (0.0, 0.0)
-	rotvel = (-0.1, -0.1)
-	rotveltimescale = 0.0
-	emitdelaystart = 0.0
-	pathfollowtime = 0.0
-	history = 2
-	historylistcoordinatespace = world
+	SpeedRange = (0.0, 0.0)
+	RotVel = (-0.1, -0.1)
+	RotVelTimeScale = 0.0
+	EmitDelayStart = 0.0
+	PathFollowTime = 0.0
+	History = 2
+	HistoryListCoordinateSpace = world
 	color = -389349377
-	lod_default
-	novisibilitytest
-	quickmaterial = {
-		diffusetextureenabled
-		diffusetexture = jow_flare02
-		specularpower = 0
+	LOD_Default
+	NoVisibilityTest
+	QuickMaterial = {
+		DiffuseTextureEnabled
+		DiffuseTexture = JOW_Flare02
+		SpecularPower = 0
 		alphacutoff = 16
-		blendmode = add
-		quadanimationfps = 0
+		blendMode = Add
+		QuadAnimationFPS = 0
 	}
-	knot = [
+	Knot = [
 		(0.0, 0.0, -0.204028)
 		(0.0, 0.0, -0.204028)
 		(0.0, 0.0, -0.128626)
@@ -59,7 +59,7 @@ gp_purpleflare01 = {
 		(0.0, 0.0, 0.181851)
 		(0.0, 0.0, 0.181851)
 	]
-	particlecolor = [
+	ParticleColor = [
 		-1
 		-1
 		-1
@@ -67,7 +67,7 @@ gp_purpleflare01 = {
 		-1
 		-1
 	]
-	vertexweight = [
+	VertexWeight = [
 		0.374248
 		1.0
 	]

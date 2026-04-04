@@ -1,52 +1,52 @@
-gp_fx_sidesparks_color_low_01 = {
+GP_FX_SideSparks_Color_Low_01 = {
 	pos = (7.251001, -1.309132, 0.494165)
 	angles = (0.0, 0.0, 0.0)
-	class = particleobject
-	particletype = flexparticle
+	Class = ParticleObject
+	ParticleType = FlexParticle
 	type = flat
 	active
-	createdatstart
-	emitrangedims = (0.1, 0.1, 0.1)
-	emit_target = (0.2, 0.3, 0.0)
-	emitangle = (0.0, 0.0, 0.0)
+	CreatedAtStart
+	EmitRangeDims = (0.1, 0.1, 0.1)
+	emit_Target = (0.2, 0.3, 0.0)
+	EmitAngle = (0.0, 0.0, 0.0)
 	force = (0.0, -10.0, 0.0)
-	windcoeff = 0.0
-	localwindcoeff = 0.0
-	emittervelocityweight = 0.0
-	anglespread = 5.0
-	liferange = (1.0, 1.3)
+	WindCoeff = 0.0
+	LocalWindCoeff = 0.0
+	EmitterVelocityWeight = 0.0
+	AngleSpread = 5.0
+	LifeRange = (1.0, 1.3)
 	emit_rate = 10.0
 	max = 0
-	timeseed = 0.0
-	lifetime = 2.0
-	emitnum = 0
-	followemitter = 0.0
-	emitfunction = constant
-	emitperiod = 1.0
-	sizerange = [
+	TimeSeed = 0.0
+	lifeTime = 2.0
+	emitNum = 0
+	FollowEmitter = 0.0
+	EmitFunction = constant
+	EmitPeriod = 1.0
+	SizeRange = [
 		(0.2, 0.5)
 		(0.2, 0.1)
 	]
-	speedrange = (13.0, 15.0)
-	rotvel = (0.0, 0.0)
-	rotveltimescale = 0.0
-	emitdelaystart = 0.0
-	alignwithpath
-	pathfollowtime = 0.25
-	history = 19
-	historylistcoordinatespace = world
+	SpeedRange = (13.0, 15.0)
+	RotVel = (0.0, 0.0)
+	RotVelTimeScale = 0.0
+	EmitDelayStart = 0.0
+	AlignWithPath
+	PathFollowTime = 0.25
+	History = 19
+	HistoryListCoordinateSpace = world
 	color = -1
-	lod_default
-	quickmaterial = {
-		diffusetextureenabled
-		diffusetexture = jow_spark01
-		specularpower = 0
+	LOD_Default
+	QuickMaterial = {
+		DiffuseTextureEnabled
+		DiffuseTexture = JOW_Spark01
+		SpecularPower = 0
 		bloom
 		alphacutoff = 1
-		blendmode = add
-		quadanimationfps = 0
+		blendMode = Add
+		QuadAnimationFPS = 0
 	}
-	knot = [
+	Knot = [
 		(-0.759789, 0.0, -0.0)
 		(-0.759789, 0.0, -0.0)
 		(-0.651137, 0.0, -0.0)
@@ -60,7 +60,7 @@ gp_fx_sidesparks_color_low_01 = {
 		(0.77222896, 0.0, -0.0)
 		(0.77222896, 0.0, -0.0)
 	]
-	particlecolor = [
+	ParticleColor = [
 		-11119104
 		-1280256
 		-11118849
@@ -70,7 +70,7 @@ gp_fx_sidesparks_color_low_01 = {
 		-11119104
 		-1280256
 	]
-	vertexweight = [
+	VertexWeight = [
 		0.21276101
 		0.77099794
 		1.0

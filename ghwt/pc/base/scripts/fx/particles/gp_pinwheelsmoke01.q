@@ -1,55 +1,55 @@
-gp_pinwheelsmoke01 = {
+GP_PinWheelSmoke01 = {
 	pos = (-2.511173, 0.0, -2.78096)
 	angles = (0.0, 0.0, 0.0)
-	class = particleobject
-	particletype = flexparticle
+	Class = ParticleObject
+	ParticleType = FlexParticle
 	type = flat
 	active
-	createdatstart
+	CreatedAtStart
 	attach
-	align
-	emitrangedims = (0.0, 0.0, 0.0)
-	emit_target = (0.0, 1.0, 0.0)
-	enablerotate
-	emitangle = (0.0, 0.0, 0.0)
+	Align
+	EmitRangeDims = (0.0, 0.0, 0.0)
+	emit_Target = (0.0, 1.0, 0.0)
+	EnableRotate
+	EmitAngle = (0.0, 0.0, 0.0)
 	force = (0.0, -0.03, 0.0)
-	windcoeff = 0.0
-	localwindcoeff = 0.0
-	emittervelocityweight = 0.0
-	anglespread = 20.0
-	liferange = (3.0, 4.0)
+	WindCoeff = 0.0
+	LocalWindCoeff = 0.0
+	EmitterVelocityWeight = 0.0
+	AngleSpread = 20.0
+	LifeRange = (3.0, 4.0)
 	emit_rate = 4.7
 	max = 0
-	timeseed = 0.0
-	lifetime = 0.0
-	emitnum = 0
-	followemitter = 0.0
-	emitfunction = constant
-	emitperiod = 1.0
-	sizerange = [
+	TimeSeed = 0.0
+	lifeTime = 0.0
+	emitNum = 0
+	FollowEmitter = 0.0
+	EmitFunction = constant
+	EmitPeriod = 1.0
+	SizeRange = [
 		(2.0, 2.0)
 		(5.0, 5.0)
 	]
-	speedrange = (0.7, 1.4)
-	rotvel = (-0.2, 0.2)
-	rotveltimescale = 0.0
-	emitdelaystart = 0.0
-	pathfollowtime = 0.0
-	history = 2
-	historylistcoordinatespace = world
+	SpeedRange = (0.7, 1.4)
+	RotVel = (-0.2, 0.2)
+	RotVelTimeScale = 0.0
+	EmitDelayStart = 0.0
+	PathFollowTime = 0.0
+	History = 2
+	HistoryListCoordinateSpace = world
 	color = -80
-	lod_default
-	quickmaterial = {
-		texturelayout = layout2x2
-		diffusetextureenabled
-		diffusetexture = jow_steam02
-		specularpower = 0
+	LOD_Default
+	QuickMaterial = {
+		TextureLayout = Layout2x2
+		DiffuseTextureEnabled
+		DiffuseTexture = JOW_Steam02
+		SpecularPower = 0
 		fillburst
 		alphacutoff = 1
-		blendmode = add
-		quadanimationfps = 0
+		blendMode = Add
+		QuadAnimationFPS = 0
 	}
-	knot = [
+	Knot = [
 		(-0.377769, 0.0, -0.0)
 		(-0.377769, 0.0, -0.0)
 		(-0.26279598, 0.0, -0.0)
@@ -63,7 +63,7 @@ gp_pinwheelsmoke01 = {
 		(0.41061902, 0.0, -0.0)
 		(0.41061902, 0.0, -0.0)
 	]
-	particlecolor = [
+	ParticleColor = [
 		-332288
 		-1191680
 		-220543523
@@ -73,7 +73,7 @@ gp_pinwheelsmoke01 = {
 		-466432
 		-1123328
 	]
-	vertexweight = [
+	VertexWeight = [
 		0.17087801
 		0.65517104
 		1.0

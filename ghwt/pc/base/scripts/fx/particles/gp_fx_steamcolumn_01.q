@@ -1,55 +1,55 @@
-gp_fx_steamcolumn_01 = {
+GP_FX_SteamColumn_01 = {
 	pos = (-2.492917, 0.32547003, 0.110783994)
 	angles = (0.0, 0.0, 0.0)
-	class = particleobject
-	particletype = flexparticle
+	Class = ParticleObject
+	ParticleType = FlexParticle
 	type = flat
 	active
-	createdatstart
-	emitrangedims = (0.0, 0.0, 0.0)
-	emit_target = (0.0, 1.0, 0.0)
-	emitangle = (0.0, 0.0, 0.0)
+	CreatedAtStart
+	EmitRangeDims = (0.0, 0.0, 0.0)
+	emit_Target = (0.0, 1.0, 0.0)
+	EmitAngle = (0.0, 0.0, 0.0)
 	force = (0.0, 0.0, 0.0)
-	windcoeff = 0.0
-	localwindcoeff = 0.0
-	emittervelocityweight = 0.0
-	anglespread = 8.0
-	liferange = (0.6, 0.8)
+	WindCoeff = 0.0
+	LocalWindCoeff = 0.0
+	EmitterVelocityWeight = 0.0
+	AngleSpread = 8.0
+	LifeRange = (0.6, 0.8)
 	emit_rate = 40.0
 	max = 0
-	timeseed = 0.3
-	lifetime = 0.5
-	emitnum = 0
-	followemitter = 0.0
-	emitfunction = constant
-	emitperiod = 1.0
-	sizerange = [
+	TimeSeed = 0.3
+	lifeTime = 0.5
+	emitNum = 0
+	FollowEmitter = 0.0
+	EmitFunction = constant
+	EmitPeriod = 1.0
+	SizeRange = [
 		(0.2, 0.2)
 		(0.8, 0.8)
 	]
-	speedrange = (4.0, 4.5)
-	rotvel = (2.0, -2.0)
-	rotveltimescale = 0.5
-	emitdelaystart = 0.0
-	pathfollowtime = 0.0
-	history = 2
-	historylistcoordinatespace = world
+	SpeedRange = (4.0, 4.5)
+	RotVel = (2.0, -2.0)
+	RotVelTimeScale = 0.5
+	EmitDelayStart = 0.0
+	PathFollowTime = 0.0
+	History = 2
+	HistoryListCoordinateSpace = world
 	color = -823923941
-	lod_default
-	quickmaterial = {
-		diffusetextureenabled
-		diffusetexture = ph_smoke_singlepuff_blend_02
-		specularpower = 0
-		lighting
+	LOD_Default
+	QuickMaterial = {
+		DiffuseTextureEnabled
+		DiffuseTexture = PH_Smoke_SinglePuff_Blend_02
+		SpecularPower = 0
+		Lighting
 		alphacutoff = 1
-		blendmode = blend
-		softedge
-		softedgescale = 0.2
-		burn
-		burnvalue = 0.5
-		quadanimationfps = 0
+		blendMode = blend
+		SoftEdge
+		SoftedgeScale = 0.2
+		Burn
+		BurnValue = 0.5
+		QuadAnimationFPS = 0
 	}
-	knot = [
+	Knot = [
 		(-0.69906604, 0.0, -0.0)
 		(-0.69906604, 0.0, -0.0)
 		(-0.667938, 0.0, -0.0)
@@ -63,7 +63,7 @@ gp_fx_steamcolumn_01 = {
 		(0.83755505, 0.0, -0.0)
 		(0.83755505, 0.0, -0.0)
 	]
-	particlecolor = [
+	ParticleColor = [
 		-256
 		-256
 		-1
@@ -73,7 +73,7 @@ gp_fx_steamcolumn_01 = {
 		-1667458048
 		-1397969920
 	]
-	vertexweight = [
+	VertexWeight = [
 		0.060771998
 		0.444967
 		1.0

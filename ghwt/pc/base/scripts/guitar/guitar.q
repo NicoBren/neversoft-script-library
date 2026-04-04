@@ -78,7 +78,7 @@ drum_rock_meter_weights = {
 		2.5
 	]
 }
-current_boss = $boss_ted_props
+current_boss = $Boss_Ted_Props
 boss_battle = 0
 boss_controller = 0
 boss_oldcontroller = 0
@@ -108,26 +108,26 @@ devil_finish = 0
 battle_do_or_die = 0
 battle_do_or_die_speed_scale = 1.0
 battle_do_or_die_attack_scale = 1.0
-cheat_line6unlock = -1
-cheat_alwaysslide = -1
-cheat_superuser = -1
-cheat_airinstruments = -1
-cheat_invisiblecharacters = -1
-cheat_snobcrowd = -1
-cheat_performancemode = -1
-cheat_hyperspeed = -1
-cheat_autokick = -1
-cheat_unlockquickplay = -1
-cheat_unlockattballpark = -1
-cheat_gemcolor = -1
-cheat_flamecolor = -1
-cheat_starcolor = -1
-cheat_bestbuykid = -1
-cheat_vocalfireball = -1
-cheat_buckethat = -1
-cheat_eurocontestwinner = -1
-cheat_rina = -1
-cheat_aaron = -1
+Cheat_Line6Unlock = -1
+Cheat_AlwaysSlide = -1
+Cheat_SuperUser = -1
+Cheat_AirInstruments = -1
+Cheat_InvisibleCharacters = -1
+Cheat_SnobCrowd = -1
+Cheat_PerformanceMode = -1
+Cheat_Hyperspeed = -1
+Cheat_AutoKick = -1
+Cheat_UnlockQuickplay = -1
+Cheat_UnlockATTBallpark = -1
+Cheat_GemColor = -1
+Cheat_FlameColor = -1
+Cheat_StarColor = -1
+Cheat_BestBuyKid = -1
+Cheat_VocalFireball = -1
+Cheat_BucketHat = -1
+Cheat_EuroContestWinner = -1
+Cheat_Rina = -1
+Cheat_AARON = -1
 original_check_time_early = 0.0
 original_check_time_late = 0.0
 boss_wuss_out = 0
@@ -165,19 +165,19 @@ quickplay_song_list = [
 
 script reset_quickplay_song_list 
 	change \{quickplay_song_list_current = -1}
-	getarraysize \{$quickplay_song_list}
+	GetArraySize \{$quickplay_song_list}
 	i = 0
 	begin
-	setarrayelement arrayname = quickplay_song_list globalarray index = <i> newvalue = null
+	SetArrayElement ArrayName = quickplay_song_list GlobalArray index = <i> newvalue = null
 	<i> = (<i> + 1)
 	repeat <array_size>
 endscript
 sysnotify_menus_position = topright
 sysnotify_ingame_position = topright
-cameracuts_enablevideovenuecams = 0
+CameraCuts_EnableVideoVenueCams = 0
 
 script get_heap_sizes 
-	getplatform
+	GetPlatform
 	switch <platform>
 		case xenon
 		<heap_size_globalpak> = (31 * 1024 * 1024)
@@ -253,96 +253,96 @@ script get_heap_sizes
 		<heap_size_save_file> = ((2 * 1024 * 1024) + (10 * 1024))
 		<heap_size_save_file_vram> = 0
 		default
-		scriptassert \{qs(0xfb3c58ff)}
+		ScriptAssert \{qs("\LUnrecognized platform for heap setup")}
 	endswitch
 	return <...>
 endscript
 
 script create_havok_heap 
 	get_heap_sizes
-	pushmemprofile \{'HavokHeap'}
-	meminitheap name = 'heap_havok' size = <heap_size_havok>
-	popmemprofile
+	PushMemProfile \{'HavokHeap'}
+	MemInitHeap name = 'heap_havok' size = <heap_size_havok>
+	PopMemProfile
 endscript
 
 script print_loading_time 
-	getelapsedtime starttime = <starttime>
-	finalprintf qs(0x1d312485) a = <elapsedtime> t = <text>
+	GetElapsedTime StartTime = <StartTime>
+	finalprintf qs("\LLoading time: %a (%t)") a = <ElapsedTime> t = <text>
 endscript
 
 script guitar_startup 
-	change \{assertonmissingscripts = 1}
+	change \{AssertOnMissingScripts = 1}
 	loading_screen = 1
-	getterritory
-	if gotparam \{territory}
+	GetTerritory
+	if GotParam \{territory}
 		if (<territory> = territory_us)
-			if french
-				displayloadingscreen \{'boot_legal_frecan'
+			if French
+				DisplayLoadingScreen \{'boot_legal_frecan'
 					spin3d_texture = 'load_wheel'
 					spin_x = 454
 					spin_y = 554
 					scale = 0.055
-					speed = -2}
+					Speed = -2}
 				loading_screen = 0
 			endif
 		endif
 	endif
 	if (<loading_screen> = 1)
-		displayloadingscreen \{'boot_legal'
+		DisplayLoadingScreen \{'boot_legal'
 			spin3d_texture = 'load_wheel'
 			spin_x = 454
 			spin_y = 554
 			scale = 0.055
-			speed = -2
+			Speed = -2
 			localized}
 	endif
-	getstarttime
-	overallstarttime = <starttime>
-	gettruestarttime
-	printf \{qs(0xd21eb1c0)}
+	GetStartTime
+	OverallStartTime = <StartTime>
+	GetTrueStartTime
+	printf \{qs("\LInitializing Heaps")}
 	get_heap_sizes
-	pushmemprofile \{'Global Pak Heap'}
-	meminitheap name = 'heap_global_pak' size = <heap_size_globalpak> vram_size = <heap_size_globalpak_vram>
-	popmemprofile
-	getstarttime
-	initializecasarchive
-	print_loading_time starttime = <starttime> text = qs(0x6b785631)
-	pushmemprofile \{'Characters'}
-	meminitheap name = 'heap_musician1' size = <heap_size_musician> vram_size = <heap_size_musician_vram> vm
-	meminitheap name = 'heap_musician2' size = <heap_size_musician> vram_size = <heap_size_musician_vram> vm
-	meminitheap name = 'heap_musician3' size = <heap_size_musician> vram_size = <heap_size_musician_vram> vm
-	meminitheap name = 'heap_musician4' size = <heap_size_musician> vram_size = <heap_size_musician_vram> vm
-	meminitheap name = 'heap_musician_anim' size = <heap_size_musician_anim> vm
-	meminitheap name = 'heap_ragskel' size = <heap_size_ragskel>
-	popmemprofile
-	pushmemprofile \{'Light Show Heap'}
-	meminitheap name = 'heap_lightshow' size = <heap_size_lightshow>
-	popmemprofile
-	pushmemprofile \{'Downloads'}
-	meminitheap name = 'heap_downloads' size = <heap_size_downloads> vram_size = <heap_size_downloads_vram>
-	popmemprofile
-	pushmemprofile \{'Audio'}
-	if isfmodenabled
-		meminitheap name = 'heap_audio' size = <heap_size_audio> vram_size = <heap_size_audio_vram>
+	PushMemProfile \{'Global Pak Heap'}
+	MemInitHeap name = 'heap_global_pak' size = <heap_size_globalpak> vram_size = <heap_size_globalpak_vram>
+	PopMemProfile
+	GetStartTime
+	InitializeCASArchive
+	print_loading_time StartTime = <StartTime> text = qs("\LInitializeCASArchive")
+	PushMemProfile \{'Characters'}
+	MemInitHeap name = 'heap_musician1' size = <heap_size_musician> vram_size = <heap_size_musician_vram> vm
+	MemInitHeap name = 'heap_musician2' size = <heap_size_musician> vram_size = <heap_size_musician_vram> vm
+	MemInitHeap name = 'heap_musician3' size = <heap_size_musician> vram_size = <heap_size_musician_vram> vm
+	MemInitHeap name = 'heap_musician4' size = <heap_size_musician> vram_size = <heap_size_musician_vram> vm
+	MemInitHeap name = 'heap_musician_anim' size = <heap_size_musician_anim> vm
+	MemInitHeap name = 'heap_ragskel' size = <heap_size_ragskel>
+	PopMemProfile
+	PushMemProfile \{'Light Show Heap'}
+	MemInitHeap name = 'heap_lightshow' size = <heap_size_lightshow>
+	PopMemProfile
+	PushMemProfile \{'Downloads'}
+	MemInitHeap name = 'heap_downloads' size = <heap_size_downloads> vram_size = <heap_size_downloads_vram>
+	PopMemProfile
+	PushMemProfile \{'Audio'}
+	if IsFmodEnabled
+		MemInitHeap name = 'heap_audio' size = <heap_size_audio> vram_size = <heap_size_audio_vram>
 	endif
-	meminitheap name = 'heap_drumkitaudio' size = <heap_size_drumkitaudio> vram_size = <heap_size_drumkitaudio_vram>
-	popmemprofile
-	initsoundsystem
-	loaddrumkitall \{async = 0}
-	pushmemprofile \{'Global CAS Heap'}
-	meminitheap name = 'heap_global_cas' size = <heap_size_global_cas> vram_size = <heap_size_global_cas_vram> vm
-	popmemprofile
-	pushmemprofile \{'CAS Heap'}
-	meminitheap name = 'heap_cas' size = <heap_size_cas> vram_size = <heap_size_cas_vram> vm
-	popmemprofile
-	mempushcontext \{bottomupheap}
-	pushmemprofile \{'GH Tunes Cache Heap'}
-	meminitheap name = 'heap_ghtunes_cache' size = <heap_size_ghtunes_cache> vram_size = <heap_size_ghtunes_cache_vram> vm
-	popmemprofile
-	mempopcontext
+	MemInitHeap name = 'heap_drumkitaudio' size = <heap_size_drumkitaudio> vram_size = <heap_size_drumkitaudio_vram>
+	PopMemProfile
+	InitSoundSystem
+	LoadDrumKitAll \{async = 0}
+	PushMemProfile \{'Global CAS Heap'}
+	MemInitHeap name = 'heap_global_cas' size = <heap_size_global_cas> vram_size = <heap_size_global_cas_vram> vm
+	PopMemProfile
+	PushMemProfile \{'CAS Heap'}
+	MemInitHeap name = 'heap_cas' size = <heap_size_cas> vram_size = <heap_size_cas_vram> vm
+	PopMemProfile
+	MemPushContext \{BottomUpHeap}
+	PushMemProfile \{'GH Tunes Cache Heap'}
+	MemInitHeap name = 'heap_ghtunes_cache' size = <heap_size_ghtunes_cache> vram_size = <heap_size_ghtunes_cache_vram> vm
+	PopMemProfile
+	MemPopContext
 	alloc_pak_cache = 0
-	if isxenon
-		if ((cd) || ($force_pak_caching = 1))
+	if isXenon
+		if ((CD) || ($force_pak_caching = 1))
 			if ($disable_pak_caching = 0)
 				alloc_pak_cache = 1
 			endif
@@ -351,131 +351,131 @@ script guitar_startup
 		alloc_pak_cache = 1
 	endif
 	if (<alloc_pak_cache> = 1)
-		mempushcontext \{bottomupheap}
-		pushmemprofile \{'Pak Cache Heap'}
-		meminitheap name = 'heap_pak_cache' size = <heap_size_pak_cache> vram_size = <heap_size_pak_cache_vram>
-		popmemprofile
-		mempopcontext
+		MemPushContext \{BottomUpHeap}
+		PushMemProfile \{'Pak Cache Heap'}
+		MemInitHeap name = 'heap_pak_cache' size = <heap_size_pak_cache> vram_size = <heap_size_pak_cache_vram>
+		PopMemProfile
+		MemPopContext
 	endif
-	printf \{qs(0xac968502)}
-	pushmemprofile \{'COIM'}
-	initcoim \{size = $generic_coim_size
-		blockalign = $generic_coim_blockalign
-		coim_min_scratch_blocks
-		$generic_coim_params}
-	popmemprofile
-	pushmemprofile \{'CompositeObjectManager_startup'}
-	compositeobjectmanager_startup
-	popmemprofile
-	printf \{qs(0x14b44030)}
-	pushmemprofile \{'MemCardSystem'}
-	meminitheap name = 'heap_save_file' size = <heap_size_save_file> vram_size = <heap_size_save_file_vram>
-	memcardsysteminitialize
-	popmemprofile
-	mc_setactiveplayer \{querydefault}
-	printf \{qs(0x83673364)}
-	pushmemprofile \{'FileCache'}
-	initfilecache \{max_files = 1024
+	printf \{qs("\LInitializing COIM")}
+	PushMemProfile \{'COIM'}
+	InitCOIM \{size = $Generic_COIM_Size
+		BlockAlign = $Generic_COIM_BlockAlign
+		COIM_Min_Scratch_Blocks
+		$Generic_COIM_Params}
+	PopMemProfile
+	PushMemProfile \{'CompositeObjectManager_startup'}
+	CompositeObjectManager_startup
+	PopMemProfile
+	printf \{qs("\LInitializing memory card system")}
+	PushMemProfile \{'MemCardSystem'}
+	MemInitHeap name = 'heap_save_file' size = <heap_size_save_file> vram_size = <heap_size_save_file_vram>
+	MemCardSystemInitialize
+	PopMemProfile
+	MC_SetActivePlayer \{QueryDefault}
+	printf \{qs("\LInitializing file cache")}
+	PushMemProfile \{'FileCache'}
+	InitFileCache \{max_files = 1024
 		streambuff = 0
 		size = 2048
 		disable_on_start}
-	popmemprofile
-	printf \{qs(0x9fac0f68)}
-	pushmemprofile \{'AnimCompressTable'}
-	initanimcompresstable \{'anims\\standardkeyq.bin'
+	PopMemProfile
+	printf \{qs("\LInitializing Anim Cache")}
+	PushMemProfile \{'AnimCompressTable'}
+	InitAnimCompressTable \{'anims\\standardkeyq.bin'
 		q48}
-	initanimcompresstable \{'anims\\standardkeyt.bin'
+	InitAnimCompressTable \{'anims\\standardkeyt.bin'
 		t48}
-	popmemprofile
-	pushmemprofile \{'Animation Cache'}
-	initanimsystem {
-		animheapsize = 0
-		cacheblockalign = 3072
-		animnxbuffersize = (2 * 1024 * 1024)
-		defcachetype = fullres
-		maxanimstages = 2
-		maxanimsubsets = 4
-		maxdegenerateanims = 3
-		animjqsize = (140 * 1024)
+	PopMemProfile
+	PushMemProfile \{'Animation Cache'}
+	InitAnimSystem {
+		AnimHeapSize = 0
+		CacheBlockAlign = 3072
+		AnimNxBufferSize = (2 * 1024 * 1024)
+		DefCacheType = fullres
+		MaxAnimStages = 2
+		MaxAnimSubsets = 4
+		MaxDegenerateAnims = 3
+		AnimJQSize = (140 * 1024)
 	}
-	popmemprofile
-	loadpak \{'pak/animq.pak'
-		heap = topdownheap
+	PopMemProfile
+	LoadPak \{'pak/animq.pak'
+		heap = TopDownHeap
 		no_vram}
-	registerallanimevents
-	unloadpak \{'pak/animq.pak'}
-	pushmemprofile \{'InitLightManager'}
-	initlightmanager \{max_lights = 96
+	RegisterAllAnimEvents
+	UnloadPak \{'pak/animq.pak'}
+	PushMemProfile \{'InitLightManager'}
+	InitLightManager \{max_lights = 96
 		max_model_lights = 1
 		max_groups = 16}
-	popmemprofile
-	pushmemprofile \{'LightShow'}
-	lightshow_addnodeflags
-	lightshow_init \{notes = $lightshow_notemapping
-		nodeflags = $lightshow_statenodeflags}
-	lightshow_setprocessors \{shared = $lightshow_sharedprocessors}
-	popmemprofile
-	pushmemprofile \{'create_node_flags'}
+	PopMemProfile
+	PushMemProfile \{'LightShow'}
+	LightShow_AddNodeFlags
+	LightShow_Init \{notes = $LightShow_NoteMapping
+		nodeflags = $LightShow_StateNodeFlags}
+	LightShow_SetProcessors \{shared = $LightShow_SharedProcessors}
+	PopMemProfile
+	PushMemProfile \{'create_node_flags'}
 	create_node_flags
-	popmemprofile
-	pushmemprofile \{'Game Heaps'}
-	mempushcontext \{heap_cas}
-	getstarttime
-	loadpak \{'pak/cas_deform.pak'
+	PopMemProfile
+	PushMemProfile \{'Game Heaps'}
+	MemPushContext \{heap_cas}
+	GetStartTime
+	LoadPak \{'pak/cas_deform.pak'
 		heap = heap_global_cas}
-	print_loading_time starttime = <starttime> text = qs(0x28f6e7de)
-	getstarttime
-	loadpak \{'pak/cas_acc_bones.pak'
+	print_loading_time StartTime = <StartTime> text = qs("\Lpak/cas_deform.pak")
+	GetStartTime
+	LoadPak \{'pak/cas_acc_bones.pak'
 		heap = heap_global_cas
 		is_raw
 		no_vram}
-	print_loading_time starttime = <starttime> text = qs(0xdb02f0b5)
-	getstarttime
-	loadpak \{'pak/cas_globalpak.pak'
+	print_loading_time StartTime = <StartTime> text = qs("\Lpak/cas_acc_bones.pak")
+	GetStartTime
+	LoadPak \{'pak/cas_globalpak.pak'
 		heap = heap_global_cas
 		is_raw}
-	loadpak \{'pak/cas_captextures.pak'
+	LoadPak \{'pak/cas_captextures.pak'
 		heap = heap_global_cas}
-	casaddglobalrawpak \{name = `pak/cas_globalpak.pak`}
-	casaddglobalrawpak \{name = `pak/cas_globalpak_vram.pak`}
-	print_loading_time starttime = <starttime> text = qs(0x0563180c)
-	printf \{qs(0xd8517ff0)}
-	mempushcontext \{bottomupheap}
+	CASAddGlobalRawPak \{name = `pak/cas_globalpak.pak`}
+	CASAddGlobalRawPak \{name = `pak/cas_globalpak_vram.pak`}
+	print_loading_time StartTime = <StartTime> text = qs("\Lpak/cas_globalpak.pak & pak/cas_captextures.pak")
+	printf \{qs("\LCreating zone allocation")}
+	MemPushContext \{BottomUpHeap}
 	if ($ps2_venues = 1)
-		createpakmanmap map = zones links = ghzones folder = 'zones_ps2/' size = (<size_zones> / 1024) vram_size = (<size_zones_vram> / 1024) allocheap = heap_cas
+		CreatePakManMap map = zones links = GHZones folder = 'zones_ps2/' size = (<size_zones> / 1024) vram_size = (<size_zones_vram> / 1024) allocheap = heap_cas
 	else
-		createpakmanmap map = zones links = ghzones folder = 'zones/' size = (<size_zones> / 1024) vram_size = (<size_zones_vram> / 1024) allocheap = heap_cas
+		CreatePakManMap map = zones links = GHZones folder = 'zones/' size = (<size_zones> / 1024) vram_size = (<size_zones_vram> / 1024) allocheap = heap_cas
 	endif
-	mempopcontext
-	meminitheap name = 'heap_song' size = <heap_size_song>
-	meminitheap name = 'heap_bink' size = <heap_size_bink>
-	mempopcontext
-	popmemprofile
+	MemPopContext
+	MemInitHeap name = 'heap_song' size = <heap_size_song>
+	MemInitHeap name = 'heap_bink' size = <heap_size_bink>
+	MemPopContext
+	PopMemProfile
 	if NOT ($cas_heap_state = in_game)
-		scriptassert \{'Invalid initial cas_heap_state'}
+		ScriptAssert \{'Invalid initial cas_heap_state'}
 	endif
-	if scriptexists \{init_globaltags}
+	if ScriptExists \{init_globaltags}
 		get_num_globaltag_sets
 		init_packed_structs globaltag_sets = <num_globaltag_sets>
 		init_globaltags globaltag_sets = <num_globaltag_sets>
 	endif
-	printf \{qs(0xa30ccd58)}
+	printf \{qs("\LInitializing Replay buffer")}
 	if are_replays_enabled
 		get_replay_heap
-		mempushcontext <replay_heap>
-		pushmemprofile \{'Replay buffer'}
-		getplatform
+		MemPushContext <replay_heap>
+		PushMemProfile \{'Replay buffer'}
+		GetPlatform
 		switch <platform>
 			case xenon
 			<replay_buffer_size> = (1024 * 4)
 			case ps3
 			<replay_buffer_size> = (1024 * 1)
 			default
-			scriptassert \{qs(0xe62cb6f3)}
+			ScriptAssert \{qs("\LUnrecognized platform for replay buffer setup")}
 		endswitch
-		allocatedatabuffer name = replay kb = <replay_buffer_size>
-		popmemprofile
-		mempopcontext
+		AllocateDataBuffer name = replay kb = <replay_buffer_size>
+		PopMemProfile
+		MemPopContext
 	endif
 	set_plat_jam_maximums
 	engineconfig \{particlelod = 0}
@@ -496,176 +496,176 @@ script guitar_startup
 			0
 			0
 		]}
-	getstarttime
-	loadpak \{'pak/global_ad_tex/global_ad_tex.pak'
+	GetStartTime
+	LoadPak \{'pak/global_ad_tex/global_ad_tex.pak'
 		heap = heap_massive_ads}
-	print_loading_time starttime = <starttime> text = qs(0xec5f94aa)
-	getstarttime
-	loadpak \{'pak/global_model_tex/global_model_tex.pak'
+	print_loading_time StartTime = <StartTime> text = qs("\Lpak/global_ad_tex/global_ad_tex.pak")
+	GetStartTime
+	LoadPak \{'pak/global_model_tex/global_model_tex.pak'
 		heap = heap_global_pak}
-	print_loading_time starttime = <starttime> text = qs(0x99f9642a)
-	getstarttime
-	loadpak \{'pak/global_rag_skel/global_rag_skel.pak'
+	print_loading_time StartTime = <StartTime> text = qs("\Lpak/global_model_tex/global_model_tex.pakk")
+	GetStartTime
+	LoadPak \{'pak/global_rag_skel/global_rag_skel.pak'
 		heap = heap_global_pak
 		is_raw}
-	print_loading_time starttime = <starttime> text = qs(0x2c569805)
+	print_loading_time StartTime = <StartTime> text = qs("\Lpak/global_rag_skel/global_rag_skel.pak")
 	if ($is_demo_mode = 1)
 		change \{enable_button_cheats = 0}
 	endif
-	if cd
+	if CD
 		change \{enable_button_cheats = 0}
 	endif
 	if ($enable_button_cheats = 1)
-		launchviewer
+		LaunchViewer
 		change \{select_shift = 1}
 	endif
-	if NOT cd
+	if NOT CD
 		change \{skip_boot_menu = 1}
 	endif
-	printf \{qs(0x36fa0eb9)}
-	master_sfx_adding_sound_busses
-	printf \{qs(0x6e45d61e)}
-	pushmemprofile \{'net_load_preferences'}
+	printf \{qs("\LCreating sound busses")}
+	Master_SFX_Adding_Sound_Busses
+	printf \{qs("\LLoading net preferences")}
+	PushMemProfile \{'net_load_preferences'}
 	net_load_preferences
-	popmemprofile
-	printf \{qs(0x288a39f2)}
-	if scriptexists \{startup}
+	PopMemProfile
+	printf \{qs("\LCalling user startup script")}
+	if ScriptExists \{startup}
 		startup
 	endif
-	printf \{qs(0x049fa44b)}
-	pushmemprofile \{'UI Pak Slot'}
-	meminitheap name = 'heap_ui_pak_slot' size = <heap_size_ui_pak_slot> vram_size = <heap_size_ui_pak_slot_vram>
-	popmemprofile
-	pushmemprofile \{'UI_InitializeStateMachine'}
-	ui_initializestatemachine
-	popmemprofile
-	printf \{qs(0xd27c51ef)}
-	getstarttime
-	loadpak \{'zones/global/global.pak'
+	printf \{qs("\LInitializing UI")}
+	PushMemProfile \{'UI Pak Slot'}
+	MemInitHeap name = 'heap_ui_pak_slot' size = <heap_size_ui_pak_slot> vram_size = <heap_size_ui_pak_slot_vram>
+	PopMemProfile
+	PushMemProfile \{'UI_InitializeStateMachine'}
+	UI_InitializeStateMachine
+	PopMemProfile
+	printf \{qs("\LLoading Paks")}
+	GetStartTime
+	LoadPak \{'zones/global/global.pak'
 		heap = heap_global_pak
 		splitfile}
-	print_loading_time starttime = <starttime> text = qs(0xf9d25732)
-	parsenodearray \{queue
+	print_loading_time StartTime = <StartTime> text = qs("\Lzones/global/global.pak")
+	ParseNodeArray \{queue
 		zone_name = global
 		array_name = global_nodearray}
 	create_global_materials
-	getstarttime
-	loadpak \{'pak/anims/perm_anims/perm_anims.pak'
+	GetStartTime
+	LoadPak \{'pak/anims/perm_anims/perm_anims.pak'
 		heap = heap_musician_anim
 		no_vram}
-	loadpak \{'pak/ui_shared/ui_shared.pak'
+	LoadPak \{'pak/ui_shared/ui_shared.pak'
 		heap = heap_global_pak}
-	print_loading_time starttime = <starttime> text = qs(0x3136c57e)
-	if NOT isps3
-		if gotextramemory
-			mempushcontext \{debugheap}
+	print_loading_time StartTime = <StartTime> text = qs("\Lpak/anims/perm_anims/perm_anims.pak & pak/ui_shared/ui_shared.pak")
+	if NOT IsPs3
+		if GotExtraMemory
+			MemPushContext \{DebugHeap}
 		endif
 	endif
-	loadpak \{'fonts/debug.pak'}
-	if NOT isps3
-		if gotextramemory
-			mempopcontext
+	LoadPak \{'fonts/debug.pak'}
+	if NOT IsPs3
+		if GotExtraMemory
+			MemPopContext
 		endif
 	endif
-	setfontproperties \{'debug'
-		color_tab = $default_font_colors
+	SetFontProperties \{'debug'
+		color_tab = $Default_Font_Colors
 		debug_font}
-	setfontnonproportionalnumbers \{'debug'}
-	if isxenon
+	SetFontNonProportionalNumbers \{'debug'}
+	if isXenon
 		buttons_font = 'buttons_x360'
 	else
-		if isps3
+		if IsPs3
 			buttons_font = 'ButtonsPs3'
 		endif
 	endif
-	setfontproperties <buttons_font> buttons_font
-	setfontproperties \{'fontgrid_numeral_a7'
-		color_tab = $default_font_colors}
-	setfontproperties \{'fontgrid_numeral_a9'
-		color_tab = $default_font_colors}
-	setfontproperties \{'fontgrid_text_a3'
-		color_tab = $default_font_colors}
-	setfontproperties \{'fontgrid_text_a6'
-		color_tab = $default_font_colors}
-	setfontproperties \{'fontgrid_text_a8'
-		color_tab = $default_font_colors}
-	setfontproperties \{'fontgrid_text_a10'
-		color_tab = $default_font_colors}
-	setfontproperties \{'fontgrid_text_a11'
-		color_tab = $default_font_colors}
-	setfontproperties \{'fontgrid_text_a11_b'
-		color_tab = $default_font_colors}
-	setfontproperties \{'fontgrid_text_a11_large'
-		color_tab = $default_font_colors}
-	setfontproperties \{'fontgrid_title_a1'
-		color_tab = $default_font_colors}
-	pushmemprofile \{'FMod Streams + SFX'}
-	if isfmodenabled
-		getstarttime
-		loadfsb \{filename = 'streams/streamall'
+	SetFontProperties <buttons_font> buttons_font
+	SetFontProperties \{'fontgrid_numeral_a7'
+		color_tab = $Default_Font_Colors}
+	SetFontProperties \{'fontgrid_numeral_a9'
+		color_tab = $Default_Font_Colors}
+	SetFontProperties \{'fontgrid_text_a3'
+		color_tab = $Default_Font_Colors}
+	SetFontProperties \{'fontgrid_text_a6'
+		color_tab = $Default_Font_Colors}
+	SetFontProperties \{'fontgrid_text_a8'
+		color_tab = $Default_Font_Colors}
+	SetFontProperties \{'fontgrid_text_a10'
+		color_tab = $Default_Font_Colors}
+	SetFontProperties \{'fontgrid_text_a11'
+		color_tab = $Default_Font_Colors}
+	SetFontProperties \{'fontgrid_text_a11_b'
+		color_tab = $Default_Font_Colors}
+	SetFontProperties \{'fontgrid_text_a11_large'
+		color_tab = $Default_Font_Colors}
+	SetFontProperties \{'fontgrid_title_a1'
+		color_tab = $Default_Font_Colors}
+	PushMemProfile \{'FMod Streams + SFX'}
+	if IsFmodEnabled
+		GetStartTime
+		LoadFSB \{filename = 'streams/streamall'
 			numstreams = 4
 			nowait}
 		change streamall_fsb_index = <fsb_index>
-		print_loading_time starttime = <starttime> text = qs(0x82a57b3c)
-		getstarttime
-		enableremovesoundentry \{enable}
-		loadpak \{'zones/global/global_sfx.pak'
+		print_loading_time StartTime = <StartTime> text = qs("\Lstreams/streamall")
+		GetStartTime
+		EnableRemoveSoundEntry \{enable}
+		LoadPak \{'zones/global/global_sfx.pak'
 			heap = heap_audio}
-		print_loading_time starttime = <starttime> text = qs(0x6c6b87a9)
+		print_loading_time StartTime = <StartTime> text = qs("\Lzones/global/global_sfx.pak")
 	endif
-	popmemprofile
-	setscenepermanent \{scene = 'zones/global/global_gfx.scn'
+	PopMemProfile
+	SetScenePermanent \{scene = 'zones/global/global_gfx.scn'
 		permanent}
-	pushmemprofile \{'setup_models'}
+	PushMemProfile \{'setup_models'}
 	setup_models
-	popmemprofile
-	printf \{qs(0x52f069b2)}
-	printf \{qs(0x7ef8c198)
+	PopMemProfile
+	printf \{qs("\LLoading Zone")}
+	printf \{qs("\Lcurrent_level = %s")
 		s = $current_level}
-	setpakmancurrentblock \{map = zones
+	SetPakManCurrentBlock \{map = zones
 		pak = none
 		block_scripts = 1}
-	addeditablelist \{ped_editable_list}
-	if NOT cd
+	AddEditableList \{ped_editable_list}
+	if NOT CD
 		startkeyboardhandler \{max_length = 128}
 	endif
-	printf \{qs(0xb698d219)}
-	pushmemprofile \{'Atoms Progression Globaltags'}
-	initatoms
-	setprogressionmaxdifficulty \{difficulty = 4}
-	printf \{qs(0xd6c8512c)}
-	finalprofile_start \{'reset_globaltags_all'}
-	getstarttime
+	printf \{qs("\LDone initializing - into game...")}
+	PushMemProfile \{'Atoms Progression Globaltags'}
+	InitAtoms
+	SetProgressionMaxDifficulty \{difficulty = 4}
+	printf \{qs("\LSetting GlobalTags")}
+	FinalProfile_Start \{'reset_globaltags_all'}
+	GetStartTime
 	reset_globaltags_all
-	print_loading_time starttime = <starttime> text = qs(0x6f02fec2)
-	finalprofile_stop \{'reset_globaltags_all'}
-	printf \{qs(0xacfe5420)}
-	popmemprofile
+	print_loading_time StartTime = <StartTime> text = qs("\Lreset_globaltags_all")
+	FinalProfile_Stop \{'reset_globaltags_all'}
+	printf \{qs("\LSetting GlobalTags End")}
+	PopMemProfile
 	setup_sprites
 	disable_pause
-	setshadowrenderingflags \{enable = 'true'
+	SetShadowRenderingFlags \{enable = 'true'
 		object = 'skin'}
-	setshadowmapparams \{far = 16.0}
-	pushmemprofile \{'BG Viewport'}
+	SetShadowMapParams \{far = 16.0}
+	PushMemProfile \{'BG Viewport'}
 	setup_bg_viewport
 	restore_dummy_bg_camera
-	popmemprofile
-	getmaxplayers
+	PopMemProfile
+	GetMaxPlayers
 	player = 1
 	begin
-	formattext checksumname = player_status 'player%i_status' i = <player> addtostringlookup
-	formattext textname = player_text 'p%i' i = <player> addtostringlookup
-	spawnscriptlater create_guitar_events params = {<...>}
+	FormatText checksumname = player_status 'player%i_status' i = <player> AddToStringLookup
+	FormatText TextName = player_text 'p%i' i = <player> AddToStringLookup
+	SpawnScriptLater create_guitar_events params = {<...>}
 	player = (<player> + 1)
 	repeat <max_players>
-	setshadowprojectiontexture \{texture = white}
+	SetShadowProjectionTexture \{texture = white}
 	fadetoblack \{on
 		alpha = 1.0
 		time = 0.0
 		z_priority = 100
 		no_wait}
 	if ($autolaunch_startnow = 0)
-		if globalexists \{name = autolaunch_state
+		if GlobalExists \{name = autolaunch_state
 				type = checksum}
 			fadetoblack \{off
 				no_wait}
@@ -682,74 +682,74 @@ script guitar_startup
 				change \{primary_controller_assigned = 1}
 				ui_event \{event = menu_change
 					data = {
-						state = uistate_mainmenu
+						state = UIstate_mainmenu
 					}}
 			else
 				ui_event \{event = menu_change
 					data = {
-						state = uistate_boot_iis
+						state = UIstate_boot_iis
 					}}
 			endif
 		else
 			startrendering
 			ui_event \{event = menu_change
 				data = {
-					state = uistate_boot_legal
+					state = UIstate_boot_legal
 				}}
-			addparams \{donthide}
+			AddParams \{donthide}
 		endif
 	else
 		startrendering
 		fadetoblack \{off
 			no_wait}
-		spawnscriptlater \{autolaunch_spawned}
+		SpawnScriptLater \{autolaunch_spawned}
 	endif
 	guitar_create_character_maps
-	buildcaslookuptables \{master_editable_list = master_editable_list}
-	if NOT cd
-		if casartist
+	BuildCasLookupTables \{master_editable_list = master_editable_list}
+	if NOT CD
+		if CasArtist
 			verify_cas_budgets \{profiles}
 		endif
 	endif
-	pushmemprofile \{'CAS Asset Storage'}
-	casallocatebudgetblock \{heap = heap_musician1
+	PushMemProfile \{'CAS Asset Storage'}
+	CASAllocateBudgetBlock \{heap = heap_musician1
 		name = heap_musician1
-		budget = $cas_budget_groups}
-	casallocatebudgetblock \{heap = heap_musician2
+		Budget = $cas_budget_groups}
+	CASAllocateBudgetBlock \{heap = heap_musician2
 		name = heap_musician2
-		budget = $cas_budget_groups}
-	casallocatebudgetblock \{heap = heap_musician3
+		Budget = $cas_budget_groups}
+	CASAllocateBudgetBlock \{heap = heap_musician3
 		name = heap_musician3
-		budget = $cas_budget_groups}
-	casallocatebudgetblock \{heap = heap_musician4
+		Budget = $cas_budget_groups}
+	CASAllocateBudgetBlock \{heap = heap_musician4
 		name = heap_musician4
-		budget = $cas_budget_groups}
-	casallocatebudgetblock \{heap = heap_musician4
+		Budget = $cas_budget_groups}
+	CASAllocateBudgetBlock \{heap = heap_musician4
 		name = band_logo_block
-		budget = $cas_band_logo_budget}
-	createassetstoragefrombudgetblock \{name = heap_musician1}
-	createassetstoragefrombudgetblock \{name = heap_musician2}
-	createassetstoragefrombudgetblock \{name = heap_musician3}
-	createassetstoragefrombudgetblock \{name = heap_musician4}
-	createassetstoragefrombudgetblock name = band_logo_block slopheap = bottomupheap assetcontext = ($cas_band_logo_details.assetcontext)
-	popmemprofile
-	castemporariessetheap \{heap = heap_cas}
-	getstarttime
+		Budget = $cas_band_logo_budget}
+	CreateAssetStorageFromBudgetBlock \{name = heap_musician1}
+	CreateAssetStorageFromBudgetBlock \{name = heap_musician2}
+	CreateAssetStorageFromBudgetBlock \{name = heap_musician3}
+	CreateAssetStorageFromBudgetBlock \{name = heap_musician4}
+	CreateAssetStorageFromBudgetBlock name = band_logo_block slopheap = BottomUpHeap assetcontext = ($CAS_Band_Logo_Details.assetcontext)
+	PopMemProfile
+	CASTemporariesSetHeap \{heap = heap_cas}
+	GetStartTime
 	check_for_dupe_profiles
-	print_loading_time starttime = <starttime> text = qs(0xccbb6862)
+	print_loading_time StartTime = <StartTime> text = qs("\Lcheck_for_dupe_profiles")
 	create_font_arrays
-	pushmemprofile \{'band_logo'}
+	PushMemProfile \{'band_logo'}
 	ensure_band_logo_object_created
-	popmemprofile
-	registertexdictforui ($cas_band_logo_details.texdict)
+	PopMemProfile
+	RegisterTexDictForUI ($CAS_Band_Logo_Details.texdict)
 	change \{tutorial_disable_hud = 0}
-	createscreenelement \{type = containerelement
+	CreateScreenElement \{type = ContainerElement
 		id = dead_particle_container
 		parent = root_window
 		pos = (0.0, 0.0)}
-	pushmemprofile \{'Init2DParticles'}
-	init2dparticles \{parent = dead_particle_container}
-	popmemprofile
+	PushMemProfile \{'Init2DParticles'}
+	Init2DParticles \{parent = dead_particle_container}
+	PopMemProfile
 	vocals_start_mic
 	if ($autolaunch_startnow != 0)
 		vocals_distribute_mics
@@ -762,124 +762,124 @@ script guitar_startup
 		<profile_gpu> = 1
 	endif
 	if (<profile_gpu> = 1)
-		togglemetrics \{mode = 5}
+		ToggleMetrics \{mode = 5}
 		change \{current_cpu = 6}
 	else
 		if ($show_cpu_time = 1)
 			change \{current_cpu = 0}
-			togglemetrics \{mode = 5}
+			ToggleMetrics \{mode = 5}
 		else
-			togglemetrics \{mode = 0}
+			ToggleMetrics \{mode = 0}
 		endif
 	endif
 	if ($show_build_version = 1)
 		debug_toggle_changelist \{show}
 	endif
-	finalbuildmemreport
-	if NOT gotparam \{donthide}
-		hideloadingscreen
+	FinalBuildMemReport
+	if NOT GotParam \{donthide}
+		Hideloadingscreen
 	endif
-	print_loading_time starttime = <overallstarttime> text = qs(0xe79eced7)
+	print_loading_time StartTime = <OverallStartTime> text = qs("\LOverall")
 endscript
 
 script verify_cas_budgets 
-	verifycasbudgets editable_list = $master_editable_list budgets = $cas_budget_groups <...>
-	if gotparam \{textures}
-		verifycaptextures
+	VerifyCASBudgets editable_list = $master_editable_list budgets = $cas_budget_groups <...>
+	if GotParam \{textures}
+		VerifyCAPTextures
 	endif
-	if gotparam \{profiles}
-		verifycapprofile profile = ($default_custom_musician_profile_female) <...>
-		verifycapprofile profile = ($default_custom_musician_profile_male) <...>
-		verifycapprofile profiles = ($preset_musician_profiles_modifiable) <...>
-		verifycapprofile profiles = ($preset_musician_profiles_locked) <...>
-		verifycapprofile appearances = ($cas_preset_guitars) <...>
-		verifycapprofile appearances = ($cas_preset_basses) <...>
-		verifycapprofile appearances = ($cas_preset_drums) <...>
-		verifycapprofile appearances = ($cas_preset_female_vocals) <...>
-		verifycapprofile appearances = ($cas_preset_male_vocals) <...>
-		verifycapprofile appearances = ($cas_preset_tattoo_female) <...>
-		verifycapprofile appearances = ($cas_preset_tattoo_male) <...>
-		verifycapprofile appearances = ($cas_preset_face_skin_female) <...>
-		verifycapprofile appearances = ($cas_preset_face_skin_male) <...>
-		verifycapprofile appearances = ($cas_preset_body_female) <...>
-		verifycapprofile appearances = ($cas_preset_body_male) <...>
+	if GotParam \{profiles}
+		VerifyCAPProfile profile = ($default_custom_musician_profile_female) <...>
+		VerifyCAPProfile profile = ($default_custom_musician_profile_male) <...>
+		VerifyCAPProfile profiles = ($Preset_Musician_Profiles_Modifiable) <...>
+		VerifyCAPProfile profiles = ($Preset_Musician_Profiles_Locked) <...>
+		VerifyCAPProfile appearances = ($cas_preset_guitars) <...>
+		VerifyCAPProfile appearances = ($cas_preset_basses) <...>
+		VerifyCAPProfile appearances = ($cas_preset_drums) <...>
+		VerifyCAPProfile appearances = ($cas_preset_female_vocals) <...>
+		VerifyCAPProfile appearances = ($cas_preset_male_vocals) <...>
+		VerifyCAPProfile appearances = ($cas_preset_tattoo_female) <...>
+		VerifyCAPProfile appearances = ($cas_preset_tattoo_male) <...>
+		VerifyCAPProfile appearances = ($cas_preset_face_skin_female) <...>
+		VerifyCAPProfile appearances = ($cas_preset_face_skin_male) <...>
+		VerifyCAPProfile appearances = ($cas_preset_body_female) <...>
+		VerifyCAPProfile appearances = ($cas_preset_body_male) <...>
 	endif
 endscript
 
 script generate_worst_cas_appearances 
-	verifycasbudgets \{editable_list = $master_editable_list
+	VerifyCASBudgets \{editable_list = $master_editable_list
 		budgets = $cas_budget_groups
 		specific_parts = [
-			cas_body
-			cas_guitar_body
-			cas_female_hat_hair
+			CAS_Body
+			CAS_Guitar_Body
+			CAS_Female_Hat_Hair
 		]
-		forcebody = gh4_car_female}
+		forcebody = GH4_CAR_Female}
 	guitar_appearance = (<budget_report_geo>.worst_parts)
-	verifycasbudgets \{editable_list = $master_editable_list
+	VerifyCASBudgets \{editable_list = $master_editable_list
 		budgets = $cas_budget_groups
 		specific_parts = [
-			cas_body
-			cas_bass_body
-			cas_female_hat_hair
+			CAS_Body
+			CAS_Bass_Body
+			CAS_Female_Hat_Hair
 		]
-		forcebody = gh4_car_female}
+		forcebody = GH4_CAR_Female}
 	bass_appearance = (<budget_report_geo>.worst_parts)
-	verifycasbudgets \{editable_list = $master_editable_list
+	VerifyCASBudgets \{editable_list = $master_editable_list
 		budgets = $cas_budget_groups
 		specific_parts = [
-			cas_body
-			cas_drums
-			cas_female_hat_hair
+			CAS_Body
+			CAS_Drums
+			CAS_Female_Hat_Hair
 		]
-		forcebody = gh4_car_female}
+		forcebody = GH4_CAR_Female}
 	drum_appearance = (<budget_report_geo>.worst_parts)
-	verifycasbudgets \{editable_list = $master_editable_list
+	VerifyCASBudgets \{editable_list = $master_editable_list
 		budgets = $cas_budget_groups
 		specific_parts = [
-			cas_body
-			cas_mic
-			cas_female_hat_hair
+			CAS_Body
+			CAS_Mic
+			CAS_Female_Hat_Hair
 		]
-		forcebody = gh4_car_female}
+		forcebody = GH4_CAR_Female}
 	vocals_appearance = (<budget_report_geo>.worst_parts)
-	verifycasbudgets \{editable_list = $master_editable_list
+	VerifyCASBudgets \{editable_list = $master_editable_list
 		budgets = $cas_budget_groups
 		specific_parts = [
-			cas_body
-			cas_guitar_body
-			cas_male_hat_hair
+			CAS_Body
+			CAS_Guitar_Body
+			CAS_Male_Hat_Hair
 		]
-		forcebody = gh4_car_male}
+		forcebody = GH4_CAR_Male}
 	m_guitar_appearance = (<budget_report_geo>.worst_parts)
-	verifycasbudgets \{editable_list = $master_editable_list
+	VerifyCASBudgets \{editable_list = $master_editable_list
 		budgets = $cas_budget_groups
 		specific_parts = [
-			cas_body
-			cas_bass_body
-			cas_male_hat_hair
+			CAS_Body
+			CAS_Bass_Body
+			CAS_Male_Hat_Hair
 		]
-		forcebody = gh4_car_male}
+		forcebody = GH4_CAR_Male}
 	m_bass_appearance = (<budget_report_geo>.worst_parts)
-	verifycasbudgets \{editable_list = $master_editable_list
+	VerifyCASBudgets \{editable_list = $master_editable_list
 		budgets = $cas_budget_groups
 		specific_parts = [
-			cas_body
-			cas_drums
-			cas_male_hat_hair
+			CAS_Body
+			CAS_Drums
+			CAS_Male_Hat_Hair
 		]
-		forcebody = gh4_car_male}
+		forcebody = GH4_CAR_Male}
 	m_drum_appearance = (<budget_report_geo>.worst_parts)
-	verifycasbudgets \{editable_list = $master_editable_list
+	VerifyCASBudgets \{editable_list = $master_editable_list
 		budgets = $cas_budget_groups
 		specific_parts = [
-			cas_body
-			cas_mic
-			cas_male_hat_hair
+			CAS_Body
+			CAS_Mic
+			CAS_Male_Hat_Hair
 		]
-		forcebody = gh4_car_male}
+		forcebody = GH4_CAR_Male}
 	m_vocals_appearance = (<budget_report_geo>.worst_parts)
-	outputworstcasecasfile {
+	OutputWorstCaseCASFile {
 		path = 'car_worst_appearances.q'
 		structs = {
 			worst_female_guitar_appearance = <guitar_appearance>
@@ -896,28 +896,28 @@ endscript
 
 script set_cas_heap_state 
 	if NOT ($cas_heap_state = <state>)
-		casblockforcomposite
+		CasBlockForComposite
 		get_heap_sizes
 		free_cas_cache_pak
-		pushmemprofile \{'Game Heaps'}
-		mempushcontext \{heap_cas}
+		PushMemProfile \{'Game Heaps'}
+		MemPushContext \{heap_cas}
 		if (<state> = in_game)
 			memdeleteheap \{name = heap_bink}
-			dumpfragments \{heap = heap_cas}
-			pakmanresizemap map = zones size = (<size_zones> / 1024) vram_size = (<size_zones_vram> / 1024)
-			meminitheap name = 'heap_song' size = <heap_size_song>
-			meminitheap name = 'heap_bink' size = <heap_size_bink>
+			DumpFragments \{heap = heap_cas}
+			PakManResizeMap map = zones size = (<size_zones> / 1024) vram_size = (<size_zones_vram> / 1024)
+			MemInitHeap name = 'heap_song' size = <heap_size_song>
+			MemInitHeap name = 'heap_bink' size = <heap_size_bink>
 		else
 			unload_songqpak
 			memdeleteheap \{name = heap_bink}
 			memdeleteheap \{name = heap_song}
-			dumpfragments \{heap = heap_cas}
-			pakmanresizemap map = zones size = (<size_zones_in_cas> / 1024) vram_size = (<size_zones_in_cas_vram> / 1024)
-			meminitheap name = 'heap_bink' size = <heap_size_bink_in_cas>
+			DumpFragments \{heap = heap_cas}
+			PakManResizeMap map = zones size = (<size_zones_in_cas> / 1024) vram_size = (<size_zones_in_cas_vram> / 1024)
+			MemInitHeap name = 'heap_bink' size = <heap_size_bink_in_cas>
 			create_cas_cache_pak size = <cas_cache_size_in_cas> vram_size = <cas_cache_size_vram_in_cas>
 		endif
-		mempopcontext
-		popmemprofile
+		MemPopContext
+		PopMemProfile
 	endif
 	change cas_heap_state = <state>
 endscript
@@ -925,12 +925,12 @@ endscript
 script autolaunch_spawned 
 	if ($net_autolaunch_role = none)
 		($default_loading_screen.create)
-		mc_setactiveplayer \{querydefault}
+		MC_SetActivePlayer \{QueryDefault}
 		if ($autolaunch_showstorageselector = 1)
-			showstorageselector
+			ShowStorageSelector
 		endif
 		ui_event_block \{event = menu_add
-			state = uistate_mainmenu
+			state = UIstate_mainmenu
 			data = {
 				base_name = 'mainmenu'
 			}}
@@ -946,13 +946,13 @@ script autolaunch_spawned
 			}}
 		ui_event event = menu_change data = {state = uistate_play_song device_num = ($player1_status.controller) uselaststarttime = 1}
 	else
-		printf \{qs(0xe17688e1)}
-		mc_setactiveplayer \{querydefault}
+		printf \{qs("\Lauto launch into net game")}
+		MC_SetActivePlayer \{QueryDefault}
 		if ($autolaunch_showstorageselector = 1)
-			showstorageselector
+			ShowStorageSelector
 		endif
 		ui_event_block \{event = menu_add
-			state = uistate_mainmenu
+			state = UIstate_mainmenu
 			data = {
 				base_name = 'mainmenu'
 			}}
@@ -971,43 +971,43 @@ script autolaunch_spawned
 endscript
 
 script kill_dummy_bg_camera 
-	killcamanim \{name = dummy_cam_bg}
+	KillCamAnim \{name = dummy_cam_bg}
 endscript
 
 script restore_dummy_bg_camera 
 	kill_dummy_bg_camera
-	playigccam \{name = dummy_cam_bg
+	PlayIGCCam \{name = dummy_cam_bg
 		viewport = bg_viewport
 		pos = (-28.344543, 0.47631302, 7.1957684)
-		quat = (-0.00071999995, -0.99706, -0.07604)
-		fov = 72.0
-		play_hold}
+		Quat = (-0.00071999995, -0.99706, -0.07604)
+		FOV = 72.0
+		Play_hold}
 endscript
 
-script get_levelzonearray_size 
-	getarraysize \{$levelzonearray}
+script get_LevelZoneArray_size 
+	GetArraySize \{$LevelZoneArray}
 	size = (<array_size>)
-	if globalexists \{name = download_levelzonearray
+	if GlobalExists \{name = download_LevelZoneArray
 			type = array}
-		getarraysize \{$download_levelzonearray}
+		GetArraySize \{$download_LevelZoneArray}
 		size = (<array_size> + <size>)
 	endif
 	return array_size = <size>
 endscript
 
-script get_levelzonearray_checksum 
-	getarraysize \{$levelzonearray}
+script get_LevelZoneArray_checksum 
+	GetArraySize \{$LevelZoneArray}
 	if (<index> < <array_size>)
-		return level_checksum = ($levelzonearray [<index>])
+		return level_checksum = ($LevelZoneArray [<index>])
 	else
-		return level_checksum = ($download_levelzonearray [(<index> - <array_size>)])
+		return level_checksum = ($download_LevelZoneArray [(<index> - <array_size>)])
 	endif
 endscript
 
-script is_levelzone_downloaded \{level_checksum = load_z_artdeco}
-	if arraycontains array = ($download_levelzonearray) contains = <level_checksum>
-		formattext textname = filename '%s.pak' s = (($download_levelzones.<level_checksum>).name)
-		getcontentfolderindexfromfile <filename>
+script Is_LevelZone_Downloaded \{level_checksum = load_z_artdeco}
+	if ArrayContains array = ($download_LevelZoneArray) contains = <level_checksum>
+		FormatText TextName = filename '%s.pak' s = (($download_LevelZones.<level_checksum>).name)
+		GetContentFolderIndexFromFile <filename>
 		if (<device> = content)
 			return \{download = 1
 				true}
@@ -1044,20 +1044,20 @@ debug_cas_checksum_names = [
 	custom_character_4
 ]
 
-script getcurrentlevel 
+script GetCurrentLevel 
 	return level = ($current_level)
 endscript
 
 script get_level_prefix 
-	if structurecontains \{structure = $levelzones
+	if StructureContains \{Structure = $LevelZones
 			$current_level}
-		return prefix = ($levelzones.($current_level).name) prefix_crc = ($levelzones.($current_level).zone)
+		return prefix = ($LevelZones.($current_level).name) prefix_crc = ($LevelZones.($current_level).zone)
 	endif
-	printf \{qs(0xfd035b9c)}
-	printf \{qs(0xc919c9ff)}
-	printf \{qs(0xc350451a)}
-	printf \{qs(0xfd035b9c)}
-	printf \{qs(0xfd035b9c)}
+	printf \{qs("\L!!!!!!!!!!!!!!!!!!!!!!!!!!!!")}
+	printf \{qs("\L!!!!!!!!!!!!!!!!!!!!!!!!!!!")}
+	printf \{qs("\L!!!Warning! Unknown level!!!")}
+	printf \{qs("\L!!!!!!!!!!!!!!!!!!!!!!!!!!!!")}
+	printf \{qs("\L!!!!!!!!!!!!!!!!!!!!!!!!!!!!")}
 	return \{prefix = 'z_unknown'
 		prefix_crc = z_unknown}
 endscript
@@ -1073,12 +1073,12 @@ script postqbromid
 		difficulty2 = ($player2_status.difficulty)
 		difficulty3 = ($player3_status.difficulty)
 		difficulty4 = ($player4_status.difficulty)
-		starttime = ($current_starttime)
+		StartTime = ($current_starttime)
 		device_num = ($player1_status.controller)
 	}
 endscript
 
-script infrontend 
+script InFrontend 
 	return \{false}
 endscript
 rendering_has_been_stopped_explicit = false
@@ -1101,7 +1101,7 @@ script startrendering \{reason = explicit}
 		case loading_screen
 		change \{rendering_has_been_stopped_loading_screen = false}
 		default
-		scriptassert \{qs(0x49bf01ce)}
+		ScriptAssert \{qs("\LAn unqualified person has added a call to StartRendering!")}
 	endswitch
 	if ($rendering_has_been_stopped_explicit = true)
 		return
@@ -1118,7 +1118,7 @@ script startrendering \{reason = explicit}
 	if ($rendering_has_been_stopped_loading_screen = true)
 		return
 	endif
-	startrendering_c
+	StartRendering_C
 endscript
 
 script stoprendering \{reason = explicit}
@@ -1134,54 +1134,54 @@ script stoprendering \{reason = explicit}
 		case loading_screen
 		change \{rendering_has_been_stopped_loading_screen = true}
 		default
-		scriptassert \{qs(0xe1901769)}
+		ScriptAssert \{qs("\LAn unqualified person has added a call to StopRendering!")}
 	endswitch
-	stoprendering_c
+	StopRendering_C
 endscript
 
 script get_player_status_checksum 
-	requireparams \{[
+	RequireParams \{[
 			player
 		]
 		all}
-	getmaxplayers
+	GetMaxPlayers
 	if ((<player> < 1) || (<player> > <max_players>))
-		softassert 'player value %p should be in range 1-4' p = <player>
+		SoftAssert 'player value %p should be in range 1-4' p = <player>
 		<player> = 1
 	endif
-	formattext checksumname = player_status 'player%p_status' p = <player>
+	FormatText checksumname = player_status 'player%p_status' p = <player>
 	return player_status = <player_status>
 endscript
 
 script get_replay_heap 
-	if isps3
-		return \{replay_heap = debugheap}
+	if IsPs3
+		return \{replay_heap = DebugHeap}
 	endif
-	return \{replay_heap = bottomupheap}
+	return \{replay_heap = BottomUpHeap}
 endscript
 
 script are_replays_enabled 
 	return \{false}
 endscript
 
-script runonqbr 
-	if cd
+script RunOnQBR 
+	if CD
 		return
 	endif
 	if (<file> = 'reloads\\guitar_band_preset_profiles.qb.xen')
 		stars
-		printf \{qs(0xb2f78668)}
+		printf \{qs("\LReloaded character profiles")}
 		stars
 		if ($cas_heap_state = in_cas)
-			if getcurrentcasobject
-				getarraysize \{$preset_musician_profiles_modifiable}
+			if GetCurrentCASObject
+				GetArraySize \{$Preset_Musician_Profiles_Modifiable}
 				i = 0
 				begin
-				globaltag_set_preset_musician savegame = ($cas_current_savegame) index = <i> appearance = ($preset_musician_profiles_modifiable [<i>].appearance)
+				globaltag_set_preset_musician savegame = ($cas_current_savegame) index = <i> appearance = ($Preset_Musician_Profiles_Modifiable [<i>].appearance)
 				i = (<i> + 1)
 				repeat <array_size>
 				if NOT is_completely_custom_musician id = ($cas_current_profile) savegame = ($cas_current_savegame)
-					refreshcasprofile
+					RefreshCASProfile
 				endif
 			endif
 		endif
@@ -1194,11 +1194,11 @@ endscript
 hide_glitch_count = 0
 
 script hide_glitch_spawned 
-	onexitrun \{hide_glitch_spawned_exit}
-	setscriptcannotpause
+	OnExitRun \{hide_glitch_spawned_exit}
+	SetScriptCannotPause
 	change hide_glitch_count = ($hide_glitch_count + 1)
 	stoprendering \{reason = hide_glitch}
-	wait <num_frames> gameframes
+	Wait <num_frames> gameframes
 endscript
 
 script hide_glitch_spawned_exit 

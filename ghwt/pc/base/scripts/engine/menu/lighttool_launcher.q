@@ -1,4 +1,4 @@
-shadow_volume_settings = {
+Shadow_Volume_Settings = {
 	intensity = 0.3
 	type = modulate
 	softness = 0.5
@@ -8,7 +8,7 @@ shadow_volume_settings = {
 		0
 	]
 }
-white_noise_settings = {
+White_Noise_Settings = {
 	on = 0
 	intensity = 20
 	color = [
@@ -17,7 +17,7 @@ white_noise_settings = {
 		128
 	]
 }
-zoomblur_settings = {
+ZoomBlur_Settings = {
 	focus_center = [
 		0.5
 		0.5
@@ -43,7 +43,7 @@ zoomblur_settings = {
 	]
 	outer_alpha = 0.0
 }
-shaderoverridesettings = {
+ShaderOverrideSettings = {
 	override_static = 0
 	override_skinned = 0
 	override_normalmapped = 0

@@ -1,4 +1,4 @@
-gh3demolocalizationstrings = [
-	qs(0x2185941d)
-	qs(0xff8efab9)
+GH3DemoLocalizationStrings = [
+	qs("UNAVAILABLE IN DEMO")
+	qs("Just a taste")
 ]

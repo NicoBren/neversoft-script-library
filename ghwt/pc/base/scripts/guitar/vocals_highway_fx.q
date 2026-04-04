@@ -1,10 +1,10 @@
 vocals_comet_particle_effects = {
 	scrolling = [
 		{
-			base = {
+			Base = {
 				pos = (0.0, 0.0)
 				z_priority = 18.0
-				material = sys_particle_spark01_sys_particle_spark01
+				material = sys_Particle_Spark01_sys_Particle_Spark01
 				start_color = [
 					255
 					128
@@ -51,10 +51,10 @@ vocals_comet_particle_effects = {
 	]
 	scrolling_sp = [
 		{
-			base = {
+			Base = {
 				pos = (0.0, 0.0)
 				z_priority = 18.0
-				material = sys_particle_star01_sys_particle_star01
+				material = sys_Particle_Star01_sys_Particle_Star01
 				start_color = [
 					64
 					128
@@ -83,10 +83,10 @@ vocals_comet_particle_effects = {
 			}
 		}
 		{
-			base = {
+			Base = {
 				pos = (0.0, 0.0)
 				z_priority = 18.0
-				material = vh_sp_fx01
+				material = VH_SP_FX01
 				start_color = [
 					255
 					255
@@ -115,10 +115,10 @@ vocals_comet_particle_effects = {
 			}
 		}
 		{
-			base = {
+			Base = {
 				pos = (0.0, 0.0)
 				z_priority = 18.0
-				material = vh_sp_fx01
+				material = VH_SP_FX01
 				start_color = [
 					255
 					255
@@ -147,10 +147,10 @@ vocals_comet_particle_effects = {
 			}
 		}
 		{
-			base = {
+			Base = {
 				pos = (0.0, 0.0)
 				z_priority = 18.0
-				material = sys_particle_spark01_sys_particle_spark01
+				material = sys_Particle_Spark01_sys_Particle_Spark01
 				start_color = [
 					128
 					255
@@ -181,10 +181,10 @@ vocals_comet_particle_effects = {
 	]
 	static = [
 		{
-			base = {
+			Base = {
 				pos = (0.0, 0.0)
 				z_priority = 18.0
-				material = sys_particle_spark01_sys_particle_spark01
+				material = sys_Particle_Spark01_sys_Particle_Spark01
 				start_color = [
 					255
 					128
@@ -231,10 +231,10 @@ vocals_comet_particle_effects = {
 	]
 	static_sp = [
 		{
-			base = {
+			Base = {
 				pos = (0.0, 0.0)
 				z_priority = 18.0
-				material = sys_particle_star01_sys_particle_star01
+				material = sys_Particle_Star01_sys_Particle_Star01
 				start_color = [
 					64
 					128
@@ -263,10 +263,10 @@ vocals_comet_particle_effects = {
 			}
 		}
 		{
-			base = {
+			Base = {
 				pos = (0.0, 0.0)
 				z_priority = 18.0
-				material = vh_sp_fx01
+				material = VH_SP_FX01
 				start_color = [
 					255
 					255
@@ -295,10 +295,10 @@ vocals_comet_particle_effects = {
 			}
 		}
 		{
-			base = {
+			Base = {
 				pos = (0.0, 0.0)
 				z_priority = 18.0
-				material = vh_sp_fx01
+				material = VH_SP_FX01
 				start_color = [
 					255
 					255
@@ -327,10 +327,10 @@ vocals_comet_particle_effects = {
 			}
 		}
 		{
-			base = {
+			Base = {
 				pos = (0.0, 0.0)
 				z_priority = 18.0
-				material = sys_particle_spark01_sys_particle_spark01
+				material = sys_Particle_Spark01_sys_Particle_Spark01
 				start_color = [
 					128
 					255
@@ -373,60 +373,60 @@ vocal_cheat_fireball_end_color = [
 	64
 ]
 
-script vocalshighway_getmaterial 
-	requireparams \{[
+script VocalsHighway_GetMaterial 
+	RequireParams \{[
 			player
 		]
 		all}
-	formattext {
+	FormatText {
 		checksumname = vocals_highway_material
-		textname = vocals_highway_material_text
+		TextName = vocals_highway_material_text
 		'VocalEKGMaterial_p%p'
 		p = <player>
-		addtostringlookup
+		AddToStringLookup
 	}
 	return vocals_highway_material = <vocals_highway_material> vocals_highway_material_text = <vocals_highway_material_text>
 endscript
 
 script vocals_setup_paint_material \{player = 1}
-	vocalshighway_getid player = <player>
-	vocalshighway_getmaterial player = <player>
-	vocals_getvocalistnum player = <player>
-	destroymaterial name = <vocals_highway_material>
-	if screenelementexists id = {<vocals_highway_id> child = ekgelement}
-		destroyscreenelement id = {<vocals_highway_id> child = ekgelement}
+	VocalsHighway_GetId player = <player>
+	VocalsHighway_GetMaterial player = <player>
+	Vocals_GetVocalistNum player = <player>
+	DestroyMaterial name = <vocals_highway_material>
+	if ScreenElementExists id = {<vocals_highway_id> child = EKGElement}
+		DestroyScreenElement id = {<vocals_highway_id> child = EKGElement}
 	endif
-	creatematerial {
+	CreateMaterial {
 		name = <vocals_highway_material>
-		template = waveform_ui
+		Template = Waveform_UI
 		technique = `default`
-		blendmode = blend
+		blendMode = blend
 		alphacutoff = 1
-		materialprops = [
-			{name = m_sampnoise textureproperty = `tex\_______default_m_____.dds`}
-			{name = m_pscolors0 vectorproperty = [2.0 1.0 0.0 1.0]}
-			{name = m_pscolors1 vectorproperty = [1.2 0.8 0.0 5.0]}
-			{name = m_pscolors2 vectorproperty = [1.0 0.75 0.120000005 0.8]}
-			{name = m_pscolors3 vectorproperty = [0.0 0.0 0.0 0.8]}
-			{name = m_pscolors4 vectorproperty = [2.0 1.0 0.0 1.2]}
-			{name = m_pscolors5 vectorproperty = [0.0 0.0 0.1 0.8]}
-			{name = m_pscolors6 vectorproperty = [1.0 0.6 0.2 1.0]}
-			{name = m_pscolors7 vectorproperty = [1.0 1.0 0.3 1.0]}
-			{name = m_noisescale floatproperty = 0.8}
-			{name = m_noisebias floatproperty = 0.0}
-			{name = m_noisepower floatproperty = 0.25}
-			{name = m_noise1speedx floatproperty = 0.2}
-			{name = m_noise1speedy floatproperty = 0.25}
-			{name = m_noise2speedx floatproperty = 0.2}
-			{name = m_noise2speedy floatproperty = -0.25}
-			{name = m_splinefadedistance floatproperty = 5.0}
-			{name = m_playerindex floatproperty = <vocalist_num>}
+		MaterialProps = [
+			{name = m_sampNoise TextureProperty = `tex\_______Default_M_____.dds`}
+			{name = m_psColors0 VectorProperty = [2.0 1.0 0.0 1.0]}
+			{name = m_psColors1 VectorProperty = [1.2 0.8 0.0 5.0]}
+			{name = m_psColors2 VectorProperty = [1.0 0.75 0.120000005 0.8]}
+			{name = m_psColors3 VectorProperty = [0.0 0.0 0.0 0.8]}
+			{name = m_psColors4 VectorProperty = [2.0 1.0 0.0 1.2]}
+			{name = m_psColors5 VectorProperty = [0.0 0.0 0.1 0.8]}
+			{name = m_psColors6 VectorProperty = [1.0 0.6 0.2 1.0]}
+			{name = m_psColors7 VectorProperty = [1.0 1.0 0.3 1.0]}
+			{name = m_noiseScale FloatProperty = 0.8}
+			{name = m_noiseBias FloatProperty = 0.0}
+			{name = m_noisePower FloatProperty = 0.25}
+			{name = m_noise1SpeedX FloatProperty = 0.2}
+			{name = m_noise1SpeedY FloatProperty = 0.25}
+			{name = m_noise2SpeedX FloatProperty = 0.2}
+			{name = m_noise2SpeedY FloatProperty = -0.25}
+			{name = m_splineFadeDistance FloatProperty = 5.0}
+			{name = m_playerIndex FloatProperty = <vocalist_num>}
 		]
 	}
-	createscreenelement {
+	CreateScreenElement {
 		parent = <vocals_highway_id>
-		local_id = ekgelement
-		type = spriteelement
+		local_id = EKGElement
+		type = SpriteElement
 		pos = (0.0, 0.0)
 		dims = (512.0, 128.0)
 		scale = 1.0
@@ -436,16 +436,16 @@ script vocals_setup_paint_material \{player = 1}
 	}
 endscript
 
-script vocals_end_phrase_good_comet_fx 
-	obj_getid
-	formattext checksumname = fx_id 'vocals_end_phrase_GOOD_comet_fx_%p' p = <player>
-	destroy2dparticlesystem id = <fx_id>
-	create2dparticlesystem {
+script vocals_end_phrase_GOOD_comet_fx 
+	Obj_GetID
+	FormatText checksumname = fx_id 'vocals_end_phrase_GOOD_comet_fx_%p' p = <player>
+	Destroy2DParticleSystem id = <fx_id>
+	Create2DParticleSystem {
 		id = <fx_id>
 		pos = (0.0, 0.0)
 		z_priority = 16.0
-		material = sys_particle_drumhit1_sys_particle_drumhit1
-		parent = <objid>
+		material = sys_Particle_Drumhit1_sys_Particle_Drumhit1
+		parent = <ObjID>
 		start_color = <rgba>
 		end_color = [0 0 0 0]
 		start_scale = (0.0, 0.0)
@@ -462,14 +462,14 @@ script vocals_end_phrase_good_comet_fx
 		friction = (0.0, 0.0)
 		time = 0.25
 	}
-	formattext checksumname = fx1_id 'vocals_end_phrase_GOOD_comet_fx1_%p' p = <player>
-	destroy2dparticlesystem id = <fx1_id>
-	create2dparticlesystem {
+	FormatText checksumname = fx1_id 'vocals_end_phrase_GOOD_comet_fx1_%p' p = <player>
+	Destroy2DParticleSystem id = <fx1_id>
+	Create2DParticleSystem {
 		id = <fx1_id>
 		pos = (0.0, 0.0)
 		z_priority = 22.0
-		material = sys_particle_spark01_sys_particle_spark01
-		parent = <objid>
+		material = sys_Particle_Spark01_sys_Particle_Spark01
+		parent = <ObjID>
 		start_color = <rgba>
 		end_color = [0 0 0 0]
 		start_scale = (1.0, 1.0)
@@ -486,22 +486,22 @@ script vocals_end_phrase_good_comet_fx
 		friction = (0.0, 10.0)
 		time = 0.25
 	}
-	wait \{6
+	Wait \{6
 		frames}
-	destroy2dparticlesystem id = <fx_id> kill_when_empty
-	destroy2dparticlesystem id = <fx1_id> kill_when_empty
+	Destroy2DParticleSystem id = <fx_id> kill_when_empty
+	Destroy2DParticleSystem id = <fx1_id> kill_when_empty
 endscript
 
-script vocals_end_phrase_bad_comet_fx 
-	obj_getid
-	formattext checksumname = fx_id 'vocals_end_phrase_BAD_comet_fx_%p' p = <player>
-	destroy2dparticlesystem id = <fx_id>
-	create2dparticlesystem {
+script vocals_end_phrase_BAD_comet_fx 
+	Obj_GetID
+	FormatText checksumname = fx_id 'vocals_end_phrase_BAD_comet_fx_%p' p = <player>
+	Destroy2DParticleSystem id = <fx_id>
+	Create2DParticleSystem {
 		id = <fx_id>
 		pos = (0.0, 0.0)
 		z_priority = 19.0
-		material = sys_particle_spark01_sys_particle_spark01
-		parent = <objid>
+		material = sys_Particle_Spark01_sys_Particle_Spark01
+		parent = <ObjID>
 		start_color = <rgba>
 		end_color = [255 0 0 0]
 		start_scale = (4.0, 1.0)
@@ -518,39 +518,39 @@ script vocals_end_phrase_bad_comet_fx
 		friction = (0.0, 10.0)
 		time = 0.5
 	}
-	wait \{0.4
+	Wait \{0.4
 		seconds}
-	destroy2dparticlesystem id = <fx_id> kill_when_empty
+	Destroy2DParticleSystem id = <fx_id> kill_when_empty
 endscript
 
 script vocals_paint_star_power_on \{player = 1}
-	vocalshighway_getid player = <player>
-	if NOT screenelementexists id = {<vocals_highway_id> child = ekgelement}
+	VocalsHighway_GetId player = <player>
+	if NOT ScreenElementExists id = {<vocals_highway_id> child = EKGElement}
 		return
 	endif
-	vocalshighway_getmaterial player = <player>
-	setmaterialproperty mat = <vocals_highway_material_text> prop = 'm_psColors0' x = 0.0 y = 1.0 z = 2.0 w = 1.0
-	setmaterialproperty mat = <vocals_highway_material_text> prop = 'm_psColors1' x = 0.0 y = 0.4 z = 0.6 w = 5.0
-	setmaterialproperty mat = <vocals_highway_material_text> prop = 'm_psColors2' x = 0.120000005 y = 0.75 z = 1.0 w = 1.0
-	setmaterialproperty mat = <vocals_highway_material_text> prop = 'm_psColors3' x = 0.0 y = 0.0 z = 0.0 w = 1.0
-	setmaterialproperty mat = <vocals_highway_material_text> prop = 'm_psColors4' x = 0.0 y = 1.4 z = 1.4 w = 2.0
-	setmaterialproperty mat = <vocals_highway_material_text> prop = 'm_psColors5' x = 0.0 y = 0.0 z = 0.1 w = 1.0
-	setmaterialproperty mat = <vocals_highway_material_text> prop = 'm_psColors6' x = 0.2 y = 0.6 z = 1.0 w = 1.0
-	setmaterialproperty mat = <vocals_highway_material_text> prop = 'm_psColors7' x = 0.3 y = 1.0 z = 1.0 w = 1.0
+	VocalsHighway_GetMaterial player = <player>
+	SetMaterialProperty mat = <vocals_highway_material_text> prop = 'm_psColors0' x = 0.0 y = 1.0 z = 2.0 w = 1.0
+	SetMaterialProperty mat = <vocals_highway_material_text> prop = 'm_psColors1' x = 0.0 y = 0.4 z = 0.6 w = 5.0
+	SetMaterialProperty mat = <vocals_highway_material_text> prop = 'm_psColors2' x = 0.120000005 y = 0.75 z = 1.0 w = 1.0
+	SetMaterialProperty mat = <vocals_highway_material_text> prop = 'm_psColors3' x = 0.0 y = 0.0 z = 0.0 w = 1.0
+	SetMaterialProperty mat = <vocals_highway_material_text> prop = 'm_psColors4' x = 0.0 y = 1.4 z = 1.4 w = 2.0
+	SetMaterialProperty mat = <vocals_highway_material_text> prop = 'm_psColors5' x = 0.0 y = 0.0 z = 0.1 w = 1.0
+	SetMaterialProperty mat = <vocals_highway_material_text> prop = 'm_psColors6' x = 0.2 y = 0.6 z = 1.0 w = 1.0
+	SetMaterialProperty mat = <vocals_highway_material_text> prop = 'm_psColors7' x = 0.3 y = 1.0 z = 1.0 w = 1.0
 endscript
 
 script vocals_paint_star_power_off \{player = 1}
-	vocalshighway_getid player = <player>
-	if NOT screenelementexists id = {<vocals_highway_id> child = ekgelement}
+	VocalsHighway_GetId player = <player>
+	if NOT ScreenElementExists id = {<vocals_highway_id> child = EKGElement}
 		return
 	endif
-	vocalshighway_getmaterial player = <player>
-	setmaterialproperty mat = <vocals_highway_material_text> prop = 'm_psColors0' x = 2.0 y = 1.0 z = 0.0 w = 1.0
-	setmaterialproperty mat = <vocals_highway_material_text> prop = 'm_psColors1' x = 1.2 y = 0.8 z = 0.0 w = 5.0
-	setmaterialproperty mat = <vocals_highway_material_text> prop = 'm_psColors2' x = 1.0 y = 0.75 z = 0.120000005 w = 0.8
-	setmaterialproperty mat = <vocals_highway_material_text> prop = 'm_psColors3' x = 0.0 y = 0.0 z = 0.0 w = 0.8
-	setmaterialproperty mat = <vocals_highway_material_text> prop = 'm_psColors4' x = 2.0 y = 1.0 z = 0.0 w = 1.2
-	setmaterialproperty mat = <vocals_highway_material_text> prop = 'm_psColors5' x = 0.0 y = 0.0 z = 0.1 w = 0.8
-	setmaterialproperty mat = <vocals_highway_material_text> prop = 'm_psColors6' x = 1.0 y = 0.6 z = 0.2 w = 1.0
-	setmaterialproperty mat = <vocals_highway_material_text> prop = 'm_psColors7' x = 1.0 y = 1.0 z = 0.3 w = 1.0
+	VocalsHighway_GetMaterial player = <player>
+	SetMaterialProperty mat = <vocals_highway_material_text> prop = 'm_psColors0' x = 2.0 y = 1.0 z = 0.0 w = 1.0
+	SetMaterialProperty mat = <vocals_highway_material_text> prop = 'm_psColors1' x = 1.2 y = 0.8 z = 0.0 w = 5.0
+	SetMaterialProperty mat = <vocals_highway_material_text> prop = 'm_psColors2' x = 1.0 y = 0.75 z = 0.120000005 w = 0.8
+	SetMaterialProperty mat = <vocals_highway_material_text> prop = 'm_psColors3' x = 0.0 y = 0.0 z = 0.0 w = 0.8
+	SetMaterialProperty mat = <vocals_highway_material_text> prop = 'm_psColors4' x = 2.0 y = 1.0 z = 0.0 w = 1.2
+	SetMaterialProperty mat = <vocals_highway_material_text> prop = 'm_psColors5' x = 0.0 y = 0.0 z = 0.1 w = 0.8
+	SetMaterialProperty mat = <vocals_highway_material_text> prop = 'm_psColors6' x = 1.0 y = 0.6 z = 0.2 w = 1.0
+	SetMaterialProperty mat = <vocals_highway_material_text> prop = 'm_psColors7' x = 1.0 y = 1.0 z = 0.3 w = 1.0
 endscript

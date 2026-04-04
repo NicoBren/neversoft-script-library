@@ -2,7 +2,7 @@ heavyrock_snare_sampleset = [
 	{
 		velocity_cutoff = 0
 		sample_array = [
-			heavyrocksnare_lvl_2_01
+			HeavyRockSnare_Lvl_2_01
 		]
 		volume_low = -13.0
 		volume_high = -7.0
@@ -14,7 +14,7 @@ heavyrock_snare_sampleset = [
 	{
 		velocity_cutoff = 27
 		sample_array = [
-			heavyrocksnare_lvl_2_01
+			HeavyRockSnare_Lvl_2_01
 		]
 		volume_low = -7.0
 		volume_high = 3.0
@@ -26,7 +26,7 @@ heavyrock_snare_sampleset = [
 	{
 		velocity_cutoff = 42
 		sample_array = [
-			heavyrocksnare_lvl_4_01
+			HeavyRockSnare_Lvl_4_01
 		]
 		volume_low = 1.0
 		volume_high = 3.0
@@ -38,7 +38,7 @@ heavyrock_snare_sampleset = [
 	{
 		velocity_cutoff = 58
 		sample_array = [
-			heavyrocksnare_lvl_6_01
+			HeavyRockSnare_Lvl_6_01
 		]
 		volume_low = 2.0
 		volume_high = 4.0
@@ -50,7 +50,7 @@ heavyrock_snare_sampleset = [
 	{
 		velocity_cutoff = 72
 		sample_array = [
-			heavyrocksnare_lvl_8_01
+			HeavyRockSnare_Lvl_8_01
 		]
 		volume_low = 3.0
 		volume_high = 4.0
@@ -62,7 +62,7 @@ heavyrock_snare_sampleset = [
 	{
 		velocity_cutoff = 88
 		sample_array = [
-			heavyrocksnare_lvl_10_01
+			HeavyRockSnare_Lvl_10_01
 		]
 		volume_low = 2.0
 		volume_high = 3.0
@@ -74,9 +74,9 @@ heavyrock_snare_sampleset = [
 	{
 		velocity_cutoff = 103
 		sample_array = [
-			heavyrocksnare_lvl_12_01
-			heavyrocksnare_lvl_12_02
-			heavyrocksnare_lvl_12_03
+			HeavyRockSnare_Lvl_12_01
+			HeavyRockSnare_Lvl_12_02
+			HeavyRockSnare_Lvl_12_03
 		]
 		volume_low = 5.0
 		volume_high = 6.0
@@ -88,9 +88,9 @@ heavyrock_snare_sampleset = [
 	{
 		velocity_cutoff = 120
 		sample_array = [
-			heavyrocksnare_lvl_12_01
-			heavyrocksnare_lvl_12_02
-			heavyrocksnare_lvl_12_03
+			HeavyRockSnare_Lvl_12_01
+			HeavyRockSnare_Lvl_12_02
+			HeavyRockSnare_Lvl_12_03
 		]
 		volume_low = 6.0
 		volume_high = 6.0
@@ -104,7 +104,7 @@ heavyrock_kick_sampleset = [
 	{
 		velocity_cutoff = 0
 		sample_array = [
-			heavyrockkick_lvl_2_01
+			HeavyRockKick_Lvl_2_01
 		]
 		volume_low = -13.0
 		volume_high = -1.0
@@ -115,7 +115,7 @@ heavyrock_kick_sampleset = [
 	{
 		velocity_cutoff = 25
 		sample_array = [
-			heavyrockkick_lvl_2_01
+			HeavyRockKick_Lvl_2_01
 		]
 		volume_low = -1.0
 		volume_high = 5.0
@@ -126,7 +126,7 @@ heavyrock_kick_sampleset = [
 	{
 		velocity_cutoff = 35
 		sample_array = [
-			heavyrockkick_lvl_6_01
+			HeavyRockKick_Lvl_6_01
 		]
 		volume_low = -3.0
 		volume_high = 3.0
@@ -137,7 +137,7 @@ heavyrock_kick_sampleset = [
 	{
 		velocity_cutoff = 45
 		sample_array = [
-			heavyrockkick_lvl_10_01
+			HeavyRockKick_Lvl_10_01
 		]
 		volume_low = 0.0
 		volume_high = 3.0
@@ -148,7 +148,7 @@ heavyrock_kick_sampleset = [
 	{
 		velocity_cutoff = 80
 		sample_array = [
-			heavyrockkick_lvl_10_01
+			HeavyRockKick_Lvl_10_01
 		]
 		volume_low = 3.0
 		volume_high = 3.0
@@ -161,7 +161,7 @@ heavyrock_tom1_sampleset = [
 	{
 		velocity_cutoff = 0
 		sample_array = [
-			heavyrockhitom_lvl_4_01
+			HeavyRockHiTom_Lvl_4_01
 		]
 		volume_low = -11.0
 		volume_high = -5.0
@@ -172,7 +172,7 @@ heavyrock_tom1_sampleset = [
 	{
 		velocity_cutoff = 25
 		sample_array = [
-			heavyrockhitom_lvl_4_01
+			HeavyRockHiTom_Lvl_4_01
 		]
 		volume_low = -5.0
 		volume_high = 1.0
@@ -183,7 +183,7 @@ heavyrock_tom1_sampleset = [
 	{
 		velocity_cutoff = 49
 		sample_array = [
-			heavyrockhitom_lvl_6_01
+			HeavyRockHiTom_Lvl_6_01
 		]
 		volume_low = -1.0
 		volume_high = 4.0
@@ -194,7 +194,7 @@ heavyrock_tom1_sampleset = [
 	{
 		velocity_cutoff = 73
 		sample_array = [
-			heavyrockhitom_lvl_8_01
+			HeavyRockHiTom_Lvl_8_01
 		]
 		volume_low = 2.0
 		volume_high = 7.0
@@ -205,7 +205,7 @@ heavyrock_tom1_sampleset = [
 	{
 		velocity_cutoff = 97
 		sample_array = [
-			heavyrockhitom_lvl_10_01
+			HeavyRockHiTom_Lvl_10_01
 		]
 		volume_low = 2.0
 		volume_high = 4.0
@@ -216,7 +216,7 @@ heavyrock_tom1_sampleset = [
 	{
 		velocity_cutoff = 120
 		sample_array = [
-			heavyrockhitom_lvl_10_01
+			HeavyRockHiTom_Lvl_10_01
 		]
 		volume_low = 4.0
 		volume_high = 4.0
@@ -229,7 +229,7 @@ heavyrock_tom2_sampleset = [
 	{
 		velocity_cutoff = 0
 		sample_array = [
-			heavyrockfltom_lvl_4_01
+			HeavyRockFlTom_Lvl_4_01
 		]
 		volume_low = -13.0
 		volume_high = -3.0
@@ -240,7 +240,7 @@ heavyrock_tom2_sampleset = [
 	{
 		velocity_cutoff = 25
 		sample_array = [
-			heavyrockfltom_lvl_4_01
+			HeavyRockFlTom_Lvl_4_01
 		]
 		volume_low = -3.0
 		volume_high = 2.0
@@ -251,7 +251,7 @@ heavyrock_tom2_sampleset = [
 	{
 		velocity_cutoff = 49
 		sample_array = [
-			heavyrockfltom_lvl_6_01
+			HeavyRockFlTom_Lvl_6_01
 		]
 		volume_low = -2.0
 		volume_high = 2.0
@@ -262,7 +262,7 @@ heavyrock_tom2_sampleset = [
 	{
 		velocity_cutoff = 73
 		sample_array = [
-			heavyrockfltom_lvl_8_01
+			HeavyRockFlTom_Lvl_8_01
 		]
 		volume_low = 0.0
 		volume_high = 3.0
@@ -273,7 +273,7 @@ heavyrock_tom2_sampleset = [
 	{
 		velocity_cutoff = 97
 		sample_array = [
-			heavyrockfltom_lvl_10_01
+			HeavyRockFlTom_Lvl_10_01
 		]
 		volume_low = 0.0
 		volume_high = 2.0
@@ -284,7 +284,7 @@ heavyrock_tom2_sampleset = [
 	{
 		velocity_cutoff = 120
 		sample_array = [
-			heavyrockfltom_lvl_10_01
+			HeavyRockFlTom_Lvl_10_01
 		]
 		volume_low = 2.0
 		volume_high = 2.0
@@ -297,8 +297,8 @@ heavyrock_hihat_sampleset = [
 	{
 		velocity_cutoff = 0
 		sample_array = [
-			heavyrockhhclosed_lvl_4_01
-			heavyrockhhclosed_lvl_4_02
+			HeavyRockHHClosed_Lvl_4_01
+			HeavyRockHHClosed_Lvl_4_02
 		]
 		volume_low = -31.0
 		volume_high = -19.0
@@ -309,8 +309,8 @@ heavyrock_hihat_sampleset = [
 	{
 		velocity_cutoff = 25
 		sample_array = [
-			heavyrockhhclosed_lvl_4_01
-			heavyrockhhclosed_lvl_4_02
+			HeavyRockHHClosed_Lvl_4_01
+			HeavyRockHHClosed_Lvl_4_02
 		]
 		volume_low = -19.0
 		volume_high = -13.0
@@ -321,8 +321,8 @@ heavyrock_hihat_sampleset = [
 	{
 		velocity_cutoff = 36
 		sample_array = [
-			heavyrockhhclosed_lvl_6_01
-			heavyrockhhclosed_lvl_6_02
+			HeavyRockHHClosed_Lvl_6_01
+			HeavyRockHHClosed_Lvl_6_02
 		]
 		volume_low = -20.0
 		volume_high = -17.0
@@ -333,7 +333,7 @@ heavyrock_hihat_sampleset = [
 	{
 		velocity_cutoff = 47
 		sample_array = [
-			heavyrockhhclosed_lvl_8_01
+			HeavyRockHHClosed_Lvl_8_01
 		]
 		volume_low = -21.0
 		volume_high = -18.0
@@ -344,7 +344,7 @@ heavyrock_hihat_sampleset = [
 	{
 		velocity_cutoff = 58
 		sample_array = [
-			heavyrockhhclosed_lvl_10_01
+			HeavyRockHHClosed_Lvl_10_01
 		]
 		volume_low = -20.0
 		volume_high = -17.0
@@ -355,7 +355,7 @@ heavyrock_hihat_sampleset = [
 	{
 		velocity_cutoff = 70
 		sample_array = [
-			heavyrockhhopen_lvl_2_01
+			HeavyRockHHOpen_Lvl_2_01
 		]
 		volume_low = -13.0
 		volume_high = -10.0
@@ -366,7 +366,7 @@ heavyrock_hihat_sampleset = [
 	{
 		velocity_cutoff = 77
 		sample_array = [
-			heavyrockhhopen_lvl_6_01
+			HeavyRockHHOpen_Lvl_6_01
 		]
 		volume_low = -16.0
 		volume_high = -14.0
@@ -377,7 +377,7 @@ heavyrock_hihat_sampleset = [
 	{
 		velocity_cutoff = 85
 		sample_array = [
-			heavyrockhhopen_lvl_9_01
+			HeavyRockHHOpen_Lvl_9_01
 		]
 		volume_low = -9.0
 		volume_high = -6.0
@@ -388,7 +388,7 @@ heavyrock_hihat_sampleset = [
 	{
 		velocity_cutoff = 92
 		sample_array = [
-			heavyrockhhopen_lvl_10_01
+			HeavyRockHHOpen_Lvl_10_01
 		]
 		volume_low = -8.0
 		volume_high = -6.0
@@ -399,7 +399,7 @@ heavyrock_hihat_sampleset = [
 	{
 		velocity_cutoff = 100
 		sample_array = [
-			heavyrockhhopen_lvl_10_01
+			HeavyRockHHOpen_Lvl_10_01
 		]
 		volume_low = -6.0
 		volume_high = -6.0
@@ -412,7 +412,7 @@ heavyrock_cymbal_sampleset = [
 	{
 		velocity_cutoff = 0
 		sample_array = [
-			heavyrockride_lvl_6_01
+			HeavyRockRide_Lvl_6_01
 		]
 		volume_low = -26.0
 		volume_high = -17.0
@@ -423,7 +423,7 @@ heavyrock_cymbal_sampleset = [
 	{
 		velocity_cutoff = 25
 		sample_array = [
-			heavyrockride_lvl_6_01
+			HeavyRockRide_Lvl_6_01
 		]
 		volume_low = -17.0
 		volume_high = -8.0
@@ -434,7 +434,7 @@ heavyrock_cymbal_sampleset = [
 	{
 		velocity_cutoff = 44
 		sample_array = [
-			heavyrockride_lvl_8_01
+			HeavyRockRide_Lvl_8_01
 		]
 		volume_low = -12.0
 		volume_high = -9.0
@@ -445,7 +445,7 @@ heavyrock_cymbal_sampleset = [
 	{
 		velocity_cutoff = 62
 		sample_array = [
-			heavyrockride_lvl_10_01
+			HeavyRockRide_Lvl_10_01
 		]
 		volume_low = -10.0
 		volume_high = -8.0
@@ -456,7 +456,7 @@ heavyrock_cymbal_sampleset = [
 	{
 		velocity_cutoff = 80
 		sample_array = [
-			heavyrockcrash_lvl_8_01
+			HeavyRockCrash_Lvl_8_01
 		]
 		volume_low = -3.0
 		volume_high = 0.0
@@ -467,7 +467,7 @@ heavyrock_cymbal_sampleset = [
 	{
 		velocity_cutoff = 90
 		sample_array = [
-			heavyrockcrash_lvl_10_01
+			HeavyRockCrash_Lvl_10_01
 		]
 		volume_low = -4.0
 		volume_high = -1.0
@@ -478,7 +478,7 @@ heavyrock_cymbal_sampleset = [
 	{
 		velocity_cutoff = 100
 		sample_array = [
-			heavyrockcrash_lvl_10_01
+			HeavyRockCrash_Lvl_10_01
 		]
 		volume_low = -1.0
 		volume_high = -1.0
@@ -487,11 +487,11 @@ heavyrock_cymbal_sampleset = [
 		pan_mono = 0.17
 	}
 ]
-classicrock_snare_sampleset = [
+ClassicRock_Snare_Sampleset = [
 	{
 		velocity_cutoff = 0
 		sample_array = [
-			classicrocksnare_lvl_2_01
+			ClassicRockSnare_Lvl_2_01
 		]
 		volume_low = -4.0
 		volume_high = 2.0
@@ -502,7 +502,7 @@ classicrock_snare_sampleset = [
 	{
 		velocity_cutoff = 27
 		sample_array = [
-			classicrocksnare_lvl_2_01
+			ClassicRockSnare_Lvl_2_01
 		]
 		volume_low = 2.0
 		volume_high = 12.0
@@ -513,7 +513,7 @@ classicrock_snare_sampleset = [
 	{
 		velocity_cutoff = 42
 		sample_array = [
-			classicrocksnare_lvl_4_01
+			ClassicRockSnare_Lvl_4_01
 		]
 		volume_low = 9.0
 		volume_high = 11.0
@@ -524,7 +524,7 @@ classicrock_snare_sampleset = [
 	{
 		velocity_cutoff = 58
 		sample_array = [
-			classicrocksnare_lvl_6_01
+			ClassicRockSnare_Lvl_6_01
 		]
 		volume_low = 8.0
 		volume_high = 10.0
@@ -535,7 +535,7 @@ classicrock_snare_sampleset = [
 	{
 		velocity_cutoff = 72
 		sample_array = [
-			classicrocksnare_lvl_8_01
+			ClassicRockSnare_Lvl_8_01
 		]
 		volume_low = 7.0
 		volume_high = 8.0
@@ -546,7 +546,7 @@ classicrock_snare_sampleset = [
 	{
 		velocity_cutoff = 88
 		sample_array = [
-			classicrocksnare_lvl_10_01
+			ClassicRockSnare_Lvl_10_01
 		]
 		volume_low = 7.0
 		volume_high = 9.0
@@ -557,8 +557,8 @@ classicrock_snare_sampleset = [
 	{
 		velocity_cutoff = 103
 		sample_array = [
-			classicrocksnare_lvl_12_01
-			classicrocksnare_lvl_12_02
+			ClassicRockSnare_Lvl_12_01
+			ClassicRockSnare_Lvl_12_02
 		]
 		volume_low = 7.0
 		volume_high = 8.0
@@ -569,8 +569,8 @@ classicrock_snare_sampleset = [
 	{
 		velocity_cutoff = 120
 		sample_array = [
-			classicrocksnare_lvl_12_01
-			classicrocksnare_lvl_12_02
+			ClassicRockSnare_Lvl_12_01
+			ClassicRockSnare_Lvl_12_02
 		]
 		volume_low = 8.0
 		volume_high = 8.0
@@ -579,11 +579,11 @@ classicrock_snare_sampleset = [
 		pan_mono = -0.1
 	}
 ]
-classicrock_kick_sampleset = [
+ClassicRock_Kick_Sampleset = [
 	{
 		velocity_cutoff = 0
 		sample_array = [
-			classicrockkick_lvl_2_01
+			ClassicRockKick_Lvl_2_01
 		]
 		volume_low = -17.0
 		volume_high = -5.0
@@ -594,7 +594,7 @@ classicrock_kick_sampleset = [
 	{
 		velocity_cutoff = 25
 		sample_array = [
-			classicrockkick_lvl_2_01
+			ClassicRockKick_Lvl_2_01
 		]
 		volume_low = -5.0
 		volume_high = 1.0
@@ -605,7 +605,7 @@ classicrock_kick_sampleset = [
 	{
 		velocity_cutoff = 35
 		sample_array = [
-			classicrockkick_lvl_6_01
+			ClassicRockKick_Lvl_6_01
 		]
 		volume_low = 1.0
 		volume_high = 7.0
@@ -616,7 +616,7 @@ classicrock_kick_sampleset = [
 	{
 		velocity_cutoff = 45
 		sample_array = [
-			classicrockkick_lvl_10_01
+			ClassicRockKick_Lvl_10_01
 		]
 		volume_low = 3.0
 		volume_high = 6.0
@@ -627,7 +627,7 @@ classicrock_kick_sampleset = [
 	{
 		velocity_cutoff = 80
 		sample_array = [
-			classicrockkick_lvl_10_01
+			ClassicRockKick_Lvl_10_01
 		]
 		volume_low = 6.0
 		volume_high = 6.0
@@ -636,11 +636,11 @@ classicrock_kick_sampleset = [
 		pan_mono = 0.0
 	}
 ]
-classicrock_tom1_sampleset = [
+ClassicRock_Tom1_Sampleset = [
 	{
 		velocity_cutoff = 0
 		sample_array = [
-			classicrockhitom_lvl_6_01
+			ClassicRockHiTom_Lvl_6_01
 		]
 		volume_low = -11.0
 		volume_high = -5.0
@@ -651,7 +651,7 @@ classicrock_tom1_sampleset = [
 	{
 		velocity_cutoff = 25
 		sample_array = [
-			classicrockhitom_lvl_6_01
+			ClassicRockHiTom_Lvl_6_01
 		]
 		volume_low = -5.0
 		volume_high = 1.0
@@ -662,7 +662,7 @@ classicrock_tom1_sampleset = [
 	{
 		velocity_cutoff = 57
 		sample_array = [
-			classicrockhitom_lvl_8_01
+			ClassicRockHiTom_Lvl_8_01
 		]
 		volume_low = -2.0
 		volume_high = 4.0
@@ -673,7 +673,7 @@ classicrock_tom1_sampleset = [
 	{
 		velocity_cutoff = 88
 		sample_array = [
-			classicrockhitom_lvl_10_01
+			ClassicRockHiTom_Lvl_10_01
 		]
 		volume_low = 3.0
 		volume_high = 6.0
@@ -684,7 +684,7 @@ classicrock_tom1_sampleset = [
 	{
 		velocity_cutoff = 120
 		sample_array = [
-			classicrockhitom_lvl_10_01
+			ClassicRockHiTom_Lvl_10_01
 		]
 		volume_low = 6.0
 		volume_high = 6.0
@@ -693,11 +693,11 @@ classicrock_tom1_sampleset = [
 		pan_mono = 0.0
 	}
 ]
-classicrock_tom2_sampleset = [
+ClassicRock_Tom2_Sampleset = [
 	{
 		velocity_cutoff = 0
 		sample_array = [
-			classicrockfltom_lvl_6_01
+			ClassicRockFlTom_Lvl_6_01
 		]
 		volume_low = -12.0
 		volume_high = -2.0
@@ -708,7 +708,7 @@ classicrock_tom2_sampleset = [
 	{
 		velocity_cutoff = 25
 		sample_array = [
-			classicrockfltom_lvl_6_01
+			ClassicRockFlTom_Lvl_6_01
 		]
 		volume_low = -2.0
 		volume_high = 4.0
@@ -719,7 +719,7 @@ classicrock_tom2_sampleset = [
 	{
 		velocity_cutoff = 57
 		sample_array = [
-			classicrockfltom_lvl_8_01
+			ClassicRockFlTom_Lvl_8_01
 		]
 		volume_low = 0.0
 		volume_high = 6.0
@@ -730,7 +730,7 @@ classicrock_tom2_sampleset = [
 	{
 		velocity_cutoff = 88
 		sample_array = [
-			classicrockfltom_lvl_10_01
+			ClassicRockFlTom_Lvl_10_01
 		]
 		volume_low = 0.0
 		volume_high = 3.0
@@ -741,7 +741,7 @@ classicrock_tom2_sampleset = [
 	{
 		velocity_cutoff = 120
 		sample_array = [
-			classicrockfltom_lvl_10_01
+			ClassicRockFlTom_Lvl_10_01
 		]
 		volume_low = 3.0
 		volume_high = 3.0
@@ -750,11 +750,11 @@ classicrock_tom2_sampleset = [
 		pan_mono = 0.4
 	}
 ]
-classicrock_hihat_sampleset = [
+ClassicRock_HiHat_Sampleset = [
 	{
 		velocity_cutoff = 0
 		sample_array = [
-			classicrockhhclosed_lvl_4_01
+			ClassicRockHHClosed_Lvl_4_01
 		]
 		volume_low = -27.0
 		volume_high = -15.0
@@ -765,7 +765,7 @@ classicrock_hihat_sampleset = [
 	{
 		velocity_cutoff = 25
 		sample_array = [
-			classicrockhhclosed_lvl_4_01
+			ClassicRockHHClosed_Lvl_4_01
 		]
 		volume_low = -15.0
 		volume_high = -9.0
@@ -776,7 +776,7 @@ classicrock_hihat_sampleset = [
 	{
 		velocity_cutoff = 36
 		sample_array = [
-			classicrockhhclosed_lvl_6_01
+			ClassicRockHHClosed_Lvl_6_01
 		]
 		volume_low = -15.0
 		volume_high = -12.0
@@ -787,7 +787,7 @@ classicrock_hihat_sampleset = [
 	{
 		velocity_cutoff = 47
 		sample_array = [
-			classicrockhhclosed_lvl_8_01
+			ClassicRockHHClosed_Lvl_8_01
 		]
 		volume_low = -13.0
 		volume_high = -10.0
@@ -798,7 +798,7 @@ classicrock_hihat_sampleset = [
 	{
 		velocity_cutoff = 58
 		sample_array = [
-			classicrockhhclosed_lvl_10_01
+			ClassicRockHHClosed_Lvl_10_01
 		]
 		volume_low = -16.0
 		volume_high = -13.0
@@ -809,7 +809,7 @@ classicrock_hihat_sampleset = [
 	{
 		velocity_cutoff = 70
 		sample_array = [
-			classicrockhhopen_lvl_6_01
+			ClassicRockHHOpen_Lvl_6_01
 		]
 		volume_low = -17.0
 		volume_high = -14.0
@@ -820,7 +820,7 @@ classicrock_hihat_sampleset = [
 	{
 		velocity_cutoff = 80
 		sample_array = [
-			classicrockhhopen_lvl_9_01
+			ClassicRockHHOpen_Lvl_9_01
 		]
 		volume_low = -18.0
 		volume_high = -15.0
@@ -831,7 +831,7 @@ classicrock_hihat_sampleset = [
 	{
 		velocity_cutoff = 90
 		sample_array = [
-			classicrockhhopen_lvl_10_01
+			ClassicRockHHOpen_Lvl_10_01
 		]
 		volume_low = -16.0
 		volume_high = -13.0
@@ -842,7 +842,7 @@ classicrock_hihat_sampleset = [
 	{
 		velocity_cutoff = 100
 		sample_array = [
-			classicrockhhopen_lvl_10_01
+			ClassicRockHHOpen_Lvl_10_01
 		]
 		volume_low = -13.0
 		volume_high = -13.0
@@ -851,11 +851,11 @@ classicrock_hihat_sampleset = [
 		pan_mono = -0.4
 	}
 ]
-classicrock_cymbal_sampleset = [
+ClassicRock_Cymbal_Sampleset = [
 	{
 		velocity_cutoff = 0
 		sample_array = [
-			classicrockride_lvl_6_01
+			ClassicRockRide_Lvl_6_01
 		]
 		volume_low = -26.0
 		volume_high = -14
@@ -866,7 +866,7 @@ classicrock_cymbal_sampleset = [
 	{
 		velocity_cutoff = 25
 		sample_array = [
-			classicrockride_lvl_6_01
+			ClassicRockRide_Lvl_6_01
 		]
 		volume_low = -14
 		volume_high = -5
@@ -877,7 +877,7 @@ classicrock_cymbal_sampleset = [
 	{
 		velocity_cutoff = 47
 		sample_array = [
-			classicrockride_lvl_8_01
+			ClassicRockRide_Lvl_8_01
 		]
 		volume_low = -11
 		volume_high = -8
@@ -888,7 +888,7 @@ classicrock_cymbal_sampleset = [
 	{
 		velocity_cutoff = 69
 		sample_array = [
-			classicrockride_lvl_10_01
+			ClassicRockRide_Lvl_10_01
 		]
 		volume_low = -11
 		volume_high = -8
@@ -899,7 +899,7 @@ classicrock_cymbal_sampleset = [
 	{
 		velocity_cutoff = 80
 		sample_array = [
-			classicrockcrash_lvl_6_01
+			ClassicRockCrash_Lvl_6_01
 		]
 		volume_low = -1.0
 		volume_high = 1.0
@@ -910,7 +910,7 @@ classicrock_cymbal_sampleset = [
 	{
 		velocity_cutoff = 87
 		sample_array = [
-			classicrockcrash_lvl_8_01
+			ClassicRockCrash_Lvl_8_01
 		]
 		volume_low = 1.0
 		volume_high = 3.0
@@ -921,7 +921,7 @@ classicrock_cymbal_sampleset = [
 	{
 		velocity_cutoff = 94
 		sample_array = [
-			classicrockcrash_lvl_10_01
+			ClassicRockCrash_Lvl_10_01
 		]
 		volume_low = -8.0
 		volume_high = -6.0
@@ -932,7 +932,7 @@ classicrock_cymbal_sampleset = [
 	{
 		velocity_cutoff = 100
 		sample_array = [
-			classicrockcrash_lvl_10_01
+			ClassicRockCrash_Lvl_10_01
 		]
 		volume_low = -6.0
 		volume_high = -6.0
@@ -941,11 +941,11 @@ classicrock_cymbal_sampleset = [
 		pan_mono = -0.13
 	}
 ]
-fusion_snare_sampleset = [
+Fusion_Snare_Sampleset = [
 	{
 		velocity_cutoff = 0
 		sample_array = [
-			fusionsnare_lvl_2_01
+			FusionSnare_Lvl_2_01
 		]
 		volume_low = -7.0
 		volume_high = -1.0
@@ -956,7 +956,7 @@ fusion_snare_sampleset = [
 	{
 		velocity_cutoff = 25
 		sample_array = [
-			fusionsnare_lvl_2_01
+			FusionSnare_Lvl_2_01
 		]
 		volume_low = -1.0
 		volume_high = 9.0
@@ -967,7 +967,7 @@ fusion_snare_sampleset = [
 	{
 		velocity_cutoff = 41
 		sample_array = [
-			fusionsnare_lvl_4_01
+			FusionSnare_Lvl_4_01
 		]
 		volume_low = 6.0
 		volume_high = 8.0
@@ -978,7 +978,7 @@ fusion_snare_sampleset = [
 	{
 		velocity_cutoff = 57
 		sample_array = [
-			fusionsnare_lvl_6_01
+			FusionSnare_Lvl_6_01
 		]
 		volume_low = 5.0
 		volume_high = 7.0
@@ -989,7 +989,7 @@ fusion_snare_sampleset = [
 	{
 		velocity_cutoff = 73
 		sample_array = [
-			fusionsnare_lvl_8_01
+			FusionSnare_Lvl_8_01
 		]
 		volume_low = 5.0
 		volume_high = 6.0
@@ -1000,7 +1000,7 @@ fusion_snare_sampleset = [
 	{
 		velocity_cutoff = 89
 		sample_array = [
-			fusionsnare_lvl_10_01
+			FusionSnare_Lvl_10_01
 		]
 		volume_low = 5.0
 		volume_high = 6.0
@@ -1011,8 +1011,8 @@ fusion_snare_sampleset = [
 	{
 		velocity_cutoff = 105
 		sample_array = [
-			fusionsnare_lvl_12_01
-			fusionsnare_lvl_12_02
+			FusionSnare_Lvl_12_01
+			FusionSnare_Lvl_12_02
 		]
 		volume_low = 6.0
 		volume_high = 7.0
@@ -1023,8 +1023,8 @@ fusion_snare_sampleset = [
 	{
 		velocity_cutoff = 120
 		sample_array = [
-			fusionsnare_lvl_12_01
-			fusionsnare_lvl_12_02
+			FusionSnare_Lvl_12_01
+			FusionSnare_Lvl_12_02
 		]
 		volume_low = 7.0
 		volume_high = 7.0
@@ -1033,11 +1033,11 @@ fusion_snare_sampleset = [
 		pan_mono = -0.13
 	}
 ]
-fusion_kick_sampleset = [
+Fusion_Kick_Sampleset = [
 	{
 		velocity_cutoff = 0
 		sample_array = [
-			fusionkick_lvl_2_01
+			FusionKick_Lvl_2_01
 		]
 		volume_low = -17.0
 		volume_high = -5.0
@@ -1048,7 +1048,7 @@ fusion_kick_sampleset = [
 	{
 		velocity_cutoff = 25
 		sample_array = [
-			fusionkick_lvl_2_01
+			FusionKick_Lvl_2_01
 		]
 		volume_low = -5.0
 		volume_high = 1.0
@@ -1059,7 +1059,7 @@ fusion_kick_sampleset = [
 	{
 		velocity_cutoff = 35
 		sample_array = [
-			fusionkick_lvl_6_01
+			FusionKick_Lvl_6_01
 		]
 		volume_low = -2.0
 		volume_high = 4.0
@@ -1070,7 +1070,7 @@ fusion_kick_sampleset = [
 	{
 		velocity_cutoff = 45
 		sample_array = [
-			fusionkick_lvl_10_01
+			FusionKick_Lvl_10_01
 		]
 		volume_low = 3.0
 		volume_high = 6.0
@@ -1081,7 +1081,7 @@ fusion_kick_sampleset = [
 	{
 		velocity_cutoff = 80
 		sample_array = [
-			fusionkick_lvl_10_01
+			FusionKick_Lvl_10_01
 		]
 		volume_low = 6.0
 		volume_high = 6.0
@@ -1090,11 +1090,11 @@ fusion_kick_sampleset = [
 		pan_mono = 0.0
 	}
 ]
-fusion_tom1_sampleset = [
+Fusion_Tom1_Sampleset = [
 	{
 		velocity_cutoff = 0
 		sample_array = [
-			fusionhitom_lvl_4_01
+			FusionHiTom_Lvl_4_01
 		]
 		volume_low = -7.0
 		volume_high = -1.0
@@ -1105,7 +1105,7 @@ fusion_tom1_sampleset = [
 	{
 		velocity_cutoff = 25
 		sample_array = [
-			fusionhitom_lvl_4_01
+			FusionHiTom_Lvl_4_01
 		]
 		volume_low = -1.0
 		volume_high = 5.0
@@ -1116,7 +1116,7 @@ fusion_tom1_sampleset = [
 	{
 		velocity_cutoff = 49
 		sample_array = [
-			fusionhitom_lvl_6_01
+			FusionHiTom_Lvl_6_01
 		]
 		volume_low = 4.0
 		volume_high = 9.0
@@ -1127,7 +1127,7 @@ fusion_tom1_sampleset = [
 	{
 		velocity_cutoff = 73
 		sample_array = [
-			fusionhitom_lvl_8_01
+			FusionHiTom_Lvl_8_01
 		]
 		volume_low = 4.0
 		volume_high = 9.0
@@ -1138,7 +1138,7 @@ fusion_tom1_sampleset = [
 	{
 		velocity_cutoff = 97
 		sample_array = [
-			fusionhitom_lvl_10_01
+			FusionHiTom_Lvl_10_01
 		]
 		volume_low = 6.0
 		volume_high = 8.0
@@ -1149,7 +1149,7 @@ fusion_tom1_sampleset = [
 	{
 		velocity_cutoff = 120
 		sample_array = [
-			fusionhitom_lvl_10_01
+			FusionHiTom_Lvl_10_01
 		]
 		volume_low = 8.0
 		volume_high = 8.0
@@ -1158,11 +1158,11 @@ fusion_tom1_sampleset = [
 		pan_mono = 0.25
 	}
 ]
-fusion_tom2_sampleset = [
+Fusion_Tom2_Sampleset = [
 	{
 		velocity_cutoff = 0
 		sample_array = [
-			fusionfltom_lvl_4_01
+			FusionFlTom_Lvl_4_01
 		]
 		volume_low = -12.0
 		volume_high = -2.0
@@ -1173,7 +1173,7 @@ fusion_tom2_sampleset = [
 	{
 		velocity_cutoff = 25
 		sample_array = [
-			fusionfltom_lvl_4_01
+			FusionFlTom_Lvl_4_01
 		]
 		volume_low = -2.0
 		volume_high = 3.0
@@ -1184,7 +1184,7 @@ fusion_tom2_sampleset = [
 	{
 		velocity_cutoff = 49
 		sample_array = [
-			fusionfltom_lvl_6_01
+			FusionFlTom_Lvl_6_01
 		]
 		volume_low = -5.0
 		volume_high = 0.0
@@ -1195,7 +1195,7 @@ fusion_tom2_sampleset = [
 	{
 		velocity_cutoff = 73
 		sample_array = [
-			fusionfltom_lvl_8_01
+			FusionFlTom_Lvl_8_01
 		]
 		volume_low = -4.0
 		volume_high = -1.0
@@ -1206,7 +1206,7 @@ fusion_tom2_sampleset = [
 	{
 		velocity_cutoff = 97
 		sample_array = [
-			fusionfltom_lvl_10_01
+			FusionFlTom_Lvl_10_01
 		]
 		volume_low = 0.0
 		volume_high = 2.0
@@ -1217,7 +1217,7 @@ fusion_tom2_sampleset = [
 	{
 		velocity_cutoff = 120
 		sample_array = [
-			fusionfltom_lvl_10_01
+			FusionFlTom_Lvl_10_01
 		]
 		volume_low = 2.5
 		volume_high = 2.0
@@ -1226,11 +1226,11 @@ fusion_tom2_sampleset = [
 		pan_mono = 0.4
 	}
 ]
-fusion_hihat_sampleset = [
+Fusion_HiHat_Sampleset = [
 	{
 		velocity_cutoff = 0
 		sample_array = [
-			fusionhhclosed_lvl_4_01
+			FusionHHClosed_Lvl_4_01
 		]
 		volume_low = -23.0
 		volume_high = -11.0
@@ -1241,7 +1241,7 @@ fusion_hihat_sampleset = [
 	{
 		velocity_cutoff = 25
 		sample_array = [
-			fusionhhclosed_lvl_4_01
+			FusionHHClosed_Lvl_4_01
 		]
 		volume_low = -11.0
 		volume_high = -5.0
@@ -1252,7 +1252,7 @@ fusion_hihat_sampleset = [
 	{
 		velocity_cutoff = 36
 		sample_array = [
-			fusionhhclosed_lvl_6_01
+			FusionHHClosed_Lvl_6_01
 		]
 		volume_low = -6.0
 		volume_high = -3.0
@@ -1263,7 +1263,7 @@ fusion_hihat_sampleset = [
 	{
 		velocity_cutoff = 47
 		sample_array = [
-			fusionhhclosed_lvl_8_01
+			FusionHHClosed_Lvl_8_01
 		]
 		volume_low = -12.0
 		volume_high = -9.0
@@ -1274,7 +1274,7 @@ fusion_hihat_sampleset = [
 	{
 		velocity_cutoff = 58
 		sample_array = [
-			fusionhhclosed_lvl_10_01
+			FusionHHClosed_Lvl_10_01
 		]
 		volume_low = -12.0
 		volume_high = -9.0
@@ -1285,7 +1285,7 @@ fusion_hihat_sampleset = [
 	{
 		velocity_cutoff = 70
 		sample_array = [
-			fusionhhopen_lvl_2_01
+			FusionHHOpen_Lvl_2_01
 		]
 		volume_low = -16.0
 		volume_high = -13.0
@@ -1296,7 +1296,7 @@ fusion_hihat_sampleset = [
 	{
 		velocity_cutoff = 77
 		sample_array = [
-			fusionhhopen_lvl_6_01
+			FusionHHOpen_Lvl_6_01
 		]
 		volume_low = -15.0
 		volume_high = -13.0
@@ -1307,7 +1307,7 @@ fusion_hihat_sampleset = [
 	{
 		velocity_cutoff = 85
 		sample_array = [
-			fusionhhopen_lvl_9_01
+			FusionHHOpen_Lvl_9_01
 		]
 		volume_low = -13.0
 		volume_high = -10.0
@@ -1318,7 +1318,7 @@ fusion_hihat_sampleset = [
 	{
 		velocity_cutoff = 92
 		sample_array = [
-			fusionhhopen_lvl_10_01
+			FusionHHOpen_Lvl_10_01
 		]
 		volume_low = -11.0
 		volume_high = -9.0
@@ -1329,7 +1329,7 @@ fusion_hihat_sampleset = [
 	{
 		velocity_cutoff = 100
 		sample_array = [
-			fusionhhopen_lvl_10_01
+			FusionHHOpen_Lvl_10_01
 		]
 		volume_low = -9.0
 		volume_high = -9.0
@@ -1338,11 +1338,11 @@ fusion_hihat_sampleset = [
 		pan_mono = -0.42000002
 	}
 ]
-fusion_cymbal_sampleset = [
+Fusion_Cymbal_Sampleset = [
 	{
 		velocity_cutoff = 0
 		sample_array = [
-			fusionride_lvl_6_01
+			FusionRide_Lvl_6_01
 		]
 		volume_low = -21.0
 		volume_high = -9.0
@@ -1353,7 +1353,7 @@ fusion_cymbal_sampleset = [
 	{
 		velocity_cutoff = 25
 		sample_array = [
-			fusionride_lvl_6_01
+			FusionRide_Lvl_6_01
 		]
 		volume_low = -9.0
 		volume_high = 0.0
@@ -1364,7 +1364,7 @@ fusion_cymbal_sampleset = [
 	{
 		velocity_cutoff = 47
 		sample_array = [
-			fusionride_lvl_8_01
+			FusionRide_Lvl_8_01
 		]
 		volume_low = -5.0
 		volume_high = -2.0
@@ -1375,7 +1375,7 @@ fusion_cymbal_sampleset = [
 	{
 		velocity_cutoff = 69
 		sample_array = [
-			fusionride_lvl_10_01
+			FusionRide_Lvl_10_01
 		]
 		volume_low = -6.0
 		volume_high = -3.0
@@ -1386,7 +1386,7 @@ fusion_cymbal_sampleset = [
 	{
 		velocity_cutoff = 80
 		sample_array = [
-			fusioncrash_lvl_6_01
+			FusionCrash_Lvl_6_01
 		]
 		volume_low = -2.0
 		volume_high = 0.0
@@ -1397,7 +1397,7 @@ fusion_cymbal_sampleset = [
 	{
 		velocity_cutoff = 87
 		sample_array = [
-			fusioncrash_lvl_8_01
+			FusionCrash_Lvl_8_01
 		]
 		volume_low = -7.0
 		volume_high = -5.0
@@ -1408,7 +1408,7 @@ fusion_cymbal_sampleset = [
 	{
 		velocity_cutoff = 94
 		sample_array = [
-			fusioncrash_lvl_10_01
+			FusionCrash_Lvl_10_01
 		]
 		volume_low = -6.0
 		volume_high = -4.0
@@ -1419,7 +1419,7 @@ fusion_cymbal_sampleset = [
 	{
 		velocity_cutoff = 100
 		sample_array = [
-			fusioncrash_lvl_10_01
+			FusionCrash_Lvl_10_01
 		]
 		volume_low = -4.0
 		volume_high = -4.0
@@ -1428,11 +1428,11 @@ fusion_cymbal_sampleset = [
 		pan_mono = 0.3
 	}
 ]
-hiphop_snare_sampleset = [
+HipHop_Snare_Sampleset = [
 	{
 		velocity_cutoff = 0
 		sample_array = [
-			hiphopsnare_lvl_10_01
+			HipHopSnare_Lvl_10_01
 		]
 		volume_low = -17.0
 		volume_high = -11.0
@@ -1443,7 +1443,7 @@ hiphop_snare_sampleset = [
 	{
 		velocity_cutoff = 25
 		sample_array = [
-			hiphopsnare_lvl_10_01
+			HipHopSnare_Lvl_10_01
 		]
 		volume_low = -11.0
 		volume_high = 4.0
@@ -1454,7 +1454,7 @@ hiphop_snare_sampleset = [
 	{
 		velocity_cutoff = 120
 		sample_array = [
-			hiphopsnare_lvl_10_01
+			HipHopSnare_Lvl_10_01
 		]
 		volume_low = 4.0
 		volume_high = 4.0
@@ -1463,11 +1463,11 @@ hiphop_snare_sampleset = [
 		pan_mono = 0.0
 	}
 ]
-hiphop_kick_sampleset = [
+HipHop_Kick_Sampleset = [
 	{
 		velocity_cutoff = 0
 		sample_array = [
-			hiphopkick_lvl_10_01
+			hiphopKick_Lvl_10_01
 		]
 		volume_low = -24.0
 		volume_high = -18.0
@@ -1478,7 +1478,7 @@ hiphop_kick_sampleset = [
 	{
 		velocity_cutoff = 25
 		sample_array = [
-			hiphopkick_lvl_10_01
+			hiphopKick_Lvl_10_01
 		]
 		volume_low = -18.0
 		volume_high = -3.0
@@ -1489,7 +1489,7 @@ hiphop_kick_sampleset = [
 	{
 		velocity_cutoff = 45
 		sample_array = [
-			hiphopkick_lvl_10_01
+			hiphopKick_Lvl_10_01
 		]
 		volume_low = -3.0
 		volume_high = 0.0
@@ -1500,7 +1500,7 @@ hiphop_kick_sampleset = [
 	{
 		velocity_cutoff = 80
 		sample_array = [
-			hiphopkick_lvl_10_01
+			hiphopKick_Lvl_10_01
 		]
 		volume_low = 0.0
 		volume_high = 0.0
@@ -1509,11 +1509,11 @@ hiphop_kick_sampleset = [
 		pan_mono = 0.0
 	}
 ]
-hiphop_tom1_sampleset = [
+HipHop_Tom1_Sampleset = [
 	{
 		velocity_cutoff = 0
 		sample_array = [
-			hiphophitom_lvl_10_01
+			hiphopHiTom_Lvl_10_01
 		]
 		volume_low = -21.0
 		volume_high = -12.0
@@ -1524,7 +1524,7 @@ hiphop_tom1_sampleset = [
 	{
 		velocity_cutoff = 25
 		sample_array = [
-			hiphophitom_lvl_10_01
+			hiphopHiTom_Lvl_10_01
 		]
 		volume_low = -12.0
 		volume_high = 0.0
@@ -1535,7 +1535,7 @@ hiphop_tom1_sampleset = [
 	{
 		velocity_cutoff = 120
 		sample_array = [
-			hiphophitom_lvl_10_01
+			hiphopHiTom_Lvl_10_01
 		]
 		volume_low = 0.0
 		volume_high = 0.0
@@ -1544,11 +1544,11 @@ hiphop_tom1_sampleset = [
 		pan_mono = 0.2
 	}
 ]
-hiphop_tom2_sampleset = [
+HipHop_Tom2_Sampleset = [
 	{
 		velocity_cutoff = 0
 		sample_array = [
-			hiphopfltom_lvl_10_01
+			hiphopFlTom_Lvl_10_01
 		]
 		volume_low = -18.0
 		volume_high = -9.0
@@ -1559,7 +1559,7 @@ hiphop_tom2_sampleset = [
 	{
 		velocity_cutoff = 25
 		sample_array = [
-			hiphopfltom_lvl_10_01
+			hiphopFlTom_Lvl_10_01
 		]
 		volume_low = -9.0
 		volume_high = 0.0
@@ -1570,7 +1570,7 @@ hiphop_tom2_sampleset = [
 	{
 		velocity_cutoff = 120
 		sample_array = [
-			hiphopfltom_lvl_10_01
+			hiphopFlTom_Lvl_10_01
 		]
 		volume_low = 0.0
 		volume_high = 0.0
@@ -1579,11 +1579,11 @@ hiphop_tom2_sampleset = [
 		pan_mono = 0.35000002
 	}
 ]
-hiphop_hihat_sampleset = [
+HipHop_HiHat_Sampleset = [
 	{
 		velocity_cutoff = 0
 		sample_array = [
-			hiphophhopen_lvl_10_01
+			HipHopHHOpen_Lvl_10_01
 		]
 		volume_low = -24.0
 		volume_high = -18.0
@@ -1594,7 +1594,7 @@ hiphop_hihat_sampleset = [
 	{
 		velocity_cutoff = 25
 		sample_array = [
-			hiphophhopen_lvl_10_01
+			HipHopHHOpen_Lvl_10_01
 		]
 		volume_low = -18.0
 		volume_high = -3.0
@@ -1605,7 +1605,7 @@ hiphop_hihat_sampleset = [
 	{
 		velocity_cutoff = 100
 		sample_array = [
-			hiphophhopen_lvl_10_01
+			HipHopHHOpen_Lvl_10_01
 		]
 		volume_low = -3.0
 		volume_high = -3.0
@@ -1614,11 +1614,11 @@ hiphop_hihat_sampleset = [
 		pan_mono = -0.4
 	}
 ]
-hiphop_cymbal_sampleset = [
+HipHop_Cymbal_Sampleset = [
 	{
 		velocity_cutoff = 0
 		sample_array = [
-			hiphopcrash_lvl_10_01
+			HipHopCrash_Lvl_10_01
 		]
 		volume_low = -18.0
 		volume_high = -12.0
@@ -1629,7 +1629,7 @@ hiphop_cymbal_sampleset = [
 	{
 		velocity_cutoff = 25
 		sample_array = [
-			hiphopcrash_lvl_10_01
+			HipHopCrash_Lvl_10_01
 		]
 		volume_low = -12.0
 		volume_high = -3.0
@@ -1640,7 +1640,7 @@ hiphop_cymbal_sampleset = [
 	{
 		velocity_cutoff = 100
 		sample_array = [
-			hiphopcrash_lvl_10_01
+			HipHopCrash_Lvl_10_01
 		]
 		volume_low = -3.0
 		volume_high = -3.0
@@ -1649,11 +1649,11 @@ hiphop_cymbal_sampleset = [
 		pan_mono = -0.05
 	}
 ]
-modernrock_snare_sampleset = [
+ModernRock_Snare_Sampleset = [
 	{
 		velocity_cutoff = 0
 		sample_array = [
-			modernrocksnare_lvl_2_01
+			ModernRockSnare_Lvl_2_01
 		]
 		volume_low = -14.0
 		volume_high = 1.0
@@ -1664,7 +1664,7 @@ modernrock_snare_sampleset = [
 	{
 		velocity_cutoff = 27
 		sample_array = [
-			modernrocksnare_lvl_2_01
+			ModernRockSnare_Lvl_2_01
 		]
 		volume_low = 1.0
 		volume_high = 4.0
@@ -1675,7 +1675,7 @@ modernrock_snare_sampleset = [
 	{
 		velocity_cutoff = 42
 		sample_array = [
-			modernrocksnare_lvl_4_01
+			ModernRockSnare_Lvl_4_01
 		]
 		volume_low = 3.0
 		volume_high = 8.0
@@ -1686,7 +1686,7 @@ modernrock_snare_sampleset = [
 	{
 		velocity_cutoff = 58
 		sample_array = [
-			modernrocksnare_lvl_6_01
+			ModernRockSnare_Lvl_6_01
 		]
 		volume_low = 6.0
 		volume_high = 10.0
@@ -1697,7 +1697,7 @@ modernrock_snare_sampleset = [
 	{
 		velocity_cutoff = 72
 		sample_array = [
-			modernrocksnare_lvl_8_01
+			ModernRockSnare_Lvl_8_01
 		]
 		volume_low = 5.0
 		volume_high = 7.0
@@ -1708,7 +1708,7 @@ modernrock_snare_sampleset = [
 	{
 		velocity_cutoff = 88
 		sample_array = [
-			modernrocksnare_lvl_10_01
+			ModernRockSnare_Lvl_10_01
 		]
 		volume_low = 6.0
 		volume_high = 8.0
@@ -1719,8 +1719,8 @@ modernrock_snare_sampleset = [
 	{
 		velocity_cutoff = 103
 		sample_array = [
-			modernrocksnare_lvl_12_01
-			modernrocksnare_lvl_12_02
+			ModernRockSnare_Lvl_12_01
+			ModernRockSnare_Lvl_12_02
 		]
 		volume_low = 9.0
 		volume_high = 11.0
@@ -1731,8 +1731,8 @@ modernrock_snare_sampleset = [
 	{
 		velocity_cutoff = 120
 		sample_array = [
-			modernrocksnare_lvl_12_01
-			modernrocksnare_lvl_12_02
+			ModernRockSnare_Lvl_12_01
+			ModernRockSnare_Lvl_12_02
 		]
 		volume_low = 11.0
 		volume_high = 11.0
@@ -1741,11 +1741,11 @@ modernrock_snare_sampleset = [
 		pan_mono = 0.0
 	}
 ]
-modernrock_kick_sampleset = [
+ModernRock_Kick_Sampleset = [
 	{
 		velocity_cutoff = 0
 		sample_array = [
-			modernrockkick_lvl_2_01
+			ModernRockKick_Lvl_2_01
 		]
 		volume_low = -18.0
 		volume_high = -6.0
@@ -1756,7 +1756,7 @@ modernrock_kick_sampleset = [
 	{
 		velocity_cutoff = 25
 		sample_array = [
-			modernrockkick_lvl_2_01
+			ModernRockKick_Lvl_2_01
 		]
 		volume_low = -1.0
 		volume_high = 5.0
@@ -1767,7 +1767,7 @@ modernrock_kick_sampleset = [
 	{
 		velocity_cutoff = 35
 		sample_array = [
-			modernrockkick_lvl_6_01
+			ModernRockKick_Lvl_6_01
 		]
 		volume_low = 1.0
 		volume_high = 6.0
@@ -1778,7 +1778,7 @@ modernrock_kick_sampleset = [
 	{
 		velocity_cutoff = 45
 		sample_array = [
-			modernrockkick_lvl_10_01
+			ModernRockKick_Lvl_10_01
 		]
 		volume_low = 4.0
 		volume_high = 7.0
@@ -1789,7 +1789,7 @@ modernrock_kick_sampleset = [
 	{
 		velocity_cutoff = 80
 		sample_array = [
-			modernrockkick_lvl_10_01
+			ModernRockKick_Lvl_10_01
 		]
 		volume_low = 7.0
 		volume_high = 7.0
@@ -1798,11 +1798,11 @@ modernrock_kick_sampleset = [
 		pan_mono = 0.0
 	}
 ]
-modernrock_tom1_sampleset = [
+ModernRock_Tom1_Sampleset = [
 	{
 		velocity_cutoff = 0
 		sample_array = [
-			modernrockhitom_lvl_4_01
+			ModernRockHiTom_Lvl_4_01
 		]
 		volume_low = -10.0
 		volume_high = 2.0
@@ -1813,7 +1813,7 @@ modernrock_tom1_sampleset = [
 	{
 		velocity_cutoff = 25
 		sample_array = [
-			modernrockhitom_lvl_4_01
+			ModernRockHiTom_Lvl_4_01
 		]
 		volume_low = 2.0
 		volume_high = 8.0
@@ -1824,7 +1824,7 @@ modernrock_tom1_sampleset = [
 	{
 		velocity_cutoff = 49
 		sample_array = [
-			modernrockhitom_lvl_6_01
+			ModernRockHiTom_Lvl_6_01
 		]
 		volume_low = 0.0
 		volume_high = 5.0
@@ -1835,7 +1835,7 @@ modernrock_tom1_sampleset = [
 	{
 		velocity_cutoff = 73
 		sample_array = [
-			modernrockhitom_lvl_8_01
+			ModernRockHiTom_Lvl_8_01
 		]
 		volume_low = 4.0
 		volume_high = 9.0
@@ -1846,7 +1846,7 @@ modernrock_tom1_sampleset = [
 	{
 		velocity_cutoff = 97
 		sample_array = [
-			modernrockhitom_lvl_10_01
+			ModernRockHiTom_Lvl_10_01
 		]
 		volume_low = 4.0
 		volume_high = 6.0
@@ -1857,7 +1857,7 @@ modernrock_tom1_sampleset = [
 	{
 		velocity_cutoff = 120
 		sample_array = [
-			modernrockhitom_lvl_10_01
+			ModernRockHiTom_Lvl_10_01
 		]
 		volume_low = 6.0
 		volume_high = 6.0
@@ -1866,11 +1866,11 @@ modernrock_tom1_sampleset = [
 		pan_mono = -0.34
 	}
 ]
-modernrock_tom2_sampleset = [
+ModernRock_Tom2_Sampleset = [
 	{
 		velocity_cutoff = 0
 		sample_array = [
-			modernrockfltom_lvl_4_01
+			ModernRockFlTom_Lvl_4_01
 		]
 		volume_low = -11.0
 		volume_high = 4.0
@@ -1881,7 +1881,7 @@ modernrock_tom2_sampleset = [
 	{
 		velocity_cutoff = 25
 		sample_array = [
-			modernrockfltom_lvl_4_01
+			ModernRockFlTom_Lvl_4_01
 		]
 		volume_low = 4.0
 		volume_high = 9.0
@@ -1892,7 +1892,7 @@ modernrock_tom2_sampleset = [
 	{
 		velocity_cutoff = 49
 		sample_array = [
-			modernrockfltom_lvl_6_01
+			ModernRockFlTom_Lvl_6_01
 		]
 		volume_low = 1.0
 		volume_high = 6.0
@@ -1903,7 +1903,7 @@ modernrock_tom2_sampleset = [
 	{
 		velocity_cutoff = 73
 		sample_array = [
-			modernrockfltom_lvl_8_01
+			ModernRockFlTom_Lvl_8_01
 		]
 		volume_low = 3.0
 		volume_high = 6.0
@@ -1914,7 +1914,7 @@ modernrock_tom2_sampleset = [
 	{
 		velocity_cutoff = 97
 		sample_array = [
-			modernrockfltom_lvl_10_01
+			ModernRockFlTom_Lvl_10_01
 		]
 		volume_low = 1.0
 		volume_high = 4.0
@@ -1925,7 +1925,7 @@ modernrock_tom2_sampleset = [
 	{
 		velocity_cutoff = 120
 		sample_array = [
-			modernrockfltom_lvl_10_01
+			ModernRockFlTom_Lvl_10_01
 		]
 		volume_low = 4.0
 		volume_high = 4.0
@@ -1934,11 +1934,11 @@ modernrock_tom2_sampleset = [
 		pan_mono = 0.5
 	}
 ]
-modernrock_hihat_sampleset = [
+ModernRock_HiHat_Sampleset = [
 	{
 		velocity_cutoff = 0
 		sample_array = [
-			modernrockhhclosed_lvl_4_01
+			ModernRockHHClosed_Lvl_4_01
 		]
 		volume_low = -22
 		volume_high = -13
@@ -1949,7 +1949,7 @@ modernrock_hihat_sampleset = [
 	{
 		velocity_cutoff = 25
 		sample_array = [
-			modernrockhhclosed_lvl_4_01
+			ModernRockHHClosed_Lvl_4_01
 		]
 		volume_low = -13
 		volume_high = -7.0
@@ -1960,7 +1960,7 @@ modernrock_hihat_sampleset = [
 	{
 		velocity_cutoff = 36
 		sample_array = [
-			modernrockhhclosed_lvl_6_01
+			ModernRockHHClosed_Lvl_6_01
 		]
 		volume_low = -9
 		volume_high = -6.0
@@ -1971,7 +1971,7 @@ modernrock_hihat_sampleset = [
 	{
 		velocity_cutoff = 47
 		sample_array = [
-			modernrockhhclosed_lvl_8_01
+			ModernRockHHClosed_Lvl_8_01
 		]
 		volume_low = -10
 		volume_high = -7.0
@@ -1982,7 +1982,7 @@ modernrock_hihat_sampleset = [
 	{
 		velocity_cutoff = 58
 		sample_array = [
-			modernrockhhclosed_lvl_10_01
+			ModernRockHHClosed_Lvl_10_01
 		]
 		volume_low = -13.0
 		volume_high = -10.0
@@ -1993,7 +1993,7 @@ modernrock_hihat_sampleset = [
 	{
 		velocity_cutoff = 70
 		sample_array = [
-			modernrockhhopen_lvl_2_01
+			ModernRockHHOpen_Lvl_2_01
 		]
 		volume_low = 1.0
 		volume_high = 4.0
@@ -2004,7 +2004,7 @@ modernrock_hihat_sampleset = [
 	{
 		velocity_cutoff = 77
 		sample_array = [
-			modernrockhhopen_lvl_6_01
+			ModernRockHHOpen_Lvl_6_01
 		]
 		volume_low = 2.0
 		volume_high = 4.0
@@ -2015,7 +2015,7 @@ modernrock_hihat_sampleset = [
 	{
 		velocity_cutoff = 85
 		sample_array = [
-			modernrockhhopen_lvl_9_01
+			ModernRockHHOpen_Lvl_9_01
 		]
 		volume_low = 0.0
 		volume_high = 3.0
@@ -2026,7 +2026,7 @@ modernrock_hihat_sampleset = [
 	{
 		velocity_cutoff = 92
 		sample_array = [
-			modernrockhhopen_lvl_10_01
+			ModernRockHHOpen_Lvl_10_01
 		]
 		volume_low = 1.0
 		volume_high = 3.0
@@ -2037,7 +2037,7 @@ modernrock_hihat_sampleset = [
 	{
 		velocity_cutoff = 100
 		sample_array = [
-			modernrockhhopen_lvl_10_01
+			ModernRockHHOpen_Lvl_10_01
 		]
 		volume_low = 3.0
 		volume_high = 3.0
@@ -2046,11 +2046,11 @@ modernrock_hihat_sampleset = [
 		pan_mono = -0.3
 	}
 ]
-modernrock_cymbal_sampleset = [
+ModernRock_Cymbal_Sampleset = [
 	{
 		velocity_cutoff = 0
 		sample_array = [
-			modernrockride_lvl_6_01
+			ModernRockRide_Lvl_6_01
 		]
 		volume_low = -24.0
 		volume_high = -12.0
@@ -2061,7 +2061,7 @@ modernrock_cymbal_sampleset = [
 	{
 		velocity_cutoff = 25
 		sample_array = [
-			modernrockride_lvl_6_01
+			ModernRockRide_Lvl_6_01
 		]
 		volume_low = -12.0
 		volume_high = -2.0
@@ -2072,7 +2072,7 @@ modernrock_cymbal_sampleset = [
 	{
 		velocity_cutoff = 47
 		sample_array = [
-			modernrockride_lvl_8_01
+			ModernRockRide_Lvl_8_01
 		]
 		volume_low = -9.0
 		volume_high = -6.0
@@ -2083,7 +2083,7 @@ modernrock_cymbal_sampleset = [
 	{
 		velocity_cutoff = 69
 		sample_array = [
-			modernrockride_lvl_10_01
+			ModernRockRide_Lvl_10_01
 		]
 		volume_low = -8.0
 		volume_high = -5.0
@@ -2094,7 +2094,7 @@ modernrock_cymbal_sampleset = [
 	{
 		velocity_cutoff = 80
 		sample_array = [
-			modernrockcrash_lvl_6_01
+			ModernRockCrash_Lvl_6_01
 		]
 		volume_low = -7.0
 		volume_high = -4.0
@@ -2105,7 +2105,7 @@ modernrock_cymbal_sampleset = [
 	{
 		velocity_cutoff = 87
 		sample_array = [
-			modernrockcrash_lvl_8_01
+			ModernRockCrash_Lvl_8_01
 		]
 		volume_low = -9.0
 		volume_high = -7.0
@@ -2116,7 +2116,7 @@ modernrock_cymbal_sampleset = [
 	{
 		velocity_cutoff = 94
 		sample_array = [
-			modernrockcrash_lvl_10_01
+			ModernRockCrash_Lvl_10_01
 		]
 		volume_low = -9.0
 		volume_high = -7.0
@@ -2127,7 +2127,7 @@ modernrock_cymbal_sampleset = [
 	{
 		velocity_cutoff = 100
 		sample_array = [
-			modernrockcrash_lvl_10_01
+			ModernRockCrash_Lvl_10_01
 		]
 		volume_low = -7.0
 		volume_high = -7.0
@@ -2136,11 +2136,11 @@ modernrock_cymbal_sampleset = [
 		pan_mono = -0.13
 	}
 ]
-brazilianpercussion_snare_sampleset = [
+BrazilianPercussion_Snare_Sampleset = [
 	{
 		velocity_cutoff = 0
 		sample_array = [
-			brazilianpercussion_ciaxadeguerra_lvl_2_01
+			BrazilianPercussion_CiaxaDeGuerra_Lvl_2_01
 		]
 		volume_low = -13.0
 		volume_high = -7.0
@@ -2152,7 +2152,7 @@ brazilianpercussion_snare_sampleset = [
 	{
 		velocity_cutoff = 27
 		sample_array = [
-			brazilianpercussion_ciaxadeguerra_lvl_2_01
+			BrazilianPercussion_CiaxaDeGuerra_Lvl_2_01
 		]
 		volume_low = -7.0
 		volume_high = 3.0
@@ -2164,7 +2164,7 @@ brazilianpercussion_snare_sampleset = [
 	{
 		velocity_cutoff = 42
 		sample_array = [
-			brazilianpercussion_ciaxadeguerra_lvl_4_01
+			BrazilianPercussion_CiaxaDeGuerra_Lvl_4_01
 		]
 		volume_low = -3.0
 		volume_high = -1.0
@@ -2176,7 +2176,7 @@ brazilianpercussion_snare_sampleset = [
 	{
 		velocity_cutoff = 58
 		sample_array = [
-			brazilianpercussion_ciaxadeguerra_lvl_6_01
+			BrazilianPercussion_CiaxaDeGuerra_Lvl_6_01
 		]
 		volume_low = -2.0
 		volume_high = 0.0
@@ -2188,7 +2188,7 @@ brazilianpercussion_snare_sampleset = [
 	{
 		velocity_cutoff = 72
 		sample_array = [
-			brazilianpercussion_ciaxadeguerra_lvl_8_01
+			BrazilianPercussion_CiaxaDeGuerra_Lvl_8_01
 		]
 		volume_low = -1.0
 		volume_high = 1.0
@@ -2200,7 +2200,7 @@ brazilianpercussion_snare_sampleset = [
 	{
 		velocity_cutoff = 88
 		sample_array = [
-			brazilianpercussion_ciaxadeguerra_lvl_10_01
+			BrazilianPercussion_CiaxaDeGuerra_Lvl_10_01
 		]
 		volume_low = -3.0
 		volume_high = -2.0
@@ -2212,9 +2212,9 @@ brazilianpercussion_snare_sampleset = [
 	{
 		velocity_cutoff = 103
 		sample_array = [
-			brazilianpercussion_ciaxadeguerra_lvl_12_01
-			brazilianpercussion_ciaxadeguerra_lvl_12_02
-			brazilianpercussion_ciaxadeguerra_lvl_12_03
+			BrazilianPercussion_CiaxaDeGuerra_Lvl_12_01
+			BrazilianPercussion_CiaxaDeGuerra_Lvl_12_02
+			BrazilianPercussion_CiaxaDeGuerra_Lvl_12_03
 		]
 		volume_low = -3.0
 		volume_high = -2.0
@@ -2226,9 +2226,9 @@ brazilianpercussion_snare_sampleset = [
 	{
 		velocity_cutoff = 120
 		sample_array = [
-			brazilianpercussion_ciaxadeguerra_lvl_12_01
-			brazilianpercussion_ciaxadeguerra_lvl_12_02
-			brazilianpercussion_ciaxadeguerra_lvl_12_03
+			BrazilianPercussion_CiaxaDeGuerra_Lvl_12_01
+			BrazilianPercussion_CiaxaDeGuerra_Lvl_12_02
+			BrazilianPercussion_CiaxaDeGuerra_Lvl_12_03
 		]
 		volume_low = -2.0
 		volume_high = -2.0
@@ -2238,11 +2238,11 @@ brazilianpercussion_snare_sampleset = [
 		pan_right = 0.9
 	}
 ]
-brazilianpercussion_kick_sampleset = [
+BrazilianPercussion_Kick_Sampleset = [
 	{
 		velocity_cutoff = 0
 		sample_array = [
-			brazilianpercussion_surdo_lvl_6_01
+			BrazilianPercussion_Surdo_Lvl_6_01
 		]
 		volume_low = -19.0
 		volume_high = -7.0
@@ -2253,7 +2253,7 @@ brazilianpercussion_kick_sampleset = [
 	{
 		velocity_cutoff = 25
 		sample_array = [
-			brazilianpercussion_surdo_lvl_6_01
+			BrazilianPercussion_Surdo_Lvl_6_01
 		]
 		volume_low = -7.0
 		volume_high = -1.0
@@ -2264,7 +2264,7 @@ brazilianpercussion_kick_sampleset = [
 	{
 		velocity_cutoff = 35
 		sample_array = [
-			brazilianpercussion_surdo_lvl_8_01
+			BrazilianPercussion_Surdo_Lvl_8_01
 		]
 		volume_low = -4.0
 		volume_high = 2.0
@@ -2275,7 +2275,7 @@ brazilianpercussion_kick_sampleset = [
 	{
 		velocity_cutoff = 45
 		sample_array = [
-			brazilianpercussion_surdo_lvl_10_01
+			BrazilianPercussion_Surdo_Lvl_10_01
 		]
 		volume_low = -1.0
 		volume_high = 2.0
@@ -2286,7 +2286,7 @@ brazilianpercussion_kick_sampleset = [
 	{
 		velocity_cutoff = 80
 		sample_array = [
-			brazilianpercussion_surdo_lvl_10_01
+			BrazilianPercussion_Surdo_Lvl_10_01
 		]
 		volume_low = 2.0
 		volume_high = 2.0
@@ -2295,11 +2295,11 @@ brazilianpercussion_kick_sampleset = [
 		pan_mono = 0.0
 	}
 ]
-brazilianpercussion_tom1_sampleset = [
+BrazilianPercussion_Tom1_Sampleset = [
 	{
 		velocity_cutoff = 0
 		sample_array = [
-			brazilianpercussion_quicahigh_lvl_6_01
+			BrazilianPercussion_QuicaHigh_Lvl_6_01
 		]
 		volume_low = -31.0
 		volume_high = -25.0
@@ -2310,7 +2310,7 @@ brazilianpercussion_tom1_sampleset = [
 	{
 		velocity_cutoff = 25
 		sample_array = [
-			brazilianpercussion_quicahigh_lvl_6_01
+			BrazilianPercussion_QuicaHigh_Lvl_6_01
 		]
 		volume_low = -25.0
 		volume_high = -20.0
@@ -2321,7 +2321,7 @@ brazilianpercussion_tom1_sampleset = [
 	{
 		velocity_cutoff = 57
 		sample_array = [
-			brazilianpercussion_quicahigh_lvl_8_01
+			BrazilianPercussion_QuicaHigh_Lvl_8_01
 		]
 		volume_low = -17.0
 		volume_high = -11.0
@@ -2332,7 +2332,7 @@ brazilianpercussion_tom1_sampleset = [
 	{
 		velocity_cutoff = 89
 		sample_array = [
-			brazilianpercussion_quicahigh_lvl_10_01
+			BrazilianPercussion_QuicaHigh_Lvl_10_01
 		]
 		volume_low = -11.0
 		volume_high = -5.0
@@ -2343,7 +2343,7 @@ brazilianpercussion_tom1_sampleset = [
 	{
 		velocity_cutoff = 120
 		sample_array = [
-			brazilianpercussion_quicahigh_lvl_10_01
+			BrazilianPercussion_QuicaHigh_Lvl_10_01
 		]
 		volume_low = -5.0
 		volume_high = -5.0
@@ -2352,11 +2352,11 @@ brazilianpercussion_tom1_sampleset = [
 		pan_mono = -0.5
 	}
 ]
-brazilianpercussion_tom2_sampleset = [
+BrazilianPercussion_Tom2_Sampleset = [
 	{
 		velocity_cutoff = 0
 		sample_array = [
-			brazilianpercussion_quicalow_lvl_6_01
+			BrazilianPercussion_QuicaLow_Lvl_6_01
 		]
 		volume_low = -26.0
 		volume_high = -16.0
@@ -2367,7 +2367,7 @@ brazilianpercussion_tom2_sampleset = [
 	{
 		velocity_cutoff = 25
 		sample_array = [
-			brazilianpercussion_quicalow_lvl_6_01
+			BrazilianPercussion_QuicaLow_Lvl_6_01
 		]
 		volume_low = -16.0
 		volume_high = -10.0
@@ -2378,7 +2378,7 @@ brazilianpercussion_tom2_sampleset = [
 	{
 		velocity_cutoff = 57
 		sample_array = [
-			brazilianpercussion_quicalow_lvl_8_01
+			BrazilianPercussion_QuicaLow_Lvl_8_01
 		]
 		volume_low = -11.0
 		volume_high = -6.0
@@ -2389,7 +2389,7 @@ brazilianpercussion_tom2_sampleset = [
 	{
 		velocity_cutoff = 89
 		sample_array = [
-			brazilianpercussion_quicalow_lvl_10_01
+			BrazilianPercussion_QuicaLow_Lvl_10_01
 		]
 		volume_low = -6.0
 		volume_high = -1.0
@@ -2400,7 +2400,7 @@ brazilianpercussion_tom2_sampleset = [
 	{
 		velocity_cutoff = 120
 		sample_array = [
-			brazilianpercussion_quicalow_lvl_10_01
+			BrazilianPercussion_QuicaLow_Lvl_10_01
 		]
 		volume_low = -1.0
 		volume_high = -1.0
@@ -2409,11 +2409,11 @@ brazilianpercussion_tom2_sampleset = [
 		pan_mono = -0.5
 	}
 ]
-brazilianpercussion_hihat_sampleset = [
+BrazilianPercussion_HiHat_Sampleset = [
 	{
 		velocity_cutoff = 0
 		sample_array = [
-			brazilianpercussion_pandiero_lvl_4_01
+			BrazilianPercussion_Pandiero_Lvl_4_01
 		]
 		volume_low = -21.0
 		volume_high = -9.0
@@ -2424,7 +2424,7 @@ brazilianpercussion_hihat_sampleset = [
 	{
 		velocity_cutoff = 25
 		sample_array = [
-			brazilianpercussion_pandiero_lvl_4_01
+			BrazilianPercussion_Pandiero_Lvl_4_01
 		]
 		volume_low = -9.0
 		volume_high = -4.0
@@ -2435,7 +2435,7 @@ brazilianpercussion_hihat_sampleset = [
 	{
 		velocity_cutoff = 45
 		sample_array = [
-			brazilianpercussion_pandiero_lvl_6_01
+			BrazilianPercussion_Pandiero_Lvl_6_01
 		]
 		volume_low = -6.0
 		volume_high = -1.0
@@ -2446,7 +2446,7 @@ brazilianpercussion_hihat_sampleset = [
 	{
 		velocity_cutoff = 64
 		sample_array = [
-			brazilianpercussion_pandiero_lvl_8_01
+			BrazilianPercussion_Pandiero_Lvl_8_01
 		]
 		volume_low = -2.0
 		volume_high = 1.0
@@ -2457,7 +2457,7 @@ brazilianpercussion_hihat_sampleset = [
 	{
 		velocity_cutoff = 82
 		sample_array = [
-			brazilianpercussion_pandiero_lvl_10_01
+			BrazilianPercussion_Pandiero_Lvl_10_01
 		]
 		volume_low = 0.0
 		volume_high = 2.0
@@ -2468,7 +2468,7 @@ brazilianpercussion_hihat_sampleset = [
 	{
 		velocity_cutoff = 100
 		sample_array = [
-			brazilianpercussion_pandiero_lvl_10_01
+			BrazilianPercussion_Pandiero_Lvl_10_01
 		]
 		volume_low = 2.0
 		volume_high = 2.0
@@ -2477,13 +2477,13 @@ brazilianpercussion_hihat_sampleset = [
 		pan_mono = -0.3
 	}
 ]
-brazilianpercussion_cymbal_sampleset = [
+BrazilianPercussion_Cymbal_Sampleset = [
 	{
 		velocity_cutoff = 0
 		sample_array = [
-			brazilianpercussion_whistlelow_lvl_10_01
-			brazilianpercussion_whistlelow_lvl_10_02
-			brazilianpercussion_whistlelow_lvl_10_03
+			BrazilianPercussion_WhistleLow_Lvl_10_01
+			BrazilianPercussion_WhistleLow_Lvl_10_02
+			BrazilianPercussion_WhistleLow_Lvl_10_03
 		]
 		volume_low = -24.0
 		volume_high = -12.0
@@ -2494,9 +2494,9 @@ brazilianpercussion_cymbal_sampleset = [
 	{
 		velocity_cutoff = 25
 		sample_array = [
-			brazilianpercussion_whistlelow_lvl_10_01
-			brazilianpercussion_whistlelow_lvl_10_02
-			brazilianpercussion_whistlelow_lvl_10_03
+			BrazilianPercussion_WhistleLow_Lvl_10_01
+			BrazilianPercussion_WhistleLow_Lvl_10_02
+			BrazilianPercussion_WhistleLow_Lvl_10_03
 		]
 		volume_low = -12.0
 		volume_high = -6.0
@@ -2507,9 +2507,9 @@ brazilianpercussion_cymbal_sampleset = [
 	{
 		velocity_cutoff = 80
 		sample_array = [
-			brazilianpercussion_whistlehi_lvl_10_01
-			brazilianpercussion_whistlehi_lvl_10_03
-			brazilianpercussion_whistlehi_lvl_10_02
+			BrazilianPercussion_WhistleHi_Lvl_10_01
+			BrazilianPercussion_WhistleHi_Lvl_10_03
+			BrazilianPercussion_WhistleHi_Lvl_10_02
 		]
 		volume_low = -12
 		volume_high = -6
@@ -2520,9 +2520,9 @@ brazilianpercussion_cymbal_sampleset = [
 	{
 		velocity_cutoff = 100
 		sample_array = [
-			brazilianpercussion_whistlehi_lvl_10_01
-			brazilianpercussion_whistlehi_lvl_10_03
-			brazilianpercussion_whistlehi_lvl_10_02
+			BrazilianPercussion_WhistleHi_Lvl_10_01
+			BrazilianPercussion_WhistleHi_Lvl_10_03
+			BrazilianPercussion_WhistleHi_Lvl_10_02
 		]
 		volume_low = -6
 		volume_high = -6
@@ -2531,11 +2531,11 @@ brazilianpercussion_cymbal_sampleset = [
 		pan_mono = 0.5
 	}
 ]
-latinpercussion_kick_sampleset = [
+LatinPercussion_Kick_Sampleset = [
 	{
 		velocity_cutoff = 0
 		sample_array = [
-			latinpercussion_boxdrum_lvl_2_01
+			LatinPercussion_BoxDrum_Lvl_2_01
 		]
 		volume_low = -13.0
 		volume_high = -1.0
@@ -2546,7 +2546,7 @@ latinpercussion_kick_sampleset = [
 	{
 		velocity_cutoff = 25
 		sample_array = [
-			latinpercussion_boxdrum_lvl_2_01
+			LatinPercussion_BoxDrum_Lvl_2_01
 		]
 		volume_low = -1.0
 		volume_high = 2.0
@@ -2557,7 +2557,7 @@ latinpercussion_kick_sampleset = [
 	{
 		velocity_cutoff = 30
 		sample_array = [
-			latinpercussion_boxdrum_lvl_4_01
+			LatinPercussion_BoxDrum_Lvl_4_01
 		]
 		volume_low = -3.0
 		volume_high = 0.0
@@ -2568,7 +2568,7 @@ latinpercussion_kick_sampleset = [
 	{
 		velocity_cutoff = 35
 		sample_array = [
-			latinpercussion_boxdrum_lvl_6_01
+			LatinPercussion_BoxDrum_Lvl_6_01
 		]
 		volume_low = -1.0
 		volume_high = 2.0
@@ -2579,7 +2579,7 @@ latinpercussion_kick_sampleset = [
 	{
 		velocity_cutoff = 40
 		sample_array = [
-			latinpercussion_boxdrum_lvl_8_01
+			LatinPercussion_BoxDrum_Lvl_8_01
 		]
 		volume_low = -3.0
 		volume_high = -1.0
@@ -2590,7 +2590,7 @@ latinpercussion_kick_sampleset = [
 	{
 		velocity_cutoff = 45
 		sample_array = [
-			latinpercussion_boxdrum_lvl_10_01
+			LatinPercussion_BoxDrum_Lvl_10_01
 		]
 		volume_low = 2.0
 		volume_high = 5.0
@@ -2601,7 +2601,7 @@ latinpercussion_kick_sampleset = [
 	{
 		velocity_cutoff = 80
 		sample_array = [
-			latinpercussion_boxdrum_lvl_10_01
+			LatinPercussion_BoxDrum_Lvl_10_01
 		]
 		volume_low = 5.0
 		volume_high = 5.0
@@ -2610,11 +2610,11 @@ latinpercussion_kick_sampleset = [
 		pan_mono = 0.0
 	}
 ]
-latinpercussion_snare_sampleset = [
+LatinPercussion_Snare_Sampleset = [
 	{
 		velocity_cutoff = 0
 		sample_array = [
-			latinpercussion_conga_lvl_2_01
+			LatinPercussion_Conga_Lvl_2_01
 		]
 		volume_low = -12.0
 		volume_high = -6.0
@@ -2625,7 +2625,7 @@ latinpercussion_snare_sampleset = [
 	{
 		velocity_cutoff = 27
 		sample_array = [
-			latinpercussion_conga_lvl_2_01
+			LatinPercussion_Conga_Lvl_2_01
 		]
 		volume_low = -6.0
 		volume_high = 4.0
@@ -2636,7 +2636,7 @@ latinpercussion_snare_sampleset = [
 	{
 		velocity_cutoff = 42
 		sample_array = [
-			latinpercussion_conga_lvl_4_01
+			LatinPercussion_Conga_Lvl_4_01
 		]
 		volume_low = 0.0
 		volume_high = 3.0
@@ -2647,7 +2647,7 @@ latinpercussion_snare_sampleset = [
 	{
 		velocity_cutoff = 58
 		sample_array = [
-			latinpercussion_conga_lvl_7_01
+			LatinPercussion_Conga_Lvl_7_01
 		]
 		volume_low = 5.0
 		volume_high = 7.0
@@ -2658,7 +2658,7 @@ latinpercussion_snare_sampleset = [
 	{
 		velocity_cutoff = 72
 		sample_array = [
-			latinpercussion_conga_lvl_8_01
+			LatinPercussion_Conga_Lvl_8_01
 		]
 		volume_low = 5.0
 		volume_high = 7.0
@@ -2669,7 +2669,7 @@ latinpercussion_snare_sampleset = [
 	{
 		velocity_cutoff = 88
 		sample_array = [
-			latinpercussion_conga_lvl_10_01
+			LatinPercussion_Conga_Lvl_10_01
 		]
 		volume_low = 4.0
 		volume_high = 5.0
@@ -2680,9 +2680,9 @@ latinpercussion_snare_sampleset = [
 	{
 		velocity_cutoff = 103
 		sample_array = [
-			latinpercussion_conga_lvl_12_01
-			latinpercussion_conga_lvl_12_02
-			latinpercussion_conga_lvl_12_03
+			LatinPercussion_Conga_Lvl_12_01
+			LatinPercussion_Conga_Lvl_12_02
+			LatinPercussion_Conga_Lvl_12_03
 		]
 		volume_low = 2.0
 		volume_high = 4.0
@@ -2693,9 +2693,9 @@ latinpercussion_snare_sampleset = [
 	{
 		velocity_cutoff = 120
 		sample_array = [
-			latinpercussion_conga_lvl_12_01
-			latinpercussion_conga_lvl_12_02
-			latinpercussion_conga_lvl_12_03
+			LatinPercussion_Conga_Lvl_12_01
+			LatinPercussion_Conga_Lvl_12_02
+			LatinPercussion_Conga_Lvl_12_03
 		]
 		volume_low = 4.0
 		volume_high = 4.0
@@ -2704,11 +2704,11 @@ latinpercussion_snare_sampleset = [
 		pan_mono = -0.2
 	}
 ]
-latinpercussion_tom1_sampleset = [
+LatinPercussion_Tom1_Sampleset = [
 	{
 		velocity_cutoff = 0
 		sample_array = [
-			latinpercussion_hightimbale_lvl_2_01
+			LatinPercussion_HighTimbale_Lvl_2_01
 		]
 		volume_low = -12.0
 		volume_high = -6.0
@@ -2720,7 +2720,7 @@ latinpercussion_tom1_sampleset = [
 	{
 		velocity_cutoff = 25
 		sample_array = [
-			latinpercussion_hightimbale_lvl_2_01
+			LatinPercussion_HighTimbale_Lvl_2_01
 		]
 		volume_low = -6.0
 		volume_high = -2.0
@@ -2732,7 +2732,7 @@ latinpercussion_tom1_sampleset = [
 	{
 		velocity_cutoff = 44
 		sample_array = [
-			latinpercussion_hightimbale_lvl_4_01
+			LatinPercussion_HighTimbale_Lvl_4_01
 		]
 		volume_low = -4.0
 		volume_high = 0.0
@@ -2744,7 +2744,7 @@ latinpercussion_tom1_sampleset = [
 	{
 		velocity_cutoff = 63
 		sample_array = [
-			latinpercussion_hightimbale_lvl_6_01
+			LatinPercussion_HighTimbale_Lvl_6_01
 		]
 		volume_low = -3.0
 		volume_high = 1.0
@@ -2756,7 +2756,7 @@ latinpercussion_tom1_sampleset = [
 	{
 		velocity_cutoff = 82
 		sample_array = [
-			latinpercussion_hightimbale_lvl_8_01
+			LatinPercussion_HighTimbale_Lvl_8_01
 		]
 		volume_low = 0.0
 		volume_high = 4.0
@@ -2768,8 +2768,8 @@ latinpercussion_tom1_sampleset = [
 	{
 		velocity_cutoff = 101
 		sample_array = [
-			latinpercussion_hightimbale_lvl_10_01
-			latinpercussion_hightimbale_lvl_10_02
+			LatinPercussion_HighTimbale_Lvl_10_01
+			LatinPercussion_HighTimbale_Lvl_10_02
 		]
 		volume_low = 1.0
 		volume_high = 3.0
@@ -2781,8 +2781,8 @@ latinpercussion_tom1_sampleset = [
 	{
 		velocity_cutoff = 120
 		sample_array = [
-			latinpercussion_hightimbale_lvl_10_01
-			latinpercussion_hightimbale_lvl_10_02
+			LatinPercussion_HighTimbale_Lvl_10_01
+			LatinPercussion_HighTimbale_Lvl_10_02
 		]
 		volume_low = 3.0
 		volume_high = 3.0
@@ -2792,11 +2792,11 @@ latinpercussion_tom1_sampleset = [
 		pan_right = 1.0
 	}
 ]
-latinpercussion_tom2_sampleset = [
+LatinPercussion_Tom2_Sampleset = [
 	{
 		velocity_cutoff = 0
 		sample_array = [
-			latinpercussion_lowtimbale_lvl_2_01
+			LatinPercussion_LowTimbale_Lvl_2_01
 		]
 		volume_low = -15.0
 		volume_high = -3.0
@@ -2808,7 +2808,7 @@ latinpercussion_tom2_sampleset = [
 	{
 		velocity_cutoff = 25
 		sample_array = [
-			latinpercussion_lowtimbale_lvl_2_01
+			LatinPercussion_LowTimbale_Lvl_2_01
 		]
 		volume_low = -3.0
 		volume_high = 0.0
@@ -2820,7 +2820,7 @@ latinpercussion_tom2_sampleset = [
 	{
 		velocity_cutoff = 44
 		sample_array = [
-			latinpercussion_lowtimbale_lvl_4_01
+			LatinPercussion_LowTimbale_Lvl_4_01
 		]
 		volume_low = -3.0
 		volume_high = 0.0
@@ -2832,7 +2832,7 @@ latinpercussion_tom2_sampleset = [
 	{
 		velocity_cutoff = 63
 		sample_array = [
-			latinpercussion_lowtimbale_lvl_6_01
+			LatinPercussion_LowTimbale_Lvl_6_01
 		]
 		volume_low = -2.0
 		volume_high = 1.0
@@ -2844,7 +2844,7 @@ latinpercussion_tom2_sampleset = [
 	{
 		velocity_cutoff = 82
 		sample_array = [
-			latinpercussion_lowtimbale_lvl_8_01
+			LatinPercussion_LowTimbale_Lvl_8_01
 		]
 		volume_low = -1.0
 		volume_high = 2.0
@@ -2856,8 +2856,8 @@ latinpercussion_tom2_sampleset = [
 	{
 		velocity_cutoff = 101
 		sample_array = [
-			latinpercussion_lowtimbale_lvl_10_01
-			latinpercussion_lowtimbale_lvl_10_02
+			LatinPercussion_LowTimbale_Lvl_10_01
+			LatinPercussion_LowTimbale_Lvl_10_02
 		]
 		volume_low = 0.0
 		volume_high = 3.0
@@ -2869,8 +2869,8 @@ latinpercussion_tom2_sampleset = [
 	{
 		velocity_cutoff = 120
 		sample_array = [
-			latinpercussion_lowtimbale_lvl_10_01
-			latinpercussion_lowtimbale_lvl_10_02
+			LatinPercussion_LowTimbale_Lvl_10_01
+			LatinPercussion_LowTimbale_Lvl_10_02
 		]
 		volume_low = 3.0
 		volume_high = 3.0
@@ -2880,13 +2880,13 @@ latinpercussion_tom2_sampleset = [
 		pan_right = 1.0
 	}
 ]
-latinpercussion_hihat_sampleset = [
+LatinPercussion_HiHat_Sampleset = [
 	{
 		velocity_cutoff = 0
 		sample_array = [
-			latinpercussion_maraca_lvl_10_01
-			latinpercussion_maraca_lvl_10_02
-			latinpercussion_maraca_lvl_10_03
+			LatinPercussion_Maraca_Lvl_10_01
+			LatinPercussion_Maraca_Lvl_10_02
+			LatinPercussion_Maraca_Lvl_10_03
 		]
 		volume_low = -24.0
 		volume_high = -15.0
@@ -2897,9 +2897,9 @@ latinpercussion_hihat_sampleset = [
 	{
 		velocity_cutoff = 25
 		sample_array = [
-			latinpercussion_maraca_lvl_10_01
-			latinpercussion_maraca_lvl_10_02
-			latinpercussion_maraca_lvl_10_03
+			LatinPercussion_Maraca_Lvl_10_01
+			LatinPercussion_Maraca_Lvl_10_02
+			LatinPercussion_Maraca_Lvl_10_03
 		]
 		volume_low = -15.0
 		volume_high = 0.0
@@ -2910,9 +2910,9 @@ latinpercussion_hihat_sampleset = [
 	{
 		velocity_cutoff = 100
 		sample_array = [
-			latinpercussion_maraca_lvl_10_01
-			latinpercussion_maraca_lvl_10_02
-			latinpercussion_maraca_lvl_10_03
+			LatinPercussion_Maraca_Lvl_10_01
+			LatinPercussion_Maraca_Lvl_10_02
+			LatinPercussion_Maraca_Lvl_10_03
 		]
 		volume_low = 0.0
 		volume_high = 0.0
@@ -2921,14 +2921,14 @@ latinpercussion_hihat_sampleset = [
 		pan_mono = -0.7
 	}
 ]
-latinpercussion_cymbal_sampleset = [
+LatinPercussion_Cymbal_Sampleset = [
 	{
 		velocity_cutoff = 0
 		sample_array = [
-			latinpercussion_clave_lvl_10_01
-			latinpercussion_clave_lvl_10_02
-			latinpercussion_clave_lvl_10_03
-			latinpercussion_clave_lvl_10_04
+			LatinPercussion_Clave_Lvl_10_01
+			LatinPercussion_Clave_Lvl_10_02
+			LatinPercussion_Clave_Lvl_10_03
+			LatinPercussion_Clave_Lvl_10_04
 		]
 		volume_low = -26
 		volume_high = -17
@@ -2939,10 +2939,10 @@ latinpercussion_cymbal_sampleset = [
 	{
 		velocity_cutoff = 25
 		sample_array = [
-			latinpercussion_clave_lvl_10_01
-			latinpercussion_clave_lvl_10_02
-			latinpercussion_clave_lvl_10_03
-			latinpercussion_clave_lvl_10_04
+			LatinPercussion_Clave_Lvl_10_01
+			LatinPercussion_Clave_Lvl_10_02
+			LatinPercussion_Clave_Lvl_10_03
+			LatinPercussion_Clave_Lvl_10_04
 		]
 		volume_low = -17
 		volume_high = -2
@@ -2953,10 +2953,10 @@ latinpercussion_cymbal_sampleset = [
 	{
 		velocity_cutoff = 100
 		sample_array = [
-			latinpercussion_clave_lvl_10_01
-			latinpercussion_clave_lvl_10_02
-			latinpercussion_clave_lvl_10_03
-			latinpercussion_clave_lvl_10_04
+			LatinPercussion_Clave_Lvl_10_01
+			LatinPercussion_Clave_Lvl_10_02
+			LatinPercussion_Clave_Lvl_10_03
+			LatinPercussion_Clave_Lvl_10_04
 		]
 		volume_low = -2
 		volume_high = -2
@@ -2965,11 +2965,11 @@ latinpercussion_cymbal_sampleset = [
 		pan_mono = 0.5
 	}
 ]
-rockpercussion_kick_sampleset = [
+Rockpercussion_kick_sampleset = [
 	{
 		velocity_cutoff = 0
 		sample_array = [
-			rockpercussion_concertbassdrum_lvl_4_01
+			RockPercussion_ConcertBassDrum_Lvl_4_01
 		]
 		volume_low = -16.0
 		volume_high = -4
@@ -2981,7 +2981,7 @@ rockpercussion_kick_sampleset = [
 	{
 		velocity_cutoff = 25
 		sample_array = [
-			rockpercussion_concertbassdrum_lvl_4_01
+			RockPercussion_ConcertBassDrum_Lvl_4_01
 		]
 		volume_low = -4.0
 		volume_high = 2.0
@@ -2993,7 +2993,7 @@ rockpercussion_kick_sampleset = [
 	{
 		velocity_cutoff = 32
 		sample_array = [
-			rockpercussion_concertbassdrum_lvl_6_01
+			RockPercussion_ConcertBassDrum_Lvl_6_01
 		]
 		volume_low = -2.0
 		volume_high = 1.0
@@ -3005,7 +3005,7 @@ rockpercussion_kick_sampleset = [
 	{
 		velocity_cutoff = 38
 		sample_array = [
-			rockpercussion_concertbassdrum_lvl_8_01
+			RockPercussion_ConcertBassDrum_Lvl_8_01
 		]
 		volume_low = -3.0
 		volume_high = 0.0
@@ -3017,7 +3017,7 @@ rockpercussion_kick_sampleset = [
 	{
 		velocity_cutoff = 45
 		sample_array = [
-			rockpercussion_concertbassdrum_lvl_10_01
+			RockPercussion_ConcertBassDrum_Lvl_10_01
 		]
 		volume_low = -3.0
 		volume_high = 0.0
@@ -3029,7 +3029,7 @@ rockpercussion_kick_sampleset = [
 	{
 		velocity_cutoff = 80
 		sample_array = [
-			rockpercussion_concertbassdrum_lvl_10_01
+			RockPercussion_ConcertBassDrum_Lvl_10_01
 		]
 		volume_low = 0.0
 		volume_high = 0.0
@@ -3039,13 +3039,13 @@ rockpercussion_kick_sampleset = [
 		pan_right = 1.0
 	}
 ]
-rockpercussion_snare_sampleset = [
+Rockpercussion_snare_sampleset = [
 	{
 		velocity_cutoff = 0
 		sample_array = [
-			rockpercussion_handclap_lvl_10_01
-			rockpercussion_handclap_lvl_10_04
-			rockpercussion_handclap_lvl_10_05
+			RockPercussion_HandClap_Lvl_10_01
+			RockPercussion_HandClap_Lvl_10_04
+			RockPercussion_HandClap_Lvl_10_05
 		]
 		volume_low = -21.0
 		volume_high = -15.0
@@ -3057,9 +3057,9 @@ rockpercussion_snare_sampleset = [
 	{
 		velocity_cutoff = 25
 		sample_array = [
-			rockpercussion_handclap_lvl_10_01
-			rockpercussion_handclap_lvl_10_04
-			rockpercussion_handclap_lvl_10_05
+			RockPercussion_HandClap_Lvl_10_01
+			RockPercussion_HandClap_Lvl_10_04
+			RockPercussion_HandClap_Lvl_10_05
 		]
 		volume_low = -15.0
 		volume_high = -9.0
@@ -3071,8 +3071,8 @@ rockpercussion_snare_sampleset = [
 	{
 		velocity_cutoff = 57
 		sample_array = [
-			rockpercussion_handclap_lvl_10_02
-			rockpercussion_handclap_lvl_10_03
+			RockPercussion_HandClap_Lvl_10_02
+			RockPercussion_HandClap_Lvl_10_03
 		]
 		volume_low = -9.0
 		volume_high = -3.0
@@ -3084,7 +3084,7 @@ rockpercussion_snare_sampleset = [
 	{
 		velocity_cutoff = 89
 		sample_array = [
-			rockpercussion_handclap_lvl_10_02
+			RockPercussion_HandClap_Lvl_10_02
 		]
 		volume_low = -3.0
 		volume_high = 0.0
@@ -3096,7 +3096,7 @@ rockpercussion_snare_sampleset = [
 	{
 		velocity_cutoff = 120
 		sample_array = [
-			rockpercussion_handclap_lvl_10_02
+			RockPercussion_HandClap_Lvl_10_02
 		]
 		volume_low = 0.0
 		volume_high = 0.0
@@ -3106,11 +3106,11 @@ rockpercussion_snare_sampleset = [
 		pan_right = 1.0
 	}
 ]
-rockpercussion_tom1_sampleset = [
+Rockpercussion_tom1_sampleset = [
 	{
 		velocity_cutoff = 0
 		sample_array = [
-			rockpercussion_rototomhi_lvl_2_01
+			RockPercussion_RotoTomHi_Lvl_2_01
 		]
 		volume_low = -1.0
 		volume_high = 5.0
@@ -3121,7 +3121,7 @@ rockpercussion_tom1_sampleset = [
 	{
 		velocity_cutoff = 25
 		sample_array = [
-			rockpercussion_rototomhi_lvl_2_01
+			RockPercussion_RotoTomHi_Lvl_2_01
 		]
 		volume_low = 5.0
 		volume_high = 11.0
@@ -3132,7 +3132,7 @@ rockpercussion_tom1_sampleset = [
 	{
 		velocity_cutoff = 44
 		sample_array = [
-			rockpercussion_rototomhi_lvl_4_01
+			RockPercussion_RotoTomHi_Lvl_4_01
 		]
 		volume_low = 8.0
 		volume_high = 12.0
@@ -3143,7 +3143,7 @@ rockpercussion_tom1_sampleset = [
 	{
 		velocity_cutoff = 63
 		sample_array = [
-			rockpercussion_rototomhi_lvl_6_01
+			RockPercussion_RotoTomHi_Lvl_6_01
 		]
 		volume_low = 9.0
 		volume_high = 12.0
@@ -3154,7 +3154,7 @@ rockpercussion_tom1_sampleset = [
 	{
 		velocity_cutoff = 82
 		sample_array = [
-			rockpercussion_rototomhi_lvl_8_01
+			RockPercussion_RotoTomHi_Lvl_8_01
 		]
 		volume_low = 9.0
 		volume_high = 12.0
@@ -3165,7 +3165,7 @@ rockpercussion_tom1_sampleset = [
 	{
 		velocity_cutoff = 101
 		sample_array = [
-			rockpercussion_rototomhi_lvl_10_01
+			RockPercussion_RotoTomHi_Lvl_10_01
 		]
 		volume_low = 9.0
 		volume_high = 11.0
@@ -3176,7 +3176,7 @@ rockpercussion_tom1_sampleset = [
 	{
 		velocity_cutoff = 120
 		sample_array = [
-			rockpercussion_rototomhi_lvl_10_01
+			RockPercussion_RotoTomHi_Lvl_10_01
 		]
 		volume_low = 11.0
 		volume_high = 11.0
@@ -3185,11 +3185,11 @@ rockpercussion_tom1_sampleset = [
 		pan_mono = 0.5
 	}
 ]
-rockpercussion_tom2_sampleset = [
+Rockpercussion_tom2_sampleset = [
 	{
 		velocity_cutoff = 0
 		sample_array = [
-			rockpercussion_rototommed_lvl_2_01
+			RockPercussion_RotoTomMed_Lvl_2_01
 		]
 		volume_low = -3.0
 		volume_high = 3.0
@@ -3200,7 +3200,7 @@ rockpercussion_tom2_sampleset = [
 	{
 		velocity_cutoff = 25
 		sample_array = [
-			rockpercussion_rototommed_lvl_2_01
+			RockPercussion_RotoTomMed_Lvl_2_01
 		]
 		volume_low = 3.0
 		volume_high = 8.0
@@ -3211,7 +3211,7 @@ rockpercussion_tom2_sampleset = [
 	{
 		velocity_cutoff = 49
 		sample_array = [
-			rockpercussion_rototommed_lvl_6_01
+			RockPercussion_RotoTomMed_Lvl_6_01
 		]
 		volume_low = 2.0
 		volume_high = 7.0
@@ -3222,7 +3222,7 @@ rockpercussion_tom2_sampleset = [
 	{
 		velocity_cutoff = 73
 		sample_array = [
-			rockpercussion_rototommed_lvl_8_01
+			RockPercussion_RotoTomMed_Lvl_8_01
 		]
 		volume_low = 4.0
 		volume_high = 7.0
@@ -3233,7 +3233,7 @@ rockpercussion_tom2_sampleset = [
 	{
 		velocity_cutoff = 97
 		sample_array = [
-			rockpercussion_rototommed_lvl_10_01
+			RockPercussion_RotoTomMed_Lvl_10_01
 		]
 		volume_low = 4.0
 		volume_high = 6.0
@@ -3244,7 +3244,7 @@ rockpercussion_tom2_sampleset = [
 	{
 		velocity_cutoff = 120
 		sample_array = [
-			rockpercussion_rototommed_lvl_10_01
+			RockPercussion_RotoTomMed_Lvl_10_01
 		]
 		volume_low = 6.0
 		volume_high = 6.0
@@ -3253,13 +3253,13 @@ rockpercussion_tom2_sampleset = [
 		pan_mono = 0.5
 	}
 ]
-rockpercussion_hihat_sampleset = [
+Rockpercussion_hihat_sampleset = [
 	{
 		velocity_cutoff = 0
 		sample_array = [
-			rockpercussion_tambourine_lvl_10_01
-			rockpercussion_tambourine_lvl_10_02
-			rockpercussion_tambourine_lvl_10_03
+			RockPercussion_Tambourine_Lvl_10_01
+			RockPercussion_Tambourine_Lvl_10_02
+			RockPercussion_Tambourine_Lvl_10_03
 		]
 		volume_low = -21.0
 		volume_high = -15.0
@@ -3271,9 +3271,9 @@ rockpercussion_hihat_sampleset = [
 	{
 		velocity_cutoff = 25
 		sample_array = [
-			rockpercussion_tambourine_lvl_10_01
-			rockpercussion_tambourine_lvl_10_02
-			rockpercussion_tambourine_lvl_10_03
+			RockPercussion_Tambourine_Lvl_10_01
+			RockPercussion_Tambourine_Lvl_10_02
+			RockPercussion_Tambourine_Lvl_10_03
 		]
 		volume_low = -15.0
 		volume_high = -9.0
@@ -3285,9 +3285,9 @@ rockpercussion_hihat_sampleset = [
 	{
 		velocity_cutoff = 50
 		sample_array = [
-			rockpercussion_tambourine_lvl_12_01
-			rockpercussion_tambourine_lvl_12_02
-			rockpercussion_tambourine_lvl_12_03
+			RockPercussion_Tambourine_Lvl_12_01
+			RockPercussion_Tambourine_Lvl_12_02
+			RockPercussion_Tambourine_Lvl_12_03
 		]
 		volume_low = -11.0
 		volume_high = -8.0
@@ -3299,9 +3299,9 @@ rockpercussion_hihat_sampleset = [
 	{
 		velocity_cutoff = 75
 		sample_array = [
-			rockpercussion_tambourine_lvl_12_01
-			rockpercussion_tambourine_lvl_12_02
-			rockpercussion_tambourine_lvl_12_03
+			RockPercussion_Tambourine_Lvl_12_01
+			RockPercussion_Tambourine_Lvl_12_02
+			RockPercussion_Tambourine_Lvl_12_03
 		]
 		volume_low = -8.0
 		volume_high = -6.0
@@ -3313,9 +3313,9 @@ rockpercussion_hihat_sampleset = [
 	{
 		velocity_cutoff = 100
 		sample_array = [
-			rockpercussion_tambourine_lvl_12_01
-			rockpercussion_tambourine_lvl_12_02
-			rockpercussion_tambourine_lvl_12_03
+			RockPercussion_Tambourine_Lvl_12_01
+			RockPercussion_Tambourine_Lvl_12_02
+			RockPercussion_Tambourine_Lvl_12_03
 		]
 		volume_low = -6.0
 		volume_high = -6.0
@@ -3325,11 +3325,11 @@ rockpercussion_hihat_sampleset = [
 		pan_right = -0.4
 	}
 ]
-rockpercussion_cymbal_sampleset = [
+Rockpercussion_cymbal_sampleset = [
 	{
 		velocity_cutoff = 0
 		sample_array = [
-			rockpercussion_gong_lvl_10_01
+			RockPercussion_Gong_Lvl_10_01
 		]
 		volume_low = -22.0
 		volume_high = -16.0
@@ -3341,7 +3341,7 @@ rockpercussion_cymbal_sampleset = [
 	{
 		velocity_cutoff = 25
 		sample_array = [
-			rockpercussion_gong_lvl_10_01
+			RockPercussion_Gong_Lvl_10_01
 		]
 		volume_low = -16.0
 		volume_high = -10.0
@@ -3353,7 +3353,7 @@ rockpercussion_cymbal_sampleset = [
 	{
 		velocity_cutoff = 50
 		sample_array = [
-			rockpercussion_gong_lvl_6_01
+			RockPercussion_Gong_Lvl_6_01
 		]
 		volume_low = -10.0
 		volume_high = -7.0
@@ -3365,7 +3365,7 @@ rockpercussion_cymbal_sampleset = [
 	{
 		velocity_cutoff = 75
 		sample_array = [
-			rockpercussion_gong_lvl_6_01
+			RockPercussion_Gong_Lvl_6_01
 		]
 		volume_low = -7.0
 		volume_high = -4.0
@@ -3377,7 +3377,7 @@ rockpercussion_cymbal_sampleset = [
 	{
 		velocity_cutoff = 100
 		sample_array = [
-			rockpercussion_gong_lvl_6_01
+			RockPercussion_Gong_Lvl_6_01
 		]
 		volume_low = -4.0
 		volume_high = -4.0
@@ -3387,11 +3387,11 @@ rockpercussion_cymbal_sampleset = [
 		pan_right = 1.0
 	}
 ]
-hiphoppercussion_kick_sampleset = [
+HipHopPercussion_Kick_Sampleset = [
 	{
 		velocity_cutoff = 0
 		sample_array = [
-			hiphoppercussion_kick_lvl_6_01
+			HipHopPercussion_Kick_Lvl_6_01
 		]
 		volume_low = -15.0
 		volume_high = -9.0
@@ -3402,7 +3402,7 @@ hiphoppercussion_kick_sampleset = [
 	{
 		velocity_cutoff = 25
 		sample_array = [
-			hiphoppercussion_kick_lvl_6_01
+			HipHopPercussion_Kick_Lvl_6_01
 		]
 		volume_low = -9.0
 		volume_high = -3.0
@@ -3413,7 +3413,7 @@ hiphoppercussion_kick_sampleset = [
 	{
 		velocity_cutoff = 35
 		sample_array = [
-			hiphoppercussion_kick_lvl_8_01
+			HipHopPercussion_Kick_Lvl_8_01
 		]
 		volume_low = -9.0
 		volume_high = -3.0
@@ -3424,7 +3424,7 @@ hiphoppercussion_kick_sampleset = [
 	{
 		velocity_cutoff = 45
 		sample_array = [
-			hiphoppercussion_kick_lvl_10_01
+			HipHopPercussion_Kick_Lvl_10_01
 		]
 		volume_low = -9.0
 		volume_high = -3.0
@@ -3435,7 +3435,7 @@ hiphoppercussion_kick_sampleset = [
 	{
 		velocity_cutoff = 80
 		sample_array = [
-			hiphoppercussion_kick_lvl_10_01
+			HipHopPercussion_Kick_Lvl_10_01
 		]
 		volume_low = -3.0
 		volume_high = -3.0
@@ -3444,11 +3444,11 @@ hiphoppercussion_kick_sampleset = [
 		pan_mono = 0.0
 	}
 ]
-hiphoppercussion_snare_sampleset = [
+HipHopPercussion_Snare_Sampleset = [
 	{
 		velocity_cutoff = 0
 		sample_array = [
-			hiphoppercussion_snare_lvl_6_01
+			HipHopPercussion_Snare_Lvl_6_01
 		]
 		volume_low = -17.0
 		volume_high = -11.0
@@ -3459,7 +3459,7 @@ hiphoppercussion_snare_sampleset = [
 	{
 		velocity_cutoff = 25
 		sample_array = [
-			hiphoppercussion_snare_lvl_6_01
+			HipHopPercussion_Snare_Lvl_6_01
 		]
 		volume_low = -11.0
 		volume_high = -5.0
@@ -3470,7 +3470,7 @@ hiphoppercussion_snare_sampleset = [
 	{
 		velocity_cutoff = 57
 		sample_array = [
-			hiphoppercussion_snare_lvl_8_01
+			HipHopPercussion_Snare_Lvl_8_01
 		]
 		volume_low = -5.0
 		volume_high = 1.0
@@ -3481,7 +3481,7 @@ hiphoppercussion_snare_sampleset = [
 	{
 		velocity_cutoff = 89
 		sample_array = [
-			hiphoppercussion_snare_lvl_10_01
+			HipHopPercussion_Snare_Lvl_10_01
 		]
 		volume_low = 1.0
 		volume_high = 4.0
@@ -3492,7 +3492,7 @@ hiphoppercussion_snare_sampleset = [
 	{
 		velocity_cutoff = 120
 		sample_array = [
-			hiphoppercussion_snare_lvl_10_01
+			HipHopPercussion_Snare_Lvl_10_01
 		]
 		volume_low = 4.0
 		volume_high = 4.0
@@ -3501,11 +3501,11 @@ hiphoppercussion_snare_sampleset = [
 		pan_mono = 0.0
 	}
 ]
-hiphoppercussion_tom1_sampleset = [
+HipHopPercussion_Tom1_Sampleset = [
 	{
 		velocity_cutoff = 0
 		sample_array = [
-			hiphoppercussion_vocal_lvl_6_01
+			HipHopPercussion_Vocal_Lvl_6_01
 		]
 		volume_low = -12
 		volume_high = -6
@@ -3516,7 +3516,7 @@ hiphoppercussion_tom1_sampleset = [
 	{
 		velocity_cutoff = 25
 		sample_array = [
-			hiphoppercussion_vocal_lvl_6_01
+			HipHopPercussion_Vocal_Lvl_6_01
 		]
 		volume_low = -6
 		volume_high = -3
@@ -3527,7 +3527,7 @@ hiphoppercussion_tom1_sampleset = [
 	{
 		velocity_cutoff = 57
 		sample_array = [
-			hiphoppercussion_vocal_lvl_8_01
+			HipHopPercussion_Vocal_Lvl_8_01
 		]
 		volume_low = -8
 		volume_high = -5
@@ -3538,7 +3538,7 @@ hiphoppercussion_tom1_sampleset = [
 	{
 		velocity_cutoff = 89
 		sample_array = [
-			hiphoppercussion_vocal_lvl_10_01
+			HipHopPercussion_Vocal_Lvl_10_01
 		]
 		volume_low = -13
 		volume_high = -10
@@ -3549,7 +3549,7 @@ hiphoppercussion_tom1_sampleset = [
 	{
 		velocity_cutoff = 120
 		sample_array = [
-			hiphoppercussion_vocal_lvl_10_01
+			HipHopPercussion_Vocal_Lvl_10_01
 		]
 		volume_low = -10
 		volume_high = -10
@@ -3558,11 +3558,11 @@ hiphoppercussion_tom1_sampleset = [
 		pan_mono = 0.25
 	}
 ]
-hiphoppercussion_tom2_sampleset = [
+HipHopPercussion_Tom2_Sampleset = [
 	{
 		velocity_cutoff = 0
 		sample_array = [
-			hiphoppercussion_scratch_lvl_2_01
+			HipHopPercussion_Scratch_Lvl_2_01
 		]
 		volume_low = -14
 		volume_high = -8
@@ -3573,7 +3573,7 @@ hiphoppercussion_tom2_sampleset = [
 	{
 		velocity_cutoff = 25
 		sample_array = [
-			hiphoppercussion_scratch_lvl_2_01
+			HipHopPercussion_Scratch_Lvl_2_01
 		]
 		volume_low = -8
 		volume_high = -2
@@ -3584,7 +3584,7 @@ hiphoppercussion_tom2_sampleset = [
 	{
 		velocity_cutoff = 49
 		sample_array = [
-			hiphoppercussion_scratch_lvl_4_01
+			HipHopPercussion_Scratch_Lvl_4_01
 		]
 		volume_low = -8
 		volume_high = -2
@@ -3595,7 +3595,7 @@ hiphoppercussion_tom2_sampleset = [
 	{
 		velocity_cutoff = 73
 		sample_array = [
-			hiphoppercussion_scratch_lvl_6_01
+			HipHopPercussion_Scratch_Lvl_6_01
 		]
 		volume_low = -8
 		volume_high = -2
@@ -3606,7 +3606,7 @@ hiphoppercussion_tom2_sampleset = [
 	{
 		velocity_cutoff = 87
 		sample_array = [
-			hiphoppercussion_scratch_lvl_10_01
+			HipHopPercussion_Scratch_Lvl_10_01
 		]
 		volume_low = -8
 		volume_high = -2
@@ -3617,7 +3617,7 @@ hiphoppercussion_tom2_sampleset = [
 	{
 		velocity_cutoff = 120
 		sample_array = [
-			hiphoppercussion_scratch_lvl_10_01
+			HipHopPercussion_Scratch_Lvl_10_01
 		]
 		volume_low = -2
 		volume_high = -2
@@ -3626,11 +3626,11 @@ hiphoppercussion_tom2_sampleset = [
 		pan_mono = 0.0
 	}
 ]
-hiphoppercussion_hihat_sampleset = [
+HipHopPercussion_HiHat_Sampleset = [
 	{
 		velocity_cutoff = 0
 		sample_array = [
-			hiphoppercussion_hihat_lvl_4_01
+			HipHopPercussion_HiHat_Lvl_4_01
 		]
 		volume_low = -17
 		volume_high = -11
@@ -3641,7 +3641,7 @@ hiphoppercussion_hihat_sampleset = [
 	{
 		velocity_cutoff = 25
 		sample_array = [
-			hiphoppercussion_hihat_lvl_4_01
+			HipHopPercussion_HiHat_Lvl_4_01
 		]
 		volume_low = -11
 		volume_high = -8
@@ -3652,7 +3652,7 @@ hiphoppercussion_hihat_sampleset = [
 	{
 		velocity_cutoff = 50
 		sample_array = [
-			hiphoppercussion_hihat_lvl_10_01
+			HipHopPercussion_HiHat_Lvl_10_01
 		]
 		volume_low = -18
 		volume_high = -12
@@ -3663,7 +3663,7 @@ hiphoppercussion_hihat_sampleset = [
 	{
 		velocity_cutoff = 75
 		sample_array = [
-			hiphoppercussion_hihat_lvl_10_01
+			HipHopPercussion_HiHat_Lvl_10_01
 		]
 		volume_low = -12
 		volume_high = -9
@@ -3674,7 +3674,7 @@ hiphoppercussion_hihat_sampleset = [
 	{
 		velocity_cutoff = 100
 		sample_array = [
-			hiphoppercussion_hihat_lvl_10_01
+			HipHopPercussion_HiHat_Lvl_10_01
 		]
 		volume_low = -9
 		volume_high = -9
@@ -3683,11 +3683,11 @@ hiphoppercussion_hihat_sampleset = [
 		pan_mono = -0.4
 	}
 ]
-hiphoppercussion_cymbal_sampleset = [
+HipHopPercussion_Cymbal_Sampleset = [
 	{
 		velocity_cutoff = 0
 		sample_array = [
-			hiphoppercussion_cymbal_lvl_4_01
+			HipHopPercussion_Cymbal_Lvl_4_01
 		]
 		volume_low = -17
 		volume_high = -11
@@ -3698,7 +3698,7 @@ hiphoppercussion_cymbal_sampleset = [
 	{
 		velocity_cutoff = 25
 		sample_array = [
-			hiphoppercussion_cymbal_lvl_4_01
+			HipHopPercussion_Cymbal_Lvl_4_01
 		]
 		volume_low = -11
 		volume_high = -8
@@ -3709,7 +3709,7 @@ hiphoppercussion_cymbal_sampleset = [
 	{
 		velocity_cutoff = 50
 		sample_array = [
-			hiphoppercussion_cymbal_lvl_8_01
+			HipHopPercussion_Cymbal_Lvl_8_01
 		]
 		volume_low = -11
 		volume_high = -8
@@ -3720,7 +3720,7 @@ hiphoppercussion_cymbal_sampleset = [
 	{
 		velocity_cutoff = 75
 		sample_array = [
-			hiphoppercussion_cymbal_lvl_10_01
+			HipHopPercussion_Cymbal_Lvl_10_01
 		]
 		volume_low = -9
 		volume_high = -6
@@ -3731,7 +3731,7 @@ hiphoppercussion_cymbal_sampleset = [
 	{
 		velocity_cutoff = 100
 		sample_array = [
-			hiphoppercussion_cymbal_lvl_10_01
+			HipHopPercussion_Cymbal_Lvl_10_01
 		]
 		volume_low = -6
 		volume_high = -6
@@ -3740,11 +3740,11 @@ hiphoppercussion_cymbal_sampleset = [
 		pan_mono = 0.3
 	}
 ]
-bliphop_snare_sampleset = [
+Bliphop_snare_sampleset = [
 	{
 		velocity_cutoff = 0
 		sample_array = [
-			bliphop_snare_10
+			Bliphop_snare_10
 		]
 		volume_low = -15.0
 		volume_high = -9.0
@@ -3755,7 +3755,7 @@ bliphop_snare_sampleset = [
 	{
 		velocity_cutoff = 25
 		sample_array = [
-			bliphop_snare_10
+			Bliphop_snare_10
 		]
 		volume_low = -9.0
 		volume_high = 6.0
@@ -3766,7 +3766,7 @@ bliphop_snare_sampleset = [
 	{
 		velocity_cutoff = 120
 		sample_array = [
-			bliphop_snare_10
+			Bliphop_snare_10
 		]
 		volume_low = 6.0
 		volume_high = 6.0
@@ -3775,11 +3775,11 @@ bliphop_snare_sampleset = [
 		pan_mono = 0.0
 	}
 ]
-bliphop_kick_sampleset = [
+Bliphop_kick_sampleset = [
 	{
 		velocity_cutoff = 0
 		sample_array = [
-			bliphop_kick_10
+			Bliphop_kick_10
 		]
 		volume_low = -14
 		volume_high = -8.0
@@ -3790,7 +3790,7 @@ bliphop_kick_sampleset = [
 	{
 		velocity_cutoff = 25
 		sample_array = [
-			bliphop_kick_10
+			Bliphop_kick_10
 		]
 		volume_low = -8
 		volume_high = 7.0
@@ -3801,7 +3801,7 @@ bliphop_kick_sampleset = [
 	{
 		velocity_cutoff = 45
 		sample_array = [
-			bliphop_kick_10
+			Bliphop_kick_10
 		]
 		volume_low = 7
 		volume_high = 10.0
@@ -3812,7 +3812,7 @@ bliphop_kick_sampleset = [
 	{
 		velocity_cutoff = 80
 		sample_array = [
-			bliphop_kick_10
+			Bliphop_kick_10
 		]
 		volume_low = 10
 		volume_high = 10.0
@@ -3821,11 +3821,11 @@ bliphop_kick_sampleset = [
 		pan_mono = 0.0
 	}
 ]
-bliphop_tom1_sampleset = [
+Bliphop_tom1_sampleset = [
 	{
 		velocity_cutoff = 0
 		sample_array = [
-			bliphop_tom1
+			Bliphop_tom1
 		]
 		volume_low = -15.0
 		volume_high = -6.0
@@ -3836,7 +3836,7 @@ bliphop_tom1_sampleset = [
 	{
 		velocity_cutoff = 25
 		sample_array = [
-			bliphop_tom1
+			Bliphop_tom1
 		]
 		volume_low = -6.0
 		volume_high = 9.0
@@ -3847,7 +3847,7 @@ bliphop_tom1_sampleset = [
 	{
 		velocity_cutoff = 120
 		sample_array = [
-			bliphop_tom1
+			Bliphop_tom1
 		]
 		volume_low = 9.0
 		volume_high = 9.0
@@ -3856,11 +3856,11 @@ bliphop_tom1_sampleset = [
 		pan_mono = 0.3
 	}
 ]
-bliphop_tom2_sampleset = [
+Bliphop_tom2_sampleset = [
 	{
 		velocity_cutoff = 0
 		sample_array = [
-			bliphop_tom2
+			Bliphop_tom2
 		]
 		volume_low = -12.0
 		volume_high = -3.0
@@ -3871,7 +3871,7 @@ bliphop_tom2_sampleset = [
 	{
 		velocity_cutoff = 25
 		sample_array = [
-			bliphop_tom2
+			Bliphop_tom2
 		]
 		volume_low = -3.0
 		volume_high = 9.0
@@ -3882,7 +3882,7 @@ bliphop_tom2_sampleset = [
 	{
 		velocity_cutoff = 120
 		sample_array = [
-			bliphop_tom2
+			Bliphop_tom2
 		]
 		volume_low = 9.0
 		volume_high = 9.0
@@ -3891,11 +3891,11 @@ bliphop_tom2_sampleset = [
 		pan_mono = 0.4
 	}
 ]
-bliphop_hihat_sampleset = [
+Bliphop_hihat_sampleset = [
 	{
 		velocity_cutoff = 0
 		sample_array = [
-			bliphop_hihat_10
+			Bliphop_hihat_10
 		]
 		volume_low = -19.0
 		volume_high = -13.0
@@ -3906,7 +3906,7 @@ bliphop_hihat_sampleset = [
 	{
 		velocity_cutoff = 25
 		sample_array = [
-			bliphop_hihat_10
+			Bliphop_hihat_10
 		]
 		volume_low = -13.0
 		volume_high = 2.0
@@ -3917,7 +3917,7 @@ bliphop_hihat_sampleset = [
 	{
 		velocity_cutoff = 100
 		sample_array = [
-			bliphop_hihat_10
+			Bliphop_hihat_10
 		]
 		volume_low = 2.0
 		volume_high = 2.0
@@ -3926,11 +3926,11 @@ bliphop_hihat_sampleset = [
 		pan_mono = -0.4
 	}
 ]
-bliphop_cymbal_sampleset = [
+Bliphop_cymbal_sampleset = [
 	{
 		velocity_cutoff = 0
 		sample_array = [
-			bliphop_crash
+			Bliphop_crash
 		]
 		volume_low = -15.0
 		volume_high = -6.0
@@ -3941,7 +3941,7 @@ bliphop_cymbal_sampleset = [
 	{
 		velocity_cutoff = 25
 		sample_array = [
-			bliphop_crash
+			Bliphop_crash
 		]
 		volume_low = -6.0
 		volume_high = 9.0
@@ -3952,7 +3952,7 @@ bliphop_cymbal_sampleset = [
 	{
 		velocity_cutoff = 100
 		sample_array = [
-			bliphop_crash
+			Bliphop_crash
 		]
 		volume_low = 9.0
 		volume_high = 9.0
@@ -3961,11 +3961,11 @@ bliphop_cymbal_sampleset = [
 		pan_mono = 0.2
 	}
 ]
-electro_kick_sampleset = [
+Electro_Kick_Sampleset = [
 	{
 		velocity_cutoff = 0
 		sample_array = [
-			electro_kick
+			Electro_kick
 		]
 		volume_low = -20
 		volume_high = -14
@@ -3976,7 +3976,7 @@ electro_kick_sampleset = [
 	{
 		velocity_cutoff = 25
 		sample_array = [
-			electro_kick
+			Electro_kick
 		]
 		volume_low = -14
 		volume_high = 1
@@ -3987,7 +3987,7 @@ electro_kick_sampleset = [
 	{
 		velocity_cutoff = 45
 		sample_array = [
-			electro_kick
+			Electro_kick
 		]
 		volume_low = 1
 		volume_high = 4
@@ -3998,7 +3998,7 @@ electro_kick_sampleset = [
 	{
 		velocity_cutoff = 80
 		sample_array = [
-			electro_kick
+			Electro_kick
 		]
 		volume_low = 4
 		volume_high = 4
@@ -4007,11 +4007,11 @@ electro_kick_sampleset = [
 		pan_mono = 0.0
 	}
 ]
-electro_snare_sampleset = [
+Electro_Snare_Sampleset = [
 	{
 		velocity_cutoff = 0
 		sample_array = [
-			electro_snare
+			Electro_snare
 		]
 		volume_low = -16.0
 		volume_high = -10.0
@@ -4022,7 +4022,7 @@ electro_snare_sampleset = [
 	{
 		velocity_cutoff = 25
 		sample_array = [
-			electro_snare
+			Electro_snare
 		]
 		volume_low = -10.0
 		volume_high = 5.0
@@ -4033,7 +4033,7 @@ electro_snare_sampleset = [
 	{
 		velocity_cutoff = 120
 		sample_array = [
-			electro_snare
+			Electro_snare
 		]
 		volume_low = 5.0
 		volume_high = 5.0
@@ -4042,11 +4042,11 @@ electro_snare_sampleset = [
 		pan_mono = -0.1
 	}
 ]
-electro_tom1_sampleset = [
+Electro_Tom1_Sampleset = [
 	{
 		velocity_cutoff = 0
 		sample_array = [
-			electro_tommed
+			Electro_tommed
 		]
 		volume_low = -13.0
 		volume_high = -4.0
@@ -4057,7 +4057,7 @@ electro_tom1_sampleset = [
 	{
 		velocity_cutoff = 25
 		sample_array = [
-			electro_tommed
+			Electro_tommed
 		]
 		volume_low = -4.0
 		volume_high = 5.0
@@ -4068,7 +4068,7 @@ electro_tom1_sampleset = [
 	{
 		velocity_cutoff = 72
 		sample_array = [
-			electro_tomhigh
+			Electro_tomhigh
 		]
 		volume_low = -4.0
 		volume_high = 5.0
@@ -4079,7 +4079,7 @@ electro_tom1_sampleset = [
 	{
 		velocity_cutoff = 120
 		sample_array = [
-			electro_tomhigh
+			Electro_tomhigh
 		]
 		volume_low = 5.0
 		volume_high = 5.0
@@ -4088,11 +4088,11 @@ electro_tom1_sampleset = [
 		pan_mono = 0.3
 	}
 ]
-electro_tom2_sampleset = [
+Electro_Tom2_Sampleset = [
 	{
 		velocity_cutoff = 0
 		sample_array = [
-			electro_tomlow
+			Electro_tomlow
 		]
 		volume_low = -19.0
 		volume_high = -10.0
@@ -4103,7 +4103,7 @@ electro_tom2_sampleset = [
 	{
 		velocity_cutoff = 25
 		sample_array = [
-			electro_tomlow
+			Electro_tomlow
 		]
 		volume_low = -10.0
 		volume_high = 5.0
@@ -4114,7 +4114,7 @@ electro_tom2_sampleset = [
 	{
 		velocity_cutoff = 120
 		sample_array = [
-			electro_tomlow
+			Electro_tomlow
 		]
 		volume_low = 5.0
 		volume_high = 5.0
@@ -4123,11 +4123,11 @@ electro_tom2_sampleset = [
 		pan_mono = 0.4
 	}
 ]
-electro_hihat_sampleset = [
+Electro_HiHat_Sampleset = [
 	{
 		velocity_cutoff = 0
 		sample_array = [
-			electro_hhclose
+			Electro_hhclose
 		]
 		volume_low = -15.0
 		volume_high = -3.0
@@ -4138,7 +4138,7 @@ electro_hihat_sampleset = [
 	{
 		velocity_cutoff = 25
 		sample_array = [
-			electro_hhclose
+			Electro_hhclose
 		]
 		volume_low = -3.0
 		volume_high = 3.0
@@ -4149,7 +4149,7 @@ electro_hihat_sampleset = [
 	{
 		velocity_cutoff = 70
 		sample_array = [
-			electro_hhopen
+			Electro_hhopen
 		]
 		volume_low = -9.0
 		volume_high = -3.0
@@ -4160,7 +4160,7 @@ electro_hihat_sampleset = [
 	{
 		velocity_cutoff = 85
 		sample_array = [
-			electro_hhopen
+			Electro_hhopen
 		]
 		volume_low = -3.0
 		volume_high = 0.0
@@ -4171,7 +4171,7 @@ electro_hihat_sampleset = [
 	{
 		velocity_cutoff = 100
 		sample_array = [
-			electro_hhopen
+			Electro_hhopen
 		]
 		volume_low = 0.0
 		volume_high = 0.0
@@ -4180,11 +4180,11 @@ electro_hihat_sampleset = [
 		pan_mono = -0.3
 	}
 ]
-electro_cymbal_sampleset = [
+Electro_Cymbal_Sampleset = [
 	{
 		velocity_cutoff = 0
 		sample_array = [
-			electro_cowbell
+			Electro_cowbell
 		]
 		volume_low = -18.0
 		volume_high = -12.0
@@ -4195,7 +4195,7 @@ electro_cymbal_sampleset = [
 	{
 		velocity_cutoff = 25
 		sample_array = [
-			electro_cowbell
+			Electro_cowbell
 		]
 		volume_low = -12.0
 		volume_high = 3.0
@@ -4206,7 +4206,7 @@ electro_cymbal_sampleset = [
 	{
 		velocity_cutoff = 100
 		sample_array = [
-			electro_cowbell
+			Electro_cowbell
 		]
 		volume_low = 3.0
 		volume_high = 3.0
@@ -4215,11 +4215,11 @@ electro_cymbal_sampleset = [
 		pan_mono = 0.3
 	}
 ]
-electropercussion_snare_sampleset = [
+ElectroPercussion_Snare_Sampleset = [
 	{
 		velocity_cutoff = 0
 		sample_array = [
-			elecperc_rimshot
+			Elecperc_rimshot
 		]
 		volume_low = -24.0
 		volume_high = -15.0
@@ -4230,7 +4230,7 @@ electropercussion_snare_sampleset = [
 	{
 		velocity_cutoff = 25
 		sample_array = [
-			elecperc_rimshot
+			Elecperc_rimshot
 		]
 		volume_low = -15.0
 		volume_high = 0.0
@@ -4241,7 +4241,7 @@ electropercussion_snare_sampleset = [
 	{
 		velocity_cutoff = 120
 		sample_array = [
-			elecperc_rimshot
+			Elecperc_rimshot
 		]
 		volume_low = 0.0
 		volume_high = 0.0
@@ -4250,11 +4250,11 @@ electropercussion_snare_sampleset = [
 		pan_mono = -0.1
 	}
 ]
-electropercussion_kick_sampleset = [
+ElectroPercussion_Kick_Sampleset = [
 	{
 		velocity_cutoff = 0
 		sample_array = [
-			elecperc_kick
+			Elecperc_kick
 		]
 		volume_low = -24.0
 		volume_high = -18.0
@@ -4265,7 +4265,7 @@ electropercussion_kick_sampleset = [
 	{
 		velocity_cutoff = 25
 		sample_array = [
-			elecperc_kick
+			Elecperc_kick
 		]
 		volume_low = -18.0
 		volume_high = -3.0
@@ -4276,7 +4276,7 @@ electropercussion_kick_sampleset = [
 	{
 		velocity_cutoff = 45
 		sample_array = [
-			elecperc_kick
+			Elecperc_kick
 		]
 		volume_low = -3.0
 		volume_high = 0.0
@@ -4287,7 +4287,7 @@ electropercussion_kick_sampleset = [
 	{
 		velocity_cutoff = 80
 		sample_array = [
-			elecperc_kick
+			Elecperc_kick
 		]
 		volume_low = 0.0
 		volume_high = 0.0
@@ -4296,11 +4296,11 @@ electropercussion_kick_sampleset = [
 		pan_mono = 0.0
 	}
 ]
-electropercussion_tom1_sampleset = [
+ElectroPercussion_Tom1_Sampleset = [
 	{
 		velocity_cutoff = 0
 		sample_array = [
-			elecperc_conga2
+			Elecperc_conga2
 		]
 		volume_low = -21.0
 		volume_high = -15.0
@@ -4311,7 +4311,7 @@ electropercussion_tom1_sampleset = [
 	{
 		velocity_cutoff = 25
 		sample_array = [
-			elecperc_conga2
+			Elecperc_conga2
 		]
 		volume_low = -15.0
 		volume_high = 0.0
@@ -4322,7 +4322,7 @@ electropercussion_tom1_sampleset = [
 	{
 		velocity_cutoff = 120
 		sample_array = [
-			elecperc_conga2
+			Elecperc_conga2
 		]
 		volume_low = 0.0
 		volume_high = 0.0
@@ -4331,11 +4331,11 @@ electropercussion_tom1_sampleset = [
 		pan_mono = 0.2
 	}
 ]
-electropercussion_tom2_sampleset = [
+ElectroPercussion_Tom2_Sampleset = [
 	{
 		velocity_cutoff = 0
 		sample_array = [
-			elecperc_conga
+			Elecperc_conga
 		]
 		volume_low = -21.0
 		volume_high = -15.0
@@ -4346,7 +4346,7 @@ electropercussion_tom2_sampleset = [
 	{
 		velocity_cutoff = 25
 		sample_array = [
-			elecperc_conga
+			Elecperc_conga
 		]
 		volume_low = -15.0
 		volume_high = 0.0
@@ -4357,7 +4357,7 @@ electropercussion_tom2_sampleset = [
 	{
 		velocity_cutoff = 120
 		sample_array = [
-			elecperc_conga
+			Elecperc_conga
 		]
 		volume_low = 0.0
 		volume_high = 0.0
@@ -4366,11 +4366,11 @@ electropercussion_tom2_sampleset = [
 		pan_mono = 0.4
 	}
 ]
-electropercussion_hihat_sampleset = [
+ElectroPercussion_HiHat_Sampleset = [
 	{
 		velocity_cutoff = 0
 		sample_array = [
-			elecperc_cabasa
+			Elecperc_cabasa
 		]
 		volume_low = -21.0
 		volume_high = -15.0
@@ -4381,7 +4381,7 @@ electropercussion_hihat_sampleset = [
 	{
 		velocity_cutoff = 25
 		sample_array = [
-			elecperc_cabasa
+			Elecperc_cabasa
 		]
 		volume_low = -15.0
 		volume_high = 0.0
@@ -4392,7 +4392,7 @@ electropercussion_hihat_sampleset = [
 	{
 		velocity_cutoff = 100
 		sample_array = [
-			elecperc_cabasa
+			Elecperc_cabasa
 		]
 		volume_low = 0.0
 		volume_high = 0.0
@@ -4401,11 +4401,11 @@ electropercussion_hihat_sampleset = [
 		pan_mono = -0.3
 	}
 ]
-electropercussion_cymbal_sampleset = [
+ElectroPercussion_Cymbal_Sampleset = [
 	{
 		velocity_cutoff = 0
 		sample_array = [
-			elecperc_clap
+			Elecperc_clap
 		]
 		volume_low = -21.0
 		volume_high = -15.0
@@ -4416,7 +4416,7 @@ electropercussion_cymbal_sampleset = [
 	{
 		velocity_cutoff = 25
 		sample_array = [
-			elecperc_clap
+			Elecperc_clap
 		]
 		volume_low = -15.0
 		volume_high = 0.0
@@ -4427,7 +4427,7 @@ electropercussion_cymbal_sampleset = [
 	{
 		velocity_cutoff = 100
 		sample_array = [
-			elecperc_clap
+			Elecperc_clap
 		]
 		volume_low = 0.0
 		volume_high = 0.0
@@ -4436,11 +4436,11 @@ electropercussion_cymbal_sampleset = [
 		pan_mono = 0.3
 	}
 ]
-house_kick_sampleset = [
+House_kick_sampleset = [
 	{
 		velocity_cutoff = 0
 		sample_array = [
-			house_kick1
+			House_kick1
 		]
 		volume_low = -13
 		volume_high = -7
@@ -4451,7 +4451,7 @@ house_kick_sampleset = [
 	{
 		velocity_cutoff = 25
 		sample_array = [
-			house_kick1
+			House_kick1
 		]
 		volume_low = -7
 		volume_high = 1
@@ -4462,7 +4462,7 @@ house_kick_sampleset = [
 	{
 		velocity_cutoff = 35
 		sample_array = [
-			house_kick3
+			House_kick3
 		]
 		volume_low = -1
 		volume_high = 6
@@ -4473,7 +4473,7 @@ house_kick_sampleset = [
 	{
 		velocity_cutoff = 45
 		sample_array = [
-			house_kick2
+			House_kick2
 		]
 		volume_low = 4
 		volume_high = 7
@@ -4484,7 +4484,7 @@ house_kick_sampleset = [
 	{
 		velocity_cutoff = 80
 		sample_array = [
-			house_kick2
+			House_kick2
 		]
 		volume_low = 7
 		volume_high = 7
@@ -4493,11 +4493,11 @@ house_kick_sampleset = [
 		pan_mono = 0.0
 	}
 ]
-house_snare_sampleset = [
+House_snare_sampleset = [
 	{
 		velocity_cutoff = 0
 		sample_array = [
-			house_clap
+			House_clap
 		]
 		volume_low = -15.0
 		volume_high = -9.0
@@ -4508,7 +4508,7 @@ house_snare_sampleset = [
 	{
 		velocity_cutoff = 25
 		sample_array = [
-			house_clap
+			House_clap
 		]
 		volume_low = -9.0
 		volume_high = -3.0
@@ -4519,7 +4519,7 @@ house_snare_sampleset = [
 	{
 		velocity_cutoff = 57
 		sample_array = [
-			house_snare2
+			House_snare2
 		]
 		volume_low = -2.0
 		volume_high = 4.0
@@ -4530,7 +4530,7 @@ house_snare_sampleset = [
 	{
 		velocity_cutoff = 89
 		sample_array = [
-			house_snare1
+			House_snare1
 		]
 		volume_low = -1.0
 		volume_high = 2.0
@@ -4541,7 +4541,7 @@ house_snare_sampleset = [
 	{
 		velocity_cutoff = 120
 		sample_array = [
-			house_snare1
+			House_snare1
 		]
 		volume_low = 2.0
 		volume_high = 2.0
@@ -4550,11 +4550,11 @@ house_snare_sampleset = [
 		pan_mono = -0.1
 	}
 ]
-house_tom1_sampleset = [
+House_tom1_sampleset = [
 	{
 		velocity_cutoff = 0
 		sample_array = [
-			house_tommed
+			House_tommed
 		]
 		volume_low = -13.0
 		volume_high = -4.0
@@ -4565,7 +4565,7 @@ house_tom1_sampleset = [
 	{
 		velocity_cutoff = 25
 		sample_array = [
-			house_tommed
+			House_tommed
 		]
 		volume_low = -4.0
 		volume_high = 5.0
@@ -4576,7 +4576,7 @@ house_tom1_sampleset = [
 	{
 		velocity_cutoff = 72
 		sample_array = [
-			house_tomhigh
+			House_tomhigh
 		]
 		volume_low = -4.0
 		volume_high = 5.0
@@ -4587,7 +4587,7 @@ house_tom1_sampleset = [
 	{
 		velocity_cutoff = 120
 		sample_array = [
-			house_tomhigh
+			House_tomhigh
 		]
 		volume_low = 5.0
 		volume_high = 5.0
@@ -4596,11 +4596,11 @@ house_tom1_sampleset = [
 		pan_mono = 0.25
 	}
 ]
-house_tom2_sampleset = [
+House_tom2_sampleset = [
 	{
 		velocity_cutoff = 0
 		sample_array = [
-			house_tomlow
+			House_tomlow
 		]
 		volume_low = -19.0
 		volume_high = -10.0
@@ -4611,7 +4611,7 @@ house_tom2_sampleset = [
 	{
 		velocity_cutoff = 25
 		sample_array = [
-			house_tomlow
+			House_tomlow
 		]
 		volume_low = -10.0
 		volume_high = 5.0
@@ -4622,7 +4622,7 @@ house_tom2_sampleset = [
 	{
 		velocity_cutoff = 120
 		sample_array = [
-			house_tomlow
+			House_tomlow
 		]
 		volume_low = 5.0
 		volume_high = 5.0
@@ -4631,11 +4631,11 @@ house_tom2_sampleset = [
 		pan_mono = 0.4
 	}
 ]
-house_hihat_sampleset = [
+House_hihat_sampleset = [
 	{
 		velocity_cutoff = 0
 		sample_array = [
-			house_hhclose
+			House_hhclose
 		]
 		volume_low = -21.0
 		volume_high = -9.0
@@ -4646,7 +4646,7 @@ house_hihat_sampleset = [
 	{
 		velocity_cutoff = 25
 		sample_array = [
-			house_hhclose
+			House_hhclose
 		]
 		volume_low = -9.0
 		volume_high = -3.0
@@ -4657,7 +4657,7 @@ house_hihat_sampleset = [
 	{
 		velocity_cutoff = 70
 		sample_array = [
-			house_hhopen
+			House_hhopen
 		]
 		volume_low = -12.0
 		volume_high = -6.0
@@ -4668,7 +4668,7 @@ house_hihat_sampleset = [
 	{
 		velocity_cutoff = 85
 		sample_array = [
-			house_hhopen
+			House_hhopen
 		]
 		volume_low = -6.0
 		volume_high = -3.0
@@ -4679,7 +4679,7 @@ house_hihat_sampleset = [
 	{
 		velocity_cutoff = 100
 		sample_array = [
-			house_hhopen
+			House_hhopen
 		]
 		volume_low = -3.0
 		volume_high = -3.0
@@ -4688,11 +4688,11 @@ house_hihat_sampleset = [
 		pan_mono = -0.3
 	}
 ]
-house_cymbal_sampleset = [
+House_cymbal_sampleset = [
 	{
 		velocity_cutoff = 0
 		sample_array = [
-			house_ride
+			House_ride
 		]
 		volume_low = -18.0
 		volume_high = -6.0
@@ -4703,7 +4703,7 @@ house_cymbal_sampleset = [
 	{
 		velocity_cutoff = 25
 		sample_array = [
-			house_ride
+			House_ride
 		]
 		volume_low = -6.0
 		volume_high = 0.0
@@ -4714,7 +4714,7 @@ house_cymbal_sampleset = [
 	{
 		velocity_cutoff = 80
 		sample_array = [
-			house_crash
+			House_crash
 		]
 		volume_low = -9.0
 		volume_high = -3.0
@@ -4725,7 +4725,7 @@ house_cymbal_sampleset = [
 	{
 		velocity_cutoff = 90
 		sample_array = [
-			house_crash
+			House_crash
 		]
 		volume_low = -3.0
 		volume_high = 0.0
@@ -4736,7 +4736,7 @@ house_cymbal_sampleset = [
 	{
 		velocity_cutoff = 100
 		sample_array = [
-			house_crash
+			House_crash
 		]
 		volume_low = 0.0
 		volume_high = 0.0
@@ -4745,11 +4745,11 @@ house_cymbal_sampleset = [
 		pan_mono = 0.3
 	}
 ]
-oldschool_kick_sampleset = [
+Oldschool_kick_sampleset = [
 	{
 		velocity_cutoff = 0
 		sample_array = [
-			oldschool_kick1
+			Oldschool_kick1
 		]
 		volume_low = -11
 		volume_high = -5
@@ -4760,7 +4760,7 @@ oldschool_kick_sampleset = [
 	{
 		velocity_cutoff = 25
 		sample_array = [
-			oldschool_kick1
+			Oldschool_kick1
 		]
 		volume_low = -5
 		volume_high = 10
@@ -4771,7 +4771,7 @@ oldschool_kick_sampleset = [
 	{
 		velocity_cutoff = 45
 		sample_array = [
-			oldschool_kick2
+			Oldschool_kick2
 		]
 		volume_low = 7
 		volume_high = 10
@@ -4782,7 +4782,7 @@ oldschool_kick_sampleset = [
 	{
 		velocity_cutoff = 80
 		sample_array = [
-			oldschool_kick2
+			Oldschool_kick2
 		]
 		volume_low = 10
 		volume_high = 10
@@ -4791,11 +4791,11 @@ oldschool_kick_sampleset = [
 		pan_mono = 0.0
 	}
 ]
-oldschool_snare_sampleset = [
+Oldschool_snare_sampleset = [
 	{
 		velocity_cutoff = 0
 		sample_array = [
-			oldschool_snare1
+			Oldschool_snare1
 		]
 		volume_low = -16.0
 		volume_high = -10.0
@@ -4806,7 +4806,7 @@ oldschool_snare_sampleset = [
 	{
 		velocity_cutoff = 25
 		sample_array = [
-			oldschool_snare1
+			Oldschool_snare1
 		]
 		volume_low = -10.0
 		volume_high = -4.0
@@ -4817,7 +4817,7 @@ oldschool_snare_sampleset = [
 	{
 		velocity_cutoff = 57
 		sample_array = [
-			oldschool_snare2
+			Oldschool_snare2
 		]
 		volume_low = -5.0
 		volume_high = 1.0
@@ -4828,7 +4828,7 @@ oldschool_snare_sampleset = [
 	{
 		velocity_cutoff = 89
 		sample_array = [
-			oldschool_snare3
+			Oldschool_snare3
 		]
 		volume_low = 0.0
 		volume_high = 3.0
@@ -4839,7 +4839,7 @@ oldschool_snare_sampleset = [
 	{
 		velocity_cutoff = 120
 		sample_array = [
-			oldschool_snare3
+			Oldschool_snare3
 		]
 		volume_low = 3.0
 		volume_high = 3.0
@@ -4848,11 +4848,11 @@ oldschool_snare_sampleset = [
 		pan_mono = -0.1
 	}
 ]
-oldschool_tom1_sampleset = [
+Oldschool_tom1_sampleset = [
 	{
 		velocity_cutoff = 0
 		sample_array = [
-			oldschool_tommed
+			Oldschool_tommed
 		]
 		volume_low = -13.0
 		volume_high = -4.0
@@ -4863,7 +4863,7 @@ oldschool_tom1_sampleset = [
 	{
 		velocity_cutoff = 25
 		sample_array = [
-			oldschool_tommed
+			Oldschool_tommed
 		]
 		volume_low = -4.0
 		volume_high = 5.0
@@ -4874,7 +4874,7 @@ oldschool_tom1_sampleset = [
 	{
 		velocity_cutoff = 72
 		sample_array = [
-			oldschool_tomhi
+			Oldschool_tomhi
 		]
 		volume_low = -4.0
 		volume_high = 5.0
@@ -4885,7 +4885,7 @@ oldschool_tom1_sampleset = [
 	{
 		velocity_cutoff = 120
 		sample_array = [
-			oldschool_tomhi
+			Oldschool_tomhi
 		]
 		volume_low = 5.0
 		volume_high = 5.0
@@ -4894,11 +4894,11 @@ oldschool_tom1_sampleset = [
 		pan_mono = 0.2
 	}
 ]
-oldschool_tom2_sampleset = [
+Oldschool_tom2_sampleset = [
 	{
 		velocity_cutoff = 0
 		sample_array = [
-			oldschool_tomlow
+			Oldschool_tomlow
 		]
 		volume_low = -24.0
 		volume_high = -15.0
@@ -4909,7 +4909,7 @@ oldschool_tom2_sampleset = [
 	{
 		velocity_cutoff = 25
 		sample_array = [
-			oldschool_tomlow
+			Oldschool_tomlow
 		]
 		volume_low = -15.0
 		volume_high = 0.0
@@ -4920,7 +4920,7 @@ oldschool_tom2_sampleset = [
 	{
 		velocity_cutoff = 120
 		sample_array = [
-			oldschool_tomlow
+			Oldschool_tomlow
 		]
 		volume_low = 0.0
 		volume_high = 0.0
@@ -4929,11 +4929,11 @@ oldschool_tom2_sampleset = [
 		pan_mono = 0.4
 	}
 ]
-oldschool_hihat_sampleset = [
+Oldschool_hihat_sampleset = [
 	{
 		velocity_cutoff = 0
 		sample_array = [
-			oldschool_hhclose
+			Oldschool_hhclose
 		]
 		volume_low = -27.0
 		volume_high = -15.0
@@ -4944,7 +4944,7 @@ oldschool_hihat_sampleset = [
 	{
 		velocity_cutoff = 25
 		sample_array = [
-			oldschool_hhclose
+			Oldschool_hhclose
 		]
 		volume_low = -15.0
 		volume_high = -9.0
@@ -4955,7 +4955,7 @@ oldschool_hihat_sampleset = [
 	{
 		velocity_cutoff = 70
 		sample_array = [
-			oldschool_hhopen
+			Oldschool_hhopen
 		]
 		volume_low = -16.0
 		volume_high = -10.0
@@ -4966,7 +4966,7 @@ oldschool_hihat_sampleset = [
 	{
 		velocity_cutoff = 85
 		sample_array = [
-			oldschool_hhopen
+			Oldschool_hhopen
 		]
 		volume_low = -10.0
 		volume_high = -7.0
@@ -4977,7 +4977,7 @@ oldschool_hihat_sampleset = [
 	{
 		velocity_cutoff = 100
 		sample_array = [
-			oldschool_hhopen
+			Oldschool_hhopen
 		]
 		volume_low = -7.0
 		volume_high = -7.0
@@ -4986,11 +4986,11 @@ oldschool_hihat_sampleset = [
 		pan_mono = -0.2
 	}
 ]
-oldschool_cymbal_sampleset = [
+Oldschool_cymbal_sampleset = [
 	{
 		velocity_cutoff = 0
 		sample_array = [
-			oldschool_ride
+			Oldschool_ride
 		]
 		volume_low = -18.0
 		volume_high = -6.0
@@ -5001,7 +5001,7 @@ oldschool_cymbal_sampleset = [
 	{
 		velocity_cutoff = 25
 		sample_array = [
-			oldschool_ride
+			Oldschool_ride
 		]
 		volume_low = -6.0
 		volume_high = 0.0
@@ -5012,7 +5012,7 @@ oldschool_cymbal_sampleset = [
 	{
 		velocity_cutoff = 80
 		sample_array = [
-			oldschool_crash
+			Oldschool_crash
 		]
 		volume_low = -9.0
 		volume_high = -3.0
@@ -5023,7 +5023,7 @@ oldschool_cymbal_sampleset = [
 	{
 		velocity_cutoff = 90
 		sample_array = [
-			oldschool_crash
+			Oldschool_crash
 		]
 		volume_low = -3.0
 		volume_high = 0.0
@@ -5034,7 +5034,7 @@ oldschool_cymbal_sampleset = [
 	{
 		velocity_cutoff = 100
 		sample_array = [
-			oldschool_crash
+			Oldschool_crash
 		]
 		volume_low = 0.0
 		volume_high = 0.0
@@ -5043,11 +5043,11 @@ oldschool_cymbal_sampleset = [
 		pan_mono = 0.3
 	}
 ]
-oldschoolpercussion_snare_sampleset = [
+Oldschoolpercussion_snare_sampleset = [
 	{
 		velocity_cutoff = 0
 		sample_array = [
-			oldschoolperc_timbalehigh
+			Oldschoolperc_timbalehigh
 		]
 		volume_low = -20.0
 		volume_high = -11.0
@@ -5058,7 +5058,7 @@ oldschoolpercussion_snare_sampleset = [
 	{
 		velocity_cutoff = 25
 		sample_array = [
-			oldschoolperc_timbalehigh
+			Oldschoolperc_timbalehigh
 		]
 		volume_low = -11.0
 		volume_high = 4.0
@@ -5069,7 +5069,7 @@ oldschoolpercussion_snare_sampleset = [
 	{
 		velocity_cutoff = 120
 		sample_array = [
-			oldschoolperc_timbalehigh
+			Oldschoolperc_timbalehigh
 		]
 		volume_low = 4.0
 		volume_high = 4.0
@@ -5078,11 +5078,11 @@ oldschoolpercussion_snare_sampleset = [
 		pan_mono = 0.0
 	}
 ]
-oldschoolpercussion_kick_sampleset = [
+Oldschoolpercussion_kick_sampleset = [
 	{
 		velocity_cutoff = 0
 		sample_array = [
-			oldschoolperc_kick
+			Oldschoolperc_kick
 		]
 		volume_low = -20.0
 		volume_high = -14.0
@@ -5093,7 +5093,7 @@ oldschoolpercussion_kick_sampleset = [
 	{
 		velocity_cutoff = 25
 		sample_array = [
-			oldschoolperc_kick
+			Oldschoolperc_kick
 		]
 		volume_low = -14.0
 		volume_high = 1.0
@@ -5104,7 +5104,7 @@ oldschoolpercussion_kick_sampleset = [
 	{
 		velocity_cutoff = 45
 		sample_array = [
-			oldschoolperc_kick
+			Oldschoolperc_kick
 		]
 		volume_low = 1.0
 		volume_high = 4.0
@@ -5115,7 +5115,7 @@ oldschoolpercussion_kick_sampleset = [
 	{
 		velocity_cutoff = 80
 		sample_array = [
-			oldschoolperc_kick
+			Oldschoolperc_kick
 		]
 		volume_low = 4.0
 		volume_high = 4.0
@@ -5124,11 +5124,11 @@ oldschoolpercussion_kick_sampleset = [
 		pan_mono = 0.0
 	}
 ]
-oldschoolpercussion_tom1_sampleset = [
+Oldschoolpercussion_tom1_sampleset = [
 	{
 		velocity_cutoff = 0
 		sample_array = [
-			oldschoolperc_timbalemed
+			Oldschoolperc_timbalemed
 		]
 		volume_low = -17.0
 		volume_high = -11.0
@@ -5139,7 +5139,7 @@ oldschoolpercussion_tom1_sampleset = [
 	{
 		velocity_cutoff = 25
 		sample_array = [
-			oldschoolperc_timbalemed
+			Oldschoolperc_timbalemed
 		]
 		volume_low = -11.0
 		volume_high = 4.0
@@ -5150,7 +5150,7 @@ oldschoolpercussion_tom1_sampleset = [
 	{
 		velocity_cutoff = 120
 		sample_array = [
-			oldschoolperc_timbalemed
+			Oldschoolperc_timbalemed
 		]
 		volume_low = 4.0
 		volume_high = 4.0
@@ -5159,11 +5159,11 @@ oldschoolpercussion_tom1_sampleset = [
 		pan_mono = 0.3
 	}
 ]
-oldschoolpercussion_tom2_sampleset = [
+Oldschoolpercussion_tom2_sampleset = [
 	{
 		velocity_cutoff = 0
 		sample_array = [
-			oldschoolperc_timbalelow
+			Oldschoolperc_timbalelow
 		]
 		volume_low = -19.0
 		volume_high = -13.0
@@ -5174,7 +5174,7 @@ oldschoolpercussion_tom2_sampleset = [
 	{
 		velocity_cutoff = 25
 		sample_array = [
-			oldschoolperc_timbalelow
+			Oldschoolperc_timbalelow
 		]
 		volume_low = -13.0
 		volume_high = 2.0
@@ -5185,7 +5185,7 @@ oldschoolpercussion_tom2_sampleset = [
 	{
 		velocity_cutoff = 120
 		sample_array = [
-			oldschoolperc_timbalelow
+			Oldschoolperc_timbalelow
 		]
 		volume_low = 2.0
 		volume_high = 2.0
@@ -5194,11 +5194,11 @@ oldschoolpercussion_tom2_sampleset = [
 		pan_mono = 0.4
 	}
 ]
-oldschoolpercussion_hihat_sampleset = [
+Oldschoolpercussion_hihat_sampleset = [
 	{
 		velocity_cutoff = 0
 		sample_array = [
-			oldschoolperc_hhclose
+			Oldschoolperc_hhclose
 		]
 		volume_low = -15.0
 		volume_high = -12.0
@@ -5209,7 +5209,7 @@ oldschoolpercussion_hihat_sampleset = [
 	{
 		velocity_cutoff = 25
 		sample_array = [
-			oldschoolperc_hhclose
+			Oldschoolperc_hhclose
 		]
 		volume_low = -12.0
 		volume_high = 0.0
@@ -5220,7 +5220,7 @@ oldschoolpercussion_hihat_sampleset = [
 	{
 		velocity_cutoff = 70
 		sample_array = [
-			oldschoolperc_hhopen
+			Oldschoolperc_hhopen
 		]
 		volume_low = -5.0
 		volume_high = -2.0
@@ -5231,7 +5231,7 @@ oldschoolpercussion_hihat_sampleset = [
 	{
 		velocity_cutoff = 85
 		sample_array = [
-			oldschoolperc_hhopen
+			Oldschoolperc_hhopen
 		]
 		volume_low = -2.0
 		volume_high = 0.0
@@ -5242,7 +5242,7 @@ oldschoolpercussion_hihat_sampleset = [
 	{
 		velocity_cutoff = 100
 		sample_array = [
-			oldschoolperc_hhopen
+			Oldschoolperc_hhopen
 		]
 		volume_low = 0.0
 		volume_high = 0.0
@@ -5251,11 +5251,11 @@ oldschoolpercussion_hihat_sampleset = [
 		pan_mono = -0.2
 	}
 ]
-oldschoolpercussion_cymbal_sampleset = [
+Oldschoolpercussion_cymbal_sampleset = [
 	{
 		velocity_cutoff = 0
 		sample_array = [
-			oldschoolperc_clap
+			Oldschoolperc_Clap
 		]
 		volume_low = -21.0
 		volume_high = -15.0
@@ -5266,7 +5266,7 @@ oldschoolpercussion_cymbal_sampleset = [
 	{
 		velocity_cutoff = 25
 		sample_array = [
-			oldschoolperc_clap
+			Oldschoolperc_Clap
 		]
 		volume_low = -15.0
 		volume_high = 0.0
@@ -5277,7 +5277,7 @@ oldschoolpercussion_cymbal_sampleset = [
 	{
 		velocity_cutoff = 100
 		sample_array = [
-			oldschoolperc_clap
+			Oldschoolperc_Clap
 		]
 		volume_low = 0.0
 		volume_high = 0.0
@@ -5286,11 +5286,11 @@ oldschoolpercussion_cymbal_sampleset = [
 		pan_mono = 0.2
 	}
 ]
-cheesy_kick_sampleset = [
+Cheesy_kick_sampleset = [
 	{
 		velocity_cutoff = 0
 		sample_array = [
-			cheesy_kick
+			Cheesy_kick
 		]
 		volume_low = -21
 		volume_high = -15
@@ -5301,7 +5301,7 @@ cheesy_kick_sampleset = [
 	{
 		velocity_cutoff = 25
 		sample_array = [
-			cheesy_kick
+			Cheesy_kick
 		]
 		volume_low = -15
 		volume_high = 0
@@ -5312,7 +5312,7 @@ cheesy_kick_sampleset = [
 	{
 		velocity_cutoff = 45
 		sample_array = [
-			cheesy_kick
+			Cheesy_kick
 		]
 		volume_low = 0
 		volume_high = 3
@@ -5323,7 +5323,7 @@ cheesy_kick_sampleset = [
 	{
 		velocity_cutoff = 80
 		sample_array = [
-			cheesy_kick
+			Cheesy_kick
 		]
 		volume_low = 3
 		volume_high = 3
@@ -5332,11 +5332,11 @@ cheesy_kick_sampleset = [
 		pan_mono = 0.0
 	}
 ]
-cheesy_snare_sampleset = [
+Cheesy_snare_sampleset = [
 	{
 		velocity_cutoff = 0
 		sample_array = [
-			cheesy_snare
+			Cheesy_snare
 		]
 		volume_low = -19.0
 		volume_high = -13.0
@@ -5347,7 +5347,7 @@ cheesy_snare_sampleset = [
 	{
 		velocity_cutoff = 25
 		sample_array = [
-			cheesy_snare
+			Cheesy_snare
 		]
 		volume_low = -13.0
 		volume_high = 2.0
@@ -5358,7 +5358,7 @@ cheesy_snare_sampleset = [
 	{
 		velocity_cutoff = 120
 		sample_array = [
-			cheesy_snare
+			Cheesy_snare
 		]
 		volume_low = 2.0
 		volume_high = 2.0
@@ -5367,11 +5367,11 @@ cheesy_snare_sampleset = [
 		pan_mono = -0.1
 	}
 ]
-cheesy_tom1_sampleset = [
+Cheesy_tom1_sampleset = [
 	{
 		velocity_cutoff = 0
 		sample_array = [
-			cheesy_brass
+			Cheesy_brass
 		]
 		volume_low = -18.0
 		volume_high = -9
@@ -5382,7 +5382,7 @@ cheesy_tom1_sampleset = [
 	{
 		velocity_cutoff = 25
 		sample_array = [
-			cheesy_brass
+			Cheesy_brass
 		]
 		volume_low = -9.0
 		volume_high = 0.0
@@ -5393,7 +5393,7 @@ cheesy_tom1_sampleset = [
 	{
 		velocity_cutoff = 72
 		sample_array = [
-			cheesy_orch
+			Cheesy_orch
 		]
 		volume_low = -9.0
 		volume_high = 0.0
@@ -5404,7 +5404,7 @@ cheesy_tom1_sampleset = [
 	{
 		velocity_cutoff = 120
 		sample_array = [
-			cheesy_orch
+			Cheesy_orch
 		]
 		volume_low = 0.0
 		volume_high = 0.0
@@ -5413,11 +5413,11 @@ cheesy_tom1_sampleset = [
 		pan_mono = 0.3
 	}
 ]
-cheesy_tom2_sampleset = [
+Cheesy_tom2_sampleset = [
 	{
 		velocity_cutoff = 0
 		sample_array = [
-			cheesy_vocode1
+			Cheesy_vocode1
 		]
 		volume_low = -18.0
 		volume_high = -9.0
@@ -5428,7 +5428,7 @@ cheesy_tom2_sampleset = [
 	{
 		velocity_cutoff = 25
 		sample_array = [
-			cheesy_vocode1
+			Cheesy_vocode1
 		]
 		volume_low = -9.0
 		volume_high = 0.0
@@ -5439,7 +5439,7 @@ cheesy_tom2_sampleset = [
 	{
 		velocity_cutoff = 72
 		sample_array = [
-			cheesy_vocode2
+			Cheesy_vocode2
 		]
 		volume_low = -9.0
 		volume_high = 0.0
@@ -5450,7 +5450,7 @@ cheesy_tom2_sampleset = [
 	{
 		velocity_cutoff = 120
 		sample_array = [
-			cheesy_vocode1
+			Cheesy_vocode1
 		]
 		volume_low = 0.0
 		volume_high = 0.0
@@ -5459,11 +5459,11 @@ cheesy_tom2_sampleset = [
 		pan_mono = -0.3
 	}
 ]
-cheesy_hihat_sampleset = [
+Cheesy_hihat_sampleset = [
 	{
 		velocity_cutoff = 0
 		sample_array = [
-			cheesy_hhat1
+			Cheesy_hhat1
 		]
 		volume_low = -13.0
 		volume_high = -1.0
@@ -5474,7 +5474,7 @@ cheesy_hihat_sampleset = [
 	{
 		velocity_cutoff = 25
 		sample_array = [
-			cheesy_hhat1
+			Cheesy_hhat1
 		]
 		volume_low = -1.0
 		volume_high = 5.0
@@ -5485,7 +5485,7 @@ cheesy_hihat_sampleset = [
 	{
 		velocity_cutoff = 70
 		sample_array = [
-			cheesy_hhat2
+			Cheesy_hhat2
 		]
 		volume_low = -5.0
 		volume_high = 1.0
@@ -5496,7 +5496,7 @@ cheesy_hihat_sampleset = [
 	{
 		velocity_cutoff = 85
 		sample_array = [
-			cheesy_hhat2
+			Cheesy_hhat2
 		]
 		volume_low = 1.0
 		volume_high = 5.0
@@ -5507,7 +5507,7 @@ cheesy_hihat_sampleset = [
 	{
 		velocity_cutoff = 100
 		sample_array = [
-			cheesy_hhat2
+			Cheesy_hhat2
 		]
 		volume_low = 5.0
 		volume_high = 5.0
@@ -5516,11 +5516,11 @@ cheesy_hihat_sampleset = [
 		pan_mono = -0.4
 	}
 ]
-cheesy_cymbal_sampleset = [
+Cheesy_cymbal_sampleset = [
 	{
 		velocity_cutoff = 0
 		sample_array = [
-			cheesy_scratch2
+			Cheesy_scratch2
 		]
 		volume_low = -18.0
 		volume_high = -9.0
@@ -5531,7 +5531,7 @@ cheesy_cymbal_sampleset = [
 	{
 		velocity_cutoff = 25
 		sample_array = [
-			cheesy_scratch2
+			Cheesy_scratch2
 		]
 		volume_low = -9.0
 		volume_high = 0.0
@@ -5542,7 +5542,7 @@ cheesy_cymbal_sampleset = [
 	{
 		velocity_cutoff = 50
 		sample_array = [
-			cheesy_scratch1
+			Cheesy_scratch1
 		]
 		volume_low = -9.0
 		volume_high = 0.0
@@ -5553,7 +5553,7 @@ cheesy_cymbal_sampleset = [
 	{
 		velocity_cutoff = 75
 		sample_array = [
-			cheesy_cowbell
+			Cheesy_cowbell
 		]
 		volume_low = -9.0
 		volume_high = 0.0
@@ -5564,7 +5564,7 @@ cheesy_cymbal_sampleset = [
 	{
 		velocity_cutoff = 100
 		sample_array = [
-			cheesy_cowbell
+			Cheesy_cowbell
 		]
 		volume_low = 0.0
 		volume_high = 0.0
@@ -5573,11 +5573,11 @@ cheesy_cymbal_sampleset = [
 		pan_mono = 0.4
 	}
 ]
-eightys_kick_sampleset = [
+Eightys_kick_sampleset = [
 	{
 		velocity_cutoff = 0
 		sample_array = [
-			eightys_kick
+			Eightys_kick
 		]
 		volume_low = -19.0
 		volume_high = -13.0
@@ -5588,7 +5588,7 @@ eightys_kick_sampleset = [
 	{
 		velocity_cutoff = 25
 		sample_array = [
-			eightys_kick
+			Eightys_kick
 		]
 		volume_low = -13.0
 		volume_high = 2.0
@@ -5599,7 +5599,7 @@ eightys_kick_sampleset = [
 	{
 		velocity_cutoff = 45
 		sample_array = [
-			eightys_kick
+			Eightys_kick
 		]
 		volume_low = 2.0
 		volume_high = 5.0
@@ -5610,7 +5610,7 @@ eightys_kick_sampleset = [
 	{
 		velocity_cutoff = 80
 		sample_array = [
-			eightys_kick
+			Eightys_kick
 		]
 		volume_low = 5.0
 		volume_high = 5.0
@@ -5619,11 +5619,11 @@ eightys_kick_sampleset = [
 		pan_mono = 0.0
 	}
 ]
-eightys_snare_sampleset = [
+Eightys_snare_sampleset = [
 	{
 		velocity_cutoff = 0
 		sample_array = [
-			eightys_snare1
+			Eightys_snare1
 		]
 		volume_low = -15.0
 		volume_high = -9.0
@@ -5634,7 +5634,7 @@ eightys_snare_sampleset = [
 	{
 		velocity_cutoff = 25
 		sample_array = [
-			eightys_snare1
+			Eightys_snare1
 		]
 		volume_low = -9.0
 		volume_high = 6.0
@@ -5645,7 +5645,7 @@ eightys_snare_sampleset = [
 	{
 		velocity_cutoff = 72
 		sample_array = [
-			eightys_snare2
+			Eightys_snare2
 		]
 		volume_low = 1.0
 		volume_high = 3.0
@@ -5656,7 +5656,7 @@ eightys_snare_sampleset = [
 	{
 		velocity_cutoff = 120
 		sample_array = [
-			eightys_snare2
+			Eightys_snare2
 		]
 		volume_low = 3.0
 		volume_high = 3.0
@@ -5665,11 +5665,11 @@ eightys_snare_sampleset = [
 		pan_mono = -0.1
 	}
 ]
-eightys_tom1_sampleset = [
+Eightys_tom1_sampleset = [
 	{
 		velocity_cutoff = 0
 		sample_array = [
-			eightys_tommed
+			Eightys_tommed
 		]
 		volume_low = -13.0
 		volume_high = -4.0
@@ -5680,7 +5680,7 @@ eightys_tom1_sampleset = [
 	{
 		velocity_cutoff = 25
 		sample_array = [
-			eightys_tommed
+			Eightys_tommed
 		]
 		volume_low = -4.0
 		volume_high = 2.0
@@ -5691,7 +5691,7 @@ eightys_tom1_sampleset = [
 	{
 		velocity_cutoff = 72
 		sample_array = [
-			eightys_tomhigh
+			Eightys_tomhigh
 		]
 		volume_low = 0.0
 		volume_high = 3.0
@@ -5702,7 +5702,7 @@ eightys_tom1_sampleset = [
 	{
 		velocity_cutoff = 120
 		sample_array = [
-			eightys_tomhigh
+			Eightys_tomhigh
 		]
 		volume_low = 3.0
 		volume_high = 3.0
@@ -5711,11 +5711,11 @@ eightys_tom1_sampleset = [
 		pan_mono = 0.3
 	}
 ]
-eightys_tom2_sampleset = [
+Eightys_tom2_sampleset = [
 	{
 		velocity_cutoff = 0
 		sample_array = [
-			eightys_tomlow
+			Eightys_tomlow
 		]
 		volume_low = -17.0
 		volume_high = -8.0
@@ -5726,7 +5726,7 @@ eightys_tom2_sampleset = [
 	{
 		velocity_cutoff = 25
 		sample_array = [
-			eightys_tomlow
+			Eightys_tomlow
 		]
 		volume_low = -8.0
 		volume_high = 7.0
@@ -5737,7 +5737,7 @@ eightys_tom2_sampleset = [
 	{
 		velocity_cutoff = 120
 		sample_array = [
-			eightys_tomlow
+			Eightys_tomlow
 		]
 		volume_low = 7.0
 		volume_high = 7.0
@@ -5746,11 +5746,11 @@ eightys_tom2_sampleset = [
 		pan_mono = 0.5
 	}
 ]
-eightys_hihat_sampleset = [
+Eightys_hihat_sampleset = [
 	{
 		velocity_cutoff = 0
 		sample_array = [
-			eightys_hhclosed
+			Eightys_hhclosed
 		]
 		volume_low = -21.0
 		volume_high = -9.0
@@ -5761,7 +5761,7 @@ eightys_hihat_sampleset = [
 	{
 		velocity_cutoff = 25
 		sample_array = [
-			eightys_hhclosed
+			Eightys_hhclosed
 		]
 		volume_low = -9.0
 		volume_high = 6.0
@@ -5772,7 +5772,7 @@ eightys_hihat_sampleset = [
 	{
 		velocity_cutoff = 70
 		sample_array = [
-			eightys_hhopen
+			Eightys_hhopen
 		]
 		volume_low = -3.0
 		volume_high = 3.0
@@ -5783,7 +5783,7 @@ eightys_hihat_sampleset = [
 	{
 		velocity_cutoff = 85
 		sample_array = [
-			eightys_hhopen
+			Eightys_hhopen
 		]
 		volume_low = 2.0
 		volume_high = 6.0
@@ -5794,7 +5794,7 @@ eightys_hihat_sampleset = [
 	{
 		velocity_cutoff = 100
 		sample_array = [
-			eightys_hhopen
+			Eightys_hhopen
 		]
 		volume_low = 6.0
 		volume_high = 6.0
@@ -5803,11 +5803,11 @@ eightys_hihat_sampleset = [
 		pan_mono = -0.3
 	}
 ]
-eightys_cymbal_sampleset = [
+Eightys_cymbal_sampleset = [
 	{
 		velocity_cutoff = 0
 		sample_array = [
-			eightys_crash1
+			Eightys_crash1
 		]
 		volume_low = -9.0
 		volume_high = 0.0
@@ -5818,7 +5818,7 @@ eightys_cymbal_sampleset = [
 	{
 		velocity_cutoff = 25
 		sample_array = [
-			eightys_crash1
+			Eightys_crash1
 		]
 		volume_low = 0.0
 		volume_high = 9.0
@@ -5829,7 +5829,7 @@ eightys_cymbal_sampleset = [
 	{
 		velocity_cutoff = 50
 		sample_array = [
-			eightys_crash2
+			Eightys_crash2
 		]
 		volume_low = 0.0
 		volume_high = 9.0
@@ -5840,7 +5840,7 @@ eightys_cymbal_sampleset = [
 	{
 		velocity_cutoff = 75
 		sample_array = [
-			eightys_crash3
+			Eightys_crash3
 		]
 		volume_low = -4.0
 		volume_high = 5.0
@@ -5851,7 +5851,7 @@ eightys_cymbal_sampleset = [
 	{
 		velocity_cutoff = 100
 		sample_array = [
-			eightys_crash3
+			Eightys_crash3
 		]
 		volume_low = 5.0
 		volume_high = 5.0
@@ -5860,11 +5860,11 @@ eightys_cymbal_sampleset = [
 		pan_mono = 0.3
 	}
 ]
-computight_snare_sampleset = [
+Computight_snare_sampleset = [
 	{
 		velocity_cutoff = 0
 		sample_array = [
-			compukit_snare
+			Compukit_snare
 		]
 		volume_low = -19.0
 		volume_high = -10.0
@@ -5875,7 +5875,7 @@ computight_snare_sampleset = [
 	{
 		velocity_cutoff = 25
 		sample_array = [
-			compukit_snare
+			Compukit_snare
 		]
 		volume_low = -10.0
 		volume_high = 5.0
@@ -5886,7 +5886,7 @@ computight_snare_sampleset = [
 	{
 		velocity_cutoff = 120
 		sample_array = [
-			compukit_snare
+			Compukit_snare
 		]
 		volume_low = 5.0
 		volume_high = 5.0
@@ -5895,11 +5895,11 @@ computight_snare_sampleset = [
 		pan_mono = 0.0
 	}
 ]
-computight_kick_sampleset = [
+Computight_kick_sampleset = [
 	{
 		velocity_cutoff = 0
 		sample_array = [
-			compukit_kick
+			Compukit_kick
 		]
 		volume_low = -19.0
 		volume_high = -13.0
@@ -5910,7 +5910,7 @@ computight_kick_sampleset = [
 	{
 		velocity_cutoff = 25
 		sample_array = [
-			compukit_kick
+			Compukit_kick
 		]
 		volume_low = -13.0
 		volume_high = 2.0
@@ -5921,7 +5921,7 @@ computight_kick_sampleset = [
 	{
 		velocity_cutoff = 45
 		sample_array = [
-			compukit_kick
+			Compukit_kick
 		]
 		volume_low = 2.0
 		volume_high = 5.0
@@ -5932,7 +5932,7 @@ computight_kick_sampleset = [
 	{
 		velocity_cutoff = 80
 		sample_array = [
-			compukit_kick
+			Compukit_kick
 		]
 		volume_low = 5.0
 		volume_high = 5.0
@@ -5941,11 +5941,11 @@ computight_kick_sampleset = [
 		pan_mono = 0.0
 	}
 ]
-computight_tom1_sampleset = [
+Computight_tom1_sampleset = [
 	{
 		velocity_cutoff = 0
 		sample_array = [
-			compukit_woodhigh
+			Compukit_woodhigh
 		]
 		volume_low = -19.0
 		volume_high = -13.0
@@ -5956,7 +5956,7 @@ computight_tom1_sampleset = [
 	{
 		velocity_cutoff = 25
 		sample_array = [
-			compukit_woodhigh
+			Compukit_woodhigh
 		]
 		volume_low = -13.0
 		volume_high = 2.0
@@ -5967,7 +5967,7 @@ computight_tom1_sampleset = [
 	{
 		velocity_cutoff = 120
 		sample_array = [
-			compukit_woodhigh
+			Compukit_woodhigh
 		]
 		volume_low = 2.0
 		volume_high = 2.0
@@ -5976,11 +5976,11 @@ computight_tom1_sampleset = [
 		pan_mono = 0.3
 	}
 ]
-computight_tom2_sampleset = [
+Computight_tom2_sampleset = [
 	{
 		velocity_cutoff = 0
 		sample_array = [
-			compukit_woodlow
+			Compukit_woodlow
 		]
 		volume_low = -21.0
 		volume_high = -15.0
@@ -5991,7 +5991,7 @@ computight_tom2_sampleset = [
 	{
 		velocity_cutoff = 25
 		sample_array = [
-			compukit_woodlow
+			Compukit_woodlow
 		]
 		volume_low = -15.0
 		volume_high = 0.0
@@ -6002,7 +6002,7 @@ computight_tom2_sampleset = [
 	{
 		velocity_cutoff = 120
 		sample_array = [
-			compukit_woodlow
+			Compukit_woodlow
 		]
 		volume_low = 0.0
 		volume_high = 0.0
@@ -6011,11 +6011,11 @@ computight_tom2_sampleset = [
 		pan_mono = 0.3
 	}
 ]
-computight_hihat_sampleset = [
+Computight_hihat_sampleset = [
 	{
 		velocity_cutoff = 0
 		sample_array = [
-			compukit_hhclose
+			Compukit_hhclose
 		]
 		volume_low = -11.0
 		volume_high = -8.0
@@ -6026,7 +6026,7 @@ computight_hihat_sampleset = [
 	{
 		velocity_cutoff = 25
 		sample_array = [
-			compukit_hhclose
+			Compukit_hhclose
 		]
 		volume_low = -8.0
 		volume_high = 4.0
@@ -6037,7 +6037,7 @@ computight_hihat_sampleset = [
 	{
 		velocity_cutoff = 70
 		sample_array = [
-			compukit_hhopen
+			Compukit_hhopen
 		]
 		volume_low = -1.0
 		volume_high = 2.0
@@ -6048,7 +6048,7 @@ computight_hihat_sampleset = [
 	{
 		velocity_cutoff = 85
 		sample_array = [
-			compukit_hhopen
+			Compukit_hhopen
 		]
 		volume_low = 2.0
 		volume_high = 4.0
@@ -6059,7 +6059,7 @@ computight_hihat_sampleset = [
 	{
 		velocity_cutoff = 100
 		sample_array = [
-			compukit_hhopen
+			Compukit_hhopen
 		]
 		volume_low = 4.0
 		volume_high = 4.0
@@ -6068,11 +6068,11 @@ computight_hihat_sampleset = [
 		pan_mono = -0.3
 	}
 ]
-computight_cymbal_sampleset = [
+Computight_cymbal_sampleset = [
 	{
 		velocity_cutoff = 0
 		sample_array = [
-			compukit_cowbell
+			Compukit_cowbell
 		]
 		volume_low = -21.0
 		volume_high = -15.0
@@ -6083,7 +6083,7 @@ computight_cymbal_sampleset = [
 	{
 		velocity_cutoff = 25
 		sample_array = [
-			compukit_cowbell
+			Compukit_cowbell
 		]
 		volume_low = -15.0
 		volume_high = 0.0
@@ -6094,7 +6094,7 @@ computight_cymbal_sampleset = [
 	{
 		velocity_cutoff = 100
 		sample_array = [
-			compukit_cowbell
+			Compukit_cowbell
 		]
 		volume_low = 0.0
 		volume_high = 0.0
@@ -6103,7 +6103,7 @@ computight_cymbal_sampleset = [
 		pan_mono = 0.0
 	}
 ]
-india_tom2_sampleset = [
+India_tom2_sampleset = [
 	{
 		velocity_cutoff = 0
 		sample_array = [
@@ -6138,7 +6138,7 @@ india_tom2_sampleset = [
 		pan_mono = 0.5
 	}
 ]
-india_snare_sampleset = [
+India_snare_sampleset = [
 	{
 		velocity_cutoff = 0
 		sample_array = [
@@ -6173,7 +6173,7 @@ india_snare_sampleset = [
 		pan_mono = -0.1
 	}
 ]
-india_hihat_sampleset = [
+India_hihat_sampleset = [
 	{
 		velocity_cutoff = 0
 		sample_array = [
@@ -6208,7 +6208,7 @@ india_hihat_sampleset = [
 		pan_mono = -0.2
 	}
 ]
-india_tom1_sampleset = [
+India_tom1_sampleset = [
 	{
 		velocity_cutoff = 0
 		sample_array = [
@@ -6243,7 +6243,7 @@ india_tom1_sampleset = [
 		pan_mono = 0.2
 	}
 ]
-india_cymbal_sampleset = [
+India_cymbal_sampleset = [
 	{
 		velocity_cutoff = 0
 		sample_array = [
@@ -6278,7 +6278,7 @@ india_cymbal_sampleset = [
 		pan_mono = 0.3
 	}
 ]
-india_kick_sampleset = [
+India_kick_sampleset = [
 	{
 		velocity_cutoff = 0
 		sample_array = [
@@ -6324,11 +6324,11 @@ india_kick_sampleset = [
 		pan_mono = 0.0
 	}
 ]
-indiagirl_tom2_sampleset = [
+Indiagirl_tom2_sampleset = [
 	{
 		velocity_cutoff = 0
 		sample_array = [
-			india_girl3
+			India_girl3
 		]
 		volume_low = -11.0
 		volume_high = 9.0
@@ -6337,11 +6337,11 @@ indiagirl_tom2_sampleset = [
 		pan_mono = 0.4
 	}
 ]
-indiagirl_snare_sampleset = [
+Indiagirl_snare_sampleset = [
 	{
 		velocity_cutoff = 0
 		sample_array = [
-			india_girl1
+			India_girl1
 		]
 		volume_low = -11.0
 		volume_high = 9.0
@@ -6350,11 +6350,11 @@ indiagirl_snare_sampleset = [
 		pan_mono = -0.1
 	}
 ]
-indiagirl_hihat_sampleset = [
+Indiagirl_hihat_sampleset = [
 	{
 		velocity_cutoff = 0
 		sample_array = [
-			india_girl2
+			India_girl2
 		]
 		volume_low = -11.0
 		volume_high = 9.0
@@ -6365,7 +6365,7 @@ indiagirl_hihat_sampleset = [
 	{
 		velocity_cutoff = 100
 		sample_array = [
-			india_girl_longer
+			India_girl_longer
 		]
 		volume_low = 7.0
 		volume_high = 9.0
@@ -6374,11 +6374,11 @@ indiagirl_hihat_sampleset = [
 		pan_mono = -0.2
 	}
 ]
-indiagirl_tom1_sampleset = [
+Indiagirl_tom1_sampleset = [
 	{
 		velocity_cutoff = 0
 		sample_array = [
-			india_girl4
+			India_girl4
 		]
 		volume_low = -11.0
 		volume_high = 9.0
@@ -6387,11 +6387,11 @@ indiagirl_tom1_sampleset = [
 		pan_mono = 0.2
 	}
 ]
-indiagirl_cymbal_sampleset = [
+Indiagirl_cymbal_sampleset = [
 	{
 		velocity_cutoff = 0
 		sample_array = [
-			india_girl_longer2
+			India_girl_longer2
 		]
 		volume_low = -11.0
 		volume_high = 9.0
@@ -6400,11 +6400,11 @@ indiagirl_cymbal_sampleset = [
 		pan_mono = 0.3
 	}
 ]
-indiagirl_kick_sampleset = [
+Indiagirl_kick_sampleset = [
 	{
 		velocity_cutoff = 0
 		sample_array = [
-			india_girlkick
+			India_girlkick
 		]
 		volume_low = -11.0
 		volume_high = 9.0
@@ -6413,7 +6413,7 @@ indiagirl_kick_sampleset = [
 		pan_mono = 0.0
 	}
 ]
-dub_kick_sampleset = [
+Dub_kick_sampleset = [
 	{
 		velocity_cutoff = 0
 		sample_array = [
@@ -6459,7 +6459,7 @@ dub_kick_sampleset = [
 		pan_mono = 0.0
 	}
 ]
-dub_snare_sampleset = [
+Dub_snare_sampleset = [
 	{
 		velocity_cutoff = 0
 		sample_array = [
@@ -6494,7 +6494,7 @@ dub_snare_sampleset = [
 		pan_mono = -0.1
 	}
 ]
-dub_tom1_sampleset = [
+Dub_tom1_sampleset = [
 	{
 		velocity_cutoff = 0
 		sample_array = [
@@ -6529,7 +6529,7 @@ dub_tom1_sampleset = [
 		pan_mono = 0.1
 	}
 ]
-dub_tom2_sampleset = [
+Dub_tom2_sampleset = [
 	{
 		velocity_cutoff = 0
 		sample_array = [
@@ -6564,7 +6564,7 @@ dub_tom2_sampleset = [
 		pan_mono = 0.3
 	}
 ]
-dub_hihat_sampleset = [
+Dub_hihat_sampleset = [
 	{
 		velocity_cutoff = 0
 		sample_array = [
@@ -6599,7 +6599,7 @@ dub_hihat_sampleset = [
 		pan_mono = -0.2
 	}
 ]
-dub_cymbal_sampleset = [
+Dub_cymbal_sampleset = [
 	{
 		velocity_cutoff = 0
 		sample_array = [
@@ -7098,7 +7098,7 @@ conga_cymbal_sampleset = [
 		pan_mono = 0.3
 	}
 ]
-orchestral_kick_sampleset = [
+Orchestral_kick_sampleset = [
 	{
 		velocity_cutoff = 0
 		sample_array = [
@@ -7144,7 +7144,7 @@ orchestral_kick_sampleset = [
 		pan_mono = 0.0
 	}
 ]
-orchestral_snare_sampleset = [
+Orchestral_snare_sampleset = [
 	{
 		velocity_cutoff = 0
 		sample_array = [
@@ -7179,7 +7179,7 @@ orchestral_snare_sampleset = [
 		pan_mono = -0.1
 	}
 ]
-orchestral_tom1_sampleset = [
+Orchestral_tom1_sampleset = [
 	{
 		velocity_cutoff = 0
 		sample_array = [
@@ -7214,7 +7214,7 @@ orchestral_tom1_sampleset = [
 		pan_mono = 0.2
 	}
 ]
-orchestral_tom2_sampleset = [
+Orchestral_tom2_sampleset = [
 	{
 		velocity_cutoff = 0
 		sample_array = [
@@ -7249,7 +7249,7 @@ orchestral_tom2_sampleset = [
 		pan_mono = 0.4
 	}
 ]
-orchestral_hihat_sampleset = [
+Orchestral_hihat_sampleset = [
 	{
 		velocity_cutoff = 0
 		sample_array = [
@@ -7284,7 +7284,7 @@ orchestral_hihat_sampleset = [
 		pan_mono = -0.2
 	}
 ]
-orchestral_cymbal_sampleset = [
+Orchestral_cymbal_sampleset = [
 	{
 		velocity_cutoff = 0
 		sample_array = [
@@ -7319,7 +7319,7 @@ orchestral_cymbal_sampleset = [
 		pan_mono = 0.2
 	}
 ]
-jazzy_kick_sampleset = [
+Jazzy_kick_sampleset = [
 	{
 		velocity_cutoff = 0
 		sample_array = [
@@ -7365,7 +7365,7 @@ jazzy_kick_sampleset = [
 		pan_mono = 0.0
 	}
 ]
-jazzy_snare_sampleset = [
+Jazzy_snare_sampleset = [
 	{
 		velocity_cutoff = 0
 		sample_array = [
@@ -7400,7 +7400,7 @@ jazzy_snare_sampleset = [
 		pan_mono = -0.1
 	}
 ]
-jazzy_tom1_sampleset = [
+Jazzy_tom1_sampleset = [
 	{
 		velocity_cutoff = 0
 		sample_array = [
@@ -7435,7 +7435,7 @@ jazzy_tom1_sampleset = [
 		pan_mono = 0.2
 	}
 ]
-jazzy_tom2_sampleset = [
+Jazzy_tom2_sampleset = [
 	{
 		velocity_cutoff = 0
 		sample_array = [
@@ -7470,7 +7470,7 @@ jazzy_tom2_sampleset = [
 		pan_mono = 0.4
 	}
 ]
-jazzy_hihat_sampleset = [
+Jazzy_hihat_sampleset = [
 	{
 		velocity_cutoff = 0
 		sample_array = [
@@ -7505,7 +7505,7 @@ jazzy_hihat_sampleset = [
 		pan_mono = -0.25
 	}
 ]
-jazzy_cymbal_sampleset = [
+Jazzy_cymbal_sampleset = [
 	{
 		velocity_cutoff = 0
 		sample_array = [
@@ -7540,11 +7540,11 @@ jazzy_cymbal_sampleset = [
 		pan_mono = 0.3
 	}
 ]
-scratch_electro_kick_sampleset = [
+Scratch_electro_kick_sampleset = [
 	{
 		velocity_cutoff = 0
 		sample_array = [
-			scratch_electro_kick
+			Scratch_electro_kick
 		]
 		volume_low = -15.0
 		volume_high = -10.0
@@ -7555,7 +7555,7 @@ scratch_electro_kick_sampleset = [
 	{
 		velocity_cutoff = 25
 		sample_array = [
-			scratch_electro_kick
+			Scratch_electro_kick
 		]
 		volume_low = -10.0
 		volume_high = 6.0
@@ -7566,7 +7566,7 @@ scratch_electro_kick_sampleset = [
 	{
 		velocity_cutoff = 45
 		sample_array = [
-			scratch_electro_kick
+			Scratch_electro_kick
 		]
 		volume_low = 6.0
 		volume_high = 9.0
@@ -7577,7 +7577,7 @@ scratch_electro_kick_sampleset = [
 	{
 		velocity_cutoff = 80
 		sample_array = [
-			scratch_electro_kick
+			Scratch_electro_kick
 		]
 		volume_low = 9.0
 		volume_high = 9.0
@@ -7586,11 +7586,11 @@ scratch_electro_kick_sampleset = [
 		pan_mono = 0.0
 	}
 ]
-scratch_electro_snare_sampleset = [
+Scratch_electro_snare_sampleset = [
 	{
 		velocity_cutoff = 0
 		sample_array = [
-			scratch_electro_snare
+			Scratch_electro_snare
 		]
 		volume_low = -17.0
 		volume_high = -8.0
@@ -7601,7 +7601,7 @@ scratch_electro_snare_sampleset = [
 	{
 		velocity_cutoff = 25
 		sample_array = [
-			scratch_electro_snare
+			Scratch_electro_snare
 		]
 		volume_low = -8.0
 		volume_high = 7.0
@@ -7612,7 +7612,7 @@ scratch_electro_snare_sampleset = [
 	{
 		velocity_cutoff = 120
 		sample_array = [
-			scratch_electro_snare
+			Scratch_electro_snare
 		]
 		volume_low = 7.0
 		volume_high = 7.0
@@ -7621,11 +7621,11 @@ scratch_electro_snare_sampleset = [
 		pan_mono = -0.1
 	}
 ]
-scratch_electro_tom1_sampleset = [
+Scratch_electro_tom1_sampleset = [
 	{
 		velocity_cutoff = 0
 		sample_array = [
-			scratch_electro_tom1
+			Scratch_electro_tom1
 		]
 		volume_low = -21.0
 		volume_high = -12.0
@@ -7636,7 +7636,7 @@ scratch_electro_tom1_sampleset = [
 	{
 		velocity_cutoff = 25
 		sample_array = [
-			scratch_electro_tom1
+			Scratch_electro_tom1
 		]
 		volume_low = -12.0
 		volume_high = 3.0
@@ -7647,7 +7647,7 @@ scratch_electro_tom1_sampleset = [
 	{
 		velocity_cutoff = 120
 		sample_array = [
-			scratch_electro_tom1
+			Scratch_electro_tom1
 		]
 		volume_low = 3.0
 		volume_high = 3.0
@@ -7656,11 +7656,11 @@ scratch_electro_tom1_sampleset = [
 		pan_mono = 0.0
 	}
 ]
-scratch_electro_tom2_sampleset = [
+Scratch_electro_tom2_sampleset = [
 	{
 		velocity_cutoff = 0
 		sample_array = [
-			scratch_electro_tom2
+			Scratch_electro_tom2
 		]
 		volume_low = -21.0
 		volume_high = -12.0
@@ -7671,7 +7671,7 @@ scratch_electro_tom2_sampleset = [
 	{
 		velocity_cutoff = 25
 		sample_array = [
-			scratch_electro_tom2
+			Scratch_electro_tom2
 		]
 		volume_low = -12.0
 		volume_high = 3.0
@@ -7682,7 +7682,7 @@ scratch_electro_tom2_sampleset = [
 	{
 		velocity_cutoff = 120
 		sample_array = [
-			scratch_electro_tom2
+			Scratch_electro_tom2
 		]
 		volume_low = 3.0
 		volume_high = 3.0
@@ -7691,11 +7691,11 @@ scratch_electro_tom2_sampleset = [
 		pan_mono = 0.0
 	}
 ]
-scratch_electro_hihat_sampleset = [
+Scratch_electro_hihat_sampleset = [
 	{
 		velocity_cutoff = 0
 		sample_array = [
-			scratch_electro_hihat
+			Scratch_electro_hihat
 		]
 		volume_low = -21.0
 		volume_high = -12.0
@@ -7706,7 +7706,7 @@ scratch_electro_hihat_sampleset = [
 	{
 		velocity_cutoff = 25
 		sample_array = [
-			scratch_electro_hihat
+			Scratch_electro_hihat
 		]
 		volume_low = -12.0
 		volume_high = 3.0
@@ -7717,7 +7717,7 @@ scratch_electro_hihat_sampleset = [
 	{
 		velocity_cutoff = 100
 		sample_array = [
-			scratch_electro_hihat
+			Scratch_electro_hihat
 		]
 		volume_low = 3.0
 		volume_high = 3.0
@@ -7726,11 +7726,11 @@ scratch_electro_hihat_sampleset = [
 		pan_mono = -0.2
 	}
 ]
-scratch_electro_cymbal_sampleset = [
+Scratch_electro_cymbal_sampleset = [
 	{
 		velocity_cutoff = 0
 		sample_array = [
-			scratch_electro_crash
+			Scratch_electro_crash
 		]
 		volume_low = -19.0
 		volume_high = -10.0
@@ -7741,7 +7741,7 @@ scratch_electro_cymbal_sampleset = [
 	{
 		velocity_cutoff = 25
 		sample_array = [
-			scratch_electro_crash
+			Scratch_electro_crash
 		]
 		volume_low = -10.0
 		volume_high = 5.0
@@ -7752,7 +7752,7 @@ scratch_electro_cymbal_sampleset = [
 	{
 		velocity_cutoff = 100
 		sample_array = [
-			scratch_electro_crash
+			Scratch_electro_crash
 		]
 		volume_low = 5.0
 		volume_high = 5.0
@@ -7761,7 +7761,7 @@ scratch_electro_cymbal_sampleset = [
 		pan_mono = 0.3
 	}
 ]
-robot_kick_sampleset = [
+Robot_kick_sampleset = [
 	{
 		velocity_cutoff = 0
 		sample_array = [
@@ -7840,7 +7840,7 @@ robot_kick_sampleset = [
 		pan_mono = 0.0
 	}
 ]
-robot_snare_sampleset = [
+Robot_snare_sampleset = [
 	{
 		velocity_cutoff = 0
 		sample_array = [
@@ -7919,7 +7919,7 @@ robot_snare_sampleset = [
 		pan_mono = 0.0
 	}
 ]
-robot_tom1_sampleset = [
+Robot_tom1_sampleset = [
 	{
 		velocity_cutoff = 0
 		sample_array = [
@@ -7998,11 +7998,11 @@ robot_tom1_sampleset = [
 		pan_mono = 0.0
 	}
 ]
-robot_tom2_sampleset = [
+Robot_tom2_sampleset = [
 	{
 		velocity_cutoff = 0
 		sample_array = [
-			robot_technology
+			Robot_technology
 		]
 		volume_low = -9.0
 		volume_high = -3.0
@@ -8013,7 +8013,7 @@ robot_tom2_sampleset = [
 	{
 		velocity_cutoff = 25
 		sample_array = [
-			robot_technology
+			Robot_technology
 		]
 		volume_low = -3.0
 		volume_high = 0.0
@@ -8077,7 +8077,7 @@ robot_tom2_sampleset = [
 		pan_mono = 0.0
 	}
 ]
-robot_hihat_sampleset = [
+Robot_hihat_sampleset = [
 	{
 		velocity_cutoff = 0
 		sample_array = [
@@ -8156,7 +8156,7 @@ robot_hihat_sampleset = [
 		pan_mono = 0.0
 	}
 ]
-robot_cymbal_sampleset = [
+Robot_cymbal_sampleset = [
 	{
 		velocity_cutoff = 0
 		sample_array = [
@@ -8235,11 +8235,11 @@ robot_cymbal_sampleset = [
 		pan_mono = 0.0
 	}
 ]
-scratch_tom2_sampleset = [
+Scratch_tom2_sampleset = [
 	{
 		velocity_cutoff = 0
 		sample_array = [
-			dj_aahh1
+			DJ_aahh1
 		]
 		volume_low = -6.0
 		volume_high = 0.0
@@ -8250,7 +8250,7 @@ scratch_tom2_sampleset = [
 	{
 		velocity_cutoff = 25
 		sample_array = [
-			dj_aahh1
+			DJ_aahh1
 		]
 		volume_low = 0.0
 		volume_high = 3.0
@@ -8261,7 +8261,7 @@ scratch_tom2_sampleset = [
 	{
 		velocity_cutoff = 44
 		sample_array = [
-			dj_aahh7
+			DJ_aahh7
 		]
 		volume_low = 0.0
 		volume_high = 3.0
@@ -8272,7 +8272,7 @@ scratch_tom2_sampleset = [
 	{
 		velocity_cutoff = 63
 		sample_array = [
-			dj_laser10
+			DJ_Laser10
 		]
 		volume_low = 0.0
 		volume_high = 3.0
@@ -8283,7 +8283,7 @@ scratch_tom2_sampleset = [
 	{
 		velocity_cutoff = 82
 		sample_array = [
-			dj_ugh14
+			DJ_ugh14
 		]
 		volume_low = 0.0
 		volume_high = 3.0
@@ -8294,7 +8294,7 @@ scratch_tom2_sampleset = [
 	{
 		velocity_cutoff = 101
 		sample_array = [
-			dj_blast18
+			DJ_blast18
 		]
 		volume_low = 0.0
 		volume_high = 3.0
@@ -8305,7 +8305,7 @@ scratch_tom2_sampleset = [
 	{
 		velocity_cutoff = 120
 		sample_array = [
-			dj_blast18
+			DJ_blast18
 		]
 		volume_low = 3.0
 		volume_high = 3.0
@@ -8314,11 +8314,11 @@ scratch_tom2_sampleset = [
 		pan_mono = 0.0
 	}
 ]
-scratch_snare_sampleset = [
+Scratch_snare_sampleset = [
 	{
 		velocity_cutoff = 0
 		sample_array = [
-			dj_aahh2
+			DJ_aahh2
 		]
 		volume_low = -6.0
 		volume_high = 0.0
@@ -8329,7 +8329,7 @@ scratch_snare_sampleset = [
 	{
 		velocity_cutoff = 25
 		sample_array = [
-			dj_aahh2
+			DJ_aahh2
 		]
 		volume_low = 0.0
 		volume_high = 3.0
@@ -8340,7 +8340,7 @@ scratch_snare_sampleset = [
 	{
 		velocity_cutoff = 44
 		sample_array = [
-			dj_aahh8
+			DJ_aahh8
 		]
 		volume_low = 0.0
 		volume_high = 3.0
@@ -8351,7 +8351,7 @@ scratch_snare_sampleset = [
 	{
 		velocity_cutoff = 63
 		sample_array = [
-			dj_laser11
+			DJ_Laser11
 		]
 		volume_low = 0.0
 		volume_high = 3.0
@@ -8362,7 +8362,7 @@ scratch_snare_sampleset = [
 	{
 		velocity_cutoff = 82
 		sample_array = [
-			dj_ugh15
+			DJ_ugh15
 		]
 		volume_low = 0.0
 		volume_high = 3.0
@@ -8373,7 +8373,7 @@ scratch_snare_sampleset = [
 	{
 		velocity_cutoff = 101
 		sample_array = [
-			dj_blast19
+			DJ_blast19
 		]
 		volume_low = 0.0
 		volume_high = 3.0
@@ -8384,7 +8384,7 @@ scratch_snare_sampleset = [
 	{
 		velocity_cutoff = 120
 		sample_array = [
-			dj_blast19
+			DJ_blast19
 		]
 		volume_low = 3.0
 		volume_high = 3.0
@@ -8393,11 +8393,11 @@ scratch_snare_sampleset = [
 		pan_mono = 0.0
 	}
 ]
-scratch_hihat_sampleset = [
+Scratch_hihat_sampleset = [
 	{
 		velocity_cutoff = 0
 		sample_array = [
-			dj_aahh3
+			DJ_aahh3
 		]
 		volume_low = -6.0
 		volume_high = 0.0
@@ -8408,7 +8408,7 @@ scratch_hihat_sampleset = [
 	{
 		velocity_cutoff = 25
 		sample_array = [
-			dj_aahh3
+			DJ_aahh3
 		]
 		volume_low = 0.0
 		volume_high = 3.0
@@ -8419,7 +8419,7 @@ scratch_hihat_sampleset = [
 	{
 		velocity_cutoff = 40
 		sample_array = [
-			dj_aahh9
+			DJ_aahh9
 		]
 		volume_low = 0.0
 		volume_high = 3.0
@@ -8430,7 +8430,7 @@ scratch_hihat_sampleset = [
 	{
 		velocity_cutoff = 55
 		sample_array = [
-			dj_stab12
+			DJ_stab12
 		]
 		volume_low = 0.0
 		volume_high = 3.0
@@ -8441,7 +8441,7 @@ scratch_hihat_sampleset = [
 	{
 		velocity_cutoff = 70
 		sample_array = [
-			dj_ugh16
+			DJ_ugh16
 		]
 		volume_low = 0.0
 		volume_high = 3.0
@@ -8452,7 +8452,7 @@ scratch_hihat_sampleset = [
 	{
 		velocity_cutoff = 85
 		sample_array = [
-			dj_ahhya20
+			DJ_ahhya20
 		]
 		volume_low = 0.0
 		volume_high = 3.0
@@ -8463,7 +8463,7 @@ scratch_hihat_sampleset = [
 	{
 		velocity_cutoff = 100
 		sample_array = [
-			dj_ahhya20
+			DJ_ahhya20
 		]
 		volume_low = 3.0
 		volume_high = 3.0
@@ -8472,11 +8472,11 @@ scratch_hihat_sampleset = [
 		pan_mono = 0.0
 	}
 ]
-scratch_tom1_sampleset = [
+Scratch_tom1_sampleset = [
 	{
 		velocity_cutoff = 0
 		sample_array = [
-			dj_aahh4
+			DJ_aahh4
 		]
 		volume_low = -6.0
 		volume_high = 0.0
@@ -8487,7 +8487,7 @@ scratch_tom1_sampleset = [
 	{
 		velocity_cutoff = 25
 		sample_array = [
-			dj_aahh4
+			DJ_aahh4
 		]
 		volume_low = 0.0
 		volume_high = 3.0
@@ -8498,7 +8498,7 @@ scratch_tom1_sampleset = [
 	{
 		velocity_cutoff = 44
 		sample_array = [
-			dj_whew26
+			DJ_whew26
 		]
 		volume_low = 0.0
 		volume_high = 3.0
@@ -8509,7 +8509,7 @@ scratch_tom1_sampleset = [
 	{
 		velocity_cutoff = 63
 		sample_array = [
-			dj_stab13
+			DJ_stab13
 		]
 		volume_low = 0.0
 		volume_high = 3.0
@@ -8520,7 +8520,7 @@ scratch_tom1_sampleset = [
 	{
 		velocity_cutoff = 82
 		sample_array = [
-			dj_ugh17
+			DJ_ugh17
 		]
 		volume_low = 0.0
 		volume_high = 3.0
@@ -8531,7 +8531,7 @@ scratch_tom1_sampleset = [
 	{
 		velocity_cutoff = 101
 		sample_array = [
-			dj_ahhya21
+			DJ_ahhya21
 		]
 		volume_low = 0.0
 		volume_high = 3.0
@@ -8542,7 +8542,7 @@ scratch_tom1_sampleset = [
 	{
 		velocity_cutoff = 120
 		sample_array = [
-			dj_ahhya21
+			DJ_ahhya21
 		]
 		volume_low = 3.0
 		volume_high = 3.0
@@ -8551,11 +8551,11 @@ scratch_tom1_sampleset = [
 		pan_mono = 0.0
 	}
 ]
-scratch_cymbal_sampleset = [
+Scratch_cymbal_sampleset = [
 	{
 		velocity_cutoff = 0
 		sample_array = [
-			dj_aahh5
+			DJ_aahh5
 		]
 		volume_low = -6.0
 		volume_high = 0.0
@@ -8566,7 +8566,7 @@ scratch_cymbal_sampleset = [
 	{
 		velocity_cutoff = 25
 		sample_array = [
-			dj_aahh5
+			DJ_aahh5
 		]
 		volume_low = 0.0
 		volume_high = 3.0
@@ -8577,7 +8577,7 @@ scratch_cymbal_sampleset = [
 	{
 		velocity_cutoff = 40
 		sample_array = [
-			dj_aahh6
+			DJ_aahh6
 		]
 		volume_low = 0.0
 		volume_high = 3.0
@@ -8588,7 +8588,7 @@ scratch_cymbal_sampleset = [
 	{
 		velocity_cutoff = 55
 		sample_array = [
-			dj_shortbaby23
+			DJ_shortbaby23
 		]
 		volume_low = 0.0
 		volume_high = 3.0
@@ -8599,7 +8599,7 @@ scratch_cymbal_sampleset = [
 	{
 		velocity_cutoff = 70
 		sample_array = [
-			dj_ugh26
+			DJ_ugh26
 		]
 		volume_low = 0.0
 		volume_high = 3.0
@@ -8610,7 +8610,7 @@ scratch_cymbal_sampleset = [
 	{
 		velocity_cutoff = 85
 		sample_array = [
-			dj_whistle28
+			DJ_whistle28
 		]
 		volume_low = 0.0
 		volume_high = 3.0
@@ -8621,7 +8621,7 @@ scratch_cymbal_sampleset = [
 	{
 		velocity_cutoff = 100
 		sample_array = [
-			dj_whistle28
+			DJ_whistle28
 		]
 		volume_low = 3.0
 		volume_high = 3.0
@@ -8630,11 +8630,11 @@ scratch_cymbal_sampleset = [
 		pan_mono = 0.0
 	}
 ]
-scratch_kick_sampleset = [
+Scratch_kick_sampleset = [
 	{
 		velocity_cutoff = 0
 		sample_array = [
-			dj_aahhfull31
+			DJ_aahhfull31
 		]
 		volume_low = -6.0
 		volume_high = 0.0
@@ -8645,7 +8645,7 @@ scratch_kick_sampleset = [
 	{
 		velocity_cutoff = 25
 		sample_array = [
-			dj_aahhfull31
+			DJ_aahhfull31
 		]
 		volume_low = 0.0
 		volume_high = 3.0
@@ -8656,7 +8656,7 @@ scratch_kick_sampleset = [
 	{
 		velocity_cutoff = 36
 		sample_array = [
-			dj_rewind29
+			DJ_rewind29
 		]
 		volume_low = 0.0
 		volume_high = 3.0
@@ -8667,7 +8667,7 @@ scratch_kick_sampleset = [
 	{
 		velocity_cutoff = 47
 		sample_array = [
-			dj_backspin22
+			DJ_backspin22
 		]
 		volume_low = 0.0
 		volume_high = 3.0
@@ -8678,7 +8678,7 @@ scratch_kick_sampleset = [
 	{
 		velocity_cutoff = 58
 		sample_array = [
-			dj_fastrewind24
+			DJ_fastrewind24
 		]
 		volume_low = 0.0
 		volume_high = 3.0
@@ -8689,7 +8689,7 @@ scratch_kick_sampleset = [
 	{
 		velocity_cutoff = 69
 		sample_array = [
-			dj_backforth25
+			DJ_backforth25
 		]
 		volume_low = 0.0
 		volume_high = 3.0
@@ -8700,7 +8700,7 @@ scratch_kick_sampleset = [
 	{
 		velocity_cutoff = 80
 		sample_array = [
-			dj_backforth25
+			DJ_backforth25
 		]
 		volume_low = 3.0
 		volume_high = 3.0
@@ -8709,7 +8709,7 @@ scratch_kick_sampleset = [
 		pan_mono = 0.0
 	}
 ]
-gunshot_snare_sampleset = [
+Gunshot_snare_sampleset = [
 	{
 		velocity_cutoff = 0
 		sample_array = [
@@ -8766,11 +8766,11 @@ gunshot_snare_sampleset = [
 		pan_mono = -0.1
 	}
 ]
-gunshot_kick_sampleset = [
+Gunshot_kick_sampleset = [
 	{
 		velocity_cutoff = 0
 		sample_array = [
-			gun_kickheavy
+			Gun_kickheavy
 		]
 		volume_low = -16
 		volume_high = -10
@@ -8781,7 +8781,7 @@ gunshot_kick_sampleset = [
 	{
 		velocity_cutoff = 25
 		sample_array = [
-			gun_kickheavy
+			Gun_kickheavy
 		]
 		volume_low = -10
 		volume_high = 5
@@ -8792,7 +8792,7 @@ gunshot_kick_sampleset = [
 	{
 		velocity_cutoff = 45
 		sample_array = [
-			gun_kickheavy2
+			Gun_kickheavy2
 		]
 		volume_low = 3
 		volume_high = 6
@@ -8803,7 +8803,7 @@ gunshot_kick_sampleset = [
 	{
 		velocity_cutoff = 80
 		sample_array = [
-			gun_kickheavy2
+			Gun_kickheavy2
 		]
 		volume_low = 6
 		volume_high = 6
@@ -8812,11 +8812,11 @@ gunshot_kick_sampleset = [
 		pan_mono = 0.0
 	}
 ]
-gunshot_tom1_sampleset = [
+Gunshot_tom1_sampleset = [
 	{
 		velocity_cutoff = 0
 		sample_array = [
-			gun_tom1
+			Gun_tom1
 		]
 		volume_low = -21.0
 		volume_high = -15.0
@@ -8827,7 +8827,7 @@ gunshot_tom1_sampleset = [
 	{
 		velocity_cutoff = 25
 		sample_array = [
-			gun_tom1
+			Gun_tom1
 		]
 		volume_low = -15.0
 		volume_high = 0.0
@@ -8838,7 +8838,7 @@ gunshot_tom1_sampleset = [
 	{
 		velocity_cutoff = 120
 		sample_array = [
-			gun_tom1
+			Gun_tom1
 		]
 		volume_low = 0.0
 		volume_high = 0.0
@@ -8847,11 +8847,11 @@ gunshot_tom1_sampleset = [
 		pan_mono = 0.1
 	}
 ]
-gunshot_tom2_sampleset = [
+Gunshot_tom2_sampleset = [
 	{
 		velocity_cutoff = 0
 		sample_array = [
-			gun_tom2
+			Gun_tom2
 		]
 		volume_low = -21.0
 		volume_high = -15.0
@@ -8862,7 +8862,7 @@ gunshot_tom2_sampleset = [
 	{
 		velocity_cutoff = 25
 		sample_array = [
-			gun_tom2
+			Gun_tom2
 		]
 		volume_low = -15.0
 		volume_high = 0.0
@@ -8873,7 +8873,7 @@ gunshot_tom2_sampleset = [
 	{
 		velocity_cutoff = 120
 		sample_array = [
-			gun_tom2
+			Gun_tom2
 		]
 		volume_low = 0.0
 		volume_high = 0.0
@@ -8882,11 +8882,11 @@ gunshot_tom2_sampleset = [
 		pan_mono = 0.3
 	}
 ]
-gunshot_hihat_sampleset = [
+Gunshot_hihat_sampleset = [
 	{
 		velocity_cutoff = 0
 		sample_array = [
-			gun_hihat
+			Gun_hihat
 		]
 		volume_low = -21.0
 		volume_high = -18.0
@@ -8897,7 +8897,7 @@ gunshot_hihat_sampleset = [
 	{
 		velocity_cutoff = 25
 		sample_array = [
-			gun_hihat
+			Gun_hihat
 		]
 		volume_low = -18.0
 		volume_high = -5.0
@@ -8908,7 +8908,7 @@ gunshot_hihat_sampleset = [
 	{
 		velocity_cutoff = 70
 		sample_array = [
-			gun_hihat_open
+			Gun_hihat_open
 		]
 		volume_low = -5.0
 		volume_high = -2.0
@@ -8919,7 +8919,7 @@ gunshot_hihat_sampleset = [
 	{
 		velocity_cutoff = 85
 		sample_array = [
-			gun_hihat_open
+			Gun_hihat_open
 		]
 		volume_low = -2.0
 		volume_high = 0.0
@@ -8930,7 +8930,7 @@ gunshot_hihat_sampleset = [
 	{
 		velocity_cutoff = 100
 		sample_array = [
-			gun_hihat_open
+			Gun_hihat_open
 		]
 		volume_low = 0.0
 		volume_high = 0.0
@@ -8939,11 +8939,11 @@ gunshot_hihat_sampleset = [
 		pan_mono = -0.3
 	}
 ]
-gunshot_cymbal_sampleset = [
+Gunshot_cymbal_sampleset = [
 	{
 		velocity_cutoff = 0
 		sample_array = [
-			gun_ricocrash
+			Gun_ricocrash
 		]
 		volume_low = -20.0
 		volume_high = -14.0
@@ -8954,7 +8954,7 @@ gunshot_cymbal_sampleset = [
 	{
 		velocity_cutoff = 25
 		sample_array = [
-			gun_ricocrash
+			Gun_ricocrash
 		]
 		volume_low = -14.0
 		volume_high = 2.0
@@ -8965,7 +8965,7 @@ gunshot_cymbal_sampleset = [
 	{
 		velocity_cutoff = 80
 		sample_array = [
-			gun_ricochet
+			Gun_ricochet
 		]
 		volume_low = -4.0
 		volume_high = -1.0
@@ -8976,7 +8976,7 @@ gunshot_cymbal_sampleset = [
 	{
 		velocity_cutoff = 90
 		sample_array = [
-			gun_ricochet
+			Gun_ricochet
 		]
 		volume_low = -1.0
 		volume_high = 2.0
@@ -8987,7 +8987,7 @@ gunshot_cymbal_sampleset = [
 	{
 		velocity_cutoff = 100
 		sample_array = [
-			gun_ricochet
+			Gun_ricochet
 		]
 		volume_low = 2.0
 		volume_high = 2.0

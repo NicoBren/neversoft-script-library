@@ -28,22 +28,22 @@ jam_current_arpeggiator_modifier = [
 ]
 jam_arpeggiator_loops = [
 	{
-		name_text = qs(0xafedae19)
-		loop = arpeggiator1
+		name_text = qs("16th Notes")
+		Loop = Arpeggiator1
 		fit_to_dims = (130.0, 25.0)
 		submenu_script = guitar_jam_change_arpeggiator_loop
 		submenu_exit_script = guitar_jam_arpeggiator_loop_exit
 	}
 	{
-		name_text = qs(0x41532838)
-		loop = arpeggiator2
+		name_text = qs("8th Notes")
+		Loop = Arpeggiator2
 		fit_to_dims = (130.0, 25.0)
 		submenu_script = guitar_jam_change_arpeggiator_loop
 		submenu_exit_script = guitar_jam_arpeggiator_loop_exit
 	}
 	{
-		name_text = qs(0x76354b24)
-		loop = arpeggiator2
+		name_text = qs("Link Drum Machine")
+		Loop = Arpeggiator2
 		fit_to_dims = (160.0, 27.0)
 		submenu_script = guitar_jam_change_arpeggiator_loop
 		submenu_exit_script = guitar_jam_arpeggiator_loop_exit
@@ -72,31 +72,31 @@ jam_loop_arp_touch_pattern = [
 ]
 jam_arpeggiator_types = [
 	{
-		name_text = qs(0x0d57a685)
+		name_text = qs("Up")
 		fit_to_dims = (50.0, 25.0)
 		submenu_script = guitar_jam_change_arpeggiator_type
 		submenu_exit_script = guitar_jam_arpeggiator_loop_exit
 	}
 	{
-		name_text = qs(0xc33e8f02)
+		name_text = qs("Down")
 		fit_to_dims = (60.0, 25.0)
 		submenu_script = guitar_jam_change_arpeggiator_type
 		submenu_exit_script = guitar_jam_arpeggiator_loop_exit
 	}
 	{
-		name_text = qs(0x4e1355f5)
+		name_text = qs("Up/Down")
 		fit_to_dims = (120.0, 25.0)
 		submenu_script = guitar_jam_change_arpeggiator_type
 		submenu_exit_script = guitar_jam_arpeggiator_loop_exit
 	}
 	{
-		name_text = qs(0x8f5d9f37)
+		name_text = qs("Random")
 		fit_to_dims = (120.0, 25.0)
 		submenu_script = guitar_jam_change_arpeggiator_type
 		submenu_exit_script = guitar_jam_arpeggiator_loop_exit
 	}
 	{
-		name_text = qs(0x9c1b5214)
+		name_text = qs("None")
 		fit_to_dims = (120.0, 25.0)
 		submenu_script = guitar_jam_change_arpeggiator_type
 		submenu_exit_script = guitar_jam_arpeggiator_loop_exit
@@ -105,7 +105,7 @@ jam_arpeggiator_types = [
 
 script jam_arpeggiator_per_frame_get_strum_change 
 	<strum_change> = no_change
-	if controllerpressed up <controller>
+	if ControllerPressed up <controller>
 		if (<mid_up_strum> = 0)
 			<strum_change> = on
 		endif
@@ -116,7 +116,7 @@ script jam_arpeggiator_per_frame_get_strum_change
 		endif
 		<mid_up_strum> = 0
 	endif
-	if controllerpressed down <controller>
+	if ControllerPressed down <controller>
 		if (<mid_down_strum> = 0)
 			<strum_change> = on
 		endif
@@ -131,8 +131,8 @@ script jam_arpeggiator_per_frame_get_strum_change
 endscript
 
 script kill_arpeggiator_loop \{reset_pattern = false}
-	formattext checksumname = arpeggiator_spawn 'arpeggiator_spawn_%s' s = <select_player>
-	killspawnedscript id = <arpeggiator_spawn>
+	FormatText checksumname = arpeggiator_spawn 'arpeggiator_spawn_%s' s = <select_player>
+	KillSpawnedScript id = <arpeggiator_spawn>
 	if (<reset_pattern> = true)
 		change \{jam_arpeggiator_current_pattern = [
 				0
@@ -178,16 +178,16 @@ script jam_arpeggiator_per_frame
 	instrument_controls = [enabled]
 	if ($game_mode = training)
 		change jam_tut_arpeggiator_pattern = <hold_pattern>
-		if screenelementexists \{id = jam_band_container}
-			jam_band_container :gettags
-		elseif screenelementexists \{id = jam_studio_element}
-			jam_studio_element :gettags
+		if ScreenElementExists \{id = jam_band_container}
+			jam_band_container :GetTags
+		elseif ScreenElementExists \{id = jam_studio_element}
+			jam_studio_element :GetTags
 		endif
 	endif
 	if (($jam_advanced_record) = 0)
 		jam_check_simple_record_input controller = <controller> select_player = <select_player>
 	endif
-	getplayerinfo <select_player> jam_instrument
+	GetPlayerInfo <select_player> jam_instrument
 	control_change = false
 	jam_arpeggiator_per_frame_get_strum_change <...>
 	if NOT (<strum_change> = no_change)
@@ -213,13 +213,13 @@ script jam_arpeggiator_per_frame
 				case 1
 				jam_update_falling_gem_sustain \{sustain_global = jam_sustain_lead
 					stop = 1}
-				stopsound \{unique_id = $jam_input_current_lead
+				StopSound \{unique_id = $jam_input_current_lead
 					fade_type = linear
 					fade_time = 0.05}
 				case 2
 				jam_update_falling_gem_sustain \{sustain_global = jam_sustain_bass
 					stop = 1}
-				stopsound \{unique_id = $jam_input_current_bass
+				StopSound \{unique_id = $jam_input_current_bass
 					fade_type = linear
 					fade_time = 0.05}
 				case 4
@@ -231,51 +231,51 @@ script jam_arpeggiator_per_frame
 		if (<new_loop> = 0)
 			<do_loop> = 0
 		endif
-		setarrayelement arrayname = jam_arpeggiator_current_pattern globalarray index = <jam_instrument> newvalue = <hold_pattern>
-		setarrayelement arrayname = jam_arpeggiator_current_single_pattern globalarray index = <jam_instrument> newvalue = <single_hold_pattern>
+		SetArrayElement ArrayName = jam_arpeggiator_current_pattern GlobalArray index = <jam_instrument> newvalue = <hold_pattern>
+		SetArrayElement ArrayName = jam_arpeggiator_current_single_pattern GlobalArray index = <jam_instrument> newvalue = <single_hold_pattern>
 	endif
 	if ($jam_current_arpeggiator_whammy [<jam_instrument>] = 1)
 		if (<whammy_value> < -100)
-			setarrayelement arrayname = jam_current_arpeggiator_whammy globalarray index = <jam_instrument> newvalue = 0
+			SetArrayElement ArrayName = jam_current_arpeggiator_whammy GlobalArray index = <jam_instrument> newvalue = 0
 		endif
 	else
 		if (<whammy_value> > 0)
-			setarrayelement arrayname = jam_current_arpeggiator_whammy globalarray index = <jam_instrument> newvalue = 1
+			SetArrayElement ArrayName = jam_current_arpeggiator_whammy GlobalArray index = <jam_instrument> newvalue = 1
 			curr_arp_type = ($jam_current_arpeggiator_type [<jam_instrument>])
 			if (<curr_arp_type> = 3)
-				setarrayelement arrayname = jam_current_arpeggiator_type globalarray index = <jam_instrument> newvalue = 0
+				SetArrayElement ArrayName = jam_current_arpeggiator_type GlobalArray index = <jam_instrument> newvalue = 0
 			else
-				setarrayelement arrayname = jam_current_arpeggiator_type globalarray index = <jam_instrument> newvalue = (<curr_arp_type> + 1)
+				SetArrayElement ArrayName = jam_current_arpeggiator_type GlobalArray index = <jam_instrument> newvalue = (<curr_arp_type> + 1)
 			endif
 		endif
 	endif
 	curr_arp_type = ($jam_current_arpeggiator_type [<jam_instrument>])
 	arp_text = ($jam_arpeggiator_types [<curr_arp_type>].name_text)
-	formattext checksumname = extra_info_id 'jam_band_extra_info_%s' s = <select_player>
-	if screenelementexists id = <extra_info_id>
-		formattext textname = arp_text qs(0xd8ce0d36) s = <arp_text>
-		<extra_info_id> :se_setprops info4_text = <arp_text>
+	FormatText checksumname = extra_info_id 'jam_band_extra_info_%s' s = <select_player>
+	if ScreenElementExists id = <extra_info_id>
+		FormatText TextName = arp_text qs("Type: %s") s = <arp_text>
+		<extra_info_id> :SE_SetProps info4_text = <arp_text>
 	endif
 	switch <touch_pattern>
 		case 272
 		case 16
-		setarrayelement arrayname = jam_current_arpeggiator_modifier globalarray index = <jam_instrument> newvalue = 1
+		SetArrayElement ArrayName = jam_current_arpeggiator_modifier GlobalArray index = <jam_instrument> newvalue = 1
 		case 4096
 		case 256
-		setarrayelement arrayname = jam_current_arpeggiator_modifier globalarray index = <jam_instrument> newvalue = 2
+		SetArrayElement ArrayName = jam_current_arpeggiator_modifier GlobalArray index = <jam_instrument> newvalue = 2
 		case 65536
-		setarrayelement arrayname = jam_current_arpeggiator_modifier globalarray index = <jam_instrument> newvalue = 0
+		SetArrayElement ArrayName = jam_current_arpeggiator_modifier GlobalArray index = <jam_instrument> newvalue = 0
 		case 17
 		case 1
-		setarrayelement arrayname = jam_current_arpeggiator_modifier globalarray index = <jam_instrument> newvalue = 3
+		SetArrayElement ArrayName = jam_current_arpeggiator_modifier GlobalArray index = <jam_instrument> newvalue = 3
 		default
-		setarrayelement arrayname = jam_current_arpeggiator_modifier globalarray index = <jam_instrument> newvalue = 0
+		SetArrayElement ArrayName = jam_current_arpeggiator_modifier GlobalArray index = <jam_instrument> newvalue = 0
 	endswitch
 	holding_open = 0
 	if (<mid_up_strum> > 0 || <mid_down_strum> > 0)
 		<holding_open> = 1
 	endif
-	arpeggiator_loop = arpeggiator1
+	arpeggiator_loop = Arpeggiator1
 	if NOT ((<touch_pattern> = $jam_loop_arp_touch_pattern [<jam_instrument>]) && <do_loop> = 0)
 		if NOT (<hold_pattern> = 1048576 && <holding_open> = 0)
 			switch <touch_pattern>
@@ -283,31 +283,31 @@ script jam_arpeggiator_per_frame
 				case 4096
 				case 69632
 				<do_loop> = 1
-				setarrayelement arrayname = jam_arpeggiator_current_pattern globalarray index = <jam_instrument> newvalue = <hold_pattern>
-				<arpeggiator_loop> = arpeggiator2
+				SetArrayElement ArrayName = jam_arpeggiator_current_pattern GlobalArray index = <jam_instrument> newvalue = <hold_pattern>
+				<arpeggiator_loop> = Arpeggiator2
 				case 256
 				<do_loop> = 1
-				setarrayelement arrayname = jam_arpeggiator_current_pattern globalarray index = <jam_instrument> newvalue = <hold_pattern>
-				<arpeggiator_loop> = arpeggiator1
+				SetArrayElement ArrayName = jam_arpeggiator_current_pattern GlobalArray index = <jam_instrument> newvalue = <hold_pattern>
+				<arpeggiator_loop> = Arpeggiator1
 				case 0
 				last_touch = ($jam_loop_arp_touch_pattern [<jam_instrument>])
 				if (<last_touch> = 65536 || <last_touch> = 69632 || <last_touch> = 4096 || <last_touch> = 256)
 					<do_loop> = 1
-					setarrayelement arrayname = jam_arpeggiator_current_pattern globalarray index = <jam_instrument> newvalue = <hold_pattern>
-					<arpeggiator_loop> = arpeggiator1
+					SetArrayElement ArrayName = jam_arpeggiator_current_pattern GlobalArray index = <jam_instrument> newvalue = <hold_pattern>
+					<arpeggiator_loop> = Arpeggiator1
 				endif
 			endswitch
-			setarrayelement arrayname = jam_loop_arp_touch_pattern globalarray index = <jam_instrument> newvalue = <touch_pattern>
+			SetArrayElement ArrayName = jam_loop_arp_touch_pattern GlobalArray index = <jam_instrument> newvalue = <touch_pattern>
 		endif
 	endif
-	if arraycontains array = <instrument_controls> contains = enabled
+	if ArrayContains array = <instrument_controls> contains = enabled
 		if (<do_loop> = 1)
 			kill_arpeggiator_loop select_player = <select_player>
-			appendsuffixtochecksum base = <arpeggiator_loop> suffixstring = '_drum_loop'
+			AppendSuffixToChecksum Base = <arpeggiator_loop> SuffixString = '_drum_loop'
 			if NOT (<touch_pattern> = 16 || <touch_pattern> = 272)
-				spawnscriptnow id = <arpeggiator_spawn> jam_play_arpeggiator_loop params = {spawn_id = <spawn_id> hold_pattern = <hold_pattern> arpeggio_array = <arpeggio_array> controller = <controller> player = <select_player> loop = <appended_id> bpm = ($jam_current_bpm)}
+				spawnscriptnow id = <arpeggiator_spawn> jam_play_arpeggiator_loop params = {spawn_id = <spawn_id> hold_pattern = <hold_pattern> arpeggio_array = <arpeggio_array> controller = <controller> player = <select_player> Loop = <appended_id> bpm = ($jam_current_bpm)}
 			else
-				spawnscriptnow id = <arpeggiator_spawn> jam_play_arpeggiator_loop params = {spawn_id = <spawn_id> hold_pattern = <single_hold_pattern> arpeggio_array = <single_arpeggio_array> controller = <controller> player = <select_player> loop = <appended_id> bpm = ($jam_current_bpm)}
+				spawnscriptnow id = <arpeggiator_spawn> jam_play_arpeggiator_loop params = {spawn_id = <spawn_id> hold_pattern = <single_hold_pattern> arpeggio_array = <single_arpeggio_array> controller = <controller> player = <select_player> Loop = <appended_id> bpm = ($jam_current_bpm)}
 			endif
 		endif
 	endif
@@ -334,25 +334,25 @@ jam_current_arpeggiator_note_count = [
 script jam_play_arpeggiator_loop \{bpm = 120
 		player = 1
 		loop_repeat = 1}
-	getsongtimems
-	casttointeger \{time}
+	GetSongTimeMs
+	CastToInteger \{time}
 	curr_song_time = <time>
-	if NOT globalexists name = <loop> type = array
+	if NOT GlobalExists name = <Loop> type = array
 		return
 	endif
-	getarraysize ($<loop>)
-	getplayerinfo <player> jam_instrument
+	GetArraySize ($<Loop>)
+	GetPlayerInfo <player> jam_instrument
 	loop_bpm = 125.0
 	time_scale_percentage = (<loop_bpm> / <bpm>)
 	ms_per_beat = (60000.0 / <bpm>)
 	ms_per_loop = (<ms_per_beat> * (4 * 4))
 	intervals = (<time> / <ms_per_loop>)
-	casttointeger \{intervals}
+	CastToInteger \{intervals}
 	time_into_loop = (<time> - (<ms_per_loop> * <intervals>))
 	start_index = -1
 	index = 0
 	begin
-	note_time = ($<loop> [<index>] [0])
+	note_time = ($<Loop> [<index>] [0])
 	<note_time> = (<note_time> * <time_scale_percentage>)
 	if (<note_time> >= <time_into_loop> && <start_index> < 0)
 		<start_index> = <index>
@@ -375,11 +375,11 @@ script jam_play_arpeggiator_loop \{bpm = 120
 	holding = 0
 	last_curr_song_time = 0
 	begin
-	note_time = ($<loop> [<index>] [0])
+	note_time = ($<Loop> [<index>] [0])
 	<note_time> = (<note_time> * <time_scale_percentage>)
 	orig_note_time = <note_time>
-	getsongtimems
-	casttointeger \{time}
+	GetSongTimeMs
+	CastToInteger \{time}
 	curr_song_time = <time>
 	jam_play_loop_adj_for_curr_song_time <...>
 	<note_time> = (<note_time> + (<num_loops> * <ms_per_loop>))
@@ -391,18 +391,18 @@ script jam_play_arpeggiator_loop \{bpm = 120
 		gate_note = 0
 		if (<first_strum> = 0)
 			add_open = 0
-			if controllerpressed up <controller>
+			if ControllerPressed up <controller>
 				<add_open> = 1
 			endif
-			if controllerpressed down <controller>
+			if ControllerPressed down <controller>
 				<add_open> = 1
 			endif
 			if (<add_open> = 1)
-				setarrayelement \{arrayname = arpeggio_array
+				SetArrayElement \{ArrayName = arpeggio_array
 					index = 0
 					newvalue = 1}
 			else
-				setarrayelement \{arrayname = arpeggio_array
+				SetArrayElement \{ArrayName = arpeggio_array
 					index = 0
 					newvalue = 0}
 			endif
@@ -426,26 +426,26 @@ script jam_play_arpeggiator_loop \{bpm = 120
 					endswitch
 				endif
 			else
-				spawnscript stop_arpeggiator_sound id = <spawn_id> params = {jam_instrument = <jam_instrument> time = (25 / 1000.0)}
+				SpawnScript stop_arpeggiator_sound id = <spawn_id> params = {jam_instrument = <jam_instrument> time = (25 / 1000.0)}
 			endif
 			if (<holding> = 0 && ($jam_current_arpeggiator_modifier [<jam_instrument>]) = 1)
 				<holding> = 1
 			endif
 			if (($jam_current_arpeggiator_modifier [<jam_instrument>]) = 2)
-				spawnscript stop_arpeggiator_sound id = <spawn_id> params = {jam_instrument = <jam_instrument> time = (25 / 1000.0)}
+				SpawnScript stop_arpeggiator_sound id = <spawn_id> params = {jam_instrument = <jam_instrument> time = (25 / 1000.0)}
 			endif
-			setarrayelement arrayname = jam_current_arpeggiator_note_count globalarray index = <jam_instrument> newvalue = <note_count>
+			SetArrayElement ArrayName = jam_current_arpeggiator_note_count GlobalArray index = <jam_instrument> newvalue = <note_count>
 			<note_count> = (<note_count> + 1)
 		endif
 		if (<index> >= (<array_size> - 1))
 			break
 		else
-			next_note_time = ($<loop> [(<index> + 1)] [0])
+			next_note_time = ($<Loop> [(<index> + 1)] [0])
 			<next_note_time> = (<next_note_time> * <time_scale_percentage>)
 			<next_note_time> = (<next_note_time> + (<num_loops> * <ms_per_loop>))
 			if (<note_time> = <next_note_time>)
 				<index> = (<index> + 1)
-				note_time = ($<loop> [<index>] [0])
+				note_time = ($<Loop> [<index>] [0])
 				<note_time> = (<note_time> * <time_scale_percentage>)
 				<note_time> = (<note_time> + (<num_loops> * <ms_per_loop>))
 			else
@@ -463,24 +463,24 @@ script jam_play_arpeggiator_loop \{bpm = 120
 			break
 		endif
 	endif
-	wait \{1
+	Wait \{1
 		gameframe}
 	repeat
 endscript
 
 script stop_arpeggiator_sound 
-	wait <time> seconds
+	Wait <time> seconds
 	switch <jam_instrument>
 		case 1
 		jam_update_falling_gem_sustain \{sustain_global = jam_sustain_lead
 			stop = 1}
-		stopsound \{unique_id = $jam_input_current_lead
+		StopSound \{unique_id = $jam_input_current_lead
 			fade_type = linear
 			fade_time = 0.05}
 		case 2
 		jam_update_falling_gem_sustain \{sustain_global = jam_sustain_bass
 			stop = 1}
-		stopsound \{unique_id = $jam_input_current_bass
+		StopSound \{unique_id = $jam_input_current_bass
 			fade_type = linear
 			fade_time = 0.05}
 		case 4
@@ -491,7 +491,7 @@ script stop_arpeggiator_sound
 endscript
 
 script jam_get_arpeggiator_pattern \{note_count = 0}
-	getarraysize \{arpeggio_array}
+	GetArraySize \{arpeggio_array}
 	num_button_holds = 0
 	gem_count = 0
 	begin
@@ -505,26 +505,26 @@ script jam_get_arpeggiator_pattern \{note_count = 0}
 	endif
 	switch ($jam_current_arpeggiator_type [<jam_instrument>])
 		case 0
-		mod a = <note_count> b = <num_button_holds>
-		next_note = (<mod> + 1)
+		Mod a = <note_count> b = <num_button_holds>
+		next_note = (<Mod> + 1)
 		case 1
-		mod a = <note_count> b = <num_button_holds>
-		next_note = (<num_button_holds> - <mod>)
+		Mod a = <note_count> b = <num_button_holds>
+		next_note = (<num_button_holds> - <Mod>)
 		case 2
 		if (<num_button_holds> > 2)
-			mod a = <note_count> b = ((<num_button_holds> * 2) - 2)
-			if (<mod> < <num_button_holds>)
-				next_note = (<mod> + 1)
+			Mod a = <note_count> b = ((<num_button_holds> * 2) - 2)
+			if (<Mod> < <num_button_holds>)
+				next_note = (<Mod> + 1)
 			else
-				new_mod = (<mod> - (<num_button_holds> - 1))
+				new_mod = (<Mod> - (<num_button_holds> - 1))
 				next_note = (<num_button_holds> - <new_mod>)
 			endif
 		else
-			mod a = <note_count> b = <num_button_holds>
-			next_note = (<mod> + 1)
+			Mod a = <note_count> b = <num_button_holds>
+			next_note = (<Mod> + 1)
 		endif
 		case 3
-		getrandomvalue name = next_note integer a = 1 b = <num_button_holds>
+		GetRandomValue name = next_note Integer a = 1 b = <num_button_holds>
 		case 4
 		return arpeggiator_pattern = <hold_pattern>
 	endswitch
@@ -558,11 +558,11 @@ script jam_get_arpeggiator_pattern \{note_count = 0}
 endscript
 
 script jam_advanced_recording_toggle_arpeggiator 
-	getplayerinfo <select_player> jam_instrument
+	GetPlayerInfo <select_player> jam_instrument
 	if (($is_arpeggiator [<jam_instrument>]) = 0)
-		setarrayelement arrayname = is_arpeggiator globalarray index = <jam_instrument> newvalue = 1
+		SetArrayElement ArrayName = is_arpeggiator GlobalArray index = <jam_instrument> newvalue = 1
 	else
-		setarrayelement arrayname = is_arpeggiator globalarray index = <jam_instrument> newvalue = 0
+		SetArrayElement ArrayName = is_arpeggiator GlobalArray index = <jam_instrument> newvalue = 0
 	endif
 	destroy_popup_warning_menu
 	set_focus_color \{rgba = [

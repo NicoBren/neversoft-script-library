@@ -1,51 +1,51 @@
-gp_fx_dust_01 = {
+GP_FX_Dust_01 = {
 	pos = (-0.73808295, 2.696533, -6.520752)
 	angles = (0.0, 0.0, 0.0)
-	class = particleobject
-	particletype = flexparticle
+	Class = ParticleObject
+	ParticleType = FlexParticle
 	type = flat
 	active
-	createdatstart
-	emitrangedims = (5.0, 2.0, 4.0)
-	emit_target = (0.0, 1.0, 0.0)
-	emitangle = (0.0, 0.0, 0.0)
+	CreatedAtStart
+	EmitRangeDims = (5.0, 2.0, 4.0)
+	emit_Target = (0.0, 1.0, 0.0)
+	EmitAngle = (0.0, 0.0, 0.0)
 	force = (0.0, 0.0, 0.0)
-	windcoeff = 0.0
-	localwindcoeff = 0.0
-	emittervelocityweight = 0.0
-	anglespread = 360.0
-	liferange = (10.0, 10.0)
+	WindCoeff = 0.0
+	LocalWindCoeff = 0.0
+	EmitterVelocityWeight = 0.0
+	AngleSpread = 360.0
+	LifeRange = (10.0, 10.0)
 	emit_rate = 20.0
 	max = 0
-	timeseed = 0.0
-	lifetime = 0.0
-	emitnum = 0
-	followemitter = 0.0
-	emitfunction = constant
-	emitperiod = 1.0
-	sizerange = [
+	TimeSeed = 0.0
+	lifeTime = 0.0
+	emitNum = 0
+	FollowEmitter = 0.0
+	EmitFunction = constant
+	EmitPeriod = 1.0
+	SizeRange = [
 		(0.03, 0.03)
 		(0.03, 0.03)
 	]
-	speedrange = (0.1, 0.2)
-	rotvel = (0.0, 0.0)
-	rotveltimescale = 0.0
-	emitdelaystart = 0.0
-	pathfollowtime = 0.0
-	history = 2
-	historylistcoordinatespace = world
+	SpeedRange = (0.1, 0.2)
+	RotVel = (0.0, 0.0)
+	RotVelTimeScale = 0.0
+	EmitDelayStart = 0.0
+	PathFollowTime = 0.0
+	History = 2
+	HistoryListCoordinateSpace = world
 	color = 1633767713
-	lod_default
-	quickmaterial = {
-		diffusetextureenabled
-		diffusetexture = ph_dustparticle
-		specularpower = 0
-		lighting
+	LOD_Default
+	QuickMaterial = {
+		DiffuseTextureEnabled
+		DiffuseTexture = PH_DustParticle
+		SpecularPower = 0
+		Lighting
 		alphacutoff = 0
-		blendmode = add
-		quadanimationfps = 0
+		blendMode = Add
+		QuadAnimationFPS = 0
 	}
-	knot = [
+	Knot = [
 		(-0.507645, 0.0, -0.0)
 		(-0.507645, 0.0, -0.0)
 		(-0.414729, 0.0, -0.0)
@@ -59,7 +59,7 @@ gp_fx_dust_01 = {
 		(0.571823, 0.0, -0.0)
 		(0.571823, 0.0, -0.0)
 	]
-	particlecolor = [
+	ParticleColor = [
 		-256
 		-256
 		-1
@@ -69,7 +69,7 @@ gp_fx_dust_01 = {
 		-1
 		-1
 	]
-	vertexweight = [
+	VertexWeight = [
 		0.258227
 		0.62286603
 		1.0

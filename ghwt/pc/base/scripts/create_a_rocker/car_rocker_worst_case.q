@@ -1,5 +1,5 @@
 worst_user_cap_entry = {
-	texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_009.img`
+	texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_009.img`
 	color = red_orange_1
 	a = 70
 	x_trans = -22
@@ -11,86 +11,86 @@ worst_user_cap_entry = {
 	rot = 3783
 	flags = 3
 }
-worst_car_loc_string_name = qs(0xcc00d2c0)
+worst_car_loc_string_name = qs("\LNAMENAMENAMENAMENAME")
 worst_user_cap_entry_base = {
-	base_tex = `tex\models\car_instruments\bass\cab_body_b1a_d_mls.dds`
-	material = cab_body_arcos_primary
+	base_tex = `tex\models\CAR_Instruments\Bass\cab_body_b1a_d_mls.dds`
+	material = CAB_Body_Arcos_Primary
 	diffuse
 	layers = [
 	]
 }
 worst_cap_preset_entry = {
-	base_tex = `tex\models\car_instruments\bass\cab_body_b1a_d_mls.dds`
-	material = cab_body_arcos_primary
+	base_tex = `tex\models\CAR_Instruments\Bass\cab_body_b1a_d_mls.dds`
+	material = CAB_Body_Arcos_Primary
 	diffuse
 	pre_layer = [
 		{
-			texture = `tex/models/characters/layers/cab/cab_body_arks_pale.img`
+			texture = `tex/models/Characters/Layers/CAB/CAB_Body_ARKS_Pale.img`
 			flags = 4
-			color = black_1guitar
+			color = Black_1guitar
 		}
 	]
 }
 worst_bones_entry = {
-	headsize = -0.93299997
-	facefullness = 0.4
-	jawscale = 0.5
-	chinsize = 0.661
-	cheekboneshape = 0.82199997
-	nosesize = 0.0
-	noseposition = 0.0
-	nosebridge = 0.5
-	nosetip = 0.6
-	mouthangle = 0.2
-	mouthdepth = 0.4
-	mouthposition = 0.6
-	lowerlipthickness = 0.047
-	mouthscale = 0.2
-	lipshape = 0.2
-	eyeangle = 0.7
-	eyescale = 0.3
-	eyedistance = 0.5
-	eyeshape = 0.5
-	eyeposition = 0.2
-	browposition = 0.4
-	eyebrowangle = 0.0
-	eyebrowshape = 0.9
-	browdepth = 0.2
-	eyebrowdistance = 0.2
-	eyedepth = 0.6
-	upperlipthickness = 0.5
+	HeadSize = -0.93299997
+	FaceFullness = 0.4
+	JawScale = 0.5
+	ChinSize = 0.661
+	CheekboneShape = 0.82199997
+	NoseSize = 0.0
+	NosePosition = 0.0
+	NoseBridge = 0.5
+	NoseTip = 0.6
+	MouthAngle = 0.2
+	MouthDepth = 0.4
+	MouthPosition = 0.6
+	LowerLipThickness = 0.047
+	MouthScale = 0.2
+	LipShape = 0.2
+	EyeAngle = 0.7
+	EyeScale = 0.3
+	EyeDistance = 0.5
+	EyeShape = 0.5
+	EyePosition = 0.2
+	BrowPosition = 0.4
+	EyebrowAngle = 0.0
+	EyebrowShape = 0.9
+	BrowDepth = 0.2
+	EyebrowDistance = 0.2
+	EyeDepth = 0.6
+	UpperLipThickness = 0.5
 }
 worst_additional_bone_entry = [
 	{
-		bone = bone_neck
+		bone = Bone_Neck
 		scaling = {
 			value = (0.25, 0.25, 0.25)
 			no_propagate
 		}
 	}
 	{
-		bone = bone_chest
+		bone = Bone_Chest
 		scaling = {
 			value = (0.1, 0.4, 0.4)
 			no_propagate
 		}
 	}
 	{
-		bone = bone_stomach_upper
+		bone = Bone_Stomach_Upper
 		scaling = {
 			value = (0.1, 0.25, 0.25)
 			no_propagate
 		}
 	}
 	{
-		bone = bone_stomach_lower
+		bone = Bone_Stomach_Lower
 		scaling = {
 			value = (0.1, 0.25, 0.15)
 			no_propagate
 		}
 	}
 	{
-		bone = bone_collar_r
+		bone = Bone_Collar_R
 		scaling = {
 			value = (0.2, 0.2, 0.2)
 			no_propagate
@@ -100,7 +100,7 @@ worst_additional_bone_entry = [
 		}
 	}
 	{
-		bone = bone_collar_l
+		bone = Bone_Collar_L
 		scaling = {
 			value = (0.2, 0.2, 0.2)
 			no_propagate
@@ -110,81 +110,81 @@ worst_additional_bone_entry = [
 		}
 	}
 	{
-		bone = bone_twist_bicep_top_r
+		bone = Bone_Twist_Bicep_Top_R
 		scaling = {
 			value = (0.0, 0.65000004, 0.5)
 			no_propagate
 		}
 	}
 	{
-		bone = bone_twist_bicep_mid_r
+		bone = Bone_Twist_Bicep_Mid_R
 		scaling = {
 			value = (0.0, 0.65000004, 0.5)
 			no_propagate
 		}
 	}
 	{
-		bone = bone_bicep_r
+		bone = Bone_Bicep_R
 		scaling = {
 			value = (0.0, 0.65000004, 0.5)
 			no_propagate
 		}
 	}
 	{
-		bone = bone_twist_bicep_top_l
+		bone = Bone_Twist_Bicep_Top_L
 		scaling = {
 			value = (0.0, 0.65000004, 0.5)
 			no_propagate
 		}
 	}
 	{
-		bone = bone_twist_bicep_mid_l
+		bone = Bone_Twist_Bicep_Mid_L
 		scaling = {
 			value = (0.0, 0.65000004, 0.5)
 			no_propagate
 		}
 	}
 	{
-		bone = bone_bicep_l
+		bone = Bone_Bicep_L
 		scaling = {
 			value = (0.0, 0.65000004, 0.5)
 			no_propagate
 		}
 	}
 	{
-		bone = bone_forearm_l
+		bone = Bone_Forearm_L
 		scaling = {
 			value = (0.0, 0.5, 0.35000002)
 			no_propagate
 		}
 	}
 	{
-		bone = bone_forearm_r
+		bone = Bone_Forearm_R
 		scaling = {
 			value = (0.0, 0.5, 0.35000002)
 			no_propagate
 		}
 	}
 	{
-		bone = bone_palm_l
+		bone = Bone_Palm_L
 		scaling = {
 			value = (0.0, 0.3, 0.3)
 		}
 	}
 	{
-		bone = bone_palm_r
+		bone = Bone_Palm_R
 		scaling = {
 			value = (0.0, 0.3, 0.3)
 		}
 	}
 	{
-		bone = bone_ankle_r
+		bone = Bone_Ankle_R
 		scaling = {
 			value = (0.13, 0.0, 0.3)
 		}
 	}
 	{
-		bone = bone_ankle_l
+		bone = Bone_Ankle_L
 		scaling = {
 			value = (0.13, 0.0, 0.3)
 		}
@@ -196,7 +196,7 @@ worst_chosen_materials_entry = {
 }
 worst_car_defs = [
 	{
-		part = cas_body
+		part = CAS_Body
 		custom_cap_sections = 4
 		cap_preset_layers = 2
 		bones = true
@@ -207,237 +207,237 @@ worst_car_defs = [
 		additional_bones = true
 	}
 	{
-		part = cas_eyes
+		part = CAS_Eyes
 	}
 	{
-		part = cas_male_hair
+		part = CAS_Male_Hair
 		chosen_materials = 2
 	}
 	{
-		part = cas_male_hat_hair
+		part = CAS_Male_Hat_Hair
 		chosen_materials = 2
 	}
 	{
-		part = cas_male_facial_hair
+		part = CAS_Male_Facial_Hair
 		chosen_materials = 2
 	}
 	{
-		part = cas_male_hat
+		part = CAS_Male_Hat
 		chosen_materials = 2
 	}
 	{
-		part = cas_male_torso
+		part = CAS_Male_Torso
 		custom_cap_sections = 1
 		chosen_materials = 2
 	}
 	{
-		part = cas_male_legs
+		part = CAS_Male_Legs
 		chosen_materials = 2
 	}
 	{
-		part = cas_male_shoes
+		part = CAS_Male_Shoes
 		chosen_materials = 2
 	}
 	{
-		part = cas_male_acc_left
+		part = CAS_Male_Acc_Left
 		chosen_materials = 2
 	}
 	{
-		part = cas_male_acc_right
+		part = CAS_Male_Acc_Right
 		chosen_materials = 2
 	}
 	{
-		part = cas_male_acc_face
+		part = CAS_Male_Acc_Face
 		chosen_materials = 2
 	}
 	{
-		part = cas_male_acc_ears
+		part = CAS_Male_Acc_Ears
 		chosen_materials = 2
 	}
 	{
-		part = cas_male_age
+		part = CAS_Male_Age
 	}
 	{
-		part = cas_male_intro_anim
+		part = CAS_Male_Intro_Anim
 	}
 	{
-		part = cas_male_win_anim
+		part = CAS_Male_Win_Anim
 	}
 	{
-		part = cas_male_lose_anim
+		part = CAS_Male_Lose_Anim
 	}
 ]
 worst_preset_defs = [
 	{
-		part = cas_male_hair
+		part = CAS_Male_Hair
 		chosen_materials = 2
 	}
 	{
-		part = cas_male_hat_hair
+		part = CAS_Male_Hat_Hair
 		chosen_materials = 2
 	}
 	{
-		part = cas_male_facial_hair
+		part = CAS_Male_Facial_Hair
 		chosen_materials = 2
 	}
 	{
-		part = cas_male_hat
+		part = CAS_Male_Hat
 		chosen_materials = 2
 	}
 	{
-		part = cas_male_torso
+		part = CAS_Male_Torso
 		custom_cap_sections = 1
 		chosen_materials = 2
 	}
 	{
-		part = cas_male_legs
+		part = CAS_Male_Legs
 		chosen_materials = 2
 	}
 	{
-		part = cas_male_shoes
+		part = CAS_Male_Shoes
 		chosen_materials = 2
 	}
 	{
-		part = cas_male_acc_left
+		part = CAS_Male_Acc_Left
 		chosen_materials = 2
 	}
 	{
-		part = cas_male_acc_right
+		part = CAS_Male_Acc_Right
 		chosen_materials = 2
 	}
 	{
-		part = cas_male_acc_face
+		part = CAS_Male_Acc_Face
 		chosen_materials = 2
 	}
 	{
-		part = cas_male_acc_ears
+		part = CAS_Male_Acc_Ears
 		chosen_materials = 2
 	}
 	{
-		part = cas_male_age
+		part = CAS_Male_Age
 	}
 	{
-		part = cas_male_intro_anim
+		part = CAS_Male_Intro_Anim
 	}
 	{
-		part = cas_male_win_anim
+		part = CAS_Male_Win_Anim
 	}
 	{
-		part = cas_male_lose_anim
+		part = CAS_Male_Lose_Anim
 	}
 ]
 worst_guitar_defs = [
 	{
-		part = cas_guitar_body
+		part = CAS_Guitar_Body
 		custom_cap_sections = 1
 		cap_preset_layers = 2
 		chosen_materials = 2
 	}
 	{
-		part = cas_guitar_neck
+		part = CAS_Guitar_Neck
 		cap_preset_layers = 2
 		chosen_materials = 2
 	}
 	{
-		part = cas_guitar_head
+		part = CAS_Guitar_Head
 		custom_cap_sections = 1
 		cap_preset_layers = 2
 		chosen_materials = 2
 	}
 	{
-		part = cas_guitar_pickguards
+		part = CAS_Guitar_Pickguards
 		cap_preset_layers = 1
 		chosen_materials = 2
 	}
 	{
-		part = cas_guitar_bridges
+		part = CAS_Guitar_Bridges
 		chosen_materials = 2
 	}
 	{
-		part = cas_guitar_knobs
+		part = CAS_Guitar_Knobs
 		chosen_materials = 2
 	}
 	{
-		part = cas_guitar_pickups
+		part = CAS_Guitar_Pickups
 		chosen_materials = 2
 	}
 	{
-		part = cas_guitar_strings
+		part = CAS_Guitar_Strings
 	}
 	{
-		part = cas_guitar_highway
+		part = CAS_Guitar_Highway
 	}
 ]
 worst_bass_defs = [
 	{
-		part = cas_bass_body
+		part = CAS_Bass_Body
 		custom_cap_sections = 1
 		cap_preset_layers = 2
 		chosen_materials = 2
 	}
 	{
-		part = cas_bass_neck
+		part = CAS_Bass_Neck
 		cap_preset_layers = 2
 		chosen_materials = 2
 	}
 	{
-		part = cas_bass_head
+		part = CAS_Bass_Head
 		custom_cap_sections = 1
 		cap_preset_layers = 2
 		chosen_materials = 2
 	}
 	{
-		part = cas_bass_pickguards
+		part = CAS_Bass_Pickguards
 		cap_preset_layers = 1
 		chosen_materials = 2
 	}
 	{
-		part = cas_bass_bridges
+		part = CAS_Bass_Bridges
 		chosen_materials = 2
 	}
 	{
-		part = cas_bass_knobs
+		part = CAS_Bass_Knobs
 		chosen_materials = 2
 	}
 	{
-		part = cas_bass_pickups
+		part = CAS_Bass_Pickups
 		chosen_materials = 2
 	}
 	{
-		part = cas_bass_strings
+		part = CAS_Bass_Strings
 	}
 	{
-		part = cas_bass_highway
+		part = CAS_Bass_Highway
 	}
 ]
 worst_drum_defs = [
 	{
-		part = cas_drums
+		part = CAS_Drums
 		custom_cap_sections = 1
 		cap_preset_layers = 2
 		chosen_materials = 2
 	}
 	{
-		part = cas_drums_sticks
+		part = CAS_Drums_Sticks
 		chosen_materials = 2
 	}
 	{
-		part = cas_drums_highway
+		part = CAS_Drums_Highway
 	}
 ]
 worst_vocals_defs = [
 	{
-		part = cas_mic
+		part = CAS_Mic
 		chosen_materials = 2
 	}
 	{
-		part = cas_mic_stand
+		part = CAS_Mic_Stand
 		chosen_materials = 2
 	}
 ]
 worst_logo_defs = [
 	{
-		part = cas_band_logo
+		part = CAS_Band_Logo
 		custom_cap_sections = 1
 	}
 ]
@@ -445,13 +445,13 @@ worst_entry_global = {
 }
 
 script generate_worst_cas_struct 
-	requireparams \{[
+	RequireParams \{[
 			defs
 		]
 		all}
 	change \{worst_entry_global = {
 		}}
-	foreachin <defs> do = generate_worst_cas_struct_foreach
+	ForEachIn <defs> do = generate_worst_cas_struct_foreach
 	cas_struct = ($worst_entry_global)
 	change \{worst_entry_global = {
 		}}
@@ -461,14 +461,14 @@ endscript
 script generate_worst_cas_struct_foreach 
 	struct = ($worst_entry_global)
 	new_entry = {
-		desc_id = axelhighway
+		desc_id = AxelHighway
 	}
-	if gotparam \{chosen_materials}
+	if GotParam \{chosen_materials}
 		newstruct = {}
 		i = 0
 		begin
-		formattext checksumname = field 'material%d' d = (<i> + 1)
-		updatestructelement struct = <newstruct> element = <field> value = green_1
+		FormatText checksumname = field 'material%d' d = (<i> + 1)
+		UpdateStructElement struct = <newstruct> element = <field> value = green_1
 		i = (<i> + 1)
 		repeat <chosen_materials>
 		new_entry = {
@@ -476,35 +476,35 @@ script generate_worst_cas_struct_foreach
 			chosen_materials = <newstruct>
 		}
 	endif
-	if gotparam \{bones}
+	if GotParam \{bones}
 		new_entry = {
 			<new_entry>
 			bones = ($worst_bones_entry)
 		}
 	endif
-	if gotparam \{additional_bones}
+	if GotParam \{additional_bones}
 		new_entry = {
 			<new_entry>
 			bones = ($worst_additional_bone_entry)
 		}
 	endif
 	array = []
-	if gotparam \{cap_preset_layers}
+	if GotParam \{cap_preset_layers}
 		i = 0
 		begin
-		addarrayelement array = <array> element = ($worst_cap_preset_entry)
+		AddArrayElement array = <array> element = ($worst_cap_preset_entry)
 		i = (<i> + 1)
 		repeat <cap_preset_layers>
 	endif
-	if gotparam \{custom_cap_sections}
+	if GotParam \{custom_cap_sections}
 		i = 0
 		begin
 		cas_generate_worst_user_cap layers = ($max_cap_layers)
-		addarrayelement array = <array> element = <user_cap>
+		AddArrayElement array = <array> element = <user_cap>
 		i = (<i> + 1)
 		repeat <custom_cap_sections>
 	endif
-	getarraysize <array>
+	GetArraySize <array>
 	if (<array_size> > 0)
 		new_entry = {
 			<new_entry>
@@ -515,7 +515,7 @@ script generate_worst_cas_struct_foreach
 		<new_entry>
 		name = ($worst_car_loc_string_name)
 	}
-	appendstruct struct = struct field = <part> params = <new_entry>
+	AppendStruct struct = struct field = <part> params = <new_entry>
 	change worst_entry_global = <struct>
 endscript
 
@@ -523,7 +523,7 @@ script cas_generate_worst_user_cap
 	array = []
 	i = 0
 	begin
-	addarrayelement array = <array> element = ($worst_user_cap_entry)
+	AddArrayElement array = <array> element = ($worst_user_cap_entry)
 	i = (<i> + 1)
 	repeat <layers>
 	return user_cap = {($worst_user_cap_entry_base) layers = <array>}
@@ -565,7 +565,7 @@ script generate_worst_cas
 	generate_worst_cas_struct_car
 	print_worst_cas cas_struct = <cas_struct> num = $max_num_create_a_rockers name = 'car'
 	generate_worst_cas_struct_preset
-	getarraysize \{$preset_musician_profiles_modifiable}
+	GetArraySize \{$Preset_Musician_Profiles_Modifiable}
 	print_worst_cas cas_struct = <cas_struct> num = <array_size> name = 'presetcar'
 	generate_worst_cas_struct \{defs = $worst_guitar_defs}
 	print_worst_cas cas_struct = <cas_struct> num = $max_num_instrument_saves name = 'guitar'
@@ -584,10 +584,10 @@ script generate_worst_cas
 endscript
 
 script print_worst_cas \{num = 1}
-	getwritetobuffersize struct = <cas_struct> lzss
+	GetWriteToBufferSize struct = <cas_struct> lzss
 	buffer_size_lzss = <buffer_size>
-	getwritetobuffersize struct = <cas_struct>
-	getcomponentusage struct = <cas_struct>
+	GetWriteToBufferSize struct = <cas_struct>
+	GetComponentUsage struct = <cas_struct>
 	components_used = (<components_used> * <num>)
 	structs_used = (<structs_used> * <num>)
 	arrays_used = (<arrays_used> * <num>)

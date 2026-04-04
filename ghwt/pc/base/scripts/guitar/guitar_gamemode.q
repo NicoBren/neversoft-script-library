@@ -1,4 +1,4 @@
-gamemode_list = [
+Gamemode_list = [
 	p1_quickplay
 	p2_quickplay
 	p3_quickplay

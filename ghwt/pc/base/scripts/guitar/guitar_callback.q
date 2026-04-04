@@ -1,6 +1,6 @@
 
 script timer_callback_script 
-	if ($input_mode = play)
+	if ($input_mode = Play)
 		playback_timer
 	endif
 endscript
@@ -13,19 +13,19 @@ script script_callback_script
 endscript
 
 script script_postcallback_script 
-	updateguitarfuncs
-	if NOT gameispaused
-		getdeltatime \{ignore_slomo}
-		update2dparticlesystems delta_time = <delta_time>
-		runqueuedpulseevents
-		checkbosscutoff
+	UpdateGuitarFuncs
+	if NOT GameIsPaused
+		GetDeltaTime \{ignore_slomo}
+		Update2DParticleSystems delta_time = <delta_time>
+		RunQueuedPulseEvents
+		CheckBossCutoff
 		if ($output_gpu_log = 1)
-			getprofiledata \{cpu = 6
+			GetProfileData \{cpu = 6
 				name = gpu}
 			milliseconds = (<microseconds> / 1000.0)
-			getsongtime
-			formattext textname = text qs(0x8a7791b0) s = <songtime> m = <milliseconds> dontassertforchecksums
-			textoutput text = <text>
+			GetSongTime
+			FormatText TextName = text qs("\LGPU Time; %s; %m") s = <songtime> m = <milliseconds> DontAssertForChecksums
+			TextOutput text = <text>
 		endif
 	endif
 endscript

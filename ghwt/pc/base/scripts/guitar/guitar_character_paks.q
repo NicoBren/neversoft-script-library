@@ -1,23 +1,23 @@
-highway_pakman_links = {
+Highway_Pakman_Links = {
 	highway_axel = {
 		name = 'highway_axel'
 	}
 	highway_casey = {
 		name = 'highway_casey'
 	}
-	highway_izzy = {
+	highway_Izzy = {
 		name = 'highway_izzy'
 	}
-	highway_johnny = {
+	highway_Johnny = {
 		name = 'highway_johnny'
 	}
 	highway_judy = {
 		name = 'highway_judy'
 	}
-	highway_lars = {
+	highway_Lars = {
 		name = 'highway_lars'
 	}
-	highway_midori = {
+	highway_Midori = {
 		name = 'highway_midori'
 	}
 	highway_classic = {
@@ -44,7 +44,7 @@ highway_pakman_links = {
 	highway_sting = {
 		name = 'highway_Sting'
 	}
-	highway_winston = {
+	highway_Winston = {
 		name = 'highway_Winston'
 	}
 	highway_wylde = {
@@ -61,7 +61,7 @@ lose_anim_path = 'ingame/Lose/'
 point_win_anim_path = 'ingame/PointWin/'
 point_lose_anim_path = 'ingame/PointLose/'
 starpower_anim_path = 'ingame/StarPower/'
-anim_perm_pakman_links = {
+Anim_Perm_Pakman_Links = {
 	perm_anims_in_game = {
 		name = 'perm_anims_in_game'
 		path = 'perm_anims/'
@@ -71,104 +71,104 @@ anim_perm_pakman_links = {
 		path = $frontend_anim_path
 	}
 }
-anim_loop_guit_singer_pakman_links = {
-	l_guit_chrisvance_bulls_anims = {
+Anim_Loop_GUIT_SINGER_Pakman_Links = {
+	L_GUIT_ChrisVance_Bulls_anims = {
 		name = 'L_GUIT_ChrisVance_Bulls_anims'
 		path = $guit_loop_anim_path
 	}
-	l_guit_chrisvance_damnit_anims = {
+	L_GUIT_ChrisVance_Damnit_anims = {
 		name = 'L_GUIT_ChrisVance_Damnit_anims'
 		path = $guit_loop_anim_path
 	}
-	l_guit_chrisv_damnit2_anims = {
+	L_GUIT_ChrisV_Damnit2_anims = {
 		name = 'L_GUIT_ChrisV_Damnit2_anims'
 		path = $guit_loop_anim_path
 	}
-	l_guit_chrisvance_joker_anims = {
+	L_GUIT_ChrisVance_Joker_anims = {
 		name = 'L_GUIT_ChrisVance_Joker_anims'
 		path = $guit_loop_anim_path
 	}
-	l_guit_davidicus_damnit_anims = {
+	L_GUIT_Davidicus_Damnit_anims = {
 		name = 'L_GUIT_Davidicus_Damnit_anims'
 		path = $guit_loop_anim_path
 	}
-	l_guit_davidicus_damnit2_anims = {
+	L_GUIT_Davidicus_Damnit2_anims = {
 		name = 'L_GUIT_Davidicus_Damnit2_anims'
 		path = $guit_loop_anim_path
 	}
-	l_guit_davidicus_joker_anims = {
+	L_GUIT_Davidicus_Joker_anims = {
 		name = 'L_GUIT_Davidicus_Joker_anims'
 		path = $guit_loop_anim_path
 	}
-	l_guit_davidicus_bulls_anims = {
+	L_GUIT_Davidicus_Bulls_anims = {
 		name = 'L_GUIT_Davidicus_Bulls_anims'
 		path = $guit_loop_anim_path
 	}
-	l_guit_dvdicus_bulls_150_anims = {
+	L_GUIT_Dvdicus_Bulls_150_anims = {
 		name = 'L_GUIT_Dvdicus_Bulls_150_anims'
 		path = $guit_loop_anim_path
 	}
-	l_guit_dan_damnit_anims = {
+	L_GUIT_Dan_Damnit_anims = {
 		name = 'L_GUIT_Dan_Damnit_anims'
 		path = $guit_loop_anim_path
 	}
-	l_guit_dan_joker_anims = {
+	L_GUIT_Dan_Joker_anims = {
 		name = 'L_GUIT_Dan_Joker_anims'
 		path = $guit_loop_anim_path
 	}
-	l_guit_joer_areyou_anims = {
+	L_GUIT_JoeR_AreYou_anims = {
 		name = 'L_GUIT_JoeR_AreYou_anims'
 		path = $guit_loop_anim_path
 	}
-	l_guit_joer_hot_anims = {
+	L_GUIT_JoeR_Hot_anims = {
 		name = 'L_GUIT_JoeR_Hot_anims'
 		path = $guit_loop_anim_path
 	}
-	l_guit_jeffs_lowkey_anims = {
+	L_GUIT_JeffS_LowKey_anims = {
 		name = 'L_GUIT_JeffS_LowKey_anims'
 		path = $guit_loop_anim_path
 	}
-	l_guit_jeffs_lowkey2_anims = {
+	L_GUIT_JeffS_LowKey2_anims = {
 		name = 'L_GUIT_JeffS_LowKey2_anims'
 		path = $guit_loop_anim_path
 	}
-	l_guit_jimi_joker_anims = {
+	L_GUIT_Jimi_Joker_anims = {
 		name = 'L_GUIT_Jimi_Joker_anims'
 		path = $guit_loop_anim_path
 	}
-	l_guit_joes_areyou_anims = {
+	L_GUIT_JoeS_AreYou_anims = {
 		name = 'L_GUIT_JoeS_AreYou_anims'
 		path = $guit_loop_anim_path
 	}
-	l_guit_joes_hot_anims = {
+	L_GUIT_JoeS_Hot_anims = {
 		name = 'L_GUIT_JoeS_Hot_anims'
 		path = $guit_loop_anim_path
 	}
-	l_guit_joes_hot_150_anims = {
+	L_GUIT_JoeS_Hot_150_anims = {
 		name = 'L_GUIT_JoeS_Hot_150_anims'
 		path = $guit_loop_anim_path
 	}
-	l_guit_matt_stillborn_anims = {
+	L_GUIT_Matt_Stillborn_anims = {
 		name = 'L_GUIT_Matt_Stillborn_anims'
 		path = $guit_loop_anim_path
 	}
-	l_guit_matt_bulls_anims = {
+	L_GUIT_Matt_Bulls_anims = {
 		name = 'L_GUIT_Matt_Bulls_anims'
 		path = $guit_loop_anim_path
 	}
-	l_guit_sam_joker_anims = {
+	L_GUIT_Sam_Joker_anims = {
 		name = 'L_GUIT_Sam_Joker_anims'
 		path = $guit_loop_anim_path
 	}
-	l_guit_sam_dammit_anims = {
+	L_GUIT_Sam_Dammit_anims = {
 		name = 'L_GUIT_Sam_Dammit_anims'
 		path = $guit_loop_anim_path
 	}
-	l_guit_sonny_bulls_anims = {
+	L_GUIT_Sonny_Bulls_anims = {
 		name = 'L_GUIT_Sonny_Bulls_anims'
 		path = $guit_loop_anim_path
 	}
-	l_guit_sonny_stillborn_anims = {
+	L_GUIT_Sonny_Stillborn_anims = {
 		name = 'L_GUIT_Sonny_Stillborn_anims'
 		path = $guit_loop_anim_path
 	}
@@ -180,27 +180,27 @@ anim_loop_guit_singer_pakman_links = {
 		name = 'L_GUIT_Zakk_Stillborn_anims'
 		path = $guit_loop_anim_path
 	}
-	l_guit_ginger_areyou_anims = {
+	L_GUIT_Ginger_AreYou_anims = {
 		name = 'L_GUIT_Ginger_AreYou_anims'
 		path = $guit_loop_anim_path
 	}
-	l_guit_ginger_bulls_anims = {
+	L_GUIT_Ginger_Bulls_anims = {
 		name = 'L_GUIT_Ginger_Bulls_anims'
 		path = $guit_loop_anim_path
 	}
-	l_guit_ginger_joker_anims = {
+	L_GUIT_Ginger_Joker_anims = {
 		name = 'L_GUIT_Ginger_Joker_anims'
 		path = $guit_loop_anim_path
 	}
-	l_guit_judita_areyou_anims = {
+	L_GUIT_Judita_AreYou_anims = {
 		name = 'L_GUIT_Judita_AreYou_anims'
 		path = $guit_loop_anim_path
 	}
-	l_guit_judita_bulls_anims = {
+	L_GUIT_Judita_Bulls_anims = {
 		name = 'L_GUIT_Judita_Bulls_anims'
 		path = $guit_loop_anim_path
 	}
-	l_guit_judita_joker_anims = {
+	L_GUIT_Judita_Joker_anims = {
 		name = 'L_GUIT_Judita_Joker_anims'
 		path = $guit_loop_anim_path
 	}
@@ -220,67 +220,67 @@ anim_loop_guit_singer_pakman_links = {
 		name = 'frontend_anims_guit2'
 		path = $frontend_anim_path
 	}
-	l_sing_jeffs_lowkey_anims = {
+	L_SING_JeffS_LowKey_anims = {
 		name = 'L_SING_JeffS_LowKey_anims'
 		path = $sing_loop_anim_path
 	}
-	l_sing_jeffs_lowkey2_anims = {
+	L_SING_JeffS_LowKey2_anims = {
 		name = 'L_SING_JeffS_LowKey2_anims'
 		path = $sing_loop_anim_path
 	}
-	l_sing_joeh_hot_anims = {
+	L_SING_JoeH_Hot_anims = {
 		name = 'L_SING_JoeH_Hot_anims'
 		path = $sing_loop_anim_path
 	}
-	l_sing_josh_dammit_anims = {
+	L_SING_Josh_Dammit_anims = {
 		name = 'L_SING_Josh_Dammit_anims'
 		path = $sing_loop_anim_path
 	}
-	l_sing_josh_joker_anims = {
+	L_SING_Josh_Joker_anims = {
 		name = 'L_SING_Josh_Joker_anims'
 		path = $sing_loop_anim_path
 	}
-	l_sing_rob_bulls_anims = {
+	L_SING_Rob_Bulls_anims = {
 		name = 'L_SING_Rob_Bulls_anims'
 		path = $sing_loop_anim_path
 	}
-	l_sing_rob_stillborn_anims = {
+	L_SING_Rob_Stillborn_anims = {
 		name = 'L_SING_Rob_Stillborn_anims'
 		path = $sing_loop_anim_path
 	}
-	l_sing_rockg_damnit_anims = {
+	L_SING_RockG_Damnit_anims = {
 		name = 'L_SING_RockG_Damnit_anims'
 		path = $sing_loop_anim_path
 	}
-	l_sing_rockg_damnit2_anims = {
+	L_SING_RockG_Damnit2_anims = {
 		name = 'L_SING_RockG_Damnit2_anims'
 		path = $sing_loop_anim_path
 	}
-	l_sing_rockg_joker_anims = {
+	L_SING_Rockg_Joker_anims = {
 		name = 'L_SING_RockG_Joker_anims'
 		path = $sing_loop_anim_path
 	}
-	l_sing_rockg_bulls_anims = {
+	L_SING_RockG_Bulls_anims = {
 		name = 'L_SING_RockG_Bulls_anims'
 		path = $sing_loop_anim_path
 	}
-	l_sing_joeh_areyou_anims = {
+	L_SING_JoeH_AreYou_anims = {
 		name = 'L_SING_JoeH_AreYou_anims'
 		path = $sing_loop_anim_path
 	}
-	l_sing_natalie_areyou_anims = {
+	L_SING_Natalie_AreYou_anims = {
 		name = 'L_SING_Natalie_AreYou_anims'
 		path = $sing_loop_anim_path
 	}
-	l_sing_haley_bulls_anims = {
+	L_SING_Haley_Bulls_anims = {
 		name = 'L_SING_Haley_Bulls_anims'
 		path = $sing_loop_anim_path
 	}
-	l_sing_haley_dammit_anims = {
+	L_SING_Haley_Dammit_anims = {
 		name = 'L_SING_Haley_Dammit_anims'
 		path = $sing_loop_anim_path
 	}
-	l_sing_haley_joker_anims = {
+	L_SING_Haley_Joker_anims = {
 		name = 'L_SING_Haley_Joker_anims'
 		path = $sing_loop_anim_path
 	}
@@ -293,20 +293,20 @@ anim_loop_guit_singer_pakman_links = {
 		path = $frontend_anim_path
 	}
 }
-anim_loop_drum_pakman_links = {
-	l_drum_loops_standard_anims = {
+Anim_Loop_DRUM_Pakman_Links = {
+	L_DRUM_Loops_Standard_anims = {
 		name = 'L_DRUM_Loops_Standard_anims'
 		path = $drum_loop_anim_path
 	}
-	l_drum_loops_misery_anims = {
+	L_DRUM_Loops_Misery_anims = {
 		name = 'L_DRUM_Loops_Misery_anims'
 		path = $drum_loop_anim_path
 	}
-	l_drum_loops_byob_anims = {
+	L_DRUM_Loops_BYOB_anims = {
 		name = 'L_DRUM_Loops_BYOB_anims'
 		path = $drum_loop_anim_path
 	}
-	l_drum_loops_soul_doubt_anims = {
+	L_DRUM_Loops_Soul_Doubt_anims = {
 		name = 'L_DRUM_Loops_Soul_Doubt_anims'
 		path = $drum_loop_anim_path
 	}
@@ -314,7 +314,7 @@ anim_loop_drum_pakman_links = {
 		name = 'L_DRUM_Loops_1ArmdScior_anims'
 		path = $drum_loop_anim_path
 	}
-	l_drum_loops_overkill_anims = {
+	L_DRUM_Loops_Overkill_anims = {
 		name = 'L_DRUM_Loops_Overkill_anims'
 		path = $drum_loop_anim_path
 	}
@@ -322,27 +322,27 @@ anim_loop_drum_pakman_links = {
 		name = 'L_DRUM_Loops_PullMeUnder_anims'
 		path = $drum_loop_anim_path
 	}
-	l_drum_loops_frkonlsh_anims = {
+	L_DRUM_Loops_FrkOnLsh_anims = {
 		name = 'L_DRUM_Loops_FrkOnLsh_anims'
 		path = $drum_loop_anim_path
 	}
-	l_drum_loops_jessiesgrl_anims = {
+	L_DRUM_Loops_JessiesGrl_anims = {
 		name = 'L_DRUM_Loops_JessiesGrl_anims'
 		path = $drum_loop_anim_path
 	}
-	l_drum_loops_satchboogie_anims = {
+	L_DRUM_Loops_Satchboogie_anims = {
 		name = 'L_DRUM_Loops_Satchboogie_anims'
 		path = $drum_loop_anim_path
 	}
-	l_drum_loops_scream_anims = {
+	L_DRUM_Loops_scream_anims = {
 		name = 'L_DRUM_Loops_scream_anims'
 		path = $drum_loop_anim_path
 	}
-	l_drum_loops_kill_anims = {
+	L_DRUM_Loops_kill_anims = {
 		name = 'L_DRUM_Loops_kill_anims'
 		path = $drum_loop_anim_path
 	}
-	l_drum_loops_floaton_anims = {
+	L_DRUM_Loops_FloatOn_anims = {
 		name = 'L_DRUM_Loops_FloatOn_anims'
 		path = $drum_loop_anim_path
 	}
@@ -351,7 +351,7 @@ anim_loop_drum_pakman_links = {
 		path = $frontend_anim_path
 	}
 }
-anim_intro_win_pakman_links = {
+Anim_Intro_Win_Pakman_Links = {
 	d_travis_win = {
 		name = 'd_travis_win'
 		path = $win_anim_path
@@ -380,7 +380,7 @@ anim_intro_win_pakman_links = {
 		name = 's_billy_intro_boss'
 		path = $intro_anim_path
 	}
-	s_billy_win_boss = {
+	S_Billy_Win_Boss = {
 		name = 'S_Billy_Win_Boss'
 		path = $win_anim_path
 	}
@@ -460,7 +460,7 @@ anim_intro_win_pakman_links = {
 		name = 'Guit_Zakk_WinR'
 		path = $win_anim_path
 	}
-	s_billy_win_boss = {
+	S_Billy_Win_Boss = {
 		name = 'S_Billy_Win_Boss'
 		path = $win_anim_path
 	}
@@ -592,7 +592,7 @@ anim_intro_win_pakman_links = {
 		name = 'b_jeff_win_kick'
 		path = $win_anim_path
 	}
-	b_jeff_win_kungfu = {
+	b_jeff_win_KungFu = {
 		name = 'b_jeff_win_kungfu'
 		path = $win_anim_path
 	}
@@ -604,7 +604,7 @@ anim_intro_win_pakman_links = {
 		name = 'b_jeff_win_robot'
 		path = $win_anim_path
 	}
-	b_jeff_win_scary = {
+	b_jeff_win_Scary = {
 		name = 'b_jeff_win_scary'
 		path = $win_anim_path
 	}
@@ -684,11 +684,11 @@ anim_intro_win_pakman_links = {
 		name = 'car_female_wins_generic'
 		path = $win_anim_path
 	}
-	car_female_wins_jump = {
+	CAR_Female_Wins_Jump = {
 		name = 'car_female_wins_jump'
 		path = $win_anim_path
 	}
-	car_female_wins_kungfu = {
+	CAR_Female_Wins_KungFu = {
 		name = 'car_female_wins_kungfu'
 		path = $win_anim_path
 	}
@@ -724,11 +724,11 @@ anim_intro_win_pakman_links = {
 		name = 'car_wins_kicks'
 		path = $win_anim_path
 	}
-	car_wins_kungfu = {
+	car_wins_KungFu = {
 		name = 'car_wins_kungfu'
 		path = $win_anim_path
 	}
-	car_wins_noinstrument = {
+	CAR_wins_noinstrument = {
 		name = 'car_wins_noinstrument'
 		path = $win_anim_path
 	}
@@ -744,7 +744,7 @@ anim_intro_win_pakman_links = {
 		name = 'car_wins_robot'
 		path = $win_anim_path
 	}
-	car_wins_scary = {
+	car_wins_Scary = {
 		name = 'car_wins_scary'
 		path = $win_anim_path
 	}
@@ -768,7 +768,7 @@ anim_intro_win_pakman_links = {
 		name = 'd_jeff_win_kick'
 		path = $win_anim_path
 	}
-	d_jeff_win_kungfu = {
+	d_jeff_win_KungFu = {
 		name = 'd_jeff_win_kungfu'
 		path = $win_anim_path
 	}
@@ -780,7 +780,7 @@ anim_intro_win_pakman_links = {
 		name = 'd_jeff_win_robot'
 		path = $win_anim_path
 	}
-	d_jeff_win_scary = {
+	d_jeff_win_Scary = {
 		name = 'd_jeff_win_scary'
 		path = $win_anim_path
 	}
@@ -896,7 +896,7 @@ anim_intro_win_pakman_links = {
 		name = 'g_jeff_win_kick'
 		path = $win_anim_path
 	}
-	g_jeff_win_kungfu = {
+	g_jeff_win_KungFu = {
 		name = 'g_jeff_win_kungfu'
 		path = $win_anim_path
 	}
@@ -908,7 +908,7 @@ anim_intro_win_pakman_links = {
 		name = 'g_jeff_win_robot'
 		path = $win_anim_path
 	}
-	g_jeff_win_scary = {
+	g_jeff_win_Scary = {
 		name = 'g_jeff_win_scary'
 		path = $win_anim_path
 	}
@@ -996,7 +996,7 @@ anim_intro_win_pakman_links = {
 		name = 's_jeff_win_kick'
 		path = $win_anim_path
 	}
-	s_jeff_win_kungfu = {
+	s_jeff_win_KungFu = {
 		name = 's_jeff_win_kungfu'
 		path = $win_anim_path
 	}
@@ -1008,7 +1008,7 @@ anim_intro_win_pakman_links = {
 		name = 's_jeff_win_robot'
 		path = $win_anim_path
 	}
-	s_jeff_win_scary = {
+	s_jeff_win_Scary = {
 		name = 's_jeff_win_scary'
 		path = $win_anim_path
 	}
@@ -1157,24 +1157,24 @@ anim_intro_win_pakman_links = {
 		path = $win_anim_path
 	}
 }
-anim_lose_pakman_links = {
+Anim_Lose_Pakman_Links = {
 	bdgs_b_bassist_lose_01 = {
 		name = 'bdgs_b_bassist_lose_01'
 		path = $lose_anim_path
 	}
-	bdgs_b_drummer_lose_01 = {
+	BDGS_B_Drummer_Lose_01 = {
 		name = 'bdgs_b_drummer_lose_01'
 		path = $lose_anim_path
 	}
-	bdgs_b_guitarist_lose_01 = {
+	BDGS_B_Guitarist_Lose_01 = {
 		name = 'bdgs_b_guitarist_lose_01'
 		path = $lose_anim_path
 	}
-	bdgs_b_singer_lose_01 = {
+	BDGS_B_Singer_Lose_01 = {
 		name = 'bdgs_b_singer_lose_01'
 		path = $lose_anim_path
 	}
-	bdgs_d_bassist_lose_01 = {
+	BDGS_D_Bassist_Lose_01 = {
 		name = 'bdgs_d_bassist_lose_01'
 		path = $lose_anim_path
 	}
@@ -1182,19 +1182,19 @@ anim_lose_pakman_links = {
 		name = 'bdgs_d_drummer_lose_01'
 		path = $lose_anim_path
 	}
-	bdgs_d_guitarist_lose_01 = {
+	BDGS_D_Guitarist_Lose_01 = {
 		name = 'bdgs_d_guitarist_lose_01'
 		path = $lose_anim_path
 	}
-	bdgs_d_singer_lose_01 = {
+	BDGS_D_Singer_Lose_01 = {
 		name = 'bdgs_d_singer_lose_01'
 		path = $lose_anim_path
 	}
-	bdgs_g_bassist_lose_01 = {
+	BDGS_G_Bassist_Lose_01 = {
 		name = 'bdgs_g_bassist_lose_01'
 		path = $lose_anim_path
 	}
-	bdgs_g_drummer_lose_01 = {
+	BDGS_G_Drummer_Lose_01 = {
 		name = 'bdgs_g_drummer_lose_01'
 		path = $lose_anim_path
 	}
@@ -1202,19 +1202,19 @@ anim_lose_pakman_links = {
 		name = 'bdgs_g_guitarist_lose_01'
 		path = $lose_anim_path
 	}
-	bdgs_g_singer_lose_01 = {
+	BDGS_G_Singer_Lose_01 = {
 		name = 'bdgs_g_singer_lose_01'
 		path = $lose_anim_path
 	}
-	bdgs_s_bassist_lose_01 = {
+	BDGS_S_Bassist_Lose_01 = {
 		name = 'bdgs_s_bassist_lose_01'
 		path = $lose_anim_path
 	}
-	bdgs_s_drummer_lose_01 = {
+	BDGS_S_Drummer_Lose_01 = {
 		name = 'bdgs_s_drummer_lose_01'
 		path = $lose_anim_path
 	}
-	bdgs_s_guitarist_lose_01 = {
+	BDGS_S_Guitarist_Lose_01 = {
 		name = 'bdgs_s_guitarist_lose_01'
 		path = $lose_anim_path
 	}
@@ -1242,27 +1242,27 @@ anim_lose_pakman_links = {
 		name = 'b_jeff_lose_walkoff'
 		path = $lose_anim_path
 	}
-	b_kris_lose_angryatcrowd = {
+	B_Kris_Lose_AngryAtCrowd = {
 		name = 'B_Kris_Lose_AngryAtCrowd'
 		path = $lose_anim_path
 	}
-	b_kris_lose_depressed = {
+	B_Kris_Lose_Depressed = {
 		name = 'B_Kris_Lose_Depressed'
 		path = $lose_anim_path
 	}
-	b_kris_lose_pointbass = {
+	B_Kris_Lose_PointBass = {
 		name = 'B_Kris_Lose_PointBass'
 		path = $lose_anim_path
 	}
-	b_kris_lose_pointdrum = {
+	B_Kris_Lose_PointDrum = {
 		name = 'B_Kris_Lose_PointDrum'
 		path = $lose_anim_path
 	}
-	b_kris_lose_pointguit = {
+	B_Kris_Lose_PointGuit = {
 		name = 'B_Kris_Lose_PointGuit'
 		path = $lose_anim_path
 	}
-	b_kris_lose_pointsing = {
+	B_Kris_Lose_PointSing = {
 		name = 'B_Kris_Lose_PointSing'
 		path = $lose_anim_path
 	}
@@ -1274,11 +1274,11 @@ anim_lose_pakman_links = {
 		name = 'b_kris_lose_tantrum'
 		path = $lose_anim_path
 	}
-	car_female_lose_angryatcrowd = {
+	CAR_Female_Lose_AngryAtCrowd = {
 		name = 'CAR_Female_Lose_AngryAtCrowd'
 		path = $lose_anim_path
 	}
-	car_female_lose_depressed = {
+	CAR_Female_Lose_Depressed = {
 		name = 'CAR_Female_Lose_Depressed'
 		path = $lose_anim_path
 	}
@@ -1326,27 +1326,27 @@ anim_lose_pakman_links = {
 		name = 'd_jeff_lose_walkoff'
 		path = $lose_anim_path
 	}
-	d_kris_lose_angryatcrowd = {
+	D_Kris_Lose_AngryAtCrowd = {
 		name = 'D_Kris_Lose_AngryAtCrowd'
 		path = $lose_anim_path
 	}
-	d_kris_lose_depressed = {
+	D_Kris_Lose_Depressed = {
 		name = 'D_Kris_Lose_Depressed'
 		path = $lose_anim_path
 	}
-	d_kris_lose_pointbass = {
+	D_Kris_Lose_PointBass = {
 		name = 'D_Kris_Lose_PointBass'
 		path = $lose_anim_path
 	}
-	d_kris_lose_pointdrum = {
+	D_Kris_Lose_PointDrum = {
 		name = 'D_Kris_Lose_PointDrum'
 		path = $lose_anim_path
 	}
-	d_kris_lose_pointguit = {
+	D_Kris_Lose_PointGuit = {
 		name = 'D_Kris_Lose_PointGuit'
 		path = $lose_anim_path
 	}
-	d_kris_lose_pointsing = {
+	D_Kris_Lose_PointSing = {
 		name = 'D_Kris_Lose_PointSing'
 		path = $lose_anim_path
 	}
@@ -1454,27 +1454,27 @@ anim_lose_pakman_links = {
 		name = 'g_jimi_loss_left'
 		path = $lose_anim_path
 	}
-	g_kris_lose_angryatcrowd = {
+	G_Kris_Lose_AngryAtCrowd = {
 		name = 'G_Kris_Lose_AngryAtCrowd'
 		path = $lose_anim_path
 	}
-	g_kris_lose_depressed = {
+	G_Kris_Lose_Depressed = {
 		name = 'G_Kris_Lose_Depressed'
 		path = $lose_anim_path
 	}
-	g_kris_lose_pointbass = {
+	G_Kris_Lose_PointBass = {
 		name = 'G_Kris_Lose_PointBass'
 		path = $lose_anim_path
 	}
-	g_kris_lose_pointdrum = {
+	G_Kris_Lose_PointDrum = {
 		name = 'G_Kris_Lose_PointDrum'
 		path = $lose_anim_path
 	}
-	g_kris_lose_pointguit = {
+	G_Kris_Lose_PointGuit = {
 		name = 'G_Kris_Lose_PointGuit'
 		path = $lose_anim_path
 	}
-	g_kris_lose_pointsing = {
+	G_Kris_Lose_PointSing = {
 		name = 'G_Kris_Lose_PointSing'
 		path = $lose_anim_path
 	}
@@ -1510,7 +1510,7 @@ anim_lose_pakman_links = {
 		name = 's_billy_lose_boss_02'
 		path = $lose_anim_path
 	}
-	s_billy_lose_boss_guitsmash = {
+	S_Billy_Lose_Boss_GuitSmash = {
 		name = 's_billy_lose_boss_guitsmash'
 		path = $lose_anim_path
 	}
@@ -1554,27 +1554,27 @@ anim_lose_pakman_links = {
 		name = 's_jeff_lose_walkoff'
 		path = $lose_anim_path
 	}
-	s_kris_lose_angryatcrowd = {
+	S_Kris_Lose_AngryAtCrowd = {
 		name = 'S_Kris_Lose_AngryAtCrowd'
 		path = $lose_anim_path
 	}
-	s_kris_lose_depressed = {
+	S_Kris_Lose_Depressed = {
 		name = 'S_Kris_Lose_Depressed'
 		path = $lose_anim_path
 	}
-	s_kris_lose_pointbass = {
+	S_Kris_Lose_PointBass = {
 		name = 'S_Kris_Lose_PointBass'
 		path = $lose_anim_path
 	}
-	s_kris_lose_pointdrum = {
+	S_Kris_Lose_PointDrum = {
 		name = 'S_Kris_Lose_PointDrum'
 		path = $lose_anim_path
 	}
-	s_kris_lose_pointguit = {
+	S_Kris_Lose_PointGuit = {
 		name = 'S_Kris_Lose_PointGuit'
 		path = $lose_anim_path
 	}
-	s_kris_lose_pointsing = {
+	S_Kris_Lose_PointSing = {
 		name = 'S_Kris_Lose_PointSing'
 		path = $lose_anim_path
 	}
@@ -1623,7 +1623,7 @@ anim_lose_pakman_links = {
 		path = $lose_anim_path
 	}
 }
-anim_starpower_pakman_links = {
+Anim_StarPower_Pakman_Links = {
 	group_starpower_01 = {
 		name = 'group_starpower_01'
 		path = $starpower_anim_path
@@ -1636,111 +1636,111 @@ anim_starpower_pakman_links = {
 
 script guitar_create_character_maps 
 	mpm_new_map \{heap = heap_musician1
-		links = highway_pakman_links
+		links = Highway_Pakman_Links
 		folder = 'pak/models/highway/'}
 	mpm_new_map \{heap = heap_musician2
-		links = highway_pakman_links
+		links = Highway_Pakman_Links
 		folder = 'pak/models/highway/'}
 	mpm_new_map \{heap = heap_musician3
-		links = highway_pakman_links
+		links = Highway_Pakman_Links
 		folder = 'pak/models/highway/'}
 	mpm_new_map \{heap = heap_musician_anim
-		links = anim_perm_pakman_links
+		links = Anim_Perm_Pakman_Links
 		folder = 'pak/anims/'
 		no_vram}
 	mpm_new_map \{heap = heap_musician_anim
-		links = anim_loop_guit_singer_pakman_links
-		folder = 'pak/anims/'
-		index = 0
-		no_vram}
-	mpm_new_map \{heap = heap_musician_anim
-		links = anim_loop_guit_singer_pakman_links
-		folder = 'pak/anims/'
-		index = 1
-		no_vram}
-	mpm_new_map \{heap = heap_musician_anim
-		links = anim_loop_guit_singer_pakman_links
-		folder = 'pak/anims/'
-		index = 2
-		no_vram}
-	mpm_new_map \{heap = heap_musician_anim
-		links = anim_loop_drum_pakman_links
-		folder = 'pak/anims/'
-		no_vram}
-	mpm_new_map \{heap = heap_musician_anim
-		links = anim_intro_win_pakman_links
+		links = Anim_Loop_GUIT_SINGER_Pakman_Links
 		folder = 'pak/anims/'
 		index = 0
 		no_vram}
 	mpm_new_map \{heap = heap_musician_anim
-		links = anim_intro_win_pakman_links
+		links = Anim_Loop_GUIT_SINGER_Pakman_Links
 		folder = 'pak/anims/'
 		index = 1
 		no_vram}
 	mpm_new_map \{heap = heap_musician_anim
-		links = anim_intro_win_pakman_links
+		links = Anim_Loop_GUIT_SINGER_Pakman_Links
 		folder = 'pak/anims/'
 		index = 2
 		no_vram}
 	mpm_new_map \{heap = heap_musician_anim
-		links = anim_intro_win_pakman_links
+		links = Anim_Loop_DRUM_Pakman_Links
+		folder = 'pak/anims/'
+		no_vram}
+	mpm_new_map \{heap = heap_musician_anim
+		links = Anim_Intro_Win_Pakman_Links
+		folder = 'pak/anims/'
+		index = 0
+		no_vram}
+	mpm_new_map \{heap = heap_musician_anim
+		links = Anim_Intro_Win_Pakman_Links
+		folder = 'pak/anims/'
+		index = 1
+		no_vram}
+	mpm_new_map \{heap = heap_musician_anim
+		links = Anim_Intro_Win_Pakman_Links
+		folder = 'pak/anims/'
+		index = 2
+		no_vram}
+	mpm_new_map \{heap = heap_musician_anim
+		links = Anim_Intro_Win_Pakman_Links
 		folder = 'pak/anims/'
 		index = 3
 		no_vram}
 	mpm_new_map \{heap = heap_musician_anim
-		links = anim_intro_win_pakman_links
+		links = Anim_Intro_Win_Pakman_Links
 		folder = 'pak/anims/'
 		index = 4
 		no_vram}
 	mpm_new_map \{heap = heap_musician_anim
-		links = anim_intro_win_pakman_links
+		links = Anim_Intro_Win_Pakman_Links
 		folder = 'pak/anims/'
 		index = 5
 		no_vram}
 	mpm_new_map \{heap = heap_musician_anim
-		links = anim_intro_win_pakman_links
+		links = Anim_Intro_Win_Pakman_Links
 		folder = 'pak/anims/'
 		index = 6
 		no_vram}
 	mpm_new_map \{heap = heap_musician_anim
-		links = anim_intro_win_pakman_links
+		links = Anim_Intro_Win_Pakman_Links
 		folder = 'pak/anims/'
 		index = 7
 		no_vram}
 	mpm_new_map \{heap = heap_musician_anim
-		links = anim_lose_pakman_links
+		links = Anim_Lose_Pakman_Links
 		folder = 'pak/anims/'
 		index = 0
 		no_vram}
 	mpm_new_map \{heap = heap_musician_anim
-		links = anim_lose_pakman_links
+		links = Anim_Lose_Pakman_Links
 		folder = 'pak/anims/'
 		index = 1
 		no_vram}
 	mpm_new_map \{heap = heap_musician_anim
-		links = anim_lose_pakman_links
+		links = Anim_Lose_Pakman_Links
 		folder = 'pak/anims/'
 		index = 2
 		no_vram}
 	mpm_new_map \{heap = heap_musician_anim
-		links = anim_lose_pakman_links
+		links = Anim_Lose_Pakman_Links
 		folder = 'pak/anims/'
 		index = 3
 		no_vram}
 	mpm_new_map \{heap = heap_musician_anim
-		links = anim_starpower_pakman_links
+		links = Anim_StarPower_Pakman_Links
 		folder = 'pak/anims/'
 		index = 0
 		no_vram}
 endscript
 
 script guitar_force_unload_anim_paks 
-	mpm_flush_all_paks_eachlink \{checksum = anim_loop_drum_pakman_links}
-	mpm_flush_all_paks_eachlink \{checksum = anim_loop_guit_singer_pakman_links}
-	if NOT gotparam \{not_wli}
-		mpm_flush_all_paks_eachlink \{checksum = anim_intro_win_pakman_links}
-		mpm_flush_all_paks_eachlink \{checksum = anim_lose_pakman_links}
-		mpm_flush_all_paks_eachlink \{checksum = anim_starpower_pakman_links}
+	mpm_flush_all_paks_eachlink \{checksum = Anim_Loop_DRUM_Pakman_Links}
+	mpm_flush_all_paks_eachlink \{checksum = Anim_Loop_GUIT_SINGER_Pakman_Links}
+	if NOT GotParam \{not_wli}
+		mpm_flush_all_paks_eachlink \{checksum = Anim_Intro_Win_Pakman_Links}
+		mpm_flush_all_paks_eachlink \{checksum = Anim_Lose_Pakman_Links}
+		mpm_flush_all_paks_eachlink \{checksum = Anim_StarPower_Pakman_Links}
 	endif
 endscript
 

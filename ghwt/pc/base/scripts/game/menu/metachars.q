@@ -2,7 +2,7 @@ meta_button_map_default_name = guitar
 meta_button_map = [
 	{
 		name = guitar
-		indicestoswapforenterbuttonassignmentonps3 = [
+		indicesToSwapForEnterButtonAssignmentOnPS3 = [
 			(0.0, 1.0)
 			(5.0, 6.0)
 		]
@@ -67,7 +67,7 @@ meta_button_map = [
 	}
 	{
 		name = drum
-		indicestoswapforenterbuttonassignmentonps3 = [
+		indicesToSwapForEnterButtonAssignmentOnPS3 = [
 			(0.0, 1.0)
 			(5.0, 6.0)
 		]
@@ -132,7 +132,7 @@ meta_button_map = [
 	}
 	{
 		name = pad
-		indicestoswapforenterbuttonassignmentonps3 = [
+		indicesToSwapForEnterButtonAssignmentOnPS3 = [
 			(0.0, 1.0)
 			(5.0, 6.0)
 		]

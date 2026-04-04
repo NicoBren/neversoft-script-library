@@ -24,22 +24,22 @@ script menu_camera_control_script
 	begin
 	if NOT ($current_menu_camera = $target_menu_camera)
 		change \{menu_camera_finished = 0}
-		formattext checksumname = camera_name 'ui_%s_camera' s = ($target_menu_camera)
-		formattext checksumname = last_camera_name 'ui_%s_camera' s = ($current_menu_camera)
-		getmenutransitiontime <...>
+		FormatText checksumname = camera_name 'ui_%s_camera' s = ($target_menu_camera)
+		FormatText checksumname = last_camera_name 'ui_%s_camera' s = ($current_menu_camera)
+		GetMenuTransitionTime <...>
 		if NOT (($cas_override_camera_time) < 0)
 			new_time = ($cas_override_camera_time)
 		else
-			removeparameter \{new_time}
+			RemoveParameter \{new_time}
 		endif
 		if NOT (<time> = 0)
-			spawnscriptnow applymenutransitiondof params = {<...> use_transitiondof = 1}
+			spawnscriptnow ApplyMenuTransitionDOF params = {<...> use_transitiondof = 1}
 		endif
 		menucontrolscript = menu_camera_control_standard
-		if globalexists name = <camera_name>
-			if structurecontains structure = ($<camera_name>) controlscript
-				extendcrc ($<camera_name>.controlscript) '_MenuTransition' out = newcontrolscript
-				if scriptexists <newcontrolscript>
+		if GlobalExists name = <camera_name>
+			if StructureContains Structure = ($<camera_name>) controlscript
+				ExtendCRC ($<camera_name>.controlscript) '_MenuTransition' out = newcontrolscript
+				if ScriptExists <newcontrolscript>
 					menucontrolscript = <newcontrolscript>
 				endif
 			endif
@@ -52,77 +52,77 @@ script menu_camera_control_script
 		}
 		if NOT (<time> = 0)
 			startrendering \{reason = menu_transition}
-			ccam_waitmorph
+			CCam_WaitMorph
 		endif
-		spawnscriptnow applymenutransitiondof params = {<...>}
+		spawnscriptnow ApplyMenuTransitionDOF params = {<...>}
 		change current_menu_camera = ($target_menu_camera)
 	endif
 	change \{menu_camera_finished = 1}
-	wait \{1
+	Wait \{1
 		gameframe}
 	repeat
 endscript
 
 script menu_camera_control_standard 
-	ccam_enablehandcam \{shakeenabled = false
-		driftenabled = false}
-	ccam_domorph {
+	CCam_EnableHandcam \{ShakeEnabled = false
+		DriftEnabled = false}
+	CCam_DoMorph {
 		<...>
 	}
 endscript
 
-script cameracuts_handcam_menutransition \{name = none}
-	ccam_domorph
+script CameraCuts_HandCam_MenuTransition \{name = none}
+	CCam_DoMorph
 	zooming = false
-	if gotparam \{type}
+	if GotParam \{type}
 		if (<type> = longshot)
-			getrandomvalue \{name = random_value
-				integer
+			GetRandomValue \{name = random_value
+				Integer
 				a = 0
 				b = 100}
 			if (<random_value> < 25)
-				ccam_domorph <...> fov = 62 time = <camera_time>
+				CCam_DoMorph <...> FOV = 62 time = <camera_time>
 				zooming = true
 			endif
 			if (<random_value> > 95)
-				ccam_domorph <...> fov = 78 time = <camera_time>
+				CCam_DoMorph <...> FOV = 78 time = <camera_time>
 				zooming = true
 			endif
 		endif
 		if (<type> = mid)
-			getrandomvalue \{name = random_value
-				integer
+			GetRandomValue \{name = random_value
+				Integer
 				a = 0
 				b = 100}
 			if (<random_value> < 5)
-				ccam_domorph <...> fov = 64 time = <camera_time>
+				CCam_DoMorph <...> FOV = 64 time = <camera_time>
 				zooming = true
 			endif
 			if (<random_value> > 85)
-				ccam_domorph <...> fov = 82 time = <camera_time>
+				CCam_DoMorph <...> FOV = 82 time = <camera_time>
 				zooming = true
 			endif
 		endif
 	endif
 	if (<zooming> = true)
-		amplitudeposition = 0.01
-		amplituderotation = -0.01
+		amplitudePosition = 0.01
+		amplitudeRotation = -0.01
 	else
-		amplitudeposition = 0.05
-		amplituderotation = -0.08
+		amplitudePosition = 0.05
+		amplitudeRotation = -0.08
 	endif
-	cameracuts_sethandcamparams <...>
+	CameraCuts_SetHandCamParams <...>
 endscript
 
-script getmenutransitiontime 
-	if globalexists name = <last_camera_name>
-		if globalexists name = <camera_name>
-			if comparestructs struct1 = ($<last_camera_name>.params) struct2 = ($<camera_name>.params)
+script GetMenuTransitionTime 
+	if GlobalExists name = <last_camera_name>
+		if GlobalExists name = <camera_name>
+			if CompareStructs struct1 = ($<last_camera_name>.params) struct2 = ($<camera_name>.params)
 				return \{time = 0}
 			endif
 		endif
 	endif
-	if globalexists name = <last_camera_name>
+	if GlobalExists name = <last_camera_name>
 		if ($target_menu_camera_back = 1)
 			camera_name = <last_camera_name>
 		endif
@@ -130,113 +130,113 @@ script getmenutransitiontime
 		return \{time = 0}
 	endif
 	time = ($default_camera_transition_time)
-	if globalexists name = <camera_name>
-		if structurecontains structure = ($<camera_name>) time
+	if GlobalExists name = <camera_name>
+		if StructureContains Structure = ($<camera_name>) time
 			time = ($<camera_name>.time)
 		endif
 	endif
 	return time = <time>
 endscript
 
-script applymenutransitiondof \{use_transitiondof = 0}
-	dofparam = ($dof_off_tod_manager.screen_fx [0])
+script ApplyMenuTransitionDOF \{use_transitiondof = 0}
+	dofParam = ($DOF_Off_tod_manager.screen_fx [0])
 	if (<use_transitiondof> = 1)
 		if ($target_menu_camera_back = 1)
-			if globalexists name = <last_camera_name>
+			if GlobalExists name = <last_camera_name>
 				camera_name = <last_camera_name>
 			endif
 		endif
-		if globalexists name = <camera_name>
-			if structurecontains structure = ($<camera_name>) transitiondof
-				if structurecontains structure = ($<camera_name>.transitiondof) screen_fx
-					doftype = ($<camera_name>.transitiondof)
-					dofparam = (<doftype>.screen_fx [0])
+		if GlobalExists name = <camera_name>
+			if StructureContains Structure = ($<camera_name>) TransitionDOF
+				if StructureContains Structure = ($<camera_name>.TransitionDOF) screen_fx
+					dofType = ($<camera_name>.TransitionDOF)
+					dofParam = (<dofType>.screen_fx [0])
 				endif
 			endif
 		endif
 	else
-		if globalexists name = <camera_name>
-			if structurecontains structure = ($<camera_name>) dof
-				if structurecontains structure = ($<camera_name>.dof) screen_fx
-					doftype = ($<camera_name>.dof)
-					dofparam = (<doftype>.screen_fx [0])
+		if GlobalExists name = <camera_name>
+			if StructureContains Structure = ($<camera_name>) dof
+				if StructureContains Structure = ($<camera_name>.dof) screen_fx
+					dofType = ($<camera_name>.dof)
+					dofParam = (<dofType>.screen_fx [0])
 				endif
 			endif
 		endif
 	endif
-	if viewportexists \{id = bg_viewport}
-		if NOT screenfx_fxinstanceexists \{viewport = bg_viewport
-				name = depth_of_field__simplified_}
-			screenfx_addfxinstance {
+	if ViewportExists \{id = bg_viewport}
+		if NOT ScreenFX_FxInstanceExists \{viewport = bg_viewport
+				name = Depth_of_Field__simplified_}
+			ScreenFX_AddFXInstance {
 				viewport = bg_viewport
-				<dofparam>
+				<dofParam>
 			}
 		else
-			screenfx_updatefxinstanceparams {
+			ScreenFX_UpdateFXInstanceParams {
 				viewport = bg_viewport
-				<dofparam>
+				<dofParam>
 			}
 		endif
 	else
-		printf \{qs(0xef60923a)}
+		printf \{qs("\Lbg_viewport doesn't exist")}
 	endif
 endscript
 
-script applymenudof 
-	if viewportexists \{id = bg_viewport}
-		if NOT screenfx_fxinstanceexists \{viewport = bg_viewport
-				name = depth_of_field__simplified_}
-			screenfx_addfxinstance {
+script ApplyMenuDOF 
+	if ViewportExists \{id = bg_viewport}
+		if NOT ScreenFX_FxInstanceExists \{viewport = bg_viewport
+				name = Depth_of_Field__simplified_}
+			ScreenFX_AddFXInstance {
 				viewport = bg_viewport
-				<dofparam>
+				<dofParam>
 			}
 		else
-			screenfx_updatefxinstanceparams {
+			ScreenFX_UpdateFXInstanceParams {
 				viewport = bg_viewport
-				<dofparam>
+				<dofParam>
 			}
 		endif
 	else
-		printf \{qs(0xef60923a)}
+		printf \{qs("\Lbg_viewport doesn't exist")}
 	endif
 endscript
 
 script task_menu_default_anim_in \{base_name = 'none'}
-	printf qs(0x497b2e87) s = <base_name> channel = camera
-	if gotparam \{ignore_time}
+	printf qs("\Ltask_menu_default_anim_in Base Name : %s") s = <base_name> channel = camera
+	if GotParam \{ignore_time}
 		params = {ignore_time = 1}
 	endif
 	if (<base_name> = 'null')
 		return
 	endif
-	if gotparam \{ignore_camera}
+	if GotParam \{ignore_camera}
 		spawnscriptnow menu_soundevent_in params = <...>
 		return
 	endif
-	if gotparam \{override_base_name}
+	if GotParam \{override_base_name}
 		base_name = <override_base_name>
-		printf qs(0xdc5b800e) s = <base_name> channel = camera
+		printf qs("\Ltask_menu_default_anim_in override Base Name : %s") s = <base_name> channel = camera
 	endif
-	if NOT viewportexists \{id = bg_viewport}
+	if NOT ViewportExists \{id = bg_viewport}
 		setup_bg_viewport
 	endif
-	formattext checksumname = camera_name 'ui_%s_camera' s = <base_name>
-	if globalexists name = <camera_name>
-		killcamanim \{name = ch_view_cam}
-		if camanimfinished \{name = menu_view_cam}
-			printf \{qs(0xd7b7aa34)
+	FormatText checksumname = camera_name 'ui_%s_camera' s = <base_name>
+	if GlobalExists name = <camera_name>
+		KillCamAnim \{name = ch_view_cam}
+		if CamAnimFinished \{name = menu_view_cam}
+			printf \{qs("\LCamera not active starting...")
 				channel = camera}
 			change target_menu_camera = <base_name>
 			change \{target_menu_camera_back = 0}
 			change \{menu_camera_finished = 0}
-			playigccam {
+			PlayIGCCam {
 				id = cs_view_cam_id
 				name = menu_view_cam
 				viewport = bg_viewport
-				lockto = world
+				LockTo = world
 				pos = (-28.344543, 0.47631302, 7.1957684)
-				quat = (-0.00071999995, -0.99706, -0.07604)
-				play_hold = 1
+				Quat = (-0.00071999995, -0.99706, -0.07604)
+				Play_hold = 1
 				controlscript = menu_camera_control_script
 				params = <params>
 				interrupt_current
@@ -245,22 +245,22 @@ script task_menu_default_anim_in \{base_name = 'none'}
 			return
 		endif
 		spawnscriptnow menu_soundevent_in params = <...>
-		printf \{qs(0xb186d8c7)
+		printf \{qs("\LSetting Camera Target")
 			channel = camera}
-		if NOT gotparam \{do_not_hide}
-			root_window :se_setprops \{alpha = 0.0}
+		if NOT GotParam \{do_not_hide}
+			root_window :SE_SetProps \{alpha = 0.0}
 		endif
-		if gotparam \{back}
+		if GotParam \{back}
 			change \{target_menu_camera_back = 1}
 		else
 			change \{target_menu_camera_back = 0}
 		endif
 		change target_menu_camera = <base_name>
 		change \{menu_camera_finished = 0}
-		formattext checksumname = current_camera_name 'ui_%s_camera' s = ($current_menu_camera)
-		if globalexists name = <current_camera_name>
-			if comparestructs struct1 = $<camera_name> struct2 = $<current_camera_name>
-				root_window :se_setprops \{alpha = 1.0}
+		FormatText checksumname = current_camera_name 'ui_%s_camera' s = ($current_menu_camera)
+		if GlobalExists name = <current_camera_name>
+			if CompareStructs struct1 = $<camera_name> struct2 = $<current_camera_name>
+				root_window :SE_SetProps \{alpha = 1.0}
 				no_camera = 1
 			endif
 		endif
@@ -271,16 +271,16 @@ script task_menu_default_anim_in \{base_name = 'none'}
 		elseif NOT ($view_mode = 0)
 			break
 		endif
-		wait \{1
+		Wait \{1
 			game
 			frame}
 		repeat
 		change \{generic_menu_block_input = 0}
-		printf \{qs(0xf2569fd5)
+		printf \{qs("\LSetting Camera Target Finished")
 			channel = camera}
-		root_window :se_setprops \{alpha = 1.0}
+		root_window :SE_SetProps \{alpha = 1.0}
 	else
-		root_window :se_setprops \{alpha = 1.0}
+		root_window :SE_SetProps \{alpha = 1.0}
 		spawnscriptnow menu_soundevent_in params = <...>
 	endif
 endscript
@@ -294,21 +294,21 @@ script task_menu_retrieve_camera_base_name
 endscript
 
 script task_menu_retrieve_camera_params 
-	requireparams \{[
+	RequireParams \{[
 			camera_name
 		]
 		all}
-	formattext checksumname = camera_fullname 'ui_%s_camera' s = <camera_name>
+	FormatText checksumname = camera_fullname 'ui_%s_camera' s = <camera_name>
 	return camera_params = ($<camera_fullname>.params)
 endscript
 
-script task_menu_retrieve_camera_dof_params 
-	requireparams \{[
+script task_menu_retrieve_camera_DOF_params 
+	RequireParams \{[
 			camera_name
 		]
 		all}
-	formattext checksumname = camera_fullname 'ui_%s_camera' s = <camera_name>
-	if structurecontains structure = ($<camera_fullname>) dof
+	FormatText checksumname = camera_fullname 'ui_%s_camera' s = <camera_name>
+	if StructureContains Structure = ($<camera_fullname>) dof
 		dof = ($<camera_fullname>.dof)
 		dof_params = (<dof>.screen_fx [0])
 		return dof_params = <dof_params>

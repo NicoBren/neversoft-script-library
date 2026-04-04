@@ -2,406 +2,406 @@ car_font_list = [
 	{
 		font = 'fontgrid_title_a1'
 		font_checksum = fontgrid_title_a1
-		frontend_desc = qs(0x7fbf99b9)
+		frontend_desc = qs("\LFont A1")
 		icon = category_font_harbour
 	}
 	{
 		font = 'fontgrid_text_a3'
 		font_checksum = fontgrid_text_a3
-		frontend_desc = qs(0x4d89fb3b)
+		frontend_desc = qs("\LFont A3")
 		icon = category_font_square40
 	}
 	{
 		font = 'fontgrid_text_a6'
 		font_checksum = fontgrid_text_a6
-		frontend_desc = qs(0x30fe0f7e)
+		frontend_desc = qs("\LFont A6")
 		icon = category_font_bordello
 	}
 	{
 		font = 'fontgrid_text_a8'
 		font_checksum = fontgrid_text_a8
-		frontend_desc = qs(0xae7d22f0)
+		frontend_desc = qs("\LFont A8")
 		icon = category_font_aaux
 	}
 ]
 car_char_list = [
 	{
-		frontend_desc = qs(0x0dd10f11)
+		frontend_desc = qs("\LA")
 		text = 'A'
 		clamp_uv
 	}
 	{
-		frontend_desc = qs(0x98552bb3)
+		frontend_desc = qs("\La")
 		text = 'a'
 		clamp_uv
 	}
 	{
-		frontend_desc = qs(0x26fc5cd2)
+		frontend_desc = qs("\LB")
 		text = 'B'
 		clamp_uv
 	}
 	{
-		frontend_desc = qs(0xb3787870)
+		frontend_desc = qs("\Lb")
 		text = 'b'
 		clamp_uv
 	}
 	{
-		frontend_desc = qs(0x3fe76d93)
+		frontend_desc = qs("\LC")
 		text = 'C'
 		clamp_uv
 	}
 	{
-		frontend_desc = qs(0xaa634931)
+		frontend_desc = qs("\Lc")
 		text = 'c'
 		clamp_uv
 	}
 	{
-		frontend_desc = qs(0x70a6fb54)
+		frontend_desc = qs("\LD")
 		text = 'D'
 		clamp_uv
 	}
 	{
-		frontend_desc = qs(0xe522dff6)
+		frontend_desc = qs("\Ld")
 		text = 'd'
 		clamp_uv
 	}
 	{
-		frontend_desc = qs(0x69bdca15)
+		frontend_desc = qs("\LE")
 		text = 'E'
 		clamp_uv
 	}
 	{
-		frontend_desc = qs(0xfc39eeb7)
+		frontend_desc = qs("\Le")
 		text = 'e'
 		clamp_uv
 	}
 	{
-		frontend_desc = qs(0x429099d6)
+		frontend_desc = qs("\LF")
 		text = 'F'
 		clamp_uv
 	}
 	{
-		frontend_desc = qs(0xd714bd74)
+		frontend_desc = qs("\Lf")
 		text = 'f'
 		clamp_uv
 	}
 	{
-		frontend_desc = qs(0x5b8ba897)
+		frontend_desc = qs("\LG")
 		text = 'G'
 		clamp_uv
 	}
 	{
-		frontend_desc = qs(0xce0f8c35)
+		frontend_desc = qs("\Lg")
 		text = 'g'
 		clamp_uv
 	}
 	{
-		frontend_desc = qs(0xdc13b458)
+		frontend_desc = qs("\LH")
 		text = 'H'
 		clamp_uv
 	}
 	{
-		frontend_desc = qs(0x499790fa)
+		frontend_desc = qs("\Lh")
 		text = 'h'
 		clamp_uv
 	}
 	{
-		frontend_desc = qs(0xc5088519)
+		frontend_desc = qs("\LI")
 		text = 'I'
 		clamp_uv
 	}
 	{
-		frontend_desc = qs(0x508ca1bb)
+		frontend_desc = qs("\Li")
 		text = 'i'
 		clamp_uv
 	}
 	{
-		frontend_desc = qs(0xee25d6da)
+		frontend_desc = qs("\LJ")
 		text = 'J'
 		clamp_uv
 	}
 	{
-		frontend_desc = qs(0x7ba1f278)
+		frontend_desc = qs("\Lj")
 		text = 'j'
 		clamp_uv
 	}
 	{
-		frontend_desc = qs(0xf73ee79b)
+		frontend_desc = qs("\LK")
 		text = 'K'
 		clamp_uv
 	}
 	{
-		frontend_desc = qs(0x62bac339)
+		frontend_desc = qs("\Lk")
 		text = 'k'
 		clamp_uv
 	}
 	{
-		frontend_desc = qs(0xb87f715c)
+		frontend_desc = qs("\LL")
 		text = 'L'
 		clamp_uv
 	}
 	{
-		frontend_desc = qs(0x2dfb55fe)
+		frontend_desc = qs("\Ll")
 		text = 'l'
 		clamp_uv
 	}
 	{
-		frontend_desc = qs(0xa164401d)
+		frontend_desc = qs("\LM")
 		text = 'M'
 		clamp_uv
 	}
 	{
-		frontend_desc = qs(0x34e064bf)
+		frontend_desc = qs("\Lm")
 		text = 'm'
 		clamp_uv
 	}
 	{
-		frontend_desc = qs(0x8a4913de)
+		frontend_desc = qs("\LN")
 		text = 'N'
 		clamp_uv
 	}
 	{
-		frontend_desc = qs(0x1fcd377c)
+		frontend_desc = qs("\Ln")
 		text = 'n'
 		clamp_uv
 	}
 	{
-		frontend_desc = qs(0x9352229f)
+		frontend_desc = qs("\LO")
 		text = 'O'
 		clamp_uv
 	}
 	{
-		frontend_desc = qs(0x06d6063d)
+		frontend_desc = qs("\Lo")
 		text = 'o'
 		clamp_uv
 	}
 	{
-		frontend_desc = qs(0x5e082c01)
+		frontend_desc = qs("\LP")
 		text = 'P'
 		clamp_uv
 	}
 	{
-		frontend_desc = qs(0xcb8c08a3)
+		frontend_desc = qs("\Lp")
 		text = 'p'
 		clamp_uv
 	}
 	{
-		frontend_desc = qs(0x47131d40)
+		frontend_desc = qs("\LQ")
 		text = 'Q'
 		clamp_uv
 	}
 	{
-		frontend_desc = qs(0xd29739e2)
+		frontend_desc = qs("\Lq")
 		text = 'q'
 		clamp_uv
 	}
 	{
-		frontend_desc = qs(0x6c3e4e83)
+		frontend_desc = qs("\LR")
 		text = 'R'
 		clamp_uv
 	}
 	{
-		frontend_desc = qs(0xf9ba6a21)
+		frontend_desc = qs("\Lr")
 		text = 'r'
 		clamp_uv
 	}
 	{
-		frontend_desc = qs(0x75257fc2)
+		frontend_desc = qs("\LS")
 		text = 'S'
 		clamp_uv
 	}
 	{
-		frontend_desc = qs(0xe0a15b60)
+		frontend_desc = qs("\Ls")
 		text = 's'
 		clamp_uv
 	}
 	{
-		frontend_desc = qs(0x3a64e905)
+		frontend_desc = qs("\LT")
 		text = 'T'
 		clamp_uv
 	}
 	{
-		frontend_desc = qs(0xafe0cda7)
+		frontend_desc = qs("\Lt")
 		text = 't'
 		clamp_uv
 	}
 	{
-		frontend_desc = qs(0x237fd844)
+		frontend_desc = qs("\LU")
 		text = 'U'
 		clamp_uv
 	}
 	{
-		frontend_desc = qs(0xb6fbfce6)
+		frontend_desc = qs("\Lu")
 		text = 'u'
 		clamp_uv
 	}
 	{
-		frontend_desc = qs(0x08528b87)
+		frontend_desc = qs("\LV")
 		text = 'V'
 		clamp_uv
 	}
 	{
-		frontend_desc = qs(0x9dd6af25)
+		frontend_desc = qs("\Lv")
 		text = 'v'
 		clamp_uv
 	}
 	{
-		frontend_desc = qs(0x1149bac6)
+		frontend_desc = qs("\LW")
 		text = 'W'
 		clamp_uv
 	}
 	{
-		frontend_desc = qs(0x84cd9e64)
+		frontend_desc = qs("\Lw")
 		text = 'w'
 		clamp_uv
 	}
 	{
-		frontend_desc = qs(0x96d1a609)
+		frontend_desc = qs("\LX")
 		text = 'X'
 		clamp_uv
 	}
 	{
-		frontend_desc = qs(0x035582ab)
+		frontend_desc = qs("\Lx")
 		text = 'x'
 		clamp_uv
 	}
 	{
-		frontend_desc = qs(0x8fca9748)
+		frontend_desc = qs("\LY")
 		text = 'Y'
 		clamp_uv
 	}
 	{
-		frontend_desc = qs(0x1a4eb3ea)
+		frontend_desc = qs("\Ly")
 		text = 'y'
 		clamp_uv
 	}
 	{
-		frontend_desc = qs(0xa4e7c48b)
+		frontend_desc = qs("\LZ")
 		text = 'Z'
 		clamp_uv
 	}
 	{
-		frontend_desc = qs(0x3163e029)
+		frontend_desc = qs("\Lz")
 		text = 'z'
 		clamp_uv
 	}
 	{
-		frontend_desc = qs(0x3bf547a6)
+		frontend_desc = qs("\L0")
 		text = '0'
 		clamp_uv
 	}
 	{
-		frontend_desc = qs(0x22ee76e7)
+		frontend_desc = qs("\L1")
 		text = '1'
 		clamp_uv
 	}
 	{
-		frontend_desc = qs(0x09c32524)
+		frontend_desc = qs("\L2")
 		text = '2'
 		clamp_uv
 	}
 	{
-		frontend_desc = qs(0x10d81465)
+		frontend_desc = qs("\L3")
 		text = '3'
 		clamp_uv
 	}
 	{
-		frontend_desc = qs(0x5f9982a2)
+		frontend_desc = qs("\L4")
 		text = '4'
 		clamp_uv
 	}
 	{
-		frontend_desc = qs(0x4682b3e3)
+		frontend_desc = qs("\L5")
 		text = '5'
 		clamp_uv
 	}
 	{
-		frontend_desc = qs(0x6dafe020)
+		frontend_desc = qs("\L6")
 		text = '6'
 		clamp_uv
 	}
 	{
-		frontend_desc = qs(0x74b4d161)
+		frontend_desc = qs("\L7")
 		text = '7'
 		clamp_uv
 	}
 	{
-		frontend_desc = qs(0xf32ccdae)
+		frontend_desc = qs("\L8")
 		text = '8'
 		clamp_uv
 	}
 	{
-		frontend_desc = qs(0xea37fcef)
+		frontend_desc = qs("\L9")
 		text = '9'
 		clamp_uv
 	}
 	{
-		frontend_desc = qs(0x682c64b6)
+		frontend_desc = qs("\L!")
 		text = '!'
 		clamp_uv
 	}
 	{
-		frontend_desc = qs(0xbc6d5b69)
+		frontend_desc = qs("\L?")
 		text = '?'
 		clamp_uv
 	}
 	{
-		frontend_desc = qs(0x14ca3e50)
+		frontend_desc = qs("\L@")
 		text = '@'
 		clamp_uv
 	}
 	{
-		frontend_desc = qs(0x5a1a0634)
+		frontend_desc = qs("\L#")
 		text = '#'
 		clamp_uv
 	}
 	{
-		frontend_desc = qs(0x155b90f3)
+		frontend_desc = qs("\L$")
 		text = '$'
 		clamp_uv
 	}
 	{
-		frontend_desc = qs(0x0c40a1b2)
+		frontend_desc = qs("\L%")
 		text = '%'
 		clamp_uv
 	}
 	{
-		frontend_desc = qs(0xc08b018f)
+		frontend_desc = qs("\L^")
 		text = '^'
 		clamp_uv
 	}
 	{
-		frontend_desc = qs(0x276df271)
+		frontend_desc = qs("\L&")
 		text = '&'
 		clamp_uv
 	}
 	{
-		frontend_desc = qs(0x8bd8bd7d)
+		frontend_desc = qs("\L*")
 		text = '*'
 		clamp_uv
 	}
 	{
-		frontend_desc = qs(0xb9eedfff)
+		frontend_desc = qs("\L(")
 		text = '('
 		clamp_uv
 	}
 	{
-		frontend_desc = qs(0xa0f5eebe)
+		frontend_desc = qs("\L)")
 		text = ')'
 		clamp_uv
 	}
 	{
-		frontend_desc = qs(0x814e1af2)
+		frontend_desc = qs("\L`")
 		text = '`'
 		clamp_uv
 	}
 	{
-		frontend_desc = qs(0xc11aaf2c)
+		frontend_desc = qs("\L:")
 		text = ':'
 		clamp_uv
 	}
 	{
-		frontend_desc = qs(0xc4992bba)
+		frontend_desc = qs("\L-")
 		text = '-'
 		clamp_uv
 	}

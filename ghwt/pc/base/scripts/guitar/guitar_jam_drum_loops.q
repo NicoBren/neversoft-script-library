@@ -1,149 +1,149 @@
 jam_drum_loops_by_type = [
 	{
-		name_text = qs(0xd9050164)
+		name_text = qs("\LAlternative")
 		loops = [
-			alternative1
-			alternative2
-			alternative3
-			alternative4
-			alternative5
+			Alternative1
+			Alternative2
+			Alternative3
+			Alternative4
+			Alternative5
 		]
 		fit_to_dims = (130.0, 25.0)
 		submenu_script = guitar_jam_change_drum_loop
 		submenu_exit_script = guitar_jam_drum_loop_exit
 	}
 	{
-		name_text = qs(0x21f10cbf)
+		name_text = qs("\LElectronic")
 		loops = [
-			electronic1
-			electronic2
-			electronic3
-			electronic4
-			electronic5
+			Electronic1
+			Electronic2
+			Electronic3
+			Electronic4
+			Electronic5
 		]
 		fit_to_dims = (130.0, 25.0)
 		submenu_script = guitar_jam_change_drum_loop
 		submenu_exit_script = guitar_jam_drum_loop_exit
 	}
 	{
-		name_text = qs(0x0da7fd0e)
+		name_text = qs("\LExperimental")
 		loops = [
-			experimental1
-			experimental2
-			experimental3
-			experimental4
-			experimental5
+			Experimental1
+			Experimental2
+			Experimental3
+			Experimental4
+			Experimental5
 		]
 		fit_to_dims = (130.0, 25.0)
 		submenu_script = guitar_jam_change_drum_loop
 		submenu_exit_script = guitar_jam_drum_loop_exit
 	}
 	{
-		name_text = qs(0xfe3a0ec0)
+		name_text = qs("\LHip Hop")
 		loops = [
-			hip_hop1
-			hip_hop2
-			hip_hop3
-			hip_hop4
-			hip_hop5
+			Hip_Hop1
+			Hip_Hop2
+			Hip_Hop3
+			Hip_Hop4
+			Hip_Hop5
 		]
 		fit_to_dims = (130.0, 25.0)
 		submenu_script = guitar_jam_change_drum_loop
 		submenu_exit_script = guitar_jam_drum_loop_exit
 	}
 	{
-		name_text = qs(0x14a144e7)
+		name_text = qs("\LBossa Nova")
 		loops = [
-			latin_bossa_nova1
-			latin_bossa_nova2
-			latin_bossa_nova3
-			latin_bossa_nova4
-			latin_bossa_nova5
+			Latin_Bossa_Nova1
+			Latin_Bossa_Nova2
+			Latin_Bossa_Nova3
+			Latin_Bossa_Nova4
+			Latin_Bossa_Nova5
 		]
 		fit_to_dims = (130.0, 25.0)
 		submenu_script = guitar_jam_change_drum_loop
 		submenu_exit_script = guitar_jam_drum_loop_exit
 	}
 	{
-		name_text = qs(0x3ffdff2c)
+		name_text = qs("\LMetal")
 		loops = [
-			metal1
-			metal2
-			metal3
-			metal4
-			metal5
+			Metal1
+			Metal2
+			Metal3
+			Metal4
+			Metal5
 		]
 		fit_to_dims = (80.0, 25.0)
 		submenu_script = guitar_jam_change_drum_loop
 		submenu_exit_script = guitar_jam_drum_loop_exit
 	}
 	{
-		name_text = qs(0x819bb0b9)
+		name_text = qs("\LPop")
 		loops = [
-			pop1
-			pop2
-			pop3
-			pop4
-			pop5
+			Pop1
+			Pop2
+			Pop3
+			Pop4
+			Pop5
 		]
 		fit_to_dims = (80.0, 25.0)
 		submenu_script = guitar_jam_change_drum_loop
 		submenu_exit_script = guitar_jam_drum_loop_exit
 	}
 	{
-		name_text = qs(0x78e66a86)
+		name_text = qs("\LRock")
 		loops = [
-			rock1
-			rock2
-			rock3
-			rock4
-			rock5
+			Rock1
+			Rock2
+			Rock3
+			Rock4
+			Rock5
 		]
 		fit_to_dims = (80.0, 25.0)
 		submenu_script = guitar_jam_change_drum_loop
 		submenu_exit_script = guitar_jam_drum_loop_exit
 	}
 	{
-		name_text = qs(0x8a019d07)
+		name_text = qs("\LBreaks")
 		loops = [
-			breakbeat1
-			breakbeat2
-			breakbeat3
-			breakbeat4
-			breakbeat5
+			Breakbeat1
+			Breakbeat2
+			Breakbeat3
+			Breakbeat4
+			Breakbeat5
 		]
 		fit_to_dims = (80.0, 25.0)
 		submenu_script = guitar_jam_change_drum_loop
 		submenu_exit_script = guitar_jam_drum_loop_exit
 	}
 	{
-		name_text = qs(0xd9caedaa)
+		name_text = qs("\LPowerbeats")
 		loops = [
-			breakbeat6
-			breakbeat7
-			breakbeat10
-			breakbeat9
-			breakbeat8
+			Breakbeat6
+			Breakbeat7
+			Breakbeat10
+			Breakbeat9
+			Breakbeat8
 		]
 		fit_to_dims = (80.0, 25.0)
 		submenu_script = guitar_jam_change_drum_loop
 		submenu_exit_script = guitar_jam_drum_loop_exit
 	}
 	{
-		name_text = qs(0xfe0be2a1)
+		name_text = qs("\LGarage")
 		loops = [
-			breakbeat11
-			breakbeat12
-			breakbeat13
-			breakbeat4
-			breakbeat5
+			Breakbeat11
+			Breakbeat12
+			Breakbeat13
+			Breakbeat4
+			Breakbeat5
 		]
 		fit_to_dims = (80.0, 25.0)
 		submenu_script = guitar_jam_change_drum_loop
 		submenu_exit_script = guitar_jam_drum_loop_exit
 	}
 	{
-		name_text = qs(0x1ca1a48a)
+		name_text = qs("\LStraight Up")
 		loops = [
 			andyloop1_1
 			andyloop1_2
@@ -156,7 +156,7 @@ jam_drum_loops_by_type = [
 		submenu_exit_script = guitar_jam_drum_loop_exit
 	}
 	{
-		name_text = qs(0x6e3acf04)
+		name_text = qs("\LImprov")
 		loops = [
 			andyloop2_1
 			andyloop2_2
@@ -169,7 +169,7 @@ jam_drum_loops_by_type = [
 		submenu_exit_script = guitar_jam_drum_loop_exit
 	}
 	{
-		name_text = qs(0x41e3127d)
+		name_text = qs("\LFunky")
 		loops = [
 			andyloop3_1
 			andyloop3_2
@@ -182,7 +182,7 @@ jam_drum_loops_by_type = [
 		submenu_exit_script = guitar_jam_drum_loop_exit
 	}
 	{
-		name_text = qs(0x9b4eba22)
+		name_text = qs("\LTom Frenzy")
 		loops = [
 			andyloop4_1
 			andyloop4_2
@@ -195,7 +195,7 @@ jam_drum_loops_by_type = [
 		submenu_exit_script = guitar_jam_drum_loop_exit
 	}
 	{
-		name_text = qs(0x5b7c8896)
+		name_text = qs("\LEpic")
 		loops = [
 			andyloop5_1
 			andyloop5_2
@@ -208,7 +208,7 @@ jam_drum_loops_by_type = [
 		submenu_exit_script = guitar_jam_drum_loop_exit
 	}
 	{
-		name_text = qs(0x033c5edf)
+		name_text = qs("\LLoose")
 		loops = [
 			andyloop6_1
 			andyloop6_2
@@ -221,13 +221,13 @@ jam_drum_loops_by_type = [
 		submenu_exit_script = guitar_jam_drum_loop_exit
 	}
 	{
-		name_text = qs(0x26d7e862)
+		name_text = qs("\LBumpin")
 		loops = [
-			bumpin5
-			bumpin3
-			bumpin2
-			bumpin1
-			bumpin4
+			Bumpin5
+			Bumpin3
+			Bumpin2
+			Bumpin1
+			Bumpin4
 		]
 		fit_to_dims = (80.0, 25.0)
 		submenu_script = guitar_jam_change_drum_loop
@@ -245,10 +245,10 @@ jam_current_drum_loop_velocity = 0
 script jam_input_loops_per_frame 
 	instrument_controls = [enabled]
 	if ($game_mode = training)
-		if screenelementexists \{id = jam_band_container}
-			jam_band_container :gettags
-		elseif screenelementexists \{id = jam_studio_element}
-			jam_studio_element :gettags
+		if ScreenElementExists \{id = jam_band_container}
+			jam_band_container :GetTags
+		elseif ScreenElementExists \{id = jam_studio_element}
+			jam_studio_element :GetTags
 		endif
 	endif
 	if (($jam_advanced_record) = 0)
@@ -279,7 +279,7 @@ script jam_input_loops_per_frame
 			<do_loop> = 0
 		endif
 		if (<do_loop> = 0 && $jam_loop_current_touch_pattern = 0)
-			killspawnedscript \{name = jam_play_drum_loop}
+			KillSpawnedScript \{name = jam_play_drum_loop}
 			<do_loop> = 0
 		endif
 	endif
@@ -287,22 +287,22 @@ script jam_input_loops_per_frame
 		change jam_loop_current_touch_pattern = <touch_pattern>
 		switch <touch_pattern>
 			case 4352
-			drum_loop = extra6
+			drum_loop = Extra6
 			<do_loop> = 1
 			case 256
-			drum_loop = extra4
+			drum_loop = Extra4
 			<do_loop> = 1
 			case 272
-			drum_loop = extra3
+			drum_loop = Extra3
 			<do_loop> = 1
 			case 16
-			drum_loop = extra1
+			drum_loop = Extra1
 			<do_loop> = 1
 			case 17
-			drum_loop = extra5
+			drum_loop = Extra5
 			<do_loop> = 1
 			case 1
-			drum_loop = extra2
+			drum_loop = Extra2
 			<do_loop> = 1
 			default
 			change \{jam_loop_current_pattern = 0}
@@ -329,10 +329,10 @@ script jam_input_loops_per_frame
 	endif
 	change jam_current_drum_loop_velocity = <velocity>
 	jam_drum_tilt_needle_update velocity = <velocity> player = <select_player>
-	if arraycontains array = <instrument_controls> contains = enabled
+	if ArrayContains array = <instrument_controls> contains = enabled
 		if (<do_loop> = 1)
-			killspawnedscript \{name = jam_play_drum_loop}
-			appendsuffixtochecksum base = <drum_loop> suffixstring = '_drum_loop'
+			KillSpawnedScript \{name = jam_play_drum_loop}
+			AppendSuffixToChecksum Base = <drum_loop> SuffixString = '_drum_loop'
 			spawnscriptnow id = <spawn_id> jam_play_drum_loop params = {player = <select_player> controller = <controller> drum_loop = <appended_id> bpm = ($jam_current_bpm)}
 		endif
 	endif
@@ -340,20 +340,20 @@ script jam_input_loops_per_frame
 endscript
 
 script jam_test_all_drum_loops 
-	if NOT gotparam \{bpm}
+	if NOT GotParam \{bpm}
 		bpm = ($jam_current_bpm)
 	endif
-	getarraysize \{$jam_drum_loops}
+	GetArraySize \{$jam_drum_loops}
 	loop_num = 0
 	begin
-	printf channel = jam_mode qs(0xdcb807d9) s = <loop_num>
+	printf channel = jam_mode qs("\LPlaying Drum Loop %s") s = <loop_num>
 	jam_play_drum_loop_test drum_loop = ($jam_drum_loops [<loop_num>].loop_array) bpm = <bpm> loop_repeat = 0 time = 0
 	<loop_num> = (<loop_num> + 1)
 	repeat <array_size>
 endscript
 
 script jam_play_drum_loop_test 
-	reset_song_time starttime = <time>
+	reset_song_time StartTime = <time>
 	jam_play_drum_loop <...>
 endscript
 
@@ -361,21 +361,21 @@ script jam_play_drum_loop \{bpm = 120
 		player = 1
 		loop_repeat = 1}
 	loop_midi_notes = [38 46 48 49 45 36]
-	getsongtimems
-	casttointeger \{time}
+	GetSongTimeMs
+	CastToInteger \{time}
 	curr_song_time = <time>
-	if NOT globalexists name = <drum_loop> type = array
+	if NOT GlobalExists name = <drum_loop> type = array
 		return
 	endif
-	getarraysize ($<drum_loop>)
+	GetArraySize ($<drum_loop>)
 	jam_drum_loop_bpm = 125.0
 	time_scale_percentage = (<jam_drum_loop_bpm> / <bpm>)
 	ms_per_beat = (60000.0 / <bpm>)
 	ms_per_loop = (<ms_per_beat> * (4 * 4))
 	intervals = (<time> / <ms_per_loop>)
-	casttointeger \{intervals}
+	CastToInteger \{intervals}
 	time_into_loop = (<time> - (<ms_per_loop> * <intervals>))
-	printf channel = jam_mode qs(0x56090418) s = <array_size> t = <time> a = <time_into_loop> c = <ms_per_loop> b = <bpm>
+	printf channel = jam_mode qs("\LDrum Loop: Size %s, Time %t, Time into Loop %a, MS per loop %c, Bpm %b") s = <array_size> t = <time> a = <time_into_loop> c = <ms_per_loop> b = <bpm>
 	start_index = -1
 	index = 0
 	note_count = [0 0 0 0 0 0]
@@ -389,17 +389,17 @@ script jam_play_drum_loop \{bpm = 120
 	endif
 	switch <note_type>
 		case (<loop_midi_notes> [0])
-		setarrayelement arrayname = note_count index = 0 newvalue = ((<note_count> [0]) + 1)
+		SetArrayElement ArrayName = note_count index = 0 newvalue = ((<note_count> [0]) + 1)
 		case (<loop_midi_notes> [1])
-		setarrayelement arrayname = note_count index = 1 newvalue = ((<note_count> [1]) + 1)
+		SetArrayElement ArrayName = note_count index = 1 newvalue = ((<note_count> [1]) + 1)
 		case (<loop_midi_notes> [2])
-		setarrayelement arrayname = note_count index = 2 newvalue = ((<note_count> [2]) + 1)
+		SetArrayElement ArrayName = note_count index = 2 newvalue = ((<note_count> [2]) + 1)
 		case (<loop_midi_notes> [3])
-		setarrayelement arrayname = note_count index = 3 newvalue = ((<note_count> [3]) + 1)
+		SetArrayElement ArrayName = note_count index = 3 newvalue = ((<note_count> [3]) + 1)
 		case (<loop_midi_notes> [4])
-		setarrayelement arrayname = note_count index = 4 newvalue = ((<note_count> [4]) + 1)
+		SetArrayElement ArrayName = note_count index = 4 newvalue = ((<note_count> [4]) + 1)
 		case (<loop_midi_notes> [5])
-		setarrayelement arrayname = note_count index = 5 newvalue = ((<note_count> [5]) + 1)
+		SetArrayElement ArrayName = note_count index = 5 newvalue = ((<note_count> [5]) + 1)
 	endswitch
 	<index> = (<index> + 1)
 	if (<index> = (<array_size> - 1))
@@ -429,8 +429,8 @@ script jam_play_drum_loop \{bpm = 120
 	orig_note_time = <note_time>
 	note_type = ($<drum_loop> [<index>] [1])
 	note_velocity = ($<drum_loop> [<index>] [2])
-	getsongtimems
-	casttointeger \{time}
+	GetSongTimeMs
+	CastToInteger \{time}
 	curr_song_time = <time>
 	jam_play_loop_adj_for_curr_song_time <...>
 	<note_time> = (<note_time> + (<num_loops> * <ms_per_loop>))
@@ -438,35 +438,35 @@ script jam_play_drum_loop \{bpm = 120
 		add_crash = 0
 		begin
 		hold_pattern = 0
-		if NOT gotparam \{ignore_touch}
+		if NOT GotParam \{ignore_touch}
 			switch $jam_current_drum_modifier
 				case 1
-				setarrayelement \{arrayname = loop_midi_notes
+				SetArrayElement \{ArrayName = loop_midi_notes
 					index = 0
 					newvalue = 0}
-				setarrayelement \{arrayname = loop_midi_notes
+				SetArrayElement \{ArrayName = loop_midi_notes
 					index = 1
 					newvalue = 0}
-				setarrayelement \{arrayname = loop_midi_notes
+				SetArrayElement \{ArrayName = loop_midi_notes
 					index = 2
 					newvalue = 0}
-				setarrayelement \{arrayname = loop_midi_notes
+				SetArrayElement \{ArrayName = loop_midi_notes
 					index = 3
 					newvalue = 0}
-				setarrayelement \{arrayname = loop_midi_notes
+				SetArrayElement \{ArrayName = loop_midi_notes
 					index = 4
 					newvalue = 0}
 				case 2
-				setarrayelement \{arrayname = loop_midi_notes
+				SetArrayElement \{ArrayName = loop_midi_notes
 					index = 1
 					newvalue = 0}
-				setarrayelement \{arrayname = loop_midi_notes
+				SetArrayElement \{ArrayName = loop_midi_notes
 					index = 2
 					newvalue = 0}
-				setarrayelement \{arrayname = loop_midi_notes
+				SetArrayElement \{ArrayName = loop_midi_notes
 					index = 3
 					newvalue = 0}
-				setarrayelement \{arrayname = loop_midi_notes
+				SetArrayElement \{ArrayName = loop_midi_notes
 					index = 4
 					newvalue = 0}
 				case 3
@@ -476,19 +476,19 @@ script jam_play_drum_loop \{bpm = 120
 					<add_crash> = -1
 				endif
 				case 4
-				setarrayelement \{arrayname = loop_midi_notes
+				SetArrayElement \{ArrayName = loop_midi_notes
 					index = 0
 					newvalue = 0}
-				setarrayelement \{arrayname = loop_midi_notes
+				SetArrayElement \{ArrayName = loop_midi_notes
 					index = 2
 					newvalue = 0}
-				setarrayelement \{arrayname = loop_midi_notes
+				SetArrayElement \{ArrayName = loop_midi_notes
 					index = 3
 					newvalue = 0}
-				setarrayelement \{arrayname = loop_midi_notes
+				SetArrayElement \{ArrayName = loop_midi_notes
 					index = 4
 					newvalue = 0}
-				setarrayelement \{arrayname = loop_midi_notes
+				SetArrayElement \{ArrayName = loop_midi_notes
 					index = 5
 					newvalue = 0}
 			endswitch
@@ -515,19 +515,19 @@ script jam_play_drum_loop \{bpm = 120
 			<hold_pattern> = 1048576
 		endswitch
 		loop_pitch = 0
-		if controllerpressed up <controller>
+		if ControllerPressed up <controller>
 			<loop_pitch> = 12
 		endif
-		if controllerpressed down <controller>
+		if ControllerPressed down <controller>
 			<loop_pitch> = -12
 		endif
-		if gotparam \{loop_velocity}
-			jam_input_drum_strum hold_pattern = <hold_pattern> velocity = <note_velocity> controller = 0 buss = jammode_drums select_player = <player> loop_pitch = <loop_pitch> loop
+		if GotParam \{loop_velocity}
+			jam_input_drum_strum hold_pattern = <hold_pattern> velocity = <note_velocity> controller = 0 buss = JamMode_Drums select_player = <player> loop_pitch = <loop_pitch> Loop
 		else
-			jam_input_drum_strum hold_pattern = <hold_pattern> velocity = ($jam_current_drum_loop_velocity) controller = 0 buss = jammode_drums select_player = <player> loop_pitch = <loop_pitch> loop
+			jam_input_drum_strum hold_pattern = <hold_pattern> velocity = ($jam_current_drum_loop_velocity) controller = 0 buss = JamMode_Drums select_player = <player> loop_pitch = <loop_pitch> Loop
 		endif
 		if (<add_crash> = 1)
-			jam_input_drum_strum hold_pattern = 1 velocity = ($jam_current_drum_loop_velocity) controller = 0 buss = jammode_drums select_player = <player> loop_pitch = <loop_pitch> loop
+			jam_input_drum_strum hold_pattern = 1 velocity = ($jam_current_drum_loop_velocity) controller = 0 buss = JamMode_Drums select_player = <player> loop_pitch = <loop_pitch> Loop
 			change \{jam_current_whammy_modifier = 0}
 		endif
 		if (<index> >= (<array_size> - 1))
@@ -558,7 +558,7 @@ script jam_play_drum_loop \{bpm = 120
 			break
 		endif
 	endif
-	wait \{1
+	Wait \{1
 		gameframe}
 	repeat
 endscript

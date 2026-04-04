@@ -1,33 +1,33 @@
-gh4_career_vocals_songs = {
+GH4_Career_Vocals_Songs = {
 	prefix = 'career_vocals'
-	part = vocals
+	part = Vocals
 	num_tiers = 20
 	initial_movie = 'singer_intro'
 	end_movie = 'singer_outro'
 	tier1 = {
 		songs = [
-			feelthepain
-			overkill
+			FeelthePain
+			Overkill
 			nosleeptillbrooklyn
 		]
 		encorep1 = nosleeptillbrooklyn
-		level = load_z_frathouse
-		poster_texture = frat_poster
+		level = load_z_Frathouse
+		poster_texture = Frat_Poster
 		defaultunlocked = 4
-		setlist_icon = setlist_icon_bar
-		genre = rock
+		setlist_icon = setlist_icon_BAR
+		genre = Rock
 	}
 	tier2 = {
 		songs = [
 			doitagain
-			ramblinman
+			RamblinMan
 			uparoundthebend
 		]
 		encorep1 = uparoundthebend
 		level = load_z_harbor
-		poster_texture = hongkong_poster
-		setlist_icon = setlist_icon_bar
-		genre = `classic rock`
+		poster_texture = Hongkong_Poster
+		setlist_icon = setlist_icon_BAR
+		genre = `Classic Rock`
 	}
 	tier3 = {
 		songs = [
@@ -37,49 +37,49 @@ gh4_career_vocals_songs = {
 		]
 		encorep1 = youregonnasayyeah
 		level = load_z_goth
-		poster_texture = goth_poster
-		setlist_icon = setlist_icon_bar
-		genre = goth
+		poster_texture = Goth_Poster
+		setlist_icon = setlist_icon_BAR
+		genre = Goth
 	}
 	tier4 = {
 		songs = [
 			whativedone
-			screamaimfire
+			ScreamAimFire
 			mrcrowley
 			crazytrain
 		]
 		encorep1 = crazytrain
 		level = load_z_metalfest
-		poster_texture = ozzfest_poster
-		setlist_icon = setlist_icon_bar
-		genre = `heavy metal`
+		poster_texture = Ozzfest_Poster
+		setlist_icon = setlist_icon_BAR
+		genre = `Heavy Metal`
 	}
 	tier5 = {
 		songs = [
-			freakonaleash
+			FreakOnALeash
 			prisonerofsociety
 			stillborn
 			trappedunderice
 		]
 		encorep1 = trappedunderice
 		level = load_z_bayou
-		poster_texture = bayou_poster
-		setlist_icon = setlist_icon_bar
-		genre = `heavy metal`
+		poster_texture = Bayou_Poster
+		setlist_icon = setlist_icon_BAR
+		genre = `Heavy Metal`
 	}
 	tier6 = {
 		songs = [
 			somemightsay
 			beautifuldisaster
 			areyougonnagomyway
-			dammit
+			Dammit
 			eyeofthetiger
 		]
 		encorep1 = eyeofthetiger
 		level = load_z_military
-		poster_texture = aircraft_poster
-		setlist_icon = setlist_icon_bar
-		genre = rock
+		poster_texture = aircraft_Poster
+		setlist_icon = setlist_icon_BAR
+		genre = Rock
 	}
 	tier7 = {
 		songs = [
@@ -91,37 +91,37 @@ gh4_career_vocals_songs = {
 		]
 		encorep1 = hotforteacher
 		level = load_z_hob
-		poster_texture = hob_poster
-		setlist_icon = setlist_icon_bar
-		genre = `classic rock`
+		poster_texture = hob_Poster
+		setlist_icon = setlist_icon_BAR
+		genre = `Classic Rock`
 	}
 	tier8 = {
 		songs = [
 			santeria
 			obstacle1
 			mountainsong
-			today
+			Today
 			rebelyell
 		]
 		encorep1 = rebelyell
 		level = load_z_cathedral
-		poster_texture = bone_poster
-		setlist_icon = setlist_icon_bar
-		genre = goth
+		poster_texture = bone_Poster
+		setlist_icon = setlist_icon_BAR
+		genre = Goth
 	}
 	tier9 = {
 		songs = [
 			ontheroadagain
 			heartbreaker
-			bandontherun
+			BandOnTheRun
 			stranglehold
 			lovemetwotimes
 		]
 		encorep1 = lovemetwotimes
 		level = load_z_fairgrounds
-		poster_texture = statefair_poster
-		setlist_icon = setlist_icon_bar
-		genre = `classic rock`
+		poster_texture = Statefair_Poster
+		setlist_icon = setlist_icon_BAR
+		genre = `Classic Rock`
 	}
 	tier10 = {
 		songs = [
@@ -133,9 +133,9 @@ gh4_career_vocals_songs = {
 		]
 		encorep1 = goyourownway
 		level = load_z_recordstore
-		poster_texture = amobea_poster
-		setlist_icon = setlist_icon_bar
-		genre = rock
+		poster_texture = Amobea_Poster
+		setlist_icon = setlist_icon_BAR
+		genre = Rock
 	}
 	tier11 = {
 		songs = [
@@ -147,25 +147,25 @@ gh4_career_vocals_songs = {
 			purplehaze
 		]
 		encorep1 = purplehaze
-		level = load_z_ballpark
-		poster_texture = sf_ballpark_poster
-		setlist_icon = setlist_icon_bar
-		genre = `classic rock`
+		level = load_z_Ballpark
+		poster_texture = sf_ballpark_Poster
+		setlist_icon = setlist_icon_BAR
+		genre = `Classic Rock`
 	}
 	tier12 = {
 		songs = [
 			kickoutthejams
-			thekill
+			TheKill
 			ourtruth
 			escueladecalor
-			demolitionman
+			DemolitionMan
 			livingonaprayer
 		]
 		encorep1 = livingonaprayer
 		level = load_z_castle
-		poster_texture = castle_poster
-		setlist_icon = setlist_icon_bar
-		genre = rock
+		poster_texture = Castle_Poster
+		setlist_icon = setlist_icon_BAR
+		genre = Rock
 	}
 	tier13 = {
 		songs = [
@@ -179,23 +179,23 @@ gh4_career_vocals_songs = {
 		]
 		encorep1 = beatit
 		level = load_z_newyork
-		poster_texture = times_poster
-		setlist_icon = setlist_icon_bar
-		genre = rock
+		poster_texture = Times_Poster
+		setlist_icon = setlist_icon_BAR
+		genre = Rock
 		play_finalbandintro_transition_type = finalbandintro_transition_played_vocals
 		end_with_credits
 	}
 	tier14 = {
 		songs = [
-			parabola
-			schism
-			vicarious
+			Parabola
+			Schism
+			Vicarious
 		]
 		paytoplay = 8000
 		level = load_z_tool
-		poster_texture = tool_poster
-		setlist_icon = setlist_icon_bar
-		genre = punk
+		poster_texture = Tool_Poster
+		setlist_icon = setlist_icon_BAR
+		genre = Punk
 	}
 	tier15 = {
 		songs = [
@@ -205,10 +205,10 @@ gh4_career_vocals_songs = {
 			aggro
 		]
 		paytoplay = 2000
-		level = load_z_hotel
-		poster_texture = tiki_poster
-		setlist_icon = setlist_icon_bar
-		genre = punk
+		level = load_z_Hotel
+		poster_texture = Tiki_Poster
+		setlist_icon = setlist_icon_BAR
+		genre = Punk
 	}
 	tier16 = {
 		songs = [
@@ -219,45 +219,45 @@ gh4_career_vocals_songs = {
 			weaponofchoice
 		]
 		paytoplay = 2000
-		level = load_z_studio2
-		poster_texture = studio_01_poster
-		setlist_icon = setlist_icon_bar
-		genre = pop
+		level = load_z_Studio2
+		poster_texture = Studio_01_Poster
+		setlist_icon = setlist_icon_BAR
+		genre = Pop
 	}
 	tier17 = {
 		songs = [
-			floaton
+			FloatOn
 			hailtothefreaks
 			vinternoll2
-			souldoubt
+			SoulDoubt
 			toomuchtooyoung
 		]
 		paytoplay = 2000
-		level = load_z_scifi
-		poster_texture = voltage_poster
-		setlist_icon = setlist_icon_bar
-		genre = goth
+		level = load_z_Scifi
+		poster_texture = Voltage_Poster
+		setlist_icon = setlist_icon_BAR
+		genre = Goth
 	}
 	tier18 = {
 		songs = [
 			onearmedscissor
 			toyboy
 			goodgod
-			nevertoolate
-			pullmeunder
+			NeverTooLate
+			PullMeUnder
 		]
 		paytoplay = 3000
 		level = load_z_credits
-		poster_texture = wow_poster
-		setlist_icon = setlist_icon_bar
-		genre = `black metal`
+		poster_texture = WOW_Poster
+		setlist_icon = setlist_icon_BAR
+		genre = `Black Metal`
 	}
 	tier19 = {
 		songs = [
-			placeholdersong
+			PlaceHolderSong
 		]
-		poster_texture = create_a_gig_poster
-		genre = `heavy metal`
+		poster_texture = Create_a_Gig_Poster
+		genre = `Heavy Metal`
 		createagig
 	}
 	tier20 = {
@@ -268,12 +268,12 @@ gh4_career_vocals_songs = {
 		]
 		encorep1 = twelveseconddebug
 		level = load_z_newyork
-		poster_texture = times_poster
-		genre = punk
+		poster_texture = Times_Poster
+		genre = Punk
 		debug_gig
 	}
 }
-gh4_career_vocals_progression_unlock_order = {
+GH4_Career_Vocals_Progression_Unlock_Order = {
 	name = 'Career_Vocals'
 	freegigs = {
 		gig1 = {
@@ -291,8 +291,8 @@ gh4_career_vocals_progression_unlock_order = {
 		gig4 = {
 			name = 'gig20'
 			num = 20
-			debug_dont_unlock
-			dont_add_gig_poster
+			DEBUG_DONT_UNLOCK
+			DONT_ADD_GIG_POSTER
 		}
 	}
 	freegigs_last = {
@@ -389,30 +389,30 @@ gh4_career_vocals_progression_unlock_order = {
 		}
 	}
 }
-gh4_career_vocals_gig_complete_params = {
-	career_vocals
-	unlock_order = gh4_career_vocals_progression_unlock_order
+GH4_Career_Vocals_Gig_Complete_Params = {
+	Career_Vocals
+	unlock_order = GH4_Career_Vocals_Progression_Unlock_Order
 	part = 'Vocals'
 }
-gh4_career_vocals_progression = [
+GH4_Career_Vocals_Progression = [
 	{
 		name = set_initial_states
-		type = scr
-		atom_script = progression_career_vocals_init
+		type = Scr
+		atom_script = Progression_Career_Vocals_Init
 		atom_params = {
 		}
 	}
 	{
 		name = vocals_career_gig1_complete
-		type = scr
-		atom_script = progression_career_gig_complete
-		atom_params = $gh4_career_vocals_gig_complete_params
+		type = Scr
+		atom_script = Progression_Career_Gig_Complete
+		atom_params = $GH4_Career_Vocals_Gig_Complete_Params
 		depends_on = [
 			{
-				type = scr
-				scr = progression_career_check_gig_complete
+				type = Scr
+				Scr = Progression_Career_Check_Gig_Complete
 				params = {
-					career_vocals
+					Career_Vocals
 					gig = 1
 				}
 			}
@@ -420,15 +420,15 @@ gh4_career_vocals_progression = [
 	}
 	{
 		name = vocals_career_gig2_complete
-		type = scr
-		atom_script = progression_career_gig_complete
-		atom_params = $gh4_career_vocals_gig_complete_params
+		type = Scr
+		atom_script = Progression_Career_Gig_Complete
+		atom_params = $GH4_Career_Vocals_Gig_Complete_Params
 		depends_on = [
 			{
-				type = scr
-				scr = progression_career_check_gig_complete
+				type = Scr
+				Scr = Progression_Career_Check_Gig_Complete
 				params = {
-					career_vocals
+					Career_Vocals
 					gig = 2
 				}
 			}
@@ -436,15 +436,15 @@ gh4_career_vocals_progression = [
 	}
 	{
 		name = vocals_career_gig3_complete
-		type = scr
-		atom_script = progression_career_gig_complete
-		atom_params = $gh4_career_vocals_gig_complete_params
+		type = Scr
+		atom_script = Progression_Career_Gig_Complete
+		atom_params = $GH4_Career_Vocals_Gig_Complete_Params
 		depends_on = [
 			{
-				type = scr
-				scr = progression_career_check_gig_complete
+				type = Scr
+				Scr = Progression_Career_Check_Gig_Complete
 				params = {
-					career_vocals
+					Career_Vocals
 					gig = 3
 				}
 			}
@@ -452,15 +452,15 @@ gh4_career_vocals_progression = [
 	}
 	{
 		name = vocals_career_gig4_complete
-		type = scr
-		atom_script = progression_career_gig_complete
-		atom_params = $gh4_career_vocals_gig_complete_params
+		type = Scr
+		atom_script = Progression_Career_Gig_Complete
+		atom_params = $GH4_Career_Vocals_Gig_Complete_Params
 		depends_on = [
 			{
-				type = scr
-				scr = progression_career_check_gig_complete
+				type = Scr
+				Scr = Progression_Career_Check_Gig_Complete
 				params = {
-					career_vocals
+					Career_Vocals
 					gig = 4
 				}
 			}
@@ -468,15 +468,15 @@ gh4_career_vocals_progression = [
 	}
 	{
 		name = vocals_career_gig5_complete
-		type = scr
-		atom_script = progression_career_gig_complete
-		atom_params = $gh4_career_vocals_gig_complete_params
+		type = Scr
+		atom_script = Progression_Career_Gig_Complete
+		atom_params = $GH4_Career_Vocals_Gig_Complete_Params
 		depends_on = [
 			{
-				type = scr
-				scr = progression_career_check_gig_complete
+				type = Scr
+				Scr = Progression_Career_Check_Gig_Complete
 				params = {
-					career_vocals
+					Career_Vocals
 					gig = 5
 				}
 			}
@@ -484,15 +484,15 @@ gh4_career_vocals_progression = [
 	}
 	{
 		name = vocals_career_gig6_complete
-		type = scr
-		atom_script = progression_career_gig_complete
-		atom_params = $gh4_career_vocals_gig_complete_params
+		type = Scr
+		atom_script = Progression_Career_Gig_Complete
+		atom_params = $GH4_Career_Vocals_Gig_Complete_Params
 		depends_on = [
 			{
-				type = scr
-				scr = progression_career_check_gig_complete
+				type = Scr
+				Scr = Progression_Career_Check_Gig_Complete
 				params = {
-					career_vocals
+					Career_Vocals
 					gig = 6
 				}
 			}
@@ -500,15 +500,15 @@ gh4_career_vocals_progression = [
 	}
 	{
 		name = vocals_career_gig7_complete
-		type = scr
-		atom_script = progression_career_gig_complete
-		atom_params = $gh4_career_vocals_gig_complete_params
+		type = Scr
+		atom_script = Progression_Career_Gig_Complete
+		atom_params = $GH4_Career_Vocals_Gig_Complete_Params
 		depends_on = [
 			{
-				type = scr
-				scr = progression_career_check_gig_complete
+				type = Scr
+				Scr = Progression_Career_Check_Gig_Complete
 				params = {
-					career_vocals
+					Career_Vocals
 					gig = 7
 				}
 			}
@@ -516,15 +516,15 @@ gh4_career_vocals_progression = [
 	}
 	{
 		name = vocals_career_gig8_complete
-		type = scr
-		atom_script = progression_career_gig_complete
-		atom_params = $gh4_career_vocals_gig_complete_params
+		type = Scr
+		atom_script = Progression_Career_Gig_Complete
+		atom_params = $GH4_Career_Vocals_Gig_Complete_Params
 		depends_on = [
 			{
-				type = scr
-				scr = progression_career_check_gig_complete
+				type = Scr
+				Scr = Progression_Career_Check_Gig_Complete
 				params = {
-					career_vocals
+					Career_Vocals
 					gig = 8
 				}
 			}
@@ -532,15 +532,15 @@ gh4_career_vocals_progression = [
 	}
 	{
 		name = vocals_career_gig9_complete
-		type = scr
-		atom_script = progression_career_gig_complete
-		atom_params = $gh4_career_vocals_gig_complete_params
+		type = Scr
+		atom_script = Progression_Career_Gig_Complete
+		atom_params = $GH4_Career_Vocals_Gig_Complete_Params
 		depends_on = [
 			{
-				type = scr
-				scr = progression_career_check_gig_complete
+				type = Scr
+				Scr = Progression_Career_Check_Gig_Complete
 				params = {
-					career_vocals
+					Career_Vocals
 					gig = 9
 				}
 			}
@@ -548,15 +548,15 @@ gh4_career_vocals_progression = [
 	}
 	{
 		name = vocals_career_gig10_complete
-		type = scr
-		atom_script = progression_career_gig_complete
-		atom_params = $gh4_career_vocals_gig_complete_params
+		type = Scr
+		atom_script = Progression_Career_Gig_Complete
+		atom_params = $GH4_Career_Vocals_Gig_Complete_Params
 		depends_on = [
 			{
-				type = scr
-				scr = progression_career_check_gig_complete
+				type = Scr
+				Scr = Progression_Career_Check_Gig_Complete
 				params = {
-					career_vocals
+					Career_Vocals
 					gig = 10
 				}
 			}
@@ -564,15 +564,15 @@ gh4_career_vocals_progression = [
 	}
 	{
 		name = vocals_career_gig11_complete
-		type = scr
-		atom_script = progression_career_gig_complete
-		atom_params = $gh4_career_vocals_gig_complete_params
+		type = Scr
+		atom_script = Progression_Career_Gig_Complete
+		atom_params = $GH4_Career_Vocals_Gig_Complete_Params
 		depends_on = [
 			{
-				type = scr
-				scr = progression_career_check_gig_complete
+				type = Scr
+				Scr = Progression_Career_Check_Gig_Complete
 				params = {
-					career_vocals
+					Career_Vocals
 					gig = 11
 				}
 			}
@@ -580,15 +580,15 @@ gh4_career_vocals_progression = [
 	}
 	{
 		name = vocals_career_gig12_complete
-		type = scr
-		atom_script = progression_career_gig_complete
-		atom_params = $gh4_career_vocals_gig_complete_params
+		type = Scr
+		atom_script = Progression_Career_Gig_Complete
+		atom_params = $GH4_Career_Vocals_Gig_Complete_Params
 		depends_on = [
 			{
-				type = scr
-				scr = progression_career_check_gig_complete
+				type = Scr
+				Scr = Progression_Career_Check_Gig_Complete
 				params = {
-					career_vocals
+					Career_Vocals
 					gig = 12
 				}
 			}
@@ -596,15 +596,15 @@ gh4_career_vocals_progression = [
 	}
 	{
 		name = vocals_career_gig13_complete
-		type = scr
-		atom_script = progression_career_gig_complete
-		atom_params = $gh4_career_vocals_gig_complete_params
+		type = Scr
+		atom_script = Progression_Career_Gig_Complete
+		atom_params = $GH4_Career_Vocals_Gig_Complete_Params
 		depends_on = [
 			{
-				type = scr
-				scr = progression_career_check_gig_complete
+				type = Scr
+				Scr = Progression_Career_Check_Gig_Complete
 				params = {
-					career_vocals
+					Career_Vocals
 					gig = 13
 				}
 			}
@@ -612,15 +612,15 @@ gh4_career_vocals_progression = [
 	}
 	{
 		name = vocals_career_specialgig1_complete
-		type = scr
-		atom_script = progression_career_gig_complete
-		atom_params = $gh4_career_vocals_gig_complete_params
+		type = Scr
+		atom_script = Progression_Career_Gig_Complete
+		atom_params = $GH4_Career_Vocals_Gig_Complete_Params
 		depends_on = [
 			{
-				type = scr
-				scr = progression_career_check_gig_complete
+				type = Scr
+				Scr = Progression_Career_Check_Gig_Complete
 				params = {
-					career_vocals
+					Career_Vocals
 					specialgig = 1
 				}
 			}
@@ -628,15 +628,15 @@ gh4_career_vocals_progression = [
 	}
 	{
 		name = vocals_career_specialgig2_complete
-		type = scr
-		atom_script = progression_career_gig_complete
-		atom_params = $gh4_career_vocals_gig_complete_params
+		type = Scr
+		atom_script = Progression_Career_Gig_Complete
+		atom_params = $GH4_Career_Vocals_Gig_Complete_Params
 		depends_on = [
 			{
-				type = scr
-				scr = progression_career_check_gig_complete
+				type = Scr
+				Scr = Progression_Career_Check_Gig_Complete
 				params = {
-					career_vocals
+					Career_Vocals
 					specialgig = 2
 				}
 			}
@@ -644,15 +644,15 @@ gh4_career_vocals_progression = [
 	}
 	{
 		name = vocals_career_specialgig3_complete
-		type = scr
-		atom_script = progression_career_gig_complete
-		atom_params = $gh4_career_vocals_gig_complete_params
+		type = Scr
+		atom_script = Progression_Career_Gig_Complete
+		atom_params = $GH4_Career_Vocals_Gig_Complete_Params
 		depends_on = [
 			{
-				type = scr
-				scr = progression_career_check_gig_complete
+				type = Scr
+				Scr = Progression_Career_Check_Gig_Complete
 				params = {
-					career_vocals
+					Career_Vocals
 					specialgig = 3
 				}
 			}
@@ -660,15 +660,15 @@ gh4_career_vocals_progression = [
 	}
 	{
 		name = vocals_career_specialgig4_complete
-		type = scr
-		atom_script = progression_career_gig_complete
-		atom_params = $gh4_career_vocals_gig_complete_params
+		type = Scr
+		atom_script = Progression_Career_Gig_Complete
+		atom_params = $GH4_Career_Vocals_Gig_Complete_Params
 		depends_on = [
 			{
-				type = scr
-				scr = progression_career_check_gig_complete
+				type = Scr
+				Scr = Progression_Career_Check_Gig_Complete
 				params = {
-					career_vocals
+					Career_Vocals
 					specialgig = 4
 				}
 			}
@@ -676,15 +676,15 @@ gh4_career_vocals_progression = [
 	}
 	{
 		name = vocals_career_bonus_gig1_complete
-		type = scr
-		atom_script = progression_career_gig_complete
-		atom_params = $gh4_career_vocals_gig_complete_params
+		type = Scr
+		atom_script = Progression_Career_Gig_Complete
+		atom_params = $GH4_Career_Vocals_Gig_Complete_Params
 		depends_on = [
 			{
-				type = scr
-				scr = progression_career_check_gig_complete
+				type = Scr
+				Scr = Progression_Career_Check_Gig_Complete
 				params = {
-					career_vocals
+					Career_Vocals
 					gig = 14
 				}
 			}
@@ -692,15 +692,15 @@ gh4_career_vocals_progression = [
 	}
 	{
 		name = vocals_career_bonus_gig2_complete
-		type = scr
-		atom_script = progression_career_gig_complete
-		atom_params = $gh4_career_vocals_gig_complete_params
+		type = Scr
+		atom_script = Progression_Career_Gig_Complete
+		atom_params = $GH4_Career_Vocals_Gig_Complete_Params
 		depends_on = [
 			{
-				type = scr
-				scr = progression_career_check_gig_complete
+				type = Scr
+				Scr = Progression_Career_Check_Gig_Complete
 				params = {
-					career_vocals
+					Career_Vocals
 					gig = 15
 				}
 			}
@@ -708,15 +708,15 @@ gh4_career_vocals_progression = [
 	}
 	{
 		name = vocals_career_bonus_gig3_complete
-		type = scr
-		atom_script = progression_career_gig_complete
-		atom_params = $gh4_career_vocals_gig_complete_params
+		type = Scr
+		atom_script = Progression_Career_Gig_Complete
+		atom_params = $GH4_Career_Vocals_Gig_Complete_Params
 		depends_on = [
 			{
-				type = scr
-				scr = progression_career_check_gig_complete
+				type = Scr
+				Scr = Progression_Career_Check_Gig_Complete
 				params = {
-					career_vocals
+					Career_Vocals
 					gig = 16
 				}
 			}
@@ -724,15 +724,15 @@ gh4_career_vocals_progression = [
 	}
 	{
 		name = vocals_career_bonus_gig4_complete
-		type = scr
-		atom_script = progression_career_gig_complete
-		atom_params = $gh4_career_vocals_gig_complete_params
+		type = Scr
+		atom_script = Progression_Career_Gig_Complete
+		atom_params = $GH4_Career_Vocals_Gig_Complete_Params
 		depends_on = [
 			{
-				type = scr
-				scr = progression_career_check_gig_complete
+				type = Scr
+				Scr = Progression_Career_Check_Gig_Complete
 				params = {
-					career_vocals
+					Career_Vocals
 					gig = 17
 				}
 			}
@@ -740,10 +740,10 @@ gh4_career_vocals_progression = [
 	}
 	{
 		name = vocals_career_bonus_gig4_unlock
-		type = scr
-		atom_script = progression_career_gig_unlock
+		type = Scr
+		atom_script = Progression_Career_Gig_Unlock
 		atom_params = {
-			$gh4_career_vocals_gig_complete_params
+			$GH4_Career_Vocals_Gig_Complete_Params
 			gig_name = 'gig18'
 		}
 		depends_on = [
@@ -755,15 +755,15 @@ gh4_career_vocals_progression = [
 	}
 	{
 		name = vocals_career_bonus_gig5_complete
-		type = scr
-		atom_script = progression_career_gig_complete
-		atom_params = $gh4_career_vocals_gig_complete_params
+		type = Scr
+		atom_script = Progression_Career_Gig_Complete
+		atom_params = $GH4_Career_Vocals_Gig_Complete_Params
 		depends_on = [
 			{
-				type = scr
-				scr = progression_career_check_gig_complete
+				type = Scr
+				Scr = Progression_Career_Check_Gig_Complete
 				params = {
-					career_vocals
+					Career_Vocals
 					gig = 18
 				}
 			}
@@ -771,17 +771,17 @@ gh4_career_vocals_progression = [
 	}
 	{
 		name = end_of_first_update
-		type = scr
-		atom_script = progression_career_vocals_endoffirstupdate
+		type = Scr
+		atom_script = Progression_Career_Vocals_EndOfFirstUpdate
 		atom_params = {
 		}
 	}
 ]
 
-script progression_career_vocals_init 
-	printf \{qs(0x27427fc4)}
+script Progression_Career_Vocals_Init 
+	printf \{qs("\LProgression_Career_Vocals_Init")}
 endscript
 
-script progression_career_vocals_endoffirstupdate 
-	printf \{qs(0x850bf005)}
+script Progression_Career_Vocals_EndOfFirstUpdate 
+	printf \{qs("\LProgression_Career_Vocals_EndOfFirstUpdate")}
 endscript

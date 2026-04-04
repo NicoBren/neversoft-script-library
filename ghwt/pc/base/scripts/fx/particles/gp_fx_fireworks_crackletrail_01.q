@@ -1,53 +1,53 @@
-gp_fx_fireworks_crackletrail_01 = {
+GP_FX_Fireworks_CrackleTrail_01 = {
 	pos = (-3.301401, 10.609411, 14.541697)
 	angles = (0.0, 0.0, 0.0)
-	class = particleobject
-	particletype = flexparticle
+	Class = ParticleObject
+	ParticleType = FlexParticle
 	type = flat
 	active
-	createdatstart
-	emitrangedims = (1.5, 1.5, 1.5)
-	emit_target = (0.0, 1.0, 0.0)
-	emitangle = (0.0, 0.0, 0.0)
+	CreatedAtStart
+	EmitRangeDims = (1.5, 1.5, 1.5)
+	emit_Target = (0.0, 1.0, 0.0)
+	EmitAngle = (0.0, 0.0, 0.0)
 	force = (0.0, -4.0, 0.0)
-	windcoeff = 0.0
-	localwindcoeff = 0.0
-	emittervelocityweight = 0.0
-	radiate
-	anglespread = 60.0
-	liferange = (5.0, 5.0)
+	WindCoeff = 0.0
+	LocalWindCoeff = 0.0
+	EmitterVelocityWeight = 0.0
+	Radiate
+	AngleSpread = 60.0
+	LifeRange = (5.0, 5.0)
 	emit_rate = 100.0
 	max = 0
-	timeseed = 0.0
-	lifetime = 1.0
-	emitnum = 0
-	followemitter = 0.0
-	emitfunction = triangle
-	emitperiod = 1.0
-	sizerange = [
+	TimeSeed = 0.0
+	lifeTime = 1.0
+	emitNum = 0
+	FollowEmitter = 0.0
+	EmitFunction = triangle
+	EmitPeriod = 1.0
+	SizeRange = [
 		(0.1, 0.5)
 		(0.05, 0.5)
 	]
-	speedrange = (1.0, 2.0)
-	rotvel = (0.0, 0.0)
-	rotveltimescale = 0.0
-	emitdelaystart = 0.0
-	alignwithpath
-	pathfollowtime = 0.1
-	history = 11
-	historylistcoordinatespace = world
+	SpeedRange = (1.0, 2.0)
+	RotVel = (0.0, 0.0)
+	RotVelTimeScale = 0.0
+	EmitDelayStart = 0.0
+	AlignWithPath
+	PathFollowTime = 0.1
+	History = 11
+	HistoryListCoordinateSpace = world
 	color = -661304069
-	lod_default
-	quickmaterial = {
-		diffusetextureenabled
-		diffusetexture = jow_spark01
-		specularpower = 0
+	LOD_Default
+	QuickMaterial = {
+		DiffuseTextureEnabled
+		DiffuseTexture = JOW_Spark01
+		SpecularPower = 0
 		bloom
 		alphacutoff = 1
-		blendmode = add
-		quadanimationfps = 0
+		blendMode = Add
+		QuadAnimationFPS = 0
 	}
-	knot = [
+	Knot = [
 		(0.67239, 0.0, -0.763177)
 		(0.67239, 0.0, -0.763177)
 		(0.444005, 0.0, -0.485143)
@@ -58,7 +58,7 @@ gp_fx_fireworks_crackletrail_01 = {
 		(-0.65962404, 0.0, 0.69224995)
 		(-0.65962404, 0.0, 0.69224995)
 	]
-	particlecolor = [
+	ParticleColor = [
 		-487391233
 		-533249
 		-487391233
@@ -66,7 +66,7 @@ gp_fx_fireworks_crackletrail_01 = {
 		-487391488
 		-533504
 	]
-	vertexweight = [
+	VertexWeight = [
 		0.42949504
 		1.0
 	]

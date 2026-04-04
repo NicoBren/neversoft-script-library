@@ -1,52 +1,52 @@
-gp_fx_harborsparklesmoke_01 = {
+GP_FX_HarborSparkleSmoke_01 = {
 	pos = (6.7126417, 0.0, 68.0874)
 	angles = (0.0, 0.0, 0.0)
-	class = particleobject
-	particletype = flexparticle
+	Class = ParticleObject
+	ParticleType = FlexParticle
 	type = flat
 	active
-	createdatstart
+	CreatedAtStart
 	attach
-	emitrangedims = (0.1, 0.1, 0.1)
-	emit_target = (0.0, 1.0, 0.0)
-	emitangle = (0.0, 0.0, 0.0)
+	EmitRangeDims = (0.1, 0.1, 0.1)
+	emit_Target = (0.0, 1.0, 0.0)
+	EmitAngle = (0.0, 0.0, 0.0)
 	force = (0.0, 0.0, 0.0)
-	windcoeff = 0.0
-	localwindcoeff = 0.0
-	emittervelocityweight = 0.0
-	anglespread = 1.0
-	liferange = (1.2, 1.6)
+	WindCoeff = 0.0
+	LocalWindCoeff = 0.0
+	EmitterVelocityWeight = 0.0
+	AngleSpread = 1.0
+	LifeRange = (1.2, 1.6)
 	emit_rate = 200.0
 	max = 0
-	timeseed = 0.0
-	lifetime = 3.0
-	emitnum = 0
-	followemitter = 0.0
-	alwaysemit
-	emitfunction = constant
-	emitperiod = 1.0
-	sizerange = [
+	TimeSeed = 0.0
+	lifeTime = 3.0
+	emitNum = 0
+	FollowEmitter = 0.0
+	AlwaysEmit
+	EmitFunction = constant
+	EmitPeriod = 1.0
+	SizeRange = [
 		(0.4, 0.4)
 		(0.4, 0.4)
 	]
-	speedrange = (1.0, 2.0)
-	rotvel = (0.3, -0.3)
-	rotveltimescale = 0.2
-	emitdelaystart = 0.0
-	pathfollowtime = 0.0
-	history = 2
-	historylistcoordinatespace = world
+	SpeedRange = (1.0, 2.0)
+	RotVel = (0.3, -0.3)
+	RotVelTimeScale = 0.2
+	EmitDelayStart = 0.0
+	PathFollowTime = 0.0
+	History = 2
+	HistoryListCoordinateSpace = world
 	color = -1667457841
-	lod_default
-	quickmaterial = {
-		diffusetextureenabled
-		diffusetexture = ph_smoke_singlepuff_blend_02
-		specularpower = 0
+	LOD_Default
+	QuickMaterial = {
+		DiffuseTextureEnabled
+		DiffuseTexture = PH_Smoke_SinglePuff_Blend_02
+		SpecularPower = 0
 		alphacutoff = 1
-		blendmode = blend
-		quadanimationfps = 0
+		blendMode = blend
+		QuadAnimationFPS = 0
 	}
-	knot = [
+	Knot = [
 		(-0.48883003, 0.0, 0.17903)
 		(-0.48883003, 0.0, 0.17903)
 		(-0.33989704, 0.0, 0.117797)
@@ -57,7 +57,7 @@ gp_fx_harborsparklesmoke_01 = {
 		(0.530863, 0.0, -0.17436)
 		(0.530863, 0.0, -0.17436)
 	]
-	particlecolor = [
+	ParticleColor = [
 		-475906560
 		-4235776
 		-1734829825
@@ -65,7 +65,7 @@ gp_fx_harborsparklesmoke_01 = {
 		-1734830080
 		-256
 	]
-	vertexweight = [
+	VertexWeight = [
 		0.447061
 		1.0
 	]

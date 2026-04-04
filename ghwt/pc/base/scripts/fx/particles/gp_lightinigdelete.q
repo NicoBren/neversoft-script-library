@@ -1,56 +1,56 @@
-gp_lightinigdelete = {
+GP_Lightinigdelete = {
 	pos = (0.096286, 4.795653, -0.074613005)
 	angles = (0.0, 0.0, 0.0)
-	class = particleobject
-	particletype = flexparticle
+	Class = ParticleObject
+	ParticleType = FlexParticle
 	type = flat
 	active
-	createdatstart
-	emitrangedims = (0.2, 0.2, 0.2)
-	emit_target = (0.0, 1.0, 0.0)
-	emitangle = (0.0, 0.0, 0.0)
+	CreatedAtStart
+	EmitRangeDims = (0.2, 0.2, 0.2)
+	emit_Target = (0.0, 1.0, 0.0)
+	EmitAngle = (0.0, 0.0, 0.0)
 	force = (0.0, 0.0, 0.0)
-	windcoeff = 0.0
-	localwindcoeff = 0.0
-	emittervelocityweight = 0.0
-	radiate
-	anglespread = 360.0
-	liferange = (0.5, 0.6)
+	WindCoeff = 0.0
+	LocalWindCoeff = 0.0
+	EmitterVelocityWeight = 0.0
+	Radiate
+	AngleSpread = 360.0
+	LifeRange = (0.5, 0.6)
 	emit_rate = 60.0
 	max = 0
-	timeseed = 0.0
-	lifetime = 0.0
-	emitnum = 0
-	followemitter = 0.0
-	emitfunction = constant
-	emitperiod = 1.0
-	sizerange = [
+	TimeSeed = 0.0
+	lifeTime = 0.0
+	emitNum = 0
+	FollowEmitter = 0.0
+	EmitFunction = constant
+	EmitPeriod = 1.0
+	SizeRange = [
 		(2.5, 4.0)
 		(4.0, 2.0)
 	]
-	speedrange = (1.0, 1.2)
-	rotvel = (0.2, -0.2)
-	rotveltimescale = 0.4
-	emitdelaystart = 0.0
-	pathfollowtime = 5.5
-	history = 2
-	historylistcoordinatespace = world
+	SpeedRange = (1.0, 1.2)
+	RotVel = (0.2, -0.2)
+	RotVelTimeScale = 0.4
+	EmitDelayStart = 0.0
+	PathFollowTime = 5.5
+	History = 2
+	HistoryListCoordinateSpace = world
 	color = -1493435045
-	lod_default
-	quickmaterial = {
-		diffusetextureenabled
-		diffusetexture = ph_electricity_01
-		specularpower = 0
+	LOD_Default
+	QuickMaterial = {
+		DiffuseTextureEnabled
+		DiffuseTexture = PH_Electricity_01
+		SpecularPower = 0
 		bloom
 		alphacutoff = 1
-		blendmode = add
-		softedge
-		softedgescale = 0.2
-		burn
-		burnvalue = 0.2
-		quadanimationfps = 0
+		blendMode = Add
+		SoftEdge
+		SoftedgeScale = 0.2
+		Burn
+		BurnValue = 0.2
+		QuadAnimationFPS = 0
 	}
-	knot = [
+	Knot = [
 		(-0.820389, 0.0, -0.0)
 		(-0.820389, 0.0, -0.0)
 		(-0.669945, 0.0, -0.0)
@@ -64,7 +64,7 @@ gp_lightinigdelete = {
 		(1.0294049, 0.0, -0.0)
 		(1.0294049, 0.0, -0.0)
 	]
-	particlecolor = [
+	ParticleColor = [
 		-256
 		-256
 		-1
@@ -74,7 +74,7 @@ gp_lightinigdelete = {
 		-256
 		-256
 	]
-	vertexweight = [
+	VertexWeight = [
 		0.24399102
 		0.72982603
 		1.0

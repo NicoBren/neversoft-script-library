@@ -7,218 +7,218 @@ progression_completion_tier = 1
 progression_unlocked_guitar = -1
 progression_unlocked_guitar2 = -1
 progression_unlocked_type = guitar
-cash_system_rules = [
+Cash_System_rules = [
 	{
 		diff = easy_rhythm
 		newstars = 3
 		oldstars = 0
-		cash = 35
+		Cash = 35
 	}
 	{
 		diff = easy_rhythm
 		newstars = 4
 		oldstars = 0
-		cash = 85
+		Cash = 85
 	}
 	{
 		diff = easy_rhythm
 		newstars = 5
 		oldstars = 0
-		cash = 150
+		Cash = 150
 	}
 	{
 		diff = easy_rhythm
 		newstars = 4
 		oldstars = 3
-		cash = 50
+		Cash = 50
 	}
 	{
 		diff = easy_rhythm
 		newstars = 5
 		oldstars = 3
-		cash = 115
+		Cash = 115
 	}
 	{
 		diff = easy_rhythm
 		newstars = 5
 		oldstars = 4
-		cash = 65
+		Cash = 65
 	}
 	{
 		diff = easy
 		newstars = 3
 		oldstars = 0
-		cash = 75
+		Cash = 75
 	}
 	{
 		diff = easy
 		newstars = 4
 		oldstars = 0
-		cash = 175
+		Cash = 175
 	}
 	{
 		diff = easy
 		newstars = 5
 		oldstars = 0
-		cash = 300
+		Cash = 300
 	}
 	{
 		diff = easy
 		newstars = 4
 		oldstars = 3
-		cash = 100
+		Cash = 100
 	}
 	{
 		diff = easy
 		newstars = 5
 		oldstars = 3
-		cash = 225
+		Cash = 225
 	}
 	{
 		diff = easy
 		newstars = 5
 		oldstars = 4
-		cash = 125
+		Cash = 125
 	}
 	{
 		diff = medium
 		newstars = 3
 		oldstars = 0
-		cash = 150
+		Cash = 150
 	}
 	{
 		diff = medium
 		newstars = 4
 		oldstars = 0
-		cash = 350
+		Cash = 350
 	}
 	{
 		diff = medium
 		newstars = 5
 		oldstars = 0
-		cash = 600
+		Cash = 600
 	}
 	{
 		diff = medium
 		newstars = 4
 		oldstars = 3
-		cash = 200
+		Cash = 200
 	}
 	{
 		diff = medium
 		newstars = 5
 		oldstars = 3
-		cash = 450
+		Cash = 450
 	}
 	{
 		diff = medium
 		newstars = 5
 		oldstars = 4
-		cash = 250
+		Cash = 250
 	}
 	{
 		diff = hard
 		newstars = 3
 		oldstars = 0
-		cash = 300
+		Cash = 300
 	}
 	{
 		diff = hard
 		newstars = 4
 		oldstars = 0
-		cash = 700
+		Cash = 700
 	}
 	{
 		diff = hard
 		newstars = 5
 		oldstars = 0
-		cash = 1200
+		Cash = 1200
 	}
 	{
 		diff = hard
 		newstars = 4
 		oldstars = 3
-		cash = 400
+		Cash = 400
 	}
 	{
 		diff = hard
 		newstars = 5
 		oldstars = 3
-		cash = 900
+		Cash = 900
 	}
 	{
 		diff = hard
 		newstars = 5
 		oldstars = 4
-		cash = 500
+		Cash = 500
 	}
 	{
 		diff = expert
 		newstars = 3
 		oldstars = 0
-		cash = 450
+		Cash = 450
 	}
 	{
 		diff = expert
 		newstars = 4
 		oldstars = 0
-		cash = 1050
+		Cash = 1050
 	}
 	{
 		diff = expert
 		newstars = 5
 		oldstars = 0
-		cash = 1800
+		Cash = 1800
 	}
 	{
 		diff = expert
 		newstars = 4
 		oldstars = 3
-		cash = 600
+		Cash = 600
 	}
 	{
 		diff = expert
 		newstars = 5
 		oldstars = 3
-		cash = 1350
+		Cash = 1350
 	}
 	{
 		diff = expert
 		newstars = 5
 		oldstars = 4
-		cash = 750
+		Cash = 750
 	}
 ]
-songs_implemented = {
+Songs_Implemented = {
 }
 
-script progression_checksong5star 
-	printf \{qs(0xb04c15e0)}
+script Progression_CheckSong5Star 
+	printf \{qs("\LProgression_CheckSong5Star")}
 	get_progression_globals game_mode = ($game_mode)
 	songlist = <tier_global>
 	tier = 1
 	begin
 	setlist_prefix = ($<songlist>.prefix)
-	formattext checksumname = tiername '%ptier%i' p = <setlist_prefix> i = <tier>
-	formattext checksumname = tier_checksum 'tier%s' s = <tier>
-	getarraysize ($<songlist>.<tier_checksum>.songs)
+	FormatText checksumname = tiername '%ptier%i' p = <setlist_prefix> i = <tier>
+	FormatText checksumname = tier_checksum 'tier%s' s = <tier>
+	GetArraySize ($<songlist>.<tier_checksum>.songs)
 	unlocked = 0
 	format_globaltag_gigname setlist_prefix = <setlist_prefix> gignum = <tier>
-	getglobaltags <gig_name>
+	GetGlobalTags <gig_name>
 	if (<unlocked> = 0 && <completed> = 0)
 		return \{false}
 	endif
 	array_count = 0
 	begin
-	if ($current_progression_flag = career_band)
+	if ($current_progression_flag = Career_Band)
 		get_band_difficulty
 		format_globaltag_song_checksum part = ($<songlist>.part) song = ($<songlist>.<tier_checksum>.songs [<array_count>]) difficulty = <band_difficulty>
 	else
 		format_globaltag_song_checksum part = ($<songlist>.part) song = ($<songlist>.<tier_checksum>.songs [<array_count>])
 	endif
-	getglobaltags <song_checksum> param = unlocked
-	getglobaltags <song_checksum> param = stars
-	if NOT progression_isbosssong tier_global = <tier_global> tier = <tier> song = ($<songlist>.<tier_checksum>.songs [<array_count>])
+	GetGlobalTags <song_checksum> param = unlocked
+	GetGlobalTags <song_checksum> param = stars
+	if NOT Progression_IsBossSong tier_global = <tier_global> tier = <tier> song = ($<songlist>.<tier_checksum>.songs [<array_count>])
 		if NOT (<stars> = 5)
 			return \{false}
 		endif
@@ -230,13 +230,13 @@ script progression_checksong5star
 	return \{true}
 endscript
 
-script progression_checkdiff 
-	printf \{qs(0xfc49ebf7)}
-	progression_getdifficulty
+script Progression_CheckDiff 
+	printf \{qs("\LProgression_CheckDiff")}
+	Progression_GetDifficulty
 	if NOT (<diff> = <difficulty>)
 		return \{false}
 	endif
-	if gotparam \{mode}
+	if GotParam \{mode}
 		if NOT ($game_mode = <mode>)
 			return \{false}
 		endif
@@ -244,48 +244,48 @@ script progression_checkdiff
 	return \{true}
 endscript
 
-script progression_songfailed 
-	printf \{qs(0xb3ef858d)}
+script Progression_SongFailed 
+	printf \{qs("\LProgression_SongFailed")}
 	if ($coop_dlc_active = 1)
 		return
 	endif
 	if ($game_mode = p1_career ||
 			$game_mode = p2_career)
-		updateatoms \{name = progression}
+		UpdateAtoms \{name = Progression}
 	endif
 	if NOT ($is_attract_mode = 1)
-		change \{achievements_songwonflag = 0}
-		achievements_update
+		change \{Achievements_SongWonFlag = 0}
+		Achievements_Update
 	endif
-	if isxenon
+	if isXenon
 		if NOT ($current_song = jamsession)
-			writesongdatatofile \{failed = 1}
+			WriteSongDataToFile \{failed = 1}
 		endif
 	endif
 endscript
 
-script progression_songwon 
-	printf \{qs(0xaea36534)}
+script Progression_SongWon 
+	printf \{qs("\LProgression_SongWon")}
 	additional_cash = 0
 	change \{progression_beat_game_last_song = 0}
 	change \{progression_unlock_tier_last_song = 0}
 	change \{progression_got_sponsored_last_song = 0}
 	change \{progression_play_completion_movie = 0}
 	update_song_star_rating
-	if issingleplayergame
-		getplayerinfo \{1
+	if isSinglePlayerGame
+		GetPlayerInfo \{1
 			part}
 	else
-		part = band
+		part = Band
 	endif
 	get_difficulty_text_nl difficulty = ($player1_status.difficulty)
 	get_song_prefix song = ($current_song)
 	get_formatted_songname song_prefix = (<song_prefix>) difficulty_text_nl = <difficulty_text_nl> part = ($instrument_list.<part>.text_nl)
 	if ($current_song != jamsession)
-		if issingleplayergame
+		if isSinglePlayerGame
 			get_player_percent_accuracy \{player_index = 1}
 		else
-			gamemode_getnumplayersshown
+			GameMode_GetNumPlayersShown
 			p = 1
 			gold_stars = 1
 			begin
@@ -303,54 +303,54 @@ script progression_songwon
 		endif
 		if (<percent_notes_hit> = 100)
 			if ($game_mode = p1_quickplay || $game_mode = p2_quickplay)
-				setglobaltags <songname> params = {tr_percent100 = 1}
+				SetGlobalTags <songname> params = {tr_percent100 = 1}
 			endif
 			if ($game_mode = p1_quickplay ||
 					$game_mode = p1_career)
-				setglobaltags <songname> params = {achievement_gold_star = 1}
+				SetGlobalTags <songname> params = {achievement_gold_star = 1}
 			endif
 		endif
 	endif
-	gamemode_gettype
+	GameMode_GetType
 	if (<type> = career)
 		get_progression_globals ($current_progression_flag) game_mode = ($game_mode) use_current_tab = 1
 		songlist = <tier_global>
 		bandname_id = band_info
-		setglobaltags <bandname_id> params = {first_play = 0} all_active_players = 1
-		getglobaltags \{progression
+		SetGlobalTags <bandname_id> params = {first_play = 0} all_active_players = 1
+		GetGlobalTags \{Progression
 			params = current_tier}
-		getglobaltags \{progression
+		GetGlobalTags \{Progression
 			params = current_song_count}
-		getglobaltags \{progression
+		GetGlobalTags \{Progression
 			params = career_using_createagig}
 		song_count = <current_song_count>
-		if gotparam \{current_tier}
+		if GotParam \{current_tier}
 			setlist_prefix = ($<songlist>.prefix)
-			formattext checksumname = tier_checksum 'tier%s' s = <current_tier>
+			FormatText checksumname = tier_checksum 'tier%s' s = <current_tier>
 			if (<career_using_createagig> = 1)
-				if ($current_progression_flag = career_band)
+				if ($current_progression_flag = Career_Band)
 					get_band_difficulty
 					format_globaltag_song_checksum part = ($<tier_global>.part) song = ($current_song) difficulty = <band_difficulty>
 				else
 					format_globaltag_song_checksum part = ($<tier_global>.part) song = ($current_song)
 				endif
 			else
-				if ($current_progression_flag = career_band)
+				if ($current_progression_flag = Career_Band)
 					get_band_difficulty
 					format_globaltag_song_checksum part = ($<tier_global>.part) song = ($<tier_global>.<tier_checksum>.songs [<song_count>]) difficulty = <band_difficulty>
 				else
 					format_globaltag_song_checksum part = ($<tier_global>.part) song = ($<tier_global>.<tier_checksum>.songs [<song_count>])
 				endif
 			endif
-			if progression_isbosssong tier_global = <tier_global> tier = <current_tier> song = ($<tier_global>.<tier_checksum>.songs [<song_count>])
+			if Progression_IsBossSong tier_global = <tier_global> tier = <current_tier> song = ($<tier_global>.<tier_checksum>.songs [<song_count>])
 				change \{structurename = player1_status
 					stars = 5}
 			endif
-			if issingleplayergame
-				getplayerinfo \{1
+			if isSinglePlayerGame
+				GetPlayerInfo \{1
 					stars}
 				new_stars = <stars>
-				getplayerinfo \{1
+				GetPlayerInfo \{1
 					score}
 				new_score = <score>
 			else
@@ -358,12 +358,12 @@ script progression_songwon
 				new_score = ($band1_status.score)
 			endif
 			if ($is_network_game = 0)
-				progression_cashmilestonessongwon
+				Progression_CashMilestonesSongWon
 			endif
-			if issingleplayergame
+			if isSinglePlayerGame
 				get_player_percent_accuracy \{player_index = 1}
 			else
-				gamemode_getnumplayersshown
+				GameMode_GetNumPlayersShown
 				p = 1
 				gold_stars = 1
 				begin
@@ -380,46 +380,46 @@ script progression_songwon
 				endif
 			endif
 			if (<percent_notes_hit> = 100)
-				setglobaltags <song_checksum> params = {percent100 = 1} all_active_players = 1
+				SetGlobalTags <song_checksum> params = {percent100 = 1} all_active_players = 1
 			endif
-			gamemode_getnumplayersshown
+			GameMode_GetNumPlayersShown
 			if (<num_players_shown> > 0)
 				if is_boss_battle_song
 					num_players_shown = 1
 				endif
 				<player> = 1
 				begin
-				getplayerinfo <player> is_local_client
+				GetPlayerInfo <player> is_local_client
 				if (<is_local_client> = 1)
-					getplayerinfo <player> controller
-					getsavegamefromcontroller controller = <controller>
-					getglobaltags <song_checksum> savegame = <savegame> param = stars
+					GetPlayerInfo <player> controller
+					GetSavegameFromController controller = <controller>
+					GetGlobalTags <song_checksum> savegame = <savegame> param = stars
 					old_stars = <stars>
-					getglobaltags <song_checksum> savegame = <savegame> param = score
+					GetGlobalTags <song_checksum> savegame = <savegame> param = score
 					old_score = <score>
 					if (<new_stars> > <old_stars>)
-						setglobaltags <song_checksum> savegame = <savegame> params = {stars = <new_stars>}
+						SetGlobalTags <song_checksum> savegame = <savegame> params = {stars = <new_stars>}
 						if ($primary_controller = <controller>)
 							if ($current_tab = tab_setlist)
-								if NOT structurecontains structure = ($<tier_global>.<tier_checksum>) nocash
-									progression_awardcash old_stars = <stars> new_stars = <new_stars>
+								if NOT StructureContains Structure = ($<tier_global>.<tier_checksum>) nocash
+									Progression_AwardCash old_stars = <stars> new_stars = <new_stars>
 								endif
 							endif
 						endif
 					endif
 					if (<new_score> > <old_score>)
-						casttointeger \{new_score}
-						setglobaltags <song_checksum> savegame = <savegame> params = {score = <new_score>}
+						CastToInteger \{new_score}
+						SetGlobalTags <song_checksum> savegame = <savegame> params = {score = <new_score>}
 					endif
 				endif
 				player = (<player> + 1)
 				repeat <num_players_shown>
 			endif
 			setup_encore = 1
-			getglobaltags \{progression
+			GetGlobalTags \{Progression
 				params = career_play_song_and_end
 				noassert = 1}
-			if gotparam \{career_play_song_and_end}
+			if GotParam \{career_play_song_and_end}
 				if (<career_play_song_and_end> = 1)
 					setup_encore = 0
 				endif
@@ -428,61 +428,61 @@ script progression_songwon
 				setup_encore = 0
 			endif
 			if (<setup_encore> = 1)
-				getarraysize ($<tier_global>.<tier_checksum>.songs)
-				getglobaltags \{progression
+				GetArraySize ($<tier_global>.<tier_checksum>.songs)
+				GetGlobalTags \{Progression
 					params = current_song_count}
-				if structurecontains structure = ($<tier_global>.<tier_checksum>) encorep1
+				if StructureContains Structure = ($<tier_global>.<tier_checksum>) encorep1
 					if ((<current_song_count> + 1) = (<array_size> - 1))
 						change \{current_transition = preencore}
 						<current_song_count> = (<current_song_count> + 1)
-						setglobaltags progression params = {current_song_count = <current_song_count> encore_song = ($<tier_global>.<tier_checksum>.encorep1)}
+						SetGlobalTags Progression params = {current_song_count = <current_song_count> encore_song = ($<tier_global>.<tier_checksum>.encorep1)}
 					endif
 				endif
 			endif
 			if ($is_network_game = 0)
 				format_globaltag_gigname setlist_prefix = ($<tier_global>.prefix) gignum = ($current_gig_number)
-				getglobaltags <gig_name> param = completed
+				GetGlobalTags <gig_name> param = completed
 				if (<completed> = 0)
-					if structurecontains structure = ($<tier_global>.<tier_checksum>) end_with_credits
-						if progression_career_check_gig_complete ($current_progression_flag) gig = ($current_gig_number)
+					if StructureContains Structure = ($<tier_global>.<tier_checksum>) end_with_credits
+						if Progression_Career_Check_Gig_Complete ($current_progression_flag) gig = ($current_gig_number)
 							change \{end_credits = 1}
 							get_movie_id_by_name movie = ($<tier_global>.end_movie)
-							setglobaltags <id> params = {unlocked = 1} all_active_players = 1
+							SetGlobalTags <id> params = {unlocked = 1} all_active_players = 1
 						endif
 					endif
 				endif
 			endif
 		endif
 		if NOT ($current_song = jamsession)
-			if globaltagexists \{$current_song
+			if GlobalTagExists \{$current_song
 					noassert = 1}
-				setglobaltags \{$current_song
+				SetGlobalTags \{$current_song
 					all_active_players = 1
 					params = {
 						unlocked = 1
 					}}
 			endif
 		endif
-		if iswinport
-			0xf9e188de <...>
+		if IsWinPort
+			WinportMakeSureGigsAreUnlockedAfterCompletion <...>
 		endif
 		execute_unlock_atoms
 	elseif (<type> = quickplay && $is_network_game = 0)
-		progression_cashmilestonessongwon
+		Progression_CashMilestonesSongWon
 	endif
-	progression_updatedetailedstatsforgig
-	if isxenon
+	Progression_UpdateDetailedStatsForGig
+	if isXenon
 		if NOT ($current_song = jamsession)
-			writesongdatatofile
+			WriteSongDataToFile
 		endif
 	endif
 endscript
 
 script update_song_star_rating 
-	gamemode_getnumplayersshown
+	GameMode_GetNumPlayersShown
 	player = 1
 	begin
-	formattext checksumname = player_status 'player%i_status' i = <player>
+	FormatText checksumname = player_status 'player%i_status' i = <player>
 	new_stars = 3
 	if ($<player_status>.score >= $<player_status>.base_score * ($star_rating_cutoffs.star5 [(<num_players_shown> - 1)]))
 		new_stars = 5
@@ -510,49 +510,49 @@ script update_song_star_rating
 endscript
 
 script get_player_percent_accuracy 
-	requireparams \{[
+	RequireParams \{[
 			player_index
 		]
 		all}
-	if NOT playerinfoequals <player_index> part = vocals
-		getplayerinfo <player_index> notes_hit
-		getplayerinfo <player_index> max_notes
+	if NOT PlayerInfoEquals <player_index> part = Vocals
+		GetPlayerInfo <player_index> notes_hit
+		GetPlayerInfo <player_index> max_notes
 		if (<max_notes> > 0)
 			<percent_notes_hit> = (((<notes_hit> * 1.0) / <max_notes>) * 100.0)
 		else
 			<percent_notes_hit> = 0
 		endif
 	else
-		getplayerinfo <player_index> vocal_phrase_quality
-		getplayerinfo <player_index> vocal_phrase_max_qual
+		GetPlayerInfo <player_index> vocal_phrase_quality
+		GetPlayerInfo <player_index> vocal_phrase_max_qual
 		if (<vocal_phrase_max_qual> > 0)
 			<percent_notes_hit> = (((<vocal_phrase_quality> * 1.0) / <vocal_phrase_max_qual>) * 100.0)
 		else
 			<percent_notes_hit> = 0
 		endif
 	endif
-	mathfloor <percent_notes_hit>
+	MathFloor <percent_notes_hit>
 	<percent_notes_hit> = <floor>
 	return percent_notes_hit = <percent_notes_hit>
 endscript
 end_credits = 0
 boss_devil_score = 0
 
-script progression_endcredits 
-	printf \{qs(0x08c313c4)}
+script Progression_EndCredits 
+	printf \{qs("\LCREDITS BEGIN")}
 	change boss_devil_score = ($player1_status.score)
 	reset_score \{player_status = player1_status}
 	change \{current_level = load_z_credits}
 	change \{current_song = $final_credits_song}
 	create_loading_screen
-	load_venue
-	spawnscriptnow \{credits_screenfx}
-	restart_gem_scroller song_name = ($current_song) difficulty = ($player1_status.difficulty) difficulty2 = ($player2_status.difficulty) starttime = 0 end_credits_restart = 1
+	Load_Venue
+	spawnscriptnow \{Credits_ScreenFX}
+	restart_gem_scroller song_name = ($current_song) difficulty = ($player1_status.difficulty) difficulty2 = ($player2_status.difficulty) StartTime = 0 end_credits_restart = 1
 	generic_event_choose \{state = uistate_play_song}
 	spawnscriptnow \{scrolling_list_begin}
 endscript
 
-script progression_endcredits_done 
+script Progression_EndCredits_Done 
 	if ($end_credits = 1)
 		change structurename = player1_status score = ($boss_devil_score)
 		change \{boss_devil_score = 0}
@@ -560,49 +560,49 @@ script progression_endcredits_done
 	destroy_credits_menu
 endscript
 
-script playmovie_endcredits 
-	killmovie \{textureslot = 1}
-	preloadmovie \{movie = 'Fret_Flames'
-		textureslot = 1
-		texturepri = -2
+script PlayMovie_EndCredits 
+	KillMovie \{TextureSlot = 1}
+	PreLoadMovie \{movie = 'Fret_Flames'
+		TextureSlot = 1
+		TexturePri = -2
 		no_loop
 		no_hold}
 	begin
-	if (ismoviepreloaded textureslot = 1)
-		startpreloadedmovie \{textureslot = 1}
+	if (isMoviePreLoaded TextureSlot = 1)
+		StartPreLoadedMovie \{TextureSlot = 1}
 		return
 	endif
-	wait \{1
+	Wait \{1
 		gameframe}
 	repeat
 endscript
 
-script progression_awardcash 
-	printf \{qs(0xf198ad82)}
+script Progression_AwardCash 
+	printf \{qs("\LProgression_AwardCash")}
 	additional_cash = 0
 	get_current_band_info
-	getglobaltags <band_info>
-	getglobaltags \{progression
+	GetGlobalTags <band_info>
+	GetGlobalTags \{Progression
 		params = current_song_count}
 	get_progression_globals ($current_progression_flag)
 	format_globaltag_gigname setlist_prefix = ($<tier_global>.prefix) gignum = ($current_gig_number)
-	getglobaltags <gig_name> param = cash_earned
-	setglobaltags <gig_name> params = {cash_earned = (<cash_earned> + <additional_cash>)}
-	getglobaltags \{progression
+	GetGlobalTags <gig_name> param = cash_earned
+	SetGlobalTags <gig_name> params = {cash_earned = (<cash_earned> + <additional_cash>)}
+	GetGlobalTags \{Progression
 		params = current_song_count}
 	return additional_cash = <additional_cash>
 endscript
 
-script progression_countcompletedsongsincurrenttier 
+script Progression_CountCompletedSongsInCurrentTier 
 	completed_songs = 0
 	tier_size = 0
 	get_progression_globals game_mode = ($game_mode) ($current_progression_flag)
 	if NOT (<tier_global> = 0 || $current_gig_number = 0)
-		progression_getnumtiersong tier_global = <tier_global> tier = ($current_gig_number) all
+		Progression_GetNumTierSong tier_global = <tier_global> tier = ($current_gig_number) all
 		song_count = 0
 		begin
-		progression_gettiersong tier_global = <tier_global> tier = ($current_gig_number) song_count = <song_count>
-		getglobaltags <song_checksum> param = stars
+		Progression_GetTierSong tier_global = <tier_global> tier = ($current_gig_number) song_count = <song_count>
+		GetGlobalTags <song_checksum> param = stars
 		if NOT (<stars> = 0)
 			completed_songs = (<completed_songs> + 1)
 		endif
@@ -612,43 +612,43 @@ script progression_countcompletedsongsincurrenttier
 	return {completed_songs = <completed_songs> total_songs = <tier_size>}
 endscript
 
-script progression_getnumtiersong 
-	formattext checksumname = tier_checksum 'tier%s' s = <tier>
-	getarraysize ($<tier_global>.<tier_checksum>.songs)
-	if gotparam \{all}
+script Progression_GetNumTierSong 
+	FormatText checksumname = tier_checksum 'tier%s' s = <tier>
+	GetArraySize ($<tier_global>.<tier_checksum>.songs)
+	if GotParam \{all}
 		return tier_size = <array_size>
 	endif
-	if structurecontains structure = ($<tier_global>.<tier_checksum>) encorep1
+	if StructureContains Structure = ($<tier_global>.<tier_checksum>) encorep1
 		array_size = (<array_size> - 1)
 	endif
-	if structurecontains structure = ($<tier_global>.<tier_checksum>) encorep2
+	if StructureContains Structure = ($<tier_global>.<tier_checksum>) encorep2
 		array_size = (<array_size> - 1)
 	endif
-	if structurecontains structure = ($<tier_global>.<tier_checksum>) boss
+	if StructureContains Structure = ($<tier_global>.<tier_checksum>) boss
 		array_size = (<array_size> - 1)
 	endif
 	return tier_size = <array_size>
 endscript
 
-script progression_gettiersong 
+script Progression_GetTierSong 
 	setlist_prefix = ($<tier_global>.prefix)
-	formattext checksumname = tier_checksum 'tier%s' s = <tier>
+	FormatText checksumname = tier_checksum 'tier%s' s = <tier>
 	song = ($<tier_global>.<tier_checksum>.songs [<song_count>])
 	format_globaltag_song_checksum part = ($<tier_global>.part) song = <song>
 	return song = <song> song_checksum = <song_checksum>
 endscript
 
-script progression_getbosssong 
+script Progression_GetBossSong 
 	setlist_prefix = ($<tier_global>.prefix)
-	formattext checksumname = tier_checksum 'tier%s' s = <tier>
-	if NOT structurecontains structure = ($<tier_global>.<tier_checksum>) boss
+	FormatText checksumname = tier_checksum 'tier%s' s = <tier>
+	if NOT StructureContains Structure = ($<tier_global>.<tier_checksum>) boss
 		return \{song_count = -1
 			song = none
 			song_checksum = none}
 	endif
-	getarraysize ($<tier_global>.<tier_checksum>.songs)
+	GetArraySize ($<tier_global>.<tier_checksum>.songs)
 	array_count = (<array_size> - 1)
-	if structurecontains structure = ($<tier_global>.<tier_checksum>) encorep1
+	if StructureContains Structure = ($<tier_global>.<tier_checksum>) encorep1
 		array_count = (<array_count> - 1)
 	endif
 	song = ($<tier_global>.<tier_checksum>.songs [<array_count>])
@@ -656,12 +656,12 @@ script progression_getbosssong
 	return song_count = <array_count> song = <song> song_checksum = <song_checksum>
 endscript
 
-script progression_getencoresong \{type = any}
+script Progression_GetEncoreSong \{type = any}
 	setlist_prefix = ($<tier_global>.prefix)
-	formattext checksumname = tier_checksum 'tier%s' s = <tier>
+	FormatText checksumname = tier_checksum 'tier%s' s = <tier>
 	if (<type> = any)
-		if NOT structurecontains structure = ($<tier_global>.<tier_checksum>) encorep1
-			if NOT structurecontains structure = ($<tier_global>.<tier_checksum>) encorep2
+		if NOT StructureContains Structure = ($<tier_global>.<tier_checksum>) encorep1
+			if NOT StructureContains Structure = ($<tier_global>.<tier_checksum>) encorep2
 				return \{song_count = -1
 					song = none
 					song_checksum = none}
@@ -669,28 +669,28 @@ script progression_getencoresong \{type = any}
 		endif
 	endif
 	if (<type> = p1)
-		if NOT structurecontains structure = ($<tier_global>.<tier_checksum>) encorep1
+		if NOT StructureContains Structure = ($<tier_global>.<tier_checksum>) encorep1
 			return \{song_count = -1
 				song = none
 				song_checksum = none}
 		endif
 	endif
 	if (<type> = p2)
-		if NOT structurecontains structure = ($<tier_global>.<tier_checksum>) encorep2
+		if NOT StructureContains Structure = ($<tier_global>.<tier_checksum>) encorep2
 			return \{song_count = -1
 				song = none
 				song_checksum = none}
 		endif
 	endif
-	getarraysize ($<tier_global>.<tier_checksum>.songs)
+	GetArraySize ($<tier_global>.<tier_checksum>.songs)
 	array_count = (<array_size> - 1)
 	if (<type> = p1)
-		if structurecontains structure = ($<tier_global>.<tier_checksum>) encorep2
+		if StructureContains Structure = ($<tier_global>.<tier_checksum>) encorep2
 			array_count = (<array_count> - 1)
 		endif
 	endif
 	song = ($<tier_global>.<tier_checksum>.songs [<array_count>])
-	if ($current_progression_flag = career_band)
+	if ($current_progression_flag = Career_Band)
 		get_band_difficulty
 		format_globaltag_song_checksum part = ($<tier_global>.part) song = <song> difficulty = <band_difficulty>
 	else
@@ -699,26 +699,26 @@ script progression_getencoresong \{type = any}
 	return song_count = <array_count> song = <song> song_checksum = <song_checksum>
 endscript
 
-script progression_isbosssong 
-	if NOT gotparam \{tier}
+script Progression_IsBossSong 
+	if NOT GotParam \{tier}
 		return \{false}
 	endif
 	query_song = <song>
-	progression_getbosssong <...>
+	Progression_GetBossSong <...>
 	if (<song> = <query_song>)
 		return \{true}
 	endif
 	return \{false}
 endscript
 
-script progression_isencoresong 
+script Progression_IsEncoreSong 
 	query_song = <song>
-	progression_getencoresong <...> type = p1
+	Progression_GetEncoreSong <...> type = p1
 	printstruct <...>
 	if (<song> = <query_song>)
 		return \{true}
 	endif
-	progression_getencoresong <...> type = p2
+	Progression_GetEncoreSong <...> type = p2
 	printstruct <...>
 	if (<song> = <query_song>)
 		return \{true}
@@ -726,25 +726,25 @@ script progression_isencoresong
 	return \{false}
 endscript
 
-script progression_unlocksong \{encore = 0
+script Progression_UnlockSong \{encore = 0
 		boss = 0
 		unlocked = 0}
 	setlist_prefix = ($<tier_global>.prefix)
 	tier = 1
 	begin
-	formattext checksumname = tiername '%ptier%i' p = <setlist_prefix> i = <tier>
-	formattext checksumname = tier_checksum 'tier%s' s = <tier>
-	getarraysize ($<tier_global>.<tier_checksum>.songs)
+	FormatText checksumname = tiername '%ptier%i' p = <setlist_prefix> i = <tier>
+	FormatText checksumname = tier_checksum 'tier%s' s = <tier>
+	GetArraySize ($<tier_global>.<tier_checksum>.songs)
 	array_count = 0
 	begin
 	if ($<tier_global>.<tier_checksum>.songs [<array_count>] = <song>)
-		if ($current_progression_flag = career_band)
+		if ($current_progression_flag = Career_Band)
 			get_band_difficulty
 			format_globaltag_song_checksum part = ($<tier_global>.part) song = ($<tier_global>.<tier_checksum>.songs [<array_count>]) difficulty = <band_difficulty>
 		else
 			format_globaltag_song_checksum part = ($<tier_global>.part) song = ($<tier_global>.<tier_checksum>.songs [<array_count>])
 		endif
-		setglobaltags <song_checksum> all_active_players = 1 params = {unlocked = 1}
+		SetGlobalTags <song_checksum> all_active_players = 1 params = {unlocked = 1}
 	endif
 	array_count = (<array_count> + 1)
 	repeat <array_size>
@@ -752,7 +752,7 @@ script progression_unlocksong \{encore = 0
 	repeat ($<tier_global>.num_tiers)
 endscript
 
-script progression_getdifficulty 
+script Progression_GetDifficulty 
 	difficulty = ($player1_status.difficulty)
 	if ($game_mode = p2_career)
 		get_minimum_difficulty difficulty1 = ($player1_status.difficulty) difficulty2 = ($player2_status.difficulty)
@@ -761,8 +761,8 @@ script progression_getdifficulty
 	return difficulty = <difficulty>
 endscript
 
-script progression_setprogressionnodeflags 
-	changenodeflag \{ls_always
+script Progression_SetProgressionNodeFlags 
+	ChangeNodeFlag \{LS_ALWAYS
 		1}
 	ls_encore = 0
 	ls_3_5 = 0
@@ -773,11 +773,11 @@ script progression_setprogressionnodeflags
 				$game_mode = p2_career ||
 				$game_mode = p3_career ||
 				$game_mode = p4_career)
-			if progression_isencoresong tier_global = <tier_global> tier = <tier> song = ($current_song)
+			if Progression_IsEncoreSong tier_global = <tier_global> tier = <tier> song = ($current_song)
 				ls_encore = 1
 			endif
-			progression_getdifficulty
-			progression_countcompletedsongsincurrenttier
+			Progression_GetDifficulty
+			Progression_CountCompletedSongsInCurrentTier
 			if (<completed_songs> >= (<total_songs> - 1))
 				ls_3_5 = 1
 			endif
@@ -786,44 +786,44 @@ script progression_setprogressionnodeflags
 	if ($debug_encore)
 		<ls_encore> = 1
 	endif
-	printf qs(0xd8a1c35d) d = <ls_encore> i = <ls_3_5>
+	printf qs("\LProgression_SetProgressionNodeFlags encore = %d 3_5 = %i") d = <ls_encore> i = <ls_3_5>
 	if (<ls_encore> = 1)
-		changenodeflag \{ls_3_5_pre
+		ChangeNodeFlag \{LS_3_5_PRE
 			0}
-		changenodeflag \{ls_3_5_post
+		ChangeNodeFlag \{LS_3_5_POST
 			1}
-		changenodeflag \{ls_encore_pre
+		ChangeNodeFlag \{LS_ENCORE_PRE
 			0}
-		changenodeflag \{ls_encore_post
+		ChangeNodeFlag \{LS_ENCORE_POST
 			1}
 	elseif (<ls_3_5> = 1)
-		changenodeflag \{ls_3_5_pre
+		ChangeNodeFlag \{LS_3_5_PRE
 			0}
-		changenodeflag \{ls_3_5_post
+		ChangeNodeFlag \{LS_3_5_POST
 			1}
-		changenodeflag \{ls_encore_pre
+		ChangeNodeFlag \{LS_ENCORE_PRE
 			1}
-		changenodeflag \{ls_encore_post
+		ChangeNodeFlag \{LS_ENCORE_POST
 			0}
 	else
-		changenodeflag \{ls_3_5_pre
+		ChangeNodeFlag \{LS_3_5_PRE
 			1}
-		changenodeflag \{ls_3_5_post
+		ChangeNodeFlag \{LS_3_5_POST
 			0}
-		changenodeflag \{ls_encore_pre
+		ChangeNodeFlag \{LS_ENCORE_PRE
 			1}
-		changenodeflag \{ls_encore_post
+		ChangeNodeFlag \{LS_ENCORE_POST
 			0}
 	endif
-	getpakmancurrentname \{map = zones}
-	if gotparam \{pakname}
-		formattext checksumname = zone_setup '%s_SetupNodeflags' s = <pakname>
-		if scriptexists <zone_setup>
+	GetPakManCurrentName \{map = zones}
+	if GotParam \{pakname}
+		FormatText checksumname = zone_setup '%s_SetupNodeflags' s = <pakname>
+		if ScriptExists <zone_setup>
 			spawnscriptnow <zone_setup>
 		endif
 	endif
 endscript
-gh4_demo_songs = {
+GH4_Demo_Songs = {
 	prefix = 'demo'
 	num_tiers = 4
 	tier1 = {
@@ -856,121 +856,121 @@ gh4_demo_songs = {
 		defaultunlocked = 1
 	}
 }
-bonus_progression = {
-	tier_global = bonus_songs
+Bonus_progression = {
+	tier_global = Bonus_Songs
 	progression_global = none
 }
-download_guitar_progression = {
-	tier_global = gh4_download_songs_guitar
+Download_Guitar_progression = {
+	tier_global = GH4_Download_Songs_Guitar
 	progression_global = none
 }
-download_bass_progression = {
-	tier_global = gh4_download_songs_bass
+Download_Bass_progression = {
+	tier_global = GH4_Download_Songs_Bass
 	progression_global = none
 }
-download_drum_progression = {
-	tier_global = gh4_download_songs_drum
+Download_Drum_progression = {
+	tier_global = GH4_Download_Songs_Drum
 	progression_global = none
 }
-download_vocals_progression = {
-	tier_global = gh4_download_songs_vocals
+Download_Vocals_progression = {
+	tier_global = GH4_Download_Songs_Vocals
 	progression_global = none
 }
-download_band_progression = {
-	tier_global = gh4_download_songs_band
+Download_Band_progression = {
+	tier_global = GH4_Download_Songs_Band
 	progression_global = none
 }
-demo_progression = {
-	tier_global = gh4_demo_songs
+Demo_progression = {
+	tier_global = GH4_Demo_Songs
 	progression_global = none
 }
-career_guitar_progression = {
-	tier_global = gh4_career_guitar_songs
-	progression_global = gh4_career_guitar_progression
+Career_Guitar_progression = {
+	tier_global = GH4_Career_Guitar_Songs
+	progression_global = GH4_Career_Guitar_Progression
 }
-career_bass_progression = {
-	tier_global = gh4_career_bass_songs
-	progression_global = gh4_career_bass_progression
+Career_Bass_progression = {
+	tier_global = GH4_Career_Bass_Songs
+	progression_global = GH4_Career_Bass_Progression
 }
-career_drum_progression = {
-	tier_global = gh4_career_drum_songs
-	progression_global = gh4_career_drum_progression
+Career_Drum_progression = {
+	tier_global = GH4_Career_Drum_Songs
+	progression_global = GH4_Career_Drum_Progression
 }
-career_vocals_progression = {
-	tier_global = gh4_career_vocals_songs
-	progression_global = gh4_career_vocals_progression
+Career_Vocals_progression = {
+	tier_global = GH4_Career_Vocals_Songs
+	progression_global = GH4_Career_Vocals_Progression
 }
-career_band_progression = {
-	tier_global = gh4_career_band_songs
-	progression_global = gh4_career_band_progression
+Career_Band_progression = {
+	tier_global = GH4_Career_Band_Songs
+	progression_global = GH4_Career_Band_Progression
 }
 
 script get_progression_globals \{use_current_tab = 0}
-	if NOT gotparam \{game_mode}
+	if NOT GotParam \{game_mode}
 		game_mode = ($game_mode)
 	endif
 	if (<use_current_tab> = 1)
 		if ($current_tab = tab_bonus)
-			bonus = 1
+			Bonus = 1
 		elseif ($current_tab = tab_downloads)
 			download = 1
 		endif
 	endif
 	if ($is_demo_mode = 1)
-		if gotparam \{bonus}
-			addparams ($bonus_progression)
-		elseif gotparam \{download}
-			addparams ($download_progression)
+		if GotParam \{Bonus}
+			AddParams ($Bonus_progression)
+		elseif GotParam \{download}
+			AddParams ($Download_progression)
 		elseif (<game_mode> = p1_career)
-			addparams ($demo_progression_career)
+			AddParams ($Demo_progression_Career)
 		elseif (<game_mode> = p1_quickplay)
-			addparams ($demo_progression_quickplay)
+			AddParams ($Demo_progression_Quickplay)
 		else
-			addparams ($demo_progression_multiplayer)
+			AddParams ($Demo_progression_Multiplayer)
 		endif
 		return tier_global = <tier_global> progression_global = <progression_global>
 	endif
-	if gotparam \{download}
-		if gotparam \{career_guitar}
-			addparams ($download_guitar_progression)
-		elseif gotparam \{career_bass}
-			addparams ($download_bass_progression)
-		elseif gotparam \{career_drum}
-			addparams ($download_drum_progression)
-		elseif gotparam \{career_vocals}
-			addparams ($download_vocals_progression)
-		elseif gotparam \{career_band}
-			addparams ($download_band_progression)
+	if GotParam \{download}
+		if GotParam \{Career_Guitar}
+			AddParams ($Download_Guitar_progression)
+		elseif GotParam \{Career_Bass}
+			AddParams ($Download_Bass_progression)
+		elseif GotParam \{Career_Drum}
+			AddParams ($Download_Drum_progression)
+		elseif GotParam \{Career_Vocals}
+			AddParams ($Download_Vocals_progression)
+		elseif GotParam \{Career_Band}
+			AddParams ($Download_Band_progression)
 		endif
 	endif
-	if gotparam \{career_band}
-		addparams ($career_band_progression)
-	elseif gotparam \{career_guitar}
-		addparams ($career_guitar_progression)
-	elseif gotparam \{career_bass}
-		addparams ($career_bass_progression)
-	elseif gotparam \{career_drum}
-		addparams ($career_drum_progression)
-	elseif gotparam \{career_vocals}
-		addparams ($career_vocals_progression)
-	elseif gotparam \{bonus}
-		addparams ($bonus_progression)
+	if GotParam \{Career_Band}
+		AddParams ($Career_Band_progression)
+	elseif GotParam \{Career_Guitar}
+		AddParams ($Career_Guitar_progression)
+	elseif GotParam \{Career_Bass}
+		AddParams ($Career_Bass_progression)
+	elseif GotParam \{Career_Drum}
+		AddParams ($Career_Drum_progression)
+	elseif GotParam \{Career_Vocals}
+		AddParams ($Career_Vocals_progression)
+	elseif GotParam \{Bonus}
+		AddParams ($Bonus_progression)
 	elseif ($band_mode_mode = career)
-		addparams ($career_band_progression)
+		AddParams ($Career_Band_progression)
 	elseif ($band_mode_mode = quickplay)
-		addparams ($career_band_progression)
+		AddParams ($Career_Band_progression)
 	elseif (<game_mode> = p1_career)
-		addparams ($career_guitar_progression)
+		AddParams ($Career_Guitar_progression)
 	elseif (<game_mode> = p2_career)
-		addparams ($career_band_progression)
+		AddParams ($Career_Band_progression)
 	elseif (<game_mode> = p1_quickplay)
-		addparams ($career_guitar_progression)
+		AddParams ($Career_Guitar_progression)
 	elseif (<game_mode> = p2_quickplay)
-		addparams ($career_band_progression)
+		AddParams ($Career_Band_progression)
 	elseif (<game_mode> = p2_coop)
-		addparams ($career_band_progression)
+		AddParams ($Career_Band_progression)
 	else
-		addparams ($career_band_progression)
+		AddParams ($Career_Band_progression)
 	endif
 	return tier_global = <tier_global> progression_global = <progression_global>
 endscript
@@ -980,17 +980,17 @@ script progression_set_new_song_in_gig_list
 	printscriptinfo \{'progression_set_new_song_in_gig_list'}
 	get_progression_globals ($current_progression_flag)
 	setlist_prefix = ($<tier_global>.prefix)
-	formattext \{checksumname = tiername
+	FormatText \{checksumname = tiername
 		'tier%d'
 		d = $current_gig_number}
 	song_num = 0
-	getarraysize ($<tier_global>.<tiername>.songs)
+	GetArraySize ($<tier_global>.<tiername>.songs)
 	song_size = <array_size>
-	getglobaltags \{progression}
+	GetGlobalTags \{Progression}
 	if (<career_using_createagig> = 0)
 		format_globaltag_gigname setlist_prefix = ($<tier_global>.prefix) gignum = ($current_gig_number)
-		setglobaltags <gig_name> params = {started = 1} all_active_players = 1
-		if gotparam \{career_play_song_and_end}
+		SetGlobalTags <gig_name> params = {started = 1} all_active_players = 1
+		if GotParam \{career_play_song_and_end}
 			if (<career_play_song_and_end> = 1)
 				return \{false}
 			endif
@@ -1004,107 +1004,107 @@ script progression_set_new_song_in_gig_list
 		if ((<current_song_count> + 1) < <song_size>)
 			<current_song_count> = (<current_song_count> + 1)
 			change current_song = ($<tier_global>.<tiername>.songs [<current_song_count>])
-			setglobaltags progression params = {current_song_count = <current_song_count>}
-			if structurecontains structure = ($<tier_global>.<tiername>) boss
+			SetGlobalTags Progression params = {current_song_count = <current_song_count>}
+			if StructureContains Structure = ($<tier_global>.<tiername>) boss
 				if ($current_song = ($<tier_global>.<tiername>.boss))
-					setglobaltags <gig_name> params = {boss_unlocked = 1} all_active_players = 1
+					SetGlobalTags <gig_name> params = {boss_unlocked = 1} all_active_players = 1
 				endif
 			endif
 			printf \{'*************************************************************************'}
-			printf \{channel = progression
+			printf \{channel = Progression
 				'*****************'}
-			printf \{channel = progression
+			printf \{channel = Progression
 				'$current_song = %c'
 				c = $current_song}
-			printf \{channel = progression
+			printf \{channel = Progression
 				'*****************'}
 			printf \{'*************************************************************************'}
-			updateatoms \{name = progression}
+			UpdateAtoms \{name = Progression}
 			return \{true}
 		endif
 	endif
 	updated_progression = 0
 	if (<career_using_createagig> = 0)
-		gamemode_getnumplayersshown
+		GameMode_GetNumPlayersShown
 		player_index = 0
 		begin
-		getplayerinfo (<player_index> + 1) is_local_client
+		GetPlayerInfo (<player_index> + 1) is_local_client
 		if (<is_local_client> != 0)
-			getplayerinfo (<player_index> + 1) controller
-			getsavegamefromcontroller controller = <controller>
-			getglobaltags <gig_name> savegame = <savegame> params = completed
+			GetPlayerInfo (<player_index> + 1) controller
+			GetSavegameFromController controller = <controller>
+			GetGlobalTags <gig_name> savegame = <savegame> params = completed
 			if (<completed> = 0)
-				setglobaltags <gig_name> params = {completed = 1} savegame = <savegame>
+				SetGlobalTags <gig_name> params = {completed = 1} savegame = <savegame>
 				change \{allow_career_progression_check = 1}
 				change current_progression_savegame = <savegame>
 				register_new_progression_atoms ($current_progression_flag) keep_current_savegame
 				updated_progression = 1
 				change \{allow_career_progression_check = 0}
 			elseif (<completed> = -1)
-				setglobaltags <gig_name> params = {completed = 2} savegame = <savegame>
+				SetGlobalTags <gig_name> params = {completed = 2} savegame = <savegame>
 			endif
 		endif
 		player_index = (<player_index> + 1)
 		repeat <num_players_shown>
 		if ($current_level != load_z_credits)
-			formattext {
+			FormatText {
 				checksumname = venue_checksum
 				'%s_%i'
-				s = ($levelzones.($current_level).name)
+				s = ($LevelZones.($current_level).name)
 				i = ($instrument_list.($<tier_global>.part).text_nl)
-				addtostringlookup = true
+				AddToStringLookup = true
 			}
-			setglobaltags <venue_checksum> all_active_players = 1 params = {unlocked = 1}
-			formattext checksumname = venue_checksum 'venue_%s' s = ($levelzones.($current_level).name)
-			setglobaltags <venue_checksum> all_active_players = 1 params = {unlocked = 1}
+			SetGlobalTags <venue_checksum> all_active_players = 1 params = {unlocked = 1}
+			FormatText checksumname = venue_checksum 'venue_%s' s = ($LevelZones.($current_level).name)
+			SetGlobalTags <venue_checksum> all_active_players = 1 params = {unlocked = 1}
 		endif
 	endif
 	if (<updated_progression> = 0)
-		updateatoms \{name = progression}
+		UpdateAtoms \{name = Progression}
 	endif
-	if ishost
-		sendstructure \{callback = savegigcomplete
+	if IsHost
+		SendStructure \{callback = SaveGigComplete
 			data_to_send = {
 				none
 			}}
 	endif
 	if NOT ($is_attract_mode = 1)
-		change \{achievements_newgigwonflag = 1}
-		achievements_update
-		change \{achievements_newgigwonflag = 0}
+		change \{Achievements_NewGigWonFlag = 1}
+		Achievements_Update
+		change \{Achievements_NewGigWonFlag = 0}
 	endif
 	return \{false}
 endscript
 
-script savegigcomplete 
+script SaveGigComplete 
 	get_progression_globals ($current_progression_flag)
 	setlist_prefix = ($<tier_global>.prefix)
-	formattext \{checksumname = tiername
+	FormatText \{checksumname = tiername
 		'tier%d'
 		d = $current_gig_number}
 	song_num = 0
-	getarraysize ($<tier_global>.<tiername>.songs)
+	GetArraySize ($<tier_global>.<tiername>.songs)
 	song_size = <array_size>
 	format_globaltag_gigname setlist_prefix = ($<tier_global>.prefix) gignum = ($current_gig_number)
-	setglobaltags <gig_name> params = {started = 1}
-	getglobaltags <gig_name> params = completed
+	SetGlobalTags <gig_name> params = {started = 1}
+	GetGlobalTags <gig_name> params = completed
 	if (<completed> = 0)
-		setglobaltags <gig_name> params = {completed = 1}
+		SetGlobalTags <gig_name> params = {completed = 1}
 		change \{allow_career_progression_check = 1}
 	elseif (<completed> = -1)
-		setglobaltags <gig_name> params = {completed = 2}
+		SetGlobalTags <gig_name> params = {completed = 2}
 	endif
-	formattext {
+	FormatText {
 		checksumname = venue_checksum
 		'%s_%i'
-		s = ($levelzones.($current_level).name)
+		s = ($LevelZones.($current_level).name)
 		i = ($instrument_list.($<tier_global>.part).text_nl)
-		addtostringlookup = true
+		AddToStringLookup = true
 	}
-	setglobaltags <venue_checksum> all_active_players = 1 params = {unlocked = 1}
-	formattext checksumname = venue_checksum 'venue_%s' s = ($levelzones.($current_level).name)
-	setglobaltags <venue_checksum> all_active_players = 1 params = {unlocked = 1}
-	updateatoms \{name = progression}
+	SetGlobalTags <venue_checksum> all_active_players = 1 params = {unlocked = 1}
+	FormatText checksumname = venue_checksum 'venue_%s' s = ($LevelZones.($current_level).name)
+	SetGlobalTags <venue_checksum> all_active_players = 1 params = {unlocked = 1}
+	UpdateAtoms \{name = Progression}
 	change \{allow_career_progression_check = 0}
 endscript
 
@@ -1137,21 +1137,21 @@ script quickplay_end_of_gig_list
 endscript
 
 script progression_check_for_gig_end 
-	getglobaltags \{progression}
+	GetGlobalTags \{Progression}
 	if (<career_using_createagig> = 1)
 		if quickplay_end_of_gig_list
 			return \{true}
 		endif
 	else
 		get_progression_globals ($current_progression_flag)
-		formattext \{checksumname = tiername
+		FormatText \{checksumname = tiername
 			'tier%d'
 			d = $current_gig_number}
-		getarraysize ($<tier_global>.<tiername>.songs)
+		GetArraySize ($<tier_global>.<tiername>.songs)
 		if ((<current_song_count> + 1) >= <array_size>)
 			return \{true}
 		endif
-		if gotparam \{career_play_song_and_end}
+		if GotParam \{career_play_song_and_end}
 			if (<career_play_song_and_end> = 1)
 				return \{true}
 			endif
@@ -1160,115 +1160,115 @@ script progression_check_for_gig_end
 	return \{false}
 endscript
 
-script debug_unlock_next_gig \{part = band}
+script debug_unlock_next_gig \{part = Band}
 	temp = $allow_career_progression_check
 	change \{allow_career_progression_check = 1}
-	progression_flag = career_band
-	unlock_order = gh4_career_band_progression_unlock_order
+	progression_flag = Career_Band
+	unlock_order = GH4_Career_Band_Progression_Unlock_Order
 	if (<part> = guitar)
-		<progression_flag> = career_guitar
-		<unlock_order> = gh4_career_guitar_progression_unlock_order
-	elseif (<part> = bass)
-		<progression_flag> = career_bass
-		<unlock_order> = gh4_career_bass_progression_unlock_order
+		<progression_flag> = Career_Guitar
+		<unlock_order> = GH4_Career_Guitar_Progression_Unlock_Order
+	elseif (<part> = Bass)
+		<progression_flag> = Career_Bass
+		<unlock_order> = GH4_Career_Bass_Progression_Unlock_Order
 	elseif (<part> = drum)
-		<progression_flag> = career_drum
-		<unlock_order> = gh4_career_drum_progression_unlock_order
-	elseif (<part> = vocals)
-		<progression_flag> = career_vocals
-		<unlock_order> = gh4_career_vocals_progression_unlock_order
+		<progression_flag> = Career_Drum
+		<unlock_order> = GH4_Career_Drum_Progression_Unlock_Order
+	elseif (<part> = Vocals)
+		<progression_flag> = Career_Vocals
+		<unlock_order> = GH4_Career_Vocals_Progression_Unlock_Order
 	endif
-	progression_career_gig_complete <...> (<progression_flag>)
+	Progression_Career_Gig_Complete <...> (<progression_flag>)
 	change allow_career_progression_check = <temp>
 endscript
 
 script register_new_progression_atoms 
 	index = ($difficulty_list_props.($player1_status.difficulty).index)
-	setprogressiondifficulty difficulty = <index>
-	deregisteratoms
-	if NOT gotparam \{keep_current_savegame}
-		getsavegamefromcontroller controller = ($primary_controller)
+	SetProgressionDifficulty difficulty = <index>
+	DeRegisterAtoms
+	if NOT GotParam \{keep_current_savegame}
+		GetSavegameFromController controller = ($primary_controller)
 		change current_progression_savegame = <savegame>
 	endif
 	get_progression_globals game_mode = ($game_mode) <...>
 	if NOT (<progression_global> = none)
 		setup_unlock_atoms <...>
 		array = $<progression_global>
-		getarraysize \{$unlock_atoms}
+		GetArraySize \{$Unlock_Atoms}
 		if (<array_size> > 0)
 			i = 0
 			begin
-			addarrayelement array = <array> element = ($unlock_atoms [<i>])
+			AddArrayElement array = <array> element = ($Unlock_Atoms [<i>])
 			i = (<i> + 1)
 			repeat <array_size>
 		endif
-		registeratoms name = progression <array>
-		updateatoms \{name = progression}
+		RegisterAtoms name = Progression <array>
+		UpdateAtoms \{name = Progression}
 	endif
 endscript
 
-script progression_career_check_challenge_complete 
+script Progression_Career_Check_Challenge_Complete 
 	get_progression_globals game_mode = ($game_mode) ($current_progression_flag)
 	format_globaltag_gigname setlist_prefix = ($<tier_global>.prefix) gignum = <gig_num>
-	formattext checksumname = challenge_crc 'challenge%d_completed' d = <challenge_num>
-	getglobaltags <gig_name>
+	FormatText checksumname = challenge_crc 'challenge%d_completed' d = <challenge_num>
+	GetGlobalTags <gig_name>
 	if ((<...>.<challenge_crc>) = 1)
 		return \{true}
 	endif
 	return \{false}
 endscript
 
-script check_gig_completed_quick 
+script Check_Gig_Completed_Quick 
 	get_progression_globals game_mode = ($game_mode) ($current_progression_flag)
 	format_globaltag_gigname setlist_prefix = ($<tier_global>.prefix) gignum = <gig_num>
-	getglobaltags <gig_name>
+	GetGlobalTags <gig_name>
 	if (<completed> = 1 || <completed> = 2)
 		return \{true}
 	endif
 	return \{false}
 endscript
 
-script check_gig_unlocked 
+script Check_Gig_Unlocked 
 	get_progression_globals <...>
 	format_globaltag_gigname setlist_prefix = ($<tier_global>.prefix) gignum = <gig>
-	getglobaltags <gig_name>
+	GetGlobalTags <gig_name>
 	if (<unlocked> = 1)
 		return \{true}
 	endif
 	return \{false}
 endscript
 
-script unlock_special_event_challenge 
+script Unlock_Special_Event_Challenge 
 	get_progression_globals game_mode = ($game_mode) ($current_progression_flag)
 	format_globaltag_gigname setlist_prefix = ($<tier_global>.prefix) gignum = <gig_num>
-	getglobaltags <gig_name>
+	GetGlobalTags <gig_name>
 	if (<challenge_num> = 2)
-		setglobaltags <gig_name> params = {challenge2_unlocked = 1}
+		SetGlobalTags <gig_name> params = {challenge2_unlocked = 1}
 		if (<challenge2_unlocked> != 1)
-			setglobaltags <gig_name> params = {completed = -1}
+			SetGlobalTags <gig_name> params = {completed = -1}
 		endif
 	elseif (<challenge_num> = 3)
-		setglobaltags <gig_name> params = {challenge3_unlocked = 1}
+		SetGlobalTags <gig_name> params = {challenge3_unlocked = 1}
 		if (<challenge3_unlocked> != 1)
-			setglobaltags <gig_name> params = {completed = -1}
+			SetGlobalTags <gig_name> params = {completed = -1}
 		endif
 	endif
 endscript
 
-script progression_career_check_gig_complete savegame = ($current_progression_savegame)
-	printf \{qs(0x567674eb)}
+script Progression_Career_Check_Gig_Complete savegame = ($current_progression_savegame)
+	printf \{qs("\LProgression_Career_Check_Gig_Complete")}
 	get_progression_globals <...>
 	setlist_prefix = ($<tier_global>.prefix)
-	if gotparam \{gig}
-		formattext checksumname = tier 'tier%d' d = <gig>
-		getarraysize ($<tier_global>.<tier>.songs)
+	if GotParam \{gig}
+		FormatText checksumname = tier 'tier%d' d = <gig>
+		GetArraySize ($<tier_global>.<tier>.songs)
 		num_required = <array_size>
 		array_entry = 0
 		begin
 		diff_index = 0
 		begin
 		format_globaltag_song_checksum part = ($<tier_global>.part) song = ($<tier_global>.<tier>.songs [<array_entry>]) difficulty_index = <diff_index>
-		getglobaltags <song_checksum> savegame = <savegame> params = stars
+		GetGlobalTags <song_checksum> savegame = <savegame> params = stars
 		if (<stars> > 2)
 			<num_required> = (<num_required> - 1)
 			break
@@ -1285,7 +1285,7 @@ script progression_career_check_gig_complete savegame = ($current_progression_sa
 endscript
 allow_career_progression_check = 0
 
-script progression_career_gig_complete savegame = ($current_progression_savegame)
+script Progression_Career_Gig_Complete savegame = ($current_progression_savegame)
 	if ($allow_career_progression_check = 0)
 		return
 	endif
@@ -1295,39 +1295,39 @@ script progression_career_gig_complete savegame = ($current_progression_savegame
 	set_got_unlocked = 0
 	set_num = 1
 	begin
-	formattext checksumname = setnum 'unlockset%d' d = <set_num>
-	if NOT structurecontains structure = $<unlock_order> <setnum>
+	FormatText checksumname = setnum 'unlockset%d' d = <set_num>
+	if NOT StructureContains Structure = $<unlock_order> <setnum>
 		break
 	endif
 	set_has_none = 0
-	if structurecontains structure = ($<unlock_order>.<setnum>) none
+	if StructureContains Structure = ($<unlock_order>.<setnum>) none
 		set_has_none = 1
 		format_globaltag_gigname setlist_prefix = <setlist_prefix> gig = ($<unlock_order>.<setnum>.none)
-		getglobaltags <gig_name> savegame = <savegame>
+		GetGlobalTags <gig_name> savegame = <savegame>
 		if (<unlocked> = 0)
-			setglobaltags <gig_name> savegame = <savegame> params = {unlocked = 1 first_time_unlocked = 1}
+			SetGlobalTags <gig_name> savegame = <savegame> params = {unlocked = 1 first_time_unlocked = 1}
 			return
 		endif
 	endif
 	if (<set_has_none> = 0)
 		gig_num = 1
 		begin
-		formattext checksumname = gignum 'gig%d' d = <gig_num>
-		if NOT structurecontains structure = ($<unlock_order>.<setnum>) <gignum>
+		FormatText checksumname = gignum 'gig%d' d = <gig_num>
+		if NOT StructureContains Structure = ($<unlock_order>.<setnum>) <gignum>
 			break
 		endif
 		gig = ($<unlock_order>.<setnum>.<gignum>.name)
 		gig_number = ($<unlock_order>.<setnum>.<gignum>.num)
 		format_globaltag_gigname setlist_prefix = <setlist_prefix> gig = <gig>
-		getglobaltags <gig_name> savegame = <savegame> noassert = 1
+		GetGlobalTags <gig_name> savegame = <savegame> noassert = 1
 		if (<unlocked> = 0)
-			setglobaltags <gig_name> savegame = <savegame> params = {unlocked = 1 first_time_unlocked = 1}
+			SetGlobalTags <gig_name> savegame = <savegame> params = {unlocked = 1 first_time_unlocked = 1}
 			<set_got_unlocked> = 1
-			formattext checksumname = tiername 'tier%d' d = <gig_number>
-			getarraysize ($<tier_global>.<tiername>.songs)
+			FormatText checksumname = tiername 'tier%d' d = <gig_number>
+			GetArraySize ($<tier_global>.<tiername>.songs)
 			song_index = 0
 			begin
-			setglobaltags ($<tier_global>.<tiername>.songs [<song_index>]) savegame = <savegame> params = {unlocked = 1}
+			SetGlobalTags ($<tier_global>.<tiername>.songs [<song_index>]) savegame = <savegame> params = {unlocked = 1}
 			song_index = (<song_index> + 1)
 			repeat <array_size>
 		endif
@@ -1335,22 +1335,22 @@ script progression_career_gig_complete savegame = ($current_progression_savegame
 		repeat
 		specialevent_num = 1
 		begin
-		formattext checksumname = specialeventnum 'special_event%d' d = <specialevent_num>
-		if NOT structurecontains structure = ($<unlock_order>.<setnum>) <specialeventnum>
+		FormatText checksumname = specialeventnum 'special_event%d' d = <specialevent_num>
+		if NOT StructureContains Structure = ($<unlock_order>.<setnum>) <specialeventnum>
 			break
 		endif
 		gig = ($<unlock_order>.<setnum>.<specialeventnum>.name)
 		gig_num = ($<unlock_order>.<setnum>.<specialeventnum>.num)
 		format_globaltag_gigname setlist_prefix = <setlist_prefix> gig = <gig>
-		getglobaltags <gig_name> savegame = <savegame> noassert = 1
+		GetGlobalTags <gig_name> savegame = <savegame> noassert = 1
 		if (<unlocked> = 0)
-			setglobaltags <gig_name> savegame = <savegame> params = {unlocked = 1 first_time_unlocked = 1}
+			SetGlobalTags <gig_name> savegame = <savegame> params = {unlocked = 1 first_time_unlocked = 1}
 			<set_got_unlocked> = 1
-			formattext checksumname = tiername 'tier%d' d = <gig_num>
-			getarraysize ($<tier_global>.<tiername>.songs)
+			FormatText checksumname = tiername 'tier%d' d = <gig_num>
+			GetArraySize ($<tier_global>.<tiername>.songs)
 			song_index = 0
 			begin
-			setglobaltags ($<tier_global>.<tiername>.songs [<song_index>]) savegame = <savegame> params = {unlocked = 1}
+			SetGlobalTags ($<tier_global>.<tiername>.songs [<song_index>]) savegame = <savegame> params = {unlocked = 1}
 			song_index = (<song_index> + 1)
 			repeat <array_size>
 		endif
@@ -1358,16 +1358,16 @@ script progression_career_gig_complete savegame = ($current_progression_savegame
 		repeat
 		paytoplay_num = 1
 		begin
-		formattext checksumname = paytoplaynum 'pay_to_play%d' d = <paytoplay_num>
-		if NOT structurecontains structure = ($<unlock_order>.<setnum>) <paytoplaynum>
+		FormatText checksumname = paytoplaynum 'pay_to_play%d' d = <paytoplay_num>
+		if NOT StructureContains Structure = ($<unlock_order>.<setnum>) <paytoplaynum>
 			break
 		endif
 		gig = ($<unlock_order>.<setnum>.<paytoplaynum>.name)
 		gig_number = ($<unlock_order>.<setnum>.<paytoplaynum>.num)
 		format_globaltag_gigname setlist_prefix = <setlist_prefix> gig = <gig>
-		getglobaltags <gig_name> savegame = <savegame> noassert = 1
+		GetGlobalTags <gig_name> savegame = <savegame> noassert = 1
 		if (<unlocked> = 0)
-			setglobaltags <gig_name> savegame = <savegame> params = {unlocked = 1 first_time_unlocked = 1}
+			SetGlobalTags <gig_name> savegame = <savegame> params = {unlocked = 1 first_time_unlocked = 1}
 			<set_got_unlocked> = 1
 		endif
 		<paytoplay_num> = (<paytoplay_num> + 1)
@@ -1380,19 +1380,19 @@ script progression_career_gig_complete savegame = ($current_progression_savegame
 	repeat
 endscript
 
-script progression_career_gig_unlock 
+script Progression_Career_Gig_Unlock 
 	printf \{'Progression_Career_Gig_Unlock'}
 	printstruct <...>
 	get_progression_globals <...>
 	setlist_prefix = ($<tier_global>.prefix)
 	format_globaltag_gigname setlist_prefix = <setlist_prefix> gig = <gig_name>
-	getglobaltags <gig_name>
+	GetGlobalTags <gig_name>
 	if (<unlocked> = 0)
-		setglobaltags <gig_name> savegame = ($current_progression_savegame) params = {unlocked = 1 first_time_unlocked = 1}
+		SetGlobalTags <gig_name> savegame = ($current_progression_savegame) params = {unlocked = 1 first_time_unlocked = 1}
 	endif
 endscript
 
-script progression_cleardetailedstatsforgig 
+script Progression_ClearDetailedStatsForGig 
 	change \{gig_detailed_stats = [
 			[
 			]
@@ -1407,33 +1407,33 @@ script progression_cleardetailedstatsforgig
 		}}
 endscript
 
-script progression_updatedetailedstatsforgig 
-	progression_cleardetailedstatsforgig
+script Progression_UpdateDetailedStatsForGig 
+	Progression_ClearDetailedStatsForGig
 	<default_song_stats> = {
 		song = ($current_song)
 	}
-	gamemode_getnumplayersshown
+	GameMode_GetNumPlayersShown
 	if (<num_players_shown> > 0)
 		<player_idx> = 0
 		begin
 		<player> = (<player_idx> + 1)
-		getplayerinfo <player> is_local_client
+		GetPlayerInfo <player> is_local_client
 		if (<is_local_client> = 1)
-			getplayerinfo <player> score
-			casttointeger \{score}
-			getplayerinfo <player> cash_rank_up
-			getplayerinfo <player> new_cash
-			getplayerinfo <player> career_earnings
-			getplayerinfo <player> stars
-			getplayerinfo <player> notes_hit
-			getplayerinfo <player> total_notes
-			getplayerinfo <player> sp_phrases_hit
-			getplayerinfo <player> sp_phrases_total
-			getplayerinfo <player> best_run
-			getplayerinfo <player> max_notes
-			getplayerinfo <player> vocal_streak_phrases
-			getplayerinfo <player> vocal_phrase_quality
-			getplayerinfo <player> vocal_phrase_max_qual
+			GetPlayerInfo <player> score
+			CastToInteger \{score}
+			GetPlayerInfo <player> cash_rank_up
+			GetPlayerInfo <player> new_cash
+			GetPlayerInfo <player> career_earnings
+			GetPlayerInfo <player> stars
+			GetPlayerInfo <player> notes_hit
+			GetPlayerInfo <player> total_notes
+			GetPlayerInfo <player> sp_phrases_hit
+			GetPlayerInfo <player> sp_phrases_total
+			GetPlayerInfo <player> best_run
+			GetPlayerInfo <player> max_notes
+			GetPlayerInfo <player> vocal_streak_phrases
+			GetPlayerInfo <player> vocal_phrase_quality
+			GetPlayerInfo <player> vocal_phrase_max_qual
 			get_average_multiplier player = <player>
 			<avg_multiplier> = <average_multiplier>
 			get_song_section_arrays_for_player player = <player>
@@ -1458,15 +1458,15 @@ script progression_updatedetailedstatsforgig
 				detailed_stats_max = <detailed_stats_max>
 				section_names = <section_names>
 			}
-			getarraysize \{$gig_detailed_stats}
+			GetArraySize \{$gig_detailed_stats}
 			if (<array_size> < 10)
 				<stats_all> = ($gig_detailed_stats)
 				<old_stats_player> = (<stats_all> [<player_idx>])
-				addarrayelement array = <old_stats_player> element = <curr_song_stats>
-				setarrayelement arrayname = stats_all index = <player_idx> newvalue = <array>
+				AddArrayElement array = <old_stats_player> element = <curr_song_stats>
+				SetArrayElement ArrayName = stats_all index = <player_idx> newvalue = <array>
 				change globalname = gig_detailed_stats newvalue = <stats_all>
 			else
-				scriptassert 'Played more than %d songs in the current gig.' d = <array_size>
+				ScriptAssert 'Played more than %d songs in the current gig.' d = <array_size>
 			endif
 		endif
 		<player_idx> = (<player_idx> + 1)
@@ -1486,28 +1486,28 @@ script progression_updatedetailedstatsforgig
 endscript
 
 script get_song_section_arrays_for_player 
-	requireparams \{[
+	RequireParams \{[
 			player
 		]
 		all}
 	<detailed_stats> = []
 	<detailed_stats_max> = []
 	<section_names> = []
-	formattext checksumname = last_song_stats 'p%p_last_song_detailed_stats' p = <player> addtostringlookup
-	formattext checksumname = last_song_stats_max 'p%p_last_song_detailed_stats_max' p = <player> addtostringlookup
-	getplayerinfo <player> current_song_section_array
+	FormatText checksumname = last_song_stats 'p%p_last_song_detailed_stats' p = <player> AddToStringLookup
+	FormatText checksumname = last_song_stats_max 'p%p_last_song_detailed_stats_max' p = <player> AddToStringLookup
+	GetPlayerInfo <player> current_song_section_array
 	if (<current_song_section_array> = none)
 		return detailed_stats = <detailed_stats> detailed_stats_max = <detailed_stats_max> section_names = <section_names>
 	endif
 	<song_section_array> = <current_song_section_array>
-	getmarkerarraysize array = <song_section_array>
+	GetMarkerArraySize array = <song_section_array>
 	if (<array_size> > 0)
 		<detailed_stats> = ($<last_song_stats>)
 		<detailed_stats_max> = ($<last_song_stats_max>)
 		i = 0
 		begin
-		formattext textname = marker_text qs(0x73307931) s = (($<song_section_array> [<i>]).marker)
-		addarrayelement array = <section_names> element = <marker_text>
+		FormatText TextName = marker_text qs("\L%s") s = (($<song_section_array> [<i>]).marker)
+		AddArrayElement array = <section_names> element = <marker_text>
 		<section_names> = <array>
 		i = (<i> + 1)
 		repeat <array_size>
@@ -1520,9 +1520,9 @@ script progression_gig_get_highest_difficulty_completed
 	setlist_prefix = ($<tier_global>.prefix)
 	highest_diff_completed = 'none'
 	highest_diff_index = 4
-	if gotparam \{gig}
-		formattext checksumname = tier 'tier%d' d = <gig>
-		getarraysize ($<tier_global>.<tier>.songs)
+	if GotParam \{gig}
+		FormatText checksumname = tier 'tier%d' d = <gig>
+		GetArraySize ($<tier_global>.<tier>.songs)
 		num_required = <array_size>
 		array_entry = 0
 		begin
@@ -1549,13 +1549,13 @@ script progression_song_get_highest_difficulty_completed
 	setlist_prefix = ($<tier_global>.prefix)
 	highest_diff_completed = 'none'
 	highest_diff_index = -1
-	if gotparam \{song}
+	if GotParam \{song}
 		diff_index = 0
-		getarraysize \{$difficulty_list}
+		GetArraySize \{$difficulty_list}
 		diff_size = <array_size>
 		begin
 		format_globaltag_song_checksum part = ($<tier_global>.part) song = <song> difficulty = ($difficulty_list [<diff_index>])
-		getglobaltags <song_checksum> params = stars
+		GetGlobalTags <song_checksum> params = stars
 		if (<stars> > 2)
 			get_difficulty_text_nl difficulty = ($difficulty_list [<diff_index>])
 			<highest_diff_completed> = <difficulty_text_nl>
@@ -1567,43 +1567,43 @@ script progression_song_get_highest_difficulty_completed
 	return highest_diff_completed = <highest_diff_completed> diff_index = <highest_diff_index>
 endscript
 
-script 0x37ee468a 
+script WinportGetNumGigsCompletedAndNumGigsUnlocked 
 	get_progression_globals <...>
 	savegame = ($current_progression_savegame)
-	0xb7d9d74d = 0
+	num_completed = 0
 	num_unlocked = 0
 	i = 1
 	begin
 	format_globaltag_gigname setlist_prefix = ($<tier_global>.prefix) gignum = <i>
-	getglobaltags <gig_name> savegame = <savegame>
+	GetGlobalTags <gig_name> savegame = <savegame>
 	if (<unlocked> = 1)
 		<num_unlocked> = (<num_unlocked> + 1)
 	endif
 	if (<completed> = 1 || <completed> = 2)
-		<0xb7d9d74d> = (<0xb7d9d74d> + 1)
+		<num_completed> = (<num_completed> + 1)
 	endif
 	<i> = (<i> + 1)
 	repeat (($<tier_global>.num_tiers) - 2)
-	return 0xb7d9d74d = <0xb7d9d74d> num_unlocked = <num_unlocked>
+	return num_completed = <num_completed> num_unlocked = <num_unlocked>
 endscript
 
-script 0xf9e188de 
+script WinportMakeSureGigsAreUnlockedAfterCompletion 
 	get_progression_globals <...>
 	savegame = ($current_progression_savegame)
 	begin
-	0x37ee468a
-	printf qs(0x690492e0) a = <0xb7d9d74d> b = <num_unlocked>
-	formattext checksumname = 0x723effed 'winport_completed_to_unlocked_%d' d = <0xb7d9d74d>
-	if NOT structurecontains structure = ($<tier_global>) <0x723effed>
+	WinportGetNumGigsCompletedAndNumGigsUnlocked
+	printf qs(0x690492e0) a = <num_completed> b = <num_unlocked>
+	FormatText checksumname = completed_to_unlocked_map 'winport_completed_to_unlocked_%d' d = <num_completed>
+	if NOT StructureContains Structure = ($<tier_global>) <completed_to_unlocked_map>
 		return
 	endif
-	0x7cb62b37 = ($<tier_global>.<0x723effed>)
-	printf qs(0xabe4541e) a = <0x7cb62b37>
-	if (<num_unlocked> < <0x7cb62b37>)
+	should_be_unlocked = ($<tier_global>.<completed_to_unlocked_map>)
+	printf qs(0xabe4541e) a = <should_be_unlocked>
+	if (<num_unlocked> < <should_be_unlocked>)
 		change \{allow_career_progression_check = 1}
-		progression_flag = career_band
-		unlock_order = gh4_career_band_progression_unlock_order
-		progression_career_gig_complete <...> (<progression_flag>)
+		progression_flag = Career_Band
+		unlock_order = GH4_Career_Band_Progression_Unlock_Order
+		Progression_Career_Gig_Complete <...> (<progression_flag>)
 		change \{allow_career_progression_check = 0}
 	else
 		break

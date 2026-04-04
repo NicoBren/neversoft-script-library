@@ -1,4 +1,4 @@
-global_should_use_net_debugging = 0
+GLOBAL_SHOULD_USE_NET_DEBUGGING = 0
 online_lobby_item_text_color = [
 	200
 	200
@@ -35,87 +35,87 @@ net_starting_matchmaking = 0
 net_block_matchmaking = 0
 online_to_setlist_count = 10
 net_num_players = 0
-gamertag_0 = qs(0x00000000)
-gamertag_1 = qs(0x00000000)
-gamertag_2 = qs(0x00000000)
-gamertag_3 = qs(0x00000000)
-gamertag_4 = qs(0x00000000)
-gamertag_5 = qs(0x00000000)
-gamertag_6 = qs(0x00000000)
-gamertag_7 = qs(0x00000000)
+gamertag_0 = qs("")
+gamertag_1 = qs("")
+gamertag_2 = qs("")
+gamertag_3 = qs("")
+gamertag_4 = qs("")
+gamertag_5 = qs("")
+gamertag_6 = qs("")
+gamertag_7 = qs("")
 net_helper_text_strings = {
-	find_a_game_text = qs(0xc1201c11)
-	debug_create_match_text = qs(0x10b0727c)
-	debug_custom_search_text = qs(0x9d1520dd)
-	game_mode_text = qs(0xde03dba6)
-	start_matchmaking_text = qs(0x07f6b71c)
-	matchmaking_complete_text = qs(0x869701dc)
-	friends_text = qs(0x3f4b229f)
-	timer_5_text = qs(0xbf481dd4)
-	timer_4_text = qs(0xa6532c95)
-	timer_3_text = qs(0xe912ba52)
-	timer_2_text = qs(0xf0098b13)
-	timer_1_text = qs(0xdb24d8d0)
-	timer_0_text = qs(0xc23fe991)
-	postgame_play_again_text = qs(0xd02307b1)
-	postgame_party_up_text = qs(0x0a4ae9af)
-	p2_pro_faceoff_text = qs(0x61385580)
-	p4_pro_faceoff_text = qs(0xc7550a40)
-	p2_faceoff_text = qs(0xb8805f63)
-	p2_battle_text = qs(0x09d42ee1)
-	p2_quickplay_text = qs(0x958a1731)
-	p4_quickplay_text = qs(0x7847bad8)
-	p8_pro_faceoff_text = qs(0xeecf4e99)
-	p4_career_text = qs(0x82f80e32)
+	find_a_game_text = qs("Find other players to play Guitar Hero World Tour with.")
+	debug_create_match_text = qs("Jump into the setlist for easy testing.")
+	debug_custom_search_text = qs("Find a match with specific settings.")
+	game_mode_text = qs("Choose what game mode you would like to play.")
+	start_matchmaking_text = qs("Looking for suitable players.\nPress \m1 to cancel.")
+	matchmaking_complete_text = qs("Adding players to your session.")
+	friends_text = qs("View your friends list and send game invites.")
+	timer_5_text = qs("COUNT DOWN TO SETLIST 5")
+	timer_4_text = qs("COUNT DOWN TO SETLIST 4")
+	timer_3_text = qs("COUNT DOWN TO SETLIST 3")
+	timer_2_text = qs("COUNT DOWN TO SETLIST 2")
+	timer_1_text = qs("COUNT DOWN TO SETLIST 1")
+	timer_0_text = qs("COUNT DOWN TO SETLIST 0")
+	postgame_play_again_text = qs("Play another song.")
+	postgame_party_up_text = qs("Party up to stay together after this match ends.")
+	p2_pro_faceoff_text = qs("Play full track against 1 player.")
+	p4_pro_faceoff_text = qs("Play with a partner against 2 players.")
+	p2_faceoff_text = qs("Alternate parts against 1 player.")
+	p2_battle_text = qs("Battle against 1 player.")
+	p2_quickplay_text = qs("Play co-op with 1 player.")
+	p4_quickplay_text = qs("Join a band and play songs.")
+	p8_pro_faceoff_text = qs("Join a band and play a full track against another band.")
+	p4_career_text = qs("Career Text")
 }
 net_helper_text_strings_xen = {
-	preferences_text = qs(0xdf6376f3)
-	pref_character_text = qs(0xe0d87a1c)
-	pref_difficulty_text = qs(0x58fe6093)
-	pref_lefty_flip_text = qs(0xebce6360)
-	pref_venue_text = qs(0x4a1fdafa)
-	pref_vocal_style_text = qs(0x743fe478)
-	gamer_card_text = qs(0x3aa38ab5)
-	sign_in_text = qs(0x7ca9368d)
-	postgame_quit_text = qs(0xdb9fcce6)
-	friends_menu_text = qs(0x5ee2a003)
-	blank_text = qs(0x00000000)
+	preferences_text = qs("Edit preferences for Xbox LIVE play.")
+	pref_character_text = qs("Select rocker for Xbox LIVE play.")
+	pref_difficulty_text = qs("Change difficulty for Xbox LIVE play.")
+	pref_lefty_flip_text = qs("Change lefty flip for Xbox LIVE play.")
+	pref_venue_text = qs("Select preferred venue for Xbox LIVE play.")
+	pref_vocal_style_text = qs("Select vocal highway for Xbox LIVE play.")
+	gamer_card_text = qs("Press \m0 to view gamer card.")
+	sign_in_text = qs("Press \m0 to Sign In.")
+	postgame_quit_text = qs("Move back to the Xbox LIVE lobby.")
+	friends_menu_text = qs("Press \m0 to select friend and send game invites.")
+	blank_text = qs("")
 }
 net_helper_text_strings_ps3 = {
-	preferences_text = qs(0x5e4232a5)
-	pref_character_text = qs(0x2154e6be)
-	pref_difficulty_text = qs(0xe2a82b91)
-	pref_lefty_flip_text = qs(0x026e3d2c)
-	pref_venue_text = qs(0x78503805)
-	pref_vocal_style_text = qs(0xaffa5a09)
-	gamer_card_text = qs(0x00000000)
-	postgame_quit_text = qs(0xdf3c37a3)
-	friends_menu_text = qs(0x0f66f204)
+	preferences_text = qs("Edit preferences for online play.")
+	pref_character_text = qs("Select rocker for online play.")
+	pref_difficulty_text = qs("Change difficulty for online play.")
+	pref_lefty_flip_text = qs("Change lefty flip for online play.")
+	pref_venue_text = qs("Select preferred venue for online play.")
+	pref_vocal_style_text = qs("Select vocal highway for online play.")
+	gamer_card_text = qs("")
+	postgame_quit_text = qs("Move back to the online lobby.")
+	friends_menu_text = qs("Press \m0 for invite options.")
 }
-0x98866af2 = {
-	preferences_text = qs(0x5e4232a5)
-	pref_character_text = qs(0x2154e6be)
-	pref_difficulty_text = qs(0xe2a82b91)
-	pref_lefty_flip_text = qs(0x026e3d2c)
-	pref_venue_text = qs(0x78503805)
-	pref_vocal_style_text = qs(0xaffa5a09)
-	gamer_card_text = qs(0x00000000)
-	postgame_quit_text = qs(0xdf3c37a3)
+net_helper_text_strings_winport = {
+	preferences_text = qs("Edit preferences for online play.")
+	pref_character_text = qs("Select rocker for online play.")
+	pref_difficulty_text = qs("Change difficulty for online play.")
+	pref_lefty_flip_text = qs("Change lefty flip for online play.")
+	pref_venue_text = qs("Select preferred venue for online play.")
+	pref_vocal_style_text = qs("Select vocal highway for online play.")
+	gamer_card_text = qs("")
+	postgame_quit_text = qs("Move back to the online lobby.")
 	friends_menu_text = qs(0x21026814)
-	0x8171fc15 = qs(0x0755b258)
+	friends_menu_text_keyboard = qs(0x0755b258)
 	friends_text = qs(0x64f440af)
-	0xabb781c0 = qs(0x6b6a2bac)
+	find_a_game_private_text = qs(0x6b6a2bac)
 }
 has_invite_join_result_callback_completed = 0
 need_to_refresh_player_slots = 0
 net_no_focus_warning = 0
 
 script net_spawned_wait_and_set_joinable 
-	if netsessionfunc \{obj = party
+	if NetSessionFunc \{obj = party
 			func = is_host}
-		wait \{2
+		Wait \{2
 			seconds}
-		netsessionfunc \{obj = party
+		NetSessionFunc \{obj = party
 			func = set_party_joinable
 			params = {
 				joinable = 1
@@ -124,17 +124,17 @@ script net_spawned_wait_and_set_joinable
 endscript
 
 script create_net_matchmaking_menu 
-	netsessionfunc \{obj = voice
-		func = turnteamtalkoff}
+	NetSessionFunc \{obj = voice
+		func = TurnTeamTalkOff}
 	frontend_load_soundcheck \{loadingscreen}
-	createscreenelement \{parent = root_window
-		id = onlinelobbyinterface
-		type = descinterface
+	CreateScreenElement \{parent = root_window
+		id = OnlineLobbyInterface
+		type = DescInterface
 		desc = 'online_lobby'
 		pos = (0.0, -1000.0)
 		tags = {
 			menu_index = 0
-			menu_items = 0
+			Menu_items = 0
 			slots_index = -1
 			slot_items = 0
 			player_slots_menu_id = 0
@@ -143,14 +143,14 @@ script create_net_matchmaking_menu
 		}}
 	set_focus_color rgba = ($online_lobby_item_text_color)
 	set_unfocus_color rgba = ($online_lobby_item_text_color)
-	onlinelobbyinterface :desc_checkversion \{desired = 16
-		assertif = mismatch}
-	getactivecontrollers
-	getarraysize <active_controllers>
+	OnlineLobbyInterface :Desc_CheckVersion \{desired = 16
+		AssertIf = Mismatch}
+	GetActiveControllers
+	GetArraySize <active_controllers>
 	i = 0
 	begin
 	if (<active_controllers> [<i>] = 1)
-		if netsessionfunc func = iscontrolleringame params = {controller = <i>}
+		if NetSessionFunc func = IsControllerInGame params = {controller = <i>}
 			restore_save_net_preferences controller_index = <i>
 		endif
 	endif
@@ -165,36 +165,36 @@ script create_net_matchmaking_menu
 	create_signin_container
 	change \{net_no_focus_warning = 0}
 	online_lobby_setup_helper_controls
-	if gotparam \{accepting_invite}
+	if GotParam \{accepting_invite}
 		create_joining_invite_popup
 	else
-		if onlinelobbyinterface :desc_resolvealias \{name = alias_matchmaking_vmenu
+		if OnlineLobbyInterface :Desc_ResolveAlias \{name = alias_matchmaking_vmenu
 				param = vmenu_id}
-			onlinelobbyinterface :obj_spawnscriptnow online_lobby_animate_in params = {<...>}
+			OnlineLobbyInterface :Obj_SpawnScriptNow online_lobby_animate_in params = {<...>}
 		endif
 	endif
-	if isps3
-		if NOT netsessionfunc \{obj = voice
+	if IsPs3
+		if NOT NetSessionFunc \{obj = voice
 				func = voice_allowed}
-			create_ps3_chat_warning_message \{message = qs(0x925535f4)}
+			create_ps3_chat_warning_message \{message = qs("Chat is disabled on your PLAYSTATION®Network account due to parental control restrictions.")}
 		endif
 	endif
 endscript
 
 script online_lobby_setup_helper_controls \{menu_type = left_hand}
-	if screenelementexists \{id = onlinelobbyinterface}
-		onlinelobbyinterface :gettags
+	if ScreenElementExists \{id = OnlineLobbyInterface}
+		OnlineLobbyInterface :GetTags
 		clean_up_user_control_helpers
-		if checksumequals a = left_hand b = <menu_type>
-			add_user_control_helper \{text = qs(0xc18d5e76)
+		if ChecksumEquals a = left_hand b = <menu_type>
+			add_user_control_helper \{text = qs("SELECT")
 				button = green
 				z = 100000}
-		elseif checksumequals a = right_hand b = <menu_type>
-			if NOT iswinport
-				if isxenon
-					if gotparam \{gamer_card}
+		elseif ChecksumEquals a = right_hand b = <menu_type>
+			if NOT IsWinPort
+				if isXenon
+					if GotParam \{gamer_card}
 						if (<gamer_card> = 1)
-							add_user_control_helper \{text = qs(0xfcc51f45)
+							add_user_control_helper \{text = qs("VIEW GAMER CARD")
 								button = green
 								z = 100000}
 						endif
@@ -202,28 +202,28 @@ script online_lobby_setup_helper_controls \{menu_type = left_hand}
 				endif
 			endif
 		endif
-		getactivecontrollers
-		getarraysize <active_controllers>
+		GetActiveControllers
+		GetArraySize <active_controllers>
 		i = 0
 		begin
 		if (<active_controllers> [<i>] = 1)
-			if netsessionfunc func = iscontrolleringame params = {controller = <i>}
+			if NetSessionFunc func = IsControllerInGame params = {controller = <i>}
 				get_controller_type controller_index = <i>
 				if (<controller_type> = guitar || <controller_type> = controller)
-					add_user_control_helper text = qs(0xfe21f453) button = orange z = 100000 controller = <i>
+					add_user_control_helper text = qs(0xfe21f453) button = Orange z = 100000 controller = <i>
 					break
 				endif
 			endif
 		endif
 		<i> = (<i> + 1)
 		repeat <array_size>
-		add_user_control_helper \{text = qs(0xaf4d5dd2)
+		add_user_control_helper \{text = qs("BACK")
 			button = red
 			z = 100000}
 		if ($is_multiplayer_beta = 0)
-			if isps3
-				add_user_control_helper \{text = qs(0x306229d7)
-					button = yellow
+			if IsPs3
+				add_user_control_helper \{text = qs("INVITES")
+					button = Yellow
 					z = 100000}
 			endif
 		endif
@@ -231,33 +231,33 @@ script online_lobby_setup_helper_controls \{menu_type = left_hand}
 endscript
 
 script online_lobby_animate_in 
-	setspawninstancelimits \{max = 1
+	SetSpawnInstanceLimits \{max = 1
 		management = kill_oldest}
-	wait \{0.5
+	Wait \{0.5
 		second}
-	soundevent \{event = online_main_panel_in}
-	if screenelementexists \{id = onlinelobbyinterface}
-		onlinelobbyinterface :se_setprops \{pos = (0.0, 30.0)
+	SoundEvent \{event = Online_Main_Panel_In}
+	if ScreenElementExists \{id = OnlineLobbyInterface}
+		OnlineLobbyInterface :SE_SetProps \{pos = (0.0, 30.0)
 			time = 0.2
-			anim = gentle}
+			Anim = gentle}
 	else
 		return
 	endif
-	wait \{0.22
+	Wait \{0.22
 		second}
-	if screenelementexists \{id = onlinelobbyinterface}
-		onlinelobbyinterface :se_setprops \{pos = (0.0, 0.0)
+	if ScreenElementExists \{id = OnlineLobbyInterface}
+		OnlineLobbyInterface :SE_SetProps \{pos = (0.0, 0.0)
 			time = 0.1
-			anim = gentle}
+			Anim = gentle}
 	else
 		return
 	endif
-	assignalias id = <vmenu_id> alias = current_menu
-	launchevent \{type = focus
+	AssignAlias id = <vmenu_id> alias = current_menu
+	LaunchEvent \{type = focus
 		target = current_menu}
-	resolvescreenelementid \{id = [
+	ResolveScreenElementId \{id = [
 			{
-				id = onlinelobbyinterface
+				id = OnlineLobbyInterface
 			}
 			{
 				local_id = lobby_menu
@@ -270,16 +270,16 @@ script online_lobby_animate_in
 			}
 		]}
 	online_lobby_swing id = <resolved_id>
-	if gotparam \{lost_party}
-		create_online_warning_message \{title = qs(0x50c3c667)
-			message = qs(0x1715dfdb)
+	if GotParam \{lost_party}
+		create_online_warning_message \{title = qs("INFO")
+			message = qs("You lost connection to your party.")
 			alpha = 0.0}
 		display_online_warning_message
 	endif
 endscript
 
 script online_lobby_swing 
-	setspawninstancelimits \{max = 1
+	SetSpawnInstanceLimits \{max = 1
 		management = kill_oldest}
 	if (RandomInteger (0.0, 1.0) = 1)
 		swing_direction = 1
@@ -287,71 +287,71 @@ script online_lobby_swing
 		swing_direction = -1
 	endif
 	swing_direction = (<swing_direction> * RandomFloat (0.3, 1.0))
-	if screenelementexists id = <id>
-		<id> :se_setprops rot_angle = (<swing_direction> * 2) anim = gentle time = 0.2
+	if ScreenElementExists id = <id>
+		<id> :SE_SetProps rot_angle = (<swing_direction> * 2) Anim = gentle time = 0.2
 	else
 		return
 	endif
-	wait \{0.25
+	Wait \{0.25
 		second}
-	if screenelementexists id = <id>
-		<id> :se_setprops rot_angle = (<swing_direction> * -1.75) anim = gentle time = 0.2
+	if ScreenElementExists id = <id>
+		<id> :SE_SetProps rot_angle = (<swing_direction> * -1.75) Anim = gentle time = 0.2
 	else
 		return
 	endif
-	wait \{0.25
+	Wait \{0.25
 		second}
-	if screenelementexists id = <id>
-		<id> :se_setprops rot_angle = (<swing_direction> * 1.5) anim = gentle time = 0.2
+	if ScreenElementExists id = <id>
+		<id> :SE_SetProps rot_angle = (<swing_direction> * 1.5) Anim = gentle time = 0.2
 	else
 		return
 	endif
-	wait \{0.25
+	Wait \{0.25
 		second}
-	if screenelementexists id = <id>
-		<id> :se_setprops rot_angle = (<swing_direction> * -1.25) anim = gentle time = 0.2
+	if ScreenElementExists id = <id>
+		<id> :SE_SetProps rot_angle = (<swing_direction> * -1.25) Anim = gentle time = 0.2
 	else
 		return
 	endif
-	wait \{0.25
+	Wait \{0.25
 		second}
-	if screenelementexists id = <id>
-		<id> :se_setprops rot_angle = (<swing_direction> * 1.0) anim = gentle time = 0.2
+	if ScreenElementExists id = <id>
+		<id> :SE_SetProps rot_angle = (<swing_direction> * 1.0) Anim = gentle time = 0.2
 	else
 		return
 	endif
-	wait \{0.25
+	Wait \{0.25
 		second}
-	if screenelementexists id = <id>
-		<id> :se_setprops rot_angle = (<swing_direction> * -0.5) anim = gentle time = 0.2
+	if ScreenElementExists id = <id>
+		<id> :SE_SetProps rot_angle = (<swing_direction> * -0.5) Anim = gentle time = 0.2
 	else
 		return
 	endif
-	wait \{0.25
+	Wait \{0.25
 		second}
-	if screenelementexists id = <id>
-		<id> :se_setprops rot_angle = (<swing_direction> * 0.25) anim = gentle time = 0.2
+	if ScreenElementExists id = <id>
+		<id> :SE_SetProps rot_angle = (<swing_direction> * 0.25) Anim = gentle time = 0.2
 	else
 		return
 	endif
-	wait \{0.25
+	Wait \{0.25
 		second}
-	if screenelementexists id = <id>
-		<id> :se_setprops rot_angle = 0 anim = gentle time = 0.1
+	if ScreenElementExists id = <id>
+		<id> :SE_SetProps rot_angle = 0 Anim = gentle time = 0.1
 	else
 		return
 	endif
 endscript
 
 script online_lobby_transition_in 
-	if iswinport
-		if NOT screenelementexists \{id = popupelement}
+	if IsWinPort
+		if NOT ScreenElementExists \{id = PopupElement}
 			online_lobby_setup_helper_controls
 		endif
 	endif
-	resolvescreenelementid \{id = [
+	ResolveScreenElementId \{id = [
 			{
-				id = onlinelobbyinterface
+				id = OnlineLobbyInterface
 			}
 			{
 				local_id = lobby_menu
@@ -363,26 +363,26 @@ script online_lobby_transition_in
 				local_id = left_side_container
 			}
 		]}
-	setspawninstancelimits \{max = 1
+	SetSpawnInstanceLimits \{max = 1
 		management = kill_oldest}
-	soundevent \{event = online_panel_in}
-	if screenelementexists \{id = onlinelobbyinterface}
-		<resolved_id> :se_setprops pos = {(0.0, 1000.0) relative} time = 0.15 anim = gentle
+	SoundEvent \{event = Online_Panel_In}
+	if ScreenElementExists \{id = OnlineLobbyInterface}
+		<resolved_id> :SE_SetProps pos = {(0.0, 1000.0) relative} time = 0.15 Anim = gentle
 	else
 		return
 	endif
-	wait \{0.15
+	Wait \{0.15
 		second}
-	if NOT gotparam \{no_focus}
-		launchevent \{type = focus
+	if NOT GotParam \{no_focus}
+		LaunchEvent \{type = focus
 			target = current_menu}
 	endif
 endscript
 
 script online_lobby_transition_out 
-	resolvescreenelementid \{id = [
+	ResolveScreenElementId \{id = [
 			{
-				id = onlinelobbyinterface
+				id = OnlineLobbyInterface
 			}
 			{
 				local_id = lobby_menu
@@ -394,42 +394,42 @@ script online_lobby_transition_out
 				local_id = left_side_container
 			}
 		]}
-	setspawninstancelimits \{max = 1
+	SetSpawnInstanceLimits \{max = 1
 		management = kill_oldest}
-	if screenelementexists \{id = onlinelobbyinterface}
-		<resolved_id> :se_setprops pos = {(0.0, -1000.0) relative} time = 0.15 anim = gentle
+	if ScreenElementExists \{id = OnlineLobbyInterface}
+		<resolved_id> :SE_SetProps pos = {(0.0, -1000.0) relative} time = 0.15 Anim = gentle
 	else
 		return
 	endif
-	wait \{0.15
+	Wait \{0.15
 		second}
 endscript
 
 script destroy_net_matchmaking_menu 
-	if screenelementexists \{id = onlinelobbyinterface}
-		destroyscreenelement \{id = onlinelobbyinterface}
+	if ScreenElementExists \{id = OnlineLobbyInterface}
+		DestroyScreenElement \{id = OnlineLobbyInterface}
 	endif
-	killspawnedscript \{name = set_net_ui_to_finished_searching}
+	KillSpawnedScript \{name = set_net_ui_to_finished_searching}
 	generic_ui_destroy
 endscript
 
 script create_joining_invite_popup 
-	printf \{qs(0x7c8c6783)}
+	printf \{qs("\L---create_joining_invite_popup")}
 	if ($has_invite_join_result_callback_completed = 0)
-		create_popup_warning_menu \{title = qs(0x4d21d20e)
+		create_popup_warning_menu \{title = qs("JOINING")
 			textblock = {
-				text = qs(0x00000000)
+				text = qs("")
 			}
 			parent = current_menu
 			no_background
 			options = [
 				{
 					func = kill_online_popup
-					text = qs(0x7343df39)
+					text = qs("Cancel")
 				}
 			]}
-		createscreenelement \{type = spriteelement
-			parent = popupelement
+		CreateScreenElement \{type = SpriteElement
+			parent = PopupElement
 			texture = load_wheel
 			pos = (440.0, 300.0)
 			dims = (128.0, 128.0)
@@ -438,38 +438,38 @@ script create_joining_invite_popup
 				center
 			]
 			z_priority = 520}
-		popupelement :obj_spawnscriptnow animate_online_icon params = {id = <id>}
-		assignalias \{id = pu_warning_vmenu
+		PopupElement :Obj_SpawnScriptNow animate_online_icon params = {id = <id>}
+		AssignAlias \{id = pu_warning_vmenu
 			alias = current_menu}
 	endif
 endscript
 
 script cleanup_invite_popup 
-	printf \{qs(0xd693e89b)}
+	printf \{qs("\L--- cleanup_invite_popup")}
 	destroy_popup_warning_menu
-	launchevent \{type = focus
+	LaunchEvent \{type = focus
 		target = current_menu}
 endscript
 
 script animate_online_icon 
 	rot_angle = -360
 	begin
-	<id> :se_setprops rot_angle = <rot_angle> time = 1.0
-	<id> :se_waitprops
+	<id> :SE_SetProps rot_angle = <rot_angle> time = 1.0
+	<id> :SE_WaitProps
 	<rot_angle> = (<rot_angle> - 360)
 	repeat
 endscript
 
-script create_online_warning_message title = qs(0x134b7e69) message = qs(0xa609d4d1) pos = ($default_online_warning_pos) parent = onlinelobbyinterface alpha = 1.0
-	if NOT screenelementexists id = <parent>
+script create_online_warning_message title = qs("TEST") message = qs("NO MESSAGE PROVIDED") pos = ($default_online_warning_pos) parent = OnlineLobbyInterface alpha = 1.0
+	if NOT ScreenElementExists id = <parent>
 		return
 	endif
-	if screenelementexists \{id = online_warning_message_container}
-		destroyscreenelement \{id = online_warning_message_container}
+	if ScreenElementExists \{id = online_warning_message_container}
+		DestroyScreenElement \{id = online_warning_message_container}
 	endif
-	getscreenelementzpriority id = <parent>
-	createscreenelement {
-		type = containerelement
+	GetScreenElementZPriority id = <parent>
+	CreateScreenElement {
+		type = ContainerElement
 		id = online_warning_message_container
 		parent = <parent>
 		pos = <pos>
@@ -478,8 +478,8 @@ script create_online_warning_message title = qs(0x134b7e69) message = qs(0xa609d
 		alpha = <alpha>
 	}
 	menu_anchor = <id>
-	createscreenelement {
-		type = spriteelement
+	CreateScreenElement {
+		type = SpriteElement
 		parent = <menu_anchor>
 		texture = online_dialog_bg
 		dims = (360.0, 360.0)
@@ -488,8 +488,8 @@ script create_online_warning_message title = qs(0x134b7e69) message = qs(0xa609d
 		z_priority = (<z_priority> + 21)
 		alpha = 1.0
 	}
-	createscreenelement {
-		type = textblockelement
+	CreateScreenElement {
+		type = TextBlockElement
 		parent = <menu_anchor>
 		id = online_warning_message_title
 		font = fontgrid_text_a6
@@ -504,8 +504,8 @@ script create_online_warning_message title = qs(0x134b7e69) message = qs(0xa609d
 		fit_height = `scale down if larger`
 		scale_mode = `per axis`
 	}
-	createscreenelement {
-		type = textblockelement
+	CreateScreenElement {
+		type = TextBlockElement
 		parent = <menu_anchor>
 		id = online_warning_message_text
 		font = fontgrid_text_a6
@@ -525,37 +525,37 @@ script create_online_warning_message title = qs(0x134b7e69) message = qs(0xa609d
 endscript
 
 script destroy_online_warning_message 
-	if screenelementexists \{id = online_warning_message_container}
-		destroyscreenelement \{id = online_warning_message_container}
+	if ScreenElementExists \{id = online_warning_message_container}
+		DestroyScreenElement \{id = online_warning_message_container}
 	endif
 endscript
 
 script display_online_warning_message 
-	if screenelementexists \{id = online_warning_message_container}
-		online_warning_message_container :obj_spawnscriptnow \{online_warning_message_animate}
+	if ScreenElementExists \{id = online_warning_message_container}
+		online_warning_message_container :Obj_SpawnScriptNow \{online_warning_message_animate}
 	endif
 endscript
 
 script online_warning_message_animate 
-	if screenelementexists \{id = online_warning_message_container}
-		online_warning_message_container :se_setprops \{alpha = 1.0
+	if ScreenElementExists \{id = online_warning_message_container}
+		online_warning_message_container :SE_SetProps \{alpha = 1.0
 			time = 0.2}
-		online_warning_message_container :se_waitprops
+		online_warning_message_container :SE_WaitProps
 	endif
-	wait \{2.0
+	Wait \{2.0
 		seconds}
-	if screenelementexists \{id = online_warning_message_container}
-		online_warning_message_container :se_setprops \{alpha = 0.0
+	if ScreenElementExists \{id = online_warning_message_container}
+		online_warning_message_container :SE_SetProps \{alpha = 0.0
 			time = 0.2}
-		online_warning_message_container :se_waitprops
+		online_warning_message_container :SE_WaitProps
 	endif
 	destroy_online_warning_message
 endscript
 
 script create_ps3_chat_warning_message 
-	createscreenelement {
-		type = textblockelement
-		parent = onlinelobbyinterface
+	CreateScreenElement {
+		type = TextBlockElement
+		parent = OnlineLobbyInterface
 		id = ps3_chat_warning_text
 		font = fontgrid_text_a6
 		rgba = ($ps3_chat_warning_text)
@@ -574,8 +574,8 @@ script create_ps3_chat_warning_message
 endscript
 
 script destroy_ps3_chat_warning_message 
-	if screenelementexists \{id = ps3_chat_warning_text}
-		destroyscreenelement \{id = ps3_chat_warning_text}
+	if ScreenElementExists \{id = ps3_chat_warning_text}
+		DestroyScreenElement \{id = ps3_chat_warning_text}
 	endif
 endscript
 
@@ -585,9 +585,9 @@ script create_matchmaking_menu_and_items
 	else
 		demo_mode_disable = {}
 	endif
-	if onlinelobbyinterface :desc_resolvealias \{name = alias_matchmaking_vmenu}
+	if OnlineLobbyInterface :Desc_ResolveAlias \{name = alias_matchmaking_vmenu}
 		if ($is_multiplayer_beta = 0)
-			if isps3
+			if IsPs3
 				new_event_handlers = [
 					{pad_back leave_net_main_menu params = {id = <resolved_id>}}
 					{pad_up net_up_down_action params = {action = up}}
@@ -603,11 +603,11 @@ script create_matchmaking_menu_and_items
 					{pad_l1 toggle_guitar_part}
 				]
 			endif
-			<resolved_id> :se_setprops {
+			<resolved_id> :SE_SetProps {
 				event_handlers = <new_event_handlers>
 			}
 		else
-			<resolved_id> :se_setprops {
+			<resolved_id> :SE_SetProps {
 				event_handlers = [
 					{pad_back leave_net_main_menu params = {id = <resolved_id>}}
 					{pad_up net_up_down_action params = {action = up}}
@@ -616,90 +616,90 @@ script create_matchmaking_menu_and_items
 			}
 		endif
 		<matchmaking_vmenu_id> = <resolved_id>
-		menu_items = 0
-		if netsessionfunc \{obj = party
+		Menu_items = 0
+		if NetSessionFunc \{obj = party
 				func = is_host}
 		else
 			focusable = not_focusable
 		endif
-		resolvescreenelementid id = {<matchmaking_vmenu_id> child = start_matchmaking}
-		<resolved_id> :se_setprops {
+		ResolveScreenElementId id = {<matchmaking_vmenu_id> child = start_matchmaking}
+		<resolved_id> :SE_SetProps {
 			<focusable>
 			event_handlers = [
 				{focus matchmaking_item_change_focus params = {focus}}
 				{unfocus matchmaking_item_change_focus params = {unfocus}}
-				{pad_choose 0x58723d8c}
+				{pad_choose winport_start_matchmaking_public}
 			]
 		}
-		if gotparam \{focusable}
+		if GotParam \{focusable}
 			if (<focusable> = not_focusable)
-				resolvescreenelementid id = [
+				ResolveScreenElementId id = [
 					{id = <resolved_id>}
 					{local_id = text}
 				]
-				<menu_items> = (<menu_items> - 1)
-				<resolved_id> :se_setprops alpha = 0.5
+				<Menu_items> = (<Menu_items> - 1)
+				<resolved_id> :SE_SetProps alpha = 0.5
 			endif
 		endif
-		if iswinport
-			resolvescreenelementid id = {<matchmaking_vmenu_id> child = 0x04f60e76}
-			<resolved_id> :se_setprops {
+		if IsWinPort
+			ResolveScreenElementId id = {<matchmaking_vmenu_id> child = start_matchmaking_private}
+			<resolved_id> :SE_SetProps {
 				<focusable>
 				event_handlers = [
 					{focus matchmaking_item_change_focus params = {focus}}
 					{unfocus matchmaking_item_change_focus params = {unfocus}}
-					{pad_choose 0x876f4b9d}
+					{pad_choose winport_start_matchmaking_private}
 				]
 			}
-			if gotparam \{focusable}
+			if GotParam \{focusable}
 				if (<focusable> = not_focusable)
-					resolvescreenelementid id = [
+					ResolveScreenElementId id = [
 						{id = <resolved_id>}
 						{local_id = text}
 					]
-					<menu_items> = (<menu_items> - 1)
-					<resolved_id> :se_setprops alpha = 0.5
+					<Menu_items> = (<Menu_items> - 1)
+					<resolved_id> :SE_SetProps alpha = 0.5
 				endif
 			endif
 		endif
 		choose_first_viewable_mode \{net_pref_name = game_modes}
-		netoptions :pref_get \{name = game_modes}
-		formattext textname = game_mode_text qs(0xed77b849) d = <display_string>
-		resolvescreenelementid id = [
+		NetOptions :Pref_Get \{name = game_modes}
+		FormatText TextName = game_mode_text qs("MODE: %d") d = <display_string>
+		ResolveScreenElementId id = [
 			{id = <matchmaking_vmenu_id>}
 			{local_id = game_mode}
 			{local_id = text}
 		]
 		start_matchmaking_params = {
 			net_pref_name = game_modes
-			base_text = qs(0xbd07b80c)
+			base_text = qs("MODE: ")
 			vmenu_id = current_menu
 			text_id = <resolved_id>
 			net_pref_name = game_modes
 		}
-		resolvescreenelementid id = {<matchmaking_vmenu_id> child = game_mode}
-		<resolved_id> :se_setprops {
+		ResolveScreenElementId id = {<matchmaking_vmenu_id> child = game_mode}
+		<resolved_id> :SE_SetProps {
 			<focusable>
 			event_handlers = [
 				{focus matchmaking_item_change_focus params = {focus}}
 				{unfocus matchmaking_item_change_focus params = {unfocus}}
-				{pad_choose try_create_matchmaking_submenu params = {<start_matchmaking_params> title = qs(0x876172e8)}}
+				{pad_choose try_create_matchmaking_submenu params = {<start_matchmaking_params> title = qs("GAME MODE")}}
 			]
 		}
-		if gotparam \{focusable}
+		if GotParam \{focusable}
 			if (<focusable> = not_focusable)
-				resolvescreenelementid id = [
+				ResolveScreenElementId id = [
 					{id = <resolved_id>}
 					{local_id = text}
 				]
-				<resolved_id> :se_setprops alpha = 0.5
+				<resolved_id> :SE_SetProps alpha = 0.5
 			endif
 		endif
-		onlinelobbyinterface :se_setprops {
+		OnlineLobbyInterface :SE_SetProps {
 			matchmaking_game_mode_text = <game_mode_text>
 		}
-		resolvescreenelementid id = {<matchmaking_vmenu_id> child = friends}
-		<resolved_id> :se_setprops {
+		ResolveScreenElementId id = {<matchmaking_vmenu_id> child = friends}
+		<resolved_id> :SE_SetProps {
 			<demo_mode_disable>
 			event_handlers = [
 				{focus matchmaking_item_change_focus params = {focus}}
@@ -709,14 +709,14 @@ script create_matchmaking_menu_and_items
 			]
 		}
 		if ($is_multiplayer_beta = 1)
-			resolvescreenelementid id = [
+			ResolveScreenElementId id = [
 				{id = <resolved_id>}
 				{local_id = text}
 			]
-			<resolved_id> :se_setprops {<demo_mode_disable>}
+			<resolved_id> :SE_SetProps {<demo_mode_disable>}
 		endif
-		resolvescreenelementid id = {<matchmaking_vmenu_id> child = preferences}
-		<resolved_id> :se_setprops {
+		ResolveScreenElementId id = {<matchmaking_vmenu_id> child = preferences}
+		<resolved_id> :SE_SetProps {
 			event_handlers = [
 				{focus matchmaking_item_change_focus params = {focus}}
 				{unfocus matchmaking_item_change_focus params = {unfocus}}
@@ -724,30 +724,30 @@ script create_matchmaking_menu_and_items
 				{pad_choose start_net_preferences}
 			]
 		}
-		<menu_items> = 0
-		getscreenelementchildren id = <matchmaking_vmenu_id>
-		getarraysize <children>
+		<Menu_items> = 0
+		GetScreenElementChildren id = <matchmaking_vmenu_id>
+		GetArraySize <children>
 		j = 0
 		begin
-		if NOT (<children> [<j>]) :getsingletag tag_not_focusable
-			<menu_items> = (<menu_items> + 1)
+		if NOT (<children> [<j>]) :GetSingleTag tag_not_focusable
+			<Menu_items> = (<Menu_items> + 1)
 		endif
 		j = (<j> + 1)
 		repeat <array_size>
-		onlinelobbyinterface :settags menu_items = <menu_items>
+		OnlineLobbyInterface :SetTags Menu_items = <Menu_items>
 		change \{net_starting_matchmaking = 0}
-		if (1 = $global_should_use_net_debugging)
+		if (1 = $GLOBAL_SHOULD_USE_NET_DEBUGGING)
 			add_matchmaking_item {
 				vmenu_id = <matchmaking_vmenu_id>
 				msg_checksum = debug_create_match
-				text = qs(0x3e236307)
+				text = qs("DEBUG: CREATE MATCH")
 				choose_script = net_quick_create
 				<focusable>
 			}
 			add_matchmaking_item {
 				vmenu_id = <matchmaking_vmenu_id>
 				msg_checksum = debug_custom_search
-				text = qs(0xe57d4656)
+				text = qs("DEBUG: CUSTOM SEARCH")
 				choose_script = net_custom_search
 				<focusable>
 			}
@@ -756,92 +756,92 @@ script create_matchmaking_menu_and_items
 endscript
 
 script destroy_matchmaking_menu_and_items 
-	if screenelementexists \{id = matchmaking_vscollingmenu}
-		destroyscreenelement \{id = matchmaking_vscollingmenu}
+	if ScreenElementExists \{id = matchmaking_vscollingmenu}
+		DestroyScreenElement \{id = matchmaking_vscollingmenu}
 	endif
 endscript
 
 script net_up_down_action 
-	onlinelobbyinterface :gettags
-	if NOT gotparam \{action}
+	OnlineLobbyInterface :GetTags
+	if NOT GotParam \{action}
 		return
 	endif
-	if NOT screenelementexists \{id = current_menu}
+	if NOT ScreenElementExists \{id = current_menu}
 		return
 	endif
-	if NOT screenelementexists id = <player_slots_menu_id>
+	if NOT ScreenElementExists id = <player_slots_menu_id>
 		return
 	endif
 	generic_menu_up_or_down_sound <action>
 	if (<locked_to_players> = 0)
-		if isscreenelementinfocus \{id = current_menu}
+		if IsScreenElementInFocus \{id = current_menu}
 			if (<action> = up)
 				if (<menu_index> = 0)
 					if (<slot_items> > 0)
-						launchevent \{type = unfocus
+						LaunchEvent \{type = unfocus
 							target = current_menu}
 						online_lobby_setup_helper_controls \{menu_type = right_hand}
-						launchevent type = focus target = <player_slots_menu_id> data = {child_index = (<slot_items> - 1)}
-						onlinelobbyinterface :settags slots_index = (<slot_items> - 1)
+						LaunchEvent type = focus target = <player_slots_menu_id> data = {child_index = (<slot_items> - 1)}
+						OnlineLobbyInterface :SetTags slots_index = (<slot_items> - 1)
 					else
-						onlinelobbyinterface :settags menu_index = (<menu_items> - 1)
+						OnlineLobbyInterface :SetTags menu_index = (<Menu_items> - 1)
 					endif
 				else
-					onlinelobbyinterface :settags menu_index = (<menu_index> - 1)
+					OnlineLobbyInterface :SetTags menu_index = (<menu_index> - 1)
 				endif
 			elseif (<action> = down)
-				if (<menu_index> = (<menu_items> - 1))
+				if (<menu_index> = (<Menu_items> - 1))
 					if (<slot_items> > 0)
-						launchevent \{type = unfocus
+						LaunchEvent \{type = unfocus
 							target = current_menu}
 						online_lobby_setup_helper_controls \{menu_type = right_hand}
-						launchevent type = focus target = <player_slots_menu_id> data = {child_index = 0}
-						onlinelobbyinterface :settags \{slots_index = 0}
+						LaunchEvent type = focus target = <player_slots_menu_id> data = {child_index = 0}
+						OnlineLobbyInterface :SetTags \{slots_index = 0}
 					else
-						onlinelobbyinterface :settags \{menu_index = 0}
+						OnlineLobbyInterface :SetTags \{menu_index = 0}
 					endif
 				else
-					onlinelobbyinterface :settags menu_index = (<menu_index> + 1)
+					OnlineLobbyInterface :SetTags menu_index = (<menu_index> + 1)
 				endif
 			endif
-		elseif isscreenelementinfocus id = <player_slots_menu_id>
+		elseif IsScreenElementInFocus id = <player_slots_menu_id>
 			if (<action> = up)
 				if (<slots_index> = 0)
-					if (<menu_items> > 0)
-						launchevent type = unfocus target = <player_slots_menu_id>
+					if (<Menu_items> > 0)
+						LaunchEvent type = unfocus target = <player_slots_menu_id>
 						online_lobby_setup_helper_controls
-						launchevent type = focus target = current_menu data = {child_index = (<menu_items> - 1)}
-						onlinelobbyinterface :settags \{slots_index = -1}
-						onlinelobbyinterface :settags menu_index = (<menu_items> - 1)
+						LaunchEvent type = focus target = current_menu data = {child_index = (<Menu_items> - 1)}
+						OnlineLobbyInterface :SetTags \{slots_index = -1}
+						OnlineLobbyInterface :SetTags menu_index = (<Menu_items> - 1)
 					else
-						onlinelobbyinterface :settags slots_index = (<slots_items> - 1)
+						OnlineLobbyInterface :SetTags slots_index = (<slots_items> - 1)
 					endif
 				else
 					if (<slots_index> = -1)
 						<slots_index> = 1
 					endif
-					onlinelobbyinterface :settags slots_index = (<slots_index> - 1)
+					OnlineLobbyInterface :SetTags slots_index = (<slots_index> - 1)
 				endif
 			elseif (<action> = down)
 				if (<slots_index> = (<slot_items> - 1))
-					if (<menu_items> > 0)
-						launchevent type = unfocus target = <player_slots_menu_id>
+					if (<Menu_items> > 0)
+						LaunchEvent type = unfocus target = <player_slots_menu_id>
 						online_lobby_setup_helper_controls
-						launchevent \{type = focus
+						LaunchEvent \{type = focus
 							target = current_menu
 							data = {
 								child_index = 0
 							}}
-						onlinelobbyinterface :settags \{slots_index = -1}
-						onlinelobbyinterface :settags \{menu_index = 0}
+						OnlineLobbyInterface :SetTags \{slots_index = -1}
+						OnlineLobbyInterface :SetTags \{menu_index = 0}
 					else
-						onlinelobbyinterface :settags slots_index = (<slots_items> - 1)
+						OnlineLobbyInterface :SetTags slots_index = (<slots_items> - 1)
 					endif
 				else
 					if (<slots_index> = -1)
 						<slots_index> = 0
 					endif
-					onlinelobbyinterface :settags slots_index = (<slots_index> + 1)
+					OnlineLobbyInterface :SetTags slots_index = (<slots_index> + 1)
 				endif
 			endif
 		endif
@@ -849,36 +849,36 @@ script net_up_down_action
 endscript
 
 script choose_first_viewable_mode 
-	netoptions :pref_get \{name = game_modes}
+	NetOptions :Pref_Get \{name = game_modes}
 	is_gamemode_visible mode = <checksum>
 	if (<item_is_visible>)
 		return
 	endif
-	netoptions :pref_size \{name = game_modes}
+	NetOptions :Pref_Size \{name = game_modes}
 	i = 0
 	begin
-	netoptions :pref_get name = game_modes index = <i>
+	NetOptions :Pref_Get name = game_modes index = <i>
 	is_gamemode_visible mode = <checksum>
 	if (<item_is_visible>)
-		netoptions :pref_choose name = game_modes index = <i>
+		NetOptions :Pref_Choose name = game_modes index = <i>
 		return
 	endif
 	<i> = (<i> + 1)
 	repeat <size>
-	if netsessionfunc \{obj = party
+	if NetSessionFunc \{obj = party
 			func = is_host}
-		netoptions :pref_get \{name = game_modes}
-		netsessionfunc obj = party func = append_shared_data params = {data = {game_mode = <i>}}
+		NetOptions :Pref_Get \{name = game_modes}
+		NetSessionFunc obj = party func = append_shared_data params = {data = {game_mode = <i>}}
 	endif
 endscript
 
 script is_gamemode_visible 
-	<returnvalue> = 0
+	<returnValue> = 0
 	get_visible_game_modes
-	if arraycontains array = <modes> contains = <mode>
-		<returnvalue> = 1
+	if ArrayContains array = <modes> contains = <mode>
+		<returnValue> = 1
 	endif
-	return item_is_visible = <returnvalue>
+	return item_is_visible = <returnValue>
 endscript
 
 script get_visible_game_modes 
@@ -897,7 +897,7 @@ script get_visible_game_modes
 endscript
 
 script try_create_matchmaking_submenu 
-	requireparams \{[
+	RequireParams \{[
 			device_num
 			title
 		]
@@ -910,36 +910,36 @@ script try_create_matchmaking_submenu
 	endif
 endscript
 
-script create_matchmaking_submenu \{title = qs(0xae01dcbe)}
+script create_matchmaking_submenu \{title = qs("NONE")}
 	online_lobby_transition_out
-	createscreenelement {
-		type = descinterface
-		parent = onlinelobbyinterface
+	CreateScreenElement {
+		type = DescInterface
+		parent = OnlineLobbyInterface
 		desc = 'online_lobby_left_side'
 		pos = (0.0, -1000.0)
-		id = onlinesubmenuinterface
+		id = OnlineSubMenuInterface
 		exclusive_device = <device_num>
 		tags = {
 			menu_index = 0
-			menu_items = 0
+			Menu_items = 0
 			player_num = <info_index>
 			exit_script = <exit_script>
 			scrollbar_id = null
 		}
 	}
-	onlinesubmenuinterface :desc_checkversion \{desired = 2
-		assertif = mismatch}
-	<id> :se_setprops title_text = <title>
+	OnlineSubMenuInterface :Desc_CheckVersion \{desired = 2
+		AssertIf = Mismatch}
+	<id> :SE_SetProps title_text = <title>
 	left_side_id = <id>
-	if onlinesubmenuinterface :desc_resolvealias \{name = alias_online_lobby_scrollbar
+	if OnlineSubMenuInterface :Desc_ResolveAlias \{name = alias_online_lobby_scrollbar
 			param = scrollbar_id}
-		onlinesubmenuinterface :settags scrollbar_id = <scrollbar_id>
+		OnlineSubMenuInterface :SetTags scrollbar_id = <scrollbar_id>
 	endif
-	if onlinesubmenuinterface :desc_resolvealias \{name = alias_left_side_vmenu}
-		<resolved_id> :se_setprops {
+	if OnlineSubMenuInterface :Desc_ResolveAlias \{name = alias_left_side_vmenu}
+		<resolved_id> :SE_SetProps {
 			event_handlers = [
 				{pad_back generic_menu_pad_back_sound}
-				{pad_back destroy_matchmaking_submenu params = {container_id = onlinesubmenuinterface vmenu_id = <subvmenu_id> parent_id = <vmenu_id>}}
+				{pad_back destroy_matchmaking_submenu params = {container_id = OnlineSubMenuInterface vmenu_id = <subvmenu_id> parent_id = <vmenu_id>}}
 				{pad_up generic_menu_up_or_down_sound}
 				{pad_up online_lobby_submenu_up}
 				{pad_down generic_menu_up_or_down_sound}
@@ -947,18 +947,18 @@ script create_matchmaking_submenu \{title = qs(0xae01dcbe)}
 			]
 		}
 		subvmenu_id = <resolved_id>
-		netoptions :pref_getstruct name = <net_pref_name>
-		if gotparam \{pref_struct}
+		NetOptions :Pref_GetStruct name = <net_pref_name>
+		if GotParam \{pref_struct}
 			<checksum> = (<pref_struct>.search_chk)
 		endif
 		<current_index> = 0
-		netoptions :pref_size name = <net_pref_name>
+		NetOptions :Pref_Size name = <net_pref_name>
 		i = 0
 		<menu_index> = 0
 		<item_is_visible> = 1
 		begin
-		netoptions :pref_getstruct name = <net_pref_name> index = <i>
-		if structurecontains structure = <pref_struct> func
+		NetOptions :Pref_GetStruct name = <net_pref_name> index = <i>
+		if StructureContains Structure = <pref_struct> func
 			(<pref_struct>.func) mode = (<pref_struct>.checksum)
 		endif
 		if (<item_is_visible>)
@@ -978,69 +978,69 @@ script create_matchmaking_submenu \{title = qs(0xae01dcbe)}
 					text = (<pref_struct>.name)
 					text_id = <text_id>
 					index = <i>
-					container_id = onlinesubmenuinterface
+					container_id = OnlineSubMenuInterface
 					vmenu_id = <subvmenu_id>
 					parent_id = <vmenu_id>
 				}
 			}
-			if gotparam \{id}
-				<id> :settags msg_checksum = (<pref_struct>.checksum)
+			if GotParam \{id}
+				<id> :SetTags msg_checksum = (<pref_struct>.checksum)
 			endif
 			<menu_index> = (<menu_index> + 1)
 		endif
 		i = (<i> + 1)
 		repeat <size>
-		if screenelementexists id = <scrollbar_id>
-			onlinesubmenuinterface :gettags
-			scroll_increment = (175 / (<menu_items> -1))
-			<scrollbar_id> :settags scroll_increment = <scroll_increment>
-			<scrollbar_id> :se_setprops scrollbar_thumb_pos = ((0.0, 1.0) * (<scroll_increment> * <current_index>))
+		if ScreenElementExists id = <scrollbar_id>
+			OnlineSubMenuInterface :GetTags
+			scroll_increment = (175 / (<Menu_items> -1))
+			<scrollbar_id> :SetTags scroll_increment = <scroll_increment>
+			<scrollbar_id> :SE_SetProps scrollbar_thumb_pos = ((0.0, 1.0) * (<scroll_increment> * <current_index>))
 		endif
-		onlinesubmenuinterface :settags menu_index = <current_index>
-		launchevent type = unfocus target = <vmenu_id>
+		OnlineSubMenuInterface :SetTags menu_index = <current_index>
+		LaunchEvent type = unfocus target = <vmenu_id>
 	endif
 	clean_up_user_control_helpers
 	menu_finish
-	if gotparam \{title}
+	if GotParam \{title}
 		switch <title>
-			case qs(0x876172e8)
-			soundevent \{event = online_panel_in}
+			case qs("GAME MODE")
+			SoundEvent \{event = Online_Panel_In}
 		endswitch
 	endif
-	if gotparam \{subvmenu_id}
-		<left_side_id> :obj_spawnscriptnow animate_left_side params = {id = <left_side_id> direction = in focus_id = <subvmenu_id> focus_index = <current_index>}
+	if GotParam \{subvmenu_id}
+		<left_side_id> :Obj_SpawnScriptNow animate_left_side params = {id = <left_side_id> direction = in focus_id = <subvmenu_id> focus_index = <current_index>}
 	else
-		<left_side_id> :obj_spawnscriptnow animate_left_side params = {id = <left_side_id> direction = in}
+		<left_side_id> :Obj_SpawnScriptNow animate_left_side params = {id = <left_side_id> direction = in}
 	endif
 endscript
 
 script destroy_matchmaking_submenu 
-	if NOT ((gotparam container_id) || (gotparam vmenu_id) || (gotparam parent_id))
+	if NOT ((GotParam container_id) || (GotParam vmenu_id) || (GotParam parent_id))
 		return
 	endif
-	if screenelementexists id = <vmenu_id>
-		launchevent type = unfocus target = <vmenu_id>
+	if ScreenElementExists id = <vmenu_id>
+		LaunchEvent type = unfocus target = <vmenu_id>
 	endif
-	if screenelementexists id = <container_id>
+	if ScreenElementExists id = <container_id>
 		animate_left_side id = <container_id> direction = out
-		destroyscreenelement id = <container_id>
+		DestroyScreenElement id = <container_id>
 		online_lobby_transition_in
 	endif
-	if screenelementexists id = <parent_id>
-		launchevent type = focus target = <parent_id>
+	if ScreenElementExists id = <parent_id>
+		LaunchEvent type = focus target = <parent_id>
 	endif
 endscript
 
 script select_submenu_item 
-	if gotparam \{text_id}
-		if screenelementexists id = <text_id>
-			formattext textname = new_string qs(0x3080c264) s = <base_text> d = <text>
-			setscreenelementprops id = <text_id> text = <new_string>
-			netoptions :pref_choose name = <net_pref_name> index = <index>
-			if netsessionfunc \{obj = party
+	if GotParam \{text_id}
+		if ScreenElementExists id = <text_id>
+			FormatText TextName = new_string qs("%s%d") s = <base_text> d = <text>
+			SetScreenElementProps id = <text_id> text = <new_string>
+			NetOptions :Pref_Choose name = <net_pref_name> index = <index>
+			if NetSessionFunc \{obj = party
 					func = is_host}
-				netoptions :pref_get name = <net_pref_name>
-				netsessionfunc obj = party func = append_shared_data params = {data = {game_mode = <index>}}
+				NetOptions :Pref_Get name = <net_pref_name>
+				NetSessionFunc obj = party func = append_shared_data params = {data = {game_mode = <index>}}
 			endif
 		endif
 	endif
@@ -1048,57 +1048,57 @@ script select_submenu_item
 endscript
 
 script online_lobby_submenu_up 
-	if screenelementexists \{id = onlinesubmenuinterface}
-		onlinesubmenuinterface :gettags
+	if ScreenElementExists \{id = OnlineSubMenuInterface}
+		OnlineSubMenuInterface :GetTags
 		if (<menu_index> = 0)
-			onlinesubmenuinterface :settags menu_index = (<menu_items> - 1)
-			if screenelementexists id = <scrollbar_id>
-				<scrollbar_id> :se_setprops scrollbar_thumb_pos = (0.0, 175.0)
+			OnlineSubMenuInterface :SetTags menu_index = (<Menu_items> - 1)
+			if ScreenElementExists id = <scrollbar_id>
+				<scrollbar_id> :SE_SetProps scrollbar_thumb_pos = (0.0, 175.0)
 			endif
 		else
-			onlinesubmenuinterface :settags menu_index = (<menu_index> - 1)
-			if screenelementexists id = <scrollbar_id>
-				<scrollbar_id> :gettags
+			OnlineSubMenuInterface :SetTags menu_index = (<menu_index> - 1)
+			if ScreenElementExists id = <scrollbar_id>
+				<scrollbar_id> :GetTags
 				pos = ((0.0, -1.0) * <scroll_increment>)
-				<scrollbar_id> :se_setprops scrollbar_thumb_pos = {<pos> relative}
+				<scrollbar_id> :SE_SetProps scrollbar_thumb_pos = {<pos> relative}
 			endif
 		endif
 	endif
 endscript
 
 script online_lobby_submenu_down 
-	if screenelementexists \{id = onlinesubmenuinterface}
-		onlinesubmenuinterface :gettags
-		if ((<menu_index> + 1) = <menu_items>)
-			onlinesubmenuinterface :settags \{menu_index = 0}
-			if screenelementexists id = <scrollbar_id>
-				<scrollbar_id> :se_setprops scrollbar_thumb_pos = (0.0, 0.0)
+	if ScreenElementExists \{id = OnlineSubMenuInterface}
+		OnlineSubMenuInterface :GetTags
+		if ((<menu_index> + 1) = <Menu_items>)
+			OnlineSubMenuInterface :SetTags \{menu_index = 0}
+			if ScreenElementExists id = <scrollbar_id>
+				<scrollbar_id> :SE_SetProps scrollbar_thumb_pos = (0.0, 0.0)
 			endif
 		else
-			onlinesubmenuinterface :settags menu_index = (<menu_index> + 1)
-			if screenelementexists id = <scrollbar_id>
-				<scrollbar_id> :gettags
+			OnlineSubMenuInterface :SetTags menu_index = (<menu_index> + 1)
+			if ScreenElementExists id = <scrollbar_id>
+				<scrollbar_id> :GetTags
 				pos = ((0.0, 1.0) * (<scroll_increment>))
-				<scrollbar_id> :se_setprops scrollbar_thumb_pos = {<pos> relative}
+				<scrollbar_id> :SE_SetProps scrollbar_thumb_pos = {<pos> relative}
 			endif
 		endif
 	endif
 endscript
 
 script add_matchmaking_item \{focus_script = matchmaking_item_change_focus}
-	if NOT gotparam \{vmenu_id}
+	if NOT GotParam \{vmenu_id}
 		return
 	endif
-	if NOT gotparam \{text}
-		text = qs(0x134b7e69)
+	if NOT GotParam \{text}
+		text = qs("TEST")
 	endif
 	text_alpha = 1
-	if gotparam \{not_focusable}
+	if GotParam \{not_focusable}
 		focusable = not_focusable
 		text_alpha = 0.5
 	endif
-	createscreenelement {
-		type = containerelement
+	CreateScreenElement {
+		type = ContainerElement
 		parent = <vmenu_id>
 		pos = (0.0, 0.0)
 		dims = (256.0, 40.0)
@@ -1109,11 +1109,11 @@ script add_matchmaking_item \{focus_script = matchmaking_item_change_focus}
 		]
 	}
 	container_id = <id>
-	if gotparam \{msg_checksum}
-		<container_id> :settags msg_checksum = <msg_checksum>
+	if GotParam \{msg_checksum}
+		<container_id> :SetTags msg_checksum = <msg_checksum>
 	endif
-	if gotparam \{choose_script}
-		setscreenelementprops {
+	if GotParam \{choose_script}
+		SetScreenElementProps {
 			id = <container_id>
 			event_handlers = [
 				{pad_choose ui_menu_select_sfx}
@@ -1121,27 +1121,27 @@ script add_matchmaking_item \{focus_script = matchmaking_item_change_focus}
 			]
 		}
 	endif
-	if gotparam \{sub_menu_item}
+	if GotParam \{sub_menu_item}
 		width = 285
-		if screenelementexists \{id = onlinesubmenuinterface}
-			onlinesubmenuinterface :gettags
-			onlinesubmenuinterface :settags menu_items = (<menu_items> + 1)
+		if ScreenElementExists \{id = OnlineSubMenuInterface}
+			OnlineSubMenuInterface :GetTags
+			OnlineSubMenuInterface :SetTags Menu_items = (<Menu_items> + 1)
 		endif
 	else
-		if NOT gotparam \{not_focusable}
-			onlinelobbyinterface :gettags
-			onlinelobbyinterface :settags menu_items = (<menu_items> + 1)
+		if NOT GotParam \{not_focusable}
+			OnlineLobbyInterface :GetTags
+			OnlineLobbyInterface :SetTags Menu_items = (<Menu_items> + 1)
 		endif
 		width = 285
 	endif
-	getscreenelementzpriority id = <container_id>
+	GetScreenElementZPriority id = <container_id>
 	<text_pos> = (10.0, 0.0)
-	if gotparam \{slide_left}
+	if GotParam \{slide_left}
 		<text_pos> = (0.0, 0.0)
 	endif
-	if gotparam \{text_id}
-		createscreenelement {
-			type = textblockelement
+	if GotParam \{text_id}
+		CreateScreenElement {
+			type = TextBlockElement
 			parent = <container_id>
 			id = <text_id>
 			local_id = text
@@ -1158,8 +1158,8 @@ script add_matchmaking_item \{focus_script = matchmaking_item_change_focus}
 			scale_mode = `per axis`
 		}
 	else
-		createscreenelement {
-			type = textblockelement
+		CreateScreenElement {
+			type = TextBlockElement
 			parent = <container_id>
 			local_id = text
 			font = fontgrid_text_a6
@@ -1179,94 +1179,94 @@ script add_matchmaking_item \{focus_script = matchmaking_item_change_focus}
 endscript
 
 script matchmaking_item_change_focus 
-	obj_getid
-	<objid> :gettags
-	resolvescreenelementid id = [
-		{id = <objid>}
+	Obj_GetID
+	<ObjID> :GetTags
+	ResolveScreenElementId id = [
+		{id = <ObjID>}
 		{local_id = text}
 	]
-	if gotparam \{focus}
-		if gotparam \{msg_checksum}
+	if GotParam \{focus}
+		if GotParam \{msg_checksum}
 			set_net_dialog_message msg_checksum = <msg_checksum>
 		endif
 		retail_menu_focus id = <resolved_id>
-	elseif gotparam \{unfocus}
+	elseif GotParam \{unfocus}
 		retail_menu_unfocus id = <resolved_id>
 	endif
 endscript
 
 script set_net_dialog_message 
-	if NOT gotparam \{msg_checksum}
+	if NOT GotParam \{msg_checksum}
 		return
 	endif
-	if iswinport
-		plat_helper_strings = 0x98866af2
+	if IsWinPort
+		plat_helper_strings = net_helper_text_strings_winport
 	else
-		if isxenon
+		if isXenon
 			plat_helper_strings = net_helper_text_strings_xen
-		elseif isps3
+		elseif IsPs3
 			plat_helper_strings = net_helper_text_strings_ps3
 		endif
 	endif
-	appendsuffixtochecksum base = <msg_checksum> suffixstring = '_text'
-	if structurecontains structure = ($<plat_helper_strings>) <appended_id>
-		if screenelementexists \{id = onlinelobbyinterface}
-			onlinelobbyinterface :se_setprops matchmaking_info_text = ($<plat_helper_strings>.<appended_id>)
+	AppendSuffixToChecksum Base = <msg_checksum> SuffixString = '_text'
+	if StructureContains Structure = ($<plat_helper_strings>) <appended_id>
+		if ScreenElementExists \{id = OnlineLobbyInterface}
+			OnlineLobbyInterface :SE_SetProps matchmaking_info_text = ($<plat_helper_strings>.<appended_id>)
 		endif
-	elseif structurecontains structure = ($net_helper_text_strings) <appended_id>
-		if screenelementexists \{id = onlinelobbyinterface}
-			onlinelobbyinterface :se_setprops matchmaking_info_text = ($net_helper_text_strings.<appended_id>)
+	elseif StructureContains Structure = ($net_helper_text_strings) <appended_id>
+		if ScreenElementExists \{id = OnlineLobbyInterface}
+			OnlineLobbyInterface :SE_SetProps matchmaking_info_text = ($net_helper_text_strings.<appended_id>)
 		endif
 	endif
 endscript
 
 script matchmaking_submenu_item_change_focus 
-	obj_getid
-	<objid> :gettags
-	resolvescreenelementid id = [
-		{id = <objid>}
+	Obj_GetID
+	<ObjID> :GetTags
+	ResolveScreenElementId id = [
+		{id = <ObjID>}
 		{local_id = text}
 	]
-	if gotparam \{focus}
-		if gotparam \{msg_checksum}
+	if GotParam \{focus}
+		if GotParam \{msg_checksum}
 			set_submenu_helper_text msg_checksum = <msg_checksum>
 		endif
 		retail_menu_focus id = <resolved_id>
-	elseif gotparam \{unfocus}
+	elseif GotParam \{unfocus}
 		retail_menu_unfocus id = <resolved_id>
 	endif
 endscript
 
 script set_submenu_helper_text 
-	if NOT gotparam \{msg_checksum}
+	if NOT GotParam \{msg_checksum}
 		return
 	endif
-	if iswinport
-		plat_helper_strings = 0x98866af2
+	if IsWinPort
+		plat_helper_strings = net_helper_text_strings_winport
 	else
-		if isxenon
+		if isXenon
 			plat_helper_strings = net_helper_text_strings_xen
-		elseif isps3
+		elseif IsPs3
 			plat_helper_strings = net_helper_text_strings_ps3
 		endif
 	endif
-	appendsuffixtochecksum base = <msg_checksum> suffixstring = '_text'
-	if structurecontains structure = ($<plat_helper_strings>) <appended_id>
-		if screenelementexists \{id = onlinesubmenuinterface}
-			onlinesubmenuinterface :se_setprops info_text = ($<plat_helper_strings>.<appended_id>)
+	AppendSuffixToChecksum Base = <msg_checksum> SuffixString = '_text'
+	if StructureContains Structure = ($<plat_helper_strings>) <appended_id>
+		if ScreenElementExists \{id = OnlineSubMenuInterface}
+			OnlineSubMenuInterface :SE_SetProps info_text = ($<plat_helper_strings>.<appended_id>)
 		endif
-	elseif structurecontains structure = ($net_helper_text_strings) <appended_id>
-		if screenelementexists \{id = onlinesubmenuinterface}
-			onlinesubmenuinterface :se_setprops info_text = ($net_helper_text_strings.<appended_id>)
+	elseif StructureContains Structure = ($net_helper_text_strings) <appended_id>
+		if ScreenElementExists \{id = OnlineSubMenuInterface}
+			OnlineSubMenuInterface :SE_SetProps info_text = ($net_helper_text_strings.<appended_id>)
 		endif
 	endif
 endscript
 
 script create_player_slots_container 
-	if onlinelobbyinterface :desc_resolvealias \{name = alias_player_slots_vmenu}
+	if OnlineLobbyInterface :Desc_ResolveAlias \{name = alias_player_slots_vmenu}
 		<player_slots_menu_id> = <resolved_id>
-		onlinelobbyinterface :settags player_slots_menu_id = <player_slots_menu_id>
-		if isps3
+		OnlineLobbyInterface :SetTags player_slots_menu_id = <player_slots_menu_id>
+		if IsPs3
 			new_event_handlers = [
 				{pad_back leave_net_main_menu params = {id = <player_slots_menu_id>}}
 				{pad_up net_up_down_action params = {action = up}}
@@ -1282,10 +1282,10 @@ script create_player_slots_container
 				{pad_l1 toggle_guitar_part}
 			]
 		endif
-		<player_slots_menu_id> :se_setprops {
+		<player_slots_menu_id> :SE_SetProps {
 			event_handlers = <new_event_handlers>
 		}
-		<player_slots_menu_id> :settags {
+		<player_slots_menu_id> :SetTags {
 			num_players_in_session = 0
 			safe_to_refresh_player_slots = 1
 			all_players_checksum = [
@@ -1308,14 +1308,14 @@ script create_player_slots_container
 				unplugged
 			]
 		}
-		<player_slots_menu_id> :obj_spawnscriptlater update_player_slots_ui
+		<player_slots_menu_id> :Obj_SpawnScriptLater update_player_slots_ui
 	endif
 endscript
 
 script create_player_slots_ui 
-	onlinelobbyinterface :gettags
-	<player_slots_menu_id> :gettags
-	getarraysize \{all_players_checksum}
+	OnlineLobbyInterface :GetTags
+	<player_slots_menu_id> :GetTags
+	GetArraySize \{all_players_checksum}
 	count = 0
 	begin
 	if (<all_players_checksum> [<count>] = local_signed_in)
@@ -1323,7 +1323,7 @@ script create_player_slots_ui
 	elseif (<all_players_checksum> [<count>] = remote)
 		add_player_slot_to_menu index = <count> player_type = remote
 	elseif (<all_players_checksum> [<count>] = local_not_signed_in)
-		if netsessionfunc \{obj = party
+		if NetSessionFunc \{obj = party
 				func = is_host}
 			get_ui_slot_corresponding_controller target_ui_slot = <count>
 			add_player_slot_to_menu index = <count> player_type = not_signed_in controller = <controller>
@@ -1334,74 +1334,74 @@ script create_player_slots_ui
 endscript
 
 script destroy_player_slots_ui 
-	onlinelobbyinterface :gettags
-	if screenelementexists id = <player_slots_menu_id>
-		destroyscreenelement id = <player_slots_menu_id> preserve_parent
+	OnlineLobbyInterface :GetTags
+	if ScreenElementExists id = <player_slots_menu_id>
+		DestroyScreenElement id = <player_slots_menu_id> preserve_parent
 	endif
-	onlinelobbyinterface :settags \{slot_items = 0}
+	OnlineLobbyInterface :SetTags \{slot_items = 0}
 endscript
 
 script refresh_player_slots_ui 
-	printscriptinfo \{qs(0x73ccf700)}
-	if screenelementexists \{id = onlinelobbyinterface}
-		onlinelobbyinterface :gettags
+	printscriptinfo \{qs("---refresh_player_slots_ui")}
+	if ScreenElementExists \{id = OnlineLobbyInterface}
+		OnlineLobbyInterface :GetTags
 		begin
-		<player_slots_menu_id> :gettags
+		<player_slots_menu_id> :GetTags
 		if (<safe_to_refresh_player_slots> = 1)
 			break
 		endif
-		wait \{1
+		Wait \{1
 			frame}
 		repeat
-		<player_slots_menu_id> :settags safe_to_refresh_player_slots = 0
-		onlinelobbyinterface :gettags
-		launchevent type = unfocus target = <player_slots_menu_id>
+		<player_slots_menu_id> :SetTags safe_to_refresh_player_slots = 0
+		OnlineLobbyInterface :GetTags
+		LaunchEvent type = unfocus target = <player_slots_menu_id>
 		if (<slots_index> != -1)
 			target_slots_index = <slots_index>
 		endif
 		destroy_player_slots_ui
 		create_player_slots_ui
 		update_signed_in_controllers
-		if gotparam \{target_slots_index}
-			onlinelobbyinterface :gettags
+		if GotParam \{target_slots_index}
+			OnlineLobbyInterface :GetTags
 			if (<slot_items> = 0)
-				onlinelobbyinterface :settags \{menu_index = 0}
-				launchevent \{type = focus
+				OnlineLobbyInterface :SetTags \{menu_index = 0}
+				LaunchEvent \{type = focus
 					target = current_menu
 					data = {
 						child_index = 0
 					}}
 			else
 				if ((<target_slots_index> + 1) > <slot_items>)
-					onlinelobbyinterface :settags \{slots_index = 0}
-					launchevent type = focus target = <player_slots_menu_id> data = {child_index = 0}
+					OnlineLobbyInterface :SetTags \{slots_index = 0}
+					LaunchEvent type = focus target = <player_slots_menu_id> data = {child_index = 0}
 				else
-					onlinelobbyinterface :settags slots_index = <target_slots_index>
-					launchevent type = focus target = <player_slots_menu_id> data = {child_index = <target_slots_index>}
+					OnlineLobbyInterface :SetTags slots_index = <target_slots_index>
+					LaunchEvent type = focus target = <player_slots_menu_id> data = {child_index = <target_slots_index>}
 				endif
 			endif
 		endif
-		<player_slots_menu_id> :settags safe_to_refresh_player_slots = 1
+		<player_slots_menu_id> :SetTags safe_to_refresh_player_slots = 1
 	endif
 endscript
 
 script player_slot_change_focus 
-	obj_getid
-	<objid> :gettags
-	resolvescreenelementid id = [
-		{id = <objid>}
+	Obj_GetID
+	<ObjID> :GetTags
+	ResolveScreenElementId id = [
+		{id = <ObjID>}
 		{local_id = online_player_slots_item}
 		{local_id = player_slot_name}
 	]
-	if gotparam \{focus}
-		if gotparam \{msg_checksum}
+	if GotParam \{focus}
+		if GotParam \{msg_checksum}
 			set_net_dialog_message msg_checksum = <msg_checksum>
 		endif
-		if gotparam \{view_gamer_card}
+		if GotParam \{view_gamer_card}
 			online_lobby_setup_helper_controls menu_type = right_hand gamer_card = <view_gamer_card>
 		endif
 		retail_menu_focus id = <resolved_id>
-	elseif gotparam \{unfocus}
+	elseif GotParam \{unfocus}
 		retail_menu_unfocus id = <resolved_id>
 	endif
 endscript
@@ -1410,69 +1410,69 @@ script add_player_slot_to_menu
 	keep_sign_in_button = 0
 	cash_icon_alpha = 0
 	cash_icon_id = cash_milestone_icon_002
-	cash_text = qs(0x00000000)
+	cash_text = qs("")
 	if (4 < <index>)
-		if isps3
+		if IsPs3
 			destroy_ps3_chat_warning_message
 		endif
 	endif
 	if (<player_type> = not_signed_in)
-		name = qs(0x09aff446)
+		name = qs("TO SIGN IN")
 		get_controller_type controller_index = <controller>
-		formattext checksumname = controller_texture 'Logo_%d_GrayScale' d = ($controller_lookup_table.<controller_type>)
+		FormatText checksumname = controller_texture 'Logo_%d_GrayScale' d = ($Controller_Lookup_Table.<controller_type>)
 		<keep_sign_in_button> = 1
-		<cash_text> = qs(0x00000000)
+		<cash_text> = qs("")
 	elseif (<player_type> = local || <player_type> = remote)
-		formattext checksumname = gamertag 'gamertag_%d' d = <index>
-		formattext checksumname = player_status 'player%d_status' d = (<index> + 1)
+		FormatText checksumname = gamertag 'gamertag_%d' d = <index>
+		FormatText checksumname = player_status 'player%d_status' d = (<index> + 1)
 		xuid = [0 0]
-		setarrayelement arrayname = xuid index = 0 newvalue = ($<player_status>.net_id_first)
-		setarrayelement arrayname = xuid index = 1 newvalue = ($<player_status>.net_id_second)
+		SetArrayElement ArrayName = xuid index = 0 newvalue = ($<player_status>.net_id_first)
+		SetArrayElement ArrayName = xuid index = 1 newvalue = ($<player_status>.net_id_second)
 		sign_in_button_alpha = 0
 		if (<player_type> = remote)
 			name = $<gamertag>
-			formattext checksumname = controller_texture 'Logo_%d_GrayScale' d = ($controller_lookup_table.($<player_status>.part))
+			FormatText checksumname = controller_texture 'Logo_%d_GrayScale' d = ($Controller_Lookup_Table.($<player_status>.part))
 			cash_get_info_from_earnings earnings = (($<player_status>.career_earnings))
-			formattext textname = cash_text qs(0x76b3fda7) d = <rank>
+			FormatText TextName = cash_text qs("\L%d") d = <rank>
 			<cash_icon_alpha> = 1
 		else
 			controller = ($<player_status>.controller)
-			if NOT netsessionfunc func = iscontrolleringame params = {controller = <controller>}
-				name = qs(0x12f727b9)
+			if NOT NetSessionFunc func = IsControllerInGame params = {controller = <controller>}
+				name = qs("TO JOIN GAME")
 				<keep_sign_in_button> = 1
 			else
-				netsessionfunc func = get_gamertag params = {controller = ($<player_status>.controller)}
+				NetSessionFunc func = get_gamertag params = {controller = ($<player_status>.controller)}
 				change globalname = <gamertag> newvalue = <name>
 				cash_ranks_get_icon_id player = (<index> + 1)
 				cash_ranks_get_rank player = (<index> + 1)
-				formattext textname = cash_text qs(0x76b3fda7) d = <rank>
+				FormatText TextName = cash_text qs("\L%d") d = <rank>
 				<cash_icon_alpha> = 1
 				<keep_sign_in_button> = 0
 			endif
 			if ($net_starting_matchmaking = 0)
 				get_controller_type controller_index = ($<player_status>.controller)
-				formattext checksumname = controller_texture 'Logo_%d_GrayScale' d = ($controller_lookup_table.<controller_type>)
+				FormatText checksumname = controller_texture 'Logo_%d_GrayScale' d = ($Controller_Lookup_Table.<controller_type>)
 				if (<controller_type> = guitar || <controller_type> = controller)
-					formattext checksumname = controller_texture 'Logo_%d_GrayScale' d = ($controller_lookup_table.($<player_status>.part))
+					FormatText checksumname = controller_texture 'Logo_%d_GrayScale' d = ($Controller_Lookup_Table.($<player_status>.part))
 				endif
 			else
-				formattext checksumname = controller_texture 'Logo_%d_GrayScale' d = ($controller_lookup_table.($<player_status>.part))
+				FormatText checksumname = controller_texture 'Logo_%d_GrayScale' d = ($Controller_Lookup_Table.($<player_status>.part))
 			endif
 		endif
 	endif
 	<view_gamer_card> = 0
-	if isxenon
-		if gotparam \{xuid}
+	if isXenon
+		if GotParam \{xuid}
 			if (<keep_sign_in_button> = 0)
 				<view_gamer_card> = 1
 			endif
 		endif
 	endif
-	onlinelobbyinterface :gettags
-	if ((iswinport) && (<controller> = 0))
-		0xeb08ac72 \{actionnum = 0}
-		createscreenelement {
-			type = descinterface
+	OnlineLobbyInterface :GetTags
+	if ((IsWinPort) && (<controller> = 0))
+		winport_get_keyboard_text \{actionNum = 0}
+		CreateScreenElement {
+			type = DescInterface
 			desc = 'online_lobby_player_slot_item'
 			parent = <player_slots_menu_id>
 			auto_dims = false
@@ -1481,16 +1481,16 @@ script add_player_slot_to_menu
 				{focus player_slot_change_focus params = {focus view_gamer_card = <view_gamer_card>}}
 				{unfocus player_slot_change_focus params = {unfocus}}
 			]
-			0x9b72cbff = qs(0x0433a81f)
-			0x5264a5ce = <0x5d165c12>
-			0xb97b0adb = <0xb609f307>
-			0xd2ea270d = <0x5765a514>
-			0x8f7fe9b0 = <0xc89b71a9>
-			0x66736119 = ((12.5, 44.0) + <0x3a15b5b9>)
+			sign_in_button_text = qs("\L\bp")
+			sign_in_button_keyboardtext = <keyText>
+			sign_in_button_keyboardfont = <keyFont>
+			sign_in_button_keyboardfontspacing = <keyFontSpacing>
+			sign_in_button_keyboardinternalscale = <keyScale>
+			sign_in_button_keyboardpos = ((12.5, 44.0) + <keyPosOffset>)
 		}
 	else
-		createscreenelement {
-			type = descinterface
+		CreateScreenElement {
+			type = DescInterface
 			desc = 'online_lobby_player_slot_item'
 			parent = <player_slots_menu_id>
 			auto_dims = false
@@ -1501,8 +1501,8 @@ script add_player_slot_to_menu
 			]
 		}
 	endif
-	<id> :desc_checkversion desired = 2 assertif = mismatch
-	<id> :se_setprops {
+	<id> :Desc_CheckVersion desired = 2 AssertIf = Mismatch
+	<id> :SE_SetProps {
 		player_slot_name_text = <name>
 		player_instrument_logo_texture = <controller_texture>
 		player_slot_bg_rgba = ($online_player_slot_bg_gray)
@@ -1510,55 +1510,55 @@ script add_player_slot_to_menu
 		cash_rank_text = <cash_text>
 		cash_icon_alpha = <cash_icon_alpha>
 	}
-	if gotparam \{controller}
+	if GotParam \{controller}
 		if ((<controller> >= 0) || (<controller> < 4))
-			if <id> :desc_resolvealias name = alias_sign_in_button param = signin_id
-				<signin_id> :setprops {
-					metaremapenableauto = false
-					metaremapdevicetouse = <controller>
+			if <id> :Desc_ResolveAlias name = alias_sign_in_button param = signin_id
+				<signin_id> :SetProps {
+					metaRemapEnableAuto = false
+					metaRemapDeviceToUse = <controller>
 				}
 			endif
 		endif
 	endif
 	if (<keep_sign_in_button> = 0)
-		if <id> :desc_resolvealias name = alias_sign_in_button param = signin_id
-			<signin_id> :die
+		if <id> :Desc_ResolveAlias name = alias_sign_in_button param = signin_id
+			<signin_id> :Die
 		endif
-		if isxenon
-			formattext checksumname = player_status 'player%d_status' d = (<index> + 1)
+		if isXenon
+			FormatText checksumname = player_status 'player%d_status' d = (<index> + 1)
 			if (<player_type> = remote)
-				<id> :obj_spawnscriptlater update_headset_status params = {obj_id = <id> uid = <xuid>}
-			elseif NOT netsessionfunc func = xenonisguest params = {controller_index = ($<player_status>.controller)}
-				<id> :obj_spawnscriptlater update_headset_status params = {obj_id = <id> uid = <xuid>}
+				<id> :Obj_SpawnScriptLater update_headset_status params = {obj_id = <id> uid = <xuid>}
+			elseif NOT NetSessionFunc func = XenonIsGuest params = {controller_index = ($<player_status>.controller)}
+				<id> :Obj_SpawnScriptLater update_headset_status params = {obj_id = <id> uid = <xuid>}
 			endif
 		endif
 	endif
-	if isxenon
-		if gotparam \{xuid}
+	if isXenon
+		if GotParam \{xuid}
 			if (<keep_sign_in_button> = 0)
-				<id> :se_setprops event_handlers = [{pad_choose ui_menu_select_sfx}
+				<id> :SE_SetProps event_handlers = [{pad_choose ui_menu_select_sfx}
 					{pad_choose menu_show_gamercard_from_netid params = {net_id = <xuid>}}
 				]
 			else
-				<id> :se_setprops event_handlers = [{pad_choose menu_scroll_end_sound}]
+				<id> :SE_SetProps event_handlers = [{pad_choose menu_scroll_end_sound}]
 			endif
 		else
-			<id> :se_setprops event_handlers = [{pad_choose menu_scroll_end_sound}]
+			<id> :SE_SetProps event_handlers = [{pad_choose menu_scroll_end_sound}]
 		endif
 		if (<player_type> = not_signed_in)
-			<id> :settags msg_checksum = sign_in
+			<id> :SetTags msg_checksum = sign_in
 		elseif (<player_type> = remote)
-			<id> :settags msg_checksum = gamer_card
-		elseif netsessionfunc func = iscontrolleringame params = {controller = <controller>}
-			<id> :settags msg_checksum = gamer_card
+			<id> :SetTags msg_checksum = gamer_card
+		elseif NetSessionFunc func = IsControllerInGame params = {controller = <controller>}
+			<id> :SetTags msg_checksum = gamer_card
 		else
-			<id> :settags msg_checksum = blank
+			<id> :SetTags msg_checksum = Blank
 		endif
 	else
-		<id> :se_setprops event_handlers = [{pad_choose menu_scroll_end_sound}]
+		<id> :SE_SetProps event_handlers = [{pad_choose menu_scroll_end_sound}]
 	endif
-	onlinelobbyinterface :gettags
-	onlinelobbyinterface :settags slot_items = (<slot_items> + 1)
+	OnlineLobbyInterface :GetTags
+	OnlineLobbyInterface :SetTags slot_items = (<slot_items> + 1)
 endscript
 
 script update_headset_status 
@@ -1568,11 +1568,11 @@ script update_headset_status
 	begin
 	<has_headset> = 0
 	<is_talking> = 0
-	if (netsessionfunc obj = voice func = hasheadset params = {player_xuid = <uid>})
+	if (NetSessionFunc obj = voice func = hasheadset params = {player_xuid = <uid>})
 		<has_headset> = 1
 	endif
 	if (<has_headset> = 1)
-		if (netsessionfunc obj = voice func = istalking params = {player_xuid = <uid>})
+		if (NetSessionFunc obj = voice func = IsTalking params = {player_xuid = <uid>})
 			<is_talking> = 1
 		endif
 		if (<is_talking> = 1)
@@ -1583,10 +1583,10 @@ script update_headset_status
 	else
 		headset_icon_alpha = 0
 	endif
-	if screenelementexists id = <obj_id>
-		<obj_id> :se_setprops headset_icon_alpha = <headset_icon_alpha>
+	if ScreenElementExists id = <obj_id>
+		<obj_id> :SE_SetProps headset_icon_alpha = <headset_icon_alpha>
 	endif
-	wait \{1.0
+	Wait \{1.0
 		second}
 	repeat
 endscript
@@ -1601,33 +1601,33 @@ script update_player_slots_ui
 		refresh_player_slots_ui
 		change \{need_to_refresh_player_slots = 0}
 	endif
-	wait \{1
+	Wait \{1
 		second}
 	repeat
 endscript
 
 script get_active_local_controllers 
-	getactivecontrollers
-	getarraysize <active_controllers>
+	GetActiveControllers
+	GetArraySize <active_controllers>
 	controller_index = 0
 	begin
 	if (<active_controllers> [<controller_index>] = 1)
 		check_for_local_controller_change controller_index = <controller_index> state = active
 		if (<change>)
-			add_remove_player_to_net_ui action = add index = <controller_index> player_type = local_not_signed_in
+			add_remove_player_to_net_ui action = Add index = <controller_index> player_type = local_not_signed_in
 		endif
 	endif
 	if (<active_controllers> [<controller_index>] = 0)
 		check_for_local_controller_change controller_index = <controller_index> state = inactive
 		if (<change>)
-			if isxenon
-				if NOT checkforsignin controller_index = <controller_index>
+			if isXenon
+				if NOT CheckForSignIn controller_index = <controller_index>
 					get_controller_corresponding_ui_slot controller = <controller_index>
 					add_remove_player_to_net_ui action = remove ui_slot = <ui_slot> index = <controller_index> player_type = local_not_signed_in
 				endif
 			else
 				if (<controller_index> != $primary_controller)
-					netsessionfunc func = removecontroller params = {controller = <controller_index>}
+					NetSessionFunc func = RemoveController params = {controller = <controller_index>}
 					get_controller_corresponding_ui_slot controller = <controller_index>
 					add_remove_player_to_net_ui action = remove ui_slot = <ui_slot> index = <controller_index> player_type = local_not_signed_in
 				endif
@@ -1639,32 +1639,32 @@ script get_active_local_controllers
 endscript
 
 script get_signin_status_local_controllers 
-	if onlinelobbyinterface :desc_resolvealias \{name = alias_player_slots_vmenu}
-		<resolved_id> :gettags
-		getarraysize <local_controllers>
+	if OnlineLobbyInterface :Desc_ResolveAlias \{name = alias_player_slots_vmenu}
+		<resolved_id> :GetTags
+		GetArraySize <local_controllers>
 		controller_index = 0
 		begin
 		if NOT (<local_controllers> [<controller_index>] = unplugged)
-			if checkforsignin controller_index = <controller_index>
+			if CheckForSignIn controller_index = <controller_index>
 				check_for_signin_signin_change controller_index = <controller_index> state = signed_in
 				if (<change>)
-					if netsessionfunc \{obj = party
+					if NetSessionFunc \{obj = party
 							func = is_host}
 						if NOT party_is_full controller = <controller_index>
 							add_remove_player_to_net_ui action = replace index = <controller_index> player_type = local_signed_in
 						else
-							printf \{qs(0x027c88b5)}
+							printf \{qs("\L!!!!!!!!!!!!!!!!!!REALLY BAD THINGS WE SHOULDN'T BE HERE!!!!!!!!!!!!!!!!")}
 						endif
-					elseif netsessionfunc func = iscontrolleringame params = {controller = <controller_index>}
+					elseif NetSessionFunc func = IsControllerInGame params = {controller = <controller_index>}
 						add_remove_player_to_net_ui action = replace index = <controller_index> player_type = local_signed_in
 					endif
 				endif
 			else
 				check_for_signin_signin_change controller_index = <controller_index> state = signed_out
 				if (<change>)
-					if netsessionfunc \{obj = party
+					if NetSessionFunc \{obj = party
 							func = is_host}
-						netsessionfunc func = removecontroller params = {controller = <controller_index>}
+						NetSessionFunc func = RemoveController params = {controller = <controller_index>}
 						add_remove_player_to_net_ui action = replace index = <controller_index> player_type = local_not_signed_in
 					endif
 				endif
@@ -1678,10 +1678,10 @@ endscript
 script is_net_player_in_struct 
 	info_index = 1
 	begin
-	getplayerinfo <info_index> net_id_first
-	getplayerinfo <info_index> net_id_second
-	getplayerinfo <info_index> controller
-	if iswinport
+	GetPlayerInfo <info_index> net_id_first
+	GetPlayerInfo <info_index> net_id_second
+	GetPlayerInfo <info_index> controller
+	if IsWinPort
 		if ((<net_id_second> = <user_id_first>) && (<net_id_first> = <user_id_second>))
 			if (<controller> = <controller_index>)
 				return player_in_struct = 1 info_index = <info_index>
@@ -1700,8 +1700,8 @@ script is_net_player_in_struct
 endscript
 
 script restore_save_net_preferences 
-	printf \{qs(0xf0dd7111)}
-	requireparams \{[
+	printf \{qs("\L--- restore_save_net_preferences")}
+	RequireParams \{[
 			controller_index
 		]
 		all}
@@ -1709,33 +1709,33 @@ script restore_save_net_preferences
 	found = 0
 	index = 1
 	begin
-	getplayerinfo <index> is_local_client
+	GetPlayerInfo <index> is_local_client
 	if (<is_local_client> = 1)
-		getplayerinfo <index> controller
+		GetPlayerInfo <index> controller
 		if (<controller_index> = <controller>)
 			load_settings = 0
-			if isxenon
+			if isXenon
 				<load_settings> = 1
 			elseif (<controller_index> = $primary_controller)
 				<load_settings> = 1
 			endif
 			if (<load_settings> = 1)
-				getglobaltags savegame = <savegame> user_options param = lefty_flip_save
-				getglobaltags savegame = <savegame> user_options param = vocals_highway_view_save
-				setplayerinfo <index> vocals_highway_view = <vocals_highway_view_save>
-				setplayerinfo <index> lefty_flip = <lefty_flip_save>
-				setplayerinfo <index> lefthanded_gems = <lefty_flip_save>
-				setplayerinfo <index> lefthanded_button_ups = <lefty_flip_save>
-				setplayerinfo <index> lefthanded_button_ups_flip_save = <lefty_flip_save>
-				setplayerinfo <index> lefthanded_gems_flip_save = <lefty_flip_save>
-				setplayerinfo <index> difficulty = ($default_difficulty [<controller_index>])
+				GetGlobalTags savegame = <savegame> user_options param = lefty_flip_save
+				GetGlobalTags savegame = <savegame> user_options param = vocals_highway_view_save
+				SetPlayerInfo <index> vocals_highway_view = <vocals_highway_view_save>
+				SetPlayerInfo <index> lefty_flip = <lefty_flip_save>
+				SetPlayerInfo <index> lefthanded_gems = <lefty_flip_save>
+				SetPlayerInfo <index> lefthanded_button_ups = <lefty_flip_save>
+				SetPlayerInfo <index> lefthanded_button_ups_flip_save = <lefty_flip_save>
+				SetPlayerInfo <index> lefthanded_gems_flip_save = <lefty_flip_save>
+				SetPlayerInfo <index> difficulty = ($default_difficulty [<controller_index>])
 			endif
 			get_controller_part controller = <controller_index>
 			get_last_band_character_recorded player = <index> part = <controller_part> no_band_leader_grab
 			if (<character_id> = none)
 				cas_get_random_preset_character savegame = <savegame> part = <controller_part>
 			endif
-			setplayerinfo <index> character_id = <character_id>
+			SetPlayerInfo <index> character_id = <character_id>
 		endif
 	endif
 	index = (<index> + 1)
@@ -1743,9 +1743,9 @@ script restore_save_net_preferences
 endscript
 
 script poll_party_object 
-	netsessionfunc \{obj = party
+	NetSessionFunc \{obj = party
 		func = get_party_members}
-	getarraysize <connections>
+	GetArraySize <connections>
 	<connections_size> = <array_size>
 	if (<connections_size> > 0)
 		<index> = 0
@@ -1758,19 +1758,19 @@ script poll_party_object
 			}
 			if (<player_in_struct> = 0)
 				change \{respond_to_signin_changed_all_players = 1}
-				netsessionfunc \{obj = party
+				NetSessionFunc \{obj = party
 					func = get_shared_data}
-				formattext checksumname = player_data 'player_%d' d = ((<connections> [<index>]).party_id)
-				if structurecontains structure = <party_shared_data> <player_data>
+				FormatText checksumname = player_data 'player_%d' d = ((<connections> [<index>]).party_id)
+				if StructureContains Structure = <party_shared_data> <player_data>
 					part = ((<party_shared_data>.<player_data>).player_part)
 					earnings = ((<party_shared_data>.<player_data>).player_career_earnings)
 				else
 					switch ((<connections> [<index>]).instrument)
-						case eguitar
+						case eGUITAR
 						part = guitar
-						case emicrophone
-						part = vocals
-						case edrums
+						case eMICROPHONE
+						part = Vocals
+						case eDRUMS
 						part = drum
 						default
 						part = guitar
@@ -1778,11 +1778,11 @@ script poll_party_object
 					earnings = 0
 				endif
 				if ui_slots_are_full
-					printf \{qs(0x28f1e81b)}
+					printf \{qs("\LMust remove a ui slot")}
 					remove_locals_not_ingame \{one_player}
 				endif
 				add_remove_player_to_net_ui {
-					action = add
+					action = Add
 					index = ((<connections> [<index>]).controller_index)
 					player_type = remote
 					name = ((<connections> [<index>]).gamertag)
@@ -1795,18 +1795,18 @@ script poll_party_object
 					obj_id = -1
 				}
 			else
-				netsessionfunc \{obj = party
+				NetSessionFunc \{obj = party
 					func = get_shared_data}
-				formattext checksumname = player_data 'player_%d' d = ((<connections> [<index>]).party_id)
-				if structurecontains structure = <party_shared_data> <player_data>
-					getplayerinfo <info_index> part
-					getplayerinfo <info_index> career_earnings
+				FormatText checksumname = player_data 'player_%d' d = ((<connections> [<index>]).party_id)
+				if StructureContains Structure = <party_shared_data> <player_data>
+					GetPlayerInfo <info_index> part
+					GetPlayerInfo <info_index> career_earnings
 					if NOT (((<party_shared_data>.<player_data>).player_part = <part>))
-						setplayerinfo <info_index> part = ((<party_shared_data>.<player_data>).player_part)
-						setplayerinfo <info_index> career_earnings = ((<party_shared_data>.<player_data>).player_career_earnings)
+						SetPlayerInfo <info_index> part = ((<party_shared_data>.<player_data>).player_part)
+						SetPlayerInfo <info_index> career_earnings = ((<party_shared_data>.<player_data>).player_career_earnings)
 						change \{need_to_refresh_player_slots = 1}
 					elseif NOT (((<party_shared_data>.<player_data>).player_career_earnings = <career_earnings>))
-						setplayerinfo <info_index> career_earnings = ((<party_shared_data>.<player_data>).player_career_earnings)
+						SetPlayerInfo <info_index> career_earnings = ((<party_shared_data>.<player_data>).player_career_earnings)
 						change \{need_to_refresh_player_slots = 1}
 					endif
 				endif
@@ -1818,58 +1818,58 @@ script poll_party_object
 				controller_index = ((<connections> [<index>]).controller_index)
 			}
 			if (<player_in_struct> = 1)
-				getplayerinfo <info_index> controller
-				if netsessionfunc func = iscontrolleringame params = {controller = <controller>}
-					netsessionfunc \{obj = party
+				GetPlayerInfo <info_index> controller
+				if NetSessionFunc func = IsControllerInGame params = {controller = <controller>}
+					NetSessionFunc \{obj = party
 						func = get_shared_data}
-					formattext checksumname = player_data 'player_%d' d = ((<connections> [<index>]).party_id)
-					setplayerinfo <info_index> party_id = ((<connections> [<index>]).party_id)
-					if structurecontains structure = <party_shared_data> <player_data>
-						getplayerinfo <info_index> part
+					FormatText checksumname = player_data 'player_%d' d = ((<connections> [<index>]).party_id)
+					SetPlayerInfo <info_index> party_id = ((<connections> [<index>]).party_id)
+					if StructureContains Structure = <party_shared_data> <player_data>
+						GetPlayerInfo <info_index> part
 						get_controller_type controller_index = ((<connections> [<index>]).controller_index)
-						if iswinport
+						if IsWinPort
 							if (<controller_type> = controller)
 							elseif (<controller_type> != <part>)
 								printf \{qs(0x0ab2d112)}
-								if NOT (<controller_type> = guitar && <part> = bass)
+								if NOT (<controller_type> = guitar && <part> = Bass)
 									printf \{qs(0xda922b78)}
 									<part> = <controller_type>
-									setplayerinfo <info_index> part = <part>
+									SetPlayerInfo <info_index> part = <part>
 									change \{need_to_refresh_player_slots = 1}
 								endif
 							endif
-							if 0x1c708d82 controller = <controller>
+							if WinPortIsKeyboardController controller = <controller>
 								switch <part>
 									case guitar
-									case bass
-									change \{0xf9695deb = 1}
+									case Bass
+									change \{winport_keyboard_instrument = 1}
 									case drum
-									change \{0xf9695deb = 3}
-									case vocals
-									change \{0xf9695deb = 4}
+									change \{winport_keyboard_instrument = 3}
+									case Vocals
+									change \{winport_keyboard_instrument = 4}
 								endswitch
 							endif
 						else
 							if (<controller_type> = controller)
-								<controller_type> = vocals
+								<controller_type> = Vocals
 							endif
 							if (<controller_type> != <part>)
-								if NOT (<controller_type> = guitar && <part> = bass)
+								if NOT (<controller_type> = guitar && <part> = Bass)
 									<part> = <controller_type>
-									setplayerinfo <info_index> part = <part>
+									SetPlayerInfo <info_index> part = <part>
 									change \{need_to_refresh_player_slots = 1}
 								endif
 							endif
 						endif
 						if NOT (((<party_shared_data>.<player_data>).player_part = <part>))
-							printf \{qs(0x387789dc)}
+							printf \{qs("\Lsomething is different update the party info")}
 							get_savegame_from_controller controller = <controller>
 							get_current_band_info
-							getglobaltags <band_info> savegame = <savegame> param = career_earnings
-							formattext checksumname = player_info 'player_%d' d = ((<connections> [<index>]).party_id)
-							formattext checksumname = player_status 'player%d_status' d = <info_index>
+							GetGlobalTags <band_info> savegame = <savegame> param = career_earnings
+							FormatText checksumname = player_info 'player_%d' d = ((<connections> [<index>]).party_id)
+							FormatText checksumname = player_status 'player%d_status' d = <info_index>
 							party_info = {}
-							appendstruct {
+							AppendStruct {
 								struct = party_info
 								field = <player_info>
 								params = {
@@ -1877,16 +1877,16 @@ script poll_party_object
 									player_career_earnings = <career_earnings>
 								}
 							}
-							netsessionfunc obj = party func = append_shared_data params = {data = <party_info>}
+							NetSessionFunc obj = party func = append_shared_data params = {data = <party_info>}
 						endif
 					else
 						get_savegame_from_controller controller = <controller>
 						get_current_band_info
-						getglobaltags <band_info> savegame = <savegame> param = career_earnings
-						formattext checksumname = player_info 'player_%d' d = ((<connections> [<index>]).party_id)
-						formattext checksumname = player_status 'player%d_status' d = <info_index>
+						GetGlobalTags <band_info> savegame = <savegame> param = career_earnings
+						FormatText checksumname = player_info 'player_%d' d = ((<connections> [<index>]).party_id)
+						FormatText checksumname = player_status 'player%d_status' d = <info_index>
 						party_info = {}
-						appendstruct {
+						AppendStruct {
 							struct = party_info
 							field = <player_info>
 							params = {
@@ -1894,7 +1894,7 @@ script poll_party_object
 								player_career_earnings = <career_earnings>
 							}
 						}
-						netsessionfunc obj = party func = append_shared_data params = {data = <party_info>}
+						NetSessionFunc obj = party func = append_shared_data params = {data = <party_info>}
 					endif
 				endif
 			endif
@@ -1902,10 +1902,10 @@ script poll_party_object
 		<index> = (<index> + 1)
 		repeat <connections_size>
 	endif
-	onlinelobbyinterface :gettags
-	if screenelementexists id = <player_slots_menu_id>
-		<player_slots_menu_id> :gettags
-		getarraysize \{all_players_checksum}
+	OnlineLobbyInterface :GetTags
+	if ScreenElementExists id = <player_slots_menu_id>
+		<player_slots_menu_id> :GetTags
+		GetArraySize \{all_players_checksum}
 		i = 0
 		begin
 		if (<all_players_checksum> [<i>] = remote)
@@ -1914,13 +1914,13 @@ script poll_party_object
 				<found> = 0
 				begin
 				if ((<connections> [<index>]).is_local = 0)
-					getplayerinfo (<i> + 1) net_id_first
-					getplayerinfo (<i> + 1) net_id_second
+					GetPlayerInfo (<i> + 1) net_id_first
+					GetPlayerInfo (<i> + 1) net_id_second
 					if ((((<connections> [<index>]).user_id [0]) = <net_id_first>) &&
 							(((<connections> [<index>]).user_id [1]) = <net_id_second>))
-						if ((isps3) || (iswinport))
-							formattext checksumname = gamertag 'gamertag_%d' d = <i>
-							if localizedstringequals a = ((<connections> [<index>]).gamertag) b = ($<gamertag>)
+						if ((IsPs3) || (IsWinPort))
+							FormatText checksumname = gamertag 'gamertag_%d' d = <i>
+							if LocalizedStringEquals a = ((<connections> [<index>]).gamertag) b = ($<gamertag>)
 								<found> = 1
 								break
 							endif
@@ -1945,16 +1945,16 @@ script poll_party_object
 		i = (<i> + 1)
 		repeat <array_size>
 	endif
-	if NOT netsessionfunc \{obj = party
+	if NOT NetSessionFunc \{obj = party
 			func = is_host}
-		netsessionfunc \{obj = party
+		NetSessionFunc \{obj = party
 			func = get_shared_data}
-		if structurecontains structure = <party_shared_data> game_mode
-			netoptions :pref_choose name = game_modes index = (<party_shared_data>.game_mode)
-			netoptions :pref_get \{name = game_modes}
-			formattext textname = game_mode_text qs(0xed77b849) d = <display_string>
-			if screenelementexists \{id = onlinelobbyinterface}
-				onlinelobbyinterface :se_setprops {
+		if StructureContains Structure = <party_shared_data> game_mode
+			NetOptions :Pref_Choose name = game_modes index = (<party_shared_data>.game_mode)
+			NetOptions :Pref_Get \{name = game_modes}
+			FormatText TextName = game_mode_text qs("MODE: %d") d = <display_string>
+			if ScreenElementExists \{id = OnlineLobbyInterface}
+				OnlineLobbyInterface :SE_SetProps {
 					matchmaking_game_mode_text = <game_mode_text>
 				}
 			endif
@@ -1964,9 +1964,9 @@ endscript
 
 script change_handle_signin_if_no_remotes 
 	has_remote = 0
-	netsessionfunc \{obj = party
+	NetSessionFunc \{obj = party
 		func = get_party_members}
-	getarraysize <connections>
+	GetArraySize <connections>
 	if (<array_size> > 0)
 		i = 0
 		begin
@@ -1983,15 +1983,15 @@ script change_handle_signin_if_no_remotes
 endscript
 
 script check_for_local_controller_change \{controller_index = -1}
-	if onlinelobbyinterface :desc_resolvealias \{name = alias_player_slots_vmenu}
+	if OnlineLobbyInterface :Desc_ResolveAlias \{name = alias_player_slots_vmenu}
 		if (<controller_index> = -1)
-			printf \{qs(0x32764d51)}
+			printf \{qs("\Ldidn't recieve a controller index")}
 			return
 		endif
-		<resolved_id> :gettags
+		<resolved_id> :GetTags
 		if (<state> = active)
 			if (<local_controllers> [<controller_index>] = unplugged)
-				if netsessionfunc \{obj = party
+				if NetSessionFunc \{obj = party
 						func = is_host}
 					if NOT party_is_full controller = <controller_index>
 						if NOT (ui_slots_are_full)
@@ -2002,7 +2002,7 @@ script check_for_local_controller_change \{controller_index = -1}
 					else
 						return \{change = 0}
 					endif
-				elseif netsessionfunc func = iscontrolleringame params = {controller = <controller_index>}
+				elseif NetSessionFunc func = IsControllerInGame params = {controller = <controller_index>}
 					return \{change = 1}
 				else
 					return \{change = 0}
@@ -2021,12 +2021,12 @@ script check_for_local_controller_change \{controller_index = -1}
 endscript
 
 script check_for_signin_signin_change \{controller_index = -1}
-	if onlinelobbyinterface :desc_resolvealias \{name = alias_player_slots_vmenu}
+	if OnlineLobbyInterface :Desc_ResolveAlias \{name = alias_player_slots_vmenu}
 		if (<controller_index> = -1)
-			printf \{qs(0x32764d51)}
+			printf \{qs("\Ldidn't recieve a controller index")}
 			return
 		endif
-		<resolved_id> :gettags
+		<resolved_id> :GetTags
 		get_controller_corresponding_ui_slot controller = <controller_index>
 		if (<state> = signed_in)
 			if (<all_players_checksum> [<ui_slot>] = local_not_signed_in)
@@ -2045,14 +2045,14 @@ script check_for_signin_signin_change \{controller_index = -1}
 endscript
 
 script add_remove_player_to_net_ui 
-	if NOT screenelementexists \{id = onlinelobbyinterface}
+	if NOT ScreenElementExists \{id = OnlineLobbyInterface}
 		return
 	endif
-	onlinelobbyinterface :gettags
-	if screenelementexists id = <player_slots_menu_id>
-		<player_slots_menu_id> :gettags
-		if (<action> = add)
-			printf qs(0xd4bafb84) d = <player_type>
+	OnlineLobbyInterface :GetTags
+	if ScreenElementExists id = <player_slots_menu_id>
+		<player_slots_menu_id> :GetTags
+		if (<action> = Add)
+			printf qs("\LAdding player type - %d") d = <player_type>
 			if (<player_type> = local_signed_in || <player_type> = remote)
 				players_to_add = 1
 			else
@@ -2060,25 +2060,25 @@ script add_remove_player_to_net_ui
 			endif
 			get_next_available_slot slot_type = <player_type>
 			if (<available_slot> = -1)
-				printf \{qs(0x2f5d1c34)}
+				printf \{qs("\LWe are out of SLOTS can't add this player")}
 				return
 			endif
-			<player_slots_menu_id> :gettags
-			if iswinport
+			<player_slots_menu_id> :GetTags
+			if IsWinPort
 			endif
 			if (<player_type> = local_not_signed_in || <player_type> = local_signed_in)
-				formattext checksumname = controller_status 'plugged_in_%d' d = <available_slot>
+				FormatText checksumname = controller_status 'plugged_in_%d' d = <available_slot>
 				if (-1 != <index>)
-					setarrayelement arrayname = local_controllers index = <index> newvalue = <controller_status>
+					SetArrayElement ArrayName = local_controllers index = <index> newvalue = <controller_status>
 				else
-					printf \{qs(0xd140ddc4)}
+					printf \{qs("\LWe have a index of -1!")}
 					printstruct <...>
-					printscriptinfo \{qs(0xee7a58ed)}
+					printscriptinfo \{qs("add_remove_player_to_net_ui")}
 					return
 				endif
 			endif
-			setarrayelement arrayname = all_players_checksum index = <available_slot> newvalue = <player_type>
-			<player_slots_menu_id> :settags {
+			SetArrayElement ArrayName = all_players_checksum index = <available_slot> newvalue = <player_type>
+			<player_slots_menu_id> :SetTags {
 				all_players_checksum = <all_players_checksum>
 				local_controllers = <local_controllers>
 				num_players_in_session = (<num_players_in_session> + <players_to_add>)
@@ -2087,8 +2087,8 @@ script add_remove_player_to_net_ui
 				add_player_to_player_status_structs <...>
 			endif
 		elseif (<action> = remove)
-			printf qs(0xc42a0a4d) d = <player_type>
-			if iswinport
+			printf qs("\LRemoving player type - %d") d = <player_type>
+			if IsWinPort
 			endif
 			if (<player_type> = local_signed_in || <player_type> = remote)
 				players_to_remove = 1
@@ -2097,34 +2097,34 @@ script add_remove_player_to_net_ui
 			endif
 			if (<player_type> = local_not_signed_in || <player_type> = local_signed_in)
 				if (-1 != <index>)
-					setarrayelement arrayname = local_controllers index = <index> newvalue = unplugged
-					setarrayelement arrayname = all_players_checksum index = <ui_slot> newvalue = empty
+					SetArrayElement ArrayName = local_controllers index = <index> newvalue = unplugged
+					SetArrayElement ArrayName = all_players_checksum index = <ui_slot> newvalue = empty
 				else
-					printf \{qs(0x07d124a8)}
+					printf \{qs("\L!!!! index = -1!!!!")}
 					printstruct <...>
 					return
 				endif
 			else
-				setarrayelement arrayname = all_players_checksum index = <ui_slot> newvalue = empty
+				SetArrayElement ArrayName = all_players_checksum index = <ui_slot> newvalue = empty
 			endif
-			<player_slots_menu_id> :settags {
+			<player_slots_menu_id> :SetTags {
 				all_players_checksum = <all_players_checksum>
 				local_controllers = <local_controllers>
 				num_players_in_session = (<num_players_in_session> - <players_to_remove>)
 			}
 			remove_player_from_player_status_structs index = <ui_slot>
 		elseif (<action> = replace)
-			printf qs(0xa1c6e951) d = <player_type>
-			if iswinport
+			printf qs("\LReplace player type - %d") d = <player_type>
+			if IsWinPort
 			endif
 			get_controller_corresponding_ui_slot controller = <index>
-			setarrayelement arrayname = local_controllers index = <index> newvalue = unplugged
-			setarrayelement arrayname = all_players_checksum index = <ui_slot> newvalue = empty
-			<player_slots_menu_id> :settags {
+			SetArrayElement ArrayName = local_controllers index = <index> newvalue = unplugged
+			SetArrayElement ArrayName = all_players_checksum index = <ui_slot> newvalue = empty
+			<player_slots_menu_id> :SetTags {
 				all_players_checksum = <all_players_checksum>
 				local_controllers = <local_controllers>
 			}
-			add_remove_player_to_net_ui action = add index = <index> player_type = <player_type>
+			add_remove_player_to_net_ui action = Add index = <index> player_type = <player_type>
 			return
 		endif
 		change \{need_to_refresh_player_slots = 1}
@@ -2132,33 +2132,33 @@ script add_remove_player_to_net_ui
 endscript
 
 script add_player_to_player_status_structs 
-	if iswinport
+	if IsWinPort
 		printf \{qs(0x10f6ee93)}
 		printstruct <...>
 	endif
-	formattext checksumname = player_status 'player%d_status' d = (<available_slot> + 1)
+	FormatText checksumname = player_status 'player%d_status' d = (<available_slot> + 1)
 	if (<player_type> = local_signed_in)
-		netsessionfunc obj = match func = get_gamertag params = {controller = <index>}
-		getnetid controller_index = <index>
+		NetSessionFunc obj = match func = get_gamertag params = {controller = <index>}
+		GetNetID controller_index = <index>
 		get_controller_type controller_index = <index>
 		change structurename = <player_status> controller = <index>
 		local_client = 1
 		obj_id = -1
 		get_savegame_from_controller controller = <index>
 		get_current_band_info
-		getglobaltags <band_info> savegame = <savegame> param = career_earnings
-		if NOT gotparam \{part}
+		GetGlobalTags <band_info> savegame = <savegame> param = career_earnings
+		if NOT GotParam \{part}
 			part = <controller_type>
 			if (<part> = controller)
 				printf \{qs(0xb4dec57f)}
-				<part> = vocals
+				<part> = Vocals
 			endif
 		endif
 	elseif (<player_type> = remote)
 		change structurename = <player_status> controller = <index>
 		local_client = 0
 	endif
-	formattext checksumname = gamertag 'gamertag_%d' d = <available_slot>
+	FormatText checksumname = gamertag 'gamertag_%d' d = <available_slot>
 	change globalname = <gamertag> newvalue = <name>
 	change structurename = <player_status> gamertag = <gamertag>
 	change structurename = <player_status> net_id_first = <net_id_first>
@@ -2166,16 +2166,16 @@ script add_player_to_player_status_structs
 	change structurename = <player_status> controller_type = <controller_type>
 	change structurename = <player_status> is_local_client = <local_client>
 	change structurename = <player_status> net_obj_id = <obj_id>
-	if gotparam \{part}
+	if GotParam \{part}
 		change structurename = <player_status> part = <part>
 	endif
-	if gotparam \{career_earnings}
+	if GotParam \{career_earnings}
 		change structurename = <player_status> career_earnings = <career_earnings>
 	endif
 endscript
 
 script remove_player_from_player_status_structs 
-	formattext checksumname = player_status 'player%d_status' d = (<index> + 1)
+	FormatText checksumname = player_status 'player%d_status' d = (<index> + 1)
 	change structurename = <player_status> net_id_first = 0
 	change structurename = <player_status> net_id_second = 0
 	change structurename = <player_status> is_local_client = 0
@@ -2185,11 +2185,11 @@ script remove_player_from_player_status_structs
 endscript
 
 script get_next_available_slot 
-	onlinelobbyinterface :gettags
-	<player_slots_menu_id> :gettags
+	OnlineLobbyInterface :GetTags
+	<player_slots_menu_id> :GetTags
 	slot = -1
 	if (<slot_type> = local_not_signed_in)
-		getarraysize \{all_players_checksum}
+		GetArraySize \{all_players_checksum}
 		i = 0
 		begin
 		if (<all_players_checksum> [<i>] = empty)
@@ -2199,7 +2199,7 @@ script get_next_available_slot
 		i = (<i> + 1)
 		repeat <array_size>
 	elseif (<slot_type> = remote)
-		getarraysize \{all_players_checksum}
+		GetArraySize \{all_players_checksum}
 		i = 0
 		begin
 		if (<all_players_checksum> [<i>] = empty)
@@ -2213,7 +2213,7 @@ script get_next_available_slot
 		i = (<i> + 1)
 		repeat <array_size>
 	elseif (<slot_type> = local_signed_in)
-		getarraysize \{all_players_checksum}
+		GetArraySize \{all_players_checksum}
 		i = 0
 		begin
 		if (<all_players_checksum> [<i>] = empty)
@@ -2235,23 +2235,23 @@ script get_next_available_slot
 endscript
 
 script shift_player_slots 
-	onlinelobbyinterface :gettags
-	<player_slots_menu_id> :gettags
-	getarraysize \{all_players_checksum}
+	OnlineLobbyInterface :GetTags
+	<player_slots_menu_id> :GetTags
+	GetArraySize \{all_players_checksum}
 	i = <starting_point>
 	shift_value_current = (<all_players_checksum> [<i>])
 	shift_value_next = (<all_players_checksum> [(<i> + 1)])
-	getplayerinfo (<i> + 1) net_id_first
-	getplayerinfo (<i> + 1) net_id_second
-	getplayerinfo (<i> + 1) controller
-	getplayerinfo (<i> + 1) is_local_client
-	getplayerinfo (<i> + 1) part
-	getplayerinfo (<i> + 1) career_earnings
-	getplayerinfo (<i> + 1) difficulty
-	getplayerinfo (<i> + 1) lefty_flip
-	getplayerinfo (<i> + 1) character_id
-	getplayerinfo (<i> + 1) vocals_highway_view
-	formattext checksumname = gamertag 'gamertag_%d' d = (<i>)
+	GetPlayerInfo (<i> + 1) net_id_first
+	GetPlayerInfo (<i> + 1) net_id_second
+	GetPlayerInfo (<i> + 1) controller
+	GetPlayerInfo (<i> + 1) is_local_client
+	GetPlayerInfo (<i> + 1) part
+	GetPlayerInfo (<i> + 1) career_earnings
+	GetPlayerInfo (<i> + 1) difficulty
+	GetPlayerInfo (<i> + 1) lefty_flip
+	GetPlayerInfo (<i> + 1) character_id
+	GetPlayerInfo (<i> + 1) vocals_highway_view
+	FormatText checksumname = gamertag 'gamertag_%d' d = (<i>)
 	current_net_info = {
 		net_id_first = <net_id_first>
 		net_id_second = <net_id_second>
@@ -2265,17 +2265,17 @@ script shift_player_slots
 		character_id = <character_id>
 		vocals_highway_view = <vocals_highway_view>
 	}
-	formattext checksumname = gamertag 'gamertag_%d' d = (<i> + 1)
-	getplayerinfo (<i> + 2) net_id_first
-	getplayerinfo (<i> + 2) net_id_second
-	getplayerinfo (<i> + 2) controller
-	getplayerinfo (<i> + 2) is_local_client
-	getplayerinfo (<i> + 2) part
-	getplayerinfo (<i> + 2) career_earnings
-	getplayerinfo (<i> + 2) difficulty
-	getplayerinfo (<i> + 2) lefty_flip
-	getplayerinfo (<i> + 2) character_id
-	getplayerinfo (<i> + 2) vocals_highway_view
+	FormatText checksumname = gamertag 'gamertag_%d' d = (<i> + 1)
+	GetPlayerInfo (<i> + 2) net_id_first
+	GetPlayerInfo (<i> + 2) net_id_second
+	GetPlayerInfo (<i> + 2) controller
+	GetPlayerInfo (<i> + 2) is_local_client
+	GetPlayerInfo (<i> + 2) part
+	GetPlayerInfo (<i> + 2) career_earnings
+	GetPlayerInfo (<i> + 2) difficulty
+	GetPlayerInfo (<i> + 2) lefty_flip
+	GetPlayerInfo (<i> + 2) character_id
+	GetPlayerInfo (<i> + 2) vocals_highway_view
 	next_net_info = {
 		net_id_first = <net_id_first>
 		net_id_second = <net_id_second>
@@ -2295,13 +2295,13 @@ script shift_player_slots
 	else
 		controller_value = (<local_controllers> [<controller>])
 	endif
-	setarrayelement arrayname = all_players_checksum index = <i> newvalue = empty
+	SetArrayElement ArrayName = all_players_checksum index = <i> newvalue = empty
 	begin
 	if NOT (<controller_value> = unplugged)
-		formattext checksumname = controller_status 'plugged_in_%d' d = (<i> + 1)
-		setarrayelement arrayname = local_controllers index = <controller> newvalue = <controller_status>
+		FormatText checksumname = controller_status 'plugged_in_%d' d = (<i> + 1)
+		SetArrayElement ArrayName = local_controllers index = <controller> newvalue = <controller_status>
 	endif
-	setarrayelement arrayname = all_players_checksum index = (<i> + 1) newvalue = <shift_value_current>
+	SetArrayElement ArrayName = all_players_checksum index = (<i> + 1) newvalue = <shift_value_current>
 	copy_net_info_into_struct destination_index = (<i> + 2) info = <current_net_info>
 	if ((<i> + 2) = <array_size>)
 		break
@@ -2319,17 +2319,17 @@ script shift_player_slots
 		character_id = (<next_net_info>.character_id)
 		vocals_highway_view = (<next_net_info>.vocals_highway_view)
 	}
-	getplayerinfo (<i> + 3) net_id_first
-	getplayerinfo (<i> + 3) net_id_second
-	getplayerinfo (<i> + 3) controller
-	getplayerinfo (<i> + 3) is_local_client
-	getplayerinfo (<i> + 3) part
-	getplayerinfo (<i> + 3) career_earnings
-	getplayerinfo (<i> + 3) difficulty
-	getplayerinfo (<i> + 3) lefty_flip
-	getplayerinfo (<i> + 3) character_id
-	getplayerinfo (<i> + 3) vocals_highway_view
-	formattext checksumname = gamertag 'gamertag_%d' d = (<i> + 2)
+	GetPlayerInfo (<i> + 3) net_id_first
+	GetPlayerInfo (<i> + 3) net_id_second
+	GetPlayerInfo (<i> + 3) controller
+	GetPlayerInfo (<i> + 3) is_local_client
+	GetPlayerInfo (<i> + 3) part
+	GetPlayerInfo (<i> + 3) career_earnings
+	GetPlayerInfo (<i> + 3) difficulty
+	GetPlayerInfo (<i> + 3) lefty_flip
+	GetPlayerInfo (<i> + 3) character_id
+	GetPlayerInfo (<i> + 3) vocals_highway_view
+	FormatText checksumname = gamertag 'gamertag_%d' d = (<i> + 2)
 	next_net_info = {
 		net_id_first = <net_id_first>
 		net_id_second = <net_id_second>
@@ -2353,32 +2353,32 @@ script shift_player_slots
 	endif
 	i = (<i> + 1)
 	repeat <array_size>
-	<player_slots_menu_id> :settags all_players_checksum = <all_players_checksum> local_controllers = <local_controllers>
+	<player_slots_menu_id> :SetTags all_players_checksum = <all_players_checksum> local_controllers = <local_controllers>
 endscript
 
 script copy_net_info_into_struct 
-	setplayerinfo <destination_index> net_id_first = (<info>.net_id_first)
-	setplayerinfo <destination_index> net_id_second = (<info>.net_id_second)
-	setplayerinfo <destination_index> controller = (<info>.controller)
-	setplayerinfo <destination_index> is_local_client = (<info>.is_local)
-	setplayerinfo <destination_index> part = (<info>.part)
-	setplayerinfo <destination_index> career_earnings = (<info>.earnings)
-	setplayerinfo <destination_index> difficulty = (<info>.difficulty)
-	setplayerinfo <destination_index> lefty_flip = (<info>.lefty_flip)
-	setplayerinfo <destination_index> lefthanded_gems = (<info>.lefty_flip)
-	setplayerinfo <destination_index> lefthanded_button_ups = (<info>.lefty_flip)
-	setplayerinfo <destination_index> lefthanded_button_ups_flip_save = (<info>.lefty_flip)
-	setplayerinfo <destination_index> lefthanded_gems_flip_save = (<info>.lefty_flip)
-	setplayerinfo <destination_index> character_id = (<info>.character_id)
-	setplayerinfo <destination_index> vocals_highway_view = (<info>.vocals_highway_view)
-	formattext checksumname = gamertag 'gamertag_%d' d = (<destination_index> -1)
+	SetPlayerInfo <destination_index> net_id_first = (<info>.net_id_first)
+	SetPlayerInfo <destination_index> net_id_second = (<info>.net_id_second)
+	SetPlayerInfo <destination_index> controller = (<info>.controller)
+	SetPlayerInfo <destination_index> is_local_client = (<info>.is_local)
+	SetPlayerInfo <destination_index> part = (<info>.part)
+	SetPlayerInfo <destination_index> career_earnings = (<info>.earnings)
+	SetPlayerInfo <destination_index> difficulty = (<info>.difficulty)
+	SetPlayerInfo <destination_index> lefty_flip = (<info>.lefty_flip)
+	SetPlayerInfo <destination_index> lefthanded_gems = (<info>.lefty_flip)
+	SetPlayerInfo <destination_index> lefthanded_button_ups = (<info>.lefty_flip)
+	SetPlayerInfo <destination_index> lefthanded_button_ups_flip_save = (<info>.lefty_flip)
+	SetPlayerInfo <destination_index> lefthanded_gems_flip_save = (<info>.lefty_flip)
+	SetPlayerInfo <destination_index> character_id = (<info>.character_id)
+	SetPlayerInfo <destination_index> vocals_highway_view = (<info>.vocals_highway_view)
+	FormatText checksumname = gamertag 'gamertag_%d' d = (<destination_index> -1)
 	change globalname = <gamertag> newvalue = (<info>.gamertag)
-	monitorcontrollerstates
+	MonitorControllerStates
 endscript
 
 script get_controller_corresponding_ui_slot 
-	onlinelobbyinterface :gettags
-	<player_slots_menu_id> :gettags
+	OnlineLobbyInterface :GetTags
+	<player_slots_menu_id> :GetTags
 	switch (<local_controllers> [<controller>])
 		case plugged_in_0
 		return \{ui_slot = 0}
@@ -2402,9 +2402,9 @@ script get_controller_corresponding_ui_slot
 endscript
 
 script get_ui_slot_corresponding_controller 
-	onlinelobbyinterface :gettags
-	<player_slots_menu_id> :gettags
-	getarraysize \{local_controllers}
+	OnlineLobbyInterface :GetTags
+	<player_slots_menu_id> :GetTags
+	GetArraySize \{local_controllers}
 	controller = 0
 	begin
 	get_controller_corresponding_ui_slot controller = <controller>
@@ -2417,17 +2417,17 @@ script get_ui_slot_corresponding_controller
 endscript
 
 script leave_net_main_menu 
-	requireparams \{[
+	RequireParams \{[
 			device_num
 		]
 		all}
-	if netsessionfunc \{obj = party
+	if NetSessionFunc \{obj = party
 			func = is_host}
 		if (<device_num> = $primary_controller)
-			netsessionfunc \{obj = party
+			NetSessionFunc \{obj = party
 				func = get_party_members}
 			has_remote = 0
-			getarraysize <connections>
+			GetArraySize <connections>
 			if (<array_size> > 0)
 				i = 0
 				begin
@@ -2439,8 +2439,8 @@ script leave_net_main_menu
 				repeat <array_size>
 			endif
 			if (<has_remote> = 1)
-				if gotparam \{id}
-					launchevent type = unfocus target = <id>
+				if GotParam \{id}
+					LaunchEvent type = unfocus target = <id>
 				endif
 				generic_event_choose \{state = uistate_online_quit_warning
 					data = {
@@ -2450,20 +2450,20 @@ script leave_net_main_menu
 			else
 				ui_event_block \{event = menu_change
 					data = {
-						state = uistate_mainmenu
+						state = UIstate_mainmenu
 						base_name = 'mainmenu'
 						selected_index = 3
 						clear_previous_stack
 					}}
 			endif
 		else
-			netsessionfunc func = removecontroller params = {controller = <device_num>}
+			NetSessionFunc func = RemoveController params = {controller = <device_num>}
 			change \{need_to_refresh_player_slots = 1}
 		endif
 	else
 		if (<device_num> = $primary_controller)
-			if gotparam \{id}
-				launchevent type = unfocus target = <id>
+			if GotParam \{id}
+				LaunchEvent type = unfocus target = <id>
 			endif
 			generic_event_choose \{state = uistate_online_quit_warning
 				data = {
@@ -2475,61 +2475,61 @@ script leave_net_main_menu
 endscript
 
 script matchmaking_leave_party_confirm 
-	printf \{qs(0x02e0ff4d)}
-	setspawninstancelimits \{max = 1
+	printf \{qs("\Lmatchmaking_leave_party_confirm")}
+	SetSpawnInstanceLimits \{max = 1
 		management = ignore_spawn_request}
-	if is_ui_event_running
+	if Is_ui_event_running
 		return
 	endif
-	netsessionfunc \{obj = party
+	NetSessionFunc \{obj = party
 		func = leave_party}
 	net_clear_all_remote_player_status
-	if screenelementexists \{id = onlinelobbyinterface}
-		onlinelobbyinterface :obj_spawnscriptlater \{refresh_online_lobby}
+	if ScreenElementExists \{id = OnlineLobbyInterface}
+		OnlineLobbyInterface :Obj_SpawnScriptLater \{refresh_online_lobby}
 	endif
 	generic_event_back
 endscript
 
 script refresh_online_lobby 
-	wait \{10
+	Wait \{10
 		gameframes}
-	printf \{qs(0xda926fa0)}
+	printf \{qs("\LCalling menu_refresh")}
 	ui_event_wait \{event = menu_refresh}
 endscript
 
 script matchmaking_host_disband_party 
-	printf \{qs(0xafd082fe)}
-	setspawninstancelimits \{max = 1
+	printf \{qs("\Lmatchmaking_host_disband_party")}
+	SetSpawnInstanceLimits \{max = 1
 		management = ignore_spawn_request}
-	if is_ui_event_running
+	if Is_ui_event_running
 		return
 	endif
-	netsessionfunc \{obj = party
+	NetSessionFunc \{obj = party
 		func = disband_party_session}
 	net_clear_all_remote_player_status
-	if screenelementexists \{id = onlinelobbyinterface}
-		onlinelobbyinterface :obj_spawnscriptlater \{refresh_online_lobby}
+	if ScreenElementExists \{id = OnlineLobbyInterface}
+		OnlineLobbyInterface :Obj_SpawnScriptLater \{refresh_online_lobby}
 	endif
 	generic_event_back
 endscript
 
 script create_start_matchmaking_container 
 	destroy_popup_warning_menu
-	create_popup_warning_menu \{title = qs(0xddccf0c3)
+	create_popup_warning_menu \{title = qs("SEARCHING")
 		textblock = {
-			text = qs(0x00000000)
+			text = qs("")
 		}
-		parent = onlinelobbyinterface
+		parent = OnlineLobbyInterface
 		no_background
 		options = [
 			{
 				func = cancel_start_matchmaking
-				text = qs(0xf7723015)
+				text = qs("CANCEL")
 			}
 		]}
-	createscreenelement \{type = spriteelement
-		parent = popupelement
-		texture = online_load_wheel_bg
+	CreateScreenElement \{type = SpriteElement
+		parent = PopupElement
+		texture = online_load_wheel_BG
 		pos = (960.0, 600.0)
 		dims = (128.0, 128.0)
 		just = [
@@ -2537,8 +2537,8 @@ script create_start_matchmaking_container
 			center
 		]
 		z_priority = 520}
-	createscreenelement \{type = spriteelement
-		parent = popupelement
+	CreateScreenElement \{type = SpriteElement
+		parent = PopupElement
 		texture = online_load_wheel
 		pos = (960.0, 600.0)
 		dims = (128.0, 128.0)
@@ -2547,9 +2547,9 @@ script create_start_matchmaking_container
 			center
 		]
 		z_priority = 521}
-	popupelement :obj_spawnscriptnow animate_online_icon params = {id = <id>}
-	popupelement :obj_spawnscriptnow \{update_players_found}
-	netsessionfunc \{obj = party
+	PopupElement :Obj_SpawnScriptNow animate_online_icon params = {id = <id>}
+	PopupElement :Obj_SpawnScriptNow \{update_players_found}
+	NetSessionFunc \{obj = party
 		func = append_shared_data
 		params = {
 			data = {
@@ -2563,18 +2563,18 @@ script client_create_start_matchmaking_container
 	if (<base_name> = 'online_quit_warning')
 		ui_event_block \{event = menu_back}
 	endif
-	launchevent \{type = unfocus
+	LaunchEvent \{type = unfocus
 		target = current_menu}
 	destroy_popup_warning_menu
-	create_popup_warning_menu \{title = qs(0xddccf0c3)
+	create_popup_warning_menu \{title = qs("SEARCHING")
 		textblock = {
-			text = qs(0x00000000)
+			text = qs("")
 		}
-		parent = onlinelobbyinterface
+		parent = OnlineLobbyInterface
 		no_background}
-	createscreenelement \{type = spriteelement
-		parent = popupelement
-		texture = online_load_wheel_bg
+	CreateScreenElement \{type = SpriteElement
+		parent = PopupElement
+		texture = online_load_wheel_BG
 		pos = (960.0, 600.0)
 		dims = (128.0, 128.0)
 		just = [
@@ -2582,8 +2582,8 @@ script client_create_start_matchmaking_container
 			center
 		]
 		z_priority = 520}
-	createscreenelement \{type = spriteelement
-		parent = popupelement
+	CreateScreenElement \{type = SpriteElement
+		parent = PopupElement
 		texture = online_load_wheel
 		pos = (960.0, 600.0)
 		dims = (128.0, 128.0)
@@ -2592,38 +2592,38 @@ script client_create_start_matchmaking_container
 			center
 		]
 		z_priority = 521}
-	popupelement :obj_spawnscriptnow animate_online_icon params = {id = <id>}
-	popupelement :obj_spawnscriptnow client_check_for_cancel_matchmaking params = {id = <id>}
+	PopupElement :Obj_SpawnScriptNow animate_online_icon params = {id = <id>}
+	PopupElement :Obj_SpawnScriptNow client_check_for_cancel_matchmaking params = {id = <id>}
 endscript
 
 script client_check_for_cancel_matchmaking 
 	change \{respond_to_signin_changed_all_players = 1}
 	players_found = 0
 	begin
-	netsessionfunc \{obj = match
+	NetSessionFunc \{obj = match
 		func = get_num_matchmaking_players}
-	netsessionfunc \{obj = party
+	NetSessionFunc \{obj = party
 		func = get_party_members}
-	netsessionfunc \{obj = party
+	NetSessionFunc \{obj = party
 		func = get_shared_data}
-	getarraysize <connections>
-	if structurecontains structure = <party_shared_data> matchmaking
+	GetArraySize <connections>
+	if StructureContains Structure = <party_shared_data> matchmaking
 		if (<party_shared_data>.matchmaking = 0)
 			destroy_searching_ui
 			change \{respond_to_signin_changed_all_players = 0}
-			if screenelementexists \{id = onlinelobbyinterface}
-				onlinelobbyinterface :gettags
-				if screenelementexists id = <player_slots_menu_id>
-					<player_slots_menu_id> :obj_spawnscriptlater update_player_slots_ui
+			if ScreenElementExists \{id = OnlineLobbyInterface}
+				OnlineLobbyInterface :GetTags
+				if ScreenElementExists id = <player_slots_menu_id>
+					<player_slots_menu_id> :Obj_SpawnScriptLater update_player_slots_ui
 				endif
 			endif
 			online_lobby_setup_helper_controls
-			launchevent \{type = focus
+			LaunchEvent \{type = focus
 				target = current_menu}
 			break
 		endif
 	endif
-	if gotparam \{num_matchmaking_players}
+	if GotParam \{num_matchmaking_players}
 		<players_found> = (<num_matchmaking_players> - <array_size>)
 		if (<players_found> < 0)
 			<players_found> = 0
@@ -2632,37 +2632,37 @@ script client_check_for_cancel_matchmaking
 		<players_found> = 0
 	endif
 	if (<players_found> = 0)
-		message = qs(0xbb856970)
+		message = qs("Searching for players...")
 	else
-		formattext textname = message qs(0x18cc19f0) d = <players_found>
+		FormatText TextName = message qs("Found %d player(s)") d = <players_found>
 	endif
-	if screenelementexists \{id = popupelement}
-		popupelement :setprops {
-			popupbody_text = <message>
+	if ScreenElementExists \{id = PopupElement}
+		PopupElement :SetProps {
+			PopupBody_text = <message>
 		}
 	endif
-	if scriptisrunning \{set_net_ui_to_finished_searching}
+	if ScriptIsRunning \{set_net_ui_to_finished_searching}
 		destroy_searching_ui
 		break
 	endif
-	wait \{1.0
+	Wait \{1.0
 		seconds}
 	repeat
 endscript
 
 script cancel_start_matchmaking 
-	if netsessionfunc \{obj = match
+	if NetSessionFunc \{obj = match
 			func = cancel_join_server}
-		netsessionfunc \{obj = party
+		NetSessionFunc \{obj = party
 			func = set_party_joinable
 			params = {
 				joinable = 1
 			}}
 		change \{net_new_matchmaking_ui_flag = 0}
 		change \{respond_to_signin_changed_all_players = 0}
-		onlinelobbyinterface :gettags
+		OnlineLobbyInterface :GetTags
 		create_player_slots_container
-		netsessionfunc \{obj = party
+		NetSessionFunc \{obj = party
 			func = append_shared_data
 			params = {
 				data = {
@@ -2672,7 +2672,7 @@ script cancel_start_matchmaking
 		destroy_searching_ui
 		online_lobby_setup_helper_controls
 		change \{net_starting_matchmaking = 0}
-		launchevent \{type = focus
+		LaunchEvent \{type = focus
 			target = current_menu}
 	endif
 endscript
@@ -2687,17 +2687,17 @@ script update_players_found
 	players_found = 0
 	<time_waited> = 0
 	begin
-	netsessionfunc \{obj = match
+	NetSessionFunc \{obj = match
 		func = get_num_matchmaking_players}
-	netsessionfunc \{obj = party
+	NetSessionFunc \{obj = party
 		func = get_party_members}
-	getarraysize <connections>
-	if iswinport
-		if ($0x33d5180d = 0)
+	GetArraySize <connections>
+	if IsWinPort
+		if ($winport_creating_private_match = 0)
 			if (<time_waited> >= 45)
-				if gotparam \{num_matchmaking_players}
+				if GotParam \{num_matchmaking_players}
 					if (<array_size> >= <num_matchmaking_players>)
-						gamemode_getminplayers
+						GameMode_GetMinPlayers
 						if (<min_players> > <num_matchmaking_players>)
 							create_confirm_search_again
 							break
@@ -2708,9 +2708,9 @@ script update_players_found
 		endif
 	else
 		if (<time_waited> >= 45)
-			if gotparam \{num_matchmaking_players}
+			if GotParam \{num_matchmaking_players}
 				if (<array_size> >= <num_matchmaking_players>)
-					gamemode_getminplayers
+					GameMode_GetMinPlayers
 					if (<min_players> > <num_matchmaking_players>)
 						create_confirm_search_again
 						break
@@ -2719,7 +2719,7 @@ script update_players_found
 			endif
 		endif
 	endif
-	if gotparam \{num_matchmaking_players}
+	if GotParam \{num_matchmaking_players}
 		<players_found> = (<num_matchmaking_players> - <array_size>)
 		if (<players_found> < 0)
 			<players_found> = 0
@@ -2728,16 +2728,16 @@ script update_players_found
 		<players_found> = 0
 	endif
 	if (<players_found> = 0)
-		message = qs(0xbb856970)
+		message = qs("Searching for players...")
 	else
-		formattext textname = message qs(0x18cc19f0) d = <players_found>
+		FormatText TextName = message qs("Found %d player(s)") d = <players_found>
 	endif
-	if screenelementexists \{id = popupelement}
-		popupelement :setprops {
-			popupbody_text = <message>
+	if ScreenElementExists \{id = PopupElement}
+		PopupElement :SetProps {
+			PopupBody_text = <message>
 		}
 	endif
-	wait \{1.0
+	Wait \{1.0
 		seconds}
 	<time_waited> = (<time_waited> + 1.0)
 	repeat
@@ -2745,20 +2745,20 @@ endscript
 
 script create_confirm_search_again 
 	destroy_searching_ui
-	create_popup_warning_menu \{title = qs(0x3954a4af)
+	create_popup_warning_menu \{title = qs("UPDATE")
 		textblock = {
-			text = qs(0x54edfd91)
+			text = qs("There are currently no games available that match your search criteria.")
 		}
 		parent = current_menu
 		no_background
 		options = [
 			{
 				func = continue_matchmaking_search
-				text = qs(0x182f0173)
+				text = qs("CONTINUE")
 			}
 			{
 				func = cancel_start_matchmaking
-				text = qs(0x6683b73b)
+				text = qs("CANCEL SEARCH")
 			}
 		]}
 endscript
@@ -2769,8 +2769,8 @@ script continue_matchmaking_search
 endscript
 
 script create_signin_container 
-	createscreenelement \{type = containerelement
-		parent = onlinelobbyinterface
+	CreateScreenElement \{type = ContainerElement
+		parent = OnlineLobbyInterface
 		id = online_lobby_signin_container
 		event_handlers = [
 			{
@@ -2779,96 +2779,96 @@ script create_signin_container
 			}
 		]}
 	update_signed_in_controllers
-	launchevent \{type = focus
+	LaunchEvent \{type = focus
 		target = online_lobby_signin_container}
 endscript
 
 script update_signed_in_controllers 
-	printf \{qs(0xb0cba5b5)}
-	if screenelementexists \{id = onlinelobbyinterface}
-		if screenelementexists \{id = online_lobby_signin_container}
+	printf \{qs("\L---update_signed_in_controllers")}
+	if ScreenElementExists \{id = OnlineLobbyInterface}
+		if ScreenElementExists \{id = online_lobby_signin_container}
 			non_signed_in_controllers = []
 			signed_in_controllers = []
-			getactivecontrollers
-			getarraysize <active_controllers>
+			GetActiveControllers
+			GetArraySize <active_controllers>
 			i = 0
 			begin
 			if (<active_controllers> [<i>] = 1)
-				if NOT checkforsignin controller_index = <i> dont_set_primary
-					addarrayelement array = <non_signed_in_controllers> element = <i>
+				if NOT CheckForSignIn controller_index = <i> dont_set_primary
+					AddArrayElement array = <non_signed_in_controllers> element = <i>
 					<non_signed_in_controllers> = <array>
-				elseif NOT netsessionfunc func = iscontrolleringame params = {controller = <i>}
-					addarrayelement array = <non_signed_in_controllers> element = <i>
+				elseif NOT NetSessionFunc func = IsControllerInGame params = {controller = <i>}
+					AddArrayElement array = <non_signed_in_controllers> element = <i>
 					<non_signed_in_controllers> = <array>
 				else
-					addarrayelement array = <signed_in_controllers> element = <i>
+					AddArrayElement array = <signed_in_controllers> element = <i>
 					<signed_in_controllers> = <array>
 				endif
 			else
-				addarrayelement array = <non_signed_in_controllers> element = <i>
+				AddArrayElement array = <non_signed_in_controllers> element = <i>
 				<non_signed_in_controllers> = <array>
 			endif
 			<i> = (<i> + 1)
 			repeat <array_size>
-			addarrayelement array = <non_signed_in_controllers> element = <i>
+			AddArrayElement array = <non_signed_in_controllers> element = <i>
 			<non_signed_in_controllers> = <array>
-			online_lobby_signin_container :se_setprops {exclusive_device = <non_signed_in_controllers>}
-			getarraysize <non_signed_in_controllers>
+			online_lobby_signin_container :SE_SetProps {exclusive_device = <non_signed_in_controllers>}
+			GetArraySize <non_signed_in_controllers>
 		endif
-		if onlinelobbyinterface :desc_resolvealias \{name = alias_matchmaking_vmenu}
-			<resolved_id> :se_setprops {exclusive_device = <signed_in_controllers>}
+		if OnlineLobbyInterface :Desc_ResolveAlias \{name = alias_matchmaking_vmenu}
+			<resolved_id> :SE_SetProps {exclusive_device = <signed_in_controllers>}
 		endif
-		if onlinelobbyinterface :desc_resolvealias \{name = alias_player_slots_vmenu}
-			<resolved_id> :se_setprops {exclusive_device = <signed_in_controllers>}
+		if OnlineLobbyInterface :Desc_ResolveAlias \{name = alias_player_slots_vmenu}
+			<resolved_id> :SE_SetProps {exclusive_device = <signed_in_controllers>}
 		endif
 	endif
 endscript
 
 script signin_or_join_game 
-	printf \{qs(0xab5ccbec)}
-	requireparams \{[
+	printf \{qs("\Lsignin_or_join_game")}
+	RequireParams \{[
 			device_num
 		]
 		all}
-	if netsessionfunc \{obj = party
+	if NetSessionFunc \{obj = party
 			func = is_host}
 		if ($net_starting_matchmaking = 0)
 			change \{net_block_matchmaking = 1}
 			if NOT (party_is_full)
-				if isxenon
-					if NOT checkforsignin controller_index = <device_num> dont_set_primary
+				if isXenon
+					if NOT CheckForSignIn controller_index = <device_num> dont_set_primary
 						generic_menu_pad_choose_sound
-						if onlinelobbyinterface :desc_resolvealias \{name = alias_player_slots_vmenu
+						if OnlineLobbyInterface :Desc_ResolveAlias \{name = alias_player_slots_vmenu
 								param = player_slots_menu}
-							<player_slots_menu> :obj_killspawnedscript name = update_player_slots_ui
+							<player_slots_menu> :Obj_KillSpawnedScript name = update_player_slots_ui
 						endif
-						if checkforsignin local controller controller_index = <device_num>
-							netsessionfunc \{func = showsigninui
+						if CheckForSignIn local controller controller_index = <device_num>
+							NetSessionFunc \{func = showsigninui
 								params = {
 									convert_offline_to_guest
 								}}
 						else
-							netsessionfunc \{func = showsigninui4pane
+							NetSessionFunc \{func = ShowSignInUI4Pane
 								params = {
 									online_only
 								}}
 						endif
 						wait_for_blade_complete
-						wait \{1.0
+						Wait \{1.0
 							seconds}
-						if onlinelobbyinterface :desc_resolvealias \{name = alias_player_slots_vmenu
+						if OnlineLobbyInterface :Desc_ResolveAlias \{name = alias_player_slots_vmenu
 								param = player_slots_menu}
-							<player_slots_menu> :obj_spawnscriptnow update_player_slots_ui
+							<player_slots_menu> :Obj_SpawnScriptNow update_player_slots_ui
 						endif
 					else
 						generic_menu_pad_choose_sound
-						if iswinport
-							netsessionfunc func = addcontrollers params = {controller = <device_num>}
-							if NOT netsessionfunc func = xenonisguest params = {controller_index = <device_num>}
+						if IsWinPort
+							NetSessionFunc func = AddControllers params = {controller = <device_num>}
+							if NOT NetSessionFunc func = XenonIsGuest params = {controller_index = <device_num>}
 								net_clear_all_remote_player_status
 								generic_event_replace no_sound state = uistate_signin data = {device_num = <device_num> allow_back = 0 new_state = uistate_online primary = 0}
 							else
-								if isscreenelementinfocus \{id = current_menu}
+								if IsScreenElementInFocus \{id = current_menu}
 									online_lobby_setup_helper_controls
 								else
 									online_lobby_setup_helper_controls \{menu_type = right_hand}
@@ -2881,9 +2881,9 @@ script signin_or_join_game
 					endif
 				else
 					if can_add_vocals_player device_num = <device_num>
-						netsessionfunc func = addcontrollers params = {controller = <device_num>}
+						NetSessionFunc func = AddControllers params = {controller = <device_num>}
 						restore_save_net_preferences controller_index = <device_num>
-						if isscreenelementinfocus \{id = current_menu}
+						if IsScreenElementInFocus \{id = current_menu}
 							online_lobby_setup_helper_controls
 						else
 							online_lobby_setup_helper_controls \{menu_type = right_hand}
@@ -2901,17 +2901,17 @@ endscript
 script can_add_vocals_player 
 	already_has_vocals = 0
 	get_controller_type controller_index = <device_num>
-	if NOT (<controller_type> = vocals || <controller_type> = controller)
+	if NOT (<controller_type> = Vocals || <controller_type> = controller)
 		return \{true}
 	endif
-	getactivecontrollers
-	getarraysize <active_controllers>
+	GetActiveControllers
+	GetArraySize <active_controllers>
 	i = 0
 	begin
 	if (<active_controllers> [<i>] = 1)
-		if netsessionfunc func = iscontrolleringame params = {controller = <i>}
+		if NetSessionFunc func = IsControllerInGame params = {controller = <i>}
 			get_controller_type controller_index = <i>
-			if (<controller_type> = vocals || <controller_type> = controller)
+			if (<controller_type> = Vocals || <controller_type> = controller)
 				<already_has_vocals> = 1
 				break
 			endif
@@ -2920,9 +2920,9 @@ script can_add_vocals_player
 	<i> = (<i> + 1)
 	repeat <array_size>
 	if (<already_has_vocals> = 0)
-		if ismicrophonepluggedin \{number = 0}
+		if IsMicrophonePluggedIn \{number = 0}
 			return \{true}
-		elseif ismicrophonepluggedin \{number = 1}
+		elseif IsMicrophonePluggedIn \{number = 1}
 			return \{true}
 		elseif controller_has_headset controller = <device_num>
 			return \{true}
@@ -2933,16 +2933,16 @@ endscript
 
 script create_vocals_warning 
 	if ($net_no_focus_warning = 0)
-		if isps3
-			popup_text = qs(0x1fe26012)
-		elseif iswinport
+		if IsPs3
+			popup_text = qs("You must plug in a microphone with your controller or remove the current vocalist to continue.")
+		elseif IsWinPort
 			popup_text = qs(0x4aeb92e6)
 		else
-			popup_text = qs(0x396e303f)
+			popup_text = qs("You must connect a microphone or Xbox 360 Headset or remove the current vocalist to continue.")
 		endif
 		destroy_popup_warning_menu
 		create_popup_warning_menu {
-			title = qs(0xaa163738)
+			title = qs("WARNING")
 			textblock = {
 				text = <popup_text>
 			}
@@ -2951,48 +2951,48 @@ script create_vocals_warning
 		}
 		set_focus_color rgba = ($online_lobby_item_text_color)
 		set_unfocus_color rgba = ($online_lobby_item_text_color)
-		if screenelementexists \{id = popupelement}
-			popupelement :obj_spawnscriptnow \{wait_and_kill_vocals_warning_popup}
+		if ScreenElementExists \{id = PopupElement}
+			PopupElement :Obj_SpawnScriptNow \{wait_and_kill_vocals_warning_popup}
 		endif
 	endif
 endscript
 
 script wait_and_kill_vocals_warning_popup 
-	wait \{3.0
+	Wait \{3.0
 		seconds}
 	destroy_net_popup
 	set_focus_color rgba = ($online_lobby_item_text_color)
 	set_unfocus_color rgba = ($online_lobby_item_text_color)
 endscript
-0x33d5180d = 0
+winport_creating_private_match = 0
 
-script 0x58723d8c 
+script winport_start_matchmaking_public 
 	printf \{qs(0x6e528351)}
-	change \{gprivatematchid = 0}
-	setnetworkpreference \{field = 'private_slots'
+	change \{gPrivateMatchId = 0}
+	SetNetworkPreference \{field = 'private_slots'
 		num = 0
 		string = qs(0xaec7c1fb)}
-	change \{0x33d5180d = 0}
+	change \{winport_creating_private_match = 0}
 	spawnscriptnow start_matchmaking params = {<...>}
 endscript
 
-script 0x876f4b9d 
+script winport_start_matchmaking_private 
 	printf \{qs(0x8f059def)}
-	change \{gprivatematchid = 0}
-	setnetworkpreference \{field = 'private_slots'
+	change \{gPrivateMatchId = 0}
+	SetNetworkPreference \{field = 'private_slots'
 		num = 1
 		string = qs(0xaec7c1fb)}
-	change \{0x33d5180d = 1}
+	change \{winport_creating_private_match = 1}
 	spawnscriptnow start_matchmaking params = {<...>}
 endscript
 
 script start_matchmaking 
-	printf \{qs(0x14c9ca0a)}
+	printf \{qs("\L--- start_matchmaking")}
 	if ($net_starting_matchmaking = 1)
 		return
 	endif
 	change \{respond_to_signin_changed_all_players = 1}
-	requireparams \{[
+	RequireParams \{[
 			device_num
 		]
 		all}
@@ -3000,19 +3000,19 @@ script start_matchmaking
 		if all_clients_are_ready
 			if vocalist_has_mic
 				if is_valid_instrument_config
-					if checkforsignin controller_index = <device_num>
+					if CheckForSignIn controller_index = <device_num>
 						can_continue = 1
 						if ($is_multiplayer_beta = 1)
-							getcontrollertype controller = <device_num>
-							if checksumequals a = guitar b = <controller_type>
+							GetControllerType controller = <device_num>
+							if ChecksumEquals a = guitar b = <controller_type>
 							else
-								printf \{qs(0x17ce1c7d)}
+								printf \{qs("\Lonline beta lockout")}
 								can_continue = 0
 							endif
 						endif
 						if (<can_continue> = 1)
 							change \{net_starting_matchmaking = 1}
-							netsessionfunc \{obj = party
+							NetSessionFunc \{obj = party
 								func = set_party_joinable
 								params = {
 									joinable = 0
@@ -3021,21 +3021,21 @@ script start_matchmaking
 							if ($net_block_matchmaking = 0)
 								break
 							endif
-							wait \{1
+							Wait \{1
 								gameframe}
 							repeat
 							destroy_online_warning_message
-							if isps3
+							if IsPs3
 								destroy_ps3_chat_warning_message
 							endif
-							netoptions :pref_get \{name = game_modes}
+							NetOptions :Pref_Get \{name = game_modes}
 							if (<checksum> = p2_battle)
 								get_player_num_from_controller controller_index = ($primary_controller)
 								if (<player_num> != -1)
-									getplayerinfo <player_num> difficulty
+									GetPlayerInfo <player_num> difficulty
 									if (<difficulty> = easy_rhythm)
 										checksum = easy
-										setplayerinfo <player_num> difficulty = <checksum>
+										SetPlayerInfo <player_num> difficulty = <checksum>
 									endif
 								endif
 							endif
@@ -3047,48 +3047,48 @@ script start_matchmaking
 							change \{net_num_player_settings_ack = 0}
 							set_network_preferences
 							net_dummy_get_needed_search_params
-							netsessionfunc obj = match func = set_search_params params = <...>
-							if iswinport
-								0x3f953f25 = xboxlive_menu_optimatch_results_stop
-								if ($0x33d5180d = 1)
+							NetSessionFunc obj = match func = set_search_params params = <...>
+							if IsWinPort
+								completion_callback = xboxlive_menu_optimatch_results_stop
+								if ($winport_creating_private_match = 1)
 									printf \{qs(0xdf8b05a4)}
-									netsessionfunc \{obj = match
+									NetSessionFunc \{obj = match
 										func = set_server_list_mode
 										params = {
 											host_only
 										}}
-								elseif gotparam \{privatematchid}
+								elseif GotParam \{privateMatchId}
 									printf \{qs(0xcedff35c)}
-									0x3f953f25 = 0x5498378a
-									netsessionfunc \{obj = match
+									completion_callback = winport_menu_join_private_quickmatch_results_stop
+									NetSessionFunc \{obj = match
 										func = set_server_list_mode
 										params = {
 											quickmatch
 										}}
 								else
 									printf \{qs(0x29116eeb)}
-									netsessionfunc \{obj = match
+									NetSessionFunc \{obj = match
 										func = set_server_list_mode
 										params = {
 											automatch
 										}}
 								endif
-								netsessionfunc {
+								NetSessionFunc {
 									obj = match
 									func = start_server_list
 									params = {
 										callback = xboxlive_menu_optimatch_results_item_add
-										callback_complete = <0x3f953f25>
+										callback_complete = <completion_callback>
 										controller = <device_num>
 									}
 								}
 							else
-								netsessionfunc \{obj = match
+								NetSessionFunc \{obj = match
 									func = set_server_list_mode
 									params = {
 										automatch
 									}}
-								netsessionfunc {
+								NetSessionFunc {
 									obj = match
 									func = start_server_list
 									params = {
@@ -3098,10 +3098,10 @@ script start_matchmaking
 									}
 								}
 							endif
-							setservermode
-							startserver
-							setjoinmode \{$join_mode_play}
-							joinserver
+							SetServerMode
+							StartServer
+							SetJoinMode \{$JOIN_MODE_PLAY}
+							JoinServer
 						else
 							menu_scroll_end_sound
 						endif
@@ -3124,16 +3124,16 @@ endscript
 
 script all_clients_are_ready 
 	all_clients_are_ready = 1
-	netsessionfunc \{obj = party
+	NetSessionFunc \{obj = party
 		func = get_party_members}
-	netsessionfunc \{obj = party
+	NetSessionFunc \{obj = party
 		func = get_shared_data}
-	getarraysize <connections>
+	GetArraySize <connections>
 	if (<array_size> > 0)
 		index = 0
 		begin
-		formattext checksumname = player_data 'player_%d' d = ((<connections> [<index>]).party_id)
-		if NOT structurecontains structure = <party_shared_data> <player_data>
+		FormatText checksumname = player_data 'player_%d' d = ((<connections> [<index>]).party_id)
+		if NOT StructureContains Structure = <party_shared_data> <player_data>
 			<all_clients_are_ready> = 0
 			break
 		endif
@@ -3148,14 +3148,14 @@ script all_clients_are_ready
 endscript
 
 script setup_temp_net_id_array 
-	getactivecontrollers
-	getarraysize <active_controllers>
+	GetActiveControllers
+	GetArraySize <active_controllers>
 	i = 0
 	begin
-	if netsessionfunc func = iscontrolleringame params = {controller = <i>}
-		getnetid controller_index = (<i>)
-		netsessionfunc func = get_gamertag params = {controller = <i>}
-		setarrayelement arrayname = temp_net_id globalarray index = <i> newvalue = {net_id_first = <net_id_first> net_id_second = <net_id_second> name = <name>}
+	if NetSessionFunc func = IsControllerInGame params = {controller = <i>}
+		GetNetID controller_index = (<i>)
+		NetSessionFunc func = get_gamertag params = {controller = <i>}
+		SetArrayElement ArrayName = temp_net_id GlobalArray index = <i> newvalue = {net_id_first = <net_id_first> net_id_second = <net_id_second> name = <name>}
 	endif
 	<i> = (<i> + 1)
 	repeat <array_size>
@@ -3163,20 +3163,20 @@ endscript
 
 script vocalist_has_mic 
 	found_vocalist = 0
-	getactivecontrollers
-	getarraysize <active_controllers>
+	GetActiveControllers
+	GetArraySize <active_controllers>
 	i = 0
 	begin
 	if (<active_controllers> [<i>] = 1)
-		if netsessionfunc func = iscontrolleringame params = {controller = <i>}
+		if NetSessionFunc func = IsControllerInGame params = {controller = <i>}
 			info_index = (<i> + 1)
-			getplayerinfo <info_index> part
-			if (<part> = vocals)
+			GetPlayerInfo <info_index> part
+			if (<part> = Vocals)
 				<found_vocalist> = 1
-				if ismicrophonepluggedin \{number = 0}
+				if IsMicrophonePluggedIn \{number = 0}
 					vocals_distribute_mics
 					return \{true}
-				elseif ismicrophonepluggedin \{number = 1}
+				elseif IsMicrophonePluggedIn \{number = 1}
 					vocals_distribute_mics
 					return \{true}
 				elseif controller_has_headset controller = <i>
@@ -3197,23 +3197,23 @@ endscript
 
 script create_microphone_warning 
 	change \{net_no_focus_warning = 1}
-	launchevent \{type = unfocus
+	LaunchEvent \{type = unfocus
 		target = current_menu}
-	if isps3
-		popup_text = qs(0xe2f3f704)
-	elseif iswinport
+	if IsPs3
+		popup_text = qs("You must plug in a microphone with your controller to continue.")
+	elseif IsWinPort
 		popup_text = qs(0xd35f811b)
 	else
-		popup_text = qs(0xec4dbd17)
+		popup_text = qs("You must connect a microphone or Xbox 360 Headset to continue.")
 	endif
-	create_net_popup title = qs(0xaa163738) popup_text = <popup_text>
-	if screenelementexists \{id = popupelement}
-		popupelement :obj_spawnscriptnow \{wait_and_kill_config_warning_popup}
+	create_net_popup title = qs("WARNING") popup_text = <popup_text>
+	if ScreenElementExists \{id = PopupElement}
+		PopupElement :Obj_SpawnScriptNow \{wait_and_kill_config_warning_popup}
 	endif
 endscript
 
 script is_valid_instrument_config 
-	printf \{qs(0x5f460716)}
+	printf \{qs("\L---is_valid_instrument_config")}
 	num_bass = 0
 	num_guitars = 0
 	num_drums = 0
@@ -3224,13 +3224,13 @@ script is_valid_instrument_config
 	num_local_mics = 0
 	num_local_players = 0
 	num_players = 0
-	netsessionfunc \{obj = party
+	NetSessionFunc \{obj = party
 		func = get_party_members}
-	netsessionfunc \{obj = party
+	NetSessionFunc \{obj = party
 		func = get_shared_data}
-	netoptions :pref_getstruct \{name = game_modes}
+	NetOptions :Pref_GetStruct \{name = game_modes}
 	search_mode = (<pref_struct>.search_chk)
-	getarraysize <connections>
+	GetArraySize <connections>
 	if (<array_size> > 0)
 		num_players = <array_size>
 		index = 0
@@ -3238,16 +3238,16 @@ script is_valid_instrument_config
 		if ((<connections> [<index>]).is_local = 1)
 			<num_local_players> = (<num_local_players> + 1)
 		endif
-		formattext checksumname = player_data 'player_%d' d = ((<connections> [<index>]).party_id)
-		if structurecontains structure = <party_shared_data> <player_data>
+		FormatText checksumname = player_data 'player_%d' d = ((<connections> [<index>]).party_id)
+		if StructureContains Structure = <party_shared_data> <player_data>
 			part = ((<party_shared_data>.<player_data>).player_part)
 		else
 			switch ((<connections> [<index>]).instrument)
-				case eguitar
+				case eGUITAR
 				part = guitar
-				case emicrophone
-				part = vocals
-				case edrums
+				case eMICROPHONE
+				part = Vocals
+				case eDRUMS
 				part = drum
 				default
 				part = guitar
@@ -3256,13 +3256,13 @@ script is_valid_instrument_config
 		if ((<connections> [<index>]).is_local = 1)
 			get_controller_type controller_index = ((<connections> [<index>]).controller_index)
 			if (<controller_type> != <part> && <controller_type> != controller)
-				if NOT (<controller_type> = guitar && <part> = bass)
+				if NOT (<controller_type> = guitar && <part> = Bass)
 					<part> = <controller_type>
 				endif
 			endif
 		endif
 		switch (<part>)
-			case bass
+			case Bass
 			<num_bass> = (<num_bass> + 1)
 			if ((<connections> [<index>]).is_local = 1)
 				<num_local_bass> = (<num_local_bass> + 1)
@@ -3281,7 +3281,7 @@ script is_valid_instrument_config
 			if ((<connections> [<index>]).is_local = 1)
 				<num_local_drums> = (<num_local_drums> + 1)
 			endif
-			case vocals
+			case Vocals
 			<num_mics> = (<num_mics> + 1)
 			if ((<connections> [<index>]).is_local = 1)
 				<num_local_mics> = (<num_local_mics> + 1)
@@ -3352,52 +3352,52 @@ endscript
 
 script create_intrument_config_warning 
 	change \{net_no_focus_warning = 1}
-	launchevent \{type = unfocus
+	LaunchEvent \{type = unfocus
 		target = current_menu}
-	create_net_popup \{title = qs(0xaa163738)
-		popup_text = qs(0x2d14c74a)}
-	if screenelementexists \{id = popupelement}
-		popupelement :obj_spawnscriptnow \{wait_and_kill_config_warning_popup}
+	create_net_popup \{title = qs("WARNING")
+		popup_text = qs("The current instrument setup is not supported for this game mode.")}
+	if ScreenElementExists \{id = PopupElement}
+		PopupElement :Obj_SpawnScriptNow \{wait_and_kill_config_warning_popup}
 	endif
 endscript
 
 script wait_and_kill_config_warning_popup 
-	wait \{3.0
+	Wait \{3.0
 		seconds}
 	destroy_net_popup
 	set_focus_color rgba = ($online_lobby_item_text_color)
 	set_unfocus_color rgba = ($online_lobby_item_text_color)
 	online_lobby_setup_helper_controls
 	change \{net_no_focus_warning = 0}
-	launchevent \{type = focus
+	LaunchEvent \{type = focus
 		target = current_menu}
 endscript
 
 script net_quick_create 
-	printf \{qs(0xeed4fc3d)}
-	requireparams \{[
+	printf \{qs("\L--- net_quick_create")}
+	RequireParams \{[
 			device_num
 		]
 		all}
 	if (<device_num> = $primary_controller)
-		if checkforsignin controller_index = <device_num>
+		if CheckForSignIn controller_index = <device_num>
 			can_continue = 1
 			if ($is_multiplayer_beta = 1)
-				getcontrollertype controller = <device_num>
-				if checksumequals a = guitar b = <controller_type>
+				GetControllerType controller = <device_num>
+				if ChecksumEquals a = guitar b = <controller_type>
 				else
-					printf \{qs(0x17ce1c7d)}
+					printf \{qs("\Lonline beta lockout")}
 					can_continue = 0
 				endif
 			endif
 			if (<can_continue> = 1)
-				netsessionfunc \{obj = party
+				NetSessionFunc \{obj = party
 					func = set_party_joinable
 					params = {
 						joinable = 0
 					}}
 				destroy_online_warning_message
-				if isps3
+				if IsPs3
 					destroy_ps3_chat_warning_message
 				endif
 				ui_menu_select_sfx
@@ -3406,13 +3406,13 @@ script net_quick_create
 				change \{net_num_player_settings_ack = 0}
 				set_network_preferences
 				net_dummy_get_needed_search_params
-				netsessionfunc obj = match func = set_search_params params = <...>
-				netsessionfunc \{obj = match
+				NetSessionFunc obj = match func = set_search_params params = <...>
+				NetSessionFunc \{obj = match
 					func = set_server_list_mode
 					params = {
 						host_only
 					}}
-				netsessionfunc {
+				NetSessionFunc {
 					obj = match
 					func = start_server_list
 					params = {
@@ -3421,13 +3421,13 @@ script net_quick_create
 						controller = <device_num>
 					}
 				}
-				if NOT cd
+				if NOT CD
 					net_create_matchmaking_status_window
 				endif
-				setservermode
-				startserver
-				setjoinmode \{$join_mode_play}
-				joinserver
+				SetServerMode
+				StartServer
+				SetJoinMode \{$JOIN_MODE_PLAY}
+				JoinServer
 			else
 				menu_scroll_end_sound
 			endif
@@ -3440,23 +3440,23 @@ script net_quick_create
 endscript
 
 script net_custom_search 
-	generic_event_choose state = uistate_net_custom_search data = {device_num = <device_num>}
+	generic_event_choose state = UIstate_net_custom_search data = {device_num = <device_num>}
 endscript
 
 script set_net_ui_to_searching 
-	onlinelobbyinterface :gettags
-	launchevent \{type = unfocus
+	OnlineLobbyInterface :GetTags
+	LaunchEvent \{type = unfocus
 		target = current_menu}
 	create_start_matchmaking_container
-	<player_slots_menu_id> :obj_killspawnedscript name = update_player_slots_ui
+	<player_slots_menu_id> :Obj_KillSpawnedScript name = update_player_slots_ui
 	remove_locals_not_ingame
-	<player_slots_menu_id> :gettags
-	getarraysize \{all_players_checksum}
+	<player_slots_menu_id> :GetTags
+	GetArraySize \{all_players_checksum}
 	i = 0
 	begin
 	if (<all_players_checksum> [<i>] = empty)
 		if ((<i> + 1) = <array_size>)
-			printf qs(0xb065622b) m = <i> d = <j>
+			printf qs("\Li = %m j = %d") m = <i> d = <j>
 			break
 		endif
 		j = (<i> + 1)
@@ -3464,21 +3464,21 @@ script set_net_ui_to_searching
 		begin
 		if (<all_players_checksum> [<j>] = local_signed_in)
 			get_ui_slot_corresponding_controller target_ui_slot = <j>
-			getplayerinfo (<j> + 1) part
-			getplayerinfo (<j> + 1) difficulty
-			getplayerinfo (<j> + 1) lefty_flip
-			getplayerinfo (<j> + 1) character_id
-			getplayerinfo (<j> + 1) vocals_highway_view
+			GetPlayerInfo (<j> + 1) part
+			GetPlayerInfo (<j> + 1) difficulty
+			GetPlayerInfo (<j> + 1) lefty_flip
+			GetPlayerInfo (<j> + 1) character_id
+			GetPlayerInfo (<j> + 1) vocals_highway_view
 			add_remove_player_to_net_ui action = remove ui_slot = <j> index = <controller> player_type = local_signed_in
-			add_remove_player_to_net_ui action = add index = <controller> player_type = local_signed_in part = <part>
+			add_remove_player_to_net_ui action = Add index = <controller> player_type = local_signed_in part = <part>
 			get_controller_corresponding_ui_slot controller = <controller>
 			if (<ui_slot> != -1)
-				setplayerinfo (<ui_slot> + 1) difficulty = <difficulty>
-				setplayerinfo (<ui_slot> + 1) lefty_flip = <lefty_flip>
-				setplayerinfo (<ui_slot> + 1) character_id = <character_id>
-				setplayerinfo (<ui_slot> + 1) vocals_highway_view = <vocals_highway_view>
+				SetPlayerInfo (<ui_slot> + 1) difficulty = <difficulty>
+				SetPlayerInfo (<ui_slot> + 1) lefty_flip = <lefty_flip>
+				SetPlayerInfo (<ui_slot> + 1) character_id = <character_id>
+				SetPlayerInfo (<ui_slot> + 1) vocals_highway_view = <vocals_highway_view>
 			endif
-			<player_slots_menu_id> :getsingletag all_players_checksum
+			<player_slots_menu_id> :GetSingleTag all_players_checksum
 			break
 		endif
 		j = (<j> + 1)
@@ -3492,22 +3492,22 @@ script set_net_ui_to_searching
 endscript
 
 script remove_locals_not_ingame 
-	onlinelobbyinterface :gettags
-	<player_slots_menu_id> :gettags
-	getarraysize \{all_players_checksum}
+	OnlineLobbyInterface :GetTags
+	<player_slots_menu_id> :GetTags
+	GetArraySize \{all_players_checksum}
 	i = 0
 	begin
 	if (<all_players_checksum> [<i>] = local_not_signed_in)
 		get_ui_slot_corresponding_controller target_ui_slot = <i>
 		add_remove_player_to_net_ui action = remove ui_slot = <i> index = <controller> player_type = local_not_signed_in
-		if gotparam \{one_player}
+		if GotParam \{one_player}
 			return
 		endif
 	elseif (<all_players_checksum> [<i>] = local_signed_in)
 		get_ui_slot_corresponding_controller target_ui_slot = <i>
-		if NOT netsessionfunc func = iscontrolleringame params = {controller = <controller>}
+		if NOT NetSessionFunc func = IsControllerInGame params = {controller = <controller>}
 			add_remove_player_to_net_ui action = remove ui_slot = <i> index = <controller> player_type = local_signed_in
-			if gotparam \{one_player}
+			if GotParam \{one_player}
 				return
 			endif
 		endif
@@ -3517,14 +3517,14 @@ script remove_locals_not_ingame
 endscript
 
 script remove_empty_slots_from_status_structs 
-	if screenelementexists \{id = onlinelobbyinterface}
-		onlinelobbyinterface :gettags
-		<player_slots_menu_id> :gettags
-		getarraysize \{all_players_checksum}
+	if ScreenElementExists \{id = OnlineLobbyInterface}
+		OnlineLobbyInterface :GetTags
+		<player_slots_menu_id> :GetTags
+		GetArraySize \{all_players_checksum}
 		i = 0
 		begin
 		if (<all_players_checksum> [<i>] = empty)
-			formattext checksumname = player_status 'player%d_status' d = (<i> + 1)
+			FormatText checksumname = player_status 'player%d_status' d = (<i> + 1)
 			change structurename = <player_status> is_local_client = 0
 		endif
 		i = (<i> + 1)
@@ -3533,27 +3533,27 @@ script remove_empty_slots_from_status_structs
 endscript
 
 script set_net_ui_to_finished_searching 
-	printf \{qs(0x385807d3)}
-	if screenelementexists \{id = onlinelobbyinterface}
+	printf \{qs("\Lset_net_ui_to_finished_searching")}
+	if ScreenElementExists \{id = OnlineLobbyInterface}
 		spawn_player_drop_listeners \{drop_player_script = matchmaking_countdown_drop_player_script
 			end_game_script = matchmaking_countdown_end_game_script}
 		destroy_searching_ui
 		sent_settings_sync = 0
 		set_ui_to_final_player_slots
 		change \{online_song_choice_id = 0}
-		if iswinport
+		if IsWinPort
 			printf \{qs(0x914a4062)}
-			onlinelobbyinterface :settags \{toggle_allowed = 0}
+			OnlineLobbyInterface :SetTags \{toggle_allowed = 0}
 			set_ui_to_final_player_slots \{locked}
 		endif
 		index = ($online_to_setlist_count)
 		begin
-		formattext textname = timer_msg qs(0xbd40792a) d = <index>
-		if screenelementexists \{id = onlinelobbyinterface}
-			onlinelobbyinterface :se_setprops matchmaking_info_text = (<timer_msg>)
+		FormatText TextName = timer_msg qs("COUNTDOWN TO SETLIST %d") d = <index>
+		if ScreenElementExists \{id = OnlineLobbyInterface}
+			OnlineLobbyInterface :SE_SetProps matchmaking_info_text = (<timer_msg>)
 		endif
 		if (<index> = 5)
-			onlinelobbyinterface :settags \{toggle_allowed = 0}
+			OnlineLobbyInterface :SetTags \{toggle_allowed = 0}
 			set_ui_to_final_player_slots \{locked}
 		elseif (<index> < 5 && (<sent_settings_sync> = 0))
 			<sent_settings_sync> = 1
@@ -3563,19 +3563,19 @@ script set_net_ui_to_finished_searching
 			break
 		endif
 		index = (<index> - 1)
-		wait \{1
+		Wait \{1
 			second}
 		repeat
 		if NOT ($net_match_dlc_sync_finished = 1)
-			if isps3
-				title = qs(0xe60e3e4a)
-			elseif iswinport
-				title = qs(0xe60e3e4a)
+			if IsPs3
+				title = qs("ONLINE")
+			elseif IsWinPort
+				title = qs("ONLINE")
 			else
-				title = qs(0x2725b21f)
+				title = qs("Xbox LIVE")
 			endif
 			destroy_popup_warning_menu
-			if iswinport
+			if IsWinPort
 				create_popup_warning_menu {
 					title = <title>
 					title_props = {scale = 1.0}
@@ -3590,15 +3590,15 @@ script set_net_ui_to_finished_searching
 					title = <title>
 					title_props = {scale = 1.0}
 					textblock = {
-						text = qs(0x1fb396f2)
+						text = qs("Syncing downloadable content...")
 						pos = (640.0, 380.0)
 					}
 					no_background
 				}
 			endif
-			createscreenelement \{type = spriteelement
-				parent = popupelement
-				texture = online_load_wheel_bg
+			CreateScreenElement \{type = SpriteElement
+				parent = PopupElement
+				texture = online_load_wheel_BG
 				pos = (960.0, 600.0)
 				dims = (128.0, 128.0)
 				just = [
@@ -3606,8 +3606,8 @@ script set_net_ui_to_finished_searching
 					center
 				]
 				z_priority = 520}
-			createscreenelement \{type = spriteelement
-				parent = popupelement
+			CreateScreenElement \{type = SpriteElement
+				parent = PopupElement
 				texture = online_load_wheel
 				pos = (960.0, 600.0)
 				dims = (128.0, 128.0)
@@ -3616,23 +3616,23 @@ script set_net_ui_to_finished_searching
 					center
 				]
 				z_priority = 521}
-			popupelement :obj_spawnscriptnow animate_online_icon params = {id = <id>}
+			PopupElement :Obj_SpawnScriptNow animate_online_icon params = {id = <id>}
 			wait_time = 0
 			begin
 			if ($net_match_dlc_sync_finished = 1)
 				break
 			elseif (<wait_time> > 15)
-				killspawnedscript \{name = net_match_send_available_items}
+				KillSpawnedScript \{name = net_match_send_available_items}
 				break
 			endif
 			<wait_time> = (<wait_time> + 1)
-			wait \{1.0
+			Wait \{1.0
 				seconds}
 			repeat
 			destroy_popup_warning_menu
 		endif
 		ui_event_get_top
-		if gotparam \{is_popup}
+		if GotParam \{is_popup}
 			generic_event_replace \{state = uistate_setlist
 				data = {
 					no_jamsession
@@ -3644,42 +3644,42 @@ script set_net_ui_to_finished_searching
 				}}
 		endif
 	else
-		printf \{qs(0xb8033e72)}
+		printf \{qs("\Lour matchmaking menu doesn't exist")}
 	endif
 endscript
 
 script lock_player_parts 
-	printf \{qs(0x861fd6e0)}
-	if ishost
-		gamemode_getnumplayers
+	printf \{qs("\L--- lock_player_parts")}
+	if IsHost
+		GameMode_GetNumPlayers
 		index = 1
 		num_bass = [0 0]
 		num_guitar = [0 0]
 		begin
-		getplayerinfo <index> part
-		getplayerinfo <index> team
-		if (<part> = guitar || <part> = bass)
+		GetPlayerInfo <index> part
+		GetPlayerInfo <index> team
+		if (<part> = guitar || <part> = Bass)
 			if (<part> = guitar)
-				setarrayelement arrayname = num_guitar index = <team> newvalue = (<num_guitar> [<team>] + 1)
+				SetArrayElement ArrayName = num_guitar index = <team> newvalue = (<num_guitar> [<team>] + 1)
 				if (<num_guitar> [<team>] > 1)
-					setplayerinfo <index> part = bass
+					SetPlayerInfo <index> part = Bass
 				else
-					setplayerinfo <index> part = guitar
+					SetPlayerInfo <index> part = guitar
 				endif
-			elseif (<part> = bass)
-				setarrayelement arrayname = num_bass index = <team> newvalue = (<num_bass> [<team>] + 1)
+			elseif (<part> = Bass)
+				SetArrayElement ArrayName = num_bass index = <team> newvalue = (<num_bass> [<team>] + 1)
 				if (<num_bass> [<team>] > 1)
-					setplayerinfo <index> part = guitar
+					SetPlayerInfo <index> part = guitar
 				else
-					setplayerinfo <index> part = bass
+					SetPlayerInfo <index> part = Bass
 				endif
 			endif
 		endif
 		<index> = (<index> + 1)
 		repeat (<num_players>)
-		if screenelementexists \{id = onlinelobbyinterface}
+		if ScreenElementExists \{id = OnlineLobbyInterface}
 			if ($network_game_postgame_lobby = 0)
-				onlinelobbyinterface :gettags
+				OnlineLobbyInterface :GetTags
 				set_ui_to_final_player_slots slot = <slot_index> locked
 			else
 				refresh_player_scores_postgame_container \{locked}
@@ -3690,39 +3690,39 @@ endscript
 
 script set_ui_to_final_player_slots \{slot = 0}
 	destroy_player_slots_ui
-	onlinelobbyinterface :gettags
-	gamemode_getnumplayers
+	OnlineLobbyInterface :GetTags
+	GameMode_GetNumPlayers
 	<index> = 1
 	begin
-	getplayerinfo <index> net_id_first
-	getplayerinfo <index> net_id_second
-	getplayerinfo <index> part
+	GetPlayerInfo <index> net_id_first
+	GetPlayerInfo <index> net_id_second
+	GetPlayerInfo <index> part
 	switch (<part>)
 		case guitar
-		icon_texture = logo_guitar_grayscale
-		case bass
-		icon_texture = logo_bass_grayscale
+		icon_texture = Logo_Guitar_GrayScale
+		case Bass
+		icon_texture = Logo_Bass_GrayScale
 		case drum
-		icon_texture = logo_drum_grayscale
-		case vocals
-		icon_texture = logo_vocal_grayscale
+		icon_texture = Logo_Drum_GrayScale
+		case Vocals
+		icon_texture = Logo_Vocal_GrayScale
 	endswitch
-	formattext checksumname = gamertag 'gamertag_%d' d = (<index> - 1)
+	FormatText checksumname = gamertag 'gamertag_%d' d = (<index> - 1)
 	name = $<gamertag>
 	xuid = [0 0]
-	setarrayelement arrayname = xuid index = 0 newvalue = (<net_id_first>)
-	setarrayelement arrayname = xuid index = 1 newvalue = (<net_id_second>)
+	SetArrayElement ArrayName = xuid index = 0 newvalue = (<net_id_first>)
+	SetArrayElement ArrayName = xuid index = 1 newvalue = (<net_id_second>)
 	color = ($online_player_slot_bg_team1)
-	if NOT gamemode_iscooperative
+	if NOT GameMode_IsCooperative
 		if (<index> > <num_players> / 2)
 			color = ($online_player_slot_bg_team2)
 		endif
 	endif
-	getplayerinfo <index> career_earnings
+	GetPlayerInfo <index> career_earnings
 	cash_get_info_from_earnings earnings = <career_earnings>
-	getplayerinfo <index> controller
-	getplayerinfo <index> is_local_client
-	formattext textname = cash_text qs(0x48c6d14c) d = <rank>
+	GetPlayerInfo <index> controller
+	GetPlayerInfo <index> is_local_client
+	FormatText TextName = cash_text qs("%d") d = <rank>
 	online_lobby_add_player_slot {
 		name = <name>
 		controller_texture = <icon_texture>
@@ -3737,15 +3737,15 @@ script set_ui_to_final_player_slots \{slot = 0}
 	<index> = (<index> + 1)
 	repeat <num_players>
 	clean_up_user_control_helpers
-	netoptions :pref_get \{name = game_modes}
-	if gotparam \{locked}
+	NetOptions :Pref_Get \{name = game_modes}
+	if GotParam \{locked}
 		new_event_handlers = [
 			{pad_up net_up_down_action params = {action = up}}
 			{pad_down net_up_down_action params = {action = down}}
 		]
-		if NOT iswinport
-			if isxenon
-				add_user_control_helper \{text = qs(0xfcc51f45)
+		if NOT IsWinPort
+			if isXenon
+				add_user_control_helper \{text = qs("VIEW GAMER CARD")
 					button = green
 					z = 100000}
 			endif
@@ -3756,22 +3756,22 @@ script set_ui_to_final_player_slots \{slot = 0}
 			{pad_down net_up_down_action params = {action = down}}
 			{pad_l1 toggle_guitar_part params = {finished_matchmaking}}
 		]
-		if NOT iswinport
-			if isxenon
-				add_user_control_helper \{text = qs(0xfcc51f45)
+		if NOT IsWinPort
+			if isXenon
+				add_user_control_helper \{text = qs("VIEW GAMER CARD")
 					button = green
 					z = 100000}
 			endif
 		endif
-		getactivecontrollers
-		getarraysize <active_controllers>
+		GetActiveControllers
+		GetArraySize <active_controllers>
 		i = 0
 		begin
 		if (<active_controllers> [<i>] = 1)
-			if netsessionfunc func = iscontrolleringame params = {controller = <i>}
+			if NetSessionFunc func = IsControllerInGame params = {controller = <i>}
 				get_controller_type controller_index = <i>
 				if (<controller_type> = guitar || <controller_type> = controller)
-					add_user_control_helper text = qs(0xfe21f453) button = orange z = 100000 controller = <i>
+					add_user_control_helper text = qs(0xfe21f453) button = Orange z = 100000 controller = <i>
 					break
 				endif
 			endif
@@ -3783,34 +3783,34 @@ script set_ui_to_final_player_slots \{slot = 0}
 			{pad_up net_up_down_action params = {action = up}}
 			{pad_down net_up_down_action params = {action = down}}
 		]
-		if NOT iswinport
-			if isxenon
-				add_user_control_helper \{text = qs(0xfcc51f45)
+		if NOT IsWinPort
+			if isXenon
+				add_user_control_helper \{text = qs("VIEW GAMER CARD")
 					button = green
 					z = 100000}
 			endif
 		endif
 	endif
-	setscreenelementprops {
+	SetScreenElementProps {
 		id = <player_slots_menu_id>
 		event_handlers = []
 		replace_handlers
 	}
-	setscreenelementprops {
+	SetScreenElementProps {
 		id = <player_slots_menu_id>
 		event_handlers = <new_event_handlers>
 		replace_handlers
 	}
-	onlinelobbyinterface :settags slot_items = <num_players> menu_items = 0 slot_index = 0 locked_to_players = 1
-	launchevent type = focus target = <player_slots_menu_id> data = {child_index = <slot>}
+	OnlineLobbyInterface :SetTags slot_items = <num_players> Menu_items = 0 slot_index = 0 locked_to_players = 1
+	LaunchEvent type = focus target = <player_slots_menu_id> data = {child_index = <slot>}
 endscript
 
-script online_lobby_add_player_slot \{cash_text = qs(0x6160dbf3)
+script online_lobby_add_player_slot \{cash_text = qs("0")
 		cash_icon_id = cash_milestone_icon_002}
-	if screenelementexists \{id = onlinelobbyinterface}
-		onlinelobbyinterface :gettags
-		createscreenelement {
-			type = descinterface
+	if ScreenElementExists \{id = OnlineLobbyInterface}
+		OnlineLobbyInterface :GetTags
+		CreateScreenElement {
+			type = DescInterface
 			desc = 'online_lobby_player_slot_item'
 			parent = <parent>
 			auto_dims = false
@@ -3820,22 +3820,22 @@ script online_lobby_add_player_slot \{cash_text = qs(0x6160dbf3)
 				{unfocus player_slot_change_focus params = {unfocus}}
 			]
 		}
-		if isxenon
-			if gotparam \{xuid}
-				<id> :se_setprops event_handlers = [{pad_choose ui_menu_select_sfx}
+		if isXenon
+			if GotParam \{xuid}
+				<id> :SE_SetProps event_handlers = [{pad_choose ui_menu_select_sfx}
 					{pad_choose menu_show_gamercard_from_netid params = {net_id = <xuid>}}
 				]
 				if (<is_local_client> = 0)
-					<id> :obj_spawnscriptlater update_headset_status params = {obj_id = <id> uid = <xuid>}
-				elseif gotparam \{controller}
-					if NOT netsessionfunc func = xenonisguest params = {controller_index = (<controller>)}
-						<id> :obj_spawnscriptlater update_headset_status params = {obj_id = <id> uid = <xuid>}
+					<id> :Obj_SpawnScriptLater update_headset_status params = {obj_id = <id> uid = <xuid>}
+				elseif GotParam \{controller}
+					if NOT NetSessionFunc func = XenonIsGuest params = {controller_index = (<controller>)}
+						<id> :Obj_SpawnScriptLater update_headset_status params = {obj_id = <id> uid = <xuid>}
 					endif
 				endif
 			endif
 		endif
-		<id> :desc_checkversion desired = 2 assertif = mismatch
-		<id> :se_setprops {
+		<id> :Desc_CheckVersion desired = 2 AssertIf = Mismatch
+		<id> :SE_SetProps {
 			player_slot_name_text = <name>
 			player_instrument_logo_texture = <controller_texture>
 			player_slot_bg_rgba = <bg_rgba>
@@ -3843,42 +3843,42 @@ script online_lobby_add_player_slot \{cash_text = qs(0x6160dbf3)
 			cash_rank_text = <cash_text>
 			cash_icon_alpha = 1
 		}
-		if <id> :desc_resolvealias name = alias_sign_in_button param = signin_id
-			<signin_id> :die
+		if <id> :Desc_ResolveAlias name = alias_sign_in_button param = signin_id
+			<signin_id> :Die
 		endif
 	endif
 endscript
 
 script update_ui_total_players 
-	printf \{qs(0xdbe11d09)}
-	gamemode_gettype
+	printf \{qs("\Lupdate_ui_total_players")}
+	GameMode_GetType
 	if (<type> = career)
-		printf \{qs(0x810d64d1)}
+		printf \{qs("\Lcareer matchmaking is done")}
 		get_local_players_in_game
 		if (($num_players_in_band = <num_local_players>) && ($num_players_in_band = <total_players>))
-			wait \{1
+			Wait \{1
 				second}
-			finalizejoinprocesslocalonly
+			FinalizeJoinProcessLocalOnly
 		endif
 	else
 		get_local_players_in_game
-		netsessionfunc \{obj = party
+		NetSessionFunc \{obj = party
 			func = get_party_members}
-		getarraysize <connections>
+		GetArraySize <connections>
 		if ((<array_size> = <num_local_players>) && (<array_size> = <total_players>))
-			wait \{1
+			Wait \{1
 				second}
 			change \{net_match_dlc_sync_finished = 1}
 			net_match_set_available_items
-			finalizejoinprocesslocalonly
+			FinalizeJoinProcessLocalOnly
 		endif
 	endif
 	change net_num_players = <total_players>
 endscript
 
 script net_msg_update_player_ui 
-	printf \{qs(0x315363a3)}
-	gamemode_gettype
+	printf \{qs("\Lnet_msg_update_player_ui")}
+	GameMode_GetType
 	if (<type> = career)
 		net_add_player_to_career_ui {
 			name = <gamertag_string>
@@ -3894,11 +3894,11 @@ script net_msg_update_player_ui
 endscript
 
 script net_msg_update_joining_ui 
-	printf \{qs(0x1adf4bb7)}
-	gamemode_gettype
+	printf \{qs("\Lnet_msg_update_joining_ui")}
+	GameMode_GetType
 	if (<type> = career)
-		if NOT ishost
-			register_new_progression_atoms \{career_band}
+		if NOT IsHost
+			register_new_progression_atoms \{Career_Band}
 			ui_event_get_stack
 			if NOT ((<stack> [1].base_name) = 'band_mode')
 				proceed_to_band_lobby
@@ -3909,26 +3909,26 @@ script net_msg_update_joining_ui
 			ui_band_mode_change_menu_focus_all \{focus_type = focus
 				local_only}
 			get_player_num_from_controller controller_index = ($primary_controller)
-			sendstructure callback = net_career_asign_band_leader_icon data_to_send = {player_num = <player_num>}
-			if screenelementexists \{id = myinterfaceelement}
-				myinterfaceelement :obj_spawnscript \{net_career_host_finalize_menu_ui}
+			SendStructure callback = net_career_asign_band_leader_icon data_to_send = {player_num = <player_num>}
+			if ScreenElementExists \{id = MyInterfaceElement}
+				MyInterfaceElement :obj_spawnscript \{net_career_host_finalize_menu_ui}
 			endif
 		endif
 	else
-		if screenelementexists \{id = onlinelobbyinterface}
-			onlinelobbyinterface :obj_spawnscriptlater \{set_net_ui_to_finished_searching}
+		if ScreenElementExists \{id = OnlineLobbyInterface}
+			OnlineLobbyInterface :Obj_SpawnScriptLater \{set_net_ui_to_finished_searching}
 		else
-			spawnscriptlater \{set_net_ui_to_finished_searching}
+			SpawnScriptLater \{set_net_ui_to_finished_searching}
 		endif
 	endif
 endscript
 
 script choose_random_venue 
-	getarraysize ($levelzonearray)
+	GetArraySize ($LevelZoneArray)
 	begin
-	getrandomvalue name = level_index integer a = 0 b = (<array_size> -1)
-	get_levelzonearray_checksum index = <level_index>
-	if NOT structurecontains structure = ($levelzones.<level_checksum>) debug_only
+	GetRandomValue name = level_index Integer a = 0 b = (<array_size> -1)
+	get_LevelZoneArray_checksum index = <level_index>
+	if NOT StructureContains Structure = ($LevelZones.<level_checksum>) debug_only
 		change current_level = <level_checksum>
 		break
 	endif
@@ -3936,17 +3936,17 @@ script choose_random_venue
 endscript
 
 script host_start_player_settings_sync 
-	if ishost
+	if IsHost
 		if ($net_num_player_settings_ack = 0)
-			printf \{qs(0xd493fca3)}
-			sendstructure \{callback = player_settings_request
+			printf \{qs("\L---host_start_player_settings_sync")}
+			SendStructure \{callback = player_settings_request
 				data_to_send = {
 					none
 				}}
 			i = 1
 			num_local_players = 4
 			begin
-			formattext checksumname = player_status 'player%d_status' d = <i>
+			FormatText checksumname = player_status 'player%d_status' d = <i>
 			if ((($<player_status>.is_local_client) = 1) && (($<player_status>.net_obj_id) >= 0))
 				change net_num_player_settings_ack = ($net_num_player_settings_ack + 1)
 				printf ($net_num_player_settings_ack)
@@ -3956,10 +3956,10 @@ script host_start_player_settings_sync
 			if (($net_num_players) = ($net_num_player_settings_ack))
 				lock_player_parts
 			endif
-			gamemode_gettype
+			GameMode_GetType
 			if (<type> = career)
-				if screenelementexists \{id = myinterfaceelement}
-					myinterfaceelement :obj_spawnscriptnow \{host_wait_for_player_settings_request_ack}
+				if ScreenElementExists \{id = MyInterfaceElement}
+					MyInterfaceElement :Obj_SpawnScriptNow \{host_wait_for_player_settings_request_ack}
 				endif
 			endif
 		endif
@@ -3976,12 +3976,12 @@ script host_wait_for_player_settings_request_ack
 		change \{player_drop_in_setting_sync = 1}
 		break
 	endif
-	wait \{1
+	Wait \{1
 		second}
 	repeat
-	printf \{qs(0x800db563)}
+	printf \{qs("\Lwe have a dropped player, so we're just going have the host broadcast his settings.")}
 	change \{net_num_player_settings_ack = 0}
-	gamemode_gettype
+	GameMode_GetType
 	if (<type> = career)
 		net_career_check_instruments
 	else
@@ -3991,9 +3991,9 @@ script host_wait_for_player_settings_request_ack
 	player_data = {}
 	i = 0
 	begin
-	formattext checksumname = player_status 'player%d_status' d = (<i> + 1)
+	FormatText checksumname = player_status 'player%d_status' d = (<i> + 1)
 	if (($<player_status>.net_obj_id) >= 0)
-		appendstruct {
+		AppendStruct {
 			struct = player_data
 			field = <player_status>
 			params = {
@@ -4010,28 +4010,28 @@ script host_wait_for_player_settings_request_ack
 	endif
 	i = (<i> + 1)
 	repeat 8
-	printf \{qs(0x8528c58d)}
+	printf \{qs("\LHost now sending all players' info to everyone")}
 	printstruct <player_data>
-	sendstructure callback = finish_player_settings_sync data_to_send = {player_data = <player_data>}
+	SendStructure callback = finish_player_settings_sync data_to_send = {player_data = <player_data>}
 	if (<type> = career)
 		count = 0
 		i = 1
 		num_local_players = 4
 		begin
-		formattext checksumname = player_status 'player%d_status' d = <i>
+		FormatText checksumname = player_status 'player%d_status' d = <i>
 		if ((($<player_status>.net_obj_id) >= 0) && (($<player_status>.is_local_client) = 1))
 			change net_num_player_settings_ack = (($net_num_player_settings_ack) + 1)
-			printf qs(0xfe4ea33f) d = ($net_num_player_settings_ack)
+			printf qs("\Lwe currently have %d players locally that are in thte game") d = ($net_num_player_settings_ack)
 		endif
 		i = (<i> + 1)
 		repeat <num_local_players>
-		if screenelementexists \{id = myinterfaceelement}
-			myinterfaceelement :obj_spawnscript \{net_career_wait_to_proceed_to_online_play}
+		if ScreenElementExists \{id = MyInterfaceElement}
+			MyInterfaceElement :obj_spawnscript \{net_career_wait_to_proceed_to_online_play}
 		endif
 	else
 		if ($network_game_postgame_lobby = 0)
 			get_local_players_in_game
-			gamemode_getnumplayers
+			GameMode_GetNumPlayers
 			if (<num_players> != <num_local_players>)
 				net_match_send_available_items
 			endif
@@ -4040,14 +4040,14 @@ script host_wait_for_player_settings_request_ack
 endscript
 
 script player_settings_request 
-	printf \{qs(0xbe85d6ff)}
-	gamemode_gettype
+	printf \{qs("\Lplayer_settings_request")}
+	GameMode_GetType
 	if (<type> = career)
 		begin
 		if ($net_career_data_sync_done = 0)
 			break
 		endif
-		wait \{1
+		Wait \{1
 			gameframe}
 		repeat
 	endif
@@ -4055,9 +4055,9 @@ script player_settings_request
 	player_data = {}
 	i = 1
 	begin
-	formattext checksumname = player_status 'player%d_status' d = <i>
+	FormatText checksumname = player_status 'player%d_status' d = <i>
 	if ((($<player_status>.is_local_client) = 1) && (($<player_status>.net_obj_id) >= 0))
-		appendstruct {
+		AppendStruct {
 			struct = player_data
 			field = <player_status>
 			params = {
@@ -4071,39 +4071,39 @@ script player_settings_request
 	i = (<i> + 1)
 	repeat <num_local_players>
 	if NOT (<type> = career)
-		if screenelementexists \{id = onlinelobbyinterface}
+		if ScreenElementExists \{id = OnlineLobbyInterface}
 			if ($network_game_postgame_lobby = 0)
-				onlinelobbyinterface :gettags
+				OnlineLobbyInterface :GetTags
 				set_ui_to_final_player_slots slot = <slot_index> locked
 			endif
 		endif
 	endif
-	sendstructure callback = player_settings_request_ack data_to_send = {player_data = <player_data>} to_server
+	SendStructure callback = player_settings_request_ack data_to_send = {player_data = <player_data>} to_server
 endscript
 
 script player_settings_request_ack 
-	printf \{qs(0xefe6d493)}
+	printf \{qs("\Lplayer_settings_request_ack")}
 	if ($player_drop_in_setting_sync = 0)
-		if gotparam \{player_data}
+		if GotParam \{player_data}
 			num_local_players = 4
 			i = 1
 			begin
-			formattext checksumname = player_status 'player%d_status' d = <i>
-			if structurecontains structure = <player_data> <player_status>
+			FormatText checksumname = player_status 'player%d_status' d = <i>
+			if StructureContains Structure = <player_data> <player_status>
 				num_net_players = 8
 				j = 1
 				begin
-				getplayerinfo <j> net_obj_id
+				GetPlayerInfo <j> net_obj_id
 				if (<net_obj_id> = <player_data>.<player_status>.player_obj_id)
 					change net_num_player_settings_ack = ($net_num_player_settings_ack + 1)
 					printf ($net_num_player_settings_ack)
-					setplayerinfo <j> difficulty = (<player_data>.<player_status>.player_difficulty)
-					setplayerinfo <j> lefty_flip = (<player_data>.<player_status>.player_lefty_flip)
-					setplayerinfo <j> lefthanded_gems = (<player_data>.<player_status>.player_lefty_flip)
-					setplayerinfo <j> lefthanded_button_ups = (<player_data>.<player_status>.player_lefty_flip)
-					setplayerinfo <j> lefthanded_button_ups_flip_save = (<player_data>.<player_status>.player_lefty_flip)
-					setplayerinfo <j> lefthanded_gems_flip_save = (<player_data>.<player_status>.player_lefty_flip)
-					setplayerinfo <j> part = (<player_data>.<player_status>.player_part)
+					SetPlayerInfo <j> difficulty = (<player_data>.<player_status>.player_difficulty)
+					SetPlayerInfo <j> lefty_flip = (<player_data>.<player_status>.player_lefty_flip)
+					SetPlayerInfo <j> lefthanded_gems = (<player_data>.<player_status>.player_lefty_flip)
+					SetPlayerInfo <j> lefthanded_button_ups = (<player_data>.<player_status>.player_lefty_flip)
+					SetPlayerInfo <j> lefthanded_button_ups_flip_save = (<player_data>.<player_status>.player_lefty_flip)
+					SetPlayerInfo <j> lefthanded_gems_flip_save = (<player_data>.<player_status>.player_lefty_flip)
+					SetPlayerInfo <j> part = (<player_data>.<player_status>.player_part)
 				endif
 				j = (<j> + 1)
 				repeat <num_net_players>
@@ -4112,16 +4112,16 @@ script player_settings_request_ack
 			repeat <num_local_players>
 		endif
 		if (($net_num_players) = ($net_num_player_settings_ack))
-			gamemode_gettype
+			GameMode_GetType
 			if (<type> = career)
-				if screenelementexists \{id = myinterfaceelement}
-					myinterfaceelement :obj_killspawnedscript \{name = host_wait_for_player_settings_request_ack}
+				if ScreenElementExists \{id = MyInterfaceElement}
+					MyInterfaceElement :Obj_KillSpawnedScript \{name = host_wait_for_player_settings_request_ack}
 				endif
 			endif
-			printf \{qs(0x016b9c08)}
+			printf \{qs("\LHost recieved all player's settings.")}
 			change \{net_num_player_settings_ack = 0}
 			change \{player_drop_in_setting_sync = 0}
-			gamemode_gettype
+			GameMode_GetType
 			if (<type> = career)
 				net_career_check_instruments
 			else
@@ -4131,9 +4131,9 @@ script player_settings_request_ack
 			player_data = {}
 			i = 0
 			begin
-			formattext checksumname = player_status 'player%d_status' d = (<i> + 1)
+			FormatText checksumname = player_status 'player%d_status' d = (<i> + 1)
 			if (($<player_status>.net_obj_id) >= 0)
-				appendstruct {
+				AppendStruct {
 					struct = player_data
 					field = <player_status>
 					params = {
@@ -4150,28 +4150,28 @@ script player_settings_request_ack
 			endif
 			i = (<i> + 1)
 			repeat 8
-			printf \{qs(0x8528c58d)}
+			printf \{qs("\LHost now sending all players' info to everyone")}
 			printstruct <player_data>
-			sendstructure callback = finish_player_settings_sync data_to_send = {player_data = <player_data>}
+			SendStructure callback = finish_player_settings_sync data_to_send = {player_data = <player_data>}
 			if (<type> = career)
 				count = 0
 				i = 1
 				num_local_players = 4
 				begin
-				formattext checksumname = player_status 'player%d_status' d = <i>
+				FormatText checksumname = player_status 'player%d_status' d = <i>
 				if ((($<player_status>.net_obj_id) >= 0) && (($<player_status>.is_local_client) = 1))
 					change net_num_player_settings_ack = (($net_num_player_settings_ack) + 1)
-					printf qs(0xfe4ea33f) d = ($net_num_player_settings_ack)
+					printf qs("\Lwe currently have %d players locally that are in thte game") d = ($net_num_player_settings_ack)
 				endif
 				i = (<i> + 1)
 				repeat <num_local_players>
-				if screenelementexists \{id = myinterfaceelement}
-					myinterfaceelement :obj_spawnscript \{net_career_wait_to_proceed_to_online_play}
+				if ScreenElementExists \{id = MyInterfaceElement}
+					MyInterfaceElement :obj_spawnscript \{net_career_wait_to_proceed_to_online_play}
 				endif
 			else
 				if ($network_game_postgame_lobby = 0)
 					get_local_players_in_game
-					gamemode_getnumplayers
+					GameMode_GetNumPlayers
 					if (<num_players> != <num_local_players>)
 						net_match_send_available_items
 					endif
@@ -4182,26 +4182,26 @@ script player_settings_request_ack
 endscript
 
 script finish_player_settings_sync 
-	printf \{qs(0xc8dc30a5)}
+	printf \{qs("\Lfinish_player_settings_sync")}
 	printstruct <...>
-	if gotparam \{player_data}
+	if GotParam \{player_data}
 		num_net_players = 8
 		i = 1
 		begin
-		formattext checksumname = player_status 'player%d_status' d = <i>
-		if structurecontains structure = <player_data> <player_status>
+		FormatText checksumname = player_status 'player%d_status' d = <i>
+		if StructureContains Structure = <player_data> <player_status>
 			num_net_players = 8
 			j = 1
 			begin
-			getplayerinfo <j> net_obj_id
+			GetPlayerInfo <j> net_obj_id
 			if (<net_obj_id> = <player_data>.<player_status>.player_obj_id)
-				setplayerinfo <j> difficulty = (<player_data>.<player_status>.player_difficulty)
-				setplayerinfo <j> lefty_flip = (<player_data>.<player_status>.player_lefty_flip)
-				setplayerinfo <j> lefthanded_gems = (<player_data>.<player_status>.player_lefty_flip)
-				setplayerinfo <j> lefthanded_button_ups = (<player_data>.<player_status>.player_lefty_flip)
-				setplayerinfo <j> lefthanded_button_ups_flip_save = (<player_data>.<player_status>.player_lefty_flip)
-				setplayerinfo <j> lefthanded_gems_flip_save = (<player_data>.<player_status>.player_lefty_flip)
-				setplayerinfo <j> part = (<player_data>.<player_status>.player_part)
+				SetPlayerInfo <j> difficulty = (<player_data>.<player_status>.player_difficulty)
+				SetPlayerInfo <j> lefty_flip = (<player_data>.<player_status>.player_lefty_flip)
+				SetPlayerInfo <j> lefthanded_gems = (<player_data>.<player_status>.player_lefty_flip)
+				SetPlayerInfo <j> lefthanded_button_ups = (<player_data>.<player_status>.player_lefty_flip)
+				SetPlayerInfo <j> lefthanded_button_ups_flip_save = (<player_data>.<player_status>.player_lefty_flip)
+				SetPlayerInfo <j> lefthanded_gems_flip_save = (<player_data>.<player_status>.player_lefty_flip)
+				SetPlayerInfo <j> part = (<player_data>.<player_status>.player_part)
 			endif
 			j = (<j> + 1)
 			repeat <num_net_players>
@@ -4209,25 +4209,25 @@ script finish_player_settings_sync
 		i = (<i> + 1)
 		repeat <num_net_players>
 	endif
-	gamemode_gettype
+	GameMode_GetType
 	if (<type> = career)
 		count = 0
 		i = 1
 		num_local_players = 4
 		begin
-		formattext checksumname = player_status 'player%d_status' d = <i>
+		FormatText checksumname = player_status 'player%d_status' d = <i>
 		if ((($<player_status>.net_obj_id) >= 0) && (($<player_status>.is_local_client) = 1))
 			count = (<count> + 1)
 		endif
 		i = (<i> + 1)
 		repeat <num_local_players>
-		sendstructure callback = finish_player_settings_sync_ack data_to_send = {num_ready = <count>}
+		SendStructure callback = finish_player_settings_sync_ack data_to_send = {num_ready = <count>}
 	else
-		if screenelementexists \{id = onlinelobbyinterface}
+		if ScreenElementExists \{id = OnlineLobbyInterface}
 			if ($network_game_postgame_lobby = 0)
-				onlinelobbyinterface :gettags
+				OnlineLobbyInterface :GetTags
 				get_local_players_in_game
-				gamemode_getnumplayers
+				GameMode_GetNumPlayers
 				if (<num_players> != <num_local_players>)
 					net_match_send_available_items
 				endif
@@ -4240,20 +4240,20 @@ script finish_player_settings_sync
 endscript
 
 script finish_player_settings_sync_ack 
-	gamemode_gettype
+	GameMode_GetType
 	if (<type> = career)
 		change net_num_player_settings_ack = (($net_num_player_settings_ack) + <num_ready>)
-		printf qs(0xab067796) d = ($net_num_player_settings_ack)
+		printf qs("\Lwe now have %d players in the game") d = ($net_num_player_settings_ack)
 	endif
 endscript
 
 script net_party_host_started_matchmaking 
-	printf \{qs(0xea82e4e2)}
-	gamemode_gettype
+	printf \{qs("\L--- net_party_host_started_matchmaking")}
+	GameMode_GetType
 	if (<type> = career)
-		netsessionfunc \{obj = party
+		NetSessionFunc \{obj = party
 			func = get_party_members}
-		getarraysize <connections>
+		GetArraySize <connections>
 		change \{net_career_invite_flag = 1}
 		change \{net_band_mode_menu = lobby}
 		get_local_players_in_game
@@ -4264,51 +4264,51 @@ script net_party_host_started_matchmaking
 		else
 			value = 0
 		endif
-		setplayerinfo (<i> + 1) is_local_client = <value>
+		SetPlayerInfo (<i> + 1) is_local_client = <value>
 		i = (<i> + 1)
 		repeat 4
 		change num_players_in_band = <array_size>
 		ui_event \{event = menu_change
 			data = {
-				state = uistate_band_mode
+				state = UIstate_band_mode
 			}}
 	else
 		begin
-		if screenelementexists \{id = current_menu}
+		if ScreenElementExists \{id = current_menu}
 			break
 		endif
-		wait \{1
+		Wait \{1
 			gameframe}
 		repeat
 		remove_empty_slots_from_status_structs
 		change \{net_new_matchmaking_ui_flag = 1}
-		launchevent \{type = unfocus
+		LaunchEvent \{type = unfocus
 			target = current_menu}
 		set_net_dialog_message \{msg_checksum = start_matchmaking}
-		if screenelementexists \{id = onlinelobbyinterface}
-			onlinelobbyinterface :gettags
-			if screenelementexists id = <player_slots_menu_id>
-				<player_slots_menu_id> :obj_killspawnedscript name = update_player_slots_ui
-				if isscreenelementinfocus id = <player_slots_menu_id>
-					launchevent type = unfocus target = <player_slots_menu_id>
+		if ScreenElementExists \{id = OnlineLobbyInterface}
+			OnlineLobbyInterface :GetTags
+			if ScreenElementExists id = <player_slots_menu_id>
+				<player_slots_menu_id> :Obj_KillSpawnedScript name = update_player_slots_ui
+				if IsScreenElementInFocus id = <player_slots_menu_id>
+					LaunchEvent type = unfocus target = <player_slots_menu_id>
 				endif
 			endif
 		endif
-		netoptions :pref_get \{name = game_modes}
+		NetOptions :Pref_Get \{name = game_modes}
 		if (<checksum> = p2_battle)
 			get_player_num_from_controller controller_index = ($primary_controller)
 			if (<player_num> != -1)
-				getplayerinfo <player_num> difficulty
+				GetPlayerInfo <player_num> difficulty
 				if (<difficulty> = easy_rhythm)
 					checksum = easy
-					setplayerinfo <player_num> difficulty = <checksum>
+					SetPlayerInfo <player_num> difficulty = <checksum>
 				endif
 			endif
 		endif
-		if screenelementexists \{id = netprefinterface}
+		if ScreenElementExists \{id = NetPrefInterface}
 			ui_destroy_net_preferences \{no_focus}
 		endif
-		if screenelementexists \{id = friendslistinterface}
+		if ScreenElementExists \{id = FriendsListInterface}
 			ui_destroy_friends_list \{no_focus}
 		endif
 		clear_temp_net_id_array
@@ -4318,16 +4318,16 @@ script net_party_host_started_matchmaking
 endscript
 
 script net_party_attempted_join_result 
-	printf \{qs(0x781f28a3)}
-	requireparams \{[
+	printf \{qs("\L--- net_party_attempted_join_result")}
+	RequireParams \{[
 			join_result
 			join_mode
 		]
 		all}
 	change \{has_invite_join_result_callback_completed = 1}
 	if (<join_result> = 1)
-		printf \{qs(0x9014f167)}
-		if checksumequals a = <join_mode> b = career_join
+		printf \{qs("\LWe were able to join the remote party!")}
+		if ChecksumEquals a = <join_mode> b = career_join
 			ui_event_block \{event = menu_add
 				data = {
 					state = uistate_game_mode
@@ -4341,7 +4341,7 @@ script net_party_attempted_join_result
 			change \{game_mode = p4_career}
 			change \{net_band_mode_menu = invite}
 			net_party_save_off_invite_controllers
-			netoptions :pref_choose \{name = game_modes
+			NetOptions :Pref_Choose \{name = game_modes
 				checksum = p4_career}
 			destroy_loading_screen
 			ui_event \{event = menu_change
@@ -4357,24 +4357,24 @@ script net_party_attempted_join_result
 		endif
 	else
 		shut_down_net_play
-		printf \{qs(0x71dfc671)}
-		if isps3
-			popup_text = qs(0x366e10c6)
-			if gotparam \{reason}
+		printf \{qs("\LWe DID NOT join the remote party!")}
+		if IsPs3
+			popup_text = qs("Cannot join the online party. Insufficient slots available.")
+			if GotParam \{reason}
 				if (<reason> = bad_state)
-					<popup_text> = qs(0x33923e7f)
+					<popup_text> = qs("Cannot join the online party. Session no longer available.")
 				endif
 			endif
 		else
-			popup_text = qs(0x4e216451)
-			if gotparam \{reason}
+			popup_text = qs("Cannot join the Xbox LIVE party. Insufficient slots available.")
+			if GotParam \{reason}
 				if (<reason> = bad_state)
-					<popup_text> = qs(0x3c913dd8)
+					<popup_text> = qs("Cannot join the Xbox LIVE party. Session no longer available.")
 				endif
 			endif
 		endif
 		create_popup_warning_menu {
-			title = qs(0x4d21d20e)
+			title = qs("JOINING")
 			textblock = {
 				text = <popup_text>
 			}
@@ -4382,7 +4382,7 @@ script net_party_attempted_join_result
 			options = [
 				{
 					func = net_party_failed_join_attempt_continue
-					text = qs(0x494b4d7f)
+					text = qs("Continue")
 				}
 			]
 		}
@@ -4401,12 +4401,12 @@ script net_party_failed_join_attempt_continue
 endscript
 
 script net_party_lost_party_connection 
-	printf \{qs(0xb6121789)}
+	printf \{qs("\L--- net_party_lost_party_connection")}
 	ui_event_get_stack
 	if NOT ((<stack> [0].base_name) = 'mainmenu')
-		gamemode_gettype
+		GameMode_GetType
 		if (<type> = career)
-			getarraysize <stack>
+			GetArraySize <stack>
 			count = 0
 			i = 0
 			begin
@@ -4424,8 +4424,8 @@ script net_party_lost_party_connection
 				data = {
 					state = uistate_group_play
 				}}
-			create_net_popup \{title = qs(0x5ca2c535)
-				popup_text = qs(0x6c53663a)}
+			create_net_popup \{title = qs("GAME OVER")
+				popup_text = qs("There are not enough players to continue.")}
 			spawnscriptnow \{net_party_lost_party_connection_kill_popup}
 		else
 			ui_event_get_top
@@ -4442,7 +4442,7 @@ script net_party_lost_party_connection
 endscript
 
 script net_party_lost_party_connection_kill_popup 
-	wait \{3
+	Wait \{3
 		seconds}
 	ui_event_get_stack
 	if ((<stack> [0].base_name) = 'connection_loss')
@@ -4452,15 +4452,15 @@ script net_party_lost_party_connection_kill_popup
 endscript
 
 script net_party_receive_host_party_info 
-	printf \{qs(0x3529c519)}
+	printf \{qs("\L--- net_party_receive_host_party_info")}
 endscript
 
 script party_is_full 
-	netsessionfunc \{obj = party
+	NetSessionFunc \{obj = party
 		func = get_party_members}
-	getarraysize <connections>
+	GetArraySize <connections>
 	if (<array_size> >= 8)
-		if NOT gotparam \{controller}
+		if NOT GotParam \{controller}
 			return \{true}
 		else
 			i = 0
@@ -4480,11 +4480,11 @@ script party_is_full
 endscript
 
 script ui_slots_are_full 
-	if screenelementexists \{id = onlinelobbyinterface}
-		onlinelobbyinterface :gettags
-		if screenelementexists id = <player_slots_menu_id>
-			<player_slots_menu_id> :gettags
-			getarraysize <all_players_checksum>
+	if ScreenElementExists \{id = OnlineLobbyInterface}
+		OnlineLobbyInterface :GetTags
+		if ScreenElementExists id = <player_slots_menu_id>
+			<player_slots_menu_id> :GetTags
+			GetArraySize <all_players_checksum>
 			if (<array_size> > 0)
 				index = 0
 				begin
@@ -4500,16 +4500,16 @@ script ui_slots_are_full
 endscript
 
 script menu_net_matchmaking_init 
-	printf \{qs(0xcc5ed367)}
-	printf qs(0x7456dde0) d = ($primary_controller)
-	netsessionfunc {
+	printf \{qs("\L--- menu_net_matchmaking_init")}
+	printf qs("\LCreating party session with controller %d") d = ($primary_controller)
+	NetSessionFunc {
 		obj = party
 		func = create_party_session
 		params = {
 			controller_index = ($primary_controller)
 		}
 	}
-	netsessionfunc \{obj = party
+	NetSessionFunc \{obj = party
 		func = set_joiner_mode
 		params = {
 			mode = online_menu
@@ -4517,52 +4517,52 @@ script menu_net_matchmaking_init
 endscript
 
 script net_party_debug_dump 
-	printf \{qs(0x5243db76)}
-	netsessionfunc \{obj = party
+	printf \{qs("\L--- net_party_debug_dump")}
+	NetSessionFunc \{obj = party
 		func = get_party_members}
 	printstruct <...>
 endscript
 
 script menu_net_matchmaking_deinit 
-	printf \{qs(0x56ab650d)}
-	netsessionfunc \{obj = party
+	printf \{qs("\L--- menu_net_matchmaking_deinit")}
+	NetSessionFunc \{obj = party
 		func = stop_party_session}
 endscript
 temp_net_id = [
 	{
 		net_id_first = 0
 		net_id_second = 0
-		name = qs(0x00000000)
+		name = qs("")
 	}
 	{
 		net_id_first = 0
 		net_id_second = 0
-		name = qs(0x00000000)
+		name = qs("")
 	}
 	{
 		net_id_first = 0
 		net_id_second = 0
-		name = qs(0x00000000)
+		name = qs("")
 	}
 	{
 		net_id_first = 0
 		net_id_second = 0
-		name = qs(0x00000000)
+		name = qs("")
 	}
 	{
 		net_id_first = 0
 		net_id_second = 0
-		name = qs(0x00000000)
+		name = qs("")
 	}
 	{
 		net_id_first = 0
 		net_id_second = 0
-		name = qs(0x00000000)
+		name = qs("")
 	}
 	{
 		net_id_first = 0
 		net_id_second = 0
-		name = qs(0x00000000)
+		name = qs("")
 	}
 ]
 
@@ -4571,54 +4571,54 @@ script clear_temp_net_id_array
 			{
 				net_id_first = 0
 				net_id_second = 0
-				name = qs(0x00000000)
+				name = qs("")
 			}
 			{
 				net_id_first = 0
 				net_id_second = 0
-				name = qs(0x00000000)
+				name = qs("")
 			}
 			{
 				net_id_first = 0
 				net_id_second = 0
-				name = qs(0x00000000)
+				name = qs("")
 			}
 			{
 				net_id_first = 0
 				net_id_second = 0
-				name = qs(0x00000000)
+				name = qs("")
 			}
 			{
 				net_id_first = 0
 				net_id_second = 0
-				name = qs(0x00000000)
+				name = qs("")
 			}
 			{
 				net_id_first = 0
 				net_id_second = 0
-				name = qs(0x00000000)
+				name = qs("")
 			}
 			{
 				net_id_first = 0
 				net_id_second = 0
-				name = qs(0x00000000)
+				name = qs("")
 			}
 		]}
 endscript
 
 script net_party_save_off_invite_controllers 
-	printf \{qs(0x6ce8d99e)}
+	printf \{qs("\L--- net_party_save_off_invite_controllers")}
 	get_local_players_in_game
-	getarraysize \{local_players}
+	GetArraySize \{local_players}
 	if (<array_size> > 0)
 		i = 0
 		begin
 		if ((<local_players> [<i>]) = 1)
-			getnetid controller_index = <i>
-			netsessionfunc func = get_gamertag params = {controller = <i>}
-			setarrayelement {
-				globalarray
-				arrayname = temp_net_id
+			GetNetID controller_index = <i>
+			NetSessionFunc func = get_gamertag params = {controller = <i>}
+			SetArrayElement {
+				GlobalArray
+				ArrayName = temp_net_id
 				index = <i>
 				newvalue = {
 					net_id_first = <net_id_first>
@@ -4633,9 +4633,9 @@ script net_party_save_off_invite_controllers
 endscript
 
 script start_friendslist 
-	printf \{qs(0x8beb3927)}
-	if iswinport
-		requireparams \{[
+	printf \{qs("\L-- start_friendslist")}
+	if IsWinPort
+		RequireParams \{[
 				device_num
 			]
 			all}
@@ -4644,39 +4644,39 @@ script start_friendslist
 			return
 		endif
 	endif
-	if NOT screenelementexists \{id = friendslistinterface}
-		launchevent \{type = unfocus
+	if NOT ScreenElementExists \{id = FriendsListInterface}
+		LaunchEvent \{type = unfocus
 			target = current_menu}
 		online_lobby_transition_out
-		soundevent \{event = online_panel_in}
+		SoundEvent \{event = Online_Panel_In}
 		ui_create_friends_list device_num = <device_num> exit_script = online_lobby_transition_in
 	endif
 endscript
 
 script start_net_preferences 
-	if NOT screenelementexists \{id = netprefinterface}
-		launchevent \{type = unfocus
+	if NOT ScreenElementExists \{id = NetPrefInterface}
+		LaunchEvent \{type = unfocus
 			target = current_menu}
 		online_lobby_transition_out
-		soundevent \{event = online_panel_in}
+		SoundEvent \{event = Online_Panel_In}
 		ui_create_net_preferences device_num = <device_num> exit_script = online_lobby_transition_in
 	endif
 endscript
 
 script toggle_guitar_part 
-	printf \{qs(0x7f246a05)}
-	onlinelobbyinterface :getsingletag \{toggle_allowed}
+	printf \{qs("\L--- toggle_guitar_part")}
+	OnlineLobbyInterface :GetSingleTag \{toggle_allowed}
 	if (<toggle_allowed> = 0)
 		return
 	endif
-	requireparams \{[
+	RequireParams \{[
 			device_num
 		]
 		all}
 	info_index = 1
 	index = 1
 	begin
-	getplayerinfo <index> controller
+	GetPlayerInfo <index> controller
 	if (<device_num> = <controller>)
 		<info_index> = <index>
 		break
@@ -4685,80 +4685,80 @@ script toggle_guitar_part
 	repeat 8
 	get_controller_type controller_index = <device_num>
 	if (<controller_type> = guitar)
-		getplayerinfo <info_index> part
-		soundevent \{event = online_instrument_change}
+		GetPlayerInfo <info_index> part
+		SoundEvent \{event = Online_Instrument_Change}
 		if (<part> = guitar)
 			printf \{qs(0xb3e743a2)}
-			if gotparam \{finished_matchmaking}
-				setplayerinfo <info_index> part = bass
-				getplayerinfo <info_index> net_id_first
-				getplayerinfo <info_index> net_id_second
-				formattext checksumname = gamertag 'gamertag_%d' d = (<index> - 1)
-				sendstructure callback = update_player_part data_to_send = {first_id = <net_id_first> second_id = <net_id_second> name = ($<gamertag>) part = bass}
-				update_player_part first_id = <net_id_first> second_id = <net_id_second> name = ($<gamertag>) part = bass
+			if GotParam \{finished_matchmaking}
+				SetPlayerInfo <info_index> part = Bass
+				GetPlayerInfo <info_index> net_id_first
+				GetPlayerInfo <info_index> net_id_second
+				FormatText checksumname = gamertag 'gamertag_%d' d = (<index> - 1)
+				SendStructure callback = update_player_part data_to_send = {first_id = <net_id_first> second_id = <net_id_second> name = ($<gamertag>) part = Bass}
+				update_player_part first_id = <net_id_first> second_id = <net_id_second> name = ($<gamertag>) part = Bass
 			else
-				update_party_player_part info_index = <info_index> part = bass controller = <device_num>
+				update_party_player_part info_index = <info_index> part = Bass controller = <device_num>
 			endif
-		elseif (<part> = bass)
+		elseif (<part> = Bass)
 			printf \{qs(0x75c39135)}
-			if gotparam \{finished_matchmaking}
-				setplayerinfo <info_index> part = guitar
-				getplayerinfo <info_index> net_id_first
-				getplayerinfo <info_index> net_id_second
-				formattext checksumname = gamertag 'gamertag_%d' d = (<index> - 1)
-				sendstructure callback = update_player_part data_to_send = {first_id = <net_id_first> second_id = <net_id_second> name = ($<gamertag>) part = guitar}
+			if GotParam \{finished_matchmaking}
+				SetPlayerInfo <info_index> part = guitar
+				GetPlayerInfo <info_index> net_id_first
+				GetPlayerInfo <info_index> net_id_second
+				FormatText checksumname = gamertag 'gamertag_%d' d = (<index> - 1)
+				SendStructure callback = update_player_part data_to_send = {first_id = <net_id_first> second_id = <net_id_second> name = ($<gamertag>) part = guitar}
 				update_player_part first_id = <net_id_first> second_id = <net_id_second> name = ($<gamertag>) part = guitar
 			else
 				update_party_player_part info_index = <info_index> part = guitar controller = <device_num>
 			endif
 		endif
-	elseif ((iswinport) && (<controller_type> = controller))
-		getplayerinfo <info_index> part
-		soundevent \{event = online_instrument_change}
+	elseif ((IsWinPort) && (<controller_type> = controller))
+		GetPlayerInfo <info_index> part
+		SoundEvent \{event = Online_Instrument_Change}
 		if (<part> = guitar)
 			printf \{qs(0xd3148cc1)}
-			if gotparam \{finished_matchmaking}
-				setplayerinfo <info_index> part = bass
-				getplayerinfo <info_index> net_id_first
-				getplayerinfo <info_index> net_id_second
-				formattext checksumname = gamertag 'gamertag_%d' d = (<index> - 1)
-				sendstructure callback = update_player_part data_to_send = {first_id = <net_id_first> second_id = <net_id_second> name = ($<gamertag>) part = bass}
-				update_player_part first_id = <net_id_first> second_id = <net_id_second> name = ($<gamertag>) part = bass
+			if GotParam \{finished_matchmaking}
+				SetPlayerInfo <info_index> part = Bass
+				GetPlayerInfo <info_index> net_id_first
+				GetPlayerInfo <info_index> net_id_second
+				FormatText checksumname = gamertag 'gamertag_%d' d = (<index> - 1)
+				SendStructure callback = update_player_part data_to_send = {first_id = <net_id_first> second_id = <net_id_second> name = ($<gamertag>) part = Bass}
+				update_player_part first_id = <net_id_first> second_id = <net_id_second> name = ($<gamertag>) part = Bass
 			else
-				update_party_player_part info_index = <info_index> part = bass controller = <device_num>
+				update_party_player_part info_index = <info_index> part = Bass controller = <device_num>
 			endif
-		elseif (<part> = bass)
+		elseif (<part> = Bass)
 			printf \{qs(0x2f1bd889)}
-			if gotparam \{finished_matchmaking}
-				setplayerinfo <info_index> part = drum
-				getplayerinfo <info_index> net_id_first
-				getplayerinfo <info_index> net_id_second
-				formattext checksumname = gamertag 'gamertag_%d' d = (<index> - 1)
-				sendstructure callback = update_player_part data_to_send = {first_id = <net_id_first> second_id = <net_id_second> name = ($<gamertag>) part = drum}
+			if GotParam \{finished_matchmaking}
+				SetPlayerInfo <info_index> part = drum
+				GetPlayerInfo <info_index> net_id_first
+				GetPlayerInfo <info_index> net_id_second
+				FormatText checksumname = gamertag 'gamertag_%d' d = (<index> - 1)
+				SendStructure callback = update_player_part data_to_send = {first_id = <net_id_first> second_id = <net_id_second> name = ($<gamertag>) part = drum}
 				update_player_part first_id = <net_id_first> second_id = <net_id_second> name = ($<gamertag>) part = drum
 			else
 				update_party_player_part info_index = <info_index> part = drum controller = <device_num>
 			endif
 		elseif (<part> = drum)
 			printf \{qs(0x146a54c7)}
-			if gotparam \{finished_matchmaking}
-				setplayerinfo <info_index> part = vocals
-				getplayerinfo <info_index> net_id_first
-				getplayerinfo <info_index> net_id_second
-				formattext checksumname = gamertag 'gamertag_%d' d = (<index> - 1)
-				sendstructure callback = update_player_part data_to_send = {first_id = <net_id_first> second_id = <net_id_second> name = ($<gamertag>) part = vocals}
-				update_player_part first_id = <net_id_first> second_id = <net_id_second> name = ($<gamertag>) part = vocals
+			if GotParam \{finished_matchmaking}
+				SetPlayerInfo <info_index> part = Vocals
+				GetPlayerInfo <info_index> net_id_first
+				GetPlayerInfo <info_index> net_id_second
+				FormatText checksumname = gamertag 'gamertag_%d' d = (<index> - 1)
+				SendStructure callback = update_player_part data_to_send = {first_id = <net_id_first> second_id = <net_id_second> name = ($<gamertag>) part = Vocals}
+				update_player_part first_id = <net_id_first> second_id = <net_id_second> name = ($<gamertag>) part = Vocals
 			else
-				update_party_player_part info_index = <info_index> part = vocals controller = <device_num>
+				update_party_player_part info_index = <info_index> part = Vocals controller = <device_num>
 			endif
-		elseif (<part> = vocals)
+		elseif (<part> = Vocals)
 			printf \{qs(0x5760aac2)}
-			if gotparam \{finished_matchmaking}
-				setplayerinfo <info_index> part = guitar
-				getplayerinfo <info_index> net_id_first
-				getplayerinfo <info_index> net_id_second
-				formattext checksumname = gamertag 'gamertag_%d' d = (<index> - 1)
-				sendstructure callback = update_player_part data_to_send = {first_id = <net_id_first> second_id = <net_id_second> name = ($<gamertag>) part = guitar}
+			if GotParam \{finished_matchmaking}
+				SetPlayerInfo <info_index> part = guitar
+				GetPlayerInfo <info_index> net_id_first
+				GetPlayerInfo <info_index> net_id_second
+				FormatText checksumname = gamertag 'gamertag_%d' d = (<index> - 1)
+				SendStructure callback = update_player_part data_to_send = {first_id = <net_id_first> second_id = <net_id_second> name = ($<gamertag>) part = guitar}
 				update_player_part first_id = <net_id_first> second_id = <net_id_second> name = ($<gamertag>) part = guitar
 			else
 				update_party_player_part info_index = <info_index> part = guitar controller = <device_num>
@@ -4768,17 +4768,17 @@ script toggle_guitar_part
 endscript
 
 script update_party_player_part 
-	netsessionfunc \{obj = party
+	NetSessionFunc \{obj = party
 		func = get_shared_data}
-	getplayerinfo <info_index> party_id
-	formattext checksumname = player_data 'player_%d' d = <party_id>
-	if structurecontains structure = <party_shared_data> <player_data>
-		setplayerinfo <info_index> part = <part>
+	GetPlayerInfo <info_index> party_id
+	FormatText checksumname = player_data 'player_%d' d = <party_id>
+	if StructureContains Structure = <party_shared_data> <player_data>
+		SetPlayerInfo <info_index> part = <part>
 		get_savegame_from_controller controller = <controller>
 		get_current_band_info
-		getglobaltags <band_info> savegame = <savegame> param = career_earnings
+		GetGlobalTags <band_info> savegame = <savegame> param = career_earnings
 		party_info = {}
-		appendstruct {
+		AppendStruct {
 			struct = party_info
 			field = <player_data>
 			params = {
@@ -4786,26 +4786,26 @@ script update_party_player_part
 				player_career_earnings = <career_earnings>
 			}
 		}
-		netsessionfunc obj = party func = append_shared_data params = {data = <party_info>}
+		NetSessionFunc obj = party func = append_shared_data params = {data = <party_info>}
 		refresh_player_slots_ui
 	endif
 endscript
 
 script update_player_part 
-	if ishost
-		sendstructure callback = update_player_part data_to_send = <...>
+	if IsHost
+		SendStructure callback = update_player_part data_to_send = <...>
 	endif
 	found = 0
 	info_index = 1
 	begin
-	getplayerinfo <info_index> net_id_first
-	getplayerinfo <info_index> net_id_second
-	formattext checksumname = gamertag 'gamertag_%d' d = (<info_index> - 1)
+	GetPlayerInfo <info_index> net_id_first
+	GetPlayerInfo <info_index> net_id_second
+	FormatText checksumname = gamertag 'gamertag_%d' d = (<info_index> - 1)
 	if ((<net_id_first> = <first_id>) && (<net_id_second> = <second_id>))
-		if isxenon
+		if isXenon
 			<found> = 1
 			break
-		elseif localizedstringequals a = <name> b = ($<gamertag>)
+		elseif LocalizedStringEquals a = <name> b = ($<gamertag>)
 			<found> = 1
 			break
 		endif
@@ -4813,38 +4813,38 @@ script update_player_part
 	info_index = (<info_index> + 1)
 	repeat 8
 	if (<found> = 1)
-		setplayerinfo <info_index> part = <part>
-		if screenelementexists \{id = onlinelobbyinterface}
-			onlinelobbyinterface :gettags
+		SetPlayerInfo <info_index> part = <part>
+		if ScreenElementExists \{id = OnlineLobbyInterface}
+			OnlineLobbyInterface :GetTags
 			set_ui_to_final_player_slots slot = <slot_index>
 		endif
 	endif
 endscript
 
 script ps3_display_invites_received 
-	netsessionfunc \{func = displayandacceptinvites
+	NetSessionFunc \{func = DisplayAndAcceptInvites
 		params = {
 			callback = ps3_invite_callback
 		}}
 endscript
 
 script ps3_invite_callback 
-	printf \{qs(0xb8afcd4a)}
+	printf \{qs("\L----ps3_invite_callback")}
 endscript
 
 script matchmaking_countdown_end_game_script 
 	wait_for_safe_shutdown
-	if screenelementexists \{id = onlinelobbyinterface}
-		onlinelobbyinterface :obj_killspawnedscript \{name = set_net_ui_to_finished_searching}
-		killspawnedscript \{name = set_net_ui_to_finished_searching}
-		if onlinelobbyinterface :desc_resolvealias \{name = alias_player_slots_vmenu
+	if ScreenElementExists \{id = OnlineLobbyInterface}
+		OnlineLobbyInterface :Obj_KillSpawnedScript \{name = set_net_ui_to_finished_searching}
+		KillSpawnedScript \{name = set_net_ui_to_finished_searching}
+		if OnlineLobbyInterface :Desc_ResolveAlias \{name = alias_player_slots_vmenu
 				param = player_slots_menu}
-			launchevent type = unfocus target = <player_slots_menu>
+			LaunchEvent type = unfocus target = <player_slots_menu>
 		endif
 	endif
-	create_net_popup \{title = qs(0x5ca2c535)
-		popup_text = qs(0x32f94482)}
-	wait \{3
+	create_net_popup \{title = qs("GAME OVER")
+		popup_text = qs("A player has left the game. There are not enough players to continue.")}
+	Wait \{3
 		seconds}
 	destroy_net_popup
 	quit_network_game
@@ -4852,48 +4852,48 @@ script matchmaking_countdown_end_game_script
 endscript
 
 script matchmaking_countdown_drop_player_script 
-	printf \{qs(0x24956f54)}
-	printf \{qs(0x1708dab5)}
+	printf \{qs("\Lmatchmaking_countdown_drop_player_script")}
+	printf \{qs("\L--- WARNING, DOING NOTHING ---")}
 endscript
 
 script print_net_ui_status 
-	onlinelobbyinterface :gettags
-	<player_slots_menu_id> :gettags
+	OnlineLobbyInterface :GetTags
+	<player_slots_menu_id> :GetTags
 	printstruct <...>
 endscript
 
 script print_current_net_prefs 
-	netoptions :pref_get \{name = game_modes}
+	NetOptions :Pref_Get \{name = game_modes}
 	printstruct <...>
-	netoptions :pref_get \{name = ranked}
+	NetOptions :Pref_Get \{name = ranked}
 	printstruct <...>
 endscript
 
 script check_signin_wrapper 
 	printstruct <...>
-	if checkforsignin local controller controller_index = <device_num>
-		netsessionfunc \{func = showsigninui
+	if CheckForSignIn local controller controller_index = <device_num>
+		NetSessionFunc \{func = showsigninui
 			params = {
 				convert_offline_to_guest
 			}}
 	else
-		netsessionfunc \{func = showsigninui4pane
+		NetSessionFunc \{func = ShowSignInUI4Pane
 			params = {
 				online_only
 			}}
 	endif
 	wait_for_blade_complete
-	if checkforsignin controller_index = <device_num>
-		printf \{qs(0x08ec2e8b)}
+	if CheckForSignIn controller_index = <device_num>
+		printf \{qs("\Lwe should run our passed in script now")}
 	else
-		if isxenon
-			if checkforsignin local controller controller_index = <device_num>
-				netsessionfunc \{func = showsigninui
+		if isXenon
+			if CheckForSignIn local controller controller_index = <device_num>
+				NetSessionFunc \{func = showsigninui
 					params = {
 						convert_offline_to_guest
 					}}
 			else
-				netsessionfunc \{func = showsigninui4pane
+				NetSessionFunc \{func = ShowSignInUI4Pane
 					params = {
 						online_only
 					}}
@@ -4904,25 +4904,25 @@ script check_signin_wrapper
 endscript
 
 script debug_4player_signin 
-	if isxenon
-		netsessionfunc \{func = showsigninui4pane}
+	if isXenon
+		NetSessionFunc \{func = ShowSignInUI4Pane}
 		wait_for_blade_complete
 	endif
 endscript
 
 script print_player_status_structs_net_info 
-	printf \{qs(0xad29dbe4)}
+	printf \{qs("\L----print_player_status_structs_net_info")}
 	i = 1
 	begin
-	formattext checksumname = player_status 'player%d_status' d = <i>
-	formattext checksumname = gamertag 'gamertag_%i' i = (<i> - 1)
+	FormatText checksumname = player_status 'player%d_status' d = <i>
+	FormatText checksumname = gamertag 'gamertag_%i' i = (<i> - 1)
 	name = $<gamertag>
 	printf <player_status>
-	printf qs(0x8eca38c7) d = ($<player_status>.is_local_client)
-	printf qs(0xa5bccced) d = ($<player_status>.net_id_first)
-	printf qs(0x084465d1) d = ($<player_status>.net_id_second)
-	printf qs(0x5b7377e6) g = <name>
-	printf qs(0xdd16850f) d = ($<player_status>.net_obj_id)
+	printf qs("\Lis_local_client = %d") d = ($<player_status>.is_local_client)
+	printf qs("\Lnet_id_first = %d") d = ($<player_status>.net_id_first)
+	printf qs("\Lnet_id_second = %d") d = ($<player_status>.net_id_second)
+	printf qs("\Lgamertag - %g") g = <name>
+	printf qs("\Lobj_id = %d") d = ($<player_status>.net_obj_id)
 	printf ($<player_status>.part)
 	printf ($<player_status>.net_difficulty)
 	printf ($<player_status>.controller)
@@ -4931,12 +4931,12 @@ script print_player_status_structs_net_info
 	repeat 8
 endscript
 
-script 0x5498378a 
+script winport_menu_join_private_quickmatch_results_stop 
 	printf \{qs(0x1298ab73)}
-	netsessionfunc \{obj = match
+	NetSessionFunc \{obj = match
 		func = stop_server_list}
 	num_results = 0
-	if gotparam \{xboxlive_num_results}
+	if GotParam \{xboxlive_num_results}
 		printf qs(0x3f3b91ea) x = <xboxlive_num_results>
 		num_results = <xboxlive_num_results>
 	endif

@@ -1,51 +1,51 @@
-gp_fx_goldsparkleburst_bigglow_01 = {
+GP_FX_GoldSparkleBurst_BigGlow_01 = {
 	pos = (-11.09185, 8.545341, 2.0203898)
 	angles = (0.0, 0.0, 0.0)
-	class = particleobject
-	particletype = flexparticle
+	Class = ParticleObject
+	ParticleType = FlexParticle
 	type = flat
 	active
-	emitrangedims = (0.0, 0.0, 0.0)
-	emit_target = (0.0, 1.0, 0.0)
-	emitangle = (0.0, 0.0, 0.0)
+	EmitRangeDims = (0.0, 0.0, 0.0)
+	emit_Target = (0.0, 1.0, 0.0)
+	EmitAngle = (0.0, 0.0, 0.0)
 	force = (0.0, 0.0, 0.0)
-	windcoeff = 0.0
-	localwindcoeff = 0.0
-	emittervelocityweight = 0.0
-	anglespread = 45.0
-	liferange = (2.0, 2.0)
+	WindCoeff = 0.0
+	LocalWindCoeff = 0.0
+	EmitterVelocityWeight = 0.0
+	AngleSpread = 45.0
+	LifeRange = (2.0, 2.0)
 	emit_rate = 1.0
 	max = 0
-	timeseed = 1.0
-	lifetime = 0.5
-	emitnum = 0
-	followemitter = 0.0
-	emitfunction = constant
-	emitperiod = 1.0
-	sizerange = [
+	TimeSeed = 1.0
+	lifeTime = 0.5
+	emitNum = 0
+	FollowEmitter = 0.0
+	EmitFunction = constant
+	EmitPeriod = 1.0
+	SizeRange = [
 		(10.0, 10.0)
 		(10.0, 10.0)
 	]
-	speedrange = (0.1, 0.2)
-	rotvel = (0.0, 0.0)
-	rotveltimescale = 0.0
-	emitdelaystart = 0.0
-	pathfollowtime = 0.0
-	history = 2
-	historylistcoordinatespace = world
+	SpeedRange = (0.1, 0.2)
+	RotVel = (0.0, 0.0)
+	RotVelTimeScale = 0.0
+	EmitDelayStart = 0.0
+	PathFollowTime = 0.0
+	History = 2
+	HistoryListCoordinateSpace = world
 	color = -1769052417
-	lod_default
-	quickmaterial = {
-		texturelayout = layout2x2
-		diffusetextureenabled
-		diffusetexture = jow_steam02
-		specularpower = 0
+	LOD_Default
+	QuickMaterial = {
+		TextureLayout = Layout2x2
+		DiffuseTextureEnabled
+		DiffuseTexture = JOW_Steam02
+		SpecularPower = 0
 		fillburst
 		alphacutoff = 1
-		blendmode = add
-		quadanimationfps = 5
+		blendMode = Add
+		QuadAnimationFPS = 5
 	}
-	knot = [
+	Knot = [
 		(-0.97781503, 0.0, -0.0)
 		(-0.97781503, 0.0, -0.0)
 		(-0.821921, 0.0, -0.0)
@@ -59,7 +59,7 @@ gp_fx_goldsparkleburst_bigglow_01 = {
 		(0.993036, 0.0, -0.0)
 		(0.993036, 0.0, -0.0)
 	]
-	particlecolor = [
+	ParticleColor = [
 		-1
 		-1
 		-1
@@ -69,7 +69,7 @@ gp_fx_goldsparkleburst_bigglow_01 = {
 		-1
 		-1
 	]
-	vertexweight = [
+	VertexWeight = [
 		0.23730001
 		0.747254
 		1.0

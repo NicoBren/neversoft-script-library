@@ -1,50 +1,50 @@
-gp_fx_fe_fireworks_sparklerocket_smoke_01 = {
+GP_FX_FE_Fireworks_SparkleRocket_Smoke_01 = {
 	pos = (-33.656887, 0.0, -8.6561365)
 	angles = (0.0, 0.0, 0.0)
-	class = particleobject
-	particletype = flexparticle
+	Class = ParticleObject
+	ParticleType = FlexParticle
 	type = flat
 	active
-	createdatstart
-	emitrangedims = (0.1, 0.1, 0.1)
-	emit_target = (0.0, 1.0, 0.0)
-	emitangle = (0.0, 0.0, 0.0)
+	CreatedAtStart
+	EmitRangeDims = (0.1, 0.1, 0.1)
+	emit_Target = (0.0, 1.0, 0.0)
+	EmitAngle = (0.0, 0.0, 0.0)
 	force = (0.0, 0.0, 0.0)
-	windcoeff = 0.0
-	localwindcoeff = 0.0
-	emittervelocityweight = 0.0
-	anglespread = 1.0
-	liferange = (0.8, 1.2)
+	WindCoeff = 0.0
+	LocalWindCoeff = 0.0
+	EmitterVelocityWeight = 0.0
+	AngleSpread = 1.0
+	LifeRange = (0.8, 1.2)
 	emit_rate = 200.0
 	max = 0
-	timeseed = 0.0
-	lifetime = 2.0
-	emitnum = 0
-	followemitter = 0.0
-	emitfunction = constant
-	emitperiod = 1.0
-	sizerange = [
+	TimeSeed = 0.0
+	lifeTime = 2.0
+	emitNum = 0
+	FollowEmitter = 0.0
+	EmitFunction = constant
+	EmitPeriod = 1.0
+	SizeRange = [
 		(0.2, 0.2)
 		(0.2, 0.2)
 	]
-	speedrange = (1.0, 2.0)
-	rotvel = (0.3, -0.3)
-	rotveltimescale = 0.0
-	emitdelaystart = 0.0
-	pathfollowtime = 0.0
-	history = 2
-	historylistcoordinatespace = world
+	SpeedRange = (1.0, 2.0)
+	RotVel = (0.3, -0.3)
+	RotVelTimeScale = 0.0
+	EmitDelayStart = 0.0
+	PathFollowTime = 0.0
+	History = 2
+	HistoryListCoordinateSpace = world
 	color = -194
-	lod_default
-	quickmaterial = {
-		diffusetextureenabled
-		diffusetexture = ph_smoke_singlepuff_blend_02
-		specularpower = 0
+	LOD_Default
+	QuickMaterial = {
+		DiffuseTextureEnabled
+		DiffuseTexture = PH_Smoke_SinglePuff_Blend_02
+		SpecularPower = 0
 		alphacutoff = 1
-		blendmode = blend
-		quadanimationfps = 0
+		blendMode = blend
+		QuadAnimationFPS = 0
 	}
-	knot = [
+	Knot = [
 		(0.562711, 0.0, -0.171889)
 		(0.562711, 0.0, -0.171889)
 		(0.338351, 0.0, -0.112179995)
@@ -55,7 +55,7 @@ gp_fx_fe_fireworks_sparklerocket_smoke_01 = {
 		(-0.45234, 0.0, 0.16465198)
 		(-0.45234, 0.0, 0.16465198)
 	]
-	particlecolor = [
+	ParticleColor = [
 		1966604543
 		-490132737
 		1970632191
@@ -63,7 +63,7 @@ gp_fx_fe_fireworks_sparklerocket_smoke_01 = {
 		1970631936
 		-256
 	]
-	vertexweight = [
+	VertexWeight = [
 		0.6491421
 		1.0
 	]

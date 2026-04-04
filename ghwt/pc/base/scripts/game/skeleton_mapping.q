@@ -1,60 +1,42 @@
-ragdollcollisiongroups_rocker_female = [
+RagdollCollisionGroups_Rocker_Female = [
 	[
-		bone_stomach_upper
-		bone_chest
-		bone_bicep_l
-		bone_bicep_r
-		bone_thigh_l
-		bone_thigh_r
+		Bone_Stomach_Upper
+		Bone_Chest
+		Bone_Bicep_L
+		Bone_Bicep_R
+		Bone_Thigh_L
+		Bone_Thigh_R
 	]
 	[
-		bone_acc_head_01
-		bone_acc_head_03
-		bone_acc_head_05
-		bone_acc_head_07
-		bone_acc_head_09
+		Bone_ACC_Head_01
+		Bone_ACC_Head_03
+		Bone_ACC_Head_05
+		Bone_ACC_Head_07
+		Bone_ACC_Head_09
 	]
 	[
-		bone_acc_torso_01
-		bone_acc_torso_02
-		bone_acc_torso_03
-		bone_acc_torso_04
-		bone_collar_l
-		bone_collar_r
-		bone_acc_legs_01
-		bone_acc_legs_02
-		bone_acc_legs_03
-		bone_acc_legs_04
-		bone_stomach_lower
-		bone_knee_l
-		bone_knee_r
-		bone_forearm_l
-		bone_forearm_r
-		bone_pelvis
-		bone_neck
-		bone_head
-		bone_acc_head_02
-		bone_acc_head_04
-		bone_acc_head_06
-		bone_acc_head_08
-	]
-	[
-	]
-	[
-	]
-	[
-	]
-	[
-	]
-	[
-		bone_ankle_l
-		bone_ankle_r
-		bone_palm_l
-		bone_palm_r
-	]
-]
-ragdollcollisiongroups = [
-	[
+		Bone_ACC_Torso_01
+		Bone_ACC_Torso_02
+		Bone_ACC_Torso_03
+		Bone_ACC_Torso_04
+		Bone_Collar_L
+		Bone_Collar_R
+		Bone_ACC_Legs_01
+		Bone_ACC_Legs_02
+		Bone_ACC_Legs_03
+		Bone_ACC_Legs_04
+		Bone_Stomach_Lower
+		Bone_Knee_L
+		Bone_Knee_R
+		Bone_Forearm_L
+		Bone_Forearm_R
+		Bone_Pelvis
+		Bone_Neck
+		Bone_Head
+		Bone_ACC_Head_02
+		Bone_ACC_Head_04
+		Bone_ACC_Head_06
+		Bone_ACC_Head_08
 	]
 	[
 	]
@@ -65,82 +47,100 @@ ragdollcollisiongroups = [
 	[
 	]
 	[
-	]
-	[
-	]
-	[
-		bone_acc_head_01
-		bone_acc_head_02
-		bone_acc_head_03
-		bone_acc_head_04
-		bone_acc_head_05
-		bone_acc_head_06
-		bone_acc_head_07
-		bone_acc_head_08
-		bone_acc_head_09
-		bone_acc_torso_01
-		bone_acc_torso_02
-		bone_acc_torso_03
-		bone_acc_torso_04
-		bone_acc_legs_01
-		bone_acc_legs_02
-		bone_acc_legs_03
-		bone_acc_legs_04
-		bone_head
-		bone_pelvis
-		bone_stomach_lower
-		bone_stomach_upper
-		bone_chest
-		bone_neck
-		bone_collar_l
-		bone_bicep_l
-		bone_forearm_l
-		bone_palm_l
-		bone_collar_r
-		bone_bicep_r
-		bone_forearm_r
-		bone_palm_r
-		bone_thigh_l
-		bone_knee_l
-		bone_ankle_l
-		bone_thigh_r
-		bone_knee_r
-		bone_ankle_r
+		Bone_Ankle_L
+		Bone_Ankle_R
+		Bone_Palm_L
+		Bone_Palm_R
 	]
 ]
-guitarist_accessory_bones = [
-	bone_acc_01
-	bone_acc_02
-	bone_acc_03
-	bone_acc_04
-	bone_acc_05
-	bone_acc_06
-	bone_acc_07
-	bone_acc_08
-	bone_acc_09
-	bone_acc_10
-	bone_acc_11
-	bone_acc_12
-	bone_acc_13
-	bone_acc_14
-	bone_acc_15
+RagdollCollisionGroups = [
+	[
+	]
+	[
+	]
+	[
+	]
+	[
+	]
+	[
+	]
+	[
+	]
+	[
+	]
+	[
+		Bone_ACC_Head_01
+		Bone_ACC_Head_02
+		Bone_ACC_Head_03
+		Bone_ACC_Head_04
+		Bone_ACC_Head_05
+		Bone_ACC_Head_06
+		Bone_ACC_Head_07
+		Bone_ACC_Head_08
+		Bone_ACC_Head_09
+		Bone_ACC_Torso_01
+		Bone_ACC_Torso_02
+		Bone_ACC_Torso_03
+		Bone_ACC_Torso_04
+		Bone_ACC_Legs_01
+		Bone_ACC_Legs_02
+		Bone_ACC_Legs_03
+		Bone_ACC_Legs_04
+		Bone_Head
+		Bone_Pelvis
+		Bone_Stomach_Lower
+		Bone_Stomach_Upper
+		Bone_Chest
+		Bone_Neck
+		Bone_Collar_L
+		Bone_Bicep_L
+		Bone_Forearm_L
+		Bone_Palm_L
+		Bone_Collar_R
+		Bone_Bicep_R
+		Bone_Forearm_R
+		Bone_Palm_R
+		Bone_Thigh_L
+		Bone_Knee_L
+		Bone_Ankle_L
+		Bone_Thigh_R
+		Bone_Knee_R
+		Bone_Ankle_R
+	]
 ]
-rocker_accessory_bones = [
-	bone_acc_head_01
-	bone_acc_head_02
-	bone_acc_head_03
-	bone_acc_head_04
-	bone_acc_head_05
-	bone_acc_head_06
-	bone_acc_head_07
-	bone_acc_head_08
-	bone_acc_head_09
-	bone_acc_torso_01
-	bone_acc_torso_02
-	bone_acc_torso_03
-	bone_acc_torso_04
-	bone_acc_legs_01
-	bone_acc_legs_02
-	bone_acc_legs_03
-	bone_acc_legs_04
+Guitarist_accessory_bones = [
+	Bone_ACC_01
+	Bone_ACC_02
+	Bone_ACC_03
+	Bone_ACC_04
+	Bone_ACC_05
+	Bone_ACC_06
+	Bone_ACC_07
+	Bone_ACC_08
+	Bone_ACC_09
+	Bone_ACC_10
+	Bone_ACC_11
+	Bone_ACC_12
+	Bone_ACC_13
+	Bone_ACC_14
+	Bone_ACC_15
+]
+Rocker_accessory_bones = [
+	Bone_ACC_Head_01
+	Bone_ACC_Head_02
+	Bone_ACC_Head_03
+	Bone_ACC_Head_04
+	Bone_ACC_Head_05
+	Bone_ACC_Head_06
+	Bone_ACC_Head_07
+	Bone_ACC_Head_08
+	Bone_ACC_Head_09
+	Bone_ACC_Torso_01
+	Bone_ACC_Torso_02
+	Bone_ACC_Torso_03
+	Bone_ACC_Torso_04
+	Bone_ACC_Legs_01
+	Bone_ACC_Legs_02
+	Bone_ACC_Legs_03
+	Bone_ACC_Legs_04
 ]

@@ -7,22 +7,22 @@ script make_generic_menu {
 		exclusive_device = ($primary_controller)
 	}
 	destroy_generic_menu
-	if NOT gotparam \{title}
-		notitle = 1
+	if NOT GotParam \{title}
+		noTitle = 1
 	endif
-	if gotparam \{use_all_controllers}
-		removeparameter \{exclusive_device}
+	if GotParam \{use_all_controllers}
+		RemoveParameter \{exclusive_device}
 		get_all_exclusive_devices
 	endif
 	if NOT (($menu_over_ride_exclusive_device) = -1)
 		exclusive_device = ($menu_over_ride_exclusive_device)
 	endif
 	update_ingame_controllers controller = <exclusive_device>
-	if screenelementexists \{id = current_menu_anchor}
-		destroyscreenelement \{id = current_menu_anchor}
+	if ScreenElementExists \{id = current_menu_anchor}
+		DestroyScreenElement \{id = current_menu_anchor}
 	endif
-	createscreenelement {
-		type = descinterface
+	CreateScreenElement {
+		type = DescInterface
 		parent = root_window
 		desc = 'generic_menu'
 		id = generic_menu
@@ -32,45 +32,45 @@ script make_generic_menu {
 		generic_menu_bg_dims = <generic_menu_bg_dims>
 		pos = <pos>
 	}
-	if generic_menu :desc_resolvealias \{name = alias_generic_menu_vmenu
+	if generic_menu :Desc_ResolveAlias \{name = alias_generic_menu_vmenu
 			param = generic_smenu}
-		assignalias id = <generic_smenu> alias = current_menu
-		if gotparam \{vmenu_id}
-			assignalias id = <generic_smenu> alias = <vmenu_id>
+		AssignAlias id = <generic_smenu> alias = current_menu
+		if GotParam \{vmenu_id}
+			AssignAlias id = <generic_smenu> alias = <vmenu_id>
 		endif
-		<generic_smenu> :settags {total_length = 0}
+		<generic_smenu> :SetTags {total_length = 0}
 	else
-		scriptassert \{qs(0x0c18c573)}
+		ScriptAssert \{qs("\LGeneric_Menu was unable to create current_menu alias")}
 	endif
-	if NOT gotparam \{no_up_down_sound_handlers}
+	if NOT GotParam \{no_up_down_sound_handlers}
 		add_generic_menu_up_down_sound_handlers
 	endif
-	if gotparam \{pad_down_script}
-		setscreenelementprops {
+	if GotParam \{pad_down_script}
+		SetScreenElementProps {
 			id = current_menu
 			event_handlers = [
 				{pad_down <pad_down_script> params = <pad_down_params>}
 			]
 		}
 	endif
-	if gotparam \{pad_up_script}
-		setscreenelementprops {
+	if GotParam \{pad_up_script}
+		SetScreenElementProps {
 			id = current_menu
 			event_handlers = [
 				{pad_up <pad_up_script> params = <pad_up_params>}
 			]
 		}
 	endif
-	if gotparam \{pad_start_script}
-		setscreenelementprops {
+	if GotParam \{pad_start_script}
+		SetScreenElementProps {
 			id = current_menu
 			event_handlers = [
 				{pad_start <pad_start_script> params = <pad_start_params>}
 			]
 		}
 	endif
-	if gotparam \{pad_option2_script}
-		setscreenelementprops {
+	if GotParam \{pad_option2_script}
+		SetScreenElementProps {
 			id = current_menu
 			event_handlers = [
 				{pad_option2 <pad_back_sound>}
@@ -78,8 +78,8 @@ script make_generic_menu {
 			]
 		}
 	endif
-	if gotparam \{pad_option_script}
-		setscreenelementprops {
+	if GotParam \{pad_option_script}
+		SetScreenElementProps {
 			id = current_menu
 			event_handlers = [
 				{pad_option <pad_back_sound>}
@@ -87,8 +87,8 @@ script make_generic_menu {
 			]
 		}
 	endif
-	if gotparam \{pad_back_script}
-		setscreenelementprops {
+	if GotParam \{pad_back_script}
+		SetScreenElementProps {
 			id = current_menu
 			event_handlers = [
 				{pad_back <pad_back_sound>}
@@ -97,33 +97,33 @@ script make_generic_menu {
 			replace_handlers
 		}
 	endif
-	if gotparam \{nobg}
-		generic_menu :se_setprops \{generic_menu_bg_alpha = 0}
+	if GotParam \{noBG}
+		generic_menu :SE_SetProps \{generic_menu_bg_alpha = 0}
 	endif
-	if gotparam \{notitle}
-		generic_menu :se_setprops \{generic_menu_title_alpha = 0}
-	elseif gotparam \{notitlebg}
-		generic_menu :se_setprops \{generic_menu_title_bg_alpha = 0}
+	if GotParam \{noTitle}
+		generic_menu :SE_SetProps \{generic_menu_title_alpha = 0}
+	elseif GotParam \{noTitleBG}
+		generic_menu :SE_SetProps \{generic_menu_title_bg_alpha = 0}
 	endif
-	if gotparam \{show_history}
-		generic_menu :se_setprops \{generic_menu_title_text_pos = {
+	if GotParam \{show_history}
+		generic_menu :SE_SetProps \{generic_menu_title_text_pos = {
 				(40.0, 0.0)
 				relative
 			}}
-		generic_menu :se_setprops \{generic_menu_title_hist_alpha = 1}
-		generic_menu :se_setprops \{generic_menu_title_icon_alpha = 1}
+		generic_menu :SE_SetProps \{generic_menu_title_hist_alpha = 1}
+		generic_menu :SE_SetProps \{generic_menu_title_icon_alpha = 1}
 		ui_event_get_stack
-		getarraysize <stack>
+		GetArraySize <stack>
 		if (<array_size> > 0)
-			if gotparam \{hist_tex}
-				generic_menu :se_setprops generic_menu_title_icon_texture = <hist_tex>
+			if GotParam \{hist_tex}
+				generic_menu :SE_SetProps generic_menu_title_icon_texture = <hist_tex>
 			else
-				if structurecontains structure = (<stack> [0]) hist_tex
-					generic_menu :se_setprops generic_menu_title_icon_texture = (<stack> [0].hist_tex)
+				if StructureContains Structure = (<stack> [0]) hist_tex
+					generic_menu :SE_SetProps generic_menu_title_icon_texture = (<stack> [0].hist_tex)
 				endif
 			endif
 		endif
-		if NOT gotparam \{num_icons}
+		if NOT GotParam \{num_icons}
 			num_icons = 3
 		else
 			if (<num_icons> > 3)
@@ -133,25 +133,25 @@ script make_generic_menu {
 			endif
 		endif
 		if NOT (<num_icons> = 0)
-			generic_menu :se_setprops \{generic_menu_title_bg_texture = generic_title_bg_icons}
+			generic_menu :SE_SetProps \{generic_menu_title_bg_texture = generic_title_bg_icons}
 		endif
 		if (<num_icons> = 0)
-			generic_menu :se_setprops \{generic_menu_title_hist_icon_1_alpha = 0}
-			generic_menu :se_setprops \{generic_menu_title_hist_icon_2_alpha = 0}
-			generic_menu :se_setprops \{generic_menu_title_hist_icon_3_alpha = 0}
+			generic_menu :SE_SetProps \{generic_menu_title_hist_icon_1_alpha = 0}
+			generic_menu :SE_SetProps \{generic_menu_title_hist_icon_2_alpha = 0}
+			generic_menu :SE_SetProps \{generic_menu_title_hist_icon_3_alpha = 0}
 		elseif (<array_size> > 0)
 			i = 1
 			begin
 			if NOT (<i> > (<array_size> -1))
 				if (<i> > <num_icons>)
-					formattext checksumname = icon_id 'generic_menu_title_hist_icon_%i_alpha' i = <i>
-					addparam name = <icon_id> structure_name = alpha_struct value = 0
-					generic_menu :se_setprops <alpha_struct>
+					FormatText checksumname = icon_id 'generic_menu_title_hist_icon_%i_alpha' i = <i>
+					AddParam name = <icon_id> structure_name = alpha_struct value = 0
+					generic_menu :SE_SetProps <alpha_struct>
 				else
-					if structurecontains structure = (<stack> [<i>]) hist_tex
-						formattext checksumname = icon_id 'generic_menu_title_hist_icon_%i_texture' i = <i>
-						addparam name = <icon_id> structure_name = text_struct value = (<stack> [<i>].hist_tex)
-						generic_menu :se_setprops <text_struct>
+					if StructureContains Structure = (<stack> [<i>]) hist_tex
+						FormatText checksumname = icon_id 'generic_menu_title_hist_icon_%i_texture' i = <i>
+						AddParam name = <icon_id> structure_name = text_struct value = (<stack> [<i>].hist_tex)
+						generic_menu :SE_SetProps <text_struct>
 					endif
 				endif
 			endif
@@ -159,8 +159,8 @@ script make_generic_menu {
 			repeat 3
 		endif
 	endif
-	if gotparam \{title}
-		if generic_menu :desc_resolvealias \{name = alias_generic_menu_title_text}
+	if GotParam \{title}
+		if generic_menu :Desc_ResolveAlias \{name = alias_generic_menu_title_text}
 			split_text_into_menu {
 				text = <title>
 				dims = (225.0, 50.0)
@@ -168,7 +168,7 @@ script make_generic_menu {
 				fit_minor = `fit content`
 				text_params = {
 					z_priority = 4.5
-					font = fontgrid_text_a11_b
+					font = fontgrid_text_A11_b
 					rgba = [175 175 175 255]
 				}
 				pos_anchor = [left top]
@@ -182,21 +182,21 @@ script make_generic_menu {
 			i = 0
 			begin
 			text_element = (<text_element_array> [<i>])
-			<text_element> :se_setprops internal_scale = (<letter_scale> [<s>])
+			<text_element> :SE_SetProps internal_scale = (<letter_scale> [<s>])
 			s = (<s> + 1)
 			if (<s> > 3)
 				s = 0
 			endif
 			i = (<i> + 1)
 			repeat <text_element_array_size>
-			generic_menu :se_setprops \{generic_menu_title_text_text = qs(0x03ac90f0)}
+			generic_menu :SE_SetProps \{generic_menu_title_text_text = qs("\L")}
 		endif
 	endif
 endscript
 
 script destroy_generic_menu 
-	if screenelementexists \{id = generic_menu}
-		destroyscreenelement \{id = generic_menu}
+	if ScreenElementExists \{id = generic_menu}
+		DestroyScreenElement \{id = generic_menu}
 	endif
 	cleanup_cas_menu_handlers
 	destroy_viewport_ui
@@ -204,7 +204,7 @@ script destroy_generic_menu
 endscript
 
 script add_generic_menu_up_down_sound_handlers 
-	setscreenelementprops \{id = current_menu
+	SetScreenElementProps \{id = current_menu
 		event_handlers = [
 			{
 				pad_up
@@ -227,33 +227,33 @@ script add_generic_menu_text_item \{focus_script = focus_generic_menu_text_item
 		unfocus_script = unfocus_generic_menu_text_item
 		pad_choose_sound = ui_menu_select_sfx
 		parent = current_menu}
-	if screenelementexists id = <parent>
-		createscreenelement {
-			type = descinterface
+	if ScreenElementExists id = <parent>
+		CreateScreenElement {
+			type = DescInterface
 			parent = <parent>
 			desc = 'generic_menu_text_item'
-			autosizedims = true
+			autoSizeDims = true
 			generic_menu_smenu_textitem_text_text = <text>
 		}
 	else
-		scriptassert \{qs(0x2a39a91f)}
+		ScriptAssert \{qs("\Ladd_generic_menu_text_item was unable to find its parent menu, make sure it exists.")}
 	endif
-	if gotparam \{choose_state}
+	if GotParam \{choose_state}
 		pad_choose_script = ui_event_block
 		pad_choose_params = {event = menu_change data = {state = <choose_state> <choose_state_data> container_id = <id>}}
 	endif
-	if gotparam \{choose_back}
+	if GotParam \{choose_back}
 		pad_choose_script = generic_event_back_block
 	endif
-	setscreenelementprops {
+	SetScreenElementProps {
 		id = <id>
 		event_handlers = [
 			{focus <focus_script> params = {id = <id> do_not_scroll = <do_not_scroll> additional_focus_script = <additional_focus_script> additional_focus_params = <additional_focus_params>}}
 			{unfocus <unfocus_script> params = {id = <id> additional_unfocus_script = <additional_unfocus_script> additional_unfocus_params = <additional_unfocus_params>}}
 		]
 	}
-	if gotparam \{pad_choose_script}
-		setscreenelementprops {
+	if GotParam \{pad_choose_script}
+		SetScreenElementProps {
 			id = <id>
 			event_handlers = [
 				{pad_choose <pad_choose_sound>}
@@ -261,8 +261,8 @@ script add_generic_menu_text_item \{focus_script = focus_generic_menu_text_item
 			]
 		}
 	endif
-	if gotparam \{pad_square_script}
-		setscreenelementprops {
+	if GotParam \{pad_square_script}
+		SetScreenElementProps {
 			id = <id>
 			event_handlers = [
 				{pad_square <pad_choose_sound>}
@@ -270,8 +270,8 @@ script add_generic_menu_text_item \{focus_script = focus_generic_menu_text_item
 			]
 		}
 	endif
-	if gotparam \{pad_start_script}
-		setscreenelementprops {
+	if GotParam \{pad_start_script}
+		SetScreenElementProps {
 			id = <id>
 			event_handlers = [
 				{pad_start <pad_choose_sound>}
@@ -279,8 +279,8 @@ script add_generic_menu_text_item \{focus_script = focus_generic_menu_text_item
 			]
 		}
 	endif
-	if gotparam \{not_focusable}
-		if gotparam \{header_text}
+	if GotParam \{not_focusable}
+		if GotParam \{header_text}
 			rgba = (($g_menu_colors).menu_subhead)
 		else
 			rgba = (($default_color_scheme).text_color)
@@ -288,62 +288,62 @@ script add_generic_menu_text_item \{focus_script = focus_generic_menu_text_item
 		<i> = 0
 		begin
 		clrval = (<rgba> [<i>] * 0.5)
-		casttointeger \{clrval}
-		setarrayelement arrayname = rgba index = <i> newvalue = <clrval>
+		CastToInteger \{clrval}
+		SetArrayElement ArrayName = rgba index = <i> newvalue = <clrval>
 		<i> = (<i> + 1)
 		repeat 3
-		setscreenelementprops {
+		SetScreenElementProps {
 			id = <id>
 			not_focusable
 			generic_menu_smenu_textitem_text_rgba = <rgba>
 		}
 	endif
-	if gotparam \{heading}
-		setscreenelementprops {
+	if GotParam \{heading}
+		SetScreenElementProps {
 			id = <id>
 			not_focusable
 			generic_menu_smenu_textitem_text_rgba = [200 70 70 255]
 		}
 	endif
-	if gotparam \{text_case}
-		<id> :se_setprops generic_menu_smenu_textitem_text_textcase = <text_case>
+	if GotParam \{text_case}
+		<id> :SE_SetProps generic_menu_smenu_textitem_text_textcase = <text_case>
 	endif
-	<parent> :gettags
-	if gotparam \{total_length}
-		getscreenelementdims id = <parent>
-		parent_height = <height>
-		getscreenelementdims id = <id>
-		total_length = (<total_length> + <height>)
+	<parent> :GetTags
+	if GotParam \{total_length}
+		GetScreenElementDims id = <parent>
+		parent_height = <Height>
+		GetScreenElementDims id = <id>
+		total_length = (<total_length> + <Height>)
 		if (<total_length> > <parent_height>)
-			generic_menu :se_setprops \{generic_menu_scrollbar_alpha = 1.0}
+			generic_menu :SE_SetProps \{generic_menu_scrollbar_alpha = 1.0}
 		endif
-		<parent> :settags {total_length = <total_length>}
+		<parent> :SetTags {total_length = <total_length>}
 	else
-		getscreenelementdims id = <id>
-		<parent> :settags {total_length = <height>}
+		GetScreenElementDims id = <id>
+		<parent> :SetTags {total_length = <Height>}
 	endif
 	return item_container_id = <id>
 endscript
 
 script focus_generic_menu_text_item 
-	if screenelementexists \{id = generic_menu}
-		<id> :se_setprops generic_menu_smenu_textitem_text_rgba = [255 255 255 255]
-		<id> :se_setprops generic_menu_smenu_textitem_text_font = fontgrid_text_a6_fire
-		<id> :se_setprops generic_menu_smenu_textitem_text_material = sys_fontgrid_text_a6_fire_sys_fontgrid_text_a6_fire
-		if NOT gotparam \{do_not_scroll}
+	if ScreenElementExists \{id = generic_menu}
+		<id> :SE_SetProps generic_menu_smenu_textitem_text_rgba = [255 255 255 255]
+		<id> :SE_SetProps generic_menu_smenu_textitem_text_font = fontgrid_text_a6_fire
+		<id> :SE_SetProps generic_menu_smenu_textitem_text_material = sys_fontgrid_text_A6_fire_sys_fontgrid_text_A6_fire
+		if NOT GotParam \{do_not_scroll}
 			set_generic_menu_scrollbar_pos id = <id>
 		endif
 	endif
-	if gotparam \{additional_focus_script}
+	if GotParam \{additional_focus_script}
 		<additional_focus_script> <additional_focus_params>
 	endif
 endscript
 
 script unfocus_generic_menu_text_item 
-	<id> :se_setprops generic_menu_smenu_textitem_text_rgba = (($default_color_scheme).text_color)
-	<id> :se_setprops generic_menu_smenu_textitem_text_font = fontgrid_text_a6
-	<id> :se_setprops generic_menu_smenu_textitem_text_material = null
-	if gotparam \{additional_unfocus_script}
+	<id> :SE_SetProps generic_menu_smenu_textitem_text_rgba = (($default_color_scheme).text_color)
+	<id> :SE_SetProps generic_menu_smenu_textitem_text_font = fontgrid_text_a6
+	<id> :SE_SetProps generic_menu_smenu_textitem_text_material = null
+	if GotParam \{additional_unfocus_script}
 		<additional_unfocus_script> {id = <id>} <additional_unfocus_params>
 	endif
 endscript
@@ -353,36 +353,36 @@ script add_generic_menu_icon_item \{focus_script = focus_generic_menu_icon_item
 		pad_choose_sound = ui_menu_select_sfx
 		parent = current_menu
 		ui_event_script = ui_event}
-	if screenelementexists id = <parent>
-		createscreenelement {
+	if ScreenElementExists id = <parent>
+		CreateScreenElement {
 			id = <id>
-			type = descinterface
+			type = DescInterface
 			parent = <parent>
 			desc = 'generic_menu_icon_item'
-			autosizedims = true
+			autoSizeDims = true
 			generic_menu_smenu_iconitem_text_text = <text>
 			generic_menu_smenu_iconitem_icon_texture = <icon>
 			generic_menu_smenu_iconitem_icon_rot_angle = <icon_rot>
 		}
 	else
-		scriptassert \{qs(0x2a39a91f)}
+		ScriptAssert \{qs("\Ladd_generic_menu_text_item was unable to find its parent menu, make sure it exists.")}
 	endif
-	if gotparam \{choose_state}
+	if GotParam \{choose_state}
 		pad_choose_script = <ui_event_script>
 		pad_choose_params = {event = menu_change data = {state = <choose_state> <choose_state_data> container_id = <id>}}
 	endif
-	if gotparam \{choose_back}
+	if GotParam \{choose_back}
 		pad_choose_script = generic_event_back
 	endif
-	setscreenelementprops {
+	SetScreenElementProps {
 		id = <id>
 		event_handlers = [
 			{focus <focus_script> params = {id = <id> additional_focus_script = <additional_focus_script> additional_focus_params = <additional_focus_params>}}
 			{unfocus <unfocus_script> params = {id = <id> additional_unfocus_script = <additional_unfocus_script> additional_unfocus_params = <additional_unfocus_params>}}
 		]
 	}
-	if gotparam \{pad_choose_script}
-		setscreenelementprops {
+	if GotParam \{pad_choose_script}
+		SetScreenElementProps {
 			id = <id>
 			event_handlers = [
 				{pad_choose <pad_choose_sound>}
@@ -390,8 +390,8 @@ script add_generic_menu_icon_item \{focus_script = focus_generic_menu_icon_item
 			]
 		}
 	endif
-	if gotparam \{pad_square_script}
-		setscreenelementprops {
+	if GotParam \{pad_square_script}
+		SetScreenElementProps {
 			id = <id>
 			event_handlers = [
 				{pad_square <pad_choose_sound>}
@@ -399,8 +399,8 @@ script add_generic_menu_icon_item \{focus_script = focus_generic_menu_icon_item
 			]
 		}
 	endif
-	if gotparam \{pad_start_script}
-		setscreenelementprops {
+	if GotParam \{pad_start_script}
+		SetScreenElementProps {
 			id = <id>
 			event_handlers = [
 				{pad_start <pad_choose_sound>}
@@ -408,8 +408,8 @@ script add_generic_menu_icon_item \{focus_script = focus_generic_menu_icon_item
 			]
 		}
 	endif
-	if gotparam \{not_focusable}
-		if gotparam \{header_text}
+	if GotParam \{not_focusable}
+		if GotParam \{header_text}
 			rgba = (($g_menu_colors).menu_subhead)
 		else
 			rgba = (($default_color_scheme).text_color)
@@ -417,88 +417,88 @@ script add_generic_menu_icon_item \{focus_script = focus_generic_menu_icon_item
 		<i> = 0
 		begin
 		clrval = (<rgba> [<i>] * 0.5)
-		casttointeger \{clrval}
-		setarrayelement arrayname = rgba index = <i> newvalue = <clrval>
+		CastToInteger \{clrval}
+		SetArrayElement ArrayName = rgba index = <i> newvalue = <clrval>
 		<i> = (<i> + 1)
 		repeat 3
-		setscreenelementprops {
+		SetScreenElementProps {
 			id = <id>
 			not_focusable
 			generic_menu_smenu_iconitem_text_rgba = <rgba>
 		}
 	endif
-	if gotparam \{text_case}
-		<id> :se_setprops generic_menu_smenu_iconitem_text_textcase = <text_case>
+	if GotParam \{text_case}
+		<id> :SE_SetProps generic_menu_smenu_iconitem_text_textcase = <text_case>
 	endif
-	<parent> :gettags
-	if gotparam \{total_length}
-		getscreenelementdims id = <parent>
-		parent_height = <height>
-		getscreenelementdims id = <id>
-		total_length = (<total_length> + <height>)
+	<parent> :GetTags
+	if GotParam \{total_length}
+		GetScreenElementDims id = <parent>
+		parent_height = <Height>
+		GetScreenElementDims id = <id>
+		total_length = (<total_length> + <Height>)
 		if (<total_length> > <parent_height>)
-			generic_menu :se_setprops \{generic_menu_scrollbar_alpha = 1.0}
+			generic_menu :SE_SetProps \{generic_menu_scrollbar_alpha = 1.0}
 		endif
-		<parent> :settags {total_length = <total_length>}
+		<parent> :SetTags {total_length = <total_length>}
 	else
-		getscreenelementdims id = <id>
-		<parent> :settags {total_length = <height>}
+		GetScreenElementDims id = <id>
+		<parent> :SetTags {total_length = <Height>}
 	endif
 	return item_container_id = <id>
 endscript
 
 script focus_generic_menu_icon_item 
-	if screenelementexists id = <id>
-		<id> :se_setprops generic_menu_smenu_iconitem_text_rgba = [255 255 255 255]
-		<id> :se_setprops generic_menu_smenu_iconitem_text_font = fontgrid_text_a6_fire
-		<id> :se_setprops generic_menu_smenu_iconitem_text_material = sys_fontgrid_text_a6_fire_sys_fontgrid_text_a6_fire
-		<id> :se_setprops generic_menu_smenu_iconitem_highlight_alpha = 1 time = 0.1 anim = fast_in
+	if ScreenElementExists id = <id>
+		<id> :SE_SetProps generic_menu_smenu_iconitem_text_rgba = [255 255 255 255]
+		<id> :SE_SetProps generic_menu_smenu_iconitem_text_font = fontgrid_text_a6_fire
+		<id> :SE_SetProps generic_menu_smenu_iconitem_text_material = sys_fontgrid_text_A6_fire_sys_fontgrid_text_A6_fire
+		<id> :SE_SetProps generic_menu_smenu_iconitem_highlight_alpha = 1 time = 0.1 Anim = fast_in
 		set_generic_menu_scrollbar_pos id = <id>
 	endif
-	if gotparam \{additional_focus_script}
+	if GotParam \{additional_focus_script}
 		<additional_focus_script> <additional_focus_params>
 	endif
 endscript
 
 script unfocus_generic_menu_icon_item 
-	if screenelementexists id = <id>
-		<id> :se_setprops generic_menu_smenu_iconitem_text_rgba = (($default_color_scheme).text_color)
-		<id> :se_setprops generic_menu_smenu_iconitem_text_font = fontgrid_text_a6
-		<id> :se_setprops generic_menu_smenu_iconitem_text_material = null
-		<id> :se_setprops generic_menu_smenu_iconitem_highlight_alpha = 0 time = 0.5 anim = fast_in
+	if ScreenElementExists id = <id>
+		<id> :SE_SetProps generic_menu_smenu_iconitem_text_rgba = (($default_color_scheme).text_color)
+		<id> :SE_SetProps generic_menu_smenu_iconitem_text_font = fontgrid_text_a6
+		<id> :SE_SetProps generic_menu_smenu_iconitem_text_material = null
+		<id> :SE_SetProps generic_menu_smenu_iconitem_highlight_alpha = 0 time = 0.5 Anim = fast_in
 	endif
-	if gotparam \{additional_unfocus_script}
+	if GotParam \{additional_unfocus_script}
 		<additional_unfocus_script> <additional_unfocus_params>
 	endif
 endscript
 
 script set_generic_menu_scrollbar_pos 
-	if screenelementexists \{id = generic_menu}
-		getscreenelementposition id = <id>
-		<id> :se_getparentid
-		<parent_id> :gettags
-		if gotparam \{total_length}
+	if ScreenElementExists \{id = generic_menu}
+		GetScreenElementPosition id = <id>
+		<id> :SE_GetParentId
+		<parent_id> :GetTags
+		if GotParam \{total_length}
 			set_generic_menu_scrollbar_worker <...>
 		endif
 	endif
 endscript
 
 script set_generic_menu_scrollbar_index 
-	requireparams \{[
-			vmenu
+	RequireParams \{[
+			VMenu
 		]
 		all}
-	if NOT gotparam \{index}
+	if NOT GotParam \{index}
 		index = 0
 	endif
-	if screenelementexists \{id = generic_menu}
-		getscreenelementchildren id = <vmenu>
-		getarraysize <children>
+	if ScreenElementExists \{id = generic_menu}
+		GetScreenElementChildren id = <VMenu>
+		GetArraySize <children>
 		if (<index> < <array_size>)
-			if screenelementexists id = (<children> [<index>])
-				getscreenelementposition id = (<children> [<index>])
-				<vmenu> :gettags
-				if gotparam \{total_length}
+			if ScreenElementExists id = (<children> [<index>])
+				GetScreenElementPosition id = (<children> [<index>])
+				<VMenu> :GetTags
+				if GotParam \{total_length}
 					set_generic_menu_scrollbar_worker <...>
 				endif
 			endif
@@ -510,32 +510,32 @@ script set_generic_menu_scrollbar_worker
 	scroll_perc = ((<screenelementpos>.(0.0, 1.0)) / <total_length>)
 	scroll_len = 400
 	scroll_pos = (((<scroll_perc> * 400) * (0.0, 1.0)) + (-17.0, 0.0))
-	generic_menu :se_setprops generic_menu_scrollbar_thumb_blue_pos = <scroll_pos>
+	generic_menu :SE_SetProps generic_menu_scrollbar_thumb_blue_pos = <scroll_pos>
 endscript
 generic_menu_block_input = 0
 
 script generic_blocking_execute_script 
-	setspawninstancelimits \{max = 1
+	SetSpawnInstanceLimits \{max = 1
 		management = ignore_spawn_request}
 	begin
 	if ($generic_menu_block_input = 0)
 		break
 	endif
-	wait \{1
+	Wait \{1
 		game
 		frame}
 	repeat
-	if is_ui_event_running
+	if Is_ui_event_running
 		return \{false}
 	endif
 	<pad_script> <pad_params>
 endscript
 
 script generic_menu_animate_in 
-	setspawninstancelimits \{max = 1
+	SetSpawnInstanceLimits \{max = 1
 		management = kill_oldest}
-	if screenelementexists \{id = generic_menu}
-		generic_menu :se_setprops \{generic_menu_anchor_pos = {
+	if ScreenElementExists \{id = generic_menu}
+		generic_menu :SE_SetProps \{generic_menu_anchor_pos = {
 				relative
 				(0.0, -1000.0)
 			}
@@ -546,8 +546,8 @@ script generic_menu_animate_in
 	else
 		return
 	endif
-	if screenelementexists \{id = generic_menu}
-		generic_menu :se_setprops \{generic_menu_anchor_pos = {
+	if ScreenElementExists \{id = generic_menu}
+		generic_menu :SE_SetProps \{generic_menu_anchor_pos = {
 				relative
 				(0.0, 1020.0)
 			}
@@ -559,10 +559,10 @@ script generic_menu_animate_in
 	else
 		return
 	endif
-	wait \{0.22
+	Wait \{0.22
 		seconds}
-	if screenelementexists \{id = generic_menu}
-		generic_menu :se_setprops \{generic_menu_anchor_pos = {
+	if ScreenElementExists \{id = generic_menu}
+		generic_menu :SE_SetProps \{generic_menu_anchor_pos = {
 				relative
 				(0.0, -20.0)
 			}

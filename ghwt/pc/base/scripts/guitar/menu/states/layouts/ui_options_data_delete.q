@@ -1,13 +1,13 @@
 
 script ui_create_options_data_delete 
-	if NOT gotparam \{really}
+	if NOT GotParam \{really}
 		create_popup_warning_menu \{textblock = {
-				text = qs(0x113bad66)
+				text = qs("Are you sure you want to reset your progress and overwrite your current save??")
 			}
 			options = [
 				{
 					func = generic_event_back
-					text = qs(0xf7723015)
+					text = qs("CANCEL")
 				}
 				{
 					func = generic_event_replace
@@ -17,17 +17,17 @@ script ui_create_options_data_delete
 							really = 1
 						}
 					}
-					text = qs(0xc2993a50)
+					text = qs("I'M SURE")
 				}
 			]}
-	elseif NOT gotparam \{confirm}
+	elseif NOT GotParam \{confirm}
 		create_popup_warning_menu \{textblock = {
-				text = qs(0x1df63a52)
+				text = qs("Are you really sure you want to reset your progress and overwrite your current save?  All career progress, cash earned, items unlocked, rock stars created, etc. will be lost!")
 			}
 			options = [
 				{
 					func = generic_event_back
-					text = qs(0xf7723015)
+					text = qs("CANCEL")
 				}
 				{
 					func = generic_event_replace
@@ -38,18 +38,18 @@ script ui_create_options_data_delete
 							confirm = 1
 						}
 					}
-					text = qs(0x120d3970)
+					text = qs("I'M REALLY SURE")
 				}
 			]}
 	else
-		if isxenon
-			if iswinport
+		if isXenon
+			if IsWinPort
 				text = qs(0xd2c4e3d2)
 			else
-				text = qs(0xe4655cd5)
+				text = qs("Clearing all of your save data...\nPlease do not turn off your Xbox 360 console.")
 			endif
 		else
-			text = qs(0x3cb30bee)
+			text = qs("Clearing all of your save data...\nDo not switch off power during this time.")
 		endif
 		create_popup_warning_menu {
 			textblock = {
@@ -57,7 +57,7 @@ script ui_create_options_data_delete
 			}
 		}
 		spawnscriptnow \{ui_options_data_delete}
-		menu_music_off
+		Menu_Music_Off
 	endif
 endscript
 
@@ -66,18 +66,18 @@ script ui_destroy_options_data_delete
 endscript
 
 script ui_options_data_delete 
-	wait \{1
+	Wait \{1
 		gameframe}
 	get_savegame_from_controller controller = ($primary_controller)
-	getglobaltags \{user_options
+	GetGlobalTags \{user_options
 		params = {
 			autosave
 		}}
 	reset_globaltags savegame = <savegame>
-	setglobaltags user_options params = {autosave = <autosave>}
+	SetGlobalTags user_options params = {autosave = <autosave>}
 	ui_event_wait_for_safe
 	ui_memcard_save \{event = menu_change
-		state = uistate_boot_iis
+		state = UIstate_boot_iis
 		data = {
 			clear_previous_stack
 		}}

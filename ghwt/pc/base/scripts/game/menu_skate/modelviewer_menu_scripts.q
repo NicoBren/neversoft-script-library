@@ -1,32 +1,32 @@
 max_wheel_speed = 16.0
-resetcameratoviewerobject = 1
-useplayerposforviewerobjpos = 1
-applyviewerobjmodeltoplayer = 0
-defaultviewerobjpos = (0.0, 0.0, 0.0)
-viewerautorepeattime = 30
-viewerautorepeatspeed = 0
+ResetCameraToViewerObject = 1
+UsePlayerPosForViewerObjPos = 1
+ApplyViewerObjModelToPlayer = 0
+DefaultViewerObjPos = (0.0, 0.0, 0.0)
+ViewerAutoRepeatTime = 30
+ViewerAutoRepeatSpeed = 0
 
 script add_view_models_to_menu 
-	if gotparam \{array}
-		if globalexists name = <array> type = array
-			getarraysize <array>
+	if GotParam \{array}
+		if GlobalExists name = <array> type = array
+			GetArraySize <array>
 			if (<array_size> > 0)
-				foreachin (<array>) do = make_select_view_model_line
+				ForEachIn (<array>) do = make_select_view_model_line
 			endif
 		endif
 	else
-		foreachin \{$modelviewer_categories
+		ForEachIn \{$modelviewer_categories
 			do = make_select_view_model_category}
 	endif
 endscript
 
 script draw_viewer_object_panel 
 	viewer_obj_get_panel_info
-	if objectexists \{id = vo_line1}
-		setscreenelementprops {id = vo_line1 text = <line1>}
-		setscreenelementprops {id = vo_line2 text = <line2>}
-		setscreenelementprops {id = vo_line3 text = <line3>}
-		setscreenelementprops {id = vo_line4 text = <line4>}
+	if ObjectExists \{id = vo_line1}
+		SetScreenElementProps {id = vo_line1 text = <line1>}
+		SetScreenElementProps {id = vo_line2 text = <line2>}
+		SetScreenElementProps {id = vo_line3 text = <line3>}
+		SetScreenElementProps {id = vo_line4 text = <line4>}
 	else
 		create_panel_message id = vo_line1 text = <line1> style = panel_message_viewobj_line params = {xy = (40.0, 380.0)}
 		create_panel_message id = vo_line2 text = <line2> style = panel_message_viewobj_line params = {xy = (40.0, 400.0)}
@@ -36,26 +36,26 @@ script draw_viewer_object_panel
 endscript
 
 script kill_viewer_object_panel 
-	if objectexists \{id = vo_line1}
-		runscriptonscreenelement \{id = vo_line1
+	if ObjectExists \{id = vo_line1}
+		RunScriptOnScreenElement \{id = vo_line1
 			kill_panel_message}
 	endif
-	if objectexists \{id = vo_line2}
-		runscriptonscreenelement \{id = vo_line2
+	if ObjectExists \{id = vo_line2}
+		RunScriptOnScreenElement \{id = vo_line2
 			kill_panel_message}
 	endif
-	if objectexists \{id = vo_line3}
-		runscriptonscreenelement \{id = vo_line3
+	if ObjectExists \{id = vo_line3}
+		RunScriptOnScreenElement \{id = vo_line3
 			kill_panel_message}
 	endif
-	if objectexists \{id = vo_line4}
-		runscriptonscreenelement \{id = vo_line4
+	if ObjectExists \{id = vo_line4}
+		RunScriptOnScreenElement \{id = vo_line4
 			kill_panel_message}
 	endif
 endscript
 
 script panel_message_viewobj_line 
-	se_setprops \{just = [
+	SE_SetProps \{just = [
 			left
 			center
 		]
@@ -65,54 +65,54 @@ script panel_message_viewobj_line
 			10
 			115
 		]}
-	legacydomorph pos = <xy> alpha = 1 scale = 0.6
+	LegacyDoMorph pos = <xy> alpha = 1 scale = 0.6
 endscript
 
 script viewerobj_add_components 
 	printf \{'viewerobj_add_components'}
-	obj_setorientation \{dir = (0.0, 0.0, 1.0)}
-	if gotparam \{skeletonname}
-		if NOT (<skeletonname> = car)
-			createcomponentfromstructure {
-				component = animtree
+	Obj_SetOrientation \{dir = (0.0, 0.0, 1.0)}
+	if GotParam \{SkeletonName}
+		if NOT (<SkeletonName> = car)
+			CreateComponentFromStructure {
+				Component = AnimTree
 				<...>
-				defaultcommandtarget = modelviewernode
+				DefaultCommandTarget = ModelViewerNode
 			}
 		endif
 	endif
-	if gotparam \{skeletonname}
-		createcomponentfromstructure {
-			component = skeleton
+	if GotParam \{SkeletonName}
+		CreateComponentFromStructure {
+			Component = skeleton
 			<...>
-			skeleton = <skeletonname>
+			skeleton = <SkeletonName>
 			max_bone_skip_lod = 0
 		}
 	endif
-	createcomponentfromstructure component = model <...> usemodellights
+	CreateComponentFromStructure Component = Model <...> UseModelLights
 endscript
 
-script viewerobj_init_model \{buildscript = create_model_from_appearance}
+script viewerobj_init_model \{buildScript = create_model_from_appearance}
 	printf \{'viewerobj_init_model'}
-	if gotparam \{profile}
-		scriptassert \{qs(0xe737a7c0)}
+	if GotParam \{profile}
+		ScriptAssert \{qs("\Lthis should be done in code")}
 	else
-		if gotparam \{modelname}
-			obj_initmodel <...>
+		if GotParam \{modelName}
+			Obj_InitModel <...>
 		else
-			if gotparam \{model}
-				obj_initmodel <...>
+			if GotParam \{Model}
+				Obj_InitModel <...>
 			else
-				script_assert \{qs(0xb303b84e)}
+				script_assert \{qs("\Lno model name!")}
 			endif
 		endif
 	endif
-	obj_getid
-	runscriptonobject id = <objid> set_viewerobj_anim_handlers
-	obj_rotate \{relative = 0}
+	Obj_GetID
+	RunScriptOnObject id = <ObjID> set_viewerobj_anim_handlers
+	Obj_Rotate \{relative = 0}
 endscript
 
 script launch_view_models_menu 
-	runscriptonscreenelement id = current_menu_anchor animate_out callback = create_view_models_menu callback_params = <...>
+	RunScriptOnScreenElement id = current_menu_anchor animate_out callback = create_view_models_menu callback_params = <...>
 endscript
 
 script make_select_view_model_category 
@@ -125,7 +125,7 @@ script make_select_view_model_category
 	}
 endscript
 
-script make_select_view_model_line \{buildscript = create_model_from_appearance}
+script make_select_view_model_line \{buildScript = create_model_from_appearance}
 	add_menu_item {
 		scale = 0.6
 		rot = 0
@@ -136,55 +136,55 @@ script make_select_view_model_line \{buildscript = create_model_from_appearance}
 endscript
 
 script simple_focus 
-	obj_getid
-	<id> = <objid>
-	setscreenelementprops id = <id> rgba = [128 128 128 128]
+	Obj_GetID
+	<id> = <ObjID>
+	SetScreenElementProps id = <id> rgba = [128 128 128 128]
 endscript
 
 script simple_unfocus 
-	obj_getid
-	<id> = <objid>
-	setscreenelementprops id = <id> rgba = [70 70 70 128]
+	Obj_GetID
+	<id> = <ObjID>
+	SetScreenElementProps id = <id> rgba = [70 70 70 128]
 endscript
 
 script create_view_models_menu 
 	generic_ui_destroy
 	shut_down_flow_manager
-	if screenelementexists \{id = view_models_menu}
-		destroyscreenelement \{id = view_models_menu}
+	if ScreenElementExists \{id = view_models_menu}
+		DestroyScreenElement \{id = view_models_menu}
 	endif
-	playigccam \{id = modelview_view_cam_id
+	PlayIGCCam \{id = modelview_view_cam_id
 		name = modelview_view_cam
 		viewport = bg_viewport
-		lockto = world
+		LockTo = world
 		pos = (-1.068807, 1.299001, 3.7975957)
-		quat = (0.000506, 0.99942994, -0.017537998)
-		fov = 72.0
-		play_hold = 1
+		Quat = (0.000506, 0.99942994, -0.017537998)
+		FOV = 72.0
+		Play_hold = 1
 		interrupt_current}
 	make_menu \{menu_id = view_models_menu
 		vmenu_id = view_models_vmenu
-		title = qs(0x64189d33)
+		title = qs("\LMODELS")
 		scrolling}
-	setanalogstickactiveformenus \{0}
-	setscreenelementprops {
+	SetAnalogStickActiveForMenus \{0}
+	SetScreenElementProps {
 		id = view_models_vmenu
 		event_handlers = [
 			{pad_back exit_view_models_menu params = {array = <array>}}
 		]
 	}
 	add_view_models_to_menu <...>
-	runscriptonscreenelement \{id = current_menu_anchor
+	RunScriptOnScreenElement \{id = current_menu_anchor
 		animate_in}
 endscript
 
 script view_models_menu_cleanup 
-	setanalogstickactiveformenus \{1}
-	if screenelementexists \{id = view_models_menu}
-		destroyscreenelement \{id = view_models_menu}
+	SetAnalogStickActiveForMenus \{1}
+	if ScreenElementExists \{id = view_models_menu}
+		DestroyScreenElement \{id = view_models_menu}
 	endif
-	killcamanim \{name = modelview_view_cam}
-	setscreenelementprops \{id = root_window
+	KillCamAnim \{name = modelview_view_cam}
+	SetScreenElementProps \{id = root_window
 		tags = {
 			menu_state = off
 		}}
@@ -192,7 +192,7 @@ script view_models_menu_cleanup
 endscript
 
 script exit_view_models_menu 
-	if gotparam \{array}
+	if GotParam \{array}
 		view_models_menu_cleanup
 		create_view_models_menu
 	else
@@ -201,109 +201,109 @@ script exit_view_models_menu
 endscript
 last_profile_viewed = {
 	profile = no_profile
-	buildscript = create_model_from_appearance
+	buildScript = create_model_from_appearance
 }
 last_profile_valid = false
 
-script setreferencechecksum 
-	printf \{qs(0xaf299c39)}
+script SetReferenceChecksum 
+	printf \{qs("\L'SetReferenceChecksum' is deprecated")}
 endscript
 
 script view_model 
-	printf \{qs(0x3e39e076)}
-	if ((isxenon) && (gotextramemory))
-		mempushcontext \{debugheap}
+	printf \{qs("\LView Model here")}
+	if ((isXenon) && (GotExtraMemory))
+		MemPushContext \{DebugHeap}
 	else
-		mempushcontext \{bottomupheap}
+		MemPushContext \{BottomUpHeap}
 	endif
 	lock = off
-	if areassetslocked
-		allowassetloading \{on}
+	if AreAssetsLocked
+		AllowAssetLoading \{on}
 		lock = on
 	endif
-	if gotparam \{animloadscript}
-		if scriptexists <animloadscript>
-			<animloadscript>
+	if GotParam \{animLoadScript}
+		if ScriptExists <animLoadScript>
+			<animLoadScript>
 		endif
 	endif
-	if gotparam \{extraanim}
-		if scriptexists <extraanim>
-			<extraanim>
+	if GotParam \{extraAnim}
+		if ScriptExists <extraAnim>
+			<extraAnim>
 		endif
 	endif
-	mempopcontext
-	if NOT compositeobjectexists \{guitarist}
+	MemPopContext
+	if NOT CompositeObjectExists \{Guitarist}
 		create_guitarist
 	endif
-	if (istrue $useplayerposforviewerobjpos)
-		guitarist :obj_getposition
-		<viewerobjpos> = <pos>
-		guitarist :hide
+	if (IsTrue $UsePlayerPosForViewerObjPos)
+		Guitarist :Obj_GetPosition
+		<ViewerObjPos> = <pos>
+		Guitarist :hide
 	else
-		<viewerobjpos> = <defaultviewerobjpos>
+		<ViewerObjPos> = <DefaultViewerObjPos>
 	endif
-	if gotparam \{use_last_model_viewed}
+	if GotParam \{use_last_model_viewed}
 		if ($last_profile_valid = false)
-			getcasappearance \{player = 0}
+			GetCASAppearance \{player = 0}
 			profile = <appearance>
-			buildscript = create_model_from_appearance
+			buildScript = create_model_from_appearance
 		else
 			profile = ($last_profile_viewed.profile)
-			buildscript = ($last_profile_viewed.buildscript)
+			buildScript = ($last_profile_viewed.buildScript)
 		endif
 	endif
-	if gotparam \{body_shape}
-		setviewermodel <...> profile = {<profile> body_shape = <body_shape>} scale = (<body_shape>.scale)
+	if GotParam \{body_shape}
+		SetViewerModel <...> profile = {<profile> body_shape = <body_shape>} scale = (<body_shape>.scale)
 	else
-		setviewermodel <...>
+		SetViewerModel <...>
 	endif
-	if gotparam \{profile}
+	if GotParam \{profile}
 		change \{last_profile_valid = true}
-		change last_profile_viewed = {profile = <profile> buildscript = <buildscript>}
+		change last_profile_viewed = {profile = <profile> buildScript = <buildScript>}
 	endif
-	if gotparam \{defaultanim}
-		setvieweranim <defaultanim>
+	if GotParam \{defaultAnim}
+		SetViewerAnim <defaultAnim>
 	endif
 	if (<lock> = on)
-		allowassetloading \{off}
+		AllowAssetLoading \{off}
 	endif
-	if istrue \{$applyviewerobjmodeltoplayer}
+	if IsTrue \{$ApplyViewerObjModelToPlayer}
 		set_player_to_model \{no_exit}
 	endif
 endscript
 
 script set_player_to_model 
-	printf \{qs(0x121b3d41)}
+	printf \{qs("\LSetting player to model")}
 	if ($last_profile_valid = true)
-		setcasappearance appearance = ($last_profile_viewed.profile)
-		editcasappearance \{target = setpart
-			targetparams = {
+		SetCASAppearance appearance = ($last_profile_viewed.profile)
+		EditCASAppearance \{target = SetPart
+			targetParams = {
 				part = cas_board
 				desc_id = `default`
 			}}
-		updatecurrentcasmodel buildscript = ($last_profile_viewed.buildscript)
+		UpdateCurrentCASModel buildScript = ($last_profile_viewed.buildScript)
 	else
-		printf \{qs(0x274e5097)}
+		printf \{qs("\LCan't apply explicit models, only profiles")}
 	endif
-	if NOT gotparam \{no_exit}
+	if NOT GotParam \{no_exit}
 		toggle_model_viewer
 	endif
 endscript
 
-script toggle_model_viewer \{skeleton = gh3_guitarist_axel}
-	if NOT screenelementexists \{id = view_models_menu}
+script toggle_model_viewer \{skeleton = GH3_Guitarist_Axel}
+	if NOT ScreenElementExists \{id = view_models_menu}
 		view_model {
 			use_last_model_viewed
-			skeletonname = <skeleton>
-			defaultanim = ped_m_idle1
+			SkeletonName = <skeleton>
+			defaultAnim = Ped_M_Idle1
 		}
 		create_view_models_menu
 	else
 		change \{view_mode = 0}
-		toggleviewmode
-		toggleviewmode
-		toggleviewmode
-		guitarist :unhide
+		ToggleViewMode
+		ToggleViewMode
+		ToggleViewMode
+		Guitarist :unhide
 		view_models_menu_cleanup
 	endif
 endscript

@@ -1,16 +1,16 @@
-beat_game_title = qs(0xab3c4e16)
-beat_game_message = qs(0xe3d1dbcd)
-beat_game_message_expert = qs(0xbf2dce3b)
+beat_game_title = qs("\c6YOU BEAT GUITAR HERO III ON \c0%d\c6!\c0")
+beat_game_message = qs("Think you've got what it takes to really\n blow their minds? Try this bad boy out on \c1%n\c0. There may be a reward waiting for you if you succeed. Pain, fame and glory await, lil' rocker.")
+beat_game_message_expert = qs("Wow. You've mastered expert -- Go start a band already! Take it to the next level with the \c1%n\c0! Cheats can be unlocked in the options menu.")
 
 script create_beat_game_menu 
-	create_menu_backdrop \{texture = beat_game_bg}
+	create_menu_backdrop \{texture = Beat_Game_BG}
 	menu_font = fontgrid_title_a1
 	get_current_band_info
-	getglobaltags <band_info> param = name
+	GetGlobalTags <band_info> param = name
 	band_name = <name>
-	formattext textname = band_name_text qs(0x73307931) s = <band_name>
-	difficulty_text = qs(0x334908ac)
-	next_difficulty_text = qs(0x46b84468)
+	FormatText TextName = band_name_text qs("\L%s") s = <band_name>
+	difficulty_text = qs("EXPERT")
+	next_difficulty_text = qs("PRECISION MODE CHEAT")
 	<difficulty> = ($player1_status.difficulty)
 	if ($game_mode = p2_career)
 		<index1> = ($difficulty_list_props.($player1_status.difficulty).index)
@@ -21,19 +21,19 @@ script create_beat_game_menu
 	endif
 	switch (<difficulty>)
 		case easy
-		<difficulty_text> = qs(0x8d657387)
+		<difficulty_text> = qs("EASY")
 		next_difficulty = medium
-		<next_difficulty_text> = qs(0x6ef11a01)
+		<next_difficulty_text> = qs("MEDIUM")
 		case medium
-		<difficulty_text> = qs(0x6ef11a01)
+		<difficulty_text> = qs("MEDIUM")
 		next_difficulty = hard
-		<next_difficulty_text> = qs(0x51b06d2f)
+		<next_difficulty_text> = qs("HARD")
 		case hard
-		<difficulty_text> = qs(0x51b06d2f)
+		<difficulty_text> = qs("HARD")
 		next_difficulty = expert
-		<next_difficulty_text> = qs(0x334908ac)
+		<next_difficulty_text> = qs("EXPERT")
 	endswitch
-	createscreenelement \{type = containerelement
+	CreateScreenElement \{type = ContainerElement
 		parent = root_window
 		id = beat_game_container
 		pos = (0.0, 0.0)
@@ -41,8 +41,8 @@ script create_beat_game_menu
 			left
 			top
 		]}
-	createscreenelement {
-		type = textelement
+	CreateScreenElement {
+		type = TextElement
 		parent = beat_game_container
 		id = bgs_band_name
 		just = [center top]
@@ -52,15 +52,15 @@ script create_beat_game_menu
 		rgba = [140 70 70 255]
 		pos = (640.0, 366.0)
 	}
-	getscreenelementdims \{id = bgs_band_name}
+	GetScreenElementDims \{id = bgs_band_name}
 	if (<width> > 300)
 		fit_text_in_rectangle \{id = bgs_band_name
 			dims = (1060.0, 130.0)
 			pos = (640.0, 366.0)}
 	endif
-	formattext textname = title_text $beat_game_title d = <difficulty_text>
-	createscreenelement {
-		type = textelement
+	FormatText TextName = title_text $beat_game_title d = <difficulty_text>
+	CreateScreenElement {
+		type = TextElement
 		parent = beat_game_container
 		id = bgs_under_title
 		just = [left top]
@@ -73,12 +73,12 @@ script create_beat_game_menu
 		dims = (700.0, 65.0)
 		pos = (300.0, 428.0)}
 	if (<difficulty> = expert)
-		formattext textname = motivation_text ($beat_game_message_expert) n = <next_difficulty_text>
+		FormatText TextName = motivation_text ($beat_game_message_expert) n = <next_difficulty_text>
 	else
-		formattext textname = motivation_text ($beat_game_message) n = <next_difficulty_text>
+		FormatText TextName = motivation_text ($beat_game_message) n = <next_difficulty_text>
 	endif
-	createscreenelement {
-		type = textblockelement
+	CreateScreenElement {
+		type = TextBlockElement
 		parent = beat_game_container
 		font = fontgrid_text_a8
 		text = <motivation_text>
@@ -90,11 +90,11 @@ script create_beat_game_menu
 		scale = 0.7
 		z_priority = 3
 	}
-	<cheat> = qs(0x04463894)
-	formattext textname = cheat_text qs(0x4563924d) c = <cheat>
+	<cheat> = qs("ROCK YOU LIKE A HURRICANE RIFF x 2")
+	FormatText TextName = cheat_text qs("CHEAT HINT: %c") c = <cheat>
 	if (<difficulty> = expert)
-		createscreenelement {
-			type = textelement
+		CreateScreenElement {
+			type = TextElement
 			parent = beat_game_container
 			id = bgs_cheat_text
 			just = [center top]
@@ -106,7 +106,7 @@ script create_beat_game_menu
 		}
 	endif
 	button_font = buttons_x360
-	displaysprite \{id = bgs_black_banner
+	displaySprite \{id = bgs_black_banner
 		parent = beat_game_container
 		tex = white
 		pos = (0.0, -2.0)
@@ -118,7 +118,7 @@ script create_beat_game_menu
 			255
 		]
 		z = -2}
-	createscreenelement \{type = textelement
+	CreateScreenElement \{type = TextElement
 		parent = beat_game_container
 		id = continue_text
 		scale = 1.0
@@ -141,7 +141,7 @@ script create_beat_game_menu
 			}
 		]}
 	spawnscriptnow scroll_band_name params = {band_text = <band_name_text>}
-	launchevent \{type = focus
+	LaunchEvent \{type = focus
 		target = continue_text}
 	set_user_control_color \{text_rgba = [
 			200
@@ -155,7 +155,7 @@ script create_beat_game_menu
 			0
 			200
 		]}
-	add_user_control_helper \{text = qs(0x182f0173)
+	add_user_control_helper \{text = qs("CONTINUE")
 		button = green
 		z = 100}
 endscript
@@ -164,58 +164,58 @@ script destroy_beat_game_menu
 	clean_up_user_control_helpers
 	destroy_menu \{menu_id = beat_game_container}
 	destroy_menu_backdrop
-	killspawnedscript \{name = scroll_band_name}
+	KillSpawnedScript \{name = scroll_band_name}
 endscript
 
 script scroll_band_name 
-	displaytext id = scrolling_bandname1 parent = beat_game_container pos = (0.0, 34.0) scale = 1 font = <menu_font> text = <band_text> rgba = [124 77 65 255] z = -1
-	getscreenelementdims \{id = scrolling_bandname1}
+	displayText id = scrolling_bandname1 parent = beat_game_container pos = (0.0, 34.0) scale = 1 font = <menu_font> text = <band_text> rgba = [124 77 65 255] z = -1
+	GetScreenElementDims \{id = scrolling_bandname1}
 	multi = (1280 / <width>)
-	band_text_with_space = (<band_text> + qs(0x713755f7))
+	band_text_with_space = (<band_text> + qs("\L "))
 	long_band_text = <band_text_with_space>
-	stringlength string = <band_text_with_space>
+	StringLength string = <band_text_with_space>
 	<band_text_with_space_length> = <str_len>
 	begin
-	stringlength string = <long_band_text>
+	StringLength string = <long_band_text>
 	<long_band_text_length> = <str_len>
 	if NOT (<long_band_text_length> < (127 - <band_text_with_space_length>))
 		break
 	endif
 	<long_band_text> = (<long_band_text> + <band_text_with_space>)
-	setscreenelementprops id = scrolling_bandname1 text = <long_band_text>
-	getscreenelementdims \{id = scrolling_bandname1}
+	SetScreenElementProps id = scrolling_bandname1 text = <long_band_text>
+	GetScreenElementDims \{id = scrolling_bandname1}
 	if (<width> > 1280)
 		break
 	endif
 	repeat <multi>
-	setscreenelementprops id = scrolling_bandname1 text = <long_band_text>
-	fit_text_in_rectangle id = scrolling_bandname1 dims = ((1280.0, 0.0) + (<height> * (0.0, 1.0))) pos = (0.0, 34.0)
-	displaytext id = scrolling_bandname2 parent = beat_game_container scale = 1 font = <menu_font> text = <long_band_text> rgba = [124 77 65 255] z = -1
-	getscreenelementdims \{id = scrolling_bandname1}
-	fit_text_in_rectangle id = scrolling_bandname2 dims = ((1280.0, 0.0) + (<height> * (0.0, 1.0))) pos = (((1.0, 0.0) * <width>) + (0.0, 34.0))
+	SetScreenElementProps id = scrolling_bandname1 text = <long_band_text>
+	fit_text_in_rectangle id = scrolling_bandname1 dims = ((1280.0, 0.0) + (<Height> * (0.0, 1.0))) pos = (0.0, 34.0)
+	displayText id = scrolling_bandname2 parent = beat_game_container scale = 1 font = <menu_font> text = <long_band_text> rgba = [124 77 65 255] z = -1
+	GetScreenElementDims \{id = scrolling_bandname1}
+	fit_text_in_rectangle id = scrolling_bandname2 dims = ((1280.0, 0.0) + (<Height> * (0.0, 1.0))) pos = (((1.0, 0.0) * <width>) + (0.0, 34.0))
 	first = 1
 	begin
 	if (<first>)
-		legacydoscreenelementmorph id = scrolling_bandname1 pos = (((-1.0, 0.0) * <width>) + (0.0, 34.0)) time = 5
-		legacydoscreenelementmorph \{id = scrolling_bandname2
+		LegacyDoScreenElementMorph id = scrolling_bandname1 pos = (((-1.0, 0.0) * <width>) + (0.0, 34.0)) time = 5
+		LegacyDoScreenElementMorph \{id = scrolling_bandname2
 			pos = (0.0, 34.0)
 			time = 5}
 	else
-		legacydoscreenelementmorph id = scrolling_bandname2 pos = (((-1.0, 0.0) * <width>) + (0.0, 34.0)) time = 5
-		legacydoscreenelementmorph \{id = scrolling_bandname1
+		LegacyDoScreenElementMorph id = scrolling_bandname2 pos = (((-1.0, 0.0) * <width>) + (0.0, 34.0)) time = 5
+		LegacyDoScreenElementMorph \{id = scrolling_bandname1
 			pos = (0.0, 34.0)
 			time = 5}
 	endif
-	wait \{5
+	Wait \{5
 		seconds}
 	if (<first>)
-		setscreenelementprops id = scrolling_bandname1 pos = (((1.0, 0.0) * <width>) + (0.0, 34.0))
-		setscreenelementprops \{id = scrolling_bandname2
+		SetScreenElementProps id = scrolling_bandname1 pos = (((1.0, 0.0) * <width>) + (0.0, 34.0))
+		SetScreenElementProps \{id = scrolling_bandname2
 			pos = (0.0, 34.0)}
 		<first> = 0
 	else
-		setscreenelementprops id = scrolling_bandname2 pos = (((1.0, 0.0) * <width>) + (0.0, 34.0))
-		setscreenelementprops \{id = scrolling_bandname1
+		SetScreenElementProps id = scrolling_bandname2 pos = (((1.0, 0.0) * <width>) + (0.0, 34.0))
+		SetScreenElementProps \{id = scrolling_bandname1
 			pos = (0.0, 34.0)}
 		<first> = 1
 	endif

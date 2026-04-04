@@ -22,16 +22,16 @@ g_using_alt_popup_bg = 0
 
 script create_popup_warning_menu player_device = ($primary_controller) popup_event_handlers = ($popup_event_handlers_options) header_offset = (0.0, 0.0) dlg_z_priority = 500 parent = root_window
 	change \{g_cpw_have_helper_pills = 0}
-	if gotparam \{fail_song_props}
+	if GotParam \{fail_song_props}
 		change \{g_using_alt_popup_bg = 1}
-	elseif gotparam \{fail_song_props_prac}
+	elseif GotParam \{fail_song_props_prac}
 		change \{g_using_alt_popup_bg = 1}
 	else
 		change \{g_using_alt_popup_bg = 0}
 	endif
 	<event_handlers> = []
-	if gotparam \{options}
-		getarraysize <options>
+	if GotParam \{options}
+		GetArraySize <options>
 		if (<array_size> > 1)
 			<event_handlers> = <popup_event_handlers>
 		endif
@@ -39,32 +39,32 @@ script create_popup_warning_menu player_device = ($primary_controller) popup_eve
 			change \{g_using_alt_popup_bg = 1}
 		endif
 	endif
-	if gotparam \{back_button_script}
+	if GotParam \{back_button_script}
 		<event> = {pad_back generic_menu_pad_choose_sound}
-		addarrayelement array = <event_handlers> element = <event>
-		if gotparam \{back_button_params}
+		AddArrayElement array = <event_handlers> element = <event>
+		if GotParam \{back_button_params}
 			<event> = {pad_back <back_button_script> params = {<back_button_params>}}
 		else
 			<event> = {pad_back <back_button_script>}
 		endif
-		addarrayelement array = <event_handlers> element = <event>
+		AddArrayElement array = <event_handlers> element = <event>
 		<event_handlers> = <array>
 	endif
 	if NOT (($menu_over_ride_exclusive_device) = -1)
 		player_device = ($menu_over_ride_exclusive_device)
 	endif
-	if gotparam \{use_all_controllers}
+	if GotParam \{use_all_controllers}
 		player_device = [0 , 1 , 2 , 3]
 	endif
-	createscreenelement {
-		type = containerelement
+	CreateScreenElement {
+		type = ContainerElement
 		parent = <parent>
 		id = popup_warning_container
 		pos = (0.0, 0.0)
 		just = [left top]
 	}
-	if NOT (gotparam no_background)
-		displaysprite \{parent = popup_warning_container
+	if NOT (GotParam no_background)
+		displaySprite \{parent = popup_warning_container
 			tex = boot_brick_bg
 			pos = (640.0, 360.0)
 			dims = (1280.0, 720.0)
@@ -74,37 +74,37 @@ script create_popup_warning_menu player_device = ($primary_controller) popup_eve
 			]
 			z = 96}
 	endif
-	if NOT gotparam \{no_helpers}
+	if NOT GotParam \{no_helpers}
 		clean_up_user_control_helpers
-		if gotparam \{player_device}
+		if GotParam \{player_device}
 			add_gamertag_helper exclusive_device = <player_device>
 		endif
 	endif
-	if gotparam \{options}
-		if gotparam \{long}
-			createscreenelement {
+	if GotParam \{options}
+		if GotParam \{Long}
+			CreateScreenElement {
 				parent = root_window
-				id = popupelement
-				type = descinterface
+				id = PopupElement
+				type = DescInterface
 				desc = 'dialog_box_long_alert'
 				z_priority = <dlg_z_priority>
 				exclusive_device = <player_device>
 			}
 		else
 			if ($g_using_alt_popup_bg = 0)
-				createscreenelement {
+				CreateScreenElement {
 					parent = root_window
-					id = popupelement
-					type = descinterface
+					id = PopupElement
+					type = DescInterface
 					desc = 'dialog_box'
 					z_priority = <dlg_z_priority>
 					exclusive_device = <player_device>
 				}
 			else
-				createscreenelement {
+				CreateScreenElement {
 					parent = root_window
-					id = popupelement
-					type = descinterface
+					id = PopupElement
+					type = DescInterface
 					desc = 'dialog_box_fail'
 					z_priority = <dlg_z_priority>
 					exclusive_device = <player_device>
@@ -112,65 +112,65 @@ script create_popup_warning_menu player_device = ($primary_controller) popup_eve
 			endif
 		endif
 		change \{g_cpw_have_helper_pills = 1}
-		add_user_control_helper \{text = qs(0xc18d5e76)
+		add_user_control_helper \{text = qs("SELECT")
 			button = green
 			z = 100000}
-		if gotparam \{back_button_script}
-			add_user_control_helper \{text = qs(0xaf4d5dd2)
+		if GotParam \{back_button_script}
+			add_user_control_helper \{text = qs("BACK")
 				button = red
 				z = 100000}
 		endif
 	else
-		createscreenelement {
+		CreateScreenElement {
 			parent = root_window
-			id = popupelement
-			type = descinterface
+			id = PopupElement
+			type = DescInterface
 			desc = 'dialog_box_no_options'
 			z_priority = <dlg_z_priority>
 		}
 		<id> :obj_spawnscript popup_warning_menu_title_fade
 	endif
-	if popupelement :desc_resolvealias \{name = alias_dlog_vmenu}
-		assignalias id = <resolved_id> alias = pu_warning_vmenu
-		<resolved_id> :se_setprops event_handlers = <event_handlers>
-		<resolved_id> :se_getprops
+	if PopupElement :Desc_ResolveAlias \{name = alias_dlog_vmenu}
+		AssignAlias id = <resolved_id> alias = pu_warning_vmenu
+		<resolved_id> :SE_SetProps event_handlers = <event_handlers>
+		<resolved_id> :SE_GetProps
 		<z> = <z_priority>
-		if NOT gotparam \{no_focus}
-			launchevent type = focus target = <resolved_id>
+		if NOT GotParam \{no_focus}
+			LaunchEvent type = focus target = <resolved_id>
 		endif
 	endif
 	create_popup_warning_text <...>
-	if gotparam \{options}
+	if GotParam \{options}
 		create_popup_warning_menu_options <...>
 	endif
-	if gotparam \{resolved_id}
+	if GotParam \{resolved_id}
 		return {menu_id = <resolved_id>}
 	endif
 endscript
 
 script popup_warning_menu_title_fade 
-	if desc_resolvealias \{name = alias_dialog_text
+	if Desc_ResolveAlias \{name = alias_dialog_text
 			param = cont}
-		wait \{2
+		Wait \{2
 			seconds}
 		begin
-		if NOT screenelementexists id = <cont>
+		if NOT ScreenElementExists id = <cont>
 			return
 		endif
-		<cont> :se_setprops alpha = 0.5 time = 1.0 motion = ease_in
-		<cont> :se_waitprops
-		if NOT screenelementexists id = <cont>
+		<cont> :SE_SetProps alpha = 0.5 time = 1.0 motion = ease_in
+		<cont> :SE_WaitProps
+		if NOT ScreenElementExists id = <cont>
 			return
 		endif
-		<cont> :se_setprops alpha = 1.0 time = 1.0 motion = ease_out
-		<cont> :se_waitprops
+		<cont> :SE_SetProps alpha = 1.0 time = 1.0 motion = ease_out
+		<cont> :SE_WaitProps
 		repeat
 	endif
 endscript
 
 script destroy_popup_warning_menu 
-	if screenelementexists \{id = popupelement}
-		destroyscreenelement \{id = popupelement}
+	if ScreenElementExists \{id = PopupElement}
+		DestroyScreenElement \{id = PopupElement}
 	endif
 	destroy_menu_backdrop
 	destroy_menu \{menu_id = popup_warning_container}
@@ -181,12 +181,12 @@ script destroy_popup_warning_menu
 	set_unfocus_color
 endscript
 
-script create_popup_warning_text \{title = qs(0xaa163738)}
-	popupelement :setprops {
-		popuptitle_text = qs(0x00000000)
-		popuptitle_rgba = (($g_menu_colors).alert_red)
+script create_popup_warning_text \{title = qs("WARNING")}
+	PopupElement :SetProps {
+		PopupTitle_text = qs("")
+		PopupTitle_rgba = (($g_menu_colors).alert_red)
 	}
-	if popupelement :desc_resolvealias \{name = alias_dialog_text}
+	if PopupElement :Desc_ResolveAlias \{name = alias_dialog_text}
 		split_text_into_menu {
 			text = <title>
 			dims = (330.0, 120.0)
@@ -215,7 +215,7 @@ script create_popup_warning_text \{title = qs(0xaa163738)}
 		i = 0
 		begin
 		text_element = (<text_element_array> [<i>])
-		<text_element> :se_setprops internal_scale = (<letter_scale> [<s>])
+		<text_element> :SE_SetProps internal_scale = (<letter_scale> [<s>])
 		s = (<s> + 1)
 		if (<s> > 3)
 			s = 0
@@ -223,32 +223,32 @@ script create_popup_warning_text \{title = qs(0xaa163738)}
 		i = (<i> + 1)
 		repeat <text_element_array_size>
 	endif
-	if gotparam \{textblock}
-		popupelement :setprops {
-			popupbody_text = (<textblock>.text)
+	if GotParam \{textblock}
+		PopupElement :SetProps {
+			PopupBody_text = (<textblock>.text)
 		}
 	endif
-	if gotparam \{fail_song_props}
-		popupelement :setprops {
+	if GotParam \{fail_song_props}
+		PopupElement :SetProps {
 			dlog_fail_song_title_text = (<fail_song_props>.song_title)
 		}
-		popupelement :setprops {
+		PopupElement :SetProps {
 			dlog_fail_song_percent_text = (<fail_song_props>.percent_text)
 		}
-		popupelement :setprops {
+		PopupElement :SetProps {
 			dlog_fail_song_difficulty_text = (<fail_song_props>.difficulty_text)
 		}
 	endif
-	if gotparam \{fail_song_props_prac}
-		popupelement :setprops \{dlog_fail_song_info_prac_alpha = 1
+	if GotParam \{fail_song_props_prac}
+		PopupElement :SetProps \{dlog_fail_song_info_prac_alpha = 1
 			dlog_fail_song_info_alpha = 0}
-		popupelement :setprops {
+		PopupElement :SetProps {
 			dlog_fail_song_title_text = (<fail_song_props_prac>.song_title)
 		}
-		popupelement :setprops {
+		PopupElement :SetProps {
 			dlog_fail_song_percent_prac_text = (<fail_song_props_prac>.percent_text)
 		}
-		popupelement :setprops {
+		PopupElement :SetProps {
 			dlog_fail_song_difficulty_prac_text = (<fail_song_props_prac>.difficulty_text)
 		}
 	endif
@@ -256,14 +256,14 @@ endscript
 
 script create_popup_warning_menu_option 
 	<focus_params> = {use_highlight = 0}
-	if structurecontains structure = <option> func_params
+	if StructureContains Structure = <option> func_params
 		<func_params> = (<option>.func_params)
 	endif
 	sound_func = generic_menu_pad_choose_sound
-	if structurecontains structure = <option> sound_func
+	if StructureContains Structure = <option> sound_func
 		sound_func = (<option>.sound_func)
 	endif
-	if structurecontains structure = <option> no_sound
+	if StructureContains Structure = <option> no_sound
 		sound_func = nullscript
 	endif
 	if ($g_using_alt_popup_bg = 1)
@@ -271,8 +271,8 @@ script create_popup_warning_menu_option
 	else
 		set_unfocus_color rgba = ($default_menu_unfocus_color)
 	endif
-	createscreenelement {
-		type = textblockelement
+	CreateScreenElement {
+		type = TextBlockElement
 		dims = <dims>
 		font = ($popup_warning_menu_font)
 		parent = <parent>
@@ -293,15 +293,15 @@ script create_popup_warning_menu_option
 			{pad_choose (<option>.func) params = <func_params>}
 		]
 	}
-	if structurecontains structure = <option> not_focusable
-		<id> :se_setprops non_focusable rgba = (($g_menu_colors).alert_red)
+	if StructureContains Structure = <option> not_focusable
+		<id> :SE_SetProps non_focusable rgba = (($g_menu_colors).alert_red)
 	endif
 endscript
 
 script create_popup_warning_menu_options 
 	<parent> = pu_warning_vmenu
-	getarraysize <options>
-	getscreenelementdims id = <parent>
+	GetArraySize <options>
+	GetScreenElementDims id = <parent>
 	<menu_element_dims> = ((<width> * (1.0, 0.0)) + (0.0, 50.0))
 	<i> = 0
 	begin
@@ -317,23 +317,23 @@ script create_popup_warning_menu_options
 endscript
 
 script menu_popup_focus 
-	obj_getid
-	<id> = <objid>
-	resolvescreenelementid id = {<id> child = {0 child = text}}
+	Obj_GetID
+	<id> = <ObjID>
+	ResolveScreenElementId id = {<id> child = {0 child = text}}
 	retail_menu_focus id = <resolved_id>
 	if (<use_highlight> = 1)
-		setscreenelementprops id = {<id> child = {0 child = {hi_right_spacer child = 0}}} alpha = 1
-		setscreenelementprops id = {<id> child = {0 child = {hi_left_spacer child = 0}}} alpha = 1
+		SetScreenElementProps id = {<id> child = {0 child = {hi_right_spacer child = 0}}} alpha = 1
+		SetScreenElementProps id = {<id> child = {0 child = {hi_left_spacer child = 0}}} alpha = 1
 	endif
 endscript
 
 script menu_popup_unfocus 
-	obj_getid
-	<id> = <objid>
-	resolvescreenelementid id = {<id> child = {0 child = text}}
+	Obj_GetID
+	<id> = <ObjID>
+	ResolveScreenElementId id = {<id> child = {0 child = text}}
 	retail_menu_unfocus id = <resolved_id>
 	if (<use_highlight> = 1)
-		setscreenelementprops id = {<id> child = {0 child = {hi_right_spacer child = 0}}} alpha = 0
-		setscreenelementprops id = {<id> child = {0 child = {hi_left_spacer child = 0}}} alpha = 0
+		SetScreenElementProps id = {<id> child = {0 child = {hi_right_spacer child = 0}}} alpha = 0
+		SetScreenElementProps id = {<id> child = {0 child = {hi_left_spacer child = 0}}} alpha = 0
 	endif
 endscript

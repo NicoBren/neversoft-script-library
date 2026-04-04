@@ -9,26 +9,26 @@ script ui_destroy_boot_legal
 		time = 0.0
 		z_priority = 100
 		no_wait}
-	hideloadingscreen
+	Hideloadingscreen
 endscript
 
 script ui_boot_legal_wait 
-	if cd
-		wait \{6.0
+	if CD
+		Wait \{6.0
 			seconds
 			ignoreslomo}
 	endif
 	ui_event_wait \{event = menu_replace
 		data = {
-			state = uistate_boot_movie_atvi
+			state = UIstate_boot_movie_atvi
 		}}
 endscript
 
-script ui_create_boot_movie_atvi 
+script ui_create_boot_movie_ATVI 
 	spawnscriptnow \{ui_boot_movie_wait
 		params = {
 			movie = 'atvi'
-			state = uistate_boot_movie_red_octane
+			state = UIstate_boot_movie_red_octane
 		}}
 endscript
 
@@ -36,31 +36,31 @@ script ui_create_boot_movie_red_octane
 	spawnscriptnow \{ui_boot_movie_wait
 		params = {
 			movie = 'ro_logo'
-			state = uistate_boot_movie_neversoft
+			state = UIstate_boot_movie_neversoft
 		}}
 endscript
 
 script ui_create_boot_movie_neversoft 
-	if iswinport
+	if IsWinPort
 		spawnscriptnow \{ui_boot_movie_wait
 			params = {
 				movie = 'ns_logo'
-				state = 0x6f165127
+				state = UIstate_boot_movie_aspyr
 			}}
 	else
 		spawnscriptnow \{ui_boot_movie_wait
 			params = {
 				movie = 'ns_logo'
-				state = uistate_boot_movie_intro
+				state = UIstate_boot_movie_intro
 			}}
 	endif
 endscript
 
-script 0x16b524bc 
+script ui_create_boot_movie_aspyr 
 	spawnscriptnow \{ui_boot_movie_wait
 		params = {
 			movie = 'Aspyr'
-			state = uistate_boot_movie_intro
+			state = UIstate_boot_movie_intro
 		}}
 endscript
 
@@ -68,11 +68,11 @@ script ui_create_boot_movie_intro
 	spawnscriptnow \{ui_boot_movie_wait
 		params = {
 			movie = 'band_intro'
-			state = uistate_boot_iis
+			state = UIstate_boot_iis
 		}}
 endscript
 
 script ui_boot_movie_wait 
-	playmovieandwait movie = <movie> noblack
+	PlayMovieAndWait movie = <movie> noblack
 	ui_event_wait event = menu_replace data = {state = <state>}
 endscript

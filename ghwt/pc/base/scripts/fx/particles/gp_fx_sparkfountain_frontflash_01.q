@@ -1,53 +1,53 @@
-gp_fx_sparkfountain_frontflash_01 = {
+GP_FX_SparkFountain_frontFlash_01 = {
 	pos = (-6.590143, 0.42187104, -1.8424008)
 	angles = (0.0, 0.0, 0.0)
-	class = particleobject
-	particletype = flexparticle
+	Class = ParticleObject
+	ParticleType = FlexParticle
 	type = flat
 	active
-	createdatstart
-	emitrangedims = (0.1, 0.1, 0.1)
-	emit_target = (0.0, 1.0, 0.0)
-	emitangle = (0.0, 0.0, 0.0)
+	CreatedAtStart
+	EmitRangeDims = (0.1, 0.1, 0.1)
+	emit_Target = (0.0, 1.0, 0.0)
+	EmitAngle = (0.0, 0.0, 0.0)
 	force = (0.0, 0.0, 0.0)
-	windcoeff = 0.0
-	localwindcoeff = 0.0
-	emittervelocityweight = 0.0
-	anglespread = 45.0
-	liferange = (0.1, 0.1)
+	WindCoeff = 0.0
+	LocalWindCoeff = 0.0
+	EmitterVelocityWeight = 0.0
+	AngleSpread = 45.0
+	LifeRange = (0.1, 0.1)
 	emit_rate = 1.0
 	max = 0
-	timeseed = 0.0
-	lifetime = 0.0
-	emitnum = 1
-	followemitter = 0.0
-	emitfunction = constant
-	emitperiod = 1.0
-	sizerange = [
+	TimeSeed = 0.0
+	lifeTime = 0.0
+	emitNum = 1
+	FollowEmitter = 0.0
+	EmitFunction = constant
+	EmitPeriod = 1.0
+	SizeRange = [
 		(10.0, 15.0)
 		(7.0, 9.0)
 	]
-	speedrange = (0.0, 0.0)
-	rotvel = (0.0, 0.0)
-	rotveltimescale = 0.0
-	emitdelaystart = 0.0
-	pathfollowtime = 0.0
-	history = 2
-	historylistcoordinatespace = world
+	SpeedRange = (0.0, 0.0)
+	RotVel = (0.0, 0.0)
+	RotVelTimeScale = 0.0
+	EmitDelayStart = 0.0
+	PathFollowTime = 0.0
+	History = 2
+	HistoryListCoordinateSpace = world
 	color = -2042881
-	lod_default
-	quickmaterial = {
-		diffusetextureenabled
-		diffusetexture = ph_radialglow_01
-		specularpower = 0
+	LOD_Default
+	QuickMaterial = {
+		DiffuseTextureEnabled
+		DiffuseTexture = PH_RadialGlow_01
+		SpecularPower = 0
 		fillburst
 		alphacutoff = 1
-		blendmode = add
-		softedge
-		softedgescale = 0.1
-		quadanimationfps = 0
+		blendMode = Add
+		SoftEdge
+		SoftedgeScale = 0.1
+		QuadAnimationFPS = 0
 	}
-	knot = [
+	Knot = [
 		(-0.371477, 0.0, -0.0)
 		(-0.371477, 0.0, -0.0)
 		(-0.287313, 0.0, -0.0)
@@ -58,7 +58,7 @@ gp_fx_sparkfountain_frontflash_01 = {
 		(0.490462, 0.0, -0.0)
 		(0.490462, 0.0, -0.0)
 	]
-	particlecolor = [
+	ParticleColor = [
 		-1
 		-1
 		-1
@@ -66,7 +66,7 @@ gp_fx_sparkfountain_frontflash_01 = {
 		-1
 		-1
 	]
-	vertexweight = [
+	VertexWeight = [
 		0.292935
 		1.0
 	]

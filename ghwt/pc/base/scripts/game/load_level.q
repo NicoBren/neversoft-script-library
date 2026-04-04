@@ -1,66 +1,66 @@
 fake_net = 0
-assertonmissingscripts = 0
-assertonmissingassets = 1
-alwaysdump = 0
+AssertOnMissingScripts = 0
+AssertOnMissingAssets = 1
+AlwaysDump = 0
 next_level_script = nullscript
 dont_call_zone_init_hack = 0
 
 script zone_init 
-	printf qs(0x24c35764) s = <zone_string_name>
+	printf qs("\Lzone_init: %s") s = <zone_string_name>
 	if (<zone_string_name> = 'z_viewer')
-		printf \{qs(0xae81ca89)}
-		change \{assertonmissingscripts = 0}
+		printf \{qs("\LAssertOnMissingScripts = 0")}
+		change \{AssertOnMissingScripts = 0}
 	endif
-	mempushcontext \{topdownheap}
-	formattext textname = zone_editable_text checksumname = zone_editable_list '%a%b' a = <zone_string_name> b = '_editable_list'
-	if globalexists name = <zone_editable_list> type = array
-		addeditablelist <zone_editable_list>
+	MemPushContext \{TopDownHeap}
+	FormatText TextName = zone_editable_text checksumname = zone_editable_list '%a%b' a = <zone_string_name> b = '_editable_list'
+	if GlobalExists name = <zone_editable_list> type = array
+		AddEditableList <zone_editable_list>
 	endif
-	mempopcontext
-	mempushcontext \{bottomupheap}
-	parsenodearray {
+	MemPopContext
+	MemPushContext \{BottomUpHeap}
+	ParseNodeArray {
 		queue
 		zone_name = <zone_name>
 		array_name = <array_name>
 	}
-	if gotparam \{sfx_array_name}
-		parsenodearray {
+	if GotParam \{sfx_array_name}
+		ParseNodeArray {
 			queue
 			zone_name = <sfx_zone_name>
 			array_name = <sfx_array_name>
 		}
 	endif
-	if gotparam \{gfx_array_name}
-		parsenodearray {
+	if GotParam \{gfx_array_name}
+		ParseNodeArray {
 			queue
 			zone_name = <gfx_zone_name>
 			array_name = <gfx_array_name>
 		}
 	endif
-	if gotparam \{lfx_array_name}
-		parsenodearray {
+	if GotParam \{lfx_array_name}
+		ParseNodeArray {
 			queue
 			zone_name = <lfx_zone_name>
 			array_name = <lfx_array_name>
 		}
 	endif
-	if gotparam \{mfx_array_name}
-		parsenodearray {
+	if GotParam \{mfx_array_name}
+		ParseNodeArray {
 			queue
 			zone_name = <mfx_zone_name>
 			array_name = <mfx_array_name>
 		}
 	endif
 	if NOT ($disable_global_pedestrians = 1)
-		if NOT innetgame
-			if iscoiminited
+		if NOT InNetGame
+			if IsCOIMInited
 			endif
 		endif
 	endif
-	mempopcontext
-	if NOT infrontend
-		formattext checksumname = zone_setup_script '%a_Setup' a = <zone_string_name>
-		if scriptexists <zone_setup_script>
+	MemPopContext
+	if NOT InFrontend
+		FormatText checksumname = zone_setup_script '%a_Setup' a = <zone_string_name>
+		if ScriptExists <zone_setup_script>
 			spawnscriptnow zone_init_wait_run_setup params = {zone_setup_script = <zone_setup_script>}
 		endif
 	endif
@@ -68,45 +68,45 @@ endscript
 
 script zone_init_wait_run_setup 
 	begin
-	if NOT nodearraybusy
+	if NOT NodeArrayBusy
 		break
 	endif
-	wait \{1
+	Wait \{1
 		gameframe}
 	repeat
-	if scriptexists <zone_setup_script>
+	if ScriptExists <zone_setup_script>
 		<zone_setup_script>
 	endif
 endscript
 
 script zone_deinit 
-	printf qs(0xb9052920) s = <zone_string_name>
-	parsenodearray abort array_name = <array_name>
-	if gotparam \{sfx_array_name}
-		parsenodearray abort array_name = <sfx_array_name>
+	printf qs("\Lzone_deinit: %s") s = <zone_string_name>
+	ParseNodeArray abort array_name = <array_name>
+	if GotParam \{sfx_array_name}
+		ParseNodeArray abort array_name = <sfx_array_name>
 	endif
-	if gotparam \{gfx_array_name}
-		parsenodearray abort array_name = <gfx_array_name>
+	if GotParam \{gfx_array_name}
+		ParseNodeArray abort array_name = <gfx_array_name>
 	endif
-	if gotparam \{lfx_array_name}
-		parsenodearray abort array_name = <lfx_array_name>
+	if GotParam \{lfx_array_name}
+		ParseNodeArray abort array_name = <lfx_array_name>
 	endif
-	if gotparam \{mfx_array_name}
-		parsenodearray abort array_name = <mfx_array_name>
+	if GotParam \{mfx_array_name}
+		ParseNodeArray abort array_name = <mfx_array_name>
 	endif
-	formattext textname = zone_editable_text checksumname = zone_editable_list '%a%b' a = <zone_string_name> b = '_editable_list'
-	if globalexists name = <zone_editable_list> type = array
-		removeeditablelist <zone_editable_list>
+	FormatText TextName = zone_editable_text checksumname = zone_editable_list '%a%b' a = <zone_string_name> b = '_editable_list'
+	if GlobalExists name = <zone_editable_list> type = array
+		RemoveEditableList <zone_editable_list>
 	endif
 endscript
 
-script setupcoim 
-	pushmemprofile \{'COIM'}
-	initcoim {
+script SetupCOIM 
+	PushMemProfile \{'COIM'}
+	InitCOIM {
 		size = <size>
-		blockalign = $generic_coim_blockalign
-		coim_min_scratch_blocks
-		$generic_coim_params
+		BlockAlign = $Generic_COIM_BlockAlign
+		COIM_Min_Scratch_Blocks
+		$Generic_COIM_Params
 	}
-	popmemprofile
+	PopMemProfile
 endscript

@@ -1,8 +1,8 @@
 
 script ui_create_jam_publish_genre 
-	make_generic_menu \{title = qs(0x5f98cef0)
+	make_generic_menu \{title = qs("Select Genre")
 		vmenu_id = jam_publish_genre_vmenu}
-	getarraysize ($jam_genre_list)
+	GetArraySize ($jam_genre_list)
 	i = 0
 	begin
 	add_generic_menu_text_item {

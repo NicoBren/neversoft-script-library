@@ -1,6 +1,6 @@
 host_songs_to_pick = 0
 client_songs_to_pick = 0
-tie_breaker = host
+tie_breaker = HOST
 num_songs = num_1
 player1_color = [
 	0
@@ -39,7 +39,7 @@ g_disable_song_chooser_spinner = 0
 
 script create_setlist_popup 
 	if ($net_new_matchmaking_ui_flag = 1)
-		if gotparam \{parent_element}
+		if GotParam \{parent_element}
 			create_net_ui parent_element = <parent_element>
 		else
 			create_net_ui
@@ -57,7 +57,7 @@ script create_setlist_popup
 				right
 				top
 			]}
-		if (screenelementexists id = net_setlist_popup_container)
+		if (ScreenElementExists id = net_setlist_popup_container)
 			return
 		endif
 		create_ready_icons \{pos1 = (290.0, 170.0)
@@ -86,17 +86,17 @@ script net_request_song
 			change \{current_level = load_z_newyork}
 		endif
 	endif
-	sendstructure callback = net_song_selected data_to_send = {song_checksum = ($current_song) level_checksum = ($current_level)}
-	if ishost
+	SendStructure callback = net_song_selected data_to_send = {song_checksum = ($current_song) level_checksum = ($current_level)}
+	if IsHost
 		change \{net_song_countdown = 1}
-		if screenelementexists \{id = net_setlist_helper_text}
-			net_setlist_helper_text :obj_spawnscriptlater song_selected_countdown params = {song_checksum = ($current_song)}
+		if ScreenElementExists \{id = net_setlist_helper_text}
+			net_setlist_helper_text :Obj_SpawnScriptLater song_selected_countdown params = {song_checksum = ($current_song)}
 		endif
 	endif
 endscript
 
 script net_song_selected 
-	requireparams \{[
+	RequireParams \{[
 			song_checksum
 			level_checksum
 		]
@@ -104,64 +104,64 @@ script net_song_selected
 	spawnscriptnow \{destroy_setlist_songpreview_monitor}
 	change current_song = <song_checksum>
 	change current_level = <level_checksum>
-	if ishost
-		sendstructure callback = net_song_selected data_to_send = {song_checksum = ($current_song) level_checksum = ($current_level)}
+	if IsHost
+		SendStructure callback = net_song_selected data_to_send = {song_checksum = ($current_song) level_checksum = ($current_level)}
 	endif
 	change \{net_song_countdown = 1}
 	ui_event_get_top
 	if (<base_name> = 'online_quit_warning')
 		generic_event_back
 	endif
-	if screenelementexists \{id = net_setlist_spinner}
+	if ScreenElementExists \{id = net_setlist_spinner}
 		destroy_net_setlist_spinner
 	endif
 	ui_event_wait_for_safe
 	wait_time = 0
 	begin
-	if screenelementexists \{id = net_setlist_helper_text}
+	if ScreenElementExists \{id = net_setlist_helper_text}
 		break
 	endif
 	if (<wait_time> > 3)
 		break
 	endif
-	wait \{1.0
+	Wait \{1.0
 		seconds}
 	<wait_time> = (<wait_time> + 1)
 	repeat
-	if screenelementexists \{id = net_setlist_helper_text}
-		net_setlist_helper_text :obj_spawnscriptlater song_selected_countdown params = {song_checksum = <song_checksum>}
+	if ScreenElementExists \{id = net_setlist_helper_text}
+		net_setlist_helper_text :Obj_SpawnScriptLater song_selected_countdown params = {song_checksum = <song_checksum>}
 	endif
 endscript
 
 script create_song_chooser_spinner 
-	printf \{qs(0xefd530a5)}
-	launchevent \{type = unfocus
+	printf \{qs("\L---create_song_chooser_spinner")}
+	LaunchEvent \{type = unfocus
 		target = setlist_menu}
 	change \{net_song_countdown = 0}
 	clean_up_user_control_helpers
 	setlist_popup_z = ($setlist_text_z + 50.0)
-	if isps3
-		message_text = qs(0xf1fe0905)
-	elseif iswinport
+	if IsPs3
+		message_text = qs("All players must have the same Downloaded Song in order to play it in PLAYSTATION®Network multiplayer games.")
+	elseif IsWinPort
 		message_text = qs(0x19cff643)
 	else
-		message_text = qs(0xd4435dff)
+		message_text = qs("All players must have the same Downloaded Song in order to play it in Xbox LIVE multiplayer games.")
 	endif
-	createscreenelement {
+	CreateScreenElement {
 		id = net_setlist_spinner
-		type = descinterface
+		type = DescInterface
 		desc = 'net_setlist_spinner'
-		parent = setlistinterface
+		parent = SetlistInterface
 		z_priority = <setlist_popup_z>
 		alpha = 0.0
 		message_text = <message_text>
 		not_focusable
 	}
-	net_setlist_spinner :se_setprops net_spinner_name_text = ($gamertag_0)
-	if NOT gotparam \{selected_index}
+	net_setlist_spinner :SE_SetProps net_spinner_name_text = ($gamertag_0)
+	if NOT GotParam \{selected_index}
 		selected_index = 0
 	endif
-	net_setlist_spinner :obj_spawnscriptlater spin_names params = {selected_index = <selected_index>}
+	net_setlist_spinner :Obj_SpawnScriptLater spin_names params = {selected_index = <selected_index>}
 endscript
 online_length_of_spinner = 5
 
@@ -171,17 +171,17 @@ script online_song_choose_spin
 	wait_time = 0.025
 	player_index = 0
 	begin
-	formattext checksumname = gamertag 'gamertag_%d' d = <player_index>
+	FormatText checksumname = gamertag 'gamertag_%d' d = <player_index>
 	name = $<gamertag>
-	soundevent \{event = ghmix_scroll_up_down}
-	if screenelementexists \{id = net_spinner_text}
-		net_spinner_text :se_setprops text = <name>
+	SoundEvent \{event = GhMix_Scroll_Up_Down}
+	if ScreenElementExists \{id = net_spinner_text}
+		net_spinner_text :SE_SetProps text = <name>
 	endif
-	getplayerinfo (<player_index> + 1) net_obj_id
+	GetPlayerInfo (<player_index> + 1) net_obj_id
 	if ((<wait_time> > 0.75) && ($online_song_choice_id = <net_obj_id>))
 		break
 	endif
-	wait <wait_time> seconds
+	Wait <wait_time> seconds
 	<wait_time> = (<wait_time> * 1.1)
 	if (<player_index> = (<num_players> - 1))
 		<player_index> = 0
@@ -189,19 +189,19 @@ script online_song_choose_spin
 		<player_index> = (<player_index> + 1)
 	endif
 	repeat
-	net_setlist_spinner_container :obj_spawnscriptlater kill_online_choose_spinner params = <...>
+	net_setlist_spinner_container :Obj_SpawnScriptLater kill_online_choose_spinner params = <...>
 	i = 0
 	begin
-	if screenelementexists \{id = net_spinner_text}
+	if ScreenElementExists \{id = net_spinner_text}
 		if (<i> = 0)
-			soundevent \{event = ghmix_select}
-			net_spinner_text :se_setprops rgba = ($online_lobby_item_text_color)
+			SoundEvent \{event = GhMix_Select}
+			net_spinner_text :SE_SetProps rgba = ($online_lobby_item_text_color)
 		else
-			soundevent \{event = ghmix_select}
-			net_spinner_text :se_setprops rgba = ($online_medium_blue)
+			SoundEvent \{event = GhMix_Select}
+			net_spinner_text :SE_SetProps rgba = ($online_medium_blue)
 		endif
 	endif
-	wait \{0.1
+	Wait \{0.1
 		seconds}
 	if (<i> = 0)
 		<i> = 1
@@ -212,48 +212,48 @@ script online_song_choose_spin
 endscript
 
 script kill_online_choose_spinner 
-	wait \{2.0
+	Wait \{2.0
 		seconds}
 	destroy_net_setlist_spinner <...>
 endscript
 
 script destroy_net_setlist_spinner 
-	printf \{qs(0x4eaf51ef)}
+	printf \{qs("\Ldestroy_net_setlist_spinner")}
 	destroy_spinner
-	create_setlist_popup \{parent_element = setlistinterface}
+	create_setlist_popup \{parent_element = SetlistInterface}
 	if local_player_is_choosing_song
-		add_user_control_helper \{text = qs(0x4d9ad28f)
+		add_user_control_helper \{text = qs("SELECT SONG")
 			button = green
 			z = 100}
 	endif
 	setlist_show_sort_helper_text
 	setlist_show_jump_helper_text
-	add_user_control_helper \{text = qs(0xaf4d5dd2)
+	add_user_control_helper \{text = qs("BACK")
 		button = red
 		z = 100}
-	if gotparam \{selected_index}
-		launchevent type = focus target = setlist_menu data = {child_index = <selected_index>}
+	if GotParam \{selected_index}
+		LaunchEvent type = focus target = setlist_menu data = {child_index = <selected_index>}
 	else
 		printstruct <...>
-		printf \{qs(0xd9c124ee)}
+		printf \{qs("\Ldidn't receive a selected index so we are not calling focus")}
 	endif
-	spawnscriptlater \{setlist_songpreview_monitor}
+	SpawnScriptLater \{setlist_songpreview_monitor}
 endscript
 
 script net_setlist_go_back 
 	if ($player2_present = 0)
-		sendnetmessage \{type = select_song
+		SendNetMessage \{type = select_song
 			song_checksum = 0}
 	endif
 endscript
 
 script net_setlist_players_ready 
-	wait \{2
+	Wait \{2
 		seconds}
-	printf \{qs(0x18f64ee8)}
+	printf \{qs("\LStarting net play with setlist:")}
 	net_print_setlist
 	change current_song = ($net_setlist_songs [($net_song_num)])
-	setglobaltags progression params = {current_tier = ($net_setlist_tiers [($net_song_num)])}
+	SetGlobalTags Progression params = {current_tier = ($net_setlist_tiers [($net_song_num)])}
 	if ($g_tie_breaker_song = 1)
 		ui_flow_manager_respond_to_action \{action = continue_to_final_song}
 	else
@@ -263,10 +263,10 @@ script net_setlist_players_ready
 endscript
 
 script net_print_setlist 
-	getarraysize \{$net_setlist_songs}
+	GetArraySize \{$net_setlist_songs}
 	array_count = 0
 	begin
-	printf qs(0x39f26b60) c = ($net_setlist_songs [<array_count>])
+	printf qs("\L%c") c = ($net_setlist_songs [<array_count>])
 	<array_count> = (<array_count> + 1)
 	repeat <array_size>
 endscript
@@ -299,18 +299,18 @@ script get_selection_indeces
 endscript
 
 script reset_setlist 
-	printf \{qs(0x50c20135)}
+	printf \{qs("\L---reset_setlist")}
 	get_number_of_song_selections
 	change host_songs_to_pick = <song_selections>
 	change client_songs_to_pick = <song_selections>
-	if (ishost)
-		setsongselections
+	if (IsHost)
+		SetSongSelections
 	endif
-	getarraysize \{$net_setlist_songs}
+	GetArraySize \{$net_setlist_songs}
 	array_count = 0
 	begin
-	setarrayelement arrayname = net_setlist_songs globalarray index = <array_count> newvalue = null
-	setarrayelement arrayname = net_setlist_tiers globalarray index = <array_count> newvalue = 0
+	SetArrayElement ArrayName = net_setlist_songs GlobalArray index = <array_count> newvalue = null
+	SetArrayElement ArrayName = net_setlist_tiers GlobalArray index = <array_count> newvalue = 0
 	<array_count> = (<array_count> + 1)
 	repeat <array_size>
 endscript
@@ -334,44 +334,44 @@ script get_number_of_songs
 endscript
 
 script setlist_unready 
-	launchevent \{type = unfocus
+	LaunchEvent \{type = unfocus
 		target = ready_container_p1}
-	launchevent \{type = focus
+	LaunchEvent \{type = focus
 		target = current_menu}
 	drop_out_ready_sign \{player = 1}
 endscript
 
 script create_net_ui \{parent_element = net_setlist_container}
-	gamemode_getnumplayers
+	GameMode_GetNumPlayers
 	index = 1
-	<name> = qs(0x00000000)
+	<name> = qs("")
 	begin
-	getplayerinfo <index> net_obj_id
+	GetPlayerInfo <index> net_obj_id
 	if ($online_song_choice_id = <net_obj_id>)
-		formattext checksumname = gamertag 'gamertag_%d' d = (<index> - 1)
+		FormatText checksumname = gamertag 'gamertag_%d' d = (<index> - 1)
 		<name> = $<gamertag>
 		break
 	endif
 	<index> = (<index> + 1)
 	repeat <num_players>
 	if (<index> <= 8)
-		getplayerinfo <index> is_local_client
+		GetPlayerInfo <index> is_local_client
 		if (<is_local_client> = 1)
-			formattext textname = message qs(0x208e0884) g = <name>
+			FormatText TextName = message qs("%g you get to choose a song that rocks!") g = <name>
 		else
-			formattext textname = message qs(0x3c3a6c0d) g = <name>
+			FormatText TextName = message qs("Who cares what song %g picks. You still get to rock out!") g = <name>
 		endif
 		setlist_popup_z = ($setlist_text_z + 50.0)
-		createscreenelement {
-			type = containerelement
+		CreateScreenElement {
+			type = ContainerElement
 			id = net_setlist_popup_container
 			parent = <parent_element>
 			pos = (320.0, -400.0)
 			alpha = 0.75
 		}
 		menu_anchor = <id>
-		createscreenelement {
-			type = spriteelement
+		CreateScreenElement {
+			type = SpriteElement
 			parent = <menu_anchor>
 			texture = online_setlist_popup_bg
 			dims = (1024.0, 256.0)
@@ -380,8 +380,8 @@ script create_net_ui \{parent_element = net_setlist_container}
 			z_priority = <setlist_popup_z>
 			alpha = 1.0
 		}
-		createscreenelement {
-			type = textblockelement
+		CreateScreenElement {
+			type = TextBlockElement
 			parent = <menu_anchor>
 			id = net_setlist_helper_text
 			font = fontgrid_text_a8
@@ -394,57 +394,57 @@ script create_net_ui \{parent_element = net_setlist_container}
 			pos = (320.0, -25.0)
 			dims = (1300.0, 100.0)
 		}
-		net_setlist_popup_container :se_setprops \{pos = (320.0, 110.0)
+		net_setlist_popup_container :SE_SetProps \{pos = (320.0, 110.0)
 			time = 0.5}
 	endif
 endscript
 
 script destroy_net_ui 
-	if screenelementexists \{id = net_setlist_container}
-		destroyscreenelement \{id = net_setlist_container}
+	if ScreenElementExists \{id = net_setlist_container}
+		DestroyScreenElement \{id = net_setlist_container}
 	endif
 endscript
 
 script song_selected_countdown 
-	printf \{qs(0x6d8a1932)}
+	printf \{qs("\Lsong_selected_countdown")}
 	get_song_title song = <song_checksum>
 	i = 3
 	begin
 	if (<i> < 0)
 		break
 	endif
-	formattext textname = msg qs(0x1e737845) d = <song_title> i = <i>
-	net_setlist_helper_text :se_setprops text = <msg>
+	FormatText TextName = msg qs("Starting %d in %i seconds") d = <song_title> i = <i>
+	net_setlist_helper_text :SE_SetProps text = <msg>
 	i = (<i> - 1)
-	wait \{1
+	Wait \{1
 		second}
 	repeat
-	if ishost
+	if IsHost
 		host_proceed_to_online_play
 	endif
 endscript
 
 script spin_names 
-	obj_getid
-	<objid> :se_setprops alpha = 1.0 time = 0.1
-	<objid> :se_waitprops
-	wait \{1
+	Obj_GetID
+	<ObjID> :SE_SetProps alpha = 1.0 time = 0.1
+	<ObjID> :SE_WaitProps
+	Wait \{1
 		seconds}
-	gamemode_getnumplayers
+	GameMode_GetNumPlayers
 	wait_time = 0.025
 	player_index = 1
 	begin
-	soundevent \{event = ghmix_scroll_up_down}
-	<objid> :se_setprops net_spinner_text_pos = (0.0, -90.0) time = (<wait_time> / 2)
-	<objid> :se_waitprops
-	formattext checksumname = gamertag 'gamertag_%d' d = <player_index>
+	SoundEvent \{event = GhMix_Scroll_Up_Down}
+	<ObjID> :SE_SetProps net_spinner_text_pos = (0.0, -90.0) time = (<wait_time> / 2)
+	<ObjID> :SE_WaitProps
+	FormatText checksumname = gamertag 'gamertag_%d' d = <player_index>
 	name = $<gamertag>
-	<objid> :se_setprops net_spinner_name_text = <name>
-	<objid> :se_setprops net_spinner_text_pos = (0.0, 90.0)
-	<objid> :se_setprops net_spinner_text_pos = (0.0, 0.0) time = (<wait_time> / 2)
-	<objid> :se_waitprops
+	<ObjID> :SE_SetProps net_spinner_name_text = <name>
+	<ObjID> :SE_SetProps net_spinner_text_pos = (0.0, 90.0)
+	<ObjID> :SE_SetProps net_spinner_text_pos = (0.0, 0.0) time = (<wait_time> / 2)
+	<ObjID> :SE_WaitProps
 	<wait_time> = (<wait_time> * 1.2)
-	getplayerinfo (<player_index> + 1) net_obj_id
+	GetPlayerInfo (<player_index> + 1) net_obj_id
 	if ((<wait_time> > 0.6) && ($online_song_choice_id = <net_obj_id>))
 		break
 	endif
@@ -454,17 +454,17 @@ script spin_names
 		<player_index> = (<player_index> + 1)
 	endif
 	repeat
-	<objid> :obj_spawnscriptlater kill_online_choose_spinner params = {selected_index = <selected_index>}
+	<ObjID> :Obj_SpawnScriptLater kill_online_choose_spinner params = {selected_index = <selected_index>}
 	i = 0
 	begin
 	if (<i> = 0)
-		soundevent \{event = ghmix_select}
-		<objid> :se_setprops net_spinner_text_color = ($online_lobby_item_text_color)
+		SoundEvent \{event = GhMix_Select}
+		<ObjID> :SE_SetProps net_spinner_text_color = ($online_lobby_item_text_color)
 	else
-		soundevent \{event = ghmix_select}
-		<objid> :se_setprops net_spinner_text_color = ($online_medium_blue)
+		SoundEvent \{event = GhMix_Select}
+		<ObjID> :SE_SetProps net_spinner_text_color = ($online_medium_blue)
 	endif
-	wait \{0.1
+	Wait \{0.1
 		seconds}
 	if (<i> = 0)
 		<i> = 1
@@ -475,7 +475,7 @@ script spin_names
 endscript
 
 script destroy_spinner 
-	if screenelementexists \{id = net_setlist_spinner}
-		destroyscreenelement \{id = net_setlist_spinner}
+	if ScreenElementExists \{id = net_setlist_spinner}
+		DestroyScreenElement \{id = net_setlist_spinner}
 	endif
 endscript

@@ -1,6 +1,6 @@
 
 script ui_create_pausemenu_song_ended 
-	if iswinport
+	if IsWinPort
 		change \{skater_accessory_bones_enabled = 1}
 	endif
 	kill_intro_celeb_ui

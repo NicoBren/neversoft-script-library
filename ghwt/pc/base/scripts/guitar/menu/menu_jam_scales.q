@@ -1,25 +1,25 @@
 jam_roots = [
-	qs(0x69bdca15)
-	qs(0x429099d6)
-	qs(0xe0187c88)
-	qs(0x5b8ba897)
-	qs(0x58a41bed)
-	qs(0x0dd10f11)
-	qs(0x7dcf4431)
-	qs(0x26fc5cd2)
-	qs(0x3fe76d93)
-	qs(0xd7c68cba)
-	qs(0x70a6fb54)
-	qs(0x4a11b403)
+	qs("\LE")
+	qs("\LF")
+	qs("\LF#")
+	qs("\LG")
+	qs("\LG#")
+	qs("\LA")
+	qs("\LA#")
+	qs("\LB")
+	qs("\LC")
+	qs("\LC#")
+	qs("\LD")
+	qs("\LD#")
 ]
 
 script create_menu_jam_scales \{controller = 0}
-	launchevent type = unfocus target = <vmenu_id>
-	formattext checksumname = player_pause_scales 'jam_band_pause_scales_%s' s = <select_player>
-	if screenelementexists id = <player_pause_scales>
-		destroyscreenelement id = <player_pause_scales>
+	LaunchEvent type = unfocus target = <vmenu_id>
+	FormatText checksumname = player_pause_scales 'jam_band_pause_scales_%s' s = <select_player>
+	if ScreenElementExists id = <player_pause_scales>
+		DestroyScreenElement id = <player_pause_scales>
 	endif
-	getplayerinfo <select_player> jam_instrument
+	GetPlayerInfo <select_player> jam_instrument
 	switch <jam_instrument>
 		case 0
 		case 1
@@ -32,29 +32,29 @@ script create_menu_jam_scales \{controller = 0}
 		case 5
 		inst_logo = theme_vocal
 	endswitch
-	formattext textname = player_text qs(0x033007b2) s = <select_player>
+	FormatText TextName = player_text qs("PLAYER %s") s = <select_player>
 	if ($jam_advanced_record = 0)
-		createscreenelement {
-			type = containerelement
+		CreateScreenElement {
+			type = ContainerElement
 			id = <player_pause_scales>
 			parent = <player_cont>
 			pos = (0.0, -40.0)
 		}
-		getplayerinfo <select_player> controller
+		GetPlayerInfo <select_player> controller
 		band_leader_alpha = 0
 		if (<controller> = $primary_controller)
 			<band_leader_alpha> = 1
 		endif
-		createscreenelement {
+		CreateScreenElement {
 			parent = <player_pause_scales>
-			type = descinterface
+			type = DescInterface
 			pos = (-141.0, 15.0)
 			z_priority = 20
 			alpha = 1
 			desc = 'jam_band_pause_screen'
 			inst_icon_texture = <inst_logo>
 			player_number_text = <player_text>
-			pause_header_text = qs(0xf5bd05ec)
+			pause_header_text = qs("scale")
 			band_leader_alpha = <band_leader_alpha>
 		}
 		<pause_font_color> = [80 80 80 255]
@@ -67,28 +67,28 @@ script create_menu_jam_scales \{controller = 0}
 		set_unfocus_color rgba = <pause_font_color>
 		menu_pos = (0.0, 140.0)
 	else
-		createscreenelement {
+		CreateScreenElement {
 			local_id = clip_window_pause_scales
-			type = windowelement
+			type = WindowElement
 			parent = <player_cont>
 			just = [left top]
 			pos = (-210.0, -27.0)
 			dims = (1040.0, 588.0)
 		}
-		createscreenelement {
-			type = containerelement
+		CreateScreenElement {
+			type = ContainerElement
 			id = <player_pause_scales>
 			parent = <id>
 			pos = (133.0, -57.0)
 		}
-		createscreenelement {
+		CreateScreenElement {
 			parent = <player_pause_scales>
-			type = descinterface
+			type = DescInterface
 			pos = (-143.0, 15.0)
 			z_priority = 20
 			alpha = 1
 			desc = 'jam_advanced_pause_screen'
-			pause_header_text = qs(0xf5bd05ec)
+			pause_header_text = qs("scale")
 			inst_icon_texture = <inst_logo>
 		}
 		<pause_font_color> = [80 80 80 255]
@@ -101,19 +101,19 @@ script create_menu_jam_scales \{controller = 0}
 		set_unfocus_color rgba = <pause_font_color>
 		menu_pos = (2.0, 140.0)
 	endif
-	formattext checksumname = player_pause_scales_cont 'jam_band_pause_scales_cont_%s' s = <select_player>
-	if screenelementexists id = <player_pause_scales_cont>
-		destroyscreenelement id = <player_pause_scales_cont>
+	FormatText checksumname = player_pause_scales_cont 'jam_band_pause_scales_cont_%s' s = <select_player>
+	if ScreenElementExists id = <player_pause_scales_cont>
+		DestroyScreenElement id = <player_pause_scales_cont>
 	endif
-	createscreenelement {
-		type = containerelement
+	CreateScreenElement {
+		type = ContainerElement
 		id = <player_pause_scales_cont>
 		parent = <player_pause_scales>
 		pos = <menu_pos>
 	}
-	formattext checksumname = scrolling_scales 'jam_scrolling_scales_%s' s = <select_player>
-	formattext checksumname = vmenu_scales 'jam_vmenu_scales_%s' s = <select_player>
-	getplayerinfo <select_player> controller
+	FormatText checksumname = scrolling_scales 'jam_scrolling_scales_%s' s = <select_player>
+	FormatText checksumname = vmenu_scales 'jam_vmenu_scales_%s' s = <select_player>
+	GetPlayerInfo <select_player> controller
 	new_menu {
 		scrollid = <scrolling_scales>
 		vmenuid = <vmenu_scales>
@@ -129,11 +129,11 @@ script create_menu_jam_scales \{controller = 0}
 		]
 		menu_parent = <player_pause_scales_cont>
 	}
-	text_params = {type = textelement font = fontgrid_text_a3 just = [center center] scale = 0.6 rgba = ($menu_unfocus_color) z_priority = 60}
-	formattext checksumname = scales_root_text 'jam_scales_root_txt_%s' s = <select_player>
-	formattext checksumname = scales_root_ctn 'jam_scales_root_ctn_%s' s = <select_player>
-	createscreenelement {
-		type = containerelement
+	text_params = {type = TextElement font = fontgrid_text_a3 just = [center center] scale = 0.6 rgba = ($menu_unfocus_color) z_priority = 60}
+	FormatText checksumname = scales_root_text 'jam_scales_root_txt_%s' s = <select_player>
+	FormatText checksumname = scales_root_ctn 'jam_scales_root_ctn_%s' s = <select_player>
+	CreateScreenElement {
+		type = ContainerElement
 		id = <scales_root_ctn>
 		parent = <vmenu_scales>
 		dims = (100.0, 60.0)
@@ -145,11 +145,11 @@ script create_menu_jam_scales \{controller = 0}
 		]
 	}
 	roots = ($jam_track_rootnotes)
-	getplayerinfo <select_player> jam_instrument
+	GetPlayerInfo <select_player> jam_instrument
 	root = (<roots> [<jam_instrument>])
-	formattext textname = root_text qs(0x1684e961) s = ($jam_roots [<root>])
-	createscreenelement {
-		type = textblockelement
+	FormatText TextName = root_text qs("Root Note: %s") s = ($jam_roots [<root>])
+	CreateScreenElement {
+		type = TextBlockElement
 		parent = <player_pause_scales_cont>
 		id = <scales_root_text>
 		font = fontgrid_text_a3
@@ -164,12 +164,12 @@ script create_menu_jam_scales \{controller = 0}
 		fit_width = `scale each line if larger`
 		fit_height = `scale down if larger`
 		scale_mode = proportional
-		text_case = original
+		text_case = Original
 	}
-	printf channel = jam_mode qs(0x73307931) s = ($jam_roots [<root>])
-	formattext checksumname = scales_scale_text 'jam_scales_scale_txt_%s' s = <select_player>
-	createscreenelement {
-		type = containerelement
+	printf channel = jam_mode qs("\L%s") s = ($jam_roots [<root>])
+	FormatText checksumname = scales_scale_text 'jam_scales_scale_txt_%s' s = <select_player>
+	CreateScreenElement {
+		type = ContainerElement
 		parent = <vmenu_scales>
 		dims = (100.0, 60.0)
 		exclusive_device = <controller>
@@ -182,9 +182,9 @@ script create_menu_jam_scales \{controller = 0}
 	<scale_indices> = ($jam_track_scaleindex)
 	<scale_index> = (<scale_indices> [<jam_instrument>])
 	<scale_name_txt> = (($jam_scales_new [<scale_index>]).name)
-	formattext textname = scale_text qs(0x7dde4785) s = <scale_name_txt>
-	createscreenelement {
-		type = textblockelement
+	FormatText TextName = scale_text qs("Scale: %s") s = <scale_name_txt>
+	CreateScreenElement {
+		type = TextBlockElement
 		parent = <player_pause_scales_cont>
 		id = <scales_scale_text>
 		font = fontgrid_text_a3
@@ -199,13 +199,13 @@ script create_menu_jam_scales \{controller = 0}
 		fit_width = `scale each line if larger`
 		fit_height = `scale down if larger`
 		scale_mode = proportional
-		text_case = original
+		text_case = Original
 	}
-	getplayerinfo <select_player> jam_instrument
+	GetPlayerInfo <select_player> jam_instrument
 	if (<jam_instrument> = 1)
-		formattext checksumname = scales_range_txt 'jam_scales_range_txt_%s' s = <select_player>
-		createscreenelement {
-			type = containerelement
+		FormatText checksumname = scales_range_txt 'jam_scales_range_txt_%s' s = <select_player>
+		CreateScreenElement {
+			type = ContainerElement
 			parent = <vmenu_scales>
 			dims = (100.0, 60.0)
 			exclusive_device = <controller>
@@ -217,13 +217,13 @@ script create_menu_jam_scales \{controller = 0}
 		}
 		switch ($jam_lead_octave_range)
 			case 1
-			<range> = qs(0x359c9c2f)
+			<range> = qs("Low")
 			case 2
-			<range> = qs(0x448b8949)
+			<range> = qs("High")
 		endswitch
-		formattext textname = range_text qs(0x322ac4ff) s = <range>
-		createscreenelement {
-			type = textblockelement
+		FormatText TextName = range_text qs("Range: %s") s = <range>
+		CreateScreenElement {
+			type = TextBlockElement
 			parent = <player_pause_scales_cont>
 			id = <scales_range_txt>
 			font = fontgrid_text_a3
@@ -238,12 +238,12 @@ script create_menu_jam_scales \{controller = 0}
 			fit_width = `scale each line if larger`
 			fit_height = `scale down if larger`
 			scale_mode = proportional
-			text_case = original
+			text_case = Original
 		}
 	elseif (<jam_instrument> = 4)
-		formattext checksumname = scales_range_txt 'jam_scales_range_txt_%s' s = <select_player>
-		createscreenelement {
-			type = containerelement
+		FormatText checksumname = scales_range_txt 'jam_scales_range_txt_%s' s = <select_player>
+		CreateScreenElement {
+			type = ContainerElement
 			parent = <vmenu_scales>
 			dims = (100.0, 60.0)
 			exclusive_device = <controller>
@@ -255,13 +255,13 @@ script create_menu_jam_scales \{controller = 0}
 		}
 		switch ($jam_melody_octave_range)
 			case 1
-			<range> = qs(0x359c9c2f)
+			<range> = qs("Low")
 			case 2
-			<range> = qs(0x448b8949)
+			<range> = qs("High")
 		endswitch
-		formattext textname = range_text qs(0x322ac4ff) s = <range>
-		createscreenelement {
-			type = textblockelement
+		FormatText TextName = range_text qs("Range: %s") s = <range>
+		CreateScreenElement {
+			type = TextBlockElement
 			parent = <player_pause_scales_cont>
 			id = <scales_range_txt>
 			font = fontgrid_text_a3
@@ -276,13 +276,13 @@ script create_menu_jam_scales \{controller = 0}
 			fit_width = `scale each line if larger`
 			fit_height = `scale down if larger`
 			scale_mode = proportional
-			text_case = original
+			text_case = Original
 		}
 	endif
 	if (<jam_instrument> = 0)
-		formattext checksumname = chord_type_txt 'jam_chord_type_txt_%s' s = <select_player>
-		createscreenelement {
-			type = containerelement
+		FormatText checksumname = chord_type_txt 'jam_chord_type_txt_%s' s = <select_player>
+		CreateScreenElement {
+			type = ContainerElement
 			parent = <vmenu_scales>
 			dims = (100.0, 60.0)
 			exclusive_device = <controller>
@@ -294,12 +294,12 @@ script create_menu_jam_scales \{controller = 0}
 		}
 		switch ($jam_rhythm_chord_type)
 			case 0
-			<chord_type> = qs(0x596dd695)
+			<chord_type> = qs("Power Chords")
 			case 1
-			<chord_type> = qs(0x27c54a39)
+			<chord_type> = qs("Clean Chords")
 		endswitch
-		createscreenelement {
-			type = textblockelement
+		CreateScreenElement {
+			type = TextBlockElement
 			parent = <player_pause_scales_cont>
 			id = <chord_type_txt>
 			font = fontgrid_text_a3
@@ -314,7 +314,7 @@ script create_menu_jam_scales \{controller = 0}
 			fit_width = `scale each line if larger`
 			fit_height = `scale down if larger`
 			scale_mode = proportional
-			text_case = original
+			text_case = Original
 		}
 	endif
 	if (<jam_instrument> = 0)
@@ -332,14 +332,14 @@ script create_menu_jam_scales \{controller = 0}
 	if NOT (<jam_instrument> = 3)
 		jam_scales_update_note_gems player = <select_player>
 	endif
-	formattext checksumname = scales_band_text 'jam_scales_band_txt_%s' s = <select_player>
-	formattext checksumname = scales_band_text_ctn 'jam_scales_band_ctn_%s' s = <select_player>
-	if screenelementexists id = <scales_band_text>
-		destroyscreenelement id = <scales_band_text>
-		destroyscreenelement id = <scales_band_text_ctn>
+	FormatText checksumname = scales_band_text 'jam_scales_band_txt_%s' s = <select_player>
+	FormatText checksumname = scales_band_text_ctn 'jam_scales_band_ctn_%s' s = <select_player>
+	if ScreenElementExists id = <scales_band_text>
+		DestroyScreenElement id = <scales_band_text>
+		DestroyScreenElement id = <scales_band_text_ctn>
 	endif
-	createscreenelement {
-		type = containerelement
+	CreateScreenElement {
+		type = ContainerElement
 		id = <scales_band_text_ctn>
 		parent = <vmenu_scales>
 		dims = (100.0, 60.0)
@@ -350,8 +350,8 @@ script create_menu_jam_scales \{controller = 0}
 			{pad_choose jam_set_band_scale params = {select_player = <select_player>}}
 		]
 	}
-	createscreenelement {
-		type = textblockelement
+	CreateScreenElement {
+		type = TextBlockElement
 		parent = <player_pause_scales_cont>
 		id = <scales_band_text>
 		font = fontgrid_text_a3
@@ -361,22 +361,22 @@ script create_menu_jam_scales \{controller = 0}
 		rgba = <pause_font_color>
 		pos = (0.0, 308.0)
 		dims = (180.0, 30.0)
-		text = qs(0x6da8e017)
+		text = qs("set band scale")
 		z_priority = 60
 		fit_width = `scale each line if larger`
 		fit_height = `scale down if larger`
 		scale_mode = proportional
-		text_case = original
+		text_case = Original
 	}
-	<scales_band_text> :se_fittodims dims = (135.0, 40.0) preserve_aspect_ratio
-	formattext checksumname = scales_custom_text 'jam_scales_custom_txt_%s' s = <select_player>
-	formattext checksumname = scales_custom_ctn 'jam_scales_custom_ctn_%s' s = <select_player>
-	if screenelementexists id = <scales_custom_text>
-		destroyscreenelement id = <scales_custom_text>
-		destroyscreenelement id = <scales_custom_ctn>
+	<scales_band_text> :SE_FitToDims dims = (135.0, 40.0) preserve_aspect_ratio
+	FormatText checksumname = scales_custom_text 'jam_scales_custom_txt_%s' s = <select_player>
+	FormatText checksumname = scales_custom_ctn 'jam_scales_custom_ctn_%s' s = <select_player>
+	if ScreenElementExists id = <scales_custom_text>
+		DestroyScreenElement id = <scales_custom_text>
+		DestroyScreenElement id = <scales_custom_ctn>
 	endif
-	createscreenelement {
-		type = containerelement
+	CreateScreenElement {
+		type = ContainerElement
 		parent = <vmenu_scales>
 		id = <scales_custom_ctn>
 		dims = (100.0, 60.0)
@@ -384,11 +384,11 @@ script create_menu_jam_scales \{controller = 0}
 		event_handlers = [
 			{focus jam_pause_focus params = {id = <scales_custom_text>}}
 			{unfocus retail_menu_unfocus params = {id = <scales_custom_text>}}
-			{pad_choose change_scales_option_custom params = {select_player = <select_player> vmenu = <vmenu_scales>}}
+			{pad_choose change_scales_option_custom params = {select_player = <select_player> VMenu = <vmenu_scales>}}
 		]
 	}
-	createscreenelement {
-		type = textblockelement
+	CreateScreenElement {
+		type = TextBlockElement
 		parent = <player_pause_scales_cont>
 		id = <scales_custom_text>
 		font = fontgrid_text_a3
@@ -398,43 +398,43 @@ script create_menu_jam_scales \{controller = 0}
 		rgba = <pause_font_color>
 		pos = (0.0, 338.0)
 		dims = (180.0, 30.0)
-		text = qs(0x7718adc8)
+		text = qs("make custom")
 		z_priority = 60
 		fit_width = `scale each line if larger`
 		fit_height = `scale down if larger`
 		scale_mode = proportional
-		text_case = original
+		text_case = Original
 	}
-	<scales_custom_text> :se_fittodims dims = (135.0, 40.0) preserve_aspect_ratio
+	<scales_custom_text> :SE_FitToDims dims = (135.0, 40.0) preserve_aspect_ratio
 	<chosen_scales_array> = ($jam_track_scaleindex)
 	<chosen_scale_index> = (<chosen_scales_array> [<jam_instrument>])
 	<chosen_scale> = ($jam_scales_new [<chosen_scale_index>])
-	if structurecontains structure = <chosen_scale> custom
-		<scales_custom_text> :se_setprops rgba = [120 120 120 0]
-		<scales_custom_ctn> :se_setprops not_focusable
+	if StructureContains Structure = <chosen_scale> custom
+		<scales_custom_text> :SE_SetProps rgba = [120 120 120 0]
+		<scales_custom_ctn> :SE_SetProps not_focusable
 	endif
 	if ($jam_advanced_record = 1)
 		clean_up_user_control_helpers
-		add_user_control_helper \{text = qs(0xc18d5e76)
+		add_user_control_helper \{text = qs("SELECT")
 			button = green
 			z = 100}
-		if ((iswinport) && (0x1c708d82 controller = $primary_controller))
-			add_user_control_helper \{text = qs(0xaf4d5dd2)
-				button = 0x2b3590c1
+		if ((IsWinPort) && (WinPortIsKeyboardController controller = $primary_controller))
+			add_user_control_helper \{text = qs("BACK")
+				button = redfret
 				z = 100}
 		else
-			add_user_control_helper \{text = qs(0xaf4d5dd2)
+			add_user_control_helper \{text = qs("BACK")
 				button = red
 				z = 100}
 		endif
 	endif
-	launchevent type = focus target = <vmenu_scales>
+	LaunchEvent type = focus target = <vmenu_scales>
 endscript
 
 script create_menu_jam_scales_rhythm 
-	<parent> :settags num_buttons = 7 last_previewed_note = none
-	button_text_params = {type = textelement font = fontgrid_text_a11 just = [center center] scale = 0.6 rgba = [120 120 120 255]}
-	note_text_params = {type = textblockelement font = fontgrid_text_a3 just = [left center] rgba = <font_color>}
+	<parent> :SetTags num_buttons = 7 last_previewed_note = none
+	button_text_params = {type = TextElement font = fontgrid_text_a11 just = [center center] scale = 0.6 rgba = [120 120 120 255]}
+	note_text_params = {type = TextBlockElement font = fontgrid_text_a3 just = [left center] rgba = <font_color>}
 	<x_buttons> = -95
 	<x_notes> = 41
 	<x_notes_off> = 24
@@ -450,9 +450,9 @@ script create_menu_jam_scales_rhythm
 		[0 0 3 0 5]
 		[0 0 0 4 5]
 	]
-	formattext checksumname = note_previews 'jam_preview_ctn_%s' s = <select_player>
-	createscreenelement {
-		type = containerelement
+	FormatText checksumname = note_previews 'jam_preview_ctn_%s' s = <select_player>
+	CreateScreenElement {
+		type = ContainerElement
 		id = <note_previews>
 		parent = <player_pause_scales>
 		pos = (0.0, 0.0)
@@ -477,8 +477,8 @@ script create_menu_jam_scales_rhythm
 		case 5
 		<sprite> = orange_button
 	endswitch
-	createscreenelement {
-		type = spriteelement
+	CreateScreenElement {
+		type = SpriteElement
 		parent = <note_previews>
 		texture = <sprite>
 		just = [left bottom]
@@ -488,22 +488,22 @@ script create_menu_jam_scales_rhythm
 	}
 	<inner_loop_count> = (<inner_loop_count> + 1)
 	repeat 5
-	formattext checksumname = scales_note_text 'jam_scales_note_txt%n_%s' n = <loop_count> s = <select_player>
-	formattext checksumname = scales_note_ctn 'jam_scales_note_ctn%n_%s' n = <loop_count> s = <select_player>
-	createscreenelement {
+	FormatText checksumname = scales_note_text 'jam_scales_note_txt%n_%s' n = <loop_count> s = <select_player>
+	FormatText checksumname = scales_note_ctn 'jam_scales_note_ctn%n_%s' n = <loop_count> s = <select_player>
+	CreateScreenElement {
 		<note_text_params>
 		parent = <note_previews>
 		id = <scales_note_text>
 		pos = ((<x_notes> * (1.0, 0.0)) + ((<y_notes> + (<y_inc> * <loop_count>)) * (0.0, 1.0)))
-		text = qs(0x9e0cb7ef)
+		text = qs("-")
 		internal_just = [left , center]
 		z_priority = 60
 		dims = (50.0, 33.0)
 		fit_height = `scale down if larger`
 		fit_width = `scale each line if larger`
 	}
-	createscreenelement {
-		type = containerelement
+	CreateScreenElement {
+		type = ContainerElement
 		parent = <parent>
 		id = <scales_note_ctn>
 		dims = (0.0, 0.0)
@@ -511,22 +511,22 @@ script create_menu_jam_scales_rhythm
 		event_handlers = [
 			{focus jam_pause_focus params = {id = <scales_note_text>}}
 			{unfocus retail_menu_unfocus params = {id = <scales_note_text>}}
-			{pad_choose jam_scales_custom_choose params = {index = <loop_count> vmenu = <parent> parent = <player_pause_scales> select_player = <select_player>}}
+			{pad_choose jam_scales_custom_choose params = {index = <loop_count> VMenu = <parent> parent = <player_pause_scales> select_player = <select_player>}}
 		]
 	}
-	<scales_note_ctn> :se_setprops not_focusable
+	<scales_note_ctn> :SE_SetProps not_focusable
 	<loop_count> = (<loop_count> + 1)
 	repeat 7
-	formattext checksumname = scale_preview_spawn 'scale_preview_spawn_%s' s = <select_player>
-	killspawnedscript id = <scale_preview_spawn>
+	FormatText checksumname = scale_preview_spawn 'scale_preview_spawn_%s' s = <select_player>
+	KillSpawnedScript id = <scale_preview_spawn>
 	jam_stop_preview_sound jam_instrument = <jam_instrument>
 	spawnscriptnow jam_scales_audible_scale_preview id = <scale_preview_spawn> params = {select_player = <select_player>}
 endscript
 
 script create_menu_jam_scales_leadbass \{diatonic = 0}
-	<parent> :settags {num_buttons = 6 last_previewed_note = none}
-	button_text_params = {type = textelement font = fontgrid_text_a11 just = [center center] scale = 0.6 rgba = [120 120 120 255]}
-	note_text_params = {type = textblockelement font = fontgrid_text_a3 just = [left center] rgba = <font_color>}
+	<parent> :SetTags {num_buttons = 6 last_previewed_note = none}
+	button_text_params = {type = TextElement font = fontgrid_text_a11 just = [center center] scale = 0.6 rgba = [120 120 120 255]}
+	note_text_params = {type = TextBlockElement font = fontgrid_text_a3 just = [left center] rgba = <font_color>}
 	<x_buttons> = -95
 	<x_notes> = 41
 	<x_notes_off> = 24
@@ -544,12 +544,12 @@ script create_menu_jam_scales_leadbass \{diatonic = 0}
 		[0 0 0 0 5]
 		[0 0 0 4 5]
 	]
-	formattext checksumname = note_previews 'jam_preview_ctn_%s' s = <select_player>
-	if screenelementexists id = <note_previews>
-		destroyscreenelement id = <note_previews>
+	FormatText checksumname = note_previews 'jam_preview_ctn_%s' s = <select_player>
+	if ScreenElementExists id = <note_previews>
+		DestroyScreenElement id = <note_previews>
 	endif
-	createscreenelement {
-		type = containerelement
+	CreateScreenElement {
+		type = ContainerElement
 		id = <note_previews>
 		parent = <player_pause_scales>
 		pos = (0.0, 0.0)
@@ -558,11 +558,11 @@ script create_menu_jam_scales_leadbass \{diatonic = 0}
 		<num_notes> = 7
 		<button_scale> = 0.7
 		<y_inc> = 30.2
-		<parent> :settags num_buttons = 7
+		<parent> :SetTags num_buttons = 7
 	endif
-	formattext checksumname = diatonic_ctn 'jam_scales_note_ctn6_%s' s = <select_player>
-	if screenelementexists id = <diatonic_ctn>
-		destroyscreenelement id = <diatonic_ctn>
+	FormatText checksumname = diatonic_ctn 'jam_scales_note_ctn6_%s' s = <select_player>
+	if ScreenElementExists id = <diatonic_ctn>
+		DestroyScreenElement id = <diatonic_ctn>
 	endif
 	<loop_count> = 0
 	begin
@@ -584,8 +584,8 @@ script create_menu_jam_scales_leadbass \{diatonic = 0}
 		case 5
 		<sprite> = orange_button
 	endswitch
-	createscreenelement {
-		type = spriteelement
+	CreateScreenElement {
+		type = SpriteElement
 		parent = <note_previews>
 		texture = <sprite>
 		just = [left bottom]
@@ -595,25 +595,25 @@ script create_menu_jam_scales_leadbass \{diatonic = 0}
 	}
 	<inner_loop_count> = (<inner_loop_count> + 1)
 	repeat 5
-	formattext checksumname = scales_note_text 'jam_scales_note_txt%n_%s' n = <loop_count> s = <select_player>
-	formattext checksumname = scales_note_ctn 'jam_scales_note_ctn%n_%s' n = <loop_count> s = <select_player>
-	createscreenelement {
+	FormatText checksumname = scales_note_text 'jam_scales_note_txt%n_%s' n = <loop_count> s = <select_player>
+	FormatText checksumname = scales_note_ctn 'jam_scales_note_ctn%n_%s' n = <loop_count> s = <select_player>
+	CreateScreenElement {
 		<note_text_params>
 		parent = <note_previews>
 		id = <scales_note_text>
 		pos = ((<x_notes> * (1.0, 0.0)) + ((<y_notes> + (<y_inc> * <loop_count>)) * (0.0, 1.0)))
-		text = qs(0x9e0cb7ef)
+		text = qs("-")
 		internal_just = [left , center]
 		z_priority = 60
 		dims = (50.0, 33.0)
 		fit_height = `scale down if larger`
 		fit_width = `scale each line if larger`
 	}
-	if screenelementexists id = <scales_note_ctn>
-		destroyscreenelement id = <scales_note_ctn>
+	if ScreenElementExists id = <scales_note_ctn>
+		DestroyScreenElement id = <scales_note_ctn>
 	endif
-	createscreenelement {
-		type = containerelement
+	CreateScreenElement {
+		type = ContainerElement
 		parent = <parent>
 		id = <scales_note_ctn>
 		dims = (0.0, 0.0)
@@ -621,26 +621,26 @@ script create_menu_jam_scales_leadbass \{diatonic = 0}
 		event_handlers = [
 			{focus jam_pause_focus params = {id = <scales_note_text>}}
 			{unfocus retail_menu_unfocus params = {id = <scales_note_text>}}
-			{pad_choose jam_scales_custom_choose params = {index = <loop_count> parent = <player_pause_scales> vmenu = <parent> select_player = <select_player>}}
+			{pad_choose jam_scales_custom_choose params = {index = <loop_count> parent = <player_pause_scales> VMenu = <parent> select_player = <select_player>}}
 		]
 	}
-	<scales_note_ctn> :se_setprops not_focusable
+	<scales_note_ctn> :SE_SetProps not_focusable
 	<loop_count> = (<loop_count> + 1)
 	repeat <num_notes>
-	formattext checksumname = scale_preview_spawn 'scale_preview_spawn_%s' s = <select_player>
-	killspawnedscript id = <scale_preview_spawn>
+	FormatText checksumname = scale_preview_spawn 'scale_preview_spawn_%s' s = <select_player>
+	KillSpawnedScript id = <scale_preview_spawn>
 	jam_stop_preview_sound jam_instrument = <jam_instrument>
 	spawnscriptnow jam_scales_audible_scale_preview id = <scale_preview_spawn> params = {select_player = <select_player>}
 	<pause_font_color> = [80 80 80 255]
-	formattext checksumname = player_pause_scales_cont 'jam_band_pause_scales_cont_%s' s = <select_player>
-	formattext checksumname = scales_band_text 'jam_scales_band_txt_%s' s = <select_player>
-	formattext checksumname = scales_band_text_ctn 'jam_scales_band_ctn_%s' s = <select_player>
-	if screenelementexists id = <scales_band_text>
-		destroyscreenelement id = <scales_band_text>
-		destroyscreenelement id = <scales_band_text_ctn>
+	FormatText checksumname = player_pause_scales_cont 'jam_band_pause_scales_cont_%s' s = <select_player>
+	FormatText checksumname = scales_band_text 'jam_scales_band_txt_%s' s = <select_player>
+	FormatText checksumname = scales_band_text_ctn 'jam_scales_band_ctn_%s' s = <select_player>
+	if ScreenElementExists id = <scales_band_text>
+		DestroyScreenElement id = <scales_band_text>
+		DestroyScreenElement id = <scales_band_text_ctn>
 	endif
-	createscreenelement {
-		type = containerelement
+	CreateScreenElement {
+		type = ContainerElement
 		id = <scales_band_text_ctn>
 		parent = <parent>
 		dims = (100.0, 60.0)
@@ -651,8 +651,8 @@ script create_menu_jam_scales_leadbass \{diatonic = 0}
 			{pad_choose jam_set_band_scale params = {select_player = <select_player>}}
 		]
 	}
-	createscreenelement {
-		type = textblockelement
+	CreateScreenElement {
+		type = TextBlockElement
 		parent = <player_pause_scales_cont>
 		id = <scales_band_text>
 		font = fontgrid_text_a3
@@ -662,22 +662,22 @@ script create_menu_jam_scales_leadbass \{diatonic = 0}
 		rgba = <pause_font_color>
 		pos = (0.0, 308.0)
 		dims = (160.0, 25.0)
-		text = qs(0x6da8e017)
+		text = qs("set band scale")
 		z_priority = 60
 		fit_width = `scale each line if larger`
 		fit_height = `scale down if larger`
 		scale_mode = proportional
-		text_case = original
+		text_case = Original
 	}
-	<scales_band_text> :se_fittodims dims = (135.0, 40.0) preserve_aspect_ratio
-	formattext checksumname = scales_custom_text 'jam_scales_custom_txt_%s' s = <select_player>
-	formattext checksumname = scales_custom_ctn 'jam_scales_custom_ctn_%s' s = <select_player>
-	if screenelementexists id = <scales_custom_text>
-		destroyscreenelement id = <scales_custom_text>
-		destroyscreenelement id = <scales_custom_ctn>
+	<scales_band_text> :SE_FitToDims dims = (135.0, 40.0) preserve_aspect_ratio
+	FormatText checksumname = scales_custom_text 'jam_scales_custom_txt_%s' s = <select_player>
+	FormatText checksumname = scales_custom_ctn 'jam_scales_custom_ctn_%s' s = <select_player>
+	if ScreenElementExists id = <scales_custom_text>
+		DestroyScreenElement id = <scales_custom_text>
+		DestroyScreenElement id = <scales_custom_ctn>
 	endif
-	createscreenelement {
-		type = containerelement
+	CreateScreenElement {
+		type = ContainerElement
 		parent = <parent>
 		id = <scales_custom_ctn>
 		dims = (100.0, 60.0)
@@ -685,11 +685,11 @@ script create_menu_jam_scales_leadbass \{diatonic = 0}
 		event_handlers = [
 			{focus jam_pause_focus params = {id = <scales_custom_text>}}
 			{unfocus retail_menu_unfocus params = {id = <scales_custom_text>}}
-			{pad_choose change_scales_option_custom params = {select_player = <select_player> vmenu = <vmenu_scales>}}
+			{pad_choose change_scales_option_custom params = {select_player = <select_player> VMenu = <vmenu_scales>}}
 		]
 	}
-	createscreenelement {
-		type = textblockelement
+	CreateScreenElement {
+		type = TextBlockElement
 		parent = <player_pause_scales_cont>
 		id = <scales_custom_text>
 		font = fontgrid_text_a3
@@ -699,33 +699,33 @@ script create_menu_jam_scales_leadbass \{diatonic = 0}
 		rgba = <pause_font_color>
 		pos = (0.0, 338.0)
 		dims = (160.0, 25.0)
-		text = qs(0x7718adc8)
+		text = qs("make custom")
 		z_priority = 60
 		fit_width = `scale each line if larger`
 		fit_height = `scale down if larger`
 		scale_mode = proportional
-		text_case = original
+		text_case = Original
 	}
-	<scales_custom_text> :se_fittodims dims = (135.0, 40.0) preserve_aspect_ratio
+	<scales_custom_text> :SE_FitToDims dims = (135.0, 40.0) preserve_aspect_ratio
 	if ($jam_advanced_record = 1)
 		clean_up_user_control_helpers
-		add_user_control_helper \{text = qs(0xc18d5e76)
+		add_user_control_helper \{text = qs("SELECT")
 			button = green
 			z = 100}
-		add_user_control_helper \{text = qs(0xaf4d5dd2)
+		add_user_control_helper \{text = qs("BACK")
 			button = red
 			z = 100}
 	endif
 endscript
 
 script jam_scales_update_note_gems 
-	formattext checksumname = scales_root_title 'jam_scales_root_title_%s' s = <player>
-	formattext checksumname = scales_root_text 'jam_scales_root_txt_%s' s = <player>
-	formattext checksumname = scales_root_ctn 'jam_scales_root_ctn_%s' s = <player>
-	formattext checksumname = scales_custom_text 'jam_scales_custom_txt_%s' s = <player>
-	formattext checksumname = scales_custom_ctn 'jam_scales_custom_ctn_%s' s = <player>
-	formattext checksumname = note_previews 'jam_preview_ctn_%s' s = <player>
-	getplayerinfo <player> jam_instrument
+	FormatText checksumname = scales_root_title 'jam_scales_root_title_%s' s = <player>
+	FormatText checksumname = scales_root_text 'jam_scales_root_txt_%s' s = <player>
+	FormatText checksumname = scales_root_ctn 'jam_scales_root_ctn_%s' s = <player>
+	FormatText checksumname = scales_custom_text 'jam_scales_custom_txt_%s' s = <player>
+	FormatText checksumname = scales_custom_ctn 'jam_scales_custom_ctn_%s' s = <player>
+	FormatText checksumname = note_previews 'jam_preview_ctn_%s' s = <player>
+	GetPlayerInfo <player> jam_instrument
 	<chosen_scales_array> = ($jam_track_scaleindex)
 	<chosen_scale_index> = (<chosen_scales_array> [<jam_instrument>])
 	<chosen_scale> = ($jam_scales_new [<chosen_scale_index>])
@@ -736,23 +736,23 @@ script jam_scales_update_note_gems
 			<diatonic> = 1
 		endif
 	endif
-	if structurecontains structure = <chosen_scale> custom
-		if screenelementexists id = <scales_custom_text>
-			<scales_custom_text> :se_setprops rgba = [120 120 120 0]
-			<scales_custom_ctn> :se_setprops not_focusable
+	if StructureContains Structure = <chosen_scale> custom
+		if ScreenElementExists id = <scales_custom_text>
+			<scales_custom_text> :SE_SetProps rgba = [120 120 120 0]
+			<scales_custom_ctn> :SE_SetProps not_focusable
 		endif
-		<note_previews> :se_setprops pos = (0.0, 0.0)
+		<note_previews> :SE_SetProps pos = (0.0, 0.0)
 	else
-		if screenelementexists id = <scales_custom_text>
-			<scales_custom_text> :se_setprops text = qs(0x7718adc8)
-			<scales_custom_text> :se_setprops rgba = ($menu_unfocus_color)
-			<scales_custom_ctn> :se_setprops focusable
+		if ScreenElementExists id = <scales_custom_text>
+			<scales_custom_text> :SE_SetProps text = qs("make custom")
+			<scales_custom_text> :SE_SetProps rgba = ($menu_unfocus_color)
+			<scales_custom_ctn> :SE_SetProps focusable
 		endif
-		<note_previews> :se_setprops pos = (0.0, 0.0)
+		<note_previews> :SE_SetProps pos = (0.0, 0.0)
 	endif
 	if (<jam_instrument> = 1 || <jam_instrument> = 2)
-		formattext checksumname = player_pause_scales_cont 'jam_band_pause_scales_cont_%s' s = <player>
-		formattext checksumname = vmenu_scales 'jam_vmenu_scales_%s' s = <player>
+		FormatText checksumname = player_pause_scales_cont 'jam_band_pause_scales_cont_%s' s = <player>
+		FormatText checksumname = vmenu_scales 'jam_vmenu_scales_%s' s = <player>
 		create_menu_jam_scales_leadbass select_player = <player> player_pause_scales = <player_pause_scales_cont> parent = <vmenu_scales> font_color = [80 80 80 255] diatonic = <diatonic>
 	endif
 	<cur_active_scale_name> = ($jam_track_scales_new [<jam_instrument>])
@@ -767,12 +767,12 @@ script jam_scales_update_note_gems
 	endif
 	<loop_count> = 0
 	begin
-	formattext checksumname = scales_note_text 'jam_scales_note_txt%n_%s' n = <loop_count> s = <player>
-	if screenelementexists id = <scales_note_text>
+	FormatText checksumname = scales_note_text 'jam_scales_note_txt%n_%s' n = <loop_count> s = <player>
+	if ScreenElementExists id = <scales_note_text>
 		<note_struct> = (<cur_scale> [<loop_count>])
 		jam_get_sample_checksum string = (<note_struct> [0]) fret = (<note_struct> [1]) type = 0 jam_instrument = <jam_instrument>
 		<final_text> = <note_text>
-		if structurecontains structure = <chosen_scale> chromatic
+		if StructureContains Structure = <chosen_scale> chromatic
 			<main_note> = <note_text>
 			if (<jam_instrument> = 0)
 				<note_struct> = (<cur_scale> [<loop_count> + 7])
@@ -780,14 +780,14 @@ script jam_scales_update_note_gems
 				<note_struct> = (<cur_scale> [<loop_count> + 6])
 			endif
 			jam_get_sample_checksum string = (<note_struct> [0]) fret = (<note_struct> [1]) type = 0 jam_instrument = <jam_instrument>
-			formattext textname = final_text qs(0x53cfde30) a = <main_note> b = <note_text>
+			FormatText TextName = final_text qs("%a, %b") a = <main_note> b = <note_text>
 		endif
-		<scales_note_text> :setprops text = <final_text>
+		<scales_note_text> :SetProps text = <final_text>
 	endif
-	if structurecontains structure = <chosen_scale> custom
-		formattext checksumname = scales_note_ctn 'jam_scales_note_ctn%n_%s' n = <loop_count> s = <player>
-		if screenelementexists id = <scales_note_ctn>
-			<scales_note_ctn> :se_setprops focusable
+	if StructureContains Structure = <chosen_scale> custom
+		FormatText checksumname = scales_note_ctn 'jam_scales_note_ctn%n_%s' n = <loop_count> s = <player>
+		if ScreenElementExists id = <scales_note_ctn>
+			<scales_note_ctn> :SE_SetProps focusable
 		endif
 	endif
 	<loop_count> = (<loop_count> + 1)
@@ -796,15 +796,15 @@ endscript
 
 script change_scales_option 
 	generic_menu_pad_choose_sound
-	formattext checksumname = scale_preview_spawn 'scale_preview_spawn_%s' s = <select_player>
-	killspawnedscript id = <scale_preview_spawn>
+	FormatText checksumname = scale_preview_spawn 'scale_preview_spawn_%s' s = <select_player>
+	KillSpawnedScript id = <scale_preview_spawn>
 	jam_stop_preview_sound jam_instrument = <jam_instrument>
 	spawnscriptnow jam_scales_audible_scale_preview id = <scale_preview_spawn> params = {select_player = <select_player>}
-	setscreenelementprops id = <vmenu_scales> block_events
-	formattext checksumname = scales_event_handler 'jam_scales_event_handler_%s' s = <select_player>
-	getplayerinfo <select_player> controller
-	createscreenelement {
-		type = containerelement
+	SetScreenElementProps id = <vmenu_scales> block_events
+	FormatText checksumname = scales_event_handler 'jam_scales_event_handler_%s' s = <select_player>
+	GetPlayerInfo <select_player> controller
+	CreateScreenElement {
+		type = ContainerElement
 		parent = <text_id>
 		id = <scales_event_handler>
 		z_priority = 60
@@ -817,11 +817,11 @@ script change_scales_option
 			{pad_start change_scales_option_back params = {ops_array = <ops_array> vmenu_scales = <vmenu_scales> select_player = <select_player> back}}
 		]
 	}
-	launchevent type = focus target = <scales_event_handler>
-	if checksumequals a = <ops_array> b = jam_roots
-		formattext checksumname = scales_arrow_up 'scales_arrow_up_%a' a = <select_player>
-		createscreenelement {
-			type = spriteelement
+	LaunchEvent type = focus target = <scales_event_handler>
+	if ChecksumEquals a = <ops_array> b = jam_roots
+		FormatText checksumname = scales_arrow_up 'scales_arrow_up_%a' a = <select_player>
+		CreateScreenElement {
+			type = SpriteElement
 			parent = <scales_event_handler>
 			id = <scales_arrow_up>
 			texture = up_arrow
@@ -830,9 +830,9 @@ script change_scales_option
 			scale = 0.5
 			z_priority = 70
 		}
-		formattext checksumname = scales_arrow_down 'scales_arrow_down_%a' a = <select_player>
-		createscreenelement {
-			type = spriteelement
+		FormatText checksumname = scales_arrow_down 'scales_arrow_down_%a' a = <select_player>
+		CreateScreenElement {
+			type = SpriteElement
 			parent = <scales_event_handler>
 			id = <scales_arrow_down>
 			texture = down_arrow
@@ -842,9 +842,9 @@ script change_scales_option
 			z_priority = 70
 		}
 	else
-		formattext checksumname = scales_arrow_up 'scales_arrow_up_%a' a = <select_player>
-		createscreenelement {
-			type = spriteelement
+		FormatText checksumname = scales_arrow_up 'scales_arrow_up_%a' a = <select_player>
+		CreateScreenElement {
+			type = SpriteElement
 			parent = <scales_event_handler>
 			id = <scales_arrow_up>
 			texture = up_arrow
@@ -853,9 +853,9 @@ script change_scales_option
 			scale = 0.5
 			z_priority = 70
 		}
-		formattext checksumname = scales_arrow_down 'scales_arrow_down_%a' a = <select_player>
-		createscreenelement {
-			type = spriteelement
+		FormatText checksumname = scales_arrow_down 'scales_arrow_down_%a' a = <select_player>
+		CreateScreenElement {
+			type = SpriteElement
 			parent = <scales_event_handler>
 			id = <scales_arrow_down>
 			texture = down_arrow
@@ -868,81 +868,81 @@ script change_scales_option
 endscript
 
 script change_scales_option_updown 
-	getplayerinfo <select_player> jam_instrument
+	GetPlayerInfo <select_player> jam_instrument
 	ops = ($<ops_index>)
 	index_in_ops = (<ops> [<jam_instrument>])
-	if gotparam \{up}
-		soundevent \{event = scale_scroll_up}
+	if GotParam \{up}
+		SoundEvent \{event = Scale_Scroll_Up}
 		new_option = (<index_in_ops> - 1)
 		if (<new_option> < 0)
-			getarraysize ($<ops_array>)
+			GetArraySize ($<ops_array>)
 			<new_option> = (<array_size> - 1)
 		endif
-		formattext checksumname = scales_arrow_up 'scales_arrow_up_%a' a = <select_player>
-		legacydoscreenelementmorph id = <scales_arrow_up> scale = 1.3 relative_scale
-		legacydoscreenelementmorph id = <scales_arrow_up> scale = 1.0 relative_scale time = 0.1
-	elseif gotparam \{down}
-		soundevent \{event = scale_scroll_down}
+		FormatText checksumname = scales_arrow_up 'scales_arrow_up_%a' a = <select_player>
+		LegacyDoScreenElementMorph id = <scales_arrow_up> scale = 1.3 relative_scale
+		LegacyDoScreenElementMorph id = <scales_arrow_up> scale = 1.0 relative_scale time = 0.1
+	elseif GotParam \{down}
+		SoundEvent \{event = Scale_Scroll_down}
 		new_option = (<index_in_ops> + 1)
-		getarraysize ($<ops_array>)
+		GetArraySize ($<ops_array>)
 		if (<new_option> >= <array_size>)
 			<new_option> = 0
 		endif
-		formattext checksumname = scales_arrow_down 'scales_arrow_down_%a' a = <select_player>
-		legacydoscreenelementmorph id = <scales_arrow_down> scale = 1.3 relative_scale
-		legacydoscreenelementmorph id = <scales_arrow_down> scale = 1.0 relative_scale time = 0.1
+		FormatText checksumname = scales_arrow_down 'scales_arrow_down_%a' a = <select_player>
+		LegacyDoScreenElementMorph id = <scales_arrow_down> scale = 1.3 relative_scale
+		LegacyDoScreenElementMorph id = <scales_arrow_down> scale = 1.0 relative_scale time = 0.1
 	endif
-	setarrayelement arrayname = <ops_index> globalarray index = <jam_instrument> newvalue = <new_option>
+	SetArrayElement ArrayName = <ops_index> GlobalArray index = <jam_instrument> newvalue = <new_option>
 	<chosen_scale> = ($<ops_array> [<new_option>])
-	if checksumequals a = <ops_array> b = jam_roots
+	if ChecksumEquals a = <ops_array> b = jam_roots
 		<text> = <chosen_scale>
-		formattext textname = text qs(0x1684e961) s = <chosen_scale>
+		FormatText TextName = text qs("Root Note: %s") s = <chosen_scale>
 	else
 		<text> = (<chosen_scale>.name)
-		formattext textname = text qs(0x7dde4785) s = (<chosen_scale>.name)
+		FormatText TextName = text qs("Scale: %s") s = (<chosen_scale>.name)
 	endif
-	setscreenelementprops id = <text_id> text = <text>
+	SetScreenElementProps id = <text_id> text = <text>
 	jam_update_scalemenu_scales ops_array = <ops_array> select_player = <select_player> new_option = <new_option>
-	formattext checksumname = scale_preview_spawn 'scale_preview_spawn_%s' s = <select_player>
-	killspawnedscript id = <scale_preview_spawn>
+	FormatText checksumname = scale_preview_spawn 'scale_preview_spawn_%s' s = <select_player>
+	KillSpawnedScript id = <scale_preview_spawn>
 	jam_stop_preview_sound jam_instrument = <jam_instrument>
 	spawnscriptnow jam_scales_audible_scale_preview id = <scale_preview_spawn> params = {select_player = <select_player>}
 endscript
 
 script jam_update_scalemenu_scales 
-	getplayerinfo <select_player> jam_instrument
-	formattext checksumname = scales_custom_text 'jam_scales_custom_txt_%s' s = <select_player>
-	formattext checksumname = scales_root_text 'jam_scales_root_txt_%s' s = <select_player>
-	formattext checksumname = scales_root_ctn 'jam_scales_root_ctn_%s' s = <select_player>
-	formattext checksumname = scales_root_title 'jam_scales_root_title_%s' s = <select_player>
-	formattext checksumname = scales_custom_ctn 'jam_scales_custom_ctn_%s' s = <select_player>
-	formattext checksumname = note_previews 'jam_preview_ctn_%s' s = <select_player>
-	formattext checksumname = vmenu 'jam_vmenu_scales_%s' s = <select_player>
-	<vmenu> :gettags
+	GetPlayerInfo <select_player> jam_instrument
+	FormatText checksumname = scales_custom_text 'jam_scales_custom_txt_%s' s = <select_player>
+	FormatText checksumname = scales_root_text 'jam_scales_root_txt_%s' s = <select_player>
+	FormatText checksumname = scales_root_ctn 'jam_scales_root_ctn_%s' s = <select_player>
+	FormatText checksumname = scales_root_title 'jam_scales_root_title_%s' s = <select_player>
+	FormatText checksumname = scales_custom_ctn 'jam_scales_custom_ctn_%s' s = <select_player>
+	FormatText checksumname = note_previews 'jam_preview_ctn_%s' s = <select_player>
+	FormatText checksumname = VMenu 'jam_vmenu_scales_%s' s = <select_player>
+	<VMenu> :GetTags
 	<chosen_scales_array> = ($jam_track_scaleindex)
 	<chosen_scale_index> = (<chosen_scales_array> [<jam_instrument>])
 	<chosen_scale> = ($jam_scales_new [<chosen_scale_index>])
-	if structurecontains structure = <chosen_scale> custom
-		<scales_custom_text> :se_setprops rgba = [120 120 120 0]
-		<scales_custom_ctn> :se_setprops not_focusable
-		<note_previews> :se_setprops pos = (0.0, 0.0)
-		if checksumequals a = <ops_array> b = jam_scales_new
+	if StructureContains Structure = <chosen_scale> custom
+		<scales_custom_text> :SE_SetProps rgba = [120 120 120 0]
+		<scales_custom_ctn> :SE_SetProps not_focusable
+		<note_previews> :SE_SetProps pos = (0.0, 0.0)
+		if ChecksumEquals a = <ops_array> b = jam_scales_new
 			<loop_count> = 0
 			begin
-			formattext checksumname = scales_note_ctn 'jam_scales_note_ctn%n_%s' n = <loop_count> s = <select_player>
-			<scales_note_ctn> :se_setprops focusable
+			FormatText checksumname = scales_note_ctn 'jam_scales_note_ctn%n_%s' n = <loop_count> s = <select_player>
+			<scales_note_ctn> :SE_SetProps focusable
 			<loop_count> = (<loop_count> + 1)
 			repeat <num_buttons>
 		endif
 	else
-		<scales_custom_text> :se_setprops text = qs(0x7718adc8)
-		<scales_custom_ctn> :se_setprops focusable
-		<note_previews> :se_setprops pos = (0.0, 0.0)
-		if checksumequals a = <ops_array> b = jam_scales_new
+		<scales_custom_text> :SE_SetProps text = qs("make custom")
+		<scales_custom_ctn> :SE_SetProps focusable
+		<note_previews> :SE_SetProps pos = (0.0, 0.0)
+		if ChecksumEquals a = <ops_array> b = jam_scales_new
 			<loop_count> = 0
 			begin
-			formattext checksumname = scales_note_ctn 'jam_scales_note_ctn%n_%s' n = <loop_count> s = <select_player>
-			<scales_note_ctn> :se_setprops not_focusable
+			FormatText checksumname = scales_note_ctn 'jam_scales_note_ctn%n_%s' n = <loop_count> s = <select_player>
+			<scales_note_ctn> :SE_SetProps not_focusable
 			<loop_count> = (<loop_count> + 1)
 			repeat <num_buttons>
 		endif
@@ -952,23 +952,23 @@ script jam_update_scalemenu_scales
 endscript
 
 script change_scales_option_back 
-	setscreenelementprops id = <vmenu_scales> unblock_events
-	formattext checksumname = scales_event_handler 'jam_scales_event_handler_%s' s = <select_player>
-	if screenelementexists id = <scales_event_handler>
-		destroyscreenelement id = <scales_event_handler>
+	SetScreenElementProps id = <vmenu_scales> unblock_events
+	FormatText checksumname = scales_event_handler 'jam_scales_event_handler_%s' s = <select_player>
+	if ScreenElementExists id = <scales_event_handler>
+		DestroyScreenElement id = <scales_event_handler>
 	endif
 	generic_menu_pad_back_sound
-	getplayerinfo <select_player> jam_instrument
+	GetPlayerInfo <select_player> jam_instrument
 	jam_stop_preview_sound jam_instrument = <jam_instrument>
-	formattext checksumname = scale_preview_spawn 'scale_preview_spawn_%s' s = <select_player>
-	killspawnedscript id = <scale_preview_spawn>
+	FormatText checksumname = scale_preview_spawn 'scale_preview_spawn_%s' s = <select_player>
+	KillSpawnedScript id = <scale_preview_spawn>
 endscript
 
 script change_scales_option_custom 
-	getplayerinfo <select_player> jam_instrument
+	GetPlayerInfo <select_player> jam_instrument
 	<scale_index> = (($jam_track_scaleindex) [<jam_instrument>])
 	<premade_struct> = (($jam_scales_new) [<scale_index>])
-	if structurecontains structure = <premade_struct> custom
+	if StructureContains Structure = <premade_struct> custom
 		return
 	endif
 	<chosen_roots_array> = ($jam_track_rootnotes)
@@ -986,7 +986,7 @@ script change_scales_option_custom
 			<used_amount> = (12 - <note>)
 			<note> = (<root_note> - <used_amount>)
 		endif
-		setarrayelement arrayname = final_custom index = <count> newvalue = <note>
+		SetArrayElement ArrayName = final_custom index = <count> newvalue = <note>
 		<count> = (<count> + 1)
 		repeat 7
 	else
@@ -1002,64 +1002,64 @@ script change_scales_option_custom
 		if (<new_value> > 11)
 			<new_value> = (<new_value> - 12)
 		endif
-		setarrayelement arrayname = final_custom index = <count> newvalue = <new_value>
+		SetArrayElement ArrayName = final_custom index = <count> newvalue = <new_value>
 		<count> = (<count> + 1)
 		repeat 6
 	endif
 	<custom_names_array> = ($jam_track_custom_scales_new)
 	<custom_name> = (<custom_names_array> [<jam_instrument>])
 	change globalname = <custom_name> newvalue = <final_custom>
-	getarraysize ($jam_scales_new)
-	setarrayelement arrayname = jam_track_scaleindex globalarray index = <jam_instrument> newvalue = (<array_size> -1)
+	GetArraySize ($jam_scales_new)
+	SetArrayElement ArrayName = jam_track_scaleindex GlobalArray index = <jam_instrument> newvalue = (<array_size> -1)
 	<custom_struct> = (($jam_scales_new) [(<array_size> -1)])
-	<text> = qs(0x780a0bdc)
-	formattext checksumname = text_id 'jam_scales_scale_txt_%s' s = <select_player>
-	setscreenelementprops id = <text_id> text = <text>
-	formattext checksumname = vmenu 'jam_vmenu_scales_%s' s = <select_player>
-	launchevent type = unfocus target = <vmenu>
-	formattext checksumname = scales_custom_text 'jam_scales_custom_txt_%s' s = <select_player>
-	formattext checksumname = scales_custom_ctn 'jam_scales_custom_ctn_%s' s = <select_player>
-	<scales_custom_text> :se_setprops rgba = [120 120 120 0]
-	<scales_custom_ctn> :se_setprops not_focusable
-	formattext checksumname = scales_custom_text 'jam_scales_custom_txt_%s' s = <select_player>
-	<scales_custom_text> :se_setprops rgba = [120 120 120 0]
-	<vmenu> :gettags
+	<text> = qs("Scale: Custom")
+	FormatText checksumname = text_id 'jam_scales_scale_txt_%s' s = <select_player>
+	SetScreenElementProps id = <text_id> text = <text>
+	FormatText checksumname = VMenu 'jam_vmenu_scales_%s' s = <select_player>
+	LaunchEvent type = unfocus target = <VMenu>
+	FormatText checksumname = scales_custom_text 'jam_scales_custom_txt_%s' s = <select_player>
+	FormatText checksumname = scales_custom_ctn 'jam_scales_custom_ctn_%s' s = <select_player>
+	<scales_custom_text> :SE_SetProps rgba = [120 120 120 0]
+	<scales_custom_ctn> :SE_SetProps not_focusable
+	FormatText checksumname = scales_custom_text 'jam_scales_custom_txt_%s' s = <select_player>
+	<scales_custom_text> :SE_SetProps rgba = [120 120 120 0]
+	<VMenu> :GetTags
 	<loop_count> = 0
 	begin
-	formattext checksumname = scales_note_ctn 'jam_scales_note_ctn%n_%s' n = <loop_count> s = <select_player>
-	<scales_note_ctn> :se_setprops focusable
+	FormatText checksumname = scales_note_ctn 'jam_scales_note_ctn%n_%s' n = <loop_count> s = <select_player>
+	<scales_note_ctn> :SE_SetProps focusable
 	<loop_count> = (<loop_count> + 1)
 	repeat <num_buttons>
 	jam_scales_update_note_gems player = <select_player>
-	formattext checksumname = scales_note_ctn 'jam_scales_note_ctn0_%s' s = <select_player>
-	launchevent type = focus target = <vmenu> data = {child_id = <scales_note_ctn>}
-	formattext checksumname = scale_preview_spawn 'scale_preview_spawn_%s' s = <select_player>
-	killspawnedscript id = <scale_preview_spawn>
-	getplayerinfo <select_player> jam_instrument
+	FormatText checksumname = scales_note_ctn 'jam_scales_note_ctn0_%s' s = <select_player>
+	LaunchEvent type = focus target = <VMenu> data = {child_id = <scales_note_ctn>}
+	FormatText checksumname = scale_preview_spawn 'scale_preview_spawn_%s' s = <select_player>
+	KillSpawnedScript id = <scale_preview_spawn>
+	GetPlayerInfo <select_player> jam_instrument
 	jam_stop_preview_sound jam_instrument = <jam_instrument>
 	generic_menu_pad_choose_sound
 endscript
 
 script jam_scales_custom_choose 
-	setscreenelementprops id = <vmenu> block_events
-	formattext checksumname = scales_custom_event_handler 'jam_scales_custom_event_handler_%s' s = <select_player>
-	getplayerinfo <select_player> controller
-	createscreenelement {
-		type = containerelement
+	SetScreenElementProps id = <VMenu> block_events
+	FormatText checksumname = scales_custom_event_handler 'jam_scales_custom_event_handler_%s' s = <select_player>
+	GetPlayerInfo <select_player> controller
+	CreateScreenElement {
+		type = ContainerElement
 		parent = <parent>
 		id = <scales_custom_event_handler>
 		z_priority = 75
 		exclusive_device = <controller>
 		event_handlers = [
-			{pad_up jam_scales_custom_updown params = {up index = <index> select_player = <select_player> handler = <scales_custom_event_handler> parent_menu = <vmenu>}}
-			{pad_down jam_scales_custom_updown params = {down index = <index> select_player = <select_player> handler = <scales_custom_event_handler> parent_menu = <vmenu>}}
-			{pad_choose jam_scales_custom_edit_back params = {select_player = <select_player> handler = <scales_custom_event_handler> vmenu = <vmenu>}}
-			{pad_circle jam_scales_custom_edit_back params = {select_player = <select_player> handler = <scales_custom_event_handler> vmenu = <vmenu>}}
-			{pad_start jam_scales_custom_edit_back params = {select_player = <select_player> handler = <scales_custom_event_handler> vmenu = <vmenu>}}
+			{pad_up jam_scales_custom_updown params = {up index = <index> select_player = <select_player> handler = <scales_custom_event_handler> parent_menu = <VMenu>}}
+			{pad_down jam_scales_custom_updown params = {down index = <index> select_player = <select_player> handler = <scales_custom_event_handler> parent_menu = <VMenu>}}
+			{pad_choose jam_scales_custom_edit_back params = {select_player = <select_player> handler = <scales_custom_event_handler> VMenu = <VMenu>}}
+			{pad_circle jam_scales_custom_edit_back params = {select_player = <select_player> handler = <scales_custom_event_handler> VMenu = <VMenu>}}
+			{pad_start jam_scales_custom_edit_back params = {select_player = <select_player> handler = <scales_custom_event_handler> VMenu = <VMenu>}}
 		]
 	}
-	launchevent type = focus target = <scales_custom_event_handler>
-	getplayerinfo <select_player> jam_instrument
+	LaunchEvent type = focus target = <scales_custom_event_handler>
+	GetPlayerInfo <select_player> jam_instrument
 	if (<jam_instrument> = 0)
 		<start_top> = (88.0, 91.0)
 		<start_bottom> = (88.0, 101.0)
@@ -1069,12 +1069,12 @@ script jam_scales_custom_choose
 		<start_bottom> = (88.0, 103.0)
 		<y_off> = 35
 	endif
-	formattext checksumname = custom_arrow_up 'custom_scale_arrow_up_%a' a = <select_player>
+	FormatText checksumname = custom_arrow_up 'custom_scale_arrow_up_%a' a = <select_player>
 	<pos> = <start_top>
-	<add> = (<index> * <y_off>)
-	<pos> = (<pos> + (<add> * (0.0, 1.0)))
-	createscreenelement {
-		type = spriteelement
+	<Add> = (<index> * <y_off>)
+	<pos> = (<pos> + (<Add> * (0.0, 1.0)))
+	CreateScreenElement {
+		type = SpriteElement
 		parent = <scales_custom_event_handler>
 		id = <custom_arrow_up>
 		texture = up_arrow
@@ -1083,12 +1083,12 @@ script jam_scales_custom_choose
 		scale = 0.5
 		z_priority = 70
 	}
-	formattext checksumname = custom_arrow_down 'custom_scale_arrow_down_%a' a = <select_player>
+	FormatText checksumname = custom_arrow_down 'custom_scale_arrow_down_%a' a = <select_player>
 	<pos> = <start_bottom>
-	<add> = (<index> * <y_off>)
-	<pos> = (<pos> + (<add> * (0.0, 1.0)))
-	createscreenelement {
-		type = spriteelement
+	<Add> = (<index> * <y_off>)
+	<pos> = (<pos> + (<Add> * (0.0, 1.0)))
+	CreateScreenElement {
+		type = SpriteElement
 		parent = <scales_custom_event_handler>
 		id = <custom_arrow_down>
 		texture = down_arrow
@@ -1101,92 +1101,92 @@ script jam_scales_custom_choose
 	cur_scale_name = (<custom_scales> [<jam_instrument>])
 	cur_scale = ($<cur_scale_name>)
 	cur_note = (<cur_scale> [<index>])
-	killspawnedscript \{name = jam_scales_audible_note_preview}
+	KillSpawnedScript \{name = jam_scales_audible_note_preview}
 	spawnscriptnow jam_scales_audible_note_preview params = {select_player = <select_player> target_note = <cur_note> note_index = <index>}
 endscript
 
 script jam_scales_custom_updown 
-	getplayerinfo <select_player> jam_instrument
+	GetPlayerInfo <select_player> jam_instrument
 	<custom_scales> = ($jam_track_custom_scales_new)
 	<cur_scale_name> = (<custom_scales> [<jam_instrument>])
 	<cur_scale> = ($<cur_scale_name>)
 	<cur_note> = (<cur_scale> [<index>])
-	if gotparam \{up}
+	if GotParam \{up}
 		<cur_note> = (<cur_note> - 1)
-		getarraysize ($jam_roots)
+		GetArraySize ($jam_roots)
 		if (<cur_note> < 0)
 			<cur_note> = (<array_size> -1)
 		endif
-		formattext checksumname = custom_arrow_up 'custom_scale_arrow_up_%a' a = <select_player>
-		legacydoscreenelementmorph id = <custom_arrow_up> scale = 1.3 relative_scale
-		legacydoscreenelementmorph id = <custom_arrow_up> scale = 1.0 relative_scale time = 0.1
-	elseif gotparam \{down}
+		FormatText checksumname = custom_arrow_up 'custom_scale_arrow_up_%a' a = <select_player>
+		LegacyDoScreenElementMorph id = <custom_arrow_up> scale = 1.3 relative_scale
+		LegacyDoScreenElementMorph id = <custom_arrow_up> scale = 1.0 relative_scale time = 0.1
+	elseif GotParam \{down}
 		<cur_note> = (<cur_note> + 1)
-		getarraysize ($jam_roots)
+		GetArraySize ($jam_roots)
 		if (<cur_note> >= <array_size>)
 			<cur_note> = 0
 		endif
-		formattext checksumname = custom_arrow_down 'custom_scale_arrow_down_%a' a = <select_player>
-		legacydoscreenelementmorph id = <custom_arrow_down> scale = 1.3 relative_scale
-		legacydoscreenelementmorph id = <custom_arrow_down> scale = 1.0 relative_scale time = 0.1
+		FormatText checksumname = custom_arrow_down 'custom_scale_arrow_down_%a' a = <select_player>
+		LegacyDoScreenElementMorph id = <custom_arrow_down> scale = 1.3 relative_scale
+		LegacyDoScreenElementMorph id = <custom_arrow_down> scale = 1.0 relative_scale time = 0.1
 	endif
-	killspawnedscript \{name = jam_scales_audible_note_preview}
+	KillSpawnedScript \{name = jam_scales_audible_note_preview}
 	spawnscriptnow jam_scales_audible_note_preview params = {select_player = <select_player> target_note = <cur_note> note_index = <index>}
-	setarrayelement arrayname = cur_scale index = <index> newvalue = <cur_note>
+	SetArrayElement ArrayName = cur_scale index = <index> newvalue = <cur_note>
 	change globalname = <cur_scale_name> newvalue = <cur_scale>
 	<new_text> = ($jam_roots [<cur_note>])
-	formattext checksumname = scales_note_text 'jam_scales_note_txt%n_%s' n = <index> s = <select_player>
-	<scales_note_text> :setprops text = <new_text>
+	FormatText checksumname = scales_note_text 'jam_scales_note_txt%n_%s' n = <index> s = <select_player>
+	<scales_note_text> :SetProps text = <new_text>
 endscript
 
 script jam_scales_custom_edit_back 
-	launchevent type = unfocus target = <handler>
-	destroyscreenelement id = <handler>
-	getarraysize ($jam_scales_new)
+	LaunchEvent type = unfocus target = <handler>
+	DestroyScreenElement id = <handler>
+	GetArraySize ($jam_scales_new)
 	jam_update_scalemenu_scales ops_array = jam_scales_new select_player = <select_player> new_option = (<array_size> -1)
-	setscreenelementprops id = <vmenu> unblock_events
-	launchevent type = focus target = <vmenu>
-	getplayerinfo <select_player> jam_instrument
+	SetScreenElementProps id = <VMenu> unblock_events
+	LaunchEvent type = focus target = <VMenu>
+	GetPlayerInfo <select_player> jam_instrument
 	jam_stop_preview_sound jam_instrument = <jam_instrument>
 	generic_menu_pad_back_sound
 endscript
 
 script destroy_menu_jam_scales 
 	generic_menu_pad_back_sound
-	formattext checksumname = vmenu_scales 'jam_vmenu_scales_%s' s = <select_player>
-	launchevent type = unfocus target = <vmenu_scales>
-	formattext checksumname = scale_preview_spawn 'scale_preview_spawn_%s' s = <select_player>
-	killspawnedscript id = <scale_preview_spawn>
-	getplayerinfo \{1
+	FormatText checksumname = vmenu_scales 'jam_vmenu_scales_%s' s = <select_player>
+	LaunchEvent type = unfocus target = <vmenu_scales>
+	FormatText checksumname = scale_preview_spawn 'scale_preview_spawn_%s' s = <select_player>
+	KillSpawnedScript id = <scale_preview_spawn>
+	GetPlayerInfo \{1
 		jam_instrument}
 	jam_stop_preview_sound jam_instrument = <jam_instrument>
-	formattext checksumname = scrolling_scales 'jam_scrolling_scales_%s' s = <select_player>
+	FormatText checksumname = scrolling_scales 'jam_scrolling_scales_%s' s = <select_player>
 	destroy_menu menu_id = <scrolling_scales>
-	formattext checksumname = player_pause_scales 'jam_band_pause_scales_%s' s = <select_player>
-	if screenelementexists id = <player_pause_scales>
-		destroyscreenelement id = <player_pause_scales>
+	FormatText checksumname = player_pause_scales 'jam_band_pause_scales_%s' s = <select_player>
+	if ScreenElementExists id = <player_pause_scales>
+		DestroyScreenElement id = <player_pause_scales>
 	endif
-	if screenelementexists \{id = {
+	if ScreenElementExists \{id = {
 				jam_pause_container
 				child = clip_window_pause_scales
 			}}
-		destroyscreenelement \{id = {
+		DestroyScreenElement \{id = {
 				jam_pause_container
 				child = clip_window_pause_scales
 			}}
 	endif
 	if ($jam_advanced_record = 1)
 		clean_up_user_control_helpers
-		add_user_control_helper \{text = qs(0xc18d5e76)
+		add_user_control_helper \{text = qs("SELECT")
 			button = green
 			z = 100}
-		add_user_control_helper \{text = qs(0x00688155)
+		add_user_control_helper \{text = qs("UNPAUSE")
 			button = start
 			z = 100}
 		jam_ghmix_note_quick_update player = ($jam_current_recording_player)
 	endif
-	formattext checksumname = vmenu_options 'vmenu_options_%s' s = <select_player>
-	if screenelementexists id = <vmenu_options>
-		launchevent type = focus target = <vmenu_options>
+	FormatText checksumname = vmenu_options 'vmenu_options_%s' s = <select_player>
+	if ScreenElementExists id = <vmenu_options>
+		LaunchEvent type = focus target = <vmenu_options>
 	endif
 endscript

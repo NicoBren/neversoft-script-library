@@ -1,8 +1,8 @@
 
 script ui_band_name_is_valid 
-	stringremovetrailingwhitespace string = <text>
-	stringtochararray string = <new_string>
-	getarraysize <char_array>
+	StringRemoveTrailingWhitespace string = <text>
+	StringToCharArray string = <new_string>
+	GetArraySize <char_array>
 	if (<array_size> = 0)
 		return \{false}
 	else

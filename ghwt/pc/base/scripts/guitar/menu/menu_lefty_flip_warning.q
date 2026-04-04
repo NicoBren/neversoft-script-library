@@ -5,7 +5,7 @@ script create_lefty_flip_warning_menu
 	player_device = ($last_start_pressed_device)
 	i = 1
 	begin
-	getplayerinfo <i> controller
+	GetPlayerInfo <i> controller
 	if (<controller> = <player_device>)
 		player = <i>
 		break
@@ -14,7 +14,7 @@ script create_lefty_flip_warning_menu
 	repeat ($current_num_players)
 	create_popup_warning_menu {
 		textblock = {
-			text = qs(0x440b83d5)
+			text = qs("TO CHANGE THE LEFTY FLIP SETTING, THIS SONG MUST BE RESTARTED. YOU WILL LOSE ALL UNSAVED PROGRESS IF YOU RESTART. ARE YOU SURE YOU WANT TO CONTINUE?")
 			dims = (800.0, 400.0)
 			scale = 0.55
 		}
@@ -24,11 +24,11 @@ script create_lefty_flip_warning_menu
 		options = [
 			{
 				func = lefty_flip_warning_go_back
-				text = qs(0xf7723015)
+				text = qs("CANCEL")
 			}
 			{
 				func = {menu_lefty_flip_warning_select_yes params = {player = <player>}}
-				text = qs(0xb8790f2f)
+				text = qs("RESTART")
 			}
 		]
 	}
@@ -45,8 +45,8 @@ endscript
 
 script menu_lefty_flip_warning_select_yes 
 	generic_event_back \{state = uistate_gameplay}
-	resetscoreupdateready
-	getplayerinfo <player> lefty_flip
+	ResetScoreUpdateReady
+	GetPlayerInfo <player> lefty_flip
 	if (<lefty_flip> = 1)
 		new_flip = 0
 		if (<player> = 1)
@@ -58,17 +58,17 @@ script menu_lefty_flip_warning_select_yes
 			change \{pad_event_up_inversion = false}
 		endif
 	endif
-	formattext checksumname = player_status 'player%i_status' i = <player> addtostringlookup
+	FormatText checksumname = player_status 'player%i_status' i = <player> AddToStringLookup
 	change structurename = <player_status> lefty_flip = <new_flip>
 	<player_num> = 1
 	begin
-	getplayerinfo player = <player_num> controller
+	GetPlayerInfo player = <player_num> controller
 	get_savegame_from_controller controller = <controller>
-	getplayerinfo player = <player_num> lefty_flip
-	setglobaltags savegame = <savegame> user_options params = {lefty_flip_save = <lefty_flip>}
+	GetPlayerInfo player = <player_num> lefty_flip
+	SetGlobalTags savegame = <savegame> user_options params = {lefty_flip_save = <lefty_flip>}
 	<player_num> = (<player_num> + 1)
 	repeat 4
-	gh3_sfx_fail_song_stop_sounds
-	monitorcontrollerstates
+	GH3_SFX_fail_song_stop_sounds
+	MonitorControllerStates
 	spawnscriptnow lefty_flip_func params = {player = <player>}
 endscript

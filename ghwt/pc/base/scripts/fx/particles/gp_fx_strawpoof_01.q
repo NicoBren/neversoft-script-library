@@ -1,54 +1,54 @@
-gp_fx_strawpoof_01 = {
+GP_FX_StrawPoof_01 = {
 	pos = (-0.12421401, 7.145174, -2.791274)
 	angles = (0.0, 0.0, 0.0)
-	class = particleobject
-	particletype = flexparticle
+	Class = ParticleObject
+	ParticleType = FlexParticle
 	type = flat
 	active
-	createdatstart
-	emitrangedims = (0.2, 0.2, 0.2)
-	emit_target = (0.0, 1.0, 1.0)
-	emitangle = (0.0, 0.0, 0.0)
+	CreatedAtStart
+	EmitRangeDims = (0.2, 0.2, 0.2)
+	emit_Target = (0.0, 1.0, 1.0)
+	EmitAngle = (0.0, 0.0, 0.0)
 	force = (0.0, -5.0, 0.0)
-	windcoeff = 0.0
-	localwindcoeff = 0.0
-	emittervelocityweight = 0.0
-	anglespread = 70.0
-	liferange = (2.0, 2.0)
+	WindCoeff = 0.0
+	LocalWindCoeff = 0.0
+	EmitterVelocityWeight = 0.0
+	AngleSpread = 70.0
+	LifeRange = (2.0, 2.0)
 	emit_rate = 300.0
 	max = 0
-	timeseed = 0.0
-	lifetime = 2.0
-	emitnum = 0
-	followemitter = 0.0
-	emitfunction = constant
-	emitperiod = 1.0
-	sizerange = [
+	TimeSeed = 0.0
+	lifeTime = 2.0
+	emitNum = 0
+	FollowEmitter = 0.0
+	EmitFunction = constant
+	EmitPeriod = 1.0
+	SizeRange = [
 		(0.1, 0.1)
 		(0.1, 0.1)
 	]
-	speedrange = (3.0, 5.0)
-	rotvel = (2.0, -2.0)
-	rotveltimescale = 0.1
-	emitdelaystart = 0.0
-	pathfollowtime = 0.0
-	history = 2
-	historylistcoordinatespace = world
+	SpeedRange = (3.0, 5.0)
+	RotVel = (2.0, -2.0)
+	RotVelTimeScale = 0.1
+	EmitDelayStart = 0.0
+	PathFollowTime = 0.0
+	History = 2
+	HistoryListCoordinateSpace = world
 	align_to = (1.0, 0.0, 0.0)
-	rotate3d
+	Rotate3D
 	color = -673988609
-	lod_default
-	quickmaterial = {
-		texturelayout = layout2x2
-		diffusetextureenabled
-		diffusetexture = ph_straw_quad
-		specularpower = 0
-		twoside
+	LOD_Default
+	QuickMaterial = {
+		TextureLayout = Layout2x2
+		DiffuseTextureEnabled
+		DiffuseTexture = PH_Straw_Quad
+		SpecularPower = 0
+		TwoSide
 		alphacutoff = 1
-		blendmode = blend
-		quadanimationfps = 0
+		blendMode = blend
+		QuadAnimationFPS = 0
 	}
-	knot = [
+	Knot = [
 		(-1.001418, 0.0, -0.0)
 		(-1.001418, 0.0, -0.0)
 		(-0.869705, 0.0, -0.0)
@@ -62,7 +62,7 @@ gp_fx_strawpoof_01 = {
 		(0.971832, 0.0, -0.0)
 		(0.971832, 0.0, -0.0)
 	]
-	particlecolor = [
+	ParticleColor = [
 		-256
 		-256
 		-1
@@ -72,7 +72,7 @@ gp_fx_strawpoof_01 = {
 		-256
 		-256
 	]
-	vertexweight = [
+	VertexWeight = [
 		0.200248
 		0.829739
 		1.0

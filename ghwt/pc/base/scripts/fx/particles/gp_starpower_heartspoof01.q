@@ -1,58 +1,58 @@
-gp_starpower_heartspoof01 = {
+GP_StarPower_HeartsPoof01 = {
 	pos = (0.35688803, 27.734457, 0.071379)
 	angles = (0.0, 0.0, 0.0)
-	class = particleobject
-	particletype = flexparticle
+	Class = ParticleObject
+	ParticleType = FlexParticle
 	type = flat
 	active
-	createdatstart
+	CreatedAtStart
 	attach
-	attachobject = guitarist
-	bone = bone_pelvis
-	emitrangedims = (0.0, 0.7, 0.0)
-	emit_target = (0.0, 1.0, 0.0)
-	emitangle = (0.0, 0.0, 0.0)
+	AttachObject = Guitarist
+	bone = Bone_Pelvis
+	EmitRangeDims = (0.0, 0.7, 0.0)
+	emit_Target = (0.0, 1.0, 0.0)
+	EmitAngle = (0.0, 0.0, 0.0)
 	force = (0.0, -1.5, 0.0)
-	windcoeff = 0.0
-	localwindcoeff = 0.0
-	emittervelocityweight = 0.0
-	radiate
-	elevspread = (70.0, 160.0)
-	sweepspread = (0.0, 360.0)
-	liferange = (1.0, 2.0)
+	WindCoeff = 0.0
+	LocalWindCoeff = 0.0
+	EmitterVelocityWeight = 0.0
+	Radiate
+	ElevSpread = (70.0, 160.0)
+	SweepSpread = (0.0, 360.0)
+	LifeRange = (1.0, 2.0)
 	emit_rate = 32.0
 	max = 0
-	timeseed = 0.2
-	lifetime = 0.0
-	emitnum = 32
-	followemitter = 0.0
-	emitfunction = constant
-	emitperiod = 1.0
-	sizerange = [
+	TimeSeed = 0.2
+	lifeTime = 0.0
+	emitNum = 32
+	FollowEmitter = 0.0
+	EmitFunction = constant
+	EmitPeriod = 1.0
+	SizeRange = [
 		(0.05, 1.0)
 		(0.0, 2.0)
 	]
-	speedrange = (2.0, 3.0)
-	rotvel = (-0.5, 0.5)
-	rotveltimescale = 1.0
-	emitdelaystart = 0.0
-	alignwithpath
-	pathfollowtime = 0.2
-	history = 12
-	historylistcoordinatespace = world
+	SpeedRange = (2.0, 3.0)
+	RotVel = (-0.5, 0.5)
+	RotVelTimeScale = 1.0
+	EmitDelayStart = 0.0
+	AlignWithPath
+	PathFollowTime = 0.2
+	History = 12
+	HistoryListCoordinateSpace = world
 	color = -13127425
-	lod_default
-	quickmaterial = {
-		diffusetextureenabled
-		diffusetexture = jow_spark01
-		specularpower = 0
+	LOD_Default
+	QuickMaterial = {
+		DiffuseTextureEnabled
+		DiffuseTexture = JOW_Spark01
+		SpecularPower = 0
 		alphacutoff = 48
-		blendmode = blend
-		burn
-		burnvalue = 0.8
-		quadanimationfps = 0
+		blendMode = blend
+		Burn
+		BurnValue = 0.8
+		QuadAnimationFPS = 0
 	}
-	knot = [
+	Knot = [
 		(-0.48496202, 0.0, -0.0)
 		(-0.48496202, 0.0, -0.0)
 		(-0.46225402, 0.0, -0.0)
@@ -66,7 +66,7 @@ gp_starpower_heartspoof01 = {
 		(1.051219, 0.0, -0.0)
 		(1.051219, 0.0, -0.0)
 	]
-	particlecolor = [
+	ParticleColor = [
 		-1
 		-1
 		-1
@@ -76,7 +76,7 @@ gp_starpower_heartspoof01 = {
 		-256
 		-256
 	]
-	vertexweight = [
+	VertexWeight = [
 		0.314324
 		0.553779
 		1.0

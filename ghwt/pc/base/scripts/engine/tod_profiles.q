@@ -1,8 +1,8 @@
-default_tod_manager = {
+Default_tod_manager = {
 	screen_fx = [
 		{
-			name = depth_of_field__simplified_
-			scefname = depth_of_field__simplified_
+			name = Depth_of_Field__simplified_
+			scefName = Depth_of_Field__simplified_
 			type = dof3
 			on = 1
 			strength = 0.0
@@ -11,8 +11,8 @@ default_tod_manager = {
 			farblurend = 20.0
 		}
 		{
-			name = bloom__simplified_
-			scefname = bloom__simplified_
+			name = Bloom__simplified_
+			scefName = Bloom__simplified_
 			type = bloom2
 			on = 1
 			materialfilter = 1
@@ -33,9 +33,9 @@ default_tod_manager = {
 			equation = eq2
 		}
 		{
-			name = godray
-			scefname = godray
-			type = godray
+			name = Godray
+			scefName = Godray
+			type = Godray
 			on = 0
 			colormodulate = [
 				1.0
@@ -64,8 +64,8 @@ default_tod_manager = {
 			lightsource = object
 		}
 		{
-			name = noise_lite
-			scefname = noise_lite
+			name = Noise_Lite
+			scefName = Noise_Lite
 			type = noise2
 			on = 1
 			intensity = 0.08
@@ -83,17 +83,17 @@ default_tod_manager = {
 			]
 		}
 		{
-			name = uberscreenfx
-			scefname = uberscreenfx
-			type = uberscreenfx
+			name = UberScreenFX
+			scefName = UberScreenFX
+			type = UberScreenFX
 		}
 	]
 }
-dof_off_tod_manager = {
+DOF_Off_tod_manager = {
 	screen_fx = [
 		{
-			name = depth_of_field__simplified_
-			scefname = depth_of_field__simplified_
+			name = Depth_of_Field__simplified_
+			scefName = Depth_of_Field__simplified_
 			type = dof3
 			on = 1
 			strength = 0.0
@@ -103,11 +103,11 @@ dof_off_tod_manager = {
 		}
 	]
 }
-dof_closeup01_tod_manager = {
+DOF_CloseUp01_tod_manager = {
 	screen_fx = [
 		{
-			name = depth_of_field__simplified_
-			scefname = depth_of_field__simplified_
+			name = Depth_of_Field__simplified_
+			scefName = Depth_of_Field__simplified_
 			type = dof3
 			on = 1
 			strength = 1.0
@@ -117,11 +117,11 @@ dof_closeup01_tod_manager = {
 		}
 	]
 }
-dof_closeup02_tod_manager = {
+DOF_CloseUp02_tod_manager = {
 	screen_fx = [
 		{
-			name = depth_of_field__simplified_
-			scefname = depth_of_field__simplified_
+			name = Depth_of_Field__simplified_
+			scefName = Depth_of_Field__simplified_
 			type = dof3
 			on = 1
 			strength = 1.0
@@ -131,11 +131,11 @@ dof_closeup02_tod_manager = {
 		}
 	]
 }
-dof_closeup03_tod_manager = {
+DOF_CloseUp03_tod_manager = {
 	screen_fx = [
 		{
-			name = depth_of_field__simplified_
-			scefname = depth_of_field__simplified_
+			name = Depth_of_Field__simplified_
+			scefName = Depth_of_Field__simplified_
 			type = dof3
 			on = 1
 			strength = 1.0
@@ -145,11 +145,11 @@ dof_closeup03_tod_manager = {
 		}
 	]
 }
-dof_closeup04_tod_manager = {
+DOF_CloseUp04_tod_manager = {
 	screen_fx = [
 		{
-			name = depth_of_field__simplified_
-			scefname = depth_of_field__simplified_
+			name = Depth_of_Field__simplified_
+			scefName = Depth_of_Field__simplified_
 			type = dof3
 			on = 1
 			strength = 1.0
@@ -159,11 +159,11 @@ dof_closeup04_tod_manager = {
 		}
 	]
 }
-dof_medium01_tod_manager = {
+DOF_Medium01_tod_manager = {
 	screen_fx = [
 		{
-			name = depth_of_field__simplified_
-			scefname = depth_of_field__simplified_
+			name = Depth_of_Field__simplified_
+			scefName = Depth_of_Field__simplified_
 			type = dof3
 			on = 1
 			strength = 0.5
@@ -173,11 +173,11 @@ dof_medium01_tod_manager = {
 		}
 	]
 }
-dof_medium02_tod_manager = {
+DOF_Medium02_tod_manager = {
 	screen_fx = [
 		{
-			name = depth_of_field__simplified_
-			scefname = depth_of_field__simplified_
+			name = Depth_of_Field__simplified_
+			scefName = Depth_of_Field__simplified_
 			type = dof3
 			on = 1
 			strength = 0.75
@@ -187,11 +187,11 @@ dof_medium02_tod_manager = {
 		}
 	]
 }
-dof_long01_tod_manager = {
+DOF_Long01_tod_manager = {
 	screen_fx = [
 		{
-			name = depth_of_field__simplified_
-			scefname = depth_of_field__simplified_
+			name = Depth_of_Field__simplified_
+			scefName = Depth_of_Field__simplified_
 			type = dof3
 			on = 1
 			strength = 0.8
@@ -201,11 +201,11 @@ dof_long01_tod_manager = {
 		}
 	]
 }
-dof_stage01_tod_manager = {
+DOF_Stage01_tod_manager = {
 	screen_fx = [
 		{
-			name = depth_of_field__simplified_
-			scefname = depth_of_field__simplified_
+			name = Depth_of_Field__simplified_
+			scefName = Depth_of_Field__simplified_
 			type = dof3
 			on = 1
 			strength = 0.8
@@ -215,11 +215,11 @@ dof_stage01_tod_manager = {
 		}
 	]
 }
-dof_uiblur_tod_manager = {
+DOF_UIblur_tod_manager = {
 	screen_fx = [
 		{
-			name = depth_of_field__simplified_
-			scefname = depth_of_field__simplified_
+			name = Depth_of_Field__simplified_
+			scefName = Depth_of_Field__simplified_
 			type = dof3
 			on = 1
 			strength = 0.9
@@ -229,11 +229,11 @@ dof_uiblur_tod_manager = {
 		}
 	]
 }
-dof_car_accl_tod_manager = {
+DOF_CAR_ACCL_tod_manager = {
 	screen_fx = [
 		{
-			name = depth_of_field__simplified_
-			scefname = depth_of_field__simplified_
+			name = Depth_of_Field__simplified_
+			scefName = Depth_of_Field__simplified_
 			type = dof3
 			on = 1
 			strength = 1.0
@@ -243,11 +243,11 @@ dof_car_accl_tod_manager = {
 		}
 	]
 }
-dof_car_main_tod_manager = {
+DOF_CAR_Main_tod_manager = {
 	screen_fx = [
 		{
-			name = depth_of_field__simplified_
-			scefname = depth_of_field__simplified_
+			name = Depth_of_Field__simplified_
+			scefName = Depth_of_Field__simplified_
 			type = dof3
 			on = 1
 			strength = 1.0
@@ -257,11 +257,11 @@ dof_car_main_tod_manager = {
 		}
 	]
 }
-dof_car_selchar_tod_manager = {
+DOF_CAR_SelChar_tod_manager = {
 	screen_fx = [
 		{
-			name = depth_of_field__simplified_
-			scefname = depth_of_field__simplified_
+			name = Depth_of_Field__simplified_
+			scefName = Depth_of_Field__simplified_
 			type = dof3
 			on = 1
 			strength = 1.0
@@ -271,11 +271,11 @@ dof_car_selchar_tod_manager = {
 		}
 	]
 }
-dof_car_selgender_tod_manager = {
+DOF_CAR_SelGender_tod_manager = {
 	screen_fx = [
 		{
-			name = depth_of_field__simplified_
-			scefname = depth_of_field__simplified_
+			name = Depth_of_Field__simplified_
+			scefName = Depth_of_Field__simplified_
 			type = dof3
 			on = 1
 			strength = 1.0
@@ -284,9 +284,9 @@ dof_car_selgender_tod_manager = {
 			farblurend = 5.13
 		}
 		{
-			name = godray
-			scefname = godray
-			type = godray
+			name = Godray
+			scefName = Godray
+			type = Godray
 			on = 1
 			colormodulate = [
 				1.0
@@ -316,11 +316,11 @@ dof_car_selgender_tod_manager = {
 		}
 	]
 }
-dof_car_selecttorso_tod_manager = {
+DOF_CAR_SelectTorso_tod_manager = {
 	screen_fx = [
 		{
-			name = depth_of_field__simplified_
-			scefname = depth_of_field__simplified_
+			name = Depth_of_Field__simplified_
+			scefName = Depth_of_Field__simplified_
 			type = dof3
 			on = 1
 			strength = 1.0
@@ -330,11 +330,11 @@ dof_car_selecttorso_tod_manager = {
 		}
 	]
 }
-dof_car_sel_instr_tod_manager = {
+DOF_CAR_Sel_Instr_tod_manager = {
 	screen_fx = [
 		{
-			name = depth_of_field__simplified_
-			scefname = depth_of_field__simplified_
+			name = Depth_of_Field__simplified_
+			scefName = Depth_of_Field__simplified_
 			type = dof3
 			on = 1
 			strength = 0.75
@@ -344,11 +344,11 @@ dof_car_sel_instr_tod_manager = {
 		}
 	]
 }
-dof_car_sel_glasses_tod_manager = {
+DOF_CAR_Sel_Glasses_tod_manager = {
 	screen_fx = [
 		{
-			name = depth_of_field__simplified_
-			scefname = depth_of_field__simplified_
+			name = Depth_of_Field__simplified_
+			scefName = Depth_of_Field__simplified_
 			type = dof3
 			on = 1
 			strength = 1.0
@@ -358,11 +358,11 @@ dof_car_sel_glasses_tod_manager = {
 		}
 	]
 }
-dof_car_sel_micstand_tod_manager = {
+DOF_CAR_Sel_MicStand_tod_manager = {
 	screen_fx = [
 		{
-			name = depth_of_field__simplified_
-			scefname = depth_of_field__simplified_
+			name = Depth_of_Field__simplified_
+			scefName = Depth_of_Field__simplified_
 			type = dof3
 			on = 1
 			strength = 1.0
@@ -372,11 +372,11 @@ dof_car_sel_micstand_tod_manager = {
 		}
 	]
 }
-dof_car_sel_microphone_tod_manager = {
+DOF_CAR_Sel_Microphone_tod_manager = {
 	screen_fx = [
 		{
-			name = depth_of_field__simplified_
-			scefname = depth_of_field__simplified_
+			name = Depth_of_Field__simplified_
+			scefName = Depth_of_Field__simplified_
 			type = dof3
 			on = 1
 			strength = 1.0
@@ -386,11 +386,11 @@ dof_car_sel_microphone_tod_manager = {
 		}
 	]
 }
-dof_car_sel_guitar_tod_manager = {
+DOF_CAR_Sel_Guitar_tod_manager = {
 	screen_fx = [
 		{
-			name = depth_of_field__simplified_
-			scefname = depth_of_field__simplified_
+			name = Depth_of_Field__simplified_
+			scefName = Depth_of_Field__simplified_
 			type = dof3
 			on = 1
 			strength = 0.82
@@ -400,11 +400,11 @@ dof_car_sel_guitar_tod_manager = {
 		}
 	]
 }
-dof_car_sel_guitar_hardware_tod_manager = {
+DOF_CAR_Sel_Guitar_Hardware_tod_manager = {
 	screen_fx = [
 		{
-			name = depth_of_field__simplified_
-			scefname = depth_of_field__simplified_
+			name = Depth_of_Field__simplified_
+			scefName = Depth_of_Field__simplified_
 			type = dof3
 			on = 1
 			strength = 0.9
@@ -414,11 +414,11 @@ dof_car_sel_guitar_hardware_tod_manager = {
 		}
 	]
 }
-dof_car_sel_drums_tod_manager = {
+DOF_CAR_Sel_Drums_tod_manager = {
 	screen_fx = [
 		{
-			name = depth_of_field__simplified_
-			scefname = depth_of_field__simplified_
+			name = Depth_of_Field__simplified_
+			scefName = Depth_of_Field__simplified_
 			type = dof3
 			on = 1
 			strength = 0.5
@@ -428,11 +428,11 @@ dof_car_sel_drums_tod_manager = {
 		}
 	]
 }
-dof_car_sel_drumsticks_tod_manager = {
+DOF_CAR_sel_drumsticks_tod_manager = {
 	screen_fx = [
 		{
-			name = depth_of_field__simplified_
-			scefname = depth_of_field__simplified_
+			name = Depth_of_Field__simplified_
+			scefName = Depth_of_Field__simplified_
 			type = dof3
 			on = 1
 			strength = 1.0
@@ -442,11 +442,11 @@ dof_car_sel_drumsticks_tod_manager = {
 		}
 	]
 }
-dof_car_sel_tat_r_tod_manager = {
+DOF_CAR_Sel_Tat_R_tod_manager = {
 	screen_fx = [
 		{
-			name = depth_of_field__simplified_
-			scefname = depth_of_field__simplified_
+			name = Depth_of_Field__simplified_
+			scefName = Depth_of_Field__simplified_
 			type = dof3
 			on = 1
 			strength = 1.0
@@ -456,11 +456,11 @@ dof_car_sel_tat_r_tod_manager = {
 		}
 	]
 }
-dof_car_sel_tat_l_tod_manager = {
+DOF_CAR_Sel_Tat_L_tod_manager = {
 	screen_fx = [
 		{
-			name = depth_of_field__simplified_
-			scefname = depth_of_field__simplified_
+			name = Depth_of_Field__simplified_
+			scefName = Depth_of_Field__simplified_
 			type = dof3
 			on = 1
 			strength = 1.0
@@ -470,11 +470,11 @@ dof_car_sel_tat_l_tod_manager = {
 		}
 	]
 }
-dof_band_select_tod_manager = {
+DOF_Band_Select_tod_manager = {
 	screen_fx = [
 		{
-			name = depth_of_field__simplified_
-			scefname = depth_of_field__simplified_
+			name = Depth_of_Field__simplified_
+			scefName = Depth_of_Field__simplified_
 			type = dof3
 			on = 1
 			strength = 1.0
@@ -484,11 +484,11 @@ dof_band_select_tod_manager = {
 		}
 	]
 }
-gigroom_section01_tod_manager = {
+GigRoom_Section01_tod_manager = {
 	screen_fx = [
 		{
-			name = depth_of_field__simplified_
-			scefname = depth_of_field__simplified_
+			name = Depth_of_Field__simplified_
+			scefName = Depth_of_Field__simplified_
 			type = dof3
 			on = 1
 			strength = 0.7985
@@ -497,8 +497,8 @@ gigroom_section01_tod_manager = {
 			farblurend = 3.6599998
 		}
 		{
-			name = noise_lite
-			scefname = noise_lite
+			name = Noise_Lite
+			scefName = Noise_Lite
 			type = noise2
 			on = 1
 			intensity = 0.08
@@ -516,17 +516,17 @@ gigroom_section01_tod_manager = {
 			]
 		}
 		{
-			name = uberscreenfx
-			scefname = uberscreenfx
-			type = uberscreenfx
+			name = UberScreenFX
+			scefName = UberScreenFX
+			type = UberScreenFX
 		}
 	]
 }
-gigroom_section02_tod_manager = {
+GigRoom_Section02_tod_manager = {
 	screen_fx = [
 		{
-			name = depth_of_field__simplified_
-			scefname = depth_of_field__simplified_
+			name = Depth_of_Field__simplified_
+			scefName = Depth_of_Field__simplified_
 			type = dof3
 			on = 1
 			strength = 0.4945
@@ -535,8 +535,8 @@ gigroom_section02_tod_manager = {
 			farblurend = 5.13
 		}
 		{
-			name = noise_lite
-			scefname = noise_lite
+			name = Noise_Lite
+			scefName = Noise_Lite
 			type = noise2
 			on = 1
 			intensity = 0.08
@@ -554,17 +554,17 @@ gigroom_section02_tod_manager = {
 			]
 		}
 		{
-			name = uberscreenfx
-			scefname = uberscreenfx
-			type = uberscreenfx
+			name = UberScreenFX
+			scefName = UberScreenFX
+			type = UberScreenFX
 		}
 	]
 }
-gigroom_section03_tod_manager = {
+GigRoom_Section03_tod_manager = {
 	screen_fx = [
 		{
-			name = depth_of_field__simplified_
-			scefname = depth_of_field__simplified_
+			name = Depth_of_Field__simplified_
+			scefName = Depth_of_Field__simplified_
 			type = dof3
 			on = 1
 			strength = 0.6703
@@ -573,17 +573,17 @@ gigroom_section03_tod_manager = {
 			farblurend = 3.6599998
 		}
 		{
-			name = vignette
-			scefname = vignette
-			type = vignette
+			name = Vignette
+			scefName = Vignette
+			type = Vignette
 			on = 1
 			inner_radius = 0.674
 			outer_radius = 1.3188
 			alpha = 0.5128
 		}
 		{
-			name = noise_lite
-			scefname = noise_lite
+			name = Noise_Lite
+			scefName = Noise_Lite
 			type = noise2
 			on = 1
 			intensity = 0.08
@@ -601,17 +601,17 @@ gigroom_section03_tod_manager = {
 			]
 		}
 		{
-			name = uberscreenfx
-			scefname = uberscreenfx
-			type = uberscreenfx
+			name = UberScreenFX
+			scefName = UberScreenFX
+			type = UberScreenFX
 		}
 	]
 }
-gigroom_section04_tod_manager = {
+GigRoom_Section04_tod_manager = {
 	screen_fx = [
 		{
-			name = depth_of_field__simplified_
-			scefname = depth_of_field__simplified_
+			name = Depth_of_Field__simplified_
+			scefName = Depth_of_Field__simplified_
 			type = dof3
 			on = 1
 			strength = 0.5018
@@ -620,8 +620,8 @@ gigroom_section04_tod_manager = {
 			farblurend = 4.7599998
 		}
 		{
-			name = noise_lite
-			scefname = noise_lite
+			name = Noise_Lite
+			scefName = Noise_Lite
 			type = noise2
 			on = 1
 			intensity = 0.1
@@ -639,17 +639,17 @@ gigroom_section04_tod_manager = {
 			]
 		}
 		{
-			name = uberscreenfx
-			scefname = uberscreenfx
-			type = uberscreenfx
+			name = UberScreenFX
+			scefName = UberScreenFX
+			type = UberScreenFX
 		}
 	]
 }
-gigroom_section05_tod_manager = {
+GigRoom_Section05_tod_manager = {
 	screen_fx = [
 		{
-			name = depth_of_field__simplified_
-			scefname = depth_of_field__simplified_
+			name = Depth_of_Field__simplified_
+			scefName = Depth_of_Field__simplified_
 			type = dof3
 			on = 1
 			strength = 0.63740003
@@ -658,8 +658,8 @@ gigroom_section05_tod_manager = {
 			farblurend = 5.4900002
 		}
 		{
-			name = noise_lite
-			scefname = noise_lite
+			name = Noise_Lite
+			scefName = Noise_Lite
 			type = noise2
 			on = 1
 			intensity = 0.08
@@ -677,17 +677,17 @@ gigroom_section05_tod_manager = {
 			]
 		}
 		{
-			name = uberscreenfx
-			scefname = uberscreenfx
-			type = uberscreenfx
+			name = UberScreenFX
+			scefName = UberScreenFX
+			type = UberScreenFX
 		}
 	]
 }
-dof_car_photo_tod_manager = {
+DOF_CAR_Photo_tod_manager = {
 	screen_fx = [
 		{
-			name = depth_of_field__simplified_
-			scefname = depth_of_field__simplified_
+			name = Depth_of_Field__simplified_
+			scefName = Depth_of_Field__simplified_
 			type = dof3
 			on = 1
 			strength = 1.0
@@ -697,7 +697,7 @@ dof_car_photo_tod_manager = {
 		}
 		{
 			name = zoom_blur
-			scefname = zoom_blur
+			scefName = zoom_blur
 			type = blur
 			on = 1
 			amount = 0.75
@@ -721,8 +721,8 @@ dof_car_photo_tod_manager = {
 			]
 		}
 		{
-			name = brightness___saturation
-			scefname = brightness___saturation
+			name = Brightness___Saturation
+			scefName = Brightness___Saturation
 			type = bright_sat
 			on = 1
 			brightness = 0.85
@@ -740,8 +740,8 @@ dof_car_photo_tod_manager = {
 			blue_mix_b = 1.0
 		}
 		{
-			name = noise_lite
-			scefname = noise_lite
+			name = Noise_Lite
+			scefName = Noise_Lite
 			type = noise2
 			on = 1
 			intensity = 0.08
@@ -760,11 +760,11 @@ dof_car_photo_tod_manager = {
 		}
 	]
 }
-credits_mindof_tod_manager = {
+Credits_MinDOF_tod_manager = {
 	screen_fx = [
 		{
-			name = depth_of_field__simplified_
-			scefname = depth_of_field__simplified_
+			name = Depth_of_Field__simplified_
+			scefName = Depth_of_Field__simplified_
 			type = dof3
 			on = 1
 			strength = 0.69229996

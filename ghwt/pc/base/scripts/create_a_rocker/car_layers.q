@@ -10,1283 +10,1283 @@ global_layers_list = [
 car_basic_primitives_1 = [
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_001.dds'
-		frontend_desc = qs(0xd4484296)
+		frontend_desc = qs("\LRight Round")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_002.dds'
-		frontend_desc = qs(0x0bd4517c)
+		frontend_desc = qs("\LZenith Twinkler")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_003.dds'
-		frontend_desc = qs(0x050b6068)
+		frontend_desc = qs("\LTil Dusk")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_004.dds'
-		frontend_desc = qs(0x903ff64c)
+		frontend_desc = qs("\LSlit")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_005.dds'
-		frontend_desc = qs(0x920b5405)
+		frontend_desc = qs("\L90 Degrees")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_006.dds'
-		frontend_desc = qs(0x39f13d82)
+		frontend_desc = qs("\LWhat A Square!")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_007.dds'
-		frontend_desc = qs(0xe5c8b2db)
+		frontend_desc = qs("\LSo Smooth")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_008.dds'
-		frontend_desc = qs(0x258d39bb)
+		frontend_desc = qs("\LCuttin' Corners")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_009.dds'
-		frontend_desc = qs(0x71d86402)
+		frontend_desc = qs("\LTrapezoid")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_010.dds'
-		frontend_desc = qs(0x44601fbc)
+		frontend_desc = qs("\L3 Points")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_011.dds'
-		frontend_desc = qs(0x4075f176)
+		frontend_desc = qs("\LEquilateral")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_012.dds'
-		frontend_desc = qs(0x487505ee)
+		frontend_desc = qs("\LHave A Slice")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_013.dds'
-		frontend_desc = qs(0xf23a481c)
+		frontend_desc = qs("\LRight Side Up")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_014.dds'
-		frontend_desc = qs(0x9e2a7c6d)
+		frontend_desc = qs("\LPendulum")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_015.dds'
-		frontend_desc = qs(0xa5a129c9)
+		frontend_desc = qs("\LFakie")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_016.dds'
-		frontend_desc = qs(0xda642811)
+		frontend_desc = qs("\LTear Drop")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_017.dds'
-		frontend_desc = qs(0x4878bd9e)
+		frontend_desc = qs("\LHard Boiled")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_018.dds'
-		frontend_desc = qs(0xf95a83e4)
+		frontend_desc = qs("\LWhat Do You See?")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_019.dds'
-		frontend_desc = qs(0x3ddca3d9)
+		frontend_desc = qs("\LJust A Smidge")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_020.dds'
-		frontend_desc = qs(0x6a12b8a5)
+		frontend_desc = qs("\LWe're Home")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_021.dds'
-		frontend_desc = qs(0x41b0fe25)
+		frontend_desc = qs("\LSwallow Tail")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_022.dds'
-		frontend_desc = qs(0xf36473dd)
+		frontend_desc = qs("\LGirl's Best Friend")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_023.dds'
-		frontend_desc = qs(0xf3b90a86)
+		frontend_desc = qs("\LWide Eye")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_024.dds'
-		frontend_desc = qs(0x7a739518)
+		frontend_desc = qs("\LWarbled")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_025.dds'
-		frontend_desc = qs(0x14c0d9fc)
+		frontend_desc = qs("\LTwinkle")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_026.dds'
-		frontend_desc = qs(0xee9e77b9)
+		frontend_desc = qs("\LStarfish")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_027.dds'
-		frontend_desc = qs(0xabe369d4)
+		frontend_desc = qs("\LCounty Sheriff")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_028.dds'
-		frontend_desc = qs(0xc8d30560)
+		frontend_desc = qs("\LOctogram")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_029.dds'
-		frontend_desc = qs(0x3e2ea02b)
+		frontend_desc = qs("\LBam! Pow!")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_030.dds'
-		frontend_desc = qs(0x0a274dc4)
+		frontend_desc = qs("\LAtomic Flower")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_031.dds'
-		frontend_desc = qs(0x5bbb80e2)
+		frontend_desc = qs("\LPlus One")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_032.dds'
-		frontend_desc = qs(0x499f2713)
+		frontend_desc = qs("\LSmile")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_033.dds'
-		frontend_desc = qs(0x99d3fd55)
+		frontend_desc = qs("\LDoing Laps")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_034.dds'
-		frontend_desc = qs(0xdd310528)
+		frontend_desc = qs("\LSweeping Heart")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_035.dds'
-		frontend_desc = qs(0x026a7e18)
+		frontend_desc = qs("\LCrush")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_036.dds'
-		frontend_desc = qs(0xf4ac5669)
+		frontend_desc = qs("\LShields Up")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_037.dds'
-		frontend_desc = qs(0xb2c51568)
+		frontend_desc = qs("\LWebbed")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_038.dds'
-		frontend_desc = qs(0x2f6b49fa)
+		frontend_desc = qs("\LHexagon")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_039.dds'
-		frontend_desc = qs(0x22b60aa1)
+		frontend_desc = qs("\LMount Up")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_040.dds'
-		frontend_desc = qs(0xc9cda434)
+		frontend_desc = qs("\LSpokes")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_041.dds'
-		frontend_desc = qs(0x7a398828)
+		frontend_desc = qs("\LBOOMerang")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_042.dds'
-		frontend_desc = qs(0x67994ed0)
+		frontend_desc = qs("\LCrescent")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_043.dds'
-		frontend_desc = qs(0x4a709801)
+		frontend_desc = qs("\LWhispy")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_044.dds'
-		frontend_desc = qs(0x57be8172)
+		frontend_desc = qs("\LYin")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_045.dds'
-		frontend_desc = qs(0x9463ecd1)
+		frontend_desc = qs("\LSliver")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_046.dds'
-		frontend_desc = qs(0x36294919)
+		frontend_desc = qs("\LSwooshy")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_047.dds'
-		frontend_desc = qs(0x394ac566)
+		frontend_desc = qs("\LSlithery")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_048.dds'
-		frontend_desc = qs(0x3acefcc4)
+		frontend_desc = qs("\LGrin And Bear It")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_049.dds'
-		frontend_desc = qs(0x7cf4bc9a)
+		frontend_desc = qs("\LSine Curve")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_050.dds'
-		frontend_desc = qs(0x06478edd)
+		frontend_desc = qs("\LNot So Tubular")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_051.dds'
-		frontend_desc = qs(0xcb26fd1a)
+		frontend_desc = qs("\LTubular")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_052.dds'
-		frontend_desc = qs(0x4bb026ce)
+		frontend_desc = qs("\LTri Curve")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_053.dds'
-		frontend_desc = qs(0xb67ba22d)
+		frontend_desc = qs("\LNot Quite Venn")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_054.dds'
-		frontend_desc = qs(0x5e1408aa)
+		frontend_desc = qs("\LClover")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_055.dds'
-		frontend_desc = qs(0x3472382b)
+		frontend_desc = qs("\LAce")
 		clamp_uv
 	}
 ]
 car_basic_primitives_2 = [
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShapeOutline_001.dds'
-		frontend_desc = qs(0x8a0bc2e1)
+		frontend_desc = qs("\LProtractor")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShapeOutline_002.dds'
-		frontend_desc = qs(0x76108d85)
+		frontend_desc = qs("\LCircle Inside")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShapeOutline_003.dds'
-		frontend_desc = qs(0x0c00ed2a)
+		frontend_desc = qs("\LSlits")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShapeOutline_004.dds'
-		frontend_desc = qs(0xb69d1be1)
+		frontend_desc = qs("\LCroc Tears")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShapeOutline_005.dds'
-		frontend_desc = qs(0xed01e1bc)
+		frontend_desc = qs("\LEgg Shell")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShapeOutline_006.dds'
-		frontend_desc = qs(0xce10e38d)
+		frontend_desc = qs("\LInk Blot")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShapeOutline_007.dds'
-		frontend_desc = qs(0x3cf5f431)
+		frontend_desc = qs("\LCrusty Bread")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShapeOutline_008.dds'
-		frontend_desc = qs(0x6380d2fa)
+		frontend_desc = qs("\LTri-Ruler")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShapeOutline_009.dds'
-		frontend_desc = qs(0x55156004)
+		frontend_desc = qs("\LAre Forever")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShapeOutline_010.dds'
-		frontend_desc = qs(0xb3fa182f)
+		frontend_desc = qs("\LGum Drop")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShapeOutline_011.dds'
-		frontend_desc = qs(0xfe048df0)
+		frontend_desc = qs("\LDelta")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShapeOutline_012.dds'
-		frontend_desc = qs(0x569468b4)
+		frontend_desc = qs("\LMmm Pie")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShapeOutline_013.dds'
-		frontend_desc = qs(0x3cdba0f9)
+		frontend_desc = qs("\LSwing")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShapeOutline_014.dds'
-		frontend_desc = qs(0xd48474b5)
+		frontend_desc = qs("\LRubber Band")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShapeOutline_015.dds'
-		frontend_desc = qs(0x8078ad2b)
+		frontend_desc = qs("\LBeat As One")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShapeOutline_016.dds'
-		frontend_desc = qs(0x37393587)
+		frontend_desc = qs("\LCoat Of Arms")
 		clamp_uv
 	}
 ]
 car_gradiant_shapes = [
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShapeGradient_001.dds'
-		frontend_desc = qs(0x890736ed)
+		frontend_desc = qs("\LNice Dissolve")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShapeGradient_002.dds'
-		frontend_desc = qs(0x60ac5a70)
+		frontend_desc = qs("\LRing Around")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShapeGradient_003.dds'
-		frontend_desc = qs(0x54d69b27)
+		frontend_desc = qs("\LStar Fade")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShapeGradient_004.dds'
-		frontend_desc = qs(0xee05195b)
+		frontend_desc = qs("\LWittle Bit")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShapeGradient_005.dds'
-		frontend_desc = qs(0x2f09222a)
+		frontend_desc = qs("\LHalf Full")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShapeGradient_006.dds'
-		frontend_desc = qs(0x86283a66)
+		frontend_desc = qs("\LInner Circle")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShapeGradient_007.dds'
-		frontend_desc = qs(0x6de4a5a9)
+		frontend_desc = qs("\LEclipse")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShapeGradient_008.dds'
-		frontend_desc = qs(0x0073f48e)
+		frontend_desc = qs("\LShader")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShapeGradient_009.dds'
-		frontend_desc = qs(0xc92a82af)
+		frontend_desc = qs("\LFade In")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShapeGradient_010.dds'
-		frontend_desc = qs(0xc41afe1b)
+		frontend_desc = qs("\LHeart Burn")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShapeGradient_011.dds'
-		frontend_desc = qs(0xd190fe5a)
+		frontend_desc = qs("\LFull Of Love")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShapeGradient_012.dds'
-		frontend_desc = qs(0x6c264858)
+		frontend_desc = qs("\LFading Fast")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShapeGradient_013.dds'
-		frontend_desc = qs(0x940f0958)
+		frontend_desc = qs("\LAmour")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShapeGradient_014.dds'
-		frontend_desc = qs(0x7a510e85)
+		frontend_desc = qs("\LShrinking Moon")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShapeGradient_015.dds'
-		frontend_desc = qs(0x79d3285e)
+		frontend_desc = qs("\LBlink")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShapeGradient_016.dds'
-		frontend_desc = qs(0x082fa127)
+		frontend_desc = qs("\LBurnt Out")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShapeGradient_017.dds'
-		frontend_desc = qs(0x3887f054)
+		frontend_desc = qs("\LLittle Odd")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShapeGradient_018.dds'
-		frontend_desc = qs(0xc1998605)
+		frontend_desc = qs("\LImperfect")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShapeGradient_019.dds'
-		frontend_desc = qs(0x3d7aed40)
+		frontend_desc = qs("\LPrincess Cut")
 		clamp_uv
 	}
 ]
 car_graphics = [
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_graphics_zombieface.dds'
-		frontend_desc = qs(0x11258ffe)
+		frontend_desc = qs("\LZombie Face")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_graphics_spiral.dds'
-		frontend_desc = qs(0x69436729)
+		frontend_desc = qs("\LSpiral")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_graphics_punkskull.dds'
-		frontend_desc = qs(0xd83d1ce9)
+		frontend_desc = qs("\LPunk skull")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_graphics005.dds'
-		frontend_desc = qs(0x032e1bb9)
+		frontend_desc = qs("\LSasparilla")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_graphics006.dds'
-		frontend_desc = qs(0xca532767)
+		frontend_desc = qs("\LDrum Salute")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_graphics007.dds'
-		frontend_desc = qs(0x41598071)
+		frontend_desc = qs("\LYang")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_graphics008.dds'
-		frontend_desc = qs(0xb47ffedb)
+		frontend_desc = qs("\LImperial Cloud")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_graphics009.dds'
-		frontend_desc = qs(0x392dd4e3)
+		frontend_desc = qs("\LIce Flame Drums")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_graphics010.dds'
-		frontend_desc = qs(0xb4e303ce)
+		frontend_desc = qs("\LAlways Double Down")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_graphics011.dds'
-		frontend_desc = qs(0xabb31b33)
+		frontend_desc = qs("\LDragon Skull")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_graphics012.dds'
-		frontend_desc = qs(0x10b92e09)
+		frontend_desc = qs("\LThe Sweet Twin")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_graphics013.dds'
-		frontend_desc = qs(0x875ac294)
+		frontend_desc = qs("\LNice Accoustic")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_graphics014.dds'
-		frontend_desc = qs(0x9fb2de70)
+		frontend_desc = qs("\LSink It")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_graphics015.dds'
-		frontend_desc = qs(0xc8fbdc25)
+		frontend_desc = qs("\LScytheosis")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_graphics016.dds'
-		frontend_desc = qs(0x8cf302e9)
+		frontend_desc = qs("\LUnhappy Cloud")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_graphics017.dds'
-		frontend_desc = qs(0x88877049)
+		frontend_desc = qs("\LKenney Cocktail")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_graphics018.dds'
-		frontend_desc = qs(0xf74ffe9f)
+		frontend_desc = qs("\LMolotov Maniac")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_graphics019.dds'
-		frontend_desc = qs(0x1eda2145)
+		frontend_desc = qs("\LWhy Snakes?")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_graphics020.dds'
-		frontend_desc = qs(0x880a0619)
+		frontend_desc = qs("\LWith This Sword")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_graphics021.dds'
-		frontend_desc = qs(0xd8e77cb6)
+		frontend_desc = qs("\LLotta Muscle")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_graphics022.dds'
-		frontend_desc = qs(0x79f268c7)
+		frontend_desc = qs("\LP.A.")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_graphics023.dds'
-		frontend_desc = qs(0xd015e70a)
+		frontend_desc = qs("\LEven More Muscle")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_graphics024.dds'
-		frontend_desc = qs(0x6af4a16e)
+		frontend_desc = qs("\LSo Free")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_graphics025.dds'
-		frontend_desc = qs(0x3486e8d5)
+		frontend_desc = qs("\LCaution: Sharp")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_graphics026.dds'
-		frontend_desc = qs(0xb6e46d13)
+		frontend_desc = qs("\LVocal Hellion")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_graphics027.dds'
-		frontend_desc = qs(0x21693842)
+		frontend_desc = qs("\LHit The High Note")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_graphics029.dds'
-		frontend_desc = qs(0xe440e577)
+		frontend_desc = qs("\LWhole Lotta Shred")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_graphics030.dds'
-		frontend_desc = qs(0x2ec2c0ec)
+		frontend_desc = qs("\LCelestial Shredder")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_graphics031.dds'
-		frontend_desc = qs(0x842a555a)
+		frontend_desc = qs("\LTouche")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_graphics032.dds'
-		frontend_desc = qs(0xa89f9d61)
+		frontend_desc = qs("\LArms Of Rock")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_graphics033.dds'
-		frontend_desc = qs(0x9eccd690)
+		frontend_desc = qs("\LFor The Win")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_graphics034.dds'
-		frontend_desc = qs(0x0dd37bf3)
+		frontend_desc = qs("\LHorror Monkey")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_graphics035.dds'
-		frontend_desc = qs(0x93bb8665)
+		frontend_desc = qs("\LLong In The Teeth")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_graphics036.dds'
-		frontend_desc = qs(0xefbb5d64)
+		frontend_desc = qs("\LSweet Spikes")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_graphics037.dds'
-		frontend_desc = qs(0x8b528ce9)
+		frontend_desc = qs("\LFor Pinks")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_graphics038.dds'
-		frontend_desc = qs(0x10de8440)
+		frontend_desc = qs("\LGlamour Skull")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_graphics039.dds'
-		frontend_desc = qs(0xc698df84)
+		frontend_desc = qs("\LSneaky Jester")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_graphics040.dds'
-		frontend_desc = qs(0x1aee530e)
+		frontend_desc = qs("\LRed In The Face")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_graphics041.dds'
-		frontend_desc = qs(0xa040c82a)
+		frontend_desc = qs("\LHard Knocks Skull")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_graphics042.dds'
-		frontend_desc = qs(0xef215b5b)
+		frontend_desc = qs("\LSkull Fella")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_graphics043.dds'
-		frontend_desc = qs(0x78659c17)
+		frontend_desc = qs("\LSkull Vicious")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_graphics044.dds'
-		frontend_desc = qs(0xf59b1de0)
+		frontend_desc = qs("\LWarped LP")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_graphics045.dds'
-		frontend_desc = qs(0x7dbb6fbd)
+		frontend_desc = qs("\LTeal Devil")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_graphics046.dds'
-		frontend_desc = qs(0xdf9705e0)
+		frontend_desc = qs("\LInflammatory")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_graphics047.dds'
-		frontend_desc = qs(0x46d01337)
+		frontend_desc = qs("\LCalavera Rose")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_graphics049.dds'
-		frontend_desc = qs(0xbc23b5bb)
+		frontend_desc = qs("\LSweetheart")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_graphics050.dds'
-		frontend_desc = qs(0xb7b771b9)
+		frontend_desc = qs("\LCrushed")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_graphics051.dds'
-		frontend_desc = qs(0xbb1e7006)
+		frontend_desc = qs("\LOn The Prowl")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_graphics052.dds'
-		frontend_desc = qs(0x9997928e)
+		frontend_desc = qs("\LKat-ostrophy")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_graphics053.dds'
-		frontend_desc = qs(0x187e1156)
+		frontend_desc = qs("\LRock It")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_graphics055.dds'
-		frontend_desc = qs(0xaa421645)
+		frontend_desc = qs("\LAnton")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_graphics056.dds'
-		frontend_desc = qs(0xd01282a0)
+		frontend_desc = qs("\LSinuous Violet")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_graphics057.dds'
-		frontend_desc = qs(0xa485c22b)
+		frontend_desc = qs("\LEwww!")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_graphics058.dds'
-		frontend_desc = qs(0x8a2d066d)
+		frontend_desc = qs("\LNo More Sparrow")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_graphics059.dds'
-		frontend_desc = qs(0x3e44fa47)
+		frontend_desc = qs("\LChicky Chicky Punk")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_graphics060.dds'
-		frontend_desc = qs(0xd42a1f2f)
+		frontend_desc = qs("\LGecko Of Me")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_graphics061.dds'
-		frontend_desc = qs(0xf350211b)
+		frontend_desc = qs("\LBoaris")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_graphics062.dds'
-		frontend_desc = qs(0x678c4068)
+		frontend_desc = qs("\LCrowley")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_graphics063.dds'
-		frontend_desc = qs(0x62797892)
+		frontend_desc = qs("\LShady Elk")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_graphics064.dds'
-		frontend_desc = qs(0x5d0a2bb2)
+		frontend_desc = qs("\LGlory Banner")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_graphics065.dds'
-		frontend_desc = qs(0x6e40c155)
+		frontend_desc = qs("\LDramedy")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_graphics066.dds'
-		frontend_desc = qs(0xf935b897)
+		frontend_desc = qs("\LHexapus Hal")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_graphics067.dds'
-		frontend_desc = qs(0x40179a3a)
+		frontend_desc = qs("\LScrawny")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_graphics069.dds'
-		frontend_desc = qs(0x9952ad74)
+		frontend_desc = qs("\LOmniscient")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_graphics070.dds'
-		frontend_desc = qs(0xa677cb4d)
+		frontend_desc = qs("\LCHARming")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_graphics071.dds'
-		frontend_desc = qs(0x26b23721)
+		frontend_desc = qs("\LHorns Up")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_graphics072.dds'
-		frontend_desc = qs(0x0b297582)
+		frontend_desc = qs("\LAt Port")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_graphics074.dds'
-		frontend_desc = qs(0xe594e805)
+		frontend_desc = qs("\LWhat Up Sucka")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_graphics075.dds'
-		frontend_desc = qs(0x8c349b5e)
+		frontend_desc = qs("\LGums")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_graphics076.dds'
-		frontend_desc = qs(0x0cbac084)
+		frontend_desc = qs("\LAnne Gelika")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_graphics077.dds'
-		frontend_desc = qs(0x26f7e1ae)
+		frontend_desc = qs("\LLady Lisafer")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_graphics078.dds'
-		frontend_desc = qs(0x3fb15b91)
+		frontend_desc = qs("\LGone Surfin'")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_graphics079.dds'
-		frontend_desc = qs(0x0666929b)
+		frontend_desc = qs("\LWoof At The Moon")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_graphics080.dds'
-		frontend_desc = qs(0xef6ec56b)
+		frontend_desc = qs("\LIt's A Wrap")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_graphics081.dds'
-		frontend_desc = qs(0x4668a6de)
+		frontend_desc = qs("\LVlad You Asked")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_graphics082.dds'
-		frontend_desc = qs(0xb3e631c1)
+		frontend_desc = qs("\LAt The Wheel")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_graphics083.dds'
-		frontend_desc = qs(0xefebb9cf)
+		frontend_desc = qs("\LLike A Pearl")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_graphics084.dds'
-		frontend_desc = qs(0xaf5b14c9)
+		frontend_desc = qs("\LSmirking Toad")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_graphics085.dds'
-		frontend_desc = qs(0x71a53b75)
+		frontend_desc = qs("\LIguana Nap")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_graphics086.dds'
-		frontend_desc = qs(0xf0312f63)
+		frontend_desc = qs("\LFlaming 8")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_graphics087.dds'
-		frontend_desc = qs(0xb050410d)
+		frontend_desc = qs("\LBat Outta Hades")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_graphics088.dds'
-		frontend_desc = qs(0xa33e9635)
+		frontend_desc = qs("\LProfessor Bizarro")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_graphics089.dds'
-		frontend_desc = qs(0x0da69242)
+		frontend_desc = qs("\LCorny Lick")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_graphics090.dds'
-		frontend_desc = qs(0xd8fbf104)
+		frontend_desc = qs("\LHeraldry")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_graphics091.dds'
-		frontend_desc = qs(0x9bf250fb)
+		frontend_desc = qs("\LMetaloctopus")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_graphics092.dds'
-		frontend_desc = qs(0xf75b92ce)
+		frontend_desc = qs("\LCoffin Bloom")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_graphics093.dds'
-		frontend_desc = qs(0xda4a2d4f)
+		frontend_desc = qs("\LWink Wink")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_graphics094.dds'
-		frontend_desc = qs(0x47779b62)
+		frontend_desc = qs("\LPepe")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_graphics095.dds'
-		frontend_desc = qs(0xae818fc4)
+		frontend_desc = qs("\LBone Dancin'")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_graphics096.dds'
-		frontend_desc = qs(0xfd81684d)
+		frontend_desc = qs("\LCome Slither Eyes")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_graphics097.dds'
-		frontend_desc = qs(0xebf88b5b)
+		frontend_desc = qs("\LS. Kull")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_graphics098.dds'
-		frontend_desc = qs(0x8c0a6346)
+		frontend_desc = qs("\LMad Mask")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_graphics099.dds'
-		frontend_desc = qs(0x2fb6e6eb)
+		frontend_desc = qs("\LFrankie")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_graphics100.dds'
-		frontend_desc = qs(0x73cf2780)
+		frontend_desc = qs("\LLatrodectus")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_graphics101.dds'
-		frontend_desc = qs(0x22fa9b55)
+		frontend_desc = qs("\LAnother Skull")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_graphics102.dds'
-		frontend_desc = qs(0x16383c42)
+		frontend_desc = qs("\LOuch")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_graphics103.dds'
-		frontend_desc = qs(0x0ce2207f)
+		frontend_desc = qs("\LTasty Fishy")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_graphics104.dds'
-		frontend_desc = qs(0x0b2e5359)
+		frontend_desc = qs("\LMy First Tattoo")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_graphics105.dds'
-		frontend_desc = qs(0xf99e53eb)
+		frontend_desc = qs("\LMaternal Love")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_graphics107.dds'
-		frontend_desc = qs(0x1bca9072)
+		frontend_desc = qs("\LJackson")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_graphics109.dds'
-		frontend_desc = qs(0x6760038b)
+		frontend_desc = qs("\LB-Rat")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_graphics110.dds'
-		frontend_desc = qs(0x1152c2f6)
+		frontend_desc = qs("\LTiki Devil")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_icons054.dds'
-		frontend_desc = qs(0x1d5b4f41)
+		frontend_desc = qs("\LStone Shy")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_icons055.dds'
-		frontend_desc = qs(0x47b91df0)
+		frontend_desc = qs("\LNautical Star")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_icons056.dds'
-		frontend_desc = qs(0xd9e4e1eb)
+		frontend_desc = qs("\LAaaahhh!")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_graphics_nativetat001.dds'
-		frontend_desc = qs(0xab3bcd82)
+		frontend_desc = qs("\LEagle Tat")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_graphics_nativetat002.dds'
-		frontend_desc = qs(0x3c8a687d)
+		frontend_desc = qs("\LOrca Tat")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_graphics_nativetat003.dds'
-		frontend_desc = qs(0x3b49c788)
+		frontend_desc = qs("\LToothy Grin")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_graphics_nativetat004.dds'
-		frontend_desc = qs(0x305cd10e)
+		frontend_desc = qs("\LTurtle Tat")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_graphics_nativetat005.dds'
-		frontend_desc = qs(0x906fb804)
+		frontend_desc = qs("\LOgie San")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_banners001.dds'
-		frontend_desc = qs(0x87e0c6ca)
+		frontend_desc = qs("\L100 Percent")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_banners002.dds'
-		frontend_desc = qs(0xf3a36516)
+		frontend_desc = qs("\LDog Collar")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_banners003.dds'
-		frontend_desc = qs(0xa134d91c)
+		frontend_desc = qs("\LDouble Swoop")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_banners004.dds'
-		frontend_desc = qs(0xa8cbb852)
+		frontend_desc = qs("\LTick Ticker")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_banners005.dds'
-		frontend_desc = qs(0xf641bb9a)
+		frontend_desc = qs("\LLocked In")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_banners006.dds'
-		frontend_desc = qs(0xc637a74c)
+		frontend_desc = qs("\LCorktwist")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_banners007.dds'
-		frontend_desc = qs(0xd32c49be)
+		frontend_desc = qs("\LRibbon Dancer")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_banners008.dds'
-		frontend_desc = qs(0x2eef1567)
+		frontend_desc = qs("\LFirst Class")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_banners009.dds'
-		frontend_desc = qs(0x97ec5a4a)
+		frontend_desc = qs("\LTaped Off")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_banners010.dds'
-		frontend_desc = qs(0xbbba7145)
+		frontend_desc = qs("\LTorn Off")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_elemental001.dds'
-		frontend_desc = qs(0x7d0c8b67)
+		frontend_desc = qs("\LHottastic")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_elemental002.dds'
-		frontend_desc = qs(0xf4cf610a)
+		frontend_desc = qs("\LBubbling Skulls")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_elemental003.dds'
-		frontend_desc = qs(0x13bf735c)
+		frontend_desc = qs("\LSizzle Cheeks")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_elemental004.dds'
-		frontend_desc = qs(0xfd200d84)
+		frontend_desc = qs("\LQuite Picante")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_elemental005.dds'
-		frontend_desc = qs(0xae85a068)
+		frontend_desc = qs("\LBolted Down")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_elemental006.dds'
-		frontend_desc = qs(0x83e2d9db)
+		frontend_desc = qs("\LAye, Caliente!")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_elemental007.dds'
-		frontend_desc = qs(0xc75736e6)
+		frontend_desc = qs("\LBlistering")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_Icon032.dds'
-		frontend_desc = qs(0x3d6a656c)
+		frontend_desc = qs("\LShocking")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_Icon035.dds'
-		frontend_desc = qs(0xafdc5919)
+		frontend_desc = qs("\LRockin' On Out")
 		clamp_uv
 	}
 ]
 car_plants = [
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_Icon_Creature001.dds'
-		frontend_desc = qs(0xfc85c5b5)
+		frontend_desc = qs("\LRemoved this section")
 		clamp_uv
 	}
 ]
 car_living_shapes = [
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_Icon_Creature001.dds'
-		frontend_desc = qs(0x17c0b5fd)
+		frontend_desc = qs("\LWingless")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_Icon_Creature002.dds'
-		frontend_desc = qs(0xc140ccc0)
+		frontend_desc = qs("\LBasilisk")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_Icon_Creature003.dds'
-		frontend_desc = qs(0x696f4fbd)
+		frontend_desc = qs("\LAgamidae")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_Icon_Creature004.dds'
-		frontend_desc = qs(0x1b9ff18d)
+		frontend_desc = qs("\LCorvus")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_Icon_Creature005.dds'
-		frontend_desc = qs(0x00f15c69)
+		frontend_desc = qs("\LCarpio Carpio")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_Icon_Creature006.dds'
-		frontend_desc = qs(0x9ee23a5d)
+		frontend_desc = qs("\LSanke")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_Icon_Creature007.dds'
-		frontend_desc = qs(0xaecfaf1c)
+		frontend_desc = qs("\LAries")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_Icon_Insect001.dds'
-		frontend_desc = qs(0xf6a51c89)
+		frontend_desc = qs("\LLong Legs")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_Icon_Insect002.dds'
-		frontend_desc = qs(0xabe08940)
+		frontend_desc = qs("\LDynastes")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_Icon_Insect003.dds'
-		frontend_desc = qs(0xedaaff0d)
+		frontend_desc = qs("\LColeoptera")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_Icon_Mammal001.dds'
-		frontend_desc = qs(0x75a2bed3)
+		frontend_desc = qs("\LChiroptera")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_Icon_Mammal002.dds'
-		frontend_desc = qs(0x245820fd)
+		frontend_desc = qs("\LDolfinus")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_Icon_Wing001.dds'
-		frontend_desc = qs(0x9a650d21)
+		frontend_desc = qs("\LAir Boss")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_Icon_Wing002.dds'
-		frontend_desc = qs(0x20612318)
+		frontend_desc = qs("\LAilerons")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_Icon_Wing003.dds'
-		frontend_desc = qs(0x33eab123)
+		frontend_desc = qs("\LPhalanges")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_Icon_Wing004.dds'
-		frontend_desc = qs(0x36c521ef)
+		frontend_desc = qs("\LSpoilers")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_Icon_Wing005.dds'
-		frontend_desc = qs(0x6669d8c7)
+		frontend_desc = qs("\LLucky Feather")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_Icon_Wing006.dds'
-		frontend_desc = qs(0xb561ddf7)
+		frontend_desc = qs("\LPlumage")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_Icon_Wing007.dds'
-		frontend_desc = qs(0x6732e935)
+		frontend_desc = qs("\LGilded")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_Icon_Wing008.dds'
-		frontend_desc = qs(0xc99bf250)
+		frontend_desc = qs("\LDihedral")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_Icon_Wing009.dds'
-		frontend_desc = qs(0xd60f8586)
+		frontend_desc = qs("\LAnhedral")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_plant_001.dds'
-		frontend_desc = qs(0xea5f916a)
+		frontend_desc = qs("\LLucky")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_plant_002.dds'
-		frontend_desc = qs(0xea8493e8)
+		frontend_desc = qs("\LGoodwill")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_plant_003.dds'
-		frontend_desc = qs(0x054d3f07)
+		frontend_desc = qs("\LSunny Flower")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_Icon_Veggie001.dds'
-		frontend_desc = qs(0x1ae4f401)
+		frontend_desc = qs("\LFun Guy")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_Icon_Veggie002.dds'
-		frontend_desc = qs(0xef63fb2f)
+		frontend_desc = qs("\LStalky Carrot")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_Icon_Veggie003.dds'
-		frontend_desc = qs(0x89a89108)
+		frontend_desc = qs("\LOniony")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_Icon_Veggie004.dds'
-		frontend_desc = qs(0x3c6eaa17)
+		frontend_desc = qs("\LFrom The Core")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_Icon_Veggie005.dds'
-		frontend_desc = qs(0x1d8ffd73)
+		frontend_desc = qs("\LAway, Doctor!")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_Icon_Veggie006.dds'
-		frontend_desc = qs(0x090d3c06)
+		frontend_desc = qs("\LSakura")
 		clamp_uv
 	}
 ]
 car_banners = [
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_Icon_Creature001.dds'
-		frontend_desc = qs(0xb4e197f5)
+		frontend_desc = qs("\LRemoved this section1")
 		clamp_uv
 	}
 ]
 car_elemental = [
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_Icon_Creature001.dds'
-		frontend_desc = qs(0x9fccc436)
+		frontend_desc = qs("\LRemoved this section2")
 		clamp_uv
 	}
 ]
 car_sponsors = [
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_sponsors_Amoeba_01.dds'
-		frontend_desc = qs(0xa0a61b39)
+		frontend_desc = qs("\LAMOEBA")
 		clamp_uv
 		no_color
 		no_alpha
@@ -1298,7 +1298,7 @@ car_sponsors = [
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_sponsors_famous_02.dds'
-		frontend_desc = qs(0x025e48cd)
+		frontend_desc = qs("\LFAMOUS 01")
 		clamp_uv
 		no_color
 		no_alpha
@@ -1310,7 +1310,7 @@ car_sponsors = [
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_sponsors_famous_01.dds'
-		frontend_desc = qs(0x29731b0e)
+		frontend_desc = qs("\LFAMOUS 02")
 		clamp_uv
 		no_color
 		no_alpha
@@ -1322,7 +1322,7 @@ car_sponsors = [
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_sponsors_KFC_01.dds'
-		frontend_desc = qs(0xc1dbc765)
+		frontend_desc = qs("\LKFC")
 		clamp_uv
 		no_color
 		no_alpha
@@ -1334,7 +1334,7 @@ car_sponsors = [
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_sponsors_Sabian_01.dds'
-		frontend_desc = qs(0x2353ee5f)
+		frontend_desc = qs("\LSABIAN")
 		clamp_uv
 		no_color
 		no_alpha
@@ -1346,7 +1346,7 @@ car_sponsors = [
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_sponsors_EMG_01.dds'
-		frontend_desc = qs(0x48bce410)
+		frontend_desc = qs("\LEMG")
 		clamp_uv
 		no_color
 		no_alpha
@@ -1358,7 +1358,7 @@ car_sponsors = [
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_sponsors_AT_01.dds'
-		frontend_desc = qs(0x1bb8dc8f)
+		frontend_desc = qs("\LAudio-Technica")
 		clamp_uv
 		no_color
 		no_alpha
@@ -1370,7 +1370,7 @@ car_sponsors = [
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_sponsors_coke_01.dds'
-		frontend_desc = qs(0x7aad20f2)
+		frontend_desc = qs("\LCoca-Cola")
 		clamp_uv
 		no_color
 		no_alpha
@@ -1382,7 +1382,7 @@ car_sponsors = [
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_sponsors_evans_01.dds'
-		frontend_desc = qs(0xd350e80c)
+		frontend_desc = qs("\LEVANS")
 		clamp_uv
 		no_color
 		no_alpha
@@ -1394,7 +1394,7 @@ car_sponsors = [
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_sponsors_GCaxesmith_01.dds'
-		frontend_desc = qs(0xafc1c6ea)
+		frontend_desc = qs("\LGuitar Center")
 		clamp_uv
 		no_color
 		no_alpha
@@ -1406,7 +1406,7 @@ car_sponsors = [
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_sponsors_hob_01.dds'
-		frontend_desc = qs(0xc85e108b)
+		frontend_desc = qs("\LHOUSE OF BLUES")
 		clamp_uv
 		no_color
 		no_alpha
@@ -1418,7 +1418,7 @@ car_sponsors = [
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_sponsors_KFC_02.dds'
-		frontend_desc = qs(0x48d3da18)
+		frontend_desc = qs("\LKFC Gothic")
 		clamp_uv
 		no_color
 		no_alpha
@@ -1430,7 +1430,7 @@ car_sponsors = [
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_sponsors_line6_01.dds'
-		frontend_desc = qs(0x0a196a8a)
+		frontend_desc = qs("\LLINE 6")
 		clamp_uv
 		no_color
 		no_alpha
@@ -1442,7 +1442,7 @@ car_sponsors = [
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_sponsors_Mackie_02.dds'
-		frontend_desc = qs(0x2a22720c)
+		frontend_desc = qs("\LMACKIE STENCIL")
 		clamp_uv
 		no_color
 		no_alpha
@@ -1454,7 +1454,7 @@ car_sponsors = [
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_sponsors_Mackie_01.dds'
-		frontend_desc = qs(0x3b7885e9)
+		frontend_desc = qs("\LMACKIE RUNNING MAN")
 		clamp_uv
 		no_color
 		no_alpha
@@ -1466,7 +1466,7 @@ car_sponsors = [
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_sponsors_ernieball_01.dds'
-		frontend_desc = qs(0x3a9a8386)
+		frontend_desc = qs("\LERNIE BALL")
 		clamp_uv
 		no_color
 		no_alpha
@@ -1478,7 +1478,7 @@ car_sponsors = [
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_sponsors_marshall_01.dds'
-		frontend_desc = qs(0x9ac5e721)
+		frontend_desc = qs("\LMARSHALL")
 		clamp_uv
 		no_color
 		no_alpha
@@ -1490,7 +1490,7 @@ car_sponsors = [
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_sponsors_OCDP_01.dds'
-		frontend_desc = qs(0xebfa8f9b)
+		frontend_desc = qs("\LORANGE COUNTY DRUMS")
 		clamp_uv
 		no_color
 		no_alpha
@@ -1502,7 +1502,7 @@ car_sponsors = [
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_sponsors_porkpie_01.dds'
-		frontend_desc = qs(0x2992afda)
+		frontend_desc = qs("\LPORK PIE PERCUSSION")
 		clamp_uv
 		no_color
 		no_alpha
@@ -1514,7 +1514,7 @@ car_sponsors = [
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_sponsors_regaltip_01.dds'
-		frontend_desc = qs(0xcb6440a7)
+		frontend_desc = qs("\LREGAL TIP")
 		clamp_uv
 		no_color
 		no_alpha
@@ -1526,7 +1526,7 @@ car_sponsors = [
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_sponsors_Vox_01.dds'
-		frontend_desc = qs(0xaaad5230)
+		frontend_desc = qs("\LVOX")
 		clamp_uv
 		no_color
 		no_alpha
@@ -1538,7 +1538,7 @@ car_sponsors = [
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_sponsors_wrigleys_01.dds'
-		frontend_desc = qs(0xc4a77939)
+		frontend_desc = qs("\LWRIGLEY'S")
 		clamp_uv
 		no_color
 		no_alpha
@@ -1550,7 +1550,7 @@ car_sponsors = [
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_sponsors_zildjian_01.dds'
-		frontend_desc = qs(0xfc33a4c0)
+		frontend_desc = qs("\LZILDJIAN")
 		clamp_uv
 		no_color
 		no_alpha
@@ -1564,279 +1564,279 @@ car_sponsors = [
 car_icons = [
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_Icon001.dds'
-		frontend_desc = qs(0xd4784775)
+		frontend_desc = qs("\LBlaze")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_Icon002.dds'
-		frontend_desc = qs(0x9a3d3e77)
+		frontend_desc = qs("\LFlare-up")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_Icon003.dds'
-		frontend_desc = qs(0x21906655)
+		frontend_desc = qs("\LCombust")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_Icon004.dds'
-		frontend_desc = qs(0x6761b335)
+		frontend_desc = qs("\LHooked")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_Icon005.dds'
-		frontend_desc = qs(0x604b30f8)
+		frontend_desc = qs("\LSabre Flame")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_Icon006.dds'
-		frontend_desc = qs(0x74b5e933)
+		frontend_desc = qs("\LUprooted")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_Icon007.dds'
-		frontend_desc = qs(0x0677f702)
+		frontend_desc = qs("\LSplit End")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_Icon008.dds'
-		frontend_desc = qs(0xec31d902)
+		frontend_desc = qs("\LTwine")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_Icon009.dds'
-		frontend_desc = qs(0x21af8f1c)
+		frontend_desc = qs("\LFire Cloud")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_Icon010.dds'
-		frontend_desc = qs(0xc5629d4f)
+		frontend_desc = qs("\LBad Hawk")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_Icon011.dds'
-		frontend_desc = qs(0x0ce476dc)
+		frontend_desc = qs("\LTwo Moons")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_Icon012.dds'
-		frontend_desc = qs(0x9b63f5ee)
+		frontend_desc = qs("\LOpal Edge")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_Icon013.dds'
-		frontend_desc = qs(0xe78ca8c7)
+		frontend_desc = qs("\LFeathered")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_Icon014.dds'
-		frontend_desc = qs(0x1be231d9)
+		frontend_desc = qs("\LFleur")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_Icon015.dds'
-		frontend_desc = qs(0x1b5c9a15)
+		frontend_desc = qs("\LFancy Crook")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_Icon016.dds'
-		frontend_desc = qs(0x1a071019)
+		frontend_desc = qs("\LShuriken")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_Icon017.dds'
-		frontend_desc = qs(0x1e2db759)
+		frontend_desc = qs("\LRadiant Sapphire")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_Icon018.dds'
-		frontend_desc = qs(0x5b419655)
+		frontend_desc = qs("\LPeas And Chips")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_Icon019.dds'
-		frontend_desc = qs(0x46416b94)
+		frontend_desc = qs("\LFlora")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_Icon020.dds'
-		frontend_desc = qs(0x6b0a7c5a)
+		frontend_desc = qs("\LFletching Free")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_Icon021.dds'
-		frontend_desc = qs(0x9a4d5db4)
+		frontend_desc = qs("\LAlien Gecko")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_Icon029.dds'
-		frontend_desc = qs(0x19303374)
+		frontend_desc = qs("\LSwish")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_Icon030.dds'
-		frontend_desc = qs(0xcc04055f)
+		frontend_desc = qs("\LCurrent")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_Icon031.dds'
-		frontend_desc = qs(0x7fe467d1)
+		frontend_desc = qs("\LCirculate")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_Icon033.dds'
-		frontend_desc = qs(0x121e6e28)
+		frontend_desc = qs("\LFlux")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_icons044.dds'
-		frontend_desc = qs(0x1c7c84c0)
+		frontend_desc = qs("\LHeart You")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_icons045.dds'
-		frontend_desc = qs(0xf0bb7b5f)
+		frontend_desc = qs("\LTadpole")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_icons046.dds'
-		frontend_desc = qs(0x5bf7cc02)
+		frontend_desc = qs("\LOcho")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_icons047.dds'
-		frontend_desc = qs(0x59fa7bfc)
+		frontend_desc = qs("\LBad Idea")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_icons048.dds'
-		frontend_desc = qs(0x091cbee6)
+		frontend_desc = qs("\LChimera")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_icons049.dds'
-		frontend_desc = qs(0xd37fdb77)
+		frontend_desc = qs("\LNo Idea")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_icons050.dds'
-		frontend_desc = qs(0xc8088649)
+		frontend_desc = qs("\LCompass")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_icons051.dds'
-		frontend_desc = qs(0x5d2672a1)
+		frontend_desc = qs("\LOrnate")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_icons052.dds'
-		frontend_desc = qs(0xa3e0048f)
+		frontend_desc = qs("\LFlorid Taste")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_icons053.dds'
-		frontend_desc = qs(0x44b14d61)
+		frontend_desc = qs("\LKaboom!")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_Icon036.dds'
-		frontend_desc = qs(0xe2ae7aec)
+		frontend_desc = qs("\LSparky")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_Icon037.dds'
-		frontend_desc = qs(0xf54d4539)
+		frontend_desc = qs("\LSpikey")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_Icon038.dds'
-		frontend_desc = qs(0xdb47aca9)
+		frontend_desc = qs("\LCorneal")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_Icon039.dds'
-		frontend_desc = qs(0x7f6ceeff)
+		frontend_desc = qs("\LModel Pupil")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_Icon040.dds'
-		frontend_desc = qs(0x780de50a)
+		frontend_desc = qs("\LTensor Tympani")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_Icon041.dds'
-		frontend_desc = qs(0x352bdce1)
+		frontend_desc = qs("\LWe See Sound")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_Icon042.dds'
-		frontend_desc = qs(0x01077c09)
+		frontend_desc = qs("\LTemporal")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_icons043.dds'
-		frontend_desc = qs(0x511c8513)
+		frontend_desc = qs("\LChakra")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_Icon022.dds'
-		frontend_desc = qs(0x6f1bb1d4)
+		frontend_desc = qs("\LCut The Bull")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_Icon023.dds'
-		frontend_desc = qs(0x45ace8d7)
+		frontend_desc = qs("\LBoney")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_Icon024.dds'
-		frontend_desc = qs(0xf027a066)
+		frontend_desc = qs("\LMy Good Side")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_Icon025.dds'
-		frontend_desc = qs(0x2d6bd304)
+		frontend_desc = qs("\LHorns Are Showing")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_Icon026.dds'
-		frontend_desc = qs(0xe0f8a7c7)
+		frontend_desc = qs("\LDig Here")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_Icon027.dds'
-		frontend_desc = qs(0xbfd10073)
+		frontend_desc = qs("\LChew Toy")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_Icon028.dds'
-		frontend_desc = qs(0xdfd31f9b)
+		frontend_desc = qs("\LAntivenom")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_graphics073.dds'
-		frontend_desc = qs(0x48af08a4)
+		frontend_desc = qs("\LA-rawk-nid")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_icons057.dds'
-		frontend_desc = qs(0xdbd02ca9)
+		frontend_desc = qs("\LWadjet")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Decals/CAG_icons058.dds'
-		frontend_desc = qs(0x6ed3773e)
+		frontend_desc = qs("\LLife")
 		clamp_uv
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Cag_Proto/CAG_Sticker01.dds'
-		frontend_desc = qs(0xb5bb18fb)
+		frontend_desc = qs("\LBone Claws")
 		clamp_uv
 	}
 ]
 car_male_makeup = [
 	{
 		pattern = 'tex/models/Characters/CAR/CAR_Shared_None.dds'
-		frontend_desc = qs(0x9c1b5214)
+		frontend_desc = qs("None")
 		no_edit_options
 		no_translate
 		no_scale
@@ -1848,7 +1848,7 @@ car_male_makeup = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CAR/Female/Makeup/CAR_female_Makeup01.dds'
-		frontend_desc = qs(0x1dd7be31)
+		frontend_desc = qs("Soft Smudge Blue")
 		no_translate
 		no_scale
 		no_rotate
@@ -1862,7 +1862,7 @@ car_male_makeup = [
 car_female_makeup = [
 	{
 		pattern = 'tex/models/Characters/CAR/CAR_Shared_None.dds'
-		frontend_desc = qs(0x9c1b5214)
+		frontend_desc = qs("None")
 		no_edit_options
 		no_translate
 		no_scale
@@ -1874,7 +1874,7 @@ car_female_makeup = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CAR/Female/Makeup/CAR_female_Makeup01.dds'
-		frontend_desc = qs(0x1dd7be31)
+		frontend_desc = qs("Soft Smudge Blue")
 		no_translate
 		no_scale
 		no_rotate
@@ -1886,7 +1886,7 @@ car_female_makeup = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CAR/Female/Makeup/CAR_female_Makeup01_earth.dds'
-		frontend_desc = qs(0xc7a94adf)
+		frontend_desc = qs("Soft Smudge Earthtone")
 		no_translate
 		no_scale
 		no_rotate
@@ -1898,7 +1898,7 @@ car_female_makeup = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CAR/Female/Makeup/CAR_female_Makeup01_green.dds'
-		frontend_desc = qs(0x9d342801)
+		frontend_desc = qs("Soft Smudge Green")
 		no_translate
 		no_scale
 		no_rotate
@@ -1910,7 +1910,7 @@ car_female_makeup = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CAR/Female/Makeup/CAR_female_Makeup01_purple.dds'
-		frontend_desc = qs(0x2114e7f6)
+		frontend_desc = qs("Soft Smudge Purple")
 		no_translate
 		no_scale
 		no_rotate
@@ -1922,7 +1922,7 @@ car_female_makeup = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CAR/Female/Makeup/CAR_female_Makeup01_red.dds'
-		frontend_desc = qs(0x33dcabfb)
+		frontend_desc = qs("Soft Smudge Red")
 		no_translate
 		no_scale
 		no_rotate
@@ -1934,7 +1934,7 @@ car_female_makeup = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CAR/Female/Makeup/CAR_female_Makeup02.dds'
-		frontend_desc = qs(0x4c250747)
+		frontend_desc = qs("Just A Hint Red")
 		no_translate
 		no_scale
 		no_rotate
@@ -1946,7 +1946,7 @@ car_female_makeup = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CAR/Female/Makeup/CAR_female_Makeup02_gold.dds'
-		frontend_desc = qs(0x70b99a21)
+		frontend_desc = qs("Just A Hint Gold")
 		no_translate
 		no_scale
 		no_rotate
@@ -1958,7 +1958,7 @@ car_female_makeup = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CAR/Female/Makeup/CAR_female_Makeup02_purple.dds'
-		frontend_desc = qs(0x5d08302f)
+		frontend_desc = qs("Just A Hint Purple")
 		no_translate
 		no_scale
 		no_rotate
@@ -1970,7 +1970,7 @@ car_female_makeup = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CAR/Female/Makeup/CAR_female_Makeup02_teal.dds'
-		frontend_desc = qs(0x1f364b7e)
+		frontend_desc = qs("Just A Hint Green")
 		no_translate
 		no_scale
 		no_rotate
@@ -1982,7 +1982,7 @@ car_female_makeup = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CAR/Female/Makeup/CAR_female_Makeup03.dds'
-		frontend_desc = qs(0x4001c1b8)
+		frontend_desc = qs("Somber Burnt")
 		no_translate
 		no_scale
 		no_rotate
@@ -1994,7 +1994,7 @@ car_female_makeup = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CAR/Female/Makeup/CAR_female_Makeup03_blue.dds'
-		frontend_desc = qs(0x2bba9db8)
+		frontend_desc = qs("Somber Blue")
 		no_translate
 		no_scale
 		no_rotate
@@ -2006,7 +2006,7 @@ car_female_makeup = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CAR/Female/Makeup/CAR_female_Makeup03_green.dds'
-		frontend_desc = qs(0xd5124c1c)
+		frontend_desc = qs("Somber Green")
 		no_translate
 		no_scale
 		no_rotate
@@ -2018,7 +2018,7 @@ car_female_makeup = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CAR/Female/Makeup/CAR_female_Makeup04.dds'
-		frontend_desc = qs(0x8c360f90)
+		frontend_desc = qs("Corpse Paint")
 		no_translate
 		no_scale
 		no_rotate
@@ -2030,7 +2030,7 @@ car_female_makeup = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CAR/Female/Makeup/CAR_female_Makeup05.dds'
-		frontend_desc = qs(0x3ea28c79)
+		frontend_desc = qs("Funky Liner Yellow")
 		no_translate
 		no_scale
 		no_rotate
@@ -2042,7 +2042,7 @@ car_female_makeup = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CAR/Female/Makeup/CAR_female_Makeup05_blue.dds'
-		frontend_desc = qs(0x62cf70f8)
+		frontend_desc = qs("Funky Liner Blue")
 		no_translate
 		no_scale
 		no_rotate
@@ -2054,7 +2054,7 @@ car_female_makeup = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CAR/Female/Makeup/CAR_female_Makeup05_green.dds'
-		frontend_desc = qs(0xfbd0d4a9)
+		frontend_desc = qs("Funky Liner Green")
 		no_translate
 		no_scale
 		no_rotate
@@ -2066,7 +2066,7 @@ car_female_makeup = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CAR/Female/Makeup/CAR_female_Makeup05_pink.dds'
-		frontend_desc = qs(0x15072a0d)
+		frontend_desc = qs("Funky Liner Pink")
 		no_translate
 		no_scale
 		no_rotate
@@ -2078,7 +2078,7 @@ car_female_makeup = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CAR/Female/Makeup/CAR_female_Makeup06.dds'
-		frontend_desc = qs(0xac389c9a)
+		frontend_desc = qs("Flirtatious Red")
 		no_translate
 		no_scale
 		no_rotate
@@ -2090,7 +2090,7 @@ car_female_makeup = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CAR/Female/Makeup/CAR_female_Makeup06_blue.dds'
-		frontend_desc = qs(0x4aeeccd9)
+		frontend_desc = qs("Flirtatious Teal")
 		no_translate
 		no_scale
 		no_rotate
@@ -2102,7 +2102,7 @@ car_female_makeup = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CAR/Female/Makeup/CAR_female_Makeup06_gold.dds'
-		frontend_desc = qs(0x23f28ba2)
+		frontend_desc = qs("Flirtatious Gold")
 		no_translate
 		no_scale
 		no_rotate
@@ -2114,7 +2114,7 @@ car_female_makeup = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CAR/Female/Makeup/CAR_female_Makeup06_green.dds'
-		frontend_desc = qs(0x6528f34f)
+		frontend_desc = qs("Flirtatious Green")
 		no_translate
 		no_scale
 		no_rotate
@@ -2126,7 +2126,7 @@ car_female_makeup = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CAR/Female/Makeup/CAR_female_Makeup06_purple.dds'
-		frontend_desc = qs(0x5eef763d)
+		frontend_desc = qs("Flirtatious Purple")
 		no_translate
 		no_scale
 		no_rotate
@@ -2138,7 +2138,7 @@ car_female_makeup = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CAR/Female/Makeup/CAR_female_Makeup07.dds'
-		frontend_desc = qs(0xfa858027)
+		frontend_desc = qs("Spider Eyes")
 		no_translate
 		no_scale
 		no_rotate
@@ -2150,7 +2150,7 @@ car_female_makeup = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CAR/Female/Makeup/CAR_female_Makeup08.dds'
-		frontend_desc = qs(0xf9668072)
+		frontend_desc = qs("Stitches")
 		no_translate
 		no_scale
 		no_rotate
@@ -2162,7 +2162,7 @@ car_female_makeup = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CAR/Female/Makeup/CAR_female_Makeup09.dds'
-		frontend_desc = qs(0x5a7252d4)
+		frontend_desc = qs("Carnival")
 		no_translate
 		no_scale
 		no_rotate
@@ -2174,7 +2174,7 @@ car_female_makeup = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CAR/Female/Makeup/CAR_female_Makeup10.dds'
-		frontend_desc = qs(0x1467346c)
+		frontend_desc = qs("Blades")
 		no_translate
 		no_scale
 		no_rotate
@@ -2186,7 +2186,7 @@ car_female_makeup = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CAR/Female/Makeup/CAR_female_Makeup11.dds'
-		frontend_desc = qs(0x5773c2f7)
+		frontend_desc = qs("Ice")
 		no_translate
 		no_scale
 		no_rotate
@@ -2198,7 +2198,7 @@ car_female_makeup = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CAR/Female/Makeup/CAR_female_Makeup12.dds'
-		frontend_desc = qs(0x9e824c1f)
+		frontend_desc = qs("Scales")
 		no_translate
 		no_scale
 		no_rotate
@@ -2210,7 +2210,7 @@ car_female_makeup = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CAR/Female/Makeup/CAR_female_Makeup13.dds'
-		frontend_desc = qs(0x263a96f6)
+		frontend_desc = qs("Deathrock")
 		no_translate
 		no_scale
 		no_rotate
@@ -2222,7 +2222,7 @@ car_female_makeup = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CAR/Female/Makeup/CAR_female_Makeup14.dds'
-		frontend_desc = qs(0xc359bd2c)
+		frontend_desc = qs("Ra")
 		no_translate
 		no_scale
 		no_rotate
@@ -2234,7 +2234,7 @@ car_female_makeup = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CAR/Female/Makeup/CAR_female_Makeup15.dds'
-		frontend_desc = qs(0xada5ddcb)
+		frontend_desc = qs("Replicant")
 		no_translate
 		no_scale
 		no_rotate
@@ -2246,7 +2246,7 @@ car_female_makeup = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CAR/Female/Makeup/CAR_female_Makeup16.dds'
-		frontend_desc = qs(0xf811d1e8)
+		frontend_desc = qs("Wet Mascara")
 		no_translate
 		no_scale
 		no_rotate
@@ -2260,7 +2260,7 @@ car_female_makeup = [
 car_female_makeup_lip = [
 	{
 		pattern = 'tex/models/Characters/CAR/CAR_Shared_None2.dds'
-		frontend_desc = qs(0x9c1b5214)
+		frontend_desc = qs("None")
 		no_edit_options
 		no_translate
 		no_scale
@@ -2272,7 +2272,7 @@ car_female_makeup_lip = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CAR/Female/Makeup/CAR_female_Makeup_lip01.dds'
-		frontend_desc = qs(0x02125e32)
+		frontend_desc = qs("Red")
 		no_translate
 		no_scale
 		no_rotate
@@ -2284,7 +2284,7 @@ car_female_makeup_lip = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CAR/Female/Makeup/CAR_female_Makeup_lip02.dds'
-		frontend_desc = qs(0x241c6135)
+		frontend_desc = qs("Purple")
 		no_translate
 		no_scale
 		no_rotate
@@ -2296,7 +2296,7 @@ car_female_makeup_lip = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CAR/Female/Makeup/CAR_female_Makeup_lip03.dds'
-		frontend_desc = qs(0x3e7bfe3c)
+		frontend_desc = qs("Grape")
 		no_translate
 		no_scale
 		no_rotate
@@ -2308,7 +2308,7 @@ car_female_makeup_lip = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CAR/Female/Makeup/CAR_female_Makeup_lip05.dds'
-		frontend_desc = qs(0xb3ebe94c)
+		frontend_desc = qs("Burgundy")
 		no_translate
 		no_scale
 		no_rotate
@@ -2320,7 +2320,7 @@ car_female_makeup_lip = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CAR/Female/Makeup/CAR_female_Makeup_lip06.dds'
-		frontend_desc = qs(0xdb5cc093)
+		frontend_desc = qs("Hot Pink")
 		no_translate
 		no_scale
 		no_rotate
@@ -2332,7 +2332,7 @@ car_female_makeup_lip = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CAR/Female/Makeup/CAR_female_Makeup_lip07.dds'
-		frontend_desc = qs(0x5773c2f7)
+		frontend_desc = qs("Ice")
 		no_translate
 		no_scale
 		no_rotate
@@ -2344,7 +2344,7 @@ car_female_makeup_lip = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CAR/Female/Makeup/CAR_female_Makeup_lip08.dds'
-		frontend_desc = qs(0xaadf788c)
+		frontend_desc = qs("Frost")
 		no_translate
 		no_scale
 		no_rotate
@@ -2356,7 +2356,7 @@ car_female_makeup_lip = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CAR/Female/Makeup/CAR_female_Makeup_lip09.dds'
-		frontend_desc = qs(0x095e8089)
+		frontend_desc = qs("Goth")
 		no_translate
 		no_scale
 		no_rotate
@@ -2368,7 +2368,7 @@ car_female_makeup_lip = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CAR/Female/Makeup/CAR_female_Makeup_lip10.dds'
-		frontend_desc = qs(0x51eb938d)
+		frontend_desc = qs("Nude")
 		no_translate
 		no_scale
 		no_rotate
@@ -2380,7 +2380,7 @@ car_female_makeup_lip = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CAR/Female/Makeup/CAR_female_Makeup_lip11.dds'
-		frontend_desc = qs(0x3046b0f5)
+		frontend_desc = qs("Gold")
 		no_translate
 		no_scale
 		no_rotate
@@ -2392,7 +2392,7 @@ car_female_makeup_lip = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CAR/Female/Makeup/CAR_female_Makeup_lip12.dds'
-		frontend_desc = qs(0x3779e92e)
+		frontend_desc = qs("Geisha")
 		no_translate
 		no_scale
 		no_rotate
@@ -2404,7 +2404,7 @@ car_female_makeup_lip = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CAR/Female/Makeup/CAR_female_Makeup_lip13.dds'
-		frontend_desc = qs(0xa3df6fd1)
+		frontend_desc = qs("Smeared")
 		no_translate
 		no_scale
 		no_rotate
@@ -2416,7 +2416,7 @@ car_female_makeup_lip = [
 	}
 	{
 		pattern = 'tex/models/Characters/Layers/CAR/Female/Makeup/CAR_female_Makeup_lip04.dds'
-		frontend_desc = qs(0x0f380a0a)
+		frontend_desc = qs("Cat")
 		no_translate
 		no_scale
 		no_rotate
@@ -2427,10 +2427,10 @@ car_female_makeup_lip = [
 		static_alpha
 	}
 ]
-guitar_head_finishes = [
+Guitar_Head_Finishes = [
 	{
 		pattern = 'tex/models/Characters/Layers/Maple.dds'
-		frontend_desc = qs(0x038ed054)
+		frontend_desc = qs("\LMaple")
 		no_translate
 		no_scale
 		no_rotate
@@ -2440,33 +2440,33 @@ guitar_head_finishes = [
 car_shoe_laces = [
 	{
 		pattern = 'images/PanelSprites/white.png'
-		frontend_desc = qs(0x75820df7)
+		frontend_desc = qs("\LSolid color")
 	}
 ]
 car_shoe_body = [
 	{
 		pattern = 'tex/models/Characters/Skater_Male/SHARED/ShoeTest/Layers/pattern_01.dds'
-		frontend_desc = qs(0x72d94c9a)
+		frontend_desc = qs("\LCheckers")
 		no_color
 		static_alpha
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/SHARED/ShoeTest/Layers/pattern_02.dds'
-		frontend_desc = qs(0x4b271efa)
+		frontend_desc = qs("\LLeopard Skin")
 		no_scale
 		static_alpha
 	}
 ]
-cag_bass01_body = [
+CAG_Bass01_Body = [
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Cag_Proto/BASS_Body_01.dds'
-		frontend_desc = qs(0x109b891d)
+		frontend_desc = qs("\LBasic Tan")
 		no_translate
 		no_scale
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Cag_Proto/BASS_Body_02.dds'
-		frontend_desc = qs(0x5bf9119b)
+		frontend_desc = qs("\LSunburst")
 		no_translate
 		no_scale
 		no_u_flip
@@ -2474,23 +2474,23 @@ cag_bass01_body = [
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Cag_Proto/BASS_Body_03.dds'
-		frontend_desc = qs(0xc2073dc7)
+		frontend_desc = qs("\LSurf Pattern")
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Cag_Proto/BASS_Body_04.dds'
-		frontend_desc = qs(0x6d85152a)
+		frontend_desc = qs("\LPlaid Pattern")
 	}
 ]
-cag_bass01_pickguard = [
+CAG_Bass01_PickGuard = [
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Cag_Proto/Bass_Pickguard_01.dds'
-		frontend_desc = qs(0x7f6c9ee1)
+		frontend_desc = qs("\LPick Guard 01")
 		no_translate
 		no_scale
 	}
 	{
 		pattern = 'tex/models/Characters/Skater_Male/Cag_Proto/Bass_Pickguard_02.dds'
-		frontend_desc = qs(0x5441cd22)
+		frontend_desc = qs("\LPick Guard 02")
 		no_translate
 		no_scale
 	}

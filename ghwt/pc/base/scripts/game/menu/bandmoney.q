@@ -1,26 +1,26 @@
 
 script create_band_money_display 
 	destroy_band_money_display
-	createscreenelement \{parent = root_window
-		type = descinterface
+	CreateScreenElement \{parent = root_window
+		type = DescInterface
 		id = band_money_id
 		desc = 'band_money'}
 	refresh_band_money_display savegame = <savegame>
 endscript
 
 script destroy_band_money_display 
-	if screenelementexists \{id = band_money_id}
-		destroyscreenelement \{id = band_money_id}
+	if ScreenElementExists \{id = band_money_id}
+		DestroyScreenElement \{id = band_money_id}
 	endif
 endscript
 
 script refresh_band_money_display savegame = ($cas_current_savegame)
 	get_current_band_info
-	getglobaltags <band_info> savegame = <savegame>
-	formattext textname = cash_text qs(0x7e81ee2f) i = <cash>
-	formattext textname = earnings_text qs(0x7e81ee2f) i = <career_earnings>
-	if screenelementexists \{id = band_money_id}
-		setscreenelementprops {
+	GetGlobalTags <band_info> savegame = <savegame>
+	FormatText TextName = cash_text qs("\L$%i") i = <Cash>
+	FormatText TextName = earnings_text qs("\L$%i") i = <career_earnings>
+	if ScreenElementExists \{id = band_money_id}
+		SetScreenElementProps {
 			id = band_money_id
 			cash_available_value_text = <cash_text>
 			career_earnings_value_text = <earnings_text>
@@ -29,26 +29,26 @@ script refresh_band_money_display savegame = ($cas_current_savegame)
 endscript
 
 script decrease_band_money savegame = ($cas_current_savegame)
-	requireparams \{[
+	RequireParams \{[
 			price
 		]
 		all}
 	get_current_band_info
-	getglobaltags <band_info> savegame = <savegame>
-	cash = (<cash> - <price>)
-	setglobaltags <band_info> params = {cash = <cash>} savegame = <savegame>
+	GetGlobalTags <band_info> savegame = <savegame>
+	Cash = (<Cash> - <price>)
+	SetGlobalTags <band_info> params = {Cash = <Cash>} savegame = <savegame>
 	refresh_band_money_display savegame = <savegame>
 endscript
 
 script increase_band_money savegame = ($cas_current_savegame)
-	requireparams \{[
+	RequireParams \{[
 			amount
 		]
 		all}
 	get_current_band_info
-	getglobaltags <band_info> savegame = <savegame>
-	cash = (<cash> + <amount>)
-	setglobaltags <band_info> params = {cash = <cash>} savegame = <savegame>
+	GetGlobalTags <band_info> savegame = <savegame>
+	Cash = (<Cash> + <amount>)
+	SetGlobalTags <band_info> params = {Cash = <Cash>} savegame = <savegame>
 	refresh_band_money_display savegame = <savegame>
 endscript
 
@@ -64,29 +64,29 @@ script bankrupt_band
 endscript
 
 script set_band_money savegame = ($cas_current_savegame)
-	requireparams \{[
+	RequireParams \{[
 			value
 		]
 		all}
 	get_current_band_info
-	setglobaltags <band_info> params = {cash = <value>} savegame = <savegame>
+	SetGlobalTags <band_info> params = {Cash = <value>} savegame = <savegame>
 	refresh_band_money_display savegame = <savegame>
 endscript
 
-script get_band_money cash = 0 savegame = ($cas_current_savegame)
+script get_band_money Cash = 0 savegame = ($cas_current_savegame)
 	get_current_band_info
-	getglobaltags <band_info> savegame = <savegame>
-	return cash = <cash>
+	GetGlobalTags <band_info> savegame = <savegame>
+	return Cash = <Cash>
 endscript
 
 script has_enough_money savegame = ($cas_current_savegame)
-	requireparams \{[
+	RequireParams \{[
 			price
 		]
 		all}
 	get_current_band_info
-	getglobaltags <band_info> savegame = <savegame>
-	if (<price> > <cash>)
+	GetGlobalTags <band_info> savegame = <savegame>
+	if (<price> > <Cash>)
 		return \{false}
 	else
 		return \{true}
@@ -94,19 +94,19 @@ script has_enough_money savegame = ($cas_current_savegame)
 endscript
 
 script increase_career_earnings savegame = ($cas_current_savegame)
-	requireparams \{[
+	RequireParams \{[
 			amount
 		]
 		all}
 	get_current_band_info
-	getglobaltags <band_info> savegame = <savegame>
+	GetGlobalTags <band_info> savegame = <savegame>
 	career_earnings = (<career_earnings> + <amount>)
-	setglobaltags <band_info> params = {career_earnings = <career_earnings>} savegame = <savegame>
+	SetGlobalTags <band_info> params = {career_earnings = <career_earnings>} savegame = <savegame>
 	refresh_band_money_display savegame = <savegame>
 endscript
 
 script increase_band_cash_and_earnings 
-	requireparams \{[
+	RequireParams \{[
 			amount
 		]
 		all}

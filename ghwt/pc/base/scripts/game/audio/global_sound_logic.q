@@ -1,122 +1,122 @@
-interiorpanningradius = 10
-global_user_sfx_number = 10
-guitar_always_volume_100 = 0
-star_power_verb_is_on = 0
+InteriorPanningRadius = 10
+Global_User_SFX_Number = 10
+Guitar_Always_Volume_100 = 0
+Star_power_verb_is_on = 0
 sfx_adjusted_guitar_volume = 100
 highpass_cutoff_freq_modulated = 2000
 lowpass_cutoff_freq_modulated = 1000
 phaser_delay_time_modulated = 10
 auto_wah_is_on = 0
 wah_cutoff_freq_modulated = 900
-current_audio_effect_type = highpass
+current_audio_effect_type = HighPass
 guitar_audio_effects_are_on = 0
 guitar_audio_effects_are_on_p1 = 0
 guitar_audio_effects_are_on_p2 = 0
-debug_audible_downbeat = 0
-debug_audible_open = 0
-debug_audible_close = 0
-debug_audible_hitnote = 0
-debug_audible_metronome = 0
+Debug_Audible_Downbeat = 0
+Debug_Audible_Open = 0
+Debug_Audible_Close = 0
+Debug_Audible_HitNote = 0
+Debug_Audible_Metronome = 0
 lagtestpart1 = 0
 lagtestpart2 = 0
 lagtestpart3 = 0
 lagtestpart4 = 0
 viewvolumesonscreen = 0
-crowdlistenerstateclapon1234 = 0
-crowdlevelforsurges = 1.66
+CrowdListenerStateClapOn1234 = 0
+CrowdLevelForSurges = 1.66
 temp_language_hack = lang_english
-crowd_anticipation_flag = 0
-clap_fade = 0
-crowd_transition_start_of_song_normal = 0
-star_clap_left = 0
-star_clap_right = 0
-star_clap_left_middle = 0
-star_clap_right_middle = 0
-star_clap_middle = 0
-star_clap_normal = 0
-star_clap_leftcenterright = 0
-streamprioritylow = 10
-streamprioritylowmid = 30
-streamprioritymid = 50
-streamprioritymidhigh = 70
-streampriorityhigh = 90
-streampriorityhighest = 95
-streamprioritysystem = 109
-star_power_deployed_flag = 0
-star_power_ready_flag = 0
-star_power_awarded_flag = 0
-menu_music_pan_right = 0
-global_soundevent_default_priority = 50
-global_soundevent_default_buss = `default`
-global_soundevent_norepeatfor = 0.1
-global_soundevent_instancemanagement = stop_furthest
-global_soundevent_instancelimit = 1
-current_menu_song = `default`
-guitar_knob_effects_position = 1
-bass_knob_effects_position = 1
-drum_knob_effects_position = 1
-song_guitar_track_buss = leadgtr_balance
+Crowd_Anticipation_Flag = 0
+Clap_Fade = 0
+Crowd_Transition_Start_Of_Song_Normal = 0
+Star_Clap_Left = 0
+Star_Clap_Right = 0
+Star_Clap_Left_Middle = 0
+Star_Clap_Right_Middle = 0
+Star_Clap_Middle = 0
+Star_Clap_Normal = 0
+Star_Clap_LeftCenterRight = 0
+StreamPriorityLow = 10
+StreamPriorityLowMid = 30
+StreamPriorityMid = 50
+StreamPriorityMidHigh = 70
+StreamPriorityHigh = 90
+StreamPriorityHighest = 95
+StreamPrioritySystem = 109
+Star_Power_Deployed_Flag = 0
+Star_Power_Ready_Flag = 0
+Star_Power_Awarded_Flag = 0
+Menu_Music_Pan_Right = 0
+Global_SoundEvent_Default_Priority = 50
+Global_SoundEvent_Default_Buss = `default`
+Global_SoundEvent_NoRepeatFor = 0.1
+Global_SoundEvent_InstanceManagement = stop_furthest
+Global_SoundEvent_InstanceLimit = 1
+Current_Menu_Song = `default`
+Guitar_Knob_Effects_Position = 1
+Bass_Knob_Effects_Position = 1
+Drum_Knob_Effects_Position = 1
+song_guitar_track_buss = leadGTR_balance
 song_rhythm_track_buss = bass_balance
-song_leadvox_track_buss = lead_vox
-song_band_track_buss = band_balance
-song_crowd_track_buss = crowd_singalong
-song_drum_track_buss = drums_balance
+song_leadvox_track_buss = Lead_Vox
+song_band_track_buss = Band_Balance
+song_crowd_track_buss = Crowd_Singalong
+song_drum_track_buss = Drums_Balance
 instrument_missed_note_ramp_up_time = 0.0
 instrument_missed_note_ramp_down_time = 0.02
 starpower_sendeffect_slot = 1
-current_crowd_anticipation = `default`
-current_crowd_whistle_soundevent = `default`
-current_crowd_oneshot_positive_soundevent = `default`
-current_crowd_oneshot_negative_soundevent = `default`
-current_crowd_looping_bg_area_bad = `default`
-current_crowd_looping_bg_area_neutral = `default`
-current_crowd_looping_bg_area_good = `default`
-current_crowd_looping_bg_area = `default`
-current_crowd_battle_cheer_l_p1 = `default`
-current_crowd_battle_cheer_r_p1 = `default`
-current_crowd_battle_cheer_l_p2 = `default`
-current_crowd_battle_cheer_r_p2 = `default`
-current_crowd_clap_normal_soundevent = `default`
-current_crowd_clap_middle_soundevent = `default`
-current_crowd_clap_right_soundevent = `default`
-current_crowd_clap_left_soundevent = `default`
-current_crowd_clap_right_middle_soundevent = `default`
-current_crowd_clap_left_middle_soundevent = `default`
-current_crowd_transition_bad_to_neutral_l = `default`
-current_crowd_transition_bad_to_neutral_r = `default`
-current_crowd_transition_neutral_to_bad_l = `default`
-current_crowd_transition_neutral_to_bad_r = `default`
-current_crowd_transition_neutral_to_good_l = `default`
-current_crowd_transition_neutral_to_good_r = `default`
-current_crowd_transition_good_to_neutral_l = `default`
-current_crowd_transition_good_to_neutral_r = `default`
-current_crowd_transition_bad_to_neutral = `default`
-current_crowd_transition_neutral_to_bad = `default`
-current_crowd_transition_neutral_to_good = `default`
-current_crowd_transition_good_to_neutral = `default`
-current_crowd_swell_short_soundevent_l = `default`
-current_crowd_swell_short_soundevent_r = `default`
-current_crowd_swell_short_soft_soundevent_l = `default`
-current_crowd_swell_short_soft_soundevent_r = `default`
-current_crowd_swell_med_soundevent_l = `default`
-current_crowd_swell_med_soundevent_r = `default`
-current_crowd_swell_long_soundevent_l = `default`
-current_crowd_swell_long_soundevent_r = `default`
-current_crowd_applause_soundevent_l = `default`
-current_crowd_applause_soundevent_r = `default`
-current_crowd_venue_intro_soundevent = `default`
-current_crowd_preencore_looping_soundevent = `default`
-current_crowd_encore = `default`
-current_venue_size = `default`
-turn_off_oneshot_cheers = 0
+Current_Crowd_Anticipation = `default`
+Current_Crowd_Whistle_SoundEvent = `default`
+Current_Crowd_OneShot_Positive_SoundEvent = `default`
+Current_Crowd_OneShot_Negative_SoundEvent = `default`
+Current_Crowd_Looping_BG_Area_Bad = `default`
+Current_Crowd_Looping_BG_Area_Neutral = `default`
+Current_Crowd_Looping_BG_Area_Good = `default`
+Current_Crowd_Looping_BG_Area = `default`
+Current_Crowd_Battle_Cheer_L_P1 = `default`
+Current_Crowd_Battle_Cheer_R_P1 = `default`
+Current_Crowd_Battle_Cheer_L_P2 = `default`
+Current_Crowd_Battle_Cheer_R_P2 = `default`
+Current_Crowd_Clap_Normal_SoundEvent = `default`
+Current_Crowd_Clap_Middle_SoundEvent = `default`
+Current_Crowd_Clap_Right_SoundEvent = `default`
+Current_Crowd_Clap_Left_SoundEvent = `default`
+Current_Crowd_Clap_Right_Middle_SoundEvent = `default`
+Current_Crowd_Clap_Left_Middle_SoundEvent = `default`
+Current_Crowd_Transition_Bad_To_Neutral_L = `default`
+Current_Crowd_Transition_Bad_To_Neutral_R = `default`
+Current_Crowd_Transition_Neutral_To_Bad_L = `default`
+Current_Crowd_Transition_Neutral_To_Bad_R = `default`
+Current_Crowd_Transition_Neutral_To_Good_L = `default`
+Current_Crowd_Transition_Neutral_To_Good_R = `default`
+Current_Crowd_Transition_Good_To_Neutral_L = `default`
+Current_Crowd_Transition_Good_To_Neutral_R = `default`
+Current_Crowd_Transition_Bad_To_Neutral = `default`
+Current_Crowd_Transition_Neutral_To_Bad = `default`
+Current_Crowd_Transition_Neutral_To_Good = `default`
+Current_Crowd_Transition_Good_To_Neutral = `default`
+Current_Crowd_Swell_Short_SoundEvent_L = `default`
+Current_Crowd_Swell_Short_SoundEvent_R = `default`
+Current_Crowd_Swell_Short_Soft_SoundEvent_L = `default`
+Current_Crowd_Swell_Short_Soft_SoundEvent_R = `default`
+Current_Crowd_Swell_Med_SoundEvent_L = `default`
+Current_Crowd_Swell_Med_SoundEvent_R = `default`
+Current_Crowd_Swell_Long_SoundEvent_L = `default`
+Current_Crowd_Swell_Long_SoundEvent_R = `default`
+Current_Crowd_Applause_SoundEvent_L = `default`
+Current_Crowd_Applause_SoundEvent_R = `default`
+Current_Crowd_Venue_Intro_SoundEvent = `default`
+Current_Crowd_PreEncore_Looping_SoundEvent = `default`
+Current_Crowd_Encore = `default`
+Current_Venue_Size = `default`
+Turn_Off_OneShot_Cheers = 0
 crowd_is_singing = 0
 crowd_in_jam_mode_song_state = 0
-crowd_singalong_pan1x = -1
-crowd_singalong_pan1y = 0
-crowd_singalong_pan2x = 1
-crowd_singalong_pan2y = 0
-all_songs_master_volume = -2.0
-cooppanning = {
+Crowd_Singalong_Pan1x = -1
+Crowd_Singalong_Pan1y = 0
+Crowd_Singalong_Pan2x = 1
+Crowd_Singalong_Pan2y = 0
+All_Songs_Master_Volume = -2.0
+CoopPanning = {
 	guitar = {
 		mono_song_stream = false
 		vocal_vol = 0
@@ -127,7 +127,7 @@ cooppanning = {
 		guitar_vol_on = 0.7
 		guitar_vol_off = -100
 	}
-	bass = {
+	Bass = {
 		mono_song_stream = false
 		vocal_vol = 0
 		center_player_pan = [
@@ -137,7 +137,7 @@ cooppanning = {
 		bass_vol_on = 6
 		bass_vol_off = -100
 	}
-	drums = {
+	Drums = {
 		mono_song_stream = false
 		vocal_vol = 0
 		center_player_pan = [
@@ -153,11 +153,11 @@ cooppanning = {
 		mono_drums_vol_on = 2
 		mono_drums_vol_off = -100
 	}
-	vocals = {
+	Vocals = {
 		mono_song_stream = false
 		vocal_vol = 1.5
 	}
-	bossbattle = {
+	BossBattle = {
 		mono_song_stream = true
 		vocal_vol = 0
 		left_player_pan = [
@@ -173,7 +173,7 @@ cooppanning = {
 		bass_vol_on = 0.7
 		bass_vol_off = -100
 	}
-	guitarbass = {
+	GuitarBass = {
 		mono_song_stream = true
 		vocal_vol = 0
 		left_player_pan = [
@@ -189,7 +189,7 @@ cooppanning = {
 		bass_vol_on = 3
 		bass_vol_off = -100
 	}
-	guitardrums = {
+	GuitarDrums = {
 		mono_song_stream = true
 		vocal_vol = 0
 		left_player_pan = [
@@ -215,7 +215,7 @@ cooppanning = {
 		mono_drums_vol_on = 1.5
 		mono_drums_vol_off = -100
 	}
-	guitarvocals = {
+	GuitarVocals = {
 		mono_song_stream = false
 		vocal_vol = 1.5
 		center_player_pan = [
@@ -225,7 +225,7 @@ cooppanning = {
 		guitar_vol_on = 0.7
 		guitar_vol_off = -100
 	}
-	bassdrums = {
+	BassDrums = {
 		mono_song_stream = false
 		vocal_vol = 0
 		left_player_pan = [
@@ -251,7 +251,7 @@ cooppanning = {
 		mono_drums_vol_on = 2
 		mono_drums_vol_off = -100
 	}
-	bassvocals = {
+	BassVocals = {
 		mono_song_stream = false
 		vocal_vol = 2
 		center_player_pan = [
@@ -261,7 +261,7 @@ cooppanning = {
 		bass_vol_on = 3.5
 		bass_vol_off = -100
 	}
-	drumsvocals = {
+	DrumsVocals = {
 		mono_song_stream = false
 		vocal_vol = 2
 		left_player_pan = [
@@ -285,7 +285,7 @@ cooppanning = {
 		mono_drums_vol_on = 2
 		mono_drums_vol_off = -100
 	}
-	guitarbassdrums = {
+	GuitarBassDrums = {
 		mono_song_stream = true
 		vocal_vol = 0
 		left_player_pan = [
@@ -313,7 +313,7 @@ cooppanning = {
 		mono_drums_vol_on = 1
 		mono_drums_vol_off = -100
 	}
-	guitarbassvocals = {
+	GuitarBassVocals = {
 		mono_song_stream = true
 		vocal_vol = 1.5
 		left_player_pan = [
@@ -329,7 +329,7 @@ cooppanning = {
 		bass_vol_on = 2
 		bass_vol_off = -100
 	}
-	guitardrumsvocals = {
+	GuitarDrumsVocals = {
 		mono_song_stream = true
 		vocal_vol = 1.5
 		left_player_pan = [
@@ -355,7 +355,7 @@ cooppanning = {
 		mono_drums_vol_on = 1
 		mono_drums_vol_off = -100
 	}
-	bassdrumsvocals = {
+	BassDrumsVocals = {
 		mono_song_stream = false
 		vocal_vol = 1.5
 		left_player_pan = [
@@ -381,7 +381,7 @@ cooppanning = {
 		mono_drums_vol_on = 1
 		mono_drums_vol_off = -100
 	}
-	guitarbassdrumsvocals = {
+	GuitarBassDrumsVocals = {
 		mono_song_stream = true
 		vocal_vol = 0
 		left_player_pan = [
@@ -410,7 +410,7 @@ cooppanning = {
 		mono_drums_vol_off = -100
 	}
 }
-faceoffpanning = {
+FaceoffPanning = {
 	guitar = {
 		mono_song_stream = true
 		vocal_vol = 0
@@ -463,7 +463,7 @@ faceoffpanning = {
 			]
 		}
 	}
-	bass = {
+	Bass = {
 		mono_song_stream = false
 		vocal_vol = 0
 		p1_on_p2_on = {
@@ -515,7 +515,7 @@ faceoffpanning = {
 			]
 		}
 	}
-	drums = {
+	Drums = {
 		mono_song_stream = false
 		vocal_vol = 0
 		p1_on_p2_on = {
@@ -607,7 +607,7 @@ faceoffpanning = {
 			]
 		}
 	}
-	monodrums = {
+	MonoDrums = {
 		mono_song_stream = false
 		vocal_vol = 0
 		p1_on_p2_on = {
@@ -699,7 +699,7 @@ faceoffpanning = {
 			]
 		}
 	}
-	vocals = {
+	Vocals = {
 		mono_song_stream = false
 		vocal_vol = 0
 		p1_on_p2_on = {
@@ -753,310 +753,310 @@ faceoffpanning = {
 	}
 }
 
-script soundevent 
-	soundeventfast <...>
+script SoundEvent 
+	SoundEventFast <...>
 endscript
 
-script registersoundevent 
-	addsoundeventscript soundevent_eventid = <soundevent_eventid>
-	onexitrun deregistersoundevent params = {soundevent_eventid = <soundevent_eventid>}
+script RegisterSoundEvent 
+	AddSoundEventScript SoundEvent_EventID = <SoundEvent_EventID>
+	OnExitRun DeRegisterSoundEvent params = {SoundEvent_EventID = <SoundEvent_EventID>}
 	<event> <...>
 endscript
 
-script deregistersoundevent 
-	removesoundeventscript soundevent_eventid = <soundevent_eventid>
+script DeRegisterSoundEvent 
+	RemoveSoundEventScript SoundEvent_EventID = <SoundEvent_EventID>
 endscript
 
-script master_sfx_adding_sound_busses 
-	createbusssystem \{$busstree}
-	setsoundbussparams \{$default_bussset}
-	setsoundbussparams \{$default_bussset
+script Master_SFX_Adding_Sound_Busses 
+	CreateBussSystem \{$BussTree}
+	SetSoundBussParams \{$Default_BussSet}
+	SetSoundBussParams \{$Default_BussSet
 		time = 0.5}
-	soundbusslock \{master}
-	soundbusslock \{user_leadvox}
-	soundbusslock \{user_drums}
-	soundbusslock \{user_leadgtr}
-	soundbusslock \{user_bass}
-	soundbusslock \{user_rhythmgtr}
-	soundbusslock \{user_crowd}
-	soundbusslock \{user_sfx}
-	soundbusslock \{user_band}
-	soundbusslock \{user_crowdsingalong}
-	soundbusslock \{user_misc}
+	SoundBussLock \{Master}
+	SoundBussLock \{User_LeadVox}
+	SoundBussLock \{User_Drums}
+	SoundBussLock \{User_LeadGTR}
+	SoundBussLock \{User_Bass}
+	SoundBussLock \{User_RhythmGTR}
+	SoundBussLock \{User_Crowd}
+	SoundBussLock \{User_Sfx}
+	SoundBussLock \{User_Band}
+	SoundBussLock \{User_CrowdSingalong}
+	SoundBussLock \{User_Misc}
 endscript
 
-script printpushpopdebuginfo 
-	if NOT gotparam \{push}
-		if NOT gotparam \{pop}
-			printf \{qs(0xf0680b89)}
+script PrintPushPopDebugInfo 
+	if NOT GotParam \{push}
+		if NOT GotParam \{Pop}
+			printf \{qs("\LDid not specify push or pop!")}
 			return
 		endif
 	endif
-	if gotparam \{push}
-		pushpop = qs(0x1acc2a0c)
+	if GotParam \{push}
+		pushPop = qs("\Lpush")
 	else
-		pushpop = qs(0x8637b58f)
+		pushPop = qs("\Lpop")
 	endif
-	if NOT gotparam \{name}
-		printf \{qs(0xd2bb34b1)}
+	if NOT GotParam \{name}
+		printf \{qs("\LDid not specify script name!")}
 		return
 	endif
-	printf qs(0x3c00af92) a = <name> b = <pushpop>
+	printf qs("\L=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= %a %b") a = <name> b = <pushPop>
 endscript
 
-script gh3_change_crowd_reverb_settings_by_venue 
-	getpakmancurrent \{map = zones}
-	printf channel = sfx qs(0x28d12439) s = <pak>
+script GH3_Change_crowd_reverb_settings_by_Venue 
+	GetPakManCurrent \{map = zones}
+	printf channel = sfx qs("\L*************************************changing reverb settings to %s zone") s = <pak>
 	switch <pak>
 		case z_bayou
 		setsoundbusseffects \{effects = [
 				{
-					$reverb_crowd_buss_z_bayou
-					name = crowd_w_reverb_buss_reverb
+					$Reverb_Crowd_Buss_z_bayou
+					name = Crowd_W_Reverb_Buss_Reverb
 				}
 			]}
 		setsoundbusseffects \{effects = [
 				{
-					$echo_crowd_buss_z_bayou
-					name = crowd_w_reverb_buss_echo
+					$Echo_Crowd_Buss_z_bayou
+					name = Crowd_W_Reverb_Buss_Echo
 				}
 			]}
 		case z_goth
 		setsoundbusseffects \{effects = [
 				{
-					$reverb_crowd_buss_z_goth
-					name = crowd_w_reverb_buss_reverb
+					$Reverb_Crowd_Buss_z_goth
+					name = Crowd_W_Reverb_Buss_Reverb
 				}
 			]}
 		setsoundbusseffects \{effects = [
 				{
-					$echo_crowd_buss_z_goth
-					name = crowd_w_reverb_buss_echo
+					$Echo_Crowd_Buss_z_goth
+					name = Crowd_W_Reverb_Buss_Echo
 				}
 			]}
 		case z_hotel
 		setsoundbusseffects \{effects = [
 				{
-					$reverb_crowd_buss_z_hotel
-					name = crowd_w_reverb_buss_reverb
+					$Reverb_Crowd_Buss_z_hotel
+					name = Crowd_W_Reverb_Buss_Reverb
 				}
 			]}
 		setsoundbusseffects \{effects = [
 				{
-					$echo_crowd_buss_z_hotel
-					name = crowd_w_reverb_buss_echo
+					$Echo_Crowd_Buss_z_hotel
+					name = Crowd_W_Reverb_Buss_Echo
 				}
 			]}
 		case z_cathedral
 		setsoundbusseffects \{effects = [
 				{
-					$reverb_crowd_buss_z_cathedral
-					name = crowd_w_reverb_buss_reverb
+					$Reverb_Crowd_Buss_z_cathedral
+					name = Crowd_W_Reverb_Buss_Reverb
 				}
 			]}
 		setsoundbusseffects \{effects = [
 				{
-					$echo_crowd_buss_z_cathedral
-					name = crowd_w_reverb_buss_echo
+					$Echo_Crowd_Buss_z_cathedral
+					name = Crowd_W_Reverb_Buss_Echo
 				}
 			]}
 		case z_recordstore
 		setsoundbusseffects \{effects = [
 				{
-					$reverb_crowd_buss_z_recordstore
-					name = crowd_w_reverb_buss_reverb
+					$Reverb_Crowd_Buss_z_recordstore
+					name = Crowd_W_Reverb_Buss_Reverb
 				}
 			]}
 		setsoundbusseffects \{effects = [
 				{
-					$echo_crowd_buss_z_recordstore
-					name = crowd_w_reverb_buss_echo
+					$Echo_Crowd_Buss_z_recordstore
+					name = Crowd_W_Reverb_Buss_Echo
 				}
 			]}
 		case z_frathouse
 		setsoundbusseffects \{effects = [
 				{
-					$reverb_crowd_buss_z_frathouse
-					name = crowd_w_reverb_buss_reverb
+					$Reverb_Crowd_Buss_z_frathouse
+					name = Crowd_W_Reverb_Buss_Reverb
 				}
 			]}
 		setsoundbusseffects \{effects = [
 				{
-					$echo_crowd_buss_z_frathouse
-					name = crowd_w_reverb_buss_echo
+					$Echo_Crowd_Buss_z_frathouse
+					name = Crowd_W_Reverb_Buss_Echo
 				}
 			]}
 		case z_metalfest
 		setsoundbusseffects \{effects = [
 				{
-					$reverb_crowd_buss_z_metalfest
-					name = crowd_w_reverb_buss_reverb
+					$Reverb_Crowd_Buss_z_metalfest
+					name = Crowd_W_Reverb_Buss_Reverb
 				}
 			]}
 		setsoundbusseffects \{effects = [
 				{
-					$echo_crowd_buss_z_metalfest
-					name = crowd_w_reverb_buss_echo
+					$Echo_Crowd_Buss_z_metalfest
+					name = Crowd_W_Reverb_Buss_Echo
 				}
 			]}
 		case z_fairgrounds
 		setsoundbusseffects \{effects = [
 				{
-					$reverb_crowd_buss_z_fairgrounds
-					name = crowd_w_reverb_buss_reverb
+					$Reverb_Crowd_Buss_z_fairgrounds
+					name = Crowd_W_Reverb_Buss_Reverb
 				}
 			]}
 		setsoundbusseffects \{effects = [
 				{
-					$echo_crowd_buss_z_fairgrounds
-					name = crowd_w_reverb_buss_echo
+					$Echo_Crowd_Buss_z_fairgrounds
+					name = Crowd_W_Reverb_Buss_Echo
 				}
 			]}
 		case z_newyork
 		setsoundbusseffects \{effects = [
 				{
-					$reverb_crowd_buss_z_newyork
-					name = crowd_w_reverb_buss_reverb
+					$Reverb_Crowd_Buss_z_newyork
+					name = Crowd_W_Reverb_Buss_Reverb
 				}
 			]}
 		setsoundbusseffects \{effects = [
 				{
-					$echo_crowd_buss_z_newyork
-					name = crowd_w_reverb_buss_echo
+					$Echo_Crowd_Buss_z_newyork
+					name = Crowd_W_Reverb_Buss_Echo
 				}
 			]}
 		case z_ballpark
 		setsoundbusseffects \{effects = [
 				{
-					$reverb_crowd_buss_z_ballpark
-					name = crowd_w_reverb_buss_reverb
+					$Reverb_Crowd_Buss_z_ballpark
+					name = Crowd_W_Reverb_Buss_Reverb
 				}
 			]}
 		setsoundbusseffects \{effects = [
 				{
-					$echo_crowd_buss_z_ballpark
-					name = crowd_w_reverb_buss_echo
+					$Echo_Crowd_Buss_z_ballpark
+					name = Crowd_W_Reverb_Buss_Echo
 				}
 			]}
 		case z_castle
 		setsoundbusseffects \{effects = [
 				{
-					$reverb_crowd_buss_z_castle
-					name = crowd_w_reverb_buss_reverb
+					$Reverb_Crowd_Buss_z_castle
+					name = Crowd_W_Reverb_Buss_Reverb
 				}
 			]}
 		setsoundbusseffects \{effects = [
 				{
-					$echo_crowd_buss_z_castle
-					name = crowd_w_reverb_buss_echo
+					$Echo_Crowd_Buss_z_castle
+					name = Crowd_W_Reverb_Buss_Echo
 				}
 			]}
 		case z_military
 		setsoundbusseffects \{effects = [
 				{
-					$reverb_crowd_buss_z_military
-					name = crowd_w_reverb_buss_reverb
+					$Reverb_Crowd_Buss_z_military
+					name = Crowd_W_Reverb_Buss_Reverb
 				}
 			]}
 		setsoundbusseffects \{effects = [
 				{
-					$echo_crowd_buss_z_military
-					name = crowd_w_reverb_buss_echo
+					$Echo_Crowd_Buss_z_military
+					name = Crowd_W_Reverb_Buss_Echo
 				}
 			]}
 		case z_harbor
 		setsoundbusseffects \{effects = [
 				{
-					$reverb_crowd_buss_z_harbor
-					name = crowd_w_reverb_buss_reverb
+					$Reverb_Crowd_Buss_z_harbor
+					name = Crowd_W_Reverb_Buss_Reverb
 				}
 			]}
 		setsoundbusseffects \{effects = [
 				{
-					$echo_crowd_buss_z_harbor
-					name = crowd_w_reverb_buss_echo
+					$Echo_Crowd_Buss_z_harbor
+					name = Crowd_W_Reverb_Buss_Echo
 				}
 			]}
 		case z_scifi
 		setsoundbusseffects \{effects = [
 				{
-					$reverb_crowd_buss_z_scifi
-					name = crowd_w_reverb_buss_reverb
+					$Reverb_Crowd_Buss_z_scifi
+					name = Crowd_W_Reverb_Buss_Reverb
 				}
 			]}
 		setsoundbusseffects \{effects = [
 				{
-					$echo_crowd_buss_z_scifi
-					name = crowd_w_reverb_buss_echo
+					$Echo_Crowd_Buss_z_scifi
+					name = Crowd_W_Reverb_Buss_Echo
 				}
 			]}
 		case z_submarine
 		setsoundbusseffects \{effects = [
 				{
-					$reverb_crowd_buss_z_submarine
-					name = crowd_w_reverb_buss_reverb
+					$Reverb_Crowd_Buss_z_submarine
+					name = Crowd_W_Reverb_Buss_Reverb
 				}
 			]}
 		setsoundbusseffects \{effects = [
 				{
-					$echo_crowd_buss_z_submarine
-					name = crowd_w_reverb_buss_echo
+					$Echo_Crowd_Buss_z_submarine
+					name = Crowd_W_Reverb_Buss_Echo
 				}
 			]}
 		case z_party
-		printf \{qs(0x713755f7)}
+		printf \{qs("\L ")}
 		default
 		setsoundbusseffects \{effects = [
 				{
-					$reverb_crowd_buss_default_semiwet
-					name = crowd_w_reverb_buss_reverb
+					$Reverb_Crowd_Buss_Default_SemiWet
+					name = Crowd_W_Reverb_Buss_Reverb
 				}
 			]}
 		setsoundbusseffects \{effects = [
 				{
-					$echo_crowd_buss_default_semiwet
-					name = crowd_w_reverb_buss_echo
+					$Echo_Crowd_Buss_Default_SemiWet
+					name = Crowd_W_Reverb_Buss_Echo
 				}
 			]}
 	endswitch
 endscript
 
-script generic_reverb_functionality_script \{newechosettings = $echo_dry
-		echofadetime = 0.5
-		newreverbsettings = $reverb_dry
-		reverbfadetime = 0.5}
+script Generic_Reverb_Functionality_Script \{NewEchoSettings = $Echo_Dry
+		EchoFadeTime = 0.5
+		NewReverbSettings = $Reverb_Dry
+		ReverbFadeTime = 0.5}
 	if inside
-		if gotparam \{newechosettings}
-			if gotparam \{echofadetime}
-				setsoundbusseffects effects = [{<newechosettings> name = crowd_w_reverb_buss_echo}] time = <echofadetime>
+		if GotParam \{NewEchoSettings}
+			if GotParam \{EchoFadeTime}
+				setsoundbusseffects effects = [{<NewEchoSettings> name = Crowd_W_Reverb_Buss_Echo}] time = <EchoFadeTime>
 			else
-				setsoundbusseffects effects = [{<newechosettings> name = crowd_w_reverb_buss_echo}]
+				setsoundbusseffects effects = [{<NewEchoSettings> name = Crowd_W_Reverb_Buss_Echo}]
 			endif
 		endif
-		if gotparam \{newreverbsettings}
-			if gotparam \{reverbfadetime}
-				setsoundbusseffects effects = [{<newreverbsettings> name = crowd_w_reverb_buss_reverb}] time = <reverbfadetime>
+		if GotParam \{NewReverbSettings}
+			if GotParam \{ReverbFadeTime}
+				setsoundbusseffects effects = [{<NewReverbSettings> name = Crowd_W_Reverb_Buss_Reverb}] time = <ReverbFadeTime>
 			else
-				setsoundbusseffects effects = [{<newreverbsettings> name = crowd_w_reverb_buss_reverb}]
+				setsoundbusseffects effects = [{<NewReverbSettings> name = Crowd_W_Reverb_Buss_Reverb}]
 			endif
 		endif
 	else
-		if gotparam \{destroyed}
+		if GotParam \{Destroyed}
 		else
-			if gotparam \{created}
+			if GotParam \{Created}
 			else
-				if gotparam \{exitechosettings}
-					if gotparam \{exitechofadetime}
-						setsoundbusseffects effects = [{<exitechosettings> name = crowd_w_reverb_buss_echo}] time = <exitechofadetime>
+				if GotParam \{ExitEchoSettings}
+					if GotParam \{ExitEchoFadeTime}
+						setsoundbusseffects effects = [{<ExitEchoSettings> name = Crowd_W_Reverb_Buss_Echo}] time = <ExitEchoFadeTime>
 					else
-						setsoundbusseffects effects = [{<exitechosettings> name = crowd_w_reverb_buss_echo}]
+						setsoundbusseffects effects = [{<ExitEchoSettings> name = Crowd_W_Reverb_Buss_Echo}]
 					endif
 				endif
-				if gotparam \{exitreverbsettings}
-					if gotparam \{exitreverbfadetime}
-						setsoundbusseffects effects = [{<exitreverbsettings> name = crowd_w_reverb_buss_reverb}] time = <exitreverbfadetime>
+				if GotParam \{ExitReverbSettings}
+					if GotParam \{ExitReverbFadeTime}
+						setsoundbusseffects effects = [{<ExitReverbSettings> name = Crowd_W_Reverb_Buss_Reverb}] time = <ExitReverbFadeTime>
 					else
-						setsoundbusseffects effects = [{<exitreverbsettings> name = crowd_w_reverb_buss_reverb}]
+						setsoundbusseffects effects = [{<ExitReverbSettings> name = Crowd_W_Reverb_Buss_Reverb}]
 					endif
 				endif
 			endif
@@ -1064,22 +1064,22 @@ script generic_reverb_functionality_script \{newechosettings = $echo_dry
 	endif
 endscript
 
-script gh_star_power_verb_on 
+script GH_Star_Power_Verb_On 
 	printf \{channel = sfx
-		qs(0x9892061a)}
-	getplayerinfo <player> part
-	printf channel = sfx qs(0xbaecfbed) s = <player>
-	if ($star_power_verb_is_on = 1)
+		qs("\L****************GH_Star_Power_Verb_On**************************")}
+	GetPlayerInfo <player> part
+	printf channel = sfx qs("\L****************PLAYER THAT REQUESTED STAR POWER VERB = PLAYER # %s") s = <player>
+	if ($Star_power_verb_is_on = 1)
 		printf \{channel = sfx
-			qs(0xf3504361)}
-		if NOT issingleplayergame
+			qs("\L****************$Star_power_verb_is_on equals 1 - Verb is already on!")}
+		if NOT isSinglePlayerGame
 			printf \{channel = sfx
-				qs(0x4292e934)}
-			spawnscriptnow star_power_clap_panning_multiple params = {player = <player>}
-			spawnscriptnow star_power_deployed_sfx_multiplayer params = {player = <player>}
+				qs("\L****************$Star_power_verb_is_on equals 1, AND we're NOT n a single player game! - spawning two scripts")}
+			spawnscriptnow Star_Power_Clap_Panning_Multiple params = {player = <player>}
+			spawnscriptnow Star_Power_Deployed_SFX_Multiplayer params = {player = <player>}
 			get_song_tempo_cfunc
 			oneandahalfbeats = (<beat_duration> * 1.5)
-			printf channel = sfx qs(0x3d45af48) s = <oneandahalfbeats>
+			printf channel = sfx qs("\L****************oneandahalfbeats = %s") s = <oneandahalfbeats>
 			if (<oneandahalfbeats> > 600)
 				if (<beat_duration> > 400)
 					beat_duration = (<beat_duration> / 2)
@@ -1096,137 +1096,137 @@ script gh_star_power_verb_on
 			else
 				beat_duration = <oneandahalfbeats>
 			endif
-			printf channel = sfx qs(0xa8e933a2) s = <beat_duration>
+			printf channel = sfx qs("\L****************done with delay logic - now, beat_duration = %s") s = <beat_duration>
 			printf \{channel = sfx
-				qs(0x05b68718)}
+				qs("\L****************Setting the delay right now to <beat_duration>")}
 			setsoundbusseffects effects = [{effect = echo name = starpowerecho delay = <beat_duration>}]
 			switch <part>
 				case guitar
 				printf \{channel = sfx
-					qs(0xaf3a873b)}
+					qs("\L****************Part is GUITAR")}
 				setsoundbusseffects \{effects = [
 						{
 							effect = echo
 							name = starpowerecho
 							wetmix = 0.0
 							drymix = 0.2
-							decayratio = 0.0
+							DecayRatio = 0.0
 						}
 					]}
 				setsoundbusseffects \{effects = [
 						{
 							effect = sfxreverb
 							name = starpowerreverb
-							drylevel = -1000.0
+							DryLevel = -1000.0
 							reverblevel = 2000
-							reflectionslevel = 1000
-							room = -2000
-							roomrollofffactor = 18
-							reverbdelay = 0.1
-							decaytime = 3.0
+							ReflectionsLevel = 1000
+							Room = -2000
+							RoomRollOffFactor = 18
+							ReverbDelay = 0.1
+							DecayTime = 3.0
 							roomhf = -500
 						}
 					]
 					time = 0.1}
-				songsetstarpowereffectssendvolume player = <player> vol = 6
-				case bass
+				SongSetStarpowerEffectsSendVolume player = <player> vol = 6
+				case Bass
 				printf \{channel = sfx
-					qs(0xf7672ca5)}
+					qs("\L****************Part is BASS")}
 				setsoundbusseffects \{effects = [
 						{
 							effect = echo
 							name = starpowerecho
 							wetmix = 0.3
 							drymix = 0.7
-							decayratio = 0.25
+							DecayRatio = 0.25
 						}
 					]}
 				setsoundbusseffects \{effects = [
 						{
 							effect = sfxreverb
 							name = starpowerreverb
-							drylevel = -1400.0
+							DryLevel = -1400.0
 							reverblevel = 900
-							reflectionslevel = 0
-							room = -2000
-							roomrollofffactor = 18
-							reverbdelay = 0.1
-							decaytime = 0.1
+							ReflectionsLevel = 0
+							Room = -2000
+							RoomRollOffFactor = 18
+							ReverbDelay = 0.1
+							DecayTime = 0.1
 							roomhf = -1
 						}
 					]
 					time = 0.1}
-				songsetstarpowereffectssendvolume player = <player> vol = 8
+				SongSetStarpowerEffectsSendVolume player = <player> vol = 8
 				case drum
 				printf \{channel = sfx
-					qs(0x45603514)}
+					qs("\L****************Part is DRUM")}
 				setsoundbusseffects \{effects = [
 						{
 							effect = echo
 							name = starpowerecho
 							wetmix = 0.0
 							drymix = 0.2
-							decayratio = 0.0
+							DecayRatio = 0.0
 						}
 					]}
 				setsoundbusseffects \{effects = [
 						{
 							effect = sfxreverb
 							name = starpowerreverb
-							drylevel = -1000.0
+							DryLevel = -1000.0
 							reverblevel = 2000
-							reflectionslevel = 1000
-							room = -2000
-							roomrollofffactor = 18
-							reverbdelay = 0.1
-							decaytime = 3.0
+							ReflectionsLevel = 1000
+							Room = -2000
+							RoomRollOffFactor = 18
+							ReverbDelay = 0.1
+							DecayTime = 3.0
 							roomhf = -500
 						}
 					]
 					time = 0.1}
-				songsetstarpowereffectssendvolume player = <player> vol = 7
-				case vocals
+				SongSetStarpowerEffectsSendVolume player = <player> vol = 7
+				case Vocals
 				printf \{channel = sfx
-					qs(0x21a151f5)}
-				vocaldspsetparams \{effect = sfxreverb
+					qs("\L****************Part is VOCALS")}
+				VocalDSPSetParams \{effect = sfxreverb
 					reverblevel = 200
 					roomhf = 1000
 					diffusion = 1200
-					drylevel = -2000.0}
-				vocaldspsetparams \{effect = echo
+					DryLevel = -2000.0}
+				VocalDSPSetParams \{effect = echo
 					drymix = 0.0
 					wetmix = 0.5
 					delay = 100}
 				default
 				printf \{channel = sfx
-					qs(0xacc915b2)}
+					qs("\LOOOOOOOPPPPPSSSSSSS!")}
 			endswitch
 		endif
 		printf \{channel = sfx
-			qs(0x5f48d472)}
+			qs("\L****************   RETURNING!!!!!!!!!")}
 		return
 	else
 		printf \{channel = sfx
-			qs(0xd6de249a)}
-		spawnscriptnow star_power_clap_panning params = {player = <player>}
+			qs("\L****************$Star_power_verb_is_on IS NOT equal to 1 - Verb is NOT already on! - spawning one script for clapping")}
+		spawnscriptnow Star_Power_Clap_Panning params = {player = <player>}
 		printf \{channel = sfx
-			qs(0xc8d90171)}
-		change \{star_power_verb_is_on = 1}
-		if issingleplayergame
-			soundevent \{event = star_power_deployed_lfe_gh4}
-			soundevent \{event = star_power_deployed_back_gh4}
-			soundevent \{event = star_power_deployed_front_gh4}
+			qs("\L****************changing Star_power_verb_is_on to equal 1")}
+		change \{Star_power_verb_is_on = 1}
+		if isSinglePlayerGame
+			SoundEvent \{event = Star_Power_Deployed_LFE_GH4}
+			SoundEvent \{event = Star_Power_Deployed_Back_GH4}
+			SoundEvent \{event = Star_Power_Deployed_Front_Gh4}
 			if ($game_mode != tutorial)
-				if NOT issoundeventplaying \{star_power_deployed_cheer_sfx}
-					soundevent \{event = star_power_deployed_cheer_sfx}
+				if NOT isSoundEventPlaying \{Star_Power_Deployed_Cheer_SFX}
+					SoundEvent \{event = Star_Power_Deployed_Cheer_SFX}
 				endif
 			endif
 		else
-			spawnscriptnow star_power_deployed_sfx_multiplayer params = {player = <player>}
+			spawnscriptnow Star_Power_Deployed_SFX_Multiplayer params = {player = <player>}
 		endif
 		get_song_tempo_cfunc
 		oneandahalfbeats = (<beat_duration> * 1.5)
-		printf channel = sfx qs(0x3d45af48) s = <oneandahalfbeats>
+		printf channel = sfx qs("\L****************oneandahalfbeats = %s") s = <oneandahalfbeats>
 		if (<oneandahalfbeats> > 600)
 			if (<beat_duration> > 400)
 				beat_duration = (<beat_duration> / 2)
@@ -1243,202 +1243,202 @@ script gh_star_power_verb_on
 		else
 			beat_duration = <oneandahalfbeats>
 		endif
-		printf channel = sfx qs(0xa8e933a2) s = <beat_duration>
+		printf channel = sfx qs("\L****************done with delay logic - now, beat_duration = %s") s = <beat_duration>
 		printf \{channel = sfx
-			qs(0x05b68718)}
+			qs("\L****************Setting the delay right now to <beat_duration>")}
 		setsoundbusseffects effects = [{effect = echo name = starpowerecho delay = <beat_duration>}]
 		if (<part> = guitar)
 			printf \{channel = sfx
-				qs(0xaf3a873b)}
-			if issingleplayergame
+				qs("\L****************Part is GUITAR")}
+			if isSinglePlayerGame
 				printf \{channel = sfx
-					qs(0xf8444318)}
+					qs("\L****************Part is GUITAR and we ARE in a singleplayer game")}
 				setsoundbusseffects \{effects = [
 						{
 							effect = echo
 							name = starpowerecho
 							wetmix = 1.0
 							drymix = 0.7
-							decayratio = 0.25
+							DecayRatio = 0.25
 						}
 					]}
 				setsoundbusseffects \{effects = [
 						{
 							effect = sfxreverb
 							name = starpowerreverb
-							drylevel = -1500.0
+							DryLevel = -1500.0
 							reverblevel = -500
-							reflectionslevel = 0
-							room = -1000
-							roomrollofffactor = 18
-							reverbdelay = 0.1
-							decaytime = 0.1
+							ReflectionsLevel = 0
+							Room = -1000
+							RoomRollOffFactor = 18
+							ReverbDelay = 0.1
+							DecayTime = 0.1
 							roomhf = -1
 						}
 					]
 					time = 0.1}
-				songsetstarpowereffectssendvolume player = <player> vol = 4
+				SongSetStarpowerEffectsSendVolume player = <player> vol = 4
 			else
 				printf \{channel = sfx
-					qs(0x7bcc986d)}
+					qs("\L****************Part is GUITAR and we ARE NOT in a singleplayer game")}
 				setsoundbusseffects \{effects = [
 						{
 							effect = echo
 							name = starpowerecho
 							wetmix = 0.0
 							drymix = 0.2
-							decayratio = 0.0
+							DecayRatio = 0.0
 						}
 					]}
 				setsoundbusseffects \{effects = [
 						{
 							effect = sfxreverb
 							name = starpowerreverb
-							drylevel = -1000.0
+							DryLevel = -1000.0
 							reverblevel = 2000
-							reflectionslevel = 1000
-							room = -2000
-							roomrollofffactor = 18
-							reverbdelay = 0.1
-							decaytime = 3.0
+							ReflectionsLevel = 1000
+							Room = -2000
+							RoomRollOffFactor = 18
+							ReverbDelay = 0.1
+							DecayTime = 3.0
 							roomhf = -500
 						}
 					]
 					time = 0.1}
-				songsetstarpowereffectssendvolume player = <player> vol = 6
+				SongSetStarpowerEffectsSendVolume player = <player> vol = 6
 			endif
 		endif
 		if (<part> = drum)
 			printf \{channel = sfx
-				qs(0x45603514)}
-			if issingleplayergame
+				qs("\L****************Part is DRUM")}
+			if isSinglePlayerGame
 				printf \{channel = sfx
-					qs(0x89688b72)}
+					qs("\L****************Part is DRUM and we ARE in a singleplayer game")}
 				setsoundbusseffects \{effects = [
 						{
 							effect = echo
 							name = starpowerecho
 							wetmix = 0.0
 							drymix = 0.2
-							decayratio = 0.0
+							DecayRatio = 0.0
 						}
 					]}
 				setsoundbusseffects \{effects = [
 						{
 							effect = sfxreverb
 							name = starpowerreverb
-							drylevel = -2000.0
+							DryLevel = -2000.0
 							reverblevel = 1700
-							reflectionslevel = -10000
-							room = -2000
-							roomrollofffactor = 18
-							reverbdelay = 0.1
-							decaytime = 3.0
+							ReflectionsLevel = -10000
+							Room = -2000
+							RoomRollOffFactor = 18
+							ReverbDelay = 0.1
+							DecayTime = 3.0
 							roomhf = -1
 						}
 					]
 					time = 0.1}
-				songsetstarpowereffectssendvolume player = <player> vol = 12
+				SongSetStarpowerEffectsSendVolume player = <player> vol = 12
 			else
 				printf \{channel = sfx
-					qs(0x71c9f9c0)}
+					qs("\L****************Part is DRUM and we ARE NOT in a singleplayer game")}
 				setsoundbusseffects \{effects = [
 						{
 							effect = echo
 							name = starpowerecho
 							wetmix = 0.0
 							drymix = 0.2
-							decayratio = 0.0
+							DecayRatio = 0.0
 						}
 					]}
 				setsoundbusseffects \{effects = [
 						{
 							effect = sfxreverb
 							name = starpowerreverb
-							drylevel = -1000.0
+							DryLevel = -1000.0
 							reverblevel = 2000
-							reflectionslevel = 1000
-							room = -2000
-							roomrollofffactor = 18
-							reverbdelay = 0.1
-							decaytime = 3.0
+							ReflectionsLevel = 1000
+							Room = -2000
+							RoomRollOffFactor = 18
+							ReverbDelay = 0.1
+							DecayTime = 3.0
 							roomhf = -500
 						}
 					]
 					time = 0.1}
-				songsetstarpowereffectssendvolume player = <player> vol = 7
+				SongSetStarpowerEffectsSendVolume player = <player> vol = 7
 			endif
 		endif
-		if (<part> = bass)
+		if (<part> = Bass)
 			printf \{channel = sfx
-				qs(0xf7672ca5)}
-			if issingleplayergame
+				qs("\L****************Part is BASS")}
+			if isSinglePlayerGame
 				printf \{channel = sfx
-					qs(0x29b80d4d)}
+					qs("\L****************Part is BASS and we ARE in a singleplayer game")}
 				setsoundbusseffects \{effects = [
 						{
 							effect = echo
 							name = starpowerecho
 							wetmix = 0.3
 							drymix = 0.7
-							decayratio = 0.25
+							DecayRatio = 0.25
 						}
 					]}
 				setsoundbusseffects \{effects = [
 						{
 							effect = sfxreverb
 							name = starpowerreverb
-							drylevel = -1400.0
+							DryLevel = -1400.0
 							reverblevel = 900
-							reflectionslevel = 0
-							room = -2000
-							roomrollofffactor = 18
-							reverbdelay = 0.1
-							decaytime = 0.1
+							ReflectionsLevel = 0
+							Room = -2000
+							RoomRollOffFactor = 18
+							ReverbDelay = 0.1
+							DecayTime = 0.1
 							roomhf = -1
 						}
 					]
 					time = 0.1}
-				songsetstarpowereffectssendvolume player = <player> vol = 8
+				SongSetStarpowerEffectsSendVolume player = <player> vol = 8
 			else
 				printf \{channel = sfx
-					qs(0xa4fbe460)}
+					qs("\L****************Part is BASS and we ARE NOT in a singleplayer game")}
 				setsoundbusseffects \{effects = [
 						{
 							effect = echo
 							name = starpowerecho
 							wetmix = 0.0
 							drymix = 0.2
-							decayratio = 0.0
+							DecayRatio = 0.0
 						}
 					]}
 				setsoundbusseffects \{effects = [
 						{
 							effect = sfxreverb
 							name = starpowerreverb
-							drylevel = -1000.0
+							DryLevel = -1000.0
 							reverblevel = 2000
-							reflectionslevel = 1000
-							room = -2000
-							roomrollofffactor = 18
-							reverbdelay = 0.1
-							decaytime = 3.0
+							ReflectionsLevel = 1000
+							Room = -2000
+							RoomRollOffFactor = 18
+							ReverbDelay = 0.1
+							DecayTime = 3.0
 							roomhf = -500
 						}
 					]
 					time = 0.1}
-				songsetstarpowereffectssendvolume player = <player> vol = 8
+				SongSetStarpowerEffectsSendVolume player = <player> vol = 8
 			endif
 		endif
-		if (<part> = vocals)
+		if (<part> = Vocals)
 			printf \{channel = sfx
-				qs(0x21a151f5)}
-			vocaldspsetparams \{effect = sfxreverb
+				qs("\L****************Part is VOCALS")}
+			VocalDSPSetParams \{effect = sfxreverb
 				reverblevel = 200
 				roomhf = 1000
 				diffusion = 1200
-				drylevel = -1300.0}
-			vocaldspsetparams \{effect = echo
+				DryLevel = -1300.0}
+			VocalDSPSetParams \{effect = echo
 				drymix = 0.0
 				wetmix = 0.5
 				delay = 100}
@@ -1446,108 +1446,108 @@ script gh_star_power_verb_on
 	endif
 endscript
 
-script gh_star_power_verb_off 
+script GH_Star_Power_Verb_Off 
 	printf \{channel = sfx
-		qs(0xfa676f80)}
-	if ($star_power_verb_is_on = 1)
+		qs("\L********************************* script GH_Star_Power_Verb_Off")}
+	if ($Star_power_verb_is_on = 1)
 	endif
-	printf channel = sfx qs(0x149d7db3) s = <player>
-	spawnscriptnow star_clap_end params = {player = <player>}
-	spawnscriptnow \{clap_fading}
-	change \{star_power_verb_is_on = 0}
-	songsetstarpowereffectssendvolume player = <player> vol = -100
-	getplayerinfo <player> part
-	if (<part> = vocals)
-		vocaldspsetparams \{effect = sfxreverb
+	printf channel = sfx qs("\L********************************* TURNING OFF PLAYER # %s-s EFFECTS SEND") s = <player>
+	spawnscriptnow Star_Clap_End params = {player = <player>}
+	spawnscriptnow \{Clap_Fading}
+	change \{Star_power_verb_is_on = 0}
+	SongSetStarpowerEffectsSendVolume player = <player> vol = -100
+	GetPlayerInfo <player> part
+	if (<part> = Vocals)
+		VocalDSPSetParams \{effect = sfxreverb
 			reverblevel = -550
 			roomhf = 0
 			diffusion = 100
-			drylevel = 0.0}
-		vocaldspsetparams \{effect = echo
+			DryLevel = 0.0}
+		VocalDSPSetParams \{effect = echo
 			drymix = 0.0
 			wetmis = 0.25
 			delay = 100}
 	endif
 endscript
 
-script gh3_set_guitar_verb_and_echo_to_dry 
+script GH3_Set_Guitar_Verb_And_Echo_to_Dry 
 endscript
 
-script gh3_battle_attack_finished_sfx 
+script GH3_Battle_Attack_Finished_SFX 
 	if (<player> = 1)
-		soundevent \{event = gh_sfx_battlemode_attack_over_p1}
+		SoundEvent \{event = GH_SFX_BattleMode_Attack_Over_P1}
 	else
-		soundevent \{event = gh_sfx_battlemode_attack_over_p2}
+		SoundEvent \{event = GH_SFX_BattleMode_Attack_Over_P2}
 	endif
 endscript
 
-script gh_battlemode_player1_sfx_diffup_start 
-	soundevent \{event = gh_sfx_battlemode_diffup_p1}
+script GH_BattleMode_Player1_SFX_DiffUp_Start 
+	SoundEvent \{event = GH_SFX_BattleMode_DiffUp_P1}
 endscript
 
-script gh_battlemode_player2_sfx_diffup_start 
-	soundevent \{event = gh_sfx_battlemode_diffup_p2}
+script GH_BattleMode_Player2_SFX_DiffUp_Start 
+	SoundEvent \{event = GH_SFX_BattleMode_DiffUp_P2}
 endscript
 
-script gh_battlemode_player1_sfx_doublenotes_start 
-	soundevent \{event = gh_sfx_battlemode_doublenote_p1}
+script GH_BattleMode_Player1_SFX_DoubleNotes_Start 
+	SoundEvent \{event = GH_SFX_BattleMode_DoubleNote_P1}
 endscript
 
-script gh_battlemode_player2_sfx_doublenotes_start 
-	soundevent \{event = gh_sfx_battlemode_doublenote_p2}
+script GH_BattleMode_Player2_SFX_DoubleNotes_Start 
+	SoundEvent \{event = GH_SFX_BattleMode_DoubleNote_P2}
 endscript
 
-script gh_battlemode_player1_sfx_shake_start 
-	soundevent \{event = gh_sfx_battlemode_lightning_player1}
+script GH_BattleMode_Player1_SFX_Shake_Start 
+	SoundEvent \{event = GH_SFX_BattleMode_Lightning_Player1}
 endscript
 
-script gh_battlemode_player2_sfx_shake_start 
-	soundevent \{event = gh_sfx_battlemode_lightning_player2}
+script GH_BattleMode_Player2_SFX_Shake_Start 
+	SoundEvent \{event = GH_SFX_BattleMode_Lightning_Player2}
 endscript
 
-script gh_battlemode_player1_sfx_leftynotes_start 
-	soundevent \{event = gh_sfx_battlemode_lefty_p1}
+script GH_BattleMode_Player1_SFX_LeftyNotes_Start 
+	SoundEvent \{event = GH_SFX_BattleMode_Lefty_P1}
 endscript
 
-script gh_battlemode_player2_sfx_leftynotes_start 
-	soundevent \{event = gh_sfx_battlemode_lefty_p2}
+script GH_BattleMode_Player2_SFX_LeftyNotes_Start 
+	SoundEvent \{event = GH_SFX_BattleMode_Lefty_P2}
 endscript
 
-script gh_battlemode_player1_sfx_brokenstring_start 
-	soundevent \{event = gh_sfx_battlemode_stringbreak_p1}
+script GH_BattleMode_Player1_SFX_BrokenString_Start 
+	SoundEvent \{event = GH_SFX_BattleMode_StringBreak_P1}
 endscript
 
-script gh_battlemode_player2_sfx_brokenstring_start 
-	soundevent \{event = gh_sfx_battlemode_stringbreak_p2}
+script GH_BattleMode_Player2_SFX_BrokenString_Start 
+	SoundEvent \{event = GH_SFX_BattleMode_StringBreak_P2}
 endscript
 
-script gh_battlemode_player1_sfx_steal 
-	soundevent \{event = gh_sfx_battlemode_steal_p1}
+script GH_BattleMode_Player1_SFX_Steal 
+	SoundEvent \{event = GH_SFX_BattleMode_Steal_P1}
 endscript
 
-script gh_battlemode_player2_sfx_steal 
-	soundevent \{event = gh_sfx_battlemode_steal_p2}
+script GH_BattleMode_Player2_SFX_Steal 
+	SoundEvent \{event = GH_SFX_BattleMode_Steal_P2}
 endscript
 
-script gh_battlemode_player1_sfx_whammy_start 
-	soundevent \{event = gh_sfx_battlemode_whammyattack_p1}
+script GH_BattleMode_Player1_SFX_Whammy_Start 
+	SoundEvent \{event = GH_SFX_BattleMode_WhammyAttack_P1}
 endscript
 
-script gh_battlemode_player2_sfx_whammy_start 
-	soundevent \{event = gh_sfx_battlemode_whammyattack_p2}
+script GH_BattleMode_Player2_SFX_Whammy_Start 
+	SoundEvent \{event = GH_SFX_BattleMode_WhammyAttack_P2}
 endscript
 
-script gh3_battle_play_crowd_reaction_sfx 
+script GH3_Battle_Play_Crowd_Reaction_SFX 
 	if (<receiving_player> = 1)
-		soundevent \{event = $current_crowd_battle_cheer_l_p2}
-		soundevent \{event = $current_crowd_battle_cheer_r_p2}
+		SoundEvent \{event = $Current_Crowd_Battle_Cheer_L_P2}
+		SoundEvent \{event = $Current_Crowd_Battle_Cheer_R_P2}
 	else
-		soundevent \{event = $current_crowd_battle_cheer_l_p1}
-		soundevent \{event = $current_crowd_battle_cheer_r_p1}
+		SoundEvent \{event = $Current_Crowd_Battle_Cheer_L_P1}
+		SoundEvent \{event = $Current_Crowd_Battle_Cheer_R_P1}
 	endif
 endscript
 
-script gh3_battle_play_whammy_pitch_up_sound 
+script GH3_Battle_Play_Whammy_Pitch_Up_Sound 
 	num_strums = ($<other_player_status>.whammy_attack)
 	player_pan = ($<other_player_status>.player)
 	if (<player_pan> = 1)
@@ -1571,17 +1571,17 @@ script gh3_battle_play_whammy_pitch_up_sound
 		case expert
 		<total_strums> = ($battlemode_powerups [6].expert_repair)
 		default
-		printf \{qs(0xe5d01698)}
+		printf \{qs("\Lmoron")}
 	endswitch
 	<change_pitch> = (1.3 * <num_strums> / <total_strums>)
 	<local_pitch> = (100.0 - (10.0 * <change_pitch>))
-	playsound gh3_battlemode_whammyattack_received vol_percent = 50 pitch_percent = <local_pitch> pan1x = <pan1x> pan1y = <pan1y> pan2x = <pan2x> pan2y = <pan2y> buss = ui_battle_mode
+	PlaySound GH3_BattleMode_WhammyAttack_Received vol_percent = 50 pitch_percent = <local_pitch> pan1x = <pan1x> pan1y = <pan1y> pan2x = <pan2x> pan2y = <pan2y> buss = UI_Battle_Mode
 endscript
 
-script battle_sfx_repair_broken_string 
-	if gotparam \{num_strums}
-		if gotparam \{player_pan}
-			if gotparam \{difficulty}
+script Battle_SFX_Repair_Broken_String 
+	if GotParam \{num_strums}
+		if GotParam \{player_pan}
+			if GotParam \{difficulty}
 				if (<player_pan> = 1)
 					<pan1x> = -0.76199996
 					<pan1y> = 0.6470001
@@ -1603,391 +1603,391 @@ script battle_sfx_repair_broken_string
 					case expert
 					<total_strums> = ($battlemode_powerups [5].expert_repair)
 					default
-					printf \{qs(0xe5d01698)}
+					printf \{qs("\Lmoron")}
 				endswitch
 				<change_pitch> = (1.0 * <num_strums> / <total_strums>)
 				<local_pitch> = (100.0 - (10.0 * <change_pitch>))
-				playsound gh3_battlemode_stringtune_2 vol_percent = 50 pitch_percent = <local_pitch> pan1x = <pan1x> pan1y = <pan1y> pan2x = <pan2x> pan2y = <pan2y> buss = ui_battle_mode
+				PlaySound GH3_Battlemode_StringTune_2 vol_percent = 50 pitch_percent = <local_pitch> pan1x = <pan1x> pan1y = <pan1y> pan2x = <pan2x> pan2y = <pan2y> buss = UI_Battle_Mode
 			endif
 		endif
 	endif
 endscript
 
-script setup_all_crowd_sounds_based_on_zone 
-	venuesize = 'Medium_EXT'
-	getpakmancurrentname \{map = zones}
-	formattext checksumname = scriptgetvenuesize '%s_sfx_Get_Venue_Size' s = <pakname> addtostringlookup = true
-	if scriptexists <scriptgetvenuesize>
+script Setup_All_Crowd_Sounds_Based_On_Zone 
+	VenueSize = 'Medium_EXT'
+	GetPakManCurrentName \{map = zones}
+	FormatText checksumname = scriptgetvenuesize '%s_sfx_Get_Venue_Size' s = <pakname> AddToStringLookup = true
+	if ScriptExists <scriptgetvenuesize>
 		<scriptgetvenuesize>
 	else
-		venuesize = 'Medium_EXT'
+		VenueSize = 'Medium_EXT'
 	endif
-	formattext checksumname = whistletemp 'Crowd_Whistle_%s_Good' s = <venuesize> addtostringlookup = true
-	change current_crowd_whistle_soundevent = <whistletemp>
-	formattext checksumname = oneshotgoodtemp 'Crowd_OneShot_%s_Good' s = <venuesize> addtostringlookup = true
-	change current_crowd_oneshot_positive_soundevent = <oneshotgoodtemp>
-	formattext checksumname = oneshotbadtemp 'Crowd_OneShot_%s_Bad' s = <venuesize> addtostringlookup = true
-	change current_crowd_oneshot_negative_soundevent = <oneshotbadtemp>
-	formattext checksumname = loopgoodtemp 'Crowd_Loop_%s_Good' s = <venuesize> addtostringlookup = true
-	change current_crowd_looping_bg_area_good = <loopgoodtemp>
-	formattext checksumname = loopneutraltemp 'Crowd_Loop_%s_Neutral' s = <venuesize> addtostringlookup = true
-	change current_crowd_looping_bg_area_neutral = <loopneutraltemp>
-	formattext checksumname = loopbadtemp 'Crowd_Loop_%s_Bad' s = <venuesize> addtostringlookup = true
-	change current_crowd_looping_bg_area_bad = <loopbadtemp>
-	crowdtransitionchecksum = crowd_transition
-	state_p_to_m_left = '_poor_to_med_L'
-	state_m_to_p_left = '_med_to_poor_L'
-	state_m_to_g_left = '_med_to_good_L'
-	state_g_to_m_left = '_good_to_med_L'
-	state_p_to_m_right = '_poor_to_med_R'
-	state_m_to_p_right = '_med_to_poor_R'
-	state_m_to_g_right = '_med_to_good_R'
-	state_g_to_m_right = '_good_to_med_R'
-	formattext checksumname = claptemp 'Crowd_Clap_To_Beat_%s_Normal' s = <venuesize> addtostringlookup = true
-	change current_crowd_clap_normal_soundevent = <claptemp>
-	formattext checksumname = claptemp 'Crowd_Clap_To_Beat_%s_Middle' s = <venuesize> addtostringlookup = true
-	change current_crowd_clap_middle_soundevent = <claptemp>
-	formattext checksumname = claptemp 'Crowd_Clap_To_Beat_%s_Left_Middle' s = <venuesize> addtostringlookup = true
-	change current_crowd_clap_left_middle_soundevent = <claptemp>
-	formattext checksumname = claptemp 'Crowd_Clap_To_Beat_%s_Right_Middle' s = <venuesize> addtostringlookup = true
-	change current_crowd_clap_right_middle_soundevent = <claptemp>
-	formattext checksumname = claptemp 'Crowd_Clap_To_Beat_%s_Left' s = <venuesize> addtostringlookup = true
-	change current_crowd_clap_left_soundevent = <claptemp>
-	formattext checksumname = claptemp 'Crowd_Clap_To_Beat_%s_Right' s = <venuesize> addtostringlookup = true
-	change current_crowd_clap_right_soundevent = <claptemp>
-	formattext checksumname = transitiontemp 'Crowd_Transition_%s_Poor_To_Med' s = <venuesize> addtostringlookup = true
-	change current_crowd_transition_bad_to_neutral = <transitiontemp>
-	formattext checksumname = transitiontemp 'Crowd_Transition_%s_Med_To_Poor' s = <venuesize> addtostringlookup = true
-	change current_crowd_transition_neutral_to_bad = <transitiontemp>
-	formattext checksumname = transitiontemp 'Crowd_Transition_%s_Med_To_Good' s = <venuesize> addtostringlookup = true
-	change current_crowd_transition_neutral_to_good = <transitiontemp>
-	formattext checksumname = transitiontemp 'Crowd_Transition_%s_Good_To_Med' s = <venuesize> addtostringlookup = true
-	change current_crowd_transition_good_to_neutral = <transitiontemp>
-	formattext checksumname = transitiontemp 'Crowd_Transition_%s_Poor_To_Med_L' s = <venuesize> addtostringlookup = true
-	change current_crowd_transition_bad_to_neutral_l = <transitiontemp>
-	formattext checksumname = transitiontemp 'Crowd_Transition_%s_Poor_To_Med_R' s = <venuesize> addtostringlookup = true
-	change current_crowd_transition_bad_to_neutral_r = <transitiontemp>
-	formattext checksumname = transitiontemp 'Crowd_Transition_%s_Med_To_Poor_L' s = <venuesize> addtostringlookup = true
-	change current_crowd_transition_neutral_to_bad_l = <transitiontemp>
-	formattext checksumname = transitiontemp 'Crowd_Transition_%s_Med_To_Poor_R' s = <venuesize> addtostringlookup = true
-	change current_crowd_transition_neutral_to_bad_r = <transitiontemp>
-	formattext checksumname = transitiontemp 'Crowd_Transition_%s_Med_To_Good_L' s = <venuesize> addtostringlookup = true
-	change current_crowd_transition_neutral_to_good_l = <transitiontemp>
-	formattext checksumname = transitiontemp 'Crowd_Transition_%s_Med_To_Good_R' s = <venuesize> addtostringlookup = true
-	change current_crowd_transition_neutral_to_good_r = <transitiontemp>
-	formattext checksumname = transitiontemp 'Crowd_Transition_%s_Good_To_Med_L' s = <venuesize> addtostringlookup = true
-	change current_crowd_transition_good_to_neutral_l = <transitiontemp>
-	formattext checksumname = transitiontemp 'Crowd_Transition_%s_Good_To_Med_R' s = <venuesize> addtostringlookup = true
-	change current_crowd_transition_good_to_neutral_r = <transitiontemp>
-	formattext checksumname = battlecheertemp 'Crowd_Battle_Cheer_%s_L_P1' s = <venuesize> addtostringlookup = true
-	change current_crowd_battle_cheer_l_p1 = <battlecheertemp>
-	formattext checksumname = battlecheertemp 'Crowd_Battle_Cheer_%s_R_P1' s = <venuesize> addtostringlookup = true
-	change current_crowd_battle_cheer_r_p1 = <battlecheertemp>
-	formattext checksumname = battlecheertemp 'Crowd_Battle_Cheer_%s_L_P2' s = <venuesize> addtostringlookup = true
-	change current_crowd_battle_cheer_l_p2 = <battlecheertemp>
-	formattext checksumname = battlecheertemp 'Crowd_Battle_Cheer_%s_R_P2' s = <venuesize> addtostringlookup = true
-	change current_crowd_battle_cheer_r_p2 = <battlecheertemp>
-	formattext checksumname = swelltemp 'Crowd_Swell_Short_%s_L' s = <venuesize> addtostringlookup = true
-	change current_crowd_swell_short_soundevent_l = <swelltemp>
-	formattext checksumname = swelltemp 'Crowd_Swell_Short_%s_R' s = <venuesize> addtostringlookup = true
-	change current_crowd_swell_short_soundevent_r = <swelltemp>
-	formattext checksumname = swelltemp 'Crowd_Swell_Short_Soft_%s_L' s = <venuesize> addtostringlookup = true
-	change current_crowd_swell_short_soft_soundevent_l = <swelltemp>
-	formattext checksumname = swelltemp 'Crowd_Swell_Short_Soft_%s_R' s = <venuesize> addtostringlookup = true
-	change current_crowd_swell_short_soft_soundevent_r = <swelltemp>
-	formattext checksumname = swelltemp 'Crowd_Swell_Med_%s_L' s = <venuesize> addtostringlookup = true
-	change current_crowd_swell_med_soundevent_l = <swelltemp>
-	formattext checksumname = swelltemp 'Crowd_Swell_Med_%s_R' s = <venuesize> addtostringlookup = true
-	change current_crowd_swell_med_soundevent_r = <swelltemp>
-	formattext checksumname = swelltemp 'Crowd_Swell_Long_%s_L' s = <venuesize> addtostringlookup = true
-	change current_crowd_swell_long_soundevent_l = <swelltemp>
-	formattext checksumname = swelltemp 'Crowd_Swell_Long_%s_R' s = <venuesize> addtostringlookup = true
-	change current_crowd_swell_long_soundevent_r = <swelltemp>
-	formattext checksumname = encoretemp '%s_Encore_Crowd' s = <venuesize> addtostringlookup = true
-	change current_crowd_encore = <encoretemp>
-	formattext checksumname = anticipationtemp '%s_Crowd_Anticipation_Loop' s = <venuesize> addtostringlookup = true
-	change current_crowd_anticipation = <anticipationtemp>
-	formattext checksumname = applausetemp 'Crowd_Applause_%s_L' s = <venuesize> addtostringlookup = true
-	change current_crowd_applause_soundevent_l = <applausetemp>
-	formattext checksumname = applausetemp 'Crowd_Applause_%s_R' s = <venuesize> addtostringlookup = true
-	change current_crowd_applause_soundevent_r = <applausetemp>
-	formattext checksumname = introtemp 'Crowd_Venue_Intro_%s' s = <pakname> addtostringlookup = true
-	change current_crowd_venue_intro_soundevent = <introtemp>
-	formattext checksumname = preencoretemp 'Crowd_PreEncore_Looping_SoundEvent_%s' s = <venuesize> addtostringlookup = true
-	change current_crowd_preencore_looping_soundevent = <preencoretemp>
-	formattext checksumname = tempvenuesize '%s' s = <venuesize> addtostringlookup = true
-	change current_venue_size = <tempvenuesize>
+	FormatText checksumname = whistletemp 'Crowd_Whistle_%s_Good' s = <VenueSize> AddToStringLookup = true
+	change Current_Crowd_Whistle_SoundEvent = <whistletemp>
+	FormatText checksumname = oneshotgoodtemp 'Crowd_OneShot_%s_Good' s = <VenueSize> AddToStringLookup = true
+	change Current_Crowd_OneShot_Positive_SoundEvent = <oneshotgoodtemp>
+	FormatText checksumname = oneshotbadtemp 'Crowd_OneShot_%s_Bad' s = <VenueSize> AddToStringLookup = true
+	change Current_Crowd_OneShot_Negative_SoundEvent = <oneshotbadtemp>
+	FormatText checksumname = loopgoodtemp 'Crowd_Loop_%s_Good' s = <VenueSize> AddToStringLookup = true
+	change Current_Crowd_Looping_BG_Area_Good = <loopgoodtemp>
+	FormatText checksumname = loopneutraltemp 'Crowd_Loop_%s_Neutral' s = <VenueSize> AddToStringLookup = true
+	change Current_Crowd_Looping_BG_Area_Neutral = <loopneutraltemp>
+	FormatText checksumname = loopbadtemp 'Crowd_Loop_%s_Bad' s = <VenueSize> AddToStringLookup = true
+	change Current_Crowd_Looping_BG_Area_Bad = <loopbadtemp>
+	crowdtransitionchecksum = Crowd_Transition
+	state_p_to_m_Left = '_poor_to_med_L'
+	state_m_to_p_Left = '_med_to_poor_L'
+	state_m_to_g_Left = '_med_to_good_L'
+	state_g_to_m_Left = '_good_to_med_L'
+	state_p_to_m_Right = '_poor_to_med_R'
+	state_m_to_p_Right = '_med_to_poor_R'
+	state_m_to_g_Right = '_med_to_good_R'
+	state_g_to_m_Right = '_good_to_med_R'
+	FormatText checksumname = claptemp 'Crowd_Clap_To_Beat_%s_Normal' s = <VenueSize> AddToStringLookup = true
+	change Current_Crowd_Clap_Normal_SoundEvent = <claptemp>
+	FormatText checksumname = claptemp 'Crowd_Clap_To_Beat_%s_Middle' s = <VenueSize> AddToStringLookup = true
+	change Current_Crowd_Clap_Middle_SoundEvent = <claptemp>
+	FormatText checksumname = claptemp 'Crowd_Clap_To_Beat_%s_Left_Middle' s = <VenueSize> AddToStringLookup = true
+	change Current_Crowd_Clap_Left_Middle_SoundEvent = <claptemp>
+	FormatText checksumname = claptemp 'Crowd_Clap_To_Beat_%s_Right_Middle' s = <VenueSize> AddToStringLookup = true
+	change Current_Crowd_Clap_Right_Middle_SoundEvent = <claptemp>
+	FormatText checksumname = claptemp 'Crowd_Clap_To_Beat_%s_Left' s = <VenueSize> AddToStringLookup = true
+	change Current_Crowd_Clap_Left_SoundEvent = <claptemp>
+	FormatText checksumname = claptemp 'Crowd_Clap_To_Beat_%s_Right' s = <VenueSize> AddToStringLookup = true
+	change Current_Crowd_Clap_Right_SoundEvent = <claptemp>
+	FormatText checksumname = transitiontemp 'Crowd_Transition_%s_Poor_To_Med' s = <VenueSize> AddToStringLookup = true
+	change Current_Crowd_Transition_Bad_To_Neutral = <transitiontemp>
+	FormatText checksumname = transitiontemp 'Crowd_Transition_%s_Med_To_Poor' s = <VenueSize> AddToStringLookup = true
+	change Current_Crowd_Transition_Neutral_To_Bad = <transitiontemp>
+	FormatText checksumname = transitiontemp 'Crowd_Transition_%s_Med_To_Good' s = <VenueSize> AddToStringLookup = true
+	change Current_Crowd_Transition_Neutral_To_Good = <transitiontemp>
+	FormatText checksumname = transitiontemp 'Crowd_Transition_%s_Good_To_Med' s = <VenueSize> AddToStringLookup = true
+	change Current_Crowd_Transition_Good_To_Neutral = <transitiontemp>
+	FormatText checksumname = transitiontemp 'Crowd_Transition_%s_Poor_To_Med_L' s = <VenueSize> AddToStringLookup = true
+	change Current_Crowd_Transition_Bad_To_Neutral_L = <transitiontemp>
+	FormatText checksumname = transitiontemp 'Crowd_Transition_%s_Poor_To_Med_R' s = <VenueSize> AddToStringLookup = true
+	change Current_Crowd_Transition_Bad_To_Neutral_R = <transitiontemp>
+	FormatText checksumname = transitiontemp 'Crowd_Transition_%s_Med_To_Poor_L' s = <VenueSize> AddToStringLookup = true
+	change Current_Crowd_Transition_Neutral_To_Bad_L = <transitiontemp>
+	FormatText checksumname = transitiontemp 'Crowd_Transition_%s_Med_To_Poor_R' s = <VenueSize> AddToStringLookup = true
+	change Current_Crowd_Transition_Neutral_To_Bad_R = <transitiontemp>
+	FormatText checksumname = transitiontemp 'Crowd_Transition_%s_Med_To_Good_L' s = <VenueSize> AddToStringLookup = true
+	change Current_Crowd_Transition_Neutral_To_Good_L = <transitiontemp>
+	FormatText checksumname = transitiontemp 'Crowd_Transition_%s_Med_To_Good_R' s = <VenueSize> AddToStringLookup = true
+	change Current_Crowd_Transition_Neutral_To_Good_R = <transitiontemp>
+	FormatText checksumname = transitiontemp 'Crowd_Transition_%s_Good_To_Med_L' s = <VenueSize> AddToStringLookup = true
+	change Current_Crowd_Transition_Good_To_Neutral_L = <transitiontemp>
+	FormatText checksumname = transitiontemp 'Crowd_Transition_%s_Good_To_Med_R' s = <VenueSize> AddToStringLookup = true
+	change Current_Crowd_Transition_Good_To_Neutral_R = <transitiontemp>
+	FormatText checksumname = battlecheertemp 'Crowd_Battle_Cheer_%s_L_P1' s = <VenueSize> AddToStringLookup = true
+	change Current_Crowd_Battle_Cheer_L_P1 = <battlecheertemp>
+	FormatText checksumname = battlecheertemp 'Crowd_Battle_Cheer_%s_R_P1' s = <VenueSize> AddToStringLookup = true
+	change Current_Crowd_Battle_Cheer_R_P1 = <battlecheertemp>
+	FormatText checksumname = battlecheertemp 'Crowd_Battle_Cheer_%s_L_P2' s = <VenueSize> AddToStringLookup = true
+	change Current_Crowd_Battle_Cheer_L_P2 = <battlecheertemp>
+	FormatText checksumname = battlecheertemp 'Crowd_Battle_Cheer_%s_R_P2' s = <VenueSize> AddToStringLookup = true
+	change Current_Crowd_Battle_Cheer_R_P2 = <battlecheertemp>
+	FormatText checksumname = swelltemp 'Crowd_Swell_Short_%s_L' s = <VenueSize> AddToStringLookup = true
+	change Current_Crowd_Swell_Short_SoundEvent_L = <swelltemp>
+	FormatText checksumname = swelltemp 'Crowd_Swell_Short_%s_R' s = <VenueSize> AddToStringLookup = true
+	change Current_Crowd_Swell_Short_SoundEvent_R = <swelltemp>
+	FormatText checksumname = swelltemp 'Crowd_Swell_Short_Soft_%s_L' s = <VenueSize> AddToStringLookup = true
+	change Current_Crowd_Swell_Short_Soft_SoundEvent_L = <swelltemp>
+	FormatText checksumname = swelltemp 'Crowd_Swell_Short_Soft_%s_R' s = <VenueSize> AddToStringLookup = true
+	change Current_Crowd_Swell_Short_Soft_SoundEvent_R = <swelltemp>
+	FormatText checksumname = swelltemp 'Crowd_Swell_Med_%s_L' s = <VenueSize> AddToStringLookup = true
+	change Current_Crowd_Swell_Med_SoundEvent_L = <swelltemp>
+	FormatText checksumname = swelltemp 'Crowd_Swell_Med_%s_R' s = <VenueSize> AddToStringLookup = true
+	change Current_Crowd_Swell_Med_SoundEvent_R = <swelltemp>
+	FormatText checksumname = swelltemp 'Crowd_Swell_Long_%s_L' s = <VenueSize> AddToStringLookup = true
+	change Current_Crowd_Swell_Long_SoundEvent_L = <swelltemp>
+	FormatText checksumname = swelltemp 'Crowd_Swell_Long_%s_R' s = <VenueSize> AddToStringLookup = true
+	change Current_Crowd_Swell_Long_SoundEvent_R = <swelltemp>
+	FormatText checksumname = encoretemp '%s_Encore_Crowd' s = <VenueSize> AddToStringLookup = true
+	change Current_Crowd_Encore = <encoretemp>
+	FormatText checksumname = anticipationtemp '%s_Crowd_Anticipation_Loop' s = <VenueSize> AddToStringLookup = true
+	change Current_Crowd_Anticipation = <anticipationtemp>
+	FormatText checksumname = Applausetemp 'Crowd_Applause_%s_L' s = <VenueSize> AddToStringLookup = true
+	change Current_Crowd_Applause_SoundEvent_L = <Applausetemp>
+	FormatText checksumname = Applausetemp 'Crowd_Applause_%s_R' s = <VenueSize> AddToStringLookup = true
+	change Current_Crowd_Applause_SoundEvent_R = <Applausetemp>
+	FormatText checksumname = IntroTemp 'Crowd_Venue_Intro_%s' s = <pakname> AddToStringLookup = true
+	change Current_Crowd_Venue_Intro_SoundEvent = <IntroTemp>
+	FormatText checksumname = PreEncoreTemp 'Crowd_PreEncore_Looping_SoundEvent_%s' s = <VenueSize> AddToStringLookup = true
+	change Current_Crowd_PreEncore_Looping_SoundEvent = <PreEncoreTemp>
+	FormatText checksumname = tempvenuesize '%s' s = <VenueSize> AddToStringLookup = true
+	change Current_Venue_Size = <tempvenuesize>
 	if ((<pakname> = 'z_studio') || (<pakname> = 'z_studio2'))
-		change \{current_crowd_looping_bg_area_bad = musicstudio}
-		change \{current_crowd_looping_bg_area_neutral = musicstudio}
-		change \{current_crowd_looping_bg_area_good = musicstudio}
-		change \{current_crowd_looping_bg_area = musicstudio}
+		change \{Current_Crowd_Looping_BG_Area_Bad = MusicStudio}
+		change \{Current_Crowd_Looping_BG_Area_Neutral = MusicStudio}
+		change \{Current_Crowd_Looping_BG_Area_Good = MusicStudio}
+		change \{Current_Crowd_Looping_BG_Area = MusicStudio}
 	endif
 	if ((<pakname> = 'z_tool') || (<pakname> = 'z_credits'))
-		<venuesize> = 'Large_EXT'
-		formattext checksumname = transitiontemp 'Crowd_Transition_%s_Poor_To_Med' s = <venuesize> addtostringlookup = true
-		change current_crowd_transition_bad_to_neutral = <transitiontemp>
-		formattext checksumname = transitiontemp 'Crowd_Transition_%s_Med_To_Poor' s = <venuesize> addtostringlookup = true
-		change current_crowd_transition_neutral_to_bad = <transitiontemp>
-		formattext checksumname = transitiontemp 'Crowd_Transition_%s_Med_To_Good' s = <venuesize> addtostringlookup = true
-		change current_crowd_transition_neutral_to_good = <transitiontemp>
-		formattext checksumname = transitiontemp 'Crowd_Transition_%s_Good_To_Med' s = <venuesize> addtostringlookup = true
-		change current_crowd_transition_good_to_neutral = <transitiontemp>
-		formattext checksumname = transitiontemp 'Crowd_Transition_%s_Poor_To_Med_L' s = <venuesize> addtostringlookup = true
-		change current_crowd_transition_bad_to_neutral_l = <transitiontemp>
-		formattext checksumname = transitiontemp 'Crowd_Transition_%s_Poor_To_Med_R' s = <venuesize> addtostringlookup = true
-		change current_crowd_transition_bad_to_neutral_r = <transitiontemp>
-		formattext checksumname = transitiontemp 'Crowd_Transition_%s_Med_To_Poor_L' s = <venuesize> addtostringlookup = true
-		change current_crowd_transition_neutral_to_bad_l = <transitiontemp>
-		formattext checksumname = transitiontemp 'Crowd_Transition_%s_Med_To_Poor_R' s = <venuesize> addtostringlookup = true
-		change current_crowd_transition_neutral_to_bad_r = <transitiontemp>
-		formattext checksumname = transitiontemp 'Crowd_Transition_%s_Med_To_Good_L' s = <venuesize> addtostringlookup = true
-		change current_crowd_transition_neutral_to_good_l = <transitiontemp>
-		formattext checksumname = transitiontemp 'Crowd_Transition_%s_Med_To_Good_R' s = <venuesize> addtostringlookup = true
-		change current_crowd_transition_neutral_to_good_r = <transitiontemp>
-		formattext checksumname = transitiontemp 'Crowd_Transition_%s_Good_To_Med_L' s = <venuesize> addtostringlookup = true
-		change current_crowd_transition_good_to_neutral_l = <transitiontemp>
-		formattext checksumname = transitiontemp 'Crowd_Transition_%s_Good_To_Med_R' s = <venuesize> addtostringlookup = true
-		change current_crowd_transition_good_to_neutral_r = <transitiontemp>
+		<VenueSize> = 'Large_EXT'
+		FormatText checksumname = transitiontemp 'Crowd_Transition_%s_Poor_To_Med' s = <VenueSize> AddToStringLookup = true
+		change Current_Crowd_Transition_Bad_To_Neutral = <transitiontemp>
+		FormatText checksumname = transitiontemp 'Crowd_Transition_%s_Med_To_Poor' s = <VenueSize> AddToStringLookup = true
+		change Current_Crowd_Transition_Neutral_To_Bad = <transitiontemp>
+		FormatText checksumname = transitiontemp 'Crowd_Transition_%s_Med_To_Good' s = <VenueSize> AddToStringLookup = true
+		change Current_Crowd_Transition_Neutral_To_Good = <transitiontemp>
+		FormatText checksumname = transitiontemp 'Crowd_Transition_%s_Good_To_Med' s = <VenueSize> AddToStringLookup = true
+		change Current_Crowd_Transition_Good_To_Neutral = <transitiontemp>
+		FormatText checksumname = transitiontemp 'Crowd_Transition_%s_Poor_To_Med_L' s = <VenueSize> AddToStringLookup = true
+		change Current_Crowd_Transition_Bad_To_Neutral_L = <transitiontemp>
+		FormatText checksumname = transitiontemp 'Crowd_Transition_%s_Poor_To_Med_R' s = <VenueSize> AddToStringLookup = true
+		change Current_Crowd_Transition_Bad_To_Neutral_R = <transitiontemp>
+		FormatText checksumname = transitiontemp 'Crowd_Transition_%s_Med_To_Poor_L' s = <VenueSize> AddToStringLookup = true
+		change Current_Crowd_Transition_Neutral_To_Bad_L = <transitiontemp>
+		FormatText checksumname = transitiontemp 'Crowd_Transition_%s_Med_To_Poor_R' s = <VenueSize> AddToStringLookup = true
+		change Current_Crowd_Transition_Neutral_To_Bad_R = <transitiontemp>
+		FormatText checksumname = transitiontemp 'Crowd_Transition_%s_Med_To_Good_L' s = <VenueSize> AddToStringLookup = true
+		change Current_Crowd_Transition_Neutral_To_Good_L = <transitiontemp>
+		FormatText checksumname = transitiontemp 'Crowd_Transition_%s_Med_To_Good_R' s = <VenueSize> AddToStringLookup = true
+		change Current_Crowd_Transition_Neutral_To_Good_R = <transitiontemp>
+		FormatText checksumname = transitiontemp 'Crowd_Transition_%s_Good_To_Med_L' s = <VenueSize> AddToStringLookup = true
+		change Current_Crowd_Transition_Good_To_Neutral_L = <transitiontemp>
+		FormatText checksumname = transitiontemp 'Crowd_Transition_%s_Good_To_Med_R' s = <VenueSize> AddToStringLookup = true
+		change Current_Crowd_Transition_Good_To_Neutral_R = <transitiontemp>
 	endif
 	printf \{channel = sfx
-		qs(0xfba306ee)}
+		qs("\L///////////////////////////////////////////////////////////////////////")}
 	printf \{channel = sfx
-		qs(0x8d80eacf)
-		s = $current_crowd_whistle_soundevent}
+		qs("\LCurrent_Crowd_Whistle_SoundEvent = %s")
+		s = $Current_Crowd_Whistle_SoundEvent}
 	printf \{channel = sfx
-		qs(0xf1a35267)
-		s = $current_crowd_oneshot_positive_soundevent}
+		qs("\LCurrent_Crowd_OneShot_Positive_SoundEvent = %s")
+		s = $Current_Crowd_OneShot_Positive_SoundEvent}
 	printf \{channel = sfx
-		qs(0xfe1327ac)
-		s = $current_crowd_oneshot_negative_soundevent}
+		qs("\LCurrent_Crowd_OneShot_Negative_SoundEvent = %s")
+		s = $Current_Crowd_OneShot_Negative_SoundEvent}
 	printf \{channel = sfx
-		qs(0x713755f7)}
+		qs("\L ")}
 	printf \{channel = sfx
-		qs(0x77767cd1)
-		s = $current_crowd_looping_bg_area_bad}
+		qs("\LCurrent_Crowd_Looping_BG_Area_Bad = %s")
+		s = $Current_Crowd_Looping_BG_Area_Bad}
 	printf \{channel = sfx
-		qs(0x832a45ec)
-		s = $current_crowd_looping_bg_area_neutral}
+		qs("\LCurrent_Crowd_Looping_BG_Area_Neutral = %s")
+		s = $Current_Crowd_Looping_BG_Area_Neutral}
 	printf \{channel = sfx
-		qs(0xf6e25b4b)
-		s = $current_crowd_looping_bg_area_good}
+		qs("\LCurrent_Crowd_Looping_BG_Area_Good = %s")
+		s = $Current_Crowd_Looping_BG_Area_Good}
 	printf \{channel = sfx
-		qs(0x24ab80a8)
-		s = $current_crowd_looping_bg_area}
+		qs("\LCurrent_Crowd_Looping_BG_Area = %s")
+		s = $Current_Crowd_Looping_BG_Area}
 	printf \{channel = sfx
-		qs(0x713755f7)}
+		qs("\L ")}
 	printf \{channel = sfx
-		qs(0xe512b6d5)
-		s = $current_crowd_transition_bad_to_neutral}
+		qs("\LCurrent_Crowd_Transition_Bad_To_Neutral = %s")
+		s = $Current_Crowd_Transition_Bad_To_Neutral}
 	printf \{channel = sfx
-		qs(0xbf1fc790)
-		s = $current_crowd_transition_neutral_to_bad}
+		qs("\LCurrent_Crowd_Transition_Neutral_To_Bad = %s")
+		s = $Current_Crowd_Transition_Neutral_To_Bad}
 	printf \{channel = sfx
-		qs(0x43338762)
-		s = $current_crowd_transition_neutral_to_good}
+		qs("\LCurrent_Crowd_Transition_Neutral_To_Good = %s")
+		s = $Current_Crowd_Transition_Neutral_To_Good}
 	printf \{channel = sfx
-		qs(0xb603dab6)
-		s = $current_crowd_transition_good_to_neutral}
+		qs("\LCurrent_Crowd_Transition_Good_To_Neutral = %s")
+		s = $Current_Crowd_Transition_Good_To_Neutral}
 	printf \{channel = sfx
-		qs(0x713755f7)}
+		qs("\L ")}
 	printf \{channel = sfx
-		qs(0xcd6342fb)
-		s = $current_crowd_transition_bad_to_neutral_l}
+		qs("\LCurrent_Crowd_Transition_Bad_To_Neutral_L = %s")
+		s = $Current_Crowd_Transition_Bad_To_Neutral_L}
 	printf \{channel = sfx
-		qs(0x284a7c19)
-		s = $current_crowd_transition_bad_to_neutral_r}
+		qs("\LCurrent_Crowd_Transition_Bad_To_Neutral_R = %s")
+		s = $Current_Crowd_Transition_Bad_To_Neutral_R}
 	printf \{channel = sfx
-		qs(0x0a8a2e34)
-		s = $current_crowd_transition_neutral_to_bad_l}
+		qs("\LCurrent_Crowd_Transition_Neutral_To_Bad_L = %s")
+		s = $Current_Crowd_Transition_Neutral_To_Bad_L}
 	printf \{channel = sfx
-		qs(0xefa310d6)
-		s = $current_crowd_transition_neutral_to_bad_r}
+		qs("\LCurrent_Crowd_Transition_Neutral_To_Bad_R = %s")
+		s = $Current_Crowd_Transition_Neutral_To_Bad_R}
 	printf \{channel = sfx
-		qs(0xdb45a841)
-		s = $current_crowd_transition_neutral_to_good_l}
+		qs("\LCurrent_Crowd_Transition_Neutral_To_Good_L = %s")
+		s = $Current_Crowd_Transition_Neutral_To_Good_L}
 	printf \{channel = sfx
-		qs(0x3e6c96a3)
-		s = $current_crowd_transition_neutral_to_good_r}
+		qs("\LCurrent_Crowd_Transition_Neutral_To_Good_R = %s")
+		s = $Current_Crowd_Transition_Neutral_To_Good_R}
 	printf \{channel = sfx
-		qs(0x04860b0c)
-		s = $current_crowd_transition_good_to_neutral_l}
+		qs("\LCurrent_Crowd_Transition_Good_To_Neutral_L = %s")
+		s = $Current_Crowd_Transition_Good_To_Neutral_L}
 	printf \{channel = sfx
-		qs(0xe1af35ee)
-		s = $current_crowd_transition_good_to_neutral_r}
+		qs("\LCurrent_Crowd_Transition_Good_To_Neutral_R = %s")
+		s = $Current_Crowd_Transition_Good_To_Neutral_R}
 	printf \{channel = sfx
-		qs(0x713755f7)}
+		qs("\L ")}
 	printf \{channel = sfx
-		qs(0x38c78dcb)
-		s = $current_crowd_swell_short_soundevent_l}
+		qs("\LCurrent_Crowd_Swell_Short_SoundEvent_L = %s")
+		s = $Current_Crowd_Swell_Short_SoundEvent_L}
 	printf \{channel = sfx
-		qs(0xddeeb329)
-		s = $current_crowd_swell_short_soundevent_r}
+		qs("\LCurrent_Crowd_Swell_Short_SoundEvent_R = %s")
+		s = $Current_Crowd_Swell_Short_SoundEvent_R}
 	printf \{channel = sfx
-		qs(0xbc9d08f4)
-		s = $current_crowd_swell_med_soundevent_l}
+		qs("\LCurrent_Crowd_Swell_Med_SoundEvent_L = %s")
+		s = $Current_Crowd_Swell_Med_SoundEvent_L}
 	printf \{channel = sfx
-		qs(0x59b43616)
-		s = $current_crowd_swell_med_soundevent_r}
+		qs("\LCurrent_Crowd_Swell_Med_SoundEvent_R = %s")
+		s = $Current_Crowd_Swell_Med_SoundEvent_R}
 	printf \{channel = sfx
-		qs(0xdc496519)
-		s = $current_crowd_swell_long_soundevent_l}
+		qs("\LCurrent_Crowd_Swell_Long_SoundEvent_L = %s")
+		s = $Current_Crowd_Swell_Long_SoundEvent_L}
 	printf \{channel = sfx
-		qs(0x39605bfb)
-		s = $current_crowd_swell_long_soundevent_r}
+		qs("\LCurrent_Crowd_Swell_Long_SoundEvent_R = %s")
+		s = $Current_Crowd_Swell_Long_SoundEvent_R}
 	printf \{channel = sfx
-		qs(0x713755f7)}
+		qs("\L ")}
 	printf \{channel = sfx
-		qs(0x5b5de30b)
-		s = $current_crowd_applause_soundevent_l}
+		qs("\LCurrent_Crowd_Applause_SoundEvent_L = %s")
+		s = $Current_Crowd_Applause_SoundEvent_L}
 	printf \{channel = sfx
-		qs(0xbe74dde9)
-		s = $current_crowd_applause_soundevent_r}
+		qs("\LCurrent_Crowd_Applause_SoundEvent_R = %s")
+		s = $Current_Crowd_Applause_SoundEvent_R}
 	printf \{channel = sfx
-		qs(0xfba306ee)}
+		qs("\L///////////////////////////////////////////////////////////////////////")}
 endscript
 
-script gh3_crowd_event_listener 
+script GH3_Crowd_Event_Listener 
 	printf \{channel = sfx
-		qs(0xbc3cb5c5)
+		qs("\LCrowd Event Listener: Game Mode = %s")
 		s = $game_mode}
 	if NOT ($crowd_in_jam_mode_song_state = 1)
-		getpakmancurrent \{map = zones}
-		printf channel = sfx qs(0xbca18178) s = <pak>
+		GetPakManCurrent \{map = zones}
+		printf channel = sfx qs("\LCrowd Event Listener: Pak = %s") s = <pak>
 		if (<pak> != z_studio && <pak> != z_studio2 && <pak> != z_tool && <pak> != z_credits)
 			if NOT ($game_mode = training)
-				if gotparam \{event_type}
-					printf channel = sfx qs(0xecb6df2d) s = <event_type>
+				if GotParam \{event_type}
+					printf channel = sfx qs("\LCROWD PARAM!!!!!      %s") s = <event_type>
 					switch <event_type>
 						case 1
-						if ($turn_off_oneshot_cheers = 0)
-							play_a_short_crowd_swell_for_this_venue
+						if ($Turn_Off_OneShot_Cheers = 0)
+							Play_A_Short_Crowd_Swell_For_This_Venue
 						endif
 						case 2
-						if ($turn_off_oneshot_cheers = 0)
-							play_a_crowd_applause_for_this_venue
+						if ($Turn_Off_OneShot_Cheers = 0)
+							Play_A_Crowd_Applause_For_This_Venue
 						endif
 						case 3
 						if ($current_crowd >= 1.3333)
-							if ($turn_off_oneshot_cheers = 0)
-								crowd_surge_and_sustain_at_end_of_song
+							if ($Turn_Off_OneShot_Cheers = 0)
+								Crowd_Surge_And_Sustain_At_End_Of_Song
 							endif
 						endif
 						case 4
-						play_a_crowd_whistle_good_based_on_venue
+						Play_A_Crowd_Whistle_Good_Based_On_Venue
 						case 5
 						if ($current_crowd >= 1.3333)
-							gh3_adjustcrowdfastsmallsurge
+							GH3_AdjustCrowdFastSmallSurge
 						endif
 						case 6
 						if ($current_crowd >= 1.3333)
-							if ($turn_off_oneshot_cheers = 0)
-								play_a_short_crowd_swell_for_this_venue_softer
+							if ($Turn_Off_OneShot_Cheers = 0)
+								Play_A_Short_Crowd_Swell_For_This_Venue_Softer
 							endif
-							gh3_adjustcrowdfastbigsurge
+							GH3_AdjustCrowdFastBigSurge
 						endif
 						case 7
 						if ($current_crowd >= 1.3333)
-							if ($turn_off_oneshot_cheers = 0)
-								play_a_med_crowd_swell_for_this_venue
+							if ($Turn_Off_OneShot_Cheers = 0)
+								Play_A_Med_Crowd_Swell_For_This_Venue
 							endif
-							gh3_adjustcrowdmedsurge
+							GH3_AdjustCrowdMedSurge
 						endif
 						case 8
 						if ($current_crowd >= 1.3333)
-							if ($turn_off_oneshot_cheers = 0)
-								play_a_long_crowd_swell_for_this_venue
+							if ($Turn_Off_OneShot_Cheers = 0)
+								Play_A_Long_Crowd_Swell_For_This_Venue
 							endif
-							gh3_adjustcrowdslowbigsurge
+							GH3_AdjustCrowdSlowBigSurge
 						endif
 						case 9
 						printf \{'Not Working Right Now'}
 						case 10
-						song_quiet_adjust_all_sfx_down
+						Song_Quiet_Adjust_All_SFX_Down
 						case 11
-						song_quiet_over_adjust_all_sfx_to_normal
+						Song_Quiet_Over_Adjust_All_SFX_To_Normal
 						case 12
-						moment_on_stage_crowd_reaction_sfx
+						Moment_On_Stage_Crowd_Reaction_SFX
 						default
 						printf \{channel = sfx
-							qs(0x3c088a0f)}
+							qs("\LUh, oh!  NO EVENT TYPE SPECIFIED!!!!")}
 					endswitch
 				endif
 			endif
 		else
 			printf \{channel = sfx
-				qs(0x6f5cebdf)}
+				qs("\LGH3_Crowd_Event_Listener: we are in one of the forbidden zones for crowd events!!!!")}
 		endif
 	else
 		printf \{channel = sfx
-			qs(0x595a9f3d)}
+			qs("\LGH3_Crowd_Event_Listener: $crowd_in_jam_mode_song_state equals 1, so we are in a jam mode song, so not playing any crowd listener events!")}
 	endif
 endscript
 
-script play_a_crowd_whistle_good_based_on_venue 
-	soundevent \{event = $current_crowd_whistle_soundevent}
+script Play_A_Crowd_Whistle_Good_Based_On_Venue 
+	SoundEvent \{event = $Current_Crowd_Whistle_SoundEvent}
 endscript
 
-script play_a_short_crowd_swell_for_this_venue 
+script Play_A_Short_Crowd_Swell_For_This_Venue 
 	printf \{channel = sfx
-		qs(0x32f04896)
-		s = $current_crowd_swell_short_soundevent_l}
+		qs("\LSHORT CROWD SWEEL FOR THIS VENUE = %s")
+		s = $Current_Crowd_Swell_Short_SoundEvent_L}
 	printf \{channel = sfx
-		qs(0x32f04896)
-		s = $current_crowd_swell_short_soundevent_r}
-	soundevent \{event = $current_crowd_swell_short_soundevent_l}
-	soundevent \{event = $current_crowd_swell_short_soundevent_r}
+		qs("\LSHORT CROWD SWEEL FOR THIS VENUE = %s")
+		s = $Current_Crowd_Swell_Short_SoundEvent_R}
+	SoundEvent \{event = $Current_Crowd_Swell_Short_SoundEvent_L}
+	SoundEvent \{event = $Current_Crowd_Swell_Short_SoundEvent_R}
 endscript
 
-script play_a_short_crowd_swell_for_this_venue_softer 
-	soundevent \{event = $current_crowd_swell_short_soft_soundevent_l}
-	soundevent \{event = $current_crowd_swell_short_soft_soundevent_r}
+script Play_A_Short_Crowd_Swell_For_This_Venue_Softer 
+	SoundEvent \{event = $Current_Crowd_Swell_Short_Soft_SoundEvent_L}
+	SoundEvent \{event = $Current_Crowd_Swell_Short_Soft_SoundEvent_R}
 endscript
 
-script play_a_med_crowd_swell_for_this_venue 
-	soundevent \{event = $current_crowd_swell_med_soundevent_l}
-	soundevent \{event = $current_crowd_swell_med_soundevent_r}
+script Play_A_Med_Crowd_Swell_For_This_Venue 
+	SoundEvent \{event = $Current_Crowd_Swell_Med_SoundEvent_L}
+	SoundEvent \{event = $Current_Crowd_Swell_Med_SoundEvent_R}
 endscript
 
-script play_a_long_crowd_swell_for_this_venue 
-	soundevent \{event = $current_crowd_swell_long_soundevent_l}
-	soundevent \{event = $current_crowd_swell_long_soundevent_r}
+script Play_A_Long_Crowd_Swell_For_This_Venue 
+	SoundEvent \{event = $Current_Crowd_Swell_Long_SoundEvent_L}
+	SoundEvent \{event = $Current_Crowd_Swell_Long_SoundEvent_R}
 endscript
 
-script play_a_crowd_applause_for_this_venue 
-	soundevent \{event = $current_crowd_applause_soundevent_l}
-	soundevent \{event = $current_crowd_applause_soundevent_r}
+script Play_A_Crowd_Applause_For_This_Venue 
+	SoundEvent \{event = $Current_Crowd_Applause_SoundEvent_L}
+	SoundEvent \{event = $Current_Crowd_Applause_SoundEvent_R}
 endscript
 
-script gh3_play_a_crowd_oneshot_positive_based_on_venue 
+script GH3_Play_A_Crowd_OneShot_Positive_Based_On_Venue 
 endscript
 
-script gh3_play_a_crowd_oneshot_negative_based_on_venue 
+script GH3_Play_A_Crowd_OneShot_Negative_Based_On_Venue 
 	printf \{channel = sfx
 		'HELLLLLLLLLLLLLLLo'}
-	soundevent \{event = crowd_reaction_bad_l}
-	soundevent \{event = crowd_reaction_bad_r}
-	if ($turn_off_oneshot_cheers = 0)
-		spawnscriptnow \{stopallcheeringsounds}
+	SoundEvent \{event = Crowd_Reaction_Bad_L}
+	SoundEvent \{event = Crowd_Reaction_Bad_R}
+	if ($Turn_Off_OneShot_Cheers = 0)
+		spawnscriptnow \{StopAllCheeringSounds}
 	endif
 endscript
 
-script gh3_adjustcrowdloopbacktodefault \{restarting = 0
-		normal = 0}
+script GH3_AdjustCrowdLoopBackToDefault \{restarting = 0
+		Normal = 0}
 	if ($current_playing_transition = loading)
 	else
 		if (<restarting> = 1)
-			if gotparam \{time}
-				setsoundbussparams {crowd_beds = {vol = ($default_bussset.crowd_beds.vol) pitch = 0.0} time = <time>}
+			if GotParam \{time}
+				SetSoundBussParams {Crowd_Beds = {vol = ($Default_BussSet.Crowd_Beds.vol) pitch = 0.0} time = <time>}
 			else
-				setsoundbussparams {crowd_beds = {vol = ($default_bussset.crowd_beds.vol) pitch = 0.0}}
+				SetSoundBussParams {Crowd_Beds = {vol = ($Default_BussSet.Crowd_Beds.vol) pitch = 0.0}}
 			endif
 		else
-			if (<normal> = 1)
-				if gotparam \{time}
-					setsoundbussparams {crowd_beds = {vol = ($default_bussset.crowd_beds.vol) pitch = 0.0} time = <time>}
+			if (<Normal> = 1)
+				if GotParam \{time}
+					SetSoundBussParams {Crowd_Beds = {vol = ($Default_BussSet.Crowd_Beds.vol) pitch = 0.0} time = <time>}
 				else
-					setsoundbussparams {crowd_beds = {vol = ($default_bussset.crowd_beds.vol) pitch = 0.0}}
+					SetSoundBussParams {Crowd_Beds = {vol = ($Default_BussSet.Crowd_Beds.vol) pitch = 0.0}}
 				endif
 			else
 			endif
@@ -1995,161 +1995,161 @@ script gh3_adjustcrowdloopbacktodefault \{restarting = 0
 	endif
 endscript
 
-script gh3_adjustcrowdfastsmallsurge 
-	getpakmancurrent \{map = zones}
-	printf channel = sfx qs(0x4d995118) s = <pak>
+script GH3_AdjustCrowdFastSmallSurge 
+	GetPakManCurrent \{map = zones}
+	printf channel = sfx qs("\L*************************************GH3_AdjustCrowdFastSmallSurge zone = %s") s = <pak>
 	switch <pak>
 		case z_metalfest
-		setsoundbussparams {crowd_beds = {vol = (($default_bussset.crowd_beds.vol) + 2)} time = 0.08}
-		wait \{1.5
+		SetSoundBussParams {Crowd_Beds = {vol = (($Default_BussSet.Crowd_Beds.vol) + 2)} time = 0.08}
+		Wait \{1.5
 			seconds}
-		gh3_adjustcrowdloopbacktodefault \{time = 4
-			normal = 1}
+		GH3_AdjustCrowdLoopBackToDefault \{time = 4
+			Normal = 1}
 		case z_newyork
-		setsoundbussparams {crowd_beds = {vol = (($default_bussset.crowd_beds.vol) + 2)} time = 0.08}
-		wait \{1.5
+		SetSoundBussParams {Crowd_Beds = {vol = (($Default_BussSet.Crowd_Beds.vol) + 2)} time = 0.08}
+		Wait \{1.5
 			seconds}
-		gh3_adjustcrowdloopbacktodefault \{time = 4
-			normal = 1}
+		GH3_AdjustCrowdLoopBackToDefault \{time = 4
+			Normal = 1}
 		default
-		setsoundbussparams {crowd_beds = {vol = (($default_bussset.crowd_beds.vol) + 2)} time = 0.08}
-		wait \{1.5
+		SetSoundBussParams {Crowd_Beds = {vol = (($Default_BussSet.Crowd_Beds.vol) + 2)} time = 0.08}
+		Wait \{1.5
 			seconds}
-		gh3_adjustcrowdloopbacktodefault \{time = 4
-			normal = 1}
+		GH3_AdjustCrowdLoopBackToDefault \{time = 4
+			Normal = 1}
 	endswitch
 endscript
 
-script gh3_adjustcrowdfastbigsurge 
+script GH3_AdjustCrowdFastBigSurge 
 	if NOT ($is_attract_mode = 1)
-		getpakmancurrent \{map = zones}
-		printf channel = sfx qs(0xff61e7c6) s = <pak>
+		GetPakManCurrent \{map = zones}
+		printf channel = sfx qs("\L*************************************GH3_AdjustCrowdFastBigSurge zone = %s") s = <pak>
 		switch <pak>
 			case z_metalfest
-			setsoundbussparams {crowd_beds = {vol = (($default_bussset.crowd_beds.vol) + 2.5) pitch = 0.5} time = 0.08}
-			wait \{1.5
+			SetSoundBussParams {Crowd_Beds = {vol = (($Default_BussSet.Crowd_Beds.vol) + 2.5) pitch = 0.5} time = 0.08}
+			Wait \{1.5
 				seconds}
-			gh3_adjustcrowdloopbacktodefault \{time = 4
-				normal = 1}
+			GH3_AdjustCrowdLoopBackToDefault \{time = 4
+				Normal = 1}
 			case z_newyork
-			setsoundbussparams {crowd_beds = {vol = (($default_bussset.crowd_beds.vol) + 2)} time = 0.08}
-			wait \{1.5
+			SetSoundBussParams {Crowd_Beds = {vol = (($Default_BussSet.Crowd_Beds.vol) + 2)} time = 0.08}
+			Wait \{1.5
 				seconds}
-			gh3_adjustcrowdloopbacktodefault \{time = 4
-				normal = 1}
+			GH3_AdjustCrowdLoopBackToDefault \{time = 4
+				Normal = 1}
 			default
-			setsoundbussparams {crowd_beds = {vol = (($default_bussset.crowd_beds.vol) + 4)} time = 0.08}
-			wait \{1.5
+			SetSoundBussParams {Crowd_Beds = {vol = (($Default_BussSet.Crowd_Beds.vol) + 4)} time = 0.08}
+			Wait \{1.5
 				seconds}
-			gh3_adjustcrowdloopbacktodefault \{time = 4
-				normal = 1}
+			GH3_AdjustCrowdLoopBackToDefault \{time = 4
+				Normal = 1}
 		endswitch
 	endif
 endscript
 
-script gh3_adjustcrowdmedsurge 
+script GH3_AdjustCrowdMedSurge 
 	if NOT ($is_attract_mode = 1)
-		getpakmancurrent \{map = zones}
-		printf channel = sfx qs(0x0d163bb8) s = <pak>
+		GetPakManCurrent \{map = zones}
+		printf channel = sfx qs("\L*************************************GH3_AdjustCrowdMedSurge zone = %s") s = <pak>
 		switch <pak>
 			case z_metalfest
-			setsoundbussparams {crowd_beds = {vol = (($default_bussset.crowd_beds.vol) + 3.25) pitch = 0.5} time = 2}
-			wait \{4
+			SetSoundBussParams {Crowd_Beds = {vol = (($Default_BussSet.Crowd_Beds.vol) + 3.25) pitch = 0.5} time = 2}
+			Wait \{4
 				seconds}
-			gh3_adjustcrowdloopbacktodefault \{time = 4
-				normal = 1}
+			GH3_AdjustCrowdLoopBackToDefault \{time = 4
+				Normal = 1}
 			case z_newyork
-			setsoundbussparams {crowd_beds = {vol = (($default_bussset.crowd_beds.vol) + 2)} time = 0.08}
-			wait \{1.5
+			SetSoundBussParams {Crowd_Beds = {vol = (($Default_BussSet.Crowd_Beds.vol) + 2)} time = 0.08}
+			Wait \{1.5
 				seconds}
-			gh3_adjustcrowdloopbacktodefault \{time = 4
-				normal = 1}
+			GH3_AdjustCrowdLoopBackToDefault \{time = 4
+				Normal = 1}
 			default
-			setsoundbussparams {crowd_beds = {vol = (($default_bussset.crowd_beds.vol) + 4)} time = 2}
-			wait \{4
+			SetSoundBussParams {Crowd_Beds = {vol = (($Default_BussSet.Crowd_Beds.vol) + 4)} time = 2}
+			Wait \{4
 				seconds}
-			gh3_adjustcrowdloopbacktodefault \{time = 4
-				normal = 1}
+			GH3_AdjustCrowdLoopBackToDefault \{time = 4
+				Normal = 1}
 		endswitch
 	endif
 endscript
 
-script gh3_adjustcrowdslowbigsurge 
+script GH3_AdjustCrowdSlowBigSurge 
 	if NOT ($is_attract_mode = 1)
-		getpakmancurrent \{map = zones}
-		printf channel = sfx qs(0xe0d3da54) s = <pak>
+		GetPakManCurrent \{map = zones}
+		printf channel = sfx qs("\L*************************************GH3_AdjustCrowdSlowBigSurge zone = %s") s = <pak>
 		switch <pak>
 			case z_metalfest
-			setsoundbussparams {crowd_beds = {vol = (($default_bussset.crowd_beds.vol) + 4.5) pitch = 0.5} time = 3}
-			wait \{8
+			SetSoundBussParams {Crowd_Beds = {vol = (($Default_BussSet.Crowd_Beds.vol) + 4.5) pitch = 0.5} time = 3}
+			Wait \{8
 				seconds}
-			gh3_adjustcrowdloopbacktodefault \{time = 4
-				normal = 1}
+			GH3_AdjustCrowdLoopBackToDefault \{time = 4
+				Normal = 1}
 			case z_newyork
-			setsoundbussparams {crowd_beds = {vol = (($default_bussset.crowd_beds.vol) + 2)} time = 0.08}
-			wait \{1.5
+			SetSoundBussParams {Crowd_Beds = {vol = (($Default_BussSet.Crowd_Beds.vol) + 2)} time = 0.08}
+			Wait \{1.5
 				seconds}
-			gh3_adjustcrowdloopbacktodefault \{time = 4
-				normal = 1}
+			GH3_AdjustCrowdLoopBackToDefault \{time = 4
+				Normal = 1}
 			default
-			setsoundbussparams {crowd_beds = {vol = (($default_bussset.crowd_beds.vol) + 4)} time = 3}
-			wait \{8
+			SetSoundBussParams {Crowd_Beds = {vol = (($Default_BussSet.Crowd_Beds.vol) + 4)} time = 3}
+			Wait \{8
 				seconds}
-			gh3_adjustcrowdloopbacktodefault \{time = 4
-				normal = 1}
+			GH3_AdjustCrowdLoopBackToDefault \{time = 4
+				Normal = 1}
 		endswitch
 	endif
 endscript
 
-script song_quiet_adjust_all_sfx_down 
+script Song_Quiet_Adjust_All_SFX_Down 
 	printf \{channel = sfx
-		qs(0xfa5455b6)}
-	setsoundbussparams {sfx_balance = {vol = (($default_bussset.sfx_balance.vol) - 4.0)} time = 4}
-	setsoundbussparams {crowd_balance = {vol = (($default_bussset.crowd_balance.vol) - 5.0)} time = 8}
+		qs("\LQUIETING SFX DUE TO QUIET SONG TRIGGER!")}
+	SetSoundBussParams {SFX_Balance = {vol = (($Default_BussSet.SFX_Balance.vol) - 4.0)} time = 4}
+	SetSoundBussParams {Crowd_Balance = {vol = (($Default_BussSet.Crowd_Balance.vol) - 5.0)} time = 8}
 endscript
 
-script song_quiet_over_adjust_all_sfx_to_normal 
+script Song_Quiet_Over_Adjust_All_SFX_To_Normal 
 	printf \{channel = sfx
-		qs(0x1c6b884d)}
-	setsoundbussparams {sfx_balance = {vol = ($default_bussset.sfx_balance.vol)} time = 8}
-	setsoundbussparams {crowd_balance = {vol = ($default_bussset.crowd_balance.vol)} time = 4}
+		qs("\LRESTORING SFX DUE TO QUIET SONG OVER TRIGGER!")}
+	SetSoundBussParams {SFX_Balance = {vol = ($Default_BussSet.SFX_Balance.vol)} time = 8}
+	SetSoundBussParams {Crowd_Balance = {vol = ($Default_BussSet.Crowd_Balance.vol)} time = 4}
 endscript
 
-script song_quiet_reset_sfx_balance \{loading_transition = 0
+script Song_Quiet_Reset_SFX_Balance \{loading_transition = 0
 		restarting = 0}
 	if (<loading_transition> = 1)
 		printf \{channel = sfx
-			qs(0x989d0b7a)}
+			qs("\LSong_Quiet_Reset_SFX_Balance: The Gig to Gig Loading Transition - DOING NOTHING")}
 	else
 		if (<restarting> = 1)
 			printf \{channel = sfx
-				qs(0xf695898a)}
+				qs("\LSong_Quiet_Reset_SFX_Balance: The Restart")}
 			printf \{channel = sfx
-				qs(0xd75ad5d0)}
-			setsoundbussparams {sfx_balance = {vol = ($default_bussset.sfx_balance.vol)}}
-			setsoundbussparams {crowd_balance = {vol = ($default_bussset.crowd_balance.vol)}}
+				qs("\LRESTTING SFX_BALANCE BUSS IMMEDIATELY!")}
+			SetSoundBussParams {SFX_Balance = {vol = ($Default_BussSet.SFX_Balance.vol)}}
+			SetSoundBussParams {Crowd_Balance = {vol = ($Default_BussSet.Crowd_Balance.vol)}}
 		else
 			printf \{channel = sfx
-				qs(0xd4c3161a)}
-			change \{crowd_transition_start_of_song_normal = 1}
+				qs("\LSong_Quiet_Reset_SFX_Balance: Loading_transition is not equal to 1 and restarting is not equal to 1")}
+			change \{Crowd_Transition_Start_Of_Song_Normal = 1}
 			printf \{channel = sfx
-				qs(0xd626aaa4)}
+				qs("\LSong_Quiet_Reset_SFX_Balance The Normal Start")}
 		endif
 	endif
 endscript
 
-script moment_on_stage_crowd_reaction_sfx 
+script Moment_On_Stage_Crowd_Reaction_SFX 
 endscript
 
-script crowd_surge_and_sustain_at_end_of_song 
-	setsoundbussparams {crowd_beds = {vol = (($default_bussset.crowd_beds.vol) + 4)} time = 3.5}
+script Crowd_Surge_And_Sustain_At_End_Of_Song 
+	SetSoundBussParams {Crowd_Beds = {vol = (($Default_BussSet.Crowd_Beds.vol) + 4)} time = 3.5}
 endscript
 
-script crowd_singalong_volume_up 
-	getpakmancurrent \{map = zones}
+script Crowd_Singalong_Volume_Up 
+	GetPakManCurrent \{map = zones}
 	if NOT ((<pak> = z_tool) || (<pak> = z_studio) || (<pak> = z_credits) || (<pak> = z_training) || (<pak> = z_studio2))
 		if NOT ($crowd_is_singing = 1)
-			setsoundbussparams \{crowd_singalong = {
+			SetSoundBussParams \{Crowd_Singalong = {
 					vol = -2
 				}
 				time = 4}
@@ -2158,9 +2158,9 @@ script crowd_singalong_volume_up
 	endif
 endscript
 
-script crowd_singalong_volume_down 
+script Crowd_Singalong_Volume_Down 
 	if ($crowd_is_singing = 1)
-		setsoundbussparams \{crowd_singalong = {
+		SetSoundBussParams \{Crowd_Singalong = {
 				vol = -100.0
 			}
 			time = 4}
@@ -2168,11 +2168,11 @@ script crowd_singalong_volume_down
 	change \{crowd_is_singing = 0}
 endscript
 
-script change_crowd_looping_sfx \{crowd_looping_state = good
+script Change_Crowd_Looping_SFX \{crowd_looping_state = good
 		player = 1
 		loading_transition = 0
 		restarting = 0}
-	wait \{1
+	Wait \{1
 		gameframe}
 	if ($boss_battle = 1)
 		if (<player> = 1)
@@ -2190,84 +2190,84 @@ endscript
 
 script do_actual_changing_of_looping_sound \{loading_transition = 0
 		restarting = 0}
-	if gotparam \{crowd_looping_state}
-		getpakmancurrent \{map = zones}
+	if GotParam \{crowd_looping_state}
+		GetPakManCurrent \{map = zones}
 		switch <crowd_looping_state>
-			case bad
-			new_bg_area = $current_crowd_looping_bg_area_bad
-			new_oneshots = $current_crowd_oneshot_negative_soundevent
+			case Bad
+			New_BG_Area = $Current_Crowd_Looping_BG_Area_Bad
+			New_OneShots = $Current_Crowd_OneShot_Negative_SoundEvent
 			case neutral
-			new_bg_area = $current_crowd_looping_bg_area_neutral
-			new_oneshots = $current_crowd_oneshot_positive_soundevent
+			New_BG_Area = $Current_Crowd_Looping_BG_Area_Neutral
+			New_OneShots = $Current_Crowd_OneShot_Positive_SoundEvent
 			case good
-			new_bg_area = $current_crowd_looping_bg_area_good
-			new_oneshots = $current_crowd_oneshot_positive_soundevent
+			New_BG_Area = $Current_Crowd_Looping_BG_Area_Good
+			New_OneShots = $Current_Crowd_OneShot_Positive_SoundEvent
 			default
 			printf \{channel = sfx
-				qs(0xae489741)}
-			new_bg_area = $current_crowd_looping_bg_area_good
-			new_oneshots = $current_crowd_oneshot_positive_soundevent
+				qs("\LDEFAULT CASE!!!!!!!!   CROWD LOOPING STATE WAS NOT ONE OF THE THREE CASES!!!!")}
+			New_BG_Area = $Current_Crowd_Looping_BG_Area_Good
+			New_OneShots = $Current_Crowd_OneShot_Positive_SoundEvent
 		endswitch
 	else
 		printf \{channel = sfx
-			qs(0x5b438be7)}
+			qs("\LNO CROWD_LOOPING_STATE PARAM WAS PASSED IN!!!!!")}
 		return
 	endif
 	if (($crowd_in_jam_mode_song_state = 1) || (<pak> = z_studio) || (<pak> = z_studio2) || (<pak> = z_tool) || (<pak> = z_credits))
-		new_oneshots = donothing_oneshot
+		New_OneShots = DoNothing_OneShot
 	endif
-	skate8_sfx_backgrounds_new_area bg_sfx_area = <new_bg_area> loading_transition = <loading_transition> restarting = <restarting>
-	one_shot_soundevent soundevent = <new_oneshots> waittime = 5
+	Skate8_SFX_Backgrounds_New_Area BG_SFX_Area = <New_BG_Area> loading_transition = <loading_transition> restarting = <restarting>
+	One_Shot_SoundEvent SoundEvent = <New_OneShots> waittime = 5
 endscript
 
-script bg_crowd_front_end_silence \{immediate = 0}
-	skate8_sfx_backgrounds_new_area bg_sfx_area = frontend immediate = <immediate>
-	one_shot_soundevent soundevent = donothing_oneshot waittime = 5 immediate = <immediate>
+script BG_Crowd_Front_End_Silence \{immediate = 0}
+	Skate8_SFX_Backgrounds_New_Area BG_SFX_Area = FrontEnd immediate = <immediate>
+	One_Shot_SoundEvent SoundEvent = DoNothing_OneShot waittime = 5 immediate = <immediate>
 endscript
 
-script crowd_transition_sfx_poor_to_medium 
-	if gotparam \{player}
-		wait \{1
+script Crowd_Transition_SFX_Poor_To_Medium 
+	if GotParam \{player}
+		Wait \{1
 			gameframe}
 		printf \{channel = sfx
-			qs(0xa78f5575)}
-		crowd_generic_transition_sfx state = poor_to_med player = <player>
+			qs("\Lpoor to med")}
+		Crowd_generic_transition_sfx state = poor_to_med player = <player>
 	endif
 endscript
 
-script crowd_transition_sfx_medium_to_good 
-	if gotparam \{player}
-		wait \{1
+script Crowd_Transition_SFX_Medium_To_Good 
+	if GotParam \{player}
+		Wait \{1
 			gameframe}
 		printf \{channel = sfx
-			qs(0x34382b61)}
-		crowd_generic_transition_sfx state = med_to_good player = <player>
+			qs("\Lmed to good")}
+		Crowd_generic_transition_sfx state = med_to_good player = <player>
 	endif
 endscript
 
-script crowd_transition_sfx_medium_to_poor 
-	if gotparam \{player}
-		wait \{1
+script Crowd_Transition_SFX_Medium_To_Poor 
+	if GotParam \{player}
+		Wait \{1
 			gameframe}
 		printf \{channel = sfx
-			qs(0x5edea684)}
-		crowd_generic_transition_sfx state = med_to_poor player = <player>
+			qs("\Lmed to poor")}
+		Crowd_generic_transition_sfx state = med_to_poor player = <player>
 	endif
 endscript
 
-script crowd_transition_sfx_good_to_medium 
-	gh3_adjustcrowdloopbacktodefault \{time = 1
-		normal = 1}
-	if gotparam \{player}
-		wait \{1
+script Crowd_Transition_SFX_Good_To_Medium 
+	GH3_AdjustCrowdLoopBackToDefault \{time = 1
+		Normal = 1}
+	if GotParam \{player}
+		Wait \{1
 			gameframe}
 		printf \{channel = sfx
-			qs(0xde17760e)}
-		crowd_generic_transition_sfx state = good_to_med player = <player>
+			qs("\Lgood to med")}
+		Crowd_generic_transition_sfx state = good_to_med player = <player>
 	endif
 endscript
 
-script crowd_generic_transition_sfx \{state = med_to_good}
+script Crowd_generic_transition_sfx \{state = med_to_good}
 	if ($game_mode = p2_battle)
 	else
 		if ($boss_battle = 1)
@@ -2290,180 +2290,180 @@ script transition_sfx_right_side
 endscript
 
 script play_transition_sfx 
-	if gotparam \{state}
+	if GotParam \{state}
 		switch <state>
 			case poor_to_med
-			stopsoundevent \{$current_crowd_transition_neutral_to_bad
+			StopSoundEvent \{$Current_Crowd_Transition_Neutral_To_Bad
 				fade_time = 0.5
 				fade_type = log_slow}
-			stopsoundevent \{$current_crowd_transition_neutral_to_bad_l
+			StopSoundEvent \{$Current_Crowd_Transition_Neutral_To_Bad_L
 				fade_time = 0.5
 				fade_type = log_slow}
-			stopsoundevent \{$current_crowd_transition_neutral_to_bad_r
+			StopSoundEvent \{$Current_Crowd_Transition_Neutral_To_Bad_R
 				fade_time = 0.5
 				fade_type = log_slow}
-			transitionevent_l = $current_crowd_transition_bad_to_neutral_l
-			transitionevent_r = $current_crowd_transition_bad_to_neutral_r
-			transitionevent = $current_crowd_transition_bad_to_neutral
+			transitionevent_L = $Current_Crowd_Transition_Bad_To_Neutral_L
+			transitionevent_R = $Current_Crowd_Transition_Bad_To_Neutral_R
+			transitionevent = $Current_Crowd_Transition_Bad_To_Neutral
 			case med_to_good
-			stopsoundevent \{$current_crowd_transition_good_to_neutral
+			StopSoundEvent \{$Current_Crowd_Transition_Good_To_Neutral
 				fade_time = 0.5
 				fade_type = log_slow}
-			stopsoundevent \{$current_crowd_transition_good_to_neutral_l
+			StopSoundEvent \{$Current_Crowd_Transition_Good_To_Neutral_L
 				fade_time = 0.5
 				fade_type = log_slow}
-			stopsoundevent \{$current_crowd_transition_good_to_neutral_r
+			StopSoundEvent \{$Current_Crowd_Transition_Good_To_Neutral_R
 				fade_time = 0.5
 				fade_type = log_slow}
-			transitionevent_l = $current_crowd_transition_neutral_to_good_l
-			transitionevent_r = $current_crowd_transition_neutral_to_good_r
-			transitionevent = $current_crowd_transition_neutral_to_good
+			transitionevent_L = $Current_Crowd_Transition_Neutral_To_Good_L
+			transitionevent_R = $Current_Crowd_Transition_Neutral_To_Good_R
+			transitionevent = $Current_Crowd_Transition_Neutral_To_Good
 			case good_to_med
-			stopsoundevent \{$current_crowd_transition_neutral_to_good
+			StopSoundEvent \{$Current_Crowd_Transition_Neutral_To_Good
 				fade_time = 0.5
 				fade_type = log_slow}
-			stopsoundevent \{$current_crowd_transition_neutral_to_good_l
+			StopSoundEvent \{$Current_Crowd_Transition_Neutral_To_Good_L
 				fade_time = 0.5
 				fade_type = log_slow}
-			stopsoundevent \{$current_crowd_transition_neutral_to_good_r
+			StopSoundEvent \{$Current_Crowd_Transition_Neutral_To_Good_R
 				fade_time = 0.5
 				fade_type = log_slow}
-			transitionevent_l = $current_crowd_transition_good_to_neutral_l
-			transitionevent_r = $current_crowd_transition_good_to_neutral_r
-			transitionevent = $current_crowd_transition_good_to_neutral
+			transitionevent_L = $Current_Crowd_Transition_Good_To_Neutral_L
+			transitionevent_R = $Current_Crowd_Transition_Good_To_Neutral_R
+			transitionevent = $Current_Crowd_Transition_Good_To_Neutral
 			case med_to_poor
-			stopsoundevent \{$current_crowd_transition_bad_to_neutral
+			StopSoundEvent \{$Current_Crowd_Transition_Bad_To_Neutral
 				fade_time = 0.5
 				fade_type = log_slow}
-			stopsoundevent \{$current_crowd_transition_bad_to_neutral_l
+			StopSoundEvent \{$Current_Crowd_Transition_Bad_To_Neutral_L
 				fade_time = 0.5
 				fade_type = log_slow}
-			stopsoundevent \{$current_crowd_transition_bad_to_neutral_r
+			StopSoundEvent \{$Current_Crowd_Transition_Bad_To_Neutral_R
 				fade_time = 0.5
 				fade_type = log_slow}
-			transitionevent_l = $current_crowd_transition_neutral_to_bad_l
-			transitionevent_r = $current_crowd_transition_neutral_to_bad_r
-			transitionevent = $current_crowd_transition_neutral_to_bad
+			transitionevent_L = $Current_Crowd_Transition_Neutral_To_Bad_L
+			transitionevent_R = $Current_Crowd_Transition_Neutral_To_Bad_R
+			transitionevent = $Current_Crowd_Transition_Neutral_To_Bad
 			default
 			printf \{channel = sfx
-				qs(0xa331cc69)
+				qs("\LUh oh...    *******  BAD TRANSITION TYPE PASSED INTO SCRIPT ")
 				play_transition_sfx
-				qs(0x03ac90f0)}
+				qs("\L")}
 		endswitch
 		if NOT ($is_attract_mode = 1)
-			wait \{1
+			Wait \{1
 				gameframe}
-			if gotparam \{left}
-				if gotparam \{right}
+			if GotParam \{left}
+				if GotParam \{right}
 					printf \{channel = sfx
-						qs(0x0316271d)}
-					soundevent event = <transitionevent>
+						qs("\Lgot both left and right - now playing in stereo")}
+					SoundEvent event = <transitionevent>
 				else
 					printf \{channel = sfx
-						qs(0x58436b7c)}
-					soundevent event = <transitionevent_l>
+						qs("\Lgot left only, playing on left side")}
+					SoundEvent event = <transitionevent_L>
 				endif
 			else
-				if gotparam \{right}
+				if GotParam \{right}
 					printf \{channel = sfx
-						qs(0x0e3be335)}
-					soundevent event = <transitionevent_r>
+						qs("\Ldid not get left, but got right, playing on right side")}
+					SoundEvent event = <transitionevent_R>
 				else
 					printf \{channel = sfx
-						qs(0xdf6ecc9d)}
+						qs("\Ldid not get left and did not get right!!!!!! ERROR!!!!!")}
 				endif
 			endif
 		endif
 	endif
 endscript
-menu_music_on_flag = 0
+Menu_Music_On_Flag = 0
 
 script menu_music_on 
-	spawnscriptnow menu_music_on_spawned params = {<...>}
+	spawnscriptnow Menu_Music_On_Spawned params = {<...>}
 endscript
 
-script menu_music_on_spawned 
-	if ($menu_music_on_flag = 1)
+script Menu_Music_On_Spawned 
+	if ($Menu_Music_On_Flag = 1)
 		return
 	else
-		change \{menu_music_on_flag = 1}
+		change \{Menu_Music_On_Flag = 1}
 	endif
-	if gotparam \{waitforguitarlick}
-		wait \{4
+	if GotParam \{waitforguitarlick}
+		Wait \{4
 			seconds}
-		soundevent \{event = guitar_lick_crowd_swell}
+		SoundEvent \{event = Guitar_Lick_Crowd_Swell}
 	endif
-	enableusermusic
+	EnableUserMusic
 	begin
-	soundevent \{event = menu_music_se}
-	if ($menu_music_pan_right = 1)
-		setsoundparams \{$current_menu_song
+	SoundEvent \{event = Menu_Music_SE}
+	if ($Menu_Music_Pan_Right = 1)
+		SetSoundParams \{$Current_Menu_Song
 			pan1x = -1
 			pan1y = 1
 			pan2x = -0.4
 			pan2y = 1}
 	endif
-	skate8_sfx_backgrounds_new_area \{bg_sfx_area = frontend_menu_music}
-	wait \{2
+	Skate8_SFX_Backgrounds_New_Area \{BG_SFX_Area = FrontEnd_Menu_Music}
+	Wait \{2
 		seconds}
-	menu_music_checking
-	wait \{1
+	Menu_music_Checking
+	Wait \{1
 		second}
 	repeat
 endscript
 
-script menu_music_panning_vol 
-	if (issoundplaying $current_menu_song)
-		if gotparam \{panandlowervol}
-			wait \{0.5
+script Menu_Music_Panning_Vol 
+	if (issoundplaying $Current_Menu_Song)
+		if GotParam \{panandlowervol}
+			Wait \{0.5
 				seconds}
-			setsoundbussparams {music_frontend = {vol = (($default_bussset.music_frontend.vol) - 2.4)} time = 4}
+			SetSoundBussParams {Music_FrontEnd = {vol = (($Default_BussSet.Music_FrontEnd.vol) - 2.4)} time = 4}
 		else
-			if gotparam \{reset}
-				wait \{0.5
+			if GotParam \{reset}
+				Wait \{0.5
 					seconds}
-				setsoundbussparams {music_frontend = {vol = ($default_bussset.music_frontend.vol)} time = 4}
+				SetSoundBussParams {Music_FrontEnd = {vol = ($Default_BussSet.Music_FrontEnd.vol)} time = 4}
 			endif
 		endif
 	endif
 endscript
 
-script menu_music_pan_reset 
-	if ($menu_music_pan_right = 1)
-		change \{menu_music_pan_right = 0}
+script Menu_Music_Pan_reset 
+	if ($Menu_Music_Pan_Right = 1)
+		change \{Menu_Music_Pan_Right = 0}
 		i = -0.4
 		begin
-		setsoundparams $current_menu_song pan1x = -1 pan1y = 1 pan2x = <i> pan2y = 1
+		SetSoundParams $Current_Menu_Song pan1x = -1 pan1y = 1 pan2x = <i> pan2y = 1
 		i = (<i> + 0.0077770003)
-		wait \{1
+		Wait \{1
 			gameframe}
 		repeat 180
 	endif
 endscript
 
-script menu_music_pan 
-	if ($menu_music_pan_right = 0)
-		change \{menu_music_pan_right = 1}
+script Menu_Music_Pan 
+	if ($Menu_Music_Pan_Right = 0)
+		change \{Menu_Music_Pan_Right = 1}
 		i = 1
 		begin
-		setsoundparams $current_menu_song pan1x = -1 pan1y = 1 pan2x = <i> pan2y = 1
+		SetSoundParams $Current_Menu_Song pan1x = -1 pan1y = 1 pan2x = <i> pan2y = 1
 		i = (<i> -0.0077770003)
-		wait \{1
+		Wait \{1
 			gameframe}
 		repeat 180
 	endif
 endscript
 
-script menu_music_checking 
+script Menu_music_Checking 
 	begin
 	if ($menu_music_preloading = 0)
 		break
 	endif
-	wait \{1
+	Wait \{1
 		gameframe}
 	repeat
 	begin
-	wait \{1
+	Wait \{1
 		second}
 	if NOT issoundplaying \{$menu_music_stream}
 		break
@@ -2471,19 +2471,19 @@ script menu_music_checking
 	repeat
 endscript
 
-script menu_music_off 
-	enableusermusic \{disable}
-	killspawnedscript \{name = menu_music_on}
-	killspawnedscript \{name = menu_music_on_spawned}
-	change \{menu_music_on_flag = 0}
-	stopsoundevent \{menu_music_se}
-	killmenumusic
+script Menu_Music_Off 
+	EnableUserMusic \{disable}
+	KillSpawnedScript \{name = menu_music_on}
+	KillSpawnedScript \{name = Menu_Music_On_Spawned}
+	change \{Menu_Music_On_Flag = 0}
+	StopSoundEvent \{Menu_Music_SE}
+	KillMenuMusic
 endscript
 
-script band_screen_ui_sound 
-	setspawninstancelimits \{max = 6
+script Band_Screen_UI_Sound 
+	SetSpawnInstanceLimits \{max = 6
 		management = kill_oldest}
-	printf channel = sfx qs(0x222b9798) s = <player_num>
+	printf channel = sfx qs("\L Player Number %s !!!!!!") s = <player_num>
 	if (($game_mode = p2_faceoff) || ($game_mode = p2_pro_faceoff) || ($game_mode = p2_battle))
 		if (<player_num> = 1)
 			<pan1x> = -0.25
@@ -2519,792 +2519,792 @@ script band_screen_ui_sound
 			<pan2y> = 1
 		endif
 	endif
-	if gotparam \{up}
+	if GotParam \{up}
 		switch <instrument>
 			case drum
-			playsound menu_scroll_up vol = -10 pitch = 1 buss = front_end pan1x = <pan1x> pan1y = <pan1y> pan2x = <pan2x> pan2y = <pan2y>
+			PlaySound Menu_Scroll_Up vol = -10 pitch = 1 buss = front_end pan1x = <pan1x> pan1y = <pan1y> pan2x = <pan2x> pan2y = <pan2y>
 			case guitar
-			playsound menu_scroll_up vol = -10 pitch = 1 buss = front_end pan1x = <pan1x> pan1y = <pan1y> pan2x = <pan2x> pan2y = <pan2y>
-			case vocals
-			playsound menu_scroll_up vol = -10 pitch = 1 buss = front_end pan1x = <pan1x> pan1y = <pan1y> pan2x = <pan2x> pan2y = <pan2y>
-			case bass
-			playsound menu_scroll_up vol = -10 pitch = 1 buss = front_end pan1x = <pan1x> pan1y = <pan1y> pan2x = <pan2x> pan2y = <pan2y>
+			PlaySound Menu_Scroll_Up vol = -10 pitch = 1 buss = front_end pan1x = <pan1x> pan1y = <pan1y> pan2x = <pan2x> pan2y = <pan2y>
+			case Vocals
+			PlaySound Menu_Scroll_Up vol = -10 pitch = 1 buss = front_end pan1x = <pan1x> pan1y = <pan1y> pan2x = <pan2x> pan2y = <pan2y>
+			case Bass
+			PlaySound Menu_Scroll_Up vol = -10 pitch = 1 buss = front_end pan1x = <pan1x> pan1y = <pan1y> pan2x = <pan2x> pan2y = <pan2y>
 			default
-			playsound menu_scroll_up vol = -10 pitch = 1 buss = front_end pan1x = <pan1x> pan1y = <pan1y> pan2x = <pan2x> pan2y = <pan2y>
+			PlaySound Menu_Scroll_Up vol = -10 pitch = 1 buss = front_end pan1x = <pan1x> pan1y = <pan1y> pan2x = <pan2x> pan2y = <pan2y>
 		endswitch
-	else gotparam \{down}
+	else GotParam \{down}
 		switch <instrument>
 			case drum
-			playsound menu_scroll_down vol = -6.5 pitch = 3 buss = front_end pan1x = <pan1x> pan1y = <pan1y> pan2x = <pan2x> pan2y = <pan2y>
+			PlaySound Menu_Scroll_Down vol = -6.5 pitch = 3 buss = front_end pan1x = <pan1x> pan1y = <pan1y> pan2x = <pan2x> pan2y = <pan2y>
 			case guitar
-			playsound menu_scroll_down vol = -6.5 pitch = 3 buss = front_end pan1x = <pan1x> pan1y = <pan1y> pan2x = <pan2x> pan2y = <pan2y>
-			case vocals
-			playsound menu_scroll_down vol = -6.5 pitch = 3 buss = front_end pan1x = <pan1x> pan1y = <pan1y> pan2x = <pan2x> pan2y = <pan2y>
-			case bass
-			playsound menu_scroll_down vol = -6.5 pitch = 3 buss = front_end pan1x = <pan1x> pan1y = <pan1y> pan2x = <pan2x> pan2y = <pan2y>
+			PlaySound Menu_Scroll_Down vol = -6.5 pitch = 3 buss = front_end pan1x = <pan1x> pan1y = <pan1y> pan2x = <pan2x> pan2y = <pan2y>
+			case Vocals
+			PlaySound Menu_Scroll_Down vol = -6.5 pitch = 3 buss = front_end pan1x = <pan1x> pan1y = <pan1y> pan2x = <pan2x> pan2y = <pan2y>
+			case Bass
+			PlaySound Menu_Scroll_Down vol = -6.5 pitch = 3 buss = front_end pan1x = <pan1x> pan1y = <pan1y> pan2x = <pan2x> pan2y = <pan2y>
 			default
-			playsound menu_scroll_down vol = -6.5 pitch = 3 buss = front_end pan1x = <pan1x> pan1y = <pan1y> pan2x = <pan2x> pan2y = <pan2y>
+			PlaySound Menu_Scroll_Down vol = -6.5 pitch = 3 buss = front_end pan1x = <pan1x> pan1y = <pan1y> pan2x = <pan2x> pan2y = <pan2y>
 		endswitch
 	endif
 endscript
 
-script band_screen_scroll 
+script Band_Screen_Scroll 
 endscript
 
-script band_screen_select 
+script Band_Screen_Select 
 endscript
 
-script band_screen_back 
+script Band_Screen_Back 
 endscript
 
-script attract_mode_start_sound_script 
+script Attract_Mode_Start_Sound_Script 
 	printf \{channel = sfx
-		qs(0xa66c98f7)}
-	setsoundbussparams {music_frontend = {vol = (($default_bussset.music_frontend.vol) - 100)} time = 2.5}
-	setsoundbussparams {leadvox_balance = {vol = (($default_bussset.leadvox_balance.vol) - 11)} time = 1.5}
-	setsoundbussparams {drums_balance = {vol = (($default_bussset.drums_balance.vol) - 11)} time = 1.5}
-	setsoundbussparams {leadgtr_balance = {vol = (($default_bussset.leadgtr_balance.vol) - 11)} time = 1.5}
-	setsoundbussparams {bass_balance = {vol = (($default_bussset.bass_balance.vol) - 11)} time = 1.5}
-	setsoundbussparams {rhythmgtr_balance = {vol = (($default_bussset.rhythmgtr_balance.vol) - 11)} time = 1.5}
-	setsoundbussparams {band_balance = {vol = (($default_bussset.band_balance.vol) - 11)} time = 1.5}
-	setsoundbussparams {sfx_balance = {vol = (($default_bussset.sfx_balance.vol) - 11)} time = 1.5}
-	setsoundbussparams {crowd_balance = {vol = (($default_bussset.crowd_balance.vol) - 11)} time = 7}
-	setsoundbussparams {crowdsingalong_balance = {vol = (($default_bussset.crowdsingalong_balance.vol) - 11)} time = 7}
-	setsoundbussparams {crowd_w_reverb = {vol = (($default_bussset.crowd_w_reverb.vol) - 11)} time = 7}
+		qs("\L###################################Attract Mode STARTING - Setting Master fader level here!")}
+	SetSoundBussParams {Music_FrontEnd = {vol = (($Default_BussSet.Music_FrontEnd.vol) - 100)} time = 2.5}
+	SetSoundBussParams {LeadVox_Balance = {vol = (($Default_BussSet.LeadVox_Balance.vol) - 11)} time = 1.5}
+	SetSoundBussParams {Drums_Balance = {vol = (($Default_BussSet.Drums_Balance.vol) - 11)} time = 1.5}
+	SetSoundBussParams {leadGTR_balance = {vol = (($Default_BussSet.leadGTR_balance.vol) - 11)} time = 1.5}
+	SetSoundBussParams {bass_balance = {vol = (($Default_BussSet.bass_balance.vol) - 11)} time = 1.5}
+	SetSoundBussParams {RhythmGTR_Balance = {vol = (($Default_BussSet.RhythmGTR_Balance.vol) - 11)} time = 1.5}
+	SetSoundBussParams {Band_Balance = {vol = (($Default_BussSet.Band_Balance.vol) - 11)} time = 1.5}
+	SetSoundBussParams {SFX_Balance = {vol = (($Default_BussSet.SFX_Balance.vol) - 11)} time = 1.5}
+	SetSoundBussParams {Crowd_Balance = {vol = (($Default_BussSet.Crowd_Balance.vol) - 11)} time = 7}
+	SetSoundBussParams {CrowdSingalong_Balance = {vol = (($Default_BussSet.CrowdSingalong_Balance.vol) - 11)} time = 7}
+	SetSoundBussParams {Crowd_W_Reverb = {vol = (($Default_BussSet.Crowd_W_Reverb.vol) - 11)} time = 7}
 endscript
 
-script attract_mode_ends_sound_script 
+script Attract_Mode_Ends_Sound_Script 
 	printf \{channel = sfx
-		qs(0x2023477e)}
-	setsoundbussparams {music_frontend = {vol = ($default_bussset.music_frontend.vol)} time = 2.5}
-	setsoundbussparams {leadvox_balance = {vol = ($default_bussset.leadvox_balance.vol)} time = 1.5}
-	setsoundbussparams {drums_balance = {vol = ($default_bussset.drums_balance.vol)} time = 1.5}
-	setsoundbussparams {leadgtr_balance = {vol = ($default_bussset.leadgtr_balance.vol)} time = 1.5}
-	setsoundbussparams {bass_balance = {vol = ($default_bussset.bass_balance.vol)} time = 1.5}
-	setsoundbussparams {rhythmgtr_balance = {vol = ($default_bussset.rhythmgtr_balance.vol)} time = 1.5}
-	setsoundbussparams {band_balance = {vol = ($default_bussset.band_balance.vol)} time = 1.5}
-	setsoundbussparams {sfx_balance = {vol = ($default_bussset.sfx_balance.vol)} time = 1.5}
-	setsoundbussparams {crowd_balance = {vol = ($default_bussset.crowd_balance.vol)} time = 7}
-	setsoundbussparams {crowdsingalong_balance = {vol = ($default_bussset.crowdsingalong_balance.vol)} time = 7}
-	setsoundbussparams {crowd_w_reverb = {vol = ($default_bussset.crowd_w_reverb.vol)} time = 7}
+		qs("\L###################################Attrack Mode ENDING - Setting Master fader level here!")}
+	SetSoundBussParams {Music_FrontEnd = {vol = ($Default_BussSet.Music_FrontEnd.vol)} time = 2.5}
+	SetSoundBussParams {LeadVox_Balance = {vol = ($Default_BussSet.LeadVox_Balance.vol)} time = 1.5}
+	SetSoundBussParams {Drums_Balance = {vol = ($Default_BussSet.Drums_Balance.vol)} time = 1.5}
+	SetSoundBussParams {leadGTR_balance = {vol = ($Default_BussSet.leadGTR_balance.vol)} time = 1.5}
+	SetSoundBussParams {bass_balance = {vol = ($Default_BussSet.bass_balance.vol)} time = 1.5}
+	SetSoundBussParams {RhythmGTR_Balance = {vol = ($Default_BussSet.RhythmGTR_Balance.vol)} time = 1.5}
+	SetSoundBussParams {Band_Balance = {vol = ($Default_BussSet.Band_Balance.vol)} time = 1.5}
+	SetSoundBussParams {SFX_Balance = {vol = ($Default_BussSet.SFX_Balance.vol)} time = 1.5}
+	SetSoundBussParams {Crowd_Balance = {vol = ($Default_BussSet.Crowd_Balance.vol)} time = 7}
+	SetSoundBussParams {CrowdSingalong_Balance = {vol = ($Default_BussSet.CrowdSingalong_Balance.vol)} time = 7}
+	SetSoundBussParams {Crowd_W_Reverb = {vol = ($Default_BussSet.Crowd_W_Reverb.vol)} time = 7}
 endscript
 
 script sound_options_scroll 
-	soundevent \{event = audio_options_up_down}
+	SoundEvent \{event = Audio_Options_Up_Down}
 endscript
 
 script playing_sound_fader \{time = 2.102}
-	setspawnedscriptnorepeatfor time = <time>
-	setspawninstancelimits \{max = 1
+	SetSpawnedScriptNoRepeatFor time = <time>
+	SetSpawnInstanceLimits \{max = 1
 		management = ignore_spawn_request}
-	if gotparam \{instrument}
+	if GotParam \{instrument}
 		switch <instrument>
 			case guitar
-			if ($guitar_knob_effects_position = 1)
-				playsound \{audio_options_guitar
+			if ($Guitar_Knob_Effects_Position = 1)
+				PlaySound \{Audio_Options_Guitar
 					vol = -13.0
-					buss = options_guitar
+					buss = Options_Guitar
 					effects = [
 						{
-							$eq_guitarlead_crisp
+							$EQ_GuitarLead_Crisp
 							name = audiooptionssound
 						}
 					]}
 			endif
-			if ($guitar_knob_effects_position = 2)
-				playsound \{audio_options_guitar
+			if ($Guitar_Knob_Effects_Position = 2)
+				PlaySound \{Audio_Options_Guitar
 					vol = -13.0
-					buss = options_guitar
+					buss = Options_Guitar
 					effects = [
 						{
-							$eq_guitarlead_edgy
+							$EQ_GuitarLead_Edgy
 							name = audiooptionssound
 						}
 					]}
 			endif
-			if ($guitar_knob_effects_position = 3)
-				playsound \{audio_options_guitar
+			if ($Guitar_Knob_Effects_Position = 3)
+				PlaySound \{Audio_Options_Guitar
 					vol = -13.0
-					buss = options_guitar
+					buss = Options_Guitar
 					effects = [
 						{
-							$eq_guitarlead_fuzz
+							$EQ_GuitarLead_Fuzz
 							name = audiooptionssound
 						}
 					]}
 			endif
-			case bass
-			if ($bass_knob_effects_position = 1)
-				playsound \{audio_options_bass
+			case Bass
+			if ($Bass_Knob_Effects_Position = 1)
+				PlaySound \{Audio_Options_Bass
 					vol = -9.0
-					buss = options_bass
+					buss = Options_Bass
 					effects = [
 						{
-							$eq_bass_bari
+							$EQ_Bass_Bari
 							name = audiooptionssound
 						}
 					]}
 			endif
-			if ($bass_knob_effects_position = 2)
-				playsound \{audio_options_bass
+			if ($Bass_Knob_Effects_Position = 2)
+				PlaySound \{Audio_Options_Bass
 					vol = -9.0
-					buss = options_bass
+					buss = Options_Bass
 					effects = [
 						{
-							$eq_bass_boomy
+							$EQ_Bass_Boomy
 							name = audiooptionssound
 						}
 					]}
 			endif
-			if ($bass_knob_effects_position = 3)
-				playsound \{audio_options_bass
+			if ($Bass_Knob_Effects_Position = 3)
+				PlaySound \{Audio_Options_Bass
 					vol = -9.0
-					buss = options_bass
+					buss = Options_Bass
 					effects = [
 						{
-							$eq_bass_fretty
+							$EQ_Bass_Fretty
 							name = audiooptionssound
 						}
 					]}
 			endif
-			case drums
-			if ($drum_knob_effects_position = 1)
-				playsound \{audio_options_drum
+			case Drums
+			if ($Drum_Knob_Effects_Position = 1)
+				PlaySound \{Audio_Options_Drum
 					vol = -9.0
-					buss = options_drums
+					buss = Options_Drums
 					effects = [
 						{
-							$eq_drum_punch
+							$EQ_Drum_Punch
 							name = audiooptionssound
 						}
 					]}
 			endif
-			if ($drum_knob_effects_position = 2)
-				playsound \{audio_options_drum
+			if ($Drum_Knob_Effects_Position = 2)
+				PlaySound \{Audio_Options_Drum
 					vol = -9.0
-					buss = options_drums
+					buss = Options_Drums
 					effects = [
 						{
-							$eq_drum_crack
+							$EQ_Drum_Crack
 							name = audiooptionssound
 						}
 					]}
 			endif
-			if ($drum_knob_effects_position = 3)
-				playsound \{audio_options_drum
+			if ($Drum_Knob_Effects_Position = 3)
+				PlaySound \{Audio_Options_Drum
 					vol = -9.0
-					buss = options_drums
+					buss = Options_Drums
 					effects = [
 						{
-							$eq_drum_sizzle
+							$EQ_Drum_Sizzle
 							name = audiooptionssound
 						}
 					]}
 			endif
 			case mic
-			playsound \{audio_options_mic
+			PlaySound \{Audio_Options_Mic
 				vol = -5
-				buss = options_vox}
-			case vocals
-			playsound \{audio_options_vocals
+				buss = Options_Vox}
+			case Vocals
+			PlaySound \{Audio_Options_Vocals
 				vol = 0
-				buss = lead_vox}
-			case instruments
-			playsound \{audio_options_instruments
+				buss = Lead_Vox}
+			case Instruments
+			PlaySound \{Audio_Options_Instruments
 				vol = -6
-				buss = band_playback}
+				buss = Band_Playback}
 			case sfx
-			playsound \{audio_options_sfx
+			PlaySound \{Audio_Options_SFX
 				vol = -2
-				buss = options_crowd}
+				buss = Options_Crowd}
 		endswitch
 	endif
 endscript
 
 script playing_sound_knob 
-	setspawnedscriptnorepeatfor \{time = 2.256}
-	setspawninstancelimits \{max = 1
+	SetSpawnedScriptNoRepeatFor \{time = 2.256}
+	SetSpawnInstanceLimits \{max = 1
 		management = ignore_spawn_request}
-	if gotparam \{instrument}
+	if GotParam \{instrument}
 		switch <instrument>
 			case guitar
-			playsound audio_options_guitar vol = -9.0 buss = options_guitar effects = [{<eq_setting> name = audiooptionssound}]
-			case bass
-			playsound audio_options_bass vol = -9.0 buss = options_bass effects = [{<eq_setting> name = audiooptionssound}]
-			case vocals
-			playsound audio_options_vocals vol = -9.0 buss = options_vocals effects = [{<eq_setting> name = audiooptionssound}]
-			case drums
-			playsound audio_options_drum vol = -9.0 buss = options_drums effects = [{<eq_setting> name = audiooptionssound}]
+			PlaySound Audio_Options_Guitar vol = -9.0 buss = Options_Guitar effects = [{<eq_setting> name = audiooptionssound}]
+			case Bass
+			PlaySound Audio_Options_Bass vol = -9.0 buss = Options_Bass effects = [{<eq_setting> name = audiooptionssound}]
+			case Vocals
+			PlaySound Audio_Options_Vocals vol = -9.0 buss = Options_Vocals effects = [{<eq_setting> name = audiooptionssound}]
+			case Drums
+			PlaySound Audio_Options_Drum vol = -9.0 buss = Options_Drums effects = [{<eq_setting> name = audiooptionssound}]
 		endswitch
 	endif
 endscript
 
-script menu_music_fade \{wait = 0
+script menu_music_fade \{Wait = 0
 		volume = 100
 		time = 0}
-	wait <wait> seconds
-	if gotparam \{out}
-		setsoundbussparams {music_frontend = {vol = (($default_bussset.music_frontend.vol) - <volume>)} time = <time>}
-		if NOT gotparam \{dont_fade_crowd}
-			setsoundbussparams {crowd_beds = {vol = (($default_bussset.crowd_beds.vol) - <volume>)} time = <time>}
+	Wait <Wait> seconds
+	if GotParam \{out}
+		SetSoundBussParams {Music_FrontEnd = {vol = (($Default_BussSet.Music_FrontEnd.vol) - <volume>)} time = <time>}
+		if NOT GotParam \{dont_fade_crowd}
+			SetSoundBussParams {Crowd_Beds = {vol = (($Default_BussSet.Crowd_Beds.vol) - <volume>)} time = <time>}
 		endif
 	else
-		if gotparam \{in}
-			setsoundbussparams {music_frontend = {vol = ($default_bussset.music_frontend.vol)} time = <time>}
-			setsoundbussparams {crowd_beds = {vol = ($default_bussset.crowd_beds.vol)} time = <time>}
-			skate8_sfx_backgrounds_new_area \{bg_sfx_area = frontend_menu_music}
+		if GotParam \{in}
+			SetSoundBussParams {Music_FrontEnd = {vol = ($Default_BussSet.Music_FrontEnd.vol)} time = <time>}
+			SetSoundBussParams {Crowd_Beds = {vol = ($Default_BussSet.Crowd_Beds.vol)} time = <time>}
+			Skate8_SFX_Backgrounds_New_Area \{BG_SFX_Area = FrontEnd_Menu_Music}
 		else
 			printf \{channel = sfx
-				qs(0x876d718a)}
+				qs("\Ldid not get either param out, or param in, so doing nothing")}
 		endif
 	endif
 endscript
 
-script song_intro_kick_sfx_waiting 
-	wait ($current_intro.hud_move_time / 1000.0) seconds
-	soundevent \{event = song_intro_kick_sfx}
+script Song_Intro_Kick_SFX_Waiting 
+	Wait ($current_intro.hud_move_time / 1000.0) seconds
+	SoundEvent \{event = Song_Intro_Kick_SFX}
 endscript
 
-script song_intro_highway_up_sfx_waiting 
+script Song_Intro_Highway_Up_SFX_Waiting 
 	waittime = (($current_intro.highway_move_time / 1000.0) - 1.5)
 	if (<waittime> < 0)
 		waittime = 0
 	endif
-	wait <waittime> seconds
-	soundevent \{event = song_intro_highway_up}
-	getpakmancurrent \{map = zones}
+	Wait <waittime> seconds
+	SoundEvent \{event = Song_Intro_Highway_Up}
+	GetPakManCurrent \{map = zones}
 	if ((z_studio = <pak>))
-		if issoundeventplaying \{z_studio_intro_1}
-			stopsoundevent \{z_studio_intro_1
+		if isSoundEventPlaying \{z_studio_intro_1}
+			StopSoundEvent \{z_studio_intro_1
 				fade_time = 0.5
 				fade_type = log_slow}
 		endif
 	endif
 endscript
 
-script song_intro_highway_up_vocals_sfx_waiting 
+script Song_Intro_Highway_Up_Vocals_SFX_Waiting 
 	waittime = (($current_intro.highway_move_time / 1000.0) - 2.3)
 	if (<waittime> < 0)
 		waittime = 0
 	endif
-	wait <waittime> seconds
-	soundevent \{event = vocal_highway_appear}
+	Wait <waittime> seconds
+	SoundEvent \{event = Vocal_Highway_Appear}
 endscript
 
-script gh_sfx_intro_warmup 
-	getpakmancurrent \{map = zones}
+script GH_SFX_Intro_WarmUp 
+	GetPakManCurrent \{map = zones}
 	switch <pak>
 		case z_metalfest
 		spawnscriptnow \{metalfest_intro}
-		soundevent \{event = z_metalfest_intro}
+		SoundEvent \{event = z_metalfest_intro}
 		case z_fairgrounds
-		spawnscriptnow \{fair_intro}
-		soundevent \{event = z_fairgrounds_intro}
+		spawnscriptnow \{Fair_Intro}
+		SoundEvent \{event = z_fairgrounds_intro}
 		case z_newyork
 		spawnscriptnow \{metalfest_intro}
-		soundevent \{event = z_metalfest_intro}
+		SoundEvent \{event = z_metalfest_intro}
 		case z_ballpark
 		spawnscriptnow \{metalfest_intro}
-		soundevent \{event = z_metalfest_intro}
+		SoundEvent \{event = z_metalfest_intro}
 		case z_bayou
-		spawnscriptnow \{med_inside_intro}
-		soundevent \{event = z_harbor_intro}
+		spawnscriptnow \{Med_Inside_Intro}
+		SoundEvent \{event = z_harbor_intro}
 		case z_castle
 		spawnscriptnow \{metalfest_intro}
-		soundevent \{event = z_castle_intro}
+		SoundEvent \{event = z_castle_intro}
 		case z_goth
-		spawnscriptnow \{med_inside_intro}
-		soundevent \{event = z_harbor_intro}
+		spawnscriptnow \{Med_Inside_Intro}
+		SoundEvent \{event = z_harbor_intro}
 		case z_military
-		spawnscriptnow \{military_intro}
-		soundevent \{event = z_military_intro}
+		spawnscriptnow \{Military_Intro}
+		SoundEvent \{event = z_military_intro}
 		case z_harbor
 		spawnscriptnow \{metalfest_intro}
-		soundevent \{event = z_castle_intro}
+		SoundEvent \{event = z_castle_intro}
 		case z_hotel
-		spawnscriptnow \{small_intro}
-		soundevent \{event = z_frathouse_intro}
+		spawnscriptnow \{Small_Intro}
+		SoundEvent \{event = z_frathouse_intro}
 		case z_cathedral
-		spawnscriptnow \{med_inside_intro}
-		soundevent \{event = z_harbor_intro}
+		spawnscriptnow \{Med_Inside_Intro}
+		SoundEvent \{event = z_harbor_intro}
 		case z_recordstore
-		spawnscriptnow \{small_intro}
-		soundevent \{event = z_frathouse_intro}
+		spawnscriptnow \{Small_Intro}
+		SoundEvent \{event = z_frathouse_intro}
 		case z_frathouse
-		spawnscriptnow \{small_intro}
-		soundevent \{event = z_frathouse_intro}
+		spawnscriptnow \{Small_Intro}
+		SoundEvent \{event = z_frathouse_intro}
 		case z_hob
-		spawnscriptnow \{med_inside_intro}
-		soundevent \{event = z_harbor_intro}
+		spawnscriptnow \{Med_Inside_Intro}
+		SoundEvent \{event = z_harbor_intro}
 		case z_studio
-		soundevent \{event = z_studio_intro_1}
+		SoundEvent \{event = z_studio_intro_1}
 		printf \{channel = sfx
-			qs(0x467cbb62)}
+			qs("\LThis is Studio 1, and sould be playing sounds")}
 		case z_studio2
-		soundevent \{event = z_studio_intro_1}
+		SoundEvent \{event = z_studio_intro_1}
 		printf \{channel = sfx
-			qs(0x9acb1fd9)}
+			qs("\LNO INTRO!!!")}
 		case z_scifi
-		spawnscriptnow \{military_intro}
-		soundevent \{event = z_scifi_intro}
+		spawnscriptnow \{Military_Intro}
+		SoundEvent \{event = z_scifi_intro}
 		case z_credits
-		soundevent \{event = z_credits_intro}
+		SoundEvent \{event = z_credits_intro}
 		default
 		spawnscriptnow \{metalfest_intro}
-		soundevent \{event = z_harbor_intro}
+		SoundEvent \{event = z_harbor_intro}
 	endswitch
 	if (<pak> != z_studio && <pak> != z_studio2 && <pak> != z_tool && <pak> != z_credits)
-		soundevent \{event = $current_crowd_applause_soundevent_l}
-		soundevent \{event = $current_crowd_applause_soundevent_r}
+		SoundEvent \{event = $Current_Crowd_Applause_SoundEvent_L}
+		SoundEvent \{event = $Current_Crowd_Applause_SoundEvent_R}
 	endif
-	killspawnedscript \{name = loading_screen_crowd_swell}
-	killspawnedscript \{name = crowd_loading_whistle}
-	setsoundbussparams {crowd_beds = {vol = (($default_bussset.crowd_beds.vol))} time = 2}
+	KillSpawnedScript \{name = Loading_Screen_Crowd_Swell}
+	KillSpawnedScript \{name = Crowd_Loading_Whistle}
+	SetSoundBussParams {Crowd_Beds = {vol = (($Default_BussSet.Crowd_Beds.vol))} time = 2}
 endscript
 
-script gh_sfx_countoff_logic 
+script GH_SFX_Countoff_Logic 
 	get_song_struct song = ($current_song)
-	if structurecontains structure = <song_struct> name = countoff
+	if StructureContains Structure = <song_struct> name = countoff
 		countoff_sound = (<song_struct>.countoff)
 	else
 		countoff_sound = 'sticks_normal'
 	endif
 	if (<velocity> > 99)
-		formattext checksumname = sound_event_name 'Countoff_SFX_%s_Hard' s = <countoff_sound>
+		FormatText checksumname = sound_event_name 'Countoff_SFX_%s_Hard' s = <countoff_sound>
 	else
 		if (<velocity> > 74)
-			formattext checksumname = sound_event_name 'Countoff_SFX_%s_Med' s = <countoff_sound>
+			FormatText checksumname = sound_event_name 'Countoff_SFX_%s_Med' s = <countoff_sound>
 		else
 			if (<velocity> > 49)
-				formattext checksumname = sound_event_name 'Countoff_SFX_%s_Soft' s = <countoff_sound>
+				FormatText checksumname = sound_event_name 'Countoff_SFX_%s_Soft' s = <countoff_sound>
 			else
-				formattext checksumname = sound_event_name 'Countoff_SFX_%s_Soft' s = <countoff_sound>
+				FormatText checksumname = sound_event_name 'Countoff_SFX_%s_Soft' s = <countoff_sound>
 			endif
 		endif
 	endif
-	soundevent event = <sound_event_name>
+	SoundEvent event = <sound_event_name>
 endscript
 
-script you_rock_waiting_crowd_sfx 
-	wait \{2
+script You_Rock_Waiting_Crowd_SFX 
+	Wait \{2
 		seconds}
-	soundevent \{event = medium_crowd_applause}
+	SoundEvent \{event = Medium_Crowd_Applause}
 endscript
 
-script gh3_sfx_fail_song_stop_sounds 
-	stopsoundsbybuss \{crowd}
-	stopsoundsbybuss \{ui_star_power}
-	stopsoundsbybuss \{ui_battle_mode}
-	stopsoundsbybuss \{practice_band_playback}
-	stopsoundsbybuss \{wrong_notes_bass}
-	stopsoundsbybuss \{wrong_notes_drums}
-	stopsoundsbybuss \{wrong_notes_guitar}
-	stopsoundsbybuss \{binkcutscenes}
-	bg_crowd_front_end_silence \{immediate = 1}
+script GH3_SFX_fail_song_stop_sounds 
+	StopSoundsByBuss \{Crowd}
+	StopSoundsByBuss \{UI_Star_Power}
+	StopSoundsByBuss \{UI_Battle_Mode}
+	StopSoundsByBuss \{Practice_Band_Playback}
+	StopSoundsByBuss \{Wrong_Notes_Bass}
+	StopSoundsByBuss \{Wrong_Notes_Drums}
+	StopSoundsByBuss \{Wrong_Notes_Guitar}
+	StopSoundsByBuss \{binkcutscenes}
+	BG_Crowd_Front_End_Silence \{immediate = 1}
 endscript
 
-script gh3_sfx_stop_sounds_for_killsong \{loading_transition = 0}
-	setsoundbussparams {`default` = {vol = ($default_bussset.`default`.vol)} time = 0.02}
-	stopsoundevent \{song_intro_kick_sfx}
-	stopsoundevent \{notes_ripple_up_sfx}
-	stopsoundevent \{song_intro_highway_up}
-	stopsoundevent \{crowd_fast_surge_cheer}
-	stopsoundevent \{medium_crowd_applause}
-	stopsoundevent \{lose_multiplier_crowd}
-	stopsoundevent \{star_power_release_front_p1_gh4}
-	stopsoundevent \{star_power_release_center_p1_gh4}
-	stopsoundevent \{star_power_release_center_p2_gh4}
-	stopsoundevent \{star_power_release_front_p2_gh4}
-	stopsoundevent \{star_power_deployed_lfe_p1_gh4}
-	stopsoundevent \{star_power_deployed_lfe_p2_gh4}
-	stopsoundevent \{star_power_deployed_front_p1_gh4}
-	stopsoundevent \{star_power_deployed_back_p1_gh4}
-	stopsoundevent \{star_power_deployed_front_p2_gh4}
-	stopsoundevent \{star_power_deployed_back_p2_gh4}
-	stopsoundevent \{star_power_available_p2_gh4}
-	stopsoundevent \{star_power_available_p1_gh4}
-	stopsoundevent \{star_power_awarded_sfx}
-	stopsoundevent \{star_power_ready_sfx}
-	stopsoundevent \{star_power_available_gh4}
-	stopsoundevent \{star_power_release_center_gh4}
-	stopsoundevent \{star_power_release_front_gh4}
-	stopsoundevent \{star_power_deployed_sfx}
-	stopsoundevent \{star_power_deployed_cheer_sfx}
-	stopsoundevent \{star_power_deployed_back_gh4}
-	stopsoundevent \{star_power_deployed_lfe_gh4}
-	stopsoundevent \{star_power_deployed_front_gh4}
-	stopsoundevent \{gh_sfx_battlemode_lightning_player1}
-	stopsoundevent \{gh_sfx_battlemode_lightning_player2}
-	stopsoundevent \{gh_sfx_battlemode_diffup_p1}
-	stopsoundevent \{gh_sfx_battlemode_diffup_p2}
-	stopsoundevent \{gh_sfx_battlemode_doublenote_p1}
-	stopsoundevent \{gh_sfx_battlemode_doublenote_p2}
-	stopsoundevent \{gh_sfx_battlemode_lefty_p1}
-	stopsoundevent \{gh_sfx_battlemode_lefty_p2}
-	stopsoundevent \{gh_sfx_battlemode_steal_p1}
-	stopsoundevent \{gh_sfx_battlemode_steal_p2}
-	stopsoundevent \{gh_sfx_battlemode_stringbreak_p1}
-	stopsoundevent \{gh_sfx_battlemode_stringbreak_p2}
-	stopsoundevent \{gh_sfx_battlemode_whammyattack_p1}
-	stopsoundevent \{gh_sfx_battlemode_whammyattack_p2}
-	stopsoundevent \{gh_sfx_bossbattle_playerdies}
-	stopsoundevent \{gh_sfx_battlemode_attack_over_p1}
-	stopsoundevent \{gh_sfx_battlemode_attack_over_p2}
-	stopsoundevent \{battle_power_awarded_sfx_p1}
-	stopsoundevent \{battle_power_awarded_sfx_p2}
-	stopsoundevent \{gh_sfx_battlemode_whammyattack_received_p1}
-	stopsoundevent \{gh_sfx_battlemode_whammyattack_received_p2}
-	stopsoundevent \{battlemode_heartbeat_p1}
-	stopsoundevent \{battlemode_heartbeat_p2}
-	stopsoundsbybuss \{practice_band_playback}
-	stopsoundevent \{ui_sfx_lose_multiplier_2x}
-	stopsoundevent \{ui_sfx_lose_multiplier_3x}
-	stopsoundevent \{ui_sfx_lose_multiplier_4x}
-	stopsoundevent \{lose_multiplier_crowd}
-	stopsoundevent \{star_power_deployed_back_p3_gh4}
-	stopsoundevent \{star_power_deployed_front_p3_gh4}
-	stopsoundevent \{star_power_available_p3_gh4}
-	stopsoundevent \{star_power_awarded_sfx_p3}
-	stopsoundevent \{star_power_release_center_p1_gh4}
-	stopsoundevent \{star_power_release_front_p1_gh4}
-	stopsoundevent \{ui_sfx_50_note_streak_singleplayer}
-	stopsoundevent \{ui_sfx_50_note_streak_p1}
-	stopsoundevent \{ui_sfx_50_note_streak_p2}
-	stopsoundevent \{ui_sfx_100_note_streak_singleplayer}
-	stopsoundevent \{ui_sfx_100_note_streak_p1}
-	stopsoundevent \{ui_sfx_100_note_streak_p2}
-	stopsoundsbybuss \{drums_ingame}
-	stopsoundsbybuss \{drums_jammode}
-	stopsoundsbybuss \{guitar_jammode}
-	stopsoundsbybuss \{bass_jammode}
-	stopsoundsbybuss \{wrong_notes_guitar}
-	stopsoundsbybuss \{wrong_notes_bass}
-	stopsoundsbybuss \{wrong_notes_drums}
-	if (<type> = normal)
+script GH3_SFX_Stop_Sounds_For_KillSong \{loading_transition = 0}
+	SetSoundBussParams {`default` = {vol = ($Default_BussSet.`default`.vol)} time = 0.02}
+	StopSoundEvent \{Song_Intro_Kick_SFX}
+	StopSoundEvent \{Notes_Ripple_Up_SFX}
+	StopSoundEvent \{Song_Intro_Highway_Up}
+	StopSoundEvent \{Crowd_Fast_Surge_Cheer}
+	StopSoundEvent \{Medium_Crowd_Applause}
+	StopSoundEvent \{Lose_Multiplier_Crowd}
+	StopSoundEvent \{Star_Power_Release_Front_P1_Gh4}
+	StopSoundEvent \{Star_Power_Release_Center_P1_Gh4}
+	StopSoundEvent \{Star_Power_Release_Center_P2_GH4}
+	StopSoundEvent \{Star_Power_Release_Front_P2_GH4}
+	StopSoundEvent \{Star_Power_Deployed_LFE_P1_GH4}
+	StopSoundEvent \{Star_Power_Deployed_LFE_P2_GH4}
+	StopSoundEvent \{Star_Power_Deployed_Front_P1_GH4}
+	StopSoundEvent \{Star_Power_Deployed_Back_P1_GH4}
+	StopSoundEvent \{Star_Power_Deployed_Front_P2_GH4}
+	StopSoundEvent \{Star_Power_Deployed_Back_P2_GH4}
+	StopSoundEvent \{Star_Power_Available_P2_GH4}
+	StopSoundEvent \{Star_Power_Available_P1_GH4}
+	StopSoundEvent \{Star_Power_Awarded_SFX}
+	StopSoundEvent \{Star_Power_Ready_SFX}
+	StopSoundEvent \{Star_Power_Available_GH4}
+	StopSoundEvent \{Star_Power_Release_Center_Gh4}
+	StopSoundEvent \{Star_Power_Release_Front_GH4}
+	StopSoundEvent \{Star_Power_Deployed_SFX}
+	StopSoundEvent \{Star_Power_Deployed_Cheer_SFX}
+	StopSoundEvent \{Star_Power_Deployed_Back_GH4}
+	StopSoundEvent \{Star_Power_Deployed_LFE_GH4}
+	StopSoundEvent \{Star_Power_Deployed_Front_Gh4}
+	StopSoundEvent \{GH_SFX_BattleMode_Lightning_Player1}
+	StopSoundEvent \{GH_SFX_BattleMode_Lightning_Player2}
+	StopSoundEvent \{GH_SFX_BattleMode_DiffUp_P1}
+	StopSoundEvent \{GH_SFX_BattleMode_DiffUp_P2}
+	StopSoundEvent \{GH_SFX_BattleMode_DoubleNote_P1}
+	StopSoundEvent \{GH_SFX_BattleMode_DoubleNote_P2}
+	StopSoundEvent \{GH_SFX_BattleMode_Lefty_P1}
+	StopSoundEvent \{GH_SFX_BattleMode_Lefty_P2}
+	StopSoundEvent \{GH_SFX_BattleMode_Steal_P1}
+	StopSoundEvent \{GH_SFX_BattleMode_Steal_P2}
+	StopSoundEvent \{GH_SFX_BattleMode_StringBreak_P1}
+	StopSoundEvent \{GH_SFX_BattleMode_StringBreak_P2}
+	StopSoundEvent \{GH_SFX_BattleMode_WhammyAttack_P1}
+	StopSoundEvent \{GH_SFX_BattleMode_WhammyAttack_P2}
+	StopSoundEvent \{GH_SFX_BossBattle_PlayerDies}
+	StopSoundEvent \{GH_SFX_BattleMode_Attack_Over_P1}
+	StopSoundEvent \{GH_SFX_BattleMode_Attack_Over_P2}
+	StopSoundEvent \{Battle_Power_Awarded_SFX_P1}
+	StopSoundEvent \{Battle_Power_Awarded_SFX_P2}
+	StopSoundEvent \{GH_SFX_BattleMode_WhammyAttack_Received_P1}
+	StopSoundEvent \{GH_SFX_BattleMode_WhammyAttack_Received_P2}
+	StopSoundEvent \{Battlemode_HeartBeat_P1}
+	StopSoundEvent \{Battlemode_HeartBeat_P2}
+	StopSoundsByBuss \{Practice_Band_Playback}
+	StopSoundEvent \{UI_SFX_Lose_Multiplier_2X}
+	StopSoundEvent \{UI_SFX_Lose_Multiplier_3X}
+	StopSoundEvent \{UI_SFX_Lose_Multiplier_4X}
+	StopSoundEvent \{Lose_Multiplier_Crowd}
+	StopSoundEvent \{Star_Power_Deployed_Back_P3_GH4}
+	StopSoundEvent \{Star_Power_Deployed_Front_P3_GH4}
+	StopSoundEvent \{Star_Power_Available_P3_GH4}
+	StopSoundEvent \{Star_Power_Awarded_SFX_P3}
+	StopSoundEvent \{Star_Power_Release_Center_P1_Gh4}
+	StopSoundEvent \{Star_Power_Release_Front_P1_Gh4}
+	StopSoundEvent \{UI_SFX_50_Note_Streak_SinglePlayer}
+	StopSoundEvent \{UI_SFX_50_Note_Streak_P1}
+	StopSoundEvent \{UI_SFX_50_Note_Streak_P2}
+	StopSoundEvent \{UI_SFX_100_Note_Streak_SinglePlayer}
+	StopSoundEvent \{UI_SFX_100_Note_Streak_P1}
+	StopSoundEvent \{UI_SFX_100_Note_Streak_P2}
+	StopSoundsByBuss \{Drums_InGame}
+	StopSoundsByBuss \{Drums_JamMode}
+	StopSoundsByBuss \{Guitar_JamMode}
+	StopSoundsByBuss \{Bass_JamMode}
+	StopSoundsByBuss \{Wrong_Notes_Guitar}
+	StopSoundsByBuss \{Wrong_Notes_Bass}
+	StopSoundsByBuss \{Wrong_Notes_Drums}
+	if (<type> = Normal)
 		if (<loading_transition> = 1)
 		else
-			bg_crowd_front_end_silence \{immediate = 1}
+			BG_Crowd_Front_End_Silence \{immediate = 1}
 		endif
 	endif
 endscript
 
-script gh_sfx_training_tuning_strings 
+script GH_SFX_Training_Tuning_Strings 
 	switch <note_played>
 		case 0
 		switch <training_notes_strummed>
 			case 1
-			playsound \{e_tuning
+			PlaySound \{E_Tuning
 				vol_percent = 90
 				pitch_percent = 80
-				buss = training_vo}
+				buss = Training_VO}
 			case 2
-			playsound \{e_tuning
+			PlaySound \{E_Tuning
 				vol_percent = 90
 				pitch_percent = 90
-				buss = training_vo}
+				buss = Training_VO}
 			case 3
-			playsound \{e_string
+			PlaySound \{E_String
 				vol_percent = 90
 				pitch_percent = 90
-				buss = training_vo}
+				buss = Training_VO}
 		endswitch
 		case 1
 		switch <training_notes_strummed>
 			case 1
-			playsound \{a_tuning
+			PlaySound \{A_Tuning
 				vol_percent = 90
 				pitch_percent = 80
-				buss = training_vo}
+				buss = Training_VO}
 			case 2
-			playsound \{a_tuning
+			PlaySound \{A_Tuning
 				vol_percent = 90
 				pitch_percent = 90
-				buss = training_vo}
+				buss = Training_VO}
 			case 3
-			playsound \{a_string
+			PlaySound \{A_String
 				vol_percent = 90
 				pitch_percent = 90
-				buss = training_vo}
+				buss = Training_VO}
 		endswitch
 		case 2
 		switch <training_notes_strummed>
 			case 1
-			playsound \{d_tuning
+			PlaySound \{D_Tuning
 				vol_percent = 90
 				pitch_percent = 80
-				buss = training_vo}
+				buss = Training_VO}
 			case 2
-			playsound \{d_tuning
+			PlaySound \{D_Tuning
 				vol_percent = 90
 				pitch_percent = 90
-				buss = training_vo}
+				buss = Training_VO}
 			case 3
-			playsound \{d_string
+			PlaySound \{D_String
 				vol_percent = 90
 				pitch_percent = 90
-				buss = training_vo}
+				buss = Training_VO}
 		endswitch
 		case 3
 		switch <training_notes_strummed>
 			case 1
-			playsound \{g_tuning
+			PlaySound \{G_Tuning
 				vol_percent = 90
 				pitch_percent = 80
-				buss = training_vo}
+				buss = Training_VO}
 			case 2
-			playsound \{g_tuning
+			PlaySound \{G_Tuning
 				vol_percent = 90
 				pitch_percent = 90
-				buss = training_vo}
+				buss = Training_VO}
 			case 3
-			playsound \{g_string
+			PlaySound \{G_String
 				vol_percent = 90
 				pitch_percent = 90
-				buss = training_vo}
+				buss = Training_VO}
 		endswitch
 		case 4
 		switch <training_notes_strummed>
 			case 1
-			playsound \{b_tuning
+			PlaySound \{B_Tuning
 				vol_percent = 90
 				pitch_percent = 80
-				buss = training_vo}
+				buss = Training_VO}
 			case 2
-			playsound \{b_tuning
+			PlaySound \{B_Tuning
 				vol_percent = 90
 				pitch_percent = 90
-				buss = training_vo}
+				buss = Training_VO}
 			case 3
-			playsound \{b_string
+			PlaySound \{B_String
 				vol_percent = 90
 				pitch_percent = 90
-				buss = training_vo}
+				buss = Training_VO}
 		endswitch
 	endswitch
 endscript
 
-script gh_sfx_training_hammer_on_lesson_2 
+script GH_SFX_Training_Hammer_On_Lesson_2 
 	switch <note_played>
 		case 0
 		switch <training_notes_strummed>
 			case 1
-			playsound \{e_tuning
+			PlaySound \{E_Tuning
 				vol_percent = 90
 				pitch_percent = 80
-				buss = training_vo}
+				buss = Training_VO}
 			case 2
-			playsound \{e_tuning
+			PlaySound \{E_Tuning
 				vol_percent = 90
 				pitch_percent = 90
-				buss = training_vo}
+				buss = Training_VO}
 			case 3
-			playsound \{e_string
+			PlaySound \{E_String
 				vol_percent = 90
 				pitch_percent = 90
-				buss = training_vo}
+				buss = Training_VO}
 		endswitch
 		case 1
 		switch <training_notes_strummed>
 			case 1
-			playsound \{a_tuning
+			PlaySound \{A_Tuning
 				vol_percent = 90
 				pitch_percent = 80
-				buss = training_vo}
+				buss = Training_VO}
 			case 2
-			playsound \{a_tuning
+			PlaySound \{A_Tuning
 				vol_percent = 90
 				pitch_percent = 90
-				buss = training_vo}
+				buss = Training_VO}
 			case 3
-			playsound \{a_string
+			PlaySound \{A_String
 				vol_percent = 90
 				pitch_percent = 90
-				buss = training_vo}
+				buss = Training_VO}
 		endswitch
 		case 2
 		switch <training_notes_strummed>
 			case 1
-			playsound \{d_tuning
+			PlaySound \{D_Tuning
 				vol_percent = 90
 				pitch_percent = 80
-				buss = training_vo}
+				buss = Training_VO}
 			case 2
-			playsound \{d_tuning
+			PlaySound \{D_Tuning
 				vol_percent = 90
 				pitch_percent = 90
-				buss = training_vo}
+				buss = Training_VO}
 			case 3
-			playsound \{d_string
+			PlaySound \{D_String
 				vol_percent = 90
 				pitch_percent = 90
-				buss = training_vo}
+				buss = Training_VO}
 		endswitch
 		case 3
 		switch <training_notes_strummed>
 			case 1
-			playsound \{g_tuning
+			PlaySound \{G_Tuning
 				vol_percent = 90
 				pitch_percent = 80
-				buss = training_vo}
+				buss = Training_VO}
 			case 2
-			playsound \{g_tuning
+			PlaySound \{G_Tuning
 				vol_percent = 90
 				pitch_percent = 90
-				buss = training_vo}
+				buss = Training_VO}
 			case 3
-			playsound \{g_string
+			PlaySound \{G_String
 				vol_percent = 90
 				pitch_percent = 90
-				buss = training_vo}
+				buss = Training_VO}
 		endswitch
 		case 4
 		switch <training_notes_strummed>
 			case 1
-			playsound \{b_tuning
+			PlaySound \{B_Tuning
 				vol_percent = 90
 				pitch_percent = 80
-				buss = training_vo}
+				buss = Training_VO}
 			case 2
-			playsound \{b_tuning
+			PlaySound \{B_Tuning
 				vol_percent = 90
 				pitch_percent = 90
-				buss = training_vo}
+				buss = Training_VO}
 			case 3
-			playsound \{b_string
+			PlaySound \{B_String
 				vol_percent = 90
 				pitch_percent = 90
-				buss = training_vo}
+				buss = Training_VO}
 		endswitch
 	endswitch
 endscript
 
-script stopnotes_01 
-	if issoundeventplaying \{tutorial_string_1_strum_free}
-		setsoundparams \{tutorial_string_1_strum_free
+script StopNotes_01 
+	if isSoundEventPlaying \{Tutorial_String_1_Strum_Free}
+		SetSoundParams \{Tutorial_String_1_Strum_Free
 			vol_percent = 100}
-		wait \{0.05
+		Wait \{0.05
 			seconds}
-		setsoundparams \{tutorial_string_1_strum_free
+		SetSoundParams \{Tutorial_String_1_Strum_Free
 			vol_percent = 50}
-		wait \{0.05
+		Wait \{0.05
 			seconds}
-		setsoundparams \{tutorial_string_1_strum_free
+		SetSoundParams \{Tutorial_String_1_Strum_Free
 			vol_percent = 10}
-		stopsoundevent \{tutorial_string_1_strum_free}
+		StopSoundEvent \{Tutorial_String_1_Strum_Free}
 	endif
 endscript
 
-script stopnotes_02 
-	if issoundeventplaying \{tutorial_string_2_hopo_free}
-		setsoundparams \{tutorial_string_2_hopo_free
+script StopNotes_02 
+	if isSoundEventPlaying \{Tutorial_String_2_HOPO_Free}
+		SetSoundParams \{Tutorial_String_2_HOPO_Free
 			vol_percent = 100}
-		wait \{0.05
+		Wait \{0.05
 			seconds}
-		setsoundparams \{tutorial_string_2_hopo_free
+		SetSoundParams \{Tutorial_String_2_HOPO_Free
 			vol_percent = 50}
-		wait \{0.05
+		Wait \{0.05
 			seconds}
-		setsoundparams \{tutorial_string_2_hopo_free
+		SetSoundParams \{Tutorial_String_2_HOPO_Free
 			vol_percent = 10}
-		stopsoundevent \{tutorial_string_2_hopo_free}
+		StopSoundEvent \{Tutorial_String_2_HOPO_Free}
 	endif
 endscript
 
-script stopnotes_03 
-	if issoundeventplaying \{tutorial_string_3_hopo_free}
-		setsoundparams \{tutorial_string_3_hopo_free
+script StopNotes_03 
+	if isSoundEventPlaying \{Tutorial_String_3_HOPO_Free}
+		SetSoundParams \{Tutorial_String_3_HOPO_Free
 			vol_percent = 100}
-		wait \{0.05
+		Wait \{0.05
 			seconds}
-		setsoundparams \{tutorial_string_3_hopo_free
+		SetSoundParams \{Tutorial_String_3_HOPO_Free
 			vol_percent = 50}
-		wait \{0.05
+		Wait \{0.05
 			seconds}
-		setsoundparams \{tutorial_string_3_hopo_free
+		SetSoundParams \{Tutorial_String_3_HOPO_Free
 			vol_percent = 10}
-		stopsoundevent \{tutorial_string_3_hopo_free}
+		StopSoundEvent \{Tutorial_String_3_HOPO_Free}
 	endif
 endscript
 
-script stopnotes_04 
-	if issoundeventplaying \{tutorial_string_3_strum_free}
-		setsoundparams \{tutorial_string_3_strum_free
+script StopNotes_04 
+	if isSoundEventPlaying \{Tutorial_String_3_Strum_Free}
+		SetSoundParams \{Tutorial_String_3_Strum_Free
 			vol_percent = 100}
-		wait \{0.05
+		Wait \{0.05
 			seconds}
-		setsoundparams \{tutorial_string_3_strum_free
+		SetSoundParams \{Tutorial_String_3_Strum_Free
 			vol_percent = 50}
-		wait \{0.05
+		Wait \{0.05
 			seconds}
-		setsoundparams \{tutorial_string_3_strum_free
+		SetSoundParams \{Tutorial_String_3_Strum_Free
 			vol_percent = 10}
-		stopsoundevent \{tutorial_string_3_strum_free}
+		StopSoundEvent \{Tutorial_String_3_Strum_Free}
 	endif
 endscript
 
-script stopnotes_05 
-	if issoundeventplaying \{tutorial_string_2_hopo_free}
-		setsoundparams \{tutorial_string_2_hopo_free
+script StopNotes_05 
+	if isSoundEventPlaying \{Tutorial_String_2_HOPO_Free}
+		SetSoundParams \{Tutorial_String_2_HOPO_Free
 			vol_percent = 100}
-		wait \{0.05
+		Wait \{0.05
 			seconds}
-		setsoundparams \{tutorial_string_2_hopo_free
+		SetSoundParams \{Tutorial_String_2_HOPO_Free
 			vol_percent = 50}
-		wait \{0.05
+		Wait \{0.05
 			seconds}
-		setsoundparams \{tutorial_string_2_hopo_free
+		SetSoundParams \{Tutorial_String_2_HOPO_Free
 			vol_percent = 10}
-		stopsoundevent \{tutorial_string_2_hopo_free}
+		StopSoundEvent \{Tutorial_String_2_HOPO_Free}
 	endif
 endscript
 
-script stopnotes_06 
-	if issoundeventplaying \{tutorial_string_1_hopo_free}
-		setsoundparams \{tutorial_string_1_hopo_free
+script StopNotes_06 
+	if isSoundEventPlaying \{Tutorial_String_1_HOPO_Free}
+		SetSoundParams \{Tutorial_String_1_HOPO_Free
 			vol_percent = 100}
-		wait \{0.05
+		Wait \{0.05
 			seconds}
-		setsoundparams \{tutorial_string_1_hopo_free
+		SetSoundParams \{Tutorial_String_1_HOPO_Free
 			vol_percent = 50}
-		wait \{0.05
+		Wait \{0.05
 			seconds}
-		setsoundparams \{tutorial_string_1_hopo_free
+		SetSoundParams \{Tutorial_String_1_HOPO_Free
 			vol_percent = 10}
-		stopsoundevent \{tutorial_string_1_hopo_free}
+		StopSoundEvent \{Tutorial_String_1_HOPO_Free}
 	endif
 endscript
 
-script tutorial_mode_finish_chord_02 
-	wait \{1
+script Tutorial_Mode_Finish_Chord_02 
+	Wait \{1
 		seconds}
-	soundevent \{event = tutorial_mode_finish_chord}
+	SoundEvent \{event = Tutorial_Mode_Finish_Chord}
 endscript
 
-script tutorial_mode_finish_chord_03 
-	wait \{0.3
+script Tutorial_Mode_Finish_Chord_03 
+	Wait \{0.3
 		seconds}
-	soundevent \{event = tutorial_mode_finish_chord}
+	SoundEvent \{event = Tutorial_Mode_Finish_Chord}
 endscript
 
-script gh_sfx_note_streak_singleplayer 
+script GH_SFX_Note_Streak_SinglePlayer 
 	if NOT (($is_attract_mode = 1) || ($crowd_in_jam_mode_song_state = 1))
-		soundevent \{event = ui_sfx_50_note_streak_singleplayer}
+		SoundEvent \{event = UI_SFX_50_Note_Streak_SinglePlayer}
 	endif
 endscript
 
-script gh_sfx_note_streak_p1 
+script GH_SFX_Note_Streak_P1 
 	if NOT (($is_attract_mode = 1) || ($crowd_in_jam_mode_song_state = 1))
-		soundevent \{event = ui_sfx_50_note_streak_p1}
+		SoundEvent \{event = UI_SFX_50_Note_Streak_P1}
 	endif
 endscript
 
-script gh_sfx_note_streak_p2 
+script GH_SFX_Note_Streak_P2 
 	if NOT (($is_attract_mode = 1) || ($crowd_in_jam_mode_song_state = 1))
-		soundevent \{event = ui_sfx_50_note_streak_p2}
+		SoundEvent \{event = UI_SFX_50_Note_Streak_P2}
 	endif
 endscript
 
-script guitar_wrong_note_sound_logic \{vol = 0.0
+script Guitar_Wrong_Note_Sound_Logic \{vol = 0.0
 		pitch = 0.0
 		soundasset = `default`
 		buss = `default`
@@ -3315,14 +3315,14 @@ script guitar_wrong_note_sound_logic \{vol = 0.0
 	switch ($<player_status>.highway_position)
 		case left
 		printf \{channel = sfx
-			qs(0xac627fa4)}
+			qs("\LLeft Highway missed a note - setting pan positions")}
 		pan1x = -1.0
 		pan1y = 1.0
 		pan2x = 0.0
 		pan2y = 1.0
 		case right
 		printf \{channel = sfx
-			qs(0x26f527b0)}
+			qs("\LRight Highway missed a note - setting pan positions")}
 		pan1x = 1.0
 		pan1y = 1.0
 		pan2x = 0.0
@@ -3330,14 +3330,14 @@ script guitar_wrong_note_sound_logic \{vol = 0.0
 		case center
 		if ($current_num_players < 2)
 			printf \{channel = sfx
-				qs(0x64108053)}
+				qs("\LCenter Highway missed a note and we are in a single player game - setting pan to full width")}
 			pan1x = -1.0
 			pan1y = 1.0
 			pan2x = 1.0
 			pan2y = 1.0
 		else
 			printf \{channel = sfx
-				qs(0x28ac8da2)}
+				qs("\LCenter Highway missed a note and we are in a multiplayer game - setting pan to decreased width")}
 			pan1x = -0.25
 			pan1y = 1.0
 			pan2x = 0.25
@@ -3345,10 +3345,10 @@ script guitar_wrong_note_sound_logic \{vol = 0.0
 		endif
 		default
 		printf \{channel = sfx
-			qs(0x4ecd64b0)}
+			qs("\LUh oh - no player status highway position... ")}
 	endswitch
 	switch ($<player_status>.part)
-		case bass
+		case Bass
 		RandomNoRepeat (
 			@ soundasset = bad_note_bass2
 			vol = -2
@@ -3357,8 +3357,8 @@ script guitar_wrong_note_sound_logic \{vol = 0.0
 			@ soundasset = bad_note_bass6
 			vol = -2
 			)
-		newbuss = wrong_notes_bass
-		printf channel = sfx qs(0x1e59813a) s = <soundasset> v = <vol> t = <newbuss>
+		newbuss = Wrong_Notes_Bass
+		printf channel = sfx qs("\LThe BASS Player Missed A Note - setting the sound asset to %s, volume to %v and buss to %t ") s = <soundasset> v = <vol> t = <newbuss>
 		case guitar
 		RandomNoRepeat (
 			@ soundasset = bad_note1
@@ -3372,39 +3372,39 @@ script guitar_wrong_note_sound_logic \{vol = 0.0
 			@ soundasset = bad_note6
 			vol = -5.2599998
 			)
-		newbuss = wrong_notes_guitar
-		printf channel = sfx qs(0xdddcd451) s = <soundasset> v = <vol> t = <newbuss>
+		newbuss = Wrong_Notes_Guitar
+		printf channel = sfx qs("\LThe GUITAR Player Missed A Note - setting the sound asset to %s, volume to %v and buss to %t ") s = <soundasset> v = <vol> t = <newbuss>
 		case drum
 		switch <drum_stream>
 			case 0
 			case 2
-			soundasset = bad_note_tom1
+			soundasset = Bad_Note_Tom1
 			vol = -6
 			pitch = RandomFloat (-2.0, 0.0)
 			case 1
-			soundasset = bad_note_hihat1
+			soundasset = Bad_Note_HiHat1
 			vol = -2
 			pitch = -4
 			case 3
-			soundasset = bad_note_kick1
+			soundasset = Bad_Note_Kick1
 			vol = -1
 			pitch = 4
 		endswitch
-		newbuss = wrong_notes_drums
-		printf channel = sfx qs(0x6828d74c) s = <soundasset> v = <vol> t = <newbuss>
+		newbuss = Wrong_Notes_Drums
+		printf channel = sfx qs("\LThe DRUM Player Missed A Note - setting the sound asset to %s, volume to %v and buss to %t ") s = <soundasset> v = <vol> t = <newbuss>
 		default
 		printf \{channel = sfx
-			qs(0xd6ef2146)}
+			qs("\LUh oh - no player staus part... ")}
 	endswitch
-	gamemode_getnumplayersshown
+	GameMode_GetNumPlayersShown
 	if (<num_players_shown> > 1)
 		vol = (<vol> - 2)
 	endif
-	printf channel = sfx qs(0xa9b0bfad) s = <soundasset> t = <vol> u = <pitch> v = <newbuss> w = <pan1x> x = <pan1y> y = <pan2x> z = <pan2y>
-	playsound <soundasset> vol = <vol> pitch = <pitch> buss = <newbuss> pan1x = <pan1x> pan1y = <pan1y> pan2x = <pan2x> pan2y = <pan2y> priority = 90 panremovecenter = true
+	printf channel = sfx qs("\Lplaysound %s vol=%t pitch=%u buss=%v pan1x=%w pan1y=%x pan2x=%y pan2y=%z priority=90") s = <soundasset> t = <vol> u = <pitch> v = <newbuss> w = <pan1x> x = <pan1y> y = <pan2x> z = <pan2y>
+	PlaySound <soundasset> vol = <vol> pitch = <pitch> buss = <newbuss> pan1x = <pan1x> pan1y = <pan1y> pan2x = <pan2x> pan2y = <pan2y> priority = 90 panRemoveCenter = true
 endscript
 
-script play_instrument_sound_with_panning \{vol = 0.0
+script Play_Instrument_Sound_With_Panning \{vol = 0.0
 		pitch = 0.0
 		soundasset = `default`
 		buss = `default`
@@ -3415,14 +3415,14 @@ script play_instrument_sound_with_panning \{vol = 0.0
 	switch ($<player_status>.highway_position)
 		case left
 		printf \{channel = sfx
-			qs(0xac627fa4)}
+			qs("\LLeft Highway missed a note - setting pan positions")}
 		pan1x = -1.0
 		pan1y = 1.0
 		pan2x = 0.0
 		pan2y = 1.0
 		case right
 		printf \{channel = sfx
-			qs(0x26f527b0)}
+			qs("\LRight Highway missed a note - setting pan positions")}
 		pan1x = 1.0
 		pan1y = 1.0
 		pan2x = 0.0
@@ -3430,14 +3430,14 @@ script play_instrument_sound_with_panning \{vol = 0.0
 		case center
 		if ($current_num_players < 2)
 			printf \{channel = sfx
-				qs(0x64108053)}
+				qs("\LCenter Highway missed a note and we are in a single player game - setting pan to full width")}
 			pan1x = -1.0
 			pan1y = 1.0
 			pan2x = 1.0
 			pan2y = 1.0
 		else
 			printf \{channel = sfx
-				qs(0x28ac8da2)}
+				qs("\LCenter Highway missed a note and we are in a multiplayer game - setting pan to decreased width")}
 			pan1x = -0.25
 			pan1y = 1.0
 			pan2x = 0.25
@@ -3445,10 +3445,10 @@ script play_instrument_sound_with_panning \{vol = 0.0
 		endif
 		default
 		printf \{channel = sfx
-			qs(0x4ecd64b0)}
+			qs("\LUh oh - no player status highway position... ")}
 	endswitch
 	switch ($<player_status>.part)
-		case bass
+		case Bass
 		RandomNoRepeat (
 			@ soundasset = bad_note_bass2
 			vol = -2
@@ -3457,8 +3457,8 @@ script play_instrument_sound_with_panning \{vol = 0.0
 			@ soundasset = bad_note_bass6
 			vol = -2
 			)
-		newbuss = wrong_notes_bass
-		printf channel = sfx qs(0x1e59813a) s = <soundasset> v = <vol> t = <newbuss>
+		newbuss = Wrong_Notes_Bass
+		printf channel = sfx qs("\LThe BASS Player Missed A Note - setting the sound asset to %s, volume to %v and buss to %t ") s = <soundasset> v = <vol> t = <newbuss>
 		case guitar
 		RandomNoRepeat (
 			@ soundasset = bad_note1
@@ -3472,135 +3472,135 @@ script play_instrument_sound_with_panning \{vol = 0.0
 			@ soundasset = bad_note6
 			vol = -5.2599998
 			)
-		newbuss = wrong_notes_guitar
-		printf channel = sfx qs(0xdddcd451) s = <soundasset> v = <vol> t = <newbuss>
+		newbuss = Wrong_Notes_Guitar
+		printf channel = sfx qs("\LThe GUITAR Player Missed A Note - setting the sound asset to %s, volume to %v and buss to %t ") s = <soundasset> v = <vol> t = <newbuss>
 		case drum
 		switch <drum_index>
 			case 0
 			case 1
 			case 3
-			soundasset = bad_note_tom1
+			soundasset = Bad_Note_Tom1
 			vol = -6
 			pitch = RandomFloat (-2.0, 0.0)
 			case 2
 			case 4
-			soundasset = bad_note_hihat1
+			soundasset = Bad_Note_HiHat1
 			vol = -2
 			pitch = -4
 			case 5
-			soundasset = bad_note_kick1
+			soundasset = Bad_Note_Kick1
 			vol = -1
 			pitch = 4
 		endswitch
-		newbuss = wrong_notes_drums
-		printf channel = sfx qs(0x6828d74c) s = <soundasset> v = <vol> t = <newbuss>
+		newbuss = Wrong_Notes_Drums
+		printf channel = sfx qs("\LThe DRUM Player Missed A Note - setting the sound asset to %s, volume to %v and buss to %t ") s = <soundasset> v = <vol> t = <newbuss>
 		default
 		printf \{channel = sfx
-			qs(0xd6ef2146)}
+			qs("\LUh oh - no player staus part... ")}
 	endswitch
-	printf channel = sfx qs(0xa9b0bfad) s = <soundasset> t = <vol> u = <pitch> v = <newbuss> w = <pan1x> x = <pan1y> y = <pan2x> z = <pan2y>
-	playsound <soundasset> vol = <vol> pitch = <pitch> buss = <newbuss> pan1x = <pan1x> pan1y = <pan1y> pan2x = <pan2x> pan2y = <pan2y> priority = 90 panremovecenter = true
+	printf channel = sfx qs("\Lplaysound %s vol=%t pitch=%u buss=%v pan1x=%w pan1y=%x pan2x=%y pan2y=%z priority=90") s = <soundasset> t = <vol> u = <pitch> v = <newbuss> w = <pan1x> x = <pan1y> y = <pan2x> z = <pan2y>
+	PlaySound <soundasset> vol = <vol> pitch = <pitch> buss = <newbuss> pan1x = <pan1x> pan1y = <pan1y> pan2x = <pan2x> pan2y = <pan2y> priority = 90 panRemoveCenter = true
 endscript
 
 script z_metalfest_sfx_proxim_test 
 	if inside
 		printf \{channel = sfx
-			qs(0xd77ff6d5)}
+			qs("\LINSIDE!!!!")}
 	else
-		if gotparam \{destroyed}
+		if GotParam \{Destroyed}
 			printf \{channel = sfx
-				qs(0x55c7c113)}
+				qs("\LSkater was Inside when Proxim was destroyed")}
 		else
-			if gotparam \{created}
+			if GotParam \{Created}
 				printf \{channel = sfx
-					qs(0x1d37061a)}
+					qs("\LSkater started Outside")}
 			else
 				printf \{channel = sfx
-					qs(0x5b76594f)}
+					qs("\LSkater moved Outside")}
 			endif
 		endif
 	endif
 endscript
 
-script testtonesoundevent \{type = `default`}
-	printf channel = sfx qs(0x7a0099b8) s = <type>
+script TestToneSoundEvent \{type = `default`}
+	printf channel = sfx qs("\L%s ") s = <type>
 	switch <type>
 		case guitar
 		printf \{channel = sfx
-			qs(0x3d4d753d)}
-		playsound \{testtones_guitar
-			buss = master}
-		case bass
+			qs("\LPlaying Guitar Tones")}
+		PlaySound \{TestTones_Guitar
+			buss = Master}
+		case Bass
 		printf \{channel = sfx
-			qs(0x3d4d753d)}
-		playsound \{testtones_bass
-			buss = master}
+			qs("\LPlaying Guitar Tones")}
+		PlaySound \{TestTones_Bass
+			buss = Master}
 		case kick
 		printf \{channel = sfx
-			qs(0x3d4d753d)}
-		playsound \{testtones_kickdrum
-			buss = master}
+			qs("\LPlaying Guitar Tones")}
+		PlaySound \{TestTones_KickDrum
+			buss = Master}
 		case snare
 		printf \{channel = sfx
-			qs(0x3d4d753d)}
-		playsound \{testtones_snaredrum
-			buss = master}
+			qs("\LPlaying Guitar Tones")}
+		PlaySound \{TestTones_SnareDrum
+			buss = Master}
 		case tom
 		printf \{channel = sfx
-			qs(0x3d4d753d)}
-		playsound \{testtones_toms
-			buss = master}
+			qs("\LPlaying Guitar Tones")}
+		PlaySound \{TestTones_Toms
+			buss = Master}
 		case cymbal
 		printf \{channel = sfx
-			qs(0x3d4d753d)}
-		playsound \{testtones_cymbals
-			buss = master}
+			qs("\LPlaying Guitar Tones")}
+		PlaySound \{TestTones_Cymbals
+			buss = Master}
 		case voxlead
 		printf \{channel = sfx
-			qs(0x3d4d753d)}
-		playsound \{testtones_leadvocals
-			buss = master}
+			qs("\LPlaying Guitar Tones")}
+		PlaySound \{TestTones_LeadVocals
+			buss = Master}
 		case voxbackup
 		printf \{channel = sfx
-			qs(0x3d4d753d)}
-		playsound \{testtones_backupvocals
-			buss = master}
-		case band
+			qs("\LPlaying Guitar Tones")}
+		PlaySound \{TestTones_BackupVocals
+			buss = Master}
+		case Band
 		printf \{channel = sfx
-			qs(0x3d4d753d)}
-		playsound \{testtones_band
-			buss = master}
-		case crowd
+			qs("\LPlaying Guitar Tones")}
+		PlaySound \{TestTones_Band
+			buss = Master}
+		case Crowd
 		printf \{channel = sfx
-			qs(0x3d4d753d)}
-		playsound \{testtones_crowd
-			buss = master}
+			qs("\LPlaying Guitar Tones")}
+		PlaySound \{TestTones_Crowd
+			buss = Master}
 		default
-		printf channel = sfx qs(0x7a0099b8) s = <type>
+		printf channel = sfx qs("\L%s ") s = <type>
 	endswitch
 endscript
 
-script startpinknoiseloopforcaliratelagscreen 
-	playsound \{pinknoise_minnus_20
+script StartPinkNoiseLoopForCalirateLagScreen 
+	PlaySound \{PinkNoise_Minnus_20
 		buss = `default`
 		vol = -70
 		num_loops = -1}
 endscript
 
-script stoppinknoiseloopforcaliratelagscreen 
-	stopsound \{pinknoise_minnus_20}
+script StopPinkNoiseLoopForCalirateLagScreen 
+	StopSound \{PinkNoise_Minnus_20}
 endscript
 
-script testtoneenterscript 
-	setsoundbussparams {sfx_balance = {vol = (($default_bussset.sfx_balance.vol) - 100)}}
+script TestToneEnterScript 
+	SetSoundBussParams {SFX_Balance = {vol = (($Default_BussSet.SFX_Balance.vol) - 100)}}
 endscript
 
-script testtoneexitscript 
-	setsoundbussparams {sfx_balance = {vol = ($default_bussset.sfx_balance.vol)}}
+script TestToneExitScript 
+	SetSoundBussParams {SFX_Balance = {vol = ($Default_BussSet.SFX_Balance.vol)}}
 endscript
 
 script muting_test_setup_script 
-	setsoundbussparams \{ui = {
+	SetSoundBussParams \{ui = {
 			vol = -100.0
 		}}
 	change \{crowd_debug_mode = 1}
@@ -3608,7 +3608,7 @@ endscript
 save_check_time_early = 0.0
 save_check_time_late = 0.0
 
-script audio_sync_test_disable_highway 
+script Audio_Sync_Test_Disable_Highway 
 	disable_bg_viewport
 	change \{save_check_time_early = $check_time_early}
 	change \{save_check_time_late = $check_time_late}
@@ -3616,752 +3616,752 @@ script audio_sync_test_disable_highway
 	change \{check_time_late = 1.0}
 endscript
 
-script audio_sync_test_enable_highway 
+script Audio_Sync_Test_Enable_Highway 
 	enable_bg_viewport
 	change \{check_time_early = $save_check_time_early}
 	change \{check_time_late = $save_check_time_late}
 endscript
 
-script profiling_fmod_effects 
+script Profiling_FMOD_EFFECTS 
 endscript
 
 script stars 
 	printf \{channel = sfx
-		qs(0x65278da5)}
+		qs("\L*******************************************************")}
 	printf \{channel = sfx
-		qs(0x65278da5)}
+		qs("\L*******************************************************")}
 	printf \{channel = sfx
-		qs(0x65278da5)}
+		qs("\L*******************************************************")}
 	printf \{channel = sfx
-		qs(0x65278da5)}
+		qs("\L*******************************************************")}
 	printf \{channel = sfx
-		qs(0x65278da5)}
+		qs("\L*******************************************************")}
 endscript
 
-script star_power_deployed_sfx_multiplayer \{player = 1}
+script Star_Power_Deployed_SFX_Multiplayer \{player = 1}
 	printf \{channel = sfx
-		qs(0x9e86cd69)}
-	getplayerinfo <player> highway_position
-	printf channel = sfx qs(0x3c9d8c67) s = <highway_position>
-	if NOT issoundplaying \{star_deployed_back}
+		qs("\L****************spawned script Star_Power_Deployed_SFX_Multiplayer")}
+	GetPlayerInfo <player> highway_position
+	printf channel = sfx qs("\L****************within script Star_Power_Deployed_SFX_Multiplayer, highway position is __%s__ ") s = <highway_position>
+	if NOT issoundplaying \{Star_Deployed_Back}
 		printf \{channel = sfx
-			qs(0xc62aa5dd)}
+			qs("\L****************within script Star_Power_Deployed_SFX_Multiplayer, the sound Star_Deployed_Back IS NOT playing")}
 		if (<highway_position> = left)
 			printf \{channel = sfx
-				qs(0x4dfd5b77)}
-			soundevent \{event = star_power_deployed_lfe_p1_gh4}
-			soundevent \{event = star_power_deployed_back_p1_gh4}
-			soundevent \{event = star_power_deployed_front_p1_gh4}
-			soundevent \{event = star_power_deployed_cheer_sfx_p1}
+				qs("\L****************within script Star_Power_Deployed_SFX_Multiplayer, $Star_Power_Deployed_Flag IS NOT equal to 1, AND highway position is LEFT")}
+			SoundEvent \{event = Star_Power_Deployed_LFE_P1_GH4}
+			SoundEvent \{event = Star_Power_Deployed_Back_P1_GH4}
+			SoundEvent \{event = Star_Power_Deployed_Front_P1_GH4}
+			SoundEvent \{event = Star_Power_Deployed_Cheer_SFX_P1}
 		else
 			if (<highway_position> = right)
 				printf \{channel = sfx
-					qs(0x290badee)}
-				soundevent \{event = star_power_deployed_lfe_p1_gh4}
-				soundevent \{event = star_power_deployed_back_p2_gh4}
-				soundevent \{event = star_power_deployed_front_p2_gh4}
-				soundevent \{event = star_power_deployed_cheer_sfx_p2}
+					qs("\L****************within script Star_Power_Deployed_SFX_Multiplayer, $Star_Power_Deployed_Flag IS NOT equal to 1, AND highway position is not LEFT, but is RIGHT")}
+				SoundEvent \{event = Star_Power_Deployed_LFE_P1_GH4}
+				SoundEvent \{event = Star_Power_Deployed_Back_P2_GH4}
+				SoundEvent \{event = Star_Power_Deployed_Front_P2_GH4}
+				SoundEvent \{event = Star_Power_Deployed_Cheer_SFX_P2}
 			else
 				printf \{channel = sfx
-					qs(0xb3f669ca)}
-				soundevent \{event = star_power_deployed_lfe_p1_gh4}
-				soundevent \{event = star_power_deployed_back_p3_gh4}
-				soundevent \{event = star_power_deployed_front_p3_gh4}
-				soundevent \{event = star_power_deployed_cheer_sfx_p3}
+					qs("\L****************within script Star_Power_Deployed_SFX_Multiplayer, $Star_Power_Deployed_Flag IS NOT equal to 1, AND highway position is not LEFT, and is not RIGHT")}
+				SoundEvent \{event = Star_Power_Deployed_LFE_P1_GH4}
+				SoundEvent \{event = Star_Power_Deployed_Back_P3_GH4}
+				SoundEvent \{event = Star_Power_Deployed_Front_P3_GH4}
+				SoundEvent \{event = Star_Power_Deployed_Cheer_SFX_P3}
 			endif
 		endif
 		printf \{channel = sfx
-			qs(0xe6e95e4d)}
-		change \{star_power_deployed_flag = 1}
-		wait \{0.9
+			qs("\L****************within script Star_Power_Deployed_SFX_Multiplayer, changing Star_Power_Deployed_Flag to 1, and waiting")}
+		change \{Star_Power_Deployed_Flag = 1}
+		Wait \{0.9
 			seconds}
 		printf \{channel = sfx
-			qs(0x0a5c5d52)}
-		change \{star_power_deployed_flag = 0}
+			qs("\L****************within script Star_Power_Deployed_SFX_Multiplayer, done waiting, changing it back")}
+		change \{Star_Power_Deployed_Flag = 0}
 	else
 		printf \{channel = sfx
-			qs(0xe4f96e42)}
-		if ($star_power_deployed_flag = 1)
+			qs("\L****************within script Star_Power_Deployed_SFX_Multiplayer, the sound Star_Deployed_Back IS playing")}
+		if ($Star_Power_Deployed_Flag = 1)
 			printf \{channel = sfx
-				qs(0xbf9f78e2)}
-			setsoundparams \{star_deployed_front
+				qs("\L****************within script Star_Power_Deployed_SFX_Multiplayer, $Star_Power_Deployed_Flag IS equal to 1")}
+			SetSoundParams \{star_deployed_front
 				pan1x = -1
 				pan1y = 1
 				pan2x = 1
 				pan2y = 1}
-			setsoundparams \{star_deployed_back
+			SetSoundParams \{Star_Deployed_Back
 				pan1x = -1
 				pan1y = 1
 				pan2x = 1
 				pan2y = -1}
-			setsoundparams \{sp_cheer1
+			SetSoundParams \{sp_cheer1
 				pan1x = -1
 				pan1y = 1
 				pan2x = 1
 				pan2y = 1}
 		else
 			printf \{channel = sfx
-				qs(0x181f2540)}
+				qs("\L****************within script Star_Power_Deployed_SFX_Multiplayer, $Star_Power_Deployed_Flag IS NOT equal to 1")}
 			if (<highway_position> = left)
 				printf \{channel = sfx
-					qs(0x4dfd5b77)}
-				soundevent \{event = star_power_deployed_lfe_p1_gh4}
-				soundevent \{event = star_power_deployed_back_p1_gh4}
-				soundevent \{event = star_power_deployed_front_p1_gh4}
-				soundevent \{event = star_power_deployed_cheer_sfx_p1}
+					qs("\L****************within script Star_Power_Deployed_SFX_Multiplayer, $Star_Power_Deployed_Flag IS NOT equal to 1, AND highway position is LEFT")}
+				SoundEvent \{event = Star_Power_Deployed_LFE_P1_GH4}
+				SoundEvent \{event = Star_Power_Deployed_Back_P1_GH4}
+				SoundEvent \{event = Star_Power_Deployed_Front_P1_GH4}
+				SoundEvent \{event = Star_Power_Deployed_Cheer_SFX_P1}
 			else
 				if (<highway_position> = right)
 					printf \{channel = sfx
-						qs(0x290badee)}
-					soundevent \{event = star_power_deployed_lfe_p1_gh4}
-					soundevent \{event = star_power_deployed_back_p2_gh4}
-					soundevent \{event = star_power_deployed_front_p2_gh4}
-					soundevent \{event = star_power_deployed_cheer_sfx_p2}
+						qs("\L****************within script Star_Power_Deployed_SFX_Multiplayer, $Star_Power_Deployed_Flag IS NOT equal to 1, AND highway position is not LEFT, but is RIGHT")}
+					SoundEvent \{event = Star_Power_Deployed_LFE_P1_GH4}
+					SoundEvent \{event = Star_Power_Deployed_Back_P2_GH4}
+					SoundEvent \{event = Star_Power_Deployed_Front_P2_GH4}
+					SoundEvent \{event = Star_Power_Deployed_Cheer_SFX_P2}
 				else
 					printf \{channel = sfx
-						qs(0xb3f669ca)}
-					soundevent \{event = star_power_deployed_lfe_p1_gh4}
-					soundevent \{event = star_power_deployed_back_p3_gh4}
-					soundevent \{event = star_power_deployed_front_p3_gh4}
-					soundevent \{event = star_power_deployed_cheer_sfx_p3}
+						qs("\L****************within script Star_Power_Deployed_SFX_Multiplayer, $Star_Power_Deployed_Flag IS NOT equal to 1, AND highway position is not LEFT, and is not RIGHT")}
+					SoundEvent \{event = Star_Power_Deployed_LFE_P1_GH4}
+					SoundEvent \{event = Star_Power_Deployed_Back_P3_GH4}
+					SoundEvent \{event = Star_Power_Deployed_Front_P3_GH4}
+					SoundEvent \{event = Star_Power_Deployed_Cheer_SFX_P3}
 				endif
 			endif
 		endif
 	endif
 endscript
 
-script star_power_ready_sfx_multiplayer \{player = 1}
-	getplayerinfo <player> highway_position
-	if NOT issoundplaying \{star_available}
+script Star_Power_Ready_SFX_Multiplayer \{player = 1}
+	GetPlayerInfo <player> highway_position
+	if NOT issoundplaying \{Star_Available}
 		if (<highway_position> = left)
-			soundevent \{event = star_power_available_p1_gh4}
+			SoundEvent \{event = Star_Power_Available_P1_GH4}
 		elseif (<highway_position> = right)
-			soundevent \{event = star_power_available_p2_gh4}
+			SoundEvent \{event = Star_Power_Available_P2_GH4}
 		else
-			soundevent \{event = star_power_available_p3_gh4}
+			SoundEvent \{event = Star_Power_Available_P3_GH4}
 		endif
-		change \{star_power_ready_flag = 1}
-		wait \{0.9
+		change \{Star_Power_Ready_Flag = 1}
+		Wait \{0.9
 			second}
-		change \{star_power_ready_flag = 0}
+		change \{Star_Power_Ready_Flag = 0}
 	else
-		if ($star_power_ready_flag = 1)
-			setsoundparams \{star_available
+		if ($Star_Power_Ready_Flag = 1)
+			SetSoundParams \{Star_Available
 				pan1x = -0.5
 				pan1y = 0.87
 				pan2x = 0.5
 				pan2y = 0.87}
 		else
 			if (<highway_position> = left)
-				soundevent \{event = star_power_available_p1_gh4}
+				SoundEvent \{event = Star_Power_Available_P1_GH4}
 			elseif (<highway_position> = right)
-				soundevent \{event = star_power_available_p2_gh4}
+				SoundEvent \{event = Star_Power_Available_P2_GH4}
 			else
-				soundevent \{event = star_power_available_p3_gh4}
+				SoundEvent \{event = Star_Power_Available_P3_GH4}
 			endif
 		endif
 	endif
 endscript
 
-script star_power_awarded_sfx_multiplayer \{player = 1}
-	getplayerinfo <player> highway_position
+script Star_Power_Awarded_SFX_Multiplayer \{player = 1}
+	GetPlayerInfo <player> highway_position
 	if NOT issoundplaying \{sp_awarded1}
 		if (<highway_position> = left)
-			soundevent \{event = star_power_awarded_sfx_p1}
+			SoundEvent \{event = Star_Power_Awarded_SFX_P1}
 		elseif (<highway_position> = right)
-			soundevent \{event = star_power_awarded_sfx_p2}
+			SoundEvent \{event = Star_Power_Awarded_SFX_P2}
 		else
-			soundevent \{event = star_power_awarded_sfx_p3}
+			SoundEvent \{event = Star_Power_Awarded_SFX_P3}
 		endif
-		change \{star_power_awarded_flag = 1}
-		wait \{0.3
+		change \{Star_Power_Awarded_Flag = 1}
+		Wait \{0.3
 			second}
-		change \{star_power_awarded_flag = 0}
+		change \{Star_Power_Awarded_Flag = 0}
 	else
-		if ($star_power_awarded_flag = 1)
-			setsoundparams \{sp_awarded1
+		if ($Star_Power_Awarded_Flag = 1)
+			SetSoundParams \{sp_awarded1
 				pan1x = -0.5
 				pan1y = 0.87
 				pan2x = 0.5
 				pan2y = 0.87}
 		else
 			if (<highway_position> = left)
-				soundevent \{event = star_power_awarded_sfx_p1}
+				SoundEvent \{event = Star_Power_Awarded_SFX_P1}
 			elseif (<highway_position> = right)
-				soundevent \{event = star_power_awarded_sfx_p2}
+				SoundEvent \{event = Star_Power_Awarded_SFX_P2}
 			else
-				soundevent \{event = star_power_awarded_sfx_p3}
+				SoundEvent \{event = Star_Power_Awarded_SFX_P3}
 			endif
 		endif
 	endif
 endscript
 
-script star_power_release_sfx_multiplayer \{player = 1}
-	getplayerinfo <player> highway_position
-	if NOT issoundplaying \{star_release_front}
+script Star_Power_Release_SFX_Multiplayer \{player = 1}
+	GetPlayerInfo <player> highway_position
+	if NOT issoundplaying \{Star_Release_Front}
 		if (<highway_position> = left)
-			soundevent \{event = star_power_release_center_p1_gh4}
-			soundevent \{event = star_power_release_front_p1_gh4}
+			SoundEvent \{event = Star_Power_Release_Center_P1_Gh4}
+			SoundEvent \{event = Star_Power_Release_Front_P1_Gh4}
 		elseif (<highway_position> = right)
-			soundevent \{event = star_power_release_center_p2_gh4}
-			soundevent \{event = star_power_release_front_p2_gh4}
+			SoundEvent \{event = Star_Power_Release_Center_P2_GH4}
+			SoundEvent \{event = Star_Power_Release_Front_P2_GH4}
 		else
-			soundevent \{event = star_power_release_center_p3_gh4}
-			soundevent \{event = star_power_release_front_p3_gh4}
+			SoundEvent \{event = Star_Power_Release_Center_P3_GH4}
+			SoundEvent \{event = Star_Power_Release_Front_P3_GH4}
 		endif
-		change \{star_power_deployed_flag = 1}
-		wait \{0.9
+		change \{Star_Power_Deployed_Flag = 1}
+		Wait \{0.9
 			second}
-		change \{star_power_deployed_flag = 0}
+		change \{Star_Power_Deployed_Flag = 0}
 	else
-		if ($star_power_deployed_flag = 1)
-			setsoundparams \{star_release_front
+		if ($Star_Power_Deployed_Flag = 1)
+			SetSoundParams \{Star_Release_Front
 				pan1x = -0.5
 				pan1y = 0.87
 				pan2x = 0.5
 				pan2y = 0.87}
-			setsoundparams \{star_release_center
+			SetSoundParams \{Star_Release_Center
 				pan1x = 0.2392232
 				pan1y = 0.97096455}
 		else
 			if (<highway_position> = left)
-				soundevent \{event = star_power_release_center_p1_gh4}
-				soundevent \{event = star_power_release_front_p1_gh4}
+				SoundEvent \{event = Star_Power_Release_Center_P1_Gh4}
+				SoundEvent \{event = Star_Power_Release_Front_P1_Gh4}
 			elseif (<highway_position> = right)
-				soundevent \{event = star_power_release_center_p2_gh4}
-				soundevent \{event = star_power_release_front_p2_gh4}
+				SoundEvent \{event = Star_Power_Release_Center_P2_GH4}
+				SoundEvent \{event = Star_Power_Release_Front_P2_GH4}
 			else
-				soundevent \{event = star_power_release_center_p3_gh4}
-				soundevent \{event = star_power_release_front_p3_gh4}
+				SoundEvent \{event = Star_Power_Release_Center_P3_GH4}
+				SoundEvent \{event = Star_Power_Release_Front_P3_GH4}
 			endif
 		endif
 	endif
 endscript
 
-script stopallcheeringsounds 
-	stopsoundevent \{$current_crowd_swell_short_soundevent_l
+script StopAllCheeringSounds 
+	StopSoundEvent \{$Current_Crowd_Swell_Short_SoundEvent_L
 		fade_time = 0.8
 		fade_type = log_slow}
-	stopsoundevent \{$current_crowd_swell_short_soundevent_r
+	StopSoundEvent \{$Current_Crowd_Swell_Short_SoundEvent_R
 		fade_time = 0.8
 		fade_type = log_slow}
-	stopsoundevent \{$current_crowd_applause_soundevent_l
+	StopSoundEvent \{$Current_Crowd_Applause_SoundEvent_L
 		fade_time = 0.8
 		fade_type = log_slow}
-	stopsoundevent \{$current_crowd_applause_soundevent_r
+	StopSoundEvent \{$Current_Crowd_Applause_SoundEvent_R
 		fade_time = 0.8
 		fade_type = log_slow}
-	stopsoundevent \{$current_crowd_swell_short_soft_soundevent_l
+	StopSoundEvent \{$Current_Crowd_Swell_Short_Soft_SoundEvent_L
 		fade_time = 0.8
 		fade_type = log_slow}
-	stopsoundevent \{$current_crowd_swell_short_soft_soundevent_r
+	StopSoundEvent \{$Current_Crowd_Swell_Short_Soft_SoundEvent_R
 		fade_time = 0.8
 		fade_type = log_slow}
-	stopsoundevent \{$current_crowd_swell_med_soundevent_r
+	StopSoundEvent \{$Current_Crowd_Swell_Med_SoundEvent_R
 		fade_time = 0.8
 		fade_type = log_slow}
-	stopsoundevent \{$current_crowd_swell_med_soundevent_l
+	StopSoundEvent \{$Current_Crowd_Swell_Med_SoundEvent_L
 		fade_time = 0.8
 		fade_type = log_slow}
-	stopsoundevent \{$current_crowd_swell_long_soundevent_l
+	StopSoundEvent \{$Current_Crowd_Swell_Long_SoundEvent_L
 		fade_time = 0.8
 		fade_type = log_slow}
-	stopsoundevent \{$current_crowd_swell_long_soundevent_r
+	StopSoundEvent \{$Current_Crowd_Swell_Long_SoundEvent_R
 		fade_time = 0.8
 		fade_type = log_slow}
-	change \{turn_off_oneshot_cheers = 1}
-	wait \{8
+	change \{Turn_Off_OneShot_Cheers = 1}
+	Wait \{8
 		seconds}
-	change \{turn_off_oneshot_cheers = 0}
+	change \{Turn_Off_OneShot_Cheers = 0}
 endscript
 
-script clap_fading 
-	change \{clap_fade = 1}
-	setsoundbussparams \{crowd_star_power = {
+script Clap_Fading 
+	change \{Clap_Fade = 1}
+	SetSoundBussParams \{Crowd_Star_Power = {
 			vol = -100
 		}
 		time = 5}
-	wait \{5
+	Wait \{5
 		seconds}
-	change \{clap_fade = 0}
-	change \{star_clap_left = 0}
-	change \{star_clap_right = 0}
-	change \{star_clap_left_middle = 0}
-	change \{star_clap_right_middle = 0}
-	change \{star_clap_middle = 0}
-	change \{star_clap_normal = 0}
-	setsoundbussparams {crowd_star_power = {vol = ($default_bussset.crowd_star_power.vol)} time = 0.1}
+	change \{Clap_Fade = 0}
+	change \{Star_Clap_Left = 0}
+	change \{Star_Clap_Right = 0}
+	change \{Star_Clap_Left_Middle = 0}
+	change \{Star_Clap_Right_Middle = 0}
+	change \{Star_Clap_Middle = 0}
+	change \{Star_Clap_Normal = 0}
+	SetSoundBussParams {Crowd_Star_Power = {vol = ($Default_BussSet.Crowd_Star_Power.vol)} time = 0.1}
 endscript
 
-script clap_fade_kill 
-	killspawnedscript \{name = clap_fading}
-	setsoundbussparams {crowd_star_power = {vol = ($default_bussset.crowd_star_power.vol)} time = 0.1}
+script Clap_Fade_Kill 
+	KillSpawnedScript \{name = Clap_Fading}
+	SetSoundBussParams {Crowd_Star_Power = {vol = ($Default_BussSet.Crowd_Star_Power.vol)} time = 0.1}
 endscript
 
-script star_power_clap_panning \{player = 1}
-	if NOT issingleplayergame
-		getplayerinfo <player> highway_position
+script Star_Power_Clap_Panning \{player = 1}
+	if NOT isSinglePlayerGame
+		GetPlayerInfo <player> highway_position
 		if (<highway_position> = left)
-			change \{star_clap_left = 1}
-			change \{star_clap_right = 0}
-			change \{star_clap_left_middle = 0}
-			change \{star_clap_right_middle = 0}
-			change \{star_clap_middle = 0}
-			change \{star_clap_normal = 0}
-			change \{star_clap_leftcenterright = 0}
+			change \{Star_Clap_Left = 1}
+			change \{Star_Clap_Right = 0}
+			change \{Star_Clap_Left_Middle = 0}
+			change \{Star_Clap_Right_Middle = 0}
+			change \{Star_Clap_Middle = 0}
+			change \{Star_Clap_Normal = 0}
+			change \{Star_Clap_LeftCenterRight = 0}
 		elseif (<highway_position> = right)
-			change \{star_clap_right = 1}
-			change \{star_clap_left = 0}
-			change \{star_clap_left_middle = 0}
-			change \{star_clap_right_middle = 0}
-			change \{star_clap_middle = 0}
-			change \{star_clap_normal = 0}
-			change \{star_clap_leftcenterright = 0}
+			change \{Star_Clap_Right = 1}
+			change \{Star_Clap_Left = 0}
+			change \{Star_Clap_Left_Middle = 0}
+			change \{Star_Clap_Right_Middle = 0}
+			change \{Star_Clap_Middle = 0}
+			change \{Star_Clap_Normal = 0}
+			change \{Star_Clap_LeftCenterRight = 0}
 		else
-			change \{star_clap_middle = 1}
-			change \{star_clap_left = 0}
-			change \{star_clap_right = 0}
-			change \{star_clap_left_middle = 0}
-			change \{star_clap_right_middle = 0}
-			change \{star_clap_normal = 0}
-			change \{star_clap_leftcenterright = 0}
+			change \{Star_Clap_Middle = 1}
+			change \{Star_Clap_Left = 0}
+			change \{Star_Clap_Right = 0}
+			change \{Star_Clap_Left_Middle = 0}
+			change \{Star_Clap_Right_Middle = 0}
+			change \{Star_Clap_Normal = 0}
+			change \{Star_Clap_LeftCenterRight = 0}
 		endif
 	else
-		change \{star_clap_normal = 1}
-		change \{star_clap_left = 0}
-		change \{star_clap_right = 0}
-		change \{star_clap_left_middle = 0}
-		change \{star_clap_right_middle = 0}
-		change \{star_clap_middle = 0}
-		change \{star_clap_leftcenterright = 0}
+		change \{Star_Clap_Normal = 1}
+		change \{Star_Clap_Left = 0}
+		change \{Star_Clap_Right = 0}
+		change \{Star_Clap_Left_Middle = 0}
+		change \{Star_Clap_Right_Middle = 0}
+		change \{Star_Clap_Middle = 0}
+		change \{Star_Clap_LeftCenterRight = 0}
 	endif
 endscript
 
-script star_power_clap_panning_multiple \{player = 1}
+script Star_Power_Clap_Panning_Multiple \{player = 1}
 	printf \{channel = sfx
-		qs(0xd4253830)}
-	if NOT issingleplayergame
+		qs("\L****************Spawned the script Star_Power_Clap_Panning_Multiple ")}
+	if NOT isSinglePlayerGame
 		printf \{channel = sfx
-			qs(0xfae4d235)}
-		getplayerinfo <player> highway_position
-		printf channel = sfx qs(0x1fc7622c) s = <highway_position>
+			qs("\L****************within script Star_Power_Clap_Panning_Multiple, we are NOT in a singleplayer game")}
+		GetPlayerInfo <player> highway_position
+		printf channel = sfx qs("\L****************within script Star_Power_Clap_Panning_Multiple, highway position is __%s__ ") s = <highway_position>
 		if (<highway_position> = left)
-			if (($star_clap_right = 1))
-				change \{star_clap_normal = 1}
-				change \{star_clap_left = 0}
-				change \{star_clap_right = 0}
-				change \{star_clap_left_middle = 0}
-				change \{star_clap_right_middle = 0}
-				change \{star_clap_middle = 0}
-				change \{star_clap_leftcenterright = 0}
-			elseif ($star_clap_right_middle = 1)
-				change \{star_clap_normal = 0}
-				change \{star_clap_left = 0}
-				change \{star_clap_right = 0}
-				change \{star_clap_left_middle = 0}
-				change \{star_clap_right_middle = 0}
-				change \{star_clap_middle = 0}
-				change \{star_clap_leftcenterright = 1}
-			elseif ($star_clap_middle = 1)
-				change \{star_clap_left_middle = 1}
-				change \{star_clap_normal = 0}
-				change \{star_clap_left = 0}
-				change \{star_clap_right = 0}
-				change \{star_clap_right_middle = 0}
-				change \{star_clap_middle = 0}
-				change \{star_clap_leftcenterright = 0}
+			if (($Star_Clap_Right = 1))
+				change \{Star_Clap_Normal = 1}
+				change \{Star_Clap_Left = 0}
+				change \{Star_Clap_Right = 0}
+				change \{Star_Clap_Left_Middle = 0}
+				change \{Star_Clap_Right_Middle = 0}
+				change \{Star_Clap_Middle = 0}
+				change \{Star_Clap_LeftCenterRight = 0}
+			elseif ($Star_Clap_Right_Middle = 1)
+				change \{Star_Clap_Normal = 0}
+				change \{Star_Clap_Left = 0}
+				change \{Star_Clap_Right = 0}
+				change \{Star_Clap_Left_Middle = 0}
+				change \{Star_Clap_Right_Middle = 0}
+				change \{Star_Clap_Middle = 0}
+				change \{Star_Clap_LeftCenterRight = 1}
+			elseif ($Star_Clap_Middle = 1)
+				change \{Star_Clap_Left_Middle = 1}
+				change \{Star_Clap_Normal = 0}
+				change \{Star_Clap_Left = 0}
+				change \{Star_Clap_Right = 0}
+				change \{Star_Clap_Right_Middle = 0}
+				change \{Star_Clap_Middle = 0}
+				change \{Star_Clap_LeftCenterRight = 0}
 			endif
 		elseif (<highway_position> = right)
-			if (($star_clap_left = 1))
-				change \{star_clap_normal = 1}
-				change \{star_clap_left = 0}
-				change \{star_clap_right = 0}
-				change \{star_clap_left_middle = 0}
-				change \{star_clap_right_middle = 0}
-				change \{star_clap_middle = 0}
-				change \{star_clap_leftcenterright = 0}
-			elseif ($star_clap_left_middle = 1)
-				change \{star_clap_normal = 0}
-				change \{star_clap_left = 0}
-				change \{star_clap_right = 0}
-				change \{star_clap_left_middle = 0}
-				change \{star_clap_right_middle = 0}
-				change \{star_clap_middle = 0}
-				change \{star_clap_leftcenterright = 1}
-			elseif ($star_clap_middle = 1)
-				change \{star_clap_right_middle = 1}
-				change \{star_clap_left_middle = 0}
-				change \{star_clap_normal = 0}
-				change \{star_clap_left = 0}
-				change \{star_clap_right = 0}
-				change \{star_clap_middle = 0}
-				change \{star_clap_leftcenterright = 0}
+			if (($Star_Clap_Left = 1))
+				change \{Star_Clap_Normal = 1}
+				change \{Star_Clap_Left = 0}
+				change \{Star_Clap_Right = 0}
+				change \{Star_Clap_Left_Middle = 0}
+				change \{Star_Clap_Right_Middle = 0}
+				change \{Star_Clap_Middle = 0}
+				change \{Star_Clap_LeftCenterRight = 0}
+			elseif ($Star_Clap_Left_Middle = 1)
+				change \{Star_Clap_Normal = 0}
+				change \{Star_Clap_Left = 0}
+				change \{Star_Clap_Right = 0}
+				change \{Star_Clap_Left_Middle = 0}
+				change \{Star_Clap_Right_Middle = 0}
+				change \{Star_Clap_Middle = 0}
+				change \{Star_Clap_LeftCenterRight = 1}
+			elseif ($Star_Clap_Middle = 1)
+				change \{Star_Clap_Right_Middle = 1}
+				change \{Star_Clap_Left_Middle = 0}
+				change \{Star_Clap_Normal = 0}
+				change \{Star_Clap_Left = 0}
+				change \{Star_Clap_Right = 0}
+				change \{Star_Clap_Middle = 0}
+				change \{Star_Clap_LeftCenterRight = 0}
 			endif
 		else
-			if ($star_clap_left = 1)
-				change \{star_clap_normal = 0}
-				change \{star_clap_left = 0}
-				change \{star_clap_right = 0}
-				change \{star_clap_left_middle = 1}
-				change \{star_clap_right_middle = 0}
-				change \{star_clap_middle = 0}
-				change \{star_clap_leftcenterright = 0}
-			elseif ($star_clap_right = 1)
-				change \{star_clap_normal = 0}
-				change \{star_clap_left = 0}
-				change \{star_clap_right = 0}
-				change \{star_clap_left_middle = 0}
-				change \{star_clap_right_middle = 1}
-				change \{star_clap_middle = 0}
-				change \{star_clap_leftcenterright = 0}
-			elseif ($star_clap_normal = 1)
-				change \{star_clap_normal = 0}
-				change \{star_clap_left = 0}
-				change \{star_clap_right = 0}
-				change \{star_clap_left_middle = 0}
-				change \{star_clap_right_middle = 0}
-				change \{star_clap_middle = 0}
-				change \{star_clap_leftcenterright = 1}
+			if ($Star_Clap_Left = 1)
+				change \{Star_Clap_Normal = 0}
+				change \{Star_Clap_Left = 0}
+				change \{Star_Clap_Right = 0}
+				change \{Star_Clap_Left_Middle = 1}
+				change \{Star_Clap_Right_Middle = 0}
+				change \{Star_Clap_Middle = 0}
+				change \{Star_Clap_LeftCenterRight = 0}
+			elseif ($Star_Clap_Right = 1)
+				change \{Star_Clap_Normal = 0}
+				change \{Star_Clap_Left = 0}
+				change \{Star_Clap_Right = 0}
+				change \{Star_Clap_Left_Middle = 0}
+				change \{Star_Clap_Right_Middle = 1}
+				change \{Star_Clap_Middle = 0}
+				change \{Star_Clap_LeftCenterRight = 0}
+			elseif ($Star_Clap_Normal = 1)
+				change \{Star_Clap_Normal = 0}
+				change \{Star_Clap_Left = 0}
+				change \{Star_Clap_Right = 0}
+				change \{Star_Clap_Left_Middle = 0}
+				change \{Star_Clap_Right_Middle = 0}
+				change \{Star_Clap_Middle = 0}
+				change \{Star_Clap_LeftCenterRight = 1}
 			endif
 		endif
 	endif
 	printf \{channel = sfx
-		qs(0xeb2f6f8f)
-		s = $star_clap_normal}
+		qs("\L****************Star_Clap_Normal = %s")
+		s = $Star_Clap_Normal}
 	printf \{channel = sfx
-		qs(0xb9e8a7ea)
-		s = $star_clap_left}
+		qs("\L****************Star_Clap_Left = %s")
+		s = $Star_Clap_Left}
 	printf \{channel = sfx
-		qs(0x5be19574)
-		s = $star_clap_right}
+		qs("\L****************Star_Clap_Right = %s")
+		s = $Star_Clap_Right}
 	printf \{channel = sfx
-		qs(0x26a81163)
-		s = $star_clap_left_middle}
+		qs("\L****************Star_Clap_Left_Middle = %s")
+		s = $Star_Clap_Left_Middle}
 	printf \{channel = sfx
-		qs(0x8d27effe)
-		s = $star_clap_right_middle}
+		qs("\L****************Star_Clap_Right_Middle = %s")
+		s = $Star_Clap_Right_Middle}
 	printf \{channel = sfx
-		qs(0x8183fb93)
-		s = $star_clap_middle}
+		qs("\L****************Star_Clap_Middle = %s")
+		s = $Star_Clap_Middle}
 	printf \{channel = sfx
-		qs(0x57cc176e)
-		s = $star_clap_leftcenterright}
+		qs("\L****************Star_Clap_LeftCenterRight = %s")
+		s = $Star_Clap_LeftCenterRight}
 	printf \{channel = sfx
-		qs(0x4bf4c5ee)}
+		qs("\L****************END of script Star_Power_Clap_Panning_Multiple")}
 endscript
 
-script star_clap_end \{player = 1}
-	if NOT issingleplayergame
-		getplayerinfo <player> highway_position
+script Star_Clap_End \{player = 1}
+	if NOT isSinglePlayerGame
+		GetPlayerInfo <player> highway_position
 		if (<highway_position> = left)
-			if (($star_clap_left_middle = 1))
-				change \{star_clap_normal = 0}
-				change \{star_clap_left = 0}
-				change \{star_clap_right = 0}
-				change \{star_clap_left_middle = 0}
-				change \{star_clap_right_middle = 0}
-				change \{star_clap_middle = 1}
-				change \{star_clap_leftcenterright = 0}
-			elseif ($star_clap_normal = 1)
-				change \{star_clap_left_middle = 0}
-				change \{star_clap_normal = 0}
-				change \{star_clap_left = 0}
-				change \{star_clap_right = 1}
-				change \{star_clap_right_middle = 0}
-				change \{star_clap_middle = 0}
-				change \{star_clap_leftcenterright = 0}
-			elseif ($star_clap_leftcenterright = 1)
-				change \{star_clap_left_middle = 0}
-				change \{star_clap_normal = 0}
-				change \{star_clap_left = 0}
-				change \{star_clap_right = 0}
-				change \{star_clap_right_middle = 1}
-				change \{star_clap_middle = 0}
-				change \{star_clap_leftcenterright = 0}
+			if (($Star_Clap_Left_Middle = 1))
+				change \{Star_Clap_Normal = 0}
+				change \{Star_Clap_Left = 0}
+				change \{Star_Clap_Right = 0}
+				change \{Star_Clap_Left_Middle = 0}
+				change \{Star_Clap_Right_Middle = 0}
+				change \{Star_Clap_Middle = 1}
+				change \{Star_Clap_LeftCenterRight = 0}
+			elseif ($Star_Clap_Normal = 1)
+				change \{Star_Clap_Left_Middle = 0}
+				change \{Star_Clap_Normal = 0}
+				change \{Star_Clap_Left = 0}
+				change \{Star_Clap_Right = 1}
+				change \{Star_Clap_Right_Middle = 0}
+				change \{Star_Clap_Middle = 0}
+				change \{Star_Clap_LeftCenterRight = 0}
+			elseif ($Star_Clap_LeftCenterRight = 1)
+				change \{Star_Clap_Left_Middle = 0}
+				change \{Star_Clap_Normal = 0}
+				change \{Star_Clap_Left = 0}
+				change \{Star_Clap_Right = 0}
+				change \{Star_Clap_Right_Middle = 1}
+				change \{Star_Clap_Middle = 0}
+				change \{Star_Clap_LeftCenterRight = 0}
 			endif
 		elseif (<highway_position> = right)
-			if (($star_clap_right_middle = 1))
-				change \{star_clap_normal = 0}
-				change \{star_clap_left = 0}
-				change \{star_clap_right = 0}
-				change \{star_clap_left_middle = 0}
-				change \{star_clap_right_middle = 0}
-				change \{star_clap_middle = 1}
-				change \{star_clap_leftcenterright = 0}
-			elseif ($star_clap_normal = 1)
-				change \{star_clap_right_middle = 0}
-				change \{star_clap_left_middle = 0}
-				change \{star_clap_normal = 0}
-				change \{star_clap_left = 1}
-				change \{star_clap_right = 0}
-				change \{star_clap_middle = 0}
-				change \{star_clap_leftcenterright = 0}
-			elseif ($star_clap_leftcenterright = 1)
-				change \{star_clap_left_middle = 1}
-				change \{star_clap_normal = 0}
-				change \{star_clap_left = 0}
-				change \{star_clap_right = 0}
-				change \{star_clap_right_middle = 0}
-				change \{star_clap_middle = 0}
-				change \{star_clap_leftcenterright = 0}
+			if (($Star_Clap_Right_Middle = 1))
+				change \{Star_Clap_Normal = 0}
+				change \{Star_Clap_Left = 0}
+				change \{Star_Clap_Right = 0}
+				change \{Star_Clap_Left_Middle = 0}
+				change \{Star_Clap_Right_Middle = 0}
+				change \{Star_Clap_Middle = 1}
+				change \{Star_Clap_LeftCenterRight = 0}
+			elseif ($Star_Clap_Normal = 1)
+				change \{Star_Clap_Right_Middle = 0}
+				change \{Star_Clap_Left_Middle = 0}
+				change \{Star_Clap_Normal = 0}
+				change \{Star_Clap_Left = 1}
+				change \{Star_Clap_Right = 0}
+				change \{Star_Clap_Middle = 0}
+				change \{Star_Clap_LeftCenterRight = 0}
+			elseif ($Star_Clap_LeftCenterRight = 1)
+				change \{Star_Clap_Left_Middle = 1}
+				change \{Star_Clap_Normal = 0}
+				change \{Star_Clap_Left = 0}
+				change \{Star_Clap_Right = 0}
+				change \{Star_Clap_Right_Middle = 0}
+				change \{Star_Clap_Middle = 0}
+				change \{Star_Clap_LeftCenterRight = 0}
 			endif
 		else
-			if ($star_clap_left_middle = 1)
-				change \{star_clap_normal = 0}
-				change \{star_clap_left = 1}
-				change \{star_clap_right = 0}
-				change \{star_clap_left_middle = 0}
-				change \{star_clap_right_middle = 0}
-				change \{star_clap_middle = 0}
-				change \{star_clap_leftcenterright = 0}
-			elseif ($star_clap_right_middle = 1)
-				change \{star_clap_normal = 0}
-				change \{star_clap_left = 0}
-				change \{star_clap_right = 1}
-				change \{star_clap_left_middle = 0}
-				change \{star_clap_right_middle = 0}
-				change \{star_clap_middle = 0}
-				change \{star_clap_leftcenterright = 0}
-			elseif ($star_clap_leftcenterright = 1)
-				change \{star_clap_normal = 1}
-				change \{star_clap_left = 0}
-				change \{star_clap_right = 0}
-				change \{star_clap_left_middle = 0}
-				change \{star_clap_right_middle = 0}
-				change \{star_clap_middle = 0}
-				change \{star_clap_leftcenterright = 0}
+			if ($Star_Clap_Left_Middle = 1)
+				change \{Star_Clap_Normal = 0}
+				change \{Star_Clap_Left = 1}
+				change \{Star_Clap_Right = 0}
+				change \{Star_Clap_Left_Middle = 0}
+				change \{Star_Clap_Right_Middle = 0}
+				change \{Star_Clap_Middle = 0}
+				change \{Star_Clap_LeftCenterRight = 0}
+			elseif ($Star_Clap_Right_Middle = 1)
+				change \{Star_Clap_Normal = 0}
+				change \{Star_Clap_Left = 0}
+				change \{Star_Clap_Right = 1}
+				change \{Star_Clap_Left_Middle = 0}
+				change \{Star_Clap_Right_Middle = 0}
+				change \{Star_Clap_Middle = 0}
+				change \{Star_Clap_LeftCenterRight = 0}
+			elseif ($Star_Clap_LeftCenterRight = 1)
+				change \{Star_Clap_Normal = 1}
+				change \{Star_Clap_Left = 0}
+				change \{Star_Clap_Right = 0}
+				change \{Star_Clap_Left_Middle = 0}
+				change \{Star_Clap_Right_Middle = 0}
+				change \{Star_Clap_Middle = 0}
+				change \{Star_Clap_LeftCenterRight = 0}
 			endif
 		endif
 	endif
 endscript
 
-script starttesttones_sine 
-	soundbussunlock \{user_leadvox}
-	setsoundbussparams \{user_leadvox = {
+script StartTestTones_Sine 
+	SoundBussUnlock \{User_LeadVox}
+	SetSoundBussParams \{User_LeadVox = {
 			vol = -100.0
 		}}
-	soundbusslock \{user_leadvox}
-	soundbussunlock \{user_drums}
-	setsoundbussparams \{user_drums = {
+	SoundBussLock \{User_LeadVox}
+	SoundBussUnlock \{User_Drums}
+	SetSoundBussParams \{User_Drums = {
 			vol = -100.0
 		}}
-	soundbusslock \{user_drums}
-	soundbussunlock \{user_leadgtr}
-	setsoundbussparams \{user_leadgtr = {
+	SoundBussLock \{User_Drums}
+	SoundBussUnlock \{User_LeadGTR}
+	SetSoundBussParams \{User_LeadGTR = {
 			vol = -100.0
 		}}
-	soundbusslock \{user_leadgtr}
-	soundbussunlock \{user_bass}
-	setsoundbussparams \{user_bass = {
+	SoundBussLock \{User_LeadGTR}
+	SoundBussUnlock \{User_Bass}
+	SetSoundBussParams \{User_Bass = {
 			vol = -100.0
 		}}
-	soundbusslock \{user_bass}
-	soundbussunlock \{user_rhythmgtr}
-	setsoundbussparams \{user_rhythmgtr = {
+	SoundBussLock \{User_Bass}
+	SoundBussUnlock \{User_RhythmGTR}
+	SetSoundBussParams \{User_RhythmGTR = {
 			vol = -100.0
 		}}
-	soundbusslock \{user_rhythmgtr}
-	soundbussunlock \{user_crowd}
-	setsoundbussparams \{user_crowd = {
+	SoundBussLock \{User_RhythmGTR}
+	SoundBussUnlock \{User_Crowd}
+	SetSoundBussParams \{User_Crowd = {
 			vol = -100.0
 		}}
-	soundbusslock \{user_crowd}
-	soundbussunlock \{user_sfx}
-	setsoundbussparams \{user_sfx = {
+	SoundBussLock \{User_Crowd}
+	SoundBussUnlock \{User_Sfx}
+	SetSoundBussParams \{User_Sfx = {
 			vol = -100.0
 		}}
-	soundbusslock \{user_sfx}
-	soundbussunlock \{user_band}
-	setsoundbussparams \{user_band = {
+	SoundBussLock \{User_Sfx}
+	SoundBussUnlock \{User_Band}
+	SetSoundBussParams \{User_Band = {
 			vol = -100.0
 		}}
-	soundbusslock \{user_band}
+	SoundBussLock \{User_Band}
 	begin
-	playsound \{testtone_sinewav_12db
+	PlaySound \{TestTone_SineWav_12db
 		pan1x = -1.0
 		pan1y = 1.0
-		buss = master}
-	wait \{2
+		buss = Master}
+	Wait \{2
 		seconds}
-	playsound \{testtone_sinewav_12db
+	PlaySound \{TestTone_SineWav_12db
 		pan1x = 0.0
 		pan1y = 1.0
-		buss = master}
-	wait \{2
+		buss = Master}
+	Wait \{2
 		seconds}
-	playsound \{testtone_sinewav_12db
+	PlaySound \{TestTone_SineWav_12db
 		pan1x = 1.0
 		pan1y = 1.0
-		buss = master}
-	wait \{2
+		buss = Master}
+	Wait \{2
 		seconds}
-	playsound \{testtone_sinewav_12db
+	PlaySound \{TestTone_SineWav_12db
 		pan1x = 1.0
 		pan1y = -1.0
-		buss = master}
-	wait \{2
+		buss = Master}
+	Wait \{2
 		seconds}
-	playsound \{testtone_sinewav_12db
+	PlaySound \{TestTone_SineWav_12db
 		pan1x = -1.0
 		pan1y = -1.0
-		buss = master}
-	wait \{2
+		buss = Master}
+	Wait \{2
 		seconds}
-	playsound \{testtone_sinewav_12db
-		lfeonly = true
-		lfe_vol = 0
-		buss = master}
-	wait \{2
+	PlaySound \{TestTone_SineWav_12db
+		LFEOnly = true
+		LFE_vol = 0
+		buss = Master}
+	Wait \{2
 		seconds}
 	repeat
 endscript
 
-script starttesttones_pink 
-	soundbussunlock \{user_leadvox}
-	setsoundbussparams \{user_leadvox = {
+script StartTestTones_Pink 
+	SoundBussUnlock \{User_LeadVox}
+	SetSoundBussParams \{User_LeadVox = {
 			vol = -100.0
 		}}
-	soundbusslock \{user_leadvox}
-	soundbussunlock \{user_drums}
-	setsoundbussparams \{user_drums = {
+	SoundBussLock \{User_LeadVox}
+	SoundBussUnlock \{User_Drums}
+	SetSoundBussParams \{User_Drums = {
 			vol = -100.0
 		}}
-	soundbusslock \{user_drums}
-	soundbussunlock \{user_leadgtr}
-	setsoundbussparams \{user_leadgtr = {
+	SoundBussLock \{User_Drums}
+	SoundBussUnlock \{User_LeadGTR}
+	SetSoundBussParams \{User_LeadGTR = {
 			vol = -100.0
 		}}
-	soundbusslock \{user_leadgtr}
-	soundbussunlock \{user_bass}
-	setsoundbussparams \{user_bass = {
+	SoundBussLock \{User_LeadGTR}
+	SoundBussUnlock \{User_Bass}
+	SetSoundBussParams \{User_Bass = {
 			vol = -100.0
 		}}
-	soundbusslock \{user_bass}
-	soundbussunlock \{user_rhythmgtr}
-	setsoundbussparams \{user_rhythmgtr = {
+	SoundBussLock \{User_Bass}
+	SoundBussUnlock \{User_RhythmGTR}
+	SetSoundBussParams \{User_RhythmGTR = {
 			vol = -100.0
 		}}
-	soundbusslock \{user_rhythmgtr}
-	soundbussunlock \{user_crowd}
-	setsoundbussparams \{user_crowd = {
+	SoundBussLock \{User_RhythmGTR}
+	SoundBussUnlock \{User_Crowd}
+	SetSoundBussParams \{User_Crowd = {
 			vol = -100.0
 		}}
-	soundbusslock \{user_crowd}
-	soundbussunlock \{user_sfx}
-	setsoundbussparams \{user_sfx = {
+	SoundBussLock \{User_Crowd}
+	SoundBussUnlock \{User_Sfx}
+	SetSoundBussParams \{User_Sfx = {
 			vol = -100.0
 		}}
-	soundbusslock \{user_sfx}
-	soundbussunlock \{user_band}
-	setsoundbussparams \{user_band = {
+	SoundBussLock \{User_Sfx}
+	SoundBussUnlock \{User_Band}
+	SetSoundBussParams \{User_Band = {
 			vol = -100.0
 		}}
-	soundbusslock \{user_band}
+	SoundBussLock \{User_Band}
 	begin
-	playsound \{testtone_pinknoise_12db
+	PlaySound \{TestTone_PinkNoise_12db
 		pan1x = -1.0
 		pan1y = 1.0
-		buss = master}
-	wait \{2
+		buss = Master}
+	Wait \{2
 		seconds}
-	playsound \{testtone_pinknoise_12db
+	PlaySound \{TestTone_PinkNoise_12db
 		pan1x = 0.0
 		pan1y = 1.0
-		buss = master}
-	wait \{2
+		buss = Master}
+	Wait \{2
 		seconds}
-	playsound \{testtone_pinknoise_12db
+	PlaySound \{TestTone_PinkNoise_12db
 		pan1x = 1.0
 		pan1y = 1.0
-		buss = master}
-	wait \{2
+		buss = Master}
+	Wait \{2
 		seconds}
-	playsound \{testtone_pinknoise_12db
+	PlaySound \{TestTone_PinkNoise_12db
 		pan1x = 1.0
 		pan1y = -1.0
-		buss = master}
-	wait \{2
+		buss = Master}
+	Wait \{2
 		seconds}
-	playsound \{testtone_pinknoise_12db
+	PlaySound \{TestTone_PinkNoise_12db
 		pan1x = -1.0
 		pan1y = -1.0
-		buss = master}
-	wait \{2
+		buss = Master}
+	Wait \{2
 		seconds}
-	playsound \{testtone_pinknoise_12db
-		lfeonly = true
-		lfe_vol = 0
-		buss = master}
-	wait \{2
+	PlaySound \{TestTone_PinkNoise_12db
+		LFEOnly = true
+		LFE_vol = 0
+		buss = Master}
+	Wait \{2
 		seconds}
 	repeat
 endscript
 
-script stoptesttones 
-	if issoundeventplaying \{starttesttones_pink}
-		stopsoundevent \{starttesttones_pink}
+script StopTestTones 
+	if isSoundEventPlaying \{StartTestTones_Pink}
+		StopSoundEvent \{StartTestTones_Pink}
 	endif
-	if issoundeventplaying \{starttesttones_sine}
-		stopsoundevent \{starttesttones_sine}
+	if isSoundEventPlaying \{StartTestTones_Sine}
+		StopSoundEvent \{StartTestTones_Sine}
 	endif
-	setsoundbussparams \{user_leadvox = {
+	SetSoundBussParams \{User_LeadVox = {
 			vol = 0.0
 		}}
-	soundbussunlock \{user_drums}
-	setsoundbussparams \{user_drums = {
+	SoundBussUnlock \{User_Drums}
+	SetSoundBussParams \{User_Drums = {
 			vol = 0.0
 		}}
-	soundbusslock \{user_drums}
-	setsoundbussparams \{user_leadgtr = {
+	SoundBussLock \{User_Drums}
+	SetSoundBussParams \{User_LeadGTR = {
 			vol = 0.0
 		}}
-	soundbussunlock \{user_bass}
-	setsoundbussparams \{user_bass = {
+	SoundBussUnlock \{User_Bass}
+	SetSoundBussParams \{User_Bass = {
 			vol = 0.0
 		}}
-	soundbusslock \{user_bass}
-	setsoundbussparams \{user_rhythmgtr = {
+	SoundBussLock \{User_Bass}
+	SetSoundBussParams \{User_RhythmGTR = {
 			vol = 0.0
 		}}
-	soundbussunlock \{user_crowd}
-	setsoundbussparams \{user_crowd = {
+	SoundBussUnlock \{User_Crowd}
+	SetSoundBussParams \{User_Crowd = {
 			vol = 0.0
 		}}
-	soundbusslock \{user_crowd}
-	soundbussunlock \{user_sfx}
-	setsoundbussparams \{user_sfx = {
+	SoundBussLock \{User_Crowd}
+	SoundBussUnlock \{User_Sfx}
+	SetSoundBussParams \{User_Sfx = {
 			vol = 0.0
 		}}
-	soundbusslock \{user_sfx}
-	soundbussunlock \{user_band}
-	setsoundbussparams \{user_band = {
+	SoundBussLock \{User_Sfx}
+	SoundBussUnlock \{User_Band}
+	SetSoundBussParams \{User_Band = {
 			vol = 0.0
 		}}
-	soundbusslock \{user_band}
+	SoundBussLock \{User_Band}
 endscript
 
-script jam_mode_metronome 
-	if gotparam \{downbeat}
+script Jam_Mode_Metronome 
+	if GotParam \{downbeat}
 		if (<downbeat> = 1)
-			playsound stickclickmed vol = RandomFloat (12.5, 13.0)
+			PlaySound StickClickMed vol = RandomFloat (12.5, 13.0)
 		endif
 	else
-		playsound stickclickmed vol = RandomFloat (7.5, 8.0)
+		PlaySound StickClickMed vol = RandomFloat (7.5, 8.0)
 	endif
 endscript
 
-script menu_music_se 
-	getarraysize \{$menu_music_songs}
+script Menu_Music_SE 
+	GetArraySize \{$menu_music_songs}
 	begin
-	getrandomvalue name = index integer a = 0 b = (<array_size> -1)
-	if NOT (<index> = $menu_music_last_song_index)
-		if NOT (<index> = $menu_music_last_last_song_index)
-			if NOT (<index> = $menu_music_last_last_last_song_index)
-				if NOT (<index> = $menu_music_last_last_last_last_song_index)
-					change \{menu_music_last_last_last_last_song_index = $menu_music_last_song_index}
-					change \{menu_music_last_last_last_song_index = $menu_music_last_song_index}
-					change \{menu_music_last_last_song_index = $menu_music_last_song_index}
-					change menu_music_last_song_index = <index>
+	GetRandomValue name = index Integer a = 0 b = (<array_size> -1)
+	if NOT (<index> = $Menu_music_last_song_index)
+		if NOT (<index> = $Menu_music_last_last_song_index)
+			if NOT (<index> = $Menu_music_last_last_last_song_index)
+				if NOT (<index> = $Menu_music_last_last_last_last_song_index)
+					change \{Menu_music_last_last_last_last_song_index = $Menu_music_last_song_index}
+					change \{Menu_music_last_last_last_song_index = $Menu_music_last_song_index}
+					change \{Menu_music_last_last_song_index = $Menu_music_last_song_index}
+					change Menu_music_last_song_index = <index>
 					break
 				endif
 			endif
@@ -4373,480 +4373,480 @@ script menu_music_se
 	delay = ($menu_music_songs [<index>].delay)
 	offset = ($menu_music_songs [<index>].offset)
 	vol = ($menu_music_songs [<index>].vol)
-	spawnscriptnow menu_music_se_spawned params = {stream = <stream> array = <array> delay = <delay> vol = <vol> offset = <offset>}
+	spawnscriptnow Menu_Music_SE_spawned params = {stream = <stream> array = <array> delay = <delay> vol = <vol> offset = <offset>}
 endscript
 menu_music_stream = blah
 menu_music_preloading = 0
-menu_music_last_song_index = -1
-menu_music_last_last_song_index = -1
-menu_music_last_last_last_song_index = -1
-menu_music_last_last_last_last_song_index = -1
+Menu_music_last_song_index = -1
+Menu_music_last_last_song_index = -1
+Menu_music_last_last_last_song_index = -1
+Menu_music_last_last_last_last_song_index = -1
 menu_music_songs = [
 	{
-		stream = menu_music_heartbreaker
-		array = heartbreaker_menumusic_fretbars
+		stream = Menu_Music_Heartbreaker
+		array = Heartbreaker_menumusic_fretbars
 		delay = 0.0
 		vol = -5
 		offset = 0
 	}
 	{
-		stream = menu_music_hotforteacher
-		array = hotforteacher_menumusic_fretbars
+		stream = Menu_Music_HotForTeacher
+		array = HotForTeacher_menumusic_fretbars
 		delay = 0.0
 		vol = -4
 		offset = 0
 	}
 	{
-		stream = menu_music_nosleeptilbrooklyn
+		stream = Menu_Music_NoSleepTilBrooklyn
 		array = nosleeptillbrooklyn_menumusic_fretbars
 		delay = 12.083
 		vol = -5
 		offset = 0
 	}
 	{
-		stream = menu_music_stranglehold
-		array = stranglehold_menumusic_fretbars
+		stream = Menu_Music_Stranglehold
+		array = Stranglehold_menumusic_fretbars
 		delay = 5.638
 		vol = -5.5
 		offset = 0
 	}
 	{
-		stream = menu_music_today
-		array = today_menumusic_fretbars
+		stream = Menu_Music_Today
+		array = Today_menumusic_fretbars
 		delay = 11.701
 		vol = -6
 		offset = 0
 	}
 	{
-		stream = menu_music_everlong
-		array = everlong_menumusic_fretbars
+		stream = Menu_Music_Everlong
+		array = Everlong_menumusic_fretbars
 		delay = 17.02
 		vol = -6
 		offset = 0
 	}
 ]
 
-script menu_music_se_spawned 
-	setspawninstancelimits \{max = 1
+script Menu_Music_SE_spawned 
+	SetSpawnInstanceLimits \{max = 1
 		management = kill_oldest}
 	change \{menu_music_preloading = 1}
 	change menu_music_stream = <stream>
-	preloadstream <stream>
+	PreloadStream <stream>
 	begin
-	if preloadstreamdone <unique_id>
+	if PreLoadStreamDone <unique_id>
 		break
 	endif
-	wait \{1
+	Wait \{1
 		gameframe}
 	repeat
-	startpreloadedstream <unique_id> buss = music_frontend forcesafepreload = 1 vol = -5 pitch = 100
+	StartPreloadedStream <unique_id> buss = Music_FrontEnd forcesafepreload = 1 vol = -5 pitch = 100
 	change \{menu_music_preloading = 0}
-	change current_menu_song = <stream>
-	if globalexists name = <array> type = array
+	change Current_Menu_Song = <stream>
+	if GlobalExists name = <array> type = array
 		if (<delay> > 0.0)
-			wait <delay> seconds
+			Wait <delay> seconds
 		endif
-		getarraysize $<array>
+		GetArraySize $<array>
 		index = 0
-		getstarttime
-		<starttime> = (<starttime> + <offset>)
+		GetStartTime
+		<StartTime> = (<StartTime> + <offset>)
 		pulse = 1
 		begin
 		begin
-		getelapsedtime starttime = <starttime>
-		if (<elapsedtime> >= $<array> [<index>])
+		GetElapsedTime StartTime = <StartTime>
+		if (<ElapsedTime> >= $<array> [<index>])
 			break
 		endif
-		wait \{1
+		Wait \{1
 			gameframe}
 		repeat
-		formattext checksumname = event 'frontend_speaker_pulse%d' d = <pulse>
-		broadcastevent type = <event>
+		FormatText checksumname = event 'frontend_speaker_pulse%d' d = <pulse>
+		BroadcastEvent type = <event>
 		<pulse> = (3 - <pulse>)
 		<index> = (<index> + 1)
 		repeat <array_size>
 	endif
 endscript
 
-script killmenumusic 
-	killspawnedscript \{name = menu_music_se_spawned}
+script KillMenuMusic 
+	KillSpawnedScript \{name = Menu_Music_SE_spawned}
 	change \{menu_music_preloading = 0}
-	stopsound \{$menu_music_stream}
+	StopSound \{$menu_music_stream}
 endscript
 
-script crowd_anticipation 
+script Crowd_Anticipation 
 	if ($current_crowd >= 1.3399999)
-		if issoundplaying \{$current_crowd_anticipation}
-			if ($crowd_anticipation_flag = 0)
-				stopsound \{$current_crowd_anticipation
+		if issoundplaying \{$Current_Crowd_Anticipation}
+			if ($Crowd_Anticipation_Flag = 0)
+				StopSound \{$Current_Crowd_Anticipation
 					fade_time = 3
 					fade_type = log_slow}
-				spawnscriptnow \{crowd_anticipation_flag_logic}
+				spawnscriptnow \{Crowd_Anticipation_Flag_Logic}
 			endif
 		endif
 	elseif ($current_crowd >= 1.3)
-		if issoundplaying \{$current_crowd_anticipation}
-			if ($crowd_anticipation_flag = 0)
-				setsoundparams \{$current_crowd_anticipation
+		if issoundplaying \{$Current_Crowd_Anticipation}
+			if ($Crowd_Anticipation_Flag = 0)
+				SetSoundParams \{$Current_Crowd_Anticipation
 					vol = 3
 					pitch = 0.3
 					time = 0.5}
 			endif
 		else
-			playsound \{$current_crowd_anticipation
+			PlaySound \{$Current_Crowd_Anticipation
 				vol = -3
 				pan1x = 0
 				pan1y = 0.59
-				panremovecenter = true
+				panRemoveCenter = true
 				priority = 100
-				buss = crowd_beds
+				buss = Crowd_Beds
 				attack_time = 3
 				attack_function = log_fast
 				num_loops = -1}
 		endif
 	elseif ($current_crowd >= 1.2700001)
-		if issoundplaying \{$current_crowd_anticipation}
-			if ($crowd_anticipation_flag = 0)
-				setsoundparams \{$current_crowd_anticipation
+		if issoundplaying \{$Current_Crowd_Anticipation}
+			if ($Crowd_Anticipation_Flag = 0)
+				SetSoundParams \{$Current_Crowd_Anticipation
 					vol = 1
 					pitch = 0.2
 					time = 0.5}
 			endif
 		else
-			playsound \{$current_crowd_anticipation
+			PlaySound \{$Current_Crowd_Anticipation
 				vol = -3
 				pan1x = 0
 				pan1y = 0.59
-				panremovecenter = true
+				panRemoveCenter = true
 				priority = 100
-				buss = crowd_beds
+				buss = Crowd_Beds
 				attack_time = 3
 				attack_function = log_fast
 				num_loops = -1}
 		endif
 	elseif ($current_crowd >= 1.25)
-		if issoundplaying \{$current_crowd_anticipation}
-			if ($crowd_anticipation_flag = 0)
-				setsoundparams \{$current_crowd_anticipation
+		if issoundplaying \{$Current_Crowd_Anticipation}
+			if ($Crowd_Anticipation_Flag = 0)
+				SetSoundParams \{$Current_Crowd_Anticipation
 					vol = -1
 					pitch = 0.1
 					time = 0.5}
 			endif
 		else
-			playsound \{$current_crowd_anticipation
+			PlaySound \{$Current_Crowd_Anticipation
 				vol = -3
 				pan1x = 0
 				pan1y = 0.59
-				panremovecenter = true
+				panRemoveCenter = true
 				priority = 100
-				buss = crowd_beds
+				buss = Crowd_Beds
 				attack_time = 3
 				attack_function = log_fast
 				num_loops = -1}
 		endif
 	elseif ($current_crowd >= 1.2)
-		if NOT issoundplaying \{$current_crowd_anticipation}
-			if ($crowd_anticipation_flag = 0)
-				playsound \{$current_crowd_anticipation
+		if NOT issoundplaying \{$Current_Crowd_Anticipation}
+			if ($Crowd_Anticipation_Flag = 0)
+				PlaySound \{$Current_Crowd_Anticipation
 					vol = -3
 					pan1x = 0
 					pan1y = 0.59
-					panremovecenter = true
+					panRemoveCenter = true
 					priority = 100
-					buss = crowd_beds
+					buss = Crowd_Beds
 					attack_time = 3
 					attack_function = log_fast
 					num_loops = -1}
 			endif
 		else
-			setsoundparams \{$current_crowd_anticipation
+			SetSoundParams \{$Current_Crowd_Anticipation
 				vol = -3
 				time = 0.5}
 		endif
 	else
-		if issoundplaying \{$current_crowd_anticipation}
-			if ($crowd_anticipation_flag = 0)
-				stopsound \{$current_crowd_anticipation
+		if issoundplaying \{$Current_Crowd_Anticipation}
+			if ($Crowd_Anticipation_Flag = 0)
+				StopSound \{$Current_Crowd_Anticipation
 					fade_time = 3
 					fade_type = log_slow}
-				spawnscriptnow \{crowd_anticipation_flag_logic}
+				spawnscriptnow \{Crowd_Anticipation_Flag_Logic}
 			endif
 		endif
 	endif
 endscript
 
-script crowd_anticipation_flag_logic 
-	change \{crowd_anticipation_flag = 1}
-	wait \{3
+script Crowd_Anticipation_Flag_Logic 
+	change \{Crowd_Anticipation_Flag = 1}
+	Wait \{3
 		seconds}
-	change \{crowd_anticipation_flag = 0}
+	change \{Crowd_Anticipation_Flag = 0}
 endscript
 
-script oneshotsbetweensongs 
+script OneShotsBetweenSongs 
 	begin
-	soundevent \{event = $current_crowd_whistle_soundevent}
-	wait (RandomFloat (0.1, 1.2)) seconds
+	SoundEvent \{event = $Current_Crowd_Whistle_SoundEvent}
+	Wait (RandomFloat (0.1, 1.2)) seconds
 	repeat
 endscript
 
-script surgebetweensongs 
+script SurgeBetweenSongs 
 	begin
-	soundevent \{event = $current_crowd_oneshot_positive_soundevent}
-	wait (RandomFloat (0.3, 1.2)) seconds
+	SoundEvent \{event = $Current_Crowd_OneShot_Positive_SoundEvent}
+	Wait (RandomFloat (0.3, 1.2)) seconds
 	repeat
 endscript
 
-script killsurgingscripts 
-	wait \{2
+script KillSurgingScripts 
+	Wait \{2
 		seconds}
-	killspawnedscript \{name = oneshotsbetweensongs}
-	killspawnedscript \{name = surgebetweensongs}
+	KillSpawnedScript \{name = OneShotsBetweenSongs}
+	KillSpawnedScript \{name = SurgeBetweenSongs}
 endscript
 
-script surge_after_explosion 
-	wait \{2
+script Surge_After_Explosion 
+	Wait \{2
 		seconds}
-	soundevent \{event = $current_crowd_swell_med_soundevent_l}
-	soundevent \{event = $current_crowd_swell_med_soundevent_r}
+	SoundEvent \{event = $Current_Crowd_Swell_Med_SoundEvent_L}
+	SoundEvent \{event = $Current_Crowd_Swell_Med_SoundEvent_R}
 endscript
 
-script cheer_before_explosion 
-	wait \{1
+script Cheer_Before_Explosion 
+	Wait \{1
 		second}
-	soundevent \{event = $current_crowd_swell_short_soundevent_l}
-	soundevent \{event = $current_crowd_swell_short_soundevent_r}
+	SoundEvent \{event = $Current_Crowd_Swell_Short_SoundEvent_L}
+	SoundEvent \{event = $Current_Crowd_Swell_Short_SoundEvent_R}
 endscript
 
 script colorwheel_increment_up_down 
 	printstruct <...>
-	if gotparam \{current_ring}
+	if GotParam \{current_ring}
 		switch <current_ring>
 			case 1
-			soundevent \{event = colorwheel_highlight_1}
+			SoundEvent \{event = ColorWheel_HighLight_1}
 			case 2
-			soundevent \{event = colorwheel_highlight_2}
+			SoundEvent \{event = ColorWheel_HighLight_2}
 			case 3
-			soundevent \{event = colorwheel_highlight_3}
+			SoundEvent \{event = ColorWheel_HighLight_3}
 			case 4
-			soundevent \{event = colorwheel_highlight_4}
+			SoundEvent \{event = ColorWheel_HighLight_4}
 			case 5
-			soundevent \{event = colorwheel_highlight_5}
+			SoundEvent \{event = ColorWheel_HighLight_5}
 		endswitch
 	endif
 endscript
 
-script loading_screen_crowd_swell 
-	setsoundbussparams {crowd_beds = {vol = (($default_bussset.crowd_beds.vol) + 12)} time = 6}
-	playsound \{ext_md_crowd_swell_md_l_02
-		buss = crowd_one_shots
+script Loading_Screen_Crowd_Swell 
+	SetSoundBussParams {Crowd_Beds = {vol = (($Default_BussSet.Crowd_Beds.vol) + 12)} time = 6}
+	PlaySound \{EXT_MD_Crowd_Swell_MD_L_02
+		buss = Crowd_One_Shots
 		pan1x = -1
 		pan1y = 1
 		vol = -12}
-	playsound \{ext_md_crowd_swell_md_r_02
-		buss = crowd_one_shots
+	PlaySound \{EXT_MD_Crowd_Swell_MD_R_02
+		buss = Crowd_One_Shots
 		pan1x = 1
 		pan1y = 1
 		vol = -12}
-	playsound \{ext_md_crowd_swell_lg_l_02
-		buss = crowd_one_shots
+	PlaySound \{EXT_MD_Crowd_Swell_LG_L_02
+		buss = Crowd_One_Shots
 		pan1x = -1
 		pan1y = 1
 		vol = -10}
-	playsound \{ext_md_crowd_swell_lg_r_02
-		buss = crowd_one_shots
+	PlaySound \{EXT_MD_Crowd_Swell_LG_R_02
+		buss = Crowd_One_Shots
 		pan1x = 1
 		pan1y = 1
 		vol = -10}
-	wait \{60
+	Wait \{60
 		gameframes}
-	playsound \{ext_md_crowd_swell_sh_l_01
-		buss = crowd_one_shots
+	PlaySound \{EXT_MD_Crowd_Swell_SH_L_01
+		buss = Crowd_One_Shots
 		pan1x = -1
 		pan1y = 1
 		vol = -8}
-	playsound \{ext_md_crowd_swell_sh_r_01
-		buss = crowd_one_shots
+	PlaySound \{EXT_MD_Crowd_Swell_SH_R_01
+		buss = Crowd_One_Shots
 		pan1x = 1
 		pan1y = 1
 		vol = -8}
-	wait \{30
+	Wait \{30
 		gameframes}
-	playsound \{ext_md_crowd_swell_lg_l_02
-		buss = crowd_one_shots
+	PlaySound \{EXT_MD_Crowd_Swell_LG_L_02
+		buss = Crowd_One_Shots
 		pan1x = -1
 		pan1y = 1
 		vol = -6}
-	playsound \{ext_md_crowd_swell_lg_r_02
-		buss = crowd_one_shots
+	PlaySound \{EXT_MD_Crowd_Swell_LG_R_02
+		buss = Crowd_One_Shots
 		pan1x = 1
 		pan1y = 1
 		vol = -6}
-	wait \{30
+	Wait \{30
 		gameframes}
-	playsound \{ext_md_crowd_swell_md_l_02
-		buss = crowd_one_shots
+	PlaySound \{EXT_MD_Crowd_Swell_MD_L_02
+		buss = Crowd_One_Shots
 		pan1x = -1
 		pan1y = 1
 		vol = -4}
-	playsound \{ext_md_crowd_swell_md_r_02
-		buss = crowd_one_shots
+	PlaySound \{EXT_MD_Crowd_Swell_MD_R_02
+		buss = Crowd_One_Shots
 		pan1x = 1
 		pan1y = 1
 		vol = -4}
-	wait \{60
+	Wait \{60
 		gameframes}
-	playsound \{ext_md_crowd_swell_sh_l_01
-		buss = crowd_one_shots
+	PlaySound \{EXT_MD_Crowd_Swell_SH_L_01
+		buss = Crowd_One_Shots
 		pan1x = -1
 		pan1y = 1
 		vol = -3}
-	playsound \{ext_md_crowd_swell_sh_r_01
-		buss = crowd_one_shots
+	PlaySound \{EXT_MD_Crowd_Swell_SH_R_01
+		buss = Crowd_One_Shots
 		pan1x = 1
 		pan1y = 1
 		vol = -3}
-	wait \{30
+	Wait \{30
 		gameframes}
-	playsound \{ext_md_crowd_swell_md_l_02
-		buss = crowd_one_shots
+	PlaySound \{EXT_MD_Crowd_Swell_MD_L_02
+		buss = Crowd_One_Shots
 		pan1x = -1
 		pan1y = 1
 		vol = -3}
-	playsound \{ext_md_crowd_swell_md_r_02
-		buss = crowd_one_shots
+	PlaySound \{EXT_MD_Crowd_Swell_MD_R_02
+		buss = Crowd_One_Shots
 		pan1x = 1
 		pan1y = 1
 		vol = -3}
-	playsound \{ext_md_crowd_swell_lg_l_02
-		buss = crowd_one_shots
+	PlaySound \{EXT_MD_Crowd_Swell_LG_L_02
+		buss = Crowd_One_Shots
 		pan1x = -1
 		pan1y = 1
 		vol = -3}
-	playsound \{ext_md_crowd_swell_lg_r_02
-		buss = crowd_one_shots
+	PlaySound \{EXT_MD_Crowd_Swell_LG_R_02
+		buss = Crowd_One_Shots
 		pan1x = 1
 		pan1y = 1
 		vol = -3}
-	wait \{60
+	Wait \{60
 		gameframes}
-	spawnscriptnow \{crowd_loading_whistle}
-	playsound \{ext_md_crowd_swell_lg_l_02
-		buss = crowd_one_shots
+	spawnscriptnow \{Crowd_Loading_Whistle}
+	PlaySound \{EXT_MD_Crowd_Swell_LG_L_02
+		buss = Crowd_One_Shots
 		pan1x = -1
 		pan1y = 1
 		vol = -3}
-	playsound \{ext_md_crowd_swell_lg_r_02
-		buss = crowd_one_shots
+	PlaySound \{EXT_MD_Crowd_Swell_LG_R_02
+		buss = Crowd_One_Shots
 		pan1x = 1
 		pan1y = 1
 		vol = -3}
-	wait \{30
+	Wait \{30
 		gameframes}
-	playsound \{ext_md_crowd_swell_md_l_02
-		buss = crowd_one_shots
+	PlaySound \{EXT_MD_Crowd_Swell_MD_L_02
+		buss = Crowd_One_Shots
 		pan1x = -1
 		pan1y = 1
 		vol = -3}
-	playsound \{ext_md_crowd_swell_md_r_02
-		buss = crowd_one_shots
+	PlaySound \{EXT_MD_Crowd_Swell_MD_R_02
+		buss = Crowd_One_Shots
 		pan1x = 1
 		pan1y = 1
 		vol = -3}
-	wait \{30
+	Wait \{30
 		gameframes}
-	playsound \{ext_md_crowd_swell_sh_l_01
-		buss = crowd_one_shots
+	PlaySound \{EXT_MD_Crowd_Swell_SH_L_01
+		buss = Crowd_One_Shots
 		pan1x = -1
 		pan1y = 1
 		vol = -3}
-	playsound \{ext_md_crowd_swell_sh_r_01
-		buss = crowd_one_shots
+	PlaySound \{EXT_MD_Crowd_Swell_SH_R_01
+		buss = Crowd_One_Shots
 		pan1x = 1
 		pan1y = 1
 		vol = -3}
-	wait \{30
+	Wait \{30
 		gameframes}
 	begin
-	playsound \{ext_md_crowd_swell_md_l_02
-		buss = crowd_one_shots
+	PlaySound \{EXT_MD_Crowd_Swell_MD_L_02
+		buss = Crowd_One_Shots
 		pan1x = -1
 		pan1y = 1
 		vol = -3}
-	playsound \{ext_md_crowd_swell_md_r_02
-		buss = crowd_one_shots
+	PlaySound \{EXT_MD_Crowd_Swell_MD_R_02
+		buss = Crowd_One_Shots
 		pan1x = 1
 		pan1y = 1
 		vol = -3}
-	playsound \{ext_md_crowd_swell_lg_l_02
-		buss = crowd_one_shots
+	PlaySound \{EXT_MD_Crowd_Swell_LG_L_02
+		buss = Crowd_One_Shots
 		pan1x = -1
 		pan1y = 1
 		vol = -3}
-	playsound \{ext_md_crowd_swell_lg_r_02
-		buss = crowd_one_shots
+	PlaySound \{EXT_MD_Crowd_Swell_LG_R_02
+		buss = Crowd_One_Shots
 		pan1x = 1
 		pan1y = 1
 		vol = -3}
-	wait \{60
+	Wait \{60
 		gameframes}
-	playsound \{ext_md_crowd_swell_sh_l_01
-		buss = crowd_one_shots
+	PlaySound \{EXT_MD_Crowd_Swell_SH_L_01
+		buss = Crowd_One_Shots
 		pan1x = -1
 		pan1y = 1
 		vol = -3}
-	playsound \{ext_md_crowd_swell_sh_r_01
-		buss = crowd_one_shots
+	PlaySound \{EXT_MD_Crowd_Swell_SH_R_01
+		buss = Crowd_One_Shots
 		pan1x = 1
 		pan1y = 1
 		vol = -3}
-	wait \{30
+	Wait \{30
 		gameframes}
-	playsound \{ext_md_crowd_swell_lg_l_02
-		buss = crowd_one_shots
+	PlaySound \{EXT_MD_Crowd_Swell_LG_L_02
+		buss = Crowd_One_Shots
 		pan1x = -1
 		pan1y = 1
 		vol = -3}
-	playsound \{ext_md_crowd_swell_lg_r_02
-		buss = crowd_one_shots
+	PlaySound \{EXT_MD_Crowd_Swell_LG_R_02
+		buss = Crowd_One_Shots
 		pan1x = 1
 		pan1y = 1
 		vol = -3}
-	wait \{30
+	Wait \{30
 		gameframes}
 	repeat
 endscript
 
-script killsurgingscripts_faster 
-	killspawnedscript \{name = oneshotsbetweensongs}
-	killspawnedscript \{name = surgebetweensongs}
+script KillSurgingScripts_Faster 
+	KillSpawnedScript \{name = OneShotsBetweenSongs}
+	KillSpawnedScript \{name = SurgeBetweenSongs}
 endscript
 
-script crowd_loading_whistle 
+script Crowd_Loading_Whistle 
 	i = -6.0
 	begin
 	RandomNoRepeat (
-		@ playsound ext_md_crowd_whistle_1 vol = <i> buss = crowd_one_shots
-		@ playsound ext_md_crowd_whistle_2 vol = <i> buss = crowd_one_shots
-		@ playsound ext_md_crowd_whistle_3 vol = <i> buss = crowd_one_shots
-		@ playsound ext_md_crowd_whistle_4 vol = <i> buss = crowd_one_shots
-		@ playsound ext_md_crowd_whistle_5 vol = <i> buss = crowd_one_shots
-		@ playsound ext_md_crowd_whistle_6 vol = <i> buss = crowd_one_shots
-		@ playsound ext_md_crowd_whistle_7 vol = <i> buss = crowd_one_shots
-		@ playsound ext_md_crowd_whistle_8 vol = <i> buss = crowd_one_shots
-		@ playsound ext_md_crowd_whistle_9 vol = <i> buss = crowd_one_shots
-		@ playsound ext_md_crowd_whistle_10 vol = <i> buss = crowd_one_shots
-		@ playsound ext_md_crowd_whistle_11 vol = <i> buss = crowd_one_shots
-		@ playsound ext_md_crowd_whistle_12 vol = <i> buss = crowd_one_shots
-		@ playsound ext_md_crowd_whistle_13 vol = <i> buss = crowd_one_shots
-		@ playsound ext_md_crowd_whistle_14 vol = <i> buss = crowd_one_shots
-		@ playsound ext_md_crowd_whistle_15 vol = <i> buss = crowd_one_shots
-		@ playsound ext_md_crowd_whistle_16 vol = <i> buss = crowd_one_shots
-		@ playsound ext_md_crowd_whistle_17 vol = <i> buss = crowd_one_shots
-		@ playsound ext_md_crowd_whistle_18 vol = <i> buss = crowd_one_shots
-		@ playsound ext_md_crowd_whistle_19 vol = <i> buss = crowd_one_shots
-		@ playsound ext_md_crowd_whistle_19 vol = <i> buss = crowd_one_shots
+		@ PlaySound EXT_MD_Crowd_Whistle_1 vol = <i> buss = Crowd_One_Shots
+		@ PlaySound EXT_MD_Crowd_Whistle_2 vol = <i> buss = Crowd_One_Shots
+		@ PlaySound EXT_MD_Crowd_Whistle_3 vol = <i> buss = Crowd_One_Shots
+		@ PlaySound EXT_MD_Crowd_Whistle_4 vol = <i> buss = Crowd_One_Shots
+		@ PlaySound EXT_MD_Crowd_Whistle_5 vol = <i> buss = Crowd_One_Shots
+		@ PlaySound EXT_MD_Crowd_Whistle_6 vol = <i> buss = Crowd_One_Shots
+		@ PlaySound EXT_MD_Crowd_Whistle_7 vol = <i> buss = Crowd_One_Shots
+		@ PlaySound EXT_MD_Crowd_Whistle_8 vol = <i> buss = Crowd_One_Shots
+		@ PlaySound EXT_MD_Crowd_Whistle_9 vol = <i> buss = Crowd_One_Shots
+		@ PlaySound EXT_MD_Crowd_Whistle_10 vol = <i> buss = Crowd_One_Shots
+		@ PlaySound EXT_MD_Crowd_Whistle_11 vol = <i> buss = Crowd_One_Shots
+		@ PlaySound EXT_MD_Crowd_Whistle_12 vol = <i> buss = Crowd_One_Shots
+		@ PlaySound EXT_MD_Crowd_Whistle_13 vol = <i> buss = Crowd_One_Shots
+		@ PlaySound EXT_MD_Crowd_Whistle_14 vol = <i> buss = Crowd_One_Shots
+		@ PlaySound EXT_MD_Crowd_Whistle_15 vol = <i> buss = Crowd_One_Shots
+		@ PlaySound EXT_MD_Crowd_Whistle_16 vol = <i> buss = Crowd_One_Shots
+		@ PlaySound EXT_MD_Crowd_Whistle_17 vol = <i> buss = Crowd_One_Shots
+		@ PlaySound EXT_MD_Crowd_Whistle_18 vol = <i> buss = Crowd_One_Shots
+		@ PlaySound EXT_MD_Crowd_Whistle_19 vol = <i> buss = Crowd_One_Shots
+		@ PlaySound EXT_MD_Crowd_Whistle_19 vol = <i> buss = Crowd_One_Shots
 		)
-	wait \{40
+	Wait \{40
 		gameframes}
 	i = (<i> + 0.5)
 	if (<i> > 0)
@@ -4856,114 +4856,114 @@ script crowd_loading_whistle
 endscript
 
 script metalfest_intro 
-	wait \{1
+	Wait \{1
 		second}
-	soundevent \{event = $current_crowd_swell_med_soundevent_l}
-	soundevent \{event = $current_crowd_swell_med_soundevent_r}
-	wait \{1
+	SoundEvent \{event = $Current_Crowd_Swell_Med_SoundEvent_L}
+	SoundEvent \{event = $Current_Crowd_Swell_Med_SoundEvent_R}
+	Wait \{1
 		second}
-	soundevent \{event = $current_crowd_swell_short_soundevent_l}
-	soundevent \{event = $current_crowd_swell_short_soundevent_r}
-	wait \{1
+	SoundEvent \{event = $Current_Crowd_Swell_Short_SoundEvent_L}
+	SoundEvent \{event = $Current_Crowd_Swell_Short_SoundEvent_R}
+	Wait \{1
 		second}
-	soundevent \{event = $current_crowd_swell_long_soundevent_l}
-	soundevent \{event = $current_crowd_swell_long_soundevent_r}
-	wait \{1
+	SoundEvent \{event = $Current_Crowd_Swell_Long_SoundEvent_L}
+	SoundEvent \{event = $Current_Crowd_Swell_Long_SoundEvent_R}
+	Wait \{1
 		second}
-	killsurgingscripts
+	KillSurgingScripts
 endscript
 
-script military_intro 
-	wait \{1
+script Military_Intro 
+	Wait \{1
 		second}
-	soundevent \{event = $current_crowd_swell_med_soundevent_l}
-	soundevent \{event = $current_crowd_swell_med_soundevent_r}
-	wait \{1
+	SoundEvent \{event = $Current_Crowd_Swell_Med_SoundEvent_L}
+	SoundEvent \{event = $Current_Crowd_Swell_Med_SoundEvent_R}
+	Wait \{1
 		second}
-	soundevent \{event = $current_crowd_swell_short_soundevent_l}
-	soundevent \{event = $current_crowd_swell_short_soundevent_r}
-	wait \{1
+	SoundEvent \{event = $Current_Crowd_Swell_Short_SoundEvent_L}
+	SoundEvent \{event = $Current_Crowd_Swell_Short_SoundEvent_R}
+	Wait \{1
 		second}
-	soundevent \{event = $current_crowd_swell_long_soundevent_l}
-	soundevent \{event = $current_crowd_swell_long_soundevent_r}
-	wait \{1.3
+	SoundEvent \{event = $Current_Crowd_Swell_Long_SoundEvent_L}
+	SoundEvent \{event = $Current_Crowd_Swell_Long_SoundEvent_R}
+	Wait \{1.3
 		seconds}
-	soundevent \{event = $current_crowd_swell_med_soundevent_l}
-	soundevent \{event = $current_crowd_swell_med_soundevent_r}
-	wait \{1
+	SoundEvent \{event = $Current_Crowd_Swell_Med_SoundEvent_L}
+	SoundEvent \{event = $Current_Crowd_Swell_Med_SoundEvent_R}
+	Wait \{1
 		second}
-	soundevent \{event = $current_crowd_swell_short_soundevent_l}
-	soundevent \{event = $current_crowd_swell_short_soundevent_r}
-	killsurgingscripts
+	SoundEvent \{event = $Current_Crowd_Swell_Short_SoundEvent_L}
+	SoundEvent \{event = $Current_Crowd_Swell_Short_SoundEvent_R}
+	KillSurgingScripts
 endscript
 
-script fair_intro 
-	wait \{1
+script Fair_Intro 
+	Wait \{1
 		second}
-	soundevent \{event = $current_crowd_swell_med_soundevent_l}
-	soundevent \{event = $current_crowd_swell_med_soundevent_r}
-	wait \{1
+	SoundEvent \{event = $Current_Crowd_Swell_Med_SoundEvent_L}
+	SoundEvent \{event = $Current_Crowd_Swell_Med_SoundEvent_R}
+	Wait \{1
 		second}
-	soundevent \{event = $current_crowd_swell_short_soundevent_l}
-	soundevent \{event = $current_crowd_swell_short_soundevent_r}
-	wait \{1
+	SoundEvent \{event = $Current_Crowd_Swell_Short_SoundEvent_L}
+	SoundEvent \{event = $Current_Crowd_Swell_Short_SoundEvent_R}
+	Wait \{1
 		second}
-	soundevent \{event = $current_crowd_swell_long_soundevent_l}
-	soundevent \{event = $current_crowd_swell_long_soundevent_r}
-	wait \{2.3
+	SoundEvent \{event = $Current_Crowd_Swell_Long_SoundEvent_L}
+	SoundEvent \{event = $Current_Crowd_Swell_Long_SoundEvent_R}
+	Wait \{2.3
 		seconds}
-	soundevent \{event = $current_crowd_swell_med_soundevent_l}
-	soundevent \{event = $current_crowd_swell_med_soundevent_r}
-	wait \{1
+	SoundEvent \{event = $Current_Crowd_Swell_Med_SoundEvent_L}
+	SoundEvent \{event = $Current_Crowd_Swell_Med_SoundEvent_R}
+	Wait \{1
 		second}
-	soundevent \{event = $current_crowd_swell_short_soundevent_l}
-	soundevent \{event = $current_crowd_swell_short_soundevent_r}
-	killsurgingscripts
+	SoundEvent \{event = $Current_Crowd_Swell_Short_SoundEvent_L}
+	SoundEvent \{event = $Current_Crowd_Swell_Short_SoundEvent_R}
+	KillSurgingScripts
 endscript
 
-script small_intro 
-	soundevent \{event = $current_crowd_swell_med_soundevent_l}
-	soundevent \{event = $current_crowd_swell_med_soundevent_r}
-	wait \{1
+script Small_Intro 
+	SoundEvent \{event = $Current_Crowd_Swell_Med_SoundEvent_L}
+	SoundEvent \{event = $Current_Crowd_Swell_Med_SoundEvent_R}
+	Wait \{1
 		second}
-	soundevent \{event = $current_crowd_swell_short_soundevent_l}
-	soundevent \{event = $current_crowd_swell_short_soundevent_r}
-	soundevent \{event = $current_crowd_swell_long_soundevent_l}
-	soundevent \{event = $current_crowd_swell_long_soundevent_r}
-	wait \{1
+	SoundEvent \{event = $Current_Crowd_Swell_Short_SoundEvent_L}
+	SoundEvent \{event = $Current_Crowd_Swell_Short_SoundEvent_R}
+	SoundEvent \{event = $Current_Crowd_Swell_Long_SoundEvent_L}
+	SoundEvent \{event = $Current_Crowd_Swell_Long_SoundEvent_R}
+	Wait \{1
 		second}
-	killsurgingscripts
+	KillSurgingScripts
 endscript
 
-script med_inside_intro 
-	wait \{1
+script Med_Inside_Intro 
+	Wait \{1
 		second}
-	soundevent \{event = $current_crowd_swell_med_soundevent_l}
-	soundevent \{event = $current_crowd_swell_med_soundevent_r}
-	wait \{1
+	SoundEvent \{event = $Current_Crowd_Swell_Med_SoundEvent_L}
+	SoundEvent \{event = $Current_Crowd_Swell_Med_SoundEvent_R}
+	Wait \{1
 		second}
-	soundevent \{event = $current_crowd_swell_short_soundevent_l}
-	soundevent \{event = $current_crowd_swell_short_soundevent_r}
-	soundevent \{event = $current_crowd_swell_long_soundevent_l}
-	soundevent \{event = $current_crowd_swell_long_soundevent_r}
-	wait \{1
+	SoundEvent \{event = $Current_Crowd_Swell_Short_SoundEvent_L}
+	SoundEvent \{event = $Current_Crowd_Swell_Short_SoundEvent_R}
+	SoundEvent \{event = $Current_Crowd_Swell_Long_SoundEvent_L}
+	SoundEvent \{event = $Current_Crowd_Swell_Long_SoundEvent_R}
+	Wait \{1
 		second}
-	killsurgingscripts
+	KillSurgingScripts
 endscript
 
-script ghtunes_ui_scroll_pan 
+script GHTunes_UI_Scroll_Pan 
 	sfx_pan = (<sfx_pan> * 0.1)
-	playsound ghtunes_menu_scroll vol = -2 pitch = 4 pan1x = <sfx_pan> pan1y = 1.0
+	PlaySound GHTunes_Menu_Scroll vol = -2 pitch = 4 pan1x = <sfx_pan> pan1y = 1.0
 endscript
 
-script nullsound 
+script NullSound 
 endscript
 
-script ghmix_scroll 
-	if gotparam \{adv_record}
-		soundevent \{event = ghtunes_ui_scroll}
+script GHMix_scroll 
+	if GotParam \{adv_record}
+		SoundEvent \{event = GHTunes_UI_Scroll}
 	else
-		if gotparam \{up}
+		if GotParam \{up}
 			generic_menu_up_or_down_sound \{up}
 		else
 			generic_menu_up_or_down_sound \{down}
@@ -4971,16 +4971,16 @@ script ghmix_scroll
 	endif
 endscript
 
-script ghtunes_scroll 
-	soundevent \{event = ghtunes_ui_scroll}
+script GHTunes_Scroll 
+	SoundEvent \{event = GHTunes_UI_Scroll}
 endscript
 
 script play_win_lose_anim_sound \{skip = 0}
-	obj_getid
+	Obj_GetID
 	i = 1
 	begin
-	formattext checksumname = player_status 'player%a_status' a = <i>
-	if (($<player_status>.band_member) = <objid>)
+	FormatText checksumname = player_status 'player%a_status' a = <i>
+	if (($<player_status>.band_member) = <ObjID>)
 		part = ($<player_status>.part)
 		skip = 1
 		break
@@ -4988,14 +4988,14 @@ script play_win_lose_anim_sound \{skip = 0}
 	i = (<i> + 1)
 	repeat 5
 	if NOT (<skip> = 1)
-		switch <objid>
-			case guitarist
+		switch <ObjID>
+			case Guitarist
 			part = guitar
 			case bassist
-			part = bass
+			part = Bass
 			case vocalist
-			part = vocals
-			case drummer
+			part = Vocals
+			case Drummer
 			part = drum
 			default
 			part = guitar
@@ -5011,83 +5011,83 @@ script play_win_lose_anim_sound \{skip = 0}
 		endif
 	endif
 	part = <part>
-	printf channel = sfx qs(0xafa59a93) s = <part>
-	getpakmancurrent \{map = zones}
+	printf channel = sfx qs("\LThis Anim Is playing the < %s > Sound") s = <part>
+	GetPakManCurrent \{map = zones}
 	if NOT (<pak> = z_tool)
-		if gotparam \{event}
+		if GotParam \{event}
 			switch <event>
 				case mic_feedback
-				soundevent \{event = mic_feedback}
+				SoundEvent \{event = mic_feedback}
 				case mic_grab
-				soundevent \{event = mic_grab}
+				SoundEvent \{event = mic_grab}
 				case mic_hit
-				soundevent \{event = mic_hit}
-				case drummer_sticks_throw
-				soundevent \{event = drummer_sticks_throw}
-				case large_smash
-				if gotparam \{part}
+				SoundEvent \{event = mic_hit}
+				case Drummer_sticks_throw
+				SoundEvent \{event = Drummer_sticks_throw}
+				case Large_Smash
+				if GotParam \{part}
 					switch <part>
-						case bass
-						soundevent \{event = large_bass_smash}
+						case Bass
+						SoundEvent \{event = large_Bass_smash}
 						case guitar
-						soundevent \{event = large_guitar_smash}
+						SoundEvent \{event = large_guitar_smash}
 						default
 						printf \{channel = sfx
-							qs(0x02f51c1f)}
+							qs("\LDid not get Part Guitar or Bass for win/lose anims!!!")}
 					endswitch
 				endif
-				case medium_smash
-				if gotparam \{part}
+				case Medium_Smash
+				if GotParam \{part}
 					switch <part>
-						case bass
-						soundevent \{event = medium_bass_smash}
+						case Bass
+						SoundEvent \{event = medium_Bass_smash}
 						case guitar
-						soundevent \{event = medium_guitar_smash}
+						SoundEvent \{event = medium_guitar_smash}
 						default
 						printf \{channel = sfx
-							qs(0x02f51c1f)}
+							qs("\LDid not get Part Guitar or Bass for win/lose anims!!!")}
 					endswitch
 				endif
 				case small_smash
-				if gotparam \{part}
+				if GotParam \{part}
 					switch <part>
-						case bass
-						soundevent \{event = small_bass_smash}
+						case Bass
+						SoundEvent \{event = small_Bass_smash}
 						case guitar
-						soundevent \{event = small_guitar_smash}
+						SoundEvent \{event = small_guitar_smash}
 						default
 						printf \{channel = sfx
-							qs(0x02f51c1f)}
+							qs("\LDid not get Part Guitar or Bass for win/lose anims!!!")}
 					endswitch
 				endif
-				case ozzy_bucket_water
-				soundevent \{event = ozzy_bucket_water}
+				case Ozzy_Bucket_Water
+				SoundEvent \{event = Ozzy_Bucket_Water}
 				case ozzy_bucket_throw
-				soundevent \{event = ozzy_bucket_throw}
-				case drummer_tom_hit
-				soundevent \{event = drummer_tom_hit}
-				case drummer_snare_hit
-				soundevent \{event = drummer_snare_hit}
+				SoundEvent \{event = ozzy_bucket_throw}
+				case Drummer_Tom_Hit
+				SoundEvent \{event = Drummer_Tom_Hit}
+				case Drummer_Snare_Hit
+				SoundEvent \{event = Drummer_Snare_Hit}
 				default
 				printf \{channel = sfx
-					qs(0xc0f17fb8)}
+					qs("\LWE Are Missing A Win/Lose Anim Sound!!!!!!!!")}
 			endswitch
 		endif
 	endif
 endscript
 
-script boss_battle_whoosh_sound 
-	soundevent \{event = battle_boss_flyin}
-	wait \{0.03
+script Boss_Battle_Whoosh_Sound 
+	SoundEvent \{event = Battle_Boss_FlyIn}
+	Wait \{0.03
 		seconds}
-	soundevent \{event = battle_boss_whoosh2}
+	SoundEvent \{event = Battle_Boss_Whoosh2}
 endscript
 
-script crowd_sustain_boss_battle 
-	soundevent \{event = $current_crowd_applause_soundevent_l}
-	soundevent \{event = $current_crowd_applause_soundevent_r}
-	soundevent \{event = $current_crowd_swell_short_soundevent_l}
-	soundevent \{event = $current_crowd_swell_short_soundevent_r}
-	soundevent \{event = $current_crowd_swell_med_soundevent_l}
-	soundevent \{event = $current_crowd_swell_med_soundevent_r}
+script Crowd_Sustain_Boss_Battle 
+	SoundEvent \{event = $Current_Crowd_Applause_SoundEvent_L}
+	SoundEvent \{event = $Current_Crowd_Applause_SoundEvent_R}
+	SoundEvent \{event = $Current_Crowd_Swell_Short_SoundEvent_L}
+	SoundEvent \{event = $Current_Crowd_Swell_Short_SoundEvent_R}
+	SoundEvent \{event = $Current_Crowd_Swell_Med_SoundEvent_L}
+	SoundEvent \{event = $Current_Crowd_Swell_Med_SoundEvent_R}
 endscript

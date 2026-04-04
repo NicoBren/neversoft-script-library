@@ -1,54 +1,54 @@
-gp_starpower_flamethroweranarchy01 = {
+GP_StarPower_FlameThrowerAnarchy01 = {
 	pos = (0.35688803, 2.835854, 0.071378)
 	angles = (0.0, 0.0, 0.0)
-	class = particleobject
-	particletype = flexparticle
+	Class = ParticleObject
+	ParticleType = FlexParticle
 	type = flat
 	active
-	createdatstart
+	CreatedAtStart
 	attach
-	attachobject = guitarist
-	bone = bone_pelvis
-	emitrangedims = (0.7, 0.7, 0.7)
-	emit_target = (0.0, 1.0, 0.0)
-	emitangle = (0.0, 0.0, 0.0)
+	AttachObject = Guitarist
+	bone = Bone_Pelvis
+	EmitRangeDims = (0.7, 0.7, 0.7)
+	emit_Target = (0.0, 1.0, 0.0)
+	EmitAngle = (0.0, 0.0, 0.0)
 	force = (0.0, 0.0, 0.0)
-	windcoeff = 0.0
-	localwindcoeff = 0.0
-	emittervelocityweight = 0.0
-	anglespread = 45.0
-	liferange = (0.2, 0.4)
+	WindCoeff = 0.0
+	LocalWindCoeff = 0.0
+	EmitterVelocityWeight = 0.0
+	AngleSpread = 45.0
+	LifeRange = (0.2, 0.4)
 	emit_rate = 6.0
 	max = 0
-	timeseed = 0.2
-	lifetime = 0.0
-	emitnum = 0
-	followemitter = 0.0
-	emitfunction = constant
-	emitperiod = 1.0
-	sizerange = [
+	TimeSeed = 0.2
+	lifeTime = 0.0
+	emitNum = 0
+	FollowEmitter = 0.0
+	EmitFunction = constant
+	EmitPeriod = 1.0
+	SizeRange = [
 		(0.2, 0.2)
 		(0.6, 0.6)
 	]
-	speedrange = (0.0, 0.0)
-	rotvel = (-0.1, 0.1)
-	rotveltimescale = 1.0
-	emitdelaystart = 0.0
-	pathfollowtime = 0.2
-	history = 6
-	historylistcoordinatespace = world
+	SpeedRange = (0.0, 0.0)
+	RotVel = (-0.1, 0.1)
+	RotVelTimeScale = 1.0
+	EmitDelayStart = 0.0
+	PathFollowTime = 0.2
+	History = 6
+	HistoryListCoordinateSpace = world
 	color = -16776961
-	novisibilitytest
-	quickmaterial = {
-		diffusetextureenabled
-		diffusetexture = jow_anarchy01
-		specularpower = 0
-		twoside
+	NoVisibilityTest
+	QuickMaterial = {
+		DiffuseTextureEnabled
+		DiffuseTexture = JOW_Anarchy01
+		SpecularPower = 0
+		TwoSide
 		alphacutoff = 76
-		blendmode = diffuse
-		quadanimationfps = 0
+		blendMode = diffuse
+		QuadAnimationFPS = 0
 	}
-	knot = [
+	Knot = [
 		(-5.710207, 0.0, -0.28551)
 		(-5.710207, 0.0, -0.28551)
 		(-5.15332, 0.0, -0.25833598)
@@ -56,13 +56,13 @@ gp_starpower_flamethroweranarchy01 = {
 		(5.2637234, 0.0, -0.20398802)
 		(5.2637234, 0.0, -0.20398802)
 	]
-	particlecolor = [
+	ParticleColor = [
 		-892679425
 		-256
 		-892679425
 		-1
 	]
-	vertexweight = [
+	VertexWeight = [
 		1.0
 	]
 }

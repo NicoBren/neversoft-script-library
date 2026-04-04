@@ -1,8 +1,8 @@
-0x1b5d7492 = 0
+winport_in_countdown = 0
 
 script ui_create_song_unpause 
-	if NOT cd
-		if globalexists \{name = disable_unpause_countdown}
+	if NOT CD
+		if GlobalExists \{name = disable_unpause_countdown}
 			if ($disable_unpause_countdown = 1)
 				spawnscriptnow \{ui_song_unpause_done}
 				return
@@ -21,19 +21,19 @@ script ui_create_song_unpause
 		spawnscriptnow \{ui_song_unpause_done}
 		return
 	endif
-	createscreenelement \{parent = root_window
+	CreateScreenElement \{parent = root_window
 		id = song_unpause
-		type = descinterface
+		type = DescInterface
 		desc = 'song_unpause'
 		z_priority = 10000
 		alpha = 0.0}
 	song_unpause :obj_spawnscript \{ui_song_unpause}
-	launchevent \{type = focus
+	LaunchEvent \{type = focus
 		target = song_unpause}
 endscript
 
 script ui_destroy_song_unpause 
-	destroyscreenelement \{id = song_unpause}
+	DestroyScreenElement \{id = song_unpause}
 	spawnscriptnow \{ui_destroy_song_spawned}
 endscript
 
@@ -43,23 +43,23 @@ script ui_destroy_song_spawned
 endscript
 
 script ui_song_unpause 
-	setscriptcannotpause
+	SetScriptCannotPause
 	get_song_title song = ($current_song)
-	formattext textname = title_text qs(0x373caef2) s = <song_title>
-	se_setprops title_text = <title_text> number_text = qs(0x050c1ef7)
+	FormatText TextName = title_text qs("Get Ready!\n\cD%s\c0 will resume in...") s = <song_title>
+	SE_SetProps title_text = <title_text> number_text = qs("4")
 	ui_event_wait_for_safe
-	getsongtime
+	GetSongTime
 	get_song_end_time song = ($current_song)
-	printstruct <...> channel = unpause
+	printstruct <...> channel = UnPause
 	if ((<songtime> < 0.0) || ((<songtime> * 1000) >= <total_end_time>))
 		ui_song_unpause_done
 		return
 	endif
-	change \{0x1b5d7492 = 1}
+	change \{winport_in_countdown = 1}
 	songtime = (<songtime> * 1000)
 	get_song_prefix song = ($current_song)
-	formattext checksumname = fretbar_array '%s_fretbars' s = <song_prefix> addtostringlookup
-	getarraysize $<fretbar_array>
+	FormatText checksumname = fretbar_array '%s_fretbars' s = <song_prefix> AddToStringLookup
+	GetArraySize $<fretbar_array>
 	i = 0
 	begin
 	if (<songtime> < ($<fretbar_array> [<i>]))
@@ -71,51 +71,51 @@ script ui_song_unpause
 	if (<i> < 4)
 		i = 4
 	endif
-	song_unpause :se_setprops \{alpha = 1.0}
+	song_unpause :SE_SetProps \{alpha = 1.0}
 	times = [0.0 0.0 0.0 0.0]
 	<time> = ($<fretbar_array> [(<i> + 1)])
 	j = 0
 	begin
-	setarrayelement arrayname = times index = (3 - <j>) newvalue = (<time> - ($<fretbar_array> [(<i> - <j>)]))
+	SetArrayElement ArrayName = times index = (3 - <j>) newvalue = (<time> - ($<fretbar_array> [(<i> - <j>)]))
 	time = ($<fretbar_array> [(<i> - <j>)])
 	j = (<j> + 1)
 	repeat 4
 	printstruct {} times = <times>
-	soundevent \{event = countoff_sfx_sticks_normal_hard}
-	wait ((<times> [0]) / 1000.0) seconds ignoreslomo
+	SoundEvent \{event = Countoff_SFX_Sticks_Normal_Hard}
+	Wait ((<times> [0]) / 1000.0) seconds ignoreslomo
 	i = 3
 	begin
-	formattext textname = number_text qs(0xc31d83ea) i = <i>
-	se_setprops number_text = <number_text>
-	soundevent \{event = countoff_sfx_sticks_normal_hard}
-	wait ((<times> [(4 - <i>)]) / 1000.0) seconds ignoreslomo
+	FormatText TextName = number_text qs("\L%i") i = <i>
+	SE_SetProps number_text = <number_text>
+	SoundEvent \{event = Countoff_SFX_Sticks_Normal_Hard}
+	Wait ((<times> [(4 - <i>)]) / 1000.0) seconds ignoreslomo
 	i = (<i> - 1)
 	repeat 3
 	ui_song_unpause_done
 endscript
 
 script ui_song_unpause_done 
-	setscriptcannotpause
-	change \{0x1b5d7492 = 0}
+	SetScriptCannotPause
+	change \{winport_in_countdown = 0}
 	ui_event_wait_for_safe
 	do_gh3_unpause
 	ui_event \{event = menu_back
 		data = {
 			state = uistate_gameplay
 		}}
-	if isobjectscript
-		die
+	if IsObjectScript
+		Die
 	endif
 endscript
 
 script ui_song_unpause_repause 
-	setscriptcannotpause
-	setspawninstancelimits \{max = 1
+	SetScriptCannotPause
+	SetSpawnInstanceLimits \{max = 1
 		management = ignore_spawn_request}
-	killspawnedscript \{name = ui_song_unpause}
+	KillSpawnedScript \{name = ui_song_unpause}
 	ui_event_wait_for_safe
-	change \{0x1b5d7492 = 0}
-	if gotparam \{from_system}
+	change \{winport_in_countdown = 0}
+	if GotParam \{from_system}
 		if ui_event_exists_in_stack \{name = 'gameplay'}
 			ui_event \{event = menu_back
 				data = {
@@ -125,10 +125,10 @@ script ui_song_unpause_repause
 			ui_event \{event = menu_back}
 		endif
 	else
-		printf \{qs(0x20ab9428)
+		printf \{qs("\LI'm here!")
 			channel = here}
 		generic_menu_pad_choose_sound
-		ui_event event = menu_replace state = uistate_pausemenu data = {device_num = <device_num>}
+		ui_event event = menu_replace state = UIstate_pausemenu data = {device_num = <device_num>}
 	endif
 endscript
 
