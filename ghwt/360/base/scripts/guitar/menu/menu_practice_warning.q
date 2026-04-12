@@ -1,21 +1,21 @@
-practice_return_venue = None
+practice_return_venue = none
 
 script create_practice_warning_menu 
 	disable_pause
 	player_device = ($last_start_pressed_device)
 	get_song_struct song = ($current_song)
-	if StructureContains structure = <song_struct> boss
-		warning_text = qs(0x06e614bd)
-		goto_text = qs(0xbc7838a9)
+	if StructureContains Structure = <song_struct> boss
+		warning_text = qs("YOUR PROGRESS IN THIS SONG WILL BE LOST IF YOU EXIT TO TUTORIAL NOW. EXIT?")
+		goto_text = qs("TUTORIAL")
 	else
-		warning_text = qs(0xcf65b06a)
-		goto_text = qs(0x3ea7dec9)
+		warning_text = qs("YOUR PROGRESS IN THIS SONG WILL BE LOST IF YOU EXIT TO PRACTICE NOW. EXIT?")
+		goto_text = qs("PRACTICE")
 	endif
 	disable_pause
 	create_popup_warning_menu {
 		textblock = {
 			text = <warning_text>
-			Scale = 0.6
+			scale = 0.6
 		}
 		player_device = <player_device>
 		no_background
@@ -23,7 +23,7 @@ script create_practice_warning_menu
 		options = [
 			{
 				func = generic_event_back
-				text = qs(0xf7723015)
+				text = qs("CANCEL")
 			}
 			{
 				func = practice_warning_menu_select_practice
@@ -44,15 +44,15 @@ script practice_warning_menu_select_practice
 	endif
 	GH3_SFX_fail_song_stop_sounds
 	kill_gem_scroller
-	SpawnScriptNow \{xenon_singleplayer_session_complete_uninit
+	spawnscriptnow \{xenon_singleplayer_session_complete_uninit
 		params = {
 			song_failed
 		}}
-	resetscoreupdateready
+	ResetScoreUpdateReady
 	if ScreenElementExists \{id = pu_warning_vmenu}
 		pu_warning_vmenu :SetProps \{block_events}
 	endif
-	Change practice_return_venue = ($current_level)
+	change practice_return_venue = ($current_level)
 	do_training_loading part = ($player1_status.part)
 	ui_event \{event = menu_change
 		state = uistate_select_song_section

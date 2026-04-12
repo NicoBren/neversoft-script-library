@@ -7,12 +7,12 @@ pad_event_types = [
 	pad_back
 	pad_square
 	pad_circle
-	pad_L1
-	pad_R1
-	pad_L2
-	pad_R2
-	pad_L3
-	pad_R3
+	pad_l1
+	pad_r1
+	pad_l2
+	pad_r2
+	pad_l3
+	pad_r3
 	pad_select
 	pad_start
 	pad_option
@@ -26,10 +26,10 @@ pad_event_types = [
 	pad_btn_bottom
 	pad_btn_left
 ]
-pad_event_up_inversion = FALSE
+pad_event_up_inversion = false
 ps3_pad = [
 	[
-		X
+		x
 		pad_choose
 	]
 	[
@@ -37,7 +37,7 @@ ps3_pad = [
 		pad_back
 	]
 	[
-		Triangle
+		triangle
 		pad_square
 	]
 	[
@@ -46,19 +46,19 @@ ps3_pad = [
 	]
 	[
 		left_trigger1
-		pad_L1
+		pad_l1
 	]
 	[
 		right_trigger1
-		pad_R1
+		pad_r1
 	]
 	[
 		left_trigger2
-		pad_L2
+		pad_l2
 	]
 	[
 		right_trigger2
-		pad_R2
+		pad_r2
 	]
 	[
 		select
@@ -66,22 +66,22 @@ ps3_pad = [
 	]
 	[
 		left_stick_button
-		pad_L3
+		pad_l3
 	]
 	[
 		right_stick_button
-		pad_R3
+		pad_r3
 	]
 	[
-		Triangle
+		triangle
 		pad_option
 	]
 	[
-		Square
+		square
 		pad_option2
 	]
 	[
-		Triangle
+		triangle
 		pad_backspace
 	]
 	[
@@ -97,7 +97,7 @@ ps3_pad = [
 		pad_alt2
 	]
 	[
-		Square
+		square
 		pad_btn_top
 	]
 	[
@@ -105,11 +105,11 @@ ps3_pad = [
 		pad_btn_right
 	]
 	[
-		X
+		x
 		pad_btn_bottom
 	]
 	[
-		Triangle
+		triangle
 		pad_btn_left
 	]
 	[
@@ -131,7 +131,7 @@ ps3_pad = [
 ]
 ps3_guitar = [
 	[
-		X
+		x
 		pad_choose
 	]
 	[
@@ -139,7 +139,7 @@ ps3_guitar = [
 		pad_back
 	]
 	[
-		Triangle
+		triangle
 		pad_square
 	]
 	[
@@ -148,22 +148,22 @@ ps3_guitar = [
 	]
 	[
 		left_trigger1
-		pad_L1
+		pad_l1
 	]
 	[
 		select
 		pad_select
 	]
 	[
-		Triangle
+		triangle
 		pad_option
 	]
 	[
-		Square
+		square
 		pad_option2
 	]
 	[
-		Triangle
+		triangle
 		pad_backspace
 	]
 	[
@@ -171,7 +171,7 @@ ps3_guitar = [
 		pad_space
 	]
 	[
-		Square
+		square
 		pad_btn_top
 	]
 	[
@@ -179,11 +179,11 @@ ps3_guitar = [
 		pad_btn_right
 	]
 	[
-		X
+		x
 		pad_btn_bottom
 	]
 	[
-		Triangle
+		triangle
 		pad_btn_left
 	]
 	[
@@ -205,7 +205,7 @@ ps3_guitar = [
 ]
 ps3_guitar_flip = [
 	[
-		X
+		x
 		pad_choose
 	]
 	[
@@ -213,7 +213,7 @@ ps3_guitar_flip = [
 		pad_back
 	]
 	[
-		Triangle
+		triangle
 		pad_square
 	]
 	[
@@ -222,22 +222,22 @@ ps3_guitar_flip = [
 	]
 	[
 		left_trigger1
-		pad_L1
+		pad_l1
 	]
 	[
 		select
 		pad_select
 	]
 	[
-		Triangle
+		triangle
 		pad_option
 	]
 	[
-		Square
+		square
 		pad_option2
 	]
 	[
-		Triangle
+		triangle
 		pad_backspace
 	]
 	[
@@ -245,7 +245,7 @@ ps3_guitar_flip = [
 		pad_space
 	]
 	[
-		Square
+		square
 		pad_btn_top
 	]
 	[
@@ -253,11 +253,11 @@ ps3_guitar_flip = [
 		pad_btn_right
 	]
 	[
-		X
+		x
 		pad_btn_bottom
 	]
 	[
-		Triangle
+		triangle
 		pad_btn_left
 	]
 	[
@@ -291,24 +291,24 @@ xenon_pad = [
 		pad_select
 	]
 	[
-		X
+		x
 		pad_square
 	]
 	[
 		left_trigger1
-		pad_L1
+		pad_l1
 	]
 	[
 		right_trigger1
-		pad_R1
+		pad_r1
 	]
 	[
 		left_trigger2
-		pad_L2
+		pad_l2
 	]
 	[
 		right_trigger2
-		pad_R2
+		pad_r2
 	]
 	[
 		b
@@ -320,14 +320,14 @@ xenon_pad = [
 	]
 	[
 		left_stick_button
-		pad_L3
+		pad_l3
 	]
 	[
 		right_stick_button
-		pad_R3
+		pad_r3
 	]
 	[
-		X
+		x
 		pad_option
 	]
 	[
@@ -335,7 +335,7 @@ xenon_pad = [
 		pad_option2
 	]
 	[
-		X
+		x
 		pad_backspace
 	]
 	[
@@ -363,7 +363,7 @@ xenon_pad = [
 		pad_btn_bottom
 	]
 	[
-		X
+		x
 		pad_btn_left
 	]
 	[
@@ -397,12 +397,12 @@ xenon_guitar = [
 		pad_select
 	]
 	[
-		X
+		x
 		pad_square
 	]
 	[
 		left_trigger1
-		pad_L1
+		pad_l1
 	]
 	[
 		b
@@ -413,7 +413,7 @@ xenon_guitar = [
 		pad_circle
 	]
 	[
-		X
+		x
 		pad_option
 	]
 	[
@@ -421,7 +421,7 @@ xenon_guitar = [
 		pad_option2
 	]
 	[
-		X
+		x
 		pad_backspace
 	]
 	[
@@ -441,7 +441,7 @@ xenon_guitar = [
 		pad_btn_bottom
 	]
 	[
-		X
+		x
 		pad_btn_left
 	]
 	[
@@ -475,12 +475,12 @@ xenon_guitar_flip = [
 		pad_select
 	]
 	[
-		X
+		x
 		pad_square
 	]
 	[
 		left_trigger1
-		pad_L1
+		pad_l1
 	]
 	[
 		b
@@ -491,7 +491,7 @@ xenon_guitar_flip = [
 		pad_circle
 	]
 	[
-		X
+		x
 		pad_option
 	]
 	[
@@ -499,7 +499,7 @@ xenon_guitar_flip = [
 		pad_option2
 	]
 	[
-		X
+		x
 		pad_backspace
 	]
 	[
@@ -519,7 +519,7 @@ xenon_guitar_flip = [
 		pad_btn_bottom
 	]
 	[
-		X
+		x
 		pad_btn_left
 	]
 	[
@@ -542,29 +542,29 @@ xenon_guitar_flip = [
 
 script setup_main_button_event_mappings 
 	SetButtonEventMappings {
-		PS3 = ($ps3_pad)
-		Xenon = ($xenon_pad)
+		ps3 = ($ps3_pad)
+		xenon = ($xenon_pad)
 	}
 endscript
 
 script setup_controller_button_event_mappings \{guitar = 0
-		Flip = 0}
+		flip = 0}
 	if NOT (<guitar>)
-		<Xenon> = $xenon_pad
-		<PS3> = $ps3_pad
-	elseif NOT (<Flip>)
-		<Xenon> = $xenon_guitar
-		<PS3> = $ps3_guitar
+		<xenon> = $xenon_pad
+		<ps3> = $ps3_pad
+	elseif NOT (<flip>)
+		<xenon> = $xenon_guitar
+		<ps3> = $ps3_guitar
 	else
-		<Xenon> = $xenon_guitar_flip
-		<PS3> = $ps3_guitar_flip
+		<xenon> = $xenon_guitar_flip
+		<ps3> = $ps3_guitar_flip
 	endif
 	AddArrayElement array = [] element = (<controller>)
 	SetButtonEventMappings {
-		PS3 = (<PS3>)
-		Xenon = (<Xenon>)
+		ps3 = (<ps3>)
+		xenon = (<xenon>)
 		devices = (<array>)
-		CLEAR
+		Clear
 	}
 endscript
 
@@ -578,8 +578,8 @@ script get_handlers_for_all_buttons \{event_script = nullscript
 		{pad_btn_left <event_script> params = <event_params>}
 		{pad_start <event_script> params = <event_params>}
 		{pad_select <event_script> params = <event_params>}
-		{pad_L1 <event_script> params = <event_params>}
-		{pad_R1 <event_script> params = <event_params>}
+		{pad_l1 <event_script> params = <event_params>}
+		{pad_r1 <event_script> params = <event_params>}
 	]
 	return event_handlers = <event_handlers>
 endscript

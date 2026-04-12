@@ -14,7 +14,7 @@ faceoff_hud_2d_elements = {
 	use_note_streak_morph_pos = 1
 	offscreen_gamertag_pos = (0.0, -400.0)
 	final_gamertag_pos = (0.0, 0.0)
-	Scale = 0.5
+	scale = 0.5
 	small_bulb_scale = 0.6
 	big_bulb_scale = 0.9
 	z = 0
@@ -32,7 +32,7 @@ faceoff_hud_2d_elements = {
 			texture = HUD_2p_c_rock_frame
 			pos_off = (0.0, 0.0)
 			zoff = 20
-			Scale = 2.0
+			scale = 2.0
 			create_once
 		}
 		{
@@ -42,7 +42,7 @@ faceoff_hud_2d_elements = {
 			pos_off = (0.0, 0.0)
 			zoff = 16
 			alpha = 0
-			Scale = 2.0
+			scale = 2.0
 			create_once
 		}
 		{
@@ -52,7 +52,7 @@ faceoff_hud_2d_elements = {
 			pos_off = (0.0, 0.0)
 			zoff = 16
 			alpha = 0
-			Scale = 2.0
+			scale = 2.0
 			create_once
 		}
 		{
@@ -61,7 +61,7 @@ faceoff_hud_2d_elements = {
 			texture = HUD_2p_c_rock_BG_off
 			pos_off = (0.0, 0.0)
 			zoff = 15
-			Scale = 2.0
+			scale = 2.0
 			create_once
 		}
 		{
@@ -75,7 +75,7 @@ faceoff_hud_2d_elements = {
 				0.75
 			]
 			dims = (16.0, 100.0)
-			Scale = 2.0
+			scale = 2.0
 			create_once
 		}
 		{
@@ -85,7 +85,7 @@ faceoff_hud_2d_elements = {
 			pos_off = (128.0, 128.0)
 			zoff = 21
 			alpha = 0
-			Scale = 2.0
+			scale = 2.0
 			create_once
 		}
 		{
@@ -95,7 +95,7 @@ faceoff_hud_2d_elements = {
 			pos_off = (128.0, 128.0)
 			zoff = 21
 			alpha = 0
-			Scale = 2.0
+			scale = 2.0
 			create_once
 		}
 		{
@@ -104,7 +104,7 @@ faceoff_hud_2d_elements = {
 			texture = HUD_2p_c_rock_crystal_off
 			pos_off = (128.0, 128.0)
 			zoff = 20
-			Scale = 2.0
+			scale = 2.0
 			create_once
 		}
 		{

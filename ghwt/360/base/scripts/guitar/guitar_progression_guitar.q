@@ -1,4 +1,4 @@
-gh4_career_guitar_songs = {
+GH4_Career_Guitar_Songs = {
 	prefix = 'career_guitar'
 	part = guitar
 	num_tiers = 20
@@ -11,11 +11,11 @@ gh4_career_guitar_songs = {
 			mountainsong
 		]
 		encorep1 = mountainsong
-		level = load_z_frathouse
-		poster_texture = frat_poster
+		level = load_z_Frathouse
+		poster_texture = Frat_Poster
 		defaultunlocked = 4
 		setlist_icon = setlist_icon_BAR
-		genre = rock
+		genre = Rock
 	}
 	tier2 = {
 		songs = [
@@ -25,47 +25,47 @@ gh4_career_guitar_songs = {
 		]
 		encorep1 = theoneilove
 		level = load_z_goth
-		poster_texture = goth_poster
+		poster_texture = Goth_Poster
 		setlist_icon = setlist_icon_BAR
-		genre = goth
+		genre = Goth
 	}
 	tier3 = {
 		songs = [
 			somemightsay
-			today
+			Today
 			whativedone
 		]
 		encorep1 = whativedone
 		level = load_z_cathedral
-		poster_texture = bone_poster
+		poster_texture = bone_Poster
 		setlist_icon = setlist_icon_BAR
-		genre = goth
+		genre = Goth
 	}
 	tier4 = {
 		songs = [
-			bandontherun
+			BandOnTheRun
 			youregonnasayyeah
 			uparoundthebend
 			nosleeptillbrooklyn
 		]
 		encorep1 = nosleeptillbrooklyn
 		level = load_z_harbor
-		poster_texture = hongkong_poster
+		poster_texture = Hongkong_Poster
 		setlist_icon = setlist_icon_BAR
-		genre = `classic	rock`
+		genre = `Classic Rock`
 	}
 	tier5 = {
 		songs = [
 			thejoker
-			freakonaleash
+			FreakOnALeash
 			miserybusiness
 			hotelcalifornia
 		]
 		encorep1 = hotelcalifornia
 		level = load_z_recordstore
-		poster_texture = amobea_poster
+		poster_texture = Amobea_Poster
 		setlist_icon = setlist_icon_BAR
-		genre = punk
+		genre = Punk
 	}
 	tier6 = {
 		songs = [
@@ -79,29 +79,29 @@ gh4_career_guitar_songs = {
 		boss = bosszakk
 		encorep1 = stillborn
 		level = load_z_bayou
-		poster_texture = bayou_poster
+		poster_texture = Bayou_Poster
 		setlist_icon = setlist_icon_BAR
-		genre = `classic	rock`
+		genre = `Classic Rock`
 	}
 	tier7 = {
 		songs = [
 			themiddle
 			heymanniceshot
-			feelthepain
-			dammit
+			FeelthePain
+			Dammit
 			everlong
 		]
 		encorep1 = everlong
 		level = load_z_military
-		poster_texture = aircraft_poster
+		poster_texture = aircraft_Poster
 		setlist_icon = setlist_icon_BAR
-		genre = punk
+		genre = Punk
 	}
 	tier8 = {
 		songs = [
 			heartbreaker
 			americanwoman
-			ramblinman
+			RamblinMan
 			goyourownway
 			bossted
 			stranglehold
@@ -109,9 +109,9 @@ gh4_career_guitar_songs = {
 		boss = bossted
 		encorep1 = stranglehold
 		level = load_z_fairgrounds
-		poster_texture = statefair_poster
+		poster_texture = Statefair_Poster
 		setlist_icon = setlist_icon_BAR
-		genre = `classic	rock`
+		genre = `Classic Rock`
 	}
 	tier9 = {
 		songs = [
@@ -123,23 +123,23 @@ gh4_career_guitar_songs = {
 		]
 		encorep1 = lovemetwotimes
 		level = load_z_hob
-		poster_texture = hob_poster
+		poster_texture = hob_Poster
 		setlist_icon = setlist_icon_BAR
-		genre = rock
+		genre = Rock
 	}
 	tier10 = {
 		songs = [
-			thekill
+			TheKill
 			shiver
 			rebelyell
-			demolitionman
+			DemolitionMan
 			beatit
 		]
 		encorep1 = beatit
 		level = load_z_castle
-		poster_texture = castle_poster
+		poster_texture = Castle_Poster
 		setlist_icon = setlist_icon_BAR
-		genre = rock
+		genre = Rock
 	}
 	tier11 = {
 		songs = [
@@ -151,10 +151,10 @@ gh4_career_guitar_songs = {
 			purplehaze
 		]
 		encorep1 = purplehaze
-		level = load_z_ballpark
-		poster_texture = sf_ballpark_poster
+		level = load_z_Ballpark
+		poster_texture = sf_ballpark_Poster
 		setlist_icon = setlist_icon_BAR
-		genre = `classic	rock`
+		genre = `Classic Rock`
 	}
 	tier12 = {
 		songs = [
@@ -167,39 +167,39 @@ gh4_career_guitar_songs = {
 		]
 		encorep1 = crazytrain
 		level = load_z_metalfest
-		poster_texture = ozzfest_poster
+		poster_texture = Ozzfest_Poster
 		setlist_icon = setlist_icon_BAR
-		genre = `heavy	metal`
+		genre = `Heavy Metal`
 	}
 	tier13 = {
 		songs = [
 			reedthroughlabor
 			labamba
-			screamaimfire
-			overkill
+			ScreamAimFire
+			Overkill
 			trappedunderice
 			byob
 			hotforteacher
 		]
 		encorep1 = hotforteacher
 		level = load_z_newyork
-		poster_texture = times_poster
+		poster_texture = Times_Poster
 		setlist_icon = setlist_icon_BAR
-		genre = rock
+		genre = Rock
 		play_finalbandintro_transition_type = finalbandintro_transition_played_guitar
 		end_with_credits
 	}
 	tier14 = {
 		songs = [
-			parabola
-			schism
-			vicarious
+			Parabola
+			Schism
+			Vicarious
 		]
 		paytoplay = 8000
 		level = load_z_tool
-		poster_texture = tool_poster
+		poster_texture = Tool_Poster
 		setlist_icon = setlist_icon_BAR
-		genre = punk
+		genre = Punk
 	}
 	tier15 = {
 		songs = [
@@ -210,24 +210,24 @@ gh4_career_guitar_songs = {
 			onearmedscissor
 		]
 		paytoplay = 2000
-		level = load_z_hotel
-		poster_texture = tiki_poster
+		level = load_z_Hotel
+		poster_texture = Tiki_Poster
 		setlist_icon = setlist_icon_BAR
-		genre = punk
+		genre = Punk
 	}
 	tier16 = {
 		songs = [
 			lazyeye
 			toomuchtooyoung
-			floaton
+			FloatOn
 			nuvole
 			prettyvacant
 		]
 		paytoplay = 2000
-		level = load_z_studio2
-		poster_texture = studio_01_poster
+		level = load_z_Studio2
+		poster_texture = Studio_01_Poster
 		setlist_icon = setlist_icon_BAR
-		genre = pop
+		genre = Pop
 	}
 	tier17 = {
 		songs = [
@@ -235,34 +235,34 @@ gh4_career_guitar_songs = {
 			hailtothefreaks
 			vinternoll2
 			hollywoodnights
-			souldoubt
+			SoulDoubt
 		]
 		paytoplay = 2000
-		level = load_z_scifi
-		poster_texture = voltage_poster
+		level = load_z_Scifi
+		poster_texture = Voltage_Poster
 		setlist_icon = setlist_icon_BAR
-		genre = goth
+		genre = Goth
 	}
 	tier18 = {
 		songs = [
 			lovespreads
-			nevertoolate
+			NeverTooLate
 			weaponofchoice
-			pullmeunder
-			satchboogie
+			PullMeUnder
+			SatchBoogie
 		]
 		paytoplay = 3000
 		level = load_z_credits
-		poster_texture = wow_poster
+		poster_texture = WOW_Poster
 		setlist_icon = setlist_icon_BAR
-		genre = `black	metal`
+		genre = `Black Metal`
 	}
 	tier19 = {
 		songs = [
-			placeholdersong
+			PlaceHolderSong
 		]
-		poster_texture = create_a_gig_poster
-		genre = `heavy	metal`
+		poster_texture = Create_a_Gig_Poster
+		genre = `Heavy Metal`
 		createagig
 	}
 	tier20 = {
@@ -273,460 +273,460 @@ gh4_career_guitar_songs = {
 		]
 		encorep1 = twelveseconddebug
 		level = load_z_newyork
-		poster_texture = studio_01_poster
-		genre = punk
+		poster_texture = Studio_01_Poster
+		genre = Punk
 		debug_gig
 	}
 }
-gh4_career_guitar_progression_unlock_order = {
-	Name = 'Career_Guitar'
+GH4_Career_Guitar_Progression_Unlock_Order = {
+	name = 'Career_Guitar'
 	freegigs = {
 		gig1 = {
-			Name = 'gig1'
+			name = 'gig1'
 			num = 1
 		}
 		gig2 = {
-			Name = 'gig2'
+			name = 'gig2'
 			num = 2
 		}
 		gig3 = {
-			Name = 'gig3'
+			name = 'gig3'
 			num = 3
 		}
 		gig4 = {
-			Name = 'gig20'
+			name = 'gig20'
 			num = 20
-			debug_dont_unlock
-			dont_add_gig_poster
+			DEBUG_DONT_UNLOCK
+			DONT_ADD_GIG_POSTER
 		}
 	}
 	freegigs_last = {
 		gig1 = {
-			Name = 'gig19'
+			name = 'gig19'
 			num = 19
 			forced_pos = 17
 		}
 	}
 	unlockset1 = {
 		gig1 = {
-			Name = 'gig4'
+			name = 'gig4'
 			num = 4
 		}
 	}
 	unlockset2 = {
 		gig1 = {
-			Name = 'gig5'
+			name = 'gig5'
 			num = 5
 		}
 		pay_to_play1 = {
-			Name = 'gig14'
+			name = 'gig14'
 			num = 14
 		}
 	}
 	unlockset3 = {
 		gig1 = {
-			Name = 'gig6'
+			name = 'gig6'
 			num = 6
 		}
 	}
 	unlockset4 = {
 		gig1 = {
-			Name = 'gig7'
+			name = 'gig7'
 			num = 7
 		}
 		gig2 = {
-			Name = 'gig8'
+			name = 'gig8'
 			num = 8
 		}
 	}
 	unlockset5 = {
 		pay_to_play1 = {
-			Name = 'gig15'
+			name = 'gig15'
 			num = 15
 		}
 		gig1 = {
-			Name = 'gig9'
+			name = 'gig9'
 			num = 9
 		}
 	}
 	unlockset6 = {
 		pay_to_play1 = {
-			Name = 'gig16'
+			name = 'gig16'
 			num = 16
 		}
 		gig1 = {
-			Name = 'gig10'
+			name = 'gig10'
 			num = 10
 		}
 	}
 	unlockset7 = {
 		gig1 = {
-			Name = 'gig11'
+			name = 'gig11'
 			num = 11
 		}
 		pay_to_play1 = {
-			Name = 'gig17'
+			name = 'gig17'
 			num = 17
 		}
 	}
 	unlockset8 = {
 		gig1 = {
-			Name = 'gig12'
+			name = 'gig12'
 			num = 12
 		}
 	}
 	unlockset9 = {
-		None = 'none'
+		none = 'none'
 	}
 	unlockset10 = {
 		gig1 = {
-			Name = 'gig13'
+			name = 'gig13'
 			num = 13
 			forced_pos = 18
 		}
 	}
 	unlockset11 = {
-		None
+		none
 		pay_to_play1 = {
-			Name = 'gig18'
+			name = 'gig18'
 			num = 18
 			forced_pos = 19
 		}
 	}
 }
-gh4_career_guitar_gig_complete_params = {
-	career_guitar
-	unlock_order = gh4_career_guitar_progression_unlock_order
+GH4_Career_Guitar_Gig_Complete_Params = {
+	Career_Guitar
+	unlock_order = GH4_Career_Guitar_Progression_Unlock_Order
 	part = 'Guitar'
 }
-gh4_career_guitar_progression = [
+GH4_Career_Guitar_Progression = [
 	{
-		Name = set_initial_states
-		Type = Scr
-		atom_script = progression_career_guitar_init
+		name = set_initial_states
+		type = Scr
+		atom_script = Progression_Career_Guitar_Init
 		atom_params = {
 		}
 	}
 	{
-		Name = guitar_career_gig1_complete
-		Type = Scr
-		atom_script = progression_career_gig_complete
-		atom_params = $gh4_career_guitar_gig_complete_params
+		name = guitar_career_gig1_complete
+		type = Scr
+		atom_script = Progression_Career_Gig_Complete
+		atom_params = $GH4_Career_Guitar_Gig_Complete_Params
 		depends_on = [
 			{
-				Type = Scr
-				Scr = progression_career_check_gig_complete
+				type = Scr
+				Scr = Progression_Career_Check_Gig_Complete
 				params = {
-					career_guitar
+					Career_Guitar
 					gig = 1
 				}
 			}
 		]
 	}
 	{
-		Name = guitar_career_gig2_complete
-		Type = Scr
-		atom_script = progression_career_gig_complete
-		atom_params = $gh4_career_guitar_gig_complete_params
+		name = guitar_career_gig2_complete
+		type = Scr
+		atom_script = Progression_Career_Gig_Complete
+		atom_params = $GH4_Career_Guitar_Gig_Complete_Params
 		depends_on = [
 			{
-				Type = Scr
-				Scr = progression_career_check_gig_complete
+				type = Scr
+				Scr = Progression_Career_Check_Gig_Complete
 				params = {
-					career_guitar
+					Career_Guitar
 					gig = 2
 				}
 			}
 		]
 	}
 	{
-		Name = guitar_career_gig3_complete
-		Type = Scr
-		atom_script = progression_career_gig_complete
-		atom_params = $gh4_career_guitar_gig_complete_params
+		name = guitar_career_gig3_complete
+		type = Scr
+		atom_script = Progression_Career_Gig_Complete
+		atom_params = $GH4_Career_Guitar_Gig_Complete_Params
 		depends_on = [
 			{
-				Type = Scr
-				Scr = progression_career_check_gig_complete
+				type = Scr
+				Scr = Progression_Career_Check_Gig_Complete
 				params = {
-					career_guitar
+					Career_Guitar
 					gig = 3
 				}
 			}
 		]
 	}
 	{
-		Name = guitar_career_gig4_complete
-		Type = Scr
-		atom_script = progression_career_gig_complete
-		atom_params = $gh4_career_guitar_gig_complete_params
+		name = guitar_career_gig4_complete
+		type = Scr
+		atom_script = Progression_Career_Gig_Complete
+		atom_params = $GH4_Career_Guitar_Gig_Complete_Params
 		depends_on = [
 			{
-				Type = Scr
-				Scr = progression_career_check_gig_complete
+				type = Scr
+				Scr = Progression_Career_Check_Gig_Complete
 				params = {
-					career_guitar
+					Career_Guitar
 					gig = 4
 				}
 			}
 		]
 	}
 	{
-		Name = guitar_career_gig5_complete
-		Type = Scr
-		atom_script = progression_career_gig_complete
-		atom_params = $gh4_career_guitar_gig_complete_params
+		name = guitar_career_gig5_complete
+		type = Scr
+		atom_script = Progression_Career_Gig_Complete
+		atom_params = $GH4_Career_Guitar_Gig_Complete_Params
 		depends_on = [
 			{
-				Type = Scr
-				Scr = progression_career_check_gig_complete
+				type = Scr
+				Scr = Progression_Career_Check_Gig_Complete
 				params = {
-					career_guitar
+					Career_Guitar
 					gig = 5
 				}
 			}
 		]
 	}
 	{
-		Name = guitar_career_gig6_complete
-		Type = Scr
-		atom_script = progression_career_gig_complete
-		atom_params = $gh4_career_guitar_gig_complete_params
+		name = guitar_career_gig6_complete
+		type = Scr
+		atom_script = Progression_Career_Gig_Complete
+		atom_params = $GH4_Career_Guitar_Gig_Complete_Params
 		depends_on = [
 			{
-				Type = Scr
-				Scr = progression_career_check_gig_complete
+				type = Scr
+				Scr = Progression_Career_Check_Gig_Complete
 				params = {
-					career_guitar
+					Career_Guitar
 					gig = 6
 				}
 			}
 		]
 	}
 	{
-		Name = guitar_career_gig7_complete
-		Type = Scr
-		atom_script = progression_career_gig_complete
-		atom_params = $gh4_career_guitar_gig_complete_params
+		name = guitar_career_gig7_complete
+		type = Scr
+		atom_script = Progression_Career_Gig_Complete
+		atom_params = $GH4_Career_Guitar_Gig_Complete_Params
 		depends_on = [
 			{
-				Type = Scr
-				Scr = progression_career_check_gig_complete
+				type = Scr
+				Scr = Progression_Career_Check_Gig_Complete
 				params = {
-					career_guitar
+					Career_Guitar
 					gig = 7
 				}
 			}
 		]
 	}
 	{
-		Name = guitar_career_gig8_complete
-		Type = Scr
-		atom_script = progression_career_gig_complete
-		atom_params = $gh4_career_guitar_gig_complete_params
+		name = guitar_career_gig8_complete
+		type = Scr
+		atom_script = Progression_Career_Gig_Complete
+		atom_params = $GH4_Career_Guitar_Gig_Complete_Params
 		depends_on = [
 			{
-				Type = Scr
-				Scr = progression_career_check_gig_complete
+				type = Scr
+				Scr = Progression_Career_Check_Gig_Complete
 				params = {
-					career_guitar
+					Career_Guitar
 					gig = 8
 				}
 			}
 		]
 	}
 	{
-		Name = guitar_career_gig9_complete
-		Type = Scr
-		atom_script = progression_career_gig_complete
-		atom_params = $gh4_career_guitar_gig_complete_params
+		name = guitar_career_gig9_complete
+		type = Scr
+		atom_script = Progression_Career_Gig_Complete
+		atom_params = $GH4_Career_Guitar_Gig_Complete_Params
 		depends_on = [
 			{
-				Type = Scr
-				Scr = progression_career_check_gig_complete
+				type = Scr
+				Scr = Progression_Career_Check_Gig_Complete
 				params = {
-					career_guitar
+					Career_Guitar
 					gig = 9
 				}
 			}
 		]
 	}
 	{
-		Name = guitar_career_gig10_complete
-		Type = Scr
-		atom_script = progression_career_gig_complete
-		atom_params = $gh4_career_guitar_gig_complete_params
+		name = guitar_career_gig10_complete
+		type = Scr
+		atom_script = Progression_Career_Gig_Complete
+		atom_params = $GH4_Career_Guitar_Gig_Complete_Params
 		depends_on = [
 			{
-				Type = Scr
-				Scr = progression_career_check_gig_complete
+				type = Scr
+				Scr = Progression_Career_Check_Gig_Complete
 				params = {
-					career_guitar
+					Career_Guitar
 					gig = 10
 				}
 			}
 		]
 	}
 	{
-		Name = guitar_career_gig11_complete
-		Type = Scr
-		atom_script = progression_career_gig_complete
-		atom_params = $gh4_career_guitar_gig_complete_params
+		name = guitar_career_gig11_complete
+		type = Scr
+		atom_script = Progression_Career_Gig_Complete
+		atom_params = $GH4_Career_Guitar_Gig_Complete_Params
 		depends_on = [
 			{
-				Type = Scr
-				Scr = progression_career_check_gig_complete
+				type = Scr
+				Scr = Progression_Career_Check_Gig_Complete
 				params = {
-					career_guitar
+					Career_Guitar
 					gig = 11
 				}
 			}
 		]
 	}
 	{
-		Name = guitar_career_gig12_complete
-		Type = Scr
-		atom_script = progression_career_gig_complete
-		atom_params = $gh4_career_guitar_gig_complete_params
+		name = guitar_career_gig12_complete
+		type = Scr
+		atom_script = Progression_Career_Gig_Complete
+		atom_params = $GH4_Career_Guitar_Gig_Complete_Params
 		depends_on = [
 			{
-				Type = Scr
-				Scr = progression_career_check_gig_complete
+				type = Scr
+				Scr = Progression_Career_Check_Gig_Complete
 				params = {
-					career_guitar
+					Career_Guitar
 					gig = 12
 				}
 			}
 		]
 	}
 	{
-		Name = guitar_career_gig13_complete
-		Type = Scr
-		atom_script = progression_career_gig_complete
-		atom_params = $gh4_career_guitar_gig_complete_params
+		name = guitar_career_gig13_complete
+		type = Scr
+		atom_script = Progression_Career_Gig_Complete
+		atom_params = $GH4_Career_Guitar_Gig_Complete_Params
 		depends_on = [
 			{
-				Type = Scr
-				Scr = progression_career_check_gig_complete
+				type = Scr
+				Scr = Progression_Career_Check_Gig_Complete
 				params = {
-					career_guitar
+					Career_Guitar
 					gig = 13
 				}
 			}
 		]
 	}
 	{
-		Name = guitar_career_bonus_gig1_complete
-		Type = Scr
-		atom_script = progression_career_gig_complete
-		atom_params = $gh4_career_guitar_gig_complete_params
+		name = guitar_career_bonus_gig1_complete
+		type = Scr
+		atom_script = Progression_Career_Gig_Complete
+		atom_params = $GH4_Career_Guitar_Gig_Complete_Params
 		depends_on = [
 			{
-				Type = Scr
-				Scr = progression_career_check_gig_complete
+				type = Scr
+				Scr = Progression_Career_Check_Gig_Complete
 				params = {
-					career_guitar
+					Career_Guitar
 					gig = 14
 				}
 			}
 		]
 	}
 	{
-		Name = guitar_career_bonus_gig2_complete
-		Type = Scr
-		atom_script = progression_career_gig_complete
-		atom_params = $gh4_career_guitar_gig_complete_params
+		name = guitar_career_bonus_gig2_complete
+		type = Scr
+		atom_script = Progression_Career_Gig_Complete
+		atom_params = $GH4_Career_Guitar_Gig_Complete_Params
 		depends_on = [
 			{
-				Type = Scr
-				Scr = progression_career_check_gig_complete
+				type = Scr
+				Scr = Progression_Career_Check_Gig_Complete
 				params = {
-					career_guitar
+					Career_Guitar
 					gig = 15
 				}
 			}
 		]
 	}
 	{
-		Name = guitar_career_bonus_gig3_complete
-		Type = Scr
-		atom_script = progression_career_gig_complete
-		atom_params = $gh4_career_guitar_gig_complete_params
+		name = guitar_career_bonus_gig3_complete
+		type = Scr
+		atom_script = Progression_Career_Gig_Complete
+		atom_params = $GH4_Career_Guitar_Gig_Complete_Params
 		depends_on = [
 			{
-				Type = Scr
-				Scr = progression_career_check_gig_complete
+				type = Scr
+				Scr = Progression_Career_Check_Gig_Complete
 				params = {
-					career_guitar
+					Career_Guitar
 					gig = 16
 				}
 			}
 		]
 	}
 	{
-		Name = guitar_career_bonus_gig4_complete
-		Type = Scr
-		atom_script = progression_career_gig_complete
-		atom_params = $gh4_career_guitar_gig_complete_params
+		name = guitar_career_bonus_gig4_complete
+		type = Scr
+		atom_script = Progression_Career_Gig_Complete
+		atom_params = $GH4_Career_Guitar_Gig_Complete_Params
 		depends_on = [
 			{
-				Type = Scr
-				Scr = progression_career_check_gig_complete
+				type = Scr
+				Scr = Progression_Career_Check_Gig_Complete
 				params = {
-					career_guitar
+					Career_Guitar
 					gig = 17
 				}
 			}
 		]
 	}
 	{
-		Name = guitar_career_bonus_gig5_complete
-		Type = Scr
-		atom_script = progression_career_gig_complete
-		atom_params = $gh4_career_guitar_gig_complete_params
+		name = guitar_career_bonus_gig5_complete
+		type = Scr
+		atom_script = Progression_Career_Gig_Complete
+		atom_params = $GH4_Career_Guitar_Gig_Complete_Params
 		depends_on = [
 			{
-				Type = Scr
-				Scr = progression_career_check_gig_complete
+				type = Scr
+				Scr = Progression_Career_Check_Gig_Complete
 				params = {
-					career_guitar
+					Career_Guitar
 					gig = 18
 				}
 			}
 		]
 	}
 	{
-		Name = guitar_career_bonus_gig5_unlock
-		Type = Scr
-		atom_script = progression_career_gig_unlock
+		name = guitar_career_bonus_gig5_unlock
+		type = Scr
+		atom_script = Progression_Career_Gig_Unlock
 		atom_params = {
-			$gh4_career_guitar_gig_complete_params
+			$GH4_Career_Guitar_Gig_Complete_Params
 			gig_name = 'gig18'
 		}
 		depends_on = [
 			{
-				Type = atom
+				type = atom
 				atom = guitar_career_gig13_complete
 			}
 		]
 	}
 	{
-		Name = end_of_first_update
-		Type = Scr
-		atom_script = progression_career_guitar_endoffirstupdate
+		name = end_of_first_update
+		type = Scr
+		atom_script = Progression_Career_Guitar_EndOfFirstUpdate
 		atom_params = {
 		}
 	}
 ]
 
-script progression_career_guitar_init 
-	printf \{qs(0x8cea406d)}
+script Progression_Career_Guitar_Init 
+	printf \{qs("\LProgression_Career_Guitar_Init")}
 endscript
 
-script progression_career_guitar_endoffirstupdate 
-	printf \{qs(0x957d3532)}
+script Progression_Career_Guitar_EndOfFirstUpdate 
+	printf \{qs("\LProgression_Career_Guitar_EndOfFirstUpdate")}
 endscript
 
 script update_progression_guitar 
-	UpdateAtoms \{Name = Progression}
+	UpdateAtoms \{name = Progression}
 endscript

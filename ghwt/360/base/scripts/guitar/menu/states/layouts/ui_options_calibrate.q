@@ -1,11 +1,11 @@
 
 script ui_create_options_calibrate 
 	ui_options_get_controller_type
-	make_menu_frontend \{screen = GUITARIST
-		title = qs(0x1133c9c4)}
-	add_menu_frontend_item \{text = qs(0x550b8c8e)
-		choose_state = uistate_options_calibrate_lag}
-	if (<Type> = guitar)
+	make_menu_frontend \{screen = Guitarist
+		title = qs("CALIBRATE CONTROLLER")}
+	add_menu_frontend_item \{text = qs("CALIBRATE LAG")
+		choose_state = UIstate_options_calibrate_lag}
+	if (<type> = guitar)
 	else
 	endif
 	menu_finish

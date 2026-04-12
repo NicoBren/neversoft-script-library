@@ -10,9 +10,9 @@ debug_hud_layouts_list = [
 		]
 		aliases = [
 			alias_g1
-			NULL
-			NULL
-			NULL
+			null
+			null
+			null
 		]
 	}
 	{
@@ -20,31 +20,31 @@ debug_hud_layouts_list = [
 		gamemode = p2_quickplay
 		parts = [
 			guitar
-			vocals
+			Vocals
 			guitar
 			guitar
 		]
 		aliases = [
 			alias_g1
 			alias_v1
-			NULL
-			NULL
+			null
+			null
 		]
 	}
 	{
 		layout = 'hud_1v'
 		gamemode = p1_quickplay
 		parts = [
-			vocals
+			Vocals
 			guitar
 			guitar
 			guitar
 		]
 		aliases = [
 			alias_v1
-			NULL
-			NULL
-			NULL
+			null
+			null
+			null
 		]
 	}
 	{
@@ -52,15 +52,15 @@ debug_hud_layouts_list = [
 		gamemode = p3_quickplay
 		parts = [
 			guitar
-			bass
-			vocals
+			Bass
+			Vocals
 			guitar
 		]
 		aliases = [
 			alias_g1
 			alias_g2
 			alias_v1
-			NULL
+			null
 		]
 	}
 	{
@@ -69,8 +69,8 @@ debug_hud_layouts_list = [
 		parts = [
 			guitar
 			drum
-			bass
-			vocals
+			Bass
+			Vocals
 		]
 		aliases = [
 			alias_g1
@@ -91,24 +91,24 @@ debug_hud_layouts_list = [
 		aliases = [
 			alias_g1
 			alias_g2
-			NULL
-			NULL
+			null
+			null
 		]
 	}
 	{
 		layout = 'hud_2v'
 		gamemode = p2_faceoff
 		parts = [
-			vocals
-			vocals
+			Vocals
+			Vocals
 			guitar
 			guitar
 		]
 		aliases = [
 			alias_v1
 			alias_v2
-			NULL
-			NULL
+			null
+			null
 		]
 	}
 ]

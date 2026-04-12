@@ -1,26 +1,26 @@
-gp_fx_streamrockets_04 = {
-	Pos = (-7.0681148, -0.60480905, -1.39808)
-	Angles = (0.0, 0.0, 0.0)
+GP_FX_StreamRockets_04 = {
+	pos = (-7.0681148, -0.60480905, -1.39808)
+	angles = (0.0, 0.0, 0.0)
 	Class = ParticleObject
 	ParticleType = FlexParticle
-	Type = textureribbontrail
-	Active
+	type = textureribbontrail
+	active
 	CreatedAtStart
 	EmitRangeDims = (0.1, 0.1, 0.1)
-	Emit_Target = (0.0, 1.0, 0.0)
+	emit_Target = (0.0, 1.0, 0.0)
 	EnableRotate
 	EmitAngle = (0.0, 0.0, 4.0)
-	Force = (0.0, -30.0, 0.0)
+	force = (0.0, -30.0, 0.0)
 	WindCoeff = 0.0
 	LocalWindCoeff = 0.0
 	EmitterVelocityWeight = 0.0
 	AngleSpread = 1.0
 	LifeRange = (1.2, 1.2)
-	Emit_Rate = 5.0
-	Max = 0
+	emit_rate = 5.0
+	max = 0
 	TimeSeed = 0.0
-	LifeTime = 3.0
-	EmitNum = 0
+	lifeTime = 3.0
+	emitNum = 0
 	FollowEmitter = 0.0
 	EmitFunction = constant
 	EmitPeriod = 1.0
@@ -34,15 +34,15 @@ gp_fx_streamrockets_04 = {
 	EmitDelayStart = 0.0
 	PathFollowTime = 0.62
 	History = 20
-	HistoryListCoordinateSpace = World
-	Color = -3303169
+	HistoryListCoordinateSpace = world
+	color = -3303169
 	LOD_Default
 	QuickMaterial = {
 		DiffuseTextureEnabled
 		DiffuseTexture = JOW_Spark01
 		SpecularPower = 0
-		AlphaCutoff = 1
-		BlendMode = add
+		alphacutoff = 1
+		blendMode = Add
 		QuadAnimationFPS = 0
 	}
 	Knot = [

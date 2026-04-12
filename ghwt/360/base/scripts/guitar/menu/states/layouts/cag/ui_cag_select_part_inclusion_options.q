@@ -1,6 +1,6 @@
 
 script ui_create_cag_select_part_inclusion_options 
-	SpawnScriptNow ui_create_cag_select_part_inclusion_options_worker params = {<...>}
+	spawnscriptnow ui_create_cag_select_part_inclusion_options_worker params = {<...>}
 endscript
 
 script ui_create_cag_select_part_inclusion_options_worker 
@@ -18,31 +18,31 @@ script ui_create_cag_select_part_inclusion_options_worker
 		}}
 	create_ui_history_header text = <text>
 	setup_cas_menu_handlers \{vmenu_id = create_cag_custom_part_pickguard_options_vmenu}
-	get_section_index_from_desc_id part = <part> target_desc_id = finishes
+	get_section_index_from_desc_id part = <part> target_desc_id = Finishes
 	if GotParam \{section_index}
 		add_generic_menu_icon_item {
-			text = qs(0x6e23fd31)
-			choose_state = uistate_cap_artist_layer
-			choose_state_data = {part = <part> text = qs(0x6e23fd31) section_index = <section_index>}
+			text = qs("Finishes")
+			choose_state = UIstate_cap_artist_layer
+			choose_state_data = {part = <part> text = qs("Finishes") section_index = <section_index>}
 		}
 		RemoveParameter \{section_index}
 	endif
-	get_section_index_from_desc_id part = <part> target_desc_id = details
+	get_section_index_from_desc_id part = <part> target_desc_id = Details
 	if GotParam \{section_index}
 		add_generic_menu_icon_item {
-			text = qs(0x7f5a5c11)
-			choose_state = uistate_cap_artist_layer
-			choose_state_data = {part = <part> text = qs(0x7f5a5c11) section_index = <section_index>}
+			text = qs("Details")
+			choose_state = UIstate_cap_artist_layer
+			choose_state_data = {part = <part> text = qs("Details") section_index = <section_index>}
 		}
 		RemoveParameter \{section_index}
 	endif
 	menu_finish \{car_helper_text}
 	if GotParam \{cam_name}
-		Change \{generic_menu_block_input = 1}
+		change \{generic_menu_block_input = 1}
 		task_menu_default_anim_in base_name = <cam_name>
-		Change \{generic_menu_block_input = 0}
+		change \{generic_menu_block_input = 0}
 	endif
-	LaunchEvent Type = focus target = create_cag_custom_part_pickguard_options_vmenu data = {child_index = <selected_index>}
+	LaunchEvent type = focus target = create_cag_custom_part_pickguard_options_vmenu data = {child_index = <selected_index>}
 endscript
 
 script ui_destroy_cag_select_part_inclusion_options 

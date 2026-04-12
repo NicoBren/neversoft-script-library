@@ -4,7 +4,7 @@ script ui_create_play_tutorial
 endscript
 
 script ui_destroy_play_tutorial 
-	StartRendering
+	startrendering
 endscript
 
 script ui_play_tutorial_anim_out 
@@ -13,7 +13,7 @@ endscript
 
 script ui_return_play_tutorial 
 	if ScreenElementExists \{id = menu_tutorial}
-		LaunchEvent \{Type = focus
+		LaunchEvent \{type = focus
 			target = menu_tutorial}
 	else
 		create_training_pause_handler

@@ -1,55 +1,55 @@
 AnimPreviewBaseTree = {
-	Type = DegenerateBlend
+	type = DegenerateBlend
 	id = PreviewTreeAnimNode
 }
 
-script animgrove_control_script 
-	printf \{qs(0x4f175157)}
+script AnimGrove_Control_Script 
+	printf \{qs("\LLaunching AnimGrove Control Script.")}
 	begin
-	animinfo_getallactivevaluesources
-	if ScriptExists \{animgrove_user_generated_control_script}
-		animgrove_user_generated_control_script <...>
+	AnimInfo_GetAllActiveValueSources
+	if ScriptExists \{AnimGrove_user_generated_control_script}
+		AnimGrove_user_generated_control_script <...>
 	endif
 	AnimPreview_SetSourceValues <...>
 	Wait \{1
 		gameframe}
 	repeat
-	printf \{qs(0x2d5a982c)}
+	printf \{qs("\LExiting AnimGrove Control Script.")}
 endscript
 
 script AnimTreePreview_UpdateBlendValues 
-	if CompositeObjectExists \{Name = AnimTreePreviewObject}
+	if CompositeObjectExists \{name = AnimTreePreviewObject}
 		AnimTreePreviewObject :AnimPreview_SetSourceValues <...>
 	endif
 endscript
 
 script TestAnimScript 
-	Anim_Command target = PreviewTreeAnimNode Command = DegenerateBlend_AddBranch params = {Tree = <Tree> params = <Tree_Params>}
+	Anim_Command target = PreviewTreeAnimNode command = DegenerateBlend_AddBranch params = {Tree = <Tree> params = <Tree_Params>}
 	Obj_ForceUpdate
-	animgrove_control_script
+	AnimGrove_Control_Script
 endscript
 
 script AnimTreePreview_NxCommon \{targetObject = skater
-		modelbuilderheap = debugheap}
-	if CompositeObjectExists \{Name = AnimTreePreviewObject}
+		modelBuilderHeap = DebugHeap}
+	if CompositeObjectExists \{name = AnimTreePreviewObject}
 		AnimTreePreviewRestore
 	endif
 	dump <Tree>
 	LoadPak \{'pak/animgrove_preview.pak'
-		Heap = heap_debug}
-	if NOT GotParam \{Skeleton}
+		heap = heap_debug}
+	if NOT GotParam \{skeleton}
 		<targetObject> :Skeleton_GetSkeletonName
-		Skeleton = <skeletonname>
+		skeleton = <SkeletonName>
 	endif
 	if NOT GotParam \{ragdoll}
-		if <targetObject> :ContainsComponent Name = ragdoll
-			if <targetObject> :Ragdoll_GetRagdollName
+		if <targetObject> :ContainsComponent name = ragdoll
+			if <targetObject> :ragdoll_getragdollname
 				ragdoll = <ragdollName>
 			endif
 		endif
 	endif
 	SetSearchAllAssetContexts
-	CreateFakePlayer PositionFrom = <targetObject> cloneFrom = <targetObject> Model = <Model> ragdoll = <ragdoll> Skeleton = <Skeleton> active_value_sources = <active_value_sources> modelbuilderheap = <modelbuilderheap>
+	CreateFakePlayer PositionFrom = <targetObject> CloneFrom = <targetObject> Model = <Model> ragdoll = <ragdoll> skeleton = <skeleton> active_value_sources = <active_value_sources> modelBuilderHeap = <modelBuilderHeap>
 	AnimTreePreviewObject :Anim_InitTree \{Tree = $AnimPreviewBaseTree
 		NodeIdDeclaration = [
 			PreviewTreeAnimNode
@@ -57,9 +57,9 @@ script AnimTreePreview_NxCommon \{targetObject = skater
 	if GotParam \{blend_values}
 		AnimTreePreviewObject :AnimPreview_SetSourceValues <blend_values>
 	endif
-	if AnimTreePreviewObject :Anim_LoadAnims Tree = <Tree> params = <Tree_Params>
+	if AnimTreePreviewObject :anim_loadanims Tree = <Tree> params = <Tree_Params>
 		AnimTreePreviewObject :Obj_SwitchScript TestAnimScript params = {Tree = <Tree> Tree_Params = <Tree_Params>}
-		<targetObject> :Hide
+		<targetObject> :hide
 		<targetObject> :Pause
 	else
 		AnimTreePreviewObject :Die
@@ -67,25 +67,25 @@ script AnimTreePreview_NxCommon \{targetObject = skater
 	dump <Tree>
 endscript
 
-script animtreepreviewrestore_nxcommon 
-	UnLoadPak \{'pak/animgrove_preview.pak'}
+script AnimTreePreviewRestore_NxCommon 
+	UnloadPak \{'pak/animgrove_preview.pak'}
 endscript
 
-script animtreepreview_reregisteranimevents 
-	printf \{qs(0xa2fc79d0)}
-	initanimeventmap
+script AnimTreePreview_ReregisterAnimEvents 
+	printf \{qs("\LUpdating anim events.")}
+	InitAnimEventMap
 	i = 0
 	GetArraySize \{track_names}
 	begin
 	track_name = (<track_globals> [<i>])
 	track_global = (<track_globals> [<i>])
-	registeranimevents track = <track_name> anim_events = $<track_global>
+	RegisterAnimEvents track = <track_name> anim_events = $<track_global>
 	i = (<i> + 1)
-	repeat <array_Size>
+	repeat <array_size>
 endscript
 
 script CreateFakePlayer 
-	if NOT CompositeObjectExists <cloneFrom>
+	if NOT CompositeObjectExists <CloneFrom>
 		return
 	endif
 	if NOT CompositeObjectExists <PositionFrom>
@@ -93,100 +93,100 @@ script CreateFakePlayer
 	endif
 	if CompositeObjectExists \{AnimTreePreviewObject}
 		AnimTreePreviewObject :Die
-		flushdeadobjects
+		FlushDeadObjects
 	endif
 	<PositionFrom> :Obj_GetPosition
 	<PositionFrom> :Obj_GetQuat
-	formatText checksumName = appearance '%s' s = <Model>
-	if GlobalExists Name = <appearance> Type = structure
+	FormatText checksumname = appearance '%s' s = <Model>
+	if GlobalExists name = <appearance> type = Structure
 		RemoveParameter \{Model}
 	else
 		RemoveParameter \{appearance}
 	endif
-	components = []
+	Components = []
 	if GotParam \{ragdoll}
 		RagdollComponents = [
 			{
-				component = ragdoll
+				Component = ragdoll
 				ragdollName = <ragdoll>
-				initialize_empty = FALSE
+				initialize_empty = false
 			}
 		]
-		components = (<components> + <RagdollComponents>)
+		Components = (<Components> + <RagdollComponents>)
 	endif
 	BasicComponents = [
 		{
-			component = modelbuilder
-			allocator = simple
-			Heap = <modelbuilderheap>
+			Component = ModelBuilder
+			Allocator = simple
+			heap = <modelBuilderHeap>
 		}
 		{
-			component = Input
+			Component = Input
 			controller = 1
 			dontusedpadasleftanalog
 		}
 		{
-			component = AnimPreview
+			Component = AnimPreview
 			active_value_source_list = <active_value_sources>
 			preload_model = <Model>
-			geom_heap = <modelbuilderheap>
+			geom_heap = <modelBuilderHeap>
 		}
 		{
-			component = AnimInfo
+			Component = AnimInfo
 			active_value_set = preview
 		}
 		{
-			component = AnimTree
-			ReferenceChecksum = <Skeleton>
+			Component = AnimTree
+			ReferenceChecksum = <skeleton>
 		}
 		{
-			component = Skeleton
+			Component = skeleton
 			allow_reset
 		}
 		{
-			component = SetDisplayMatrix
+			Component = SetDisplayMatrix
 		}
 	]
-	components = (<components> + <BasicComponents>)
+	Components = (<Components> + <BasicComponents>)
 	if GotParam \{Model}
 		ModelComponent = [
 			{
-				component = Model
+				Component = Model
 				Model = <Model>
 			}
 		]
 	elseif GotParam \{appearance}
 		ModelComponent = [
 			{
-				component = Model
+				Component = Model
 			}
 		]
 	else
 		ModelComponent = [
 			{
-				component = Model
-				cloneFrom = <cloneFrom>
+				Component = Model
+				CloneFrom = <CloneFrom>
 			}
 		]
 	endif
-	components = (<components> + <ModelComponent>)
+	Components = (<Components> + <ModelComponent>)
 	CreateCompositeObject {
-		components = <components>
+		Components = <Components>
 		params = {
-			skeletonname = <Skeleton>
-			Name = AnimTreePreviewObject
-			Pos = <Pos>
-			orientation = <Quat>
-			AssetContext = AnimPreviewObject
+			SkeletonName = <skeleton>
+			name = AnimTreePreviewObject
+			pos = <pos>
+			Orientation = <Quat>
+			assetcontext = AnimPreviewObject
 			$<appearance>
 		}
 	}
 	if GotParam \{appearance}
-		if NOT StructureContains structure = $<appearance> Model
+		if NOT StructureContains Structure = $<appearance> Model
 			build_params = {appearance = $<appearance> buildscriptparams = {$<appearance> async = 0}}
-			AnimTreePreviewObject :modelbuilder_preload <build_params>
-			AnimTreePreviewObject :modelbuilder_loadassets <build_params>
-			AnimTreePreviewObject :modelbuilder_build <build_params>
+			AnimTreePreviewObject :ModelBuilder_Preload <build_params>
+			AnimTreePreviewObject :ModelBuilder_LoadAssets <build_params>
+			AnimTreePreviewObject :ModelBuilder_Build <build_params>
 		endif
 	endif
 endscript

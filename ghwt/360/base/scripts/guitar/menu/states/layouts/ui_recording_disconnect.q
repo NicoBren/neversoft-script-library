@@ -5,7 +5,7 @@ script ui_create_recording_disconnect \{training = 0}
 			{
 				func = ui_recording_disconnect_continue
 				func_params = {<...>}
-				text = qs(0x0e41fe46)
+				text = qs("OK")
 				sound_func = nullscript
 			}
 		]
@@ -14,39 +14,39 @@ script ui_create_recording_disconnect \{training = 0}
 			{
 				func = ui_recording_disconnect_continue
 				func_params = {<...>}
-				text = qs(0x182f0173)
+				text = qs("CONTINUE")
 				sound_func = nullscript
 			}
 			{
 				func = ui_recording_disconnect_quit
-				text = qs(0x67d9c56d)
+				text = qs("QUIT")
 				sound_func = nullscript
 			}
 		]
 	endif
 	create_popup_warning_menu {
-		title = qs(0xaa163738)
+		title = qs("WARNING")
 		textblock = {
-			text = qs(0x00000000)
+			text = qs("")
 		}
 		options = <options>
 		player_device = ($primary_controller)
 	}
-	popupelement :SetTags \{is_disconnect_warning = true}
+	PopupElement :SetTags \{is_disconnect_warning = true}
 	if (<training> = 1)
 		KillSpawnedScript \{id = jam_tutorial_topic_spawn}
 		KillSpawnedScript \{id = jam_tutorial_spawns}
 		training_destroy_narrator_icons
-		Change \{jam_tutorial_status = inactive}
+		change \{jam_tutorial_status = inactive}
 	endif
 	if GotParam \{recording_studio}
 		if (<training> = 1)
-			popupelement :obj_spawnscript ui_recording_disconnect_update params = {training = <training>}
+			PopupElement :obj_spawnscript ui_recording_disconnect_update params = {training = <training>}
 		else
-			popupelement :obj_spawnscript \{ui_recording_studio_disconnect_update}
+			PopupElement :obj_spawnscript \{ui_recording_studio_disconnect_update}
 		endif
 	else
-		popupelement :obj_spawnscript \{ui_recording_disconnect_update}
+		PopupElement :obj_spawnscript \{ui_recording_disconnect_update}
 	endif
 endscript
 
@@ -55,31 +55,31 @@ script ui_destroy_recording_disconnect
 endscript
 
 script ui_recording_disconnect_update \{training = 0}
-	old_text = qs(0x52122f6e)
+	old_text = qs("YOU ARE ROCKING OUT A BIT TOO HARD!")
 	begin
-	text = qs(0x00000000)
-	getcontrollertype controller = ($primary_controller)
+	text = qs("")
+	GetControllerType controller = ($primary_controller)
 	GetActiveControllers
 	<is_active_controller> = (<active_controllers> [($primary_controller)])
 	if (((<controller_type> != guitar) && (<controller_type> != drum)) || <is_active_controller> != 1)
 		if (<training> = 1)
-			text = qs(0x89985c62)
+			text = qs("YOU ARE ROCKING OUT A BIT TOO HARD!\n\nYou must connect either a Guitar or Drum Controller to continue.")
 		else
-			text = qs(0x50744810)
+			text = qs("YOU ARE ROCKING OUT A BIT TOO HARD!\n\nYou must connect either a Guitar or Drum Controller to continue recording.")
 		endif
 	else
 		if (<controller_type> = guitar)
-			text = (<text> + qs(0x6bb8afcf))
+			text = (<text> + qs("Your Guitar Controller is connected!"))
 		elseif (<controller_type> = drum)
-			if isrbdrum controller = ($primary_controller)
-				text = (<text> + qs(0x764e9343))
+			if isRBDrum controller = ($primary_controller)
+				text = (<text> + qs("Your Four Pad Drum Controller is connected!"))
 			else
-				text = (<text> + qs(0xa2d3a7a1))
+				text = (<text> + qs("Your Guitar Hero Drum Controller is connected!"))
 			endif
 		endif
 	endif
 	if NOT (<old_text> = <text>)
-		se_setprops {popupbody_text = <text>}
+		SE_SetProps {PopupBody_text = <text>}
 		old_text = <text>
 	endif
 	Wait \{5
@@ -88,13 +88,13 @@ script ui_recording_disconnect_update \{training = 0}
 endscript
 
 script ui_recording_studio_disconnect_update 
-	text = qs(0xe941a4b2)
-	se_setprops {popupbody_text = <text>}
+	text = qs("YOU ARE ROCKING OUT A BIT TOO HARD!\n\nYou must connect a controller to continue recording.")
+	SE_SetProps {PopupBody_text = <text>}
 endscript
 
 script ui_recording_disconnect_continue 
 	if NOT GotParam \{recording_studio}
-		getcontrollertype controller = ($primary_controller)
+		GetControllerType controller = ($primary_controller)
 		if NOT ((<controller_type> = guitar) || (<controller_type> = drum))
 			menu_scroll_end_sound
 			return
@@ -107,7 +107,7 @@ script ui_recording_disconnect_continue
 			return
 		endif
 	endif
-	if ui_event_exists_in_stack \{Name = 'jam_tutorials'}
+	if ui_event_exists_in_stack \{name = 'jam_tutorials'}
 		generic_event_back \{state = uistate_jam_tutorials}
 	else
 		generic_event_back \{data = {
@@ -117,9 +117,9 @@ script ui_recording_disconnect_continue
 endscript
 
 script ui_recording_disconnect_quit 
-	if ui_event_exists_in_stack \{Name = 'jam_tutorials'}
+	if ui_event_exists_in_stack \{name = 'jam_tutorials'}
 		generic_event_back \{state = uistate_jam_tutorials}
 	else
-		generic_event_back \{state = uistate_jam_select_song}
+		generic_event_back \{state = UIstate_jam_select_song}
 	endif
 endscript

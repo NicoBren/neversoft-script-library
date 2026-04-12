@@ -1,11 +1,11 @@
 
 script Plugin_Quickview 
-	SpawnScriptNow Plugin_Quickview_Spawned params = <...>
+	spawnscriptnow Plugin_Quickview_Spawned params = <...>
 endscript
 
 script Plugin_Quickview_Spawned 
 	printstruct <...>
-	StopRendering
+	stoprendering
 	FinishRendering
 	Wait \{3
 		gameframes}
@@ -13,20 +13,20 @@ script Plugin_Quickview_Spawned
 	PreAllocSplats
 	switch <export_type>
 		case scene
-		ScriptAssert \{qs(0x179af63d)}
-		case sky
+		ScriptAssert \{qs("\LScene type exports are no longer supported. Use Zone type instead")}
+		case Sky
 		switch <project>
 			case gun2
-			TOD_Change_Sky sky = <sky>
+			TOD_Change_Sky Sky = <Sky>
 			default
-			Change_Sky sky = <sky>
+			Change_Sky Sky = <Sky>
 		endswitch
 		case zone
 		switch <project>
 			case gun2
 			GetPakManCurrentName \{map = zones}
 			zone_name = <pakname>
-			formatText TextName = zone qs(0xa2f2c278) z = <zone> DontAssertForChecksums
+			FormatText TextName = zone qs("\L%z") z = <zone> DontAssertForChecksums
 			if NOT (<zone_name> = <zone>)
 				JumpToZone zone = <zone>
 			else
@@ -35,12 +35,12 @@ script Plugin_Quickview_Spawned
 			endif
 			default
 			if NOT (<zone> = viewer)
-				formatText checksumName = zone 'load_%z' z = <zone> DontAssertForChecksums
+				FormatText checksumname = zone 'load_%z' z = <zone> DontAssertForChecksums
 			endif
 			GetCurrentLevel
 			if NOT (<level> = <zone>)
 				SetPakManCurrentBlock \{map = zones
-					pak = None}
+					pak = none}
 				change_level level = <zone>
 			else
 				BlockPendingPakManLoads \{map = zones}
@@ -58,25 +58,25 @@ script Plugin_Quickview_Spawned
 				RefreshCurrentZones
 			endif
 			case gh3
-			printf \{qs(0xe07578bf)}
+			printf \{qs("\LGh3 viewer refresh")}
 			select_venue \{norestart
 				level = viewer}
-			printf \{qs(0xf2bb8756)}
+			printf \{qs("\LGh3 viewer refresh done")}
 			case gh3_demo
-			printf \{qs(0x757404da)}
+			printf \{qs("\LGh3 Demo viewer refresh")}
 			select_venue \{norestart
 				level = viewer}
-			printf \{qs(0xa2b821a6)}
+			printf \{qs("\LGh3 Demo viewer refresh done")}
 			case gh4
-			printf \{qs(0x58e06a2a)}
+			printf \{qs("\LGh4 viewer refresh")}
 			select_venue \{norestart
 				level = viewer}
-			printf \{qs(0x23f5155e)}
+			printf \{qs("\LGh4 viewer refresh done")}
 			default
 			GetCurrentLevel
 			if NOT (<level> = viewer)
 				SetPakManCurrentBlock \{map = zones
-					pak = None}
+					pak = none}
 				change_level \{level = viewer}
 			else
 				BlockPendingPakManLoads \{map = zones}
@@ -86,14 +86,14 @@ script Plugin_Quickview_Spawned
 		case mission
 		switch <project>
 			case gun2
-			printf \{qs(0x625a9d67)}
+			printf \{qs("\L######################### loading new mission")}
 			load_new_mission mission_pak = <mission> reload_zones
 			default
 			BlockPendingPakManLoads \{map = zones}
 			RefreshCurrentZones
 		endswitch
 		case Model
-		Change \{view_mode = 0}
+		change \{view_mode = 0}
 		ToggleViewMode
 		ToggleViewMode
 		ToggleViewMode
@@ -101,17 +101,17 @@ script Plugin_Quickview_Spawned
 		toggle_model_viewer
 		view_model modelName = <Model>
 		case skin
-		Change \{view_mode = 0}
+		change \{view_mode = 0}
 		ToggleViewMode
 		ToggleViewMode
 		ToggleViewMode
 		exit_view_models_menu
 		toggle_model_viewer
-		view_model \{Profile = Ped_BatMasterson
+		view_model \{profile = Ped_BatMasterson
 			animLoadScript = animload_ped_male
 			extraAnim = animload_ped_male
-			Defaultanim = MV_Idle_Denton
-			skeletonname = gun}
+			defaultAnim = MV_Idle_Denton
+			SkeletonName = gun}
 		default
 	endswitch
 	if NodeFlagExists \{NODEFLAG_VIEWERLIGHTS}
@@ -120,6 +120,6 @@ script Plugin_Quickview_Spawned
 		ChangeNodeFlag \{NODEFLAG_VIEWERLIGHTS
 			1}
 	endif
-	StartRendering
+	startrendering
 	kill_panel_message_if_it_exists \{id = quickview}
 endscript

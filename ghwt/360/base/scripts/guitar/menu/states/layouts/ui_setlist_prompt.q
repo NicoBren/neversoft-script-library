@@ -1,21 +1,21 @@
 
 script ui_create_setlist_prompt 
 	create_popup_warning_menu {
-		title = qs(0xcf5deb58)
+		title = qs("NOTICE")
 		textblock = {
-			text = qs(0x10d8e2ac)
+			text = qs("You can create sets from 1 to 6 songs long. Select the songs you want to play then press the START button when ready.")
 		}
 		options = [
 			{
 				func = setlist_prompt_continue
 				func_params = {<...>}
-				text = qs(0x182f0173)
+				text = qs("CONTINUE")
 			}
 		]
 		no_background
 	}
 	clean_up_user_control_helpers
-	add_user_control_helper \{text = qs(0xc18d5e76)
+	add_user_control_helper \{text = qs("SELECT")
 		button = green
 		z = 100000}
 endscript

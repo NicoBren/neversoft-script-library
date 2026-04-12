@@ -1,16 +1,16 @@
-gp_fx_ny_top_redsparks_01 = {
-	Pos = (-0.080984, 11.183571, -0.82171)
-	Angles = (0.0, 0.0, 0.0)
+GP_FX_NY_Top_RedSparks_01 = {
+	pos = (-0.080984, 11.183571, -0.82171)
+	angles = (0.0, 0.0, 0.0)
 	Class = ParticleObject
 	ParticleType = FlexParticle
-	Type = flat
-	Active
+	type = flat
+	active
 	CreatedAtStart
 	EmitRangeDims = (0.5, 0.5, 0.5)
 	DoCircularEmit
-	Emit_Target = (0.0, 0.5, 0.2)
+	emit_Target = (0.0, 0.5, 0.2)
 	EmitAngle = (0.0, 0.0, 0.0)
-	Force = (0.0, -8.0, 0.0)
+	force = (0.0, -8.0, 0.0)
 	WindCoeff = 0.0
 	LocalWindCoeff = 0.0
 	EmitterVelocityWeight = 0.0
@@ -19,11 +19,11 @@ gp_fx_ny_top_redsparks_01 = {
 	BounceCoeff = 0.2
 	BounceCallbackRate = 0.0
 	LifeRange = (2.0, 2.0)
-	Emit_Rate = 400.0
-	Max = 0
+	emit_rate = 400.0
+	max = 0
 	TimeSeed = 2.0
-	LifeTime = 2.0
-	EmitNum = 0
+	lifeTime = 2.0
+	emitNum = 0
 	FollowEmitter = 0.0
 	EmitFunction = onoff
 	EmitPeriod = 1.0
@@ -38,17 +38,17 @@ gp_fx_ny_top_redsparks_01 = {
 	AlignWithPath
 	PathFollowTime = 0.05
 	History = 18
-	HistoryListCoordinateSpace = World
-	Color = -9868801
+	HistoryListCoordinateSpace = world
+	color = -9868801
 	LOD_Default
 	QuickMaterial = {
 		TextureLayout = Layout2x2
 		DiffuseTextureEnabled
-		DiffuseTexture = jow_confetti01
+		DiffuseTexture = JOW_Confetti01
 		SpecularPower = 0
-		Bloom
-		AlphaCutoff = 99
-		BlendMode = add
+		bloom
+		alphacutoff = 99
+		blendMode = Add
 		QuadAnimationFPS = 0
 	}
 	Knot = [

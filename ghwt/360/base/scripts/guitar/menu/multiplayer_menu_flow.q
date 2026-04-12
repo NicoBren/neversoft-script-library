@@ -5,12 +5,12 @@ script create_mp_split_off_flow_for_character_select
 		add_state_data = {
 			state = uistate_character_hub
 			base_name = 'character_hub'
-			Player = 1
+			player = 1
 			object = 1
 		}
 		continue_state_data = {
 			state = uistate_character_select
-			Player = 1
+			player = 1
 			object = 1
 		}}
 endscript
@@ -21,7 +21,7 @@ script create_mp_split_off_flow_for_character_hub
 endscript
 
 script set_store_came_from_p2_multiplayer 
-	Change \{store_came_from = p2_faceoff}
+	change \{store_came_from = p2_faceoff}
 endscript
 
 script mp_faceoff_song_select_quit 
@@ -31,6 +31,6 @@ endscript
 
 script mp_faceoff_change_mode_if_coop_dlc 
 	if ($coop_dlc_active = 1)
-		Change \{game_mode = p2_faceoff}
+		change \{game_mode = p2_faceoff}
 	endif
 endscript

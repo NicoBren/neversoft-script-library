@@ -39,27 +39,27 @@ script ui_create_cas_save_slots
 	else
 		max_saves = ($max_num_instrument_saves)
 	endif
-	formatText TextName = text qs(0x1af30f77) i = <array_Size> j = <max_saves>
+	FormatText TextName = text qs("(%i/%j)") i = <array_size> j = <max_saves>
 	CreateScreenElement {
-		Type = TextBlockElement
+		type = TextBlockElement
 		parent = root_window
 		id = num_slots
 		font = ($test_menu_font)
 		text = <text>
-		Pos = (525.0, 175.0)
+		pos = (525.0, 175.0)
 		rgba = [250 250 250 255]
 		dims = (375.0, 50.0)
-		Scale = 0.7
+		scale = 0.7
 	}
-	<num_items> = <array_Size>
-	if (<array_Size> > 0)
+	<num_items> = <array_size>
+	if (<array_size> > 0)
 		i = 0
 		begin
 		globaltag_getarrayelement savegame = <savegame> array_name = <slot_list> index = <i>
 		if GotParam \{disable_delete}
 			slots_add_item {
 				index = <i>
-				text = (<element>.Name)
+				text = (<element>.name)
 				pad_choose_script = <pad_choose_script>
 				pad_choose_params = {<pad_choose_params> index = <i>}
 				additional_focus_script = save_slots_set_helper_text
@@ -67,16 +67,16 @@ script ui_create_cas_save_slots
 		else
 			slots_add_item {
 				index = <i>
-				text = (<element>.Name)
+				text = (<element>.name)
 				pad_choose_script = <pad_choose_script>
 				pad_choose_params = {<pad_choose_params> index = <i> overwrite}
 				pad_square_script = generic_event_choose
 				pad_square_params = {
 					data = {
-						state = uistate_generic_dialogue
+						state = UIstate_generic_dialogue
 						is_popup
-						title = qs(0x2682022f)
-						text = qs(0x42fc65dd)
+						title = qs("Delete Entry?")
+						text = qs("Are you sure you want to delete this entry?")
 						choose_yes_func = {
 							slot_delete_entry params = {list = <slot_list> index = <i> savegame = <savegame>}
 						}
@@ -86,35 +86,35 @@ script ui_create_cas_save_slots
 			}
 		endif
 		i = (<i> + 1)
-		repeat <array_Size>
+		repeat <array_size>
 	else
 		if ((GotParam load_guitar) || (GotParam load_drum) || (GotParam load_design))
 			<num_items> = 1
 			slots_add_item {
-				index = <array_Size>
-				text = qs(0x44330a6a)
+				index = <array_size>
+				text = qs("No Saves")
 				pad_choose_script = generic_event_back
 				additional_focus_script = save_slots_set_helper_text
 			}
 		endif
 	endif
-	if (<array_Size> < <max_saves>)
+	if (<array_size> < <max_saves>)
 		if GotParam \{save_guitar}
 			<num_items> = (<num_items> + 1)
 			slots_add_item {
-				index = <array_Size>
-				text = qs(0x4496766c)
+				index = <array_size>
+				text = qs("New Save")
 				pad_choose_script = exit_save_instrument
-				pad_choose_params = {index = <array_Size> instrument_info = <instrument_info> list = <slot_list> savegame = <savegame> no_show_history = <no_show_history>}
+				pad_choose_params = {index = <array_size> instrument_info = <instrument_info> list = <slot_list> savegame = <savegame> no_show_history = <no_show_history>}
 				additional_focus_script = save_slots_set_helper_text
 			}
 		elseif GotParam \{save_cap}
 			<num_items> = (<num_items> + 1)
 			slots_add_item {
-				index = <array_Size>
-				text = qs(0x4496766c)
+				index = <array_size>
+				text = qs("New Save")
 				pad_choose_script = save_cap_design
-				pad_choose_params = {index = <array_Size> list = <slot_list> part = <part> div_id = <div_id> savegame = <savegame> no_show_history = <no_show_history>}
+				pad_choose_params = {index = <array_size> list = <slot_list> part = <part> div_id = <div_id> savegame = <savegame> no_show_history = <no_show_history>}
 				additional_focus_script = save_slots_set_helper_text
 			}
 		endif
@@ -122,31 +122,31 @@ script ui_create_cas_save_slots
 	if (<num_items> > 1)
 		add_generic_menu_up_down_sound_handlers
 	endif
-	LaunchEvent Type = focus target = current_menu data = {child_index = <loaded_index>}
+	LaunchEvent type = focus target = current_menu data = {child_index = <loaded_index>}
 	menu_finish \{no_helper_text}
-	add_user_control_helper \{text = qs(0xc18d5e76)
+	add_user_control_helper \{text = qs("SELECT")
 		button = green
 		z = 100000}
-	add_user_control_helper \{text = qs(0xaf4d5dd2)
+	add_user_control_helper \{text = qs("BACK")
 		button = red
 		z = 100000}
 	if NOT GotParam \{disable_delete}
-		add_user_control_helper \{text = qs(0x271a1633)
-			button = blue
+		add_user_control_helper \{text = qs("DELETE")
+			button = Blue
 			z = 100000}
 	endif
 endscript
 
 script ui_return_cas_save_slots 
-	add_user_control_helper \{text = qs(0xc18d5e76)
+	add_user_control_helper \{text = qs("SELECT")
 		button = green
 		z = 100000}
-	add_user_control_helper \{text = qs(0xaf4d5dd2)
+	add_user_control_helper \{text = qs("BACK")
 		button = red
 		z = 100000}
 	if NOT GotParam \{disable_delete}
-		add_user_control_helper \{text = qs(0x271a1633)
-			button = blue
+		add_user_control_helper \{text = qs("DELETE")
+			button = Blue
 			z = 100000}
 	endif
 endscript
@@ -161,12 +161,12 @@ endscript
 script slots_add_item \{focus_script = slot_focus_script
 		unfocus_script = slot_unfocus_script}
 	CreateScreenElement {
-		Type = descinterface
+		type = DescInterface
 		parent = current_menu
 		desc = 'generic_menu_slot_item'
 		<not_focusable>
 		slot_text_text = <text>
-		autosizedims = true
+		autoSizeDims = true
 	}
 	SetScreenElementProps {
 		id = <id>
@@ -214,7 +214,7 @@ endscript
 
 script load_guitar_save_edit 
 	load_guitar_save <...>
-	ui_event event = menu_replace data = {state = uistate_cag_custom instrument_info = <instrument_info> loaded_index = <index>}
+	ui_event event = menu_replace data = {state = UIstate_cag_custom instrument_info = <instrument_info> loaded_index = <index>}
 endscript
 
 script load_guitar_save_apply 
@@ -228,45 +228,45 @@ script load_guitar_save
 			index
 		]
 		all}
-	printf \{qs(0x254267e2)}
+	printf \{qs("\LLoad Guitar Save")}
 	globaltag_getarrayelement savegame = <savegame> array_name = <list> index = <index>
 	guitar_save = <element>
-	if StructureContains structure = <guitar_save> body_part
-		setcasappearancepartinstance part = (<instrument_info>.body_part) part_instance = (<guitar_save>.body_part)
+	if StructureContains Structure = <guitar_save> body_part
+		SetCASAppearancePartInstance part = (<instrument_info>.body_part) part_instance = (<guitar_save>.body_part)
 	endif
-	if StructureContains structure = <guitar_save> neck_part
-		setcasappearancepartinstance part = (<instrument_info>.neck_part) part_instance = (<guitar_save>.neck_part)
+	if StructureContains Structure = <guitar_save> neck_part
+		SetCASAppearancePartInstance part = (<instrument_info>.neck_part) part_instance = (<guitar_save>.neck_part)
 	endif
-	if StructureContains structure = <guitar_save> head_part
-		setcasappearancepartinstance part = (<instrument_info>.head_part) part_instance = (<guitar_save>.head_part)
+	if StructureContains Structure = <guitar_save> head_part
+		SetCASAppearancePartInstance part = (<instrument_info>.head_part) part_instance = (<guitar_save>.head_part)
 	endif
-	if StructureContains structure = <guitar_save> pick_guard_part
-		setcasappearancepartinstance part = (<instrument_info>.pick_guard_part) part_instance = (<guitar_save>.pick_guard_part)
+	if StructureContains Structure = <guitar_save> pick_guard_part
+		SetCASAppearancePartInstance part = (<instrument_info>.pick_guard_part) part_instance = (<guitar_save>.pick_guard_part)
 	endif
-	if StructureContains structure = <guitar_save> pickups_part
-		setcasappearancepartinstance part = (<instrument_info>.pickups_part) part_instance = (<guitar_save>.pickups_part)
+	if StructureContains Structure = <guitar_save> pickups_part
+		SetCASAppearancePartInstance part = (<instrument_info>.pickups_part) part_instance = (<guitar_save>.pickups_part)
 	endif
-	if StructureContains structure = <guitar_save> knobs_part
-		setcasappearancepartinstance part = (<instrument_info>.knobs_part) part_instance = (<guitar_save>.knobs_part)
+	if StructureContains Structure = <guitar_save> knobs_part
+		SetCASAppearancePartInstance part = (<instrument_info>.knobs_part) part_instance = (<guitar_save>.knobs_part)
 	endif
-	if StructureContains structure = <guitar_save> bridge_part
-		setcasappearancepartinstance part = (<instrument_info>.bridge_part) part_instance = (<guitar_save>.bridge_part)
+	if StructureContains Structure = <guitar_save> bridge_part
+		SetCASAppearancePartInstance part = (<instrument_info>.bridge_part) part_instance = (<guitar_save>.bridge_part)
 	endif
-	if StructureContains structure = <guitar_save> highway_part
-		setcasappearancepartinstance part = (<instrument_info>.highway_part) part_instance = (<guitar_save>.highway_part)
+	if StructureContains Structure = <guitar_save> highway_part
+		SetCASAppearancePartInstance part = (<instrument_info>.highway_part) part_instance = (<guitar_save>.highway_part)
 	endif
-	if StructureContains structure = <guitar_save> stand_part
-		setcasappearancepartinstance part = (<instrument_info>.stand_part) part_instance = (<guitar_save>.stand_part)
+	if StructureContains Structure = <guitar_save> stand_part
+		SetCASAppearancePartInstance part = (<instrument_info>.stand_part) part_instance = (<guitar_save>.stand_part)
 	endif
 	printcurrentappearance
-	rebuildcurrentcasmodel
+	RebuildCurrentCASModel
 endscript
 
 script slot_focus_script 
 	if ScreenElementExists id = <id>
-		<id> :se_setprops {
+		<id> :SE_SetProps {
 			slot_text_font = fontgrid_text_a6_fire
-			slot_text_material = sys_fontgrid_text_a6_fire_sys_fontgrid_text_a6_fire
+			slot_text_material = sys_fontgrid_text_A6_fire_sys_fontgrid_text_A6_fire
 			slot_bg_texture = slot_boarder
 			slot_text_rgba = [255 255 255 255]
 		}
@@ -278,9 +278,9 @@ endscript
 
 script slot_unfocus_script 
 	if ScreenElementExists id = <id>
-		<id> :se_setprops {
+		<id> :SE_SetProps {
 			slot_text_font = fontgrid_text_a6
-			slot_text_material = NULL
+			slot_text_material = null
 			slot_bg_texture = slot_boarder_no
 			slot_text_rgba = [100 88 71 255]
 		}
@@ -288,7 +288,7 @@ script slot_unfocus_script
 endscript
 
 script slot_delete_entry 
-	SpawnScriptNow slot_delete_entry_worker params = <...>
+	spawnscriptnow slot_delete_entry_worker params = <...>
 endscript
 
 script slot_delete_entry_worker 
@@ -305,7 +305,7 @@ script slot_delete_entry_worker
 endscript
 
 script exit_save_instrument 
-	ui_event event = menu_replace data = {state = uistate_cas_text_entry choose_script = exit_save_instrument_worker choose_params = {<...>} no_show_history = <no_show_history>}
+	ui_event event = menu_replace data = {state = UIstate_cas_text_entry choose_script = exit_save_instrument_worker choose_params = {<...>} no_show_history = <no_show_history>}
 endscript
 
 script exit_save_instrument_worker 
@@ -317,92 +317,92 @@ script exit_save_instrument_worker
 		]
 		all}
 	if NOT GotParam \{overwrite}
-		if NOT is_name_unique list = <list> Name = <text> savegame = <savegame>
+		if NOT is_name_unique list = <list> name = <text> savegame = <savegame>
 			ui_event_wait \{event = menu_change
 				data = {
-					state = uistate_generic_alert_popup
+					state = UIstate_generic_alert_popup
 					is_popup
-					title = qs(0xade772d9)
-					text = qs(0xe029feb1)
+					title = qs("Name is not unique?")
+					text = qs("The name you entered is not unique, please enter a unique name.")
 					pad_choose_script = save_slots_return_from_warning
 				}}
 			return
 		endif
 	endif
-	if StructureContains structure = <instrument_info> body_part
-		if getcasappearancepartinstance part = (<instrument_info>.body_part)
+	if StructureContains Structure = <instrument_info> body_part
+		if GetCASAppearancePartInstance part = (<instrument_info>.body_part)
 			entry = {
 				<entry>
 				body_part = <part_instance>
 			}
 		endif
 	endif
-	if StructureContains structure = <instrument_info> neck_part
-		if getcasappearancepartinstance part = (<instrument_info>.neck_part)
+	if StructureContains Structure = <instrument_info> neck_part
+		if GetCASAppearancePartInstance part = (<instrument_info>.neck_part)
 			entry = {
 				<entry>
 				neck_part = <part_instance>
 			}
 		endif
 	endif
-	if StructureContains structure = <instrument_info> head_part
-		if getcasappearancepartinstance part = (<instrument_info>.head_part)
+	if StructureContains Structure = <instrument_info> head_part
+		if GetCASAppearancePartInstance part = (<instrument_info>.head_part)
 			entry = {
 				<entry>
 				head_part = <part_instance>
 			}
 		endif
 	endif
-	if StructureContains structure = <instrument_info> pick_guard_part
-		if getcasappearancepartinstance part = (<instrument_info>.pick_guard_part)
+	if StructureContains Structure = <instrument_info> pick_guard_part
+		if GetCASAppearancePartInstance part = (<instrument_info>.pick_guard_part)
 			entry = {
 				<entry>
 				pick_guard_part = <part_instance>
 			}
 		endif
 	endif
-	if StructureContains structure = <instrument_info> pickups_part
-		if getcasappearancepartinstance part = (<instrument_info>.pickups_part)
+	if StructureContains Structure = <instrument_info> pickups_part
+		if GetCASAppearancePartInstance part = (<instrument_info>.pickups_part)
 			entry = {
 				<entry>
 				pickups_part = <part_instance>
 			}
 		endif
 	endif
-	if StructureContains structure = <instrument_info> knobs_part
-		if getcasappearancepartinstance part = (<instrument_info>.knobs_part)
+	if StructureContains Structure = <instrument_info> knobs_part
+		if GetCASAppearancePartInstance part = (<instrument_info>.knobs_part)
 			entry = {
 				<entry>
 				knobs_part = <part_instance>
 			}
 		endif
 	endif
-	if StructureContains structure = <instrument_info> bridge_part
-		if getcasappearancepartinstance part = (<instrument_info>.bridge_part)
+	if StructureContains Structure = <instrument_info> bridge_part
+		if GetCASAppearancePartInstance part = (<instrument_info>.bridge_part)
 			entry = {
 				<entry>
 				bridge_part = <part_instance>
 			}
 		endif
 	endif
-	if StructureContains structure = <instrument_info> highway_part
-		if getcasappearancepartinstance part = (<instrument_info>.highway_part)
+	if StructureContains Structure = <instrument_info> highway_part
+		if GetCASAppearancePartInstance part = (<instrument_info>.highway_part)
 			entry = {
 				<entry>
 				highway_part = <part_instance>
 			}
 		endif
 	endif
-	if StructureContains structure = <instrument_info> stick_part
-		if getcasappearancepartinstance part = (<instrument_info>.stick_part)
+	if StructureContains Structure = <instrument_info> stick_part
+		if GetCASAppearancePartInstance part = (<instrument_info>.stick_part)
 			entry = {
 				<entry>
 				stick_part = <part_instance>
 			}
 		endif
 	endif
-	if StructureContains structure = <instrument_info> stand_part
-		if getcasappearancepartinstance part = (<instrument_info>.stand_part)
+	if StructureContains Structure = <instrument_info> stand_part
+		if GetCASAppearancePartInstance part = (<instrument_info>.stand_part)
 			entry = {
 				<entry>
 				stand_part = <part_instance>
@@ -410,10 +410,10 @@ script exit_save_instrument_worker
 		endif
 	endif
 	globaltag_getarraysize savegame = <savegame> array_name = <list>
-	if (<index> > (<array_Size> -1))
+	if (<index> > (<array_size> -1))
 		entry = {
 			<entry>
-			Name = <text>
+			name = <text>
 		}
 		globaltag_addarrayelement savegame = <savegame> array_name = <list> element = <entry>
 		cag_update_photo
@@ -422,13 +422,13 @@ script exit_save_instrument_worker
 		globaltag_getarrayelement savegame = <savegame> array_name = <list> index = <index>
 		entry = {
 			<entry>
-			Name = (<element>.Name)
+			name = (<element>.name)
 		}
 		ui_event event = menu_change data = {
-			state = uistate_generic_dialogue
+			state = UIstate_generic_dialogue
 			is_popup
-			title = qs(0x9f8d48f3)
-			text = qs(0x275837ee)
+			title = qs("Overwrite Save?")
+			text = qs("Are you sure you want to overwrite this save?")
 			choose_yes_func = {
 				set_save_instrument_return
 				params = {list = <list> index = <index> entry = <entry> savegame = <savegame>}
@@ -436,9 +436,9 @@ script exit_save_instrument_worker
 		}
 	endif
 	if (<instrument_info>.desc_id = guitar)
-		achievements_one_of_a_kind_axe controller = ($primary_controller)
+		Achievements_ONE_OF_A_KIND_AXE controller = ($primary_controller)
 	elseif (<instrument_info>.desc_id = drum)
-		achievements_custom_beats controller = ($primary_controller)
+		Achievements_CUSTOM_BEATS controller = ($primary_controller)
 	endif
 endscript
 
@@ -451,21 +451,21 @@ endscript
 script load_drum_save 
 	globaltag_getarrayelement savegame = <savegame> array_name = <list> index = <index>
 	drum_save = <element>
-	if StructureContains structure = <drum_save> body_part
-		setcasappearancepartinstance part = (<instrument_info>.body_part) part_instance = (<drum_save>.body_part)
+	if StructureContains Structure = <drum_save> body_part
+		SetCASAppearancePartInstance part = (<instrument_info>.body_part) part_instance = (<drum_save>.body_part)
 	endif
-	if StructureContains structure = <drum_save> highway_part
-		setcasappearancepartinstance part = (<instrument_info>.highway_part) part_instance = (<drum_save>.highway_part)
+	if StructureContains Structure = <drum_save> highway_part
+		SetCASAppearancePartInstance part = (<instrument_info>.highway_part) part_instance = (<drum_save>.highway_part)
 	endif
-	if StructureContains structure = <drum_save> stick_part
-		setcasappearancepartinstance part = (<instrument_info>.stick_part) part_instance = (<drum_save>.stick_part)
+	if StructureContains Structure = <drum_save> stick_part
+		SetCASAppearancePartInstance part = (<instrument_info>.stick_part) part_instance = (<drum_save>.stick_part)
 	endif
-	rebuildcurrentcasmodel
-	ui_event event = menu_replace data = {state = uistate_cadrm_hub instrument_info = <instrument_info> loaded_index = <index>}
+	RebuildCurrentCASModel
+	ui_event event = menu_replace data = {state = UIstate_cadrm_hub instrument_info = <instrument_info> loaded_index = <index>}
 endscript
 
 script apply_cap_design 
-	Change \{achievements_modified_logo = 0}
+	change \{Achievements_modified_logo = 0}
 	globaltag_getarrayelement savegame = <savegame> array_name = <list> index = <index>
 	cas_load_graphic_data layers = (<element>.layers) <...>
 	generic_event_back \{nosound}
@@ -480,22 +480,22 @@ script load_cap_design
 		all}
 	globaltag_getarrayelement savegame = <savegame> array_name = <list> index = <index>
 	cas_load_graphic_data layers = (<element>.layers) <...>
-	ui_event event = menu_replace data = {state = uistate_cap_layers_list loaded_index = <index> <...>}
+	ui_event event = menu_replace data = {state = UIstate_cap_layers_list loaded_index = <index> <...>}
 endscript
 
 script save_cap_design 
-	ui_event event = menu_replace data = {state = uistate_cas_text_entry choose_script = save_cap_design_worker choose_params = {<...>} no_show_history = <no_show_history>}
+	ui_event event = menu_replace data = {state = UIstate_cas_text_entry choose_script = save_cap_design_worker choose_params = {<...>} no_show_history = <no_show_history>}
 endscript
 
 script save_cap_design_worker 
 	if NOT GotParam \{overwrite}
-		if NOT is_name_unique list = <list> Name = <text> savegame = <savegame>
+		if NOT is_name_unique list = <list> name = <text> savegame = <savegame>
 			ui_event_wait \{event = menu_change
 				data = {
-					state = uistate_generic_alert_popup
+					state = UIstate_generic_alert_popup
 					is_popup
-					title = qs(0xade772d9)
-					text = qs(0xe029feb1)
+					title = qs("Name is not unique?")
+					text = qs("The name you entered is not unique, please enter a unique name.")
 					pad_choose_script = save_slots_return_from_warning
 				}}
 			return
@@ -504,10 +504,10 @@ script save_cap_design_worker
 	globaltag_getarraysize savegame = <savegame> array_name = <list>
 	extract_current_layers part = <part> div_id = <div_id>
 	entry = {layers = <layers>}
-	if (<index> > (<array_Size> -1))
+	if (<index> > (<array_size> -1))
 		entry = {
 			<entry>
-			Name = <text>
+			name = <text>
 		}
 		globaltag_addarrayelement savegame = <savegame> array_name = <list> element = <entry>
 		cag_update_photo
@@ -516,25 +516,25 @@ script save_cap_design_worker
 		globaltag_getarrayelement savegame = <savegame> array_name = <list> index = <index>
 		entry = {
 			<entry>
-			Name = (<element>.Name)
+			name = (<element>.name)
 		}
 		ui_event event = menu_change data = {
-			state = uistate_generic_dialogue
+			state = UIstate_generic_dialogue
 			is_popup
-			title = qs(0x9f8d48f3)
-			text = qs(0x275837ee)
+			title = qs("Overwrite Save?")
+			text = qs("Are you sure you want to overwrite this save?")
 			choose_yes_func = {
 				set_save_cap_return
 				params = {list = <list> index = <index> entry = <entry> savegame = <savegame>}
 			}
 		}
 	endif
-	if ((GotParam div_id) && (<part> = cas_body))
-		if (<div_id> = Body || <div_id> = `right	arm` || <div_id> = `left	arm`)
-			achievements_inked controller = ($primary_controller)
+	if ((GotParam div_id) && (<part> = CAS_Body))
+		if (<div_id> = Body || <div_id> = `Right Arm` || <div_id> = `Left Arm`)
+			Achievements_INKED controller = ($primary_controller)
 		endif
-	elseif (<part> = cas_band_logo && ($achievements_modified_logo) = 1)
-		achievements_stamp_of_approval controller = ($primary_controller)
+	elseif (<part> = CAS_Band_Logo && ($Achievements_modified_logo) = 1)
+		Achievements_STAMP_OF_APPROVAL controller = ($primary_controller)
 	endif
 endscript
 
@@ -547,20 +547,20 @@ endscript
 script is_name_unique 
 	RequireParams \{[
 			list
-			Name
+			name
 			savegame
 		]
 		all}
 	globaltag_getarraysize savegame = <savegame> array_name = <list>
-	if (<array_Size> > 0)
+	if (<array_size> > 0)
 		i = 0
 		begin
 		globaltag_getarrayelement savegame = <savegame> array_name = <list> index = <i>
-		if ((<element>.Name) = <Name>)
-			return \{FALSE}
+		if ((<element>.name) = <name>)
+			return \{false}
 		endif
 		i = (<i> + 1)
-		repeat <array_Size>
+		repeat <array_size>
 	endif
 	return \{true}
 endscript
@@ -572,25 +572,25 @@ endscript
 
 script save_slots_set_helper_text_delete 
 	clean_up_user_control_helpers
-	add_user_control_helper \{text = qs(0xc18d5e76)
+	add_user_control_helper \{text = qs("SELECT")
 		button = green
 		z = 100000}
-	add_user_control_helper \{text = qs(0xaf4d5dd2)
+	add_user_control_helper \{text = qs("BACK")
 		button = red
 		z = 100000}
 	if NOT GotParam \{disable_delete}
-		add_user_control_helper \{text = qs(0x271a1633)
-			button = blue
+		add_user_control_helper \{text = qs("DELETE")
+			button = Blue
 			z = 100000}
 	endif
 endscript
 
 script save_slots_set_helper_text 
 	clean_up_user_control_helpers
-	add_user_control_helper \{text = qs(0xc18d5e76)
+	add_user_control_helper \{text = qs("SELECT")
 		button = green
 		z = 100000}
-	add_user_control_helper \{text = qs(0xaf4d5dd2)
+	add_user_control_helper \{text = qs("BACK")
 		button = red
 		z = 100000}
 endscript

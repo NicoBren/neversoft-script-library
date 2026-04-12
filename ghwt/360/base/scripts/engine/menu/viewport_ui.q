@@ -2,16 +2,16 @@
 script create_viewport_ui \{viewport_id = menu_viewport
 		viewport_override_id = menu_viewport_override
 		window_id = viewport_root
-		texture = `tex/zones/sound_stage/temp_viewport01.dds`
-		texdict = `zones/z_soundcheck/z_soundcheck.tex`
+		texture = `tex/zones/Sound_stage/Temp_Viewport01.dds`
+		texdict = `zones/z_Soundcheck/z_Soundcheck.tex`
 		window_dims = (1280.0, 720.0)}
 	destroy_viewport_ui window_id = <window_id> viewport_id = <viewport_id> viewport_override_id = <viewport_override_id>
 	if NOT GotParam \{keep_current_level}
 		printscriptinfo \{'create_viewport_ui - bad soundcheck load'}
 		frontend_load_soundcheck
 	endif
-	createviewport {
-		Priority = 6
+	CreateViewport {
+		priority = 6
 		id = <viewport_id>
 		style = viewport_ui_texture
 		has_ui = true
@@ -25,9 +25,9 @@ script create_viewport_ui \{viewport_id = menu_viewport
 		texture = <texture>
 		texdict = <texdict>
 	}
-	SetSearchAllAssetContexts \{OFF}
+	SetSearchAllAssetContexts \{off}
 	CreateScreenElement {
-		Type = WindowElement
+		type = WindowElement
 		parent = root_window
 		id = <window_id>
 		viewport = <viewport_id>
@@ -45,7 +45,7 @@ script destroy_viewport_ui \{viewport_id = menu_viewport
 	if ViewportExists id = <viewport_id>
 		SetSearchAllAssetContexts
 		DestroyViewportTextureOverride id = <viewport_override_id>
-		SetSearchAllAssetContexts \{OFF}
+		SetSearchAllAssetContexts \{off}
 		DestroyViewport id = <viewport_id>
 	endif
 endscript

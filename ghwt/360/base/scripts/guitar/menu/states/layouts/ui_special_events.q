@@ -1,10 +1,10 @@
 
 script ui_init_special_events 
-	SpawnScriptNow \{do_training_loading}
+	spawnscriptnow \{do_training_loading}
 endscript
 
 script ui_create_special_events 
-	SpawnScriptNow new_create_special_events params = {<...>}
+	spawnscriptnow new_create_special_events params = {<...>}
 endscript
 
 script new_create_special_events 
@@ -15,17 +15,17 @@ script new_create_special_events
 	Wait \{1
 		gameframe}
 	repeat
-	Change \{current_num_players = 1}
-	Change \{menu_gp_stage = 0}
+	change \{current_num_players = 1}
+	change \{menu_gp_stage = 0}
 	reset_all_special_events
-	Change special_event_previous_game_mode = ($game_mode)
-	SpawnScriptNow \{task_menu_default_anim_in
+	change special_event_previous_game_mode = ($game_mode)
+	spawnscriptnow \{task_menu_default_anim_in
 		params = {
 			base_name = 'gig_posters'
 		}}
-	formatText checksumName = special_event_num 'special_event%d' d = (<specialevent_num>)
+	FormatText checksumname = special_event_num 'special_event%d' d = (<specialevent_num>)
 	make_generic_menu {
-		title = ($special_events_challenges.<special_event_num>.title)
+		title = ($Special_Events_Challenges.<special_event_num>.title)
 		menu_id = gig_posters_menu
 		vmenu_id = gig_posters_vmenu
 		pad_back_script = special_event_go_back
@@ -36,15 +36,15 @@ script new_create_special_events
 	format_globaltag_gigname setlist_prefix = ($<tier_global>.prefix) gignum = <gig_num>
 	challenge_num = 1
 	begin
-	formatText checksumName = challenge 'challenge%d' d = <challenge_num>
-	<challenge_text> = ($special_events_challenges.<special_event_num>.<challenge>.title)
-	formatText checksumName = challenge_crc 'challenge%d_unlocked' d = <challenge_num>
+	FormatText checksumname = challenge 'challenge%d' d = <challenge_num>
+	<challenge_text> = ($Special_Events_Challenges.<special_event_num>.<challenge>.title)
+	FormatText checksumname = challenge_crc 'challenge%d_unlocked' d = <challenge_num>
 	GetGlobalTags <gig_name> param = (<challenge_crc>)
 	if ((<...>.<challenge_crc>) = 1)
-		formatText checksumName = challenge_crc 'challenge%d_completed' d = <challenge_num>
+		FormatText checksumname = challenge_crc 'challenge%d_completed' d = <challenge_num>
 		GetGlobalTags <gig_name> param = (<challenge_crc>)
 		if ((<...>.<challenge_crc>) = 1)
-			<challenge_text> = (<challenge_text> + qs(0xd3e6a338))
+			<challenge_text> = (<challenge_text> + qs(" *COMPLETED*"))
 		endif
 		add_generic_menu_text_item {
 			text = <challenge_text>
@@ -60,12 +60,12 @@ script new_create_special_events
 	current_menu :obj_spawnscript \{menu_music_on}
 	menu_finish
 	destroy_loading_screen
-	StartRendering
-	LaunchEvent Type = focus target = current_menu data = {child_index = <selected_index>}
+	startrendering
+	LaunchEvent type = focus target = current_menu data = {child_index = <selected_index>}
 endscript
 
 script special_event_go_back 
-	LaunchEvent \{Type = unfocus
+	LaunchEvent \{type = unfocus
 		target = current_menu}
 	create_loading_screen
 	reset_all_special_events
@@ -79,7 +79,7 @@ endscript
 
 script ui_destroy_special_events 
 	dim_screen \{undim}
-	KillCamAnim \{Name = ch_view_cam}
+	KillCamAnim \{name = ch_view_cam}
 	destroy_menu \{menu_id = gig_posters_menu}
 	generic_ui_destroy
 endscript

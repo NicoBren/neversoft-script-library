@@ -1,6 +1,6 @@
 
 script ui_create_net_setlist 
-	Change \{opponent_gamertag = qs(0x28673bcf)}
+	change \{opponent_gamertag = qs("waiting for player")}
 	create_setlist_menu device_num = <device_num>
 endscript
 

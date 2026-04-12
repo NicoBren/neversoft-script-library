@@ -1,30 +1,30 @@
 
 script ui_init_win_song 
-	SpawnScriptNow \{kill_gem_scroller}
+	spawnscriptnow \{kill_gem_scroller}
 endscript
 
 script ui_create_win_song 
 	set_focus_color
 	set_unfocus_color
 	CreateScreenElement \{parent = root_window
-		id = myinterfaceelement
-		Type = descinterface
+		id = MyInterfaceElement
+		type = DescInterface
 		desc = 'win_song'}
-	myinterfaceelement :desc_checkversion \{desired = 3
-		assertif = mismatch}
-	myinterfaceelement :se_getprops
+	MyInterfaceElement :Desc_CheckVersion \{desired = 3
+		AssertIf = Mismatch}
+	MyInterfaceElement :SE_GetProps
 	my_song = ($current_song)
-	if NOT ($old_song = None)
+	if NOT ($old_song = none)
 		my_song = ($old_song)
-		Change \{old_song = None}
+		change \{old_song = none}
 	endif
 	get_song_title song = <my_song>
 	get_song_artist song = <my_song>
 	get_difficulty_text difficulty = ($player1_status.difficulty)
 	score = ($player1_status.score)
 	CastToInteger \{score}
-	formatText TextName = score_text qs(0x73307931) s = <score> DecimalPlaces = 0 usecommas
-	myinterfaceelement :SetProps {
+	FormatText TextName = score_text qs("\L%s") s = <score> DecimalPlaces = 0 usecommas
+	MyInterfaceElement :SetProps {
 		song_name_text = <song_title>
 		band_name_text = <song_artist>
 		difficulty_text = <difficulty_text>
@@ -37,8 +37,8 @@ script ui_create_win_song
 	if (<stars> < 3)
 		stars = 3
 	endif
-	ResolveScreenElementID \{id = {
-			myinterfaceelement
+	ResolveScreenElementId \{id = {
+			MyInterfaceElement
 			child = {
 				win_container
 				child = star_container
@@ -54,7 +54,7 @@ script ui_create_win_song
 		rgba = [32 32 32 255]
 	endif
 	CreateScreenElement {
-		Type = ContainerElement
+		type = ContainerElement
 		parent = <resolved_id>
 		dims = (50.0, 50.0)
 		just = [center center]
@@ -63,18 +63,18 @@ script ui_create_win_song
 	container = <id>
 	rot_angle = RandomInteger (0.0, 360.0)
 	CreateScreenElement {
-		Type = SpriteElement
+		type = SpriteElement
 		parent = <container>
-		texture = Song_Summary_Score_Star
+		texture = song_summary_score_star
 		rot_angle = <rot_angle>
 		rgba = <rgba>
 	}
 	CreateScreenElement {
-		Type = SpriteElement
+		type = SpriteElement
 		parent = <container>
-		texture = Song_Summary_Score_Star
+		texture = song_summary_score_star
 		rot_angle = <rot_angle>
-		Scale = 2.0
+		scale = 2.0
 		rgba = <rgba2>
 	}
 	i = (<i> + 1)
@@ -82,26 +82,26 @@ script ui_create_win_song
 	i = 0
 	p = 1
 	begin
-	ResolveScreenElementID id = {myinterfaceelement child = {win_container child = {note_streak_container child = <i>}}}
+	ResolveScreenElementId id = {MyInterfaceElement child = {win_container child = {note_streak_container child = <i>}}}
 	if (<i> >= ($current_num_players))
 		<resolved_id> :Die
 	else
-		formatText checksumName = status 'player%a_status' a = <p>
+		FormatText checksumname = status 'player%a_status' a = <p>
 		max_notes = ($<status>.max_notes)
 		if (<max_notes> = 0)
 			max_notes = 1.0
 		endif
-		formatText TextName = streak_text qs(0x73307931) s = ($<status>.best_run)
-		formatText TextName = percent_text qs(0x49412198) p = ((($<status>.notes_hit) / (<max_notes> * 1.0)) * 100.0) DecimalPlaces = 0
+		FormatText TextName = streak_text qs("\L%s") s = ($<status>.best_run)
+		FormatText TextName = percent_text qs("%p\%") p = ((($<status>.notes_hit) / (<max_notes> * 1.0)) * 100.0) DecimalPlaces = 0
 		switch ($<status>.part)
 			case guitar
-			instrument_text = qs(0x11355666)
-			case bass
-			instrument_text = qs(0x4f551cbe)
+			instrument_text = qs("Guitar")
+			case Bass
+			instrument_text = qs("Bass")
 			case drum
-			instrument_text = qs(0xf3e03f27)
-			case vocals
-			instrument_text = qs(0x9fae80a8)
+			instrument_text = qs("Drums")
+			case Vocals
+			instrument_text = qs("Vocals")
 		endswitch
 		SetScreenElementProps id = {<resolved_id> child = 0} text = <instrument_text>
 		SetScreenElementProps id = {<resolved_id> child = 1} text = <streak_text>
@@ -110,16 +110,16 @@ script ui_create_win_song
 	endif
 	p = (<p> + 1)
 	repeat 4
-	ResolveScreenElementID \{id = {
-			myinterfaceelement
+	ResolveScreenElementId \{id = {
+			MyInterfaceElement
 			child = {
 				win_container
 				child = menu
 			}
 		}}
 	continue_script = ui_win_song_career_continue
-	gamemode_gettype
-	if ((GotParam for_practice) || <Type> = quickplay)
+	GameMode_GetType
+	if ((GotParam for_practice) || <type> = quickplay)
 		<continue_script> = ui_win_song_continue
 	endif
 	if (($game_mode = p2_battle) || ($game_mode = p2_faceoff) || ($game_mode = p2_pro_faceoff))
@@ -132,9 +132,9 @@ script ui_create_win_song
 	endif
 	CreateScreenElement {
 		parent = <resolved_id>
-		Type = TextElement
+		type = TextElement
 		font = fontgrid_text_a8
-		text = qs(0x5e743602)
+		text = qs("continue")
 		rgba = ($menu_unfocus_color)
 		event_handlers = [
 			{focus retail_menu_focus}
@@ -144,14 +144,14 @@ script ui_create_win_song
 	}
 	if (($is_network_game = 1) && ($net_new_matchmaking_ui_flag = 0))
 		if NOT (IsHost)
-			<id> :se_setprops not_focusable
+			<id> :SE_SetProps not_focusable
 		endif
 	endif
 	CreateScreenElement {
 		parent = <resolved_id>
-		Type = TextElement
+		type = TextElement
 		font = fontgrid_text_a8
-		text = qs(0xcbd10828)
+		text = qs("detailed stats")
 		rgba = ($menu_unfocus_color)
 		event_handlers = [
 			{focus retail_menu_focus}
@@ -160,14 +160,14 @@ script ui_create_win_song
 		]
 	}
 	if ($is_network_game = 1)
-		<id> :se_setprops not_focusable
+		<id> :SE_SetProps not_focusable
 	endif
 	if GotParam \{for_practice}
 		CreateScreenElement {
 			parent = <resolved_id>
-			Type = TextElement
+			type = TextElement
 			font = fontgrid_text_a8
-			text = qs(0x0c711699)
+			text = qs("replay song")
 			rgba = ($menu_unfocus_color)
 			event_handlers = [
 				{focus retail_menu_focus}
@@ -177,9 +177,9 @@ script ui_create_win_song
 		}
 		CreateScreenElement {
 			parent = <resolved_id>
-			Type = TextElement
+			type = TextElement
 			font = fontgrid_text_a8
-			text = qs(0x4a1f8323)
+			text = qs("select speed")
 			rgba = ($menu_unfocus_color)
 			event_handlers = [
 				{focus retail_menu_focus}
@@ -189,9 +189,9 @@ script ui_create_win_song
 		}
 		CreateScreenElement {
 			parent = <resolved_id>
-			Type = TextElement
+			type = TextElement
 			font = fontgrid_text_a8
-			text = qs(0x07b66aa5)
+			text = qs("select section")
 			rgba = ($menu_unfocus_color)
 			event_handlers = [
 				{focus retail_menu_focus}
@@ -202,9 +202,9 @@ script ui_create_win_song
 	else
 		CreateScreenElement {
 			parent = <resolved_id>
-			Type = TextElement
+			type = TextElement
 			font = fontgrid_text_a8
-			text = qs(0x0c711699)
+			text = qs("replay song")
 			rgba = ($menu_unfocus_color)
 			event_handlers = [
 				{focus retail_menu_focus}
@@ -213,35 +213,35 @@ script ui_create_win_song
 			]
 		}
 		if ($is_network_game = 1)
-			<id> :se_setprops not_focusable
+			<id> :SE_SetProps not_focusable
 		endif
 	endif
 	AssignAlias id = <resolved_id> alias = current_menu
 	current_menu :obj_spawnscript \{menu_music_on}
 	if ((($is_network_game = 1) && IsHost) || ($is_network_game = 0))
-		add_user_control_helper \{text = qs(0xc18d5e76)
+		add_user_control_helper \{text = qs("SELECT")
 			button = green
 			z = 100000}
 	endif
 endscript
 
 script ui_destroy_win_song 
-	if ScreenElementExists \{id = myinterfaceelement}
-		myinterfaceelement :Die
+	if ScreenElementExists \{id = MyInterfaceElement}
+		MyInterfaceElement :Die
 	endif
 	clean_up_user_control_helpers
 endscript
 
 script ui_create_win_song_spawn 
 	Wait \{1
-		Seconds}
+		seconds}
 	create_newspaper_menu <...>
 	LaunchEvent \{target = current_menu
-		Type = focus}
+		type = focus}
 endscript
 
 script ui_win_song_continue 
-	SpawnScriptNow ui_win_song_continue_spawned params = <...>
+	spawnscriptnow ui_win_song_continue_spawned params = <...>
 endscript
 
 script ui_win_song_continue_spawned 
@@ -250,7 +250,7 @@ script ui_win_song_continue_spawned
 		i = 0
 		begin
 		if ((<stack> [<i>].base_name) = 'debug')
-			generic_event_back state = uistate_debug Player = <Player>
+			generic_event_back state = uistate_debug player = <player>
 			return
 		endif
 		i = (<i> + 1)
@@ -260,27 +260,27 @@ script ui_win_song_continue_spawned
 		if ($current_special_event_num = 1)
 			get_progression_globals game_mode = ($game_mode) ($current_progression_flag)
 			format_globaltag_gigname setlist_prefix = ($<tier_global>.prefix) gignum = ($current_gig_number)
-			getplayerinfo \{1
+			GetPlayerInfo \{1
 				part}
-			formatText \{checksumName = specialevent
+			FormatText \{checksumname = specialevent
 				'special_event%d'
 				d = $current_special_event_num}
-			formatText \{checksumName = challenge
+			FormatText \{checksumname = challenge
 				'challenge%d'
 				d = $current_special_event_challenge_num}
-			formatText checksumName = songs_ar '%p_songs' p = ($part_list_props.<part>.text_nl)
+			FormatText checksumname = songs_ar '%p_songs' p = ($part_list_props.<part>.text_nl)
 			if ($special_event_stage = 3)
-				Change special_event_song_index = ($special_event_song_index + 1)
-				GetArraySize ($special_events_challenges.<specialevent>.<challenge>.<songs_ar>)
+				change special_event_song_index = ($special_event_song_index + 1)
+				GetArraySize ($Special_Events_Challenges.<specialevent>.<challenge>.<songs_ar>)
 				reset_score \{player_status = player1_status}
 				reset_current_special_event_percentages
-				if ($special_event_song_index < <array_Size>)
-					Change \{special_event_stage = 1}
-					Change current_song = ($special_events_challenges.<specialevent>.<challenge>.<songs_ar> [$special_event_song_index].song)
+				if ($special_event_song_index < <array_size>)
+					change \{special_event_stage = 1}
+					change current_song = ($Special_Events_Challenges.<specialevent>.<challenge>.<songs_ar> [$special_event_song_index].song)
 					destroy_band
 					unload_songqpak
 					load_songqpak song_name = ($current_song) async = 0
-					set_song_section_array \{Player = 1}
+					set_song_section_array \{player = 1}
 					generic_event_back \{state = uistate_select_song_section}
 				else
 					if ($current_special_event_challenge_num = 1)
@@ -304,7 +304,7 @@ script ui_win_song_continue_spawned
 			else
 				SetGlobalTags <gig_name> params = {completed = 3}
 			endif
-			Change game_mode = ($special_event_previous_game_mode)
+			change game_mode = ($special_event_previous_game_mode)
 			return
 		elseif ($current_special_event_num = 2)
 			get_progression_globals game_mode = ($game_mode) ($current_progression_flag)
@@ -332,11 +332,11 @@ script ui_win_song_continue_spawned
 			else
 				SetGlobalTags <gig_name> params = {completed = 3}
 			endif
-			Change game_mode = ($special_event_previous_game_mode)
+			change game_mode = ($special_event_previous_game_mode)
 			return
 		endif
 	endif
-	if progression_anyplayerwoncash
+	if Progression_AnyPlayerWonCash
 		generic_event_choose \{state = uistate_cash_reward}
 	else
 		ui_win_song_continue_next_menu
@@ -379,11 +379,11 @@ script ui_win_song_continue_next_menu
 endscript
 
 script ui_win_song_career_continue 
-	SpawnScriptNow \{ui_win_song_career_continue_spawned}
+	spawnscriptnow \{ui_win_song_career_continue_spawned}
 endscript
 
 script ui_win_song_career_continue_spawned 
-	printf \{qs(0xe4fd1933)}
+	printf \{qs("\L***************** ui_win_song_career_continue_spawned *****************")}
 	unlock_guitar = ($progression_unlocked_guitar)
 	unlock_guitar2 = ($progression_unlocked_guitar2)
 	sponsored = ($progression_got_sponsored_last_song)
@@ -394,33 +394,33 @@ script ui_win_song_career_continue_spawned
 		endif
 	endif
 	if ($is_network_game)
-		gamemode_gettype
-		if (<Type> = career)
+		GameMode_GetType
+		if (<type> = career)
 			if progression_set_new_song_in_gig_list
-				Change \{gameplay_restart_song = 1}
+				change \{gameplay_restart_song = 1}
 				SendStructure \{callback = net_career_next_song
 					data_to_send = {
-						None
+						none
 					}}
 				ui_memcard_autosave \{event = menu_back
-					state = Uistate_gameplay
+					state = uistate_gameplay
 					data = {
 						all_active_players = true
 					}}
-				Change \{net_ready_to_start = 0}
+				change \{net_ready_to_start = 0}
 				($default_loading_screen.create)
 				load_and_sync_timing
 			else
 				SendStructure \{callback = net_career_goto_band_lobby
 					data_to_send = {
-						None
+						none
 					}}
 				net_career_goto_band_lobby
 			endif
 		else
-			printf \{qs(0xf471f46b)}
+			printf \{qs("\Lwe're playing normal online")}
 			quit_network_game
-			Change \{net_new_matchmaking_ui_flag = 0}
+			change \{net_new_matchmaking_ui_flag = 0}
 			generic_event_back \{state = uistate_online}
 			return
 		endif
@@ -436,15 +436,15 @@ script ui_win_song_career_continue_spawned
 			}}
 	elseif (<sponsored>)
 		generic_event_choose \{state = uistate_sponsored}
-	elseif progression_anyplayerwoncash
+	elseif Progression_AnyPlayerWonCash
 		generic_event_choose \{state = uistate_cash_reward}
 	else
 		if NOT ($current_gig_number = 0)
 			if progression_set_new_song_in_gig_list
-				Change \{gameplay_restart_song = 1}
+				change \{gameplay_restart_song = 1}
 				generic_menu_pad_choose_sound
 				ui_memcard_autosave \{event = menu_back
-					state = Uistate_gameplay
+					state = uistate_gameplay
 					data = {
 						all_active_players = true
 					}}
@@ -477,7 +477,7 @@ script ui_win_song_career_continue_spawned
 endscript
 
 script do_achievement_check 
-	if (<winner> = qs(0x787beab2))
+	if (<winner> = qs("1"))
 		<won> = 1
 	else
 		<won> = 0
@@ -487,30 +487,30 @@ script do_achievement_check
 	else
 		<HOST> = 0
 	endif
-	if ($match_type = Ranked)
-		<Ranked> = 1
+	if ($match_type = ranked)
+		<ranked> = 1
 	else
-		<Ranked> = 0
+		<ranked> = 0
 	endif
 	if IsGuitarController controller = ($player1_status.controller)
 		standard_controller = 0
 	else
 		standard_controller = 1
 	endif
-	set_online_match_info Ranked = <Ranked> won = <won> HOST = <HOST> standard_controller = <standard_controller>
+	set_online_match_info ranked = <ranked> won = <won> HOST = <HOST> standard_controller = <standard_controller>
 endscript
 
 script net_career_next_song 
-	printf \{qs(0x7f29e157)}
+	printf \{qs("\L************** net_career_next_song ****************")}
 	GetGlobalTags \{user_options}
 	if progression_set_new_song_in_gig_list
 		ui_memcard_autosave \{event = menu_back
-			state = Uistate_gameplay
+			state = uistate_gameplay
 			data = {
 				all_active_players = true
 			}}
-		Change \{gameplay_restart_song = 1}
-		Change \{net_ready_to_start = 0}
+		change \{gameplay_restart_song = 1}
+		change \{net_ready_to_start = 0}
 		($default_loading_screen.create)
 		load_and_sync_timing
 	else

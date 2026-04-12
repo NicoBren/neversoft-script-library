@@ -1,27 +1,27 @@
-gp_fx_harborsparklerocket_01 = {
-	Pos = (6.7126417, 0.0, 68.0874)
-	Angles = (0.0, 0.0, 0.0)
+GP_FX_HarborSparkleRocket_01 = {
+	pos = (6.7126417, 0.0, 68.0874)
+	angles = (0.0, 0.0, 0.0)
 	Class = ParticleObject
 	ParticleType = FlexParticle
-	Type = flat
-	Active
+	type = flat
+	active
 	CreatedAtStart
-	Attach
+	attach
 	EmitRangeDims = (0.2, 0.2, 0.2)
-	Emit_Target = (0.0, 1.0, 0.0)
+	emit_Target = (0.0, 1.0, 0.0)
 	EmitAngle = (0.0, 0.0, 0.0)
-	Force = (0.0, -5.0, 0.0)
+	force = (0.0, -5.0, 0.0)
 	WindCoeff = 0.0
 	LocalWindCoeff = 0.0
 	EmitterVelocityWeight = 0.0
 	Radiate
 	AngleSpread = 1.0
 	LifeRange = (1.0, 1.5)
-	Emit_Rate = 200.0
-	Max = 0
+	emit_rate = 200.0
+	max = 0
 	TimeSeed = 0.0
-	LifeTime = 4.0
-	EmitNum = 0
+	lifeTime = 4.0
+	emitNum = 0
 	FollowEmitter = 0.0
 	AlwaysEmit
 	EmitFunction = constant
@@ -36,16 +36,16 @@ gp_fx_harborsparklerocket_01 = {
 	EmitDelayStart = 0.0
 	PathFollowTime = 0.0
 	History = 2
-	HistoryListCoordinateSpace = World
-	Color = -404481
+	HistoryListCoordinateSpace = world
+	color = -404481
 	LOD_Default
 	QuickMaterial = {
 		DiffuseTextureEnabled
 		DiffuseTexture = JOW_Spark02
 		SpecularPower = 0
-		Bloom
-		AlphaCutoff = 1
-		BlendMode = add
+		bloom
+		alphacutoff = 1
+		blendMode = Add
 		QuadAnimationFPS = 0
 	}
 	Knot = [

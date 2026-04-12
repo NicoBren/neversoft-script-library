@@ -35,15 +35,15 @@ whammy_matching_colors = [
 
 script reset_whammy_matching_array 
 	get_song_struct song = <song_name>
-	if (($<player_status>.part) = bass)
+	if (($<player_status>.part) = Bass)
 		<part> = 'rhythm_'
 	else
 		<part> = ''
 	endif
 	if ($game_mode = p2_career || $game_mode = p2_coop || $game_mode = p2_quickplay ||
-			($game_mode = training && ($<player_status>.part = bass)))
-		if StructureContains structure = <song_struct> use_coop_notetracks
-			if (($<player_status>.part) = bass)
+			($game_mode = training && ($<player_status>.part = Bass)))
+		if StructureContains Structure = <song_struct> use_coop_notetracks
+			if (($<player_status>.part) = Bass)
 				<part> = 'rhythmcoop_'
 			else
 				<part> = 'guitarcoop_'
@@ -52,26 +52,26 @@ script reset_whammy_matching_array
 	endif
 	get_song_prefix song = <song_name>
 	get_difficulty_text_nl difficulty = <difficulty>
-	formatText checksumName = song '%s_%p%d_WhammyController' s = <song_prefix> p = <part> d = <difficulty_text_nl> AddToStringLookup
-	Change structurename = <player_status> current_song_whammy_matching_array = <song>
+	FormatText checksumname = song '%s_%p%d_WhammyController' s = <song_prefix> p = <part> d = <difficulty_text_nl> AddToStringLookup
+	change structurename = <player_status> current_song_whammy_matching_array = <song>
 endscript
 
 script whammy_matching_hit \{count = 0}
 	DestroyScreenElement \{id = whammy_matching_message_element}
-	formatText TextName = wm_text qs(0x8cbd354e) s = <count>
+	FormatText TextName = wm_text qs("\LWhammy Matched %s") s = <count>
 	CreateScreenElement {
 		id = whammy_matching_message_element
 		parent = root_window
-		Type = TextElement
+		type = TextElement
 		text = <wm_text>
 		font = fontgrid_text_a11
 		just = [center center]
 		internal_just = [center center]
-		Pos = (325.0, 420.0)
+		pos = (325.0, 420.0)
 		rgba = [255 192 0 255]
 		z_priority = 1000
-		Scale = 0.5
-		Shadow
+		scale = 0.5
+		shadow
 		shadow_offs = (3.0, 3.0)
 	}
 	RunScriptOnScreenElement \{whammy_matching_message_wait_and_die
@@ -79,12 +79,12 @@ script whammy_matching_hit \{count = 0}
 endscript
 
 script whammy_matching_message_wait_and_die 
-	se_setprops \{Scale = 0.7
+	SE_SetProps \{scale = 0.7
 		time = 0.05}
-	se_waitprops
-	se_setprops \{Scale = 0.5
+	SE_WaitProps
+	SE_SetProps \{scale = 0.5
 		alpha = 0.1
 		time = 1}
-	se_waitprops
+	SE_WaitProps
 	Die
 endscript

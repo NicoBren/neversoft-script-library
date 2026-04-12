@@ -1,18 +1,18 @@
 debug_allow_modify_preset_characters = 0
-has_entered_car_before = 1
+has_entered_CAR_before = 1
 
 script ui_create_customize_character 
-	Change \{disallow_band_edit_char_spam = 0}
-	Change \{rich_presence_context = presence_rockstar_creator}
+	change \{disallow_band_edit_char_spam = 0}
+	change \{rich_presence_context = presence_rockstar_creator}
 	set_cas_loading_setup \{setup = single}
-	cas_set_object_node_pos Player = ($cas_current_player) node = z_soundcheck_trg_waypoint_car_start
+	cas_set_object_node_pos player = ($cas_current_player) node = Z_SoundCheck_TRG_Waypoint_CAR_Start
 	KillSkaterCamAnim \{all}
 	make_generic_menu \{vmenu_id = create_customize_character_vmenu
 		pad_back_script = customize_character_save_prompt
-		title = qs(0x70a9b711)
+		title = qs("Edit Character")
 		show_history
 		num_icons = 0}
-	SpawnScriptNow \{generic_menu_animate_in}
+	spawnscriptnow \{generic_menu_animate_in}
 	setup_cas_menu_handlers \{vmenu_id = create_customize_character_vmenu
 		camera_list = [
 			'customize_character_body'
@@ -28,7 +28,7 @@ script ui_create_customize_character
 		focusable_flags = {not_focusable}
 	endif
 	if is_from_singleplayer_hub
-		add_generic_menu_icon_item \{text = qs(0x7863365c)
+		add_generic_menu_icon_item \{text = qs("READY TO ROCK")
 			pad_choose_script = return_to_singleplayer_hub
 			icon = ready2rock}
 	endif
@@ -46,21 +46,21 @@ script ui_create_customize_character
 	add_generic_menu_icon_item {
 		icon = <icon>
 		text = (<profile_struct>.fullname)
-		choose_state = uistate_cas_text_entry
+		choose_state = UIstate_cas_text_entry
 		choose_state_data = {choose_script = name_entry_choose_script text = (<profile_struct>.fullname) num_icons = 1 cam_name = 'customize_character'}
 		<focusable_flags>
 		text_case = Original
 	}
 	if ((GotParam custom_musician) || ($debug_allow_modify_preset_characters = 1))
-		add_generic_menu_icon_item \{text = qs(0x888dd748)
-			choose_state = uistate_customize_character_head
+		add_generic_menu_icon_item \{text = qs("HEAD")
+			choose_state = UIstate_customize_character_head
 			icon = icon_head}
-		add_generic_menu_icon_item \{text = qs(0x706474c8)
-			choose_state = uistate_customize_character_body
+		add_generic_menu_icon_item \{text = qs("BODY")
+			choose_state = UIstate_customize_character_body
 			icon = icon_body}
-		height = 0
+		Height = 0
 		find_physique_height
-		if (<height> > 0)
+		if (<Height> > 0)
 			if is_female_char
 				hair_cam_name = 'customize_character_hair'
 			else
@@ -75,48 +75,48 @@ script ui_create_customize_character
 		endif
 		add_generic_menu_icon_item {
 			icon = icon_hair
-			text = qs(0xca300866)
-			choose_state = uistate_popout_select_part
+			text = qs("HAIR")
+			choose_state = UIstate_popout_select_part
 			choose_state_data = {
-				text = qs(0x8476cb4e)
+				text = qs("SELECT HAIR STYLE")
 				cam_name = <hair_cam_name>
 				camera_list = ['customize_character_hair' 'customize_character_hair_R' 'customize_character_hair_B' 'customize_character_hair_L']
 				zoom_camera = 'customize_character_Zoom'
-				part = cas_hair
+				part = CAS_Hair
 				num_icons = 1
 				color_wheel = ($hair_colorwheel)
 				hist_tex = icon_hair
 				is_popup
-				stance = stance_select_hair
+				stance = Stance_Select_Hair
 			}
 		}
 	endif
-	add_generic_menu_icon_item \{text = qs(0xa946c7b7)
-		choose_state = uistate_customize_character_outfit
+	add_generic_menu_icon_item \{text = qs("OUTFIT")
+		choose_state = UIstate_customize_character_outfit
 		icon = icon_outfit}
 	add_generic_menu_icon_item \{icon = icon_instrument
-		text = qs(0x8694014b)
-		choose_state = uistate_customize_character_instrument}
-	getcurrentcasobject
+		text = qs("INSTRUMENT")
+		choose_state = UIstate_customize_character_instrument}
+	GetCurrentCASObject
 	if GotParam \{cas_object}
-		bandmanager_changestance Name = <cas_object> stance = stance_frontend
+		BandManager_ChangeStance name = <cas_object> stance = stance_frontend
 	endif
 	menu_finish \{car_helper_text}
 	if is_from_singleplayer_hub
-		LaunchEvent \{Type = focus
+		LaunchEvent \{type = focus
 			target = create_customize_character_vmenu
 			data = {
 				child_index = 0
 			}}
 	else
-		LaunchEvent Type = focus target = create_customize_character_vmenu data = {child_index = <selected_index>}
+		LaunchEvent type = focus target = create_customize_character_vmenu data = {child_index = <selected_index>}
 	endif
-	if (($has_entered_car_before) = 0)
-		generic_event_choose \{state = uistate_helper_dialogue
+	if (($has_entered_CAR_before) = 0)
+		generic_event_choose \{state = UIstate_helper_dialogue
 			data = {
 				is_popup
 			}}
-		Change \{has_entered_car_before = 1}
+		change \{has_entered_CAR_before = 1}
 	endif
 endscript
 
@@ -140,11 +140,11 @@ script ui_deinit_customize_character
 		cas_free_resources \{spawn
 			block_scripts = 1}
 	else
-		SpawnScriptNow \{cas_free_resources}
+		spawnscriptnow \{cas_free_resources}
 	endif
 	destroy_band_money_display
-	Change \{cas_current_savegame = -1}
-	Change \{cas_current_profile = None}
+	change \{cas_current_savegame = -1}
+	change \{cas_current_profile = none}
 endscript
 
 script name_entry_choose_script 
@@ -153,14 +153,14 @@ script name_entry_choose_script
 endscript
 
 script get_genre_name 
-	GetArraySize ($genre_list)
+	GetArraySize ($Genre_List)
 	i = 0
 	begin
-	if ((($genre_list) [<i>].desc_id) = <genre>)
-		return genre_name = (($genre_list) [<i>].frontend_desc)
+	if ((($Genre_List) [<i>].desc_id) = <genre>)
+		return genre_name = (($Genre_List) [<i>].frontend_desc)
 	endif
 	i = (<i> + 1)
-	repeat <array_Size>
+	repeat <array_size>
 endscript
 
 script ui_return 
@@ -171,12 +171,12 @@ script customize_character_save_prompt
 	get_musician_profile_struct_by_id id = ($cas_current_profile) savegame = ($cas_current_savegame)
 	struct1 = (<profile_struct>.appearance)
 	struct2 = ($cas_current_appearance)
-	if (($cas_editing_new_character) = FALSE && comparestructs struct1 = <struct1> struct2 = <struct2>)
+	if (($cas_editing_new_character) = false && CompareStructs struct1 = <struct1> struct2 = <struct2>)
 		exit_discard_changes \{no_changes}
 	else
 		ui_event \{event = menu_change
 			data = {
-				state = uistate_save_changes_dialogue
+				state = UIstate_save_changes_dialogue
 				is_popup
 			}}
 	endif
@@ -191,15 +191,15 @@ script is_from_singleplayer_hub
 	endif
 	i = (<i> + 1)
 	repeat <stack_size>
-	return \{FALSE}
+	return \{false}
 endscript
 
 script return_to_singleplayer_hub 
 	get_musician_profile_struct_by_id id = ($cas_current_profile) savegame = ($cas_current_savegame)
-	Change \{first_character_hub_enter = 0}
+	change \{first_character_hub_enter = 0}
 	struct1 = (<profile_struct>.appearance)
 	struct2 = ($cas_current_appearance)
-	if (($cas_editing_new_character) = FALSE && comparestructs struct1 = <struct1> struct2 = <struct2>)
+	if (($cas_editing_new_character) = false && CompareStructs struct1 = <struct1> struct2 = <struct2>)
 		exit_skip_save
 	else
 		cas_get_player_status

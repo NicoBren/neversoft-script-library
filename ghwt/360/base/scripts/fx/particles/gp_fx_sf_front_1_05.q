@@ -1,15 +1,15 @@
-gp_fx_sf_front_1_05 = {
-	Pos = (-2.310318, 0.0, 4.2613525)
-	Angles = (0.0, 0.0, 0.0)
+GP_FX_SF_Front_1_05 = {
+	pos = (-2.310318, 0.0, 4.2613525)
+	angles = (0.0, 0.0, 0.0)
 	Class = ParticleObject
 	ParticleType = FlexParticle
-	Type = flat
-	Active
+	type = flat
+	active
 	CreatedAtStart
 	EmitRangeDims = (0.0, 0.0, 0.0)
-	Emit_Target = (0.0, 1.0, 0.0)
+	emit_Target = (0.0, 1.0, 0.0)
 	EmitAngle = (0.0, 0.0, 0.0)
-	Force = (0.0, -8.0, 0.0)
+	force = (0.0, -8.0, 0.0)
 	WindCoeff = 0.0
 	LocalWindCoeff = 0.0
 	EmitterVelocityWeight = 0.0
@@ -18,11 +18,11 @@ gp_fx_sf_front_1_05 = {
 	BounceCoeff = 1.0
 	BounceCallbackRate = 0.0
 	LifeRange = (1.5, 2.0)
-	Emit_Rate = 200.0
-	Max = 0
+	emit_rate = 200.0
+	max = 0
 	TimeSeed = 0.0
-	LifeTime = 1.0
-	EmitNum = 0
+	lifeTime = 1.0
+	emitNum = 0
 	FollowEmitter = 0.0
 	EmitFunction = onoff
 	EmitPeriod = 0.3
@@ -37,16 +37,16 @@ gp_fx_sf_front_1_05 = {
 	AlignWithPath
 	PathFollowTime = 0.07
 	History = 2
-	HistoryListCoordinateSpace = World
-	Color = -1
+	HistoryListCoordinateSpace = world
+	color = -1
 	LOD_Default
 	QuickMaterial = {
 		DiffuseTextureEnabled
 		DiffuseTexture = JOW_Spark01
 		SpecularPower = 0
-		Bloom
-		AlphaCutoff = 1
-		BlendMode = add
+		bloom
+		alphacutoff = 1
+		blendMode = Add
 		Burn
 		BurnValue = 0.8
 		QuadAnimationFPS = 0

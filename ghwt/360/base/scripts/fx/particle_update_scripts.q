@@ -1,5 +1,5 @@
 
-script align_scale_to_vel_update \{objID = skater
+script align_scale_to_vel_update \{ObjID = skater
 		bone = Bone_Board_Truck_Back
 		update_pos = 0
 		emit_offset = (0.0, 0.5, 0.0)
@@ -10,31 +10,31 @@ script align_scale_to_vel_update \{objID = skater
 		max_vel_range = 8
 		base_emit_rate = 0.0}
 	pos0_offset = <pos_offset>
-	<parentId> = <objID>
+	<parentId> = <ObjID>
 	begin
 	if ShouldEmit
-		<objID> :Obj_GetVelocity
+		<ObjID> :Obj_GetVelocity
 		NormalizeVector <vel>
 		<length> = (<length> / <base_vel>)
 		SetEmitTarget target = (<emit_offset> + (<emit_scale> * <norm>))
-		SetSpeedRange min = (<min_vel_range> * <length>) Max = (<max_vel_range> * <length>)
+		SetSpeedRange min = (<min_vel_range> * <length>) max = (<max_vel_range> * <length>)
 		EmitRate rate = (<length> * <base_emit_rate>)
 		if NOT (<update_pos> = 0)
-			<X> = 0
+			<x> = 0
 			<y> = 0
 			<z> = 0
 			if GotParam \{get_bone_script}
-				<get_bone_script> objID = <parentId>
+				<get_bone_script> ObjID = <parentId>
 			endif
-			<objID> :Obj_GetBonePosition bone = <bone>
-			<pos_offset> = (<pos0_offset> + <X> * (1.0, 0.0, 0.0))
+			<ObjID> :Obj_GetBonePosition bone = <bone>
+			<pos_offset> = (<pos0_offset> + <x> * (1.0, 0.0, 0.0))
 			<pos_offset> = (<pos_offset> + <y> * (0.0, 1.0, 0.0))
 			<pos_offset> = (<pos_offset> + <z> * (0.0, 0.0, 1.0))
-			setpos Pos = <pos_offset>
+			setpos pos = <pos_offset>
 		endif
 	else
 		if (<base_emit_rate> > 0.0)
-			<objID> :Obj_GetVelocity
+			<ObjID> :Obj_GetVelocity
 			NormalizeVector <vel>
 			<length> = (<length> / <base_vel>)
 			EmitRate rate = (<length> * <base_emit_rate>)
@@ -45,7 +45,7 @@ script align_scale_to_vel_update \{objID = skater
 	repeat
 endscript
 
-script align_scale_size_to_vel_update \{objID = skater
+script align_scale_size_to_vel_update \{ObjID = skater
 		bone = Bone_Board_Truck_Back
 		update_pos = 0
 		emit_offset = (0.0, 0.5, 0.0)
@@ -56,32 +56,32 @@ script align_scale_size_to_vel_update \{objID = skater
 		max_vel_range = 8
 		base_emit_rate = 0.0}
 	pos0_offset = <pos_offset>
-	<parentId> = <objID>
+	<parentId> = <ObjID>
 	begin
 	if ShouldEmit
-		<objID> :Obj_GetVelocity
+		<ObjID> :Obj_GetVelocity
 		NormalizeVector <vel>
 		<length> = (<length> / <base_vel>)
 		SetEmitTarget target = (<emit_offset> + (<emit_scale> * <norm>))
-		SetSpeedRange min = (<min_vel_range> * <length>) Max = (<max_vel_range> * <length>)
+		SetSpeedRange min = (<min_vel_range> * <length>) max = (<max_vel_range> * <length>)
 		EmitRate rate = (<length> * <base_emit_rate>)
 		SetParticleSizeScale scaleSize = <length>
 		if NOT (<update_pos> = 0)
-			<X> = 0
+			<x> = 0
 			<y> = 0
 			<z> = 0
 			if GotParam \{get_bone_script}
-				<get_bone_script> objID = <parentId>
+				<get_bone_script> ObjID = <parentId>
 			endif
-			<objID> :Obj_GetBonePosition bone = <bone>
-			<pos_offset> = (<pos0_offset> + <X> * (1.0, 0.0, 0.0))
+			<ObjID> :Obj_GetBonePosition bone = <bone>
+			<pos_offset> = (<pos0_offset> + <x> * (1.0, 0.0, 0.0))
 			<pos_offset> = (<pos_offset> + <y> * (0.0, 1.0, 0.0))
 			<pos_offset> = (<pos_offset> + <z> * (0.0, 0.0, 1.0))
-			setpos Pos = <pos_offset>
+			setpos pos = <pos_offset>
 		endif
 	else
 		if (<base_emit_rate> > 0.0)
-			<objID> :Obj_GetVelocity
+			<ObjID> :Obj_GetVelocity
 			NormalizeVector <vel>
 			<length> = (<length> / <base_vel>)
 			EmitRate rate = (<length> * <base_emit_rate>)
@@ -92,32 +92,32 @@ script align_scale_size_to_vel_update \{objID = skater
 	repeat
 endscript
 
-script align_to_vel_update \{objID = skater
+script align_to_vel_update \{ObjID = skater
 		bone = Bone_Board_Truck_Back
 		update_pos = 0
 		emit_offset = (0.0, 0.5, 0.0)
 		emit_scale = -1.0
 		pos_offset = (0.0, -2.0, 0.0)}
 	pos0_offset = <pos_offset>
-	<parentId> = <objID>
+	<parentId> = <ObjID>
 	begin
 	if ShouldEmit
-		if CompositeObjectExists Name = <objID>
-			<objID> :Obj_GetVelocity
+		if CompositeObjectExists name = <ObjID>
+			<ObjID> :Obj_GetVelocity
 			NormalizeVector <vel>
 			SetEmitTarget target = (<emit_offset> + (<emit_scale> * <norm>))
 			if NOT (<update_pos> = 0)
-				<X> = 0
+				<x> = 0
 				<y> = 0
 				<z> = 0
 				if GotParam \{get_bone_script}
-					<get_bone_script> objID = <parentId>
+					<get_bone_script> ObjID = <parentId>
 				endif
-				<objID> :Obj_GetBonePosition bone = <bone>
-				<pos_offset> = (<pos0_offset> + <X> * (1.0, 0.0, 0.0))
+				<ObjID> :Obj_GetBonePosition bone = <bone>
+				<pos_offset> = (<pos0_offset> + <x> * (1.0, 0.0, 0.0))
 				<pos_offset> = (<pos_offset> + <y> * (0.0, 1.0, 0.0))
 				<pos_offset> = (<pos_offset> + <z> * (0.0, 0.0, 1.0))
-				setpos Pos = <pos_offset>
+				setpos pos = <pos_offset>
 			endif
 		endif
 	endif
@@ -126,7 +126,7 @@ script align_to_vel_update \{objID = skater
 	repeat
 endscript
 
-script align_to_obj_orient \{objID = skater
+script align_to_obj_orient \{ObjID = skater
 		bone = Bone_Board_Truck_Back
 		update_pos = 0
 		pos_offset = (0.0, -2.0, 0.0)
@@ -134,19 +134,19 @@ script align_to_obj_orient \{objID = skater
 	pos0_offset = <pos_offset>
 	begin
 	if ShouldEmit
-		<objID> :Obj_GetOrientation
-		<orient> = ((<X> * (1.0, 0.0, 0.0)) + (<y> * (0.0, 1.0, 0.0)) + (<z> * (0.0, 0.0, 1.0)))
-		NormalizeVector <orient>
+		<ObjID> :Obj_GetOrientation
+		<Orient> = ((<x> * (1.0, 0.0, 0.0)) + (<y> * (0.0, 1.0, 0.0)) + (<z> * (0.0, 0.0, 1.0)))
+		NormalizeVector <Orient>
 		SetEmitTarget target = ((<emit_scale> * <norm>))
 		if NOT (<update_pos> = 0)
-			<X> = 0
+			<x> = 0
 			<y> = 0
 			<z> = 0
-			<objID> :Obj_GetBonePosition bone = <bone>
-			<pos_offset> = (<pos0_offset> + <X> * (1.0, 0.0, 0.0))
+			<ObjID> :Obj_GetBonePosition bone = <bone>
+			<pos_offset> = (<pos0_offset> + <x> * (1.0, 0.0, 0.0))
 			<pos_offset> = (<pos_offset> + <y> * (0.0, 1.0, 0.0))
 			<pos_offset> = (<pos_offset> + <z> * (0.0, 0.0, 1.0))
-			setpos Pos = <pos_offset>
+			setpos pos = <pos_offset>
 		endif
 	endif
 	Wait \{1
@@ -154,20 +154,20 @@ script align_to_obj_orient \{objID = skater
 	repeat
 endscript
 
-script emitRate_Speed \{objID = skater
+script emitRate_Speed \{ObjID = skater
 		minRate = 0
 		maxRate = 64
 		minSpeed = 0
 		maxSpeed = 12}
 	speedDiff = (<maxSpeed> - <minSpeed>)
 	rateDiff = (<maxRate> - <minRate>)
-	if (<objID> = parent)
+	if (<ObjID> = parent)
 		LockObj_GetParent
 		printstruct <parent>
-		objID = <parent>
+		ObjID = <parent>
 	endif
 	begin
-	<objID> :Obj_GetVelocity
+	<ObjID> :Obj_GetVelocity
 	NormalizeVector <vel>
 	if (<length> < <minSpeed>)
 		newRate = <minRate>
@@ -181,11 +181,11 @@ script emitRate_Speed \{objID = skater
 	endif
 	EmitRate rate = <newRate>
 	Wait \{1
-		Frame}
+		frame}
 	repeat
 endscript
 
-script emitRate_Size_Speed \{objID = skater
+script emitRate_Size_Speed \{ObjID = skater
 		minRate = 0
 		maxRate = 64
 		minStartSize = (0.4, 0.4)
@@ -203,7 +203,7 @@ script emitRate_Size_Speed \{objID = skater
 	printstruct <...>
 	JOW_Stars \{'begin'}
 	begin
-	<objID> :Obj_GetVelocity
+	<ObjID> :Obj_GetVelocity
 	NormalizeVector <vel>
 	if (<length> < <minSpeed>)
 		newRate = <minRate>
@@ -222,23 +222,23 @@ script emitRate_Size_Speed \{objID = skater
 	EmitRate rate = <newRate>
 	SetParticleSize sw = (<newStartSize>.(1.0, 0.0)) sh = (<newStartSize>.(0.0, 1.0)) ew = (<newEndSize>.(1.0, 0.0)) eh = (<newEndSize>.(0.0, 1.0))
 	Wait \{1
-		Frame}
+		frame}
 	repeat
 endscript
 
-script rotDir_Turn \{objID = skater
-		minrot = 0.0
-		maxrot = 0.3}
+script rotDir_Turn \{ObjID = skater
+		minRot = 0.0
+		maxRot = 0.3}
 	begin
-	if <objID> :IsTurningLeft
-		SetRotate min = (-1 * <minrot>) Max = (-1 * <maxrot>)
-	elseif <objID> :IsTurningRight
-		SetRotate min = <minrot> Max = <maxrot>
+	if <ObjID> :IsTurningLeft
+		SetRotate min = (-1 * <minRot>) max = (-1 * <maxRot>)
+	elseif <ObjID> :IsTurningRight
+		SetRotate min = <minRot> max = <maxRot>
 	else
-		SetRotate min = (-1 * <minrot>) Max = <minrot>
+		SetRotate min = (-1 * <minRot>) max = <minRot>
 	endif
 	Wait \{0.1
-		Seconds}
+		seconds}
 	repeat
 endscript
 
@@ -284,6 +284,6 @@ script starPower_Butterflies \{sMinW = 1.0
 	eCurW = (<eCurW> + (<factor> * <eWStepSize>))
 	sCurH = (<sCurH> + (<factor> * <sHStepSize>))
 	eCurH = (<eCurH> + (<factor> * <eHStepSize>))
-	Wait <updateTime> Seconds
+	Wait <updateTime> seconds
 	repeat
 endscript

@@ -1,25 +1,25 @@
-gp_fx_fireworks_sparklerocket_top_01 = {
-	Pos = (-7.473963, 0.0, 0.696806)
-	Angles = (0.0, 0.0, 0.0)
+GP_FX_Fireworks_SparkleRocket_Top_01 = {
+	pos = (-7.473963, 0.0, 0.696806)
+	angles = (0.0, 0.0, 0.0)
 	Class = ParticleObject
 	ParticleType = FlexParticle
-	Type = flat
-	Active
+	type = flat
+	active
 	CreatedAtStart
 	EmitRangeDims = (0.0, 0.0, 0.0)
-	Emit_Target = (0.0, 1.0, 0.0)
+	emit_Target = (0.0, 1.0, 0.0)
 	EmitAngle = (0.0, 0.0, 0.0)
-	Force = (0.0, 0.0, 0.0)
+	force = (0.0, 0.0, 0.0)
 	WindCoeff = 0.0
 	LocalWindCoeff = 0.0
 	EmitterVelocityWeight = 0.0
 	AngleSpread = 45.0
 	LifeRange = (1.0, 1.0)
-	Emit_Rate = 1.0
-	Max = 0
+	emit_rate = 1.0
+	max = 0
 	TimeSeed = 0.0
-	LifeTime = 1.0
-	EmitNum = 1
+	lifeTime = 1.0
+	emitNum = 1
 	FollowEmitter = 0.0
 	EmitFunction = constant
 	EmitPeriod = 1.0
@@ -34,14 +34,14 @@ gp_fx_fireworks_sparklerocket_top_01 = {
 	PathFollowTime = 0.0
 	History = 2
 	HistoryListCoordinateSpace = object
-	Color = -7518977
+	color = -7518977
 	LOD_Default
 	QuickMaterial = {
 		DiffuseTextureEnabled
-		DiffuseTexture = jow_flare02
+		DiffuseTexture = JOW_Flare02
 		SpecularPower = 0
-		AlphaCutoff = 1
-		BlendMode = add
+		alphacutoff = 1
+		blendMode = Add
 		QuadAnimationFPS = 0
 	}
 	Knot = [

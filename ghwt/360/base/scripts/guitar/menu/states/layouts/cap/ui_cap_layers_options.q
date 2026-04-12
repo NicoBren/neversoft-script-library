@@ -3,9 +3,9 @@ script ui_create_cap_layers_options
 	make_layers_options_menu
 	add_generic_menu_text_item {
 		parent = layers_options_vmenu
-		text = qs(0x65b8a528)
+		text = qs("Edit")
 		pad_choose_script = generic_event_replace
-		pad_choose_params = {data = {state = uistate_cap_shape_edit part = <part> sections = <sections> section_index = <section_index> mask_index = <mask_index> cap_index = <cap_index> layer_index = <layer_index> mask = <mask> camera_list = <camera_list> zoom_camera = <zoom_camera> override_base_name = <cam_name>}}
+		pad_choose_params = {data = {state = UIstate_cap_shape_edit part = <part> sections = <sections> section_index = <section_index> mask_index = <mask_index> cap_index = <cap_index> layer_index = <layer_index> mask = <mask> camera_list = <camera_list> zoom_camera = <zoom_camera> override_base_name = <cam_name>}}
 		do_not_scroll = 1
 	}
 	if is_cap_layers_full part = <part> div_id = <div_id>
@@ -13,7 +13,7 @@ script ui_create_cap_layers_options
 	endif
 	add_generic_menu_text_item {
 		parent = layers_options_vmenu
-		text = qs(0x51af3a34)
+		text = qs("Copy")
 		pad_choose_script = layers_options_copy
 		pad_choose_params = {part = <part> cap_index = <cap_index> layer_index = <layer_index>}
 		<focusable>
@@ -21,14 +21,14 @@ script ui_create_cap_layers_options
 	}
 	add_generic_menu_text_item {
 		parent = layers_options_vmenu
-		text = qs(0xd10df936)
+		text = qs("Re-Order")
 		pad_choose_script = layers_options_re_order
 		pad_choose_params = {part = <part> cap_index = <cap_index> layer_current_index = <layer_index>}
 		do_not_scroll = 1
 	}
 	add_generic_menu_text_item {
 		parent = layers_options_vmenu
-		text = qs(0xa32bf91f)
+		text = qs("Delete")
 		pad_choose_script = ui_delete_layer
 		pad_choose_params = {part = <part> cap_index = <cap_index> layer_index = <layer_index>}
 		do_not_scroll = 1
@@ -36,10 +36,10 @@ script ui_create_cap_layers_options
 	menu_finish \{car_helper_text
 		no_rotate_zoom_text}
 	if ScreenElementExists \{id = current_menu}
-		LaunchEvent \{Type = unfocus
+		LaunchEvent \{type = unfocus
 			target = current_menu}
 	endif
-	LaunchEvent \{Type = focus
+	LaunchEvent \{type = focus
 		target = layers_options_vmenu}
 endscript
 
@@ -52,7 +52,7 @@ script layers_options_re_order
 endscript
 
 script layers_options_copy 
-	getlayer <...>
+	GetLayer <...>
 	ui_event_block event = menu_back data = {copy_params = {<...> layer = <layer>}}
 endscript
 
@@ -73,17 +73,17 @@ script make_layers_options_menu {
 		DestroyScreenElement \{id = current_menu_anchor}
 	endif
 	CreateScreenElement {
-		Type = descinterface
+		type = DescInterface
 		parent = root_window
 		desc = 'layer_options_menu'
 		id = layers_options_menu
 		exclusive_device = <exclusive_device>
 		z_priority = -10
 	}
-	if <id> :desc_resolvealias Name = alias_layer_options_vmenu param = generic_smenu
+	if <id> :Desc_ResolveAlias name = alias_layer_options_vmenu param = generic_smenu
 		AssignAlias id = <generic_smenu> alias = layers_options_vmenu
 	else
-		ScriptAssert \{qs(0x5279a4a1)}
+		ScriptAssert \{qs("\Lmake_layers_options_menu was unable to create current_menu alias")}
 	endif
 	SetScreenElementProps \{id = layers_options_vmenu
 		event_handlers = [
@@ -142,12 +142,12 @@ endscript
 script animate_in_layers_options_menu 
 	if ScreenElementExists \{id = layers_options_menu}
 		SetScreenElementProps \{id = layers_options_menu
-			Pos = {
+			pos = {
 				relative
 				(-120.0, 0.0)
 			}}
 		SetScreenElementProps \{id = layers_options_menu
-			Pos = {
+			pos = {
 				relative
 				(120.0, 0.0)
 			}

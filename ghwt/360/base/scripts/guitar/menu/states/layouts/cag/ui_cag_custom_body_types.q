@@ -24,7 +24,7 @@ script ui_create_cag_custom_body_types
 			endif
 			if NOT is_part_purchased part = <part> desc_id = ((($<part>) [<i>]).desc_id) savegame = ($cas_current_savegame)
 				price = ((($<part>) [<i>]).price)
-				formatText TextName = pad_choose_dialogue qs(0x50618374) s = ((($<part>) [<i>]).frontend_desc)
+				FormatText TextName = pad_choose_dialogue qs("Would you like to purchase this %s?") s = ((($<part>) [<i>]).frontend_desc)
 			endif
 			add_list_item {
 				text = (($<part> [<i>]).frontend_desc)
@@ -50,10 +50,10 @@ script ui_create_cag_custom_body_types
 		endif
 	endif
 	i = (<i> + 1)
-	repeat <array_Size>
+	repeat <array_size>
 	clean_up_user_control_helpers
 	menu_finish \{car_helper_text_cancel}
-	LaunchEvent Type = focus target = create_cag_custom_body_types_vmenu data = {child_index = <current_part>}
+	LaunchEvent type = focus target = create_cag_custom_body_types_vmenu data = {child_index = <current_part>}
 endscript
 
 script ui_destroy_cag_custom_body_types 
@@ -61,13 +61,13 @@ script ui_destroy_cag_custom_body_types
 endscript
 
 script ui_init_cag_custom_body_types 
-	pushtemporarycasappearance
+	PushTemporaryCASAppearance
 	ui_load_cas_rawpak part = <part>
 endscript
 
 script ui_deinit_cag_custom_body_types 
-	flushallcompositetextures
-	poptemporarycasappearance
+	FlushAllCompositeTextures
+	PopTemporaryCASAppearance
 	cleanup_cas_menu_handlers
 endscript
 
@@ -77,20 +77,20 @@ script add_cag_part
 			index
 		]
 		all}
-	killallcompositetextures
-	dumpcompositescratchtextures
+	KillAllCompositeTextures
+	DumpCompositeScratchTextures
 	get_part_current_desc_id part = <part>
 	if NOT (((($<part>) [<index>]).desc_id) = <current_desc_id>)
 		cas_part_will_conflict part_name = <part> part_desc_id = ($<part> [<index>].desc_id)
 		if GotParam \{change_parts}
-			printf \{qs(0xb3a58f0c)}
+			printf \{qs("\L~~~~~~CONFLICTED PART~~~~~")}
 			GetArraySize \{change_parts}
-			if (<array_Size> > 0)
+			if (<array_size> > 0)
 				i = 0
 				begin
 				cas_add_item_to_appearance part = (<change_parts> [<i>].part) desc_id = (<change_parts> [<i>].desc_id) no_rebuild
 				i = (<i> + 1)
-				repeat <array_Size>
+				repeat <array_size>
 			endif
 		endif
 		cas_add_item_to_appearance part = <part> desc_id = ($<part> [<index>].desc_id) incremental
@@ -98,10 +98,10 @@ script add_cag_part
 endscript
 
 script add_cag_part_spin_guitar 
-	getcurrentcasobject
+	GetCurrentCASObject
 	if is_female_char
-		Band_PlaySimpleAnim Name = <cas_object> anim = car_female_select_guitar_turn_flip BlendDuration = 1.0
+		Band_PlaysimpleAnim name = <cas_object> Anim = car_female_select_guitar_turn_flip BlendDuration = 1.0
 	else
-		Band_PlaySimpleAnim Name = <cas_object> anim = car_male_select_guitar_turn_flip BlendDuration = 1.0
+		Band_PlaysimpleAnim name = <cas_object> Anim = CAR_male_Select_guitar_turn_flip BlendDuration = 1.0
 	endif
 endscript

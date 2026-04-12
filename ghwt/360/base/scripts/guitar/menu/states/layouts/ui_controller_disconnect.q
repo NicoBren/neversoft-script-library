@@ -5,7 +5,7 @@ unknown_drum_type = 0
 
 script ui_init_controller_disconnect 
 	if ($is_network_game)
-		enableallinput \{OFF}
+		EnableAllInput \{off}
 	endif
 endscript
 
@@ -14,14 +14,14 @@ script ui_create_controller_disconnect
 	device_array = []
 	i = 1
 	begin
-	getplayerinfo <i> controller
+	GetPlayerInfo <i> controller
 	AddArrayElement array = <device_array> element = <controller>
 	<device_array> = <array>
 	i = (<i> + 1)
 	repeat ($current_num_players)
-	<continue_text> = qs(0x182f0173)
+	<continue_text> = qs("CONTINUE")
 	if ($g_in_tutorial = 1)
-		<continue_text> = qs(0x9c8bd769)
+		<continue_text> = qs("RESTART LESSON")
 	endif
 	<options_array> = [
 		{
@@ -38,26 +38,26 @@ script ui_create_controller_disconnect
 	if ($end_credits = 0)
 		<element> = {
 			func = ui_controller_disconnect_return_to_main_menu
-			text = qs(0x67d9c56d)
+			text = qs("QUIT")
 			sound_func = nullscript
 		}
 		AddArrayElement array = <options_array> element = <element>
 		<options_array> = <array>
 	endif
-	text = qs(0x00000000)
+	text = qs("")
 	create_popup_warning_menu {
 		no_background
-		title = qs(0xaa163738)
+		title = qs("WARNING")
 		textblock = {
 			text = <text>
 		}
 		options = <options_array>
 		dlg_z_priority = ($ps3_fade_overlay_z + 100)
 		player_device = <device_array>
-		long
+		Long
 	}
 	pu_warning_vmenu :obj_spawnscript \{ui_controller_disconnect_pause}
-	popupelement :obj_spawnscript \{ui_controller_disconnect_update}
+	PopupElement :obj_spawnscript \{ui_controller_disconnect_update}
 	clean_up_user_control_helpers
 	set_user_control_color \{text_rgba = [
 			200
@@ -71,7 +71,7 @@ script ui_create_controller_disconnect
 			0
 			200
 		]}
-	add_user_control_helper \{text = qs(0xc18d5e76)
+	add_user_control_helper \{text = qs("SELECT")
 		button = green
 		z = 1000000}
 endscript
@@ -82,7 +82,7 @@ endscript
 
 script ui_deinit_controller_disconnect 
 	if ($is_network_game)
-		enableallinput
+		EnableAllInput
 	endif
 endscript
 
@@ -92,102 +92,102 @@ script ui_controller_disconnect_pause
 		if NOT ($is_network_game)
 			do_gh3_pause
 		endif
-		Change \{control_dis_paused = 1}
+		change \{control_dis_paused = 1}
 	endif
 endscript
 
 script ui_controller_disconnect_update 
-	setscriptcannotpause
+	SetScriptCannotPause
 	if ScreenElementExists \{id = menu_tutorial}
-		LaunchEvent \{Type = unfocus
+		LaunchEvent \{type = unfocus
 			target = menu_tutorial}
 	endif
-	old_text = qs(0x03ac90f0)
+	old_text = qs("\L")
 	begin
-	RemoveParameter \{array_Size}
+	RemoveParameter \{array_size}
 	GetArraySize \{$sysnotify_paused_controllers}
-	if (<array_Size> > 0)
-		text = qs(0xfbc815c6)
+	if (<array_size> > 0)
+		text = qs("Disconnected controllers:")
 		i = 0
 		begin
 		RemoveParameter \{part}
 		j = 1
 		begin
 		RemoveParameter \{controller}
-		getplayerinfo <j> controller
+		GetPlayerInfo <j> controller
 		if (<controller> = ($sysnotify_paused_controllers [<i>]))
-			getplayerinfo <j> part
+			GetPlayerInfo <j> part
 			break
 		endif
 		j = (<j> + 1)
 		repeat ($current_num_players)
 		if GotParam \{part}
 			if ($vocal_mic_invalid_dist = 0)
-				if ((<part> = guitar) || (<part> = bass))
-					formatText TextName = text qs(0x2e301f7d) t = <text> j = <j>
+				if ((<part> = guitar) || (<part> = Bass))
+					FormatText TextName = text qs("%t\nPlayer %j's Guitar Controller") t = <text> j = <j>
 				endif
 				if (<part> = drum)
 					if (($unknown_drum_type) = 1)
-						formatText TextName = text qs(0x91d2ab93) t = <text> j = <j>
-						usefourlanehighway Player = <j> reset
+						FormatText TextName = text qs("%t\nPlayer %j's Drum Controller") t = <text> j = <j>
+						UseFourLaneHighway player = <j> reset
 					else
-						getplayerinfo <j> four_lane_highway
+						GetPlayerInfo <j> four_lane_highway
 						if (<four_lane_highway> = 1)
-							formatText TextName = text qs(0x43606ed7) t = <text> j = <j>
+							FormatText TextName = text qs("%t\nPlayer %j's Four Pad Drum Controller") t = <text> j = <j>
 						elseif (<four_lane_highway> = 0)
-							formatText TextName = text qs(0x35c306d4) t = <text> j = <j>
+							FormatText TextName = text qs("%t\nPlayer %j's Guitar Hero Drum Controller") t = <text> j = <j>
 						else
-							formatText TextName = text qs(0x91d2ab93) t = <text> j = <j>
-							Change \{unknown_drum_type = 1}
-							usefourlanehighway Player = <j> reset
+							FormatText TextName = text qs("%t\nPlayer %j's Drum Controller") t = <text> j = <j>
+							change \{unknown_drum_type = 1}
+							UseFourLaneHighway player = <j> reset
 						endif
 					endif
 				endif
 			endif
-			if (<part> = vocals)
-				getplayerinfo <j> mic_connected
+			if (<part> = Vocals)
+				GetPlayerInfo <j> mic_connected
 				if isXenon
-					getplayerinfo <j> mic_type
+					GetPlayerInfo <j> mic_type
 					switch <mic_connected>
 						case mic_disconnected
 						if (<mic_type> = headset)
-							formatText TextName = text qs(0x27139544) t = <text> j = <j>
+							FormatText TextName = text qs("%t\nPlayer %j's Xbox 360 Headset") t = <text> j = <j>
 						else
-							formatText TextName = text qs(0xa8485a04) t = <text> j = <j>
+							FormatText TextName = text qs("%t\nPlayer %j's microphone") t = <text> j = <j>
 						endif
 						case both_disconnected
 						if (<mic_type> = headset)
-							formatText TextName = text qs(0x21036be5) t = <text> j = <j>
+							FormatText TextName = text qs("%t\nPlayer %j's Xbox 360 Controller\nPlayer %j's Xbox 360 Headset") t = <text> j = <j>
 						else
-							formatText TextName = text qs(0x0a21e4b1) t = <text> j = <j>
+							FormatText TextName = text qs("%t\nPlayer %j's Xbox 360 Controller\nPlayer %j's microphone") t = <text> j = <j>
 						endif
 						case controller_disconnected
 						default
-						formatText TextName = text qs(0x773068f3) t = <text> j = <j>
+						FormatText TextName = text qs("%t\nPlayer %j's Xbox 360 Controller") t = <text> j = <j>
 					endswitch
 				else
 					switch <mic_connected>
 						case mic_disconnected
-						formatText TextName = text qs(0xa8485a04) t = <text> j = <j>
+						FormatText TextName = text qs("%t\nPlayer %j's microphone") t = <text> j = <j>
 						case both_disconnected
-						formatText TextName = text qs(0xf730fcaf) t = <text> j = <j>
+						FormatText TextName = text qs("%t\nPlayer %j's microphone\nPlayer %j's wireless controller") t = <text> j = <j>
 						case controller_disconnected
 						default
-						formatText TextName = text qs(0xafdb2bc9) t = <text> j = <j>
+						FormatText TextName = text qs("%t\nPlayer %j's wireless controller") t = <text> j = <j>
 					endswitch
 				endif
 			endif
 		endif
-		if isps3
-			formatText TextName = text qs(0x09536fe2) t = <text> d = (<controller> + 1)
+		if IsPs3
+			FormatText TextName = text qs("%t (port\_%d)") t = <text> d = (<controller> + 1)
 		endif
 		i = (<i> + 1)
-		repeat <array_Size>
+		repeat <array_size>
 	else
-		text = qs(0x6c92395c)
+		text = qs("All controllers are connected!")
 	endif
 	if NOT (<old_text> = <text>)
-		se_setprops {popupbody_text = <text>}
+		SE_SetProps {PopupBody_text = <text>}
 		old_text = <text>
 	endif
 	Wait \{1
@@ -198,19 +198,19 @@ endscript
 script ui_controller_disconnect_continue 
 	if ($vocal_mic_invalid_dist = 0)
 		GetArraySize \{$sysnotify_paused_controllers}
-		if NOT (<array_Size> = 0)
+		if NOT (<array_size> = 0)
 			menu_scroll_end_sound
 			return
 		endif
 	else
 		vocals_distribute_mics
-		Change \{vocal_mic_invalid_dist = 1}
+		change \{vocal_mic_invalid_dist = 1}
 		if NOT vocals_mic_distribution_is_valid
 			menu_scroll_end_sound
 			return
 		endif
 	endif
-	Change \{check_for_unplugged_controllers = 1}
+	change \{check_for_unplugged_controllers = 1}
 	vocals_set_mics_to_user_volumes
 	if ($g_in_tutorial = 1)
 		do_gh3_unpause
@@ -221,7 +221,7 @@ script ui_controller_disconnect_continue
 			if ($playing_song = 0)
 				do_gh3_unpause
 			endif
-			Change \{control_dis_paused = 0}
+			change \{control_dis_paused = 0}
 		endif
 		if ($playing_song = 1)
 			if ($vocal_mic_invalid_dist > 0)
@@ -257,13 +257,13 @@ script ui_controller_disconnect_continue
 						}}
 				endif
 			elseif ui_event_exists_in_stack \{above = 'gameplay'
-					Name = 'pausemenu'}
+					name = 'pausemenu'}
 				generic_event_back
 			else
 				GetGlobalTags \{user_options
 					param = unpause_count}
 				if (<unpause_count> = 0)
-					restart_song_state = Uistate_gameplay
+					restart_song_state = uistate_gameplay
 					do_gh3_unpause
 				else
 					restart_song_state = uistate_song_unpause
@@ -281,19 +281,19 @@ script ui_controller_disconnect_return_to_main_menu
 			device_num
 		]
 		all}
-	KillSpawnedScript \{Name = loading_screen_crowd_swell}
-	KillSpawnedScript \{Name = crowd_loading_whistle}
-	KillSpawnedScript \{Name = oneshotsbetweensongs}
-	KillSpawnedScript \{Name = surgebetweensongs}
+	KillSpawnedScript \{name = Loading_Screen_Crowd_Swell}
+	KillSpawnedScript \{name = Crowd_Loading_Whistle}
+	KillSpawnedScript \{name = OneShotsBetweenSongs}
+	KillSpawnedScript \{name = SurgeBetweenSongs}
 	StopSoundsByBuss \{Crowd_One_Shots}
-	SetSpawnInstanceLimits \{Max = 1
+	SetSpawnInstanceLimits \{max = 1
 		management = ignore_spawn_request}
 	kill_intro_celeb_ui
-	se_setprops \{block_events}
-	Change last_start_pressed_device = <device_num>
+	SE_SetProps \{block_events}
+	change last_start_pressed_device = <device_num>
 	if ($g_in_tutorial = 1)
 		tutorial_quit \{state = uistate_select_tutorial}
-		StartRendering
+		startrendering
 	else
 		generic_event_replace \{state = uistate_pausemenu_quit_warning
 			data = {
@@ -305,9 +305,9 @@ script ui_controller_disconnect_return_to_main_menu
 endscript
 
 script ui_controller_disconnect_return_to_menu 
-	SetSpawnInstanceLimits \{Max = 1
+	SetSpawnInstanceLimits \{max = 1
 		management = ignore_spawn_request}
-	se_setprops \{block_events}
+	SE_SetProps \{block_events}
 	generic_event_replace \{state = uistate_controller_disconnect
 		data = {
 			is_popup

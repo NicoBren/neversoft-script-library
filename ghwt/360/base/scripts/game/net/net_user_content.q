@@ -2,7 +2,7 @@ net_user_content_leaderboards = [
 	{
 		checksum = user_content_best_songs
 		rating_func = net_user_content_standard_rate_function
-		Active = 0
+		active = 0
 		always_update = 0
 		download_rerate = 0
 		delta = $net_user_content_rating_delta
@@ -11,7 +11,7 @@ net_user_content_leaderboards = [
 	{
 		checksum = user_content_title_az
 		rating_func = code_alphanumeric_rate
-		Active = 0
+		active = 0
 		always_update = 0
 		download_rerate = 0
 		delta = $net_user_content_rating_delta
@@ -20,7 +20,7 @@ net_user_content_leaderboards = [
 	{
 		checksum = user_content_best_weekly
 		rating_func = net_user_content_standard_rate_function
-		Active = 0
+		active = 0
 		always_update = 0
 		download_rerate = 0
 		delta = $net_user_content_rating_delta
@@ -29,7 +29,7 @@ net_user_content_leaderboards = [
 	{
 		checksum = user_content_fast_movers
 		rating_func = code_fast_movers_rate
-		Active = 0
+		active = 0
 		always_update = 0
 		download_rerate = 1
 		delta = 0
@@ -38,7 +38,7 @@ net_user_content_leaderboards = [
 	{
 		checksum = user_content_recently_added
 		rating_func = code_recent_update_rate
-		Active = 0
+		active = 0
 		always_update = 0
 		download_rerate = 0
 		delta = $net_user_content_rating_delta
@@ -47,7 +47,7 @@ net_user_content_leaderboards = [
 	{
 		checksum = user_content_showcase
 		rating_func = net_user_content_standard_rate_function
-		Active = 0
+		active = 0
 		always_update = 0
 		download_rerate = 0
 		delta = $net_user_content_rating_delta
@@ -57,7 +57,7 @@ net_user_content_leaderboards = [
 	{
 		checksum = user_content_alternative
 		rating_func = net_user_content_standard_rate_function
-		Active = 0
+		active = 0
 		always_update = 0
 		download_rerate = 0
 		delta = $net_user_content_rating_delta
@@ -66,7 +66,7 @@ net_user_content_leaderboards = [
 	{
 		checksum = user_content_pop
 		rating_func = net_user_content_standard_rate_function
-		Active = 0
+		active = 0
 		always_update = 0
 		download_rerate = 0
 		delta = $net_user_content_rating_delta
@@ -75,7 +75,7 @@ net_user_content_leaderboards = [
 	{
 		checksum = user_content_experimental
 		rating_func = net_user_content_standard_rate_function
-		Active = 0
+		active = 0
 		always_update = 0
 		download_rerate = 0
 		delta = $net_user_content_rating_delta
@@ -84,7 +84,7 @@ net_user_content_leaderboards = [
 	{
 		checksum = user_content_hip_hop
 		rating_func = net_user_content_standard_rate_function
-		Active = 0
+		active = 0
 		always_update = 0
 		download_rerate = 0
 		delta = $net_user_content_rating_delta
@@ -93,7 +93,7 @@ net_user_content_leaderboards = [
 	{
 		checksum = user_content_rock
 		rating_func = net_user_content_standard_rate_function
-		Active = 0
+		active = 0
 		always_update = 0
 		download_rerate = 0
 		delta = $net_user_content_rating_delta
@@ -102,7 +102,7 @@ net_user_content_leaderboards = [
 	{
 		checksum = user_content_metal
 		rating_func = net_user_content_standard_rate_function
-		Active = 0
+		active = 0
 		always_update = 0
 		download_rerate = 0
 		delta = $net_user_content_rating_delta
@@ -111,7 +111,7 @@ net_user_content_leaderboards = [
 	{
 		checksum = user_content_electronic
 		rating_func = net_user_content_standard_rate_function
-		Active = 0
+		active = 0
 		always_update = 0
 		download_rerate = 0
 		delta = $net_user_content_rating_delta
@@ -120,7 +120,7 @@ net_user_content_leaderboards = [
 	{
 		checksum = user_content_other
 		rating_func = net_user_content_standard_rate_function
-		Active = 0
+		active = 0
 		always_update = 0
 		download_rerate = 0
 		delta = $net_user_content_rating_delta
@@ -129,7 +129,7 @@ net_user_content_leaderboards = [
 	{
 		checksum = user_content_ghost
 		rating_func = net_user_content_standard_rate_function
-		Active = 0
+		active = 0
 		always_update = 0
 		download_rerate = 0
 		delta = $net_user_content_rating_delta
@@ -139,7 +139,7 @@ net_user_content_leaderboards = [
 	{
 		checksum = user_content_banned_content
 		rating_func = net_user_content_standard_rate_function
-		Active = 0
+		active = 0
 		always_update = 0
 		download_rerate = 0
 		delta = $net_user_content_rating_delta
@@ -162,13 +162,13 @@ net_user_content_banned_users_board = user_content_banned_users
 net_user_content_uid_to_gamertag_board = user_content_uid_to_gamertag
 net_user_content_genre_lookup_struct = {
 	alternative = 'alternative'
-	pop = 'pop'
+	Pop = 'pop'
 	experimental = 'experimental'
 	hip_hop = 'hip_hop'
-	rock = 'rock'
+	Rock = 'rock'
 	metal = 'metal'
 	electronic = 'electronic'
-	other = 'other'
+	Other = 'other'
 }
 net_user_content_super_user_list = [
 	[
@@ -186,7 +186,7 @@ net_user_content_super_user_list = [
 ]
 
 script is_super_user 
-	if ($cheat_superuser = 1)
+	if ($Cheat_SuperUser = 1)
 		NetSessionFunc func = get_user_id params = {controller_index = <controller>}
 		GetArraySize ($net_user_content_super_user_list)
 		index = 0
@@ -194,13 +194,13 @@ script is_super_user
 		curr_user_id = ($net_user_content_super_user_list [<index>])
 		if (<curr_user_id> [0] = <user_id> [0] && <curr_user_id> [1] = <user_id> [1])
 			printf \{channel = jam_mode
-				qs(0xd6e13a78)}
+				qs("\LSUPER USER VALID")}
 			return \{true}
 		endif
 		<index> = (<index> + 1)
-		repeat <array_Size>
+		repeat <array_size>
 	endif
-	return \{FALSE}
+	return \{false}
 endscript
 
 script net_user_content_get_write_leaderboards 
@@ -211,22 +211,22 @@ script net_user_content_get_write_leaderboards
 	array = []
 	GetArraySize \{$net_user_content_leaderboards}
 	genre_board_name = nullchecksum
-	formatText checksumName = genre_board_name 'user_content_%d' d = ($net_user_content_genre_lookup_struct.<genre>)
+	FormatText checksumname = genre_board_name 'user_content_%d' d = ($net_user_content_genre_lookup_struct.<genre>)
 	got_genre = 0
 	i = 0
 	begin
-	if NOT StructureContains structure = ($net_user_content_leaderboards [<i>]) do_not_write
+	if NOT StructureContains Structure = ($net_user_content_leaderboards [<i>]) do_not_write
 		if (<download_rerate> = 0)
 			if ($net_user_content_leaderboards [<i>].genre = 0)
 				if (<remove_list> = 1)
-					if NOT StructureContains structure = ($net_user_content_leaderboards [<i>]) do_not_remove
+					if NOT StructureContains Structure = ($net_user_content_leaderboards [<i>]) do_not_remove
 						AddArrayElement array = <array> element = ($net_user_content_leaderboards [<i>])
 					endif
 				else
 					AddArrayElement array = <array> element = ($net_user_content_leaderboards [<i>])
 				endif
 			else
-				if checksumequals a = <genre_board_name> b = ($net_user_content_leaderboards [<i>].checksum)
+				if ChecksumEquals a = <genre_board_name> b = ($net_user_content_leaderboards [<i>].checksum)
 					AddArrayElement array = <array> element = ($net_user_content_leaderboards [<i>])
 					got_genre = 1
 				endif
@@ -238,9 +238,9 @@ script net_user_content_get_write_leaderboards
 		endif
 	endif
 	i = (<i> + 1)
-	repeat <array_Size>
+	repeat <array_size>
 	if (<got_genre> = 1)
-		printf \{qs(0xc8ad4543)}
+		printf \{qs("\LWARNING! Did not find genre for leaderboard write!")}
 	endif
 	return leaderboard_array = <array>
 endscript

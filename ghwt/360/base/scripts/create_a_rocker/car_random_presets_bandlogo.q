@@ -2,33 +2,33 @@ cas_preset_bandlogo = [
 	{
 		cap = [
 			{
-				base_tex = `tex\models\characters\global\global_blank_logo.dds`
-				material = band_logo_primary
+				base_tex = `tex\models\Characters\Global\Global_Blank_Logo.dds`
+				material = Band_Logo_Primary
 				diffuse
 				layers = [
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_007.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_007.img`
 						flags = 3
 						x_trans = -5
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_007.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_007.img`
 						x_trans = -4
 						y_trans = 7
 						x_scale = 90
 						y_scale = 75
 						flags = 3
-						Color = navy_1
+						color = navy_1
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_002.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_002.img`
 						x_scale = 15
 						y_scale = 15
 						flags = 3
 						x_trans = 28
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_002.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_002.img`
 						y_trans = 23
 						x_scale = 15
 						y_scale = 15
@@ -36,7 +36,7 @@ cas_preset_bandlogo = [
 						x_trans = 18
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_002.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_002.img`
 						y_trans = 30
 						x_scale = 15
 						y_scale = 15
@@ -44,8 +44,8 @@ cas_preset_bandlogo = [
 						x_trans = -34
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_001.img`
-						Color = blue_3
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_001.img`
+						color = blue_3
 						x_trans = -10
 						y_trans = 10
 						x_skew = -9
@@ -54,8 +54,8 @@ cas_preset_bandlogo = [
 						y_scale = 55
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_icon036.img`
-						Color = grey_5guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_Icon036.img`
+						color = grey_5guitar
 						x_trans = -8
 						y_trans = 15
 						x_skew = -15
@@ -64,7 +64,7 @@ cas_preset_bandlogo = [
 						y_scale = 35
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_003.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_003.img`
 						x_trans = -3
 						y_trans = -18
 						x_skew = -48
@@ -75,7 +75,7 @@ cas_preset_bandlogo = [
 						rot = 50
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_003.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_003.img`
 						x_trans = -5
 						y_trans = -11
 						x_skew = -18
@@ -84,10 +84,10 @@ cas_preset_bandlogo = [
 						y_scale = 80
 						rot = 6233
 						flags = 3
-						Color = grey_3guitar
+						color = grey_3guitar
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_013.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_013.img`
 						y_trans = -21
 						x_scale = 35
 						y_scale = 10
@@ -95,7 +95,7 @@ cas_preset_bandlogo = [
 						x_trans = 10
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshapeoutline_002.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShapeOutline_002.img`
 						x_trans = 17
 						y_trans = -10
 						x_scale = 5
@@ -104,7 +104,7 @@ cas_preset_bandlogo = [
 						x_skew = -42
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshapeoutline_002.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShapeOutline_002.img`
 						y_trans = -14
 						x_skew = 36
 						x_scale = 5
@@ -113,7 +113,7 @@ cas_preset_bandlogo = [
 						x_trans = -29
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshapeoutline_002.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShapeOutline_002.img`
 						x_trans = -6
 						x_skew = -12
 						y_skew = 3
@@ -123,8 +123,8 @@ cas_preset_bandlogo = [
 						y_trans = -12
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_graphics013.img`
-						Color = grey_5guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_graphics013.img`
+						color = grey_5guitar
 						x_trans = -22
 						y_trans = 3
 						x_skew = -9
@@ -136,7 +136,7 @@ cas_preset_bandlogo = [
 					{
 						font = fontgrid_text_a6
 						text = 'H'
-						Color = black_1guitar
+						color = Black_1guitar
 						y_trans = -32
 						x_scale = 75
 						y_scale = 70
@@ -146,7 +146,7 @@ cas_preset_bandlogo = [
 					{
 						font = fontgrid_text_a6
 						text = 'e'
-						Color = black_1guitar
+						color = Black_1guitar
 						y_trans = -34
 						x_scale = 80
 						y_scale = 60
@@ -156,7 +156,7 @@ cas_preset_bandlogo = [
 					{
 						font = fontgrid_text_a6
 						text = 'l'
-						Color = black_1guitar
+						color = Black_1guitar
 						y_trans = -32
 						x_scale = 80
 						y_scale = 65
@@ -166,7 +166,7 @@ cas_preset_bandlogo = [
 					{
 						font = fontgrid_text_a6
 						text = 'l'
-						Color = black_1guitar
+						color = Black_1guitar
 						y_trans = -32
 						x_scale = 80
 						y_scale = 65
@@ -176,7 +176,7 @@ cas_preset_bandlogo = [
 					{
 						font = fontgrid_text_a6
 						text = 'o'
-						Color = black_1guitar
+						color = Black_1guitar
 						y_trans = -34
 						x_scale = 85
 						y_scale = 80
@@ -190,13 +190,13 @@ cas_preset_bandlogo = [
 	{
 		cap = [
 			{
-				base_tex = `tex\models\characters\global\global_blank_logo.dds`
-				material = band_logo_primary
+				base_tex = `tex\models\Characters\Global\Global_Blank_Logo.dds`
+				material = Band_Logo_Primary
 				diffuse
 				layers = [
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_006.img`
-						Color = black_1guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_006.img`
+						color = Black_1guitar
 						y_trans = 30
 						x_scale = 110
 						y_scale = 35
@@ -204,15 +204,15 @@ cas_preset_bandlogo = [
 						x_trans = 0
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_008.img`
-						Color = yellow_green_1guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_008.img`
+						color = yellow_green_1guitar
 						x_scale = 115
 						flags = 3
 						y_scale = 105
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_icon026.img`
-						Color = yellow_green_2guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_Icon026.img`
+						color = yellow_green_2guitar
 						x_trans = -1
 						y_trans = -7
 						x_scale = 70
@@ -221,17 +221,17 @@ cas_preset_bandlogo = [
 						a = 50
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_001.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_001.img`
 						x_trans = -12
 						y_trans = 15
 						x_scale = 5
 						y_scale = 6
 						flags = 3
-						Color = red_3
+						color = red_3
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_001.img`
-						Color = red_2
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_001.img`
+						color = red_2
 						y_trans = 15
 						x_scale = 5
 						y_scale = 6
@@ -239,23 +239,23 @@ cas_preset_bandlogo = [
 						x_trans = 12
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_icon022.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_Icon022.img`
 						y_trans = 9
 						flags = 3
-						Color = yellow_green_4guitar
+						color = yellow_green_4guitar
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_icons055.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_icons055.img`
 						x_trans = -29
 						y_trans = -11
 						x_scale = 25
 						y_scale = 20
 						flags = 3
-						Color = yellow_green_3guitar
+						color = yellow_green_3guitar
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_icons055.img`
-						Color = yellow_green_3guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_icons055.img`
+						color = yellow_green_3guitar
 						y_trans = -11
 						x_scale = 25
 						y_scale = 20
@@ -263,8 +263,8 @@ cas_preset_bandlogo = [
 						x_trans = 26
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_icons055.img`
-						Color = yellow_green_3guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_icons055.img`
+						color = yellow_green_3guitar
 						x_trans = 0
 						y_trans = -30
 						x_scale = 25
@@ -274,8 +274,8 @@ cas_preset_bandlogo = [
 						x_skew = -18
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshapegradient_001.img`
-						Color = blue_1
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShapeGradient_001.img`
+						color = blue_1
 						a = 65
 						x_scale = 110
 						flags = 3
@@ -288,17 +288,17 @@ cas_preset_bandlogo = [
 	{
 		cap = [
 			{
-				base_tex = `tex\models\characters\global\global_blank_logo.dds`
-				material = band_logo_primary
+				base_tex = `tex\models\Characters\Global\Global_Blank_Logo.dds`
+				material = Band_Logo_Primary
 				diffuse
 				layers = [
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_018.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_018.img`
 						flags = 3
-						Color = yellow_1guitar
+						color = yellow_1guitar
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_icon002.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_Icon002.img`
 						y_trans = -15
 						y_scale = 75
 						rot = 1550
@@ -306,8 +306,8 @@ cas_preset_bandlogo = [
 						x_scale = 45
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_icons055.img`
-						Color = red_2
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_icons055.img`
+						color = red_2
 						x_trans = 27
 						x_scale = 40
 						y_scale = 40
@@ -316,8 +316,8 @@ cas_preset_bandlogo = [
 						y_trans = -11
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_icons055.img`
-						Color = red_2
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_icons055.img`
+						color = red_2
 						x_trans = -29
 						x_scale = 40
 						y_scale = 40
@@ -326,8 +326,8 @@ cas_preset_bandlogo = [
 						y_trans = -8
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_icons055.img`
-						Color = red_2
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_icons055.img`
+						color = red_2
 						y_trans = 16
 						x_scale = 55
 						y_scale = 60
@@ -342,93 +342,93 @@ cas_preset_bandlogo = [
 	{
 		cap = [
 			{
-				base_tex = `tex\models\characters\global\global_blank_logo.dds`
-				material = band_logo_primary
+				base_tex = `tex\models\Characters\Global\Global_Blank_Logo.dds`
+				material = Band_Logo_Primary
 				diffuse
 				layers = [
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_001.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_001.img`
 						x_scale = 105
 						y_scale = 105
 						flags = 3
-						Color = teal_5
+						color = teal_5
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_001.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_001.img`
 						a = 100
 						flags = 3
-						Color = grey_2guitar
+						color = grey_2guitar
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshapeoutline_012.img`
-						Color = purple_blue_5
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShapeOutline_012.img`
+						color = purple_blue_5
 						x_scale = 105
 						y_scale = 135
 						flags = 19
 						a = 100
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshapeoutline_012.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShapeOutline_012.img`
 						a = 100
 						x_scale = 95
 						y_scale = 130
 						flags = 19
-						Color = purple_blue_5
+						color = purple_blue_5
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_elemental007.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_elemental007.img`
 						a = 100
 						y_trans = 12
 						x_scale = 105
 						y_scale = 90
 						flags = 3
-						Color = grey_5guitar
+						color = grey_5guitar
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshapeoutline_012.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShapeOutline_012.img`
 						a = 100
 						x_scale = 100
 						y_scale = 130
 						flags = 19
-						Color = purple_blue_4
+						color = purple_blue_4
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_017.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_017.img`
 						y_trans = -15
 						x_scale = 130
 						y_scale = 90
 						flags = 3
-						Color = purple_blue_4
+						color = purple_blue_4
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_017.img`
-						Color = purple_blue_5
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_017.img`
+						color = purple_blue_5
 						x_scale = 95
 						y_scale = 70
 						flags = 3
 						y_trans = -22
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_elemental007.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_elemental007.img`
 						a = 85
 						y_trans = 12
 						x_scale = 105
 						y_scale = 90
 						flags = 3
-						Color = red_5
+						color = red_5
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshapegradient_005.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShapeGradient_005.img`
 						a = 70
 						y_trans = 18
 						x_scale = 225
 						y_scale = 170
 						flags = 3
-						Color = yellow_1guitar
+						color = yellow_1guitar
 					}
 					{
-						texture = `tex/models/characters/skater_male/cag_proto/cag_sticker01.img`
-						Color = grey_5guitar
+						texture = `tex/models/Characters/Skater_Male/Cag_Proto/CAG_Sticker01.img`
+						color = grey_5guitar
 						a = 100
 						x_trans = 0
 						x_scale = 90
@@ -437,8 +437,8 @@ cas_preset_bandlogo = [
 						y_trans = 18
 					}
 					{
-						texture = `tex/models/characters/skater_male/cag_proto/cag_sticker01.img`
-						Color = violet_1
+						texture = `tex/models/Characters/Skater_Male/Cag_Proto/CAG_Sticker01.img`
+						color = violet_1
 						y_trans = 19
 						x_scale = 90
 						y_scale = 50
@@ -446,8 +446,8 @@ cas_preset_bandlogo = [
 						x_trans = 0
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshapegradient_005.img`
-						Color = yellow_5guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShapeGradient_005.img`
+						color = yellow_5guitar
 						x_trans = 1
 						y_trans = -30
 						x_scale = 115
@@ -456,8 +456,8 @@ cas_preset_bandlogo = [
 						a = 100
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_graphics087.img`
-						Color = grey_5guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_graphics087.img`
+						color = grey_5guitar
 						x_trans = 0
 						x_scale = 105
 						y_scale = 110
@@ -465,8 +465,8 @@ cas_preset_bandlogo = [
 						y_trans = -11
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_046.img`
-						Color = teal_3
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_046.img`
+						color = teal_3
 						a = 100
 						x_trans = -8
 						y_trans = 18
@@ -477,8 +477,8 @@ cas_preset_bandlogo = [
 						y_scale = 25
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_044.img`
-						Color = teal_5
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_044.img`
+						color = teal_5
 						y_trans = 20
 						x_skew = -12
 						y_skew = 28
@@ -489,7 +489,7 @@ cas_preset_bandlogo = [
 						x_trans = 10
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshapegradient_005.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShapeGradient_005.img`
 						a = 100
 						x_trans = -2
 						y_trans = 23
@@ -497,7 +497,7 @@ cas_preset_bandlogo = [
 						y_scale = 5
 						rot = 3250
 						flags = 3
-						Color = teal_5
+						color = teal_5
 					}
 				]
 			}
@@ -506,19 +506,19 @@ cas_preset_bandlogo = [
 	{
 		cap = [
 			{
-				base_tex = `tex\models\characters\global\global_blank_logo.dds`
-				material = band_logo_primary
+				base_tex = `tex\models\Characters\Global\Global_Blank_Logo.dds`
+				material = Band_Logo_Primary
 				diffuse
 				layers = [
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_graphics073.img`
-						Color = red_2
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_graphics073.img`
+						color = red_2
 						x_scale = 115
 						flags = 3
 						y_scale = 100
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_graphics071.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_graphics071.img`
 						y_trans = -23
 						x_scale = 65
 						y_scale = 65
@@ -527,8 +527,8 @@ cas_preset_bandlogo = [
 						x_trans = 24
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_graphics071.img`
-						Color = yellow_green_5guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_graphics071.img`
+						color = yellow_green_5guitar
 						y_trans = -24
 						x_scale = 65
 						y_scale = 65
@@ -537,15 +537,15 @@ cas_preset_bandlogo = [
 						x_trans = -24
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_graphics022.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_graphics022.img`
 						y_trans = -33
 						x_scale = 40
 						y_scale = 70
 						flags = 3
-						Color = violet_3
+						color = violet_3
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_graphics099.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_graphics099.img`
 						x_scale = 80
 						y_scale = 80
 						flags = 3
@@ -558,13 +558,13 @@ cas_preset_bandlogo = [
 	{
 		cap = [
 			{
-				base_tex = `tex\models\characters\global\global_blank_logo.dds`
-				material = band_logo_primary
+				base_tex = `tex\models\Characters\Global\Global_Blank_Logo.dds`
+				material = Band_Logo_Primary
 				diffuse
 				layers = [
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_graphics073.img`
-						Color = purple_blue_1
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_graphics073.img`
+						color = purple_blue_1
 						y_trans = 3
 						x_scale = 110
 						y_scale = 105
@@ -573,7 +573,7 @@ cas_preset_bandlogo = [
 						x_trans = -3
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_graphics071.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_graphics071.img`
 						y_trans = 19
 						x_scale = 65
 						y_scale = 60
@@ -582,7 +582,7 @@ cas_preset_bandlogo = [
 						x_trans = -27
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_graphics071.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_graphics071.img`
 						y_trans = 17
 						x_scale = 65
 						y_scale = 60
@@ -591,7 +591,7 @@ cas_preset_bandlogo = [
 						x_trans = 26
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_graphics107.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_graphics107.img`
 						x_skew = 0
 						x_scale = 80
 						y_scale = 75
@@ -605,39 +605,39 @@ cas_preset_bandlogo = [
 	{
 		cap = [
 			{
-				base_tex = `tex\models\characters\global\global_blank_logo.dds`
-				material = band_logo_primary
+				base_tex = `tex\models\Characters\Global\Global_Blank_Logo.dds`
+				material = Band_Logo_Primary
 				diffuse
 				layers = [
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_001.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_001.img`
 						flags = 3
-						Color = red_orange_1
+						color = red_orange_1
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshapegradient_003.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShapeGradient_003.img`
 						y_trans = 4
 						x_scale = 100
 						y_scale = 100
 						flags = 3
-						Color = yellow_3guitar
+						color = yellow_3guitar
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_icon018.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_Icon018.img`
 						a = 100
 						flags = 3
-						Color = yellow_1guitar
+						color = yellow_1guitar
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_icon_creature003.img`
-						Color = yellow_green_1guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_Icon_Creature003.img`
+						color = yellow_green_1guitar
 						x_trans = 4
 						flags = 3
 						a = 100
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_icon018.img`
-						Color = yellow_1guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_Icon018.img`
+						color = yellow_1guitar
 						flags = 3
 						a = 5
 					}
@@ -648,26 +648,26 @@ cas_preset_bandlogo = [
 	{
 		cap = [
 			{
-				base_tex = `tex\models\characters\global\global_blank_logo.dds`
-				material = band_logo_primary
+				base_tex = `tex\models\Characters\Global\Global_Blank_Logo.dds`
+				material = Band_Logo_Primary
 				diffuse
 				layers = [
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_001.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_001.img`
 						flags = 3
-						Color = navy_1
+						color = navy_1
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_026.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_026.img`
 						x_scale = 120
 						y_scale = 115
 						flags = 3
 						y_trans = 4
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_graphics053.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_graphics053.img`
 						flags = 3
-						Color = yellow_1guitar
+						color = yellow_1guitar
 					}
 				]
 			}
@@ -676,20 +676,20 @@ cas_preset_bandlogo = [
 	{
 		cap = [
 			{
-				base_tex = `tex\models\characters\global\global_blank_logo.dds`
-				material = band_logo_primary
+				base_tex = `tex\models\Characters\Global\Global_Blank_Logo.dds`
+				material = Band_Logo_Primary
 				diffuse
 				layers = [
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_graphics070.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_graphics070.img`
 						x_scale = 150
 						y_scale = 100
 						flags = 3
 						x_trans = -4
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_graphics022.img`
-						Color = red_orange_3
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_graphics022.img`
+						color = red_orange_3
 						y_trans = -31
 						x_scale = 70
 						y_scale = 80
@@ -697,8 +697,8 @@ cas_preset_bandlogo = [
 						x_trans = -4
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_001.img`
-						Color = navy_1
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_001.img`
+						color = navy_1
 						y_trans = 4
 						x_scale = 80
 						y_scale = 80
@@ -706,15 +706,15 @@ cas_preset_bandlogo = [
 						x_trans = -2
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_044.img`
-						Color = blue_3
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_044.img`
+						color = blue_3
 						y_trans = 3
 						flags = 3
 						x_trans = 8
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_icon_creature005.img`
-						Color = navy_5
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_Icon_Creature005.img`
+						color = navy_5
 						x_trans = -15
 						y_trans = 14
 						x_scale = 50
@@ -724,7 +724,7 @@ cas_preset_bandlogo = [
 						a = 85
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_icon_creature006.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_Icon_Creature006.img`
 						x_trans = 9
 						y_trans = -4
 						x_scale = 55
@@ -734,8 +734,8 @@ cas_preset_bandlogo = [
 						a = 85
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_icon041.img`
-						Color = yellow_1guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_Icon041.img`
+						color = yellow_1guitar
 						y_trans = -33
 						x_scale = 15
 						y_scale = 15
@@ -744,8 +744,8 @@ cas_preset_bandlogo = [
 						x_trans = 28
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_icon041.img`
-						Color = yellow_1guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_Icon041.img`
+						color = yellow_1guitar
 						y_trans = -33
 						x_scale = 15
 						y_scale = 16
@@ -754,8 +754,8 @@ cas_preset_bandlogo = [
 						x_trans = -35
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_icon041.img`
-						Color = yellow_1guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_Icon041.img`
+						color = yellow_1guitar
 						x_trans = -2
 						y_trans = -42
 						y_scale = 16
@@ -764,8 +764,8 @@ cas_preset_bandlogo = [
 						x_scale = 20
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_044.img`
-						Color = grey_5guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_044.img`
+						color = grey_5guitar
 						x_trans = 10
 						y_trans = 31
 						x_scale = 15
@@ -775,8 +775,8 @@ cas_preset_bandlogo = [
 						a = 45
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_044.img`
-						Color = grey_5guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_044.img`
+						color = grey_5guitar
 						a = 35
 						x_trans = 13
 						y_trans = -19
@@ -788,8 +788,8 @@ cas_preset_bandlogo = [
 						rot = 4250
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_017.img`
-						Color = grey_5guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_017.img`
+						color = grey_5guitar
 						a = 45
 						x_trans = 14
 						y_trans = 31
@@ -799,8 +799,8 @@ cas_preset_bandlogo = [
 						rot = 400
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_017.img`
-						Color = grey_5guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_017.img`
+						color = grey_5guitar
 						a = 45
 						x_trans = -13
 						x_scale = 15
@@ -810,8 +810,8 @@ cas_preset_bandlogo = [
 						y_trans = -25
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_017.img`
-						Color = grey_5guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_017.img`
+						color = grey_5guitar
 						a = 65
 						y_trans = 24
 						x_scale = 10
@@ -827,55 +827,55 @@ cas_preset_bandlogo = [
 	{
 		cap = [
 			{
-				base_tex = `tex\models\characters\global\global_blank_logo.dds`
-				material = band_logo_primary
+				base_tex = `tex\models\Characters\Global\Global_Blank_Logo.dds`
+				material = Band_Logo_Primary
 				diffuse
 				layers = [
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_039.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_039.img`
 						flags = 3
-						Color = navy_1
+						color = navy_1
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_icons049.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_icons049.img`
 						a = 100
 						y_trans = 8
 						flags = 3
-						Color = navy_4
+						color = navy_4
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_011.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_011.img`
 						a = 100
 						y_trans = 0
 						x_scale = 110
 						y_scale = 115
 						flags = 3
-						Color = navy_1
+						color = navy_1
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_icons048.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_icons048.img`
 						a = 100
 						flags = 3
-						Color = navy_3
+						color = navy_3
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_icon_creature002.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_Icon_Creature002.img`
 						a = 75
 						x_trans = 4
 						y_trans = -4
 						x_scale = 85
 						y_scale = 80
 						flags = 3
-						Color = navy_5
+						color = navy_5
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_icon_insect002.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_Icon_Insect002.img`
 						x_trans = 2
 						y_trans = -19
 						x_scale = 65
 						y_scale = 45
 						flags = 3
-						Color = orange_5
+						color = orange_5
 					}
 				]
 			}
@@ -884,20 +884,20 @@ cas_preset_bandlogo = [
 	{
 		cap = [
 			{
-				base_tex = `tex\models\characters\global\global_blank_logo.dds`
-				material = band_logo_primary
+				base_tex = `tex\models\Characters\Global\Global_Blank_Logo.dds`
+				material = Band_Logo_Primary
 				diffuse
 				layers = [
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_graphics010.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_graphics010.img`
 						x_scale = 125
 						y_scale = 105
 						flags = 3
 						x_trans = 0
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_graphics050.img`
-						Color = yellow_green_3guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_graphics050.img`
+						color = yellow_green_3guitar
 						a = 100
 						x_trans = 1
 						y_trans = -3
@@ -906,7 +906,7 @@ cas_preset_bandlogo = [
 						x_scale = 100
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_graphics093.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_graphics093.img`
 						x_trans = 0
 						x_skew = 12
 						x_scale = 65
@@ -916,7 +916,7 @@ cas_preset_bandlogo = [
 						y_trans = 9
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_graphics014.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_graphics014.img`
 						x_trans = 1
 						x_scale = 30
 						y_scale = 25
@@ -930,25 +930,25 @@ cas_preset_bandlogo = [
 	{
 		cap = [
 			{
-				base_tex = `tex\models\characters\global\global_blank_logo.dds`
-				material = band_logo_primary
+				base_tex = `tex\models\Characters\Global\Global_Blank_Logo.dds`
+				material = Band_Logo_Primary
 				diffuse
 				layers = [
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_icons055.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_icons055.img`
 						rot = 4600
 						flags = 3
-						Color = yellow_green_4guitar
+						color = yellow_green_4guitar
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_icon035.img`
-						Color = teal_1
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_Icon035.img`
+						color = teal_1
 						flags = 3
 						x_trans = -5
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_elemental005.img`
-						Color = yellow_2guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_elemental005.img`
+						color = yellow_2guitar
 						a = 45
 						y_trans = -6
 						x_skew = -12
@@ -966,18 +966,18 @@ cas_preset_bandlogo = [
 	{
 		cap = [
 			{
-				base_tex = `tex\models\characters\global\global_blank_logo.dds`
-				material = band_logo_primary
+				base_tex = `tex\models\Characters\Global\Global_Blank_Logo.dds`
+				material = Band_Logo_Primary
 				diffuse
 				layers = [
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_007.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_007.img`
 						flags = 3
-						Color = navy_1
+						color = navy_1
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_037.img`
-						Color = navy_2
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_037.img`
+						color = navy_2
 						x_trans = 0
 						y_trans = 5
 						y_scale = 125
@@ -985,16 +985,16 @@ cas_preset_bandlogo = [
 						x_scale = 125
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_028.img`
-						Color = orange_2
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_028.img`
+						color = orange_2
 						x_scale = 60
 						y_scale = 50
 						flags = 3
 						y_trans = 7
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_007.img`
-						Color = yellow_1guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_007.img`
+						color = yellow_1guitar
 						x_trans = -18
 						y_trans = 19
 						x_scale = 20
@@ -1003,8 +1003,8 @@ cas_preset_bandlogo = [
 						y_scale = 11
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_008.img`
-						Color = yellow_1guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_008.img`
+						color = yellow_1guitar
 						x_trans = -33
 						y_trans = 18
 						x_scale = 25
@@ -1013,8 +1013,8 @@ cas_preset_bandlogo = [
 						y_scale = 15
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_050.img`
-						Color = yellow_1guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_050.img`
+						color = yellow_1guitar
 						x_trans = -19
 						y_trans = 28
 						x_scale = 120
@@ -1024,8 +1024,8 @@ cas_preset_bandlogo = [
 						a = 100
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_050.img`
-						Color = orange_3
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_050.img`
+						color = orange_3
 						x_trans = -19
 						y_trans = 26
 						x_scale = 115
@@ -1035,8 +1035,8 @@ cas_preset_bandlogo = [
 						a = 100
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshapeoutline_002.img`
-						Color = yellow_1guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShapeOutline_002.img`
+						color = yellow_1guitar
 						x_trans = 26
 						y_trans = 29
 						y_scale = 40
@@ -1044,8 +1044,8 @@ cas_preset_bandlogo = [
 						x_scale = 40
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_051.img`
-						Color = yellow_1guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_051.img`
+						color = yellow_1guitar
 						x_trans = 6
 						x_scale = 20
 						y_scale = 40
@@ -1054,8 +1054,8 @@ cas_preset_bandlogo = [
 						y_trans = 28
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_050.img`
-						Color = orange_3
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_050.img`
+						color = orange_3
 						x_trans = 9
 						y_trans = 27
 						x_scale = 30
@@ -1065,8 +1065,8 @@ cas_preset_bandlogo = [
 						a = 100
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_050.img`
-						Color = orange_3
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_050.img`
+						color = orange_3
 						x_trans = -15
 						y_trans = 17
 						x_scale = 25
@@ -1076,8 +1076,8 @@ cas_preset_bandlogo = [
 						a = 100
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_050.img`
-						Color = grey_5guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_050.img`
+						color = grey_5guitar
 						x_trans = -22
 						y_trans = 17
 						x_scale = 25
@@ -1087,8 +1087,8 @@ cas_preset_bandlogo = [
 						a = 65
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_050.img`
-						Color = orange_3
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_050.img`
+						color = orange_3
 						y_trans = 17
 						x_scale = 25
 						y_scale = 11
@@ -1097,8 +1097,8 @@ cas_preset_bandlogo = [
 						x_trans = -29
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_050.img`
-						Color = grey_5guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_050.img`
+						color = grey_5guitar
 						a = 65
 						y_trans = 17
 						x_scale = 25
@@ -1108,8 +1108,8 @@ cas_preset_bandlogo = [
 						x_trans = -38
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_050.img`
-						Color = grey_5guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_050.img`
+						color = grey_5guitar
 						a = 100
 						y_trans = 30
 						x_scale = 101
@@ -1119,14 +1119,14 @@ cas_preset_bandlogo = [
 						x_trans = -21
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_graphics022.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_graphics022.img`
 						y_trans = -18
 						flags = 3
-						Color = purple_blue_3
+						color = purple_blue_3
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_046.img`
-						Color = orange_2
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_046.img`
+						color = orange_2
 						x_trans = 25
 						y_trans = 43
 						x_scale = 15
@@ -1136,7 +1136,7 @@ cas_preset_bandlogo = [
 						a = 100
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_046.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_046.img`
 						x_trans = 25
 						y_trans = 15
 						x_scale = 20
@@ -1146,7 +1146,7 @@ cas_preset_bandlogo = [
 						a = 100
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_044.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_044.img`
 						y_trans = 38
 						x_skew = -24
 						y_skew = -63
@@ -1157,7 +1157,7 @@ cas_preset_bandlogo = [
 						x_trans = 39
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_044.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_044.img`
 						x_trans = 6
 						y_trans = 35
 						x_scale = 5
@@ -1167,8 +1167,8 @@ cas_preset_bandlogo = [
 						a = 100
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_051.img`
-						Color = blue_5
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_051.img`
+						color = blue_5
 						x_trans = -3
 						y_trans = 10
 						x_scale = 15
@@ -1177,8 +1177,8 @@ cas_preset_bandlogo = [
 						y_scale = 40
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_051.img`
-						Color = blue_5
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_051.img`
+						color = blue_5
 						x_trans = 5
 						y_trans = 10
 						y_scale = 40
@@ -1193,12 +1193,12 @@ cas_preset_bandlogo = [
 	{
 		cap = [
 			{
-				base_tex = `tex\models\characters\global\global_blank_logo.dds`
-				material = band_logo_primary
+				base_tex = `tex\models\Characters\Global\Global_Blank_Logo.dds`
+				material = Band_Logo_Primary
 				diffuse
 				layers = [
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_banners002.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_banners002.img`
 						x_trans = -8
 						x_scale = 85
 						y_scale = 60
@@ -1206,15 +1206,15 @@ cas_preset_bandlogo = [
 						y_trans = -38
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_039.img`
-						Color = yellow_orange_1
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_039.img`
+						color = yellow_orange_1
 						x_trans = -10
 						flags = 3
 						y_trans = 3
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_039.img`
-						Color = yellow_1guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_039.img`
+						color = yellow_1guitar
 						x_trans = -10
 						x_scale = 95
 						y_scale = 95
@@ -1222,8 +1222,8 @@ cas_preset_bandlogo = [
 						y_trans = 3
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_039.img`
-						Color = yellow_orange_1
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_039.img`
+						color = yellow_orange_1
 						x_trans = -10
 						x_scale = 90
 						y_scale = 90
@@ -1231,8 +1231,8 @@ cas_preset_bandlogo = [
 						y_trans = 4
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_039.img`
-						Color = yellow_1guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_039.img`
+						color = yellow_1guitar
 						a = 100
 						x_trans = -10
 						x_scale = 80
@@ -1241,8 +1241,8 @@ cas_preset_bandlogo = [
 						y_trans = 5
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_graphics024.img`
-						Color = orange_1
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_graphics024.img`
+						color = orange_1
 						x_trans = -11
 						x_scale = 45
 						y_scale = 40
@@ -1251,7 +1251,7 @@ cas_preset_bandlogo = [
 						y_trans = 22
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_graphics034.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_graphics034.img`
 						x_trans = -8
 						x_scale = 70
 						y_scale = 70
@@ -1259,8 +1259,8 @@ cas_preset_bandlogo = [
 						y_trans = 3
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_039.img`
-						Color = orange_1
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_039.img`
+						color = orange_1
 						x_trans = -3
 						x_skew = -18
 						y_skew = -3
@@ -1270,8 +1270,8 @@ cas_preset_bandlogo = [
 						y_trans = -1
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_039.img`
-						Color = yellow_1guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_039.img`
+						color = yellow_1guitar
 						x_trans = -3
 						x_skew = -15
 						y_skew = -9
@@ -1287,24 +1287,24 @@ cas_preset_bandlogo = [
 	{
 		cap = [
 			{
-				base_tex = `tex\models\characters\global\global_blank_logo.dds`
-				material = band_logo_primary
+				base_tex = `tex\models\Characters\Global\Global_Blank_Logo.dds`
+				material = Band_Logo_Primary
 				diffuse
 				layers = [
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_graphics035.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_graphics035.img`
 						flags = 3
-						Color = yellow_5guitar
+						color = yellow_5guitar
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_icon042.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_Icon042.img`
 						x_trans = -3
 						y_trans = -5
 						x_scale = 65
 						y_scale = 50
 						rot = 100
 						flags = 11
-						Color = red_5
+						color = red_5
 					}
 				]
 			}
@@ -1313,22 +1313,22 @@ cas_preset_bandlogo = [
 	{
 		cap = [
 			{
-				base_tex = `tex\models\characters\global\global_blank_logo.dds`
-				material = band_logo_primary
+				base_tex = `tex\models\Characters\Global\Global_Blank_Logo.dds`
+				material = Band_Logo_Primary
 				diffuse
 				layers = [
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_011.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_011.img`
 						x_trans = -2
 						y_trans = 33
 						x_scale = 110
 						y_scale = 40
 						flags = 3
-						Color = navy_1
+						color = navy_1
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_020.img`
-						Color = navy_5
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_020.img`
+						color = navy_5
 						x_trans = -1
 						x_scale = 145
 						y_scale = 135
@@ -1336,17 +1336,17 @@ cas_preset_bandlogo = [
 						y_trans = -3
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_006.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_006.img`
 						x_trans = -31
 						y_trans = -1
 						x_scale = 30
 						y_scale = 25
 						flags = 3
-						Color = blue_4
+						color = blue_4
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_006.img`
-						Color = blue_4
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_006.img`
+						color = blue_4
 						x_trans = 28
 						y_trans = -1
 						y_scale = 25
@@ -1354,8 +1354,8 @@ cas_preset_bandlogo = [
 						x_scale = 30
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshapegradient_001.img`
-						Color = grey_5guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShapeGradient_001.img`
+						color = grey_5guitar
 						x_trans = -1
 						x_scale = 110
 						y_scale = 75
@@ -1363,7 +1363,7 @@ cas_preset_bandlogo = [
 						y_trans = -17
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_006.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_006.img`
 						y_trans = 4
 						x_scale = 10
 						y_scale = 10
@@ -1371,7 +1371,7 @@ cas_preset_bandlogo = [
 						x_trans = -36
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_006.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_006.img`
 						y_trans = 4
 						x_scale = 10
 						y_scale = 10
@@ -1379,7 +1379,7 @@ cas_preset_bandlogo = [
 						x_trans = -25
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_006.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_006.img`
 						x_trans = -36
 						x_scale = 10
 						y_scale = 10
@@ -1387,7 +1387,7 @@ cas_preset_bandlogo = [
 						y_trans = -6
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_006.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_006.img`
 						x_trans = -25
 						x_scale = 10
 						y_scale = 10
@@ -1395,7 +1395,7 @@ cas_preset_bandlogo = [
 						y_trans = -6
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_006.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_006.img`
 						y_trans = 4
 						x_scale = 10
 						y_scale = 10
@@ -1403,7 +1403,7 @@ cas_preset_bandlogo = [
 						x_trans = 34
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_006.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_006.img`
 						y_trans = 4
 						x_scale = 10
 						y_scale = 10
@@ -1411,7 +1411,7 @@ cas_preset_bandlogo = [
 						x_trans = 23
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_006.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_006.img`
 						x_trans = 23
 						x_scale = 10
 						y_scale = 10
@@ -1419,7 +1419,7 @@ cas_preset_bandlogo = [
 						y_trans = -6
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_006.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_006.img`
 						y_trans = -6
 						x_scale = 10
 						y_scale = 10
@@ -1427,8 +1427,8 @@ cas_preset_bandlogo = [
 						x_trans = 34
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_035.img`
-						Color = navy_5
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_035.img`
+						color = navy_5
 						x_trans = -30
 						y_trans = -2
 						x_scale = 15
@@ -1436,8 +1436,8 @@ cas_preset_bandlogo = [
 						flags = 3
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_035.img`
-						Color = navy_5
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_035.img`
+						color = navy_5
 						y_trans = -2
 						x_scale = 15
 						y_scale = 15
@@ -1445,7 +1445,7 @@ cas_preset_bandlogo = [
 						x_trans = 28
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_004.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_004.img`
 						x_trans = -1
 						x_scale = 20
 						y_scale = 15
@@ -1453,7 +1453,7 @@ cas_preset_bandlogo = [
 						y_trans = 38
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_004.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_004.img`
 						x_trans = 5
 						x_scale = 10
 						y_scale = 10
@@ -1462,7 +1462,7 @@ cas_preset_bandlogo = [
 						y_trans = 35
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_004.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_004.img`
 						x_trans = -7
 						x_scale = 10
 						y_scale = 10
@@ -1471,7 +1471,7 @@ cas_preset_bandlogo = [
 						y_trans = 35
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_004.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_004.img`
 						y_trans = 19
 						x_scale = 10
 						y_scale = 10
@@ -1480,7 +1480,7 @@ cas_preset_bandlogo = [
 						x_trans = 38
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_004.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_004.img`
 						x_trans = 38
 						x_scale = 10
 						y_scale = 10
@@ -1489,7 +1489,7 @@ cas_preset_bandlogo = [
 						y_trans = 16
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_004.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_004.img`
 						x_trans = -37
 						x_scale = 10
 						y_scale = 10
@@ -1498,7 +1498,7 @@ cas_preset_bandlogo = [
 						y_trans = 21
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_004.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_004.img`
 						y_trans = 18
 						x_scale = 10
 						y_scale = 10
@@ -1507,8 +1507,8 @@ cas_preset_bandlogo = [
 						x_trans = -38
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshapegradient_007.img`
-						Color = navy_3
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShapeGradient_007.img`
+						color = navy_3
 						a = 55
 						x_trans = 4
 						y_trans = -41
@@ -1520,7 +1520,7 @@ cas_preset_bandlogo = [
 						x_scale = 50
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_graphics012.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_graphics012.img`
 						y_trans = -9
 						x_scale = 90
 						y_scale = 80
@@ -1528,18 +1528,18 @@ cas_preset_bandlogo = [
 						x_trans = 5
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_004.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_004.img`
 						x_trans = 8
 						y_trans = 7
 						x_scale = 5
 						y_scale = 5
 						rot = 1000
 						flags = 3
-						Color = red_3
+						color = red_3
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_004.img`
-						Color = red_3
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_004.img`
+						color = red_3
 						x_trans = -2
 						x_skew = 33
 						y_skew = -77
@@ -1556,25 +1556,25 @@ cas_preset_bandlogo = [
 	{
 		cap = [
 			{
-				base_tex = `tex\models\characters\global\global_blank_logo.dds`
-				material = band_logo_primary
+				base_tex = `tex\models\Characters\Global\Global_Blank_Logo.dds`
+				material = Band_Logo_Primary
 				diffuse
 				layers = [
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_001.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_001.img`
 						x_scale = 95
 						y_scale = 95
 						flags = 3
-						Color = green_3guitar
+						color = green_3guitar
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshapeoutline_002.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShapeOutline_002.img`
 						flags = 3
-						Color = purple_blue_4
+						color = purple_blue_4
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_graphics073.img`
-						Color = purple_blue_5
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_graphics073.img`
+						color = purple_blue_5
 						x_trans = -1
 						y_trans = 0
 						x_scale = 95
@@ -1584,8 +1584,8 @@ cas_preset_bandlogo = [
 						a = 30
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_004.img`
-						Color = teal_4
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_004.img`
+						color = teal_4
 						a = 75
 						x_trans = -16
 						x_skew = -9
@@ -1597,8 +1597,8 @@ cas_preset_bandlogo = [
 						y_trans = 5
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_044.img`
-						Color = green_1guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_044.img`
+						color = green_1guitar
 						a = 40
 						x_trans = -13
 						y_trans = 6
@@ -1608,8 +1608,8 @@ cas_preset_bandlogo = [
 						rot = 4100
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_044.img`
-						Color = green_1guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_044.img`
+						color = green_1guitar
 						a = 75
 						x_trans = 24
 						y_trans = 0
@@ -1619,7 +1619,7 @@ cas_preset_bandlogo = [
 						rot = 2300
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_004.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_004.img`
 						a = 75
 						x_trans = 21
 						y_trans = 1
@@ -1627,10 +1627,10 @@ cas_preset_bandlogo = [
 						y_scale = 45
 						rot = 2300
 						flags = 3
-						Color = teal_1
+						color = teal_1
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_016.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_016.img`
 						a = 70
 						x_trans = 26
 						y_trans = 23
@@ -1638,10 +1638,10 @@ cas_preset_bandlogo = [
 						y_scale = 65
 						rot = 800
 						flags = 19
-						Color = teal_2
+						color = teal_2
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_016.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_016.img`
 						a = 100
 						x_trans = -6
 						y_trans = 22
@@ -1650,11 +1650,11 @@ cas_preset_bandlogo = [
 						y_scale = 55
 						rot = 2850
 						flags = 3
-						Color = teal_5
+						color = teal_5
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshapegradient_005.img`
-						Color = teal_4
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShapeGradient_005.img`
+						color = teal_4
 						x_trans = -9
 						y_trans = 27
 						x_scale = 35
@@ -1664,8 +1664,8 @@ cas_preset_bandlogo = [
 						a = 65
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_044.img`
-						Color = teal_1
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_044.img`
+						color = teal_1
 						x_trans = 26
 						y_trans = 24
 						x_scale = 11
@@ -1675,8 +1675,8 @@ cas_preset_bandlogo = [
 						a = 90
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshapegradient_005.img`
-						Color = teal_4
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShapeGradient_005.img`
+						color = teal_4
 						x_trans = 28
 						y_trans = 26
 						x_skew = 3
@@ -1687,8 +1687,8 @@ cas_preset_bandlogo = [
 						a = 100
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_044.img`
-						Color = green_1guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_044.img`
+						color = green_1guitar
 						x_trans = -12
 						y_trans = 30
 						x_scale = 11
@@ -1698,21 +1698,21 @@ cas_preset_bandlogo = [
 						a = 30
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_graphics012.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_graphics012.img`
 						flags = 3
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_graphics107.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_graphics107.img`
 						x_trans = -13
 						y_trans = -25
 						x_scale = 50
 						y_scale = 35
 						flags = 3
-						Color = violet_5
+						color = violet_5
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshapegradient_005.img`
-						Color = teal_4
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShapeGradient_005.img`
+						color = teal_4
 						x_trans = -4
 						y_trans = 34
 						x_scale = 45
@@ -1721,8 +1721,8 @@ cas_preset_bandlogo = [
 						y_scale = 6
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshapegradient_005.img`
-						Color = teal_4
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShapeGradient_005.img`
+						color = teal_4
 						y_trans = 34
 						x_scale = 30
 						y_scale = 6
@@ -1731,8 +1731,8 @@ cas_preset_bandlogo = [
 						x_trans = -13
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_004.img`
-						Color = red_3
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_004.img`
+						color = red_3
 						y_trans = 20
 						x_scale = 5
 						y_scale = 5
@@ -1741,8 +1741,8 @@ cas_preset_bandlogo = [
 						x_trans = 2
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshapegradient_012.img`
-						Color = teal_4
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShapeGradient_012.img`
+						color = teal_4
 						x_trans = 29
 						y_trans = -6
 						x_skew = -6
@@ -1760,76 +1760,76 @@ cas_preset_bandlogo = [
 	{
 		cap = [
 			{
-				base_tex = `tex\models\characters\global\global_blank_logo.dds`
-				material = band_logo_primary
+				base_tex = `tex\models\Characters\Global\Global_Blank_Logo.dds`
+				material = Band_Logo_Primary
 				diffuse
 				layers = [
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_007.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_007.img`
 						x_trans = -4
 						x_scale = 105
 						flags = 3
-						Color = yellow_green_3guitar
+						color = yellow_green_3guitar
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_030.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_030.img`
 						x_trans = -7
 						y_trans = 5
 						x_scale = 115
 						y_scale = 100
 						rot = 2733
 						flags = 3
-						Color = yellow_green_2guitar
+						color = yellow_green_2guitar
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_030.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_030.img`
 						x_trans = -3
 						y_trans = 6
 						x_scale = 135
 						y_scale = 100
 						flags = 3
-						Color = yellow_green_5guitar
+						color = yellow_green_5guitar
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_029.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_029.img`
 						x_trans = -11
 						y_trans = 0
 						x_scale = 80
 						y_scale = 70
 						flags = 3
-						Color = teal_4
+						color = teal_4
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_030.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_030.img`
 						a = 100
 						x_trans = -34
 						y_trans = 26
 						x_scale = 30
 						y_scale = 25
 						flags = 3
-						Color = yellow_4guitar
+						color = yellow_4guitar
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_030.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_030.img`
 						x_trans = -37
 						y_trans = -32
 						x_scale = 30
 						y_scale = 25
 						flags = 3
-						Color = yellow_3guitar
+						color = yellow_3guitar
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_030.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_030.img`
 						x_trans = 28
 						y_trans = 20
 						x_scale = 40
 						y_scale = 35
 						flags = 3
-						Color = yellow_1guitar
+						color = yellow_1guitar
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_graphics023.img`
-						Color = grey_5guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_graphics023.img`
+						color = grey_5guitar
 						x_trans = 1
 						x_scale = 90
 						y_scale = 90
@@ -1837,7 +1837,7 @@ cas_preset_bandlogo = [
 						y_trans = -11
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_029.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_029.img`
 						x_trans = 33
 						y_trans = -3
 						x_scale = 6
@@ -1845,7 +1845,7 @@ cas_preset_bandlogo = [
 						y_scale = 5
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_029.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_029.img`
 						x_trans = 0
 						x_scale = 6
 						y_scale = 5
@@ -1853,7 +1853,7 @@ cas_preset_bandlogo = [
 						y_trans = 10
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_029.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_029.img`
 						y_trans = 0
 						x_scale = 10
 						y_scale = 10
@@ -1867,17 +1867,17 @@ cas_preset_bandlogo = [
 	{
 		cap = [
 			{
-				base_tex = `tex\models\characters\global\global_blank_logo.dds`
-				material = band_logo_primary
+				base_tex = `tex\models\Characters\Global\Global_Blank_Logo.dds`
+				material = Band_Logo_Primary
 				diffuse
 				layers = [
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_graphics010.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_graphics010.img`
 						flags = 3
-						Color = purple_blue_5
+						color = purple_blue_5
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_icon_creature003.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_Icon_Creature003.img`
 						a = 100
 						x_trans = 10
 						y_trans = 27
@@ -1885,11 +1885,11 @@ cas_preset_bandlogo = [
 						y_scale = 40
 						rot = 5683
 						flags = 3
-						Color = teal_3
+						color = teal_3
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_icon_creature003.img`
-						Color = teal_3
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_Icon_Creature003.img`
+						color = teal_3
 						a = 100
 						x_trans = -2
 						y_trans = -27
@@ -1899,19 +1899,19 @@ cas_preset_bandlogo = [
 						y_scale = 40
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_028.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_028.img`
 						y_trans = 2
 						x_scale = 30
 						y_scale = 30
 						flags = 3
-						Color = purple_blue_2
+						color = purple_blue_2
 					}
 					{
 						font = fontgrid_text_a6
 						text = 'A'
 						y_trans = 3
 						flags = 3
-						Color = teal_2
+						color = teal_2
 					}
 				]
 			}
@@ -1920,12 +1920,12 @@ cas_preset_bandlogo = [
 	{
 		cap = [
 			{
-				base_tex = `tex\models\characters\global\global_blank_logo.dds`
-				material = band_logo_primary
+				base_tex = `tex\models\Characters\Global\Global_Blank_Logo.dds`
+				material = Band_Logo_Primary
 				diffuse
 				layers = [
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_001.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_001.img`
 						x_trans = -4
 						y_trans = 5
 						x_scale = 90
@@ -1933,21 +1933,21 @@ cas_preset_bandlogo = [
 						y_scale = 90
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_sponsors_mackie_01.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_sponsors_Mackie_01.img`
 						y_trans = 4
 						flags = 3
 						x_trans = -3
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_sponsors_amoeba_01.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_sponsors_Amoeba_01.img`
 						x_trans = -10
 						rot = 400
 						flags = 3
 						y_trans = -5
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_graphics057.img`
-						Color = yellow_4guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_graphics057.img`
+						color = yellow_4guitar
 						x_trans = 1
 						y_trans = 9
 						x_skew = 3
@@ -1963,38 +1963,38 @@ cas_preset_bandlogo = [
 	{
 		cap = [
 			{
-				base_tex = `tex\models\characters\global\global_blank_logo.dds`
-				material = band_logo_primary
+				base_tex = `tex\models\Characters\Global\Global_Blank_Logo.dds`
+				material = Band_Logo_Primary
 				diffuse
 				layers = [
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_029.img`
-						Color = purple_blue_3
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_029.img`
+						color = purple_blue_3
 						x_scale = 110
 						y_scale = 105
 						flags = 3
 						rot = 6033
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_001.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_001.img`
 						flags = 3
-						Color = purple_blue_4
+						color = purple_blue_4
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_029.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_029.img`
 						flags = 3
-						Color = yellow_1guitar
+						color = yellow_1guitar
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_icon016.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_Icon016.img`
 						x_scale = 55
 						y_scale = 50
 						flags = 3
-						Color = purple_blue_3
+						color = purple_blue_3
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_icon016.img`
-						Color = green_3guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_Icon016.img`
+						color = green_3guitar
 						x_scale = 55
 						y_scale = 50
 						rot = 3983
@@ -2002,8 +2002,8 @@ cas_preset_bandlogo = [
 						y_trans = 0
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_025.img`
-						Color = red_4
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_025.img`
+						color = red_4
 						x_scale = 40
 						flags = 3
 						y_scale = 40
@@ -2015,38 +2015,38 @@ cas_preset_bandlogo = [
 	{
 		cap = [
 			{
-				base_tex = `tex\models\characters\global\global_blank_logo.dds`
-				material = band_logo_primary
+				base_tex = `tex\models\Characters\Global\Global_Blank_Logo.dds`
+				material = Band_Logo_Primary
 				diffuse
 				layers = [
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_icon023.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_Icon023.img`
 						flags = 3
-						Color = red_1
+						color = red_1
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_icon008.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_Icon008.img`
 						x_trans = 11
 						y_trans = -8
 						x_scale = 20
 						y_scale = 15
 						rot = 2050
 						flags = 3
-						Color = red_orange_2
+						color = red_orange_2
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_icon008.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_Icon008.img`
 						x_trans = -12
 						y_trans = -8
 						x_scale = 20
 						y_scale = 15
 						rot = 4083
 						flags = 11
-						Color = red_orange_2
+						color = red_orange_2
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_icon015.img`
-						Color = red_orange_2
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_Icon015.img`
+						color = red_orange_2
 						x_trans = 5
 						y_trans = 26
 						y_scale = 30
@@ -2054,8 +2054,8 @@ cas_preset_bandlogo = [
 						x_scale = 25
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_icon015.img`
-						Color = red_orange_2
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_Icon015.img`
+						color = red_orange_2
 						y_trans = 26
 						x_scale = 25
 						y_scale = 30
@@ -2063,16 +2063,16 @@ cas_preset_bandlogo = [
 						x_trans = -6
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_icon_insect002.img`
-						Color = red_orange_2
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_Icon_Insect002.img`
+						color = red_orange_2
 						y_trans = -37
 						y_scale = 15
 						flags = 3
 						x_scale = 20
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_icon_creature003.img`
-						Color = red_orange_2
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_Icon_Creature003.img`
+						color = red_orange_2
 						x_trans = 21
 						y_trans = -3
 						x_scale = 20
@@ -2081,8 +2081,8 @@ cas_preset_bandlogo = [
 						flags = 3
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_icon_creature003.img`
-						Color = red_orange_2
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_Icon_Creature003.img`
+						color = red_orange_2
 						y_trans = -3
 						x_scale = 20
 						y_scale = 15
@@ -2091,8 +2091,8 @@ cas_preset_bandlogo = [
 						x_trans = -24
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_icons057.img`
-						Color = red_orange_2
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_icons057.img`
+						color = red_orange_2
 						x_trans = 14
 						y_trans = -35
 						x_scale = 15
@@ -2101,8 +2101,8 @@ cas_preset_bandlogo = [
 						flags = 3
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_icons057.img`
-						Color = red_orange_2
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_icons057.img`
+						color = red_orange_2
 						x_trans = -15
 						x_scale = 15
 						y_scale = 15
@@ -2111,8 +2111,8 @@ cas_preset_bandlogo = [
 						y_trans = -34
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_icon008.img`
-						Color = black_1guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_Icon008.img`
+						color = Black_1guitar
 						x_trans = 18
 						y_trans = -28
 						x_skew = 0
@@ -2122,8 +2122,8 @@ cas_preset_bandlogo = [
 						flags = 27
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_icon008.img`
-						Color = black_1guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_Icon008.img`
+						color = Black_1guitar
 						y_trans = -28
 						x_skew = 0
 						x_scale = 11
@@ -2133,16 +2133,16 @@ cas_preset_bandlogo = [
 						x_trans = -18
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_icon021.img`
-						Color = black_1guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_Icon021.img`
+						color = Black_1guitar
 						x_scale = 15
 						y_scale = 15
 						flags = 3
 						y_trans = -38
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_icon028.img`
-						Color = red_orange_2
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_Icon028.img`
+						color = red_orange_2
 						x_trans = 19
 						y_trans = 28
 						x_scale = 20
@@ -2151,8 +2151,8 @@ cas_preset_bandlogo = [
 						flags = 11
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_icon028.img`
-						Color = red_orange_2
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_Icon028.img`
+						color = red_orange_2
 						x_trans = -20
 						x_scale = 20
 						y_scale = 20
@@ -2161,8 +2161,8 @@ cas_preset_bandlogo = [
 						y_trans = 28
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_graphics058.img`
-						Color = red_1
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_graphics058.img`
+						color = red_1
 						y_trans = 32
 						x_scale = 20
 						y_scale = 20
@@ -2171,8 +2171,8 @@ cas_preset_bandlogo = [
 						x_trans = 5
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_graphics058.img`
-						Color = red_1
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_graphics058.img`
+						color = red_1
 						y_trans = 32
 						x_scale = 20
 						y_scale = 20
@@ -2181,8 +2181,8 @@ cas_preset_bandlogo = [
 						x_trans = -5
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_icon009.img`
-						Color = black_1guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_Icon009.img`
+						color = Black_1guitar
 						x_trans = -10
 						y_trans = 12
 						x_scale = 25
@@ -2191,18 +2191,18 @@ cas_preset_bandlogo = [
 						rot = 6233
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_icon009.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_Icon009.img`
 						x_trans = 10
 						y_trans = 12
 						x_scale = 25
 						y_scale = 20
 						rot = 6233
 						flags = 11
-						Color = black_1guitar
+						color = Black_1guitar
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_icons043.img`
-						Color = black_1guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_icons043.img`
+						color = Black_1guitar
 						x_trans = 0
 						x_scale = 5
 						y_scale = 6
@@ -2210,8 +2210,8 @@ cas_preset_bandlogo = [
 						y_trans = -14
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_icon004.img`
-						Color = black_1guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_Icon004.img`
+						color = Black_1guitar
 						x_trans = 9
 						y_trans = 0
 						x_scale = 10
@@ -2220,8 +2220,8 @@ cas_preset_bandlogo = [
 						flags = 3
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_icon004.img`
-						Color = black_1guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_Icon004.img`
+						color = Black_1guitar
 						y_trans = 0
 						x_scale = 15
 						y_scale = 10
@@ -2236,13 +2236,13 @@ cas_preset_bandlogo = [
 	{
 		cap = [
 			{
-				base_tex = `tex\models\characters\global\global_blank_logo.dds`
-				material = band_logo_primary
+				base_tex = `tex\models\Characters\Global\Global_Blank_Logo.dds`
+				material = Band_Logo_Primary
 				diffuse
 				layers = [
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_icon001.img`
-						Color = yellow_1guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_Icon001.img`
+						color = yellow_1guitar
 						y_trans = 15
 						x_scale = 50
 						y_scale = 95
@@ -2251,7 +2251,7 @@ cas_preset_bandlogo = [
 						x_trans = 27
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_icon_wing001.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_Icon_Wing001.img`
 						x_trans = 1
 						x_scale = 45
 						y_scale = 40
@@ -2260,7 +2260,7 @@ cas_preset_bandlogo = [
 						y_trans = -30
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_icon_wing001.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_Icon_Wing001.img`
 						x_trans = -23
 						x_scale = 45
 						y_scale = 40
@@ -2269,7 +2269,7 @@ cas_preset_bandlogo = [
 						y_trans = 11
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_icon_wing001.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_Icon_Wing001.img`
 						x_trans = -23
 						x_scale = 45
 						y_scale = 40
@@ -2278,7 +2278,7 @@ cas_preset_bandlogo = [
 						y_trans = 11
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_icon_wing001.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_Icon_Wing001.img`
 						x_trans = -23
 						y_trans = 11
 						x_scale = 45
@@ -2287,13 +2287,13 @@ cas_preset_bandlogo = [
 						flags = 3
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_graphics017.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_graphics017.img`
 						x_trans = -11
 						y_trans = -7
 						x_scale = 50
 						y_scale = 55
 						flags = 3
-						Color = teal_4
+						color = teal_4
 					}
 				]
 			}
@@ -2302,35 +2302,35 @@ cas_preset_bandlogo = [
 	{
 		cap = [
 			{
-				base_tex = `tex\models\characters\global\global_blank_logo.dds`
-				material = band_logo_primary
+				base_tex = `tex\models\Characters\Global\Global_Blank_Logo.dds`
+				material = Band_Logo_Primary
 				diffuse
 				layers = [
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_icon026.img`
-						Color = grey_4guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_Icon026.img`
+						color = grey_4guitar
 						x_scale = 95
 						flags = 3
 						y_scale = 65
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_007.img`
-						Color = black_1guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_007.img`
+						color = Black_1guitar
 						x_trans = 0
 						y_scale = 55
 						flags = 3
 						x_scale = 40
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_elemental007.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_elemental007.img`
 						y_trans = 38
 						y_scale = 30
 						flags = 3
 						x_scale = 60
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_001.img`
-						Color = black_1guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_001.img`
+						color = Black_1guitar
 						x_trans = -10
 						y_trans = 6
 						x_scale = 30
@@ -2338,8 +2338,8 @@ cas_preset_bandlogo = [
 						y_scale = 30
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_001.img`
-						Color = black_1guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_001.img`
+						color = Black_1guitar
 						x_trans = 11
 						y_trans = 6
 						x_skew = 0
@@ -2349,15 +2349,15 @@ cas_preset_bandlogo = [
 						y_scale = 30
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_icon023.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_Icon023.img`
 						x_trans = 0
 						x_scale = 75
 						flags = 3
 						y_scale = 75
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_055.img`
-						Color = black_1guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_055.img`
+						color = Black_1guitar
 						y_trans = -2
 						x_scale = 20
 						y_scale = 20
@@ -2366,7 +2366,7 @@ cas_preset_bandlogo = [
 						x_trans = 0
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_plant_001.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_plant_001.img`
 						x_trans = -14
 						y_trans = 10
 						x_scale = 20
@@ -2374,7 +2374,7 @@ cas_preset_bandlogo = [
 						y_scale = 20
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_plant_001.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_plant_001.img`
 						y_trans = 10
 						x_scale = 20
 						y_scale = 20
@@ -2382,8 +2382,8 @@ cas_preset_bandlogo = [
 						x_trans = 14
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_026.img`
-						Color = red_1
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_026.img`
+						color = red_1
 						y_trans = 28
 						y_scale = 20
 						flags = 3
@@ -2396,13 +2396,13 @@ cas_preset_bandlogo = [
 	{
 		cap = [
 			{
-				base_tex = `tex\models\characters\global\global_blank_logo.dds`
-				material = band_logo_primary
+				base_tex = `tex\models\Characters\Global\Global_Blank_Logo.dds`
+				material = Band_Logo_Primary
 				diffuse
 				layers = [
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_elemental007.img`
-						Color = red_3
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_elemental007.img`
+						color = red_3
 						y_trans = 4
 						x_scale = 125
 						y_scale = 100
@@ -2410,8 +2410,8 @@ cas_preset_bandlogo = [
 						x_trans = 2
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_elemental001.img`
-						Color = red_3
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_elemental001.img`
+						color = red_3
 						a = 100
 						y_trans = 32
 						x_skew = 66
@@ -2421,8 +2421,8 @@ cas_preset_bandlogo = [
 						x_trans = -2
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_elemental001.img`
-						Color = red_3
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_elemental001.img`
+						color = red_3
 						a = 100
 						y_trans = 35
 						x_skew = -1
@@ -2433,8 +2433,8 @@ cas_preset_bandlogo = [
 						x_trans = 12
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_elemental001.img`
-						Color = red_3
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_elemental001.img`
+						color = red_3
 						a = 100
 						x_trans = -3
 						x_scale = 170
@@ -2443,8 +2443,8 @@ cas_preset_bandlogo = [
 						y_trans = 2
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_001.img`
-						Color = yellow_orange_1
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_001.img`
+						color = yellow_orange_1
 						x_trans = -19
 						y_trans = 32
 						x_skew = -3
@@ -2455,8 +2455,8 @@ cas_preset_bandlogo = [
 						a = 100
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_001.img`
-						Color = yellow_orange_4
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_001.img`
+						color = yellow_orange_4
 						a = 100
 						x_trans = -19
 						y_trans = 32
@@ -2467,7 +2467,7 @@ cas_preset_bandlogo = [
 						y_scale = 15
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_001.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_001.img`
 						x_trans = 20
 						y_trans = 32
 						x_skew = -3
@@ -2475,11 +2475,11 @@ cas_preset_bandlogo = [
 						y_scale = 25
 						rot = 3000
 						flags = 11
-						Color = yellow_orange_1
+						color = yellow_orange_1
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_001.img`
-						Color = yellow_orange_4
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_001.img`
+						color = yellow_orange_4
 						a = 100
 						y_trans = 32
 						x_skew = -3
@@ -2490,16 +2490,16 @@ cas_preset_bandlogo = [
 						x_trans = 20
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_017.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_017.img`
 						y_trans = -12
 						x_scale = 95
 						y_scale = 90
 						flags = 3
-						Color = yellow_orange_1
+						color = yellow_orange_1
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_001.img`
-						Color = yellow_orange_4
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_001.img`
+						color = yellow_orange_4
 						y_trans = -17
 						x_scale = 35
 						y_scale = 40
@@ -2507,8 +2507,8 @@ cas_preset_bandlogo = [
 						a = 100
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_001.img`
-						Color = yellow_orange_1
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_001.img`
+						color = yellow_orange_1
 						y_trans = 19
 						x_scale = 60
 						y_scale = 50
@@ -2516,18 +2516,18 @@ cas_preset_bandlogo = [
 						a = 100
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_016.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_016.img`
 						x_trans = -13
 						y_trans = 28
 						x_scale = 30
 						y_scale = 20
 						rot = 4983
 						flags = 3
-						Color = teal_3
+						color = teal_3
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_026.img`
-						Color = red_orange_4
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_026.img`
+						color = red_orange_4
 						x_trans = 13
 						x_scale = 25
 						y_scale = 20
@@ -2536,8 +2536,8 @@ cas_preset_bandlogo = [
 						y_trans = 28
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_001.img`
-						Color = black_1guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_001.img`
+						color = Black_1guitar
 						a = 100
 						y_trans = 26
 						x_scale = 5
@@ -2546,8 +2546,8 @@ cas_preset_bandlogo = [
 						x_trans = -11
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_001.img`
-						Color = black_1guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_001.img`
+						color = Black_1guitar
 						x_trans = 12
 						y_trans = 26
 						x_scale = 5
@@ -2556,8 +2556,8 @@ cas_preset_bandlogo = [
 						a = 100
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_banners002.img`
-						Color = black_1guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_banners002.img`
+						color = Black_1guitar
 						a = 100
 						x_trans = 0
 						y_trans = -1
@@ -2566,8 +2566,8 @@ cas_preset_bandlogo = [
 						x_scale = 50
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_001.img`
-						Color = yellow_orange_1
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_001.img`
+						color = yellow_orange_1
 						y_trans = 11
 						x_scale = 65
 						y_scale = 30
@@ -2575,8 +2575,8 @@ cas_preset_bandlogo = [
 						a = 100
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_001.img`
-						Color = yellow_orange_4
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_001.img`
+						color = yellow_orange_4
 						y_trans = 11
 						x_scale = 45
 						y_scale = 30
@@ -2584,8 +2584,8 @@ cas_preset_bandlogo = [
 						a = 100
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_005.img`
-						Color = black_1guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_005.img`
+						color = Black_1guitar
 						y_trans = 11
 						x_scale = 10
 						y_scale = 10
@@ -2594,8 +2594,8 @@ cas_preset_bandlogo = [
 						x_trans = -9
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_005.img`
-						Color = black_1guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_005.img`
+						color = Black_1guitar
 						y_trans = 11
 						x_scale = 10
 						y_scale = 10
@@ -2604,8 +2604,8 @@ cas_preset_bandlogo = [
 						x_trans = -2
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_005.img`
-						Color = black_1guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_005.img`
+						color = Black_1guitar
 						x_trans = 11
 						y_trans = 12
 						x_scale = 10
@@ -2614,8 +2614,8 @@ cas_preset_bandlogo = [
 						rot = 1583
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_005.img`
-						Color = black_1guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_005.img`
+						color = Black_1guitar
 						x_trans = 5
 						x_scale = 10
 						y_scale = 10
@@ -2624,8 +2624,8 @@ cas_preset_bandlogo = [
 						y_trans = 11
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_051.img`
-						Color = black_1guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_051.img`
+						color = Black_1guitar
 						y_trans = 16
 						x_scale = 6
 						y_scale = 20
@@ -2634,8 +2634,8 @@ cas_preset_bandlogo = [
 						x_trans = 1
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_036.img`
-						Color = black_1guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_036.img`
+						color = Black_1guitar
 						x_trans = 1
 						y_trans = 20
 						x_scale = 25
@@ -2644,7 +2644,7 @@ cas_preset_bandlogo = [
 						rot = 6283
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_003.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_003.img`
 						a = 100
 						x_trans = 1
 						y_trans = 21
@@ -2654,8 +2654,8 @@ cas_preset_bandlogo = [
 						rot = 6283
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_001.img`
-						Color = yellow_orange_1
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_001.img`
+						color = yellow_orange_1
 						a = 100
 						x_trans = -27
 						y_trans = -10
@@ -2665,8 +2665,8 @@ cas_preset_bandlogo = [
 						x_scale = 25
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_001.img`
-						Color = yellow_orange_4
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_001.img`
+						color = yellow_orange_4
 						a = 100
 						x_trans = -33
 						x_skew = 0
@@ -2678,8 +2678,8 @@ cas_preset_bandlogo = [
 						y_trans = -10
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_001.img`
-						Color = yellow_orange_1
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_001.img`
+						color = yellow_orange_1
 						a = 100
 						x_trans = 27
 						y_trans = -10
@@ -2689,8 +2689,8 @@ cas_preset_bandlogo = [
 						x_scale = 25
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_001.img`
-						Color = yellow_orange_4
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_001.img`
+						color = yellow_orange_4
 						a = 100
 						x_trans = 32
 						x_scale = 20
@@ -2700,7 +2700,7 @@ cas_preset_bandlogo = [
 						y_trans = -10
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_001.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_001.img`
 						a = 100
 						x_trans = -23
 						y_trans = -35
@@ -2708,10 +2708,10 @@ cas_preset_bandlogo = [
 						y_scale = 25
 						rot = 6283
 						flags = 3
-						Color = yellow_orange_1
+						color = yellow_orange_1
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_001.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_001.img`
 						a = 100
 						x_trans = 27
 						y_trans = -35
@@ -2719,11 +2719,11 @@ cas_preset_bandlogo = [
 						y_scale = 25
 						rot = 6283
 						flags = 11
-						Color = yellow_orange_1
+						color = yellow_orange_1
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_001.img`
-						Color = yellow_orange_4
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_001.img`
+						color = yellow_orange_4
 						x_trans = -26
 						y_trans = -36
 						x_skew = -12
@@ -2734,8 +2734,8 @@ cas_preset_bandlogo = [
 						a = 100
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_001.img`
-						Color = yellow_orange_4
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_001.img`
+						color = yellow_orange_4
 						a = 100
 						y_trans = -37
 						x_skew = -6
@@ -2747,7 +2747,7 @@ cas_preset_bandlogo = [
 						x_trans = 31
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_016.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_016.img`
 						x_trans = -7
 						y_trans = 42
 						x_skew = 12
@@ -2755,10 +2755,10 @@ cas_preset_bandlogo = [
 						y_scale = 6
 						rot = 5933
 						flags = 3
-						Color = purple_blue_1
+						color = purple_blue_1
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_016.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_016.img`
 						x_trans = -4
 						y_trans = 44
 						x_skew = 12
@@ -2766,21 +2766,21 @@ cas_preset_bandlogo = [
 						y_scale = 10
 						rot = 6233
 						flags = 3
-						Color = purple_blue_2
+						color = purple_blue_2
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_016.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_016.img`
 						x_trans = -1
 						y_trans = 43
 						x_skew = 12
 						x_scale = 15
 						y_scale = 15
 						flags = 3
-						Color = violet_2
+						color = violet_2
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_016.img`
-						Color = violet_3
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_016.img`
+						color = violet_3
 						y_trans = 39
 						x_skew = 12
 						x_scale = 15
@@ -2790,7 +2790,7 @@ cas_preset_bandlogo = [
 						x_trans = 2
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_001.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_001.img`
 						x_trans = 13
 						x_scale = 1
 						y_scale = 1
@@ -2798,7 +2798,7 @@ cas_preset_bandlogo = [
 						y_trans = 27
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_001.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_001.img`
 						y_trans = 27
 						x_scale = 1
 						y_scale = 1
@@ -2806,8 +2806,8 @@ cas_preset_bandlogo = [
 						x_trans = -10
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_icon026.img`
-						Color = grey_2guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_Icon026.img`
+						color = grey_2guitar
 						x_scale = 25
 						y_scale = 25
 						flags = 3
@@ -2820,13 +2820,13 @@ cas_preset_bandlogo = [
 	{
 		cap = [
 			{
-				base_tex = `tex\models\characters\global\global_blank_logo.dds`
-				material = band_logo_primary
+				base_tex = `tex\models\Characters\Global\Global_Blank_Logo.dds`
+				material = Band_Logo_Primary
 				diffuse
 				layers = [
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_017.img`
-						Color = yellow_orange_1
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_017.img`
+						color = yellow_orange_1
 						x_trans = -34
 						y_trans = -19
 						x_scale = 55
@@ -2836,8 +2836,8 @@ cas_preset_bandlogo = [
 						a = 100
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_017.img`
-						Color = yellow_orange_1
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_017.img`
+						color = yellow_orange_1
 						x_trans = 21
 						y_trans = -14
 						x_scale = 35
@@ -2847,8 +2847,8 @@ cas_preset_bandlogo = [
 						a = 100
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_001.img`
-						Color = yellow_orange_3
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_001.img`
+						color = yellow_orange_3
 						x_trans = -41
 						y_trans = -19
 						x_skew = 6
@@ -2859,8 +2859,8 @@ cas_preset_bandlogo = [
 						a = 100
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshapegradient_007.img`
-						Color = yellow_orange_5
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShapeGradient_007.img`
+						color = yellow_orange_5
 						x_trans = -41
 						y_trans = -19
 						x_skew = 30
@@ -2872,8 +2872,8 @@ cas_preset_bandlogo = [
 						a = 45
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshapegradient_005.img`
-						Color = red_3
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShapeGradient_005.img`
+						color = red_3
 						x_trans = -37
 						y_trans = -17
 						x_skew = 27
@@ -2885,8 +2885,8 @@ cas_preset_bandlogo = [
 						a = 25
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_017.img`
-						Color = yellow_orange_1
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_017.img`
+						color = yellow_orange_1
 						x_trans = -5
 						y_trans = -5
 						x_scale = 75
@@ -2896,8 +2896,8 @@ cas_preset_bandlogo = [
 						a = 100
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_001.img`
-						Color = yellow_orange_1
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_001.img`
+						color = yellow_orange_1
 						x_trans = 40
 						y_trans = 12
 						x_scale = 20
@@ -2906,8 +2906,8 @@ cas_preset_bandlogo = [
 						a = 100
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_001.img`
-						Color = yellow_orange_4
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_001.img`
+						color = yellow_orange_4
 						a = 100
 						x_trans = 39
 						x_scale = 15
@@ -2917,8 +2917,8 @@ cas_preset_bandlogo = [
 						y_trans = 12
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_001.img`
-						Color = yellow_orange_1
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_001.img`
+						color = yellow_orange_1
 						x_trans = 21
 						y_trans = 35
 						x_scale = 25
@@ -2927,8 +2927,8 @@ cas_preset_bandlogo = [
 						a = 100
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_001.img`
-						Color = yellow_orange_4
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_001.img`
+						color = yellow_orange_4
 						a = 100
 						x_trans = 21
 						x_scale = 15
@@ -2937,8 +2937,8 @@ cas_preset_bandlogo = [
 						y_trans = 36
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshapegradient_007.img`
-						Color = red_3
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShapeGradient_007.img`
+						color = red_3
 						x_trans = 22
 						y_trans = 31
 						x_scale = 40
@@ -2948,8 +2948,8 @@ cas_preset_bandlogo = [
 						a = 25
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_001.img`
-						Color = yellow_orange_1
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_001.img`
+						color = yellow_orange_1
 						x_trans = 22
 						y_trans = 18
 						x_scale = 50
@@ -2958,8 +2958,8 @@ cas_preset_bandlogo = [
 						a = 100
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshapegradient_007.img`
-						Color = red_3
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShapeGradient_007.img`
+						color = red_3
 						x_trans = 22
 						y_trans = 19
 						x_skew = 45
@@ -2971,8 +2971,8 @@ cas_preset_bandlogo = [
 						a = 15
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_017.img`
-						Color = black_1guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_017.img`
+						color = Black_1guitar
 						x_trans = 35
 						y_trans = 10
 						x_scale = 10
@@ -2982,8 +2982,8 @@ cas_preset_bandlogo = [
 						a = 100
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_017.img`
-						Color = black_1guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_017.img`
+						color = Black_1guitar
 						y_trans = 25
 						x_scale = 10
 						y_scale = 15
@@ -2992,8 +2992,8 @@ cas_preset_bandlogo = [
 						flags = 3
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_001.img`
-						Color = yellow_orange_1
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_001.img`
+						color = yellow_orange_1
 						x_trans = 15
 						y_trans = 13
 						x_skew = -36
@@ -3004,8 +3004,8 @@ cas_preset_bandlogo = [
 						a = 100
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshapegradient_007.img`
-						Color = red_3
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShapeGradient_007.img`
+						color = red_3
 						a = 15
 						x_trans = -8
 						x_skew = -9
@@ -3017,8 +3017,8 @@ cas_preset_bandlogo = [
 						y_trans = -2
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshapegradient_007.img`
-						Color = red_3
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShapeGradient_007.img`
+						color = red_3
 						a = 20
 						x_trans = 15
 						y_trans = 13
@@ -3029,8 +3029,8 @@ cas_preset_bandlogo = [
 						x_skew = 3
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_001.img`
-						Color = yellow_orange_3
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_001.img`
+						color = yellow_orange_3
 						x_trans = 16
 						y_trans = 11
 						x_skew = 0
@@ -3041,8 +3041,8 @@ cas_preset_bandlogo = [
 						a = 100
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_icon003.img`
-						Color = red_2
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_Icon003.img`
+						color = red_2
 						a = 100
 						x_trans = -33
 						x_skew = 18
@@ -3054,8 +3054,8 @@ cas_preset_bandlogo = [
 						y_trans = 13
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshapegradient_005.img`
-						Color = red_3
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShapeGradient_005.img`
+						color = red_3
 						x_trans = -12
 						y_trans = -10
 						x_skew = -30
@@ -3067,8 +3067,8 @@ cas_preset_bandlogo = [
 						a = 20
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshapegradient_007.img`
-						Color = red_3
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShapeGradient_007.img`
+						color = red_3
 						x_trans = 15
 						y_trans = 13
 						x_skew = 3
@@ -3079,8 +3079,8 @@ cas_preset_bandlogo = [
 						a = 10
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshapegradient_007.img`
-						Color = yellow_orange_5
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShapeGradient_007.img`
+						color = yellow_orange_5
 						x_trans = 16
 						y_trans = 11
 						x_skew = 3
@@ -3092,8 +3092,8 @@ cas_preset_bandlogo = [
 						a = 100
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_017.img`
-						Color = yellow_orange_1
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_017.img`
+						color = yellow_orange_1
 						x_trans = -15
 						y_trans = 18
 						x_scale = 50
@@ -3103,8 +3103,8 @@ cas_preset_bandlogo = [
 						a = 100
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_001.img`
-						Color = yellow_orange_3
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_001.img`
+						color = yellow_orange_3
 						a = 100
 						y_trans = 22
 						x_scale = 25
@@ -3114,8 +3114,8 @@ cas_preset_bandlogo = [
 						x_trans = -18
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_017.img`
-						Color = yellow_orange_1
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_017.img`
+						color = yellow_orange_1
 						x_trans = -1
 						y_trans = -30
 						x_scale = 60
@@ -3125,8 +3125,8 @@ cas_preset_bandlogo = [
 						a = 100
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_017.img`
-						Color = red_1
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_017.img`
+						color = red_1
 						x_trans = 18
 						y_trans = 8
 						x_scale = 15
@@ -3136,8 +3136,8 @@ cas_preset_bandlogo = [
 						a = 100
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_017.img`
-						Color = red_2
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_017.img`
+						color = red_2
 						x_trans = 15
 						y_trans = 8
 						x_scale = 10
@@ -3147,8 +3147,8 @@ cas_preset_bandlogo = [
 						a = 100
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_036.img`
-						Color = black_1guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_036.img`
+						color = Black_1guitar
 						x_trans = 29
 						y_trans = 14
 						x_skew = -24
@@ -3158,7 +3158,7 @@ cas_preset_bandlogo = [
 						rot = 1000
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_045.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_045.img`
 						x_trans = 30
 						y_trans = 14
 						x_scale = 5
@@ -3167,7 +3167,7 @@ cas_preset_bandlogo = [
 						rot = 900
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_001.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_001.img`
 						x_trans = 39
 						y_trans = 11
 						x_scale = 1
@@ -3175,7 +3175,7 @@ cas_preset_bandlogo = [
 						flags = 3
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_001.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_001.img`
 						x_trans = 39
 						x_scale = 1
 						y_scale = 1
@@ -3183,7 +3183,7 @@ cas_preset_bandlogo = [
 						y_trans = 11
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_001.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_001.img`
 						x_trans = 30
 						x_scale = 1
 						y_scale = 1
@@ -3191,8 +3191,8 @@ cas_preset_bandlogo = [
 						y_trans = 26
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_016.img`
-						Color = red_1
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_016.img`
+						color = red_1
 						y_trans = 9
 						x_skew = -18
 						x_scale = 5
@@ -3202,8 +3202,8 @@ cas_preset_bandlogo = [
 						x_trans = 16
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshapegradient_014.img`
-						Color = yellow_orange_4
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShapeGradient_014.img`
+						color = yellow_orange_4
 						x_trans = 10
 						y_trans = 4
 						x_skew = 100
@@ -3214,8 +3214,8 @@ cas_preset_bandlogo = [
 						y_scale = 15
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_017.img`
-						Color = yellow_orange_3
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_017.img`
+						color = yellow_orange_3
 						x_trans = 6
 						x_skew = 15
 						y_skew = -18
@@ -3226,8 +3226,8 @@ cas_preset_bandlogo = [
 						y_trans = -45
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshapegradient_007.img`
-						Color = red_3
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShapeGradient_007.img`
+						color = red_3
 						x_trans = -16
 						y_trans = 15
 						x_skew = -27
@@ -3239,8 +3239,8 @@ cas_preset_bandlogo = [
 						a = 20
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshapegradient_007.img`
-						Color = yellow_orange_5
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShapeGradient_007.img`
+						color = yellow_orange_5
 						x_trans = -17
 						y_trans = 22
 						x_skew = -3
@@ -3252,8 +3252,8 @@ cas_preset_bandlogo = [
 						a = 100
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshapegradient_005.img`
-						Color = red_3
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShapeGradient_005.img`
+						color = red_3
 						x_trans = -11
 						y_trans = -26
 						x_skew = 33
@@ -3265,8 +3265,8 @@ cas_preset_bandlogo = [
 						a = 15
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshapegradient_014.img`
-						Color = red_orange_4
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShapeGradient_014.img`
+						color = red_orange_4
 						x_trans = 30
 						y_trans = 31
 						x_skew = 57
@@ -3284,13 +3284,13 @@ cas_preset_bandlogo = [
 	{
 		cap = [
 			{
-				base_tex = `tex\models\characters\global\global_blank_logo.dds`
-				material = band_logo_primary
+				base_tex = `tex\models\Characters\Global\Global_Blank_Logo.dds`
+				material = Band_Logo_Primary
 				diffuse
 				layers = [
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_005.img`
-						Color = grey_3guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_005.img`
+						color = grey_3guitar
 						y_trans = -15
 						x_scale = 50
 						y_scale = 45
@@ -3299,8 +3299,8 @@ cas_preset_bandlogo = [
 						x_trans = -5
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_005.img`
-						Color = grey_3guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_005.img`
+						color = grey_3guitar
 						y_trans = -18
 						x_scale = 50
 						y_scale = 45
@@ -3309,8 +3309,8 @@ cas_preset_bandlogo = [
 						x_trans = 8
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_046.img`
-						Color = grey_3guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_046.img`
+						color = grey_3guitar
 						x_trans = -32
 						y_trans = -6
 						x_scale = 50
@@ -3319,8 +3319,8 @@ cas_preset_bandlogo = [
 						rot = 5083
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_046.img`
-						Color = grey_3guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_046.img`
+						color = grey_3guitar
 						y_trans = 23
 						y_skew = -27
 						x_scale = 50
@@ -3330,8 +3330,8 @@ cas_preset_bandlogo = [
 						x_trans = 31
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_016.img`
-						Color = grey_2guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_016.img`
+						color = grey_2guitar
 						x_trans = -27
 						y_trans = -11
 						x_scale = 15
@@ -3340,8 +3340,8 @@ cas_preset_bandlogo = [
 						flags = 3
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_icon003.img`
-						Color = red_orange_2
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_Icon003.img`
+						color = red_orange_2
 						x_trans = -1
 						x_scale = 25
 						y_scale = 60
@@ -3350,8 +3350,8 @@ cas_preset_bandlogo = [
 						y_trans = 44
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_009.img`
-						Color = black_1guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_009.img`
+						color = Black_1guitar
 						y_trans = 28
 						x_scale = 35
 						y_scale = 25
@@ -3359,8 +3359,8 @@ cas_preset_bandlogo = [
 						x_trans = 0
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_007.img`
-						Color = grey_2guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_007.img`
+						color = grey_2guitar
 						x_trans = 0
 						x_scale = 50
 						y_scale = 25
@@ -3368,8 +3368,8 @@ cas_preset_bandlogo = [
 						y_trans = 13
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_016.img`
-						Color = grey_2guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_016.img`
+						color = grey_2guitar
 						y_trans = -32
 						x_scale = 15
 						y_scale = 20
@@ -3378,25 +3378,25 @@ cas_preset_bandlogo = [
 						x_trans = -45
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_032.img`
-						Color = black_1guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_032.img`
+						color = Black_1guitar
 						x_scale = 70
 						y_scale = 75
 						flags = 3
 						y_trans = 2
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_001.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_001.img`
 						x_trans = -35
 						y_trans = -23
 						x_scale = 30
 						y_scale = 25
 						flags = 3
-						Color = black_1guitar
+						color = Black_1guitar
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_009.img`
-						Color = black_1guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_009.img`
+						color = Black_1guitar
 						y_trans = -36
 						x_scale = 25
 						y_scale = 15
@@ -3404,8 +3404,8 @@ cas_preset_bandlogo = [
 						x_trans = -13
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_009.img`
-						Color = black_1guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_009.img`
+						color = Black_1guitar
 						y_trans = -36
 						x_scale = 25
 						y_scale = 15
@@ -3413,24 +3413,24 @@ cas_preset_bandlogo = [
 						x_trans = 17
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_030.img`
-						Color = yellow_1guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_030.img`
+						color = yellow_1guitar
 						y_trans = 2
 						x_scale = 45
 						y_scale = 35
 						flags = 3
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_030.img`
-						Color = black_1guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_030.img`
+						color = Black_1guitar
 						y_trans = 2
 						y_scale = 30
 						flags = 3
 						x_scale = 40
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_033.img`
-						Color = yellow_3guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_033.img`
+						color = yellow_3guitar
 						x_trans = -5
 						y_skew = 27
 						x_scale = 6
@@ -3440,8 +3440,8 @@ cas_preset_bandlogo = [
 						y_trans = 30
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_033.img`
-						Color = yellow_3guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_033.img`
+						color = yellow_3guitar
 						x_trans = 5
 						y_skew = 27
 						x_scale = 6
@@ -3451,8 +3451,8 @@ cas_preset_bandlogo = [
 						y_trans = 30
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_051.img`
-						Color = red_2
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_051.img`
+						color = red_2
 						x_trans = 0
 						x_scale = 15
 						y_scale = 15
@@ -3460,8 +3460,8 @@ cas_preset_bandlogo = [
 						y_trans = 24
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_001.img`
-						Color = black_1guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_001.img`
+						color = Black_1guitar
 						x_trans = 39
 						x_scale = 15
 						y_scale = 15
@@ -3469,8 +3469,8 @@ cas_preset_bandlogo = [
 						y_trans = 41
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_001.img`
-						Color = grey_2guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_001.img`
+						color = grey_2guitar
 						y_trans = 14
 						x_scale = 5
 						y_scale = 5
@@ -3478,8 +3478,8 @@ cas_preset_bandlogo = [
 						x_trans = -22
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_001.img`
-						Color = grey_2guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_001.img`
+						color = grey_2guitar
 						x_trans = -22
 						y_trans = 14
 						x_scale = 5
@@ -3487,8 +3487,8 @@ cas_preset_bandlogo = [
 						flags = 3
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_001.img`
-						Color = grey_2guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_001.img`
+						color = grey_2guitar
 						y_trans = 14
 						x_scale = 5
 						y_scale = 5
@@ -3496,8 +3496,8 @@ cas_preset_bandlogo = [
 						x_trans = 22
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_016.img`
-						Color = grey_2guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_016.img`
+						color = grey_2guitar
 						y_trans = -19
 						x_scale = 15
 						y_scale = 11
@@ -3506,8 +3506,8 @@ cas_preset_bandlogo = [
 						x_trans = -29
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_016.img`
-						Color = grey_2guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_016.img`
+						color = grey_2guitar
 						x_trans = -27
 						x_scale = 15
 						y_scale = 20
@@ -3516,8 +3516,8 @@ cas_preset_bandlogo = [
 						y_trans = -32
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_016.img`
-						Color = grey_2guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_016.img`
+						color = grey_2guitar
 						x_trans = -45
 						y_trans = -11
 						x_scale = 15
@@ -3526,8 +3526,8 @@ cas_preset_bandlogo = [
 						flags = 3
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_016.img`
-						Color = grey_2guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_016.img`
+						color = grey_2guitar
 						x_trans = -45
 						y_trans = -11
 						x_scale = 15
@@ -3536,13 +3536,13 @@ cas_preset_bandlogo = [
 						flags = 3
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_041.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_041.img`
 						x_trans = 0
 						y_trans = 33
 						x_scale = 15
 						y_scale = 15
 						flags = 19
-						Color = grey_3guitar
+						color = grey_3guitar
 					}
 				]
 			}
@@ -3551,21 +3551,21 @@ cas_preset_bandlogo = [
 	{
 		cap = [
 			{
-				base_tex = `tex\models\characters\global\global_blank_logo.dds`
-				material = band_logo_primary
+				base_tex = `tex\models\Characters\Global\Global_Blank_Logo.dds`
+				material = Band_Logo_Primary
 				diffuse
 				layers = [
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshapeoutline_002.img`
-						Color = yellow_orange_2
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShapeOutline_002.img`
+						color = yellow_orange_2
 						x_scale = 70
 						y_scale = 70
 						flags = 3
 						x_trans = -14
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshapeoutline_002.img`
-						Color = yellow_orange_4
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShapeOutline_002.img`
+						color = yellow_orange_4
 						x_trans = -17
 						x_scale = 70
 						y_scale = 70
@@ -3573,8 +3573,8 @@ cas_preset_bandlogo = [
 						y_trans = 1
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_001.img`
-						Color = yellow_orange_4
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_001.img`
+						color = yellow_orange_4
 						x_trans = 21
 						y_trans = 25
 						x_scale = 10
@@ -3582,8 +3582,8 @@ cas_preset_bandlogo = [
 						y_scale = 10
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_001.img`
-						Color = yellow_orange_4
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_001.img`
+						color = yellow_orange_4
 						x_trans = 26
 						y_trans = 4
 						x_scale = 10
@@ -3591,8 +3591,8 @@ cas_preset_bandlogo = [
 						y_scale = 10
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_001.img`
-						Color = yellow_orange_4
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_001.img`
+						color = yellow_orange_4
 						x_trans = 24
 						y_trans = -17
 						x_scale = 10
@@ -3600,8 +3600,8 @@ cas_preset_bandlogo = [
 						y_scale = 10
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_001.img`
-						Color = yellow_orange_4
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_001.img`
+						color = yellow_orange_4
 						y_trans = -33
 						x_scale = 10
 						y_scale = 10
@@ -3609,8 +3609,8 @@ cas_preset_bandlogo = [
 						x_trans = 9
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_001.img`
-						Color = yellow_orange_4
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_001.img`
+						color = yellow_orange_4
 						y_trans = 36
 						x_scale = 6
 						y_scale = 6
@@ -3618,8 +3618,8 @@ cas_preset_bandlogo = [
 						x_trans = 4
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_001.img`
-						Color = yellow_orange_4
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_001.img`
+						color = yellow_orange_4
 						x_trans = -15
 						x_scale = 5
 						y_scale = 5
@@ -3627,8 +3627,8 @@ cas_preset_bandlogo = [
 						y_trans = 38
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_006.img`
-						Color = yellow_orange_4
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_006.img`
+						color = yellow_orange_4
 						x_trans = 7
 						x_skew = 0
 						y_skew = 0
@@ -3639,8 +3639,8 @@ cas_preset_bandlogo = [
 						y_trans = -31
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_006.img`
-						Color = yellow_orange_4
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_006.img`
+						color = yellow_orange_4
 						y_trans = 34
 						y_skew = 0
 						x_scale = 1
@@ -3650,8 +3650,8 @@ cas_preset_bandlogo = [
 						x_trans = 3
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_006.img`
-						Color = yellow_orange_4
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_006.img`
+						color = yellow_orange_4
 						x_trans = 20
 						y_skew = 0
 						x_scale = 1
@@ -3661,8 +3661,8 @@ cas_preset_bandlogo = [
 						y_trans = 24
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_006.img`
-						Color = yellow_orange_4
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_006.img`
+						color = yellow_orange_4
 						x_trans = 23
 						y_skew = 0
 						x_scale = 1
@@ -3672,8 +3672,8 @@ cas_preset_bandlogo = [
 						y_trans = 4
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_006.img`
-						Color = yellow_orange_4
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_006.img`
+						color = yellow_orange_4
 						x_trans = 19
 						y_skew = 0
 						x_scale = 1
@@ -3683,8 +3683,8 @@ cas_preset_bandlogo = [
 						y_trans = -14
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_006.img`
-						Color = yellow_orange_4
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_006.img`
+						color = yellow_orange_4
 						y_trans = 42
 						y_skew = 0
 						x_scale = 1
@@ -3694,8 +3694,8 @@ cas_preset_bandlogo = [
 						x_trans = -14
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_011.img`
-						Color = yellow_orange_4
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_011.img`
+						color = yellow_orange_4
 						x_trans = 18
 						x_scale = 6
 						y_scale = 10
@@ -3704,8 +3704,8 @@ cas_preset_bandlogo = [
 						y_trans = -41
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_011.img`
-						Color = yellow_orange_4
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_011.img`
+						color = yellow_orange_4
 						y_trans = -22
 						x_scale = 6
 						y_scale = 10
@@ -3714,8 +3714,8 @@ cas_preset_bandlogo = [
 						x_trans = 35
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_011.img`
-						Color = yellow_orange_4
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_011.img`
+						color = yellow_orange_4
 						x_trans = 38
 						y_trans = 3
 						x_scale = 6
@@ -3724,8 +3724,8 @@ cas_preset_bandlogo = [
 						rot = 1600
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_011.img`
-						Color = yellow_orange_4
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_011.img`
+						color = yellow_orange_4
 						y_trans = 33
 						x_skew = 0
 						x_scale = 6
@@ -3735,8 +3735,8 @@ cas_preset_bandlogo = [
 						x_trans = 30
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_011.img`
-						Color = yellow_orange_4
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_011.img`
+						color = yellow_orange_4
 						x_trans = 9
 						x_scale = 6
 						y_scale = 10
@@ -3745,8 +3745,8 @@ cas_preset_bandlogo = [
 						y_trans = 46
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_011.img`
-						Color = yellow_orange_4
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_011.img`
+						color = yellow_orange_4
 						y_trans = 46
 						x_scale = 6
 						y_scale = 10
@@ -3757,7 +3757,7 @@ cas_preset_bandlogo = [
 					{
 						font = fontgrid_title_a1
 						text = '6'
-						Color = yellow_1guitar
+						color = yellow_1guitar
 						x_trans = -28
 						x_scale = 135
 						y_scale = 135
@@ -3767,7 +3767,7 @@ cas_preset_bandlogo = [
 					{
 						font = fontgrid_title_a1
 						text = '1'
-						Color = yellow_1guitar
+						color = yellow_1guitar
 						x_trans = -17
 						x_scale = 130
 						y_scale = 125
@@ -3777,7 +3777,7 @@ cas_preset_bandlogo = [
 					{
 						font = fontgrid_title_a1
 						text = '%'
-						Color = yellow_1guitar
+						color = yellow_1guitar
 						x_scale = 95
 						y_scale = 115
 						flags = 3
@@ -3790,19 +3790,19 @@ cas_preset_bandlogo = [
 	{
 		cap = [
 			{
-				base_tex = `tex\models\characters\global\global_blank_logo.dds`
-				material = band_logo_primary
+				base_tex = `tex\models\Characters\Global\Global_Blank_Logo.dds`
+				material = Band_Logo_Primary
 				diffuse
 				layers = [
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_icons044.img`
-						Color = red_3
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_icons044.img`
+						color = red_3
 						y_scale = 110
 						flags = 3
 						x_scale = 90
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_banners008.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_banners008.img`
 						x_trans = 0
 						y_trans = 0
 						flags = 3
@@ -3815,13 +3815,13 @@ cas_preset_bandlogo = [
 	{
 		cap = [
 			{
-				base_tex = `tex\models\characters\global\global_blank_logo.dds`
-				material = band_logo_primary
+				base_tex = `tex\models\Characters\Global\Global_Blank_Logo.dds`
+				material = Band_Logo_Primary
 				diffuse
 				layers = [
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_022.img`
-						Color = grey_2
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_022.img`
+						color = grey_2
 						x_trans = 0
 						x_scale = 40
 						y_scale = 50
@@ -3829,15 +3829,15 @@ cas_preset_bandlogo = [
 						y_trans = -34
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_006.img`
-						Color = grey_2
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_006.img`
+						color = grey_2
 						x_trans = -1
 						x_scale = 11
 						flags = 3
 						y_trans = 10
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_032.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_032.img`
 						x_trans = 0
 						y_trans = -27
 						x_skew = -98
@@ -3845,18 +3845,18 @@ cas_preset_bandlogo = [
 						y_scale = 20
 						rot = 150
 						flags = 3
-						Color = red_orange_4
+						color = red_orange_4
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_001.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_001.img`
 						x_scale = 50
 						y_scale = 50
 						flags = 3
-						Color = yellow_orange_5
+						color = yellow_orange_5
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_001.img`
-						Color = navy_4
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_001.img`
+						color = navy_4
 						x_trans = 0
 						y_trans = 0
 						y_scale = 20
@@ -3864,8 +3864,8 @@ cas_preset_bandlogo = [
 						x_scale = 20
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_005.img`
-						Color = blue_5
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_005.img`
+						color = blue_5
 						a = 95
 						x_trans = -3
 						x_skew = -26
@@ -3876,8 +3876,8 @@ cas_preset_bandlogo = [
 						y_trans = -4
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_001.img`
-						Color = grey_1
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_001.img`
+						color = grey_1
 						y_trans = 0
 						x_scale = 11
 						y_scale = 10
@@ -3885,8 +3885,8 @@ cas_preset_bandlogo = [
 						x_trans = 0
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_001.img`
-						Color = grey_5
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_001.img`
+						color = grey_5
 						x_trans = 11
 						x_scale = 11
 						y_scale = 11
@@ -3900,14 +3900,14 @@ cas_preset_bandlogo = [
 	{
 		cap = [
 			{
-				base_tex = `tex\models\characters\global\global_blank_logo.dds`
-				material = band_logo_primary
+				base_tex = `tex\models\Characters\Global\Global_Blank_Logo.dds`
+				material = Band_Logo_Primary
 				diffuse
 				layers = [
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_graphics014.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_graphics014.img`
 						flags = 3
-						Color = grey_4
+						color = grey_4
 					}
 				]
 			}
@@ -3916,17 +3916,17 @@ cas_preset_bandlogo = [
 	{
 		cap = [
 			{
-				base_tex = `tex\models\characters\global\global_blank_logo.dds`
-				material = band_logo_primary
+				base_tex = `tex\models\Characters\Global\Global_Blank_Logo.dds`
+				material = Band_Logo_Primary
 				diffuse
 				layers = [
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_graphics_spiral.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_graphics_spiral.img`
 						flags = 3
-						Color = grey_1
+						color = grey_1
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_graphics_zombieface.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_graphics_zombieface.img`
 						x_scale = 95
 						flags = 3
 						y_scale = 95
@@ -3938,25 +3938,25 @@ cas_preset_bandlogo = [
 	{
 		cap = [
 			{
-				base_tex = `tex\models\characters\global\global_blank_logo.dds`
-				material = band_logo_primary
+				base_tex = `tex\models\Characters\Global\Global_Blank_Logo.dds`
+				material = Band_Logo_Primary
 				diffuse
 				layers = [
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_elemental007.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_elemental007.img`
 						y_scale = 45
 						flags = 3
 						y_trans = 30
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_icon023.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_Icon023.img`
 						y_scale = 80
 						flags = 3
 						y_trans = -5
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_001.img`
-						Color = red_3
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_001.img`
+						color = red_3
 						y_trans = 4
 						x_scale = 10
 						y_scale = 10
@@ -3964,8 +3964,8 @@ cas_preset_bandlogo = [
 						x_trans = 16
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_001.img`
-						Color = red_3
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_001.img`
+						color = red_3
 						x_trans = -17
 						y_trans = 4
 						x_scale = 10
@@ -3973,8 +3973,8 @@ cas_preset_bandlogo = [
 						flags = 3
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_001.img`
-						Color = grey_5
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_001.img`
+						color = grey_5
 						x_trans = 16
 						x_scale = 6
 						y_scale = 5
@@ -3982,8 +3982,8 @@ cas_preset_bandlogo = [
 						y_trans = 4
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_001.img`
-						Color = grey_5
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_001.img`
+						color = grey_5
 						y_trans = 4
 						x_scale = 6
 						y_scale = 5
@@ -3991,8 +3991,8 @@ cas_preset_bandlogo = [
 						x_trans = -17
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_001.img`
-						Color = grey_1
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_001.img`
+						color = grey_1
 						x_trans = -17
 						y_trans = 4
 						x_scale = 1
@@ -4000,8 +4000,8 @@ cas_preset_bandlogo = [
 						y_scale = 1
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_001.img`
-						Color = green_1
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_001.img`
+						color = green_1
 						y_trans = 4
 						x_scale = 1
 						y_scale = 1
@@ -4015,29 +4015,29 @@ cas_preset_bandlogo = [
 	{
 		cap = [
 			{
-				base_tex = `tex\models\characters\global\global_blank_logo.dds`
-				material = band_logo_primary
+				base_tex = `tex\models\Characters\Global\Global_Blank_Logo.dds`
+				material = Band_Logo_Primary
 				diffuse
 				layers = [
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_029.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_029.img`
 						x_scale = 145
 						y_scale = 150
 						flags = 3
-						Color = navy_5
+						color = navy_5
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_029.img`
-						Color = navy_1
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_029.img`
+						color = navy_1
 						x_scale = 125
 						y_scale = 125
 						flags = 3
 						x_trans = 0
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_graphics023.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_graphics023.img`
 						flags = 3
-						Color = grey_5
+						color = grey_5
 					}
 				]
 			}
@@ -4046,20 +4046,20 @@ cas_preset_bandlogo = [
 	{
 		cap = [
 			{
-				base_tex = `tex\models\characters\global\global_blank_logo.dds`
-				material = band_logo_primary
+				base_tex = `tex\models\Characters\Global\Global_Blank_Logo.dds`
+				material = Band_Logo_Primary
 				diffuse
 				layers = [
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_graphics031.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_graphics031.img`
 						flags = 3
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_graphics031.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_graphics031.img`
 						flags = 11
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_graphics084.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_graphics084.img`
 						flags = 3
 					}
 				]
@@ -4069,12 +4069,12 @@ cas_preset_bandlogo = [
 	{
 		cap = [
 			{
-				base_tex = `tex\models\characters\global\global_blank_logo.dds`
-				material = band_logo_primary
+				base_tex = `tex\models\Characters\Global\Global_Blank_Logo.dds`
+				material = Band_Logo_Primary
 				diffuse
 				layers = [
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_elemental001.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_elemental001.img`
 						a = 100
 						x_trans = -42
 						y_trans = -16
@@ -4082,10 +4082,10 @@ cas_preset_bandlogo = [
 						y_scale = 35
 						rot = 3783
 						flags = 3
-						Color = navy_4
+						color = navy_4
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_elemental001.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_elemental001.img`
 						x_trans = -9
 						x_scale = 80
 						y_scale = 75
@@ -4094,7 +4094,7 @@ cas_preset_bandlogo = [
 						y_trans = -25
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_icon035.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_Icon035.img`
 						x_trans = -29
 						y_trans = 5
 						x_scale = 30
@@ -4104,8 +4104,8 @@ cas_preset_bandlogo = [
 						a = 95
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_icons055.img`
-						Color = red_3
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_icons055.img`
+						color = red_3
 						x_trans = -29
 						x_scale = 6
 						y_scale = 11
@@ -4113,7 +4113,7 @@ cas_preset_bandlogo = [
 						y_trans = 3
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_icon035.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_Icon035.img`
 						x_trans = 20
 						x_scale = 70
 						y_scale = 65
@@ -4122,8 +4122,8 @@ cas_preset_bandlogo = [
 						y_trans = 18
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_icons055.img`
-						Color = red_3
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_icons055.img`
+						color = red_3
 						y_trans = 12
 						x_scale = 16
 						y_scale = 20
@@ -4137,12 +4137,12 @@ cas_preset_bandlogo = [
 	{
 		cap = [
 			{
-				base_tex = `tex\models\characters\global\global_blank_logo.dds`
-				material = band_logo_primary
+				base_tex = `tex\models\Characters\Global\Global_Blank_Logo.dds`
+				material = Band_Logo_Primary
 				diffuse
 				layers = [
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_icons045.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_icons045.img`
 						x_trans = -34
 						y_trans = -20
 						x_skew = 100
@@ -4151,10 +4151,10 @@ cas_preset_bandlogo = [
 						y_scale = 80
 						rot = 200
 						flags = 3
-						Color = grey_5
+						color = grey_5
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_icons045.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_icons045.img`
 						x_trans = -19
 						y_trans = -22
 						x_skew = 100
@@ -4163,10 +4163,10 @@ cas_preset_bandlogo = [
 						y_scale = 85
 						rot = 200
 						flags = 3
-						Color = grey_5
+						color = grey_5
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_icons045.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_icons045.img`
 						x_trans = -11
 						y_trans = -26
 						x_skew = 100
@@ -4175,10 +4175,10 @@ cas_preset_bandlogo = [
 						y_scale = 85
 						rot = 200
 						flags = 3
-						Color = grey_5
+						color = grey_5
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_017.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_017.img`
 						a = 100
 						x_trans = 6
 						y_trans = 16
@@ -4186,10 +4186,10 @@ cas_preset_bandlogo = [
 						y_scale = 80
 						rot = 3133
 						flags = 3
-						Color = navy_1
+						color = navy_1
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_017.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_017.img`
 						a = 100
 						x_trans = 9
 						y_trans = 16
@@ -4197,10 +4197,10 @@ cas_preset_bandlogo = [
 						y_scale = 80
 						rot = 3133
 						flags = 3
-						Color = grey_5
+						color = grey_5
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_017.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_017.img`
 						a = 100
 						x_trans = 11
 						y_trans = 15
@@ -4208,29 +4208,29 @@ cas_preset_bandlogo = [
 						y_scale = 80
 						rot = 3133
 						flags = 3
-						Color = navy_1
+						color = navy_1
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_001.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_001.img`
 						x_trans = 6
 						y_trans = 2
 						x_skew = 21
 						y_scale = 50
 						flags = 3
-						Color = grey_4
+						color = grey_4
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_001.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_001.img`
 						x_trans = 6
 						y_trans = -2
 						x_skew = 21
 						x_scale = 95
 						y_scale = 45
 						flags = 3
-						Color = grey_1
+						color = grey_1
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_001.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_001.img`
 						y_trans = -4
 						x_skew = 21
 						x_scale = 90
@@ -4239,7 +4239,7 @@ cas_preset_bandlogo = [
 						x_trans = 7
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_graphics022.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_graphics022.img`
 						x_trans = 9
 						y_trans = -10
 						x_skew = -15
@@ -4248,17 +4248,17 @@ cas_preset_bandlogo = [
 						y_scale = 75
 						rot = 50
 						flags = 19
-						Color = grey_5
+						color = grey_5
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_006.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_006.img`
 						x_trans = -2
 						y_trans = 38
 						x_skew = 82
 						x_scale = 11
 						y_scale = 6
 						flags = 3
-						Color = navy_1
+						color = navy_1
 					}
 				]
 			}
@@ -4267,18 +4267,18 @@ cas_preset_bandlogo = [
 	{
 		cap = [
 			{
-				base_tex = `tex\models\characters\global\global_blank_logo.dds`
-				material = band_logo_primary
+				base_tex = `tex\models\Characters\Global\Global_Blank_Logo.dds`
+				material = Band_Logo_Primary
 				diffuse
 				layers = [
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_elemental006.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_elemental006.img`
 						x_trans = 3
 						flags = 3
 						x_scale = 155
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_graphics095.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_graphics095.img`
 						y_trans = -14
 						x_scale = 70
 						y_scale = 70
@@ -4286,7 +4286,7 @@ cas_preset_bandlogo = [
 						x_trans = 0
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_graphics020.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_graphics020.img`
 						y_trans = 26
 						x_scale = 45
 						y_scale = 75
@@ -4301,12 +4301,12 @@ cas_preset_bandlogo = [
 	{
 		cap = [
 			{
-				base_tex = `tex\models\characters\global\global_blank_logo.dds`
-				material = band_logo_primary
+				base_tex = `tex\models\Characters\Global\Global_Blank_Logo.dds`
+				material = Band_Logo_Primary
 				diffuse
 				layers = [
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_graphics044.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_graphics044.img`
 						y_trans = -2
 						x_scale = 90
 						y_scale = 90
@@ -4314,8 +4314,8 @@ cas_preset_bandlogo = [
 						x_trans = -5
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_006.img`
-						Color = black_1guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_006.img`
+						color = Black_1guitar
 						x_trans = 5
 						y_trans = 13
 						y_scale = 1
@@ -4324,8 +4324,8 @@ cas_preset_bandlogo = [
 						x_scale = 65
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_006.img`
-						Color = black_1guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_006.img`
+						color = Black_1guitar
 						y_trans = -38
 						x_scale = 65
 						y_scale = 1
@@ -4334,8 +4334,8 @@ cas_preset_bandlogo = [
 						x_trans = 5
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_006.img`
-						Color = yellow_green_1guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_006.img`
+						color = yellow_green_1guitar
 						a = 65
 						x_trans = 23
 						y_skew = -100
@@ -4345,8 +4345,8 @@ cas_preset_bandlogo = [
 						y_trans = -16
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_006.img`
-						Color = grey_4guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_006.img`
+						color = grey_4guitar
 						x_trans = -3
 						y_trans = 22
 						x_skew = -100
@@ -4357,8 +4357,8 @@ cas_preset_bandlogo = [
 						a = 55
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_006.img`
-						Color = yellow_green_1guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_006.img`
+						color = yellow_green_1guitar
 						a = 65
 						x_trans = -29
 						y_skew = -100
@@ -4368,8 +4368,8 @@ cas_preset_bandlogo = [
 						y_trans = 7
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_001.img`
-						Color = red_3
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_001.img`
+						color = red_3
 						x_trans = -4
 						x_scale = 45
 						y_scale = 45
@@ -4377,8 +4377,8 @@ cas_preset_bandlogo = [
 						y_trans = -1
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshapegradient_008.img`
-						Color = red_5
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShapeGradient_008.img`
+						color = red_5
 						x_trans = -4
 						x_scale = 60
 						y_scale = 60
@@ -4386,8 +4386,8 @@ cas_preset_bandlogo = [
 						y_trans = -1
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_icon016.img`
-						Color = black_1guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_Icon016.img`
+						color = Black_1guitar
 						a = 55
 						y_trans = -2
 						x_scale = 35
@@ -4396,7 +4396,7 @@ cas_preset_bandlogo = [
 						x_trans = -5
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_006.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_006.img`
 						a = 80
 						x_trans = -3
 						y_trans = -30
@@ -4405,11 +4405,11 @@ cas_preset_bandlogo = [
 						x_scale = 35
 						y_scale = 10
 						flags = 3
-						Color = grey_4guitar
+						color = grey_4guitar
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_006.img`
-						Color = black_1guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_006.img`
+						color = Black_1guitar
 						x_trans = -12
 						y_trans = -21
 						y_scale = 1
@@ -4418,8 +4418,8 @@ cas_preset_bandlogo = [
 						x_scale = 65
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_006.img`
-						Color = black_1guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_006.img`
+						color = Black_1guitar
 						x_trans = -12
 						x_scale = 65
 						y_scale = 1
@@ -4428,8 +4428,8 @@ cas_preset_bandlogo = [
 						y_trans = 31
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_006.img`
-						Color = black_1guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_006.img`
+						color = Black_1guitar
 						x_trans = -37
 						x_scale = 1
 						y_scale = 60
@@ -4437,8 +4437,8 @@ cas_preset_bandlogo = [
 						y_trans = 15
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_006.img`
-						Color = black_1guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_006.img`
+						color = Black_1guitar
 						x_trans = 14
 						x_scale = 1
 						y_scale = 60
@@ -4446,8 +4446,8 @@ cas_preset_bandlogo = [
 						y_trans = -6
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_001.img`
-						Color = red_2
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_001.img`
+						color = red_2
 						a = 35
 						x_trans = -4
 						x_scale = 45
@@ -4457,8 +4457,8 @@ cas_preset_bandlogo = [
 						y_trans = 23
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_001.img`
-						Color = red_2
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_001.img`
+						color = red_2
 						x_trans = -4
 						y_trans = -29
 						x_scale = 45
@@ -4468,8 +4468,8 @@ cas_preset_bandlogo = [
 						a = 35
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_006.img`
-						Color = black_1guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_006.img`
+						color = Black_1guitar
 						x_trans = -20
 						x_scale = 1
 						y_scale = 60
@@ -4477,8 +4477,8 @@ cas_preset_bandlogo = [
 						y_trans = -3
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_006.img`
-						Color = black_1guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_006.img`
+						color = Black_1guitar
 						x_trans = 31
 						x_scale = 1
 						y_scale = 60
@@ -4486,8 +4486,8 @@ cas_preset_bandlogo = [
 						y_trans = -24
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_006.img`
-						Color = black_1guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_006.img`
+						color = Black_1guitar
 						y_trans = -19
 						x_scale = 30
 						y_scale = 1
@@ -4496,8 +4496,8 @@ cas_preset_bandlogo = [
 						x_trans = -29
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_006.img`
-						Color = black_1guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_006.img`
+						color = Black_1guitar
 						y_trans = 33
 						x_scale = 30
 						y_scale = 1
@@ -4506,8 +4506,8 @@ cas_preset_bandlogo = [
 						x_trans = -29
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_006.img`
-						Color = black_1guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_006.img`
+						color = Black_1guitar
 						y_trans = 11
 						x_scale = 30
 						y_scale = 1
@@ -4516,8 +4516,8 @@ cas_preset_bandlogo = [
 						x_trans = 23
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_006.img`
-						Color = black_1guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_006.img`
+						color = Black_1guitar
 						y_trans = -40
 						x_scale = 30
 						y_scale = 1
@@ -4532,29 +4532,29 @@ cas_preset_bandlogo = [
 	{
 		cap = [
 			{
-				base_tex = `tex\models\characters\global\global_blank_logo.dds`
-				material = band_logo_primary
+				base_tex = `tex\models\Characters\Global\Global_Blank_Logo.dds`
+				material = Band_Logo_Primary
 				diffuse
 				layers = [
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshapegradient_008.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShapeGradient_008.img`
 						a = 100
 						x_scale = 150
 						y_scale = 165
 						flags = 3
-						Color = green_3guitar
+						color = green_3guitar
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshapegradient_008.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShapeGradient_008.img`
 						a = 100
 						x_scale = 150
 						y_scale = 165
 						flags = 3
-						Color = green_3guitar
+						color = green_3guitar
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_009.img`
-						Color = green_2guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_009.img`
+						color = green_2guitar
 						y_trans = 10
 						x_scale = 31
 						y_scale = 85
@@ -4562,8 +4562,8 @@ cas_preset_bandlogo = [
 						a = 95
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_001.img`
-						Color = green_4guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_001.img`
+						color = green_4guitar
 						x_trans = -6
 						y_trans = -13
 						y_scale = 15
@@ -4571,8 +4571,8 @@ cas_preset_bandlogo = [
 						x_scale = 10
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_001.img`
-						Color = green_4guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_001.img`
+						color = green_4guitar
 						x_trans = 3
 						y_trans = 18
 						y_scale = 10
@@ -4580,8 +4580,8 @@ cas_preset_bandlogo = [
 						x_scale = 10
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_001.img`
-						Color = green_4guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_001.img`
+						color = green_4guitar
 						x_trans = -5
 						y_trans = 9
 						x_scale = 6
@@ -4589,8 +4589,8 @@ cas_preset_bandlogo = [
 						y_scale = 6
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_001.img`
-						Color = green_4guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_001.img`
+						color = green_4guitar
 						y_trans = 35
 						x_scale = 6
 						y_scale = 10
@@ -4598,8 +4598,8 @@ cas_preset_bandlogo = [
 						x_trans = 0
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_016.img`
-						Color = green_4guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_016.img`
+						color = green_4guitar
 						x_trans = 6
 						x_scale = 20
 						y_scale = 20
@@ -4607,18 +4607,18 @@ cas_preset_bandlogo = [
 						y_trans = -3
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_graphics071.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_graphics071.img`
 						x_trans = -23
 						y_trans = -22
 						x_scale = 65
 						y_scale = 60
 						rot = 5733
 						flags = 3
-						Color = grey_5guitar
+						color = grey_5guitar
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_graphics071.img`
-						Color = grey_5guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_graphics071.img`
+						color = grey_5guitar
 						x_trans = 24
 						x_scale = 65
 						y_scale = 60
@@ -4627,8 +4627,8 @@ cas_preset_bandlogo = [
 						y_trans = -22
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshapegradient_017.img`
-						Color = green_4guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShapeGradient_017.img`
+						color = green_4guitar
 						x_trans = 0
 						y_trans = 11
 						x_scale = 30
@@ -4637,8 +4637,8 @@ cas_preset_bandlogo = [
 						a = 25
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshapegradient_009.img`
-						Color = green_2guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShapeGradient_009.img`
+						color = green_2guitar
 						x_trans = 0
 						y_trans = 37
 						y_scale = 20
@@ -4646,8 +4646,8 @@ cas_preset_bandlogo = [
 						x_scale = 10
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshapegradient_009.img`
-						Color = green_2guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShapeGradient_009.img`
+						color = green_2guitar
 						x_trans = -6
 						y_trans = -12
 						x_scale = 15
@@ -4655,31 +4655,31 @@ cas_preset_bandlogo = [
 						y_scale = 20
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_009.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_009.img`
 						y_trans = -22
 						x_scale = 31
 						y_scale = 30
 						flags = 19
-						Color = black_1guitar
+						color = Black_1guitar
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_009.img`
-						Color = black_1guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_009.img`
+						color = Black_1guitar
 						y_trans = 42
 						y_scale = 25
 						flags = 3
 						x_scale = 16
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_009.img`
-						Color = black_1guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_009.img`
+						color = Black_1guitar
 						y_trans = -41
 						x_scale = 31
 						flags = 3
 						y_scale = 35
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_elemental006.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_elemental006.img`
 						y_trans = -23
 						x_scale = 25
 						y_scale = 20
@@ -4687,8 +4687,8 @@ cas_preset_bandlogo = [
 						x_trans = 0
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshapegradient_009.img`
-						Color = green_2guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShapeGradient_009.img`
+						color = green_2guitar
 						x_trans = -5
 						y_trans = 9
 						x_scale = 10
@@ -4696,8 +4696,8 @@ cas_preset_bandlogo = [
 						flags = 3
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshapegradient_009.img`
-						Color = green_2guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShapeGradient_009.img`
+						color = green_2guitar
 						x_trans = 3
 						x_scale = 15
 						y_scale = 15
@@ -4705,8 +4705,8 @@ cas_preset_bandlogo = [
 						y_trans = 18
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshapegradient_006.img`
-						Color = green_1guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShapeGradient_006.img`
+						color = green_1guitar
 						x_trans = 6
 						y_trans = -3
 						x_scale = 21
@@ -4721,44 +4721,44 @@ cas_preset_bandlogo = [
 	{
 		cap = [
 			{
-				base_tex = `tex\models\characters\global\global_blank_logo.dds`
-				material = band_logo_primary
+				base_tex = `tex\models\Characters\Global\Global_Blank_Logo.dds`
+				material = Band_Logo_Primary
 				diffuse
 				layers = [
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_006.img`
-						Color = grey_4guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_006.img`
+						color = grey_4guitar
 						x_scale = 120
 						flags = 3
 						y_scale = 125
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_001.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_001.img`
 						x_scale = 50
 						y_scale = 40
 						flags = 3
 						y_trans = -48
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_012.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_012.img`
 						x_trans = -55
 						y_trans = 0
 						x_scale = 50
 						y_scale = 175
 						rot = 5383
 						flags = 19
-						Color = grey_5guitar
+						color = grey_5guitar
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_012.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_012.img`
 						x_scale = 50
 						y_scale = 175
 						flags = 19
 						y_trans = 28
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_012.img`
-						Color = grey_5guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_012.img`
+						color = grey_5guitar
 						y_trans = 1
 						x_scale = 50
 						y_scale = 175
@@ -4767,8 +4767,8 @@ cas_preset_bandlogo = [
 						x_trans = 55
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_012.img`
-						Color = black_1guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_012.img`
+						color = Black_1guitar
 						y_trans = 0
 						x_scale = 40
 						y_scale = 165
@@ -4777,16 +4777,16 @@ cas_preset_bandlogo = [
 						x_trans = -55
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_012.img`
-						Color = black_1guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_012.img`
+						color = Black_1guitar
 						y_trans = 28
 						y_scale = 175
 						flags = 19
 						x_scale = 40
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_012.img`
-						Color = black_1guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_012.img`
+						color = Black_1guitar
 						x_trans = 55
 						y_trans = 1
 						y_scale = 165
@@ -4795,8 +4795,8 @@ cas_preset_bandlogo = [
 						x_scale = 40
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_001.img`
-						Color = black_1guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_001.img`
+						color = Black_1guitar
 						y_trans = -48
 						y_scale = 35
 						flags = 3
@@ -4813,7 +4813,7 @@ cas_preset_bandlogo = [
 					{
 						font = fontgrid_text_a8
 						text = 'X'
-						Color = black_1guitar
+						color = Black_1guitar
 						y_trans = -27
 						y_scale = 270
 						flags = 3
@@ -4831,7 +4831,7 @@ cas_preset_bandlogo = [
 					{
 						font = fontgrid_text_a8
 						text = 'X'
-						Color = black_1guitar
+						color = Black_1guitar
 						x_trans = -28
 						y_trans = -26
 						x_scale = 225
@@ -4841,7 +4841,7 @@ cas_preset_bandlogo = [
 					{
 						font = fontgrid_text_a8
 						text = 'X'
-						Color = grey_5guitar
+						color = grey_5guitar
 						y_trans = -26
 						x_scale = 225
 						y_scale = 205
@@ -4851,7 +4851,7 @@ cas_preset_bandlogo = [
 					{
 						font = fontgrid_text_a8
 						text = 'X'
-						Color = black_1guitar
+						color = Black_1guitar
 						x_trans = 27
 						y_trans = -26
 						y_scale = 190
@@ -4859,20 +4859,20 @@ cas_preset_bandlogo = [
 						x_scale = 200
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_graphics020.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_graphics020.img`
 						y_trans = 19
 						x_scale = 70
 						rot = 4133
 						flags = 3
-						Color = grey_4guitar
+						color = grey_4guitar
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_graphics020.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_graphics020.img`
 						y_trans = 19
 						x_scale = 70
 						rot = 2183
 						flags = 3
-						Color = grey_4guitar
+						color = grey_4guitar
 					}
 				]
 			}
@@ -4881,36 +4881,36 @@ cas_preset_bandlogo = [
 	{
 		cap = [
 			{
-				base_tex = `tex\models\characters\global\global_blank_logo.dds`
-				material = band_logo_primary
+				base_tex = `tex\models\Characters\Global\Global_Blank_Logo.dds`
+				material = Band_Logo_Primary
 				diffuse
 				layers = [
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_001.img`
-						Color = black_1guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_001.img`
+						color = Black_1guitar
 						y_scale = 105
 						flags = 3
 						x_scale = 105
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_001.img`
-						Color = yellow_1guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_001.img`
+						color = yellow_1guitar
 						x_scale = 95
 						y_scale = 100
 						flags = 3
 						a = 100
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_001.img`
-						Color = yellow_orange_1
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_001.img`
+						color = yellow_orange_1
 						x_scale = 90
 						y_scale = 100
 						flags = 3
 						a = 75
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_icon030.img`
-						Color = orange_3
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_Icon030.img`
+						color = orange_3
 						x_trans = 6
 						y_trans = -11
 						x_scale = 80
@@ -4920,8 +4920,8 @@ cas_preset_bandlogo = [
 						a = 85
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshapegradient_014.img`
-						Color = red_orange_1
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShapeGradient_014.img`
+						color = red_orange_1
 						x_trans = -11
 						y_trans = -15
 						x_scale = 105
@@ -4930,17 +4930,17 @@ cas_preset_bandlogo = [
 						rot = 2300
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_icon_creature001.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_Icon_Creature001.img`
 						y_trans = 0
 						x_scale = 90
 						y_scale = 90
 						rot = 300
 						flags = 11
-						Color = black_1guitar
+						color = Black_1guitar
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_icon_wing003.img`
-						Color = black_1guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_Icon_Wing003.img`
+						color = Black_1guitar
 						x_trans = -22
 						x_skew = 48
 						x_scale = 60
@@ -4950,8 +4950,8 @@ cas_preset_bandlogo = [
 						y_trans = 5
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_icon_wing003.img`
-						Color = black_1guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_Icon_Wing003.img`
+						color = Black_1guitar
 						x_trans = 19
 						y_trans = 10
 						x_skew = -39
@@ -4968,26 +4968,26 @@ cas_preset_bandlogo = [
 	{
 		cap = [
 			{
-				base_tex = `tex\models\characters\global\global_blank_logo.dds`
-				material = band_logo_primary
+				base_tex = `tex\models\Characters\Global\Global_Blank_Logo.dds`
+				material = Band_Logo_Primary
 				diffuse
 				layers = [
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_001.img`
-						Color = black_1guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_001.img`
+						color = Black_1guitar
 						x_scale = 110
 						flags = 3
 						y_scale = 105
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_001.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_001.img`
 						x_scale = 65
 						y_scale = 65
 						flags = 3
 						x_trans = -19
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_001.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_001.img`
 						y_trans = 0
 						x_scale = 65
 						y_scale = 65
@@ -4995,8 +4995,8 @@ cas_preset_bandlogo = [
 						x_trans = 18
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_001.img`
-						Color = black_1guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_001.img`
+						color = Black_1guitar
 						y_trans = 0
 						x_scale = 60
 						y_scale = 60
@@ -5004,8 +5004,8 @@ cas_preset_bandlogo = [
 						x_trans = -18
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_001.img`
-						Color = black_1guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_001.img`
+						color = Black_1guitar
 						y_trans = 0
 						x_scale = 60
 						y_scale = 60
@@ -5013,8 +5013,8 @@ cas_preset_bandlogo = [
 						x_trans = 17
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_001.img`
-						Color = grey_5guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_001.img`
+						color = grey_5guitar
 						y_trans = 0
 						x_scale = 55
 						y_scale = 55
@@ -5022,8 +5022,8 @@ cas_preset_bandlogo = [
 						x_trans = 15
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_001.img`
-						Color = grey_5guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_001.img`
+						color = grey_5guitar
 						y_trans = 0
 						x_scale = 55
 						y_scale = 55
@@ -5031,17 +5031,17 @@ cas_preset_bandlogo = [
 						x_trans = -16
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_001.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_001.img`
 						x_trans = -16
 						y_trans = 0
 						x_scale = 55
 						y_scale = 55
 						flags = 3
-						Color = grey_5guitar
+						color = grey_5guitar
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_001.img`
-						Color = black_1guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_001.img`
+						color = Black_1guitar
 						y_trans = 0
 						x_scale = 50
 						y_scale = 50
@@ -5049,8 +5049,8 @@ cas_preset_bandlogo = [
 						x_trans = -15
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_001.img`
-						Color = black_1guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_001.img`
+						color = Black_1guitar
 						y_trans = 0
 						x_scale = 50
 						y_scale = 50
@@ -5058,8 +5058,8 @@ cas_preset_bandlogo = [
 						x_trans = 14
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_001.img`
-						Color = grey_5guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_001.img`
+						color = grey_5guitar
 						y_trans = 0
 						x_scale = 45
 						y_scale = 45
@@ -5067,8 +5067,8 @@ cas_preset_bandlogo = [
 						x_trans = -13
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_001.img`
-						Color = grey_5guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_001.img`
+						color = grey_5guitar
 						y_trans = 0
 						x_scale = 45
 						y_scale = 45
@@ -5076,8 +5076,8 @@ cas_preset_bandlogo = [
 						x_trans = 12
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_001.img`
-						Color = black_1guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_001.img`
+						color = Black_1guitar
 						y_trans = 0
 						x_scale = 40
 						y_scale = 40
@@ -5085,8 +5085,8 @@ cas_preset_bandlogo = [
 						x_trans = 11
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_001.img`
-						Color = black_1guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_001.img`
+						color = Black_1guitar
 						y_trans = 0
 						x_scale = 40
 						y_scale = 40
@@ -5094,8 +5094,8 @@ cas_preset_bandlogo = [
 						x_trans = -12
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_001.img`
-						Color = grey_5guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_001.img`
+						color = grey_5guitar
 						y_trans = 0
 						x_scale = 35
 						y_scale = 35
@@ -5103,8 +5103,8 @@ cas_preset_bandlogo = [
 						x_trans = -10
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_001.img`
-						Color = grey_5guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_001.img`
+						color = grey_5guitar
 						y_trans = 0
 						x_scale = 35
 						y_scale = 35
@@ -5112,8 +5112,8 @@ cas_preset_bandlogo = [
 						x_trans = 9
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_001.img`
-						Color = black_1guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_001.img`
+						color = Black_1guitar
 						y_trans = 0
 						x_scale = 30
 						y_scale = 30
@@ -5121,8 +5121,8 @@ cas_preset_bandlogo = [
 						x_trans = -9
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_001.img`
-						Color = black_1guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_001.img`
+						color = Black_1guitar
 						y_trans = 0
 						x_scale = 30
 						y_scale = 30
@@ -5130,8 +5130,8 @@ cas_preset_bandlogo = [
 						x_trans = 8
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_001.img`
-						Color = grey_5guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_001.img`
+						color = grey_5guitar
 						y_trans = 0
 						x_scale = 25
 						y_scale = 25
@@ -5139,8 +5139,8 @@ cas_preset_bandlogo = [
 						x_trans = 6
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_001.img`
-						Color = grey_5guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_001.img`
+						color = grey_5guitar
 						y_trans = 0
 						x_scale = 25
 						y_scale = 25
@@ -5148,8 +5148,8 @@ cas_preset_bandlogo = [
 						x_trans = -7
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_001.img`
-						Color = black_1guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_001.img`
+						color = Black_1guitar
 						y_trans = 0
 						x_scale = 20
 						y_scale = 20
@@ -5157,8 +5157,8 @@ cas_preset_bandlogo = [
 						x_trans = -6
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_001.img`
-						Color = black_1guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_001.img`
+						color = Black_1guitar
 						y_trans = 0
 						x_scale = 20
 						y_scale = 20
@@ -5166,8 +5166,8 @@ cas_preset_bandlogo = [
 						x_trans = 5
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_001.img`
-						Color = grey_5guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_001.img`
+						color = grey_5guitar
 						y_trans = 0
 						x_scale = 15
 						y_scale = 15
@@ -5175,8 +5175,8 @@ cas_preset_bandlogo = [
 						x_trans = 3
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_001.img`
-						Color = grey_5guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_001.img`
+						color = grey_5guitar
 						y_trans = 0
 						x_scale = 15
 						y_scale = 15
@@ -5184,8 +5184,8 @@ cas_preset_bandlogo = [
 						x_trans = -4
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_001.img`
-						Color = black_1guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_001.img`
+						color = Black_1guitar
 						y_trans = 0
 						x_scale = 10
 						y_scale = 10
@@ -5193,8 +5193,8 @@ cas_preset_bandlogo = [
 						x_trans = -3
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_001.img`
-						Color = black_1guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_001.img`
+						color = Black_1guitar
 						y_trans = 0
 						x_scale = 10
 						y_scale = 10
@@ -5202,8 +5202,8 @@ cas_preset_bandlogo = [
 						x_trans = 2
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_001.img`
-						Color = grey_5guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_001.img`
+						color = grey_5guitar
 						x_trans = -1
 						y_trans = 0
 						y_scale = 5
@@ -5217,108 +5217,108 @@ cas_preset_bandlogo = [
 	{
 		cap = [
 			{
-				base_tex = `tex\models\characters\global\global_blank_logo.dds`
-				material = band_logo_primary
+				base_tex = `tex\models\Characters\Global\Global_Blank_Logo.dds`
+				material = Band_Logo_Primary
 				diffuse
 				layers = [
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_006.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_006.img`
 						x_scale = 115
 						y_scale = 110
 						flags = 3
-						Color = black_1guitar
+						color = Black_1guitar
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_006.img`
-						Color = grey_5guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_006.img`
+						color = grey_5guitar
 						x_scale = 105
 						y_scale = 100
 						flags = 3
 						rot = 6183
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_006.img`
-						Color = black_1guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_006.img`
+						color = Black_1guitar
 						x_scale = 95
 						y_scale = 90
 						flags = 3
 						rot = 6083
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_006.img`
-						Color = grey_5guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_006.img`
+						color = grey_5guitar
 						x_scale = 85
 						y_scale = 80
 						flags = 3
 						rot = 5983
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_006.img`
-						Color = black_1guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_006.img`
+						color = Black_1guitar
 						x_scale = 75
 						y_scale = 70
 						flags = 3
 						rot = 5833
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_006.img`
-						Color = grey_5guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_006.img`
+						color = grey_5guitar
 						x_scale = 65
 						y_scale = 60
 						flags = 3
 						rot = 5683
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_006.img`
-						Color = black_1guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_006.img`
+						color = Black_1guitar
 						x_scale = 55
 						y_scale = 50
 						flags = 3
 						rot = 5483
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_006.img`
-						Color = grey_5guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_006.img`
+						color = grey_5guitar
 						x_scale = 45
 						y_scale = 40
 						flags = 3
 						rot = 5233
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_006.img`
-						Color = black_1guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_006.img`
+						color = Black_1guitar
 						x_scale = 35
 						y_scale = 30
 						flags = 3
 						rot = 4883
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_006.img`
-						Color = grey_5guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_006.img`
+						color = grey_5guitar
 						x_scale = 25
 						y_scale = 20
 						flags = 3
 						rot = 4483
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_006.img`
-						Color = black_1guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_006.img`
+						color = Black_1guitar
 						x_scale = 20
 						y_scale = 15
 						flags = 3
 						rot = 4183
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_006.img`
-						Color = grey_5guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_006.img`
+						color = grey_5guitar
 						x_scale = 15
 						y_scale = 10
 						flags = 3
 						rot = 3883
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_006.img`
-						Color = black_1guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_006.img`
+						color = Black_1guitar
 						x_trans = 0
 						x_scale = 10
 						rot = 3483
@@ -5332,39 +5332,39 @@ cas_preset_bandlogo = [
 	{
 		cap = [
 			{
-				base_tex = `tex\models\characters\global\global_blank_logo.dds`
-				material = band_logo_primary
+				base_tex = `tex\models\Characters\Global\Global_Blank_Logo.dds`
+				material = Band_Logo_Primary
 				diffuse
 				layers = [
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_039.img`
-						Color = black_1guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_039.img`
+						color = Black_1guitar
 						x_scale = 105
 						flags = 3
 						y_scale = 110
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_017.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_017.img`
 						flags = 19
-						Color = purple_blue_1
+						color = purple_blue_1
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_036.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_036.img`
 						flags = 3
-						Color = black_1guitar
+						color = Black_1guitar
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_icons048.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_icons048.img`
 						flags = 3
-						Color = violet_1
+						color = violet_1
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_icon033.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_Icon033.img`
 						y_trans = -1
 						x_scale = 75
 						y_scale = 110
 						flags = 3
-						Color = yellow_orange_3
+						color = yellow_orange_3
 					}
 				]
 			}
@@ -5373,12 +5373,12 @@ cas_preset_bandlogo = [
 	{
 		cap = [
 			{
-				base_tex = `tex\models\characters\global\global_blank_logo.dds`
-				material = band_logo_primary
+				base_tex = `tex\models\Characters\Global\Global_Blank_Logo.dds`
+				material = Band_Logo_Primary
 				diffuse
 				layers = [
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_graphics086.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_graphics086.img`
 						y_trans = 18
 						x_scale = 70
 						y_scale = 75
@@ -5386,16 +5386,16 @@ cas_preset_bandlogo = [
 						x_trans = 19
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_026.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_026.img`
 						y_trans = 0
 						x_skew = 33
 						y_scale = 100
 						flags = 3
-						Color = black_1guitar
+						color = Black_1guitar
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_026.img`
-						Color = red_1
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_026.img`
+						color = red_1
 						y_trans = 0
 						x_skew = 33
 						x_scale = 90
@@ -5403,8 +5403,8 @@ cas_preset_bandlogo = [
 						y_scale = 90
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_006.img`
-						Color = grey_4guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_006.img`
+						color = grey_4guitar
 						x_trans = 15
 						x_scale = 1
 						y_scale = 15
@@ -5412,8 +5412,8 @@ cas_preset_bandlogo = [
 						y_trans = -3
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_006.img`
-						Color = grey_4guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_006.img`
+						color = grey_4guitar
 						x_trans = 37
 						x_scale = 1
 						y_scale = 15
@@ -5421,8 +5421,8 @@ cas_preset_bandlogo = [
 						y_trans = 13
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_006.img`
-						Color = grey_4guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_006.img`
+						color = grey_4guitar
 						x_trans = 10
 						x_scale = 1
 						y_scale = 15
@@ -5430,8 +5430,8 @@ cas_preset_bandlogo = [
 						y_trans = -28
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_006.img`
-						Color = grey_4guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_006.img`
+						color = grey_4guitar
 						y_trans = -16
 						x_scale = 1
 						y_scale = 15
@@ -5439,8 +5439,8 @@ cas_preset_bandlogo = [
 						x_trans = -7
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_006.img`
-						Color = grey_4guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_006.img`
+						color = grey_4guitar
 						y_trans = -27
 						x_scale = 1
 						y_scale = 15
@@ -5448,8 +5448,8 @@ cas_preset_bandlogo = [
 						x_trans = -32
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_006.img`
-						Color = grey_4guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_006.img`
+						color = grey_4guitar
 						y_trans = 13
 						x_scale = 1
 						y_scale = 15
@@ -5457,16 +5457,16 @@ cas_preset_bandlogo = [
 						x_trans = -32
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_026.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_026.img`
 						y_trans = 12
 						x_skew = 33
 						y_scale = 100
 						flags = 3
-						Color = black_1guitar
+						color = Black_1guitar
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_026.img`
-						Color = grey_5guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_026.img`
+						color = grey_5guitar
 						y_trans = 12
 						x_skew = 33
 						x_scale = 85
@@ -5474,7 +5474,7 @@ cas_preset_bandlogo = [
 						y_scale = 85
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_graphics014.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_graphics014.img`
 						y_trans = 9
 						y_skew = 27
 						x_scale = 35
@@ -5489,33 +5489,33 @@ cas_preset_bandlogo = [
 	{
 		cap = [
 			{
-				base_tex = `tex\models\characters\global\global_blank_logo.dds`
-				material = band_logo_primary
+				base_tex = `tex\models\Characters\Global\Global_Blank_Logo.dds`
+				material = Band_Logo_Primary
 				diffuse
 				layers = [
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshapeoutline_002.img`
-						Color = red_1
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShapeOutline_002.img`
+						color = red_1
 						flags = 3
 						x_scale = 105
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_icon018.img`
-						Color = green_2guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_Icon018.img`
+						color = green_2guitar
 						flags = 3
 						a = 100
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshapegradient_009.img`
-						Color = yellow_green_1guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShapeGradient_009.img`
+						color = yellow_green_1guitar
 						a = 100
 						x_scale = 105
 						flags = 3
 						y_scale = 85
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshapeoutline_003.img`
-						Color = yellow_3guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShapeOutline_003.img`
+						color = yellow_3guitar
 						x_trans = 0
 						x_scale = 170
 						y_scale = 75
@@ -5523,16 +5523,16 @@ cas_preset_bandlogo = [
 						a = 50
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshapeoutline_010.img`
-						Color = black_1guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShapeOutline_010.img`
+						color = Black_1guitar
 						a = 100
 						x_scale = 105
 						flags = 3
 						y_scale = 100
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_icon021.img`
-						Color = yellow_green_1guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_Icon021.img`
+						color = yellow_green_1guitar
 						x_scale = 80
 						rot = 1600
 						flags = 3
@@ -5545,13 +5545,13 @@ cas_preset_bandlogo = [
 	{
 		cap = [
 			{
-				base_tex = `tex\models\characters\global\global_blank_logo.dds`
-				material = band_logo_primary
+				base_tex = `tex\models\Characters\Global\Global_Blank_Logo.dds`
+				material = Band_Logo_Primary
 				diffuse
 				layers = [
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_icon_creature006.img`
-						Color = teal_1
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_Icon_Creature006.img`
+						color = teal_1
 						x_trans = -12
 						y_trans = 6
 						x_skew = 6
@@ -5562,22 +5562,22 @@ cas_preset_bandlogo = [
 						a = 85
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_icon016.img`
-						Color = black_1guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_Icon016.img`
+						color = Black_1guitar
 						x_scale = 80
 						flags = 11
 						y_scale = 80
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_001.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_001.img`
 						x_scale = 105
 						y_scale = 105
 						flags = 3
-						Color = teal_1
+						color = teal_1
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_icon042.img`
-						Color = black_1guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_Icon042.img`
+						color = Black_1guitar
 						y_trans = 1
 						x_scale = 90
 						y_scale = 90
@@ -5586,8 +5586,8 @@ cas_preset_bandlogo = [
 						a = 85
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_044.img`
-						Color = black_1guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_044.img`
+						color = Black_1guitar
 						x_trans = 14
 						y_trans = -1
 						x_scale = 115
@@ -5596,8 +5596,8 @@ cas_preset_bandlogo = [
 						a = 100
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_icon038.img`
-						Color = teal_2
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_Icon038.img`
+						color = teal_2
 						a = 30
 						x_trans = 11
 						x_skew = 12
@@ -5609,8 +5609,8 @@ cas_preset_bandlogo = [
 						y_trans = -16
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_icon039.img`
-						Color = black_1guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_Icon039.img`
+						color = Black_1guitar
 						a = 100
 						y_trans = 6
 						x_scale = 80
@@ -5625,17 +5625,17 @@ cas_preset_bandlogo = [
 	{
 		cap = [
 			{
-				base_tex = `tex\models\characters\global\global_blank_logo.dds`
-				material = band_logo_primary
+				base_tex = `tex\models\Characters\Global\Global_Blank_Logo.dds`
+				material = Band_Logo_Primary
 				diffuse
 				layers = [
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_graphics_zombieface.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_graphics_zombieface.img`
 						flags = 3
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_001.img`
-						Color = black_1guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_001.img`
+						color = Black_1guitar
 						x_trans = -11
 						y_skew = -60
 						x_scale = 20
@@ -5644,8 +5644,8 @@ cas_preset_bandlogo = [
 						y_trans = -5
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_001.img`
-						Color = yellow_3guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_001.img`
+						color = yellow_3guitar
 						x_trans = -10
 						y_trans = -6
 						y_skew = -60
@@ -5654,8 +5654,8 @@ cas_preset_bandlogo = [
 						y_scale = 20
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_001.img`
-						Color = black_1guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_001.img`
+						color = Black_1guitar
 						x_trans = 13
 						y_skew = 60
 						x_scale = 20
@@ -5664,8 +5664,8 @@ cas_preset_bandlogo = [
 						y_trans = -5
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_001.img`
-						Color = yellow_3guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_001.img`
+						color = yellow_3guitar
 						x_trans = 12
 						y_trans = -6
 						x_scale = 20
@@ -5674,8 +5674,8 @@ cas_preset_bandlogo = [
 						y_skew = 60
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_004.img`
-						Color = black_1guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_004.img`
+						color = Black_1guitar
 						x_trans = 11
 						x_scale = 10
 						y_scale = 20
@@ -5683,8 +5683,8 @@ cas_preset_bandlogo = [
 						y_trans = -7
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_004.img`
-						Color = black_1guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_004.img`
+						color = Black_1guitar
 						y_trans = -7
 						x_scale = 10
 						y_scale = 20
@@ -5692,8 +5692,8 @@ cas_preset_bandlogo = [
 						x_trans = -9
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_032.img`
-						Color = black_1guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_032.img`
+						color = Black_1guitar
 						x_trans = 2
 						y_trans = -39
 						y_scale = 25
@@ -5701,8 +5701,8 @@ cas_preset_bandlogo = [
 						x_scale = 30
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_032.img`
-						Color = black_1guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_032.img`
+						color = Black_1guitar
 						x_trans = 1
 						y_trans = 21
 						x_scale = 75
@@ -5710,17 +5710,17 @@ cas_preset_bandlogo = [
 						y_scale = 55
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_032.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_032.img`
 						x_trans = 1
 						y_trans = 21
 						x_scale = 70
 						y_scale = 50
 						flags = 19
-						Color = red_1
+						color = red_1
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_011.img`
-						Color = black_1guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_011.img`
+						color = Black_1guitar
 						x_trans = 1
 						y_trans = 22
 						x_scale = 35
@@ -5728,7 +5728,7 @@ cas_preset_bandlogo = [
 						y_scale = 30
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_011.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_011.img`
 						x_trans = 1
 						x_scale = 30
 						y_scale = 30
@@ -5736,8 +5736,8 @@ cas_preset_bandlogo = [
 						y_trans = 22
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_032.img`
-						Color = green_2guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_032.img`
+						color = green_2guitar
 						x_trans = 2
 						y_trans = -39
 						x_scale = 25
@@ -5745,8 +5745,8 @@ cas_preset_bandlogo = [
 						flags = 3
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_icon_wing007.img`
-						Color = blue_1
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_Icon_Wing007.img`
+						color = blue_1
 						y_trans = -1
 						x_scale = 30
 						y_scale = 45
@@ -5755,8 +5755,8 @@ cas_preset_bandlogo = [
 						x_trans = 20
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_icon_wing007.img`
-						Color = blue_1
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_Icon_Wing007.img`
+						color = blue_1
 						y_trans = -1
 						x_scale = 30
 						y_scale = 45
@@ -5765,8 +5765,8 @@ cas_preset_bandlogo = [
 						x_trans = -18
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_016.img`
-						Color = grey_3guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_016.img`
+						color = grey_3guitar
 						x_trans = -16
 						x_scale = 15
 						y_scale = 50
@@ -5775,8 +5775,8 @@ cas_preset_bandlogo = [
 						y_trans = 35
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_016.img`
-						Color = grey_3guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_016.img`
+						color = grey_3guitar
 						x_trans = 18
 						y_trans = 34
 						x_scale = 10
@@ -5785,8 +5785,8 @@ cas_preset_bandlogo = [
 						y_scale = 50
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_003.img`
-						Color = black_1guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_003.img`
+						color = Black_1guitar
 						x_trans = -8
 						y_trans = -13
 						x_skew = -45
@@ -5795,14 +5795,14 @@ cas_preset_bandlogo = [
 						y_scale = 50
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_003.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_003.img`
 						x_trans = -8
 						y_trans = -13
 						x_skew = -45
 						x_scale = 20
 						y_scale = 40
 						flags = 19
-						Color = green_1guitar
+						color = green_1guitar
 					}
 				]
 			}
@@ -5811,20 +5811,20 @@ cas_preset_bandlogo = [
 	{
 		cap = [
 			{
-				base_tex = `tex\models\characters\global\global_blank_logo.dds`
-				material = band_logo_primary
+				base_tex = `tex\models\Characters\Global\Global_Blank_Logo.dds`
+				material = Band_Logo_Primary
 				diffuse
 				layers = [
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_icons053.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_icons053.img`
 						x_trans = -1
 						x_scale = 100
 						y_scale = 105
 						flags = 3
-						Color = black_1guitar
+						color = Black_1guitar
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_icon013.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_Icon013.img`
 						a = 30
 						x_trans = -17
 						y_trans = -14
@@ -5832,11 +5832,11 @@ cas_preset_bandlogo = [
 						y_scale = 35
 						rot = 6233
 						flags = 11
-						Color = red_orange_1
+						color = red_orange_1
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_plant_002.img`
-						Color = purple_blue_3
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_plant_002.img`
+						color = purple_blue_3
 						x_trans = -2
 						y_scale = 105
 						rot = 6283
@@ -5844,7 +5844,7 @@ cas_preset_bandlogo = [
 						y_trans = -2
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_icon014.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_Icon014.img`
 						a = 100
 						x_trans = -1
 						y_trans = -11
@@ -5852,11 +5852,11 @@ cas_preset_bandlogo = [
 						y_scale = 80
 						rot = 1550
 						flags = 11
-						Color = black_1guitar
+						color = Black_1guitar
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_026.img`
-						Color = yellow_1guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_026.img`
+						color = yellow_1guitar
 						x_trans = -1
 						y_trans = -23
 						x_scale = 15
@@ -5865,27 +5865,27 @@ cas_preset_bandlogo = [
 						a = 65
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_graphics097.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_graphics097.img`
 						x_scale = 95
 						y_scale = 90
 						flags = 3
-						Color = orange_5
+						color = orange_5
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_banners008.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_banners008.img`
 						y_trans = 3
 						x_scale = 75
 						y_scale = 100
 						flags = 3
-						Color = yellow_orange_1
+						color = yellow_orange_1
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_icon018.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_Icon018.img`
 						y_trans = 28
 						x_scale = 25
 						y_scale = 20
 						flags = 3
-						Color = yellow_green_1guitar
+						color = yellow_green_1guitar
 					}
 					{
 						font = fontgrid_title_a1
@@ -5896,7 +5896,7 @@ cas_preset_bandlogo = [
 						y_scale = 65
 						rot = 400
 						flags = 3
-						Color = black_1guitar
+						color = Black_1guitar
 					}
 					{
 						font = fontgrid_title_a1
@@ -5907,12 +5907,12 @@ cas_preset_bandlogo = [
 						y_scale = 60
 						rot = 200
 						flags = 3
-						Color = black_1guitar
+						color = Black_1guitar
 					}
 					{
 						font = fontgrid_title_a1
 						text = 'I'
-						Color = black_1guitar
+						color = Black_1guitar
 						y_trans = 12
 						x_scale = 65
 						flags = 3
@@ -5921,7 +5921,7 @@ cas_preset_bandlogo = [
 					{
 						font = fontgrid_title_a1
 						text = 'N'
-						Color = black_1guitar
+						color = Black_1guitar
 						x_trans = 10
 						y_trans = 10
 						y_scale = 65
@@ -5932,7 +5932,7 @@ cas_preset_bandlogo = [
 					{
 						font = fontgrid_title_a1
 						text = 'D'
-						Color = black_1guitar
+						color = Black_1guitar
 						y_trans = 7
 						x_scale = 70
 						y_scale = 65
@@ -5947,13 +5947,13 @@ cas_preset_bandlogo = [
 	{
 		cap = [
 			{
-				base_tex = `tex\models\characters\global\global_blank_logo.dds`
-				material = band_logo_primary
+				base_tex = `tex\models\Characters\Global\Global_Blank_Logo.dds`
+				material = Band_Logo_Primary
 				diffuse
 				layers = [
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_009.img`
-						Color = yellow_orange_1
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_009.img`
+						color = yellow_orange_1
 						y_trans = -51
 						x_skew = -9
 						y_skew = -14
@@ -5964,8 +5964,8 @@ cas_preset_bandlogo = [
 						x_trans = 1
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_009.img`
-						Color = yellow_orange_1
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_009.img`
+						color = yellow_orange_1
 						y_trans = 29
 						x_skew = -9
 						y_skew = -14
@@ -5976,8 +5976,8 @@ cas_preset_bandlogo = [
 						x_trans = -9
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_009.img`
-						Color = yellow_orange_1
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_009.img`
+						color = yellow_orange_1
 						y_trans = -12
 						x_skew = -9
 						y_skew = -14
@@ -5988,8 +5988,8 @@ cas_preset_bandlogo = [
 						x_trans = -30
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_009.img`
-						Color = yellow_1guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_009.img`
+						color = yellow_1guitar
 						y_trans = -12
 						x_skew = -9
 						y_skew = -14
@@ -6000,8 +6000,8 @@ cas_preset_bandlogo = [
 						x_trans = -31
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_009.img`
-						Color = yellow_1guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_009.img`
+						color = yellow_1guitar
 						y_trans = -47
 						x_skew = -9
 						y_skew = -14
@@ -6012,8 +6012,8 @@ cas_preset_bandlogo = [
 						x_trans = 1
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_009.img`
-						Color = yellow_1guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_009.img`
+						color = yellow_1guitar
 						y_trans = 26
 						x_skew = -9
 						y_skew = -14
@@ -6024,8 +6024,8 @@ cas_preset_bandlogo = [
 						x_trans = -7
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_icon041.img`
-						Color = yellow_1guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_Icon041.img`
+						color = yellow_1guitar
 						y_trans = -4
 						x_scale = 125
 						y_scale = 65
@@ -6034,14 +6034,14 @@ cas_preset_bandlogo = [
 						x_trans = -12
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_graphics067.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_graphics067.img`
 						y_trans = -9
 						flags = 3
 						x_trans = 16
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_006.img`
-						Color = yellow_orange_1
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_006.img`
+						color = yellow_orange_1
 						x_trans = -48
 						x_scale = 5
 						y_scale = 130
@@ -6049,8 +6049,8 @@ cas_preset_bandlogo = [
 						a = 100
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_006.img`
-						Color = yellow_orange_1
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_006.img`
+						color = yellow_orange_1
 						x_trans = 48
 						x_scale = 5
 						y_scale = 130
@@ -6064,12 +6064,12 @@ cas_preset_bandlogo = [
 	{
 		cap = [
 			{
-				base_tex = `tex\models\characters\global\global_blank_logo.dds`
-				material = band_logo_primary
+				base_tex = `tex\models\Characters\Global\Global_Blank_Logo.dds`
+				material = Band_Logo_Primary
 				diffuse
 				layers = [
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_elemental006.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_elemental006.img`
 						y_trans = -1
 						x_skew = 15
 						y_skew = -6
@@ -6078,8 +6078,8 @@ cas_preset_bandlogo = [
 						x_trans = -4
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_006.img`
-						Color = grey_1
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_006.img`
+						color = grey_1
 						y_trans = 37
 						x_scale = 6
 						y_scale = 6
@@ -6088,8 +6088,8 @@ cas_preset_bandlogo = [
 						x_trans = 5
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_006.img`
-						Color = grey_1
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_006.img`
+						color = grey_1
 						y_trans = -4
 						x_scale = 6
 						y_scale = 6
@@ -6098,8 +6098,8 @@ cas_preset_bandlogo = [
 						x_trans = 31
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_006.img`
-						Color = grey_1
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_006.img`
+						color = grey_1
 						x_trans = 12
 						y_trans = -41
 						y_scale = 6
@@ -6108,8 +6108,8 @@ cas_preset_bandlogo = [
 						x_scale = 6
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_006.img`
-						Color = grey_1
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_006.img`
+						color = grey_1
 						x_trans = 12
 						y_trans = -41
 						y_scale = 6
@@ -6118,8 +6118,8 @@ cas_preset_bandlogo = [
 						x_scale = 6
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_006.img`
-						Color = grey_1
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_006.img`
+						color = grey_1
 						x_trans = 15
 						y_trans = -41
 						y_scale = 6
@@ -6128,8 +6128,8 @@ cas_preset_bandlogo = [
 						x_scale = 6
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_006.img`
-						Color = grey_1
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_006.img`
+						color = grey_1
 						x_trans = 15
 						y_trans = -36
 						y_scale = 11
@@ -6138,8 +6138,8 @@ cas_preset_bandlogo = [
 						x_scale = 6
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_006.img`
-						Color = grey_1
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_006.img`
+						color = grey_1
 						x_trans = 19
 						y_trans = -32
 						y_scale = 11
@@ -6148,8 +6148,8 @@ cas_preset_bandlogo = [
 						x_scale = 6
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_006.img`
-						Color = grey_1
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_006.img`
+						color = grey_1
 						x_trans = -14
 						y_trans = -38
 						y_scale = 60
@@ -6158,8 +6158,8 @@ cas_preset_bandlogo = [
 						x_scale = 6
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_006.img`
-						Color = grey_1
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_006.img`
+						color = grey_1
 						x_trans = -36
 						y_trans = 48
 						y_scale = 90
@@ -6168,8 +6168,8 @@ cas_preset_bandlogo = [
 						x_scale = 6
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_006.img`
-						Color = grey_1
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_006.img`
+						color = grey_1
 						x_trans = -1
 						y_trans = 44
 						y_scale = 10
@@ -6178,8 +6178,8 @@ cas_preset_bandlogo = [
 						x_scale = 6
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_006.img`
-						Color = grey_1
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_006.img`
+						color = grey_1
 						x_trans = 0
 						y_trans = 39
 						y_scale = 10
@@ -6188,8 +6188,8 @@ cas_preset_bandlogo = [
 						x_scale = 6
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_006.img`
-						Color = grey_1
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_006.img`
+						color = grey_1
 						x_trans = -45
 						y_trans = 18
 						y_scale = 70
@@ -6198,8 +6198,8 @@ cas_preset_bandlogo = [
 						x_scale = 6
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_006.img`
-						Color = grey_1
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_006.img`
+						color = grey_1
 						x_trans = -42
 						y_trans = -15
 						y_scale = 10
@@ -6208,8 +6208,8 @@ cas_preset_bandlogo = [
 						x_scale = 6
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_006.img`
-						Color = grey_1
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_006.img`
+						color = grey_1
 						x_trans = -44
 						y_trans = -23
 						y_scale = 11
@@ -6218,8 +6218,8 @@ cas_preset_bandlogo = [
 						x_scale = 6
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_006.img`
-						Color = grey_1
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_006.img`
+						color = grey_1
 						x_trans = -42
 						y_trans = -32
 						y_scale = 11
@@ -6228,8 +6228,8 @@ cas_preset_bandlogo = [
 						x_scale = 6
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_006.img`
-						Color = grey_1
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_006.img`
+						color = grey_1
 						x_trans = 11
 						y_trans = 31
 						y_scale = 16
@@ -6238,8 +6238,8 @@ cas_preset_bandlogo = [
 						x_scale = 6
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_006.img`
-						Color = grey_1
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_006.img`
+						color = grey_1
 						x_trans = 18
 						y_trans = 19
 						x_scale = 6
@@ -6248,8 +6248,8 @@ cas_preset_bandlogo = [
 						y_scale = 21
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_006.img`
-						Color = grey_1
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_006.img`
+						color = grey_1
 						x_trans = 26
 						y_trans = 6
 						y_scale = 21
@@ -6258,8 +6258,8 @@ cas_preset_bandlogo = [
 						x_scale = 6
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_006.img`
-						Color = grey_1
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_006.img`
+						color = grey_1
 						x_trans = 31
 						y_trans = -14
 						y_scale = 6
@@ -6268,8 +6268,8 @@ cas_preset_bandlogo = [
 						x_scale = 6
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_006.img`
-						Color = grey_1
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_006.img`
+						color = grey_1
 						x_trans = 27
 						y_trans = -20
 						x_scale = 6
@@ -6278,8 +6278,8 @@ cas_preset_bandlogo = [
 						y_scale = 16
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_006.img`
-						Color = grey_1
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_006.img`
+						color = grey_1
 						x_trans = 32
 						y_trans = -9
 						y_scale = 11
@@ -6288,8 +6288,8 @@ cas_preset_bandlogo = [
 						x_scale = 6
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_006.img`
-						Color = grey_1
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_006.img`
+						color = grey_1
 						x_trans = 24
 						y_trans = -28
 						x_scale = 6
@@ -6298,7 +6298,7 @@ cas_preset_bandlogo = [
 						y_scale = 16
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_icons055.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_icons055.img`
 						x_trans = -22
 						x_scale = 10
 						y_scale = 10
@@ -6312,18 +6312,18 @@ cas_preset_bandlogo = [
 						x_scale = 120
 						y_scale = 115
 						flags = 3
-						Color = grey_1
+						color = grey_1
 					}
 					{
 						font = fontgrid_text_a6
 						text = 'A'
-						Color = grey_1
+						color = grey_1
 						x_scale = 110
 						flags = 3
 						y_scale = 125
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_plant_002.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_plant_002.img`
 						x_trans = -9
 						flags = 3
 						x_scale = 85
@@ -6335,20 +6335,20 @@ cas_preset_bandlogo = [
 	{
 		cap = [
 			{
-				base_tex = `tex\models\characters\global\global_blank_logo.dds`
-				material = band_logo_primary
+				base_tex = `tex\models\Characters\Global\Global_Blank_Logo.dds`
+				material = Band_Logo_Primary
 				diffuse
 				layers = [
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_006.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_006.img`
 						x_scale = 120
 						y_scale = 120
 						flags = 3
-						Color = grey_2
+						color = grey_2
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_006.img`
-						Color = grey_5
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_006.img`
+						color = grey_5
 						x_trans = -1
 						y_trans = 0
 						y_scale = 110
@@ -6356,8 +6356,8 @@ cas_preset_bandlogo = [
 						x_scale = 110
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_006.img`
-						Color = grey_1
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_006.img`
+						color = grey_1
 						a = 25
 						x_trans = -1
 						x_scale = 110
@@ -6366,8 +6366,8 @@ cas_preset_bandlogo = [
 						y_trans = 1
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_006.img`
-						Color = grey_1
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_006.img`
+						color = grey_1
 						a = 25
 						x_trans = -1
 						x_scale = 110
@@ -6376,8 +6376,8 @@ cas_preset_bandlogo = [
 						y_trans = 14
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_006.img`
-						Color = grey_1
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_006.img`
+						color = grey_1
 						a = 25
 						x_trans = -1
 						x_scale = 110
@@ -6386,8 +6386,8 @@ cas_preset_bandlogo = [
 						y_trans = -12
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_006.img`
-						Color = grey_1
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_006.img`
+						color = grey_1
 						a = 25
 						x_trans = -1
 						x_scale = 110
@@ -6396,8 +6396,8 @@ cas_preset_bandlogo = [
 						y_trans = -25
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_006.img`
-						Color = grey_1
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_006.img`
+						color = grey_1
 						a = 25
 						x_trans = -1
 						x_scale = 110
@@ -6406,15 +6406,15 @@ cas_preset_bandlogo = [
 						y_trans = -37
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_036.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_036.img`
 						x_scale = 105
 						y_scale = 120
 						flags = 3
-						Color = teal_1
+						color = teal_1
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_006.img`
-						Color = grey_1
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_006.img`
+						color = grey_1
 						a = 25
 						x_trans = -1
 						x_scale = 110
@@ -6423,38 +6423,38 @@ cas_preset_bandlogo = [
 						y_trans = 27
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_036.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_036.img`
 						x_scale = 100
 						y_scale = 110
 						flags = 3
-						Color = grey_5
+						color = grey_5
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_036.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_036.img`
 						x_scale = 90
 						y_scale = 100
 						flags = 3
-						Color = grey_1
+						color = grey_1
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_graphics097.img`
-						Color = green_3
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_graphics097.img`
+						color = green_3
 						x_scale = 85
 						y_scale = 85
 						flags = 3
 						a = 40
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_001.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_001.img`
 						y_trans = 75
 						x_scale = 95
 						y_scale = 105
 						flags = 3
-						Color = grey_5
+						color = grey_5
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_006.img`
-						Color = grey_1
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_006.img`
+						color = grey_1
 						a = 25
 						x_trans = -1
 						x_scale = 110
@@ -6463,8 +6463,8 @@ cas_preset_bandlogo = [
 						y_trans = 40
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_006.img`
-						Color = grey_1
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_006.img`
+						color = grey_1
 						x_trans = -1
 						x_scale = 110
 						y_scale = 6
@@ -6472,7 +6472,7 @@ cas_preset_bandlogo = [
 						y_trans = 50
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_graphics_punkskull.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_graphics_punkskull.img`
 						y_trans = -37
 						x_scale = 35
 						y_scale = 40
@@ -6481,7 +6481,7 @@ cas_preset_bandlogo = [
 						x_trans = -10
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_graphics_punkskull.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_graphics_punkskull.img`
 						y_trans = -37
 						x_scale = 35
 						y_scale = 40
@@ -6490,8 +6490,8 @@ cas_preset_bandlogo = [
 						x_trans = 10
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_graphics_punkskull.img`
-						Color = green_1
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_graphics_punkskull.img`
+						color = green_1
 						x_trans = -10
 						y_trans = -37
 						x_scale = 35
@@ -6501,8 +6501,8 @@ cas_preset_bandlogo = [
 						a = 60
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_graphics_punkskull.img`
-						Color = green_1
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_graphics_punkskull.img`
+						color = green_1
 						x_trans = 10
 						y_trans = -37
 						x_scale = 35
@@ -6512,52 +6512,52 @@ cas_preset_bandlogo = [
 						a = 65
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_icon020.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_Icon020.img`
 						y_trans = 3
 						x_scale = 50
 						y_scale = 30
 						flags = 11
-						Color = grey_3
+						color = grey_3
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_icon020.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_Icon020.img`
 						y_trans = 3
 						x_scale = 50
 						y_scale = 30
 						flags = 3
-						Color = grey_3
+						color = grey_3
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_icon020.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_Icon020.img`
 						a = 100
 						y_trans = -5
 						x_scale = 60
 						y_scale = 30
 						rot = 4733
 						flags = 3
-						Color = grey_3
+						color = grey_3
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_icon020.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_Icon020.img`
 						a = 100
 						y_trans = -8
 						x_scale = 55
 						y_scale = 30
 						rot = 1600
 						flags = 3
-						Color = grey_3
+						color = grey_3
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_icon023.img`
-						Color = grey_1
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_Icon023.img`
+						color = grey_1
 						x_scale = 15
 						y_scale = 15
 						flags = 3
 						y_trans = 32
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_icon024.img`
-						Color = grey_1
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_Icon024.img`
+						color = grey_1
 						y_trans = 37
 						x_scale = 15
 						y_scale = 15
@@ -6566,8 +6566,8 @@ cas_preset_bandlogo = [
 						x_trans = -31
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_icon024.img`
-						Color = grey_1
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_Icon024.img`
+						color = grey_1
 						y_trans = 37
 						x_scale = 15
 						y_scale = 15
@@ -6582,20 +6582,20 @@ cas_preset_bandlogo = [
 	{
 		cap = [
 			{
-				base_tex = `tex\models\characters\global\global_blank_logo.dds`
-				material = band_logo_primary
+				base_tex = `tex\models\Characters\Global\Global_Blank_Logo.dds`
+				material = Band_Logo_Primary
 				diffuse
 				layers = [
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_006.img`
-						Color = grey_1
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_006.img`
+						color = grey_1
 						x_scale = 120
 						flags = 3
 						y_scale = 125
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_022.img`
-						Color = violet_1
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_022.img`
+						color = violet_1
 						y_trans = 0
 						x_scale = 45
 						y_scale = 155
@@ -6604,8 +6604,8 @@ cas_preset_bandlogo = [
 						x_trans = -57
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_022.img`
-						Color = violet_1
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_022.img`
+						color = violet_1
 						x_trans = 57
 						x_scale = 45
 						y_scale = 155
@@ -6614,8 +6614,8 @@ cas_preset_bandlogo = [
 						y_trans = 2
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_022.img`
-						Color = violet_1
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_022.img`
+						color = violet_1
 						y_trans = 58
 						x_scale = 45
 						y_scale = 155
@@ -6624,8 +6624,8 @@ cas_preset_bandlogo = [
 						x_trans = 1
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_022.img`
-						Color = violet_1
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_022.img`
+						color = violet_1
 						y_trans = -56
 						x_scale = 45
 						y_scale = 155
@@ -6634,8 +6634,8 @@ cas_preset_bandlogo = [
 						x_trans = 0
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_022.img`
-						Color = violet_1
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_022.img`
+						color = violet_1
 						y_trans = -40
 						x_scale = 45
 						y_scale = 155
@@ -6644,8 +6644,8 @@ cas_preset_bandlogo = [
 						x_trans = -39
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_022.img`
-						Color = violet_1
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_022.img`
+						color = violet_1
 						x_trans = 40
 						x_scale = 45
 						y_scale = 155
@@ -6654,8 +6654,8 @@ cas_preset_bandlogo = [
 						y_trans = 43
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_022.img`
-						Color = violet_1
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_022.img`
+						color = violet_1
 						x_trans = -39
 						x_scale = 45
 						y_scale = 155
@@ -6664,8 +6664,8 @@ cas_preset_bandlogo = [
 						y_trans = 41
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_022.img`
-						Color = violet_1
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_022.img`
+						color = violet_1
 						x_trans = 42
 						x_scale = 45
 						y_scale = 155
@@ -6674,17 +6674,17 @@ cas_preset_bandlogo = [
 						y_trans = -40
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_045.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_045.img`
 						y_trans = 44
 						x_skew = 0
 						y_skew = 0
 						x_scale = 115
 						y_scale = 70
 						flags = 3
-						Color = grey_3
+						color = grey_3
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_045.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_045.img`
 						x_trans = 43
 						y_trans = -2
 						x_skew = 0
@@ -6693,10 +6693,10 @@ cas_preset_bandlogo = [
 						y_scale = 75
 						rot = 4733
 						flags = 19
-						Color = grey_3
+						color = grey_3
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_045.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_045.img`
 						x_trans = -43
 						y_trans = -2
 						x_skew = 0
@@ -6705,26 +6705,26 @@ cas_preset_bandlogo = [
 						y_scale = 75
 						rot = 4733
 						flags = 3
-						Color = grey_3
+						color = grey_3
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_005.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_005.img`
 						x_trans = -43
 						y_trans = 21
 						y_scale = 185
 						flags = 3
-						Color = grey_3
+						color = grey_3
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_005.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_005.img`
 						x_trans = 43
 						y_trans = 21
 						y_scale = 185
 						flags = 11
-						Color = grey_3
+						color = grey_3
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_006.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_006.img`
 						x_trans = -4
 						x_scale = 125
 						flags = 3
@@ -6737,7 +6737,7 @@ cas_preset_bandlogo = [
 						y_trans = -38
 						y_scale = 105
 						flags = 3
-						Color = grey_1
+						color = grey_1
 					}
 					{
 						font = fontgrid_title_a1
@@ -6747,7 +6747,7 @@ cas_preset_bandlogo = [
 						x_scale = 120
 						y_scale = 130
 						flags = 3
-						Color = grey_1
+						color = grey_1
 					}
 					{
 						font = fontgrid_title_a1
@@ -6757,7 +6757,7 @@ cas_preset_bandlogo = [
 						x_scale = 130
 						y_scale = 125
 						flags = 3
-						Color = grey_1
+						color = grey_1
 					}
 					{
 						font = fontgrid_title_a1
@@ -6767,12 +6767,12 @@ cas_preset_bandlogo = [
 						x_scale = 130
 						y_scale = 125
 						flags = 3
-						Color = grey_1
+						color = grey_1
 					}
 					{
 						font = fontgrid_title_a1
 						text = 'R'
-						Color = grey_1
+						color = grey_1
 						x_trans = 35
 						x_scale = 125
 						y_scale = 125
@@ -6780,8 +6780,8 @@ cas_preset_bandlogo = [
 						y_trans = -40
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_graphics076.img`
-						Color = yellow_3
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_graphics076.img`
+						color = yellow_3
 						x_scale = 75
 						y_scale = 75
 						flags = 3
@@ -6794,12 +6794,12 @@ cas_preset_bandlogo = [
 	{
 		cap = [
 			{
-				base_tex = `tex\models\characters\global\global_blank_logo.dds`
-				material = band_logo_primary
+				base_tex = `tex\models\Characters\Global\Global_Blank_Logo.dds`
+				material = Band_Logo_Primary
 				diffuse
 				layers = [
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_elemental005.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_elemental005.img`
 						flags = 3
 					}
 				]
@@ -6809,12 +6809,12 @@ cas_preset_bandlogo = [
 	{
 		cap = [
 			{
-				base_tex = `tex\models\characters\global\global_blank_logo.dds`
-				material = band_logo_primary
+				base_tex = `tex\models\Characters\Global\Global_Blank_Logo.dds`
+				material = Band_Logo_Primary
 				diffuse
 				layers = [
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_graphics046.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_graphics046.img`
 						flags = 3
 					}
 				]
@@ -6824,12 +6824,12 @@ cas_preset_bandlogo = [
 	{
 		cap = [
 			{
-				base_tex = `tex\models\characters\global\global_blank_logo.dds`
-				material = band_logo_primary
+				base_tex = `tex\models\Characters\Global\Global_Blank_Logo.dds`
+				material = Band_Logo_Primary
 				diffuse
 				layers = [
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_graphics109.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_graphics109.img`
 						flags = 3
 					}
 				]
@@ -6839,12 +6839,12 @@ cas_preset_bandlogo = [
 	{
 		cap = [
 			{
-				base_tex = `tex\models\characters\global\global_blank_logo.dds`
-				material = band_logo_primary
+				base_tex = `tex\models\Characters\Global\Global_Blank_Logo.dds`
+				material = Band_Logo_Primary
 				diffuse
 				layers = [
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_graphics101.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_graphics101.img`
 						flags = 3
 					}
 				]
@@ -6854,12 +6854,12 @@ cas_preset_bandlogo = [
 	{
 		cap = [
 			{
-				base_tex = `tex\models\characters\global\global_blank_logo.dds`
-				material = band_logo_primary
+				base_tex = `tex\models\Characters\Global\Global_Blank_Logo.dds`
+				material = Band_Logo_Primary
 				diffuse
 				layers = [
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_icon022.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_Icon022.img`
 						flags = 3
 					}
 				]
@@ -6869,12 +6869,12 @@ cas_preset_bandlogo = [
 	{
 		cap = [
 			{
-				base_tex = `tex\models\characters\global\global_blank_logo.dds`
-				material = band_logo_primary
+				base_tex = `tex\models\Characters\Global\Global_Blank_Logo.dds`
+				material = Band_Logo_Primary
 				diffuse
 				layers = [
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_graphics053.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_graphics053.img`
 						flags = 3
 					}
 				]
@@ -6884,23 +6884,23 @@ cas_preset_bandlogo = [
 	{
 		cap = [
 			{
-				base_tex = `tex\models\characters\global\global_blank_logo.dds`
-				material = band_logo_primary
+				base_tex = `tex\models\Characters\Global\Global_Blank_Logo.dds`
+				material = Band_Logo_Primary
 				diffuse
 				layers = [
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_graphics073.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_graphics073.img`
 						flags = 3
-						Color = grey_5
+						color = grey_5
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshapegradient_008.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShapeGradient_008.img`
 						x_scale = 150
 						flags = 3
 						y_scale = 160
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_graphics100.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_graphics100.img`
 						x_scale = 85
 						y_scale = 65
 						flags = 3
@@ -6913,20 +6913,20 @@ cas_preset_bandlogo = [
 	{
 		cap = [
 			{
-				base_tex = `tex\models\characters\global\global_blank_logo.dds`
-				material = band_logo_primary
+				base_tex = `tex\models\Characters\Global\Global_Blank_Logo.dds`
+				material = Band_Logo_Primary
 				diffuse
 				layers = [
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_icon027.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_Icon027.img`
 						x_scale = 67
 						rot = 0
 						flags = 11
 						x_trans = 13
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_032.img`
-						Color = red_2
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_032.img`
+						color = red_2
 						x_trans = -5
 						x_scale = 60
 						rot = 4873
@@ -6934,8 +6934,8 @@ cas_preset_bandlogo = [
 						y_scale = 105
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_001.img`
-						Color = red_5
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_001.img`
+						color = red_5
 						x_trans = -28
 						y_trans = 3
 						x_scale = 47
@@ -6943,8 +6943,8 @@ cas_preset_bandlogo = [
 						y_scale = 55
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshapegradient_007.img`
-						Color = red_4
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShapeGradient_007.img`
+						color = red_4
 						x_trans = -26
 						y_trans = 2
 						x_scale = 70
@@ -6952,13 +6952,13 @@ cas_preset_bandlogo = [
 						y_scale = 73
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshapeoutline_002.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShapeOutline_002.img`
 						x_trans = -30
 						y_trans = 4
 						x_scale = 18
 						y_scale = 25
 						flags = 3
-						Color = grey_5guitar
+						color = grey_5guitar
 					}
 				]
 			}
@@ -6967,28 +6967,28 @@ cas_preset_bandlogo = [
 	{
 		cap = [
 			{
-				base_tex = `tex\models\characters\global\global_blank_logo.dds`
-				material = band_logo_primary
+				base_tex = `tex\models\Characters\Global\Global_Blank_Logo.dds`
+				material = Band_Logo_Primary
 				diffuse
 				layers = [
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_006.img`
-						Color = yellow_orange_2
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_006.img`
+						color = yellow_orange_2
 						x_scale = 87
 						y_scale = 88
 						flags = 3
 						y_trans = 4
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_006.img`
-						Color = yellow_orange_3
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_006.img`
+						color = yellow_orange_3
 						x_scale = 113
 						y_scale = 94
 						flags = 3
 						y_trans = -5
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_001.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_001.img`
 						x_trans = -19
 						y_trans = 8
 						y_scale = 16
@@ -6996,7 +6996,7 @@ cas_preset_bandlogo = [
 						x_scale = 18
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_001.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_001.img`
 						y_trans = 8
 						x_scale = 22
 						y_scale = 22
@@ -7004,8 +7004,8 @@ cas_preset_bandlogo = [
 						x_trans = 20
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_006.img`
-						Color = black_1guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_006.img`
+						color = Black_1guitar
 						x_trans = -21
 						y_trans = 21
 						x_scale = 28
@@ -7014,8 +7014,8 @@ cas_preset_bandlogo = [
 						rot = 6043
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_006.img`
-						Color = black_1guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_006.img`
+						color = Black_1guitar
 						y_trans = 23
 						x_scale = 28
 						y_scale = 9
@@ -7024,8 +7024,8 @@ cas_preset_bandlogo = [
 						x_trans = 26
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_001.img`
-						Color = black_1guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_001.img`
+						color = Black_1guitar
 						x_trans = -19
 						x_scale = 9
 						y_scale = 8
@@ -7033,8 +7033,8 @@ cas_preset_bandlogo = [
 						y_trans = 8
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_001.img`
-						Color = black_1guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_001.img`
+						color = Black_1guitar
 						y_trans = 8
 						x_scale = 9
 						y_scale = 8
@@ -7042,8 +7042,8 @@ cas_preset_bandlogo = [
 						x_trans = 19
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_003.img`
-						Color = yellow_orange_2
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_003.img`
+						color = yellow_orange_2
 						x_trans = -20
 						y_trans = 11
 						x_scale = 23
@@ -7052,44 +7052,44 @@ cas_preset_bandlogo = [
 						rot = 6163
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_032.img`
-						Color = black_1guitar
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_032.img`
+						color = Black_1guitar
 						x_scale = 78
 						y_scale = 20
 						flags = 3
 						y_trans = -24
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_032.img`
-						Color = yellow_orange_3
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_032.img`
+						color = yellow_orange_3
 						x_scale = 78
 						y_scale = 20
 						flags = 3
 						y_trans = -20
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_016.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_016.img`
 						x_trans = -20
 						y_trans = -18
 						x_scale = 40
 						y_scale = 54
 						rot = 4453
 						flags = 3
-						Color = grey_3guitar
+						color = grey_3guitar
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_016.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_016.img`
 						x_trans = 19
 						y_trans = -18
 						x_scale = 40
 						y_scale = 54
 						rot = 5023
 						flags = 19
-						Color = grey_3guitar
+						color = grey_3guitar
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_003.img`
-						Color = yellow_orange_2
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_003.img`
+						color = yellow_orange_2
 						x_trans = 20
 						y_trans = 14
 						y_scale = 44
@@ -7098,7 +7098,7 @@ cas_preset_bandlogo = [
 						x_scale = 24
 					}
 					{
-						texture = `tex/models/characters/skater_male/decals/cag_primitiveshape_009.img`
+						texture = `tex/models/Characters/Skater_Male/Decals/CAG_PrimitiveShape_009.img`
 						y_trans = 2
 						x_scale = 10
 						y_scale = 42

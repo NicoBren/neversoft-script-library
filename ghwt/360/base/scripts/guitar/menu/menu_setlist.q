@@ -23,8 +23,8 @@ setlist_random_bg_images = [
 	{
 		texture = setlist_wrigleys_gum
 		dims = (450.0, 450.0)
-		minrot = -10
-		maxrot = 70
+		minRot = -10
+		maxRot = 70
 		loffset = (30.0, 0.0)
 		only_left
 		center_just
@@ -62,14 +62,14 @@ setlist_event_handlers = [
 		pad_up
 		setlist_scroll
 		params = {
-			Dir = up
+			dir = up
 		}
 	}
 	{
 		pad_down
 		setlist_scroll
 		params = {
-			Dir = down
+			dir = down
 		}
 	}
 	{
@@ -93,7 +93,7 @@ setlist_event_handlers = [
 		}
 	}
 	{
-		pad_L1
+		pad_l1
 		change_tab
 		params = {
 			tab = tab_downloads
@@ -136,20 +136,20 @@ setlist_page2_num = 0
 setlist_page2_dims = (819.0, 666.0)
 setlist_page1_dims = (922.0, 512.0)
 setlist_text_z = 4.1
-g_gh3_setlist = NULL
+g_gh3_setlist = null
 current_tab = tab_setlist
 setlist_page1_z = 0
 setlist_page2_z = 0
 setlist_page3_z = 0
-current_setlist_songpreview = None
-target_setlist_songpreview = None
+current_setlist_songpreview = none
+target_setlist_songpreview = none
 setlist_songpreview_changing = 0
 
 script display_as_made_famous_by \{rot_angle = -7
 		time = 0.25}
 	destroy_menu \{menu_id = setlist_original_artist}
 	CreateScreenElement {
-		Type = ContainerElement
+		type = ContainerElement
 		parent = root_window
 		id = setlist_original_artist
 		rot_angle = <rot_angle>
@@ -160,7 +160,7 @@ script display_as_made_famous_by \{rot_angle = -7
 		tex = white
 		dims = (130.0, 50.0)
 		just = [center top]
-		Pos = <Pos>
+		pos = <pos>
 		rgba = [0 0 0 255]
 		z = 500
 	}
@@ -169,53 +169,53 @@ script display_as_made_famous_by \{rot_angle = -7
 		tex = white
 		just = [center top]
 		dims = (130.0, 25.0)
-		Pos = (<Pos> + (0.0, 25.0))
+		pos = (<pos> + (0.0, 25.0))
 		rgba = [223 223 223 255]
 		z = 501
 	}
 	displayText {
 		parent = setlist_original_artist
-		text = qs(0x19ae614c)
+		text = qs("AS MADE")
 		font = fontgrid_text_a3
 		just = [center top]
-		Pos = (<Pos>)
+		pos = (<pos>)
 		z = 502
-		Scale = (0.8, 0.5)
+		scale = (0.8, 0.5)
 		rgba = [223 223 223 255]
 		noshadow
 	}
 	fit_text_in_rectangle id = <id> dims = (75.0, 15.0)
 	displayText {
 		parent = setlist_original_artist
-		text = qs(0xc1ebfea3)
+		text = qs("FAMOUS BY")
 		just = [center top]
 		font = fontgrid_text_a3
-		Pos = (<Pos> + (0.0, 25.0))
+		pos = (<pos> + (0.0, 25.0))
 		z = 502
-		Scale = (0.72499996, 0.5)
+		scale = (0.72499996, 0.5)
 		rgba = [0 0 0 255]
 		noshadow
 	}
 	fit_text_in_rectangle id = <id> dims = (90.0, 15.0)
-	legacydoscreenelementmorph id = setlist_original_artist alpha = 1 time = <time>
+	LegacyDoScreenElementMorph id = setlist_original_artist alpha = 1 time = <time>
 endscript
 
 script set_song_icon 
 	if NOT GotParam \{no_wait}
 		Wait \{0.5
-			Seconds}
+			seconds}
 	endif
 	if NOT GotParam \{song}
 		<song> = ($target_setlist_songpreview)
 	endif
-	if (<song> = None && $current_tab = tab_setlist)
+	if (<song> = none && $current_tab = tab_setlist)
 		return
 	endif
 	if ($current_tab = tab_setlist)
 		get_tier_from_song song = <song>
 		get_progression_globals game_mode = ($game_mode)
-		formatText checksumName = tiername 'tier%d' d = <tier_number>
-		if StructureContains structure = ($<tier_global>.<tiername>) setlist_icon
+		FormatText checksumname = tiername 'tier%d' d = <tier_number>
+		if StructureContains Structure = ($<tier_global>.<tiername>) setlist_icon
 			song_icon = ($<tier_global>.<tiername>.setlist_icon)
 		else
 			song_icon = setlist_icon_generic
@@ -228,20 +228,20 @@ script set_song_icon
 	mini_rot = RandomInteger (-5.0, 5.0)
 	if ScreenElementExists \{id = sl_clipart}
 		SetScreenElementProps id = sl_clipart texture = <song_icon>
-		legacydoscreenelementmorph id = sl_clipart alpha = 1 time = 0.25 rot_angle = <mini_rot>
+		LegacyDoScreenElementMorph id = sl_clipart alpha = 1 time = 0.25 rot_angle = <mini_rot>
 	endif
 	if ScreenElementExists \{id = sl_clipart_shadow}
 		SetScreenElementProps id = sl_clipart_shadow texture = <song_icon>
-		legacydoscreenelementmorph id = sl_clipart_shadow alpha = 1 time = 0.25 rot_angle = <mini_rot>
+		LegacyDoScreenElementMorph id = sl_clipart_shadow alpha = 1 time = 0.25 rot_angle = <mini_rot>
 	endif
 	if ScreenElementExists \{id = sl_clip}
 		GetScreenElementProps \{id = sl_clip}
 		rot_clip_a = <rot_angle>
 		rot_clip_b = (<rot_clip_a> + 10)
 		SetScreenElementProps id = sl_clip rot_angle = <rot_clip_b>
-		legacydoscreenelementmorph id = sl_clip alpha = 1 rot_angle = <rot_clip_a> time = 0.25
+		LegacyDoScreenElementMorph id = sl_clip alpha = 1 rot_angle = <rot_clip_a> time = 0.25
 	endif
-	if NOT (<song> = None)
+	if NOT (<song> = none)
 		get_song_original_artist song = <song>
 		if ($we_have_songs = true && <original_artist> = 0)
 			if ScreenElementExists \{id = sl_clipart}
@@ -255,7 +255,7 @@ script get_tier_from_song
 	num_tiers = ($g_gh3_setlist.num_tiers)
 	tier_index = 1
 	begin
-	formatText checksumName = tier_name 'tier%d' d = <tier_index>
+	FormatText checksumname = tier_name 'tier%d' d = <tier_index>
 	GetArraySize ($g_gh3_setlist.<tier_name>.songs)
 	song_index = 0
 	begin
@@ -264,10 +264,10 @@ script get_tier_from_song
 		return tier_number = <tier_index>
 	endif
 	<song_index> = (<song_index> + 1)
-	repeat <array_Size>
+	repeat <array_size>
 	<tier_index> = (<tier_index> + 1)
 	repeat <num_tiers>
-	printf \{qs(0x7ea206ac)}
+	printf \{qs("\LDid not find tier!")}
 	return \{tier_number = 1}
 endscript
 
@@ -289,7 +289,7 @@ endscript
 
 script setlist_go_back 
 	if (($transitions_locked = 0) && ($is_network_game = 0))
-		LaunchEvent \{Type = unfocus
+		LaunchEvent \{type = unfocus
 			target = current_menu}
 	endif
 	begin
@@ -301,7 +301,7 @@ script setlist_go_back
 	repeat
 	if ($is_network_game = 1)
 		quit_network_game
-		Change \{net_new_matchmaking_ui_flag = 0}
+		change \{net_new_matchmaking_ui_flag = 0}
 		generic_event_back \{state = uistate_online}
 	else
 		generic_event_back
@@ -320,11 +320,11 @@ script displaySprite \{just = [
 		]
 		dims = {
 		}
-		BlendMode = {
+		blendMode = {
 		}
 		internal_just = {
 		}
-		Scale = {
+		scale = {
 		}
 		alpha = 1}
 	if GotParam \{rot_angle}
@@ -333,26 +333,26 @@ script displaySprite \{just = [
 		rot_struct = {}
 	endif
 	CreateScreenElement {
-		Type = SpriteElement
+		type = SpriteElement
 		id = <id>
 		parent = <parent>
 		texture = <tex>
 		dims = <dims>
 		rgba = <rgba>
-		Pos = <Pos>
+		pos = <pos>
 		just = <just>
 		internal_just = <internal_just>
 		z_priority = <z>
-		Scale = <Scale>
+		scale = <scale>
 		<rot_struct>
-		blend = <BlendMode>
+		blend = <blendMode>
 		alpha = <alpha>
 	}
 	if GotParam \{flip_v}
-		<id> :se_setprops flip_v
+		<id> :SE_SetProps flip_v
 	endif
 	if GotParam \{flip_h}
-		<id> :se_setprops flip_h
+		<id> :SE_SetProps flip_h
 	endif
 	return id = <id>
 endscript
@@ -372,65 +372,65 @@ script displayText \{id = {
 		font = fontgrid_text_a6
 		rot = 0}
 	CreateScreenElement {
-		Type = TextElement
+		type = TextElement
 		parent = <parent>
 		font = <font>
-		Scale = <Scale>
+		scale = <scale>
 		rgba = <rgba>
 		text = <text>
 		id = <id>
-		Pos = <Pos>
+		pos = <pos>
 		just = <just>
 		rot_angle = <rot>
 		z_priority = <z>
 		font_spacing = <font_spacing>
 	}
 	if GotParam \{noshadow}
-		<id> :se_setprops noshadow
+		<id> :SE_SetProps noshadow
 	else
-		<id> :se_setprops Shadow shadow_offs = (3.0, 3.0) shadow_rgba [0 0 0 255]
+		<id> :SE_SetProps shadow shadow_offs = (3.0, 3.0) shadow_rgba [0 0 0 255]
 	endif
 	return id = <id>
 endscript
 
 script create_setlist_menu 
-	setsoundbussparams {Music_Setlist = {vol = ($default_BussSet.Music_Setlist.vol)}}
+	SetSoundBussParams {Music_Setlist = {vol = ($Default_BussSet.Music_Setlist.vol)}}
 	if ($is_network_game = 1)
-		Change \{current_tab = tab_setlist}
-		Change \{setlist_previous_tier = 1}
-		Change \{setlist_previous_song = 0}
-		Change \{setlist_previous_tab = tab_setlist}
+		change \{current_tab = tab_setlist}
+		change \{setlist_previous_tier = 1}
+		change \{setlist_previous_song = 0}
+		change \{setlist_previous_tab = tab_setlist}
 	endif
 	if ($end_credits = 1 && $current_song = bossdevil)
 		Progression_EndCredits
 		return
 	endif
-	Change \{boss_wuss_out = 0}
-	Change \{progression_unlocked_guitar = -1}
-	Change \{progression_unlocked_guitar2 = -1}
-	Change \{rich_presence_context = presence_gigboard_and_setlist}
-	menu_music_off
+	change \{boss_wuss_out = 0}
+	change \{progression_unlocked_guitar = -1}
+	change \{progression_unlocked_guitar2 = -1}
+	change \{rich_presence_context = presence_gigboard_and_setlist}
+	Menu_Music_Off
 	if ($special_event_stage != 0)
 		get_progression_globals game_mode = ($special_event_previous_game_mode) ($band_mode_mode)
 	else
 		get_progression_globals game_mode = ($game_mode) ($band_mode_mode)
 	endif
-	Change g_gh3_setlist = $<tier_global>
+	change g_gh3_setlist = $<tier_global>
 	create_setlist_scrolling_menu
-	Change \{setlist_page3_z = 3.3}
-	Change \{setlist_page2_z = 3.4}
-	Change \{setlist_page1_z = 3.5}
-	Change \{setlist_random_images_scroll_num = 0}
-	Change \{setlist_random_images_highest_num = 0}
+	change \{setlist_page3_z = 3.3}
+	change \{setlist_page2_z = 3.4}
+	change \{setlist_page1_z = 3.5}
+	change \{setlist_random_images_scroll_num = 0}
+	change \{setlist_random_images_highest_num = 0}
 	change_tab tab = ($setlist_previous_tab)
 	setlist_display_random_bg_image
 	if ($is_network_game)
-		Change \{setlist_previous_tier = 1}
-		Change \{setlist_previous_song = 0}
-		Change \{setlist_previous_tab = tab_setlist}
+		change \{setlist_previous_tier = 1}
+		change \{setlist_previous_song = 0}
+		change \{setlist_previous_tab = tab_setlist}
 		create_setlist_popup
 	endif
-	Change \{disable_menu_sounds = 1}
+	change \{disable_menu_sounds = 1}
 	begin
 	if ($setlist_selection_tier >= $setlist_previous_tier)
 		if ($setlist_selection_song >= $setlist_previous_song)
@@ -439,7 +439,7 @@ script create_setlist_menu
 	endif
 	last_tier = ($setlist_selection_tier)
 	last_song = ($setlist_selection_song)
-	LaunchEvent \{Type = pad_down
+	LaunchEvent \{type = pad_down
 		target = current_menu}
 	if (<last_tier> = $setlist_selection_tier)
 		if (<last_song> = $setlist_selection_song)
@@ -447,17 +447,17 @@ script create_setlist_menu
 		endif
 	endif
 	repeat
-	Change \{disable_menu_sounds = 0}
+	change \{disable_menu_sounds = 0}
 	if ($setlist_selection_found = 1)
-		formatText \{checksumName = tier_checksum
+		FormatText \{checksumname = tier_checksum
 			'tier%s'
 			s = $setlist_selection_tier}
 		song = ($g_gh3_setlist.<tier_checksum>.songs [$setlist_selection_song])
-		Change target_setlist_songpreview = <song>
+		change target_setlist_songpreview = <song>
 	else
-		Change \{target_setlist_songpreview = None}
+		change \{target_setlist_songpreview = none}
 	endif
-	setsoundbussparams {Music_Setlist = {vol = ($default_BussSet.Music_Setlist.vol)}}
+	SetSoundBussParams {Music_Setlist = {vol = ($Default_BussSet.Music_Setlist.vol)}}
 	SpawnScriptLater \{setlist_songpreview_monitor}
 endscript
 
@@ -497,7 +497,7 @@ script create_setlist_scrolling_menu
 		if ($current_tab = tab_downloads)
 			net_dl_content_compatabilty_warning \{parent = gamertag_container
 				z = 10000
-				Pos = (320.0, 580.0)}
+				pos = (320.0, 580.0)}
 		else
 			if ScreenElementExists \{id = dl_content_warning}
 				DestroyScreenElement \{id = dl_content_warning}
@@ -532,19 +532,19 @@ script destroy_setlist_songpreview_monitor
 	Wait \{1
 		gameframe}
 	repeat
-	KillSpawnedScript \{Name = setlist_songpreview_monitor}
-	if NOT ($current_setlist_songpreview = None)
-		songstoppreview
+	KillSpawnedScript \{name = setlist_songpreview_monitor}
+	if NOT ($current_setlist_songpreview = none)
+		SongStopPreview
 	endif
 endscript
 
 script destroy_setlist_menu 
-	KillSpawnedScript \{Name = net_match_download_songs}
-	SpawnScriptNow \{destroy_setlist_songpreview_monitor}
-	Change setlist_previous_tier = ($setlist_selection_tier)
-	Change setlist_previous_song = ($setlist_selection_song)
-	Change setlist_previous_tab = ($current_tab)
-	Change \{target_setlist_songpreview = None}
+	KillSpawnedScript \{name = net_match_download_songs}
+	spawnscriptnow \{destroy_setlist_songpreview_monitor}
+	change setlist_previous_tier = ($setlist_selection_tier)
+	change setlist_previous_song = ($setlist_selection_song)
+	change setlist_previous_tab = ($current_tab)
+	change \{target_setlist_songpreview = none}
 	destroy_menu \{menu_id = setlist_original_artist}
 	destroy_menu \{menu_id = scrolling_setlist}
 	destroy_menu \{menu_id = setlist_menu}
@@ -557,29 +557,29 @@ script destroy_setlist_menu
 endscript
 
 script setlist_choose_song \{device_num = 0}
-	printf \{qs(0x4de9c7b5)}
+	printf \{qs("\Lsetlist_choose_song")}
 	printstruct <...>
 	if GotParam \{song_count}
 		if ($is_network_game = 1)
 			if ($net_new_matchmaking_ui_flag = 1)
 				if ($net_permision_to_select_song = 1)
-					net_request_song Tier = <Tier> song_count = <song_count>
+					net_request_song tier = <tier> song_count = <song_count>
 				else
 					return
 				endif
 			else
-				net_request_song Tier = <Tier> song_count = <song_count>
+				net_request_song tier = <tier> song_count = <song_count>
 			endif
 		else
 			if ($transitions_locked = 0)
-				LaunchEvent \{Type = unfocus
+				LaunchEvent \{type = unfocus
 					target = current_menu}
 			endif
-			formatText checksumName = tier_checksum 'tier%s' s = <Tier>
-			Change current_song = ($g_gh3_setlist.<tier_checksum>.songs [<song_count>])
-			SetGlobalTags Progression params = {current_tier = <Tier>}
+			FormatText checksumname = tier_checksum 'tier%s' s = <tier>
+			change current_song = ($g_gh3_setlist.<tier_checksum>.songs [<song_count>])
+			SetGlobalTags Progression params = {current_tier = <tier>}
 			SetGlobalTags Progression params = {current_song_count = <song_count>}
-			Change \{current_level = $g_last_venue_selected}
+			change \{current_level = $g_last_venue_selected}
 			if ($is_network_game)
 				ui_flow_manager_respond_to_action \{action = continue}
 				return
@@ -593,7 +593,7 @@ script setlist_choose_song \{device_num = 0}
 				practice_check_song_for_parts
 			else
 				if ($current_num_players = 1)
-					Change player1_device = <device_num>
+					change player1_device = <device_num>
 				endif
 				switch ($game_mode)
 					case p2_faceoff
@@ -620,33 +620,33 @@ script setlist_debug_completesong
 	endif
 	if (<enable_cheat> = 1)
 		level = ($current_level)
-		formatText checksumName = tier_checksum 'tier%s' s = <Tier>
-		Change current_song = ($g_gh3_setlist.<tier_checksum>.songs [<song_count>])
-		SetGlobalTags Progression params = {current_tier = <Tier>}
+		FormatText checksumname = tier_checksum 'tier%s' s = <tier>
+		change current_song = ($g_gh3_setlist.<tier_checksum>.songs [<song_count>])
+		SetGlobalTags Progression params = {current_tier = <tier>}
 		SetGlobalTags Progression params = {current_song_count = <song_count>}
 		printstruct <...>
 		cas_destroy_all_characters
 		load_songqpak song_name = ($current_song) async = 0
 		setup_gemarrays song_name = ($current_song) difficulty = ($player1_status.difficulty) player_status = player1_status
 		calc_songscoreinfo
-		Change structurename = player1_status score = ($player1_status.base_score * 2.8 + 1)
+		change structurename = player1_status score = ($player1_status.base_score * 2.8 + 1)
 		Progression_SongWon
 		if ($game_mode = p1_quickplay || $game_mode = p2_quickplay)
 			menu_top_rockers_check_for_new_top_score
 		endif
 		songpreview = ($current_setlist_songpreview)
 		change_tab tab = ($current_tab)
-		Change current_setlist_songpreview = <songpreview>
-		Change \{disable_menu_sounds = 1}
+		change current_setlist_songpreview = <songpreview>
+		change \{disable_menu_sounds = 1}
 		begin
-		if (<Tier> = $setlist_selection_tier)
+		if (<tier> = $setlist_selection_tier)
 			if (<song_count> = $setlist_selection_song)
 				break
 			endif
 		endif
 		last_tier = ($setlist_selection_tier)
 		last_song = ($setlist_selection_song)
-		LaunchEvent \{Type = pad_down
+		LaunchEvent \{type = pad_down
 			target = current_menu}
 		if (<last_tier> = $setlist_selection_tier)
 			if (<last_song> = $setlist_selection_song)
@@ -654,13 +654,13 @@ script setlist_debug_completesong
 			endif
 		endif
 		repeat
-		Change \{disable_menu_sounds = 0}
-		Change \{structurename = player1_status
+		change \{disable_menu_sounds = 0}
+		change \{structurename = player1_status
 			new_cash = 0}
-		Change \{progression_play_completion_movie = 0}
-		Change \{progression_unlock_tier_last_song = 0}
-		Change current_level = <level>
-		Change \{end_credits = 0}
+		change \{progression_play_completion_movie = 0}
+		change \{progression_unlock_tier_last_song = 0}
+		change current_level = <level>
+		change \{end_credits = 0}
 	endif
 endscript
 
@@ -675,32 +675,32 @@ script setlist_debug_unlockall
 		endif
 		level = ($current_level)
 		get_progression_globals game_mode = ($game_mode)
-		GlobalTags_UnlockAll SongList = <tier_global>
-		GlobalTags_UnlockAll \{SongList = bonus_songs}
-		Change \{structurename = player1_status
+		GlobalTags_UnlockAll songlist = <tier_global>
+		GlobalTags_UnlockAll \{songlist = Bonus_Songs}
+		change \{structurename = player1_status
 			notes_hit = 100}
-		Change \{structurename = player1_status
+		change \{structurename = player1_status
 			total_notes = 100}
-		Change \{structurename = player2_status
+		change \{structurename = player2_status
 			notes_hit = 100}
-		Change \{structurename = player2_status
+		change \{structurename = player2_status
 			total_notes = 100}
 		if ($game_mode = p1_career || $game_mode = p2_career)
-			UpdateAtoms \{Name = Progression}
+			UpdateAtoms \{name = Progression}
 		endif
 		songpreview = ($current_setlist_songpreview)
 		change_tab tab = ($current_tab)
-		Change current_setlist_songpreview = <songpreview>
-		Change \{disable_menu_sounds = 1}
+		change current_setlist_songpreview = <songpreview>
+		change \{disable_menu_sounds = 1}
 		begin
-		if (<Tier> = $setlist_selection_tier)
+		if (<tier> = $setlist_selection_tier)
 			if (<song_count> = $setlist_selection_song)
 				break
 			endif
 		endif
 		last_tier = ($setlist_selection_tier)
 		last_song = ($setlist_selection_song)
-		LaunchEvent \{Type = pad_down
+		LaunchEvent \{type = pad_down
 			target = current_menu}
 		if (<last_tier> = $setlist_selection_tier)
 			if (<last_song> = $setlist_selection_song)
@@ -708,21 +708,21 @@ script setlist_debug_unlockall
 			endif
 		endif
 		repeat
-		Change \{disable_menu_sounds = 0}
-		Change \{structurename = player1_status
+		change \{disable_menu_sounds = 0}
+		change \{structurename = player1_status
 			new_cash = 0}
-		Change \{progression_play_completion_movie = 0}
-		Change \{progression_unlock_tier_last_song = 0}
-		Change current_level = <level>
-		Change \{end_credits = 0}
+		change \{progression_play_completion_movie = 0}
+		change \{progression_unlock_tier_last_song = 0}
+		change current_level = <level>
+		change \{end_credits = 0}
 	endif
 endscript
 
-script setlist_scroll \{Dir = down}
+script setlist_scroll \{dir = down}
 	if ($setlist_num_songs = 0)
 		return
 	endif
-	if (<Dir> = down)
+	if (<dir> = down)
 		if ($setlist_selection_index + 1 = $setlist_num_songs)
 			return
 		endif
@@ -731,27 +731,27 @@ script setlist_scroll \{Dir = down}
 			return
 		endif
 	endif
-	generic_menu_up_or_down_sound <Dir>
-	formatText \{checksumName = textid
+	generic_menu_up_or_down_sound <dir>
+	FormatText \{checksumname = textid
 		'id_song%i'
 		i = $setlist_selection_index
 		AddToStringLookup = true}
 	retail_menu_unfocus id = <textid>
 	SetScreenElementProps id = <textid> no_shadow
-	if (<Dir> = down)
+	if (<dir> = down)
 		jump_tier = 0
-		Change setlist_selection_index = ($setlist_selection_index + 1)
+		change setlist_selection_index = ($setlist_selection_index + 1)
 		setlist_prefix = ($g_gh3_setlist.prefix)
 		begin
-		formatText checksumName = tiername '%ptier%i' p = <setlist_prefix> i = $setlist_selection_tier
-		formatText \{checksumName = tier_checksum
+		FormatText checksumname = tiername '%ptier%i' p = <setlist_prefix> i = $setlist_selection_tier
+		FormatText \{checksumname = tier_checksum
 			'tier%s'
 			s = $setlist_selection_tier}
 		GetArraySize ($g_gh3_setlist.<tier_checksum>.songs)
-		Change setlist_selection_song = ($setlist_selection_song + 1)
-		if ($setlist_selection_song = <array_Size>)
-			Change \{setlist_selection_song = 0}
-			Change setlist_selection_tier = ($setlist_selection_tier + 1)
+		change setlist_selection_song = ($setlist_selection_song + 1)
+		if ($setlist_selection_song = <array_size>)
+			change \{setlist_selection_song = 0}
+			change setlist_selection_tier = ($setlist_selection_tier + 1)
 			jump_tier = 1
 		endif
 		format_globaltag_song_checksum part = ($g_gh3_setlist.part) song = ($g_gh3_setlist.<tier_checksum>.songs [($setlist_selection_song)])
@@ -767,35 +767,35 @@ script setlist_scroll \{Dir = down}
 		if ($setlist_selection_index = 1)
 			song_jump_amt = (0.0, -160.0)
 			GetScreenElementProps \{id = sl_clipart}
-			SetScreenElementProps id = sl_clipart Pos = (<Pos> - (0.0, 80.0))
+			SetScreenElementProps id = sl_clipart pos = (<pos> - (0.0, 80.0))
 			GetScreenElementProps \{id = sl_clipart_shadow}
-			SetScreenElementProps id = sl_clipart_shadow Pos = (<Pos> - (0.0, 80.0))
+			SetScreenElementProps id = sl_clipart_shadow pos = (<pos> - (0.0, 80.0))
 			GetScreenElementProps \{id = sl_clip}
-			SetScreenElementProps id = sl_clip Pos = (<Pos> - (0.0, 80.0))
+			SetScreenElementProps id = sl_clip pos = (<pos> - (0.0, 80.0))
 			GetScreenElementProps \{id = sl_highlight}
-			SetScreenElementProps id = sl_highlight Pos = (<Pos> - (0.0, 80.0))
+			SetScreenElementProps id = sl_highlight pos = (<pos> - (0.0, 80.0))
 		else
 			song_jump_amt = (0.0, -80.0)
 		endif
 	else
 		jump_tier = 0
-		Change setlist_selection_index = ($setlist_selection_index - 1)
+		change setlist_selection_index = ($setlist_selection_index - 1)
 		setlist_prefix = ($g_gh3_setlist.prefix)
 		begin
-		formatText checksumName = tiername '%ptier%i' p = <setlist_prefix> i = $setlist_selection_tier
-		formatText \{checksumName = tier_checksum
+		FormatText checksumname = tiername '%ptier%i' p = <setlist_prefix> i = $setlist_selection_tier
+		FormatText \{checksumname = tier_checksum
 			'tier%s'
 			s = $setlist_selection_tier}
 		GetArraySize ($g_gh3_setlist.<tier_checksum>.songs)
-		Change setlist_selection_song = ($setlist_selection_song - 1)
+		change setlist_selection_song = ($setlist_selection_song - 1)
 		if ($setlist_selection_song = -1)
-			Change setlist_selection_tier = ($setlist_selection_tier - 1)
-			formatText checksumName = tiername '%ptier%i' p = <setlist_prefix> i = $setlist_selection_tier
-			formatText \{checksumName = tier_checksum
+			change setlist_selection_tier = ($setlist_selection_tier - 1)
+			FormatText checksumname = tiername '%ptier%i' p = <setlist_prefix> i = $setlist_selection_tier
+			FormatText \{checksumname = tier_checksum
 				'tier%s'
 				s = $setlist_selection_tier}
 			GetArraySize ($g_gh3_setlist.<tier_checksum>.songs)
-			Change setlist_selection_song = (<array_Size> - 1)
+			change setlist_selection_song = (<array_size> - 1)
 			jump_tier = 1
 		endif
 		format_globaltag_song_checksum part = ($g_gh3_setlist.part) song = (.<tier_checksum>.songs [($setlist_selection_song)])
@@ -811,150 +811,150 @@ script setlist_scroll \{Dir = down}
 		if ($setlist_selection_index = 0)
 			song_jump_amt = (0.0, 160.0)
 			GetScreenElementProps \{id = sl_clipart}
-			SetScreenElementProps id = sl_clipart Pos = (<Pos> + (0.0, 80.0))
+			SetScreenElementProps id = sl_clipart pos = (<pos> + (0.0, 80.0))
 			GetScreenElementProps \{id = sl_clipart_shadow}
-			SetScreenElementProps id = sl_clipart_shadow Pos = (<Pos> + (0.0, 80.0))
+			SetScreenElementProps id = sl_clipart_shadow pos = (<pos> + (0.0, 80.0))
 			GetScreenElementProps \{id = sl_clip}
-			SetScreenElementProps id = sl_clip Pos = (<Pos> + (0.0, 80.0))
+			SetScreenElementProps id = sl_clip pos = (<pos> + (0.0, 80.0))
 			GetScreenElementProps \{id = sl_highlight}
-			SetScreenElementProps id = sl_highlight Pos = (<Pos> + (0.0, 80.0))
+			SetScreenElementProps id = sl_highlight pos = (<pos> + (0.0, 80.0))
 		else
 			song_jump_amt = (0.0, 80.0)
 		endif
 	endif
-	formatText \{checksumName = tier_checksum
+	FormatText \{checksumname = tier_checksum
 		'tier%s'
 		s = $setlist_selection_tier}
 	song = ($g_gh3_setlist.<tier_checksum>.songs [$setlist_selection_song])
-	Change target_setlist_songpreview = <song>
+	change target_setlist_songpreview = <song>
 	clear_setlist_clip_and_art
-	KillSpawnedScript \{Name = set_song_icon}
-	SpawnScriptNow \{set_song_icon}
-	formatText \{checksumName = textid
+	KillSpawnedScript \{name = set_song_icon}
+	spawnscriptnow \{set_song_icon}
+	FormatText \{checksumname = textid
 		'id_song%i'
 		i = $setlist_selection_index
 		AddToStringLookup = true}
 	retail_menu_focus id = <textid>
-	SetScreenElementProps id = <textid> Shadow
+	SetScreenElementProps id = <textid> shadow
 	<not_header> = 1
 	if ($current_tab = tab_setlist)
 		if (<jump_tier> = 1)
-			Change setlist_begin_text = ($setlist_begin_text + <jump_tier_amt>)
+			change setlist_begin_text = ($setlist_begin_text + <jump_tier_amt>)
 			SetScreenElementProps \{id = scrolling_setlist
-				Pos = $setlist_begin_text}
-			Change setlist_background_pos = ($setlist_background_pos + <jump_tier_amt>)
+				pos = $setlist_begin_text}
+			change setlist_background_pos = ($setlist_background_pos + <jump_tier_amt>)
 			<not_header> = 0
 		endif
 	endif
 	if (<not_header>)
-		Change setlist_begin_text = ($setlist_begin_text + <song_jump_amt>)
+		change setlist_begin_text = ($setlist_begin_text + <song_jump_amt>)
 		SetScreenElementProps \{id = scrolling_setlist
-			Pos = $setlist_begin_text}
-		Change setlist_background_pos = ($setlist_background_pos + <song_jump_amt>)
+			pos = $setlist_begin_text}
+		change setlist_background_pos = ($setlist_background_pos + <song_jump_amt>)
 	endif
 	SetScreenElementProps \{id = setlist_menu
-		Pos = $setlist_background_pos}
+		pos = $setlist_background_pos}
 	SetScreenElementProps \{id = setlist_bg_container
-		Pos = $setlist_background_pos}
+		pos = $setlist_background_pos}
 	SetScreenElementProps \{id = setlist_loops_menu
-		Pos = $setlist_background_pos}
+		pos = $setlist_background_pos}
 	if ($setlist_clip_rot_neg)
 		SetScreenElementProps id = sl_clip rot_angle = (0 - $setlist_clip_last_rot)
-		Change \{setlist_clip_rot_neg = 0}
+		change \{setlist_clip_rot_neg = 0}
 	else
-		GetRandomValue \{Name = rot
+		GetRandomValue \{name = rot
 			a = 10.0
 			b = -30.0}
 		SetScreenElementProps id = sl_clip rot_angle = <rot>
-		Change setlist_clip_last_rot = <rot>
-		Change \{setlist_clip_rot_neg = 1}
+		change setlist_clip_last_rot = <rot>
+		change \{setlist_clip_rot_neg = 1}
 	endif
-	if (<Dir> = down)
-		Change setlist_random_images_scroll_num = ($setlist_random_images_scroll_num + 1)
+	if (<dir> = down)
+		change setlist_random_images_scroll_num = ($setlist_random_images_scroll_num + 1)
 		if ($setlist_random_images_scroll_num > $setlist_random_images_highest_num)
-			Change setlist_random_images_highest_num = ($setlist_random_images_scroll_num)
+			change setlist_random_images_highest_num = ($setlist_random_images_scroll_num)
 			Mod a = ($setlist_random_images_highest_num) b = 4
 			if (<Mod> = 0)
 				setlist_display_random_bg_image
 			endif
 		endif
-		Change setlist_background_loop_num = ($setlist_background_loop_num + 1)
+		change setlist_background_loop_num = ($setlist_background_loop_num + 1)
 		if ($setlist_background_loop_num = 10)
-			Change \{setlist_background_loop_num = 0}
-			Change setlist_background_loop_pos = ($setlist_background_loop_pos + (0.0, 1308.0))
+			change \{setlist_background_loop_num = 0}
+			change setlist_background_loop_pos = ($setlist_background_loop_pos + (0.0, 1308.0))
 			displaySprite \{parent = setlist_menu
 				tex = setlist_bg_loop_1308
-				Pos = $setlist_background_loop_pos
+				pos = $setlist_background_loop_pos
 				dims = (1280.0, 1308.0)
 				z = 3.1}
 		endif
-		Change setlist_page1_num = ($setlist_page1_num + 1)
+		change setlist_page1_num = ($setlist_page1_num + 1)
 		if ($setlist_page1_num = 4)
-			Change \{setlist_page1_num = 0}
-			Change setlist_page1_loop_pos = ($setlist_page1_loop_pos + (0.0, 512.0))
+			change \{setlist_page1_num = 0}
+			change setlist_page1_loop_pos = ($setlist_page1_loop_pos + (0.0, 512.0))
 			displaySprite \{parent = setlist_loops_menu
 				tex = setlist_page1_loop_89x33
-				Pos = $setlist_page1_loop_pos
+				pos = $setlist_page1_loop_pos
 				dims = $setlist_page1_dims
 				z = $setlist_page1_z}
 		endif
 		if ($current_tab = tab_bonus)
-			Change setlist_page2_num = ($setlist_page2_num + 1)
+			change setlist_page2_num = ($setlist_page2_num + 1)
 			if ($setlist_page2_num = 5)
-				Change \{setlist_page2_num = 0}
-				Change setlist_page2_pos = ($setlist_page2_pos + (0.0, 665.5))
+				change \{setlist_page2_num = 0}
+				change setlist_page2_pos = ($setlist_page2_pos + (0.0, 665.5))
 				displaySprite \{parent = setlist_loops_menu
 					tex = setlist_page2_loop_80x65
-					Pos = $setlist_page2_pos
+					pos = $setlist_page2_pos
 					dims = $setlist_page2_dims
 					z = $setlist_page2_z}
 			endif
 		endif
-		Change setlist_line_num = ($setlist_line_num + 1)
+		change setlist_line_num = ($setlist_line_num + 1)
 		if ($setlist_line_num = 1)
-			Change \{setlist_line_num = 0}
+			change \{setlist_line_num = 0}
 			<i> = 1
 			if NOT (<not_header>)
 				<i> = 3
 			endif
 			begin
 			if ($setlist_line_index = $setlist_line_max)
-				Change \{setlist_line_index = 0}
+				change \{setlist_line_index = 0}
 			endif
 			<line> = Random (@ ($setlist_solid_lines [0]) @ ($setlist_solid_lines [1]) @ ($setlist_solid_lines [2]) )
-			displaySprite parent = setlist_menu tex = <line> Pos = $setlist_solid_line_pos dims = (896.0, 16.0) z = ($setlist_page1_z + 0.1)
-			Change setlist_line_index = ($setlist_line_index + 1)
+			displaySprite parent = setlist_menu tex = <line> pos = $setlist_solid_line_pos dims = (896.0, 16.0) z = ($setlist_page1_z + 0.1)
+			change setlist_line_index = ($setlist_line_index + 1)
 			if ($setlist_line_index = $setlist_line_max)
-				Change \{setlist_line_index = 0}
+				change \{setlist_line_index = 0}
 			endif
 			<line> = Random (@ ($setlist_dotted_lines [0]) @ ($setlist_dotted_lines [1]) @ ($setlist_dotted_lines [2]) )
-			displaySprite parent = setlist_menu tex = <line> Pos = $setlist_dotted_line_pos dims = (896.0, 16.0) z = ($setlist_page1_z + 0.1)
-			Change setlist_line_index = ($setlist_line_index + 1)
-			Change setlist_solid_line_pos = (($setlist_solid_line_pos) + ($setlist_solid_line_add))
-			Change setlist_dotted_line_pos = (($setlist_dotted_line_pos) + ($setlist_solid_line_add))
+			displaySprite parent = setlist_menu tex = <line> pos = $setlist_dotted_line_pos dims = (896.0, 16.0) z = ($setlist_page1_z + 0.1)
+			change setlist_line_index = ($setlist_line_index + 1)
+			change setlist_solid_line_pos = (($setlist_solid_line_pos) + ($setlist_solid_line_add))
+			change setlist_dotted_line_pos = (($setlist_dotted_line_pos) + ($setlist_solid_line_add))
 			repeat <i>
 		endif
-		Change setlist_page3_num = ($setlist_page3_num + 1)
+		change setlist_page3_num = ($setlist_page3_num + 1)
 		if ($setlist_page3_num = 5)
-			Change \{setlist_page3_num = 0}
-			Change setlist_page3_pos = ($setlist_page3_pos + (0.0, 532.0))
+			change \{setlist_page3_num = 0}
+			change setlist_page3_pos = ($setlist_page3_pos + (0.0, 532.0))
 			displaySprite \{parent = setlist_loops_menu
 				tex = setlist_page3_loop_13x11
-				Pos = $setlist_page3_pos
+				pos = $setlist_page3_pos
 				dims = $setlist_page3_dims
 				z = $setlist_page3_z}
 		endif
 	else
-		Change setlist_random_images_scroll_num = ($setlist_random_images_scroll_num - 1)
-		Change setlist_background_loop_num = ($setlist_background_loop_num - 1)
-		Change setlist_page1_num = ($setlist_page1_num - 1)
-		Change setlist_line_num = ($setlist_line_num - 1)
-		Change setlist_line_index = ($setlist_line_index + 1)
+		change setlist_random_images_scroll_num = ($setlist_random_images_scroll_num - 1)
+		change setlist_background_loop_num = ($setlist_background_loop_num - 1)
+		change setlist_page1_num = ($setlist_page1_num - 1)
+		change setlist_line_num = ($setlist_line_num - 1)
+		change setlist_line_index = ($setlist_line_index + 1)
 		if ($setlist_line_index = $setlist_line_max)
-			Change \{setlist_line_index = 0}
+			change \{setlist_line_index = 0}
 		endif
-		Change setlist_page3_num = ($setlist_page3_num - 1)
-		Change setlist_page2_num = ($setlist_page2_num - 1)
+		change setlist_page3_num = ($setlist_page3_num - 1)
+		change setlist_page2_num = ($setlist_page2_num - 1)
 	endif
 	if GotParam \{up}
 		generic_menu_up_or_down_sound \{up}
@@ -972,41 +972,41 @@ script setlist_display_random_bg_image
 	can_right = 1
 	flippable = 0
 	mydims = (128.0, 128.0)
-	minrot = -5
-	maxrot = 5
+	minRot = -5
+	maxRot = 5
 	loffset = (0.0, 0.0)
 	roffset = (0.0, 0.0)
 	just = [left top]
 	GetArraySize ($setlist_random_bg_images)
 	begin
-	GetRandomValue a = 0 b = (<array_Size> -1) integer Name = randimage
+	GetRandomValue a = 0 b = (<array_size> -1) Integer name = randimage
 	myimage = ($setlist_random_bg_images [<randimage>].texture)
 	if NOT (<myimage> = <old_image>)
-		if StructureContains structure = ($setlist_random_bg_images [<randimage>]) flippable
+		if StructureContains Structure = ($setlist_random_bg_images [<randimage>]) flippable
 			<flippable> = 1
 		endif
-		if StructureContains structure = ($setlist_random_bg_images [<randimage>]) dims
+		if StructureContains Structure = ($setlist_random_bg_images [<randimage>]) dims
 			<mydims> = ($setlist_random_bg_images [<randimage>].dims)
 		endif
-		if StructureContains structure = ($setlist_random_bg_images [<randimage>]) minrot
-			<minrot> = ($setlist_random_bg_images [<randimage>].minrot)
+		if StructureContains Structure = ($setlist_random_bg_images [<randimage>]) minRot
+			<minRot> = ($setlist_random_bg_images [<randimage>].minRot)
 		endif
-		if StructureContains structure = ($setlist_random_bg_images [<randimage>]) maxrot
-			<maxrot> = ($setlist_random_bg_images [<randimage>].maxrot)
+		if StructureContains Structure = ($setlist_random_bg_images [<randimage>]) maxRot
+			<maxRot> = ($setlist_random_bg_images [<randimage>].maxRot)
 		endif
-		if StructureContains structure = ($setlist_random_bg_images [<randimage>]) loffset
+		if StructureContains Structure = ($setlist_random_bg_images [<randimage>]) loffset
 			<loffset> = ($setlist_random_bg_images [<randimage>].loffset)
 		endif
-		if StructureContains structure = ($setlist_random_bg_images [<randimage>]) roffset
+		if StructureContains Structure = ($setlist_random_bg_images [<randimage>]) roffset
 			<roffset> = ($setlist_random_bg_images [<randimage>].roffset)
 		endif
-		if StructureContains structure = ($setlist_random_bg_images [<randimage>]) only_left
+		if StructureContains Structure = ($setlist_random_bg_images [<randimage>]) only_left
 			<can_right> = 0
 		endif
-		if StructureContains structure = ($setlist_random_bg_images [<randimage>]) only_right
+		if StructureContains Structure = ($setlist_random_bg_images [<randimage>]) only_right
 			<can_left> = 0
 		endif
-		if StructureContains structure = ($setlist_random_bg_images [<randimage>]) center_just
+		if StructureContains Structure = ($setlist_random_bg_images [<randimage>]) center_just
 			<just> = [center center]
 		endif
 		<old_image> = <myimage>
@@ -1015,8 +1015,8 @@ script setlist_display_random_bg_image
 	repeat
 	GetRandomValue \{a = 300
 		b = 600
-		integer
-		Name = randdown}
+		Integer
+		name = randdown}
 	if (<side> = 0)
 		if (<can_left> = 1)
 			imagepos = (($setlist_random_images_highest_num * (0.0, 300.0)) + ((0.0, 1.0) * <randdown>) + <loffset>)
@@ -1034,8 +1034,8 @@ script setlist_display_random_bg_image
 	if (<flippable> = 1)
 		GetRandomValue \{a = 1
 			b = 3
-			integer
-			Name = randflip}
+			Integer
+			name = randflip}
 		if (<randflip> = 1)
 			imageflag = {flip_h flip_v}
 		elseif (<randflip> = 2)
@@ -1044,21 +1044,21 @@ script setlist_display_random_bg_image
 			imageflag = {flip_v}
 		endif
 	endif
-	GetRandomValue a = <minrot> b = <maxrot> Name = randrot
-	if StructureContains structure = ($setlist_random_bg_images [<randimage>]) shoeprint
-		displaySprite parent = setlist_bg_container tex = <myimage> Pos = <imagepos> dims = (512.0, 512.0) rot_angle = <randrot> z = 3.2 BlendMode = subtract
-		displaySprite parent = setlist_bg_container tex = <myimage> Pos = <imagepos> dims = (512.0, 512.0) rot_angle = <randrot> z = 3.2 BlendMode = subtract
-		displaySprite parent = setlist_bg_container tex = <myimage> Pos = <imagepos> dims = (512.0, 512.0) rot_angle = <randrot> z = 3.2 BlendMode = subtract
+	GetRandomValue a = <minRot> b = <maxRot> name = randrot
+	if StructureContains Structure = ($setlist_random_bg_images [<randimage>]) shoeprint
+		displaySprite parent = setlist_bg_container tex = <myimage> pos = <imagepos> dims = (512.0, 512.0) rot_angle = <randrot> z = 3.2 blendMode = subtract
+		displaySprite parent = setlist_bg_container tex = <myimage> pos = <imagepos> dims = (512.0, 512.0) rot_angle = <randrot> z = 3.2 blendMode = subtract
+		displaySprite parent = setlist_bg_container tex = <myimage> pos = <imagepos> dims = (512.0, 512.0) rot_angle = <randrot> z = 3.2 blendMode = subtract
 	else
-		displaySprite parent = setlist_bg_container tex = <myimage> Pos = <imagepos> dims = <mydims> rot_angle = <randrot> z = 6.0 <imageflag> just = <just>
-		displaySprite parent = setlist_bg_container tex = <myimage> Pos = <imagepos> dims = <mydims> rot_angle = <randrot> z = 6.0 <imageflag> just = <just>
+		displaySprite parent = setlist_bg_container tex = <myimage> pos = <imagepos> dims = <mydims> rot_angle = <randrot> z = 6.0 <imageflag> just = <just>
+		displaySprite parent = setlist_bg_container tex = <myimage> pos = <imagepos> dims = <mydims> rot_angle = <randrot> z = 6.0 <imageflag> just = <just>
 	endif
 	<side> = 1
 	repeat 2
 endscript
 
 script setlist_songpreview_monitor 
-	SetSpawnInstanceLimits \{Max = 1
+	SetSpawnInstanceLimits \{max = 1
 		management = ignore_spawn_request}
 	begin
 	if ($setlist_songpreview_changing = 0)
@@ -1067,62 +1067,62 @@ script setlist_songpreview_monitor
 	Wait \{1
 		gameframe}
 	repeat
-	KillSpawnedScript \{Name = destroy_setlist_songpreview_monitor}
-	songstoppreview
+	KillSpawnedScript \{name = destroy_setlist_songpreview_monitor}
+	SongStopPreview
 	begin
 	if NOT ($current_setlist_songpreview = $target_setlist_songpreview)
-		Change \{setlist_songpreview_changing = 1}
+		change \{setlist_songpreview_changing = 1}
 		song = ($target_setlist_songpreview)
 		current_song = ($current_setlist_songpreview)
-		if NOT (<current_song> = None)
-			songstoppreview
+		if NOT (<current_song> = none)
+			SongStopPreview
 		endif
 		Wait \{0.5
-			Second}
-		if ($target_setlist_songpreview != <song> || $target_setlist_songpreview = None)
-			Change \{current_setlist_songpreview = None}
-			Change \{setlist_songpreview_changing = 0}
+			second}
+		if ($target_setlist_songpreview != <song> || $target_setlist_songpreview = none)
+			change \{current_setlist_songpreview = none}
+			change \{setlist_songpreview_changing = 0}
 		else
 			get_song_prefix song = <song>
 			get_song_struct song = <song>
-			if StructureContains structure = <song_struct> streamname
+			if StructureContains Structure = <song_struct> streamname
 				song_prefix = (<song_struct>.streamname)
 			endif
-			if songcheckifdownloaded FileName = <song_prefix>
+			if SongCheckIfDownloaded filename = <song_prefix>
 				if NOT Downloads_OpenContentFolder content_index = <content_index>
 					DownloadContentLost
-					return \{FALSE}
+					return \{false}
 				endif
 			endif
 			if is_song_downloaded song_checksum = <song>
-				if NOT songplaypreview FileName = <song_prefix> content_index = <content_index>
-					Change \{setlist_songpreview_changing = 0}
+				if NOT SongPlayPreview filename = <song_prefix> content_index = <content_index>
+					change \{setlist_songpreview_changing = 0}
 					DownloadContentLost
 					return
 				endif
 			endif
 			get_song_struct song = <song>
-			Change current_setlist_songpreview = <song>
-			Change \{setlist_songpreview_changing = 0}
+			change current_setlist_songpreview = <song>
+			change \{setlist_songpreview_changing = 0}
 		endif
-	elseif NOT ($current_setlist_songpreview = None)
+	elseif NOT ($current_setlist_songpreview = none)
 		song = ($current_setlist_songpreview)
 		get_song_prefix song = <song>
-		if NOT songispreviewplaying
-			Change \{setlist_songpreview_changing = 1}
-			if songcheckifdownloaded FileName = <song_prefix>
+		if NOT SongIsPreviewPlaying
+			change \{setlist_songpreview_changing = 1}
+			if SongCheckIfDownloaded filename = <song_prefix>
 				if NOT Downloads_OpenContentFolder content_index = <content_index>
-					return \{FALSE}
+					return \{false}
 				endif
 			endif
 			if is_song_downloaded song_checksum = <song>
-				if NOT songplaypreview FileName = <song_prefix> content_index = <content_index>
-					Change \{setlist_songpreview_changing = 0}
+				if NOT SongPlayPreview filename = <song_prefix> content_index = <content_index>
+					change \{setlist_songpreview_changing = 0}
 					DownloadContentLost
 					return
 				endif
 			endif
-			Change \{setlist_songpreview_changing = 0}
+			change \{setlist_songpreview_changing = 0}
 		endif
 	endif
 	Wait \{1
@@ -1133,9 +1133,9 @@ changing_tab = 0
 
 script change_tab \{tab = tab_setlist
 		button = 0}
-	Change \{changing_tab = 1}
+	change \{changing_tab = 1}
 	if ($current_tab = <tab> && <button> = 1)
-		Change \{changing_tab = 0}
+		change \{changing_tab = 0}
 		return
 	endif
 	if (<tab> = tab_setlist)
@@ -1154,62 +1154,62 @@ script change_tab \{tab = tab_setlist
 		endif
 		get_progression_globals game_mode = ($game_mode) download
 	endif
-	Change g_gh3_setlist = $<tier_global>
-	Change current_tab = <tab>
+	change g_gh3_setlist = $<tier_global>
+	change current_tab = <tab>
 	destroy_setlist_scrolling_menu
 	create_setlist_scrolling_menu
 	reset_vars \{del}
 	destroy_menu \{menu_id = setlist_original_artist}
 	destroy_menu \{menu_id = setlist_loops_menu}
 	destroy_menu \{menu_id = setlist_menu}
-	CreateScreenElement \{Type = ContainerElement
+	CreateScreenElement \{type = ContainerElement
 		parent = root_window
 		id = setlist_loops_menu
-		Pos = (0.0, 0.0)
+		pos = (0.0, 0.0)
 		just = [
 			left
 			top
 		]}
 	switch <tab>
 		case tab_setlist
-		Change \{setlist_page3_z = 3.3}
-		Change \{setlist_page2_z = 3.4}
-		Change \{setlist_page1_z = 3.5}
+		change \{setlist_page3_z = 3.3}
+		change \{setlist_page2_z = 3.4}
+		change \{setlist_page1_z = 3.5}
 		displaySprite \{parent = setlist_loops_menu
 			tex = setlist_page1_loop_89x33
-			Pos = $setlist_page1_loop_pos
+			pos = $setlist_page1_loop_pos
 			dims = $setlist_page1_dims
 			z = $setlist_page1_z}
-		displaySprite parent = setlist_loops_menu tex = setlist_page3_loop_13x11 Pos = ($setlist_page3_pos + (-180.0, 614.0)) dims = $setlist_page3_dims z = $setlist_page3_z
+		displaySprite parent = setlist_loops_menu tex = setlist_page3_loop_13x11 pos = ($setlist_page3_pos + (-180.0, 614.0)) dims = $setlist_page3_dims z = $setlist_page3_z
 		case tab_downloads
-		Change \{setlist_page3_z = 3.5}
-		Change \{setlist_page2_z = 3.4}
-		Change \{setlist_page1_z = 3.3}
+		change \{setlist_page3_z = 3.5}
+		change \{setlist_page2_z = 3.4}
+		change \{setlist_page1_z = 3.3}
 		displaySprite \{parent = setlist_loops_menu
 			tex = setlist_page1_loop_89x33
-			Pos = $setlist_page1_loop_pos
+			pos = $setlist_page1_loop_pos
 			dims = $setlist_page1_dims
 			z = $setlist_page1_z}
-		Change setlist_page3_pos = ($setlist_page3_pos + (0.0, 40.0))
-		displaySprite parent = setlist_loops_menu tex = setlist_page3_loop_13x11 Pos = ($setlist_page3_pos + (-180.0, 614.0)) dims = $setlist_page3_dims z = $setlist_page3_z
+		change setlist_page3_pos = ($setlist_page3_pos + (0.0, 40.0))
+		displaySprite parent = setlist_loops_menu tex = setlist_page3_loop_13x11 pos = ($setlist_page3_pos + (-180.0, 614.0)) dims = $setlist_page3_dims z = $setlist_page3_z
 		case tab_bonus
-		Change \{setlist_page3_z = 3.3}
-		Change \{setlist_page2_z = 3.8}
-		Change \{setlist_page1_z = 3.4}
+		change \{setlist_page3_z = 3.3}
+		change \{setlist_page2_z = 3.8}
+		change \{setlist_page1_z = 3.4}
 		displaySprite \{parent = setlist_loops_menu
 			tex = setlist_page1_loop_89x33
-			Pos = $setlist_page1_loop_pos
+			pos = $setlist_page1_loop_pos
 			dims = $setlist_page1_dims
 			z = $setlist_page1_z}
-		displaySprite parent = setlist_loops_menu tex = setlist_page3_loop_13x11 Pos = ($setlist_page3_pos + (-180.0, 614.0)) dims = $setlist_page3_dims z = $setlist_page3_z
-		displaySprite parent = setlist_loops_menu tex = setlist_page2_loop_80x65 Pos = ($setlist_page2_pos + (0.0, 553.0)) dims = $setlist_page2_dims z = $setlist_page2_z
+		displaySprite parent = setlist_loops_menu tex = setlist_page3_loop_13x11 pos = ($setlist_page3_pos + (-180.0, 614.0)) dims = $setlist_page3_dims z = $setlist_page3_z
+		displaySprite parent = setlist_loops_menu tex = setlist_page2_loop_80x65 pos = ($setlist_page2_pos + (0.0, 553.0)) dims = $setlist_page2_dims z = $setlist_page2_z
 	endswitch
 	create_sl_assets <tab>
 	SetScreenElementProps \{id = setlist_bg_container
-		Pos = (0.0, 0.0)}
-	Change \{setlist_random_images_scroll_num = 0}
-	Change setlist_page2_pos = ($setlist_page2_pos + (0.0, 553.0))
-	Change setlist_page3_pos = ($setlist_page3_pos + (-180.0, 614.0))
+		pos = (0.0, 0.0)}
+	change \{setlist_random_images_scroll_num = 0}
+	change setlist_page2_pos = ($setlist_page2_pos + (0.0, 553.0))
+	change setlist_page3_pos = ($setlist_page3_pos + (-180.0, 614.0))
 	SetScreenElementProps \{id = sl_page3_head
 		z_priority = $setlist_page3_z}
 	SetScreenElementProps \{id = sl_page2_head
@@ -1217,31 +1217,31 @@ script change_tab \{tab = tab_setlist
 	SetScreenElementProps \{id = sl_page1_head
 		z_priority = $setlist_page1_z}
 	if ($setlist_selection_found = 1)
-		formatText \{checksumName = tier_checksum
+		FormatText \{checksumname = tier_checksum
 			'tier%s'
 			s = $setlist_selection_tier}
 		song = ($g_gh3_setlist.<tier_checksum>.songs [$setlist_selection_song])
-		Change target_setlist_songpreview = <song>
+		change target_setlist_songpreview = <song>
 	else
-		Change \{target_setlist_songpreview = None}
+		change \{target_setlist_songpreview = none}
 	endif
-	KillSpawnedScript \{Name = set_song_icon}
-	SpawnScriptNow \{set_song_icon
+	KillSpawnedScript \{name = set_song_icon}
+	spawnscriptnow \{set_song_icon
 		params = {
 			no_wait
 		}}
-	LaunchEvent \{Type = focus
+	LaunchEvent \{type = focus
 		target = current_menu}
-	Change \{changing_tab = 0}
+	change \{changing_tab = 0}
 endscript
 
 script reset_vars 
 	if GotParam \{del}
-		Change \{setlist_begin_text = (0.0, 0.0)}
-		Change \{setlist_background_pos = (0.0, 0.0)}
-		Change \{setlist_background_loop_pos = (0.0, 676.0)}
-		Change \{setlist_background_loop_num = 0}
-		Change \{setlist_selection_index = 0}
+		change \{setlist_begin_text = (0.0, 0.0)}
+		change \{setlist_background_pos = (0.0, 0.0)}
+		change \{setlist_background_loop_pos = (0.0, 676.0)}
+		change \{setlist_background_loop_num = 0}
+		change \{setlist_selection_index = 0}
 		destroy_menu \{menu_id = sl_overshadow}
 		destroy_menu \{menu_id = sl_clipart}
 		destroy_menu \{menu_id = sl_clipart_shadow}
@@ -1250,27 +1250,27 @@ script reset_vars
 		destroy_menu \{menu_id = sl_highlight}
 		destroy_menu \{menu_id = sl_fixed}
 	endif
-	Change \{setlist_page1_num = 0}
-	Change \{setlist_page1_loop_pos = (157.0, 768.0)}
-	Change \{setlist_line_num = 0}
-	Change \{setlist_page3_pos = (210.0, 86.0)}
-	Change \{setlist_page3_num = 0}
-	Change \{setlist_page2_num = 0}
-	Change \{setlist_page2_pos = (240.0, 50.0)}
-	Change \{setlist_line_index = 0}
-	Change \{setlist_clip_last_rot = 0}
-	Change \{setlist_clip_rot_neg = 0}
+	change \{setlist_page1_num = 0}
+	change \{setlist_page1_loop_pos = (157.0, 768.0)}
+	change \{setlist_line_num = 0}
+	change \{setlist_page3_pos = (210.0, 86.0)}
+	change \{setlist_page3_num = 0}
+	change \{setlist_page2_num = 0}
+	change \{setlist_page2_pos = (240.0, 50.0)}
+	change \{setlist_line_index = 0}
+	change \{setlist_clip_last_rot = 0}
+	change \{setlist_clip_rot_neg = 0}
 endscript
-onlinebetasongs = [
+OnlineBetaSongs = [
 	areyougonnagomyway
-	nevertoolate
+	NeverTooLate
 	whativedone
 ]
 
 script IsSongAvailable \{for_bonus = 0}
-	gamemode_gettype
+	GameMode_GetType
 	check_allowed_in_quickplay = 0
-	if (($is_network_game = 1) || (<Type> = quickplay) || (<Type> = training))
+	if (($is_network_game = 1) || (<type> = quickplay) || (<type> = training))
 		check_allowed_in_quickplay = 1
 	endif
 	if (($game_mode = p2_faceoff) || ($game_mode = p2_pro_faceoff) || ($game_mode = p2_battle))
@@ -1279,35 +1279,35 @@ script IsSongAvailable \{for_bonus = 0}
 	if (<check_allowed_in_quickplay> = 1)
 		get_song_allowed_in_quickplay song = <song>
 		if (<allowed_in_quickplay> = 0)
-			return \{FALSE}
+			return \{false}
 		endif
 	endif
-	if StructureContains structure = ($gh_songlist_props.<song>) never_show_in_setlist
-		return \{FALSE}
+	if StructureContains Structure = ($gh_songlist_props.<song>) never_show_in_setlist
+		return \{false}
 	endif
 	if ($is_network_game = 1)
-		if StructureContains structure = ($gh_songlist_props.<song>) doesnt_support_vocals
-			gamemode_getnumplayers
+		if StructureContains Structure = ($gh_songlist_props.<song>) doesnt_support_vocals
+			GameMode_GetNumPlayers
 			<player_idx> = 1
 			begin
-			getplayerinfo <player_idx> part
-			if (<part> = vocals)
-				return \{FALSE}
+			GetPlayerInfo <player_idx> part
+			if (<part> = Vocals)
+				return \{false}
 			endif
 			<player_idx> = (<player_idx> + 1)
 			repeat <num_players>
 		endif
 		if NOT is_song_downloaded song_checksum = <song>
-			return \{FALSE}
+			return \{false}
 		endif
-		if globaltagexists <song> noassert = 1
+		if GlobalTagExists <song> noassert = 1
 			GetGlobalTags <song>
 			if ($net_match_dlc_sync_finished = 1)
 				if (<available_on_other_client> = 0)
-					return \{FALSE}
+					return \{false}
 				endif
 			elseif (<download> = 1)
-				return \{FALSE}
+				return \{false}
 			endif
 		endif
 		if ($is_multiplayer_beta = 0)
@@ -1316,24 +1316,24 @@ script IsSongAvailable \{for_bonus = 0}
 				return \{true}
 			endif
 		else
-			GetArraySize \{$onlinebetasongs}
-			if (<array_Size> > 0)
+			GetArraySize \{$OnlineBetaSongs}
+			if (<array_size> > 0)
 				index = 0
 				begin
-				if (<song> = ($onlinebetasongs [<index>]))
+				if (<song> = ($OnlineBetaSongs [<index>]))
 					return \{true}
 				endif
 				<index> = (<index> + 1)
-				repeat <array_Size>
+				repeat <array_size>
 			endif
 		endif
 	else
-		if StructureContains structure = ($gh_songlist_props.<song>) doesnt_support_vocals
-			gamemode_getnumplayers
-			gamemode_getproperty \{prop = cooperative}
-			if (<cooperative> = FALSE)
-				gamemode_getproperty \{prop = faceoff}
-				<should_disallow_vocals> = FALSE
+		if StructureContains Structure = ($gh_songlist_props.<song>) doesnt_support_vocals
+			GameMode_GetNumPlayers
+			GameMode_GetProperty \{prop = cooperative}
+			if (<cooperative> = false)
+				GameMode_GetProperty \{prop = faceoff}
+				<should_disallow_vocals> = false
 				if (<num_players> = 2 && <faceoff> = true)
 					<should_disallow_vocals> = true
 				elseif (<num_players> = 1)
@@ -1342,10 +1342,10 @@ script IsSongAvailable \{for_bonus = 0}
 				if (<should_disallow_vocals> = true)
 					<player_idx> = 1
 					begin
-					getplayerinfo <player_idx> controller
+					GetPlayerInfo <player_idx> controller
 					if NOT IsGuitarController controller = <controller>
-						if NOT isdrumcontroller controller = <controller>
-							return \{FALSE}
+						if NOT IsDrumController controller = <controller>
+							return \{false}
 						endif
 					endif
 					<player_idx> = (<player_idx> + 1)
@@ -1354,12 +1354,12 @@ script IsSongAvailable \{for_bonus = 0}
 			endif
 		endif
 		if NOT is_song_downloaded song_checksum = <song>
-			return \{FALSE}
+			return \{false}
 		endif
 		if (<download> = 1)
 			return \{true}
 		endif
-		if StructureContains structure = ($gh_songlist_props.<song>) always_unlocked
+		if StructureContains Structure = ($gh_songlist_props.<song>) always_unlocked
 			return \{true}
 		endif
 		get_song_saved_in_globaltags song = <song>
@@ -1370,30 +1370,30 @@ script IsSongAvailable \{for_bonus = 0}
 			endif
 			GetGlobalTags \{user_options}
 			if (<cheat_index13> = 1)
-				if (<song> != pullmeunder)
+				if (<song> != PullMeUnder)
 					return \{true}
 				endif
 			endif
 		endif
 	endif
-	return \{FALSE}
+	return \{false}
 endscript
-we_have_songs = FALSE
+we_have_songs = false
 
 script create_sl_assets 
-	CreateScreenElement \{Type = ContainerElement
+	CreateScreenElement \{type = ContainerElement
 		parent = root_window
 		id = setlist_menu
-		Pos = (0.0, 0.0)
+		pos = (0.0, 0.0)
 		just = [
 			left
 			top
 		]}
 	if NOT ScreenElementExists \{id = setlist_bg_container}
-		CreateScreenElement \{Type = ContainerElement
+		CreateScreenElement \{type = ContainerElement
 			parent = root_window
 			id = setlist_bg_container
-			Pos = (0.0, 0.0)
+			pos = (0.0, 0.0)
 			just = [
 				left
 				top
@@ -1402,48 +1402,48 @@ script create_sl_assets
 	displaySprite \{id = sl_bg_head
 		parent = setlist_menu
 		tex = setlist_bg_head_676
-		Pos = (0.0, 0.0)
+		pos = (0.0, 0.0)
 		dims = (1280.0, 676.0)
 		z = 3.1}
 	displaySprite \{id = sl_bg_loop
 		parent = setlist_menu
 		tex = setlist_bg_loop_1308
-		Pos = $setlist_background_loop_pos
+		pos = $setlist_background_loop_pos
 		dims = (1280.0, 1352.0)
 		z = 3.1}
 	begin
 	displaySprite \{parent = setlist_menu
 		tex = Setlist_Shoeprint
-		Pos = (850.0, -70.0)
+		pos = (850.0, -70.0)
 		dims = (640.0, 768.0)
 		alpha = 0.15
 		z = 3.2
 		flip_v
 		rot_angle = 10
-		BlendMode = subtract}
+		blendMode = subtract}
 	repeat 3
 	displaySprite \{id = sl_page3_head
 		parent = setlist_menu
 		tex = setlist_page3_head_9x6
-		Pos = $setlist_page3_pos
+		pos = $setlist_page3_pos
 		dims = (922.0, 614.0)
 		z = $setlist_page3_z}
 	displaySprite \{id = sl_page2_head
 		parent = setlist_menu
 		tex = setlist_page2_head_80x54
-		Pos = $setlist_page2_pos
+		pos = $setlist_page2_pos
 		dims = (819.0, 553.0)
 		z = $setlist_page2_z}
 	displaySprite \{flip_h
 		id = sl_page1_head
 		parent = setlist_menu
 		tex = setlist_page1_head_90x75
-		Pos = (160.0, 0.0)
+		pos = (160.0, 0.0)
 		dims = (922.0, 768.0)
 		z = $setlist_page1_z}
-	displaySprite parent = setlist_menu tex = Setlist_Page1_Line_Red Pos = (320.0, 12.0) dims = (8.0, 6400.0) z = ($setlist_page1_z + 0.1)
+	displaySprite parent = setlist_menu tex = Setlist_Page1_Line_Red pos = (320.0, 12.0) dims = (8.0, 6400.0) z = ($setlist_page1_z + 0.1)
 	<title_pos> = (300.0, 383.0)
-	displaySprite id = sl_page1_head_lines parent = setlist_menu tex = Setlist_Page1_Head_Lines Pos = (176.0, 64.0) dims = (896.0, 320.0) z = ($setlist_page1_z + 0.1)
+	displaySprite id = sl_page1_head_lines parent = setlist_menu tex = Setlist_Page1_Head_Lines pos = (176.0, 64.0) dims = (896.0, 320.0) z = ($setlist_page1_z + 0.1)
 	<begin_line> = (176.0, 420.0)
 	<solid_line_pos> = (176.0, 340.0)
 	<dotted_line_pos> = (176.0, 380.0)
@@ -1451,18 +1451,18 @@ script create_sl_assets
 	begin
 	<line> = Random (@ ($setlist_solid_lines [0]) @ ($setlist_solid_lines [1]) @ ($setlist_solid_lines [2]) )
 	<solid_line_pos> = (<solid_line_pos> + $setlist_solid_line_add)
-	displaySprite parent = setlist_menu tex = <line> Pos = <solid_line_pos> dims = (883.0, 16.0) z = ($setlist_page1_z + 0.1)
+	displaySprite parent = setlist_menu tex = <line> pos = <solid_line_pos> dims = (883.0, 16.0) z = ($setlist_page1_z + 0.1)
 	repeat 8
 	begin
 	<line> = Random (@ ($setlist_dotted_lines [0]) @ ($setlist_dotted_lines [1]) @ ($setlist_dotted_lines [2]) )
 	<dotted_line_pos> = (<dotted_line_pos> + <dotted_line_add>)
-	displaySprite parent = setlist_menu tex = <line> Pos = <dotted_line_pos> dims = (883.0, 16.0) z = ($setlist_page1_z + 0.1)
+	displaySprite parent = setlist_menu tex = <line> pos = <dotted_line_pos> dims = (883.0, 16.0) z = ($setlist_page1_z + 0.1)
 	repeat 8
 	<solid_line_pos> = (<solid_line_pos> + $setlist_solid_line_add)
 	<dotted_line_pos> = (<dotted_line_pos> + <dotted_line_add>)
-	Change setlist_solid_line_pos = <solid_line_pos>
-	Change setlist_dotted_line_pos = <dotted_line_pos>
-	Change \{setlist_num_songs = 0}
+	change setlist_solid_line_pos = <solid_line_pos>
+	change setlist_dotted_line_pos = <dotted_line_pos>
+	change \{setlist_num_songs = 0}
 	if English
 		setlist_header_tex = Setlist_Page1_Title
 	elseif French
@@ -1475,18 +1475,18 @@ script create_sl_assets
 		setlist_header_tex = Setlist_Page1_Title_it
 	endif
 	if GotParam \{tab_setlist}
-		displaySprite id = sl_page1_title parent = setlist_menu tex = <setlist_header_tex> Pos = (330.0, 220.0) dims = (512.0, 128.0) alpha = 0.7 z = ($setlist_page1_z + 0.2) rot_angle = 0
-		displaySprite parent = sl_page1_title tex = <setlist_header_tex> Pos = (-5.0, 10.0) dims = (512.0, 128.0) alpha = 0.2 z = ($setlist_page1_z + 0.2) rot_angle = -2
+		displaySprite id = sl_page1_title parent = setlist_menu tex = <setlist_header_tex> pos = (330.0, 220.0) dims = (512.0, 128.0) alpha = 0.7 z = ($setlist_page1_z + 0.2) rot_angle = 0
+		displaySprite parent = sl_page1_title tex = <setlist_header_tex> pos = (-5.0, 10.0) dims = (512.0, 128.0) alpha = 0.2 z = ($setlist_page1_z + 0.2) rot_angle = -2
 		GetUpperCaseString ($g_gh3_setlist.tier1.title)
-		displayText id = sl_text_1 parent = setlist_menu Scale = (1.0, 1.0) text = <UppercaseString> rgba = [195 80 45 255] Pos = <title_pos> z = $setlist_text_z noshadow
+		displayText id = sl_text_1 parent = setlist_menu scale = (1.0, 1.0) text = <UpperCaseString> rgba = [195 80 45 255] pos = <title_pos> z = $setlist_text_z noshadow
 	endif
 	if GotParam \{tab_downloads}
 		displayText \{parent = setlist_menu
 			id = sl_text_1
-			text = qs(0xd5a8875f)
+			text = qs("DOWNLOADED SONGS")
 			font = fontgrid_text_a10
-			Scale = 2
-			Pos = (330.0, 220.0)
+			scale = 2
+			pos = (330.0, 220.0)
 			rgba = [
 				50
 				30
@@ -1495,15 +1495,15 @@ script create_sl_assets
 			]
 			z = $setlist_text_z
 			noshadow}
-		displaySprite parent = setlist_menu tex = Setlist_Page1_Line_Red Pos = (320.0, 216.0) dims = (8.0, 6400.0) z = ($setlist_page1_z - 0.2)
+		displaySprite parent = setlist_menu tex = Setlist_Page1_Line_Red pos = (320.0, 216.0) dims = (8.0, 6400.0) z = ($setlist_page1_z - 0.2)
 	endif
 	if GotParam \{tab_bonus}
 		displayText \{parent = setlist_menu
 			id = sl_text_1
-			text = qs(0xa8cdde4f)
+			text = qs("BONUS SONGS")
 			font = fontgrid_text_a10
-			Scale = 2
-			Pos = (330.0, 220.0)
+			scale = 2
+			pos = (330.0, 220.0)
 			rgba = [
 				50
 				30
@@ -1512,35 +1512,35 @@ script create_sl_assets
 			]
 			z = $setlist_text_z
 			noshadow}
-		displaySprite parent = setlist_menu tex = Setlist_Page1_Line_Red Pos = (320.0, 216.0) dims = (8.0, 6400.0) z = ($setlist_page1_z - 0.2)
+		displaySprite parent = setlist_menu tex = Setlist_Page1_Line_Red pos = (320.0, 216.0) dims = (8.0, 6400.0) z = ($setlist_page1_z - 0.2)
 	endif
 	<text_pos> = (<title_pos> + (40.0, 54.0))
 	if ((GotParam tab_setlist) || (GotParam tab_bonus) || (GotParam tab_downloads))
 		num_tiers = ($g_gh3_setlist.num_tiers)
-		<Tier> = 0
-		Change \{setlist_selection_index = 0}
-		Change \{setlist_selection_tier = 1}
-		Change \{setlist_selection_song = 0}
-		Change \{setlist_selection_found = 0}
+		<tier> = 0
+		change \{setlist_selection_index = 0}
+		change \{setlist_selection_tier = 1}
+		change \{setlist_selection_song = 0}
+		change \{setlist_selection_found = 0}
 		begin
-		<Tier> = (<Tier> + 1)
+		<tier> = (<tier> + 1)
 		setlist_prefix = ($g_gh3_setlist.prefix)
-		formatText checksumName = tiername '%ptier%i' p = <setlist_prefix> i = <Tier>
-		formatText checksumName = tier_checksum 'tier%s' s = <Tier>
+		FormatText checksumname = tiername '%ptier%i' p = <setlist_prefix> i = <tier>
+		FormatText checksumname = tier_checksum 'tier%s' s = <tier>
 		unlocked = 1
 		if (<unlocked> = 1 || $is_network_game = 1)
-			if NOT (<Tier> = 1)
+			if NOT (<tier> = 1)
 				<text_pos> = (<text_pos> + (-40.0, 110.0))
 				GetUpperCaseString ($g_gh3_setlist.<tier_checksum>.title)
-				displayText parent = setlist_menu Scale = (1.0, 1.0) text = <UppercaseString> rgba = [190 75 40 255] Pos = <text_pos> z = $setlist_text_z noshadow
+				displayText parent = setlist_menu scale = (1.0, 1.0) text = <UpperCaseString> rgba = [190 75 40 255] pos = <text_pos> z = $setlist_text_z noshadow
 				<text_pos> = (<text_pos> + (40.0, 50.0))
 			endif
-			Change \{we_have_songs = FALSE}
+			change \{we_have_songs = false}
 			GetArraySize ($g_gh3_setlist.<tier_checksum>.songs)
-			num_songs = <array_Size>
+			num_songs = <array_size>
 			num_songs_unlocked = 0
 			song_count = 0
-			if (<array_Size> > 0)
+			if (<array_size> > 0)
 				begin
 				setlist_prefix = ($g_gh3_setlist.prefix)
 				format_globaltag_song_checksum part = ($g_gh3_setlist.part) song = ($g_gh3_setlist.<tier_checksum>.songs [<song_count>])
@@ -1550,24 +1550,24 @@ script create_sl_assets
 				endif
 				if IsSongAvailable song_checksum = <song_checksum> song = ($g_gh3_setlist.<tier_checksum>.songs [<song_count>]) for_bonus = <for_bonus>
 					if ($setlist_selection_found = 0)
-						Change setlist_selection_tier = <Tier>
-						Change setlist_selection_song = <song_count>
-						Change \{setlist_selection_found = 1}
+						change setlist_selection_tier = <tier>
+						change setlist_selection_song = <song_count>
+						change \{setlist_selection_found = 1}
 					endif
 					get_song_title song = ($g_gh3_setlist.<tier_checksum>.songs [<song_count>])
 					get_song_prefix song = ($g_gh3_setlist.<tier_checksum>.songs [<song_count>])
 					get_song_artist song = ($g_gh3_setlist.<tier_checksum>.songs [<song_count>])
-					formatText \{checksumName = textid
+					FormatText \{checksumname = textid
 						'id_song%i'
 						i = $setlist_num_songs
 						AddToStringLookup = true}
 					CreateScreenElement {
-						Type = TextElement
+						type = TextElement
 						id = <textid>
 						parent = setlist_menu
-						Scale = (0.85, 0.85)
+						scale = (0.85, 0.85)
 						text = <song_title>
-						Pos = <text_pos>
+						pos = <text_pos>
 						rgba = [50 30 10 255]
 						z_priority = $setlist_text_z
 						font = fontgrid_text_a6
@@ -1590,7 +1590,7 @@ script create_sl_assets
 						get_quickplay_song_stars song = <song_prefix>
 					endif
 					if NOT ($game_mode = training || $game_mode = p2_faceoff || $game_mode = p2_pro_faceoff || $game_mode = p2_battle)
-						if Progression_IsBossSong tier_global = g_gh3_setlist Tier = <Tier> song = ($g_gh3_setlist.<tier_checksum>.songs [<song_count>])
+						if Progression_IsBossSong tier_global = g_gh3_setlist tier = <tier> song = ($g_gh3_setlist.<tier_checksum>.songs [<song_count>])
 							stars = 0
 						endif
 						if ($game_mode = p1_quickplay || $game_mode = p2_quickplay)
@@ -1609,7 +1609,7 @@ script create_sl_assets
 								<star> = Random (@ ($setlist_loop_stars [0]) @ ($setlist_loop_stars [1]) @ ($setlist_loop_stars [2]) )
 							endif
 							<star_pos> = (<star_pos> - <star_space>)
-							displaySprite parent = setlist_menu tex = <star> rgba = [233 205 166 255] z = $setlist_text_z Pos = <star_pos>
+							displaySprite parent = setlist_menu tex = <star> rgba = [233 205 166 255] z = $setlist_text_z pos = <star_pos>
 							repeat <stars>
 						endif
 						GetGlobalTags <song_checksum> param = score
@@ -1617,24 +1617,24 @@ script create_sl_assets
 							get_quickplay_song_score song = <song_prefix>
 						endif
 						if (<score> > 0)
-							if Progression_IsBossSong tier_global = g_gh3_setlist Tier = <Tier> song = ($g_gh3_setlist.<tier_checksum>.songs [<song_count>])
+							if Progression_IsBossSong tier_global = g_gh3_setlist tier = <tier> song = ($g_gh3_setlist.<tier_checksum>.songs [<song_count>])
 								if (<score> = 1)
-									formatText \{TextName = score_text
-										qs(0x1492cc88)}
+									FormatText \{TextName = score_text
+										qs("WUSSED OUT")}
 								else
-									formatText \{TextName = score_text
-										qs(0x7086f260)}
+									FormatText \{TextName = score_text
+										qs("BATTLE WON")}
 								endif
 							else
-								formatText TextName = score_text qs(0x76b3fda7) d = <score> usecommas
+								FormatText TextName = score_text qs("\L%d") d = <score> usecommas
 							endif
 							<score_pos> = (<text_pos> + (660.0, 40.0))
 							CreateScreenElement {
-								Type = TextElement
+								type = TextElement
 								parent = setlist_menu
-								Scale = (0.75, 0.75)
+								scale = (0.75, 0.75)
 								text = <score_text>
-								Pos = <score_pos>
+								pos = <score_pos>
 								rgba = [100 120 160 255]
 								z_priority = $setlist_text_z
 								font = fontgrid_text_a6
@@ -1644,16 +1644,16 @@ script create_sl_assets
 						endif
 					endif
 					<text_pos> = (<text_pos> + (60.0, 40.0))
-					formatText \{checksumName = artistid
+					FormatText \{checksumname = artistid
 						'artist_id%d'
 						d = $setlist_num_songs}
 					GetUpperCaseString <song_artist>
-					song_artist = <UppercaseString>
-					displayText parent = setlist_menu Scale = (0.6, 0.6) id = <artistid> text = <song_artist> rgba = [60 100 140 255] Pos = <text_pos> z = $setlist_text_z font_spacing = 1 noshadow
+					song_artist = <UpperCaseString>
+					displayText parent = setlist_menu scale = (0.6, 0.6) id = <artistid> text = <song_artist> rgba = [60 100 140 255] pos = <text_pos> z = $setlist_text_z font_spacing = 1 noshadow
 					<text_pos> = (<text_pos> + (-60.0, 40.0))
-					Change setlist_num_songs = ($setlist_num_songs + 1)
+					change setlist_num_songs = ($setlist_num_songs + 1)
 					num_songs_unlocked = (<num_songs_unlocked> + 1)
-					Change \{we_have_songs = true}
+					change \{we_have_songs = true}
 				endif
 				song_count = (<song_count> + 1)
 				repeat <num_songs>
@@ -1664,37 +1664,37 @@ script create_sl_assets
 	if ((($game_mode = p1_career) || ($game_mode = p2_career)) && $is_demo_mode = 0)
 		get_progression_globals game_mode = ($game_mode)
 		summation_career_score tier_global = <tier_global>
-		formatText TextName = total_score_text qs(0x7b2c5967) d = <career_score> usecommas
+		FormatText TextName = total_score_text qs("Career Score: %d") d = <career_score> usecommas
 		displayText {
 			parent = setlist_menu
-			Scale = 0.7
+			scale = 0.7
 			text = <total_score_text>
-			Pos = ((640.0, 120.0) + (<text_pos>.(0.0, 1.0) * (0.0, 1.0)))
+			pos = ((640.0, 120.0) + (<text_pos>.(0.0, 1.0) * (0.0, 1.0)))
 			just = [center top]
 			z = $setlist_text_z
 			rgba = [30 30 30 255]
 			noshadow
 		}
 	endif
-	Change \{setlist_begin_text = $setlist_menu_pos}
+	change \{setlist_begin_text = $setlist_menu_pos}
 	if ($setlist_num_songs > 0)
 		retail_menu_focus \{id = id_song0}
 		SetScreenElementProps \{id = id_song0
-			Shadow}
+			shadow}
 	endif
-	CreateScreenElement \{Type = ContainerElement
+	CreateScreenElement \{type = ContainerElement
 		parent = root_window
 		id = sl_fixed
-		Pos = (0.0, 0.0)
+		pos = (0.0, 0.0)
 		just = [
 			left
 			top
 		]}
 	<clip_pos> = (160.0, 390.0)
-	displaySprite id = sl_clipart parent = sl_fixed Pos = <clip_pos> dims = (160.0, 160.0) z = ($setlist_text_z + 0.1) rgba = [200 200 200 255]
-	displaySprite id = sl_clipart_shadow parent = sl_fixed Pos = (<clip_pos> + (3.0, 3.0)) dims = (160.0, 160.0) z = ($setlist_text_z) rgba = [0 0 0 128]
+	displaySprite id = sl_clipart parent = sl_fixed pos = <clip_pos> dims = (160.0, 160.0) z = ($setlist_text_z + 0.1) rgba = [200 200 200 255]
+	displaySprite id = sl_clipart_shadow parent = sl_fixed pos = (<clip_pos> + (3.0, 3.0)) dims = (160.0, 160.0) z = ($setlist_text_z) rgba = [0 0 0 128]
 	<clip_pos> = (<clip_pos> + (15.0, 50.0))
-	displaySprite id = sl_clip parent = sl_fixed tex = Setlist_Clip just = [-0.5 -0.9] Pos = <clip_pos> dims = (141.0, 102.0) z = ($setlist_text_z + 0.2)
+	displaySprite id = sl_clip parent = sl_fixed tex = Setlist_Clip just = [-0.5 -0.9] pos = <clip_pos> dims = (141.0, 102.0) z = ($setlist_text_z + 0.2)
 	if ($current_tab = tab_setlist)
 		hilite_dims = (737.0, 80.0)
 	elseif ($current_tab = tab_downloads)
@@ -1702,27 +1702,27 @@ script create_sl_assets
 	elseif ($current_tab = tab_bonus)
 		hilite_dims = (690.0, 80.0)
 	endif
-	displaySprite id = sl_highlight parent = sl_fixed tex = white Pos = (326.0, 428.0) dims = <hilite_dims> z = ($setlist_text_z - 0.1) rgba = [255 255 255 128]
+	displaySprite id = sl_highlight parent = sl_fixed tex = white pos = (326.0, 428.0) dims = <hilite_dims> z = ($setlist_text_z - 0.1) rgba = [255 255 255 128]
 	<bg_helper_pos> = (140.0, 585.0)
 	<helper_rgba> = [105 65 7 160]
-	Change \{user_control_pill_gap = 100}
+	change \{user_control_pill_gap = 100}
 	if ($current_tab = tab_setlist)
-		setlist_show_helperbar Pos = (<bg_helper_pos> + (64.0, 4.0))
+		setlist_show_helperbar pos = (<bg_helper_pos> + (64.0, 4.0))
 	elseif ($current_tab = tab_bonus)
 		setlist_show_helperbar {
-			Pos = (<bg_helper_pos> + (64.0, 4.0))
-			text_option1 = qs(0x3c1b3ab6)
-			text_option2 = qs(0x271e2cfc)
-			button_option1 = qs(0x9e1f95ce)
-			button_option2 = qs(0xc8453248)
+			pos = (<bg_helper_pos> + (64.0, 4.0))
+			text_option1 = qs("SETLIST")
+			text_option2 = qs("DOWNLOADS")
+			button_option1 = qs("\L\m2")
+			button_option2 = qs("\L\m4")
 		}
 	else
 		setlist_show_helperbar {
-			Pos = (<bg_helper_pos> + (64.0, 4.0))
-			text_option1 = qs(0x3c1b3ab6)
-			text_option2 = qs(0x2e900a4e)
-			button_option1 = qs(0x9e1f95ce)
-			button_option2 = qs(0x8704a48f)
+			pos = (<bg_helper_pos> + (64.0, 4.0))
+			text_option1 = qs("SETLIST")
+			text_option2 = qs("BONUS")
+			button_option1 = qs("\L\m2")
+			button_option2 = qs("\L\m3")
 		}
 	endif
 	displaySprite \{id = sl_overshadow
@@ -1734,7 +1734,7 @@ script create_sl_assets
 		]
 		parent = root_window
 		tex = Setlist_Overshadow
-		Pos = (0.0, 0.0)
+		pos = (0.0, 0.0)
 		dims = (1280.0, 720.0)
 		z = 5.0}
 endscript
@@ -1764,10 +1764,10 @@ script get_quickplay_song_stars
 	return stars = <beststars> percent100 = <tr_percent100>
 endscript
 
-script setlist_show_helperbar \{text_option1 = qs(0x2e900a4e)
-		text_option2 = qs(0x271e2cfc)
-		button_option1 = qs(0x8704a48f)
-		button_option2 = qs(0xc8453248)
+script setlist_show_helperbar \{text_option1 = qs("BONUS")
+		text_option2 = qs("DOWNLOADS")
+		button_option1 = qs("\L\m3")
+		button_option2 = qs("\L\m4")
 		spacing = 16}
 endscript
 

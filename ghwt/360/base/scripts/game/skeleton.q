@@ -32,13 +32,13 @@ skater_accessory_bones = [
 	Bone_ACC_ShortLeg_R
 	Bone_Collar_L
 	Bone_Collar_R
-	bone_head
+	Bone_Head
 ]
 BoneSkipLODInfo = {
 }
 CustonUnactiveBoneList_SkaterAll = [
 	Bone_Pelvis_master
-	BONE_PELVIS
+	Bone_Pelvis
 	Bone_Hips
 	Bone_Thigh_L
 	Bone_Knee_L
@@ -56,7 +56,7 @@ CustonUnactiveBoneList_SkaterAll = [
 	Bone_Split_Ass_R
 	Bone_Stomach_Lower
 	Bone_Stomach_Upper
-	bone_chest
+	Bone_Chest
 	Bone_Collar_L
 	Bone_Bicep_L
 	Bone_Forearm_L
@@ -94,7 +94,7 @@ CustonUnactiveBoneList_SkaterAll = [
 	Bone_Twist_Bicep_Top_R
 	Bone_Split_Elbow_R
 	Bone_Neck
-	bone_head
+	Bone_Head
 	Bone_Brow_L
 	Bone_Brow_Mid
 	Bone_Brow_Mid_L
@@ -104,7 +104,7 @@ CustonUnactiveBoneList_SkaterAll = [
 	Bone_Cheek_R
 	Bone_Cheek_Upper_L
 	Bone_Cheek_Upper_R
-	Bone_Eye_L
+	bone_eye_l
 	Bone_Eye_R
 	Bone_Eyelid_Lower_L
 	Bone_Eyelid_Lower_R

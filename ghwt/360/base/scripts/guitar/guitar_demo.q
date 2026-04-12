@@ -2,7 +2,7 @@ GH3_Demo_Songs_Career = {
 	prefix = 'demo1'
 	num_tiers = 1
 	tier1 = {
-		title = qs(0xfb629cef)
+		title = qs("1. Starting out small")
 		songs = [
 			schoolsout
 			sabotage
@@ -35,7 +35,7 @@ GH3_Demo_Songs_Multiplayer = {
 	prefix = 'demo2'
 	num_tiers = 1
 	tier1 = {
-		title = qs(0xfb629cef)
+		title = qs("1. Starting out small")
 		songs = [
 			schoolsout
 			sabotage
@@ -66,7 +66,7 @@ GH3_Demo_Songs_Coop = {
 	prefix = 'demo3'
 	num_tiers = 1
 	tier1 = {
-		title = qs(0xfb629cef)
+		title = qs("1. Starting out small")
 		songs = [
 			schoolsout
 			sabotage
@@ -96,7 +96,7 @@ GH3_Demo_Songs_Quickplay = {
 	prefix = 'demo4'
 	num_tiers = 1
 	tier1 = {
-		title = qs(0xfb629cef)
+		title = qs("1. Starting out small")
 		songs = [
 			schoolsout
 			sabotage

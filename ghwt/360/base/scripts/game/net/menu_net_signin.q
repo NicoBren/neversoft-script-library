@@ -2,46 +2,46 @@ online_signin_autoload_required = 0
 
 script create_online_signin_splash \{menu_id = signin_dialog_menu
 		vmenu_id = signin_dialog_vmenu
-		Pos = (640.0, 520.0)
+		pos = (640.0, 520.0)
 		z = 110}
-	printf \{qs(0x373bc011)}
+	printf \{qs("\L--- create_online_signin_splash")}
 	create_menu_backdrop \{texture = xb_online_bg}
 	begin
 	if ($net_safe_to_enter_net_play = 1)
 		break
 	else
 		Wait \{0.5
-			Seconds}
+			seconds}
 	endif
 	repeat
 	Wait \{2
 		frames}
-	Change \{online_signin_autoload_required = 0}
+	change \{online_signin_autoload_required = 0}
 	if CheckForSignIn
-		NetSessionFunc \{func = OnlineSignIn}
+		NetSessionFunc \{func = onlinesignin}
 	else
 		if isXenon
 			menu_pos = (640.0, 465.0)
 			bookend_r_pos = (710.0, 533.0)
 			bookend_l_pos = (500.0, 533.0)
-			CreateScreenElement \{Type = ContainerElement
+			CreateScreenElement \{type = ContainerElement
 				parent = root_window
 				id = warning_message_container
-				Pos = (0.0, 0.0)}
+				pos = (0.0, 0.0)}
 			CreateScreenElement {
-				Type = VScrollingMenu
+				type = VScrollingMenu
 				parent = warning_message_container
 				id = <menu_id>
 				just = [center top]
 				dims = (500.0, 150.0)
-				Pos = (640.0, 465.0)
+				pos = (640.0, 465.0)
 				z_priority = 1
 			}
 			CreateScreenElement {
-				Type = VMenu
+				type = VMenu
 				parent = <menu_id>
 				id = <vmenu_id>
-				Pos = (298.0, 0.0)
+				pos = (298.0, 0.0)
 				just = [center top]
 				internal_just = [center top]
 				dims = (500.0, 150.0)
@@ -51,13 +51,13 @@ script create_online_signin_splash \{menu_id = signin_dialog_menu
 					{pad_back online_signin_select_cancel}
 				]
 			}
-			Change \{menu_focus_color = [
+			change \{menu_focus_color = [
 					180
 					50
 					50
 					255
 				]}
-			Change \{menu_unfocus_color = [
+			change \{menu_unfocus_color = [
 					0
 					0
 					0
@@ -69,7 +69,7 @@ script create_online_signin_splash \{menu_id = signin_dialog_menu
 				tex = Dialog_Title_BG
 				dims = (224.0, 224.0)
 				z = 9
-				Pos = (640.0, 100.0)
+				pos = (640.0, 100.0)
 				just = [
 					right
 					top
@@ -79,7 +79,7 @@ script create_online_signin_splash \{menu_id = signin_dialog_menu
 				tex = Dialog_Title_BG
 				dims = (224.0, 224.0)
 				z = 9
-				Pos = (640.0, 100.0)
+				pos = (640.0, 100.0)
 				just = [
 					left
 					top
@@ -87,7 +87,7 @@ script create_online_signin_splash \{menu_id = signin_dialog_menu
 			displaySprite \{parent = warning_message_container
 				id = options_bg_1
 				tex = dialog_menu_bg
-				Pos = (640.0, 500.0)
+				pos = (640.0, 500.0)
 				dims = (320.0, 64.0)
 				z = 9
 				just = [
@@ -97,7 +97,7 @@ script create_online_signin_splash \{menu_id = signin_dialog_menu
 			displaySprite \{parent = warning_message_container
 				id = options_bg_2
 				tex = dialog_menu_bg
-				Pos = (640.0, 530.0)
+				pos = (640.0, 530.0)
 				dims = (320.0, 64.0)
 				z = 9
 				just = [
@@ -105,24 +105,24 @@ script create_online_signin_splash \{menu_id = signin_dialog_menu
 					top
 				]
 				flip_h}
-			CreateScreenElement \{Type = TextElement
+			CreateScreenElement \{type = TextElement
 				parent = warning_message_container
 				font = fontgrid_title_a1
-				Scale = 1.3
+				scale = 1.3
 				rgba = [
 					223
 					223
 					223
 					250
 				]
-				text = qs(0xaa163738)
+				text = qs("WARNING")
 				just = [
 					center
 					top
 				]
 				z_priority = 10.0
-				Pos = (640.0, 175.0)
-				Shadow
+				pos = (640.0, 175.0)
+				shadow
 				shadow_offs = (3.0, 3.0)
 				shadow_rgba = [
 					0
@@ -132,35 +132,35 @@ script create_online_signin_splash \{menu_id = signin_dialog_menu
 				]}
 			if isXenon
 				if (NetSessionFunc func = is_cable_unplugged)
-					<sign_in_text> = qs(0xeef7c882)
+					<sign_in_text> = qs("Unable to connect to Xbox LIVE. Please check your network connection and settings and try again.")
 					single_option = 1
 				elseif (CheckForSignIn local)
-					<sign_in_text> = qs(0xa5439413)
+					<sign_in_text> = qs("The current Gamer Profile is not enabled for Xbox LIVE multiplayer game play.")
 				else
-					<sign_in_text> = qs(0xee63bbfc)
+					<sign_in_text> = qs("No gamer profile currently signed in. Please sign into an Xbox LIVE multiplayer enabled gamer profile to continue.")
 				endif
 			else
-				<sign_in_text> = qs(0x30d792b4)
+				<sign_in_text> = qs("The current profile does not have permission to enter the lobby.")
 			endif
 			CreateScreenElement {
-				Type = TextBlockElement
+				type = TextBlockElement
 				parent = warning_message_container
 				font = fontgrid_title_a1
-				Scale = 0.6
+				scale = 0.6
 				rgba = [210 210 210 250]
 				text = <sign_in_text>
 				just = [center top]
 				internal_just = [center top]
-				internal_scale = <Scale>
+				internal_scale = <scale>
 				z_priority = <z>
-				Pos = (640.0, 310.0)
+				pos = (640.0, 310.0)
 				dims = (800.0, 320.0)
 				line_spacing = 1.0
 			}
-			cancel_text = qs(0x182f0173)
+			cancel_text = qs("CONTINUE")
 			if NOT GotParam \{single_option}
 				CreateScreenElement {
-					Type = ContainerElement
+					type = ContainerElement
 					parent = <vmenu_id>
 					dims = (100.0, 50.0)
 					event_handlers = [
@@ -171,45 +171,45 @@ script create_online_signin_splash \{menu_id = signin_dialog_menu
 				}
 				container_id = <id>
 				CreateScreenElement {
-					Type = TextElement
+					type = TextElement
 					parent = <container_id>
 					local_id = text
 					font = fontgrid_title_a1
-					Scale = 0.85
+					scale = 0.85
 					rgba = ($menu_unfocus_color)
-					text = qs(0x17df5913)
+					text = qs("SIGN IN")
 					just = [center top]
 					z_priority = (<z> + 0.1)
 				}
 				fit_text_into_menu_item id = <id> max_width = 240
 				GetScreenElementDims id = <id>
 				CreateScreenElement {
-					Type = SpriteElement
+					type = SpriteElement
 					parent = <container_id>
 					local_id = bookend_left
 					texture = dialog_menu_hilight
 					alpha = 0.0
 					just = [right center]
-					Pos = ((0.0, 20.0) + (1.0, 0.0) * (<width> / (-2)) + (-5.0, 0.0))
+					pos = ((0.0, 20.0) + (1.0, 0.0) * (<width> / (-2)) + (-5.0, 0.0))
 					z_priority = (<z> + 0.1)
-					Scale = (1.0, 1.0)
+					scale = (1.0, 1.0)
 					flip_v
 				}
 				CreateScreenElement {
-					Type = SpriteElement
+					type = SpriteElement
 					parent = <container_id>
 					local_id = bookend_right
 					texture = dialog_menu_hilight
 					alpha = 0.0
 					just = [left center]
-					Pos = ((0.0, 20.0) + (1.0, 0.0) * (<width> / (2)) + (5.0, 0.0))
+					pos = ((0.0, 20.0) + (1.0, 0.0) * (<width> / (2)) + (5.0, 0.0))
 					z_priority = (<z> + 0.1)
-					Scale = (1.0, 1.0)
+					scale = (1.0, 1.0)
 				}
-				cancel_text = qs(0xf7723015)
+				cancel_text = qs("CANCEL")
 			endif
 			CreateScreenElement {
-				Type = ContainerElement
+				type = ContainerElement
 				parent = <vmenu_id>
 				dims = (100.0, 50.0)
 				event_handlers = [
@@ -220,11 +220,11 @@ script create_online_signin_splash \{menu_id = signin_dialog_menu
 			}
 			container_id = <id>
 			CreateScreenElement {
-				Type = TextElement
+				type = TextElement
 				parent = <container_id>
 				local_id = text
 				font = fontgrid_title_a1
-				Scale = 0.85
+				scale = 0.85
 				rgba = ($menu_unfocus_color)
 				text = <cancel_text>
 				just = [center top]
@@ -233,37 +233,37 @@ script create_online_signin_splash \{menu_id = signin_dialog_menu
 			fit_text_into_menu_item id = <id> max_width = 240
 			GetScreenElementDims id = <id>
 			CreateScreenElement {
-				Type = SpriteElement
+				type = SpriteElement
 				parent = <container_id>
 				local_id = bookend_left
 				texture = dialog_menu_hilight
 				alpha = 0.0
 				just = [right center]
-				Pos = ((0.0, 20.0) + (1.0, 0.0) * (<width> / (-2)) + (-5.0, 0.0))
+				pos = ((0.0, 20.0) + (1.0, 0.0) * (<width> / (-2)) + (-5.0, 0.0))
 				z_priority = (<z> + 0.1)
-				Scale = (1.0, 1.0)
+				scale = (1.0, 1.0)
 				flip_v
 			}
 			CreateScreenElement {
-				Type = SpriteElement
+				type = SpriteElement
 				parent = <container_id>
 				local_id = bookend_right
 				texture = dialog_menu_hilight
 				alpha = 0.0
 				just = [left center]
-				Pos = ((0.0, 20.0) + (1.0, 0.0) * (<width> / (2)) + (5.0, 0.0))
+				pos = ((0.0, 20.0) + (1.0, 0.0) * (<width> / (2)) + (5.0, 0.0))
 				z_priority = (<z> + 0.1)
-				Scale = (1.0, 1.0)
+				scale = (1.0, 1.0)
 			}
-			add_user_control_helper \{text = qs(0xc18d5e76)
+			add_user_control_helper \{text = qs("SELECT")
 				button = green
 				z = 100}
-			add_user_control_helper \{text = qs(0xaf4d5dd2)
+			add_user_control_helper \{text = qs("BACK")
 				button = red
 				z = 100}
-			LaunchEvent Type = focus target = <vmenu_id>
+			LaunchEvent type = focus target = <vmenu_id>
 		else
-			NetSessionFunc \{func = OnlineSignIn}
+			NetSessionFunc \{func = onlinesignin}
 		endif
 	endif
 endscript
@@ -283,8 +283,8 @@ script destroy_online_signin_splash
 endscript
 
 script online_signin_select_signin 
-	Change \{online_signin_autoload_required = 1}
-	NetSessionFunc \{func = OnlineSignIn}
+	change \{online_signin_autoload_required = 1}
+	NetSessionFunc \{func = onlinesignin}
 endscript
 
 script online_signin_select_cancel 

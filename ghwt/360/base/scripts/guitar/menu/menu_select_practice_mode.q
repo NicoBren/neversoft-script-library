@@ -1,33 +1,33 @@
 menu_select_practice_mode_font = fontgrid_title_a1
 training_mode = tutorials
 
-script maybeallowtutorials 
+script MaybeAllowTutorials 
 	if (
 			(IsGuitarController controller = $primary_controller)
 			||
-			(isdrumcontroller controller = $primary_controller)
+			(IsDrumController controller = $primary_controller)
 			||
-			((isps3) && $enable_button_cheats = 1)
+			((IsPs3) && $enable_button_cheats = 1)
 		)
 		return \{allow_tutorials = 1}
 	endif
 endscript
 
 script create_select_practice_mode_menu 
-	Change \{rich_presence_context = presence_menus}
-	SpawnScriptNow \{menu_music_on}
+	change \{rich_presence_context = presence_menus}
+	spawnscriptnow \{menu_music_on}
 	CreateScreenElement {
-		Type = ContainerElement
+		type = ContainerElement
 		id = spm_container
 		parent = root_window
-		Pos = (0.0, 0.0)
+		pos = (0.0, 0.0)
 		exclusive_device = ($primary_controller)
 	}
 	create_menu_backdrop \{texture = menu_venue_bg}
 	displaySprite \{texture = practice_poster_2
 		id = spm_poster
 		parent = spm_container
-		Pos = (640.0, 340.0)
+		pos = (640.0, 340.0)
 		dims = (600.0, 600.0)
 		rot_angle = -5
 		just = [
@@ -36,7 +36,7 @@ script create_select_practice_mode_menu
 		]}
 	displaySprite \{tex = practice_typebar_1
 		parent = spm_container
-		Pos = (710.0, 240.0)
+		pos = (710.0, 240.0)
 		dims = (192.0, 75.0)
 		rot_angle = -5
 		just = [
@@ -52,7 +52,7 @@ script create_select_practice_mode_menu
 		z = 5}
 	displaySprite \{tex = practice_typebar_2
 		parent = spm_container
-		Pos = (555.0, 320.0)
+		pos = (555.0, 320.0)
 		dims = (220.0, 75.0)
 		rot_angle = -5
 		just = [
@@ -66,9 +66,9 @@ script create_select_practice_mode_menu
 			255
 		]
 		z = 5}
-	displaySprite \{tex = tape_H_02
+	displaySprite \{tex = Tape_H_02
 		parent = spm_container
-		Pos = (775.0, 60.0)
+		pos = (775.0, 60.0)
 		dims = (160.0, 64.0)
 		rot_angle = -20
 		just = [
@@ -77,15 +77,15 @@ script create_select_practice_mode_menu
 		]
 		z = 7}
 	displaySprite {
-		tex = tape_H_02
+		tex = Tape_H_02
 		parent = <id>
-		Pos = (5.0, 5.0)
+		pos = (5.0, 5.0)
 		rgba = [0 0 0 128]
 		z = 6
 	}
-	displaySprite \{tex = tape_H_02
+	displaySprite \{tex = Tape_H_02
 		parent = spm_container
-		Pos = (500.0, 640.0)
+		pos = (500.0, 640.0)
 		dims = (160.0, 64.0)
 		rot_angle = 20
 		just = [
@@ -95,15 +95,15 @@ script create_select_practice_mode_menu
 		z = 7
 		flip_v}
 	displaySprite {
-		tex = tape_H_02
+		tex = Tape_H_02
 		parent = <id>
-		Pos = (5.0, 5.0)
+		pos = (5.0, 5.0)
 		rgba = [0 0 0 128]
 		z = 6
 	}
 	displaySprite \{tex = tape_V_02
 		parent = spm_container
-		Pos = (430.0, 120.0)
+		pos = (430.0, 120.0)
 		dims = (160.0, 96.0)
 		rot_angle = 280
 		just = [
@@ -114,17 +114,17 @@ script create_select_practice_mode_menu
 	displaySprite {
 		tex = tape_V_02
 		parent = <id>
-		Pos = (-5.0, 5.0)
+		pos = (-5.0, 5.0)
 		rgba = [0 0 0 128]
 		z = 6
 	}
-	CreateScreenElement \{Type = TextElement
+	CreateScreenElement \{type = TextElement
 		parent = spm_container
 		id = current_menu
-		text = qs(0xc6510dd1)
+		text = qs("TUTORIALS")
 		font = fontgrid_text_a6
-		Pos = (555.0, 320.0)
-		Scale = 0.7
+		pos = (555.0, 320.0)
+		scale = 0.7
 		rot_angle = -5
 		just = [
 			center
@@ -151,10 +151,10 @@ script create_select_practice_mode_menu
 		z_priority = 10}
 	displayText \{id = practice_text
 		parent = spm_container
-		text = qs(0x3ea7dec9)
+		text = qs("PRACTICE")
 		font = fontgrid_text_a6
-		Pos = (710.0, 245.0)
-		Scale = 0.7
+		pos = (710.0, 245.0)
+		scale = 0.7
 		just = [
 			center
 			center
@@ -162,9 +162,9 @@ script create_select_practice_mode_menu
 		rot = -5
 		z = 10}
 	displayText \{parent = spm_container
-		text = qs(0x42622a8d)
+		text = qs("SELECT PRACTICE MODE")
 		font = fontgrid_text_a11
-		Pos = (655.0, 540.0)
+		pos = (655.0, 540.0)
 		rgba = [
 			255
 			195
@@ -180,9 +180,9 @@ script create_select_practice_mode_menu
 		]}
 	fit_text_in_rectangle id = <id> only_if_larger_x = 1 dims = (320.0, 70.0)
 	update_training_menu
-	maybeallowtutorials
+	MaybeAllowTutorials
 	if NOT GotParam \{allow_tutorials}
-		Change \{training_mode = practice}
+		change \{training_mode = practice}
 		update_training_menu
 	endif
 	set_user_control_color \{text_rgba = [
@@ -197,10 +197,10 @@ script create_select_practice_mode_menu
 			0
 			200
 		]}
-	add_user_control_helper \{text = qs(0xc18d5e76)
+	add_user_control_helper \{text = qs("SELECT")
 		button = green
 		z = 100}
-	add_user_control_helper \{text = qs(0xaf4d5dd2)
+	add_user_control_helper \{text = qs("BACK")
 		button = red
 		z = 100}
 endscript
@@ -213,13 +213,13 @@ script destroy_select_practice_mode_menu
 endscript
 
 script switch_training_mode 
-	maybeallowtutorials
+	MaybeAllowTutorials
 	if GotParam \{allow_tutorials}
 		generic_menu_up_or_down_sound
 		if ($training_mode = tutorials)
-			Change \{training_mode = practice}
+			change \{training_mode = practice}
 		else
-			Change \{training_mode = tutorials}
+			change \{training_mode = tutorials}
 		endif
 		update_training_menu
 	endif
@@ -228,7 +228,7 @@ endscript
 script choose_training_mode 
 	generic_menu_pad_choose_sound
 	if ($training_mode = tutorials)
-		maybeallowtutorials
+		MaybeAllowTutorials
 		if GotParam \{allow_tutorials}
 			generic_event_choose \{state = uistate_select_tutorial}
 		endif
@@ -254,7 +254,7 @@ script update_training_menu
 					200
 					255
 				]
-				Scale = 0.75}
+				scale = 0.75}
 		endif
 		if ScreenElementExists \{id = practice_text}
 			SetScreenElementProps \{id = practice_text
@@ -264,7 +264,7 @@ script update_training_menu
 					145
 					255
 				]
-				Scale = 0.6}
+				scale = 0.6}
 		endif
 	else
 		if ScreenElementExists \{id = spm_poster}
@@ -279,7 +279,7 @@ script update_training_menu
 					145
 					255
 				]
-				Scale = 0.6}
+				scale = 0.6}
 		endif
 		if ScreenElementExists \{id = practice_text}
 			SetScreenElementProps \{id = practice_text
@@ -289,7 +289,7 @@ script update_training_menu
 					30
 					255
 				]
-				Scale = 0.75}
+				scale = 0.75}
 		endif
 	endif
 endscript

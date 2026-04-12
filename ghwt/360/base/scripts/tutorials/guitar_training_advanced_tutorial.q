@@ -80,15 +80,15 @@ training_advanced_techniques_tutorial_script = [
 
 script training_advanced_techniques_tutorial_startup 
 	training_init_session
-	LaunchEvent \{Type = unfocus
+	LaunchEvent \{type = unfocus
 		target = root_window}
 	create_training_pause_handler
 	training_create_narrator_icons
 endscript
 
 script training_4_1_show_title 
-	Change \{g_training_lessons_completed = 0}
-	training_show_title \{title = qs(0x891ade11)}
+	change \{g_training_lessons_completed = 0}
+	training_show_title \{title = qs("Advanced Techniques Tutorial")}
 	begin
 	if ($transitions_locked = 0)
 		break
@@ -98,53 +98,53 @@ script training_4_1_show_title
 	repeat
 	create_training_pause_handler
 	Wait \{3
-		Seconds}
+		seconds}
 	training_destroy_title
 endscript
 
 script training_4_1_explain 
-	training_set_lesson_header_text \{number = qs(0x22ee76e7)
-		text = qs(0x877a61d7)}
+	training_set_lesson_header_text \{number = qs("\L1")
+		text = qs("STRING BASICS")}
 	training_add_lesson_body_text \{number = 1
-		text = qs(0x980da364)}
+		text = qs("Holding the highest note overrides the notes below")}
 	training_show_lesson_header
 	training_show_narrator \{narrator = 'guitarist'}
 	training_play_sound \{Sound = 'Tut_Gtr_StringBasics_01_GTR'
 		Wait}
 	Wait \{0.5
-		Seconds
+		seconds
 		ignoreslomo}
 	training_play_sound \{Sound = 'Tut_Gtr_StringBasics_02_GTR'
 		Wait}
 	Wait \{0.5
-		Seconds
+		seconds
 		ignoreslomo}
 	training_play_sound \{Sound = 'Tut_Gtr_StringBasics_03_GTR'
 		Wait}
 	Wait \{0.5
-		Seconds
+		seconds
 		ignoreslomo}
 	training_play_sound \{Sound = 'Tut_Gtr_StringBasics_04_GTR'
 		Wait}
 	Wait \{0.5
-		Seconds
+		seconds
 		ignoreslomo}
 	training_play_sound \{Sound = 'Tut_Gtr_StringBasics_05_GTR'
 		Wait}
 	Wait \{0.5
-		Seconds
+		seconds
 		ignoreslomo}
 	training_play_sound \{Sound = 'Tut_Gtr_StringBasics_06_GTR'
 		Wait}
 	Wait \{1
-		Seconds
+		seconds
 		ignoreslomo}
-	Change g_training_lessons_completed = ($g_training_lessons_completed + 1)
+	change g_training_lessons_completed = ($g_training_lessons_completed + 1)
 endscript
 
 script training_4_2_explain 
-	training_set_lesson_header_text \{number = qs(0x09c32524)
-		text = qs(0x67759f6e)}
+	training_set_lesson_header_text \{number = qs("\L2")
+		text = qs("HAMMER-ON FINGERING")}
 	training_clear_lesson_body_text
 	training_show_lesson_header
 	training_show_narrator \{narrator = 'guitarist'}
@@ -155,114 +155,114 @@ script training_4_2_show_guitar
 	<guitar_tex> = tutorial_guitar
 	CreateScreenElement {
 		parent = training_container
-		Type = SpriteElement
+		type = SpriteElement
 		id = guitar_sprite
 		just = [center center]
 		texture = <guitar_tex>
-		Pos = (630.0, 400.0)
+		pos = (630.0, 400.0)
 		rot_angle = 0
 		rgba = [255 255 255 255]
-		Scale = (0.4, 0.4)
+		scale = (0.4, 0.4)
 		z_priority = 4
 	}
 	training_create_fret_finger_sprites
-	pose_fret_fingers \{Color = None}
+	pose_fret_fingers \{color = none}
 	training_create_strum_sprites
-	pose_strum_fingers \{Pos = middle}
+	pose_strum_fingers \{pos = middle}
 	training_play_sound \{Sound = 'Tut_Gtr_HOFinger_01_GTR'
 		Wait}
 	Wait \{0.5
-		Seconds
+		seconds
 		ignoreslomo}
 	training_play_sound \{Sound = 'Tut_Gtr_HOFinger_02_GTR'
 		Wait}
 	Wait \{0.5
-		Seconds
+		seconds
 		ignoreslomo}
 	training_play_sound \{Sound = 'Tut_Gtr_HOFinger_03_GTR'
 		Wait}
 	Wait \{0.5
-		Seconds
+		seconds
 		ignoreslomo}
 	training_play_sound \{Sound = 'Tut_Gtr_HOFinger_04_GTR'
 		Wait}
 	training_add_arrow \{id = training_arrow
 		life = 5.15
-		Pos = (360.0, 360.0)
-		Scale = 0.7}
+		pos = (360.0, 360.0)
+		scale = 0.7}
 	training_add_arrow \{id = training_strum_arrow
 		life = 3.0
-		Pos = (850.0, 360.0)
-		Scale = 0.7}
-	pose_fret_fingers \{Color = green}
+		pos = (850.0, 360.0)
+		scale = 0.7}
+	pose_fret_fingers \{color = green}
 	Wait \{0.5
-		Seconds
+		seconds
 		ignoreslomo}
-	pose_strum_fingers \{Pos = down}
+	pose_strum_fingers \{pos = down}
 	Wait \{1.0
-		Seconds
+		seconds
 		ignoreslomo}
-	pose_strum_fingers \{Pos = middle}
+	pose_strum_fingers \{pos = middle}
 	Wait \{0.5
-		Seconds
+		seconds
 		ignoreslomo}
 	training_play_sound \{Sound = 'Tut_Gtr_HOFinger_05_GTR'
 		Wait}
 	training_add_arrow \{id = training_arrow
 		life = 3.0
-		Pos = (385.0, 360.0)
-		Scale = 0.7}
-	pose_fret_fingers \{Color = green_red}
+		pos = (385.0, 360.0)
+		scale = 0.7}
+	pose_fret_fingers \{color = green_red}
 	Wait \{0.75
-		Seconds
+		seconds
 		ignoreslomo}
 	training_play_sound \{Sound = 'Tut_Gtr_HOFinger_06_GTR'
 		Wait}
 	training_add_arrow \{id = training_arrow
 		life = 3.0
-		Pos = (420.0, 360.0)
-		Scale = 0.7}
-	pose_fret_fingers \{Color = green_red_yellow}
+		pos = (420.0, 360.0)
+		scale = 0.7}
+	pose_fret_fingers \{color = green_red_yellow}
 	Wait \{0.75
-		Seconds
+		seconds
 		ignoreslomo}
 	training_play_sound \{Sound = 'Tut_Gtr_HOFinger_07_GTR'
 		Wait}
 	Wait \{1
-		Seconds
+		seconds
 		ignoreslomo}
 endscript
 
 script training_4_2_zoom_guitar 
 	training_add_lesson_body_text \{number = 1
-		text = qs(0x56c74cb1)}
+		text = qs("Play Green normally (strum)")}
 	training_add_lesson_body_text \{number = 2
-		text = qs(0x03944e1a)}
+		text = qs("Hammer-on Red (no strum)")}
 	training_add_lesson_body_text \{number = 3
-		text = qs(0x4f95a468)}
+		text = qs("Hammer-on Yellow (no strum)")}
 	training_show_lesson_header
-	training_set_task_header_body \{text = qs(0x82e793d8)}
+	training_set_task_header_body \{text = qs("Hit 3 hammer-on sequences to continue")}
 	training_show_task_header
 	training_display_notes_hit \{notes_hit = 0
 		notes_required = 3}
 	hide_strum_fingers
 	hide_fret_fingers
 	if ScreenElementExists \{id = guitar_sprite}
-		guitar_sprite :legacydomorph \{Scale = (1.0, 1.0)
-			Pos = (1100.0, 400.0)
+		guitar_sprite :LegacyDoMorph \{scale = (1.0, 1.0)
+			pos = (1100.0, 400.0)
 			time = 0.75}
 	endif
 	training_play_sound \{Sound = 'Tut_Gtr_HOFinger_08_GTR'
 		Wait}
 	Wait \{1
-		Seconds
+		seconds
 		ignoreslomo}
 	SetMenuAutoRepeatTimes \{(60.0, 60.0)}
 endscript
 
 script training_4_2_wait_for_hammeron_complete 
 	if ScreenElementExists \{id = menu_tutorial}
-		LaunchEvent \{Type = unfocus
+		LaunchEvent \{type = unfocus
 			target = menu_tutorial}
 		destroy_menu \{menu_id = menu_tutorial}
 	endif
@@ -278,46 +278,46 @@ script training_4_2_wait_for_hammeron_complete
 		use_backdrop = 0
 		event_handlers = <event_handlers>
 	}
-	LaunchEvent \{Type = focus
+	LaunchEvent \{type = focus
 		target = menu_tutorial}
-	Change \{lesson_complete = 0}
-	Change \{training_hammerons_played = 0}
-	SpawnScriptNow \{training_watch_buttons
+	change \{LESSON_COMPLETE = 0}
+	change \{training_hammerons_played = 0}
+	spawnscriptnow \{training_watch_buttons
 		id = training_spawned_script}
 	begin
-	if ($lesson_complete = 1)
+	if ($LESSON_COMPLETE = 1)
 		break
 	endif
 	Wait \{1
 		gameframe}
 	repeat
 	if ScreenElementExists \{id = menu_tutorial}
-		LaunchEvent \{Type = unfocus
+		LaunchEvent \{type = unfocus
 			target = menu_tutorial}
 		destroy_menu \{menu_id = menu_tutorial}
 		create_training_pause_handler
 	endif
-	KillSpawnedScript \{Name = training_watch_buttons}
+	KillSpawnedScript \{name = training_watch_buttons}
 	hide_pressed_notes
 	SetMenuAutoRepeatTimes \{(0.3, 0.05)}
 	Wait \{1
-		Seconds
+		seconds
 		ignoreslomo}
 endscript
 
 script training_hammeron_strummed_guitar 
-	if ($lesson_complete = 1)
+	if ($LESSON_COMPLETE = 1)
 		return
 	endif
 	printf \{channel = hammeron
-		qs(0xa404bf72)}
-	KillSpawnedScript \{Name = training_watch_for_hammeron}
-	SpawnScriptNow \{training_watch_for_hammeron
+		qs("\LStrummed guitar.........")}
+	KillSpawnedScript \{name = training_watch_for_hammeron}
+	spawnscriptnow \{training_watch_for_hammeron
 		id = training_spawned_script}
 endscript
 
 script training_count_buttons_pressed 
-	GetHeldPattern controller = ($player1_status.controller) Player = 1 nobrokenstring
+	GetHeldPattern controller = ($player1_status.controller) player = 1 nobrokenstring
 	check_button = 65536
 	array_count = 0
 	note_played = 0
@@ -337,20 +337,20 @@ notes_played = 0
 
 script training_watch_for_hammeron 
 	printf \{channel = hammeron
-		qs(0x3904ef97)}
+		qs("\Ltraining_watch_for_hammeron......")}
 	training_clear_notes_pressed
 	training_count_buttons_pressed
-	if IsSoundEventPlaying \{Tutorial_String_2_HOPO_Free}
+	if isSoundEventPlaying \{Tutorial_String_2_HOPO_Free}
 		SoundEvent \{event = Tutorial_Missed_HOPO_Free}
 		SoundEvent \{event = StopNotes_02}
 		SoundEvent \{event = StopNotes_03}
-	elseif IsSoundEventPlaying \{Tutorial_String_3_HOPO_Free}
+	elseif isSoundEventPlaying \{Tutorial_String_3_HOPO_Free}
 		SoundEvent \{event = Tutorial_Missed_HOPO_Free}
 		SoundEvent \{event = StopNotes_03}
 		SoundEvent \{event = StopNotes_02}
 	endif
 	if (<notes_played> != 1)
-		if IsSoundEventPlaying \{Tutorial_String_1_Strum_Free}
+		if isSoundEventPlaying \{Tutorial_String_1_Strum_Free}
 			SoundEvent \{event = Tutorial_Missed_HOPO_Free}
 			SoundEvent \{event = StopNotes_01}
 			SoundEvent \{event = StopNotes_03}
@@ -358,7 +358,7 @@ script training_watch_for_hammeron
 		endif
 		return
 	endif
-	GetHeldPattern controller = ($player1_status.controller) Player = 1 nobrokenstring
+	GetHeldPattern controller = ($player1_status.controller) player = 1 nobrokenstring
 	check_button = 65536
 	if (<hold_pattern> && <check_button>)
 		training_press_note \{note = 0}
@@ -366,12 +366,12 @@ script training_watch_for_hammeron
 		SoundEvent \{event = Tutorial_String_1_Strum_Free}
 		wait_time = 0
 		begin
-		GetHeldPattern controller = ($player1_status.controller) Player = 1 nobrokenstring
+		GetHeldPattern controller = ($player1_status.controller) player = 1 nobrokenstring
 		check_button = 273
 		if (<hold_pattern> && <check_button>)
 			training_clear_notes_pressed
 			printf \{channel = hammeron
-				qs(0x532de255)}
+				qs("\Lfailed...")}
 			SoundEvent \{event = Tutorial_Missed_HOPO_Free}
 			SoundEvent \{event = StopNotes_01}
 			return
@@ -379,13 +379,13 @@ script training_watch_for_hammeron
 		check_button = 4096
 		if (<hold_pattern> && <check_button>)
 			printf \{channel = hammeron
-				qs(0xa11df061)}
+				qs("\Lred pressed...")}
 			break
 		endif
 		wait_time = (<wait_time> + 1)
 		if (<wait_time> >= 60)
 			printf \{channel = hammeron
-				qs(0xaff59b6b)}
+				qs("\Ltimes up...")}
 			training_clear_notes_pressed
 			SoundEvent \{event = Tutorial_Missed_HOPO_Free}
 			SoundEvent \{event = StopNotes_01}
@@ -400,12 +400,12 @@ script training_watch_for_hammeron
 		SoundEvent \{event = StopNotes_01}
 		wait_time = 0
 		begin
-		GetHeldPattern controller = ($player1_status.controller) Player = 1 nobrokenstring
+		GetHeldPattern controller = ($player1_status.controller) player = 1 nobrokenstring
 		check_button = 17
 		if (<hold_pattern> && <check_button>)
 			training_clear_notes_pressed
 			printf \{channel = hammeron
-				qs(0x532de255)}
+				qs("\Lfailed...")}
 			SoundEvent \{event = Tutorial_Missed_HOPO_Free}
 			SoundEvent \{event = StopNotes_02}
 			return
@@ -430,7 +430,7 @@ script training_watch_for_hammeron
 		training_hit_note \{note = 0}
 		training_hit_note \{note = 1}
 		training_hit_note \{note = 2}
-		Change training_hammerons_played = ($training_hammerons_played + 1)
+		change training_hammerons_played = ($training_hammerons_played + 1)
 		if NOT ($training_hammerons_played = 3)
 			RandomNoRepeat (
 				@ training_play_sound \{Sound = 'Tut_Gtr_Positive_01_GTR'}
@@ -444,35 +444,35 @@ script training_watch_for_hammeron
 				)
 		endif
 		if ($training_hammerons_played >= 3)
-			Change \{lesson_complete = 1}
+			change \{LESSON_COMPLETE = 1}
 		endif
 		training_display_notes_hit notes_hit = ($training_hammerons_played) notes_required = 3
 		Wait \{2
-			Seconds
+			seconds
 			ignoreslomo}
 		training_clear_notes_pressed
 	endif
 endscript
 
 script training_press_note 
-	formatText checksumName = note_tuned 'note_tuned_%a' a = <note>
-	<Pos> = (($g_training_green_note_pos) + (1.0, 0.0) * (<note> * $g_training_guitar_note_offset))
+	FormatText checksumname = note_tuned 'note_tuned_%a' a = <note>
+	<pos> = (($g_training_green_note_pos) + (1.0, 0.0) * (<note> * $g_training_guitar_note_offset))
 	CreateScreenElement {
 		parent = training_container
-		Type = SpriteElement
+		type = SpriteElement
 		id = <note_tuned>
 		just = [center center]
 		texture = tutorial_checkmark
-		Pos = <Pos>
+		pos = <pos>
 		rgba = [255 255 255 255]
-		Scale = (0.5, 0.5)
+		scale = (0.5, 0.5)
 		z_priority = 7
 	}
 endscript
 
 script training_clear_notes_pressed 
 	printf \{channel = hammeron
-		qs(0x1f828b5d)}
+		qs("\Ltraining_clear_notes_pressed....")}
 	safe_destroy \{id = note_tuned_0}
 	safe_destroy \{id = note_tuned_1}
 	safe_destroy \{id = note_tuned_2}
@@ -488,39 +488,39 @@ script training_4_2_complete_message
 	training_clear_notes_pressed
 	training_destroy_pressed_notes
 	training_hide_narrator \{narrator = 'guitarist'}
-	SpawnScriptNow \{create_exploding_text
+	spawnscriptnow \{create_exploding_text
 		id = training_spawned_script
 		params = {
 			parent = 'lesson_complete'
-			text = qs(0xd50843f0)
+			text = qs("Lesson Complete")
 			text_physics = 0
 		}}
 	training_play_sound \{Sound = 'Tut_Gtr_HOFinger_15_GTR'}
 	Wait \{5
-		Seconds
+		seconds
 		ignoreslomo}
-	KillSpawnedScript \{Name = create_exploding_text}
+	KillSpawnedScript \{name = create_exploding_text}
 	destroy_exploding_text \{parent = 'lesson_complete'}
 endscript
 
 script training_4_2_end 
-	KillSpawnedScript \{Name = training_watch_buttons}
+	KillSpawnedScript \{name = training_watch_buttons}
 	destroy_menu \{menu_id = menu_tutorial_4_2}
 	training_destroy_pressed_notes
 	safe_destroy \{id = guitar_sprite}
 	training_destroy_fret_finger_sprites
 	training_destory_strum_sprites
-	Change g_training_lessons_completed = ($g_training_lessons_completed + 1)
+	change g_training_lessons_completed = ($g_training_lessons_completed + 1)
 endscript
 
 script training_4_3_start_gem_scroller 
-	training_set_lesson_header_text \{number = qs(0x10d81465)
-		text = qs(0xbfa09f6c)}
+	training_set_lesson_header_text \{number = qs("\L3")
+		text = qs("HAMMER-ONS")}
 	training_add_lesson_body_text \{number = 1
-		text = qs(0xb5886e39)}
+		text = qs("Practice hammer-ons")}
 	training_show_lesson_header
 	training_show_narrator \{narrator = 'guitarist'}
-	training_start_gem_scroller \{song = tut_gtr_hamon
+	training_start_gem_scroller \{song = Tut_Gtr_HamOn
 		bot_array = [
 			0
 			0
@@ -528,17 +528,17 @@ script training_4_3_start_gem_scroller
 			0
 		]
 		disable_hud}
-	KillSpawnedScript \{Name = update_score_fast}
+	KillSpawnedScript \{name = update_score_fast}
 	training_wait_for_gem_scroller_startup
 endscript
 
 script training_4_3_explain 
 	Wait \{3.5
-		Seconds
+		seconds
 		ignoreslomo}
 	training_pause_gem_scroller
 	if ScreenElementExists \{id = menu_tutorial}
-		LaunchEvent \{Type = unfocus
+		LaunchEvent \{type = unfocus
 			target = menu_tutorial}
 		destroy_menu \{menu_id = menu_tutorial}
 	endif
@@ -554,26 +554,26 @@ script training_4_3_explain
 		use_backdrop = 0
 		event_handlers = <event_handlers>
 	}
-	LaunchEvent \{Type = focus
+	LaunchEvent \{type = focus
 		target = menu_tutorial}
 	training_play_sound \{Sound = 'Tut_Gtr_HamOns_01_GTR'
 		Wait}
 	Wait \{0.5
-		Seconds
+		seconds
 		ignoreslomo}
 	training_play_sound \{Sound = 'Tut_Gtr_HamOns_02_GTR'
 		Wait}
-	training_set_task_header_body \{text = qs(0xde5fe553)}
+	training_set_task_header_body \{text = qs("Hit 8 notes using the hammer-on technique")}
 	training_show_task_header
 	training_display_notes_hit \{notes_hit = 0}
 	Wait \{1
-		Seconds
+		seconds
 		ignoreslomo}
 	training_resume_gem_scroller
 endscript
 
 script training_4_3_wait_for_hammerons 
-	Change \{training_hammerons_played = 0}
+	change \{training_hammerons_played = 0}
 	begin
 	if ($training_song_over = 1)
 		break
@@ -585,22 +585,22 @@ script training_4_3_wait_for_hammerons
 		gameframe}
 	repeat
 	if ScreenElementExists \{id = menu_tutorial}
-		LaunchEvent \{Type = unfocus
+		LaunchEvent \{type = unfocus
 			target = menu_tutorial}
 		destroy_menu \{menu_id = menu_tutorial}
 		create_training_pause_handler
 	endif
 	Wait \{1
-		Seconds
+		seconds
 		ignoreslomo}
 endscript
 
 script lesson4_hammeron_note 
 	if (<hammer_strum> = 1)
-		Change training_hammerons_played = ($training_hammerons_played + 1)
+		change training_hammerons_played = ($training_hammerons_played + 1)
 		training_display_notes_hit \{notes_hit = $training_hammerons_played}
 		if ($training_hammerons_played = 1)
-			training_play_positive \{who = GUITARIST}
+			training_play_positive \{who = Guitarist}
 		endif
 	endif
 endscript
@@ -610,31 +610,31 @@ script training_4_3_complete_message
 		DestroyScreenElement \{id = notes_hit_text}
 	endif
 	Wait \{0.75
-		Seconds
+		seconds
 		ignoreslomo}
 	training_hide_lesson_header
 	training_destroy_gem_scroller
 	SoundEvent \{event = Tutorial_Mode_Finish_Chord}
 	training_hide_narrator \{narrator = 'guitarist'}
-	SpawnScriptNow \{create_exploding_text
+	spawnscriptnow \{create_exploding_text
 		id = training_spawned_script
 		params = {
 			parent = 'lesson_complete'
-			text = qs(0xd50843f0)
+			text = qs("Lesson Complete")
 			text_physics = 0
 		}}
 	training_play_sound \{Sound = 'Tut_Gtr_HamOns_10_GTR'}
 	Wait \{7
-		Seconds
+		seconds
 		ignoreslomo}
-	KillSpawnedScript \{Name = create_exploding_text}
+	KillSpawnedScript \{name = create_exploding_text}
 	destroy_exploding_text \{parent = 'lesson_complete'}
-	Change g_training_lessons_completed = ($g_training_lessons_completed + 1)
+	change g_training_lessons_completed = ($g_training_lessons_completed + 1)
 endscript
 
 script training_4_4_explain 
-	training_set_lesson_header_text \{number = qs(0x5f9982a2)
-		text = qs(0x3f3c9e3e)}
+	training_set_lesson_header_text \{number = qs("\L4")
+		text = qs("PULL-OFF FINGERING")}
 	training_clear_lesson_body_text
 	training_show_lesson_header
 	training_show_narrator \{narrator = 'guitarist'}
@@ -645,150 +645,150 @@ script training_4_4_show_guitar
 	<guitar_tex> = tutorial_guitar
 	CreateScreenElement {
 		parent = training_container
-		Type = SpriteElement
+		type = SpriteElement
 		id = guitar_sprite
 		just = [center center]
 		texture = <guitar_tex>
-		Pos = (630.0, 400.0)
+		pos = (630.0, 400.0)
 		rot_angle = 0
 		rgba = [255 255 255 255]
-		Scale = (0.4, 0.4)
+		scale = (0.4, 0.4)
 		z_priority = 4
 	}
 	training_create_fret_finger_sprites
-	pose_fret_fingers \{Color = None}
+	pose_fret_fingers \{color = none}
 	training_create_strum_sprites
-	pose_strum_fingers \{Pos = middle}
+	pose_strum_fingers \{pos = middle}
 	training_play_sound \{Sound = 'Tut_Gtr_POFinger_01_GTR'
 		Wait}
 	Wait \{0.5
-		Seconds
+		seconds
 		ignoreslomo}
 	training_play_sound \{Sound = 'Tut_Gtr_POFinger_02_GTR'
 		Wait}
 	Wait \{0.5
-		Seconds
+		seconds
 		ignoreslomo}
 	training_play_sound \{Sound = 'Tut_Gtr_POFinger_03_GTR'
 		Wait}
 	Wait \{0.5
-		Seconds
+		seconds
 		ignoreslomo}
 	training_play_sound \{Sound = 'Tut_Gtr_POFinger_04_GTR'
 		Wait}
 	training_add_arrow \{id = training_arrow
 		life = 4.9500003
-		Pos = (420.0, 360.0)
-		Scale = 0.7}
+		pos = (420.0, 360.0)
+		scale = 0.7}
 	training_add_arrow \{id = training_strum_arrow
 		life = 3.5
-		Pos = (850.0, 360.0)
-		Scale = 0.7}
-	pose_fret_fingers \{Color = yellow}
+		pos = (850.0, 360.0)
+		scale = 0.7}
+	pose_fret_fingers \{color = Yellow}
 	Wait \{1.0
-		Seconds
+		seconds
 		ignoreslomo}
-	pose_strum_fingers \{Pos = down}
+	pose_strum_fingers \{pos = down}
 	Wait \{1.0
-		Seconds
+		seconds
 		ignoreslomo}
-	pose_strum_fingers \{Pos = middle}
+	pose_strum_fingers \{pos = middle}
 	Wait \{3
-		Seconds
+		seconds
 		ignoreslomo}
 	training_add_arrow \{id = training_arrow
 		life = 4.0
-		Pos = (385.0, 360.0)
-		Scale = 0.7}
-	pose_fret_fingers \{Color = red}
+		pos = (385.0, 360.0)
+		scale = 0.7}
+	pose_fret_fingers \{color = red}
 	training_play_sound \{Sound = 'Tut_Gtr_POFinger_05_GTR'
 		Wait}
 	Wait \{0.5
-		Seconds
+		seconds
 		ignoreslomo}
 	training_add_arrow \{id = training_arrow
 		life = 3.0
-		Pos = (360.0, 360.0)
-		Scale = 0.7}
-	pose_fret_fingers \{Color = green}
+		pos = (360.0, 360.0)
+		scale = 0.7}
+	pose_fret_fingers \{color = green}
 	training_play_sound \{Sound = 'Tut_Gtr_POFinger_06_GTR'
 		Wait}
 	Wait \{0.5
-		Seconds
+		seconds
 		ignoreslomo}
 	training_play_sound \{Sound = 'Tut_Gtr_POFinger_07_GTR'}
 	training_add_arrow \{id = training_arrow
 		life = 3.95
-		Pos = (420.0, 360.0)
-		Scale = 0.7}
+		pos = (420.0, 360.0)
+		scale = 0.7}
 	training_add_arrow \{id = training_strum_arrow
 		life = 3.5
-		Pos = (850.0, 360.0)
-		Scale = 0.7}
-	pose_fret_fingers \{Color = green_red_yellow}
+		pos = (850.0, 360.0)
+		scale = 0.7}
+	pose_fret_fingers \{color = green_red_yellow}
 	Wait \{3.0
-		Seconds
+		seconds
 		ignoreslomo}
-	pose_strum_fingers \{Pos = down}
+	pose_strum_fingers \{pos = down}
 	Wait \{1.0
-		Seconds
+		seconds
 		ignoreslomo}
-	pose_strum_fingers \{Pos = middle}
+	pose_strum_fingers \{pos = middle}
 	Wait \{1
-		Seconds
+		seconds
 		ignoreslomo}
 	training_add_arrow \{id = training_arrow
 		life = 1.0
-		Pos = (385.0, 360.0)
-		Scale = 0.7}
-	pose_fret_fingers \{Color = green_red}
+		pos = (385.0, 360.0)
+		scale = 0.7}
+	pose_fret_fingers \{color = green_red}
 	Wait \{1
-		Seconds
+		seconds
 		ignoreslomo}
 	training_add_arrow \{id = training_arrow
 		life = 2.0
-		Pos = (360.0, 360.0)
-		Scale = 0.7}
-	pose_fret_fingers \{Color = green}
+		pos = (360.0, 360.0)
+		scale = 0.7}
+	pose_fret_fingers \{color = green}
 	Wait \{2
-		Seconds
+		seconds
 		ignoreslomo}
 endscript
 
 script training_4_4_zoom_guitar 
 	training_add_lesson_body_text \{number = 1
-		text = qs(0x0688c538)}
+		text = qs("Play Yellow normally (strum)")}
 	training_add_lesson_body_text \{number = 2
-		text = qs(0xdb3ec64c)}
+		text = qs("Pull-off Red (no strum)")}
 	training_add_lesson_body_text \{number = 3
-		text = qs(0xfc1c1503)}
+		text = qs("Pull-off Green (no strum)")}
 	training_show_lesson_header
-	training_set_task_header_body \{text = qs(0x12d7947e)}
+	training_set_task_header_body \{text = qs("Hit 3 pull-off sequences to continue")}
 	training_show_task_header
 	training_display_notes_hit \{notes_hit = 0
 		notes_required = 3}
 	hide_strum_fingers
 	hide_fret_fingers
 	if ScreenElementExists \{id = guitar_sprite}
-		guitar_sprite :legacydomorph \{Scale = (1.0, 1.0)
-			Pos = (1100.0, 400.0)
+		guitar_sprite :LegacyDoMorph \{scale = (1.0, 1.0)
+			pos = (1100.0, 400.0)
 			time = 0.75}
 	endif
 	training_play_sound \{Sound = 'Tut_Gtr_POFinger_08_GTR'}
 	Wait \{1
-		Seconds
+		seconds
 		ignoreslomo}
 endscript
 training_pulloffs_played = 0
 
 script training_4_4_wait_for_pulloff_complete 
 	if ScreenElementExists \{id = menu_tutorial}
-		LaunchEvent \{Type = unfocus
+		LaunchEvent \{type = unfocus
 			target = menu_tutorial}
 		destroy_menu \{menu_id = menu_tutorial}
 	endif
 	printf \{channel = hammeron
-		qs(0xa3166f46)}
+		qs("\Ltraining_4_2_wait_for_pullofff_complete...")}
 	event_handlers = [
 		{pad_up training_pulloff_strummed_guitar}
 		{pad_down training_pulloff_strummed_guitar}
@@ -801,30 +801,30 @@ script training_4_4_wait_for_pulloff_complete
 		use_backdrop = 0
 		event_handlers = <event_handlers>
 	}
-	LaunchEvent \{Type = focus
+	LaunchEvent \{type = focus
 		target = menu_tutorial}
-	Change \{lesson_complete = 0}
-	Change \{training_pulloffs_played = 0}
-	Change \{notes_played = 0}
+	change \{LESSON_COMPLETE = 0}
+	change \{training_pulloffs_played = 0}
+	change \{notes_played = 0}
 	SetMenuAutoRepeatTimes \{(60.0, 60.0)}
-	SpawnScriptNow \{training_watch_buttons
+	spawnscriptnow \{training_watch_buttons
 		id = training_spawned_script}
 	begin
-	if ($lesson_complete = 1)
+	if ($LESSON_COMPLETE = 1)
 		break
 	endif
 	Wait \{1
 		gameframe}
 	repeat
-	LaunchEvent \{Type = unfocus
+	LaunchEvent \{type = unfocus
 		target = menu_tutorial}
 	destroy_menu \{menu_id = menu_tutorial}
 	create_training_pause_handler
-	KillSpawnedScript \{Name = training_watch_buttons}
+	KillSpawnedScript \{name = training_watch_buttons}
 	hide_pressed_notes
 	SetMenuAutoRepeatTimes \{(0.3, 0.05)}
 	Wait \{1
-		Seconds
+		seconds
 		ignoreslomo}
 	safe_destroy \{id = guitar_sprite}
 	training_destroy_fret_finger_sprites
@@ -832,31 +832,31 @@ script training_4_4_wait_for_pulloff_complete
 endscript
 
 script training_pulloff_strummed_guitar 
-	if ($lesson_complete = 1)
+	if ($LESSON_COMPLETE = 1)
 		return
 	endif
-	KillSpawnedScript \{Name = training_watch_for_pulloff}
-	SpawnScriptNow \{training_watch_for_pulloff
+	KillSpawnedScript \{name = training_watch_for_pulloff}
+	spawnscriptnow \{training_watch_for_pulloff
 		id = training_spawned_script}
 endscript
 
 script training_watch_for_pulloff 
 	printf \{channel = hammeron
-		qs(0x146ecd2c)}
+		qs("\Ltraining_watch_for_pulloff......")}
 	training_clear_notes_pressed
 	training_count_buttons_pressed
-	if IsSoundEventPlaying \{Tutorial_String_2_HOPO_Free}
+	if isSoundEventPlaying \{Tutorial_String_2_HOPO_Free}
 		SoundEvent \{event = Tutorial_Missed_HOPO_Free}
 		SoundEvent \{event = StopNotes_05}
 		SoundEvent \{event = StopNotes_06}
-	elseif IsSoundEventPlaying \{Tutorial_String_3_HOPO_Free}
+	elseif isSoundEventPlaying \{Tutorial_String_3_HOPO_Free}
 		SoundEvent \{event = Tutorial_Missed_HOPO_Free}
 		SoundEvent \{event = StopNotes_06}
 		SoundEvent \{event = StopNotes_05}
 	endif
-	if NOT training_wait_for_pulloff_color \{Color = yellow
+	if NOT training_wait_for_pulloff_color \{color = Yellow
 			immediate}
-		if IsSoundEventPlaying \{Tutorial_String_3_Strum_Free}
+		if isSoundEventPlaying \{Tutorial_String_3_Strum_Free}
 			SoundEvent \{event = Tutorial_Missed_HOPO_Free}
 			SoundEvent \{event = StopNotes_04}
 			SoundEvent \{event = StopNotes_05}
@@ -867,14 +867,14 @@ script training_watch_for_pulloff
 	training_press_note \{note = 2}
 	training_hit_note \{note = 2}
 	SoundEvent \{event = Tutorial_String_3_Strum_Free}
-	if NOT training_wait_for_pulloff_color \{Color = yellow
+	if NOT training_wait_for_pulloff_color \{color = Yellow
 			Released}
 		SoundEvent \{event = Tutorial_Missed_HOPO_Free}
 		SoundEvent \{event = StopNotes_04}
 		training_clear_notes_pressed
 		return
 	endif
-	if NOT training_wait_for_pulloff_color \{Color = red}
+	if NOT training_wait_for_pulloff_color \{color = red}
 		SoundEvent \{event = Tutorial_Missed_HOPO_Free}
 		SoundEvent \{event = StopNotes_04}
 		training_clear_notes_pressed
@@ -884,14 +884,14 @@ script training_watch_for_pulloff
 	training_hit_note \{note = 1}
 	SoundEvent \{event = Tutorial_String_2_HOPO_Free}
 	SoundEvent \{event = StopNotes_04}
-	if NOT training_wait_for_pulloff_color \{Color = red
+	if NOT training_wait_for_pulloff_color \{color = red
 			Released}
 		SoundEvent \{event = Tutorial_Missed_HOPO_Free}
 		SoundEvent \{event = StopNotes_05}
 		training_clear_notes_pressed
 		return
 	endif
-	if NOT training_wait_for_pulloff_color \{Color = green}
+	if NOT training_wait_for_pulloff_color \{color = green}
 		SoundEvent \{event = Tutorial_Missed_HOPO_Free}
 		SoundEvent \{event = StopNotes_05}
 		training_clear_notes_pressed
@@ -903,23 +903,23 @@ script training_watch_for_pulloff
 	training_hit_note \{note = 2}
 	SoundEvent \{event = Tutorial_String_1_HOPO_Free}
 	SoundEvent \{event = StopNotes_05}
-	Change training_pulloffs_played = ($training_pulloffs_played + 1)
+	change training_pulloffs_played = ($training_pulloffs_played + 1)
 	if NOT ($training_pulloffs_played = 3)
-		training_play_positive \{who = GUITARIST}
+		training_play_positive \{who = Guitarist}
 	endif
 	if ($training_pulloffs_played >= 3)
-		Change \{lesson_complete = 1}
+		change \{LESSON_COMPLETE = 1}
 	endif
 	training_display_notes_hit notes_hit = ($training_pulloffs_played) notes_required = 3
 	Wait \{2
-		Seconds
+		seconds
 		ignoreslomo}
 	training_clear_notes_pressed
 endscript
 
 script training_wait_for_pulloff_color 
-	switch (<Color>)
-		case yellow
+	switch (<color>)
+		case Yellow
 		button_mask = 256
 		maybe_dont_allow = 69632
 		dont_allow_mask = 17
@@ -939,9 +939,9 @@ script training_wait_for_pulloff_color
 	endif
 	wait_time = 0
 	begin
-	GetHeldPattern controller = ($player1_status.controller) Player = 1 nobrokenstring
+	GetHeldPattern controller = ($player1_status.controller) player = 1 nobrokenstring
 	if (<hold_pattern> && <dont_allow_mask>)
-		return \{FALSE}
+		return \{false}
 	endif
 	if GotParam \{Released}
 		if NOT (<hold_pattern> && <button_mask>)
@@ -952,16 +952,16 @@ script training_wait_for_pulloff_color
 			break
 		else
 			if (<hold_pattern> && <maybe_dont_allow>)
-				return \{FALSE}
+				return \{false}
 			endif
 			if GotParam \{immediate}
-				return \{FALSE}
+				return \{false}
 			endif
 		endif
 	endif
 	wait_time = (<wait_time> + 1)
 	if (<wait_time> >= <max_time>)
-		return \{FALSE}
+		return \{false}
 	endif
 	Wait \{1
 		gameframe}
@@ -977,37 +977,37 @@ script training_4_4_complete_message
 	training_clear_notes_pressed
 	training_destroy_pressed_notes
 	training_hide_narrator \{narrator = 'guitarist'}
-	SpawnScriptNow \{create_exploding_text
+	spawnscriptnow \{create_exploding_text
 		id = training_spawned_script
 		params = {
 			parent = 'lesson_complete'
-			text = qs(0xd50843f0)
+			text = qs("Lesson Complete")
 			text_physics = 0
 		}}
 	training_play_sound \{Sound = 'Tut_Gtr_POFinger_15_GTR'}
 	Wait \{5
-		Seconds
+		seconds
 		ignoreslomo}
-	KillSpawnedScript \{Name = create_exploding_text}
+	KillSpawnedScript \{name = create_exploding_text}
 	destroy_exploding_text \{parent = 'lesson_complete'}
 endscript
 
 script training_4_4_end 
-	KillSpawnedScript \{Name = training_watch_buttons}
+	KillSpawnedScript \{name = training_watch_buttons}
 	safe_destroy \{id = guitar_sprite}
 	training_destroy_pressed_notes
 	training_destroy_fret_finger_sprites
 	training_destory_strum_sprites
-	Change g_training_lessons_completed = ($g_training_lessons_completed + 1)
+	change g_training_lessons_completed = ($g_training_lessons_completed + 1)
 endscript
 
 script training_4_5_start_gem_scroller 
-	training_set_lesson_header_text \{number = qs(0x4682b3e3)
-		text = qs(0x5c192d33)}
+	training_set_lesson_header_text \{number = qs("\L5")
+		text = qs("PULL-OFFS")}
 	training_clear_lesson_body_text
 	training_show_lesson_header
 	training_show_narrator \{narrator = 'guitarist'}
-	training_start_gem_scroller \{song = tut_gtr_pulloff
+	training_start_gem_scroller \{song = Tut_Gtr_PullOff
 		bot_array = [
 			0
 			0
@@ -1015,25 +1015,25 @@ script training_4_5_start_gem_scroller
 			0
 		]
 		disable_hud}
-	KillSpawnedScript \{Name = update_score_fast}
-	Change \{training_pulloffs_played = 0}
+	KillSpawnedScript \{name = update_score_fast}
+	change \{training_pulloffs_played = 0}
 	training_wait_for_gem_scroller_startup
 endscript
 
 script training_4_5_explain 
 	Wait \{3.5
-		Seconds
+		seconds
 		ignoreslomo}
 	training_pause_gem_scroller
 	training_add_lesson_body_text \{number = 1
-		text = qs(0x49223bcd)}
+		text = qs("Practice pull-offs")}
 	training_show_lesson_header
 	training_play_sound \{Sound = 'Tut_Gtr_PullOffs_01_GTR'
 		Wait}
 	Wait \{0.5
-		Seconds
+		seconds
 		ignoreslomo}
-	training_set_task_header_body \{text = qs(0xff794001)}
+	training_set_task_header_body \{text = qs("Hit 8 notes using pull-offs to continue")}
 	training_show_task_header
 	training_display_notes_hit \{notes_hit = 0}
 	training_resume_gem_scroller
@@ -1041,7 +1041,7 @@ endscript
 
 script training_4_5_wait_for_hammerons 
 	if ScreenElementExists \{id = menu_tutorial}
-		LaunchEvent \{Type = unfocus
+		LaunchEvent \{type = unfocus
 			target = menu_tutorial}
 		destroy_menu \{menu_id = menu_tutorial}
 	endif
@@ -1057,10 +1057,10 @@ script training_4_5_wait_for_hammerons
 		use_backdrop = 0
 		event_handlers = <event_handlers>
 	}
-	LaunchEvent \{Type = focus
+	LaunchEvent \{type = focus
 		target = menu_tutorial}
-	Change \{training_pulloffs_played = 0}
-	Change \{training_song_over = 0}
+	change \{training_pulloffs_played = 0}
+	change \{training_song_over = 0}
 	begin
 	if ($training_song_over = 1)
 		break
@@ -1072,22 +1072,22 @@ script training_4_5_wait_for_hammerons
 		gameframe}
 	repeat
 	if ScreenElementExists \{id = menu_tutorial}
-		LaunchEvent \{Type = unfocus
+		LaunchEvent \{type = unfocus
 			target = menu_tutorial}
 		destroy_menu \{menu_id = menu_tutorial}
 		create_training_pause_handler
 	endif
 	Wait \{1
-		Seconds
+		seconds
 		ignoreslomo}
 endscript
 
 script lesson4_pulloff_note 
 	if (<hammer_strum> = 1)
-		Change training_pulloffs_played = ($training_pulloffs_played + 1)
+		change training_pulloffs_played = ($training_pulloffs_played + 1)
 		training_display_notes_hit \{notes_hit = $training_pulloffs_played}
 		if ($training_pulloffs_played = 1)
-			training_play_positive \{who = GUITARIST}
+			training_play_positive \{who = Guitarist}
 		endif
 	endif
 endscript
@@ -1097,42 +1097,42 @@ script training_4_5_complete_message
 		DestroyScreenElement \{id = notes_hit_text}
 	endif
 	Wait \{0.75
-		Seconds
+		seconds
 		ignoreslomo}
 	training_hide_lesson_header
 	training_destroy_gem_scroller
 	SoundEvent \{event = Tutorial_Mode_Finish_Chord}
 	training_hide_narrator \{narrator = 'guitarist'}
-	SpawnScriptNow \{create_exploding_text
+	spawnscriptnow \{create_exploding_text
 		id = training_spawned_script
 		params = {
 			parent = 'lesson_complete'
-			text = qs(0x98370f14)
+			text = qs("Advanced Techniques")
 			text_physics = 0
 			placement = top
 		}}
-	SpawnScriptNow \{create_exploding_text
+	spawnscriptnow \{create_exploding_text
 		id = training_spawned_script
 		params = {
 			parent = 'complete_text'
-			text = qs(0x8399081c)
+			text = qs("Tutorial Complete!")
 			text_physics = 0
 			placement = bottom
 		}}
 	training_play_sound \{Sound = 'Tut_Gtr_PullOffs_09_GTR'
 		Wait}
 	Wait \{0.5
-		Seconds
+		seconds
 		ignoreslomo}
-	KillSpawnedScript \{Name = create_exploding_text}
+	KillSpawnedScript \{name = create_exploding_text}
 	destroy_all_exploding_text
-	Change g_training_lessons_completed = ($g_training_lessons_completed + 1)
+	change g_training_lessons_completed = ($g_training_lessons_completed + 1)
 endscript
 training_song_over = 0
 
 script training_song_won 
-	Change \{training_song_over = 1}
-	show_training_pause_screen \{songfailed}
+	change \{training_song_over = 1}
+	show_training_pause_screen \{SongFailed}
 endscript
 
 script training_advanced_techniques_tutorial_1_end 
@@ -1145,7 +1145,7 @@ script training_advanced_techniques_tutorial_1_end
 	endif
 	training_kill_session
 	if ScreenElementExists \{id = menu_tutorial}
-		LaunchEvent \{Type = unfocus
+		LaunchEvent \{type = unfocus
 			target = menu_tutorial}
 		destroy_menu \{menu_id = menu_tutorial}
 	endif

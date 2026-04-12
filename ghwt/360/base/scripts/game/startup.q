@@ -42,12 +42,12 @@ LightCachePool = 5000
 script Set_Outline_Shader_to_Default 
 	SetOutlineShaderColor \{red = 210
 		green = 80
-		blue = 0
+		Blue = 0
 		alpha = 180}
 	SetOutlineShaderParams \{min = 0.01
-		Max = 0.06
+		max = 0.06
 		rate = 1.0
 		zscale = 0.001
 		filldist = 17
-		BlendMode = 0}
+		blendMode = 0}
 endscript

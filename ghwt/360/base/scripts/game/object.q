@@ -12,16 +12,16 @@ GameObjExceptions = [
 	SkaterLanded
 	SkaterBailed
 	ObjectInRadius
-	ObjectOutofRadius
+	ObjectOutOfRadius
 	AnyObjectInRadius
 ]
 CarExceptions = [
 	ObjectInRadius
-	ObjectOutofRadius
+	ObjectOutOfRadius
 ]
 BouncyObjExceptions = [
 	ObjectInRadius
-	ObjectOutofRadius
-	Bounce
+	ObjectOutOfRadius
+	bounce
 	DoneBouncing
 ]

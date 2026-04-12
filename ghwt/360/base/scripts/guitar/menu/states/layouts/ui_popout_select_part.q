@@ -1,6 +1,6 @@
 
 script ui_create_popout_select_part 
-	SpawnScriptNow ui_create_popout_select_part_spawned params = {<...>}
+	spawnscriptnow ui_create_popout_select_part_spawned params = {<...>}
 endscript
 
 script ui_create_popout_select_part_spawned 
@@ -11,7 +11,7 @@ script ui_create_popout_select_part_spawned
 	make_list_menu {
 		vmenu_id = create_popout_select_part_vmenu
 		pad_back_script = generic_exit_restore
-		pad_back_sound = nullsound
+		pad_back_sound = NullSound
 		parent = <container_id>
 		text_case = <text_case>
 		icon = <hist_tex>
@@ -19,9 +19,9 @@ script ui_create_popout_select_part_spawned
 		list_offset = <list_offset>
 	}
 	if NOT GotParam \{disable_rotation_zoom}
-		setup_cas_menu_handlers vmenu_id = create_popout_select_part_vmenu camera_list = <camera_list> zoom_camera = <zoom_camera> NO_ROTATE = <NO_ROTATE> no_zoom = <no_zoom> pull_back_distance = <pull_back_distance>
+		setup_cas_menu_handlers vmenu_id = create_popout_select_part_vmenu camera_list = <camera_list> zoom_camera = <zoom_camera> no_rotate = <no_rotate> no_zoom = <no_zoom> pull_back_distance = <pull_back_distance>
 	endif
-	resolvebodyspecificpartinappearance part = <part>
+	ResolveBodySpecificPartInAppearance part = <part>
 	current_part = 0
 	get_part_current_desc_id part = <part>
 	GetArraySize ($<part>)
@@ -36,7 +36,7 @@ script ui_create_popout_select_part_spawned
 			if NOT is_part_purchased part = <part> desc_id = ((($<part>) [<i>]).desc_id) savegame = ($cas_current_savegame)
 				if GotParam \{purchase_menu}
 					price = ((($<part>) [<i>]).price)
-					formatText TextName = pad_choose_dialogue qs(0x30e8eb93) s = ((($<part>) [<i>]).frontend_desc)
+					FormatText TextName = pad_choose_dialogue qs("Would you like to purchase and edit this %s?") s = ((($<part>) [<i>]).frontend_desc)
 					show_purchasable = 1
 				endif
 				if is_part_editable part = <part> desc_id = ((($<part>) [<i>]).desc_id)
@@ -50,7 +50,7 @@ script ui_create_popout_select_part_spawned
 					show_editable = 1
 					editable = {editable}
 				endif
-				pad_option2_params = {part = <part> color_wheel = <color_wheel> num_icons = <num_icons> icon = <hist_tex> cam_name = <cam_name> camera_list = <camera_list> zoom_camera = <zoom_camera> NO_ROTATE = <NO_ROTATE> no_zoom = <no_zoom> pull_back_distance = <pull_back_distance> stance = <stance> additional_deinit_script = <additional_deinit_script> return_stance = <return_stance>}
+				pad_option2_params = {part = <part> color_wheel = <color_wheel> num_icons = <num_icons> icon = <hist_tex> cam_name = <cam_name> camera_list = <camera_list> zoom_camera = <zoom_camera> no_rotate = <no_rotate> no_zoom = <no_zoom> pull_back_distance = <pull_back_distance> stance = <stance> additional_deinit_script = <additional_deinit_script> return_stance = <return_stance>}
 			endif
 			add_list_item {
 				text = ((($<part>) [<i>]).frontend_desc)
@@ -91,17 +91,17 @@ script ui_create_popout_select_part_spawned
 		endif
 	endif
 	i = (<i> + 1)
-	repeat <array_Size>
+	repeat <array_size>
 	clean_up_user_control_helpers
-	LaunchEvent Type = focus target = create_popout_select_part_vmenu data = {child_index = <current_part>}
+	LaunchEvent type = focus target = create_popout_select_part_vmenu data = {child_index = <current_part>}
 	if GotParam \{stance}
-		getcurrentcasobject
-		bandmanager_changestance Name = <cas_object> stance = <stance> no_wait
+		GetCurrentCASObject
+		BandManager_ChangeStance name = <cas_object> stance = <stance> no_wait
 	endif
 	if GotParam \{cam_name}
-		Change \{generic_menu_block_input = 1}
+		change \{generic_menu_block_input = 1}
 		task_menu_default_anim_in base_name = <cam_name>
-		Change \{generic_menu_block_input = 0}
+		change \{generic_menu_block_input = 0}
 	endif
 endscript
 
@@ -119,21 +119,21 @@ script ui_init_popout_select_part
 	if GotParam \{additional_init_script}
 		<additional_init_script>
 	endif
-	pushtemporarycasappearance
+	PushTemporaryCASAppearance
 endscript
 
 script ui_deinit_popout_select_part 
-	flushallcompositetextures
-	poptemporarycasappearance
+	FlushAllCompositeTextures
+	PopTemporaryCASAppearance
 	if NOT GotParam \{skip_deinit_script}
 		if GotParam \{additional_deinit_script}
 			<additional_deinit_script>
 		endif
-		getcurrentcasobject
+		GetCurrentCASObject
 		if GotParam \{return_stance}
-			bandmanager_changestance Name = <cas_object> stance = <return_stance> no_wait
+			BandManager_ChangeStance name = <cas_object> stance = <return_stance> no_wait
 		else
-			bandmanager_changestance Name = <cas_object> stance = stance_frontend no_wait
+			BandManager_ChangeStance name = <cas_object> stance = stance_frontend no_wait
 		endif
 	else
 		ui_event_remove_params \{param = skip_deinit_script}
@@ -143,7 +143,7 @@ endscript
 
 script popout_select_part_decide_action 
 	if ScriptIsRunning \{select_part_focus_change_spawned}
-		KillSpawnedScript \{Name = select_part_focus_change_spawned}
+		KillSpawnedScript \{name = select_part_focus_change_spawned}
 	endif
 	RequireParams \{[
 			part
@@ -153,9 +153,9 @@ script popout_select_part_decide_action
 	endif
 	ui_event_add_params \{skip_deinit_script = 1}
 	if is_part_capable part = <part>
-		if getcaspartmaterials part = <part>
+		if GetCASPartMaterials part = <part>
 			generic_event_replace data = {
-				state = uistate_cas_select_part_options
+				state = UIstate_cas_select_part_options
 				part = <part>
 				part_materials = <part_materials>
 				num_states = 1
@@ -163,7 +163,7 @@ script popout_select_part_decide_action
 				hist_tex = <icon>
 				camera_list = <camera_list>
 				zoom_camera = <zoom_camera>
-				NO_ROTATE = <NO_ROTATE>
+				no_rotate = <no_rotate>
 				no_zoom = <no_zoom>
 				pull_back_distance = <pull_back_distance>
 				stance = <stance>
@@ -173,16 +173,16 @@ script popout_select_part_decide_action
 			}
 			return
 		endif
-		get_section_index_from_desc_id part = <part> target_desc_id = finishes
+		get_section_index_from_desc_id part = <part> target_desc_id = Finishes
 		if GotParam \{section_index}
 			generic_event_replace data = {
-				state = uistate_cap_artist_layer
-				part = <part> text = qs(0x6e23fd31)
+				state = UIstate_cap_artist_layer
+				part = <part> text = qs("Finishes")
 				section_index = <section_index>
 				back_steps = 2
 				camera_list = <camera_list>
 				zoom_camera = <zoom_camera>
-				NO_ROTATE = <NO_ROTATE>
+				no_rotate = <no_rotate>
 				no_zoom = <no_zoom>
 				pull_back_distance = <pull_back_distance>
 				stance = <stance>
@@ -193,13 +193,13 @@ script popout_select_part_decide_action
 			return
 		else
 			generic_event_replace data = {
-				state = uistate_cap_main
+				state = UIstate_cap_main
 				savegame = ($cas_current_savegame)
-				part = <part> text = qs(0xd02a3b59)
+				part = <part> text = qs("Design")
 				back_steps = 1
 				camera_list = <camera_list>
 				zoom_camera = <zoom_camera>
-				NO_ROTATE = <NO_ROTATE>
+				no_rotate = <no_rotate>
 				no_zoom = <no_zoom>
 				pull_back_distance = <pull_back_distance>
 				stance = <stance>
@@ -209,11 +209,11 @@ script popout_select_part_decide_action
 			}
 			return
 		endif
-	elseif getcaspartmaterials part = <part>
+	elseif GetCASPartMaterials part = <part>
 		GetArraySize <part_materials>
-		if (<array_Size> > 1)
+		if (<array_size> > 1)
 			ui_event event = menu_replace data = {
-				state = uistate_cas_select_part_color_options
+				state = UIstate_cas_select_part_color_options
 				part = <part>
 				part_materials = <part_materials>
 				hist_tex = menu_history_color_edit
@@ -222,7 +222,7 @@ script popout_select_part_decide_action
 				color_wheel = <color_wheel>
 				camera_list = <camera_list>
 				zoom_camera = <zoom_camera>
-				NO_ROTATE = <NO_ROTATE>
+				no_rotate = <no_rotate>
 				no_zoom = <no_zoom>
 				pull_back_distance = <pull_back_distance>
 				stance = <stance>
@@ -230,9 +230,9 @@ script popout_select_part_decide_action
 				return_stance = <return_stance>
 				cam_name = <cam_name>
 			}
-		elseif (<array_Size> = 1)
+		elseif (<array_size> = 1)
 			ui_event event = menu_replace data = {
-				state = uistate_cas_color_edit
+				state = UIstate_cas_color_edit
 				part = <part>
 				part_materials = <part_materials>
 				hist_tex = menu_history_color_edit
@@ -241,7 +241,7 @@ script popout_select_part_decide_action
 				color_wheel = <color_wheel>
 				camera_list = <camera_list>
 				zoom_camera = <zoom_camera>
-				NO_ROTATE = <NO_ROTATE>
+				no_rotate = <no_rotate>
 				no_zoom = <no_zoom>
 				pull_back_distance = <pull_back_distance>
 				stance = <stance>
@@ -259,25 +259,25 @@ script select_part_focus_change
 			part
 		]
 		all}
-	killallcompositetextures
+	KillAllCompositeTextures
 	get_part_current_desc_id part = <part>
-	printf qs(0x1e9f665e) c = <current_desc_id> donotresolve
+	printf qs("\LCurrent Desc ID is %c") c = <current_desc_id> DoNotResolve
 	if (((($<part>) [<index>]).desc_id) != <current_desc_id>)
 		cas_add_item_to_appearance {
 			part = <part>
 			desc_id = (($<part>) [<index>].desc_id)
 		}
-		if NOT getcasappearancepart part = <part>
-			ScriptAssert '%s not found' s = <part> donotresolve donotresolve
+		if NOT GetCASAppearancePart part = <part>
+			ScriptAssert '%s not found' s = <part> DoNotResolve DoNotResolve
 		endif
-		if NOT getactualcasoptionstruct part = <part> desc_id = <desc_id>
-			ScriptAssert '%s %t not found' s = <part> t = <desc_id> donotresolve
+		if NOT GetActualCASOptionStruct part = <part> desc_id = <desc_id>
+			ScriptAssert '%s %t not found' s = <part> t = <desc_id> DoNotResolve
 		endif
 	endif
 	if GotParam \{play_current_anim}
 		if GotParam \{frontend_anim_name}
-			getcurrentcasobject
-			Band_PlaySimpleAnim Name = <cas_object> anim = <frontend_anim_name>
+			GetCurrentCASObject
+			Band_PlaysimpleAnim name = <cas_object> Anim = <frontend_anim_name>
 		endif
 	endif
 	clean_up_user_control_helpers

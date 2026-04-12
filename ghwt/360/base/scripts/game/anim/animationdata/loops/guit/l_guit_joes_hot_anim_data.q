@@ -1,36 +1,36 @@
-l_guit_joes_hot_anims_set = {
+L_GUIT_JoeS_Hot_anims_set = {
 	Stance_A = {
 		Idle = {
 			good = {
-				slow = [
+				Slow = [
 					guit_joes_hot_075_01
 				]
-				med = [
+				Med = [
 					guit_joes_hot_100_01
 				]
-				FAST = [
+				Fast = [
 					guit_joes_hot_120_01
 				]
 			}
 			Normal = {
-				slow = [
+				Slow = [
 					guit_joes_hot_075_01
 				]
-				med = [
+				Med = [
 					guit_joes_hot_100_01
 				]
-				FAST = [
+				Fast = [
 					guit_joes_hot_120_01
 				]
 			}
-			bad = {
-				slow = [
+			Bad = {
+				Slow = [
 					guit_joes_hot_075_01
 				]
-				med = [
+				Med = [
 					guit_joes_hot_100_01
 				]
-				FAST = [
+				Fast = [
 					guit_joes_hot_120_01
 				]
 			}

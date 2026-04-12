@@ -1,29 +1,29 @@
 GP_StarPower_BatsPoof01 = {
-	Pos = (0.35688803, -16.018635, 0.071377)
-	Angles = (0.0, 0.0, 0.0)
+	pos = (0.35688803, -16.018635, 0.071377)
+	angles = (0.0, 0.0, 0.0)
 	Class = ParticleObject
 	ParticleType = FlexParticle
-	Type = flat
-	Active
+	type = flat
+	active
 	CreatedAtStart
-	Attach
-	AttachObject = GUITARIST
-	bone = BONE_PELVIS
+	attach
+	AttachObject = Guitarist
+	bone = Bone_Pelvis
 	EmitRangeDims = (0.2, 0.5, 0.2)
-	Emit_Target = (0.0, 1.0, 0.0)
+	emit_Target = (0.0, 1.0, 0.0)
 	EmitAngle = (0.0, 0.0, 0.0)
-	Force = (0.0, 0.0, 0.0)
+	force = (0.0, 0.0, 0.0)
 	WindCoeff = 0.0
 	LocalWindCoeff = 0.0
 	EmitterVelocityWeight = 0.0
 	Radiate
 	AngleSpread = 360.0
 	LifeRange = (1.0, 1.0)
-	Emit_Rate = 32.0
-	Max = 0
+	emit_rate = 32.0
+	max = 0
 	TimeSeed = 0.2
-	LifeTime = 0.0
-	EmitNum = 16
+	lifeTime = 0.0
+	emitNum = 16
 	FollowEmitter = 0.0
 	EmitFunction = constant
 	EmitPeriod = 1.0
@@ -37,8 +37,8 @@ GP_StarPower_BatsPoof01 = {
 	EmitDelayStart = 0.0
 	PathFollowTime = 0.2
 	History = 2
-	HistoryListCoordinateSpace = World
-	Color = 1650095615
+	HistoryListCoordinateSpace = world
+	color = 1650095615
 	LOD_Default
 	QuickMaterial = {
 		TextureLayout = Layout2x2
@@ -46,8 +46,8 @@ GP_StarPower_BatsPoof01 = {
 		DiffuseTexture = JOW_Steam02
 		SpecularPower = 0
 		Lighting
-		AlphaCutoff = 16
-		BlendMode = blend
+		alphacutoff = 16
+		blendMode = blend
 		QuadAnimationFPS = 0
 	}
 	Knot = [

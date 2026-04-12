@@ -1,6 +1,6 @@
 net_matchmaking_fs = {
 	create = create_net_matchmaking_menu
-	Destroy = destroy_net_matchmaking_menu
+	destroy = destroy_net_matchmaking_menu
 	actions = [
 		{
 			action = start_match_makings
@@ -15,7 +15,7 @@ net_matchmaking_fs = {
 }
 net_achievement_tracker_fs = {
 	create = create_achievement_tracker_ui
-	Destroy = destroy_achievement_tracker_ui
+	destroy = destroy_achievement_tracker_ui
 	actions = [
 		{
 			action = go_back
@@ -25,7 +25,7 @@ net_achievement_tracker_fs = {
 }
 online_signin_fs = {
 	create = create_online_signin_splash
-	Destroy = destroy_online_signin_splash
+	destroy = destroy_online_signin_splash
 	actions = [
 		{
 			action = online_enabled
@@ -43,7 +43,7 @@ online_signin_fs = {
 }
 online_signin_warning_fs = {
 	create = create_online_signin_warning_menu
-	Destroy = destroy_online_signin_warning_menu
+	destroy = destroy_online_signin_warning_menu
 	actions = [
 		{
 			action = continue
@@ -53,7 +53,7 @@ online_signin_warning_fs = {
 }
 online_menu_fs = {
 	create = create_online_main_menu
-	Destroy = destroy_online_main_menu
+	destroy = destroy_online_main_menu
 	actions = [
 		{
 			action = continue
@@ -113,7 +113,7 @@ script select_create_match_transition
 endscript
 online_options_fs = {
 	create = create_online_options_menu
-	Destroy = destroy_online_options_menu
+	destroy = destroy_online_options_menu
 	actions = [
 		{
 			action = select_quickmatch_pref
@@ -133,7 +133,7 @@ online_options_fs = {
 }
 online_option_changed_dialog_fs = {
 	create = create_online_options_changed_dialog
-	Destroy = destroy_online_options_changed_dialog
+	destroy = destroy_online_options_changed_dialog
 	popup
 	actions = [
 		{
@@ -152,7 +152,7 @@ online_option_changed_dialog_fs = {
 }
 online_option_autosave_fs = {
 	create = memcard_sequence_begin_autosave
-	Destroy = memcard_sequence_cleanup_generic
+	destroy = memcard_sequence_cleanup_generic
 	actions = [
 		{
 			action = memcard_sequence_save_success
@@ -166,7 +166,7 @@ online_option_autosave_fs = {
 }
 online_options_quickmatch_fs = {
 	create = create_online_quickmatch_prefs
-	Destroy = destroy_online_quickmatch_prefs
+	destroy = destroy_online_quickmatch_prefs
 	actions = [
 		{
 			action = save_dialog
@@ -188,7 +188,7 @@ online_options_quickmatch_fs = {
 }
 online_options_player_prefs_fs = {
 	create = create_online_player_prefs
-	Destroy = destroy_online_player_prefs
+	destroy = destroy_online_player_prefs
 	actions = [
 		{
 			action = save_dialog
@@ -202,7 +202,7 @@ online_options_player_prefs_fs = {
 }
 online_play_song_fs = {
 	create = create_net_play_song_menu
-	Destroy = destroy_net_play_song_menu
+	destroy = destroy_net_play_song_menu
 	actions = [
 		{
 			action = pause_game
@@ -230,7 +230,7 @@ online_play_song_fs = {
 }
 online_win_song_fs = {
 	create = create_newspaper_menu
-	Destroy = destroy_newspaper_menu
+	destroy = destroy_newspaper_menu
 	actions = [
 		{
 			action = continue_to_next_song
@@ -248,7 +248,7 @@ online_win_song_fs = {
 }
 online_fail_song_fs = {
 	create = create_newspaper_menu
-	Destroy = destroy_newspaper_menu
+	destroy = destroy_newspaper_menu
 	actions = [
 		{
 			action = continue_to_next_song
@@ -266,7 +266,7 @@ online_fail_song_fs = {
 }
 online_match_stats_fs = {
 	create = create_net_detailed_stats_menu
-	Destroy = destroy_detailed_stats_menu
+	destroy = destroy_detailed_stats_menu
 	actions = [
 		{
 			action = continue
@@ -278,7 +278,7 @@ online_match_stats_fs = {
 
 script check_if_ranked_game 
 	if isXenon
-		if ($match_type = Ranked)
+		if ($match_type = ranked)
 			return \{flow_state = online_end_ranked_game_save_fs}
 		endif
 	else
@@ -288,7 +288,7 @@ script check_if_ranked_game
 endscript
 online_end_ranked_game_save_fs = {
 	create = memcard_sequence_begin_autosave
-	Destroy = memcard_sequence_cleanup_generic
+	destroy = memcard_sequence_cleanup_generic
 	actions = [
 		{
 			action = memcard_sequence_save_success
@@ -302,7 +302,7 @@ online_end_ranked_game_save_fs = {
 }
 online_pause_fs = {
 	create = create_pause_menu
-	Destroy = destroy_pause_menu
+	destroy = destroy_pause_menu
 	actions = [
 		{
 			action = select_resume
@@ -320,7 +320,7 @@ online_pause_options_fs = {
 	create_params = {
 		for_options = 1
 	}
-	Destroy = destroy_pause_menu
+	destroy = destroy_pause_menu
 	actions = [
 		{
 			action = select_audio_settings
@@ -350,7 +350,7 @@ online_pause_options_fs = {
 }
 online_leaderboard_groups_fs = {
 	create = create_leaderboard_groups_menu
-	Destroy = destroy_leaderboard_groups_menu
+	destroy = destroy_leaderboard_groups_menu
 	actions = [
 		{
 			action = select_leaderboard_group
@@ -364,7 +364,7 @@ online_leaderboard_groups_fs = {
 }
 online_leaderboard_list_fs = {
 	create = create_leaderboard_group_listing_menu
-	Destroy = destroy_leaderboard_group_listing_menu
+	destroy = destroy_leaderboard_group_listing_menu
 	actions = [
 		{
 			action = select_leaderboard
@@ -378,7 +378,7 @@ online_leaderboard_list_fs = {
 }
 view_leaderboard_fs = {
 	create = create_leaderboard_menu
-	Destroy = destroy_leaderboard_menu
+	destroy = destroy_leaderboard_menu
 	actions = [
 		{
 			action = select_leaderboard
@@ -404,7 +404,7 @@ view_leaderboard_fs = {
 }
 leaderboard_filter_fs = {
 	create = create_leaderboard_filter_dialog
-	Destroy = destroy_leaderboard_filter_dialog
+	destroy = destroy_leaderboard_filter_dialog
 	popup
 	actions = [
 		{
@@ -419,7 +419,7 @@ leaderboard_filter_fs = {
 }
 quickmatch_search_fs = {
 	create = create_online_server_list
-	Destroy = destroy_online_server_list
+	destroy = destroy_online_server_list
 	actions = [
 		{
 			action = select_server
@@ -441,7 +441,7 @@ quickmatch_search_fs = {
 }
 quick_match_joining_game_fs = {
 	create = create_join_server_menu
-	Destroy = destroy_join_server_menu
+	destroy = destroy_join_server_menu
 	actions = [
 		{
 			action = connection_lost
@@ -459,7 +459,7 @@ quick_match_joining_game_fs = {
 }
 invite_joining_game_fs = {
 	create = create_join_server_menu
-	Destroy = destroy_join_server_menu
+	destroy = destroy_join_server_menu
 	actions = [
 		{
 			action = connection_lost
@@ -481,7 +481,7 @@ invite_joining_game_fs = {
 }
 custom_match_fs = {
 	create = create_custom_create_menu
-	Destroy = destroy_custom_create_menu
+	destroy = destroy_custom_create_menu
 	actions = [
 		{
 			action = select_done
@@ -495,7 +495,7 @@ custom_match_fs = {
 }
 online_server_list_fs = {
 	create = create_online_server_list
-	Destroy = destroy_online_server_list
+	destroy = destroy_online_server_list
 	actions = [
 		{
 			action = select_server
@@ -517,7 +517,7 @@ online_server_list_fs = {
 }
 custom_match_joining_game_fs = {
 	create = create_join_server_menu
-	Destroy = destroy_join_server_menu
+	destroy = destroy_join_server_menu
 	actions = [
 		{
 			action = join_server
@@ -539,7 +539,7 @@ custom_match_joining_game_fs = {
 }
 
 script transition_from_select_match_type 
-	if (($match_type) = Ranked)
+	if (($match_type) = ranked)
 		return \{flow_state = create_match_select_game_mode_fs}
 	endif
 	return \{flow_state = create_match_select_private_match_fs}
@@ -555,7 +555,7 @@ endscript
 
 script transition_from_select_game_mode_back 
 	if isXenon
-		if (($match_type) = Ranked)
+		if (($match_type) = ranked)
 			return \{flow_state = create_match_select_match_type_fs}
 		endif
 		return \{flow_state = create_match_select_private_match_fs}
@@ -565,7 +565,7 @@ script transition_from_select_game_mode_back
 endscript
 create_match_select_match_type_fs = {
 	create = create_mp_select_match_type_menu
-	Destroy = destroy_mp_select_match_type_menu
+	destroy = destroy_mp_select_match_type_menu
 	actions = [
 		{
 			action = select_match_type
@@ -579,7 +579,7 @@ create_match_select_match_type_fs = {
 }
 create_match_select_private_match_fs = {
 	create = create_select_private_match_menu
-	Destroy = destroy_select_private_match_menu
+	destroy = destroy_select_private_match_menu
 	actions = [
 		{
 			action = continue
@@ -593,7 +593,7 @@ create_match_select_private_match_fs = {
 }
 create_match_select_game_mode_fs = {
 	create = create_mp_select_mode_menu
-	Destroy = destroy_mp_select_mode_menu
+	destroy = destroy_mp_select_mode_menu
 	actions = [
 		{
 			action = select_game_mode
@@ -607,7 +607,7 @@ create_match_select_game_mode_fs = {
 }
 create_match_select_diff_fs = {
 	create = create_select_difficulty_menu
-	Destroy = destroy_select_difficulty_menu
+	destroy = destroy_select_difficulty_menu
 	actions = [
 		{
 			action = continue
@@ -621,7 +621,7 @@ create_match_select_diff_fs = {
 }
 create_match_select_num_songs_fs = {
 	create = create_select_num_songs_menu
-	Destroy = destroy_select_num_songs_menu
+	destroy = destroy_select_num_songs_menu
 	actions = [
 		{
 			action = continue
@@ -635,7 +635,7 @@ create_match_select_num_songs_fs = {
 }
 create_match_select_venue_fs = {
 	create = create_select_venue_menu
-	Destroy = destroy_select_venue_menu
+	destroy = destroy_select_venue_menu
 	actions = [
 		{
 			action = continue
@@ -651,19 +651,19 @@ create_match_select_venue_fs = {
 }
 net_debug_lobby_fs = {
 	create = debug_new_ui_start
-	Destroy = empty_script
+	destroy = empty_script
 	actions = [
 	]
 }
 
 script debug_new_ui_start 
-	Change \{current_level = load_z_metalfest}
+	change \{current_level = load_z_metalfest}
 	if IsHost
 		mode = HOST
 	else
 		mode = CLIENT
 	endif
-	ui_event event = menu_replace data = {state = uistate_net_debug_lobby mode = <mode>}
+	ui_event event = menu_replace data = {state = UIstate_net_debug_lobby mode = <mode>}
 endscript
 
 script temp_join_server 
@@ -671,7 +671,7 @@ script temp_join_server
 endscript
 default_joining_screen = {
 	create = create_joining_screen
-	Destroy = destroy_joining_screen
+	destroy = destroy_joining_screen
 }
 
 script transition_from_char_hub 
@@ -694,7 +694,7 @@ script transition_from_setlist_back
 endscript
 online_character_select_fs = {
 	create = create_character_select_menu
-	Destroy = destroy_character_select_menu
+	destroy = destroy_character_select_menu
 	actions = [
 		{
 			action = connection_lost
@@ -713,7 +713,7 @@ online_character_select_fs = {
 }
 online_character_hub_fs = {
 	create = create_character_hub_menu
-	Destroy = destroy_character_hub_menu
+	destroy = destroy_character_hub_menu
 	actions = [
 		{
 			action = connection_lost
@@ -747,7 +747,7 @@ online_character_hub_fs = {
 }
 online_select_outfit_fs = {
 	create = create_select_outfit_menu
-	Destroy = destroy_select_outfit_menu
+	destroy = destroy_select_outfit_menu
 	actions = [
 		{
 			action = connection_lost
@@ -773,7 +773,7 @@ online_select_outfit_fs = {
 }
 online_select_style_fs = {
 	create = create_select_style_menu
-	Destroy = destroy_select_style_menu
+	destroy = destroy_select_style_menu
 	actions = [
 		{
 			action = connection_lost
@@ -799,7 +799,7 @@ online_select_style_fs = {
 }
 online_select_guitar_fs = {
 	create = create_select_guitar_menu
-	Destroy = destroy_select_guitar_menu
+	destroy = destroy_select_guitar_menu
 	actions = [
 		{
 			action = connection_lost
@@ -829,7 +829,7 @@ online_select_guitar_fs = {
 }
 online_select_guitar_finish_fs = {
 	create = create_select_guitar_finish_menu
-	Destroy = destroy_select_guitar_finish_menu
+	destroy = destroy_select_guitar_finish_menu
 	actions = [
 		{
 			action = connection_lost
@@ -855,7 +855,7 @@ online_select_guitar_finish_fs = {
 }
 online_select_bass_fs = {
 	create = create_select_bass_menu
-	Destroy = destroy_select_guitar_menu
+	destroy = destroy_select_guitar_menu
 	actions = [
 		{
 			action = connection_lost
@@ -885,7 +885,7 @@ online_select_bass_fs = {
 }
 online_coop_choose_part_fs = {
 	create = net_create_choose_part_menu
-	Destroy = destroy_choose_part_menu
+	destroy = destroy_choose_part_menu
 	actions = [
 		{
 			action = connection_lost
@@ -907,7 +907,7 @@ online_coop_choose_part_fs = {
 }
 online_select_diff_fs = {
 	create = net_create_select_difficulty_menu
-	Destroy = destroy_select_difficulty_menu
+	destroy = destroy_select_difficulty_menu
 	actions = [
 		{
 			action = connection_lost
@@ -929,7 +929,7 @@ online_select_diff_fs = {
 }
 online_setlist_fs = {
 	create = create_setlist_menu
-	Destroy = destroy_setlist_menu
+	destroy = destroy_setlist_menu
 	actions = [
 		{
 			action = connection_lost
@@ -965,7 +965,7 @@ script setlist_client_dropped
 endscript
 online_loading_fs = {
 	create = create_loading_screen
-	Destroy = destroy_loading_screen
+	destroy = destroy_loading_screen
 	actions = [
 		{
 			action = net_begin_song
@@ -980,7 +980,7 @@ online_loading_fs = {
 }
 character_lobby_cleanup_fs = {
 	create = cleanup_online_lobby_select
-	Destroy = empty_script
+	destroy = empty_script
 	actions = [
 		{
 			action = continue

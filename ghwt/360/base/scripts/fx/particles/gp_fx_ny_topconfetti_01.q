@@ -1,26 +1,26 @@
-gp_fx_ny_topconfetti_01 = {
-	Pos = (-0.080984, 11.183571, -1.075006)
-	Angles = (0.0, 0.0, 0.0)
+GP_FX_NY_TopConfetti_01 = {
+	pos = (-0.080984, 11.183571, -1.075006)
+	angles = (0.0, 0.0, 0.0)
 	Class = ParticleObject
 	ParticleType = FlexParticle
-	Type = flat
-	Active
+	type = flat
+	active
 	CreatedAtStart
 	EmitRangeDims = (1.0, 1.0, 1.0)
 	DoCircularEmit
-	Emit_Target = (0.0, 0.3, 0.2)
+	emit_Target = (0.0, 0.3, 0.2)
 	EmitAngle = (0.0, 0.0, 0.0)
-	Force = (0.0, -1.0, 0.0)
+	force = (0.0, -1.0, 0.0)
 	WindCoeff = 0.0
 	LocalWindCoeff = 0.0
 	EmitterVelocityWeight = 0.0
 	AngleSpread = 70.0
 	LifeRange = (5.0, 7.0)
-	Emit_Rate = 400.0
-	Max = 0
+	emit_rate = 400.0
+	max = 0
 	TimeSeed = 1.0
-	LifeTime = 3.0
-	EmitNum = 0
+	lifeTime = 3.0
+	emitNum = 0
 	FollowEmitter = 0.0
 	EmitFunction = constant
 	EmitPeriod = 1.0
@@ -34,19 +34,19 @@ gp_fx_ny_topconfetti_01 = {
 	EmitDelayStart = 0.0
 	PathFollowTime = 0.0
 	History = 2
-	HistoryListCoordinateSpace = World
+	HistoryListCoordinateSpace = world
 	align_to = (1.0, 0.0, 0.0)
 	Rotate3D
-	Color = -1
+	color = -1
 	LOD_Default
 	QuickMaterial = {
 		TextureLayout = Layout2x2
 		DiffuseTextureEnabled
-		DiffuseTexture = jow_confetti01
+		DiffuseTexture = JOW_Confetti01
 		SpecularPower = 0
 		TwoSide
-		AlphaCutoff = 1
-		BlendMode = blend
+		alphacutoff = 1
+		blendMode = blend
 		QuadAnimationFPS = 0
 	}
 	Knot = [

@@ -1,15 +1,15 @@
 
 script element3d_add_components 
-	if GotParam \{skeletonname}
+	if GotParam \{SkeletonName}
 		PushMemProfile \{'Element3d Skeletons'}
-		CreateComponentFromStructure component = Skeleton <...> Skeleton = <skeletonname>
+		CreateComponentFromStructure Component = skeleton <...> skeleton = <SkeletonName>
 		PopMemProfile
 	endif
 	if GotParam \{AnimName}
-		CreateComponentFromStructure component = Model LightGroup = None max_scene_lights = 0 <...> Scale = 1
-		CreateComponentFromStructure \{component = AnimTree}
+		CreateComponentFromStructure Component = Model lightgroup = none max_scene_lights = 0 <...> scale = 1
+		CreateComponentFromStructure \{Component = AnimTree}
 	else
-		CreateComponentFromStructure component = Model <...> Scale = 1 LightGroup = None
+		CreateComponentFromStructure Component = Model <...> scale = 1 lightgroup = none
 	endif
 endscript
 

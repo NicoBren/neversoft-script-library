@@ -1,6 +1,6 @@
 
-script ui_create_cag_select_part_inclusion \{stance = stance_select_guitar}
-	SpawnScriptNow ui_create_cag_select_part_inclusion_spawned params = {<...>}
+script ui_create_cag_select_part_inclusion \{stance = Stance_Select_Guitar}
+	spawnscriptnow ui_create_cag_select_part_inclusion_spawned params = {<...>}
 endscript
 
 script ui_create_cag_select_part_inclusion_spawned 
@@ -32,7 +32,7 @@ script ui_create_cag_select_part_inclusion_spawned
 				endif
 				if NOT is_part_purchased part = <part> desc_id = ((($<part>) [<i>]).desc_id) savegame = ($cas_current_savegame)
 					price = ((($<part>) [<i>]).price)
-					formatText TextName = pad_choose_dialogue qs(0x30e8eb93) s = ((($<part>) [<i>]).frontend_desc)
+					FormatText TextName = pad_choose_dialogue qs("Would you like to purchase and edit this %s?") s = ((($<part>) [<i>]).frontend_desc)
 					show_purchasable = 1
 					pad_back_script = generic_event_back
 					if NOT GotParam \{no_edit}
@@ -89,14 +89,14 @@ script ui_create_cag_select_part_inclusion_spawned
 		endif
 	endif
 	i = (<i> + 1)
-	repeat <array_Size>
+	repeat <array_size>
 	clean_up_user_control_helpers
 	menu_finish \{car_helper_text_extra}
-	LaunchEvent Type = focus target = create_cag_select_part_inclusion_vmenu data = {child_index = <current_part>}
+	LaunchEvent type = focus target = create_cag_select_part_inclusion_vmenu data = {child_index = <current_part>}
 	if GotParam \{cam_name}
-		Change \{generic_menu_block_input = 1}
+		change \{generic_menu_block_input = 1}
 		task_menu_default_anim_in base_name = <cam_name>
-		Change \{generic_menu_block_input = 0}
+		change \{generic_menu_block_input = 0}
 	endif
 endscript
 
@@ -105,12 +105,12 @@ script ui_destroy_cag_select_part_inclusion
 endscript
 
 script ui_init_cag_select_part_inclusion 
-	pushtemporarycasappearance
+	PushTemporaryCASAppearance
 	ui_load_cas_rawpak part = <part>
 endscript
 
 script ui_deinit_cag_select_part_inclusion 
-	poptemporarycasappearance
+	PopTemporaryCASAppearance
 	cleanup_cas_menu_handlers
 endscript
 
@@ -119,8 +119,8 @@ script cag_select_part_inclusion_decide_action
 			part
 		]
 		all}
-	if getcaspartmaterials part = <part>
-		ui_event event = menu_replace data = {state = uistate_cas_color_edit part_materials = <part_materials> part = <part> num_states = 1 color_wheel = <color_wheel> cam_name = <cam_name> camera_list = <camera_list> zoom_camera = <zoom_camera> return_stance = <stance>}
+	if GetCASPartMaterials part = <part>
+		ui_event event = menu_replace data = {state = UIstate_cas_color_edit part_materials = <part_materials> part = <part> num_states = 1 color_wheel = <color_wheel> cam_name = <cam_name> camera_list = <camera_list> zoom_camera = <zoom_camera> return_stance = <stance>}
 	else
 		generic_event_back
 	endif
@@ -131,10 +131,10 @@ script get_inclusion_list
 			body_part
 		]
 		all}
-	if NOT getcasappearancepart part = <body_part>
+	if NOT GetCASAppearancePart part = <body_part>
 		ScriptAssert '%s not found' s = <body_part>
 	endif
-	if NOT getactualcasoptionstruct part = <body_part> desc_id = <desc_id>
+	if NOT GetActualCASOptionStruct part = <body_part> desc_id = <desc_id>
 		ScriptAssert '%s %t not found' s = <body_part> t = <desc_id>
 	endif
 	return inclusion = <inclusion>

@@ -1,300 +1,300 @@
 
-script transition_playsimpleanim 
-	Band_PlaySimpleAnim <...>
-	bandmanager_setplayingintroanims Name = <Name>
+script Transition_PlaySimpleAnim 
+	Band_PlaysimpleAnim <...>
+	BandManager_SetPlayingIntroAnims name = <name>
 endscript
 
-script Band_PlayFacialAnim \{Name = GUITARIST}
-	if CompositeObjectExists Name = <Name>
-		<Name> :Obj_KillSpawnedScript Name = play_special_facial_anim
-		<Name> :Obj_SpawnScriptNow play_special_facial_anim params = {anim = <anim>}
+script Band_PlayFacialAnim \{name = Guitarist}
+	if CompositeObjectExists name = <name>
+		<name> :Obj_KillSpawnedScript name = play_special_facial_anim
+		<name> :Obj_SpawnScriptNow play_special_facial_anim params = {Anim = <Anim>}
 	endif
-	if (<Name> = vocalist)
-		if CompositeObjectExists \{Name = vocalist2}
-			vocalist2 :Obj_KillSpawnedScript \{Name = play_special_facial_anim}
-			vocalist2 :Obj_SpawnScriptNow play_special_facial_anim params = {anim = <anim>}
+	if (<name> = vocalist)
+		if CompositeObjectExists \{name = vocalist2}
+			vocalist2 :Obj_KillSpawnedScript \{name = play_special_facial_anim}
+			vocalist2 :Obj_SpawnScriptNow play_special_facial_anim params = {Anim = <Anim>}
 		endif
 	endif
 endscript
 
-script band_playrockinfacialanim \{Name = GUITARIST}
-	if CompositeObjectExists Name = <Name>
-		<Name> :Obj_KillSpawnedScript Name = play_special_facial_anim
-		if band_isfemale Name = <Name>
-			printf \{qs(0xc85f8d07)}
-			<Name> :Obj_SpawnScriptNow play_special_facial_anim params = {anim = gh_rocker_female_hardrockface_4}
+script Band_PlayRockinFacialAnim \{name = Guitarist}
+	if CompositeObjectExists name = <name>
+		<name> :Obj_KillSpawnedScript name = play_special_facial_anim
+		if Band_IsFemale name = <name>
+			printf \{qs("\LFemale Rocker Face")}
+			<name> :Obj_SpawnScriptNow play_special_facial_anim params = {Anim = gh_rocker_female_hardrockface_4}
 		else
-			printf \{qs(0xeda94c27)}
-			<Name> :Obj_SpawnScriptNow play_special_facial_anim params = {anim = gh_rocker_male_hardrockface_4}
+			printf \{qs("\LMale Rocker Face")}
+			<name> :Obj_SpawnScriptNow play_special_facial_anim params = {Anim = gh_rocker_male_hardrockface_4}
 		endif
 	endif
 endscript
 
-script band_changefacialanims \{Name = GUITARIST
+script Band_ChangeFacialAnims \{name = Guitarist
 		ff_anims = facial_anims_female_rocker
-		mf_anims = facial_anims_male_rocker
+		Mf_anims = facial_anims_male_rocker
 		blend_duration = 0.3}
-	if CompositeObjectExists Name = <Name>
-		ExtendCrc <Name> '_Info' out = info_struct
-		if band_isfemale Name = <Name>
-			Change structurename = <info_struct> facial_anims = <ff_anims>
+	if CompositeObjectExists name = <name>
+		ExtendCRC <name> '_Info' out = info_struct
+		if Band_IsFemale name = <name>
+			change structurename = <info_struct> facial_anims = <ff_anims>
 		else
-			Change structurename = <info_struct> facial_anims = <mf_anims>
+			change structurename = <info_struct> facial_anims = <Mf_anims>
 		endif
-		<Name> :Obj_KillSpawnedScript Name = play_special_facial_anim
-		<Name> :Obj_KillSpawnedScript Name = facial_anim_loop
-		<Name> :Obj_SpawnScriptNow facial_anim_loop params = {blend_duration = <blend_duration>}
+		<name> :Obj_KillSpawnedScript name = play_special_facial_anim
+		<name> :Obj_KillSpawnedScript name = facial_anim_loop
+		<name> :Obj_SpawnScriptNow facial_anim_loop params = {blend_duration = <blend_duration>}
 	else
-		printf qs(0x7eb6ba00) a = <Name>
+		printf qs("\L%a doesn't exists...") a = <name>
 	endif
 endscript
 
-script ae_changefacialanims \{ff_anims = facial_anims_female_rocker
-		mf_anims = facial_anims_male_rocker
+script AE_ChangeFacialAnims \{ff_anims = facial_anims_female_rocker
+		Mf_anims = facial_anims_male_rocker
 		blend_duration = 0.3}
 	Obj_GetID
-	band_changefacialanims Name = <objID> ff_anims = <ff_anims> mf_anims = <mf_anims> blend_duration = <blend_duration>
+	Band_ChangeFacialAnims name = <ObjID> ff_anims = <ff_anims> Mf_anims = <Mf_anims> blend_duration = <blend_duration>
 endscript
 
-script Band_ChangeStance \{Name = GUITARIST
+script Band_ChangeStance \{name = Guitarist
 		stance = Stance_A}
 	if ($use_drummer_events = 0)
-		if (<Name> = drummer)
+		if (<name> = Drummer)
 			return
 		endif
 	endif
-	if NOT CompositeObjectExists Name = <Name>
+	if NOT CompositeObjectExists name = <name>
 		return
 	endif
 	if bassist_should_use_guitarist_commands
-		if (<Name> = GUITARIST)
-			if CompositeObjectExists \{Name = BASSIST}
-				LaunchEvent Type = change_stance target = BASSIST data = {<...>}
+		if (<name> = Guitarist)
+			if CompositeObjectExists \{name = bassist}
+				LaunchEvent type = change_stance target = bassist data = {<...>}
 			endif
-		elseif (<Name> = BASSIST)
+		elseif (<name> = bassist)
 			return
 		endif
 	endif
-	LaunchEvent Type = change_stance target = <Name> data = {<...>}
+	LaunchEvent type = change_stance target = <name> data = {<...>}
 endscript
 
-script Band_StopStrumming \{Name = GUITARIST}
-	Band_SetStrumStyle Name = <Name> male_type = None female_type = None
+script Band_StopStrumming \{name = Guitarist}
+	Band_SetStrumStyle name = <name> male_type = none female_type = none
 endscript
 
-script band_enableautostrums 
-	band_enableautostrums_cfunc Name = <Name>
+script Band_EnableAutoStrums 
+	Band_EnableAutoStrums_CFunc name = <name>
 endscript
 
-script band_disableautostrums 
-	band_disableautostrums_cfunc Name = <Name>
+script Band_DisableAutoStrums 
+	Band_DisableAutoStrums_CFunc name = <name>
 endscript
 
-script band_enableautofret 
-	band_enableautofret_cfunc Name = <Name>
+script Band_EnableAutoFret 
+	Band_EnableAutoFret_CFunc name = <name>
 endscript
 
-script band_disableautofret 
-	band_disableautofret_cfunc Name = <Name>
+script Band_DisableAutoFret 
+	Band_DisableAutoFret_CFunc name = <name>
 endscript
 
-script band_enableautochords 
-	band_enableautochords_cfunc Name = <Name>
+script Band_EnableAutoChords 
+	Band_EnableAutoChords_CFunc name = <name>
 endscript
 
-script band_disableautochords 
-	band_disableautochords_cfunc Name = <Name>
+script Band_DisableAutoChords 
+	Band_DisableAutoChords_CFunc name = <name>
 endscript
 
-script band_setikchain 
-	if (<Chain> = guitar)
-		printf channel = anim_info qs(0x8af0dabb) s = <Name>
-		band_setikchaintarget Name = <Name> index = 0 target = Bone_IK_Hand_Guitar_R
-		band_setikchaintarget Name = <Name> index = 1 target = Bone_IK_Hand_Guitar_L
-		band_enableautofret Name = <Name>
-		band_enableautochords Name = <Name>
-		band_enableautostrums Name = <Name>
-	elseif (<Chain> = slave)
-		printf channel = anim_info qs(0xdb054b27) s = <Name>
-		band_setikchaintarget Name = <Name> index = 0 target = Bone_IK_Hand_Slave_R
-		band_setikchaintarget Name = <Name> index = 1 target = Bone_IK_Hand_Slave_L
-		band_disableautofret Name = <Name>
-		band_disableautochords Name = <Name>
-		band_disableautostrums Name = <Name>
+script Band_SetIKChain 
+	if (<chain> = guitar)
+		printf channel = anim_info qs("\LGUITAR CHAIN ACTIVE on %s") s = <name>
+		Band_SetIKChainTarget name = <name> index = 0 target = Bone_IK_Hand_Guitar_R
+		Band_SetIKChainTarget name = <name> index = 1 target = Bone_IK_Hand_Guitar_L
+		Band_EnableAutoFret name = <name>
+		Band_EnableAutoChords name = <name>
+		Band_EnableAutoStrums name = <name>
+	elseif (<chain> = slave)
+		printf channel = anim_info qs("\LSLAVE CHAIN ACTIVE on %s") s = <name>
+		Band_SetIKChainTarget name = <name> index = 0 target = Bone_IK_Hand_Slave_R
+		Band_SetIKChainTarget name = <name> index = 1 target = Bone_IK_Hand_Slave_L
+		Band_DisableAutoFret name = <name>
+		Band_DisableAutoChords name = <name>
+		Band_DisableAutoStrums name = <name>
 	else
-		printf channel = anim_info qs(0xab63139d) s = <Name>
-		band_setikchaintarget Name = <Name> index = 0 target = Bone_IK_Hand_Slave_R
-		band_setikchaintarget Name = <Name> index = 1 target = Bone_IK_Hand_Slave_L
-		band_disableautofret Name = <Name>
-		band_disableautochords Name = <Name>
-		band_disableautostrums Name = <Name>
+		printf channel = anim_info qs("\LDEFAULT SLAVE CHAIN ACTIVE on %s") s = <name>
+		Band_SetIKChainTarget name = <name> index = 0 target = Bone_IK_Hand_Slave_R
+		Band_SetIKChainTarget name = <name> index = 1 target = Bone_IK_Hand_Slave_L
+		Band_DisableAutoFret name = <name>
+		Band_DisableAutoChords name = <name>
+		Band_DisableAutoStrums name = <name>
 	endif
-	bandmanager_setikchainstrength Name = <Name> Chain = Bone_IK_Hand_Guitar_L Strength = 1
-	bandmanager_setikchainstrength Name = <Name> Chain = Bone_IK_Hand_Guitar_R Strength = 1
-	bandmanager_setikchainstrength Name = <Name> Chain = Bone_IK_Hand_Slave_L Strength = 1
-	bandmanager_setikchainstrength Name = <Name> Chain = Bone_IK_Hand_Slave_R Strength = 1
+	Bandmanager_setIKchainStrength name = <name> chain = Bone_IK_Hand_Guitar_L strength = 1
+	Bandmanager_setIKchainStrength name = <name> chain = Bone_IK_Hand_Guitar_R strength = 1
+	Bandmanager_setIKchainStrength name = <name> chain = Bone_IK_Hand_Slave_L strength = 1
+	Bandmanager_setIKchainStrength name = <name> chain = Bone_IK_Hand_Slave_R strength = 1
 endscript
 
-script ae_setik_guitarl_off 
+script AE_SetIK_GuitarL_Off 
 	Obj_GetID
-	band_disableautochords Name = <objID>
+	Band_DisableAutoChords name = <ObjID>
 endscript
 
-script ae_setik_guitarr_off 
+script AE_SetIK_GuitarR_Off 
 	Obj_GetID
-	band_disableautostrums Name = <objID>
+	Band_DisableAutoStrums name = <ObjID>
 endscript
 
-script ae_setik_slavel_off 
+script AE_SetIK_SlaveL_Off 
 endscript
 
-script ae_setik_slaver_off 
+script AE_SetIK_SlaveR_Off 
 endscript
 
-script ae_setik_guitarl_on 
+script AE_SetIK_GuitarL_On 
 	Obj_GetID
-	band_setikchaintarget Name = <objID> index = 1 target = Bone_IK_Hand_Guitar_L BlendDuration = 0.3
-	band_enableautochords Name = <objID>
+	Band_SetIKChainTarget name = <ObjID> index = 1 target = Bone_IK_Hand_Guitar_L BlendDuration = 0.3
+	Band_EnableAutoChords name = <ObjID>
 endscript
 
-script ae_setik_guitarr_on 
+script AE_SetIK_GuitarR_On 
 	Obj_GetID
-	band_setikchaintarget Name = <objID> index = 0 target = Bone_IK_Hand_Guitar_R BlendDuration = 0.3
-	band_enableautostrums Name = <objID>
+	Band_SetIKChainTarget name = <ObjID> index = 0 target = Bone_IK_Hand_Guitar_R BlendDuration = 0.3
+	Band_EnableAutoStrums name = <ObjID>
 endscript
 
-script ae_setik_slavel_on 
+script AE_SetIK_SlaveL_On 
 	Obj_GetID
-	band_setikchaintarget Name = <objID> index = 1 target = Bone_IK_Hand_Slave_L BlendDuration = 0.3
-	band_disableautochords Name = <objID>
+	Band_SetIKChainTarget name = <ObjID> index = 1 target = Bone_IK_Hand_Slave_L BlendDuration = 0.3
+	Band_DisableAutoChords name = <ObjID>
 endscript
 
-script ae_setik_slaver_on 
+script AE_SetIK_SlaveR_On 
 	Obj_GetID
-	band_setikchaintarget Name = <objID> index = 0 target = Bone_IK_Hand_Slave_R BlendDuration = 0.3
-	band_disableautostrums Name = <objID>
+	Band_SetIKChainTarget name = <ObjID> index = 0 target = Bone_IK_Hand_Slave_R BlendDuration = 0.3
+	Band_DisableAutoStrums name = <ObjID>
 endscript
 
-script ae_setik_guitarl_on_stranglehold 
+script AE_SetIK_GuitarL_On_STRANGLEHOLD 
 	Obj_GetID
-	band_setikchaintarget Name = <objID> index = 1 target = Bone_IK_Hand_Guitar_L BlendDuration = 0.3
+	Band_SetIKChainTarget name = <ObjID> index = 1 target = Bone_IK_Hand_Guitar_L BlendDuration = 0.3
 endscript
 
-script ae_setik_guitarr_on_stranglehold 
+script AE_SetIK_GuitarR_On_STRANGLEHOLD 
 	Obj_GetID
-	band_setikchaintarget Name = <objID> index = 0 target = Bone_IK_Hand_Guitar_R BlendDuration = 0.3
+	Band_SetIKChainTarget name = <ObjID> index = 0 target = Bone_IK_Hand_Guitar_R BlendDuration = 0.3
 endscript
 
-script ae_setik_slavel_on_stranglehold 
+script AE_SetIK_SlaveL_On_STRANGLEHOLD 
 	Obj_GetID
-	band_setikchaintarget Name = <objID> index = 1 target = Bone_IK_Hand_Slave_L BlendDuration = 0.3
+	Band_SetIKChainTarget name = <ObjID> index = 1 target = Bone_IK_Hand_Slave_L BlendDuration = 0.3
 endscript
 
-script ae_setik_slaver_on_stranglehold 
+script AE_SetIK_SlaveR_On_STRANGLEHOLD 
 	Obj_GetID
-	band_setikchaintarget Name = <objID> index = 0 target = Bone_IK_Hand_Slave_R BlendDuration = 0.3
+	Band_SetIKChainTarget name = <ObjID> index = 0 target = Bone_IK_Hand_Slave_R BlendDuration = 0.3
 endscript
 
-script ae_setik_slaves_on_jimi 
+script AE_SetIK_Slaves_On_Jimi 
 	if (($game_mode = p2_faceoff) || ($game_mode = p2_pro_faceoff) || ($game_mode = p2_battle))
 		Obj_GetID
-		band_setikchaintarget Name = <objID> index = 0 target = Bone_IK_Hand_Slave_R BlendDuration = 0
-		band_setikchaintarget Name = <objID> index = 1 target = Bone_IK_Hand_Slave_L BlendDuration = 0
+		Band_SetIKChainTarget name = <ObjID> index = 0 target = Bone_IK_Hand_Slave_R BlendDuration = 0
+		Band_SetIKChainTarget name = <ObjID> index = 1 target = Bone_IK_Hand_Slave_L BlendDuration = 0
 	endif
 endscript
 
-script ae_setik_to_fk_l 
+script AE_SetIK_to_FK_L 
 	Obj_GetID
-	bandmanager_setikchainstrength Name = <objID> Chain = Bone_IK_Hand_Guitar_L Strength = 0
-	bandmanager_setikchainstrength Name = <objID> Chain = Bone_IK_Hand_Slave_L Strength = 0
+	Bandmanager_setIKchainStrength name = <ObjID> chain = Bone_IK_Hand_Guitar_L strength = 0
+	Bandmanager_setIKchainStrength name = <ObjID> chain = Bone_IK_Hand_Slave_L strength = 0
 endscript
 
-script ae_setik_to_fk_r 
+script AE_SetIK_to_FK_R 
 	Obj_GetID
-	bandmanager_setikchainstrength Name = <objID> Chain = Bone_IK_Hand_Guitar_R Strength = 0
-	bandmanager_setikchainstrength Name = <objID> Chain = Bone_IK_Hand_Slave_R Strength = 0
+	Bandmanager_setIKchainStrength name = <ObjID> chain = Bone_IK_Hand_Guitar_R strength = 0
+	Bandmanager_setIKchainStrength name = <ObjID> chain = Bone_IK_Hand_Slave_R strength = 0
 endscript
 
-script ae_setik_to_ik_l 
+script AE_SetIK_to_IK_L 
 	Obj_GetID
-	bandmanager_setikchainstrength Name = <objID> Chain = Bone_IK_Hand_Guitar_L Strength = 1
-	bandmanager_setikchainstrength Name = <objID> Chain = Bone_IK_Hand_Slave_L Strength = 1
+	Bandmanager_setIKchainStrength name = <ObjID> chain = Bone_IK_Hand_Guitar_L strength = 1
+	Bandmanager_setIKchainStrength name = <ObjID> chain = Bone_IK_Hand_Slave_L strength = 1
 endscript
 
-script ae_setik_to_ik_r 
+script AE_SetIK_to_IK_R 
 	Obj_GetID
-	bandmanager_setikchainstrength Name = <objID> Chain = Bone_IK_Hand_Guitar_R Strength = 1
-	bandmanager_setikchainstrength Name = <objID> Chain = Bone_IK_Hand_Slave_R Strength = 1
+	Bandmanager_setIKchainStrength name = <ObjID> chain = Bone_IK_Hand_Guitar_R strength = 1
+	Bandmanager_setIKchainStrength name = <ObjID> chain = Bone_IK_Hand_Slave_R strength = 1
 endscript
 
-script ae_disableautofret 
+script AE_DisableAutoFret 
 	Obj_GetID
-	band_disableautofret Name = <objID>
+	Band_DisableAutoFret name = <ObjID>
 endscript
 
-script ae_enableautofret 
+script AE_EnableAutofret 
 	Obj_GetID
-	band_enableautofret Name = <objID>
+	Band_EnableAutoFret name = <ObjID>
 endscript
 
-script ik_fk_switch_override 
-	if ($current_song = bandontherun)
+script IK_FK_Switch_Override 
+	if ($current_song = BandOnTheRun)
 		return
 	endif
-	ae_setik_slaver_on
+	AE_SetIK_SlaveR_On
 endscript
 
-script band_setikchaintarget \{BlendDuration = 0.0}
-	band_setikchaintarget_cfunc Name = <Name> target = <target> index = <index> BlendDuration = <BlendDuration>
+script Band_SetIKChainTarget \{BlendDuration = 0.0}
+	Band_SetIKChainTarget_CFunc name = <name> target = <target> index = <index> BlendDuration = <BlendDuration>
 endscript
 
-script band_movetonode \{allow_in_2player = FALSE}
-	band_movetonode_cfunc allow_in_2player = <allow_in_2player> Name = <Name> node = <node>
+script Band_MoveToNode \{allow_in_2player = false}
+	Band_MoveToNode_CFunc allow_in_2player = <allow_in_2player> name = <name> node = <node>
 endscript
 
-script band_movetostartnode \{allow_in_2player = FALSE}
-	band_movetostartnode_cfunc Name = <Name> allow_in_2player = <allow_in_2player>
+script Band_MoveToStartNode \{allow_in_2player = false}
+	Band_MoveToStartNode_CFunc name = <name> allow_in_2player = <allow_in_2player>
 endscript
 
 script Band_PlayAttackAnim 
-	if NOT CompositeObjectExists Name = <Name>
+	if NOT CompositeObjectExists name = <name>
 		return
 	endif
-	attack_type = ($battlemode_powerups [<Type>].Name)
-	if (($player1_status.band_member) = <Name>)
+	attack_type = ($battlemode_powerups [<type>].name)
+	if (($player1_status.band_member) = <name>)
 		battle_anims = player1_battlemode_anims
-	elseif (($player2_status.band_member) = <Name>)
+	elseif (($player2_status.band_member) = <name>)
 		battle_anims = player2_battlemode_anims
 	else
 		return
 	endif
-	if NOT StructureContains structure = $<battle_anims> Name = <attack_type>
+	if NOT StructureContains Structure = $<battle_anims> name = <attack_type>
 		return
 	endif
-	anim = ($<battle_anims>.<attack_type>.attack_anim)
-	if NOT (<anim> = None)
-		LaunchEvent Type = play_battle_anim target = <Name> data = {<...> no_wait}
+	Anim = ($<battle_anims>.<attack_type>.attack_anim)
+	if NOT (<Anim> = none)
+		LaunchEvent type = play_battle_anim target = <name> data = {<...> no_wait}
 	endif
 endscript
 
 script Band_PlayResponseAnim 
-	if NOT CompositeObjectExists Name = <Name>
+	if NOT CompositeObjectExists name = <name>
 		return
 	endif
-	attack_type = ($battlemode_powerups [<Type>].Name)
-	if (($player1_status.band_member) = <Name>)
+	attack_type = ($battlemode_powerups [<type>].name)
+	if (($player1_status.band_member) = <name>)
 		battle_anims = player1_battlemode_anims
-	elseif (($player2_status.band_member) = <Name>)
+	elseif (($player2_status.band_member) = <name>)
 		battle_anims = player2_battlemode_anims
 	else
 		return
 	endif
-	if NOT StructureContains structure = $<battle_anims> Name = <attack_type>
+	if NOT StructureContains Structure = $<battle_anims> name = <attack_type>
 		return
 	endif
-	anim = ($<battle_anims>.<attack_type>.response_anim)
-	if NOT (<anim> = None)
-		LaunchEvent Type = play_battle_anim target = <Name> data = {<...>}
+	Anim = ($<battle_anims>.<attack_type>.response_anim)
+	if NOT (<Anim> = none)
+		LaunchEvent type = play_battle_anim target = <name> data = {<...>}
 	endif
 endscript
 
@@ -304,117 +304,117 @@ script bassist_should_use_guitarist_commands
 			return \{true}
 		endif
 	endif
-	return \{FALSE}
+	return \{false}
 endscript
 
-script band_restartidles 
-	bandmanager_playidle \{Name = GUITARIST
+script Band_RestartIdles 
+	BandManager_PlayIdle \{name = Guitarist
 		all_modes = true
 		restart}
-	bandmanager_playidle \{Name = BASSIST
+	BandManager_PlayIdle \{name = bassist
 		all_modes = true
 		restart}
-	bandmanager_playidle \{Name = vocalist
+	BandManager_PlayIdle \{name = vocalist
 		all_modes = true
 		restart}
-	bandmanager_playidle \{Name = drummer
+	BandManager_PlayIdle \{name = Drummer
 		all_modes = true
 		restart}
 endscript
 
-script band_playtransitionidles \{from_restart = FALSE}
-	printf \{channel = pop
-		qs(0xf9078adf)}
+script Band_PlayTransitionIdles \{from_restart = false}
+	printf \{channel = Pop
+		qs("\LBand_PlayTransitionIdles")}
 	band_builder_get_band_global
-	band_restartidles
-	jimi_is_present = FALSE
-	if (<Band> = band_hendrix)
+	Band_RestartIdles
+	jimi_is_present = false
+	if (<Band> = Band_Hendrix)
 		if NOT ($game_mode = p2_faceoff || $game_mode = p2_pro_faceoff || $game_mode = p2_battle)
 			jimi_is_present = true
 		endif
 	endif
 	if ((<jimi_is_present> = true) && (<from_restart> = true))
-		band_playclip \{clip = song_loading_with_jimi
+		band_playclip \{clip = Song_Loading_With_Jimi
 			no_wait
-			allgamemodes}
+			AllGameModes}
 	elseif has_singing_guitarist <...>
-		band_playclip \{clip = song_loading_singing_guitarist
+		band_playclip \{clip = Song_Loading_Singing_Guitarist
 			no_wait
-			allgamemodes}
+			AllGameModes}
 	elseif has_singing_bassist <...>
-		band_playclip \{clip = song_loading_singing_guitarist
+		band_playclip \{clip = Song_Loading_Singing_Guitarist
 			no_wait
-			allgamemodes}
+			AllGameModes}
 	else
-		band_playclip \{clip = song_loading
+		band_playclip \{clip = Song_Loading
 			no_wait
-			allgamemodes}
+			AllGameModes}
 	endif
-	bandmanager_turnoffallarmanims
+	BandManager_TurnOffAllArmAnims
 	Wait \{1
 		gameframes}
-	bandmanager_setplayingintroanims
+	BandManager_SetPlayingIntroAnims
 endscript
 
-script bandmanager_turnoffarmanims 
-	band_disableautostrums Name = <Name>
-	band_disableautofret Name = <Name>
-	band_disableautochords Name = <Name>
+script BandManager_TurnOffArmAnims 
+	Band_DisableAutoStrums name = <name>
+	Band_DisableAutoFret name = <name>
+	Band_DisableAutoChords name = <name>
 endscript
 
-script bandmanager_turnoffallarmanims 
-	bandmanager_turnoffarmanims \{Name = GUITARIST}
-	bandmanager_turnoffarmanims \{Name = guitarist2}
-	bandmanager_turnoffarmanims \{Name = BASSIST}
-	bandmanager_turnoffarmanims \{Name = vocalist}
-	band_setdrumkitstate \{Name = drummer
-		state = OFF}
-	band_setdrumkitstate \{Name = drummer2
-		state = OFF}
+script BandManager_TurnOffAllArmAnims 
+	BandManager_TurnOffArmAnims \{name = Guitarist}
+	BandManager_TurnOffArmAnims \{name = guitarist2}
+	BandManager_TurnOffArmAnims \{name = bassist}
+	BandManager_TurnOffArmAnims \{name = vocalist}
+	Band_SetDrumKitState \{name = Drummer
+		state = off}
+	Band_SetDrumKitState \{name = drummer2
+		state = off}
 endscript
 
-script bandmanager_turnonarmanims 
-	band_enableautostrums Name = <Name>
-	band_enableautofret Name = <Name>
-	band_enableautochords Name = <Name>
+script BandManager_TurnOnArmAnims 
+	Band_EnableAutoStrums name = <name>
+	Band_EnableAutoFret name = <name>
+	Band_EnableAutoChords name = <name>
 endscript
 
-script bandmanager_turnonallarmanims 
-	bandmanager_turnonarmanims \{Name = GUITARIST}
-	bandmanager_turnonarmanims \{Name = guitarist2}
-	bandmanager_turnonarmanims \{Name = BASSIST}
-	bandmanager_turnonarmanims \{Name = vocalist}
-	band_setdrumkitstate \{Name = drummer
-		state = On}
-	band_setdrumkitstate \{Name = drummer2
-		state = On}
+script BandManager_TurnOnAllArmAnims 
+	BandManager_TurnOnArmAnims \{name = Guitarist}
+	BandManager_TurnOnArmAnims \{name = guitarist2}
+	BandManager_TurnOnArmAnims \{name = bassist}
+	BandManager_TurnOnArmAnims \{name = vocalist}
+	Band_SetDrumKitState \{name = Drummer
+		state = on}
+	Band_SetDrumKitState \{name = drummer2
+		state = on}
 endscript
 
-script band_setarmanimstrength 
-	band_setarmanimstrength_cfunc Name = <Name> target = <target> Strength = <Strength>
+script Band_SetArmAnimStrength 
+	Band_SetArmAnimStrength_CFunc name = <name> target = <target> strength = <strength>
 endscript
 
-script band_setdrumkitstate 
-	if CompositeObjectExists Name = <Name>
-		if (<state> = On)
-			<Name> :Anim_Command target = drumkit Command = applydrumkitdifference_enable
+script Band_SetDrumKitState 
+	if CompositeObjectExists name = <name>
+		if (<state> = on)
+			<name> :Anim_Command target = DrumKit command = ApplyDrumKitDifference_Enable
 		else
-			<Name> :Anim_Command target = drumkit Command = applydrumkitdifference_disable
+			<name> :Anim_Command target = DrumKit command = ApplyDrumKitDifference_Disable
 		endif
 	endif
 endscript
 
-script Band_PlayIdle 
+script band_playidle 
 	if NOT GotParam \{no_wait}
 		Wait \{1
 			gameframe}
 	endif
-	bandmanager_playidle <...>
+	BandManager_PlayIdle <...>
 endscript
 
-script band_playclip \{startframe = 0.0
+script band_playclip \{startFrame = 0.0
 		override_intro = true}
-	if NOT GotParam \{allgamemodes}
+	if NOT GotParam \{AllGameModes}
 		if ($game_mode = p2_faceoff || $game_mode = p2_pro_faceoff || $game_mode = p2_battle)
 			return
 		endif
@@ -422,11 +422,11 @@ script band_playclip \{startframe = 0.0
 	clip_get_time_and_frame
 	GetSongTimeMs \{time_offset = $time_gem_offset_with_lag}
 	CastToInteger \{time}
-	printf channel = anim_info qs(0x875e8219) b = <clip>
+	printf channel = anim_info qs("\L_____________________________STARTING CLIP %b") b = <clip>
 	if GotParam \{no_wait}
-		printf channel = pop qs(0x2b19675b) a = <time> b = <clip> donotresolve
+		printf channel = Pop qs("\L%a: band_playclip clip-%b no_wait") a = <time> b = <clip> DoNotResolve
 	else
-		printf channel = pop qs(0xc518c1d7) a = <time> b = <clip> donotresolve
+		printf channel = Pop qs("\L%a: band_playclip clip-%b") a = <time> b = <clip> DoNotResolve
 	endif
 	initial_delay = 1
 	teleport_delay = 1
@@ -437,94 +437,94 @@ script band_playclip \{startframe = 0.0
 	if (<initial_delay> > 0)
 		Wait <initial_delay> gameframes
 	endif
-	band_playclip_cfunc
-	if CompositeObjectExists \{Name = GUITARIST}
-		GUITARIST :Obj_SetBoundingSphere \{10}
+	Band_PlayClip_CFunc
+	if CompositeObjectExists \{name = Guitarist}
+		Guitarist :Obj_SetBoundingSphere \{10}
 	endif
-	if CompositeObjectExists \{Name = BASSIST}
-		BASSIST :Obj_SetBoundingSphere \{10}
+	if CompositeObjectExists \{name = bassist}
+		bassist :Obj_SetBoundingSphere \{10}
 	endif
-	if CompositeObjectExists \{Name = vocalist}
+	if CompositeObjectExists \{name = vocalist}
 		vocalist :Obj_SetBoundingSphere \{10}
 	endif
 	if (<teleport_delay> != 0)
 		Wait <teleport_delay> gameframes
 	endif
-	band_playclip_finish_cfunc
-	printf channel = anim_info qs(0x0910e228) b = <clip>
+	Band_PlayClip_Finish_CFunc
+	printf channel = anim_info qs("\L_____________________________CLIP %b setup") b = <clip>
 endscript
 
-script band_forcetoidle \{all_modes = FALSE}
-	if GotParam \{Name}
-		if CompositeObjectExists Name = <Name>
-			bandmanager_changeik Name = <Name> Enabled = true
-			bandmanager_playidle Name = <Name> BlendDuration = 0.0 random_start_time = true all_modes = <all_modes>
+script Band_ForceToIdle \{all_modes = false}
+	if GotParam \{name}
+		if CompositeObjectExists name = <name>
+			BandManager_ChangeIK name = <name> enabled = true
+			BandManager_PlayIdle name = <name> BlendDuration = 0.0 random_start_time = true all_modes = <all_modes>
 		endif
 	endif
 endscript
 
-script band_forcealltoidle \{all_modes = FALSE}
+script Band_ForceAllToIdle \{all_modes = false}
 	if NOT GotParam \{no_wait}
 		Wait \{1
 			gameframe}
 	endif
-	band_forcetoidle Name = GUITARIST all_modes = <all_modes> <...>
-	band_forcetoidle Name = BASSIST all_modes = <all_modes> <...>
-	band_forcetoidle Name = vocalist all_modes = <all_modes> <...>
-	band_forcetoidle Name = drummer all_modes = <all_modes> <...>
+	Band_ForceToIdle name = Guitarist all_modes = <all_modes> <...>
+	Band_ForceToIdle name = bassist all_modes = <all_modes> <...>
+	Band_ForceToIdle name = vocalist all_modes = <all_modes> <...>
+	Band_ForceToIdle name = Drummer all_modes = <all_modes> <...>
 endscript
 
-script band_movealltostartnodes 
-	band_movetostartnode \{Name = GUITARIST}
-	band_movetostartnode \{Name = BASSIST}
-	band_movetostartnode \{Name = vocalist}
-	band_movetostartnode \{Name = drummer}
+script Band_MoveAllToStartNodes 
+	Band_MoveToStartNode \{name = Guitarist}
+	Band_MoveToStartNode \{name = bassist}
+	Band_MoveToStartNode \{name = vocalist}
+	Band_MoveToStartNode \{name = Drummer}
 endscript
 tempo_for_anims = -1
 tempo_for_drum_anims = -1
 
-script band_setanimtempo 
-	Change tempo_for_anims = <tempo>
+script Band_SetAnimTempo 
+	change tempo_for_anims = <tempo>
 	if ($tempo_for_drum_anims = -1)
-		Change tempo_for_drum_anims = <tempo>
+		change tempo_for_drum_anims = <tempo>
 	endif
 endscript
 
-script band_setdrumanimtempo 
-	Change tempo_for_drum_anims = <tempo>
+script Band_SetDrumAnimTempo 
+	change tempo_for_drum_anims = <tempo>
 endscript
 
-script band_clearanimtempo 
-	Change \{tempo_for_anims = -1}
-	Change \{tempo_for_drum_anims = -1}
+script Band_ClearAnimTempo 
+	change \{tempo_for_anims = -1}
+	change \{tempo_for_drum_anims = -1}
 endscript
 
-script band_isfemale 
-	if NOT GotParam \{Name}
-		printf \{qs(0x50e85932)}
+script Band_IsFemale 
+	if NOT GotParam \{name}
+		printf \{qs("\LBand_IsFemale called without name param")}
 		return
 	endif
-	if NOT CompositeObjectExists Name = <Name>
-		printf qs(0x4594890c) a = <Name>
+	if NOT CompositeObjectExists name = <name>
+		printf qs("\LBand_IsFemale: Unable to find object %a") a = <name>
 		return
 	endif
-	<Name> :GetSingleTag is_female
+	<name> :GetSingleTag is_female
 	if (<is_female> = 1)
 		return \{true}
 	else
-		return \{FALSE}
+		return \{false}
 	endif
 endscript
 
 script return_characters_to_idle_after_delay 
-	Wait <delay> Seconds
+	Wait <delay> seconds
 	if ($display_clip_info = true)
 		clip_get_time_and_frame
-		printf channel = clip qs(0x9d885cfe) b = <time_string>
+		printf channel = clip qs("\L%b: (returning characters to idle)") b = <time_string>
 	endif
 	clip_get_time_and_frame
-	band_movealltostartnodes
-	band_forcealltoidle \{all_modes = true
+	Band_MoveAllToStartNodes
+	Band_ForceAllToIdle \{all_modes = true
 		no_wait}
 endscript
 
@@ -540,297 +540,297 @@ script return_characters_to_idle_at_song_time
 	repeat
 	if ($display_clip_info = true)
 		clip_get_time_and_frame
-		printf channel = clip qs(0x9d885cfe) b = <time_string>
+		printf channel = clip qs("\L%b: (returning characters to idle)") b = <time_string>
 	endif
 	Wait \{1
 		gameframes}
 	GetSongTimeMs \{time_offset = $time_gem_offset_with_lag}
 	CastToInteger \{time}
-	printf channel = pop qs(0xa394d873) a = <time>
-	band_forcealltoidle \{all_modes = true
+	printf channel = Pop qs("\L%a: returning all characters to idle") a = <time>
+	Band_ForceAllToIdle \{all_modes = true
 		no_wait}
 	Wait \{1
 		gameframes}
 	GetSongTimeMs \{time_offset = $time_gem_offset_with_lag}
 	CastToInteger \{time}
-	printf channel = pop qs(0x8b4aceb9) a = <time>
-	band_movealltostartnodes
+	printf channel = Pop qs("\L%a: returning all characters to idle  --> MoveAllToStartNode") a = <time>
+	Band_MoveAllToStartNodes
 endscript
 
 script clip_get_time_and_frame 
 	GetSongTimeMs \{time_offset = $time_gem_offset_with_lag}
-	Seconds = (<time> / 1000.0)
-	if (<Seconds> < 0)
-		Seconds = 0
+	seconds = (<time> / 1000.0)
+	if (<seconds> < 0)
+		seconds = 0
 	endif
-	minutes = (<Seconds> / 60.0)
+	minutes = (<seconds> / 60.0)
 	CastToInteger \{minutes}
-	Seconds = (<Seconds> - (<minutes> * 60))
-	seconds_float = <Seconds>
-	CastToInteger \{Seconds}
+	seconds = (<seconds> - (<minutes> * 60))
+	seconds_float = <seconds>
+	CastToInteger \{seconds}
 	fps = 30
-	fraction_of_second = (<seconds_float> - <Seconds>)
-	Frame = (<fraction_of_second> * <fps>)
-	CastToInteger \{Frame}
-	if (<Seconds> < 10)
-		if (<Frame> < 10)
-			formatText TextName = time_string qs(0x593819d8) a = <minutes> b = <Seconds> c = <Frame> d = <time>
+	fraction_of_second = (<seconds_float> - <seconds>)
+	frame = (<fraction_of_second> * <fps>)
+	CastToInteger \{frame}
+	if (<seconds> < 10)
+		if (<frame> < 10)
+			FormatText TextName = time_string qs("\L%a:0%b:0%c ") a = <minutes> b = <seconds> c = <frame> d = <time>
 		else
-			formatText TextName = time_string qs(0xac471e75) a = <minutes> b = <Seconds> c = <Frame> d = <time>
+			FormatText TextName = time_string qs("\L%a:0%b:%c ") a = <minutes> b = <seconds> c = <frame> d = <time>
 		endif
 	else
-		if (<Frame> < 10)
-			formatText TextName = time_string qs(0x31aec87f) a = <minutes> b = <Seconds> c = <Frame> d = <time>
+		if (<frame> < 10)
+			FormatText TextName = time_string qs("\L%a:%b:0%c ") a = <minutes> b = <seconds> c = <frame> d = <time>
 		else
-			formatText TextName = time_string qs(0xcacc8b50) a = <minutes> b = <Seconds> c = <Frame> d = <time>
+			FormatText TextName = time_string qs("\L%a:%b:%c ") a = <minutes> b = <seconds> c = <frame> d = <time>
 		endif
 	endif
-	formatText TextName = time_string qs(0x67b7904f) a = <minutes> b = <Seconds> c = <Frame> d = <time>
+	FormatText TextName = time_string qs("\L[%d]%a:%b:%c ") a = <minutes> b = <seconds> c = <frame> d = <time>
 	return time_string = <time_string>
 endscript
 
 script debug_print_frame_time 
-	Seconds = (<time> / 1000.0)
-	if (<Seconds> < 0)
-		Seconds = 0
+	seconds = (<time> / 1000.0)
+	if (<seconds> < 0)
+		seconds = 0
 	endif
-	minutes = (<Seconds> / 60.0)
+	minutes = (<seconds> / 60.0)
 	CastToInteger \{minutes}
-	Seconds = (<Seconds> - (<minutes> * 60))
-	seconds_float = <Seconds>
-	CastToInteger \{Seconds}
+	seconds = (<seconds> - (<minutes> * 60))
+	seconds_float = <seconds>
+	CastToInteger \{seconds}
 	fps = 30
-	fraction_of_second = (<seconds_float> - <Seconds>)
-	Frame = (<fraction_of_second> * <fps>)
-	CastToInteger \{Frame}
-	if (<Seconds> < 10)
-		if (<Frame> < 10)
-			formatText TextName = time_string qs(0x593819d8) a = <minutes> b = <Seconds> c = <Frame> d = <time>
+	fraction_of_second = (<seconds_float> - <seconds>)
+	frame = (<fraction_of_second> * <fps>)
+	CastToInteger \{frame}
+	if (<seconds> < 10)
+		if (<frame> < 10)
+			FormatText TextName = time_string qs("\L%a:0%b:0%c ") a = <minutes> b = <seconds> c = <frame> d = <time>
 		else
-			formatText TextName = time_string qs(0xac471e75) a = <minutes> b = <Seconds> c = <Frame> d = <time>
+			FormatText TextName = time_string qs("\L%a:0%b:%c ") a = <minutes> b = <seconds> c = <frame> d = <time>
 		endif
 	else
-		if (<Frame> < 10)
-			formatText TextName = time_string qs(0x31aec87f) a = <minutes> b = <Seconds> c = <Frame> d = <time>
+		if (<frame> < 10)
+			FormatText TextName = time_string qs("\L%a:%b:0%c ") a = <minutes> b = <seconds> c = <frame> d = <time>
 		else
-			formatText TextName = time_string qs(0xcacc8b50) a = <minutes> b = <Seconds> c = <Frame> d = <time>
+			FormatText TextName = time_string qs("\L%a:%b:%c ") a = <minutes> b = <seconds> c = <frame> d = <time>
 		endif
 	endif
 	printf channel = AnimInfo <time_string>
 endscript
 
 script test_all_cameras 
-	test_cameras \{Name = GUITARIST}
-	test_cameras \{Name = BASSIST}
-	test_cameras \{Name = vocalist}
+	test_cameras \{name = Guitarist}
+	test_cameras \{name = bassist}
+	test_cameras \{name = vocalist}
 endscript
 
 script test_cameras 
 	printf \{channel = testcameras
-		qs(0x86fbe77a)}
-	if NOT GotParam \{Name}
+		qs("\L---------------------------------")}
+	if NOT GotParam \{name}
 		printf \{channel = testcameras
-			qs(0x4ca06177)}
+			qs("\Ltest_cameras script requires 'name' parameter")}
 		return
 	endif
-	print_obj_info Name = <Name>
-	ExtendCrc <Name> '_mocap_lock_target_01' out = camera1
-	print_obj_info Name = <camera1> name_string = <name_string>
-	ExtendCrc <Name> '_mocap_lock_target_02' out = camera2
-	print_obj_info Name = <camera2> name_string = <name_string>
+	print_obj_info name = <name>
+	ExtendCRC <name> '_mocap_lock_target_01' out = camera1
+	print_obj_info name = <camera1> name_string = <name_string>
+	ExtendCRC <name> '_mocap_lock_target_02' out = camera2
+	print_obj_info name = <camera2> name_string = <name_string>
 	printf \{channel = testcameras
-		qs(0x86fbe77a)}
+		qs("\L---------------------------------")}
 endscript
 
 script print_obj_info 
-	if NOT CompositeObjectExists Name = <Name>
-		printf channel = testcameras qs(0x68673a19) a = <Name>
+	if NOT CompositeObjectExists name = <name>
+		printf channel = testcameras qs("\Lcould not find %a") a = <name>
 		return
 	endif
-	printf channel = testcameras qs(0x0bc409e2) a = <Name>
-	if <Name> :Anim_AnimNodeExists id = BodyTimer
-		<Name> :Anim_Command target = BodyTimer Command = Timer_GetFrameFactor
-		<Name> :Anim_Command target = BodyTimer Command = Timer_GetAnimDuration
-		printf channel = testcameras qs(0x61b2abb6) a = (<framefactor>) b = <Duration> c = (<framefactor> * <Duration>)
+	printf channel = testcameras qs("\L%a") a = <name>
+	if <name> :Anim_AnimNodeExists id = BodyTimer
+		<name> :Anim_Command target = BodyTimer command = Timer_GetFrameFactor
+		<name> :Anim_Command target = BodyTimer command = Timer_GetAnimDuration
+		printf channel = testcameras qs("\L length %bs           ...... time %cs (%a)  ") a = (<framefactor>) b = <duration> c = (<framefactor> * <duration>)
 	else
 		printf \{channel = testcameras
-			qs(0x6255a299)}
+			qs("\L missing bodytimer!")}
 	endif
-	<Name> :Obj_GetPosition
-	printf channel = testcameras qs(0x795dba52) a = <Pos>
-	<Name> :Obj_GetOrientation
-	Dir = ((1.0, 0.0, 0.0) * <X> + (0.0, 1.0, 0.0) * <y> + (0.0, 0.0, 1.0) * <z>)
-	printf channel = testcameras qs(0x27ca0b4f) a = <Dir>
+	<name> :Obj_GetPosition
+	printf channel = testcameras qs("\L  position %a") a = <pos>
+	<name> :Obj_GetOrientation
+	dir = ((1.0, 0.0, 0.0) * <x> + (0.0, 1.0, 0.0) * <y> + (0.0, 0.0, 1.0) * <z>)
+	printf channel = testcameras qs("\L  orientation %a") a = <dir>
 endscript
 
-script band_showmic \{Name = GUITARIST}
+script Band_ShowMic \{name = Guitarist}
 	if ($game_mode = p2_faceoff || $game_mode = p2_pro_faceoff || $game_mode = p2_battle || $boss_battle = 1)
 		return
 	endif
-	if NOT CompositeObjectExists Name = <Name>
+	if NOT CompositeObjectExists name = <name>
 		return
 	endif
-	if ($cheat_airinstruments != 1)
-		<Name> :show_mic
+	if ($Cheat_AirInstruments != 1)
+		<name> :show_mic
 	endif
 endscript
 
-script band_hidemic \{Name = GUITARIST}
-	if NOT CompositeObjectExists Name = <Name>
+script Band_HideMic \{name = Guitarist}
+	if NOT CompositeObjectExists name = <name>
 		return
 	endif
-	<Name> :hide_mic
+	<name> :hide_mic
 endscript
 
-script band_showmic_stand \{Name = GUITARIST}
+script Band_ShowMic_Stand \{name = Guitarist}
 	if ($game_mode = p2_faceoff || $game_mode = p2_pro_faceoff || $game_mode = p2_battle || $boss_battle = 1)
 		return
 	endif
-	if NOT CompositeObjectExists Name = <Name>
+	if NOT CompositeObjectExists name = <name>
 		return
 	endif
-	if ($cheat_airinstruments != 1)
-		<Name> :show_mic_stand
+	if ($Cheat_AirInstruments != 1)
+		<name> :show_mic_stand
 	endif
 endscript
 
-script band_hidemic_stand \{Name = GUITARIST}
-	if NOT CompositeObjectExists Name = <Name>
+script Band_HideMic_stand \{name = Guitarist}
+	if NOT CompositeObjectExists name = <name>
 		return
 	endif
-	<Name> :hide_mic_stand
+	<name> :hide_mic_stand
 endscript
 
-script band_showmic_microphone \{Name = GUITARIST}
+script Band_ShowMic_microphone \{name = Guitarist}
 	if ($game_mode = p2_faceoff || $game_mode = p2_pro_faceoff || $game_mode = p2_battle || $boss_battle = 1)
 		return
 	endif
-	if NOT CompositeObjectExists Name = <Name>
+	if NOT CompositeObjectExists name = <name>
 		return
 	endif
-	if ($cheat_airinstruments != 1)
-		<Name> :show_mic_microphone
+	if ($Cheat_AirInstruments != 1)
+		<name> :show_mic_microphone
 	endif
 endscript
 
-script band_hidemic_microphone \{Name = GUITARIST}
-	if NOT CompositeObjectExists Name = <Name>
+script Band_HideMic_microphone \{name = Guitarist}
+	if NOT CompositeObjectExists name = <name>
 		return
 	endif
-	<Name> :hide_mic_microphone
+	<name> :hide_mic_microphone
 endscript
 
-script band_showdrumkit \{Name = drummer}
-	if NOT CompositeObjectExists Name = <Name>
+script Band_ShowDrumkit \{name = Drummer}
+	if NOT CompositeObjectExists name = <name>
 		return
 	endif
-	if ($cheat_airinstruments != 1)
-		<Name> :show_drumkit
+	if ($Cheat_AirInstruments != 1)
+		<name> :show_Drumkit
 	endif
 endscript
 
-script band_hidedrumkit \{Name = drummer}
-	if NOT CompositeObjectExists Name = <Name>
+script Band_HideDrumkit \{name = Drummer}
+	if NOT CompositeObjectExists name = <name>
 		return
 	endif
-	<Name> :hide_drumkit
+	<name> :hide_Drumkit
 endscript
 
-script band_hide 
-	if CompositeObjectExists Name = <Name>
-		<Name> :Hide
+script Band_Hide 
+	if CompositeObjectExists name = <name>
+		<name> :hide
 	endif
-	bandmanager_hidestrings Name = <Name>
+	BandManager_HideStrings name = <name>
 endscript
 
-script band_unhide 
-	if CompositeObjectExists Name = <Name>
-		if ($cheat_invisiblecharacters != 1)
-			<Name> :unhide
-			<Name> :Ragdoll_MarkForReset
+script Band_UnHide 
+	if CompositeObjectExists name = <name>
+		if ($Cheat_InvisibleCharacters != 1)
+			<name> :unhide
+			<name> :ragdoll_markforreset
 		endif
 	endif
-	if ($cheat_airinstruments != 1)
-		bandmanager_showstrings Name = <Name>
+	if ($Cheat_AirInstruments != 1)
+		BandManager_ShowStrings name = <name>
 	endif
 endscript
-enable_guitarist_camera_swapping = FALSE
+enable_guitarist_camera_swapping = false
 
-script band_enableguitaristcameraswapping 
-	Change \{enable_guitarist_camera_swapping = true}
+script Band_EnableGuitaristCameraSwapping 
+	change \{enable_guitarist_camera_swapping = true}
 endscript
 
-script band_disableguitaristcameraswapping 
-	Change \{enable_guitarist_camera_swapping = FALSE}
+script Band_DisableGuitaristCameraSwapping 
+	change \{enable_guitarist_camera_swapping = false}
 endscript
 
-script transition_changeik 
-	bandmanager_changeik <...>
+script Transition_ChangeIK 
+	BandManager_ChangeIK <...>
 endscript
 
-script bandmanager_stopfacialanims 
-	<Name> :Obj_KillSpawnedScript Name = play_special_facial_anim
-	<Name> :Obj_KillSpawnedScript Name = facial_anim_loop
-	<Name> :hero_clear_facial_anim
+script BandManager_StopFacialAnims 
+	<name> :Obj_KillSpawnedScript name = play_special_facial_anim
+	<name> :Obj_KillSpawnedScript name = facial_anim_loop
+	<name> :hero_clear_facial_anim
 endscript
 
-script bandmanager_startfacialanims 
-	if NOT CompositeObjectExists Name = <Name>
+script BandManager_StartFacialAnims 
+	if NOT CompositeObjectExists name = <name>
 		return
 	endif
-	<Name> :Obj_KillSpawnedScript Name = play_special_facial_anim
-	<Name> :Obj_KillSpawnedScript Name = facial_anim_loop
-	<Name> :Obj_SpawnScriptNow facial_anim_loop
+	<name> :Obj_KillSpawnedScript name = play_special_facial_anim
+	<name> :Obj_KillSpawnedScript name = facial_anim_loop
+	<name> :Obj_SpawnScriptNow facial_anim_loop
 endscript
 
-script bandmanager_startallfacialanims 
-	bandmanager_startfacialanims \{Name = GUITARIST}
-	bandmanager_startfacialanims \{Name = guitarist2}
-	bandmanager_startfacialanims \{Name = BASSIST}
-	bandmanager_startfacialanims \{Name = vocalist}
-	bandmanager_startfacialanims \{Name = vocalist2}
-	bandmanager_startfacialanims \{Name = drummer}
+script BandManager_StartAllFacialAnims 
+	BandManager_StartFacialAnims \{name = Guitarist}
+	BandManager_StartFacialAnims \{name = guitarist2}
+	BandManager_StartFacialAnims \{name = bassist}
+	BandManager_StartFacialAnims \{name = vocalist}
+	BandManager_StartFacialAnims \{name = vocalist2}
+	BandManager_StartFacialAnims \{name = Drummer}
 endscript
 
-script bandmanager_airguitarcheat 
-	if ($cheat_airinstruments = 1)
-		bandmanager_hideallinstruments
+script BandManager_AirGuitarCheat 
+	if ($Cheat_AirInstruments = 1)
+		BandManager_HideAllInstruments
 	endif
 endscript
 
-script bandmanager_invisiblecharacterscheat 
-	if ($cheat_invisiblecharacters = 1)
-		bandmanager_hideallmusicians
+script BandManager_InvisibleCharactersCheat 
+	if ($Cheat_InvisibleCharacters = 1)
+		BandManager_HideAllMusicians
 	endif
 endscript
 
-script bandmanager_hideinstrument 
-	if CompositeObjectExists <Name>
-		<Name> :hideinstrument
-		bandmanager_hidestrings Name = <Name>
+script BandManager_HideInstrument 
+	if CompositeObjectExists <name>
+		<name> :HideInstrument
+		BandManager_HideStrings name = <name>
 	endif
 endscript
 
-script bandmanager_hideallinstruments 
-	bandmanager_hideinstrument \{Name = GUITARIST}
-	bandmanager_hideinstrument \{Name = guitarist2}
-	bandmanager_hideinstrument \{Name = BASSIST}
-	bandmanager_hideinstrument \{Name = vocalist}
-	bandmanager_hideinstrument \{Name = vocalist2}
-	bandmanager_hideinstrument \{Name = drummer}
+script BandManager_HideAllInstruments 
+	BandManager_HideInstrument \{name = Guitarist}
+	BandManager_HideInstrument \{name = guitarist2}
+	BandManager_HideInstrument \{name = bassist}
+	BandManager_HideInstrument \{name = vocalist}
+	BandManager_HideInstrument \{name = vocalist2}
+	BandManager_HideInstrument \{name = Drummer}
 endscript
 
-script bandmanager_hidemusician 
-	if CompositeObjectExists <Name>
-		<Name> :hidemusician
+script BandManager_HideMusician 
+	if CompositeObjectExists <name>
+		<name> :HideMusician
 	endif
 endscript
 
-script bandmanager_hideallmusicians 
-	bandmanager_hidemusician \{Name = GUITARIST}
-	bandmanager_hidemusician \{Name = guitarist2}
-	bandmanager_hidemusician \{Name = BASSIST}
-	bandmanager_hidemusician \{Name = vocalist}
-	bandmanager_hidemusician \{Name = vocalist2}
-	bandmanager_hidemusician \{Name = drummer}
+script BandManager_HideAllMusicians 
+	BandManager_HideMusician \{name = Guitarist}
+	BandManager_HideMusician \{name = guitarist2}
+	BandManager_HideMusician \{name = bassist}
+	BandManager_HideMusician \{name = vocalist}
+	BandManager_HideMusician \{name = vocalist2}
+	BandManager_HideMusician \{name = Drummer}
 endscript

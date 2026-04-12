@@ -1,64 +1,64 @@
-l_sing_gsb_s_floaton_set = {
+L_SING_GSB_S_FloatOn_set = {
 	Stance_A = {
 		Idle = {
 			good = {
-				slow = [
-					gsb_s_floaton01
-					gsb_s_floaton02
-					gsb_s_floaton03
-					gsb_s_floaton04
+				Slow = [
+					GSB_S_FloatOn01
+					GSB_S_FloatOn02
+					GSB_S_FloatOn03
+					GSB_S_FloatOn04
 				]
-				med = [
-					gsb_s_floaton01
-					gsb_s_floaton02
-					gsb_s_floaton03
-					gsb_s_floaton04
+				Med = [
+					GSB_S_FloatOn01
+					GSB_S_FloatOn02
+					GSB_S_FloatOn03
+					GSB_S_FloatOn04
 				]
-				FAST = [
-					gsb_s_floaton01
-					gsb_s_floaton02
-					gsb_s_floaton03
-					gsb_s_floaton04
+				Fast = [
+					GSB_S_FloatOn01
+					GSB_S_FloatOn02
+					GSB_S_FloatOn03
+					GSB_S_FloatOn04
 				]
 			}
 			Normal = {
-				slow = [
-					gsb_s_floaton01
-					gsb_s_floaton02
-					gsb_s_floaton03
-					gsb_s_floaton04
+				Slow = [
+					GSB_S_FloatOn01
+					GSB_S_FloatOn02
+					GSB_S_FloatOn03
+					GSB_S_FloatOn04
 				]
-				med = [
-					gsb_s_floaton01
-					gsb_s_floaton02
-					gsb_s_floaton03
-					gsb_s_floaton04
+				Med = [
+					GSB_S_FloatOn01
+					GSB_S_FloatOn02
+					GSB_S_FloatOn03
+					GSB_S_FloatOn04
 				]
-				FAST = [
-					gsb_s_floaton01
-					gsb_s_floaton02
-					gsb_s_floaton03
-					gsb_s_floaton04
+				Fast = [
+					GSB_S_FloatOn01
+					GSB_S_FloatOn02
+					GSB_S_FloatOn03
+					GSB_S_FloatOn04
 				]
 			}
-			bad = {
-				slow = [
-					gsb_s_floaton01
-					gsb_s_floaton02
-					gsb_s_floaton03
-					gsb_s_floaton04
+			Bad = {
+				Slow = [
+					GSB_S_FloatOn01
+					GSB_S_FloatOn02
+					GSB_S_FloatOn03
+					GSB_S_FloatOn04
 				]
-				med = [
-					gsb_s_floaton01
-					gsb_s_floaton02
-					gsb_s_floaton03
-					gsb_s_floaton04
+				Med = [
+					GSB_S_FloatOn01
+					GSB_S_FloatOn02
+					GSB_S_FloatOn03
+					GSB_S_FloatOn04
 				]
-				FAST = [
-					gsb_s_floaton01
-					gsb_s_floaton02
-					gsb_s_floaton03
-					gsb_s_floaton04
+				Fast = [
+					GSB_S_FloatOn01
+					GSB_S_FloatOn02
+					GSB_S_FloatOn03
+					GSB_S_FloatOn04
 				]
 			}
 		}

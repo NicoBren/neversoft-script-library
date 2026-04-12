@@ -6,11 +6,11 @@ endscript
 
 script ui_create_guitarhero_com 
 	NetSessionFunc \{func = get_agora_token}
-	formatText TextName = passcode_text qs(0x3c71eff6) t = <Token>
+	FormatText TextName = passcode_text qs("\L%t") t = <token>
 	CreateScreenElement {
 		parent = root_window
 		id = current_menu
-		Type = descinterface
+		type = DescInterface
 		desc = 'guitarhero_com'
 		exclusive_device = ($primary_controller)
 		event_handlers = [
@@ -24,7 +24,7 @@ script ui_create_guitarhero_com
 	}
 	clean_up_user_control_helpers
 	add_gamertag_helper exclusive_device = ($primary_controller)
-	add_user_control_helper \{text = qs(0xaf4d5dd2)
+	add_user_control_helper \{text = qs("BACK")
 		button = red
 		z = 100000}
 endscript

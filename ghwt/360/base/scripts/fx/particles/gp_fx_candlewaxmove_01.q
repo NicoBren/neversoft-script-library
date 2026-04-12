@@ -1,32 +1,32 @@
-gp_fx_candlewaxmove_01 = {
-	Pos = (-0.015110999, -3.2148218, -1.9696898)
-	Angles = (0.0, 0.0, 0.0)
+GP_FX_CandleWaxMove_01 = {
+	pos = (-0.015110999, -3.2148218, -1.9696898)
+	angles = (0.0, 0.0, 0.0)
 	Class = ParticleObject
 	ParticleType = FlexParticle
-	Type = textureribbontrail
-	Active
+	type = textureribbontrail
+	active
 	CreatedAtStart
-	Attach
+	attach
 	Align
 	ApplyPositionOffset
-	AttachObject = z_cathedral_g_chandparent
+	AttachObject = z_cathedral_g_ChandParent
 	EmitRangeDims = (0.01, 0.01, 0.01)
-	Emit_Target = (0.0, 1.0, 0.0)
+	emit_Target = (0.0, 1.0, 0.0)
 	EnableRotate
 	EmitAngle = (0.0, 0.0, 0.0)
-	Force = (0.0, -10.0, 0.0)
+	force = (0.0, -10.0, 0.0)
 	WindCoeff = 0.0
 	LocalWindCoeff = 0.0
 	EmitterVelocityWeight = 0.0
 	AngleSpread = 0.0
 	LifeRange = (1.7, 2.0)
-	Emit_Rate = 3.0
-	Max = 0
+	emit_rate = 3.0
+	max = 0
 	TimeSeed = 0.0
-	LifeTime = 0.0
-	EmitNum = 0
+	lifeTime = 0.0
+	emitNum = 0
 	FollowEmitter = 0.0
-	EmitFunction = Triangle
+	EmitFunction = triangle
 	EmitPeriod = 5.0
 	SizeRange = [
 		(0.03, 0.1)
@@ -38,15 +38,15 @@ gp_fx_candlewaxmove_01 = {
 	EmitDelayStart = 0.0
 	PathFollowTime = 0.08
 	History = 2
-	HistoryListCoordinateSpace = World
-	Color = 841751295
+	HistoryListCoordinateSpace = world
+	color = 841751295
 	LOD_Default
 	QuickMaterial = {
 		DiffuseTextureEnabled
 		DiffuseTexture = JOW_Spark01
 		SpecularPower = 0
-		AlphaCutoff = 1
-		BlendMode = add
+		alphacutoff = 1
+		blendMode = Add
 		QuadAnimationFPS = 0
 	}
 	Knot = [

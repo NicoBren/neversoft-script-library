@@ -1,10 +1,10 @@
 
 script ui_create_cag_custom_highway 
 	part = (<instrument_info>.highway_part)
-	make_generic_menu \{title = qs(0xb22af2c1)
+	make_generic_menu \{title = qs("Highway")
 		pad_back_script = generic_exit_restore}
 	add_highway_menu_item \{vmenu_id = highway_vmenu}
-	resolvebodyspecificpartinappearance part = <part>
+	ResolveBodySpecificPartInAppearance part = <part>
 	current_part = 0
 	get_part_current_desc_id part = <part>
 	GetArraySize ($<part>)
@@ -27,8 +27,8 @@ script ui_create_cag_custom_highway
 		endif
 	endif
 	i = (<i> + 1)
-	repeat <array_Size>
-	LaunchEvent Type = focus target = highway_menu data = {child_index = <current_part>}
+	repeat <array_size>
+	LaunchEvent type = focus target = highway_menu data = {child_index = <current_part>}
 endscript
 
 script ui_destroy_cag_custom_highway 
@@ -36,16 +36,16 @@ script ui_destroy_cag_custom_highway
 endscript
 
 script ui_init_cag_custom_highway 
-	pushtemporarycasappearance
+	PushTemporaryCASAppearance
 endscript
 
 script ui_deinit_cag_custom_highway 
-	poptemporarycasappearance
+	PopTemporaryCASAppearance
 endscript
 
 script focus_change_highway 
 	select_part_focus_change {part = <part> index = <index>}
-	highway_menu_anchor :se_setprops highway_menu_item_highway_texture = ((($<part>) [<index>]).frontend_img)
+	highway_menu_anchor :SE_SetProps highway_menu_item_highway_texture = ((($<part>) [<index>]).frontend_img)
 	clean_up_user_control_helpers
 	menu_finish \{car_helper_text_cancel
 		no_rotate_zoom_text}

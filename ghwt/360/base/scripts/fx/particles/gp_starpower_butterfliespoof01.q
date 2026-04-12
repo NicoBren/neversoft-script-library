@@ -1,18 +1,18 @@
 GP_StarPower_ButterfliesPoof01 = {
-	Pos = (0.35688803, 36.271244, 0.071379)
-	Angles = (0.0, 0.0, 0.0)
+	pos = (0.35688803, 36.271244, 0.071379)
+	angles = (0.0, 0.0, 0.0)
 	Class = ParticleObject
 	ParticleType = FlexParticle
-	Type = flat
-	Active
+	type = flat
+	active
 	CreatedAtStart
-	Attach
-	AttachObject = GUITARIST
-	bone = BONE_PELVIS
+	attach
+	AttachObject = Guitarist
+	bone = Bone_Pelvis
 	EmitRangeDims = (0.0, 0.7, 0.0)
-	Emit_Target = (0.0, 1.0, 0.0)
+	emit_Target = (0.0, 1.0, 0.0)
 	EmitAngle = (0.0, 0.0, 0.0)
-	Force = (0.0, -1.5, 0.0)
+	force = (0.0, -1.5, 0.0)
 	WindCoeff = 0.0
 	LocalWindCoeff = 0.0
 	EmitterVelocityWeight = 0.0
@@ -20,11 +20,11 @@ GP_StarPower_ButterfliesPoof01 = {
 	ElevSpread = (70.0, 160.0)
 	SweepSpread = (0.0, 360.0)
 	LifeRange = (1.0, 2.0)
-	Emit_Rate = 32.0
-	Max = 0
+	emit_rate = 32.0
+	max = 0
 	TimeSeed = 0.2
-	LifeTime = 0.0
-	EmitNum = 32
+	lifeTime = 0.0
+	emitNum = 32
 	FollowEmitter = 0.0
 	EmitFunction = constant
 	EmitPeriod = 1.0
@@ -39,15 +39,15 @@ GP_StarPower_ButterfliesPoof01 = {
 	AlignWithPath
 	PathFollowTime = 0.2
 	History = 12
-	HistoryListCoordinateSpace = World
-	Color = -16743169
+	HistoryListCoordinateSpace = world
+	color = -16743169
 	LOD_Default
 	QuickMaterial = {
 		DiffuseTextureEnabled
 		DiffuseTexture = JOW_Spark01
 		SpecularPower = 0
-		AlphaCutoff = 48
-		BlendMode = blend
+		alphacutoff = 48
+		blendMode = blend
 		Burn
 		BurnValue = 0.8
 		QuadAnimationFPS = 0

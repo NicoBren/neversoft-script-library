@@ -1,125 +1,125 @@
 
 script UnHidePlayerAndDestroyFakes 
-	KillSpawnedScript \{Name = _TestAnimSequence}
-	if CompositeObjectExists \{Name = FakeCharacter}
+	KillSpawnedScript \{name = _TestAnimSequence}
+	if CompositeObjectExists \{name = FakeCharacter}
 		FakeCharacter :Die
 	endif
-	if CompositeObjectExists \{Name = AnimTreePreviewObject}
+	if CompositeObjectExists \{name = AnimTreePreviewObject}
 		AnimTreePreviewObject :Die
 	endif
 endscript
 
-script TestAnim \{Skeleton = GH3_guitarist_axel}
-	if GotParam \{OFF}
+script TestAnim \{skeleton = GH3_Guitarist_Axel}
+	if GotParam \{off}
 		UnHidePlayerAndDestroyFakes
 	else
-		ReloadAndTestAnim <...> Skeleton = <Skeleton>
+		ReloadAndTestAnim <...> skeleton = <skeleton>
 	endif
 endscript
 
 script ReloadAndTestAnim 
-	KillSpawnedScript \{Name = _TestAnimSequence}
-	LaunchEvent \{Type = DrawRequested
+	KillSpawnedScript \{name = _TestAnimSequence}
+	LaunchEvent \{type = DrawRequested
 		data = {
 			cycledown
 		}}
-	formatText checksumName = AnimName '%s' s = <anim> DontAssertForChecksums
+	FormatText checksumname = AnimName '%s' s = <Anim> DontAssertForChecksums
 	if GotParam \{DifferenceAnim}
-		if (<DifferenceAnim> = qs(0x03ac90f0))
+		if (<DifferenceAnim> = qs("\L"))
 		else
-			formatText checksumName = DifferenceAnimName '%s' s = <DifferenceAnim>
+			FormatText checksumname = DifferenceAnimName '%s' s = <DifferenceAnim>
 		endif
 	endif
-	CreateFake \{Original = GUITARIST
-		Skeleton = GH3_guitarist_axel
-		Pos = (0.0, 2.0, 2.0)}
-	if GotParam \{cycle}
-		AnimTreePreviewObject :ModelViewer_PlayAnim anim = <AnimName> BlendPeriod = 0 speed = <speed> cycle
+	CreateFake \{Original = Guitarist
+		skeleton = GH3_Guitarist_Axel
+		pos = (0.0, 2.0, 2.0)}
+	if GotParam \{Cycle}
+		AnimTreePreviewObject :ModelViewer_PlayAnim Anim = <AnimName> BlendPeriod = 0 Speed = <Speed> Cycle
 	else
-		AnimTreePreviewObject :ModelViewer_PlayAnim anim = <AnimName> BlendPeriod = 0 speed = <speed>
+		AnimTreePreviewObject :ModelViewer_PlayAnim Anim = <AnimName> BlendPeriod = 0 Speed = <Speed>
 	endif
 	if GotParam \{DifferenceAnim}
-		AnimTreePreviewObject :Obj_PoseControllerCommand Command = PlaySequence DifferenceAnimName = <DifferenceAnimName> differenceAnimAmount = <differenceAnimAmount>
+		AnimTreePreviewObject :Obj_PoseControllerCommand command = PlaySequence DifferenceAnimName = <DifferenceAnimName> differenceAnimAmount = <differenceAnimAmount>
 	endif
 	AnimTreePreviewObject :Obj_ForceUpdate
 endscript
 
 script CreateFake 
-	if NOT CompositeObjectExists Name = <Original>
+	if NOT CompositeObjectExists name = <Original>
 		return
 	endif
-	if CompositeObjectExists \{Name = AnimTreePreviewObject}
+	if CompositeObjectExists \{name = AnimTreePreviewObject}
 		AnimTreePreviewObject :Die
 	endif
-	UpdateAnimCache \{CLEAR}
+	UpdateAnimCache \{Clear}
 	<Original> :Obj_GetQuat
 	CreateCompositeObject {
-		components = [
+		Components = [
 			{
-				component = Suspend
+				Component = Suspend
 			}
 			{
-				component = AnimTree
+				Component = AnimTree
 			}
 			{
-				component = Skeleton
+				Component = skeleton
 			}
 			{
-				component = SetDisplayMatrix
+				Component = SetDisplayMatrix
 			}
 			{
-				component = Model
-				cloneFrom = <Original>
+				Component = Model
+				CloneFrom = <Original>
 			}
 		]
 		params = {
-			skeletonname = <Skeleton>
-			Name = AnimTreePreviewObject
-			Pos = <Pos>
-			orientation = <Quat>
+			SkeletonName = <skeleton>
+			name = AnimTreePreviewObject
+			pos = <pos>
+			Orientation = <Quat>
 		}
 	}
 	AnimTreePreviewObject :ModelViewer_InitAnimTree
 endscript
 
 script AnimTreePreview 
-	if CompositeObjectExists \{GUITARIST}
-		target_object = GUITARIST
+	if CompositeObjectExists \{Guitarist}
+		target_object = Guitarist
 	else
 		target_object = cas_player1
 	endif
-	AnimTreePreview_NxCommon targetObject = <target_object> modelbuilderheap = debugheap <...>
+	AnimTreePreview_NxCommon targetObject = <target_object> modelBuilderHeap = DebugHeap <...>
 	if NOT CompositeObjectExists \{AnimTreePreviewObject}
 		return
 	endif
-	AnimTreePreviewObject :Unpause
-	if CompositeObjectExists \{GUITARIST}
-		GUITARIST :Unpause
-		GUITARIST :Obj_SwitchScript \{guitarist_idle_animpreview}
+	AnimTreePreviewObject :UnPause
+	if CompositeObjectExists \{Guitarist}
+		Guitarist :UnPause
+		Guitarist :Obj_SwitchScript \{guitarist_idle_animpreview}
 		Wait \{1
 			gameframe}
-		GUITARIST :Pause
+		Guitarist :Pause
 	endif
-	Change \{crowd_debug_mode = 1}
+	change \{crowd_debug_mode = 1}
 endscript
 
 script AnimTreePreviewRestore 
-	animtreepreviewrestore_nxcommon <...>
+	AnimTreePreviewRestore_NxCommon <...>
 	UnHidePlayerAndDestroyFakes
-	Change \{crowd_debug_mode = 0}
-	KillSkaterCamAnim \{Name = anim_preview_cam}
-	if CompositeObjectExists \{GUITARIST}
-		GUITARIST :unhide
+	change \{crowd_debug_mode = 0}
+	KillSkaterCamAnim \{name = anim_preview_cam}
+	if CompositeObjectExists \{Guitarist}
+		Guitarist :unhide
 	elseif CompositeObjectExists \{cas_player1}
 		cas_player1 :unhide
 	endif
 endscript
 
 script UpdateHeroDifferenceAnim 
-	if (<DifferenceAnim> = qs(0x03ac90f0))
+	if (<DifferenceAnim> = qs("\L"))
 	else
-		formatText checksumName = DifferenceAnimName '%s' s = <DifferenceAnim>
-		if CompositeObjectExists \{Name = AnimTreePreviewObject}
+		FormatText checksumname = DifferenceAnimName '%s' s = <DifferenceAnim>
+		if CompositeObjectExists \{name = AnimTreePreviewObject}
 			AnimTreePreviewObject :UpdateDifferenceAnim DifferenceAnimName = <DifferenceAnimName> differenceAnimAmount = <differenceAnimAmount>
 		endif
 	endif
@@ -127,15 +127,15 @@ endscript
 
 script _TestAnimSequence 
 	if GotParam \{Animations}
-		CreateFakePlayer \{Skeleton = gh_rocker_male_original}
+		CreateFakePlayer \{skeleton = GH_Rocker_Male_original}
 		begin
 		GetArraySize <Animations>
 		<index> = 0
 		begin
-		formatText checksumName = AnimName '%s' s = (<Animations> [<index>].anim) DontAssertForChecksums
+		FormatText checksumname = AnimName '%s' s = (<Animations> [<index>].Anim) DontAssertForChecksums
 		AnimTreePreviewObject :ModelViewer_PlayAnim {
-			anim = <AnimName>
-			speed = (<Animations> [<index>].speed)
+			Anim = <AnimName>
+			Speed = (<Animations> [<index>].Speed)
 			BlendPeriod = (<Animations> [<index>].BlendPeriod)
 		}
 		if (<index> = 0)
@@ -143,22 +143,22 @@ script _TestAnimSequence
 		endif
 		AnimTreePreviewObject :ModelViewer_WaitAnimFinished
 		<index> = (<index> + 1)
-		repeat <array_Size>
-		if NOT GotParam \{cycle}
+		repeat <array_size>
+		if NOT GotParam \{Cycle}
 			break
 		endif
 		repeat
 		Wait \{1
-			Second}
+			second}
 		SpawnScriptLater \{UnHidePlayerAndDestroyFakes}
 	endif
 endscript
 
 script TestAnimSequence 
-	KillSpawnedScript \{Name = _TestAnimSequence}
+	KillSpawnedScript \{name = _TestAnimSequence}
 	SpawnScriptLater _TestAnimSequence params = <...>
 endscript
 
-script killanimpreviewrefs 
+script KillAnimPreviewRefs 
 	UnHidePlayerAndDestroyFakes
 endscript

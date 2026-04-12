@@ -33,34 +33,34 @@ script ghmix_tutorial_live_rec
 		]
 		tool_controls = [
 		]}
-	if jam_studio_element :desc_resolvealias \{Name = dialog_box}
+	if jam_studio_element :Desc_ResolveAlias \{name = dialog_box}
 		<resolved_id> :SetProps alpha = 0
 	endif
 	Wait \{1.5
-		Second}
-	training_show_title \{title = qs(0x39538c1a)}
+		second}
+	training_show_title \{title = qs("Editing in GHMix")}
 	Wait \{1
-		Second}
+		second}
 	training_play_sound \{Sound = 'Tut_RS_GHMix_01_BAS'}
 	Wait \{3
-		Seconds}
+		seconds}
 	training_destroy_title
 	training_show_narrator \{narrator = 'bassist'
 		expression = 2}
 	training_wait_for_sound \{Sound = 'Tut_RS_GHMix_01_BAS'}
 	Wait \{0.5
-		Second}
+		second}
 	training_show_narrator \{narrator = 'bassist'
 		expression = 0}
 	training_play_sound \{Sound = 'Tut_RS_GHMix_02_BAS'
 		Wait}
 	training_hide_narrator
-	training_show_title \{title = qs(0xdf38b19a)}
+	training_show_title \{title = qs("Live Record Tool")}
 	Wait \{1
-		Second}
+		second}
 	training_play_sound \{Sound = 'Tut_RS_LiveRec_01_BAS'}
 	Wait \{3
-		Seconds}
+		seconds}
 	training_destroy_title
 	training_show_narrator \{narrator = 'bassist'}
 	training_wait_for_sound \{Sound = 'Tut_RS_LiveRec_01_BAS'}
@@ -78,7 +78,7 @@ script ghmix_tutorial_live_rec
 	<challenges_complete> = (<challenges_complete> + 1)
 	jam_studio_element :SetTags {challenges_complete = <challenges_complete>}
 	jam_tutorial_segment_cleanup
-	Change \{jam_tutorial_status = section_done}
+	change \{jam_tutorial_status = section_done}
 endscript
 
 script ghmix_tutorial_live_rec_challenge 
@@ -103,17 +103,17 @@ script ghmix_tutorial_live_rec_challenge
 		tool_controls = [
 		]
 		block_snap = 0}
-	training_set_lesson_header_text \{number = qs(0x22ee76e7)
-		text = qs(0x9bde6454)}
+	training_set_lesson_header_text \{number = qs("\L1")
+		text = qs("LIVE RECORDING IN GHMIX")}
 	training_add_lesson_body_text \{number = 1
-		text = qs(0xe55ab6d0)}
-	training_set_task_header_body \{text = qs(0x7a002b7c)}
+		text = qs("PRESS Left \be and Right \bd to change the snap resolution to 1/8.")}
+	training_set_task_header_body \{text = qs("Record 10 notes")}
 	<notes_required> = 10
 	training_show_lesson_header
 	training_show_task_header
 	training_display_notes_hit notes_hit = 0 notes_required = <notes_required>
 	begin
-	Block \{Type = ghmix_snap_changed}
+	Block \{type = ghmix_snap_changed}
 	if ($jam_current_quantize = 4)
 		ControllerDebounce \{left}
 		ControllerDebounce \{right}
@@ -121,7 +121,7 @@ script ghmix_tutorial_live_rec_challenge
 	endif
 	repeat
 	training_add_lesson_body_text \{number = 2
-		text = qs(0xa30e9861)}
+		text = qs("PRESS Select \m0 to begin recording.")}
 	jam_studio_element :SetTags \{controls_enabled = [
 			0
 			0
@@ -143,9 +143,9 @@ script ghmix_tutorial_live_rec_challenge
 	suffix = '_size'
 	AppendSuffixToChecksum Base = <gem_array> SuffixString = <suffix>
 	notetrack_size_before = ($<appended_id>)
-	Block \{Type = ghmix_start_rec}
+	Block \{type = ghmix_start_rec}
 	training_add_lesson_body_text \{number = 3
-		text = qs(0x1fb1c505)}
+		text = qs("Play notes as normal.")}
 	begin
 	<num_new_notes> = ((($<appended_id>) - <notetrack_size_before>) / 2)
 	if (<num_new_notes> >= <notes_required>)
@@ -158,8 +158,8 @@ script ghmix_tutorial_live_rec_challenge
 		gameframe}
 	repeat
 	training_add_lesson_body_text \{number = 4
-		text = qs(0x77caf33b)}
-	Block \{Type = ghmix_stop_rec}
+		text = qs("PRESS Stop Recording \m9 to finish.")}
+	Block \{type = ghmix_stop_rec}
 	jam_studio_element :SetTags \{controls_enabled = [
 			0
 			0
@@ -214,12 +214,12 @@ script ghmix_tutorial_step_rec
 			0
 			1
 		]}
-	training_show_title \{title = qs(0x34edebf6)}
+	training_show_title \{title = qs("Changing Instruments")}
 	Wait \{1
-		Second}
+		second}
 	training_play_sound \{Sound = 'Tut_RS_StepRec_01_BAS'}
 	Wait \{3
-		Seconds}
+		seconds}
 	training_destroy_title
 	training_show_narrator \{narrator = 'bassist'}
 	training_wait_for_sound \{Sound = 'Tut_RS_StepRec_01_BAS'}
@@ -242,7 +242,7 @@ script ghmix_tutorial_step_rec
 	<challenges_complete> = (<challenges_complete> + 1)
 	jam_studio_element :SetTags {challenges_complete = <challenges_complete>}
 	jam_tutorial_segment_cleanup
-	Change \{jam_tutorial_status = section_done}
+	change \{jam_tutorial_status = section_done}
 endscript
 
 script ghmix_tutorial_step_rec_switch_challenge 
@@ -263,11 +263,11 @@ script ghmix_tutorial_step_rec_switch_challenge
 			1
 		]
 		block_updown = 0}
-	training_set_lesson_header_text \{number = qs(0x09c32524)
-		text = qs(0xb778e832)}
+	training_set_lesson_header_text \{number = qs("\L2")
+		text = qs("SWITCHING TO BASS TRACK")}
 	training_add_lesson_body_text \{number = 1
-		text = qs(0x43ddadac)}
-	training_set_task_header_body \{text = qs(0x9faebecd)}
+		text = qs("PRESS the Strum Bar to highlight Change Instrument.")}
+	training_set_task_header_body \{text = qs("Switch to the Bass")}
 	training_show_lesson_header
 	training_show_task_header
 	begin
@@ -281,10 +281,10 @@ script ghmix_tutorial_step_rec_switch_challenge
 		gameframe}
 	repeat
 	training_add_lesson_body_text \{number = 2
-		text = qs(0xba8d0fed)}
+		text = qs("PRESS Select \m0 to cycle instrument.")}
 	begin
 	if ($jam_current_track = 2)
-		ControllerDebounce \{X}
+		ControllerDebounce \{x}
 		break
 	endif
 	Wait \{1
@@ -328,11 +328,11 @@ script ghmix_tutorial_step_rec_challenge
 			0
 		]
 		block_updown = 0}
-	training_set_lesson_header_text \{number = qs(0x10d81465)
-		text = qs(0x81a770e1)}
+	training_set_lesson_header_text \{number = qs("\L3")
+		text = qs("STEP RECORDING IN GHMIX")}
 	training_add_lesson_body_text \{number = 1
-		text = qs(0x22aaab84)}
-	training_set_task_header_body \{text = qs(0x355d28ac)}
+		text = qs("PRESS the Strum Bar to highlight Step Record.")}
+	training_set_task_header_body \{text = qs("Record 10 Notes")}
 	<notes_required> = 10
 	training_show_lesson_header
 	training_show_task_header
@@ -348,14 +348,14 @@ script ghmix_tutorial_step_rec_challenge
 		gameframe}
 	repeat
 	training_add_lesson_body_text \{number = 2
-		text = qs(0x834015b8)}
+		text = qs("PRESS Select \m0 to Begin Recording.")}
 	<gem_array> = ($jam_tracks [$jam_current_track].gem_array)
 	suffix = '_size'
 	AppendSuffixToChecksum Base = <gem_array> SuffixString = <suffix>
 	notetrack_size_before = ($<appended_id>)
-	Block \{Type = ghmix_start_step}
+	Block \{type = ghmix_start_step}
 	training_add_lesson_body_text \{number = 3
-		text = qs(0x1fb1c505)}
+		text = qs("Play notes as normal.")}
 	begin
 	<num_new_notes> = ((($<appended_id>) - <notetrack_size_before>) / 2)
 	if (<num_new_notes> >= <notes_required>)
@@ -368,8 +368,8 @@ script ghmix_tutorial_step_rec_challenge
 		gameframe}
 	repeat
 	training_add_lesson_body_text \{number = 4
-		text = qs(0x77caf33b)}
-	Block \{Type = ghmix_stop_step}
+		text = qs("PRESS Stop Recording \m9 to finish.")}
+	Block \{type = ghmix_stop_step}
 	jam_studio_element :SetTags \{controls_enabled = [
 			0
 			0
@@ -432,12 +432,12 @@ script ghmix_tutorial_delete
 	Wait \{1
 		gameframe}
 	repeat
-	training_show_title \{title = qs(0xf33198ca)}
+	training_show_title \{title = qs("Delete Tool")}
 	Wait \{1
-		Second}
+		second}
 	training_play_sound \{Sound = 'Tut_RS_Del_01_BAS'}
 	Wait \{3
-		Seconds}
+		seconds}
 	training_destroy_title
 	training_show_narrator \{narrator = 'bassist'}
 	training_wait_for_sound \{Sound = 'Tut_RS_Del_01_BAS'}
@@ -459,15 +459,15 @@ script ghmix_tutorial_delete
 			}}
 	endif
 	jam_tutorial_segment_cleanup
-	Change \{jam_tutorial_status = section_done}
+	change \{jam_tutorial_status = section_done}
 endscript
 
 script ghmix_tutorial_delete_challenge 
-	training_set_lesson_header_text \{number = qs(0x5f9982a2)
-		text = qs(0x448b1a21)}
+	training_set_lesson_header_text \{number = qs("\L4")
+		text = qs("DELETING DRUM SOLO")}
 	training_add_lesson_body_text \{number = 1
-		text = qs(0x70fc1e48)}
-	training_set_task_header_body \{text = qs(0xef4901df)}
+		text = qs("Use Navigation Tools to get to the solo.")}
+	training_set_task_header_body \{text = qs("Delete the drum solo")}
 	training_show_lesson_header
 	training_show_task_header
 	jam_studio_element :SetTags \{controls_enabled = [
@@ -521,7 +521,7 @@ script ghmix_tutorial_delete_challenge
 				0
 				0
 			]}
-		ControllerDebounce \{X}
+		ControllerDebounce \{x}
 		break
 	endif
 	Wait \{1
@@ -529,7 +529,7 @@ script ghmix_tutorial_delete_challenge
 	repeat
 	jam_studio_cancel_helper_arrow
 	training_add_lesson_body_text \{number = 2
-		text = qs(0x571c432c)}
+		text = qs("Activate the Delete Tool.")}
 	training_play_sound \{Sound = 'Tut_RS_Del_02_BAS'}
 	jam_studio_element :SetTags \{controls_enabled = [
 			0
@@ -557,9 +557,9 @@ script ghmix_tutorial_delete_challenge
 	Wait \{1
 		gameframe}
 	repeat
-	Block \{Type = ghmix_delete_start}
+	Block \{type = ghmix_delete_start}
 	training_add_lesson_body_text \{number = 3
-		text = qs(0x311853b3)}
+		text = qs("PRESS the Strum Bar to highlight the solo.")}
 	jam_studio_element :SetTags \{delete_controls = [
 			select
 		]}
@@ -579,8 +579,8 @@ script ghmix_tutorial_delete_challenge
 			delete
 		]}
 	training_add_lesson_body_text \{number = 4
-		text = qs(0x42785339)}
-	Block \{Type = ghmix_delete_done}
+		text = qs("PRESS Delete \m9 to remove the solo.")}
+	Block \{type = ghmix_delete_done}
 	jam_studio_element :SetTags \{controls_enabled = [
 			0
 			0
@@ -656,15 +656,15 @@ script ghmix_tutorial_copypaste
 	Wait \{1
 		gameframe}
 	repeat
-	if jam_studio_element :desc_resolvealias \{Name = dialog_box}
+	if jam_studio_element :Desc_ResolveAlias \{name = dialog_box}
 		<resolved_id> :SetProps alpha = 0
 	endif
-	training_show_title \{title = qs(0x6635f479)}
+	training_show_title \{title = qs("Copy and Paste")}
 	Wait \{1
-		Second}
+		second}
 	training_play_sound \{Sound = 'Tut_RS_Copy_01_BAS'}
 	Wait \{3
-		Seconds}
+		seconds}
 	training_destroy_title
 	training_show_narrator \{narrator = 'bassist'}
 	training_wait_for_sound \{Sound = 'Tut_RS_Copy_01_BAS'}
@@ -687,15 +687,15 @@ script ghmix_tutorial_copypaste
 	jam_studio_element :SetTags {challenges_complete = <challenges_complete>}
 	jam_tutorial_lesson_complete
 	jam_tutorial_segment_cleanup
-	Change \{jam_tutorial_status = section_done}
+	change \{jam_tutorial_status = section_done}
 endscript
 
 script ghmix_tutorial_copypaste_copy_challenge 
-	training_set_lesson_header_text \{number = qs(0x22ee76e7)
-		text = qs(0xb90c5290)}
+	training_set_lesson_header_text \{number = qs("\L1")
+		text = qs("COPYING THE CHORUS")}
 	training_add_lesson_body_text \{number = 1
-		text = qs(0xaa739555)}
-	training_set_task_header_body \{text = qs(0x1991b14c)}
+		text = qs("Use Navigation Tools to get to the chorus.")}
+	training_set_task_header_body \{text = qs("Copy the chorus")}
 	training_show_lesson_header
 	training_show_task_header
 	jam_studio_element :SetTags \{controls_enabled = [
@@ -750,7 +750,7 @@ script ghmix_tutorial_copypaste_copy_challenge
 				0
 			]
 			block_updown = 1}
-		ControllerDebounce \{X}
+		ControllerDebounce \{x}
 		break
 	endif
 	Wait \{1
@@ -758,7 +758,7 @@ script ghmix_tutorial_copypaste_copy_challenge
 	repeat
 	jam_studio_cancel_helper_arrow
 	training_add_lesson_body_text \{number = 2
-		text = qs(0x04084d04)}
+		text = qs("Activate the Copy Tool.")}
 	jam_studio_element :SetTags \{controls_enabled = [
 			0
 			0
@@ -779,9 +779,9 @@ script ghmix_tutorial_copypaste_copy_challenge
 	jam_studio_element :SetTags \{copy_controls = [
 			strum
 		]}
-	Block \{Type = ghmix_start_copy}
+	Block \{type = ghmix_start_copy}
 	training_add_lesson_body_text \{number = 3
-		text = qs(0xb89f5d8e)}
+		text = qs("PRESS the Strum Bar to highlight the chorus.")}
 	jam_studio_show_helper_arrow target = <chorus_end_time>
 	begin
 	if (($jam_highway_play_time > (<chorus_end_time> -100)) && ($jam_highway_play_time < (<chorus_end_time> + 100)))
@@ -794,11 +794,11 @@ script ghmix_tutorial_copypaste_copy_challenge
 	repeat
 	jam_studio_cancel_helper_arrow
 	training_add_lesson_body_text \{number = 4
-		text = qs(0x22cfa0f3)}
+		text = qs("PRESS Copy \m9 to copy the chorus into the buffer.")}
 	jam_studio_element :SetTags \{copy_controls = [
 			copy
 		]}
-	Block \{Type = ghmix_stop_copy}
+	Block \{type = ghmix_stop_copy}
 	jam_studio_element :SetTags \{controls_enabled = [
 			0
 			0
@@ -820,11 +820,11 @@ script ghmix_tutorial_copypaste_copy_challenge
 endscript
 
 script ghmix_tutorial_copypaste_paste_challenge 
-	training_set_lesson_header_text \{number = qs(0x09c32524)
-		text = qs(0x24495be1)}
+	training_set_lesson_header_text \{number = qs("\L2")
+		text = qs("PASTING THE CHORUS")}
 	training_add_lesson_body_text \{number = 1
-		text = qs(0xd23943a6)}
-	training_set_task_header_body \{text = qs(0x0f693743)}
+		text = qs("Use Navigation Tools to get to the gap.")}
+	training_set_task_header_body \{text = qs("Paste the chorus")}
 	training_show_lesson_header
 	training_show_task_header
 	jam_studio_element :SetTags \{controls_enabled = [
@@ -880,7 +880,7 @@ script ghmix_tutorial_copypaste_paste_challenge
 			]
 			block_snap = 1
 			block_updown = 1}
-		ControllerDebounce \{X}
+		ControllerDebounce \{x}
 		break
 	endif
 	Wait \{1
@@ -888,7 +888,7 @@ script ghmix_tutorial_copypaste_paste_challenge
 	repeat
 	jam_studio_cancel_helper_arrow
 	training_add_lesson_body_text \{number = 2
-		text = qs(0xc8717e90)}
+		text = qs("Activate the Paste Tool.")}
 	training_play_sound \{Sound = 'Tut_RS_Copy_03_BAS'}
 	jam_studio_element :SetTags \{controls_enabled = [
 			0
@@ -908,19 +908,19 @@ script ghmix_tutorial_copypaste_paste_challenge
 		]
 		block_snap = 1
 		block_updown = 0}
-	Block \{Type = ghmix_paste_start}
+	Block \{type = ghmix_paste_start}
 	training_add_lesson_body_text \{number = 3
-		text = qs(0x3fb1ec42)}
+		text = qs("PRESS Paste One \m0 to paste the chorus once.")}
 	jam_studio_element :SetTags \{paste_controls = [
 			paste_one
 		]}
-	Block \{Type = ghmix_paste_pasted}
+	Block \{type = ghmix_paste_pasted}
 	training_add_lesson_body_text \{number = 4
-		text = qs(0x602a3034)}
+		text = qs("PRESS Done \m1 to finish pasting.")}
 	jam_studio_element :SetTags \{paste_controls = [
 			cancel
 		]}
-	Block \{Type = ghmix_paste_done}
+	Block \{type = ghmix_paste_done}
 	jam_studio_element :SetTags \{controls_enabled = [
 			0
 			0
@@ -983,12 +983,12 @@ script ghmix_tutorial_loops
 		gameframe}
 	repeat
 	jam_highway_move_beginning
-	training_show_title \{title = qs(0xbaa6e9d3)}
+	training_show_title \{title = qs("Loop Tool")}
 	Wait \{1
-		Second}
+		second}
 	training_play_sound \{Sound = 'Tut_RS_Loop_01_BAS'}
 	Wait \{3
-		Seconds}
+		seconds}
 	training_destroy_title
 	training_show_narrator \{narrator = 'bassist'}
 	training_wait_for_sound \{Sound = 'Tut_RS_Loop_01_BAS'}
@@ -1010,15 +1010,15 @@ script ghmix_tutorial_loops
 	<challenges_complete> = (<challenges_complete> + 1)
 	jam_studio_element :SetTags {challenges_complete = <challenges_complete>}
 	jam_tutorial_segment_cleanup
-	Change \{jam_tutorial_status = section_done}
+	change \{jam_tutorial_status = section_done}
 endscript
 
 script ghmix_tutorial_lay_loop_challenge 
-	training_set_lesson_header_text \{number = qs(0x10d81465)
-		text = qs(0x93e1d59c)}
+	training_set_lesson_header_text \{number = qs("\L3")
+		text = qs("SETTING UP A LOOP")}
 	training_add_lesson_body_text \{number = 1
-		text = qs(0xa51135ae)}
-	training_set_task_header_body \{text = qs(0xe1c6bbee)}
+		text = qs("Use Navigation Tools to get past the intro.")}
+	training_set_task_header_body \{text = qs("Setup a 2 measure loop")}
 	training_show_lesson_header
 	training_show_task_header
 	<start_time> = 2000
@@ -1057,7 +1057,7 @@ script ghmix_tutorial_lay_loop_challenge
 	jam_studio_show_helper_arrow target = <start_time>
 	begin
 	if (($jam_highway_play_time > (<start_time> -100)) && ($jam_highway_play_time < (<start_time> + 100)))
-		ControllerDebounce \{X}
+		ControllerDebounce \{x}
 		break
 	endif
 	Wait \{1
@@ -1065,7 +1065,7 @@ script ghmix_tutorial_lay_loop_challenge
 	repeat
 	jam_studio_cancel_helper_arrow
 	training_add_lesson_body_text \{number = 2
-		text = qs(0xbe0c9bc1)}
+		text = qs("Activate the Loop Tool.")}
 	jam_studio_element :SetTags \{controls_enabled = [
 			0
 			0
@@ -1095,9 +1095,9 @@ script ghmix_tutorial_lay_loop_challenge
 			0
 			1
 		]}
-	Block \{Type = ghmix_start_loop}
+	Block \{type = ghmix_start_loop}
 	training_add_lesson_body_text \{number = 3
-		text = qs(0xf00fcfb1)}
+		text = qs("PRESS the Strum Bar to navigate 2 measures into the song.")}
 	jam_studio_element :SetTags \{loop_controls = [
 			select_area
 		]}
@@ -1113,11 +1113,11 @@ script ghmix_tutorial_lay_loop_challenge
 	repeat
 	jam_studio_cancel_helper_arrow
 	training_add_lesson_body_text \{number = 4
-		text = qs(0x32c913b6)}
+		text = qs("PRESS Set Loop \m9 to complete the loop.")}
 	jam_studio_element :SetTags \{loop_controls = [
 			set_loop
 		]}
-	Block \{Type = ghmix_loop_set}
+	Block \{type = ghmix_loop_set}
 	jam_studio_element :SetTags \{controls_enabled = [
 			0
 			0
@@ -1154,16 +1154,16 @@ endscript
 
 script ghmix_tutorial_loops_challenge 
 	if ScreenElementExists \{id = jam_studio_element}
-		if jam_studio_element :desc_resolvealias \{Name = percussion_box}
+		if jam_studio_element :Desc_ResolveAlias \{name = percussion_box}
 			<resolved_id> :SetProps alpha = 0
 		endif
 	endif
 	ghmix_tutorial_force_snap \{setting = 4}
-	training_set_lesson_header_text \{number = qs(0x5f9982a2)
-		text = qs(0xcea13225)}
+	training_set_lesson_header_text \{number = qs("\L4")
+		text = qs("BUILDING A BEAT")}
 	training_add_lesson_body_text \{number = 1
-		text = qs(0x05208678)}
-	training_set_task_header_body \{text = qs(0xf0356cc3)}
+		text = qs("Activate Live Record.")}
+	training_set_task_header_body \{text = qs("Build a 3 part beat")}
 	training_show_lesson_header
 	training_show_task_header
 	jam_studio_element :SetTags \{controls_enabled = [
@@ -1183,13 +1183,13 @@ script ghmix_tutorial_loops_challenge
 			0
 		]
 		block_updown = 0}
-	Block \{Type = ghmix_start_rec}
+	Block \{type = ghmix_start_rec}
 	training_add_lesson_body_text \{number = 2
-		text = qs(0x9e30ca06)}
+		text = qs("PRESS \m2 to place Hi-Hat notes in the first Loop.")}
 	training_add_lesson_body_text \{number = 3
-		text = qs(0xe3fa127c)}
+		text = qs("PRESS \m1 to place Snare notes in a following Loop.")}
 	training_add_lesson_body_text \{number = 4
-		text = qs(0xb2feef47)}
+		text = qs("PRESS the Strum Bar to add Kick notes.")}
 	<gem_array> = ($jam_tracks [$jam_current_track].gem_array)
 	suffix = '_size'
 	AppendSuffixToChecksum Base = <gem_array> SuffixString = <suffix>
@@ -1204,8 +1204,8 @@ script ghmix_tutorial_loops_challenge
 		gameframe}
 	repeat
 	training_add_lesson_body_text \{number = 5
-		text = qs(0x77caf33b)}
-	Block \{Type = ghmix_stop_rec}
+		text = qs("PRESS Stop Recording \m9 to finish.")}
+	Block \{type = ghmix_stop_rec}
 	jam_studio_element :SetTags \{controls_enabled = [
 			0
 			0
@@ -1282,12 +1282,12 @@ script ghmix_tutorial_nudge
 		gameframe}
 	repeat
 	jam_highway_move_beginning
-	training_show_title \{title = qs(0x0f8a8a9b)}
+	training_show_title \{title = qs("Note Nudge Tool")}
 	Wait \{1
-		Second}
+		second}
 	training_play_sound \{Sound = 'Tut_RS_Nudge_01_BAS'}
 	Wait \{3
-		Seconds}
+		seconds}
 	training_destroy_title
 	training_show_narrator \{narrator = 'bassist'}
 	training_wait_for_sound \{Sound = 'Tut_RS_Nudge_01_BAS'}
@@ -1308,15 +1308,15 @@ script ghmix_tutorial_nudge
 			}}
 	endif
 	jam_tutorial_segment_cleanup
-	Change \{jam_tutorial_status = section_done}
+	change \{jam_tutorial_status = section_done}
 endscript
 
 script ghmix_tutorial_nudge_challenge 
-	training_set_lesson_header_text \{number = qs(0x4682b3e3)
-		text = qs(0xa743fb6f)}
+	training_set_lesson_header_text \{number = qs("\L5")
+		text = qs("NUDGING NOTES")}
 	training_add_lesson_body_text \{number = 1
-		text = qs(0xad2acbd5)}
-	training_set_task_header_body \{text = qs(0xc2e4064d)}
+		text = qs("Activate the Note Nudge tool.")}
+	training_set_task_header_body \{text = qs("Create a 2 measure gap")}
 	training_show_lesson_header
 	training_show_task_header
 	jam_studio_element :SetTags \{controls_enabled = [
@@ -1342,13 +1342,13 @@ script ghmix_tutorial_nudge_challenge
 	<start_time> = 0
 	<end_time> = 2000
 	ghmix_tutorial_highlight start_time = <start_time> end_time = <end_time>
-	Block \{Type = ghmix_start_nudge}
+	Block \{type = ghmix_start_nudge}
 	training_add_lesson_body_text \{number = 2
-		text = qs(0xe4d6737d)}
+		text = qs("PRESS Nudge All \m2 to move all the notes in the track.")}
 	jam_studio_show_helper_arrow target = <end_time>
 	begin
 	if (($jam_highway_play_time > (<end_time> -100)) && ($jam_highway_play_time < (<end_time> + 100)))
-		ControllerDebounce \{X}
+		ControllerDebounce \{x}
 		break
 	endif
 	Wait \{1
@@ -1359,8 +1359,8 @@ script ghmix_tutorial_nudge_challenge
 			cancel
 		]}
 	training_add_lesson_body_text \{number = 3
-		text = qs(0x8017d44f)}
-	Block \{Type = ghmix_stop_nudge}
+		text = qs("PRESS Cancel \m1 to exit the Note Nudge tool.")}
+	Block \{type = ghmix_stop_nudge}
 	jam_studio_element :SetTags \{controls_enabled = [
 			0
 			0
@@ -1395,7 +1395,7 @@ endscript
 
 script ghmix_tutorial_highlight \{start_time = 0
 		end_time = 500
-		Color = [
+		color = [
 			10
 			255
 			10
@@ -1408,46 +1408,46 @@ script ghmix_tutorial_highlight \{start_time = 0
 	high_pos = ((<end_time> / 1000.0) * $jam_highway_pixels_per_second)
 	highlight_pos = (<low_pos> + ((1.0, 0.0) * (<high_pos> [0] - <low_pos> [0])))
 	CreateScreenElement {
-		Type = SpriteElement
+		type = SpriteElement
 		parent = jam_highway_container
 		id = ghmix_tut_highlight
 		texture = white
 		just = [left top]
-		rgba = <Color>
-		Pos = (<low_pos> + (0.0, 55.0))
+		rgba = <color>
+		pos = (<low_pos> + (0.0, 55.0))
 		dims = ((0.0, 175.0) + ((1.0, 0.0) * (<high_pos> [0] - <low_pos> [0])))
 		z_priority = 10
 	}
 endscript
 
 script ghmix_tutorial_force_snap \{setting = 3}
-	Change jam_current_quantize = <setting>
+	change jam_current_quantize = <setting>
 	jam_studio_element :SetProps snap_text = ($jam_quantize [$jam_current_quantize].name_text)
 endscript
 
 script jam_studio_show_helper_arrow 
-	KillSpawnedScript \{Name = jam_studio_show_helper_arrow_spawned}
-	SpawnScriptNow jam_studio_show_helper_arrow_spawned id = jam_tutorial_spawns params = {<...>}
+	KillSpawnedScript \{name = jam_studio_show_helper_arrow_spawned}
+	spawnscriptnow jam_studio_show_helper_arrow_spawned id = jam_tutorial_spawns params = {<...>}
 endscript
 
 script jam_studio_cancel_helper_arrow 
-	KillSpawnedScript \{Name = jam_studio_show_helper_arrow_spawned}
+	KillSpawnedScript \{name = jam_studio_show_helper_arrow_spawned}
 endscript
 
 script jam_studio_show_helper_arrow_spawned \{target = 2000
 		time = 5}
 	begin
 	if ($jam_highway_play_time < (<target> -500))
-		jam_tutorial_add_arrow \{Pos = (550.0, 150.0)
+		jam_tutorial_add_arrow \{pos = (550.0, 150.0)
 			life = 1
-			Scale = 0.5
+			scale = 0.5
 			rot = 180}
 	elseif ($jam_highway_play_time > (<target> + 200))
-		jam_tutorial_add_arrow \{Pos = (550.0, 550.0)
+		jam_tutorial_add_arrow \{pos = (550.0, 550.0)
 			life = 1
-			Scale = 0.5}
+			scale = 0.5}
 	else
 	endif
-	Wait <time> Seconds
+	Wait <time> seconds
 	repeat
 endscript

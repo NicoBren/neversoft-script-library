@@ -1,6 +1,6 @@
 
 script ui_create_jam_ghtunes 
-	SpawnScriptNow create_jam_ghtunes_menu params = <...>
+	spawnscriptnow create_jam_ghtunes_menu params = <...>
 endscript
 
 script ui_destroy_jam_ghtunes 
@@ -8,10 +8,10 @@ script ui_destroy_jam_ghtunes
 endscript
 
 script ui_deinit_jam_ghtunes 
-	Change \{jam_ghtunes_last_search_text = qs(0x00000000)}
-	KillSpawnedScript \{Name = guitar_jam_playback_recording}
-	KillSpawnedScript \{Name = guitar_jam_drum_playback}
-	KillSpawnedScript \{Name = song_preview_update_playbar}
+	change \{jam_ghtunes_last_search_text = qs("")}
+	KillSpawnedScript \{name = guitar_jam_playback_recording}
+	KillSpawnedScript \{name = guitar_jam_drum_playback}
+	KillSpawnedScript \{name = song_preview_update_playbar}
 	if ScreenElementExists \{id = ghtunes_terms_dialog_box}
 		DestroyScreenElement \{id = ghtunes_terms_dialog_box}
 	endif
@@ -19,7 +19,7 @@ script ui_deinit_jam_ghtunes
 		DestroyScreenElement \{id = song_preview_element}
 	endif
 	jamsession_unload \{song_prefix = 'editable'}
-	clearjamsession
+	ClearJamSession
 endscript
 
 script ui_return_jam_ghtunes 

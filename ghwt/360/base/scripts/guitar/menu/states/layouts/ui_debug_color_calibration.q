@@ -1,12 +1,12 @@
 
 script ui_create_debug_color_calibration 
-	make_menu \{nobg}
+	make_menu \{noBG}
 	add_menu_item \{choose_back}
-	CreateScreenElement \{Type = SpriteElement
+	CreateScreenElement \{type = SpriteElement
 		parent = main_menu_anchor
 		texture = color_calibration
 		z_priority = 1000
-		Pos = (630.0, 340.0)}
+		pos = (630.0, 340.0)}
 	menu_finish \{no_helper_text}
 endscript
 

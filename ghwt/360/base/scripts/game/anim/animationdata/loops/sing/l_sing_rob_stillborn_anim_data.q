@@ -1,37 +1,37 @@
-l_sing_rob_stillborn_anims_set = {
+L_SING_Rob_Stillborn_anims_set = {
 	Stance_A = {
 		Idle = {
 			good = {
-				slow = [
-					sing_rob_stillborn_075_01
+				Slow = [
+					Sing_Rob_Stillborn_075_01
 				]
-				med = [
-					sing_rob_stillborn_100_01
+				Med = [
+					Sing_Rob_Stillborn_100_01
 				]
-				FAST = [
-					sing_rob_stillborn_120_01
+				Fast = [
+					SING_Rob_Stillborn_120_01
 				]
 			}
 			Normal = {
-				slow = [
-					sing_rob_stillborn_075_01
+				Slow = [
+					Sing_Rob_Stillborn_075_01
 				]
-				med = [
-					sing_rob_stillborn_100_01
+				Med = [
+					Sing_Rob_Stillborn_100_01
 				]
-				FAST = [
-					sing_rob_stillborn_120_01
+				Fast = [
+					SING_Rob_Stillborn_120_01
 				]
 			}
-			bad = {
-				slow = [
-					sing_rob_stillborn_075_01
+			Bad = {
+				Slow = [
+					Sing_Rob_Stillborn_075_01
 				]
-				med = [
-					sing_rob_stillborn_100_01
+				Med = [
+					Sing_Rob_Stillborn_100_01
 				]
-				FAST = [
-					sing_rob_stillborn_120_01
+				Fast = [
+					SING_Rob_Stillborn_120_01
 				]
 			}
 		}

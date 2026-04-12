@@ -1,5 +1,5 @@
 
-script ui_create_cas_color_edit title = qs(0xc420923e) controller = ($primary_controller)
+script ui_create_cas_color_edit title = qs("Change Color") controller = ($primary_controller)
 	ui_event_add_params hist_tex = <hist_tex>
 	make_generic_menu {
 		vmenu_id = create_cas_color_edit_vmenu
@@ -11,11 +11,11 @@ script ui_create_cas_color_edit title = qs(0xc420923e) controller = ($primary_co
 	}
 	setup_cas_menu_handlers vmenu_id = create_cas_color_edit_vmenu camera_list = <camera_list> zoom_camera = <zoom_camera>
 	if GotParam \{cam_name}
-		SpawnScriptNow task_menu_default_anim_in params = {base_name = <cam_name>}
+		spawnscriptnow task_menu_default_anim_in params = {base_name = <cam_name>}
 	endif
-	resolvebodyspecificpartinappearance part = <part>
+	ResolveBodySpecificPartInAppearance part = <part>
 	GetArraySize <part_materials>
-	if (<array_Size> = 0)
+	if (<array_size> = 0)
 		ScriptAssert \{'No part_materials!'}
 	endif
 	if NOT GotParam \{material_index}
@@ -23,7 +23,7 @@ script ui_create_cas_color_edit title = qs(0xc420923e) controller = ($primary_co
 	endif
 	color_edit_get_current_colors part = <part> part_material = (<part_materials> [<material_index>])
 	colorwheel_add_item {
-		Scale = 0.6
+		scale = 0.6
 		pad_choose_script = color_edit_exit_accept
 		pad_choose_params = {num_states = <num_states> material_index = <material_index> part = <part> part_materials = <part_materials>}
 		increment_focus_script = color_edit_focus_change
@@ -32,36 +32,36 @@ script ui_create_cas_color_edit title = qs(0xc420923e) controller = ($primary_co
 		special_exit_script = color_edit_restore_previous
 		lookup_table = <color_wheel>
 	}
-	add_user_control_helper \{text = qs(0xc18d5e76)
+	add_user_control_helper \{text = qs("SELECT")
 		button = green
 		z = 100000}
-	add_user_control_helper \{text = qs(0xf7723015)
+	add_user_control_helper \{text = qs("CANCEL")
 		button = red
 		z = 100000}
-	add_user_control_helper \{text = qs(0x38ee4773)
-		button = yellow
+	add_user_control_helper \{text = qs("RESET")
+		button = Yellow
 		z = 100000}
-	if ((IsGuitarController controller = <controller>) || (isdrumcontroller controller = <controller>))
-		add_user_control_helper \{text = qs(0xe7d2a66e)
-			button = blue
+	if ((IsGuitarController controller = <controller>) || (IsDrumController controller = <controller>))
+		add_user_control_helper \{text = qs("ROTATE")
+			button = Blue
 			z = 100000}
-		add_user_control_helper \{text = qs(0x26950e02)
-			button = orange
+		add_user_control_helper \{text = qs("ZOOM")
+			button = Orange
 			z = 100000}
 	else
-		add_user_control_helper \{text = qs(0xe7d2a66e)
-			button = lbrb
+		add_user_control_helper \{text = qs("ROTATE")
+			button = LBRB
 			z = 100000}
-		add_user_control_helper \{text = qs(0x26950e02)
-			button = rt
+		add_user_control_helper \{text = qs("ZOOM")
+			button = RT
 			z = 100000}
 	endif
-	LaunchEvent \{Type = focus
+	LaunchEvent \{type = focus
 		target = create_cas_color_edit_vmenu
 		data = {
 			child_index = 0
 		}}
-	LaunchEvent \{Type = pad_choose}
+	LaunchEvent \{type = pad_choose}
 	if ScreenElementExists \{id = color_wheel_menu_item}
 		setup_cas_menu_handlers vmenu_id = color_wheel_menu_item no_zoom = <no_zoom> camera_list = <camera_list> zoom_camera = <zoom_camera>
 	endif
@@ -77,33 +77,33 @@ endscript
 
 script ui_init_cas_color_edit 
 	ui_event_add_params \{hist_tex = menu_history_color_edit}
-	pushtemporarycasappearance
+	PushTemporaryCASAppearance
 endscript
 
 script ui_deinit_cas_color_edit 
-	poptemporarycasappearance
+	PopTemporaryCASAppearance
 	if NOT GotParam \{skip_deinit_script}
 		if GotParam \{additional_deinit_script}
 			<additional_deinit_script>
 		endif
-		getcurrentcasobject
+		GetCurrentCASObject
 		if GotParam \{return_stance}
-			bandmanager_changestance Name = <cas_object> stance = <return_stance> no_wait
+			BandManager_ChangeStance name = <cas_object> stance = <return_stance> no_wait
 		else
-			bandmanager_changestance Name = <cas_object> stance = stance_frontend no_wait
+			BandManager_ChangeStance name = <cas_object> stance = stance_frontend no_wait
 		endif
 	endif
 endscript
 
 script color_edit_focus_change 
-	setcasappearancematerial part = <part> material = <part_material> value = <Color>
-	if ((<part> = cas_female_hair) || (<part> = cas_male_hair))
-		if getcasappearancepart part = <part>
+	SetCASAppearanceMaterial part = <part> material = <part_material> value = <color>
+	if ((<part> = CAS_Female_Hair) || (<part> = CAS_Male_Hair))
+		if GetCASAppearancePart part = <part>
 			cas_propogate_hair_color
 		endif
 	endif
 	cas_propogate_guitar_color_to part = <part>
-	updatecurrentcasmodel \{buildscript = color_model_from_appearance}
+	UpdateCurrentCASModel \{buildScript = color_model_from_appearance}
 endscript
 
 script color_edit_get_current_colors 
@@ -112,14 +112,14 @@ script color_edit_get_current_colors
 			part_material
 		]
 		all}
-	if getcasmaterialvalue part = <part> material = <part_material>
+	if GetCASMaterialValue part = <part> material = <part_material>
 		lookup = ($color_lookup_table.<value>)
 		if GotParam \{lookup}
-			if StructureContains structure = <lookup> diffuse
+			if StructureContains Structure = <lookup> diffuse
 				diff_r = (<lookup>.diffuse [0])
 				diff_g = (<lookup>.diffuse [1])
 				diff_b = (<lookup>.diffuse [2])
-				if isfloat <diff_r>
+				if IsFloat <diff_r>
 					diff_r = (<diff_r> * 255.0)
 					diff_g = (<diff_g> * 255.0)
 					diff_b = (<diff_b> * 255.0)
@@ -128,9 +128,9 @@ script color_edit_get_current_colors
 					CastToInteger \{diff_b}
 				endif
 				rgb = [0 0 0]
-				SetArrayElement ArrayName = rgb index = 0 NewValue = <diff_r>
-				SetArrayElement ArrayName = rgb index = 1 NewValue = <diff_g>
-				SetArrayElement ArrayName = rgb index = 2 NewValue = <diff_b>
+				SetArrayElement ArrayName = rgb index = 0 newvalue = <diff_r>
+				SetArrayElement ArrayName = rgb index = 1 newvalue = <diff_g>
+				SetArrayElement ArrayName = rgb index = 2 newvalue = <diff_b>
 			endif
 		else
 			printstruct <...>
@@ -140,7 +140,7 @@ script color_edit_get_current_colors
 		AddArrayElement array = [] element = ($default_cas_hue)
 		AddArrayElement array = <array> element = ($default_cas_sat)
 		AddArrayElement array = <array> element = ($default_cas_value)
-		hsvtorgb hsv = <array>
+		HSVtoRGB hsv = <array>
 	endif
 	return rgb = <rgb>
 endscript
@@ -148,9 +148,9 @@ endscript
 script color_edit_exit_accept \{num_states = 2}
 	GetArraySize <part_materials>
 	material_index = (<material_index> + 1)
-	if (<material_index> < <array_Size>)
+	if (<material_index> < <array_size>)
 		ui_event event = menu_change data = {
-			state = uistate_cas_color_edit
+			state = UIstate_cas_color_edit
 			part = <part>
 			part_materials = <part_materials>
 			material_index = <material_index>
@@ -167,14 +167,14 @@ script color_edit_restore_default
 			part
 		]
 		all}
-	getcasappearancepart part = <part>
+	GetCASAppearancePart part = <part>
 	RemoveParameter \{chosen_materials}
-	setcasappearancepartinstance part = <part> part_instance = {<...>}
-	updatecurrentcasmodel \{buildscript = color_model_from_appearance}
+	SetCASAppearancePartInstance part = <part> part_instance = {<...>}
+	UpdateCurrentCASModel \{buildScript = color_model_from_appearance}
 	generic_event_back
 endscript
 
 script color_edit_restore_previous 
-	restoretoptemporarycasappearance \{update_color}
+	RestoreTopTemporaryCASAppearance \{update_color}
 	generic_event_back
 endscript

@@ -1,7 +1,7 @@
 jam_tutorial_menu_topics = [
 	{
-		Name = qs(0xd603d741)
-		desc = qs(0x14f2ac12)
+		name = qs("Introduction")
+		desc = qs("An introduction to the Recording Studio.")
 		lesson_tag = rs_introduction_lesson
 		allow_drums = 1
 		sections = [
@@ -11,8 +11,8 @@ jam_tutorial_menu_topics = [
 		]
 	}
 	{
-		Name = qs(0x39a07e53)
-		desc = qs(0x8abea749)
+		name = qs("Lead & Bass")
+		desc = qs("Learn the Lead and Bass Guitar basic controls for jamming.")
 		lesson_tag = rs_lead_and_bass_lesson
 		allow_drums = 0
 		sections = [
@@ -23,8 +23,8 @@ jam_tutorial_menu_topics = [
 		]
 	}
 	{
-		Name = qs(0x7d5eb9c0)
-		desc = qs(0x5c2fe125)
+		name = qs("Rhythm Guitar")
+		desc = qs("Learn Rhythm Guitar controls. Also learn about the Effects Module for all guitars.")
 		lesson_tag = rs_rhythm_lesson
 		allow_drums = 0
 		sections = [
@@ -33,8 +33,8 @@ jam_tutorial_menu_topics = [
 		]
 	}
 	{
-		Name = qs(0xf3e03f27)
-		desc = qs(0x7402ce0f)
+		name = qs("Drums")
+		desc = qs("Learn how to jam with Drums, and even change your Drum Kit.")
 		lesson_tag = rs_drums_lesson
 		allow_drums = 1
 		sections = [
@@ -43,8 +43,8 @@ jam_tutorial_menu_topics = [
 		]
 	}
 	{
-		Name = qs(0x09aa4fdd)
-		desc = qs(0xd7f2be22)
+		name = qs("Keyboard")
+		desc = qs("Learn how to jam with the Keyboard.")
 		lesson_tag = rs_melody_lesson
 		allow_drums = 0
 		sections = [
@@ -52,8 +52,8 @@ jam_tutorial_menu_topics = [
 		]
 	}
 	{
-		Name = qs(0x581ec86b)
-		desc = qs(0x6b9fb8f1)
+		name = qs("Recording a Jam")
+		desc = qs("Learn how to record a jam, play it back immediately, and then upload it online to GHTunes.")
 		lesson_tag = rs_recording_lesson
 		allow_drums = 0
 		sections = [
@@ -62,8 +62,8 @@ jam_tutorial_menu_topics = [
 		]
 	}
 	{
-		Name = qs(0x0c16e29c)
-		desc = qs(0xb17eb78b)
+		name = qs("Guitar Techniques")
+		desc = qs("Learn how to lay down sustain notes, hammer-ons and pull-offs. Also learn how to Palm Mute notes.")
 		lesson_tag = rs_pro_guitar_lesson
 		allow_drums = 0
 		sections = [
@@ -73,8 +73,8 @@ jam_tutorial_menu_topics = [
 		]
 	}
 	{
-		Name = qs(0xf0e6e156)
-		desc = qs(0xc479f2b0)
+		name = qs("Advanced Tools")
+		desc = qs("Learn how to use the Arpeggiator and the Drum Machine.")
 		lesson_tag = rs_advanced_tools_lesson
 		allow_drums = 0
 		sections = [
@@ -83,11 +83,11 @@ jam_tutorial_menu_topics = [
 		]
 	}
 	{
-		Name = qs(0xabf968ed)
-		desc = qs(0xc90915c4)
+		name = qs("GHMix Editing")
+		desc = qs("Learn how to record and edit a song using GHMix.")
 		lesson_tag = rs_ghmix_editing_lesson
 		allow_drums = 0
-		ghmix_tutorial = 1
+		GHMix_tutorial = 1
 		sections = [
 			ghmix_tutorial_live_rec
 			ghmix_tutorial_step_rec
@@ -95,11 +95,11 @@ jam_tutorial_menu_topics = [
 		]
 	}
 	{
-		Name = qs(0xde40c77b)
-		desc = qs(0x3753ed6e)
+		name = qs("GHMix Advanced")
+		desc = qs("Learn some advanced techniques for creating songs in GHMix.")
 		lesson_tag = rs_ghmix_pro_techniques_tools_lesson
 		allow_drums = 0
-		ghmix_tutorial = 2
+		GHMix_tutorial = 2
 		sections = [
 			ghmix_tutorial_copypaste
 			ghmix_tutorial_loops
@@ -109,7 +109,7 @@ jam_tutorial_menu_topics = [
 ]
 
 script ui_create_jam_tutorials 
-	SpawnScriptNow \{jam_create_tutorial_menu}
+	spawnscriptnow \{jam_create_tutorial_menu}
 endscript
 
 script ui_destroy_jam_tutorials 
@@ -123,25 +123,25 @@ script ui_deinit_jam_tutorials
 endscript
 
 script jam_create_tutorial_menu 
-	Change \{target_jam_camera_prop = jam_tutorials}
+	change \{target_jam_camera_prop = jam_tutorials}
 	jam_camera_wait
-	CreateScreenElement \{Type = ContainerElement
+	CreateScreenElement \{type = ContainerElement
 		parent = root_window
 		id = jam_tutorial_select_container}
-	make_generic_menu \{title = qs(0x800a3aa0)
+	make_generic_menu \{title = qs("Tutorials")
 		pad_back_script = jam_exit_tutorial_menu
 		vmenu_id = jam_tutorial_menu}
-	tutorial_text_params = {Type = TextElement font = fontgrid_text_a3 just = [left center] Scale = 0.6 rot_angle = -5 rgba = [20 255 20 255]}
+	tutorial_text_params = {type = TextElement font = fontgrid_text_a3 just = [left center] scale = 0.6 rot_angle = -5 rgba = [20 255 20 255]}
 	CreateScreenElement {
-		Type = TextBlockElement
+		type = TextBlockElement
 		font = fontgrid_text_a3
 		just = [left top]
-		Scale = 1
+		scale = 1
 		internal_scale = 0.75
 		rgba = [20 255 20 255]
 		parent = jam_tutorial_select_container
 		id = jam_tutorial_select_info
-		Pos = (635.0, 140.0)
+		pos = (635.0, 140.0)
 		dims = (425.0, 235.0)
 		rot_angle = 1
 		z_priority = (5)
@@ -152,14 +152,14 @@ script jam_create_tutorial_menu
 	index = 0
 	allow = 1
 	begin
-	if isdrumcontroller controller = ($primary_controller)
-		if StructureContains structure = (<tutorial_topics> [<index>]) Name = allow_drums
+	if IsDrumController controller = ($primary_controller)
+		if StructureContains Structure = (<tutorial_topics> [<index>]) name = allow_drums
 			<allow> = (<tutorial_topics> [<index>].allow_drums)
 		endif
 	endif
-	<ghmix_tutorial> = 0
-	if StructureContains structure = (<tutorial_topics> [<index>]) Name = ghmix_tutorial
-		<ghmix_tutorial> = (<tutorial_topics> [<index>].ghmix_tutorial)
+	<GHMix_tutorial> = 0
+	if StructureContains Structure = (<tutorial_topics> [<index>]) name = GHMix_tutorial
+		<GHMix_tutorial> = (<tutorial_topics> [<index>].GHMix_tutorial)
 	endif
 	if (<allow> = 1)
 		GetGlobalTags \{training}
@@ -171,22 +171,22 @@ script jam_create_tutorial_menu
 		endif
 		add_generic_menu_icon_item {
 			icon = <icon>
-			text = (<tutorial_topics> [<index>].Name)
+			text = (<tutorial_topics> [<index>].name)
 			pad_choose_script = select_jam_tutorial_option
-			pad_choose_params = {index = <index> ghmix_tut = <ghmix_tutorial>}
+			pad_choose_params = {index = <index> ghmix_tut = <GHMix_tutorial>}
 			additional_focus_script = focus_jam_tutorial_option
 			additional_focus_params = {index = <index>}
 		}
 	endif
 	<index> = (<index> + 1)
-	repeat <array_Size>
-	add_user_control_helper \{text = qs(0xc18d5e76)
+	repeat <array_size>
+	add_user_control_helper \{text = qs("SELECT")
 		button = green
 		z = 100}
-	add_user_control_helper \{text = qs(0xaf4d5dd2)
+	add_user_control_helper \{text = qs("BACK")
 		button = red
 		z = 100}
-	LaunchEvent \{Type = focus
+	LaunchEvent \{type = focus
 		target = current_menu}
 endscript
 
@@ -194,8 +194,8 @@ script focus_jam_tutorial_option
 	retail_menu_focus id = <id>
 	jam_camera_wait
 	<tutorial_topics> = ($jam_tutorial_menu_topics)
-	formatText TextName = run_text qs(0x8eeadaba) s = (<tutorial_topics> [<index>].desc)
-	jam_tutorial_select_info :se_setprops text = <run_text>
+	FormatText TextName = run_text qs("C:> run tutorial.exe \n%s") s = (<tutorial_topics> [<index>].desc)
+	jam_tutorial_select_info :SE_SetProps text = <run_text>
 	safe_show \{id = jam_tutorial_select_info}
 endscript
 
@@ -204,15 +204,15 @@ script select_jam_tutorial_option
 	<wrong> = 0
 	<tutorial_topics> = ($jam_tutorial_menu_topics)
 	if IsGuitarController controller = ($primary_controller)
-	elseif isdrumcontroller controller = ($primary_controller)
-		if StructureContains structure = (<tutorial_topics> [<index>]) Name = allow_drums
+	elseif IsDrumController controller = ($primary_controller)
+		if StructureContains Structure = (<tutorial_topics> [<index>]) name = allow_drums
 			if NOT ((<tutorial_topics> [<index>].allow_drums) = 1)
-				LaunchEvent \{Type = unfocus
+				LaunchEvent \{type = unfocus
 					target = current_menu}
 				create_popup_warning_menu \{no_background
-					title = qs(0xaa163738)
+					title = qs("WARNING")
 					textblock = {
-						text = qs(0x97c303c6)
+						text = qs("These tutorials require you to be using a Guitar controller.")
 					}
 					options = [
 						{
@@ -221,7 +221,7 @@ script select_jam_tutorial_option
 							}
 							func_params = {
 							}
-							text = qs(0x0e41fe46)
+							text = qs("OK")
 						}
 					]}
 				<wrong> = 1
@@ -234,13 +234,13 @@ script select_jam_tutorial_option
 		endif
 	endif
 	if (<wrong> = 0)
-		SpawnScriptNow jam_play_tutorial_topic id = jam_tutorial_topic_spawn params = {index = <index> ghmix_tut = <ghmix_tut>}
+		spawnscriptnow jam_play_tutorial_topic id = jam_tutorial_topic_spawn params = {index = <index> ghmix_tut = <ghmix_tut>}
 	endif
 endscript
 
 script select_jam_tutorial_option_retry 
 	destroy_popup_warning_menu
-	LaunchEvent \{Type = focus
+	LaunchEvent \{type = focus
 		target = current_menu}
 	jam_create_tutorial_menu
 endscript
@@ -254,7 +254,7 @@ endscript
 script jam_destroy_tutorial_menu 
 	set_focus_color
 	set_unfocus_color
-	Change \{game_mode = p1_quickplay}
+	change \{game_mode = p1_quickplay}
 	KillSpawnedScript \{id = jam_tutorial_spawns}
 	if ScreenElementExists \{id = jam_tut_text}
 		DestroyScreenElement \{id = jam_tut_text}

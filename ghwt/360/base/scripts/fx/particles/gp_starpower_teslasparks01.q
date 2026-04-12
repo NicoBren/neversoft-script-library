@@ -1,15 +1,15 @@
 GP_StarPower_TeslaSparks01 = {
-	Pos = (-1.2646658, 1.017312, -2.6003609)
-	Angles = (0.0, 0.0, 0.0)
+	pos = (-1.2646658, 1.017312, -2.6003609)
+	angles = (0.0, 0.0, 0.0)
 	Class = ParticleObject
 	ParticleType = FlexParticle
-	Type = flat
-	Active
+	type = flat
+	active
 	CreatedAtStart
 	EmitRangeDims = (0.0, 0.0, 0.0)
-	Emit_Target = (0.0, 1.0, 0.0)
+	emit_Target = (0.0, 1.0, 0.0)
 	EmitAngle = (0.0, 0.0, 0.0)
-	Force = (0.0, -4.0, 0.0)
+	force = (0.0, -4.0, 0.0)
 	WindCoeff = 0.0
 	LocalWindCoeff = 0.0
 	EmitterVelocityWeight = 0.0
@@ -18,11 +18,11 @@ GP_StarPower_TeslaSparks01 = {
 	BounceCoeff = 0.2
 	BounceCallbackRate = 0.0
 	LifeRange = (1.0, 3.0)
-	Emit_Rate = 32.0
-	Max = 0
+	emit_rate = 32.0
+	max = 0
 	TimeSeed = 0.1
-	LifeTime = 0.0
-	EmitNum = 64
+	lifeTime = 0.0
+	emitNum = 64
 	FollowEmitter = 0.0
 	EmitFunction = constant
 	EmitPeriod = 1.0
@@ -37,16 +37,16 @@ GP_StarPower_TeslaSparks01 = {
 	AlignWithPath
 	PathFollowTime = 0.07
 	History = 2
-	HistoryListCoordinateSpace = World
-	Color = 6291455
+	HistoryListCoordinateSpace = world
+	color = 6291455
 	LOD_Default
 	NoVisibilityTest
 	QuickMaterial = {
 		DiffuseTextureEnabled
 		DiffuseTexture = JOW_Spark01
 		SpecularPower = 0
-		AlphaCutoff = 16
-		BlendMode = add
+		alphacutoff = 16
+		blendMode = Add
 		QuadAnimationFPS = 0
 	}
 	Knot = [

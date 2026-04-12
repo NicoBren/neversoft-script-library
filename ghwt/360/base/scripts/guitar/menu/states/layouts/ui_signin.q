@@ -6,22 +6,22 @@ store_respond_to_signin_changed = 0
 alternative_primary_selected = -1
 
 script ui_init_signin 
-	Change \{signin_continue_state = uistate_boot_guitar}
-	Change \{signin_continue_data = {
+	change \{signin_continue_state = uistate_boot_guitar}
+	change \{signin_continue_data = {
 		}}
-	Change store_respond_to_signin_changed = ($respond_to_signin_changed)
-	Change \{respond_to_signin_changed = 0}
-	Change \{respond_to_signin_changed_func = ui_signin_changed_func}
-	Change \{alternative_primary_selected = -1}
+	change store_respond_to_signin_changed = ($respond_to_signin_changed)
+	change \{respond_to_signin_changed = 0}
+	change \{respond_to_signin_changed_func = ui_signin_changed_func}
+	change \{alternative_primary_selected = -1}
 endscript
 
 script ui_create_signin \{new_data = {
 		}}
 	if GotParam \{new_state}
-		Change signin_continue_state = <new_state>
-		Change signin_continue_data = <new_data>
+		change signin_continue_state = <new_state>
+		change signin_continue_data = <new_data>
 	endif
-	SpawnScriptNow ui_signin_check params = <...>
+	spawnscriptnow ui_signin_check params = <...>
 endscript
 
 script ui_destroy_signin 
@@ -29,42 +29,42 @@ script ui_destroy_signin
 endscript
 
 script ui_deinit_signin 
-	Change respond_to_signin_changed = ($store_respond_to_signin_changed)
-	Change \{respond_to_signin_changed_func = None}
+	change respond_to_signin_changed = ($store_respond_to_signin_changed)
+	change \{respond_to_signin_changed_func = none}
 endscript
 
 script assign_new_primary_controller 
 	if ($primary_controller_assigned = 0)
 		first_press = 1
 	endif
-	Change primary_controller = <device_num>
-	Change \{primary_controller_assigned = 1}
-	Change structurename = player1_status controller = ($primary_controller)
-	Change GlobalName = player1_device NewValue = ($primary_controller)
-	Change last_start_pressed_device = ($primary_controller)
+	change primary_controller = <device_num>
+	change \{primary_controller_assigned = 1}
+	change structurename = player1_status controller = ($primary_controller)
+	change globalname = player1_device newvalue = ($primary_controller)
+	change last_start_pressed_device = ($primary_controller)
 	if GotParam \{first_press}
-		Change \{respond_to_signin_changed_func = ui_signin_changed_first_press}
+		change \{respond_to_signin_changed_func = ui_signin_changed_first_press}
 		memcard_secondary_signin_first_press
 	endif
 	if ($invite_controller = -1)
-		NetSessionFunc \{func = removeallcontrollers}
+		NetSessionFunc \{func = RemoveAllControllers}
 	endif
-	NetSessionFunc func = addcontrollers params = {controller = <device_num>}
+	NetSessionFunc func = AddControllers params = {controller = <device_num>}
 endscript
 
 script ui_signin_changed_first_press 
-	printf \{qs(0x23492f74)}
+	printf \{qs("\Lui_signin_changed_first_press")}
 	if NOT (<controller> = $primary_controller)
-		if islocallysignedin controller = <controller>
-			printf \{qs(0xac06c05e)}
-			Change alternative_primary_selected = <controller>
+		if IsLocallySignedIn controller = <controller>
+			printf \{qs("\Lalternative primary controller selected")}
+			change alternative_primary_selected = <controller>
 		endif
 	endif
 endscript
 
 script ui_signin_changed_func 
-	printf \{qs(0xd7935d9a)}
-	removecontentfiles playerid = <controller>
+	printf \{qs("\Lui_signin_changed_func")}
+	RemoveContentFiles playerid = <controller>
 	reset_globaltags savegame = <controller>
 	cheat_turnoffalllocked
 endscript
@@ -73,7 +73,7 @@ ps3_done_signin_check = 0
 script ui_signin_check \{primary = 1
 		force_signin = 0
 		boot = 0}
-	Change \{enable_saving = 1}
+	change \{enable_saving = 1}
 	if ($invite_controller != -1)
 		printf 'Load soundcheck for non-primary player invite - controller %c' c = ($invite_controller)
 		frontend_load_soundcheck \{loadingscreen
@@ -84,10 +84,10 @@ script ui_signin_check \{primary = 1
 			assign_new_primary_controller device_num = <device_num>
 		endif
 	endif
-	if isps3
+	if IsPs3
 		if ($ps3_done_signin_check = 1)
 			if GotParam \{require_live}
-				NetSessionFunc func = OnlineSignIn params = {
+				NetSessionFunc func = onlinesignin params = {
 					use_online_flow
 					fail_state = uistate_signin_warning
 					fail_params = {allow_back = <allow_back>
@@ -107,13 +107,13 @@ script ui_signin_check \{primary = 1
 			<callback> <callback_params>
 			return
 		endif
-		Change \{ps3_done_signin_check = 1}
+		change \{ps3_done_signin_check = 1}
 	endif
 	signin_params = {local}
 	if GotParam \{require_live}
 		signin_params = {}
 	endif
-	if isps3
+	if IsPs3
 		if GotParam \{leaderboards}
 			signin_params = {}
 		endif
@@ -126,13 +126,13 @@ script ui_signin_check \{primary = 1
 		perform_signin = 1
 		if GotParam \{jam}
 			if isXenon
-				if NetSessionFunc func = isliveenabled params = {controller_index = <device_num>}
+				if NetSessionFunc func = IsLiveEnabled params = {controller_index = <device_num>}
 					perform_signin = 0
 				endif
 			endif
 		endif
 	endif
-	if NetSessionFunc func = xenonisguest params = {controller_index = <device_num>}
+	if NetSessionFunc func = XenonIsGuest params = {controller_index = <device_num>}
 		perform_signin = 1
 	endif
 	if (<perform_signin> = 1)
@@ -154,7 +154,7 @@ script ui_signin_check \{primary = 1
 				NetSessionFunc \{func = showsigninui}
 			endif
 		else
-			Change \{ps3_signin_complete = 0}
+			change \{ps3_signin_complete = 0}
 			xenon_singleplayer_session_init \{ps3_signin_callback = signin_complete_callback}
 		endif
 		wait_for_blade_complete
@@ -188,7 +188,7 @@ script ui_signin_check \{primary = 1
 	endif
 	if isXenon
 		if NOT GotParam \{require_live}
-			if NetSessionFunc func = xenonisguest params = {controller_index = <device_num>}
+			if NetSessionFunc func = XenonIsGuest params = {controller_index = <device_num>}
 				destroy_popup_warning_menu
 				ui_event_wait event = menu_replace state = $signin_continue_state data = ($signin_continue_data)
 				return
@@ -199,14 +199,14 @@ script ui_signin_check \{primary = 1
 	else
 		ui_event_wait \{event = menu_replace
 			data = {
-				state = uistate_signin_complete
+				state = UIstate_signin_complete
 			}}
 	endif
 endscript
 
 script ui_signin_process_complete \{controller = -1}
 	begin
-	if issigninfinished
+	if IsSigninFinished
 		break
 	endif
 	Wait \{1
@@ -223,16 +223,16 @@ script ui_signin_process_complete \{controller = -1}
 		endif
 		repeat
 		if GetGameProfileSetting gsid = 1 controller = <controller>
-			SetArrayElement ArrayName = default_difficulty globalarray index = <controller> NewValue = easy
+			SetArrayElement ArrayName = default_difficulty GlobalArray index = <controller> newvalue = easy
 			if (<game_setting> = 3)
-				SetArrayElement ArrayName = default_difficulty globalarray index = <controller> NewValue = medium
+				SetArrayElement ArrayName = default_difficulty GlobalArray index = <controller> newvalue = medium
 			elseif (<game_setting> = 4)
-				SetArrayElement ArrayName = default_difficulty globalarray index = <controller> NewValue = hard
+				SetArrayElement ArrayName = default_difficulty GlobalArray index = <controller> newvalue = hard
 			endif
 		endif
 	endif
 	start_checking_for_signin_change
-	if checksumequals a = ($signin_continue_state) b = uistate_boot_guitar
+	if ChecksumEquals a = ($signin_continue_state) b = uistate_boot_guitar
 		callback = ui_event
 		callback_params = {event = menu_replace data = {state = uistate_memcard}}
 	else
@@ -244,7 +244,7 @@ script ui_signin_process_complete \{controller = -1}
 endscript
 
 script ui_create_signin_complete 
-	SpawnScriptNow \{create_signin_complete_menu}
+	spawnscriptnow \{create_signin_complete_menu}
 endscript
 
 script ui_destroy_signin_complete 
@@ -260,31 +260,31 @@ script ui_destroy_signin_warning
 endscript
 
 script ui_signin_warning_back 
-	Change \{force_mainmenu_signin = 1}
+	change \{force_mainmenu_signin = 1}
 	generic_event_back \{nosound}
 endscript
 
 script ui_signin_handle_warnings 
 	if NOT ($alternative_primary_selected = -1)
 		device_num = ($alternative_primary_selected)
-		Change \{alternative_primary_selected = -1}
+		change \{alternative_primary_selected = -1}
 		assign_new_primary_controller device_num = <device_num>
 	endif
 	if GotParam \{require_live}
 		if GotParam \{jam}
 			if isXenon
-				if NOT NetSessionFunc func = isliveenabled params = {controller_index = <device_num>}
+				if NOT NetSessionFunc func = IsLiveEnabled params = {controller_index = <device_num>}
 					ui_event_wait event = menu_replace data = {state = uistate_signin_warning player_device = <device_num> allow_back = <allow_back> require_live = <require_live>}
 					return \{warnings = 1}
-				elseif NetSessionFunc func = xenonisguest params = {controller_index = <device_num>}
+				elseif NetSessionFunc func = XenonIsGuest params = {controller_index = <device_num>}
 					ui_event_wait event = menu_replace data = {state = uistate_signin_warning player_device = <device_num> allow_back = <allow_back> require_live = <require_live>}
 					return \{warnings = 1}
 				endif
-			elseif isps3
+			elseif IsPs3
 				if NOT CheckForSignIn controller_index = <device_num>
 					ui_event_wait event = menu_replace data = {state = uistate_signin_warning player_device = <device_num> allow_back = <allow_back> require_live = <require_live>}
 					return \{warnings = 1}
-				elseif NetSessionFunc func = xenonisguest params = {controller_index = <device_num>}
+				elseif NetSessionFunc func = XenonIsGuest params = {controller_index = <device_num>}
 					ui_event_wait event = menu_replace data = {state = uistate_signin_warning player_device = <device_num> allow_back = <allow_back> require_live = <require_live>}
 					return \{warnings = 1}
 				endif
@@ -293,13 +293,13 @@ script ui_signin_handle_warnings
 			if NOT CheckForSignIn controller_index = <device_num>
 				ui_event_wait event = menu_replace data = {state = uistate_signin_warning player_device = <device_num> allow_back = <allow_back> require_live = <require_live>}
 				return \{warnings = 1}
-			elseif NetSessionFunc func = xenonisguest params = {controller_index = <device_num>}
+			elseif NetSessionFunc func = XenonIsGuest params = {controller_index = <device_num>}
 				ui_event_wait event = menu_replace data = {state = uistate_signin_warning player_device = <device_num> allow_back = <allow_back> require_live = <require_live>}
 				return \{warnings = 1}
 			endif
 		endif
 	endif
-	if isps3
+	if IsPs3
 		if GotParam \{boot}
 			if NOT CheckForSignIn controller_index = <device_num>
 				ui_event_wait event = menu_replace data = {state = uistate_signin_warning player_device = <device_num> allow_back = <allow_back> require_live = <require_live>}
@@ -318,7 +318,7 @@ script ui_signin_handle_warnings
 			ui_event_wait event = menu_replace data = {state = uistate_signin_warning player_device = <device_num> allow_back = <allow_back> leaderboards = <leaderboards>}
 			return \{warnings = 1}
 		endif
-		if NOT NetSessionFunc func = isliveenabled params = {controller_index = <device_num>}
+		if NOT NetSessionFunc func = IsLiveEnabled params = {controller_index = <device_num>}
 			ui_event_wait event = menu_replace data = {state = uistate_signin_warning player_device = <device_num> allow_back = <allow_back> leaderboards = <leaderboards>}
 			return \{warnings = 1}
 		endif

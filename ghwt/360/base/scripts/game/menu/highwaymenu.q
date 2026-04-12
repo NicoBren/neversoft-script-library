@@ -2,18 +2,18 @@
 script add_highway_menu_item \{pad_back_script = generic_exit_restore
 		pad_back_sound = ui_menu_select_sfx}
 	CreateScreenElement \{parent = current_menu
-		Type = descinterface
+		type = DescInterface
 		desc = 'highway_menu'
 		dims = (375.0, 500.0)
 		id = highway_menu_anchor}
-	if <id> :desc_resolvealias Name = alias_highway_menu_item_vmenu param = generic_menu
+	if <id> :Desc_ResolveAlias name = alias_highway_menu_item_vmenu param = generic_menu
 		if ScreenElementExists \{id = current_menu}
-			LaunchEvent \{Type = unfocus
+			LaunchEvent \{type = unfocus
 				target = current_menu}
 		endif
 		AssignAlias id = <generic_menu> alias = highway_menu
 	else
-		ScriptAssert \{qs(0x9f6d2aad)}
+		ScriptAssert \{qs("\LCould not find alias for highway_menu")}
 	endif
 	SetScreenElementProps {
 		id = <generic_menu>

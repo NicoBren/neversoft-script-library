@@ -1,14 +1,14 @@
-gp_fx_sparkfountain_big_sparks_01 = {
-	Pos = (-6.602028, 0.58740205, -2.0932908)
-	Angles = (0.0, 0.0, 0.0)
+GP_FX_SparkFountain_Big_Sparks_01 = {
+	pos = (-6.602028, 0.58740205, -2.0932908)
+	angles = (0.0, 0.0, 0.0)
 	Class = ParticleObject
 	ParticleType = FlexParticle
-	Type = flat
-	Active
+	type = flat
+	active
 	EmitRangeDims = (0.05, 0.0, 0.05)
-	Emit_Target = (0.0, 1.0, 0.0)
+	emit_Target = (0.0, 1.0, 0.0)
 	EmitAngle = (0.0, 0.0, 0.0)
-	Force = (0.0, -10.0, 0.0)
+	force = (0.0, -10.0, 0.0)
 	WindCoeff = 0.0
 	LocalWindCoeff = 0.0
 	EmitterVelocityWeight = 0.0
@@ -17,11 +17,11 @@ gp_fx_sparkfountain_big_sparks_01 = {
 	BounceCoeff = 0.2
 	BounceCallbackRate = 0.0
 	LifeRange = (1.0, 3.0)
-	Emit_Rate = 150.0
-	Max = 0
+	emit_rate = 150.0
+	max = 0
 	TimeSeed = 0.5
-	LifeTime = 0.3
-	EmitNum = 0
+	lifeTime = 0.3
+	emitNum = 0
 	FollowEmitter = 0.0
 	EmitFunction = constant
 	EmitPeriod = 1.0
@@ -36,16 +36,16 @@ gp_fx_sparkfountain_big_sparks_01 = {
 	AlignWithPath
 	PathFollowTime = 0.07
 	History = 2
-	HistoryListCoordinateSpace = World
-	Color = -4357377
+	HistoryListCoordinateSpace = world
+	color = -4357377
 	LOD_Distances = (20.0, 30.0)
 	NoVisibilityTest
 	QuickMaterial = {
 		DiffuseTextureEnabled
 		DiffuseTexture = JOW_Spark01
 		SpecularPower = 0
-		AlphaCutoff = 16
-		BlendMode = add
+		alphacutoff = 16
+		blendMode = Add
 		QuadAnimationFPS = 0
 	}
 	Knot = [

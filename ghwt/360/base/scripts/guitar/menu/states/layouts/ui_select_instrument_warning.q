@@ -2,22 +2,22 @@
 script ui_create_select_instrument_warning controller = ($primary_controller)
 	switch (<instrument>)
 		case guitar
-		case bass
-		text = qs(0x9aef203e)
+		case Bass
+		text = qs("You must use a Guitar Controller to continue.")
 		case drum
-		text = qs(0x514a4c71)
-		case vocals
+		text = qs("You must use a Drum Controller to continue.")
+		case Vocals
 		if isXenon
-			text = qs(0xec4dbd17)
+			text = qs("You must connect a microphone or Xbox 360 Headset to continue.")
 		else
-			text = qs(0x588788f4)
+			text = qs("You must connect a microphone to continue.")
 		endif
 	endswitch
 	create_popup_warning_menu {
 		textblock = {
 			text = <text>
 			dims = (800.0, 400.0)
-			Scale = 0.55
+			scale = 0.55
 		}
 		player_device = <controller>
 		no_background
@@ -25,12 +25,12 @@ script ui_create_select_instrument_warning controller = ($primary_controller)
 		options = [
 			{
 				func = generic_event_back
-				text = qs(0x320a8d1c)
+				text = qs("GO BACK")
 			}
 			{
 				func = generic_event_back
-				func_params = {state = uistate_mainmenu}
-				text = qs(0xd95645dd)
+				func_params = {state = UIstate_mainmenu}
+				text = qs("RETURN TO MAIN MENU")
 			}
 		]
 	}

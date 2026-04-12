@@ -1,15 +1,15 @@
 GP_ButtonStarShower01 = {
-	Pos = (200.0, -99.75674, 4.7122226)
-	Angles = (0.0, 0.0, 0.0)
+	pos = (200.0, -99.75674, 4.7122226)
+	angles = (0.0, 0.0, 0.0)
 	Class = ParticleObject
 	ParticleType = FlexParticle
-	Type = flat
-	Active
+	type = flat
+	active
 	CreatedAtStart
 	EmitRangeDims = (0.4, 0.0, 0.4)
-	Emit_Target = (0.0, 1.0, 0.0)
+	emit_Target = (0.0, 1.0, 0.0)
 	EmitAngle = (0.0, 0.0, 0.0)
-	Force = (0.0, -15.0, 0.0)
+	force = (0.0, -15.0, 0.0)
 	WindCoeff = 0.0
 	LocalWindCoeff = 0.0
 	EmitterVelocityWeight = 0.0
@@ -18,11 +18,11 @@ GP_ButtonStarShower01 = {
 	BounceHeight = -99.9
 	BounceCoeff = 0.6
 	LifeRange = (1.0, 1.5)
-	Emit_Rate = 24.0
-	Max = 0
+	emit_rate = 24.0
+	max = 0
 	TimeSeed = 0.3
-	LifeTime = 0.0
-	EmitNum = 20
+	lifeTime = 0.0
+	emitNum = 20
 	FollowEmitter = 0.0
 	EmitFunction = constant
 	EmitPeriod = 1.0
@@ -36,17 +36,17 @@ GP_ButtonStarShower01 = {
 	EmitDelayStart = 0.0
 	PathFollowTime = 0.0
 	History = 2
-	HistoryListCoordinateSpace = World
+	HistoryListCoordinateSpace = world
 	Rotate3D
-	Color = -3267073
+	color = -3267073
 	LOD_Default
 	QuickMaterial = {
 		DiffuseTextureEnabled
 		DiffuseTexture = JOW_ButtonStar02
 		SpecularPower = 0
 		TwoSide
-		AlphaCutoff = 32
-		BlendMode = blend
+		alphacutoff = 32
+		blendMode = blend
 		QuadAnimationFPS = 0
 	}
 	Knot = [

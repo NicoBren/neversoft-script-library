@@ -31,11 +31,11 @@ script ui_create_cag_custom_strings
 		endif
 	endif
 	i = (<i> + 1)
-	repeat <array_Size>
+	repeat <array_size>
 	clean_up_user_control_helpers
 	menu_finish \{car_helper_text_cancel
 		no_rotate_zoom_text}
-	LaunchEvent Type = focus target = create_cag_custom_strings_vmenu data = {child_index = <current_part>}
+	LaunchEvent type = focus target = create_cag_custom_strings_vmenu data = {child_index = <current_part>}
 endscript
 
 script ui_destroy_cag_custom_strings 
@@ -46,30 +46,30 @@ script ui_destroy_cag_custom_strings
 endscript
 
 script ui_init_cag_custom_strings 
-	pushtemporarycasappearance
+	PushTemporaryCASAppearance
 endscript
 
 script ui_deinit_cag_custom_strings 
-	poptemporarycasappearance
+	PopTemporaryCASAppearance
 endscript
 
 script select_strings_focus_change 
 	if ScreenElementExists \{id = string_preview}
 		DestroyScreenElement \{id = string_preview}
 	endif
-	if NOT getactualcasoptionstruct part = <part> desc_id = (($<part>) [<index>].desc_id)
+	if NOT GetActualCASOptionStruct part = <part> desc_id = (($<part>) [<index>].desc_id)
 		ScriptAssert '%s %t not found' s = <part> t = (($<part>) [<index>].desc_id)
 	endif
 	PushAssetContext \{context = z_soundcheck}
 	CreateScreenElement {
 		id = string_preview
-		Type = SpriteElement
+		type = SpriteElement
 		parent = root_window
 		texture = <preview_texture>
-		Pos = (750.0, 200.0)
+		pos = (750.0, 200.0)
 		just = [-1.0 -1.0]
 		dims = (256.0, 256.0)
 	}
 	PopAssetContext \{context = z_soundcheck}
-	editcasappearance target = setpart targetparams = {part = <part> desc_id = <desc_id>}
+	EditCASAppearance target = SetPart targetParams = {part = <part> desc_id = <desc_id>}
 endscript

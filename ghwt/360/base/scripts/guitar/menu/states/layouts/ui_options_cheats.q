@@ -23,26 +23,26 @@ guitar_hero_cheat_index = [
 ]
 guitar_hero_cheats = [
 	{
-		Name = 'Line6Unlock'
-		name_text = qs(0x4e3fdf61)
-		var = cheat_line6unlock
+		name = 'Line6Unlock'
+		name_text = qs("EXTRA LINE 6 TONES!")
+		var = Cheat_Line6Unlock
 		unlock_pattern = [
 			green
 			red
-			yellow
-			blue
+			Yellow
+			Blue
 			red
-			yellow
-			blue
+			Yellow
+			Blue
 			green
 		]
 		not_toggle
 		options = [
 			{
-				text = qs(0x4e3fdf61)
+				text = qs("EXTRA LINE 6 TONES!")
 				globals = [
 					{
-						Set = cheat_line6unlock
+						set = Cheat_Line6Unlock
 						value = 1
 					}
 				]
@@ -50,34 +50,34 @@ guitar_hero_cheats = [
 		]
 	}
 	{
-		Name = 'AlwaysSlide'
-		name_text = qs(0x7e8961c8)
-		var = cheat_alwaysslide
+		name = 'AlwaysSlide'
+		name_text = qs("ALWAYS SLIDE")
+		var = Cheat_AlwaysSlide
 		unlock_pattern = [
 			green
 			green
 			red
 			red
-			yellow
+			Yellow
 			red
-			yellow
-			blue
+			Yellow
+			Blue
 		]
 		options = [
 			{
-				text = qs(0x9b86806b)
+				text = qs("ALWAYS SLIDE:\nOFF")
 				globals = [
 					{
-						Set = cheat_alwaysslide
+						set = Cheat_AlwaysSlide
 						value = 2
 					}
 				]
 			}
 			{
-				text = qs(0x32785e87)
+				text = qs("ALWAYS SLIDE:\nON")
 				globals = [
 					{
-						Set = cheat_alwaysslide
+						set = Cheat_AlwaysSlide
 						value = 1
 					}
 				]
@@ -85,26 +85,26 @@ guitar_hero_cheats = [
 		]
 	}
 	{
-		Name = 'BestBuyKid'
-		name_text = qs(0xe392cb41)
-		var = cheat_bestbuykid
+		name = 'BestBuyKid'
+		name_text = qs("NICK!")
+		var = Cheat_BestBuyKid
 		unlock_pattern = [
 			green
 			red
-			blue
+			Blue
 			green
 			red
-			blue
-			blue
+			Blue
+			Blue
 			green
 		]
 		not_toggle
 		options = [
 			{
-				text = qs(0xe392cb41)
+				text = qs("NICK!")
 				globals = [
 					{
-						Set = cheat_bestbuykid
+						set = Cheat_BestBuyKid
 						value = 1
 					}
 				]
@@ -112,26 +112,26 @@ guitar_hero_cheats = [
 		]
 	}
 	{
-		Name = 'EuroContestWinner'
-		name_text = qs(0x6349ea29)
-		var = cheat_eurocontestwinner
+		name = 'EuroContestWinner'
+		name_text = qs("JOHNNY VIPER!")
+		var = Cheat_EuroContestWinner
 		unlock_pattern = [
-			blue
+			Blue
 			red
-			blue
-			blue
-			yellow
-			yellow
-			yellow
+			Blue
+			Blue
+			Yellow
+			Yellow
+			Yellow
 			green
 		]
 		not_toggle
 		options = [
 			{
-				text = qs(0x6349ea29)
+				text = qs("JOHNNY VIPER!")
 				globals = [
 					{
-						Set = cheat_eurocontestwinner
+						set = Cheat_EuroContestWinner
 						value = 1
 					}
 				]
@@ -139,26 +139,26 @@ guitar_hero_cheats = [
 		]
 	}
 	{
-		Name = 'Rina'
-		name_text = qs(0x0d23599d)
-		var = cheat_rina
+		name = 'Rina'
+		name_text = qs("RINA!")
+		var = Cheat_Rina
 		unlock_pattern = [
-			blue
+			Blue
 			red
 			green
 			green
-			yellow
-			yellow
-			yellow
+			Yellow
+			Yellow
+			Yellow
 			green
 		]
 		not_toggle
 		options = [
 			{
-				text = qs(0x0d23599d)
+				text = qs("RINA!")
 				globals = [
 					{
-						Set = cheat_rina
+						set = Cheat_Rina
 						value = 1
 					}
 				]
@@ -166,26 +166,26 @@ guitar_hero_cheats = [
 		]
 	}
 	{
-		Name = 'Aaron'
-		name_text = qs(0x410a8eed)
-		var = cheat_aaron
+		name = 'Aaron'
+		name_text = qs("AARON STEELE!")
+		var = Cheat_AARON
 		unlock_pattern = [
-			blue
+			Blue
 			red
-			yellow
-			yellow
-			yellow
-			yellow
-			yellow
+			Yellow
+			Yellow
+			Yellow
+			Yellow
+			Yellow
 			green
 		]
 		not_toggle
 		options = [
 			{
-				text = qs(0x410a8eed)
+				text = qs("AARON STEELE!")
 				globals = [
 					{
-						Set = cheat_aaron
+						set = Cheat_AARON
 						value = 1
 					}
 				]
@@ -193,45 +193,45 @@ guitar_hero_cheats = [
 		]
 	}
 	{
-		Name = 'AirInstruments'
-		name_text = qs(0x9de16fb4)
-		var = cheat_airinstruments
+		name = 'AirInstruments'
+		name_text = qs("AIR INSTRUMENTS")
+		var = Cheat_AirInstruments
 		unlock_pattern = [
 			red
 			red
-			blue
-			yellow
+			Blue
+			Yellow
 			green
 			green
 			green
-			yellow
+			Yellow
 		]
 		options = [
 			{
-				text = qs(0x293b9eb2)
+				text = qs("AIR INSTRUMENTS:\nOFF")
 				globals = [
 					{
-						Set = cheat_airinstruments
+						set = Cheat_AirInstruments
 						value = 2
 					}
 					{
-						Set = airinstruments
+						set = AirInstruments
 						value = 2
 					}
 				]
 			}
 			{
-				text = qs(0x2789e787)
+				text = qs("AIR INSTRUMENTS:\nON")
 				exclude = [
-					cheat_invisiblecharacters
+					Cheat_InvisibleCharacters
 				]
 				globals = [
 					{
-						Set = cheat_airinstruments
+						set = Cheat_AirInstruments
 						value = 1
 					}
 					{
-						Set = airinstruments
+						set = AirInstruments
 						value = 1
 					}
 				]
@@ -239,45 +239,45 @@ guitar_hero_cheats = [
 		]
 	}
 	{
-		Name = 'InvisibleCharacters'
-		name_text = qs(0xd16f0703)
-		var = cheat_invisiblecharacters
+		name = 'InvisibleCharacters'
+		name_text = qs("INVISIBLE ROCKER")
+		var = Cheat_InvisibleCharacters
 		unlock_pattern = [
 			green
 			red
-			yellow
-			yellow
-			yellow
-			blue
-			blue
+			Yellow
+			Yellow
+			Yellow
+			Blue
+			Blue
 			green
 		]
 		options = [
 			{
-				text = qs(0x03309005)
+				text = qs("INVISIBLE ROCKER:\nOFF")
 				globals = [
 					{
-						Set = cheat_invisiblecharacters
+						set = Cheat_InvisibleCharacters
 						value = 2
 					}
 					{
-						Set = invisiblecharacters
+						set = InvisibleCharacters
 						value = 2
 					}
 				]
 			}
 			{
-				text = qs(0x6902dc9e)
+				text = qs("INVISIBLE ROCKER:\nON")
 				exclude = [
-					cheat_airinstruments
+					Cheat_AirInstruments
 				]
 				globals = [
 					{
-						Set = cheat_invisiblecharacters
+						set = Cheat_InvisibleCharacters
 						value = 1
 					}
 					{
-						Set = invisiblecharacters
+						set = InvisibleCharacters
 						value = 1
 					}
 				]
@@ -285,34 +285,34 @@ guitar_hero_cheats = [
 		]
 	}
 	{
-		Name = 'PerformanceMode'
-		name_text = qs(0x8aa50be2)
+		name = 'PerformanceMode'
+		name_text = qs("PERFORMANCE MODE")
 		var = Cheat_PerformanceMode
 		unlock_pattern = [
-			yellow
-			yellow
-			blue
+			Yellow
+			Yellow
+			Blue
 			red
-			blue
+			Blue
 			green
 			red
 			red
 		]
 		options = [
 			{
-				text = qs(0x45800c86)
+				text = qs("PERFORMANCE MODE:\nOFF")
 				globals = [
 					{
-						Set = Cheat_PerformanceMode
+						set = Cheat_PerformanceMode
 						value = 2
 					}
 				]
 			}
 			{
-				text = qs(0x9da2af77)
+				text = qs("PERFORMANCE MODE:\nON")
 				globals = [
 					{
-						Set = Cheat_PerformanceMode
+						set = Cheat_PerformanceMode
 						value = 1
 					}
 				]
@@ -320,94 +320,94 @@ guitar_hero_cheats = [
 		]
 	}
 	{
-		Name = 'Hyperspeed'
-		name_text = qs(0x8968c474)
+		name = 'Hyperspeed'
+		name_text = qs("HYPERSPEED")
 		var = Cheat_Hyperspeed
 		unlock_pattern = [
 			green
-			blue
+			Blue
 			red
-			yellow
-			yellow
+			Yellow
+			Yellow
 			red
 			green
 			green
 		]
 		options = [
 			{
-				text = qs(0x8175bdff)
+				text = qs("HYPERGUITAR:\nOFF")
 				globals = [
 					{
-						Set = Cheat_Hyperspeed
+						set = Cheat_Hyperspeed
 						value = 1
 					}
 					{
-						Set = hyperspeed_guitar
+						set = Hyperspeed_Guitar
 						value = 1.0
 					}
 				]
 			}
 			{
-				text = qs(0x12b79e36)
+				text = qs("HYPERGUITAR:\nON 1")
 				globals = [
 					{
-						Set = Cheat_Hyperspeed
+						set = Cheat_Hyperspeed
 						value = 1
 					}
 					{
-						Set = hyperspeed_guitar
+						set = Hyperspeed_Guitar
 						value = 0.88
 					}
 				]
 			}
 			{
-				text = qs(0x399acdf5)
+				text = qs("HYPERGUITAR:\nON 2")
 				globals = [
 					{
-						Set = Cheat_Hyperspeed
+						set = Cheat_Hyperspeed
 						value = 1
 					}
 					{
-						Set = hyperspeed_guitar
+						set = Hyperspeed_Guitar
 						value = 0.83
 					}
 				]
 			}
 			{
-				text = qs(0x2081fcb4)
+				text = qs("HYPERGUITAR:\nON 3")
 				globals = [
 					{
-						Set = Cheat_Hyperspeed
+						set = Cheat_Hyperspeed
 						value = 1
 					}
 					{
-						Set = hyperspeed_guitar
+						set = Hyperspeed_Guitar
 						value = 0.78
 					}
 				]
 			}
 			{
-				text = qs(0x6fc06a73)
+				text = qs("HYPERGUITAR:\nON 4")
 				globals = [
 					{
-						Set = Cheat_Hyperspeed
+						set = Cheat_Hyperspeed
 						value = 1
 					}
 					{
-						Set = hyperspeed_guitar
+						set = Hyperspeed_Guitar
 						value = 0.72999996
 					}
 				]
 			}
 			{
-				text = qs(0x7e0f3ef5)
+				text = qs("HYPERSGUITAR:\nON 5")
 				globals = [
 					{
-						Set = Cheat_Hyperspeed
+						set = Cheat_Hyperspeed
 						value = 1
 					}
 					{
-						Set = hyperspeed_guitar
+						set = Hyperspeed_Guitar
 						value = 0.68
 					}
 				]
@@ -415,94 +415,94 @@ guitar_hero_cheats = [
 		]
 	}
 	{
-		Name = 'Hyperspeed'
-		name_text = qs(0x8968c474)
+		name = 'Hyperspeed'
+		name_text = qs("HYPERSPEED")
 		var = Cheat_Hyperspeed
 		unlock_pattern = [
 			green
-			blue
+			Blue
 			red
-			yellow
-			yellow
+			Yellow
+			Yellow
 			red
 			green
 			green
 		]
 		options = [
 			{
-				text = qs(0x26ffe8cd)
+				text = qs("HYPERBASS:\nOFF")
 				globals = [
 					{
-						Set = Cheat_Hyperspeed
+						set = Cheat_Hyperspeed
 						value = 1
 					}
 					{
-						Set = hyperspeed_bass
+						set = Hyperspeed_Bass
 						value = 1.0
 					}
 				]
 			}
 			{
-				text = qs(0xe4c6c8b6)
+				text = qs("HYPERBASS:\nON 1")
 				globals = [
 					{
-						Set = Cheat_Hyperspeed
+						set = Cheat_Hyperspeed
 						value = 1
 					}
 					{
-						Set = hyperspeed_bass
+						set = Hyperspeed_Bass
 						value = 0.88
 					}
 				]
 			}
 			{
-				text = qs(0xcfeb9b75)
+				text = qs("HYPERBASS:\nON 2")
 				globals = [
 					{
-						Set = Cheat_Hyperspeed
+						set = Cheat_Hyperspeed
 						value = 1
 					}
 					{
-						Set = hyperspeed_bass
+						set = Hyperspeed_Bass
 						value = 0.83
 					}
 				]
 			}
 			{
-				text = qs(0xd6f0aa34)
+				text = qs("HYPERBASS:\nON 3")
 				globals = [
 					{
-						Set = Cheat_Hyperspeed
+						set = Cheat_Hyperspeed
 						value = 1
 					}
 					{
-						Set = hyperspeed_bass
+						set = Hyperspeed_Bass
 						value = 0.78
 					}
 				]
 			}
 			{
-				text = qs(0x99b13cf3)
+				text = qs("HYPERBASS:\nON 4")
 				globals = [
 					{
-						Set = Cheat_Hyperspeed
+						set = Cheat_Hyperspeed
 						value = 1
 					}
 					{
-						Set = hyperspeed_bass
+						set = Hyperspeed_Bass
 						value = 0.72999996
 					}
 				]
 			}
 			{
-				text = qs(0x80aa0db2)
+				text = qs("HYPERBASS:\nON 5")
 				globals = [
 					{
-						Set = Cheat_Hyperspeed
+						set = Cheat_Hyperspeed
 						value = 1
 					}
 					{
-						Set = hyperspeed_bass
+						set = Hyperspeed_Bass
 						value = 0.68
 					}
 				]
@@ -510,94 +510,94 @@ guitar_hero_cheats = [
 		]
 	}
 	{
-		Name = 'Hyperspeed'
-		name_text = qs(0x8968c474)
+		name = 'Hyperspeed'
+		name_text = qs("HYPERSPEED")
 		var = Cheat_Hyperspeed
 		unlock_pattern = [
 			green
-			blue
+			Blue
 			red
-			yellow
-			yellow
+			Yellow
+			Yellow
 			red
 			green
 			green
 		]
 		options = [
 			{
-				text = qs(0x18d01d6e)
+				text = qs("HYPERDRUMS:\nOFF")
 				globals = [
 					{
-						Set = Cheat_Hyperspeed
+						set = Cheat_Hyperspeed
 						value = 1
 					}
 					{
-						Set = hyperspeed_drum
+						set = Hyperspeed_Drum
 						value = 1.0
 					}
 				]
 			}
 			{
-				text = qs(0xac3b1f20)
+				text = qs("HYPERDRUMS:\nON 1")
 				globals = [
 					{
-						Set = Cheat_Hyperspeed
+						set = Cheat_Hyperspeed
 						value = 1
 					}
 					{
-						Set = hyperspeed_drum
+						set = Hyperspeed_Drum
 						value = 0.88
 					}
 				]
 			}
 			{
-				text = qs(0x87164ce3)
+				text = qs("HYPERDRUMS:\nON 2")
 				globals = [
 					{
-						Set = Cheat_Hyperspeed
+						set = Cheat_Hyperspeed
 						value = 1
 					}
 					{
-						Set = hyperspeed_drum
+						set = Hyperspeed_Drum
 						value = 0.83
 					}
 				]
 			}
 			{
-				text = qs(0x9e0d7da2)
+				text = qs("HYPERDRUMS:\nON 3")
 				globals = [
 					{
-						Set = Cheat_Hyperspeed
+						set = Cheat_Hyperspeed
 						value = 1
 					}
 					{
-						Set = hyperspeed_drum
+						set = Hyperspeed_Drum
 						value = 0.78
 					}
 				]
 			}
 			{
-				text = qs(0xd14ceb65)
+				text = qs("HYPERDRUMS:\nON 4")
 				globals = [
 					{
-						Set = Cheat_Hyperspeed
+						set = Cheat_Hyperspeed
 						value = 1
 					}
 					{
-						Set = hyperspeed_drum
+						set = Hyperspeed_Drum
 						value = 0.72999996
 					}
 				]
 			}
 			{
-				text = qs(0xc857da24)
+				text = qs("HYPERDRUMS:\nON 5")
 				globals = [
 					{
-						Set = Cheat_Hyperspeed
+						set = Cheat_Hyperspeed
 						value = 1
 					}
 					{
-						Set = hyperspeed_drum
+						set = Hyperspeed_Drum
 						value = 0.68
 					}
 				]
@@ -605,34 +605,34 @@ guitar_hero_cheats = [
 		]
 	}
 	{
-		Name = 'AutoKick'
-		name_text = qs(0x8aba6894)
-		var = cheat_autokick
+		name = 'AutoKick'
+		name_text = qs("AUTO KICK")
+		var = Cheat_AutoKick
 		unlock_pattern = [
-			yellow
+			Yellow
 			green
 			red
-			blue
-			blue
-			blue
-			blue
+			Blue
+			Blue
+			Blue
+			Blue
 			red
 		]
 		options = [
 			{
-				text = qs(0x916402ce)
+				text = qs("AUTO KICK:\nOFF")
 				globals = [
 					{
-						Set = cheat_autokick
+						set = Cheat_AutoKick
 						value = 2
 					}
 				]
 			}
 			{
-				text = qs(0xa680c44e)
+				text = qs("AUTO KICK:\nON")
 				globals = [
 					{
-						Set = cheat_autokick
+						set = Cheat_AutoKick
 						value = 1
 					}
 				]
@@ -640,34 +640,34 @@ guitar_hero_cheats = [
 		]
 	}
 	{
-		Name = 'UnlockQuickplay'
-		name_text = qs(0xfa0402f0)
-		var = cheat_unlockquickplay
+		name = 'UnlockQuickplay'
+		name_text = qs("QUICKPLAY SONGS")
+		var = Cheat_UnlockQuickplay
 		unlock_pattern = [
-			blue
-			blue
+			Blue
+			Blue
 			red
 			green
 			green
-			blue
-			blue
-			yellow
+			Blue
+			Blue
+			Yellow
 		]
 		options = [
 			{
-				text = qs(0x68d7e35a)
+				text = qs("QUICKPLAY SONGS:\nOFF")
 				globals = [
 					{
-						Set = cheat_unlockquickplay
+						set = Cheat_UnlockQuickplay
 						value = 2
 					}
 				]
 			}
 			{
-				text = qs(0x98d57fc0)
+				text = qs("QUICKPLAY SONGS:\nON")
 				globals = [
 					{
-						Set = cheat_unlockquickplay
+						set = Cheat_UnlockQuickplay
 						value = 1
 					}
 				]
@@ -675,34 +675,34 @@ guitar_hero_cheats = [
 		]
 	}
 	{
-		Name = 'UnlockATTBallpark'
-		name_text = qs(0x58b2a81e)
-		var = cheat_unlockattballpark
+		name = 'UnlockATTBallpark'
+		name_text = qs("AT&T BALLPARK")
+		var = Cheat_UnlockATTBallpark
 		unlock_pattern = [
-			yellow
+			Yellow
 			green
 			red
 			red
 			green
-			blue
+			Blue
 			red
-			yellow
+			Yellow
 		]
 		options = [
 			{
-				text = qs(0x931b8074)
+				text = qs("AT&T BALLPARK:\nOFF")
 				globals = [
 					{
-						Set = cheat_unlockattballpark
+						set = Cheat_UnlockATTBallpark
 						value = 2
 					}
 				]
 			}
 			{
-				text = qs(0x00d95717)
+				text = qs("AT&T BALLPARK:\nON")
 				globals = [
 					{
-						Set = cheat_unlockattballpark
+						set = Cheat_UnlockATTBallpark
 						value = 1
 					}
 				]
@@ -710,185 +710,185 @@ guitar_hero_cheats = [
 		]
 	}
 	{
-		Name = 'GemColor'
-		name_text = qs(0xcf42ec40)
-		var = cheat_gemcolor
+		name = 'GemColor'
+		name_text = qs("GEM COLOR")
+		var = Cheat_GemColor
 		unlock_pattern = [
-			blue
+			Blue
 			red
 			red
 			green
 			red
 			green
 			red
-			yellow
+			Yellow
 		]
 		options = [
 			{
-				text = qs(0xbbc9152c)
+				text = qs("GEM COLOR:\nNORMAL")
 				globals = [
 					{
-						Set = cheat_gemcolor
+						set = Cheat_GemColor
 						value = 1
 					}
 					{
-						Set = gem_set
+						set = gem_set
 						value = standard_gems
 					}
 				]
 			}
 			{
-				text = qs(0x011aec59)
+				text = qs("GEM COLOR:\nPINK")
 				globals = [
 					{
-						Set = cheat_gemcolor
+						set = Cheat_GemColor
 						value = 1
 					}
 					{
-						Set = gem_set
+						set = gem_set
 						value = pink_gems
 					}
 				]
 			}
 			{
-				text = qs(0x7b601734)
+				text = qs("GEM COLOR:\nSTEALTH")
 				globals = [
 					{
-						Set = cheat_gemcolor
+						set = Cheat_GemColor
 						value = 1
 					}
 					{
-						Set = gem_set
+						set = gem_set
 						value = stealth_gems
 					}
 				]
 			}
 			{
-				text = qs(0xc958d676)
+				text = qs("GEM COLOR:\nEGGS & BACON")
 				globals = [
 					{
-						Set = cheat_gemcolor
+						set = Cheat_GemColor
 						value = 1
 					}
 					{
-						Set = gem_set
-						value = eggs_n_bacon_gems
+						set = gem_set
+						value = Eggs_N_Bacon_gems
 					}
 				]
 			}
 			{
-				text = qs(0x0d5a9c27)
+				text = qs("GEM COLOR:\nOLD GLORY")
 				globals = [
 					{
-						Set = cheat_gemcolor
+						set = Cheat_GemColor
 						value = 1
 					}
 					{
-						Set = gem_set
+						set = gem_set
 						value = old_glory_gems
 					}
 				]
 			}
 			{
-				text = qs(0x88a8d588)
+				text = qs("GEM COLOR:\nSOLID GOLD")
 				globals = [
 					{
-						Set = cheat_gemcolor
+						set = Cheat_GemColor
 						value = 1
 					}
 					{
-						Set = gem_set
+						set = gem_set
 						value = solid_gold_gems
 					}
 				]
 			}
 			{
-				text = qs(0x8b527bb8)
+				text = qs("GEM COLOR:\nPLATINUM")
 				globals = [
 					{
-						Set = cheat_gemcolor
+						set = Cheat_GemColor
 						value = 1
 					}
 					{
-						Set = gem_set
+						set = gem_set
 						value = platinum_gems
 					}
 				]
 			}
 			{
-				text = qs(0x18bcfb46)
+				text = qs("GEM COLOR:\nDIABOLIC")
 				globals = [
 					{
-						Set = cheat_gemcolor
+						set = Cheat_GemColor
 						value = 1
 					}
 					{
-						Set = gem_set
+						set = gem_set
 						value = diabolic_gems
 					}
 				]
 			}
 			{
-				text = qs(0x3d4f6c65)
+				text = qs("GEM COLOR:\nTOXIC WASTE")
 				globals = [
 					{
-						Set = cheat_gemcolor
+						set = Cheat_GemColor
 						value = 1
 					}
 					{
-						Set = gem_set
+						set = gem_set
 						value = toxic_waste_gems
 					}
 				]
 			}
 			{
-				text = qs(0x8e111a11)
+				text = qs("GEM COLOR:\nBLACK")
 				globals = [
 					{
-						Set = cheat_gemcolor
+						set = Cheat_GemColor
 						value = 1
 					}
 					{
-						Set = gem_set
+						set = gem_set
 						value = black_gems
 					}
 				]
 			}
 			{
-				text = qs(0x2738dfe7)
+				text = qs("GEM COLOR:\nPASTEL")
 				globals = [
 					{
-						Set = cheat_gemcolor
+						set = Cheat_GemColor
 						value = 1
 					}
 					{
-						Set = gem_set
+						set = gem_set
 						value = pastel_gems
 					}
 				]
 			}
 			{
-				text = qs(0x0f77b9c2)
+				text = qs("GEM COLOR:\nDARK")
 				globals = [
 					{
-						Set = cheat_gemcolor
+						set = Cheat_GemColor
 						value = 1
 					}
 					{
-						Set = gem_set
+						set = gem_set
 						value = dark_gems
 					}
 				]
 			}
 			{
-				text = qs(0x252c5118)
+				text = qs("GEM COLOR:\nOUTLINE")
 				globals = [
 					{
-						Set = cheat_gemcolor
+						set = Cheat_GemColor
 						value = 1
 					}
 					{
-						Set = gem_set
+						set = gem_set
 						value = outline_gems
 					}
 				]
@@ -896,150 +896,150 @@ guitar_hero_cheats = [
 		]
 	}
 	{
-		Name = 'FlameColor'
-		name_text = qs(0x10374bab)
-		var = cheat_flamecolor
+		name = 'FlameColor'
+		name_text = qs("FLAME COLOR")
+		var = Cheat_FlameColor
 		unlock_pattern = [
 			green
 			red
 			green
-			blue
+			Blue
 			red
 			red
-			yellow
-			blue
+			Yellow
+			Blue
 		]
 		options = [
 			{
-				text = qs(0x8aaa74d1)
+				text = qs("FLAME COLOR:\nNORMAL")
 				globals = [
 					{
-						Set = cheat_flamecolor
+						set = Cheat_FlameColor
 						value = 1
 					}
 					{
-						Set = fx_set
+						set = FX_Set
 						value = standard_fx
 					}
 				]
 			}
 			{
-				text = qs(0x0fa5355c)
+				text = qs("FLAME COLOR:\nPINK")
 				globals = [
 					{
-						Set = cheat_flamecolor
+						set = Cheat_FlameColor
 						value = 1
 					}
 					{
-						Set = fx_set
+						set = FX_Set
 						value = pink_fx
 					}
 				]
 			}
 			{
-				text = qs(0xe0c7e869)
+				text = qs("FLAME COLOR:\nSTEALTH")
 				globals = [
 					{
-						Set = cheat_flamecolor
+						set = Cheat_FlameColor
 						value = 1
 					}
 					{
-						Set = fx_set
+						set = FX_Set
 						value = stealth_fx
 					}
 				]
 			}
 			{
-				text = qs(0x81ba1b96)
+				text = qs("FLAME COLOR:\nEGGS & BACON")
 				globals = [
 					{
-						Set = cheat_flamecolor
+						set = Cheat_FlameColor
 						value = 1
 					}
 					{
-						Set = fx_set
-						value = eggs_n_bacon_fx
+						set = FX_Set
+						value = Eggs_N_Bacon_fx
 					}
 				]
 			}
 			{
-				text = qs(0x0c3e1f57)
+				text = qs("FLAME COLOR:\nOLD GLORY")
 				globals = [
 					{
-						Set = cheat_flamecolor
+						set = Cheat_FlameColor
 						value = 1
 					}
 					{
-						Set = fx_set
-						value = old_glory_fx
+						set = FX_Set
+						value = Old_Glory_fx
 					}
 				]
 			}
 			{
-				text = qs(0x3aabac75)
+				text = qs("FLAME COLOR:\nDIABOLIC")
 				globals = [
 					{
-						Set = cheat_flamecolor
+						set = Cheat_FlameColor
 						value = 1
 					}
 					{
-						Set = fx_set
-						value = diabolic_fx
+						set = FX_Set
+						value = Diabolic_fx
 					}
 				]
 			}
 			{
-				text = qs(0xc395f715)
+				text = qs("FLAME COLOR:\nTOXIC WASTE")
 				globals = [
 					{
-						Set = cheat_flamecolor
+						set = Cheat_FlameColor
 						value = 1
 					}
 					{
-						Set = fx_set
-						value = toxic_waste_fx
+						set = FX_Set
+						value = Toxic_Waste_fx
 					}
 				]
 			}
 		]
 	}
 	{
-		Name = 'StarColor'
-		name_text = qs(0xfd29bb1e)
-		var = cheat_starcolor
+		name = 'StarColor'
+		name_text = qs("STAR COLOR")
+		var = Cheat_StarColor
 		unlock_pattern = [
 			red
 			red
-			yellow
+			Yellow
 			red
-			blue
+			Blue
 			red
 			red
-			blue
+			Blue
 		]
 		options = [
 			{
-				text = qs(0x5bf41d65)
+				text = qs("STAR COLOR:\nNORMAL")
 				globals = [
 					{
-						Set = cheat_starcolor
+						set = Cheat_StarColor
 						value = 1
 					}
 					{
-						Set = star_set
+						set = Star_Set
 						value = standard_stars
 					}
 				]
 			}
 			{
-				text = qs(0x3d0376dd)
+				text = qs("STAR COLOR:\nGOLD")
 				globals = [
 					{
-						Set = cheat_starcolor
+						set = Cheat_StarColor
 						value = 1
 					}
 					{
-						Set = star_set
+						set = Star_Set
 						value = gold_stars
 					}
 				]
@@ -1047,34 +1047,34 @@ guitar_hero_cheats = [
 		]
 	}
 	{
-		Name = 'VocalFireball'
-		name_text = qs(0x456e742b)
-		var = cheat_vocalfireball
+		name = 'VocalFireball'
+		name_text = qs("VOCAL FIREBALL")
+		var = Cheat_VocalFireball
 		unlock_pattern = [
 			red
 			green
 			green
-			yellow
-			blue
+			Yellow
+			Blue
 			green
-			yellow
+			Yellow
 			green
 		]
 		options = [
 			{
-				text = qs(0x738d9601)
+				text = qs("VOCAL FIREBALL:\nNORMAL")
 				globals = [
 					{
-						Set = cheat_vocalfireball
+						set = Cheat_VocalFireball
 						value = 1
 					}
 				]
 			}
 			{
-				text = qs(0x04e4f35f)
+				text = qs("VOCAL FIREBALL:\nPINK")
 				globals = [
 					{
-						Set = cheat_vocalfireball
+						set = Cheat_VocalFireball
 						value = 2
 					}
 				]
@@ -1084,8 +1084,8 @@ guitar_hero_cheats = [
 ]
 guitar_hero_debug_cheats = [
 	{
-		Name = 'UnlockAll'
-		name_text = qs(0xa2947ec6)
+		name = 'UnlockAll'
+		name_text = qs("UNLOCK ALL")
 		var = Cheat_UnlockAll
 		unlock_pattern = [
 			green
@@ -1095,12 +1095,12 @@ guitar_hero_debug_cheats = [
 			green
 			green
 			green
-			yellow
+			Yellow
 		]
 	}
 	{
-		Name = 'UnlockAllEverything'
-		name_text = qs(0x98a7826c)
+		name = 'UnlockAllEverything'
+		name_text = qs("UNLOCK ALL EVERYTHING")
 		var = Cheat_UnlockAll_Everything
 		unlock_pattern = [
 			green
@@ -1116,20 +1116,20 @@ guitar_hero_debug_cheats = [
 ]
 guitar_hero_hidden_cheats = [
 	{
-		Name = 'SuperUser'
-		name_text = qs(0x93a6ae81)
-		var = cheat_superuser
+		name = 'SuperUser'
+		name_text = qs("Superuser")
+		var = Cheat_SuperUser
 		unlock_pattern = [
 			green
-			blue
+			Blue
 			red
-			yellow
-			yellow
+			Yellow
+			Yellow
 			red
-			blue
+			Blue
 			green
 		]
-		Global = cheat_superuser
+		global = Cheat_SuperUser
 		value = 1
 	}
 ]
@@ -1138,55 +1138,55 @@ ui_cheats_settings = {
 
 script ui_create_options_cheats 
 	GetGlobalTags \{user_options}
-	SetArrayElement ArrayName = guitar_hero_cheat_index globalarray index = 0 NewValue = <cheat_index0>
-	SetArrayElement ArrayName = guitar_hero_cheat_index globalarray index = 1 NewValue = <cheat_index1>
-	SetArrayElement ArrayName = guitar_hero_cheat_index globalarray index = 2 NewValue = <cheat_index2>
-	SetArrayElement ArrayName = guitar_hero_cheat_index globalarray index = 3 NewValue = <cheat_index3>
-	SetArrayElement ArrayName = guitar_hero_cheat_index globalarray index = 4 NewValue = <cheat_index4>
-	SetArrayElement ArrayName = guitar_hero_cheat_index globalarray index = 5 NewValue = <cheat_index5>
-	SetArrayElement ArrayName = guitar_hero_cheat_index globalarray index = 6 NewValue = <cheat_index6>
-	SetArrayElement ArrayName = guitar_hero_cheat_index globalarray index = 7 NewValue = <cheat_index7>
-	SetArrayElement ArrayName = guitar_hero_cheat_index globalarray index = 8 NewValue = <cheat_index8>
-	SetArrayElement ArrayName = guitar_hero_cheat_index globalarray index = 9 NewValue = <cheat_index9>
-	SetArrayElement ArrayName = guitar_hero_cheat_index globalarray index = 10 NewValue = <cheat_index10>
-	SetArrayElement ArrayName = guitar_hero_cheat_index globalarray index = 11 NewValue = <cheat_index11>
-	SetArrayElement ArrayName = guitar_hero_cheat_index globalarray index = 12 NewValue = <cheat_index12>
-	SetArrayElement ArrayName = guitar_hero_cheat_index globalarray index = 13 NewValue = <cheat_index13>
-	SetArrayElement ArrayName = guitar_hero_cheat_index globalarray index = 14 NewValue = <cheat_index14>
-	SetArrayElement ArrayName = guitar_hero_cheat_index globalarray index = 15 NewValue = <cheat_index15>
-	SetArrayElement ArrayName = guitar_hero_cheat_index globalarray index = 16 NewValue = <cheat_index16>
-	SetArrayElement ArrayName = guitar_hero_cheat_index globalarray index = 17 NewValue = <cheat_index17>
-	SetArrayElement ArrayName = guitar_hero_cheat_index globalarray index = 18 NewValue = <cheat_index18>
-	SetArrayElement ArrayName = guitar_hero_cheat_index globalarray index = 19 NewValue = <cheat_index19>
-	SetArrayElement ArrayName = guitar_hero_cheat_index globalarray index = 20 NewValue = <cheat_index20>
-	make_menu_frontend \{screen = GUITARIST
-		title = qs(0x3e3a98e6)
+	SetArrayElement ArrayName = guitar_hero_cheat_index GlobalArray index = 0 newvalue = <cheat_index0>
+	SetArrayElement ArrayName = guitar_hero_cheat_index GlobalArray index = 1 newvalue = <cheat_index1>
+	SetArrayElement ArrayName = guitar_hero_cheat_index GlobalArray index = 2 newvalue = <cheat_index2>
+	SetArrayElement ArrayName = guitar_hero_cheat_index GlobalArray index = 3 newvalue = <cheat_index3>
+	SetArrayElement ArrayName = guitar_hero_cheat_index GlobalArray index = 4 newvalue = <cheat_index4>
+	SetArrayElement ArrayName = guitar_hero_cheat_index GlobalArray index = 5 newvalue = <cheat_index5>
+	SetArrayElement ArrayName = guitar_hero_cheat_index GlobalArray index = 6 newvalue = <cheat_index6>
+	SetArrayElement ArrayName = guitar_hero_cheat_index GlobalArray index = 7 newvalue = <cheat_index7>
+	SetArrayElement ArrayName = guitar_hero_cheat_index GlobalArray index = 8 newvalue = <cheat_index8>
+	SetArrayElement ArrayName = guitar_hero_cheat_index GlobalArray index = 9 newvalue = <cheat_index9>
+	SetArrayElement ArrayName = guitar_hero_cheat_index GlobalArray index = 10 newvalue = <cheat_index10>
+	SetArrayElement ArrayName = guitar_hero_cheat_index GlobalArray index = 11 newvalue = <cheat_index11>
+	SetArrayElement ArrayName = guitar_hero_cheat_index GlobalArray index = 12 newvalue = <cheat_index12>
+	SetArrayElement ArrayName = guitar_hero_cheat_index GlobalArray index = 13 newvalue = <cheat_index13>
+	SetArrayElement ArrayName = guitar_hero_cheat_index GlobalArray index = 14 newvalue = <cheat_index14>
+	SetArrayElement ArrayName = guitar_hero_cheat_index GlobalArray index = 15 newvalue = <cheat_index15>
+	SetArrayElement ArrayName = guitar_hero_cheat_index GlobalArray index = 16 newvalue = <cheat_index16>
+	SetArrayElement ArrayName = guitar_hero_cheat_index GlobalArray index = 17 newvalue = <cheat_index17>
+	SetArrayElement ArrayName = guitar_hero_cheat_index GlobalArray index = 18 newvalue = <cheat_index18>
+	SetArrayElement ArrayName = guitar_hero_cheat_index GlobalArray index = 19 newvalue = <cheat_index19>
+	SetArrayElement ArrayName = guitar_hero_cheat_index GlobalArray index = 20 newvalue = <cheat_index20>
+	make_menu_frontend \{screen = Guitarist
+		title = qs("CHEATS")
 		item_scale = 1.75
 		pad_back_script = ui_options_cheats_back}
 	CreateScreenElement {
-		Type = SpriteElement
+		type = SpriteElement
 		parent = <window_id>
-		texture = Triangle
-		Pos = (400.0, 110.0)
+		texture = triangle
+		pos = (400.0, 110.0)
 		rot_angle = -90
 		just = [center center]
 	}
 	CreateScreenElement {
-		Type = SpriteElement
+		type = SpriteElement
 		parent = <window_id>
-		texture = Triangle
-		Pos = (1050.0, 140.0)
+		texture = triangle
+		pos = (1050.0, 140.0)
 		rot_angle = 90
 		just = [center center]
 	}
-	add_menu_frontend_item \{text = qs(0xde232315)
+	add_menu_frontend_item \{text = qs("Enter new cheat")
 		pad_choose_script = generic_event_choose
 		pad_choose_params = {
 			state = uistate_options_cheats_new
 		}
 		item_height = 50}
-	<item_container_id> :se_getparentid
-	<parent_id> :se_setprops {
+	<item_container_id> :SE_GetParentId
+	<parent_id> :SE_SetProps {
 		event_handlers = [
 			{focus ui_options_cheats_update_helper}
 		]
@@ -1198,30 +1198,30 @@ script ui_create_options_cheats
 	GetArraySize \{$guitar_hero_cheats}
 	i = 0
 	begin
-	formatText checksumName = cheat_unlocked 'unlock_Cheat_%a' a = ($guitar_hero_cheats [<i>].Name)
+	FormatText checksumname = cheat_unlocked 'unlock_Cheat_%a' a = ($guitar_hero_cheats [<i>].name)
 	if GotParam <cheat_unlocked>
-		<text> = qs(0xb8a0b6b7)
+		<text> = qs("locked")
 		unlocked = 0
 		toggle = 1
 		pad_choose_script = nullscript
 		item_height = 50
 		if ((<...>.<cheat_unlocked>) > 0)
-			Name = ($guitar_hero_cheats [<i>].Name)
+			name = ($guitar_hero_cheats [<i>].name)
 			var = ($guitar_hero_cheats [<i>].var)
 			cheat_index = ($guitar_hero_cheat_index [<i>])
 			option_struct = ($guitar_hero_cheats [<i>].options [<cheat_index>])
 			text = (<option_struct>.text)
 			pad_choose_params = {}
-			if StructureContains structure = ($guitar_hero_cheats [<i>]) pad_choose_script
+			if StructureContains Structure = ($guitar_hero_cheats [<i>]) pad_choose_script
 				pad_choose_script = ($guitar_hero_cheats [<i>].pad_choose_script)
-				if StructureContains structure = ($guitar_hero_cheats [<i>]) pad_choose_params
+				if StructureContains Structure = ($guitar_hero_cheats [<i>]) pad_choose_params
 					pad_choose_params = ($guitar_hero_cheats [<i>].pad_choose_params)
 				endif
 			else
 				pad_choose_script = ui_options_cheat_toggle
 			endif
 			item_height = 100
-			if StructureContains structure = ($guitar_hero_cheats [<i>]) not_toggle
+			if StructureContains Structure = ($guitar_hero_cheats [<i>]) not_toggle
 				toggle = 0
 				item_height = 50
 			endif
@@ -1233,13 +1233,13 @@ script ui_create_options_cheats
 			pad_choose_params = <pad_choose_params>
 			item_height = <item_height>
 		}
-		<item_container_id> :se_getparentid
-		<parent_id> :se_setprops {
+		<item_container_id> :SE_GetParentId
+		<parent_id> :SE_SetProps {
 			event_handlers = [
 				{focus ui_options_cheats_update_helper}
 			]
 			tags = {
-				Name = <Name>
+				name = <name>
 				var = <var>
 				index = <i>
 				unlocked = <unlocked>
@@ -1248,21 +1248,21 @@ script ui_create_options_cheats
 		}
 	endif
 	i = (<i> + 1)
-	repeat <array_Size>
-	<item_container_id> :se_setprops {
+	repeat <array_size>
+	<item_container_id> :SE_SetProps {
 		event_handlers = [
 			{focus ui_options_cheats_update_helper}
 		]
 	}
 	menu_finish
-	if NOT comparestructs \{struct1 = $ui_cheats_settings
+	if NOT CompareStructs \{struct1 = $ui_cheats_settings
 			struct2 = {
 			}}
 		current_menu :SetTags \{user_options = $ui_cheats_settings}
 	else
 		ui_options_set_settings
 		current_menu :GetSingleTag \{user_options}
-		Change ui_cheats_settings = <user_options>
+		change ui_cheats_settings = <user_options>
 	endif
 endscript
 
@@ -1271,18 +1271,18 @@ script ui_destroy_options_cheats
 endscript
 
 script ui_deinit_options_cheats 
-	Change \{ui_cheats_settings = {
+	change \{ui_cheats_settings = {
 		}}
-	check_car_unlocks
+	check_CAR_unlocks
 endscript
 
 script ui_options_cheats_back 
-	SetSpawnInstanceLimits \{Max = 1
+	SetSpawnInstanceLimits \{max = 1
 		management = ignore_spawn_request}
-	if is_ui_event_running
+	if Is_ui_event_running
 		return
 	endif
-	if (($cheat_alwaysslide = 1) || ($cheat_autokick = 1))
+	if (($Cheat_AlwaysSlide = 1) || ($Cheat_AutoKick = 1))
 		generic_event_choose \{state = uistate_options_cheats_warning}
 	else
 		ui_options_check_settings
@@ -1295,19 +1295,19 @@ script ui_options_cheat_toggle
 	<cheat_index> = (<cheat_index> + 1)
 	option_array = ($guitar_hero_cheats [<index>].options)
 	GetArraySize <option_array>
-	if (<cheat_index> >= <array_Size>)
+	if (<cheat_index> >= <array_size>)
 		<cheat_index> = 0
 	endif
-	SetArrayElement ArrayName = guitar_hero_cheat_index globalarray index = <index> NewValue = <cheat_index>
+	SetArrayElement ArrayName = guitar_hero_cheat_index GlobalArray index = <index> newvalue = <cheat_index>
 	GetGlobalTags \{user_options}
-	formatText checksumName = cheat_idx 'cheat_index%a' a = <index>
-	AddParam structure_name = params Name = <cheat_idx> value = <cheat_index>
+	FormatText checksumname = cheat_idx 'cheat_index%a' a = <index>
+	AddParam structure_name = params name = <cheat_idx> value = <cheat_index>
 	SetGlobalTags user_options params = <params>
 	option_struct = (<option_array> [<cheat_index>])
 	globals = (<option_struct>.globals)
 	cheat_set_globals globals = <globals>
 	text = (<option_struct>.text)
-	se_setprops item_text = <text>
+	SE_SetProps item_text = <text>
 	exclude_option option_struct = <option_struct>
 endscript
 
@@ -1317,26 +1317,26 @@ script cheat_set_globals
 	<idx> = 0
 	begin
 	<entry> = (<globals> [<idx>])
-	<Set> = (<entry>.Set)
-	if StructureContains structure = <entry> value
+	<set> = (<entry>.set)
+	if StructureContains Structure = <entry> value
 		<set_value> = (<entry>.value)
-	elseif StructureContains structure = <entry> Global
-		<Global> = (<entry>.Global)
-		<value> = ($<Global>)
-		if StructureContains structure = <entry> Scale
-			<Scale> = (<entry>.Scale)
-			<set_value> = (<value> * <Scale>)
+	elseif StructureContains Structure = <entry> global
+		<global> = (<entry>.global)
+		<value> = ($<global>)
+		if StructureContains Structure = <entry> scale
+			<scale> = (<entry>.scale)
+			<set_value> = (<value> * <scale>)
 		else
 			<set_value> = <value>
 		endif
 	endif
-	if GotParam <Set>
-		AddParam structure_name = params Name = <Set> value = <set_value>
+	if GotParam <set>
+		AddParam structure_name = params name = <set> value = <set_value>
 	else
-		Change GlobalName = <Set> NewValue = <set_value>
+		change globalname = <set> newvalue = <set_value>
 	endif
 	<idx> = (<idx> + 1)
-	repeat <array_Size>
+	repeat <array_size>
 	if GotParam \{params}
 		SetGlobalTags user_options params = <params>
 	endif
@@ -1347,9 +1347,9 @@ script cheat_turnoffall
 	<idx> = 0
 	begin
 	<var> = ($guitar_hero_cheats [<idx>].var)
-	Change GlobalName = <var> NewValue = 0
+	change globalname = <var> newvalue = 0
 	<idx> = (<idx> + 1)
-	repeat <array_Size>
+	repeat <array_size>
 endscript
 
 script cheat_turnoffalllocked 
@@ -1361,25 +1361,25 @@ script cheat_turnoffalllocked
 	unlocked = 0
 	begin
 	GetGlobalTags savegame = <savegame> user_options
-	formatText checksumName = cheat_idx 'cheat_index%a' a = <idx>
+	FormatText checksumname = cheat_idx 'cheat_index%a' a = <idx>
 	if NOT (<...>.<cheat_idx> = 0)
 		unlocked = 1
 	endif
 	savegame = (<savegame> + 1)
 	repeat 4
 	if (<unlocked> = 0)
-		Change GlobalName = <var> NewValue = 0
+		change globalname = <var> newvalue = 0
 	endif
 	<idx> = (<idx> + 1)
-	repeat <array_Size>
+	repeat <array_size>
 endscript
 
 script exclude_option 
-	if StructureContains structure = <option_struct> exclude
+	if StructureContains Structure = <option_struct> exclude
 		<exclude_array> = (<option_struct>.exclude)
 		<exclude_index> = 0
 		GetArraySize <exclude_array>
-		<exclude_array_size> = <array_Size>
+		<exclude_array_size> = <array_size>
 		GetGlobalTags \{user_options}
 		begin
 		<exclude> = (<exclude_array> [<exclude_index>])
@@ -1388,14 +1388,14 @@ script exclude_option
 		begin
 		<var> = ($guitar_hero_cheats [<idx>].var)
 		if (<var> = <exclude>)
-			<Name> = ($guitar_hero_cheats [<idx>].Name)
-			formatText checksumName = cheat_checksum 'unlock_Cheat_%a' a = <Name>
+			<name> = ($guitar_hero_cheats [<idx>].name)
+			FormatText checksumname = cheat_checksum 'unlock_Cheat_%a' a = <name>
 			if NOT ((<...>.<cheat_checksum>) = 0)
 				exclude_array = ($guitar_hero_cheats [<idx>].options)
-				SetArrayElement ArrayName = guitar_hero_cheat_index globalarray index = <idx> NewValue = 0
+				SetArrayElement ArrayName = guitar_hero_cheat_index GlobalArray index = <idx> newvalue = 0
 				GetGlobalTags \{user_options}
-				formatText checksumName = cheat_idx 'cheat_index%a' a = <idx>
-				AddParam structure_name = params Name = <cheat_idx> value = 0
+				FormatText checksumname = cheat_idx 'cheat_index%a' a = <idx>
+				AddParam structure_name = params name = <cheat_idx> value = 0
 				SetGlobalTags user_options params = <params>
 				exclude_struct = (<exclude_array> [0])
 				if NOT GotParam \{no_menu_update}
@@ -1408,7 +1408,7 @@ script exclude_option
 			break
 		endif
 		<idx> = (<idx> + 1)
-		repeat <array_Size>
+		repeat <array_size>
 		<exclude_index> = (<exclude_index> + 1)
 		repeat <exclude_array_size>
 	endif
@@ -1421,16 +1421,16 @@ script ui_options_cheats_update_helper
 	if GotParam \{unlocked}
 		if (<unlocked> = 1)
 			if (<toggle> = 0)
-				<green_text> = qs(0xc18d5e76)
+				<green_text> = qs("SELECT")
 			else
-				<green_text> = qs(0xb92fa92b)
+				<green_text> = qs("TOGGLE")
 			endif
 			add_user_control_helper text = <green_text> button = green z = 100000
-			add_user_control_helper \{text = qs(0xaf4d5dd2)
+			add_user_control_helper \{text = qs("BACK")
 				button = red
 				z = 100000}
 		else
-			add_user_control_helper \{text = qs(0xaf4d5dd2)
+			add_user_control_helper \{text = qs("BACK")
 				button = red
 				z = 100000}
 		endif
@@ -1439,19 +1439,19 @@ script ui_options_cheats_update_helper
 	endif
 endscript
 
-script check_car_unlocks 
+script check_CAR_unlocks 
 	get_savegame_from_controller controller = ($primary_controller)
 	GetGlobalTags savegame = <savegame> user_options
-	if (<unlock_cheat_bestbuykid> = 1)
-		unlock_profile id = nickarnold savegame = <savegame>
+	if (<unlock_Cheat_BestBuyKid> = 1)
+		unlock_profile id = NickArnold savegame = <savegame>
 	endif
-	if (<unlock_cheat_eurocontestwinner> = 1)
-		unlock_profile id = gh4_car_winner savegame = <savegame>
+	if (<unlock_Cheat_EuroContestWinner> = 1)
+		unlock_profile id = GH4_CAR_Winner savegame = <savegame>
 	endif
-	if (<unlock_cheat_rina> = 1)
+	if (<unlock_Cheat_Rina> = 1)
 		unlock_profile id = rina savegame = <savegame>
 	endif
-	if (<unlock_cheat_aaron> = 1)
-		unlock_profile id = `aaron	steele` savegame = <savegame>
+	if (<unlock_Cheat_Aaron> = 1)
+		unlock_profile id = `Aaron Steele` savegame = <savegame>
 	endif
 endscript

@@ -5,7 +5,7 @@ script IGC_Camera_MoveToPlayer \{time = 0
 	<cameraid> :GetHFov
 	CCam_DoMorph {
 		LockTo = <cameraid>
-		Pos = (0.0, 0.0, 0.0)
+		pos = (0.0, 0.0, 0.0)
 		Quat = (0.0, 0.0, 0.0)
 		FOV = <hfov>
 		time = <time>

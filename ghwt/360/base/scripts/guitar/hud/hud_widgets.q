@@ -1,104 +1,104 @@
 
-script hud_attach_widget_band_meter \{local_id = rock_meter
-		Pos = (0.0, 0.0)}
+script HUD_attach_widget_band_meter \{local_id = rock_meter
+		pos = (0.0, 0.0)}
 	RequireParams \{[
 			parent
 		]
 		all}
-	if NOT ResolveScreenElementID id = <parent> param = id
+	if NOT ResolveScreenElementId id = <parent> param = id
 		return
 	endif
-	<id> :desc_resolvealias Name = alias_glow param = glow_id
-	attachhudwidget {
+	<id> :Desc_ResolveAlias name = alias_glow param = glow_id
+	AttachHudWidget {
 		Input = {
 			value = band_health
 		}
 		outputs = [
 			{
-				Type = descpropertyfloat
+				type = DescPropertyFloat
 				desc_id = <id>
-				property = needle_rot_angle
+				Property = needle_rot_angle
 				value_range = [0.0 2.0]
-				Range = [-66.0 66.0]
+				range = [-66.0 66.0]
 				single
 			}
 			{
-				Type = screenelementconditionalfloat
+				type = ScreenElementConditionalFloat
 				desc_id = <id>
-				property = red_light_alpha
+				Property = red_light_alpha
 				value_range = [0.0 0.6666]
 			}
 			{
-				Type = screenelementconditionalfloat
+				type = ScreenElementConditionalFloat
 				desc_id = <id>
-				property = yellow_light_alpha
+				Property = yellow_light_alpha
 				value_range = [0.6666 1.3333]
 			}
 			{
-				Type = screenelementconditionalfloat
+				type = ScreenElementConditionalFloat
 				desc_id = <id>
-				property = green_light_alpha
+				Property = green_light_alpha
 				value_range = [1.3333 2.0]
 			}
 			{
-				Type = screenelementconditionalfloat
+				type = ScreenElementConditionalFloat
 				desc_id = <id>
-				property = hud_meter_red_bg_alpha
+				Property = hud_meter_red_bg_alpha
 				value_range = [0.0 0.6666]
 			}
 			{
-				Type = screenelementconditionalfloat
+				type = ScreenElementConditionalFloat
 				desc_id = <id>
-				property = hud_meter_yellow_bg_alpha
+				Property = hud_meter_yellow_bg_alpha
 				value_range = [0.6666 1.3333]
 			}
 			{
-				Type = screenelementconditionalfloat
+				type = ScreenElementConditionalFloat
 				desc_id = <id>
-				property = hud_meter_green_bg_alpha
+				Property = hud_meter_green_bg_alpha
 				value_range = [1.3333 2.0]
 			}
 		]
 	}
 	if ($current_num_players = 1)
-		attachhudwidget {
+		AttachHudWidget {
 			Input = {
 				object = player1_status
 				value = score
 			}
 			output = {
-				Type = seinttostring
+				type = SEIntToString
 				desc_id = <id>
-				property = score_text
+				Property = score_text
 			}
 		}
-		if playerinfoequals \{1
-				part = vocals}
+		if PlayerInfoEquals \{1
+				part = Vocals}
 			<divide_by_10> = true
 		else
-			<divide_by_10> = FALSE
+			<divide_by_10> = false
 		endif
-		attachhudwidget {
+		AttachHudWidget {
 			Input = {
 				object = player1_status
 				value = note_streak
 			}
 			output = {
-				Type = seinttostring
+				type = SEIntToString
 				desc_id = <id>
-				property = streak_number_text
+				Property = streak_number_text
 				divide_by_10 = <divide_by_10>
 			}
 		}
-		attachhudwidget {
+		AttachHudWidget {
 			Input = {
 				object = player1_status
 				value = starpower_amount
 			}
 			output = {
-				Type = setubes
+				type = SETubes
 				desc_id = <id>
-				Player = 1
+				player = 1
 				default_scale = (0.3, 0.3)
 				value_range = [0.0 100.0]
 				textures = [glow0_texture glow1_texture glow2_texture glow3_texture glow4_texture glow5_texture]
@@ -106,7 +106,7 @@ script hud_attach_widget_band_meter \{local_id = rock_meter
 			}
 		}
 		<tubes_widget_id> = <observer_id>
-		attachhudwidget {
+		AttachHudWidget {
 			Input = {
 				object = player1_status
 				value = starpower_active
@@ -114,56 +114,56 @@ script hud_attach_widget_band_meter \{local_id = rock_meter
 			output = {id = <tubes_widget_id>}
 		}
 	else
-		attachhudwidget {
+		AttachHudWidget {
 			Input = {
 				value = band1_score
 			}
 			output = {
-				Type = seinttostring
+				type = SEIntToString
 				desc_id = <id>
-				property = score_text
+				Property = score_text
 			}
 		}
-		attachhudwidget {
+		AttachHudWidget {
 			Input = {
 				value = band1_streak
 			}
 			output = {
-				Type = seinttostring
+				type = SEIntToString
 				desc_id = <id>
-				property = streak_number_text
+				Property = streak_number_text
 			}
 		}
-		attachhudwidget {
+		AttachHudWidget {
 			Input = {
 				value = band1_multiplier
 			}
 			output = {
-				Type = sebandmultiplier
+				type = SEBandMultiplier
 				desc_id = <id>
-				property = band_mult_text
+				Property = band_mult_text
 			}
 		}
 		health_value_range = [0.0 2.0]
 		health_mask_range = [(128.0, 0.0) (128.0, 64.0)]
-		attachhudwidget {
+		AttachHudWidget {
 			Input = {
 				object = player1_status
 				value = health
 			}
 			outputs = [
 				{
-					Type = descpropertypair
+					type = DescPropertyPair
 					desc_id = <id>
-					property = band_hud_p1_mask_dims
+					Property = band_HUD_p1_mask_dims
 					value_range = <health_value_range>
-					Range = <health_mask_range>
+					range = <health_mask_range>
 					single
 				}
 				{
-					Type = screenelementrgbalerp
+					type = ScreenElementRGBALerp
 					desc_id = <id>
-					property = band_hud_p1_fill_rgba
+					Property = band_HUD_p1_fill_rgba
 					value_range = [0.0 2.0]
 					colors = [
 						[255 0 0 100]
@@ -174,24 +174,24 @@ script hud_attach_widget_band_meter \{local_id = rock_meter
 			]
 		}
 		if ($current_num_players > 1)
-			attachhudwidget {
+			AttachHudWidget {
 				Input = {
 					object = player2_status
 					value = health
 				}
 				outputs = [
 					{
-						Type = descpropertypair
+						type = DescPropertyPair
 						desc_id = <id>
-						property = band_hud_p2_mask_dims
+						Property = band_HUD_p2_mask_dims
 						value_range = <health_value_range>
-						Range = <health_mask_range>
+						range = <health_mask_range>
 						single
 					}
 					{
-						Type = screenelementrgbalerp
+						type = ScreenElementRGBALerp
 						desc_id = <id>
-						property = band_hud_p2_fill_rgba
+						Property = band_HUD_p2_fill_rgba
 						value_range = [0.0 2.0]
 						colors = [
 							[255 0 0 100]
@@ -202,27 +202,27 @@ script hud_attach_widget_band_meter \{local_id = rock_meter
 				]
 			}
 		else
-			SetScreenElementProps id = <id> band_hud_p2_fill_rgba = [0 0 0 0]
+			SetScreenElementProps id = <id> band_HUD_p2_fill_rgba = [0 0 0 0]
 		endif
 		if ($current_num_players > 2)
-			attachhudwidget {
+			AttachHudWidget {
 				Input = {
 					object = player3_status
 					value = health
 				}
 				outputs = [
 					{
-						Type = descpropertypair
+						type = DescPropertyPair
 						desc_id = <id>
-						property = band_hud_p3_mask_dims
+						Property = band_HUD_p3_mask_dims
 						value_range = <health_value_range>
-						Range = <health_mask_range>
+						range = <health_mask_range>
 						single
 					}
 					{
-						Type = screenelementrgbalerp
+						type = ScreenElementRGBALerp
 						desc_id = <id>
-						property = band_hud_p3_fill_rgba
+						Property = band_HUD_p3_fill_rgba
 						value_range = [0.0 2.0]
 						colors = [
 							[255 0 0 100]
@@ -233,27 +233,27 @@ script hud_attach_widget_band_meter \{local_id = rock_meter
 				]
 			}
 		else
-			SetScreenElementProps id = <id> band_hud_p3_fill_rgba = [0 0 0 0]
+			SetScreenElementProps id = <id> band_HUD_p3_fill_rgba = [0 0 0 0]
 		endif
 		if ($current_num_players > 3)
-			attachhudwidget {
+			AttachHudWidget {
 				Input = {
 					object = player4_status
 					value = health
 				}
 				outputs = [
 					{
-						Type = descpropertypair
+						type = DescPropertyPair
 						desc_id = <id>
-						property = band_hud_p4_mask_dims
+						Property = band_HUD_p4_mask_dims
 						value_range = <health_value_range>
-						Range = <health_mask_range>
+						range = <health_mask_range>
 						single
 					}
 					{
-						Type = screenelementrgbalerp
+						type = ScreenElementRGBALerp
 						desc_id = <id>
-						property = band_hud_p4_fill_rgba
+						Property = band_HUD_p4_fill_rgba
 						value_range = [0.0 2.0]
 						colors = [
 							[255 0 0 100]
@@ -264,15 +264,15 @@ script hud_attach_widget_band_meter \{local_id = rock_meter
 				]
 			}
 		else
-			SetScreenElementProps id = <id> band_hud_p4_fill_rgba = [0 0 0 0]
+			SetScreenElementProps id = <id> band_HUD_p4_fill_rgba = [0 0 0 0]
 		endif
-		hud_set_band_meter_instrument_icons desc_element = <id>
-		attachhudwidget {
+		HUD_set_band_meter_instrument_icons desc_element = <id>
+		AttachHudWidget {
 			Input = {
 				value = band1_starpower
 			}
 			output = {
-				Type = setubes
+				type = SETubes
 				desc_id = <id>
 				Band = true
 				band_num = 1
@@ -283,45 +283,45 @@ script hud_attach_widget_band_meter \{local_id = rock_meter
 			}
 		}
 	endif
-	hud_setup_streak_meter_animation
-	if NOT gamemode_isbandscoring
-		hud_setup_secondary_starpower_bulb_animation
+	HUD_setup_streak_meter_animation
+	if NOT GameMode_IsBandScoring
+		HUD_setup_secondary_starpower_bulb_animation
 	endif
 	if ($rock_meter_debug = 1)
-		if <id> :desc_resolvealias Name = alias_bg param = bg_id
+		if <id> :Desc_ResolveAlias name = alias_bg param = bg_id
 			CreateScreenElement {
 				parent = <bg_id>
 				id = rock_meter_debug_text
-				Type = TextElement
-				Pos = (128.0, 24.0)
-				text = qs(0x80cd18a8)
+				type = TextElement
+				pos = (128.0, 24.0)
+				text = qs("\L1337")
 				font = debug
 				just = [center bottom]
-				Scale = (0.7, 0.4)
+				scale = (0.7, 0.4)
 				z_priority = 100
 			}
 			if ($current_num_players > 1)
-				<Player> = 1
-				<Pos> = (128.0, 24.0)
+				<player> = 1
+				<pos> = (128.0, 24.0)
 				begin
-				formatText checksumName = rmdt 'rock_meter_debug_text%i' i = <Player> AddToStringLookup
-				<Pos> = (<Pos> - (0.0, 16.0))
+				FormatText checksumname = rmdt 'rock_meter_debug_text%i' i = <player> AddToStringLookup
+				<pos> = (<pos> - (0.0, 16.0))
 				CreateScreenElement {
 					parent = <bg_id>
 					id = <rmdt>
-					Type = TextElement
-					Pos = <Pos>
-					text = qs(0x80cd18a8)
+					type = TextElement
+					pos = <pos>
+					text = qs("\L1337")
 					font = debug
 					just = [center bottom]
-					Scale = (0.7, 0.4)
+					scale = (0.7, 0.4)
 					z_priority = 100
 				}
-				<Player> = (<Player> + 1)
+				<player> = (<player> + 1)
 				repeat $current_num_players
 			endif
-			KillSpawnedScript \{Name = update_rock_meter_debug_text}
-			SpawnScriptNow \{update_rock_meter_debug_text
+			KillSpawnedScript \{name = update_rock_meter_debug_text}
+			spawnscriptnow \{update_rock_meter_debug_text
 				params = {
 					id = rock_meter_debug_text
 				}}
@@ -329,23 +329,23 @@ script hud_attach_widget_band_meter \{local_id = rock_meter
 	endif
 endscript
 
-script hud_set_band_meter_instrument_icons 
+script HUD_set_band_meter_instrument_icons 
 	index = 1
 	begin
-	getplayerinfo <index> part
+	GetPlayerInfo <index> part
 	switch <part>
 		case guitar
-		icon = band_hud_guitar
-		glow_icon = band_hud_guitar_glow
-		case bass
-		icon = band_hud_bass
-		glow_icon = band_hud_bass_glow
+		icon = band_HUD_guitar
+		glow_icon = band_HUD_guitar_glow
+		case Bass
+		icon = band_HUD_bass
+		glow_icon = band_HUD_bass_glow
 		case drum
-		icon = band_hud_drums
-		glow_icon = band_hud_drums_glow
-		case vocals
-		icon = band_hud_microphone
-		glow_icon = band_hud_mic_glow
+		icon = band_HUD_drums
+		glow_icon = band_HUD_drums_glow
+		case Vocals
+		icon = band_HUD_microphone
+		glow_icon = band_HUD_mic_glow
 	endswitch
 	if (<index> <= $current_num_players)
 		alpha = 1.0
@@ -355,72 +355,72 @@ script hud_set_band_meter_instrument_icons
 	glow_rgba = [255 255 255 0]
 	switch <index>
 		case 1
-		SetScreenElementProps id = <desc_element> band_hud_instrument_p1_texture = <icon>
-		SetScreenElementProps id = <desc_element> band_hud_instrument_p1_alpha = <alpha>
-		SetScreenElementProps id = <desc_element> band_hud_instrument_glow_p1_texture = <glow_icon>
-		SetScreenElementProps id = <desc_element> band_hud_instrument_glow_p1_alpha = <alpha>
-		SetScreenElementProps id = <desc_element> band_hud_instrument_glow_p1_rgba = <glow_rgba>
+		SetScreenElementProps id = <desc_element> band_HUD_instrument_p1_texture = <icon>
+		SetScreenElementProps id = <desc_element> band_HUD_instrument_p1_alpha = <alpha>
+		SetScreenElementProps id = <desc_element> band_HUD_instrument_glow_p1_texture = <glow_icon>
+		SetScreenElementProps id = <desc_element> band_HUD_instrument_glow_p1_alpha = <alpha>
+		SetScreenElementProps id = <desc_element> band_HUD_instrument_glow_p1_rgba = <glow_rgba>
 		case 2
-		SetScreenElementProps id = <desc_element> band_hud_instrument_p2_texture = <icon>
-		SetScreenElementProps id = <desc_element> band_hud_instrument_p2_alpha = <alpha>
-		SetScreenElementProps id = <desc_element> band_hud_instrument_glow_p2_texture = <glow_icon>
-		SetScreenElementProps id = <desc_element> band_hud_instrument_glow_p2_alpha = <alpha>
-		SetScreenElementProps id = <desc_element> band_hud_instrument_glow_p2_rgba = <glow_rgba>
+		SetScreenElementProps id = <desc_element> band_HUD_instrument_p2_texture = <icon>
+		SetScreenElementProps id = <desc_element> band_HUD_instrument_p2_alpha = <alpha>
+		SetScreenElementProps id = <desc_element> band_HUD_instrument_glow_p2_texture = <glow_icon>
+		SetScreenElementProps id = <desc_element> band_HUD_instrument_glow_p2_alpha = <alpha>
+		SetScreenElementProps id = <desc_element> band_HUD_instrument_glow_p2_rgba = <glow_rgba>
 		case 3
-		SetScreenElementProps id = <desc_element> band_hud_instrument_p3_texture = <icon>
-		SetScreenElementProps id = <desc_element> band_hud_instrument_p3_alpha = <alpha>
-		SetScreenElementProps id = <desc_element> band_hud_instrument_glow_p3_texture = <glow_icon>
-		SetScreenElementProps id = <desc_element> band_hud_instrument_glow_p3_alpha = <alpha>
-		SetScreenElementProps id = <desc_element> band_hud_instrument_glow_p3_rgba = <glow_rgba>
+		SetScreenElementProps id = <desc_element> band_HUD_instrument_p3_texture = <icon>
+		SetScreenElementProps id = <desc_element> band_HUD_instrument_p3_alpha = <alpha>
+		SetScreenElementProps id = <desc_element> band_HUD_instrument_glow_p3_texture = <glow_icon>
+		SetScreenElementProps id = <desc_element> band_HUD_instrument_glow_p3_alpha = <alpha>
+		SetScreenElementProps id = <desc_element> band_HUD_instrument_glow_p3_rgba = <glow_rgba>
 		case 4
-		SetScreenElementProps id = <desc_element> band_hud_instrument_p4_texture = <icon>
-		SetScreenElementProps id = <desc_element> band_hud_instrument_p4_alpha = <alpha>
-		SetScreenElementProps id = <desc_element> band_hud_instrument_glow_p4_texture = <glow_icon>
-		SetScreenElementProps id = <desc_element> band_hud_instrument_glow_p4_alpha = <alpha>
-		SetScreenElementProps id = <desc_element> band_hud_instrument_glow_p4_rgba = <glow_rgba>
+		SetScreenElementProps id = <desc_element> band_HUD_instrument_p4_texture = <icon>
+		SetScreenElementProps id = <desc_element> band_HUD_instrument_p4_alpha = <alpha>
+		SetScreenElementProps id = <desc_element> band_HUD_instrument_glow_p4_texture = <glow_icon>
+		SetScreenElementProps id = <desc_element> band_HUD_instrument_glow_p4_alpha = <alpha>
+		SetScreenElementProps id = <desc_element> band_HUD_instrument_glow_p4_rgba = <glow_rgba>
 	endswitch
 	index = (<index> + 1)
 	repeat 4
 endscript
 
-script hud_set_band_meter_instrument_streak_color 
-	if GotParam \{Player}
+script HUD_set_band_meter_instrument_streak_color 
+	if GotParam \{player}
 		if ScreenElementExists \{id = hud_root}
-			if hud_root :desc_resolvealias \{Name = alias_band_meter
+			if hud_root :Desc_ResolveAlias \{name = alias_band_meter
 					param = band_meter}
-				ResolveScreenElementID id = <band_meter> param = desc_element
+				ResolveScreenElementId id = <band_meter> param = desc_element
 			endif
-			if GotParam \{On}
+			if GotParam \{on}
 				rgba = [255 200 0 255]
 				glow_rgba = [255 255 255 255]
-				highway_streak_glow Player = <Player> Enabled = 1
+				highway_streak_glow player = <player> enabled = 1
 			else
 				rgba = [255 255 255 255]
 				glow_rgba = [255 255 255 0]
-				highway_streak_glow Player = <Player> Enabled = 0
+				highway_streak_glow player = <player> enabled = 0
 			endif
 			if GotParam \{desc_element}
-				switch <Player>
+				switch <player>
 					case 1
-					SetScreenElementProps id = <desc_element> band_hud_instrument_p1_rgba = <rgba>
-					SetScreenElementProps id = <desc_element> band_hud_instrument_glow_p1_rgba = <glow_rgba>
+					SetScreenElementProps id = <desc_element> band_HUD_instrument_p1_rgba = <rgba>
+					SetScreenElementProps id = <desc_element> band_HUD_instrument_glow_p1_rgba = <glow_rgba>
 					case 2
-					SetScreenElementProps id = <desc_element> band_hud_instrument_p2_rgba = <rgba>
-					SetScreenElementProps id = <desc_element> band_hud_instrument_glow_p2_rgba = <glow_rgba>
+					SetScreenElementProps id = <desc_element> band_HUD_instrument_p2_rgba = <rgba>
+					SetScreenElementProps id = <desc_element> band_HUD_instrument_glow_p2_rgba = <glow_rgba>
 					case 3
-					SetScreenElementProps id = <desc_element> band_hud_instrument_p3_rgba = <rgba>
-					SetScreenElementProps id = <desc_element> band_hud_instrument_glow_p3_rgba = <glow_rgba>
+					SetScreenElementProps id = <desc_element> band_HUD_instrument_p3_rgba = <rgba>
+					SetScreenElementProps id = <desc_element> band_HUD_instrument_glow_p3_rgba = <glow_rgba>
 					case 4
-					SetScreenElementProps id = <desc_element> band_hud_instrument_p4_rgba = <rgba>
-					SetScreenElementProps id = <desc_element> band_hud_instrument_glow_p4_rgba = <glow_rgba>
+					SetScreenElementProps id = <desc_element> band_HUD_instrument_p4_rgba = <rgba>
+					SetScreenElementProps id = <desc_element> band_HUD_instrument_glow_p4_rgba = <glow_rgba>
 				endswitch
 			endif
 		endif
 	endif
 endscript
 
-script hud_band_streak_notify 
-	getplayerinfo \{1
+script HUD_band_streak_notify 
+	GetPlayerInfo \{1
 		bot_play}
 	if (<bot_play> = 1)
 		return
@@ -432,76 +432,76 @@ script hud_band_streak_notify
 		if (<streak> < 1)
 			return
 		endif
-		formatText TextName = notification qs(0x66bd2b10) d = <streak>
+		FormatText TextName = notification qs("%d\_Note\_Band\_Streak!") d = <streak>
 	else
-		formatText TextName = notification qs(0x83b2be80) d = <new_player_in_streak>
-		Priority = -1
+		FormatText TextName = notification qs("Streak") d = <new_player_in_streak>
+		priority = -1
 	endif
-	hud_create_message {text = <notification> Band Priority = <Priority> style_script = hud_message_band_streak_style style_script_params = {players = <players>}}
+	hud_create_message {text = <notification> Band priority = <priority> style_script = hud_message_band_streak_style style_script_params = {players = <players>}}
 endscript
 
-script hud_attach_widget_band_faceoff_meter 
-	attachhudwidget {
+script HUD_attach_widget_band_faceoff_meter 
+	AttachHudWidget {
 		Input = {
 			value = faceoff_ratio
 		}
 		outputs = [
 			{
-				Type = descpropertyfloat
+				type = DescPropertyFloat
 				desc_id = <parent_id>
-				property = hud_band_battle_meter_needle_rot_angle
+				Property = hud_band_battle_meter_needle_rot_angle
 				value_range = [1.0 -1.0]
-				Range = [-51.5 51.5]
+				range = [-51.5 51.5]
 				single
 			}
 			{
-				Type = descpropertyfloat
+				type = DescPropertyFloat
 				desc_id = <parent_id>
-				property = hud_band_battle_meter_amber_on_alpha
+				Property = hud_band_battle_meter_amber_on_alpha
 				value_range = [0.0 0.1]
-				Range = [0.0 1.0]
+				range = [0.0 1.0]
 				single
 			}
 			{
-				Type = descpropertyfloat
+				type = DescPropertyFloat
 				desc_id = <parent_id>
-				property = hud_band_battle_meter_violet_on_alpha
+				Property = hud_band_battle_meter_violet_on_alpha
 				value_range = [-0.1 0.0]
-				Range = [1.0 0.0]
+				range = [1.0 0.0]
 				single
 			}
 		]
 	}
 	if ($current_num_players > 2)
-		attachhudwidget {
+		AttachHudWidget {
 			Input = {
 				value = band1_score
 			}
 			output = {
-				Type = seinttostring
+				type = SEIntToString
 				desc_id = <parent_id>
-				property = score_1_text
+				Property = score_1_text
 			}
 		}
-		attachhudwidget {
+		AttachHudWidget {
 			Input = {
 				value = band2_score
 			}
 			output = {
-				Type = seinttostring
+				type = SEIntToString
 				desc_id = <parent_id>
-				property = score_2_text
+				Property = score_2_text
 			}
 		}
-		attachhudwidget {
+		AttachHudWidget {
 			Input = {
 				value = band1_multiplier
 			}
 			output = {
-				Type = semultipliernixie
+				type = SEMultiplierNixie
 				desc_id = <parent_id>
-				property = hud_bb_multiplier_nixie_1_texture
-				Player = 1
+				Property = hud_bb_multiplier_nixie_1_texture
+				player = 1
 				textures = [
 					HUD_score_nixie_1a
 					HUD_score_nixie_2a
@@ -516,15 +516,15 @@ script hud_attach_widget_band_faceoff_meter
 				]
 			}
 		}
-		attachhudwidget {
+		AttachHudWidget {
 			Input = {
 				value = band2_multiplier
 			}
 			output = {
-				Type = semultipliernixie
+				type = SEMultiplierNixie
 				desc_id = <parent_id>
-				property = hud_bb_multiplier_nixie_2_texture
-				Player = 2
+				Property = hud_bb_multiplier_nixie_2_texture
+				player = 2
 				textures = [
 					HUD_score_nixie_1a
 					HUD_score_nixie_2a
@@ -539,12 +539,12 @@ script hud_attach_widget_band_faceoff_meter
 				]
 			}
 		}
-		attachhudwidget {
+		AttachHudWidget {
 			Input = {
 				value = band1_starpower
 			}
 			output = {
-				Type = setubes
+				type = SETubes
 				desc_id = <parent_id>
 				Band = true
 				band_num = 1
@@ -555,19 +555,19 @@ script hud_attach_widget_band_faceoff_meter
 			}
 		}
 		<tubes_widget_id> = <observer_id>
-		attachhudwidget {
+		AttachHudWidget {
 			Input = {
 				object = band1_status
 				value = starpower_active
 			}
 			output = {id = <tubes_widget_id>}
 		}
-		attachhudwidget {
+		AttachHudWidget {
 			Input = {
 				value = band2_starpower
 			}
 			output = {
-				Type = setubes
+				type = SETubes
 				desc_id = <parent_id>
 				Band = true
 				band_num = 2
@@ -578,70 +578,70 @@ script hud_attach_widget_band_faceoff_meter
 			}
 		}
 		<tubes_widget_id> = <observer_id>
-		attachhudwidget {
+		AttachHudWidget {
 			Input = {
 				object = band2_status
 				value = starpower_active
 			}
 			output = {id = <tubes_widget_id>}
 		}
-		hud_setup_streak_meter_animation \{Player = 1
+		HUD_setup_streak_meter_animation \{player = 1
 			faceoff}
-		hud_setup_streak_meter_animation \{Player = 2
+		HUD_setup_streak_meter_animation \{player = 2
 			faceoff}
-		attachhudwidget {
+		AttachHudWidget {
 			Input = {
 				value = band1_streak
 			}
 			output = {
-				Type = seinttostring
+				type = SEIntToString
 				desc_id = <parent_id>
-				property = p1_streak_number_text
+				Property = p1_streak_number_text
 			}
 		}
-		attachhudwidget {
+		AttachHudWidget {
 			Input = {
 				value = band2_streak
 			}
 			output = {
-				Type = seinttostring
+				type = SEIntToString
 				desc_id = <parent_id>
-				property = p2_streak_number_text
+				Property = p2_streak_number_text
 			}
 		}
 	else
-		attachhudwidget {
+		AttachHudWidget {
 			Input = {
 				object = player1_status
 				value = score
 			}
 			output = {
-				Type = seinttostring
+				type = SEIntToString
 				desc_id = <parent_id>
-				property = score_1_text
+				Property = score_1_text
 			}
 		}
-		attachhudwidget {
+		AttachHudWidget {
 			Input = {
 				object = player2_status
 				value = score
 			}
 			output = {
-				Type = seinttostring
+				type = SEIntToString
 				desc_id = <parent_id>
-				property = score_2_text
+				Property = score_2_text
 			}
 		}
-		attachhudwidget {
+		AttachHudWidget {
 			Input = {
 				object = player1_status
 				value = multiplier
 			}
 			output = {
-				Type = semultipliernixie
+				type = SEMultiplierNixie
 				desc_id = <parent_id>
-				property = hud_bb_multiplier_nixie_1_texture
-				Player = 1
+				Property = hud_bb_multiplier_nixie_1_texture
+				player = 1
 				textures = [
 					HUD_score_nixie_1a
 					HUD_score_nixie_2a
@@ -656,16 +656,16 @@ script hud_attach_widget_band_faceoff_meter
 				]
 			}
 		}
-		attachhudwidget {
+		AttachHudWidget {
 			Input = {
 				object = player2_status
 				value = multiplier
 			}
 			output = {
-				Type = semultipliernixie
+				type = SEMultiplierNixie
 				desc_id = <parent_id>
-				property = hud_bb_multiplier_nixie_2_texture
-				Player = 2
+				Property = hud_bb_multiplier_nixie_2_texture
+				player = 2
 				textures = [
 					HUD_score_nixie_1a
 					HUD_score_nixie_2a
@@ -680,15 +680,15 @@ script hud_attach_widget_band_faceoff_meter
 				]
 			}
 		}
-		attachhudwidget {
+		AttachHudWidget {
 			Input = {
 				object = player1_status
 				value = starpower_amount
 			}
 			output = {
-				Type = setubes
+				type = SETubes
 				desc_id = <parent_id>
-				Player = 1
+				player = 1
 				default_scale = (1.0, 1.0)
 				value_range = [0.0 100.0]
 				textures = [fill_1_1_texture fill_1_2_texture fill_1_3_texture fill_1_4_texture fill_1_5_texture fill_1_6_texture]
@@ -696,22 +696,22 @@ script hud_attach_widget_band_faceoff_meter
 			}
 		}
 		<tubes_widget_id> = <observer_id>
-		attachhudwidget {
+		AttachHudWidget {
 			Input = {
 				object = player1_status
 				value = starpower_active
 			}
 			output = {id = <tubes_widget_id>}
 		}
-		attachhudwidget {
+		AttachHudWidget {
 			Input = {
 				object = player2_status
 				value = starpower_amount
 			}
 			output = {
-				Type = setubes
+				type = SETubes
 				desc_id = <parent_id>
-				Player = 2
+				player = 2
 				default_scale = (1.0, 1.0)
 				value_range = [0.0 100.0]
 				textures = [fill_2_1_texture fill_2_2_texture fill_2_3_texture fill_2_4_texture fill_2_5_texture fill_2_6_texture]
@@ -719,7 +719,7 @@ script hud_attach_widget_band_faceoff_meter
 			}
 		}
 		<tubes_widget_id> = <observer_id>
-		attachhudwidget {
+		AttachHudWidget {
 			Input = {
 				object = player2_status
 				value = starpower_active
@@ -727,43 +727,43 @@ script hud_attach_widget_band_faceoff_meter
 			output = {id = <tubes_widget_id>}
 		}
 		if NOT ($boss_battle = 1)
-			hud_setup_streak_meter_animation \{Player = 1
+			HUD_setup_streak_meter_animation \{player = 1
 				faceoff}
-			hud_setup_streak_meter_animation \{Player = 2
+			HUD_setup_streak_meter_animation \{player = 2
 				faceoff}
-			if playerinfoequals \{1
-					part = vocals}
+			if PlayerInfoEquals \{1
+					part = Vocals}
 				<divide_by_10> = true
 			else
-				<divide_by_10> = FALSE
+				<divide_by_10> = false
 			endif
-			attachhudwidget {
+			AttachHudWidget {
 				Input = {
 					object = player1_status
 					value = note_streak
 				}
 				output = {
-					Type = seinttostring
+					type = SEIntToString
 					desc_id = <parent_id>
-					property = p1_streak_number_text
+					Property = p1_streak_number_text
 					divide_by_10 = <divide_by_10>
 				}
 			}
-			if playerinfoequals \{2
-					part = vocals}
+			if PlayerInfoEquals \{2
+					part = Vocals}
 				<divide_by_10> = true
 			else
-				<divide_by_10> = FALSE
+				<divide_by_10> = false
 			endif
-			attachhudwidget {
+			AttachHudWidget {
 				Input = {
 					object = player2_status
 					value = note_streak
 				}
 				output = {
-					Type = seinttostring
+					type = SEIntToString
 					desc_id = <parent_id>
-					property = p2_streak_number_text
+					Property = p2_streak_number_text
 					divide_by_10 = <divide_by_10>
 				}
 			}
@@ -771,23 +771,23 @@ script hud_attach_widget_band_faceoff_meter
 	endif
 endscript
 
-script hud_attach_widget_player_multiplier 
+script HUD_attach_widget_player_multiplier 
 	RequireParams \{[
 			parent_id
-			Player
+			player
 		]
 		all}
-	getplayerinfo <Player> checksum
-	ResolveScreenElementID id = <parent_id> param = id
-	attachhudwidget {
+	GetPlayerInfo <player> checksum
+	ResolveScreenElementId id = <parent_id> param = id
+	AttachHudWidget {
 		Input = {
 			object = <checksum>
 			value = note_streak
 		}
 		output = {
-			Type = senotestreaklights
+			type = SENoteStreakLights
 			desc_id = <id>
-			Player = <Player>
+			player = <player>
 			bulb_textures = [
 				[
 					HUD_score_light_0
@@ -814,7 +814,7 @@ script hud_attach_widget_player_multiplier
 		}
 	}
 	<note_streak_widget_id> = <observer_id>
-	attachhudwidget {
+	AttachHudWidget {
 		Input = {
 			object = <checksum>
 			value = starpower_active
@@ -822,75 +822,75 @@ script hud_attach_widget_player_multiplier
 		output = {id = <note_streak_widget_id>}
 	}
 	textures = [
-		band_hud_score_1a
-		band_hud_score_2a
-		band_hud_score_3a
-		band_hud_score_4a
+		band_HUD_score_1a
+		band_HUD_score_2a
+		band_HUD_score_3a
+		band_HUD_score_4a
 	]
-	if playerinfoequals <Player> part = vocals
+	if PlayerInfoEquals <player> part = Vocals
 		sp_textures = [
-			vocal_hud_score_2a
-			vocal_hud_score_4a
-			vocal_hud_score_6a
-			vocal_hud_score_8b
+			vocal_HUD_score_2a
+			vocal_HUD_score_4a
+			vocal_HUD_score_6a
+			vocal_HUD_score_8b
 		]
 	else
 		sp_textures = [
-			band_hud_score_2b
-			band_hud_score_4b
-			band_hud_score_6b
-			band_hud_score_8b
+			band_HUD_score_2b
+			band_HUD_score_4b
+			band_HUD_score_6b
+			band_HUD_score_8b
 		]
 	endif
-	if gamemode_isbandscoring
-		<default_mul_tex> = band_hud_score_1a
-		getplayerinfo <Player> part
+	if GameMode_IsBandScoring
+		<default_mul_tex> = band_HUD_score_1a
+		GetPlayerInfo <player> part
 		switch <part>
-			case bass
+			case Bass
 			<default_mul_tex> = higway_icon_bass
 			case drum
 			<default_mul_tex> = higway_icon_drum
 			case guitar
 			<default_mul_tex> = higway_icon_guitar
-			case vocals
+			case Vocals
 			<default_mul_tex> = higway_icon_mic
 		endswitch
-		SetArrayElement ArrayName = textures index = 0 NewValue = <default_mul_tex>
+		SetArrayElement ArrayName = textures index = 0 newvalue = <default_mul_tex>
 	endif
-	attachhudwidget {
+	AttachHudWidget {
 		Input = {
 			object = <checksum>
 			value = multiplier
 		}
 		output = {
-			Type = semultipliernixie
+			type = SEMultiplierNixie
 			desc_id = <id>
-			property = nixie_texture
-			Player = <Player>
+			Property = nixie_texture
+			player = <player>
 			textures = <textures>
 			sp_textures = <sp_textures>
 		}
 	}
 endscript
 
-script hud_attach_widget_player_star_power 
+script HUD_attach_widget_player_star_power 
 	RequireParams \{[
 			parent_id
-			Player
+			player
 		]
 		all}
-	getplayerinfo <Player> checksum
-	ResolveScreenElementID id = <parent_id> param = id
+	GetPlayerInfo <player> checksum
+	ResolveScreenElementId id = <parent_id> param = id
 	if ($current_num_players > 1)
-		attachhudwidget {
+		AttachHudWidget {
 			Input = {
 				object = <checksum>
 				value = starpower_amount
 			}
 			output = {
-				Type = setubes
+				type = SETubes
 				desc_id = <id>
-				Player = <Player>
+				player = <player>
 				value_range = [0.0 100.0]
 				textures = [glow0_texture glow1_texture glow2_texture]
 				scales = [glow0_scale glow1_scale glow2_scale]
@@ -899,19 +899,19 @@ script hud_attach_widget_player_star_power
 	endif
 endscript
 
-script hud_setup_streak_meter_animation \{Player = 1}
+script HUD_setup_streak_meter_animation \{player = 1}
 	if NOT GotParam \{faceoff}
-		if hud_root :desc_resolvealias \{Name = alias_band_meter
+		if hud_root :Desc_ResolveAlias \{name = alias_band_meter
 				param = band_meter}
-			<band_meter> :desc_resolvealias Name = alias_streak param = streak_id
+			<band_meter> :Desc_ResolveAlias name = alias_streak param = streak_id
 		endif
 	else
-		if hud_root :desc_resolvealias \{Name = alias_faceoff_meter
+		if hud_root :Desc_ResolveAlias \{name = alias_faceoff_meter
 				param = faceoff_meter}
-			if (<Player> = 1)
-				<faceoff_meter> :desc_resolvealias Name = alias_streak_p1 param = streak_id
+			if (<player> = 1)
+				<faceoff_meter> :Desc_ResolveAlias name = alias_streak_p1 param = streak_id
 			else
-				<faceoff_meter> :desc_resolvealias Name = alias_streak_p2 param = streak_id
+				<faceoff_meter> :Desc_ResolveAlias name = alias_streak_p2 param = streak_id
 			endif
 		endif
 	endif
@@ -921,37 +921,37 @@ script hud_setup_streak_meter_animation \{Player = 1}
 	if ScreenElementExists id = <streak_id>
 		GetScreenElementProps id = <streak_id>
 		if NOT GotParam \{faceoff}
-			hide_pos = (<Pos> - (0.0, 45.0))
+			hide_pos = (<pos> - (0.0, 45.0))
 		else
-			if (<Player> = 1)
-				hide_pos = (<Pos> + (200.0, 0.0))
+			if (<player> = 1)
+				hide_pos = (<pos> + (200.0, 0.0))
 			else
-				hide_pos = (<Pos> - (200.0, 0.0))
+				hide_pos = (<pos> - (200.0, 0.0))
 			endif
 		endif
-		streak_pos = <Pos>
-		if gamemode_isbandscoring
-			if (<Player> = 1)
+		streak_pos = <pos>
+		if GameMode_IsBandScoring
+			if (<player> = 1)
 				event_handlers = [
-					{band1_streak_started SetScreenElementProps params = {id = <streak_id> time = 0.1 Pos = <streak_pos>}}
-					{band1_streak_ended SetScreenElementProps params = {id = <streak_id> time = 0.3 Pos = <hide_pos>}}
+					{band1_streak_started SetScreenElementProps params = {id = <streak_id> time = 0.1 pos = <streak_pos>}}
+					{band1_streak_ended SetScreenElementProps params = {id = <streak_id> time = 0.3 pos = <hide_pos>}}
 				]
-			elseif (<Player> = 2)
+			elseif (<player> = 2)
 				event_handlers = [
-					{band2_streak_started SetScreenElementProps params = {id = <streak_id> time = 0.1 Pos = <streak_pos>}}
-					{band2_streak_ended SetScreenElementProps params = {id = <streak_id> time = 0.3 Pos = <hide_pos>}}
+					{band2_streak_started SetScreenElementProps params = {id = <streak_id> time = 0.1 pos = <streak_pos>}}
+					{band2_streak_ended SetScreenElementProps params = {id = <streak_id> time = 0.3 pos = <hide_pos>}}
 				]
 			endif
 		else
-			if (<Player> = 1)
+			if (<player> = 1)
 				event_handlers = [
-					{player1_streak_started SetScreenElementProps params = {id = <streak_id> time = 0.1 Pos = <streak_pos>}}
-					{player1_streak_ended SetScreenElementProps params = {id = <streak_id> time = 0.3 Pos = <hide_pos>}}
+					{player1_streak_started SetScreenElementProps params = {id = <streak_id> time = 0.1 pos = <streak_pos>}}
+					{player1_streak_ended SetScreenElementProps params = {id = <streak_id> time = 0.3 pos = <hide_pos>}}
 				]
-			elseif (<Player> = 2)
+			elseif (<player> = 2)
 				event_handlers = [
-					{player2_streak_started SetScreenElementProps params = {id = <streak_id> time = 0.1 Pos = <streak_pos>}}
-					{player2_streak_ended SetScreenElementProps params = {id = <streak_id> time = 0.3 Pos = <hide_pos>}}
+					{player2_streak_started SetScreenElementProps params = {id = <streak_id> time = 0.1 pos = <streak_pos>}}
+					{player2_streak_ended SetScreenElementProps params = {id = <streak_id> time = 0.3 pos = <hide_pos>}}
 				]
 			endif
 		endif
@@ -959,42 +959,42 @@ script hud_setup_streak_meter_animation \{Player = 1}
 			id = <streak_id>
 			event_handlers = <event_handlers>
 			replace_handlers
-			Pos = <hide_pos>
+			pos = <hide_pos>
 		}
 	endif
 endscript
 
-script hud_setup_secondary_starpower_bulb_animation 
-	hud_root :desc_resolvealias \{Name = alias_band_meter
+script HUD_setup_secondary_starpower_bulb_animation 
+	hud_root :Desc_ResolveAlias \{name = alias_band_meter
 		param = band_meter}
-	<band_meter> :desc_resolvealias Name = alias_secondary_bulbs param = container_id
+	<band_meter> :Desc_ResolveAlias name = alias_secondary_bulbs param = container_id
 	if ScreenElementExists id = <container_id>
 		GetScreenElementProps id = <container_id>
-		hide_pos = (<Pos> + (-15.0, 60.0))
-		show_pos = <Pos>
+		hide_pos = (<pos> + (-15.0, 60.0))
+		show_pos = <pos>
 		event_handlers = [
-			{starpower_bulbs_unhide SetScreenElementProps params = {id = <container_id> time = 0.3 Pos = <show_pos>}}
-			{starpower_bulbs_hide SetScreenElementProps params = {id = <container_id> time = 0.3 Pos = <hide_pos>}}
+			{starpower_bulbs_unhide SetScreenElementProps params = {id = <container_id> time = 0.3 pos = <show_pos>}}
+			{starpower_bulbs_hide SetScreenElementProps params = {id = <container_id> time = 0.3 pos = <hide_pos>}}
 		]
 		SetScreenElementProps {
 			id = <container_id>
 			event_handlers = <event_handlers>
 			replace_handlers
-			Pos = <hide_pos>
+			pos = <hide_pos>
 		}
 	endif
 endscript
 
-script hud_start_blink_rock_meter 
-	SpawnScriptLater \{hud_start_blink_rock_meter_spawn}
+script HUD_start_blink_rock_meter 
+	SpawnScriptLater \{HUD_start_blink_rock_meter_spawn}
 endscript
 
-script hud_start_blink_rock_meter_spawn 
+script HUD_start_blink_rock_meter_spawn 
 	if ScreenElementExists \{id = hud_root}
-		if hud_root :desc_resolvealias \{Name = alias_band_meter
+		if hud_root :Desc_ResolveAlias \{name = alias_band_meter
 				param = band_meter}
 			if ScreenElementExists id = <band_meter>
-				if <band_meter> :desc_resolvealias Name = alias_hud_meter_red_bg param = id
+				if <band_meter> :Desc_ResolveAlias name = alias_HUD_meter_red_bg param = id
 					begin
 					if NOT ScreenElementExists id = <id>
 						break
@@ -1005,7 +1005,7 @@ script hud_start_blink_rock_meter_spawn
 						time = 0.1
 					}
 					Wait \{0.1
-						Seconds}
+						seconds}
 					if NOT ScreenElementExists id = <id>
 						break
 					endif
@@ -1015,7 +1015,7 @@ script hud_start_blink_rock_meter_spawn
 						time = 0.1
 					}
 					Wait \{0.1
-						Seconds}
+						seconds}
 					repeat
 				endif
 			endif
@@ -1023,13 +1023,13 @@ script hud_start_blink_rock_meter_spawn
 	endif
 endscript
 
-script hud_stop_blink_rock_meter 
-	KillSpawnedScript \{Name = hud_start_blink_rock_meter_spawn}
+script HUD_stop_blink_rock_meter 
+	KillSpawnedScript \{name = HUD_start_blink_rock_meter_spawn}
 	if ScreenElementExists \{id = hud_root}
-		if hud_root :desc_resolvealias \{Name = alias_band_meter
+		if hud_root :Desc_ResolveAlias \{name = alias_band_meter
 				param = band_meter}
 			if ScreenElementExists id = <band_meter>
-				if <band_meter> :desc_resolvealias Name = alias_hud_meter_red_bg param = id
+				if <band_meter> :Desc_ResolveAlias name = alias_HUD_meter_red_bg param = id
 					if ScreenElementExists id = <id>
 						SetScreenElementProps {
 							id = <id>

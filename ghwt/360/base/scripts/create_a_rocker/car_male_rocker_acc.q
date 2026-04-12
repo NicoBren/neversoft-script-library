@@ -1,28 +1,28 @@
-cas_male_acc_left = [
+CAS_Male_Acc_Left = [
 	{
-		desc_id = None
-		frontend_desc = qs(0x9c1b5214)
+		desc_id = none
+		frontend_desc = qs("None")
 	}
 	{
 		desc_id = m_bmtl_acc_llars
 		mesh = 'models/CAR/Male/M_Bmtl_Acc_LLars.skin'
-		frontend_desc = qs(0xb342bd51)
+		frontend_desc = qs("\LPin Pad")
 		genre = [
-			`black	metal`
+			`Black Metal`
 		]
 		materials = [
-			m_bmtl_acc_llars_primary
+			M_Bmtl_Acc_LLars_Primary
 		]
 	}
 	{
 		desc_id = m_bmtl_acc_ltripleband
 		mesh = 'models/CAR/Male/M_Bmtl_Acc_LTripleBand.skin'
-		frontend_desc = qs(0x795966bf)
+		frontend_desc = qs("\L1, 2, 3 Spikes")
 		genre = [
-			`black	metal`
+			`Black Metal`
 		]
 		materials = [
-			m_bmtl_acc_ltripleband_primary
+			M_Bmtl_Acc_LTripleBand_Primary
 		]
 		price = 250
 		locked
@@ -30,12 +30,12 @@ cas_male_acc_left = [
 	{
 		desc_id = m_bmtl_acc_lblackspike
 		mesh = 'models/CAR/Male/M_Bmtl_Acc_LBlackspike.skin'
-		frontend_desc = qs(0xc9d34678)
+		frontend_desc = qs("\LSharp Wit")
 		genre = [
-			`black	metal`
+			`Black Metal`
 		]
 		materials = [
-			m_bmtl_acc_lblackspike_primary
+			M_Bmtl_Acc_LBlackspike_Primary
 		]
 		price = 450
 		locked
@@ -43,12 +43,12 @@ cas_male_acc_left = [
 	{
 		desc_id = m_bmtl_acc_lstichband
 		mesh = 'models/CAR/Male/M_bmtl_Acc_LStichBand.skin'
-		frontend_desc = qs(0xb481c39e)
+		frontend_desc = qs("\LStitchy Wrist")
 		genre = [
-			`black	metal`
+			`Black Metal`
 		]
 		materials = [
-			m_bmtl_acc_lstichband_primary
+			M_Bmtl_Acc_LStichBand_Primary
 		]
 		price = 350
 		locked
@@ -56,100 +56,100 @@ cas_male_acc_left = [
 	{
 		desc_id = m_clsc_acc_lbeads
 		mesh = 'models/CAR/Male/M_Clsc_Acc_LBeads.skin'
-		frontend_desc = qs(0x1c500643)
+		frontend_desc = qs("\LLunar Beads")
 		genre = [
-			`classic	rock`
+			`Classic Rock`
 		]
 		materials = [
-			m_clsc_acc_lbeads_primary
+			M_Clsc_Acc_LBeads_Primary
 		]
 		price = 210
 		locked
-		polaroid = p_m_clsc_acc_lbeads
+		polaroid = P_M_Clsc_Acc_LBeads
 	}
 	{
 		desc_id = m_glam_acc_lmadmax
 		mesh = 'models/CAR/Male/M_Glam_ACC_LMadMax.skin'
-		frontend_desc = qs(0x298f14e0)
+		frontend_desc = qs("\LMax Out")
 		genre = [
-			`glam	rock`
+			`Glam Rock`
 		]
 		materials = [
-			m_glam_acc_lmadmax_primary
+			M_Glam_ACC_LMadMax_Primary
 		]
 		price = 175
 	}
 	{
-		desc_id = m_glam_accl_kiss
+		desc_id = M_Glam_AccL_Kiss
 		mesh = 'models/CAR/Male/M_Glam_AccL_Kiss.skin'
-		frontend_desc = qs(0x85946bf1)
+		frontend_desc = qs("\LStar Arm East")
 		genre = [
-			`glam	rock`
+			`Glam Rock`
 		]
 		materials = [
-			m_glam_accl_kiss_primary
-			m_glam_accl_kiss_secondary
+			M_Glam_AccL_Kiss_Primary
+			M_Glam_AccL_Kiss_Secondary
 		]
 		price = 750
 	}
 	{
 		desc_id = m_glam_acc_lwristband
 		mesh = 'models/CAR/Male/M_GLAM_Acc_LWristBand.skin'
-		frontend_desc = qs(0x92108abb)
+		frontend_desc = qs("\LFashionably Sweaty")
 		genre = [
-			`glam	rock`
+			`Glam Rock`
 		]
 		materials = [
-			m_glam_acc_lwristband_primary
+			M_GLAM_Acc_LWristBand_Primary
 		]
 		price = 150
 		locked
-		polaroid = p_m_glam_acc_lwristband
+		polaroid = P_M_GLAM_Acc_LWristBand
 	}
 	{
-		desc_id = m_goth_acc_lstrait
+		desc_id = M_Goth_Acc_LStrait
 		mesh = 'models/CAR/Male/M_Goth_Acc_LStrait.skin'
-		frontend_desc = qs(0x53a4a159)
+		frontend_desc = qs("\LWrist Snuggler")
 		genre = [
-			goth
+			Goth
 		]
 		materials = [
-			m_goth_acc_lstrait_primary
+			M_Goth_Acc_LStrait_Primary
 		]
 		price = 295
 	}
 	{
-		desc_id = m_goth_acc_lstraps
+		desc_id = M_Goth_Acc_LStraps
 		mesh = 'models/CAR/Male/M_Goth_Acc_LStraps.skin'
 		genre = [
-			goth
+			Goth
 		]
-		frontend_desc = qs(0x5e6e48cd)
+		frontend_desc = qs("\LDemo Wrap")
 		price = 185
 	}
 	{
-		desc_id = m_metl_acc_lzakk
+		desc_id = M_Metl_Acc_LZakk
 		mesh = 'models/CAR/Male/M_Metl_Acc_LZakk.skin'
-		frontend_desc = qs(0x998c7df8)
+		frontend_desc = qs("\LBuckle Band")
 		genre = [
-			`heavy	metal`
+			`Heavy Metal`
 		]
 	}
 	{
 		desc_id = m_metl_acc_lhole
 		mesh = 'models/CAR/Male/M_Metl_Acc_LHole.skin'
-		frontend_desc = qs(0x5cd65233)
+		frontend_desc = qs("\LHoliband")
 		genre = [
-			`heavy	metal`
+			`Heavy Metal`
 		]
 		price = 150
 	}
 	{
 		desc_id = m_metl_acc_lbarbracer
 		mesh = 'models/CAR/Male/M_Metl_Acc_LBarBracer.skin'
-		frontend_desc = qs(0x5b2ee844)
+		frontend_desc = qs("\LBarbarian Bracer")
 		genre = [
-			`heavy	metal`
+			`Heavy Metal`
 		]
 		price = 385
 	}
@@ -157,156 +157,156 @@ cas_male_acc_left = [
 		desc_id = m_pop_acc_lband
 		mesh = 'models/CAR/Male/M_Pop_Acc_LBand.skin'
 		materials = [
-			m_pop_acc_lband_primary
+			M_Pop_Acc_LBand_Primary
 		]
-		frontend_desc = qs(0x176407e2)
+		frontend_desc = qs("\LMackEnchow")
 		genre = [
-			pop
+			Pop
 		]
 	}
 	{
-		desc_id = m_punk_acc_lleather
+		desc_id = M_Punk_Acc_LLeather
 		mesh = 'models/CAR/Male/M_Punk_Acc_LLeather.skin'
-		frontend_desc = qs(0xf07d9852)
+		frontend_desc = qs("\LDiamond Head")
 		genre = [
-			punk
-			rock
-			`heavy	metal`
+			Punk
+			Rock
+			`Heavy Metal`
 		]
 		price = 175
 	}
 	{
 		desc_id = m_punk_acc_lspike
 		mesh = 'models/CAR/Male/M_Punk_Acc_LSpike.skin'
-		frontend_desc = qs(0xef9cd458)
+		frontend_desc = qs("\LTri Spike")
 		genre = [
-			punk
-			rock
-			`heavy	metal`
+			Punk
+			Rock
+			`Heavy Metal`
 		]
 		price = 150
 	}
 	{
 		desc_id = m_punk_acc_lglvwatch
 		mesh = 'models/CAR/Male/M_Punk_Acc_LGlvwatch.skin'
-		frontend_desc = qs(0xaaeae389)
+		frontend_desc = qs("\LGlove N Time")
 		genre = [
-			punk
-			rock
-			`heavy	metal`
+			Punk
+			Rock
+			`Heavy Metal`
 		]
 		price = 195
 	}
 	{
 		desc_id = m_punk_acc_lbands
 		mesh = 'models/CAR/Male/M_Punk_Acc_Lbands.skin'
-		frontend_desc = qs(0x04fae49c)
+		frontend_desc = qs("\LHoops")
 		genre = [
-			punk
-			rock
-			`heavy	metal`
+			Punk
+			Rock
+			`Heavy Metal`
 		]
 		price = 110
 	}
 	{
-		desc_id = m_punk_acc_lrings
+		desc_id = M_Punk_Acc_LRings
 		mesh = 'models/CAR/Male/M_Punk_Acc_LRings.skin'
-		frontend_desc = qs(0xf48b40b9)
+		frontend_desc = qs("\LRings")
 		genre = [
-			punk
-			rock
-			`heavy	metal`
+			Punk
+			Rock
+			`Heavy Metal`
 		]
 		price = 170
 	}
 	{
-		desc_id = m_punk_acc_lmetalskull
+		desc_id = M_Punk_Acc_LMetalskull
 		mesh = 'models/CAR/Male/M_Punk_Acc_LMetalskull.skin'
-		frontend_desc = qs(0xbade3d69)
+		frontend_desc = qs("\LDeathband")
 		genre = [
-			punk
-			rock
-			`heavy	metal`
+			Punk
+			Rock
+			`Heavy Metal`
 		]
 		price = 245
 	}
 	{
 		desc_id = m_rock_acc_lbone
 		mesh = 'models/CAR/Male/M_Rock_Acc_LBone.skin'
-		frontend_desc = qs(0x29a5df8c)
+		frontend_desc = qs("\LBoney Digits")
 		genre = [
-			rock
+			Rock
 		]
 		price = 110
 	}
 	{
-		desc_id = m_rock_acc_lwatch
+		desc_id = M_Rock_Acc_LWatch
 		mesh = 'models/CAR/Male/M_Rock_Acc_LWatch.skin'
-		frontend_desc = qs(0xd89e7a4c)
+		frontend_desc = qs("\LLeather Piece")
 		genre = [
-			rock
+			Rock
 		]
 		price = 185
 	}
 	{
-		desc_id = m_rock_acc_lskullwatch
+		desc_id = M_Rock_Acc_LSkullwatch
 		mesh = 'models/CAR/Male/M_Rock_Acc_LSkullwatch.skin'
-		frontend_desc = qs(0x893e3b21)
+		frontend_desc = qs("\LSkull Piece")
 		genre = [
-			rock
+			Rock
 		]
 		price = 280
 		locked
 	}
 	{
-		desc_id = m_rock_acc_lstrap
+		desc_id = M_Rock_Acc_LStrap
 		mesh = 'models/CAR/Male/M_Rock_Acc_LStrap.skin'
 		materials = [
-			m_rock_acc_lstrap_primary
+			M_Rock_Acc_LStrap_Primary
 		]
-		frontend_desc = qs(0xd600f4a9)
+		frontend_desc = qs("\LBanded Bracer")
 		genre = [
-			rock
+			Rock
 		]
 		price = 110
 	}
 	{
 		desc_id = m_goth_acc_lbuckleglove
 		mesh = 'models/CAR/Male/M_Goth_Acc_LBuckleGlove.skin'
-		frontend_desc = qs(0xef71f238)
+		frontend_desc = qs("\LVon Glovland")
 		genre = [
-			goth
-			rock
-			`heavy	metal`
+			Goth
+			Rock
+			`Heavy Metal`
 		]
 		price = 210
 	}
 ]
-cas_male_acc_right = [
+CAS_Male_Acc_Right = [
 	{
-		desc_id = None
-		frontend_desc = qs(0x9c1b5214)
+		desc_id = none
+		frontend_desc = qs("None")
 	}
 	{
-		desc_id = m_bmtl_acc_rlars
+		desc_id = M_Bmtl_Acc_RLars
 		mesh = 'models/CAR/Male/M_Bmtl_Acc_RLars.skin'
-		frontend_desc = qs(0xde50a229)
+		frontend_desc = qs("\LWar Hammer")
 		genre = [
-			`black	metal`
+			`Black Metal`
 		]
 		materials = [
-			m_bmtl_acc_rlars_primary
+			M_Bmtl_Acc_RLars_Primary
 		]
 	}
 	{
 		desc_id = m_bmtl_acc_rwristguard
 		mesh = 'models/CAR/Male/M_Bmtl_Acc_RWristGuard.skin'
 		materials = [
-			m_bmtl_acc_rwristguard_primary
+			M_Bmtl_Acc_RWristGuard_Primary
 		]
-		frontend_desc = qs(0xbb2eeae6)
+		frontend_desc = qs("\LSpiked Punch")
 		genre = [
-			`black	metal`
+			`Black Metal`
 		]
 		price = 255
 	}
@@ -314,11 +314,11 @@ cas_male_acc_right = [
 		desc_id = m_bmtl_acc_rspike
 		mesh = 'models/CAR/Male/M_Bmtl_Acc_RSpike.skin'
 		materials = [
-			m_bmtl_acc_rspike_primary
+			M_Bmtl_Acc_RSpike_Primary
 		]
-		frontend_desc = qs(0x899ad0fc)
+		frontend_desc = qs("\LOver Spiked Punch")
 		genre = [
-			`black	metal`
+			`Black Metal`
 		]
 		price = 265
 	}
@@ -326,364 +326,364 @@ cas_male_acc_right = [
 		desc_id = m_bmtl_acc_rlongspike
 		mesh = 'models/CAR/Male/M_Bmtl_Acc_Rlongspike.skin'
 		materials = [
-			m_bmtl_acc_rlongspike_primary
+			M_Bmtl_Acc_Rlongspike_Primary
 		]
-		frontend_desc = qs(0xce3cad66)
+		frontend_desc = qs("\LWatch Yer Face")
 		genre = [
-			`black	metal`
+			`Black Metal`
 		]
 		price = 305
 	}
 	{
-		desc_id = m_clsc_accs_rdrkbnd
+		desc_id = M_Clsc_accs_RDrkbnd
 		mesh = 'models/CAR/Male/M_Clsc_accs_RDrkbnd.skin'
-		frontend_desc = qs(0x384b3f6a)
+		frontend_desc = qs("\LDrake Wrap")
 		genre = [
-			`classic	rock`
+			`Classic Rock`
 		]
 		price = 150
 	}
 	{
-		desc_id = m_clsc_accs_rbracelet
+		desc_id = M_Clsc_Accs_RBracelet
 		mesh = 'models/CAR/Male/M_Clsc_Accs_RBracelet.skin'
-		frontend_desc = qs(0xec8098e7)
+		frontend_desc = qs("\LXcessive Rings")
 		genre = [
-			`classic	rock`
+			`Classic Rock`
 		]
 		price = 120
 	}
 	{
 		desc_id = m_glam_acc_rmesh
 		mesh = 'models/CAR/Male/M_Glam_Acc_Rmesh.skin'
-		frontend_desc = qs(0x237726d7)
+		frontend_desc = qs("\LPicture Show")
 		genre = [
-			`glam	rock`
+			`Glam Rock`
 		]
 		price = 240
 	}
 	{
-		desc_id = m_glam_accr_kiss
+		desc_id = M_Glam_AccR_Kiss
 		mesh = 'models/CAR/Male/M_Glam_AccR_Kiss.skin'
-		frontend_desc = qs(0x209b1fb1)
+		frontend_desc = qs("\LStar Arm West")
 		materials = [
-			m_glam_accr_kiss_primary
-			m_glam_accr_kiss_secondary
+			M_Glam_AccR_Kiss_Primary
+			M_Glam_AccR_Kiss_Secondary
 		]
 		genre = [
-			`glam	rock`
+			`Glam Rock`
 		]
 		price = 750
 	}
 	{
 		desc_id = m_glam_acc_rdenimband
 		mesh = 'models/CAR/Male/M_GLAM_Acc_RDenimBand.skin'
-		frontend_desc = qs(0xbc8c80e5)
+		frontend_desc = qs("\LDenim & Stones")
 		materials = [
-			m_glam_acc_rdenimband_primary
+			M_GLAM_Acc_RDenimBand_Primary
 		]
 		genre = [
-			`glam	rock`
+			`Glam Rock`
 		]
 		price = 100
 		locked
-		polaroid = p_m_glam_acc_rdenimband
+		polaroid = P_M_GLAM_Acc_RDenimBand
 	}
 	{
 		desc_id = m_glam_acc_rbaggywarmer
 		mesh = 'models/CAR/Male/M_GLAM_Acc_RBaggyWarmer.skin'
-		frontend_desc = qs(0x295a2661)
+		frontend_desc = qs("\LBaggy Warmer")
 		materials = [
-			m_glam_acc_rbaggywarmer_primary
+			M_GLAM_Acc_RBaggyWarmer_Primary
 		]
 		genre = [
-			`glam	rock`
+			`Glam Rock`
 		]
 		price = 100
 	}
 	{
-		desc_id = m_goth_acc_warmerr
+		desc_id = M_Goth_Acc_warmerR
 		mesh = 'models/CAR/Male/M_Goth_Acc_warmerR.skin'
-		frontend_desc = qs(0x888ed208)
+		frontend_desc = qs("\LMetro Gauntlet")
 		genre = [
-			goth
+			Goth
 		]
 		price = 185
 	}
 	{
-		desc_id = m_metl_acc_rzakk
+		desc_id = M_Metl_Acc_RZakk
 		mesh = 'models/CAR/Male/M_Metl_Acc_RZakk.skin'
-		frontend_desc = qs(0x998c7df8)
+		frontend_desc = qs("\LBuckle Band")
 		genre = [
-			`heavy	metal`
+			`Heavy Metal`
 		]
 	}
 	{
-		desc_id = m_metl_acc_rstuds
+		desc_id = M_Metl_Acc_RStuds
 		mesh = 'models/CAR/Male/M_Metl_Acc_RStuds.skin'
-		frontend_desc = qs(0x9a8ba233)
+		frontend_desc = qs("\LMetal Studs")
 		genre = [
-			`heavy	metal`
+			`Heavy Metal`
 		]
 		price = 450
 	}
 	{
 		desc_id = m_metl_acc_rbarbracer
 		mesh = 'models/CAR/Male/M_Metl_Acc_RBarBracer.skin'
-		frontend_desc = qs(0x5b2ee844)
+		frontend_desc = qs("\LBarbarian Bracer")
 		genre = [
-			`heavy	metal`
+			`Heavy Metal`
 		]
 		price = 385
 	}
 	{
-		desc_id = m_pop_acc_rglove
+		desc_id = M_Pop_Acc_RGlove
 		mesh = 'models/CAR/Male/M_Pop_Acc_RGlove.skin'
 		materials = [
-			m_pop_acc_rglove_primary
+			M_Pop_Acc_RGlove_Primary
 		]
-		frontend_desc = qs(0x2f46772d)
+		frontend_desc = qs("\LFingerless")
 		genre = [
-			pop
+			Pop
 		]
 		price = 120
 	}
 	{
-		desc_id = m_punk_acc_rleather
+		desc_id = M_Punk_Acc_RLeather
 		mesh = 'models/CAR/Male/M_Punk_Acc_RLeather.skin'
-		frontend_desc = qs(0x534f1395)
+		frontend_desc = qs("\LLeathery Spike")
 		genre = [
-			punk
-			rock
-			`heavy	metal`
+			Punk
+			Rock
+			`Heavy Metal`
 		]
 		price = 205
 	}
 	{
-		desc_id = m_punk_acc_rbands
+		desc_id = M_Punk_Acc_RBands
 		mesh = 'models/CAR/Male/M_Punk_Acc_RBands.skin'
-		frontend_desc = qs(0x1075d20e)
+		frontend_desc = qs("\LDiamond Bands")
 		genre = [
-			punk
-			rock
-			`heavy	metal`
+			Punk
+			Rock
+			`Heavy Metal`
 		]
 		price = 315
 	}
 	{
-		desc_id = m_punk_acc_rchain
+		desc_id = M_Punk_Acc_RChain
 		mesh = 'models/CAR/Male/M_Punk_Acc_RChain.skin'
-		frontend_desc = qs(0x2c97e142)
+		frontend_desc = qs("\LTrue Chains")
 		genre = [
-			punk
-			rock
-			`heavy	metal`
+			Punk
+			Rock
+			`Heavy Metal`
 		]
 	}
 	{
-		desc_id = m_punk_acc_rrings
+		desc_id = M_Punk_Acc_RRings
 		mesh = 'models/CAR/Male/M_Punk_Acc_RRings.skin'
-		frontend_desc = qs(0xf48b40b9)
+		frontend_desc = qs("\LRings")
 		genre = [
-			punk
-			rock
-			`heavy	metal`
+			Punk
+			Rock
+			`Heavy Metal`
 		]
 		price = 210
 	}
 	{
 		desc_id = m_punk_acc_rspikeglove
 		mesh = 'models/CAR/Male/M_Punk_Acc_RSpikeglove.skin'
-		frontend_desc = qs(0x835fca25)
+		frontend_desc = qs("\LIdol Spikes")
 		genre = [
-			punk
-			rock
-			`heavy	metal`
+			Punk
+			Rock
+			`Heavy Metal`
 		]
 		price = 350
 	}
 	{
 		desc_id = m_rock_acc_rspike
 		mesh = 'models/CAR/Male/M_Rock_Acc_RSpike.skin'
-		frontend_desc = qs(0x19979245)
+		frontend_desc = qs("\LStudded Strap")
 		genre = [
-			rock
+			Rock
 		]
 		price = 250
 	}
 	{
-		desc_id = m_rock_acc_rstripe
+		desc_id = M_Rock_Acc_RStripe
 		mesh = 'models/CAR/Male/M_Rock_Acc_RStripe.skin'
-		frontend_desc = qs(0xc282eb8e)
+		frontend_desc = qs("\LStriper")
 		genre = [
-			rock
+			Rock
 		]
 		price = 275
 	}
 	{
-		desc_id = m_rock_acc_rbracelet
+		desc_id = M_Rock_Acc_RBracelet
 		mesh = 'models/CAR/Male/M_Rock_Acc_RBracelet.skin'
-		frontend_desc = qs(0x5aed855c)
+		frontend_desc = qs("\LTiki Time")
 		genre = [
-			rock
+			Rock
 		]
 	}
 	{
-		desc_id = m_rock_acc_rstrap
+		desc_id = M_Rock_Acc_RStrap
 		mesh = 'models/CAR/Male/M_Rock_Acc_RStrap.skin'
 		materials = [
-			m_rock_acc_rstrap_primary
+			M_Rock_Acc_RStrap_Primary
 		]
-		frontend_desc = qs(0xe1c32e88)
+		frontend_desc = qs("\LLittle Banded Bracer")
 		genre = [
-			rock
+			Rock
 		]
 		price = 100
 	}
 ]
-cas_male_acc_face = [
+CAS_Male_Acc_Face = [
 	{
-		desc_id = None
-		frontend_desc = qs(0x9c1b5214)
+		desc_id = none
+		frontend_desc = qs("None")
 		random_weight = 10.0
 	}
 	{
-		desc_id = m_clsc_glasses_avtr
-		frontend_desc = qs(0x51e24e08)
+		desc_id = M_Clsc_Glasses_Avtr
+		frontend_desc = qs("\LAviator")
 		mesh = 'models/CAR/Male/M_Clsc_Glasses_Avtr.skin'
 		deform_mesh = 'models/CAR/Male/M_Clsc_Glasses_Avtr_def.skin'
 		genre = [
-			`classic	rock`
+			`Classic Rock`
 		]
 		random_weight = 0.25
 		price = 125
 		locked
-		polaroid = p_m_clsc_glasses_avtr
+		polaroid = P_M_Clsc_Glasses_Avtr
 	}
 	{
 		desc_id = m_goth_glasses_ggls
-		frontend_desc = qs(0xcb4db5d5)
+		frontend_desc = qs("\LOggles")
 		mesh = 'models/CAR/Male/M_Goth_glasses_ggls.skin'
 		deform_mesh = 'models/CAR/Male/M_Goth_glasses_ggls_def.skin'
 		materials = [
-			m_goth_glasses_ggls_glass
+			M_Goth_glasses_ggls_Glass
 		]
 		genre = [
-			goth
-			punk
+			Goth
+			Punk
 		]
 		random_weight = 0.25
 		price = 200
 		locked
-		polaroid = p_m_goth_glasses_ggls
+		polaroid = P_M_Goth_glasses_ggls
 	}
 	{
-		desc_id = m_clsc_glasses_wtnose
-		frontend_desc = qs(0xabddb150)
+		desc_id = M_Clsc_Glasses_WtNose
+		frontend_desc = qs("\LWhite Noise")
 		mesh = 'models/CAR/Male/M_Clsc_Glasses_WtNose.skin'
 		deform_mesh = 'models/CAR/Male/M_Clsc_Glasses_WtNose_def.skin'
 		genre = [
-			`classic	rock`
+			`Classic Rock`
 		]
 		random_weight = 0.25
 	}
 	{
-		desc_id = m_clsc_glasses_round
-		frontend_desc = qs(0x67f363b3)
+		desc_id = M_Clsc_Glasses_Round
+		frontend_desc = qs("\LSherlocks")
 		mesh = 'models/CAR/Male/M_Clsc_Glasses_Round.skin'
 		deform_mesh = 'models/CAR/Male/M_Clsc_Glasses_Round_def.skin'
 		genre = [
-			`classic	rock`
+			`Classic Rock`
 		]
 		random_weight = 0.25
 	}
 	{
-		desc_id = m_clsc_glasses_round2
-		frontend_desc = qs(0xbc46543c)
+		desc_id = M_Clsc_Glasses_Round2
+		frontend_desc = qs("\LShady Rounds")
 		mesh = 'models/CAR/Male/M_Clsc_Glasses_Round2.skin'
 		materials = [
-			m_clsc_glasses_round2_glass
+			M_Clsc_Glasses_Round2_Glass
 		]
 		genre = [
-			`classic	rock`
+			`Classic Rock`
 		]
 		random_weight = 0.25
 	}
 	{
-		desc_id = m_pop_glasses_riot
-		frontend_desc = qs(0x9f3cc424)
+		desc_id = M_Pop_Glasses_Riot
+		frontend_desc = qs("\LRiot Shades")
 		mesh = 'models/CAR/Male/M_Pop_Glasses_Riot.skin'
 		materials = [
-			m_pop_glasses_riot_primary
+			M_Pop_Glasses_Riot_Primary
 		]
 		genre = [
-			pop
-			rock
+			Pop
+			Rock
 		]
 		random_weight = 0.25
 		price = 200
 	}
 	{
 		desc_id = m_metl_eyepatch
-		frontend_desc = qs(0xca374960)
+		frontend_desc = qs("\LEye Patch")
 		mesh = 'models/CAR/Male/M_Metl_acc_eyepatch.skin'
 		deform_mesh = 'models/CAR/Male/M_Metl_acc_eyepatch_def.skin'
 		materials = [
-			m_metl_acc_eyepatch_primary
+			M_Metl_acc_eyepatch_Primary
 		]
 		genre = [
-			`heavy	metal`
+			`Heavy Metal`
 		]
 		price = 1500
 		random_weight = 0.25
 		locked
-		polaroid = p_m_metl_acc_eyepatch
+		polaroid = P_M_Metl_Acc_Eyepatch
 	}
 ]
-cas_male_acc_ears = [
+CAS_Male_Acc_Ears = [
 	{
-		desc_id = None
-		frontend_desc = qs(0x9c1b5214)
+		desc_id = none
+		frontend_desc = qs("None")
 	}
 	{
-		desc_id = m_punk_acc_ring
-		frontend_desc = qs(0x24b9a37c)
+		desc_id = M_Punk_Acc_Ring
+		frontend_desc = qs("\LMinimalist")
 		mesh = 'models/CAR/Male/M_Punk_Acc_Ring.skin'
 		deform_mesh = 'models/CAR/Male/M_Punk_Acc_Ring_def.skin'
 		genre = [
-			punk
+			Punk
 		]
 		price = 50
 	}
 	{
-		desc_id = m_punk_acc_ring_02
-		frontend_desc = qs(0xd6439e14)
+		desc_id = M_Punk_Acc_Ring_02
+		frontend_desc = qs("\LThrough The Nose")
 		mesh = 'models/CAR/Male/M_Punk_Acc_Ring_02.skin'
 		deform_mesh = 'models/CAR/Male/M_Punk_Acc_Ring_02_def.skin'
 		genre = [
-			punk
-			`heavy	metal`
+			Punk
+			`Heavy Metal`
 		]
 		price = 150
-		polaroid = m_punk_acc_ring_02
+		polaroid = M_Punk_Acc_Ring_02
 		locked
 	}
 	{
 		desc_id = m_punk_acc_ring_03
-		frontend_desc = qs(0x4e043416)
+		frontend_desc = qs("\LLippy Brat")
 		mesh = 'models/CAR/Male/M_Punk_Acc_Ring_03.skin'
 		deform_mesh = 'models/CAR/Male/M_Punk_Acc_Ring_03_def.skin'
 		genre = [
-			punk
+			Punk
 		]
 		price = 100
 	}
 	{
-		desc_id = m_punk_acc_ring_04
-		frontend_desc = qs(0xd68d67f0)
+		desc_id = M_Punk_Acc_Ring_04
+		frontend_desc = qs("\LPunky Class")
 		mesh = 'models/CAR/Male/M_Punk_Acc_Ring_04.skin'
 		deform_mesh = 'models/CAR/Male/M_Punk_Acc_Ring_04_def.skin'
 		genre = [
-			punk
+			Punk
 		]
 		price = 150
 	}

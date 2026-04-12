@@ -29,7 +29,7 @@ script make_menu {
 		parent = root_window
 		pad_back_script = ui_event
 		pad_back_params = {event = menu_back}
-		Pos = (200.0, 175.0)
+		pos = (200.0, 175.0)
 		dims = (400.0, 450.0)
 		rot_angle = 0
 		pad_back_sound = ui_menu_select_sfx
@@ -49,10 +49,10 @@ script make_menu {
 		bg_dims = (1280.0, 720.0)
 		exclusive_device = ($primary_controller)
 		bg_scale = (0.95, 1.0)
-		scroll_down_sfx = generic_menu_up_or_down_sound
-		scroll_up_sfx = generic_menu_up_or_down_sound
+		Scroll_down_SFX = generic_menu_up_or_down_sound
+		Scroll_up_SFX = generic_menu_up_or_down_sound
 	}
-	SetScreenElementLock id = <parent> OFF
+	SetScreenElementLock id = <parent> off
 	if NOT GotParam \{color_scheme}
 		color_scheme = $cas_color_scheme
 	endif
@@ -68,7 +68,7 @@ script make_menu {
 		endif
 	else
 		if GotParam \{fade_out_current}
-			legacydoscreenelementmorph \{id = current_menu_anchor
+			LegacyDoScreenElementMorph \{id = current_menu_anchor
 				alpha = 0
 				time = 0}
 		endif
@@ -84,7 +84,7 @@ script make_menu {
 		if NOT GotParam \{centered_offset}
 			centered_offset = (0.0, 0.0)
 		endif
-		Pos = ((((1.0, 0.0) * (640 - (<dims> [0] / 2))) + (0.0, 250.0)) + <centered_offset>)
+		pos = ((((1.0, 0.0) * (640 - (<dims> [0] / 2))) + (0.0, 250.0)) + <centered_offset>)
 		title_pos = (640.0, 130.0)
 		if (<menu_bg> = menu_bg_2)
 			title_rot_angle = -10
@@ -93,12 +93,12 @@ script make_menu {
 	endif
 	MangleChecksums a = <menu_id> b = menu
 	CreateScreenElement {
-		Type = ContainerElement
+		type = ContainerElement
 		parent = <parent>
 		id = <menu_id>
 		rot_angle = <rot_angle>
 		just = [left top]
-		Pos = (0.0, 0.0)
+		pos = (0.0, 0.0)
 		dims = (1280.0, 720.0)
 		alpha = 1
 		z_priority = <extra_z>
@@ -107,7 +107,7 @@ script make_menu {
 	}
 	<highlight_parent_id> = <menu_id>
 	CreateScreenElement {
-		Type = ContainerElement
+		type = ContainerElement
 		parent = <menu_id>
 		id = <mangled_ID>
 		just = [left top]
@@ -118,29 +118,29 @@ script make_menu {
 	endif
 	if GotParam \{title}
 		CreateScreenElement {
-			Type = TextBlockElement
+			type = TextBlockElement
 			parent = <mangled_ID>
 			local_id = title
 			font = ($test_menu_font_title)
 			text = <title>
 			rgba = <title_rgba>
-			Scale = <title_scale>
-			Pos = (<title_pos> - (0.0, 0.0))
+			scale = <title_scale>
+			pos = (<title_pos> - (0.0, 0.0))
 			just = <title_just>
 			z_priority = (3 + <extra_z>)
 			rot_angle = <title_rot_angle>
 			dims = (275.0, 75.0)
-			fit_height = `scale	down	if	larger`
-			fit_width = `scale	each	line	if	larger`
+			fit_height = `scale down if larger`
+			fit_width = `scale each line if larger`
 			internal_just = [center center]
 		}
-		if NOT ((GotParam nobg) || (GotParam notitlebg))
+		if NOT ((GotParam noBG) || (GotParam noTitleBG))
 			CreateScreenElement {
-				Type = SpriteElement
+				type = SpriteElement
 				parent = <mangled_ID>
 				texture = menu_history_background_empty
-				Scale = <title_bg_scale>
-				Pos = <title_bg_pos>
+				scale = <title_bg_scale>
+				pos = <title_bg_pos>
 				z_priority = (2 + <extra_z>)
 				just = [center top]
 			}
@@ -149,21 +149,21 @@ script make_menu {
 	<menu_id> :SetTags num_options = 0
 	if GotParam \{scrolling}
 		<menu_id> :SetTags scrolling_num_options = 0
-		scroll_bar_pos = (<Pos> + <scroll_bar_offeset>)
+		scroll_bar_pos = (<pos> + <scroll_bar_offeset>)
 		scroll_bar_len = ((<dims> [1]) + 10)
 		CreateScreenElement {
-			Type = ContainerElement
+			type = ContainerElement
 			parent = <mangled_ID>
 			local_id = scroll_bar
-			Pos = (<scroll_bar_pos> + <scroll_bar_offset>)
+			pos = (<scroll_bar_pos> + <scroll_bar_offset>)
 			just = [right top]
 			dims = ((20.0, 0.0) + ((0.0, 1.0) * <scroll_bar_len>))
 		}
 		scroll_bar_id = <id>
 		CreateScreenElement {
-			Type = SpriteElement
+			type = SpriteElement
 			parent = <scroll_bar_id>
-			Pos = (0.0, -5.0)
+			pos = (0.0, -5.0)
 			just = [center top]
 			texture = arrow
 			dims = (20.0, 20.0)
@@ -171,9 +171,9 @@ script make_menu {
 			rgba = [200 200 200 255]
 		}
 		CreateScreenElement {
-			Type = SpriteElement
+			type = SpriteElement
 			parent = <scroll_bar_id>
-			Pos = (0.0, 0.0)
+			pos = (0.0, 0.0)
 			just = [center top]
 			texture = white
 			rgba = [64 64 64 255]
@@ -182,9 +182,9 @@ script make_menu {
 			alpha = 0.0
 		}
 		CreateScreenElement {
-			Type = SpriteElement
+			type = SpriteElement
 			parent = <scroll_bar_id>
-			Pos = ((0.0, 1.0) * <scroll_bar_len>)
+			pos = ((0.0, 1.0) * <scroll_bar_len>)
 			just = [center bottom]
 			texture = arrow
 			dims = (20.0, 20.0)
@@ -193,10 +193,10 @@ script make_menu {
 			rgba = [200 200 200 255]
 		}
 		CreateScreenElement {
-			Type = SpriteElement
+			type = SpriteElement
 			parent = <scroll_bar_id>
 			local_id = zipper
-			Pos = (0.0, 0.0)
+			pos = (0.0, 0.0)
 			just = [center top]
 			texture = white
 			rgba = [200 200 0 255]
@@ -208,10 +208,10 @@ script make_menu {
 		<menu_id> :SetTags scroll_bar_len = (<scroll_bar_len> - 20)
 		<menu_id> :SetTags scroll_bar_option = 0
 		CreateScreenElement {
-			Type = VScrollingMenu
+			type = VScrollingMenu
 			parent = <mangled_ID>
 			dims = <dims>
-			Pos = <Pos>
+			pos = <pos>
 			just = [left top]
 		}
 		<parent_id> = <id>
@@ -219,13 +219,13 @@ script make_menu {
 		<vmenu_pos> = (0.0, 0.0)
 	else
 		<parent_id> = <mangled_ID>
-		<vmenu_pos> = <Pos>
+		<vmenu_pos> = <pos>
 	endif
 	CreateScreenElement {
-		Type = VMenu
+		type = VMenu
 		parent = <parent_id>
 		id = <vmenu_id>
-		Pos = <vmenu_pos>
+		pos = <vmenu_pos>
 		font = ($test_menu_font)
 		just = [left top]
 		internal_just = <internal_just>
@@ -233,20 +233,20 @@ script make_menu {
 		regular_space_amount = <regular_space_amount>
 		spacing_between = <spacing_between>
 	}
-	if NOT GotParam \{nobg}
+	if NOT GotParam \{noBG}
 		CreateScreenElement {
-			Type = SpriteElement
+			type = SpriteElement
 			parent = <menu_id>
-			Pos = <bg_pos>
+			pos = <bg_pos>
 			texture = <menu_bg>
 			just = [left top]
 			dims = <bg_dims>
-			Scale = <bg_scale>
+			scale = <bg_scale>
 		}
 		AssignAlias id = <id> alias = current_menu_background
 	endif
 	if GotParam \{no_event_handlers}
-		killeventhandlers
+		KillEventHandlers
 	else
 		internal_pad_up_params = {up = 1}
 		internal_pad_down_params = {down = 2}
@@ -262,8 +262,8 @@ script make_menu {
 			event_handlers = [
 				{pad_back <pad_back_sound>}
 				{pad_back <pad_back_script> params = <pad_back_params>}
-				{pad_up <scroll_up_sfx> params = <internal_pad_up_params>}
-				{pad_down <scroll_down_sfx> params = <internal_pad_down_params>}
+				{pad_up <Scroll_up_SFX> params = <internal_pad_up_params>}
+				{pad_down <Scroll_down_SFX> params = <internal_pad_down_params>}
 			]
 		}
 		if GotParam \{pad_down_script}
@@ -306,7 +306,7 @@ script make_menu {
 	<vmenu_id> :SetTags color_scheme = <color_scheme>
 	<vmenu_id> :SetTags extra_z = <extra_z>
 	<vmenu_id> :SetTags scroll_bar_offset = <scroll_bar_offset>
-	<vmenu_id> :SetTags menu_pos = <Pos>
+	<vmenu_id> :SetTags menu_pos = <pos>
 	if GotParam \{selection_width}
 		<vmenu_id> :SetTags selection_width = <selection_width>
 	endif
@@ -340,7 +340,7 @@ endscript
 script menu_hide_scroll_bar \{menu_anchor = current_menu_anchor}
 	if <menu_anchor> :GetSingleTag scroll_bar_id
 		if ScreenElementExists id = <scroll_bar_id>
-			legacydoscreenelementmorph id = <scroll_bar_id> alpha = 0.0
+			LegacyDoScreenElementMorph id = <scroll_bar_id> alpha = 0.0
 		endif
 	endif
 endscript
@@ -349,7 +349,7 @@ script menu_show_scroll_bar \{time = 0
 		menu_anchor = current_menu_anchor}
 	if <menu_anchor> :GetSingleTag scroll_bar_id
 		if ScreenElementExists id = <scroll_bar_id>
-			legacydoscreenelementmorph id = <scroll_bar_id> alpha = 1.0
+			LegacyDoScreenElementMorph id = <scroll_bar_id> alpha = 1.0
 		endif
 	endif
 endscript
@@ -367,7 +367,7 @@ script add_menu_item \{focus_script = menu_item_focus
 		additional_unfocus_script = nullscript
 		additional_unfocus_params = {
 		}
-		Scale = (0.8, 0.71999997)
+		scale = (0.8, 0.71999997)
 		just = [
 			left
 			top
@@ -394,7 +394,7 @@ script add_menu_item \{focus_script = menu_item_focus
 		cas_offset = (0.0, 0.0)
 		alpha = 1
 		text_case = upper}
-	if GlobalExists \{Name = massive_build}
+	if GlobalExists \{name = massive_build}
 		if NOT ($massive_build = 0)
 			if GotParam \{massive_secret_item}
 				return
@@ -447,23 +447,23 @@ script add_menu_item \{focus_script = menu_item_focus
 			if IsArray <rgba>
 				clrval = (<rgba> [0] * 0.5)
 				CastToInteger \{clrval}
-				SetArrayElement ArrayName = rgba index = 0 NewValue = <clrval>
+				SetArrayElement ArrayName = rgba index = 0 newvalue = <clrval>
 				clrval = (<rgba> [1] * 0.5)
 				CastToInteger \{clrval}
-				SetArrayElement ArrayName = rgba index = 1 NewValue = <clrval>
+				SetArrayElement ArrayName = rgba index = 1 newvalue = <clrval>
 				clrval = (<rgba> [2] * 0.5)
 				CastToInteger \{clrval}
-				SetArrayElement ArrayName = rgba index = 2 NewValue = <clrval>
+				SetArrayElement ArrayName = rgba index = 2 newvalue = <clrval>
 			endif
 		endif
 		CreateScreenElement {
-			Type = ContainerElement
+			type = ContainerElement
 			parent = <parent>
 			id = <id>
 			local_id = <local_id>
 			dims = <dims>
 			rot_angle = <rot>
-			Pos = <cas_offset>
+			pos = <cas_offset>
 			alpha = <alpha>
 			just = <just>
 			child_anchor = <child_anchor>
@@ -471,13 +471,13 @@ script add_menu_item \{focus_script = menu_item_focus
 		}
 	else
 		CreateScreenElement {
-			Type = ContainerElement
+			type = ContainerElement
 			parent = <parent>
 			id = <id>
 			local_id = <local_id>
 			dims = <dims>
 			rot_angle = <rot>
-			Pos = <cas_offset>
+			pos = <cas_offset>
 			alpha = <alpha>
 			just = <just>
 			child_anchor = <child_anchor>
@@ -502,11 +502,11 @@ script add_menu_item \{focus_script = menu_item_focus
 	endif
 	if NOT GotParam \{no_highlight_bar}
 		CreateScreenElement {
-			Type = ContainerElement
+			type = ContainerElement
 			parent = <container_id>
 			local_id = highlight
 			just = [left center]
-			Pos = (0.0, 0.0)
+			pos = (0.0, 0.0)
 			z_priority = (9 + <extra_z>)
 			alpha = 0.0
 		}
@@ -515,7 +515,7 @@ script add_menu_item \{focus_script = menu_item_focus
 		GetArraySize \{children}
 		<i> = 0
 		begin
-		if NOT StructureContains structure = (<children> [<i>]) NULL
+		if NOT StructureContains Structure = (<children> [<i>]) null
 			CreateScreenElement {
 				z_priority = (10 + <extra_z>)
 				(<children> [<i>])
@@ -523,13 +523,13 @@ script add_menu_item \{focus_script = menu_item_focus
 			}
 		endif
 		<i> = (<i> + 1)
-		repeat <array_Size>
+		repeat <array_size>
 	endif
 	if GotParam \{toggle}
-		if (<toggle> = On)
-			extra_text = qs(0x73360a03)
+		if (<toggle> = on)
+			extra_text = qs("ON")
 		else
-			extra_text = qs(0xa86f0987)
+			extra_text = qs("OFF")
 		endif
 		extra_block = {dims = (50.0, 0.0) internal_just = [center center] allow_expansion}
 		AddParams \{option_arrows}
@@ -612,23 +612,23 @@ script add_menu_item \{focus_script = menu_item_focus
 		<text> = <lowercasestring>
 	elseif (<text_case> = upper)
 		GetUpperCaseString <text>
-		<text> = <UppercaseString>
+		<text> = <UpperCaseString>
 	endif
-	text_scale = <Scale>
+	text_scale = <scale>
 	CreateScreenElement {
-		Type = TextBlockElement
+		type = TextBlockElement
 		parent = <container_id>
 		local_id = text
 		font = ($test_menu_font)
 		text = <text>
 		rgba = <rgba>
-		Scale = <text_scale>
+		scale = <text_scale>
 		just = <text_just>
-		Pos = <text_offset>
+		pos = <text_offset>
 		z_priority = (10 + <extra_z>)
 		dims = (((1.0, 0.0) * (<dims> [0])) + (0.0, 50.0))
-		fit_height = `scale	down	if	larger`
-		fit_width = `scale	each	line	if	larger`
+		fit_height = `scale down if larger`
+		fit_width = `scale each line if larger`
 		internal_just = <text_internal_just>
 	}
 	if GotParam \{extra_text}
@@ -641,39 +641,39 @@ script add_menu_item \{focus_script = menu_item_focus
 		endif
 		if NOT GotParam \{extra_block}
 			CreateScreenElement {
-				Type = TextBlockElement
+				type = TextBlockElement
 				parent = <container_id>
 				local_id = extra_text
 				font = ($test_menu_font)
 				text = <extra_text>
 				rgba = <extra_rgba>
-				Pos = (((1.0, 0.0) * <dims> [0]) + <extras_offset>)
+				pos = (((1.0, 0.0) * <dims> [0]) + <extras_offset>)
 				just = <extra_just>
-				Scale = <Scale>
+				scale = <scale>
 				z_priority = (10 + <extra_z>)
 				dims = (((1.0, 0.0) * (<dims> [0] - (<text_offset> [0] * 2))) + (0.0, 50.0))
-				fit_height = `scale	down	if	larger`
-				fit_width = `scale	each	line	if	larger`
+				fit_height = `scale down if larger`
+				fit_width = `scale each line if larger`
 			}
 		else
 			CreateScreenElement {
-				Type = TextBlockElement
+				type = TextBlockElement
 				parent = <container_id>
 				local_id = extra_text
 				font = ($test_menu_font)
 				text = <extra_text>
 				rgba = <extra_rgba>
 				just = <extra_just>
-				internal_scale = <Scale>
+				internal_scale = <scale>
 				internal_just = [left top]
 				<extra_block>
-				Pos = (((1.0, 0.0) * <dims> [0]) + <extras_offset>)
+				pos = (((1.0, 0.0) * <dims> [0]) + <extras_offset>)
 				z_priority = (10 + <extra_z>)
 			}
 			GetScreenElementChildren id = <id>
 			GetArraySize <children>
-			if NOT (<array_Size> = 1)
-				<container_id> :se_setprops dims = (((1.0, 0.0) * <dims> [0]) + ((0.0, 1.0) * (<dims> [1] * <array_Size>)))
+			if NOT (<array_size> = 1)
+				<container_id> :SE_SetProps dims = (((1.0, 0.0) * <dims> [0]) + ((0.0, 1.0) * (<dims> [1] * <array_size>)))
 			endif
 		endif
 		if GotParam \{option_arrows}
@@ -690,8 +690,8 @@ script add_menu_item \{focus_script = menu_item_focus
 	if <parent> :GetSingleTag additional_create_script
 		<additional_create_script> <...>
 	endif
-	SetScreenElementLock id = <parent> On
-	SetScreenElementLock id = <parent> OFF
+	SetScreenElementLock id = <parent> on
+	SetScreenElementLock id = <parent> off
 	return item_container_id = <container_id>
 endscript
 
@@ -707,7 +707,7 @@ script add_icon_menu_item \{focus_script = menu_icon_focus
 		additional_unfocus_script = nullscript
 		additional_unfocus_params = {
 		}
-		Scale = (0.8, 0.71999997)
+		scale = (0.8, 0.71999997)
 		just = [
 			left
 			top
@@ -737,7 +737,7 @@ script add_icon_menu_item \{focus_script = menu_icon_focus
 		extra_z = 0
 		selection_width = 345
 		selection_height = 60}
-	if GlobalExists \{Name = massive_build}
+	if GlobalExists \{name = massive_build}
 		if NOT ($massive_build = 0)
 			if GotParam \{massive_secret_item}
 				return
@@ -792,17 +792,17 @@ script add_icon_menu_item \{focus_script = menu_icon_focus
 			if IsArray <rgba>
 				clrval = (<rgba> [0] * 0.5)
 				CastToInteger \{clrval}
-				SetArrayElement ArrayName = rgba index = 0 NewValue = <clrval>
+				SetArrayElement ArrayName = rgba index = 0 newvalue = <clrval>
 				clrval = (<rgba> [1] * 0.5)
 				CastToInteger \{clrval}
-				SetArrayElement ArrayName = rgba index = 1 NewValue = <clrval>
+				SetArrayElement ArrayName = rgba index = 1 newvalue = <clrval>
 				clrval = (<rgba> [2] * 0.5)
 				CastToInteger \{clrval}
-				SetArrayElement ArrayName = rgba index = 2 NewValue = <clrval>
+				SetArrayElement ArrayName = rgba index = 2 newvalue = <clrval>
 			endif
 		endif
 		CreateScreenElement {
-			Type = ContainerElement
+			type = ContainerElement
 			parent = <parent>
 			id = <id>
 			local_id = <local_id>
@@ -815,7 +815,7 @@ script add_icon_menu_item \{focus_script = menu_icon_focus
 		}
 	else
 		CreateScreenElement {
-			Type = ContainerElement
+			type = ContainerElement
 			parent = <parent>
 			id = <id>
 			local_id = <local_id>
@@ -845,22 +845,22 @@ script add_icon_menu_item \{focus_script = menu_icon_focus
 	endif
 	if NOT GotParam \{no_highlight_bar}
 		CreateScreenElement {
-			Type = SpriteElement
-			texture = history_highlight
+			type = SpriteElement
+			texture = History_Highlight
 			parent = <container_id>
 			local_id = highlight
 			just = [left center]
-			Pos = (0.0, 0.0)
+			pos = (0.0, 0.0)
 			z_priority = (9 + <extra_z>)
 			alpha = 0.0
-			Scale = 0.5
+			scale = 0.5
 		}
 	endif
 	if GotParam \{children}
 		GetArraySize \{children}
 		<i> = 0
 		begin
-		if NOT StructureContains structure = (<children> [<i>]) NULL
+		if NOT StructureContains Structure = (<children> [<i>]) null
 			CreateScreenElement {
 				z_priority = (10 + <extra_z>)
 				(<children> [<i>])
@@ -868,7 +868,7 @@ script add_icon_menu_item \{focus_script = menu_icon_focus
 			}
 		endif
 		<i> = (<i> + 1)
-		repeat <array_Size>
+		repeat <array_size>
 	endif
 	if ((<additional_focus_script> = nullscript) && (<additional_unfocus_script> = nullscript))
 		if (<pad_choose_script> = nullscript)
@@ -934,18 +934,18 @@ script add_icon_menu_item \{focus_script = menu_icon_focus
 		<num_options> = (<num_options> + 1)
 		<parent_anchor> :SetTags num_options = <num_options>
 	endif
-	text_scale = <Scale>
+	text_scale = <scale>
 	if NOT GotParam \{icon}
 		icon = menu_history_unknown
 	endif
 	CreateScreenElement {
-		Type = SpriteElement
+		type = SpriteElement
 		parent = <container_id>
 		local_id = icon_texture
 		texture = <icon>
-		Scale = <icon_scale>
+		scale = <icon_scale>
 		internal_just = [left center]
-		Pos = <icon_offset>
+		pos = <icon_offset>
 		rot_angle = <icon_rot>
 		z_priority = (10 + <extra_z>)
 	}
@@ -954,29 +954,29 @@ script add_icon_menu_item \{focus_script = menu_icon_focus
 		<text> = <lowercasestring>
 	elseif (<text_case> = upper)
 		GetUpperCaseString <text>
-		<text> = <UppercaseString>
+		<text> = <UpperCaseString>
 	endif
 	CreateScreenElement {
-		Type = TextBlockElement
+		type = TextBlockElement
 		parent = <container_id>
 		local_id = text
 		font = ($test_menu_font)
 		text = <text>
 		rgba = <rgba>
-		Scale = <text_scale>
+		scale = <text_scale>
 		just = <text_just>
-		Pos = <text_offset>
+		pos = <text_offset>
 		z_priority = (10 + <extra_z>)
 		dims = (((1.0, 0.0) * (<dims> [0])) + (0.0, 50.0))
-		fit_height = `scale	down	if	larger`
-		fit_width = `scale	each	line	if	larger`
+		fit_height = `scale down if larger`
+		fit_width = `scale each line if larger`
 	}
 	menu_item_resize id = <container_id>
 	if <parent> :GetSingleTag additional_create_script
 		<additional_create_script> <...>
 	endif
-	SetScreenElementLock id = <parent> On
-	SetScreenElementLock id = <parent> OFF
+	SetScreenElementLock id = <parent> on
+	SetScreenElementLock id = <parent> off
 	return item_container_id = <container_id>
 endscript
 
@@ -1007,15 +1007,15 @@ script menu_item_resize_extras
 		if ScreenElementExists id = {<id> child = arrow_left}
 			SetScreenElementProps {
 				id = {<id> child = arrow_left}
-				Pos = (((1.0, 0.0) * <width>) + <extras_offset>)
+				pos = (((1.0, 0.0) * <width>) + <extras_offset>)
 			}
 			SetScreenElementProps {
 				id = {<id> child = extra_text}
-				Pos = (((1.0, 0.0) * <width>) + <arrow_offset> + <extras_offset>)
+				pos = (((1.0, 0.0) * <width>) + <arrow_offset> + <extras_offset>)
 			}
 			SetScreenElementProps {
 				id = {<id> child = arrow_right}
-				Pos = (((1.0, 0.0) * <width>) + <arrow_offset> + <arrow_offset> + <extras_offset>)
+				pos = (((1.0, 0.0) * <width>) + <arrow_offset> + <arrow_offset> + <extras_offset>)
 			}
 		endif
 	endif
@@ -1034,7 +1034,7 @@ script menu_item_focus \{parent_anchor = current_menu_anchor
 	SetScreenElementProps {
 		id = {<id> child = text}
 		rgba = [255 255 255 255]
-		font = fontgrid_text_a6_fire material = sys_fontgrid_text_a6_fire_sys_fontgrid_text_a6_fire
+		font = fontgrid_text_a6_fire material = sys_fontgrid_text_A6_fire_sys_fontgrid_text_A6_fire
 	}
 	if ScreenElementExists id = {<id> child = extra_text}
 		SetScreenElementProps {
@@ -1044,7 +1044,7 @@ script menu_item_focus \{parent_anchor = current_menu_anchor
 	endif
 	if GotParam \{scale_highlight_text}
 		if (<scale_highlight_text>)
-			legacydoscreenelementmorph id = {<id> child = text} time = 0.05 Scale = 1.25 relative_scale
+			LegacyDoScreenElementMorph id = {<id> child = text} time = 0.05 scale = 1.25 relative_scale
 		endif
 	endif
 	if ScreenElementExists id = <parent>
@@ -1057,7 +1057,7 @@ script menu_item_focus \{parent_anchor = current_menu_anchor
 		menu_update_scrollbar parent = <parent> parent_anchor = <parent_anchor> option = <scrolling_option> num_options = <scrolling_num_options>
 	endif
 	if ScreenElementExists id = {<id> child = highlight}
-		legacydoscreenelementmorph id = {<id> child = highlight} alpha = 1.0 time = 0.1
+		LegacyDoScreenElementMorph id = {<id> child = highlight} alpha = 1.0 time = 0.1
 	endif
 endscript
 
@@ -1068,11 +1068,11 @@ script menu_update_scrollbar \{parent_anchor = current_menu_anchor}
 		if (<num_options> > 1)
 			pos_fraction = ((<option> * 1.0) / (<num_options> - 1.0))
 			pos_length = (<scroll_bar_len> * <pos_fraction>)
-			Pos = (<pos_length> * (0.0, 1.0))
+			pos = (<pos_length> * (0.0, 1.0))
 		endif
 		if ScreenElementExists id = {<scroll_bar_id> child = zipper}
 			<parent_anchor> :SetTags scroll_bar_option = <option>
-			legacydoscreenelementmorph id = {<scroll_bar_id> child = zipper} Pos = (<Pos>)
+			LegacyDoScreenElementMorph id = {<scroll_bar_id> child = zipper} pos = (<pos>)
 		endif
 	endif
 endscript
@@ -1084,7 +1084,7 @@ script menu_item_unfocus \{parent = current_menu}
 		id = {<id> child = text}
 		rgba = <rgba>
 		font = ($test_menu_font)
-		material = NULL
+		material = null
 	}
 	if ScreenElementExists id = {<id> child = extra_text}
 		SetScreenElementProps {
@@ -1094,11 +1094,11 @@ script menu_item_unfocus \{parent = current_menu}
 	endif
 	if GotParam \{scale_highlight_text}
 		if (<scale_highlight_text>)
-			legacydoscreenelementmorph id = {<id> child = text} time = 0.05 Scale = 1.0 relative_scale
+			LegacyDoScreenElementMorph id = {<id> child = text} time = 0.05 scale = 1.0 relative_scale
 		endif
 	endif
 	if ScreenElementExists id = {<id> child = highlight}
-		legacydoscreenelementmorph id = {<id> child = highlight} alpha = 0.0 time = 0.5
+		LegacyDoScreenElementMorph id = {<id> child = highlight} alpha = 0.0 time = 0.5
 	endif
 	if ScreenElementExists id = <parent>
 		if <parent> :GetSingleTag additional_unfocus_script
@@ -1109,7 +1109,7 @@ endscript
 
 script add_menu_flag_item \{toggle_script = menu_toggle_flag}
 	if NOT GotParam \{flag}
-		printf \{qs(0xaf3766ab)}
+		printf \{qs("\Ladd_menu_flag_item requires a flag param")}
 		return
 	endif
 	if NOT GotParam \{toggle_params}
@@ -1117,17 +1117,17 @@ script add_menu_flag_item \{toggle_script = menu_toggle_flag}
 	endif
 	if GetGlobalFlag flag = <flag>
 		if GotParam \{reverse}
-			toggle = OFF
+			toggle = off
 			reverse = reverse
 		else
-			toggle = On
+			toggle = on
 		endif
 	else
 		if GotParam \{reverse}
-			toggle = On
+			toggle = on
 			reverse = reverse
 		else
-			toggle = OFF
+			toggle = off
 		endif
 	endif
 	add_menu_item <...> toggle_script = <toggle_script> toggle_params = <toggle_params>
@@ -1135,9 +1135,9 @@ endscript
 
 script menu_toggle_flag 
 	if GetGlobalFlag flag = <flag>
-		UnsetGlobalFlag flag = <flag>
+		UnSetGlobalFlag flag = <flag>
 	else
-		setglobalflag flag = <flag>
+		SetGlobalFlag flag = <flag>
 	endif
 endscript
 
@@ -1147,70 +1147,70 @@ script menu_finish controller = ($primary_controller)
 	endif
 	if NOT GotParam \{no_helper_text}
 		if GotParam \{no_back_button}
-			add_user_control_helper \{text = qs(0xc18d5e76)
+			add_user_control_helper \{text = qs("SELECT")
 				button = green
 				z = 100000}
 		elseif GotParam \{car_helper_text}
-			add_user_control_helper \{text = qs(0xc18d5e76)
+			add_user_control_helper \{text = qs("SELECT")
 				button = green
 				z = 100000}
-			add_user_control_helper \{text = qs(0xaf4d5dd2)
+			add_user_control_helper \{text = qs("BACK")
 				button = red
 				z = 100000}
 			menu_finish_rotate_zoom <...>
 		elseif GotParam \{car_helper_text_back}
-			add_user_control_helper \{text = qs(0xc18d5e76)
+			add_user_control_helper \{text = qs("SELECT")
 				button = green
 				z = 100000}
-			add_user_control_helper \{text = qs(0xaf4d5dd2)
+			add_user_control_helper \{text = qs("BACK")
 				button = red
 				z = 100000}
 			menu_finish_rotate_zoom <...>
 		elseif GotParam \{car_helper_text_cancel}
-			add_user_control_helper \{text = qs(0xc18d5e76)
+			add_user_control_helper \{text = qs("SELECT")
 				button = green
 				z = 100000}
-			add_user_control_helper \{text = qs(0xf7723015)
+			add_user_control_helper \{text = qs("CANCEL")
 				button = red
 				z = 100000}
 			menu_finish_rotate_zoom <...>
 		elseif GotParam \{car_helper_text_extra}
-			add_user_control_helper \{text = qs(0xc18d5e76)
+			add_user_control_helper \{text = qs("SELECT")
 				button = green
 				z = 100000}
-			add_user_control_helper \{text = qs(0x3fc1c076)
+			add_user_control_helper \{text = qs("DONE")
 				button = red
 				z = 100000}
-			add_user_control_helper \{text = qs(0xf7723015)
-				button = yellow
+			add_user_control_helper \{text = qs("CANCEL")
+				button = Yellow
 				z = 100000}
 			menu_finish_rotate_zoom <...>
 		elseif GotParam \{car_helper_text_alt}
-			add_user_control_helper \{text = qs(0xc18d5e76)
+			add_user_control_helper \{text = qs("SELECT")
 				button = green
 				z = 100000}
-			add_user_control_helper \{text = qs(0xf7723015)
+			add_user_control_helper \{text = qs("CANCEL")
 				button = red
 				z = 100000}
-			add_user_control_helper \{text = qs(0xaa2546c1)
-				button = yellow
+			add_user_control_helper \{text = qs("COLOR")
+				button = Yellow
 				z = 100000}
 			menu_finish_rotate_zoom <...>
 		elseif GotParam \{car_helper_text_purchase}
-			add_user_control_helper \{text = qs(0x9b07ecb6)
+			add_user_control_helper \{text = qs("BUY")
 				button = green
 				z = 100000}
-			add_user_control_helper \{text = qs(0xf7723015)
+			add_user_control_helper \{text = qs("CANCEL")
 				button = red
 				z = 100000}
 			menu_finish_rotate_zoom <...>
 		elseif GotParam \{car_rotate_zoom}
 			menu_finish_rotate_zoom <...>
 		else
-			add_user_control_helper \{text = qs(0xc18d5e76)
+			add_user_control_helper \{text = qs("SELECT")
 				button = green
 				z = 100000}
-			add_user_control_helper \{text = qs(0xaf4d5dd2)
+			add_user_control_helper \{text = qs("BACK")
 				button = red
 				z = 100000}
 		endif
@@ -1219,26 +1219,26 @@ endscript
 
 script menu_finish_rotate_zoom 
 	if NOT GotParam \{no_rotate_zoom_text}
-		if ((IsGuitarController controller = <controller>) || (isdrumcontroller controller = <controller>))
+		if ((IsGuitarController controller = <controller>) || (IsDrumController controller = <controller>))
 			if NOT GotParam \{no_rotate_text}
-				add_user_control_helper \{text = qs(0xe7d2a66e)
-					button = blue
+				add_user_control_helper \{text = qs("ROTATE")
+					button = Blue
 					z = 100000}
 			endif
 			if NOT GotParam \{no_zoom_text}
-				add_user_control_helper \{text = qs(0x26950e02)
-					button = orange
+				add_user_control_helper \{text = qs("ZOOM")
+					button = Orange
 					z = 100000}
 			endif
 		else
 			if NOT GotParam \{no_rotate_text}
-				add_user_control_helper \{text = qs(0xe7d2a66e)
-					button = lbrb
+				add_user_control_helper \{text = qs("ROTATE")
+					button = LBRB
 					z = 100000}
 			endif
 			if NOT GotParam \{no_zoom_text}
-				add_user_control_helper \{text = qs(0x26950e02)
-					button = rt
+				add_user_control_helper \{text = qs("ZOOM")
+					button = RT
 					z = 100000}
 			endif
 		endif
@@ -1247,15 +1247,15 @@ endscript
 
 script menu_toggle_item 
 	<id> :GetSingleTag toggle
-	if (<toggle> = On)
-		<toggle> = OFF
+	if (<toggle> = on)
+		<toggle> = off
 		if ScreenElementExists id = {<id> child = extra_text}
-			SetScreenElementProps id = {<id> child = extra_text} text = qs(0xa86f0987)
+			SetScreenElementProps id = {<id> child = extra_text} text = qs("OFF")
 		endif
 	else
-		<toggle> = On
+		<toggle> = on
 		if ScreenElementExists id = {<id> child = extra_text}
-			SetScreenElementProps id = {<id> child = extra_text} text = qs(0x73360a03)
+			SetScreenElementProps id = {<id> child = extra_text} text = qs("ON")
 		endif
 	endif
 	<id> :SetTags toggle = <toggle>
@@ -1265,7 +1265,7 @@ script menu_toggle_item
 endscript
 
 script menu_checkbox_sound 
-	SoundEvent \{event = ui_toggle_checkbox_sfx}
+	SoundEvent \{event = UI_Toggle_Checkbox_SFX}
 endscript
 
 script generic_ui_destroy \{parent_anchor = current_menu_anchor}
@@ -1287,17 +1287,17 @@ script animate_in
 		tags = {
 			menu_state = entering
 		}}
-	LaunchEvent Type = focus target = <menu_id>
-	legacydomorph \{time = 0.05
+	LaunchEvent type = focus target = <menu_id>
+	LegacyDoMorph \{time = 0.05
 		rot_angle = 3
-		Pos = (40.0, 0.0)
+		pos = (40.0, 0.0)
 		alpha = 1}
-	legacydomorph \{time = 0.01
+	LegacyDoMorph \{time = 0.01
 		rot_angle = 0
-		Pos = (10.0, 0.0)}
+		pos = (10.0, 0.0)}
 	SetScreenElementProps \{id = root_window
 		tags = {
-			menu_state = On
+			menu_state = on
 		}}
 	if NOT GotParam \{dont_unblock}
 		SetButtonEventMappings \{unblock_menu_input}
@@ -1305,27 +1305,27 @@ script animate_in
 endscript
 
 script menu_onscreen \{menu_id = current_menu_anchor}
-	legacydomorph \{Scale = 2
+	LegacyDoMorph \{scale = 2
 		time = 0}
-	if GotParam \{Pos}
-		legacydomorph Pos = <Pos>
+	if GotParam \{pos}
+		LegacyDoMorph pos = <pos>
 	endif
-	se_setprops \{just = [
+	SE_SetProps \{just = [
 			center
 			center
 		]}
 	GetTags
 	Obj_GetID
-	<id> = <objID>
+	<id> = <ObjID>
 	if GotParam \{focus_child}
-		LaunchEvent Type = focus target = <menu_id> data = {child_id = <focus_child>}
+		LaunchEvent type = focus target = <menu_id> data = {child_id = <focus_child>}
 	else
-		LaunchEvent Type = focus target = <id>
+		LaunchEvent type = focus target = <id>
 	endif
 	if NOT GotParam \{preserve_menu_state}
 		SetScreenElementProps \{id = root_window
 			tags = {
-				menu_state = On
+				menu_state = on
 			}}
 	endif
 endscript
@@ -1338,21 +1338,21 @@ script animate_out \{menu_id = current_menu_anchor}
 		}}
 	GetTags
 	Obj_GetID
-	<id> = <objID>
-	se_setprops \{just = [
+	<id> = <ObjID>
+	SE_SetProps \{just = [
 			center
 			center
 		]}
-	legacydomorph \{time = 0
-		Scale = 1.0}
-	legacydomorph \{time = 0.3
+	LegacyDoMorph \{time = 0
+		scale = 1.0}
+	LegacyDoMorph \{time = 0.3
 		alpha = 0}
 	SetScreenElementProps \{id = root_window
 		tags = {
-			menu_state = OFF
+			menu_state = off
 		}}
 	SetScreenElementLock \{id = root_window
-		OFF}
+		off}
 	DestroyScreenElement id = <menu_id>
 	SetButtonEventMappings \{unblock_menu_input}
 endscript
@@ -1360,19 +1360,19 @@ endscript
 script menu_offscreen 
 	SetScreenElementProps \{id = root_window
 		tags = {
-			menu_state = OFF
+			menu_state = off
 		}}
 	SetScreenElementLock \{id = root_window
-		OFF}
+		off}
 	Obj_GetID
-	<id> = <objID>
-	LaunchEvent Type = unfocus target = <id>
+	<id> = <ObjID>
+	LaunchEvent type = unfocus target = <id>
 	DestroyScreenElement id = <id> recurse
 endscript
 
 script hide_root_window 
 	SetScreenElementProps \{id = root_window
-		Hide}
+		hide}
 endscript
 
 script unhide_root_window 
@@ -1388,7 +1388,7 @@ script menu_icon_focus \{parent = current_menu}
 	SetScreenElementProps {
 		id = {<id> child = text}
 		rgba = <on_color>
-		font = fontgrid_text_a6_fire material = sys_fontgrid_text_a6_fire_sys_fontgrid_text_a6_fire
+		font = fontgrid_text_a6_fire material = sys_fontgrid_text_A6_fire_sys_fontgrid_text_A6_fire
 		alpha = 1
 	}
 	if ScreenElementExists id = {<id> child = extra_text}
@@ -1399,7 +1399,7 @@ script menu_icon_focus \{parent = current_menu}
 	endif
 	if GotParam \{scale_highlight_text}
 		if (<scale_highlight_text>)
-			legacydoscreenelementmorph id = {<id> child = text} time = 0.05 Scale = 1.25 relative_scale
+			LegacyDoScreenElementMorph id = {<id> child = text} time = 0.05 scale = 1.25 relative_scale
 		endif
 	endif
 	if ScreenElementExists id = <parent>
@@ -1412,7 +1412,7 @@ script menu_icon_focus \{parent = current_menu}
 		menu_update_scrollbar parent = <parent> parent_anchor = <parent_anchor> option = <scrolling_option> num_options = <scrolling_num_options>
 	endif
 	if ScreenElementExists id = {<id> child = highlight}
-		legacydoscreenelementmorph id = {<id> child = highlight} alpha = 1.0 time = 0.1
+		LegacyDoScreenElementMorph id = {<id> child = highlight} alpha = 1.0 time = 0.1
 	endif
 endscript
 
@@ -1423,7 +1423,7 @@ script menu_icon_unfocus \{parent = current_menu}
 		id = {<id> child = text}
 		rgba = <rgba>
 		font = ($test_menu_font)
-		material = NULL
+		material = null
 	}
 	if ScreenElementExists id = {<id> child = extra_text}
 		SetScreenElementProps {
@@ -1433,11 +1433,11 @@ script menu_icon_unfocus \{parent = current_menu}
 	endif
 	if GotParam \{scale_highlight_text}
 		if (<scale_highlight_text>)
-			legacydoscreenelementmorph id = {<id> child = text} time = 0.05 Scale = 1.0 relative_scale
+			LegacyDoScreenElementMorph id = {<id> child = text} time = 0.05 scale = 1.0 relative_scale
 		endif
 	endif
 	if ScreenElementExists id = {<id> child = highlight}
-		legacydoscreenelementmorph id = {<id> child = highlight} alpha = 0.0 time = 0.5
+		LegacyDoScreenElementMorph id = {<id> child = highlight} alpha = 0.0 time = 0.5
 	endif
 	if ScreenElementExists \{id = current_menu}
 		if <parent> :GetSingleTag additional_unfocus_script
@@ -1453,26 +1453,26 @@ script split_text_into_menu
 		]
 		all}
 	CreateScreenElement {
-		Type = HMenu
+		type = HMenu
 		parent = <parent>
 		<...>
 	}
 	menu_id = <id>
 	StringToCharArray string = <text>
 	GetArraySize <char_array>
-	if (<array_Size>)
+	if (<array_size>)
 		i = 0
 		begin
 		CreateScreenElement {
-			Type = TextElement
+			type = TextElement
 			font = fontgrid_text_a3
 			<text_params>
 			parent = <menu_id>
 			text = (<char_array> [<i>])
 		}
 		i = (<i> + 1)
-		repeat <array_Size>
+		repeat <array_size>
 	endif
 	GetScreenElementChildren id = <menu_id>
-	return {menu_id = <menu_id> text_element_array = <children> text_element_array_size = <array_Size>}
+	return {menu_id = <menu_id> text_element_array = <children> text_element_array_size = <array_size>}
 endscript

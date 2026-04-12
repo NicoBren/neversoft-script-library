@@ -1,14 +1,14 @@
 
 script xboxlive_menu_back_from_friends_list 
-	KillSpawnedScript \{Name = async_update_friends_list}
+	KillSpawnedScript \{name = async_update_friends_list}
 	menu_stack_pop
 endscript
 
 script xboxlive_menu_friends_close 
-	KillSpawnedScript \{Name = async_update_friends_list}
-	KillSpawnedScript \{Name = xboxlive_menu_async_retrieve_message}
+	KillSpawnedScript \{name = async_update_friends_list}
+	KillSpawnedScript \{name = xboxlive_menu_async_retrieve_message}
 	if NetSessionFunc \{func = presence_started}
-		NetSessionFunc \{Obj = presence
+		NetSessionFunc \{obj = presence
 			func = stop_friends_list}
 	endif
 endscript
@@ -16,7 +16,7 @@ endscript
 script xboxlive_menu_friends_refresh \{parent = root_window
 		menu_id = friends_menu
 		vmenu_id = friends_vmenu
-		Pos = (25.0, 100.0)
+		pos = (25.0, 100.0)
 		spacing = 2
 		tags = {
 			start_index = 0
@@ -24,7 +24,7 @@ script xboxlive_menu_friends_refresh \{parent = root_window
 		}
 		item_props = {
 			font = small
-			Scale = 0.8
+			scale = 0.8
 			highlight_rgba = [
 				123
 				4
@@ -44,20 +44,20 @@ script xboxlive_menu_friends_refresh \{parent = root_window
 		}
 		title_props = {
 			text = net_friends_list
-			Pos = (50.0, 50.0)
+			pos = (50.0, 50.0)
 			rgba = [
 				9
 				120
 				25
 				128
 			]
-			Scale = 2
+			scale = 2
 			font = fontgrid_text_a3
 		}
 		grid_index = 0
 		player_set = friends}
 	if NOT ScreenElementExists id = <menu_id>
-		SetScreenElementLock id = <parent> OFF
+		SetScreenElementLock id = <parent> off
 		make_menu {
 			title = (<title_props>.text)
 			menu_id = <menu_id>
@@ -78,8 +78,8 @@ script xboxlive_menu_friends_refresh \{parent = root_window
 				dialog_callback = <dialog_callback>
 			}
 		}
-		legacydoscreenelementmorph \{id = friends_vmenu
-			Pos = (150.0, 80.0)}
+		LegacyDoScreenElementMorph \{id = friends_vmenu
+			pos = (150.0, 80.0)}
 	else
 		xboxlive_menu_friends_get_friends_info
 		if NOT (<num_items_total> > <start_index>)
@@ -91,7 +91,7 @@ script xboxlive_menu_friends_refresh \{parent = root_window
 			xboxlive_menu_friends_netfunc_redirect \{action = getindex}
 			if GotParam \{player_index}
 				if (<player_index> > <num_items_total>)
-					ScriptAssert \{qs(0x809e07bc)}
+					ScriptAssert \{qs("\LFound index that was too high")}
 				endif
 				Mod a = <player_index> b = <items_on_page>
 				grid_index = <Mod>
@@ -100,7 +100,7 @@ script xboxlive_menu_friends_refresh \{parent = root_window
 			endif
 		endif
 	endif
-	LaunchEvent \{Type = unfocus
+	LaunchEvent \{type = unfocus
 		target = current_menu}
 	DestroyScreenElement \{id = current_menu
 		preserve_parent}
@@ -111,12 +111,12 @@ script xboxlive_menu_friends_refresh \{parent = root_window
 		xboxlive_menu_friends_arrow_add
 	endif
 	GetSkaterId
-	NetSessionFunc \{Obj = match
+	NetSessionFunc \{obj = match
 		func = get_gamertag}
 	xboxlive_menu_friends_item_add {
 		not_focusable = not_focusable
-		player_name = <Name>
-		real_id = <objnum>
+		player_name = <name>
+		real_id = <objNum>
 		player_id = something_bogus_id
 	}
 	xboxlive_menu_friends_netfunc_redirect \{action = addall}
@@ -127,7 +127,7 @@ script xboxlive_menu_friends_refresh \{parent = root_window
 			allow_new_items
 		]}
 	SetScreenElementLock \{id = current_menu
-		On}
+		on}
 	menu_finish index = <grid_index>
 endscript
 
@@ -169,7 +169,7 @@ script xboxlive_menu_friends_has_more_than_one_page
 	if (<num_items_total> > <items_on_page>)
 		return \{true}
 	else
-		return \{FALSE}
+		return \{false}
 	endif
 endscript
 
@@ -203,20 +203,20 @@ script xboxlive_menu_friends_arrow_add
 		}
 	else
 		id = padding
-		text = qs(0x03ac90f0)
+		text = qs("\L")
 		item_params = {not_focusable}
 	endif
 	SetScreenElementLock \{id = current_menu
-		OFF}
+		off}
 	current_menu :GetSingleTag \{item_props}
 	CreateScreenElement {
-		Type = TextElement
+		type = TextElement
 		parent = friends_vmenu
 		local_id = <id>
 		text = <text>
 		font = (<item_props>.font)
 		rgba = [128 128 128 128]
-		Scale = 1
+		scale = 1
 		just = [left top]
 		z_priority = 2
 		dimp = (<item_props>.bg_dims)
@@ -227,14 +227,14 @@ script xboxlive_menu_friends_arrow_add
 	}
 endscript
 
-script xboxlive_menu_friends_separator_add \{text = qs(0xb1679ca8)}
+script xboxlive_menu_friends_separator_add \{text = qs("\L------------------------------------------------------------------")}
 	if NOT current_menu :GetSingleTag \{allow_new_items}
 		return
 	endif
 	current_menu :GetSingleTag \{item_props}
 	SetScreenElementLock \{id = current_menu
-		OFF}
-	CreateScreenElement \{Type = ContainerElement
+		off}
+	CreateScreenElement \{type = ContainerElement
 		parent = current_menu
 		just = [
 			left
@@ -245,14 +245,14 @@ script xboxlive_menu_friends_separator_add \{text = qs(0xb1679ca8)}
 		not_focusable}
 	parent_id = <id>
 	CreateScreenElement {
-		Type = TextElement
+		type = TextElement
 		parent = <parent_id>
 		local_id = text
-		Pos = (60.0, 3.0)
+		pos = (60.0, 3.0)
 		text = <text>
 		font = (<item_props>.font)
 		rgba = (<item_props>.unhighlight_rgba)
-		Scale = (<item_props>.Scale)
+		scale = (<item_props>.scale)
 		just = [left top]
 		z_priority = 2
 		not_focusable
@@ -260,14 +260,14 @@ script xboxlive_menu_friends_separator_add \{text = qs(0xb1679ca8)}
 endscript
 
 script xboxlive_menu_recent_players_separator_add 
-	xboxlive_menu_friends_separator_add \{text = qs(0xfc79b827)}
+	xboxlive_menu_friends_separator_add \{text = qs("Recent Players")}
 endscript
 
 script xboxlive_menu_friends_item_add {
 	}
 	user_index = 0
 	if NOT ScreenElementExists \{id = friends_vmenu}
-		printf \{qs(0x446ba305)}
+		printf \{qs("\LWarning! tried to add a player when friends menu not up")}
 		return
 	endif
 	current_menu :GetSingleTag \{item_props}
@@ -277,31 +277,31 @@ script xboxlive_menu_friends_item_add {
 		endif
 		if GetScreenElementChildren \{id = current_menu}
 			GetArraySize <children>
-			tag_grid_x = (<array_Size> -1)
+			tag_grid_x = (<array_size> -1)
 			RemoveParameter \{children}
 		else
 			tag_grid_x = 0
 		endif
 		SetScreenElementLock \{id = current_menu
-			OFF}
+			off}
 		add_menu_item {
 			local_id = <player_id>
-			text = qs(0x03ac90f0)
+			text = qs("\L")
 		}
-		<item_container_id> :se_setprops dims = (40.0, 35.0)
+		<item_container_id> :SE_SetProps dims = (40.0, 35.0)
 		if ScreenElementExists id = {<item_container_id> child = highlight}
 			scale_element_to_size {
 				id = {<item_container_id> child = highlight}
 				target_width = 160
 				target_height = 47
 			}
-			legacydoscreenelementmorph {
+			LegacyDoScreenElementMorph {
 				id = {<item_container_id> child = highlight}
-				Pos = (-100.0, 8.0)
+				pos = (-100.0, 8.0)
 			}
-			legacydoscreenelementmorph {
+			LegacyDoScreenElementMorph {
 				id = <item_container_id>
-				Scale = (1.0, 0.76)
+				scale = (1.0, 0.76)
 			}
 		endif
 		SetScreenElementProps {
@@ -317,19 +317,19 @@ script xboxlive_menu_friends_item_add {
 		GetScreenElementProps {
 			id = {<item_container_id> child = text}
 		}
-		text_scale = <Scale>
+		text_scale = <scale>
 		CreateScreenElement {
-			Type = TextElement
-			local_id = cash
-			text = qs(0x7b277b30)
+			type = TextElement
+			local_id = Cash
+			text = qs("\Ltest")
 			font = fontgrid_text_a3
-			Scale = <text_scale>
+			scale = <text_scale>
 			parent = <item_container_id>
-			Pos = (100.0, 18.0)
+			pos = (100.0, 18.0)
 			just = [right center]
 		}
 	else
-		printf \{qs(0xb66f611c)}
+		printf \{qs("\LScreen element already exists")}
 	endif
 	SetScreenElementProps {
 		id = {current_menu child = <player_id>}
@@ -355,7 +355,7 @@ script xboxlive_menu_friends_item_add {
 			}
 		]
 	}
-	printf \{qs(0xfa6e882b)}
+	printf \{qs("\Lhere by jove!")}
 	printstruct <...>
 	SetScreenElementProps {
 		id = {current_menu child = {<player_id> child = text}}
@@ -367,9 +367,9 @@ script xboxlive_menu_friends_item_add {
 		NetGetPlayerCash player_id = <real_id>
 	endif
 	printstruct <...>
-	formatText TextName = player_cash_string qs(0xcb2f9062) d = <player_cash>
+	FormatText TextName = player_cash_string qs("\L$%d") d = <player_cash>
 	SetScreenElementProps {
-		id = {current_menu child = {<player_id> child = cash}}
+		id = {current_menu child = {<player_id> child = Cash}}
 		text = <player_cash_string>
 		z_priority = 100
 	}
@@ -418,12 +418,12 @@ script xboxlive_menu_friends_item_add_sprite \{rgba = [
 			128
 			128
 		]}
-	ResolveScreenElementID id = {current_menu child = {<player_id> child = <local_id>}}
+	ResolveScreenElementId id = {current_menu child = {<player_id> child = <local_id>}}
 	if ScreenElementExists id = <resolved_id>
 		DestroyScreenElement id = <resolved_id>
 	endif
 	if GotParam \{param}
-		SetScreenElementLock id = {current_menu child = <player_id>} OFF
+		SetScreenElementLock id = {current_menu child = <player_id>} off
 		GetArraySize \{options}
 		i = 0
 		begin
@@ -432,19 +432,19 @@ script xboxlive_menu_friends_item_add_sprite \{rgba = [
 			break
 		endif
 		i = (<i> + 1)
-		repeat <array_Size>
+		repeat <array_size>
 		if NOT GotParam \{texture}
 			return
 		endif
 		CreateScreenElement {
-			Type = SpriteElement
+			type = SpriteElement
 			parent = {current_menu child = <player_id>}
 			local_id = <local_id>
 			texture = <texture>
 			rgba = <rgba>
 			just = [left center]
-			Scale = <Scale>
-			Pos = <Pos>
+			scale = <scale>
+			pos = <pos>
 		}
 	endif
 endscript
@@ -452,10 +452,10 @@ endscript
 script xboxlive_menu_friends_item_focus 
 	Obj_GetID
 	current_menu :GetSingleTag \{item_props}
-	if ScreenElementExists id = {<objID> child = cash}
-		printf \{qs(0x4e72fc83)}
+	if ScreenElementExists id = {<ObjID> child = Cash}
+		printf \{qs("\L--- focus a;lskdfjal;skdjf;alsdkfj;alsdkjf;alskdfja;lsdkjfasdf")}
 		SetScreenElementProps {
-			id = {<objID> child = cash}
+			id = {<ObjID> child = Cash}
 			rgba = ($goal_ui_scheme.main)
 		}
 	endif
@@ -464,9 +464,9 @@ endscript
 
 script xboxlive_menu_friends_item_unfocus 
 	Obj_GetID
-	if ScreenElementExists id = {<objID> child = cash}
+	if ScreenElementExists id = {<ObjID> child = Cash}
 		SetScreenElementProps {
-			id = {<objID> child = cash}
+			id = {<ObjID> child = Cash}
 			rgba = [128 128 128 240]
 		}
 	endif
@@ -475,31 +475,31 @@ endscript
 script xboxlive_menu_friends_item_choose_back 
 	DisassociateFromObject
 	xboxlive_dialog_box_exit
-	LaunchEvent \{Type = focus
+	LaunchEvent \{type = focus
 		target = current_menu}
 	SetScreenElementLock \{id = friends_menu
-		OFF}
+		off}
 	create_helper_text \{$generic_helper_text
 		helper_pos = (320.0, 426.0)}
 endscript
 
 script xboxlive_menu_friends_item_context_action 
-	printf \{qs(0xb8dd39ec)}
+	printf \{qs("\Lxboxlive_menu_friends_item_context_action")}
 endscript
 
 script xboxlive_menu_friends_item_choose_invite_prompt 
 	allow_message = 0
-	if NetSessionFunc \{Obj = voice
+	if NetSessionFunc \{obj = voice
 			func = voice_allowed}
-		if NetSessionFunc \{Obj = voice
+		if NetSessionFunc \{obj = voice
 				func = voice_enabled}
-			if NetSessionFunc \{Obj = voice
+			if NetSessionFunc \{obj = voice
 					func = HasLocalHeadset}
 				<allow_message> = 1
 			endif
 		endif
 	endif
-	NetSessionFunc \{Obj = auth
+	NetSessionFunc \{obj = auth
 		func = get_user_device_index}
 	if (<allow_message> = 1)
 		xboxlive_dialog_box {title = net_friends_attach_voice
@@ -517,19 +517,19 @@ script xboxlive_menu_friends_item_choose_invite_prompt
 endscript
 
 script xboxlive_menu_friends_item_choose_invite 
-	NetSessionFunc Obj = presence func = invite_friend params = <...>
+	NetSessionFunc obj = presence func = invite_friend params = <...>
 	xboxlive_menu_friends_item_choose_back
 endscript
 
 script xboxlive_menu_friends_item_choose_reject_invitation 
-	NetSessionFunc Obj = presence func = reject_invitation params = <...>
+	NetSessionFunc obj = presence func = reject_invitation params = <...>
 	xboxlive_menu_friends_item_choose_back
 endscript
 
 script xboxlive_menu_friends_item_choose_follow 
-	NetSessionFunc \{Obj = auth
+	NetSessionFunc \{obj = auth
 		func = get_user_device_index}
-	if NetSessionFunc Obj = presence func = follow_friend params = <...>
+	if NetSessionFunc obj = presence func = follow_friend params = <...>
 		if GotParam \{same_title}
 			xboxlive_menu_friends_item_choose_back
 			xboxlive_menu_back_from_friends_list
@@ -552,7 +552,7 @@ script xboxlive_menu_friends_item_choose_follow
 				endif
 			endif
 		else
-			LaunchEvent \{Type = unfocus
+			LaunchEvent \{type = unfocus
 				target = current_menu}
 			current_menu :GetSingleTag \{dialog_callback}
 			if GotParam \{was_invited}
@@ -560,7 +560,7 @@ script xboxlive_menu_friends_item_choose_follow
 			else
 				title_text = net_friends_join_friend
 			endif
-			main_text = (net_friends_eject_disc + <title> + qs(0x730fb7a3) + z_mainmenu_str_310)
+			main_text = (net_friends_eject_disc + <title> + qs("\L\n\n") + z_mainmenu_str_310)
 			<dialog_callback> {
 				title = <title_text>
 				text = <main_text>
@@ -582,14 +582,14 @@ script xboxlive_menu_friends_item_choose_follow
 endscript
 
 script xboxlive_menu_friends_item_choose_remove_confirm 
-	NetSessionFunc \{Obj = auth
+	NetSessionFunc \{obj = auth
 		func = get_user_device_index}
 	xboxlive_menu_friends_item_choose_back
-	LaunchEvent \{Type = unfocus
+	LaunchEvent \{type = unfocus
 		target = current_menu}
 	current_menu :GetSingleTag \{dialog_callback}
 	title_text = (net_title_remove)
-	formatText TextName = dialog_text (net_question_are_you_sure_remove) s = <player_name>
+	FormatText TextName = dialog_text (net_question_are_you_sure_remove) s = <player_name>
 	<dialog_callback> {
 		title = <title_text>
 		text = <dialog_text>
@@ -613,17 +613,17 @@ script xboxlive_menu_friends_item_choose_remove_confirm
 endscript
 
 script xboxlive_menu_friends_item_choose_remove 
-	NetSessionFunc Obj = presence func = remove_friend params = <...>
+	NetSessionFunc obj = presence func = remove_friend params = <...>
 	xboxlive_menu_friends_item_choose_back
 endscript
 
 script xboxlive_menu_friends_item_accept_friend_request 
-	NetSessionFunc Obj = presence func = accept_friendship params = <...>
+	NetSessionFunc obj = presence func = accept_friendship params = <...>
 	xboxlive_menu_friends_item_choose_back
 endscript
 
 script xboxlive_menu_friends_item_reject_friend_request 
-	NetSessionFunc Obj = presence func = reject_friendship params = <...>
+	NetSessionFunc obj = presence func = reject_friendship params = <...>
 	xboxlive_menu_friends_item_choose_back
 endscript
 
@@ -634,23 +634,23 @@ endscript
 
 script xboxlive_menu_async_retrieve_message 
 	Wait \{1
-		Frame}
+		frame}
 	begin
-	NetSessionFunc \{Obj = presence
+	NetSessionFunc \{obj = presence
 		func = pump_download}
-	if NetSessionFunc \{Obj = presence
+	if NetSessionFunc \{obj = presence
 			func = download_complete}
 		break
 	endif
 	Wait \{1
-		Frame}
+		frame}
 	repeat
-	if NetSessionFunc \{Obj = presence
+	if NetSessionFunc \{obj = presence
 			func = download_succeeded}
 		xboxlive_dialog_box_exit
 		xboxlive_menu_friends_present_voicemail_options <...>
 	else
-		NetSessionFunc \{Obj = auth
+		NetSessionFunc \{obj = auth
 			func = get_user_device_index}
 		xboxlive_dialog_box_exit
 		create_dialog_box {title = $net_status_msg
@@ -662,14 +662,14 @@ script xboxlive_menu_async_retrieve_message
 endscript
 
 script xboxlive_menu_friends_send_feedback 
-	NetSessionFunc Obj = presence func = send_feedback params = {feedback = <feedback> <...> friend}
+	NetSessionFunc obj = presence func = send_feedback params = {feedback = <feedback> <...> friend}
 	xboxlive_menu_friends_present_voicemail_options <...>
 endscript
 
 script xboxlive_menu_friends_send_feedback_confirm 
-	NetSessionFunc \{Obj = auth
+	NetSessionFunc \{obj = auth
 		func = get_user_device_index}
-	formatText TextName = dialog_text (net_title_confirm_compaint) s = <player_name>
+	FormatText TextName = dialog_text (net_title_confirm_compaint) s = <player_name>
 	xboxlive_dialog_box {title = (net_friends_send_complaint)
 		text = <dialog_text>
 		exclusive_device = <user_index>
@@ -684,7 +684,7 @@ script xboxlive_menu_friends_feedback
 	player_structure = <...>
 	xboxlive_dialog_box {
 		title = net_title_feedback
-		text = (net_title_select_feedback + <player_name> + qs(0x3e76c330))
+		text = (net_title_select_feedback + <player_name> + qs("\L'"))
 		text_dims = (400.0, 0.0)
 		pad_back_script = xboxlive_menu_players_item_choose
 		pad_back_params = <player_structure>
@@ -741,9 +741,9 @@ script xboxlive_menu_friends_present_voicemail_options
 endscript
 
 script xboxlive_menu_friends_item_choose_play_attachment 
-	NetSessionFunc Obj = presence func = download_voice_attachment params = <...>
+	NetSessionFunc obj = presence func = download_voice_attachment params = <...>
 	xboxlive_dialog_box_exit
-	NetSessionFunc \{Obj = auth
+	NetSessionFunc \{obj = auth
 		func = get_user_device_index}
 	xboxlive_dialog_box {title = $net_status_msg
 		text = $net_status_please_wait
@@ -752,14 +752,14 @@ script xboxlive_menu_friends_item_choose_play_attachment
 endscript
 
 script xboxlive_menu_friends_item_block_friend_request_confirm 
-	NetSessionFunc \{Obj = auth
+	NetSessionFunc \{obj = auth
 		func = get_user_device_index}
 	xboxlive_menu_friends_item_choose_back
-	LaunchEvent \{Type = unfocus
+	LaunchEvent \{type = unfocus
 		target = current_menu}
 	current_menu :GetSingleTag \{dialog_callback}
 	title_text = (net_friends_block_requests)
-	formatText TextName = dialog_text (net_question_are_you_sure_block) s = <player_name>
+	FormatText TextName = dialog_text (net_question_are_you_sure_block) s = <player_name>
 	<dialog_callback> {
 		title = <title_text>
 		text = <dialog_text>
@@ -783,17 +783,17 @@ script xboxlive_menu_friends_item_block_friend_request_confirm
 endscript
 
 script xboxlive_menu_friends_item_block_friend_request 
-	NetSessionFunc Obj = presence func = block_friendship params = <...>
+	NetSessionFunc obj = presence func = block_friendship params = <...>
 	xboxlive_menu_friends_item_choose_back
 endscript
 
 script xboxlive_menu_friends_item_choose_cancel_invitation 
-	NetSessionFunc Obj = presence func = cancel_invitation params = <...>
+	NetSessionFunc obj = presence func = cancel_invitation params = <...>
 	xboxlive_menu_friends_item_choose_back
 endscript
 
 script xboxlive_menu_friends_item_cancel_friend_request 
-	NetSessionFunc Obj = presence func = cancel_friend_request params = <...>
+	NetSessionFunc obj = presence func = cancel_friend_request params = <...>
 	xboxlive_menu_friends_item_choose_back
 endscript
 
@@ -873,13 +873,13 @@ script xboxlive_menu_friends_item_choose
 		text = <player_name>
 		joinable = 0
 		if InNetGame
-			if NetSessionFunc \{Obj = presence
+			if NetSessionFunc \{obj = presence
 					func = is_joinable}
 				<joinable> = 1
 			endif
 		endif
 		if (<joinable> = 1)
-			if NetSessionFunc Obj = presence func = in_my_game params = <player_structure>
+			if NetSessionFunc obj = presence func = in_my_game params = <player_structure>
 				buttons = [
 					{
 						text = net_friends_remove
@@ -929,13 +929,13 @@ script xboxlive_menu_friends_item_choose
 		text = <player_name>
 		joinable = 0
 		if InNetGame
-			if NetSessionFunc \{Obj = presence
+			if NetSessionFunc \{obj = presence
 					func = is_joinable}
 				<joinable> = 1
 			endif
 		endif
 		if (<joinable> = 1)
-			if NetSessionFunc Obj = presence func = in_my_game params = <player_structure>
+			if NetSessionFunc obj = presence func = in_my_game params = <player_structure>
 				buttons = [
 					{
 						text = net_friends_remove
@@ -973,7 +973,7 @@ script xboxlive_menu_friends_item_choose
 				]
 			endif
 		else
-			if NetSessionFunc Obj = presence func = in_my_game params = <player_structure>
+			if NetSessionFunc obj = presence func = in_my_game params = <player_structure>
 				buttons = [
 					{
 						text = net_friends_remove
@@ -1009,10 +1009,10 @@ script xboxlive_menu_friends_item_choose
 		case 5
 		text = (<player_name>)
 		allow_message = 0
-		if NetSessionFunc Obj = presence func = has_voice_attachment params = <player_structure>
-			if NetSessionFunc \{Obj = voice
+		if NetSessionFunc obj = presence func = has_voice_attachment params = <player_structure>
+			if NetSessionFunc \{obj = voice
 					func = voice_allowed}
-				if NetSessionFunc \{Obj = voice
+				if NetSessionFunc \{obj = voice
 						func = voice_enabled}
 					<allow_message> = 1
 				endif
@@ -1082,10 +1082,10 @@ script xboxlive_menu_friends_item_choose
 		case 7
 		text = (net_title_accept_friend_request + <player_name>)
 		allow_message = 0
-		if NetSessionFunc Obj = presence func = has_voice_attachment params = <player_structure>
-			if NetSessionFunc \{Obj = voice
+		if NetSessionFunc obj = presence func = has_voice_attachment params = <player_structure>
+			if NetSessionFunc \{obj = voice
 					func = voice_allowed}
-				if NetSessionFunc \{Obj = voice
+				if NetSessionFunc \{obj = voice
 						func = voice_enabled}
 					<allow_message> = 1
 				endif
@@ -1148,13 +1148,13 @@ script xboxlive_menu_friends_item_choose
 			}
 		]
 		default
-		printf qs(0x7c7eb0dd) d = <invite>
+		printf qs("\Ldon't know what to do for this invite: %d") d = <invite>
 		return
 	endswitch
-	LaunchEvent \{Type = unfocus
+	LaunchEvent \{type = unfocus
 		target = current_menu}
 	current_menu :GetSingleTag \{dialog_callback}
-	NetSessionFunc \{Obj = auth
+	NetSessionFunc \{obj = auth
 		func = get_user_device_index}
 	<dialog_callback> {
 		title = <title>
@@ -1168,20 +1168,20 @@ endscript
 
 script xboxlive_menu_friends_blink_arrow 
 	if (<direction> = up)
-		ResolveScreenElementID \{id = {
+		ResolveScreenElementId \{id = {
 				current_menu
 				child = up_arrow
 			}}
 	endif
 	if (<direction> = down)
-		ResolveScreenElementID \{id = {
+		ResolveScreenElementId \{id = {
 				current_menu
 				child = down_arrow
 			}}
 	endif
 	if ScreenElementExists id = <resolved_id>
-		legacydoscreenelementmorph id = <resolved_id> alpha = 0
-		legacydoscreenelementmorph id = <resolved_id> alpha = 1 time = 0.3
+		LegacyDoScreenElementMorph id = <resolved_id> alpha = 0
+		LegacyDoScreenElementMorph id = <resolved_id> alpha = 1 time = 0.3
 	endif
 endscript
 
@@ -1191,20 +1191,20 @@ script xboxlive_menu_friends_netfunc_redirect
 		case friends
 		switch <action>
 			case getnum
-			NetSessionFunc \{Obj = presence
+			NetSessionFunc \{obj = presence
 				func = get_num_friends}
 			num_items_total = <num_friends>
 			case addall
 			xboxlive_menu_friends_get_friends_info
-			NetSessionFunc Obj = presence func = fill_friends_list params = {start = <start_index> num = <items_on_page>}
+			NetSessionFunc obj = presence func = fill_friends_list params = {start = <start_index> num = <items_on_page>}
 			case getindex
 			current_menu :GetSingleTag \{selected_player_name}
 			if GotParam \{selected_player_name}
-				NetSessionFunc Obj = presence func = get_player_index params = {player_name = <selected_player_name>}
+				NetSessionFunc obj = presence func = get_player_index params = {player_name = <selected_player_name>}
 				player_index = <index>
 			endif
 			default
-			printf qs(0x52f2bea2) p = <player_set> a = <action>
+			printf qs("\LBad action: player set: %p, action: %a") p = <player_set> a = <action>
 		endswitch
 		case players
 		switch <action>
@@ -1216,14 +1216,14 @@ script xboxlive_menu_friends_netfunc_redirect
 			case getindex
 			current_menu :GetSingleTag \{selected_player_name}
 			if GotParam \{selected_player_name}
-				NetSessionFunc Obj = presence func = get_player_index params = {player_name = <selected_player_name> players}
+				NetSessionFunc obj = presence func = get_player_index params = {player_name = <selected_player_name> players}
 				player_index = <index>
 			endif
 			default
-			printf qs(0x52f2bea2) p = <player_set> a = <action>
+			printf qs("\LBad action: player set: %p, action: %a") p = <player_set> a = <action>
 		endswitch
 		default
-		ScriptAssert \{qs(0x4112ea96)}
+		ScriptAssert \{qs("\Leh")}
 	endswitch
 	return <...>
 endscript

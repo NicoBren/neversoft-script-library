@@ -10,21 +10,21 @@ cas_queue_min_frames_between_jobs_fast_cas = 6
 script cas_queue_add_request 
 	RequireParams \{[
 			appearance
-			Player
+			player
 		]
 		all}
-	printscriptinfo 'cas_queue_add_request %d' d = <Player>
-	if ((<Player> < 1) || (<Player> > 4))
+	printscriptinfo 'cas_queue_add_request %d' d = <player>
+	if ((<player> < 1) || (<player> > 4))
 		ScriptAssert \{'player must be 1-4'}
 	endif
-	index = (<Player> - 1)
-	generatechecksumfromstruct \{structname = appearance}
-	if NOT StructureContains structure = ($cas_queue_player_info [<index>]) Pos
-		cas_set_object_node_pos Player = <Player>
+	index = (<player> - 1)
+	GenerateChecksumFromStruct \{StructName = appearance}
+	if NOT StructureContains Structure = ($cas_queue_player_info [<index>]) pos
+		cas_set_object_node_pos player = <player>
 	endif
 	player_info = ($cas_queue_player_info [<index>])
 	if NOT GotParam \{force_update}
-		if StructureContains structure = <player_info> object
+		if StructureContains Structure = <player_info> object
 			printf \{'has old object'}
 			old_object = (<player_info>.object)
 		endif
@@ -38,8 +38,8 @@ script cas_queue_add_request
 				endif
 				if GotParam \{in_cas}
 					if GotParam \{old_object}
-						if CompositeObjectExists Name = <old_object>
-							if <old_object> :ishidden
+						if CompositeObjectExists name = <old_object>
+							if <old_object> :IsHidden
 								printf \{'Object is hidden in CAS. Fixing instrument havok freakout...'}
 								instrument_havok_fix = 1
 							endif
@@ -47,12 +47,12 @@ script cas_queue_add_request
 					endif
 				endif
 				if NOT GotParam \{instrument_havok_fix}
-					cascancelloading
+					CasCancelLoading
 					cancelled_loading = 1
-					printf 'Cancelled existing load on %d' d = <Player>
+					printf 'Cancelled existing load on %d' d = <player>
 				endif
 				if GotParam \{old_object}
-					if CompositeObjectExists Name = <old_object>
+					if CompositeObjectExists name = <old_object>
 						if NOT <old_object> :GetSingleTag body_checksum
 							ScriptAssert \{'body_checksum missing from object'}
 						endif
@@ -63,7 +63,7 @@ script cas_queue_add_request
 		endif
 		if NOT GotParam \{cancelled_loading}
 			if GotParam \{old_object}
-				if CompositeObjectExists Name = <old_object>
+				if CompositeObjectExists name = <old_object>
 					if NOT <old_object> :GetSingleTag appearance_checksum
 						ScriptAssert \{'appearance_checksum missing from object'}
 					endif
@@ -81,7 +81,7 @@ script cas_queue_add_request
 			endif
 		endif
 	endif
-	printf 'Kicking off a new load for %d' d = <Player>
+	printf 'Kicking off a new load for %d' d = <player>
 	fast_cas_update = 0
 	if GotParam \{in_cas}
 		get_body_checksum_from_appearance appearance = <appearance>
@@ -91,45 +91,45 @@ script cas_queue_add_request
 			endif
 		endif
 	endif
-	getlogicframe
+	GetLogicFrame
 	get_is_female_from_appearance appearance = <appearance>
 	player_info = {
 		<player_info>
 		pending_appearance = <appearance>
 		pending_instrument = <instrument>
 		pending_is_female = <is_female>
-		requested_frame = <logicframe>
+		requested_frame = <LogicFrame>
 		fast_cas_update = <fast_cas_update>
 		hide_old_character = <hide_old_character>
 	}
-	SetArrayElement ArrayName = cas_queue_player_info globalarray index = <index> NewValue = <player_info>
-	SpawnScriptNow cas_queue_update params = {new_request_index = <index>}
+	SetArrayElement ArrayName = cas_queue_player_info GlobalArray index = <index> newvalue = <player_info>
+	spawnscriptnow cas_queue_update params = {new_request_index = <index>}
 endscript
 
 script cas_queue_kill_player 
 	RequireParams \{[
-			Player
+			player
 		]
 		all}
-	printf 'cas_queue_kill_player %d' d = <Player>
-	if ((<Player> < 1) || (<Player> > 4))
+	printf 'cas_queue_kill_player %d' d = <player>
+	if ((<player> < 1) || (<player> > 4))
 		ScriptAssert \{'player must be 1-4'}
 	endif
-	index = (<Player> - 1)
+	index = (<player> - 1)
 	if cas_queue_is_busy \{characters_only}
 		if (($cas_queue_current_job.current_player_index) = <index>)
-			cascancelloading
-			if StructureContains \{structure = $cas_queue_current_job
+			CasCancelLoading
+			if StructureContains \{Structure = $cas_queue_current_job
 					old_object}
 				old_object = ($cas_queue_current_job.old_object)
-				if CompositeObjectExists Name = <old_object>
+				if CompositeObjectExists name = <old_object>
 					cas_queue_internal_destroy_object object = <old_object> kill_pending_jobs
 					return
 				endif
 			endif
 		endif
 	endif
-	if cas_player_has_character_object Player = <Player>
+	if cas_player_has_character_object player = <player>
 		cas_queue_internal_destroy_object object = <character_object> kill_pending_jobs
 	endif
 	player_info = ($cas_queue_player_info [<index>])
@@ -138,7 +138,7 @@ endscript
 
 script cas_cancel_loading_callback 
 	if ($cas_queue_waiting_to_start = 1)
-		Change \{cas_queue_waiting_to_start_cancelled = 1}
+		change \{cas_queue_waiting_to_start_cancelled = 1}
 	endif
 endscript
 
@@ -157,13 +157,13 @@ script cancel_all_cas_loads
 	begin
 	if (<i> != <except>)
 		if (<i> = <active_player>)
-			cascancelloading
+			CasCancelLoading
 		else
 			player_info = ($cas_queue_player_info [<i>])
 			cas_queue_remove_job_details player_info = <player_info> index = <i>
 			if GotParam \{kill}
-				if StructureContains structure = <player_info> requested_frame
-					cas_queue_kill_player Player = (<i> + 1)
+				if StructureContains Structure = <player_info> requested_frame
+					cas_queue_kill_player player = (<i> + 1)
 				endif
 			endif
 		endif
@@ -173,7 +173,7 @@ script cancel_all_cas_loads
 	if GotParam \{kill}
 		if (<active_player> <= 4)
 			if NOT (<active_player> = <except>)
-				cas_queue_kill_player Player = (<active_player> + 1)
+				cas_queue_kill_player player = (<active_player> + 1)
 			endif
 		endif
 	endif
@@ -181,8 +181,8 @@ endscript
 
 script cas_queue_update 
 	printf \{'cas_queue_update'}
-	setscriptcannotpause
-	if ScriptIsRunning \{updatecurrentcasmodelspawned}
+	SetScriptCannotPause
+	if ScriptIsRunning \{UpdateCurrentCASModelSpawned}
 		printf \{'cas_queue_is_busy: UpdateCurrentCASModelSpawned is running'}
 		return
 	endif
@@ -196,7 +196,7 @@ script cas_queue_update
 	if ($cas_queue_lock = 1)
 		ScriptAssert \{'cas_queue_lock'}
 	endif
-	Change \{cas_queue_lock = 1}
+	change \{cas_queue_lock = 1}
 	cas_queue_rawpak_update
 	if cas_queue_get_next_entry
 		cas_start_loading_anim player_index = <index>
@@ -214,10 +214,10 @@ script cas_queue_update
 		if ($cas_queue_waiting_to_start_cancelled = 1)
 			ScriptAssert \{'This should never be set here'}
 		endif
-		Change \{cas_queue_waiting_to_start = 1}
+		change \{cas_queue_waiting_to_start = 1}
 		begin
-		getlogicframe
-		waited = (<logicframe> - ($cas_queue_last_job_frame))
+		GetLogicFrame
+		waited = (<LogicFrame> - ($cas_queue_last_job_frame))
 		if (<waited> >= <min_frames>)
 			break
 		endif
@@ -228,8 +228,8 @@ script cas_queue_update
 			gameframe}
 		printf \{'Waiting due to CAS queue spamming...'}
 		repeat
-		Change cas_queue_last_job_frame = <logicframe>
-		Change \{cas_queue_waiting_to_start = 0}
+		change cas_queue_last_job_frame = <LogicFrame>
+		change \{cas_queue_waiting_to_start = 0}
 		if ($cas_queue_waiting_to_start_cancelled = 0)
 			if (<fast_cas_update> = 1)
 				cas_queue_fast_update {
@@ -242,8 +242,8 @@ script cas_queue_update
 					index = <index>
 					old_object = <old_object>
 					new_object = <new_object>
-					Profile = {
-						Name = 'frontendguy'
+					profile = {
+						name = 'frontendguy'
 						appearance = <new_appearance>
 					}
 					instrument = <new_instrument>
@@ -252,21 +252,21 @@ script cas_queue_update
 			endif
 		else
 			printf \{'Cancelled during the waiting_to_start'}
-			Change \{cas_queue_waiting_to_start_cancelled = 0}
+			change \{cas_queue_waiting_to_start_cancelled = 0}
 		endif
 		if ($cas_queue_waiting_to_start_cancelled = 1)
 			ScriptAssert \{'This should never be set here'}
 		endif
 		player_info = ($cas_queue_player_info [<index>])
-		if NOT StructureContains structure = <player_info> requested_frame
+		if NOT StructureContains Structure = <player_info> requested_frame
 			cas_stop_loading_anim player_index = <index>
 		endif
-		Change \{cas_queue_current_job = {
+		change \{cas_queue_current_job = {
 			}}
-		Change \{cas_queue_lock = 0}
-		SpawnScriptNow \{cas_queue_update}
+		change \{cas_queue_lock = 0}
+		spawnscriptnow \{cas_queue_update}
 	endif
-	Change \{cas_queue_lock = 0}
+	change \{cas_queue_lock = 0}
 	OnExitRun \{nullscript}
 endscript
 
@@ -275,14 +275,14 @@ script cas_queue_update_death
 endscript
 
 script cas_queue_rawpak_update 
-	if existspakmanmap \{map = cas_rawpaks}
+	if ExistsPakManMap \{map = cas_rawpaks}
 		begin
-		if ($cas_queue_rawpak = None)
+		if ($cas_queue_rawpak = none)
 			break
 		endif
 		current_loading_rawpak = ($cas_queue_rawpak)
-		Change \{cas_queue_rawpak = None}
-		if NOT existspakmanmap \{map = cas_rawpaks}
+		change \{cas_queue_rawpak = none}
+		if NOT ExistsPakManMap \{map = cas_rawpaks}
 			printf \{'rawpak map deleted before we got a chance to load... bailing'}
 			return
 		endif
@@ -299,29 +299,29 @@ script cas_queue_get_next_entry
 	i = 0
 	begin
 	player_info = ($cas_queue_player_info [<i>])
-	if StructureContains structure = <player_info> requested_frame
-		Frame = (<player_info>.requested_frame)
+	if StructureContains Structure = <player_info> requested_frame
+		frame = (<player_info>.requested_frame)
 		if NOT GotParam \{earliest_frame}
-			earliest_frame = <Frame>
+			earliest_frame = <frame>
 		endif
-		if (<Frame> <= <earliest_frame>)
-			earliest_frame = <Frame>
+		if (<frame> <= <earliest_frame>)
+			earliest_frame = <frame>
 			earliest_frame_index = <i>
 		endif
 	endif
 	i = (<i> + 1)
-	repeat <array_Size>
+	repeat <array_size>
 	if GotParam \{earliest_frame_index}
 		return true index = <earliest_frame_index>
 	endif
 endscript
 
 script cas_queue_prepare_new_object 
-	if StructureContains structure = <player_info> object
+	if StructureContains Structure = <player_info> object
 		old_object = (<player_info>.object)
 	endif
 	if (<player_info>.fast_cas_update = 1)
-		if NOT CompositeObjectExists Name = <old_object>
+		if NOT CompositeObjectExists name = <old_object>
 			ScriptAssert 'Cannot fast update on %d' d = <old_object>
 		endif
 		new_object = <old_object>
@@ -337,7 +337,7 @@ script cas_queue_prepare_new_object
 			new_object = <old_object>
 			RemoveParameter \{old_object}
 		endif
-		if CompositeObjectExists Name = <new_object>
+		if CompositeObjectExists name = <new_object>
 			ScriptAssert \{'Some logic issue here, this object should not exist'}
 		endif
 	endif
@@ -350,11 +350,11 @@ script cas_queue_start_job
 			new_object
 		]}
 	player_info = ($cas_queue_player_info [<index>])
-	generatechecksumfromstruct struct = (<player_info>.pending_appearance)
+	GenerateChecksumFromStruct struct = (<player_info>.pending_appearance)
 	appearance_checksum = <structure_checksum>
 	get_body_checksum_from_appearance appearance = (<player_info>.pending_appearance)
 	is_female = (<player_info>.pending_is_female)
-	Change cas_queue_current_job = {
+	change cas_queue_current_job = {
 		new_object = <new_object>
 		old_object = <old_object>
 		current_player_index = <index>
@@ -367,18 +367,18 @@ endscript
 
 script cas_queue_remove_job_details 
 	RemoveComponent \{structure_name = player_info
-		Name = pending_appearance}
+		name = pending_appearance}
 	RemoveComponent \{structure_name = player_info
-		Name = pending_instrument}
+		name = pending_instrument}
 	RemoveComponent \{structure_name = player_info
-		Name = pending_is_female}
+		name = pending_is_female}
 	RemoveComponent \{structure_name = player_info
-		Name = requested_frame}
+		name = requested_frame}
 	RemoveComponent \{structure_name = player_info
-		Name = fast_cas_update}
+		name = fast_cas_update}
 	RemoveComponent \{structure_name = player_info
-		Name = hide_old_character}
-	SetArrayElement ArrayName = cas_queue_player_info globalarray index = <index> NewValue = <player_info>
+		name = hide_old_character}
+	SetArrayElement ArrayName = cas_queue_player_info GlobalArray index = <index> newvalue = <player_info>
 	if NOT GotParam \{startedjob}
 		cas_stop_loading_anim player_index = <index>
 	endif
@@ -394,45 +394,45 @@ script cas_queue_build_new_character
 	endif
 	if GotParam \{hide_old_character}
 		if GotParam \{old_object}
-			if CompositeObjectExists Name = <old_object>
+			if CompositeObjectExists name = <old_object>
 				cas_queue_internal_destroy_object object = <old_object>
 			endif
 		endif
 	endif
 	if create_frontend_musician {
-			Profile = <Profile>
-			Name = <new_object>
+			profile = <profile>
+			name = <new_object>
 			async = 1
-			Pos = (<player_info>.Pos)
-			Dir = (<player_info>.Dir)
+			pos = (<player_info>.pos)
+			dir = (<player_info>.dir)
 		}
 		stars
 		printf 'Loaded new musician for %d' d = (<index>)
 		stars
 		player_info = ($cas_queue_player_info [<index>])
-		<new_object> :Obj_SetPosition position = (<player_info>.Pos)
-		<new_object> :Obj_SetOrientation Dir = (<player_info>.Dir)
+		<new_object> :Obj_SetPosition position = (<player_info>.pos)
+		<new_object> :Obj_SetOrientation dir = (<player_info>.dir)
 		player_info = {
 			<player_info>
 			object = <new_object>
 		}
-		SetArrayElement ArrayName = cas_queue_player_info globalarray index = <index> NewValue = <player_info>
+		SetArrayElement ArrayName = cas_queue_player_info GlobalArray index = <index> newvalue = <player_info>
 		if GotParam \{old_object}
-			if CompositeObjectExists Name = <old_object>
+			if CompositeObjectExists name = <old_object>
 				cas_queue_internal_destroy_object object = <old_object>
 			endif
 		endif
-		formatText checksumName = aliasname 'cas_player%d' d = (<index> + 1)
+		FormatText checksumname = aliasname 'cas_player%d' d = (<index> + 1)
 		AssignAlias id = <new_object> alias = <aliasname>
-		if ($band_mode_mode = None)
+		if ($band_mode_mode = none)
 		else
-			Band_PlayAnim Name = <new_object> anim = popin no_wait
+			Band_PlayAnim name = <new_object> Anim = PopIn no_wait
 		endif
 	else
 		stars
 		printf 'Cancelled new musician for %d' d = (<index>)
 		stars
-		if CompositeObjectExists Name = <new_object>
+		if CompositeObjectExists name = <new_object>
 			cas_queue_internal_destroy_object object = <new_object>
 		endif
 	endif
@@ -441,13 +441,13 @@ endscript
 script cas_queue_new_character_profile 
 	RequireParams \{[
 			id
-			Player
+			player
 			savegame
 		]
 		all}
 	printstruct <...>
 	get_musician_profile_struct_by_id id = <id> savegame = <savegame>
-	cas_queue_add_request appearance = (<profile_struct>.appearance) Player = <Player> force_update = <force_update> hide_old_character = <hide_old_character>
+	cas_queue_add_request appearance = (<profile_struct>.appearance) player = <player> force_update = <force_update> hide_old_character = <hide_old_character>
 endscript
 
 script cas_queue_get_unused_object 
@@ -455,37 +455,37 @@ script cas_queue_get_unused_object
 	i = 0
 	begin
 	object = ($cas_object_name_list [<i>])
-	if NOT CompositeObjectExists Name = <object>
+	if NOT CompositeObjectExists name = <object>
 		return true unused_object = <object>
 	endif
 	i = (<i> + 1)
-	repeat <array_Size>
-	return \{FALSE}
+	repeat <array_size>
+	return \{false}
 endscript
 
 script cas_queue_internal_destroy_object 
-	destroy_band_member Name = <object>
+	destroy_band_member name = <object>
 	GetArraySize \{$cas_queue_player_info}
 	i = 0
 	begin
 	player_info = ($cas_queue_player_info [<i>])
-	if StructureContains structure = <player_info> object
+	if StructureContains Structure = <player_info> object
 		if ((<player_info>.object) = <object>)
 			RemoveComponent \{structure_name = player_info
-				Name = object}
+				name = object}
 			if GotParam \{kill_pending_jobs}
 				cas_queue_remove_job_details player_info = <player_info> index = <i>
 			else
-				SetArrayElement ArrayName = cas_queue_player_info globalarray index = <i> NewValue = <player_info>
+				SetArrayElement ArrayName = cas_queue_player_info GlobalArray index = <i> newvalue = <player_info>
 			endif
 		endif
 	endif
 	i = (<i> + 1)
-	repeat <array_Size>
+	repeat <array_size>
 endscript
 
 script cas_queue_is_busy 
-	if StructureContains \{structure = $cas_queue_current_job
+	if StructureContains \{Structure = $cas_queue_current_job
 			new_object}
 		return true busy_player = ($cas_queue_current_job.current_player_index)
 	endif
@@ -499,7 +499,7 @@ script cas_queue_is_busy
 			return \{true}
 		endif
 	endif
-	return \{FALSE}
+	return \{false}
 endscript
 
 script cas_queue_wait 
@@ -514,33 +514,33 @@ endscript
 
 script cas_destroy_all_characters 
 	printscriptinfo \{'cas_destroy_all_characters'}
-	cas_queue_kill_player \{Player = 1}
-	cas_queue_kill_player \{Player = 2}
-	cas_queue_kill_player \{Player = 3}
-	cas_queue_kill_player \{Player = 4}
+	cas_queue_kill_player \{player = 1}
+	cas_queue_kill_player \{player = 2}
+	cas_queue_kill_player \{player = 3}
+	cas_queue_kill_player \{player = 4}
 endscript
 
 script cas_player_has_character_object 
-	if ((<Player> < 1) || (<Player> > 4))
+	if ((<player> < 1) || (<player> > 4))
 		ScriptAssert \{'player must be 1-4'}
 	endif
-	index = (<Player> - 1)
+	index = (<player> - 1)
 	player_info = ($cas_queue_player_info [<index>])
-	if StructureContains structure = <player_info> object
-		if CompositeObjectExists Name = (<player_info>.object)
+	if StructureContains Structure = <player_info> object
+		if CompositeObjectExists name = (<player_info>.object)
 			return true character_object = (<player_info>.object)
 		endif
 	endif
-	return \{FALSE}
+	return \{false}
 endscript
 
 script cas_get_is_female 
-	if ((<Player> < 1) || (<Player> > 4))
+	if ((<player> < 1) || (<player> > 4))
 		ScriptAssert \{'player must be 1-4'}
 	endif
-	index = (<Player> - 1)
+	index = (<player> - 1)
 	player_info = ($cas_queue_player_info [<index>])
-	if StructureContains structure = <player_info> pending_is_female
+	if StructureContains Structure = <player_info> pending_is_female
 		printf \{'Pending gender queried'}
 		return is_female = (<player_info>.pending_is_female)
 	endif
@@ -550,14 +550,14 @@ script cas_get_is_female
 			return is_female = ($cas_queue_current_job.is_female)
 		endif
 	endif
-	if NOT StructureContains structure = <player_info> object
+	if NOT StructureContains Structure = <player_info> object
 		printstruct <player_info>
 		printstruct ($cas_queue_current_job)
 		printf \{'player has no current object'}
 		return \{is_female = 0}
 	endif
 	old_object = (<player_info>.object)
-	if NOT CompositeObjectExists Name = <old_object>
+	if NOT CompositeObjectExists name = <old_object>
 		ScriptAssert \{'Player object doesnt exist'}
 	endif
 	if NOT <old_object> :GetSingleTag is_female
@@ -568,8 +568,8 @@ script cas_get_is_female
 endscript
 
 script cas_queue_fast_update instrument = ($cas_current_instrument) async = 1
-	caswaitforcomposite
-	if <cas_object> :buildcasmodel {
+	CASWaitForComposite
+	if <cas_object> :BuildCASModel {
 			use_cache
 			async = <async>
 			appearance = <appearance>
@@ -582,41 +582,41 @@ script cas_queue_fast_update instrument = ($cas_current_instrument) async = 1
 		return \{true}
 	else
 		<cas_object> :unhide
-		return \{FALSE}
+		return \{false}
 	endif
 endscript
 
-script cas_set_object_node_pos \{instrument = None}
+script cas_set_object_node_pos \{instrument = none}
 	RequireParams \{[
-			Player
+			player
 		]
 		all}
-	index = (<Player> - 1)
+	index = (<player> - 1)
 	if GotParam \{node}
-		GetWaypointPos Name = <node>
-		GetWaypointDir Name = <node>
+		GetWaypointPos name = <node>
+		GetWaypointDir name = <node>
 	else
-		if getinstrumentnodename instrument = <instrument>
-			GetWaypointPos Name = <instrument_node_name>
-			GetWaypointDir Name = <instrument_node_name>
+		if GetInstrumentNodeName instrument = <instrument>
+			GetWaypointPos name = <instrument_node_name>
+			GetWaypointDir name = <instrument_node_name>
 		else
-			GetWaypointPos \{Name = $cas_node_name}
-			GetWaypointDir \{Name = $cas_node_name}
+			GetWaypointPos \{name = $CAS_node_name}
+			GetWaypointDir \{name = $CAS_node_name}
 		endif
 	endif
 	player_info = ($cas_queue_player_info [<index>])
 	player_info = {
 		<player_info>
-		Pos = <Pos>
-		Dir = <Dir>
+		pos = <pos>
+		dir = <dir>
 	}
-	SetArrayElement ArrayName = cas_queue_player_info globalarray index = <index> NewValue = <player_info>
-	if cas_player_has_character_object Player = <Player>
-		newpos = <Pos>
+	SetArrayElement ArrayName = cas_queue_player_info GlobalArray index = <index> newvalue = <player_info>
+	if cas_player_has_character_object player = <player>
+		newpos = <pos>
 		<character_object> :Obj_GetPosition
 		<character_object> :Obj_SetPosition position = <newpos>
-		if NOT (<Pos> = <newpos>)
-			<character_object> :Obj_SetOrientation Dir = <Dir>
+		if NOT (<pos> = <newpos>)
+			<character_object> :Obj_SetOrientation dir = <dir>
 		endif
 	endif
 endscript
@@ -626,15 +626,15 @@ script cas_queue_block
 	if NOT cas_queue_is_busy in_queue_too <...>
 		return
 	endif
-	casblockforloading
-	casblockforcomposite
+	CASBlockForLoading
+	CasBlockForComposite
 	Wait \{1
 		gameframe}
 	repeat
 endscript
 
 script cas_get_loading_id 
-	formatText checksumName = id 'cas_loading_clock_%d' d = <player_index> AddToStringLookup = true
+	FormatText checksumname = id 'cas_loading_clock_%d' d = <player_index> AddToStringLookup = true
 	return id = <id>
 endscript
 
@@ -643,11 +643,11 @@ script cas_start_loading_anim
 	cas_get_loading_id player_index = <player_index>
 	get_cas_loading_pos player_index = <player_index>
 	if ScreenElementExists id = <id>
-		<id> :Obj_KillSpawnedScript Name = kill_watch_timer
-		<id> :se_setprops Pos = <Pos>
+		<id> :Obj_KillSpawnedScript name = kill_watch_timer
+		<id> :SE_SetProps pos = <pos>
 		<id> :Obj_SpawnScriptNow watch_animate_in params = {time = 0.2}
 	else
-		make_watch_timer id = <id> Pos = <Pos>
+		make_watch_timer id = <id> pos = <pos>
 	endif
 endscript
 
@@ -659,10 +659,10 @@ script cas_stop_loading_anim
 endscript
 
 script kill_watch_timer 
-	setscriptcannotpause
+	SetScriptCannotPause
 	watch_animate_out \{time = 0.2}
 	Wait \{0.2
-		Seconds}
+		seconds}
 	Die
 endscript
 
@@ -678,23 +678,23 @@ script get_cas_loading_pos
 		case Band
 		switch <player_index>
 			case 0
-			return \{Pos = (-375.0, -375.0)}
+			return \{pos = (-375.0, -375.0)}
 			case 1
-			return \{Pos = (-150.0, -375.0)}
+			return \{pos = (-150.0, -375.0)}
 			case 2
-			return \{Pos = (75.0, -375.0)}
+			return \{pos = (75.0, -375.0)}
 			case 3
-			return \{Pos = (300.0, -375.0)}
+			return \{pos = (300.0, -375.0)}
 		endswitch
 		case h2h
 		switch <player_index>
 			case 0
-			return \{Pos = (-375.0, -375.0)}
+			return \{pos = (-375.0, -375.0)}
 			case 1
-			return \{Pos = (300.0, -375.0)}
+			return \{pos = (300.0, -375.0)}
 		endswitch
 		case single
-		return \{Pos = (260.0, -375.0)}
+		return \{pos = (260.0, -375.0)}
 		default
 		ScriptAssert 'unknown %s' s = ($cas_loading_setup)
 	endswitch
@@ -706,13 +706,13 @@ script set_cas_loading_setup
 			setup
 		]
 		all}
-	Change cas_loading_setup = <setup>
+	change cas_loading_setup = <setup>
 	i = 0
 	begin
 	cas_get_loading_id player_index = <i>
 	if ScreenElementExists id = <id>
 		get_cas_loading_pos player_index = <i>
-		<id> :se_setprops Pos = <Pos>
+		<id> :SE_SetProps pos = <pos>
 	endif
 	i = (<i> + 1)
 	repeat 4

@@ -1,58 +1,58 @@
 
 script ui_create_boot_legal 
-	SpawnScriptNow \{ui_boot_legal_wait}
+	spawnscriptnow \{ui_boot_legal_wait}
 endscript
 
 script ui_destroy_boot_legal 
-	fadetoblack \{On
+	fadetoblack \{on
 		alpha = 1.0
 		time = 0.0
 		z_priority = 100
 		no_wait}
-	HideLoadingScreen
+	Hideloadingscreen
 endscript
 
 script ui_boot_legal_wait 
 	if CD
 		Wait \{6.0
-			Seconds
+			seconds
 			ignoreslomo}
 	endif
 	ui_event_wait \{event = menu_replace
 		data = {
-			state = uistate_boot_movie_atvi
+			state = UIstate_boot_movie_atvi
 		}}
 endscript
 
-script ui_create_boot_movie_atvi 
-	SpawnScriptNow \{ui_boot_movie_wait
+script ui_create_boot_movie_ATVI 
+	spawnscriptnow \{ui_boot_movie_wait
 		params = {
 			movie = 'atvi'
-			state = uistate_boot_movie_red_octane
+			state = UIstate_boot_movie_red_octane
 		}}
 endscript
 
 script ui_create_boot_movie_red_octane 
-	SpawnScriptNow \{ui_boot_movie_wait
+	spawnscriptnow \{ui_boot_movie_wait
 		params = {
 			movie = 'ro_logo'
-			state = uistate_boot_movie_neversoft
+			state = UIstate_boot_movie_neversoft
 		}}
 endscript
 
 script ui_create_boot_movie_neversoft 
-	SpawnScriptNow \{ui_boot_movie_wait
+	spawnscriptnow \{ui_boot_movie_wait
 		params = {
 			movie = 'ns_logo'
-			state = uistate_boot_movie_intro
+			state = UIstate_boot_movie_intro
 		}}
 endscript
 
 script ui_create_boot_movie_intro 
-	SpawnScriptNow \{ui_boot_movie_wait
+	spawnscriptnow \{ui_boot_movie_wait
 		params = {
 			movie = 'band_intro'
-			state = uistate_boot_iis
+			state = UIstate_boot_iis
 		}}
 endscript
 

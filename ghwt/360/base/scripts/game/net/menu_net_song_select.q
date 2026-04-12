@@ -3,12 +3,12 @@ script create_online_song_select_menu {
 		menu_id = online_song_select_menu
 		vmenu_id = online_song_select_vmenu
 		pad_back_script = check_back_action_song_select
-		Pos = (($menu_pos) - (200.0, 0.0))
+		pos = (($menu_pos) - (200.0, 0.0))
 	}
 	online_song_select_event_handlers = [
 		{pad_back <pad_back_script>}
 	]
-	new_menu scrollid = <menu_id> vmenuid = <vmenu_id> use_backdrop = (1) menu_pos = <Pos> event_handlers = <online_song_select_event_handlers>
+	new_menu scrollid = <menu_id> vmenuid = <vmenu_id> use_backdrop = (1) menu_pos = <pos> event_handlers = <online_song_select_event_handlers>
 	array_entry = 0
 	get_songlist_size
 	begin
@@ -16,15 +16,15 @@ script create_online_song_select_menu {
 	get_song_struct song = <song_checksum>
 	get_song_version song = <song_checksum>
 	if (<song_version> = $current_song_version)
-		formatText checksumName = temp_id 'song_number_%n' n = <array_entry>
+		FormatText checksumname = temp_id 'song_number_%n' n = <array_entry>
 		get_song_title song = <song_checksum>
 		title = <song_title>
 		CreateScreenElement {
-			Type = TextElement
+			type = TextElement
 			parent = <vmenu_id>
 			id = <temp_id>
 			font = fontgrid_text_a3
-			Scale = 0.75
+			scale = 0.75
 			rgba = [210 210 210 250]
 			text = <title>
 			just = [left top]
@@ -40,11 +40,11 @@ script create_online_song_select_menu {
 		}
 	endif
 	<array_entry> = (<array_entry> + 1)
-	repeat <array_Size>
-	LaunchEvent Type = focus target = <vmenu_id>
+	repeat <array_size>
+	LaunchEvent type = focus target = <vmenu_id>
 	get_number_of_song_selections
 	if (<song_selections> = 0)
-		Change \{ChooseTieBreaker = 1}
+		change \{ChooseTieBreaker = 1}
 	endif
 endscript
 
@@ -68,7 +68,7 @@ script check_back_action_song_select
 		if ((<can_select_final_song> = true) && (<tie_breaker_selected> = true))
 			local_player_song_deselection
 		else
-			SendNetMessage \{Type = song_selection
+			SendNetMessage \{type = song_selection
 				song_index = -1
 				selection_value = 0
 				final_selection = -1
@@ -90,31 +90,31 @@ endscript
 script local_player_song_selection 
 	if (($ChooseTieBreaker) = 1)
 		check_tie_breaker_is_selected
-		if (<tie_breaker_selected> = FALSE)
-			SetArrayElement ArrayName = FinalSongList globalarray index = (($NumberOfSongsInfo [($NumberOfSongs [($MenuControl)].value)].value) - 1) NewValue = <selection_value>
+		if (<tie_breaker_selected> = false)
+			SetArrayElement ArrayName = FinalSongList GlobalArray index = (($NumberOfSongsInfo [($NumberOfSongs [($MenuControl)].value)].value) - 1) newvalue = <selection_value>
 			tie_breaker = 1
 			final = 1
-			Change \{LocalPlayerSetlistFinalized = 1}
+			change \{LocalPlayerSetlistFinalized = 1}
 		endif
 		check_final_setlist_ready
 		ui_flow_manager_respond_to_action \{action = selected_all_songs}
 	else
 		if IsHost
-			SetArrayElement ArrayName = FinalSongList globalarray index = ($LocalPlayerSongSelections * 2) NewValue = <selection_value>
+			SetArrayElement ArrayName = FinalSongList GlobalArray index = ($LocalPlayerSongSelections * 2) newvalue = <selection_value>
 		else
-			SetArrayElement ArrayName = FinalSongList globalarray index = (($LocalPlayerSongSelections * 2) + 1) NewValue = <selection_value>
+			SetArrayElement ArrayName = FinalSongList GlobalArray index = (($LocalPlayerSongSelections * 2) + 1) newvalue = <selection_value>
 		endif
-		SetArrayElement ArrayName = LocalPlayerSongList globalarray index = ($LocalPlayerSongSelections) NewValue = <selection_value>
+		SetArrayElement ArrayName = LocalPlayerSongList GlobalArray index = ($LocalPlayerSongSelections) newvalue = <selection_value>
 		tie_breaker = 0
-		Change LocalPlayerSongSelections = ($LocalPlayerSongSelections + 1)
+		change LocalPlayerSongSelections = ($LocalPlayerSongSelections + 1)
 		get_number_of_song_selections
 		if (<song_selections> = ($LocalPlayerSongSelections))
 			check_for_final_song_selection
 			if (<can_select_final_song> = true)
-				Change \{ChooseTieBreaker = 1}
+				change \{ChooseTieBreaker = 1}
 				final = 0
 			else
-				Change \{LocalPlayerSetlistFinalized = 1}
+				change \{LocalPlayerSetlistFinalized = 1}
 				final = 1
 				check_final_setlist_ready
 				ui_flow_manager_respond_to_action \{action = selected_all_songs}
@@ -124,7 +124,7 @@ script local_player_song_selection
 		endif
 	endif
 	SendNetMessage {
-		Type = song_selection
+		type = song_selection
 		song_index = <selection_value>
 		selection_value = 1
 		final_selection = <final>
@@ -136,31 +136,31 @@ endscript
 
 script local_player_song_deselection 
 	if (($LocalPlayerSetlistFinalized) = 1)
-		Change \{LocalPlayerSetlistFinalized = 0}
+		change \{LocalPlayerSetlistFinalized = 0}
 	endif
 	check_tie_breaker_is_selected
 	if ((($ChooseTieBreaker) = 1) && (<tie_breaker_selected> = true))
 		tie_breaker = 1
 		index = ($FinalSongList [(($NumberOfSongsInfo [($NumberOfSongs [($MenuControl)].value)].value) -1)])
-		SetArrayElement ArrayName = FinalSongList globalarray index = (($NumberOfSongsInfo [($NumberOfSongs [($MenuControl)].value)].value) -1) NewValue = -1
+		SetArrayElement ArrayName = FinalSongList GlobalArray index = (($NumberOfSongsInfo [($NumberOfSongs [($MenuControl)].value)].value) -1) newvalue = -1
 	else
-		printf \{qs(0x882a3115)}
-		if ((<tie_breaker_selected> = FALSE) && (($ChooseTieBreaker) = 1))
-			Change \{ChooseTieBreaker = 0}
+		printf \{qs("\Ldeselecting song")}
+		if ((<tie_breaker_selected> = false) && (($ChooseTieBreaker) = 1))
+			change \{ChooseTieBreaker = 0}
 		endif
 		tie_breaker = 0
-		Change LocalPlayerSongSelections = ($LocalPlayerSongSelections - 1)
+		change LocalPlayerSongSelections = ($LocalPlayerSongSelections - 1)
 		if IsHost
-			SetArrayElement ArrayName = FinalSongList globalarray index = ($LocalPlayerSongSelections * 2) NewValue = -1
+			SetArrayElement ArrayName = FinalSongList GlobalArray index = ($LocalPlayerSongSelections * 2) newvalue = -1
 		else
-			SetArrayElement ArrayName = FinalSongList globalarray index = (($LocalPlayerSongSelections * 2) + 1) NewValue = -1
+			SetArrayElement ArrayName = FinalSongList GlobalArray index = (($LocalPlayerSongSelections * 2) + 1) newvalue = -1
 		endif
 		song_index = ($LocalPlayerSongList [($LocalPlayerSongSelections)])
-		SetArrayElement ArrayName = LocalPlayerSongList globalarray index = ($LocalPlayerSongSelections) NewValue = -1
+		SetArrayElement ArrayName = LocalPlayerSongList GlobalArray index = ($LocalPlayerSongSelections) newvalue = -1
 		index = <song_index>
 	endif
 	SendNetMessage {
-		Type = song_selection
+		type = song_selection
 		song_index = -1
 		selection_value = -1
 		final_selection = 0
@@ -172,52 +172,52 @@ endscript
 
 script network_player_song_selection 
 	if (<tie_breaker_selection> = 1)
-		SetArrayElement ArrayName = FinalSongList globalarray index = (($NumberOfSongsInfo [($NumberOfSongs [($MenuControl)].value)].value) -1) NewValue = <song_index>
+		SetArrayElement ArrayName = FinalSongList GlobalArray index = (($NumberOfSongsInfo [($NumberOfSongs [($MenuControl)].value)].value) -1) newvalue = <song_index>
 		tie_breaker = true
 	else
 		if IsHost
-			SetArrayElement ArrayName = FinalSongList globalarray index = (($RemotePlayerSongSelections * 2) + 1) NewValue = <song_index>
+			SetArrayElement ArrayName = FinalSongList GlobalArray index = (($RemotePlayerSongSelections * 2) + 1) newvalue = <song_index>
 		else
-			SetArrayElement ArrayName = FinalSongList globalarray index = ($RemotePlayerSongSelections * 2) NewValue = <song_index>
+			SetArrayElement ArrayName = FinalSongList GlobalArray index = ($RemotePlayerSongSelections * 2) newvalue = <song_index>
 		endif
-		SetArrayElement ArrayName = RemotePlayerSongList globalarray index = ($RemotePlayerSongSelections) NewValue = <song_index>
-		tie_breaker = FALSE
+		SetArrayElement ArrayName = RemotePlayerSongList GlobalArray index = ($RemotePlayerSongSelections) newvalue = <song_index>
+		tie_breaker = false
 	endif
 	if (<final_selection> = 1)
-		Change \{RemotePlayerSetlistFinalized = 1}
+		change \{RemotePlayerSetlistFinalized = 1}
 		check_final_setlist_ready
 	endif
 	if (($ui_flow_manager_state [0]) = final_set_list_fs)
-		network_player_change_final_setlist Type = select tie_breaker_song = <tie_breaker>
+		network_player_change_final_setlist type = select tie_breaker_song = <tie_breaker>
 	else
 		network_player_flag_selected_song <...>
 	endif
 	if NOT (<tie_breaker> = true)
-		Change RemotePlayerSongSelections = ($RemotePlayerSongSelections + 1)
+		change RemotePlayerSongSelections = ($RemotePlayerSongSelections + 1)
 	endif
 endscript
 
 script network_player_song_deselection 
 	if (($RemotePlayerSetlistFinalized) = 1)
-		Change \{RemotePlayerSetlistFinalized = 0}
+		change \{RemotePlayerSetlistFinalized = 0}
 	endif
 	if (<tie_breaker_selection> = 1)
 		index = ($FinalSongList [(($NumberOfSongsInfo [($NumberOfSongs [($MenuControl)].value)].value) -1)])
-		SetArrayElement ArrayName = FinalSongList globalarray index = (($NumberOfSongsInfo [($NumberOfSongs [($MenuControl)].value)].value) -1) NewValue = -1
+		SetArrayElement ArrayName = FinalSongList GlobalArray index = (($NumberOfSongsInfo [($NumberOfSongs [($MenuControl)].value)].value) -1) newvalue = -1
 		tie_breaker = true
 	else
-		Change RemotePlayerSongSelections = ($RemotePlayerSongSelections - 1)
+		change RemotePlayerSongSelections = ($RemotePlayerSongSelections - 1)
 		if IsHost
-			SetArrayElement ArrayName = FinalSongList globalarray index = (($RemotePlayerSongSelections * 2) + 1) NewValue = -1
+			SetArrayElement ArrayName = FinalSongList GlobalArray index = (($RemotePlayerSongSelections * 2) + 1) newvalue = -1
 		else
-			SetArrayElement ArrayName = FinalSongList globalarray index = ($RemotePlayerSongSelections * 2) NewValue = -1
+			SetArrayElement ArrayName = FinalSongList GlobalArray index = ($RemotePlayerSongSelections * 2) newvalue = -1
 		endif
 		index = ($RemotePlayerSongList [($RemotePlayerSongSelections)])
-		SetArrayElement ArrayName = RemotePlayerSongList globalarray index = ($RemotePlayerSongSelections) NewValue = -1
-		tie_breaker = FALSE
+		SetArrayElement ArrayName = RemotePlayerSongList GlobalArray index = ($RemotePlayerSongSelections) newvalue = -1
+		tie_breaker = false
 	endif
 	if (($ui_flow_manager_state [0]) = final_set_list_fs)
-		network_player_change_final_setlist Type = unselect tie_breaker_song = <tie_breaker>
+		network_player_change_final_setlist type = unselect tie_breaker_song = <tie_breaker>
 	else
 		network_player_unflag_selected_song song_index = <index>
 	endif
@@ -243,7 +243,7 @@ script check_for_matching_song
 			return \{found_match = true}
 		endif
 		<array_count> = (<array_count> + 1)
-		repeat <array_Size>
+		repeat <array_size>
 	else
 		GetArraySize \{$LocalPlayerSongList}
 		array_count = 0
@@ -252,7 +252,7 @@ script check_for_matching_song
 			return \{found_match = true}
 		endif
 		<array_count> = (<array_count> + 1)
-		repeat <array_Size>
+		repeat <array_size>
 	endif
 endscript
 
@@ -264,18 +264,18 @@ script check_songlist_for_song
 		found = true
 	endif
 	<array_count> = (<array_count> + 1)
-	repeat <array_Size>
+	repeat <array_size>
 	return found_song = <found>
 endscript
 
 script check_for_flagged_songs 
-	found_local = FALSE
-	found_remote = FALSE
-	found_final = FALSE
+	found_local = false
+	found_remote = false
+	found_final = false
 	check_songlist_for_song song_index = <entry> global_array = FinalSongList
 	<found_final> = <found_song>
 	if (<found_final> = true)
-		formatText checksumName = song_number 'song_number_%n' n = <entry>
+		FormatText checksumname = song_number 'song_number_%n' n = <entry>
 		get_songlist_checksum index = <entry>
 		get_song_title song = <song_checksum>
 		title = <song_title>
@@ -284,16 +284,16 @@ script check_for_flagged_songs
 		check_songlist_for_song song_index = <entry> global_array = RemotePlayerSongList
 		<found_remote> = <found_song>
 		printstruct <...>
-		if ((<found_local> = FALSE) && (<found_remote> = FALSE))
-			formatText TextName = new_song_text qs(0xdfa5e575) s = <title>
-		elseif ((<found_local> = true) && (<found_remote> = FALSE))
-			formatText TextName = new_song_text qs(0x41ee67cb) s = <title>
-		elseif ((<found_local> = FALSE) && (<found_remote> = true))
-			formatText TextName = new_song_text qs(0x753a9cdd) s = <title>
+		if ((<found_local> = false) && (<found_remote> = false))
+			FormatText TextName = new_song_text qs("\L*** %s ***") s = <title>
+		elseif ((<found_local> = true) && (<found_remote> = false))
+			FormatText TextName = new_song_text qs("\L*** %s") s = <title>
+		elseif ((<found_local> = false) && (<found_remote> = true))
+			FormatText TextName = new_song_text qs("\L%s ***") s = <title>
 		elseif ((<found_local> = true) && (<found_remote> = true))
-			formatText TextName = new_song_text qs(0xdfa5e575) s = <title>
+			FormatText TextName = new_song_text qs("\L*** %s ***") s = <title>
 		endif
-		<id> :se_setprops text = <new_song_text>
+		<id> :SE_SetProps text = <new_song_text>
 	endif
 endscript
 
@@ -301,16 +301,16 @@ script local_player_flag_selected_song
 	if ScreenElementExists \{id = online_song_select_vmenu}
 		check_for_matching_song index = <selection_value> local = true
 		found = <found_match>
-		formatText checksumName = song_number 'song_number_%n' n = <selection_value>
+		FormatText checksumname = song_number 'song_number_%n' n = <selection_value>
 		get_songlist_checksum index = <selection_value>
 		get_song_title song = <song_checksum>
 		title = <song_title>
 		if (found = true)
-			formatText TextName = new_song_text qs(0xdfa5e575) s = <title>
+			FormatText TextName = new_song_text qs("\L*** %s ***") s = <title>
 		else
-			formatText TextName = new_song_text qs(0x41ee67cb) s = <title>
+			FormatText TextName = new_song_text qs("\L*** %s") s = <title>
 		endif
-		<song_number> :se_setprops text = <new_song_text>
+		<song_number> :SE_SetProps text = <new_song_text>
 	endif
 endscript
 
@@ -318,53 +318,53 @@ script local_player_unflag_selected_song
 	if ScreenElementExists \{id = online_song_select_vmenu}
 		check_for_matching_song index = <selection_value> local = true
 		found = <found_match>
-		formatText checksumName = song_number 'song_number_%n' n = <selection_value>
+		FormatText checksumname = song_number 'song_number_%n' n = <selection_value>
 		get_songlist_checksum index = <selection_value>
 		get_song_title song = <song_checksum>
 		title = <song_title>
 		if (found = true)
-			formatText TextName = new_song_text qs(0x753a9cdd) s = <title>
+			FormatText TextName = new_song_text qs("\L%s ***") s = <title>
 		else
-			formatText TextName = new_song_text qs(0x73307931) s = <title>
+			FormatText TextName = new_song_text qs("\L%s") s = <title>
 		endif
-		<song_number> :se_setprops text = <new_song_text>
+		<song_number> :SE_SetProps text = <new_song_text>
 	endif
 endscript
 
 script network_player_flag_selected_song 
-	check_for_matching_song index = <song_index> local = FALSE
+	check_for_matching_song index = <song_index> local = false
 	found = <found_match>
-	formatText checksumName = song_number 'song_number_%n' n = <song_index>
+	FormatText checksumname = song_number 'song_number_%n' n = <song_index>
 	get_songlist_checksum index = <song_index>
 	get_song_title song = <song_checksum>
 	title = <song_title>
 	if (found = true)
-		formatText TextName = new_song_text qs(0xdfa5e575) s = <title>
+		FormatText TextName = new_song_text qs("\L*** %s ***") s = <title>
 	else
-		formatText TextName = new_song_text qs(0x753a9cdd) s = <title>
+		FormatText TextName = new_song_text qs("\L%s ***") s = <title>
 	endif
-	<song_number> :se_setprops text = <new_song_text>
+	<song_number> :SE_SetProps text = <new_song_text>
 endscript
 
 script network_player_unflag_selected_song 
-	check_for_matching_song index = <song_index> local = FALSE
+	check_for_matching_song index = <song_index> local = false
 	found = <found_match>
-	formatText checksumName = song_number 'song_number_%n' n = <song_index>
+	FormatText checksumname = song_number 'song_number_%n' n = <song_index>
 	get_songlist_checksum index = <song_index>
 	get_song_title song = <song_checksum>
 	title = <song_title>
 	if (found = true)
-		formatText TextName = new_song_text qs(0x41ee67cb) s = <title>
+		FormatText TextName = new_song_text qs("\L*** %s") s = <title>
 	else
-		formatText TextName = new_song_text qs(0x73307931) s = <title>
+		FormatText TextName = new_song_text qs("\L%s") s = <title>
 	endif
-	<song_number> :se_setprops text = <new_song_text>
+	<song_number> :SE_SetProps text = <new_song_text>
 endscript
 
 script check_tie_breaker_is_selected 
 	if (($FinalSongList [(($NumberOfSongsInfo [($NumberOfSongs [($MenuControl)].value)].value) -1)]) > -1)
 		return \{tie_breaker_selected = true}
 	else
-		return \{tie_breaker_selected = FALSE}
+		return \{tie_breaker_selected = false}
 	endif
 endscript

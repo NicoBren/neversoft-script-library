@@ -1,26 +1,26 @@
-gp_fx_soundcheck_frontfog_02 = {
-	Pos = (-28.376741, -0.543919, 3.8572998)
-	Angles = (0.0, 0.0, 0.0)
+GP_FX_SoundCheck_FrontFog_02 = {
+	pos = (-28.376741, -0.543919, 3.8572998)
+	angles = (0.0, 0.0, 0.0)
 	Class = ParticleObject
 	ParticleType = FlexParticle
-	Type = flat
-	Active
+	type = flat
+	active
 	CreatedAtStart
 	EmitRangeDims = (0.1, 0.1, 0.1)
-	Emit_Target = (0.0, 1.0, 0.0)
+	emit_Target = (0.0, 1.0, 0.0)
 	EmitAngle = (0.0, 0.0, 0.0)
-	Force = (0.0, -0.01, 0.0)
+	force = (0.0, -0.01, 0.0)
 	WindCoeff = 0.0
 	LocalWindCoeff = 0.0
 	EmitterVelocityWeight = 0.0
 	ElevSpread = (90.0, 130.0)
 	SweepSpread = (80.0, 120.0)
 	LifeRange = (11.0, 14.0)
-	Emit_Rate = 4.0
-	Max = 0
+	emit_rate = 4.0
+	max = 0
 	TimeSeed = 0.0
-	LifeTime = 0.0
-	EmitNum = 0
+	lifeTime = 0.0
+	emitNum = 0
 	FollowEmitter = 0.0
 	EmitFunction = sin
 	EmitPeriod = 3.0
@@ -34,16 +34,16 @@ gp_fx_soundcheck_frontfog_02 = {
 	EmitDelayStart = 0.0
 	PathFollowTime = 0.0
 	History = 2
-	HistoryListCoordinateSpace = World
-	Color = -219820151
+	HistoryListCoordinateSpace = world
+	color = -219820151
 	LOD_Default
 	QuickMaterial = {
 		DiffuseTextureEnabled
-		DiffuseTexture = ph_smoke_singlepuff_blend_02
+		DiffuseTexture = PH_Smoke_SinglePuff_Blend_02
 		SpecularPower = 0
-		fakeambientocclusion
-		AlphaCutoff = 1
-		BlendMode = blend
+		FakeAmbientOcclusion
+		alphacutoff = 1
+		blendMode = blend
 		SoftEdge
 		SoftedgeScale = 0.2
 		Burn

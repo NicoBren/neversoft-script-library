@@ -16,29 +16,29 @@ script create_music_store_menu \{pad_back_script = generic_event_back}
 	CreateScreenElement {
 		id = gh_music_store
 		parent = root_window
-		Type = descinterface
+		type = DescInterface
 		desc = 'gh_music_store'
 		exclusive_device = <exclusive_device>
 		credits_availible_currency_texture = <money_icon>
 		credits_availible_text_text = <credits_text>
 	}
-	if gh_music_store :desc_resolvealias \{Name = alias_options_list_vmenu
-			param = gh_music_store_menu}
-		AssignAlias id = <gh_music_store_menu> alias = current_menu
-		<gh_music_store_menu> :SetTags {total_length = 0}
+	if gh_music_store :Desc_ResolveAlias \{name = alias_options_list_vmenu
+			param = GH_Music_Store_menu}
+		AssignAlias id = <GH_Music_Store_menu> alias = current_menu
+		<GH_Music_Store_menu> :SetTags {total_length = 0}
 	else
-		ScriptAssert \{qs(0x2784bcef)}
+		ScriptAssert \{qs("\LGH_Music_Store was unable to create current_menu alias")}
 	endif
-	if gh_music_store :desc_resolvealias \{Name = alias_menu_history_hmenu
-			param = gh_music_store_history_menu}
+	if gh_music_store :Desc_ResolveAlias \{name = alias_menu_history_hmenu
+			param = GH_Music_Store_history_menu}
 		CreateScreenElement {
-			parent = <gh_music_store_history_menu>
-			Type = TextBlockElement
-			text = qs(0x64a75b5f)
+			parent = <GH_Music_Store_history_menu>
+			type = TextBlockElement
+			text = qs("MAIN")
 			font = fontgrid_text_a3
 			dims = (0.0, 26.0)
-			fit_height = `scale	down	if	larger`
-			fit_width = `expand	dims`
+			fit_height = `scale down if larger`
+			fit_width = `expand dims`
 			rgba = [0 0 0 255]
 			internal_just = [left , top]
 			z_priority = 50
@@ -46,14 +46,14 @@ script create_music_store_menu \{pad_back_script = generic_event_back}
 		main_id = <id>
 		GetScreenElementDims id = <main_id>
 		CreateScreenElement {
-			parent = <gh_music_store_history_menu>
-			Type = WindowElement
-			dims = (<width> * (1.0, 0.0) + <height> * (0.0, 1.0))
+			parent = <GH_Music_Store_history_menu>
+			type = WindowElement
+			dims = (<width> * (1.0, 0.0) + <Height> * (0.0, 1.0))
 		}
-		SetScreenElementProps id = <main_id> parent = <id> Pos = (0.0, 0.0) just = [left , top]
-		SpawnScriptNow music_store_animate_main_history params = {id = <main_id>}
+		SetScreenElementProps id = <main_id> parent = <id> pos = (0.0, 0.0) just = [left , top]
+		spawnscriptnow music_store_animate_main_history params = {id = <main_id>}
 	else
-		ScriptAssert \{qs(0xf9593720)}
+		ScriptAssert \{qs("\LGH_Music_Store was unable to create GH_Music_Store_history_menu alias")}
 	endif
 	add_generic_menu_up_down_sound_handlers
 	if GotParam \{pad_back_script}
@@ -77,23 +77,23 @@ script create_music_store_menu \{pad_back_script = generic_event_back}
 		}
 	endif
 	gh_music_store :SetTags \{sort_index = 0}
-	Change \{music_store_visited = 1}
+	change \{music_store_visited = 1}
 endscript
 
 script add_music_store_item \{parent = current_menu}
 	if GotParam \{text}
 		StringLength string = <text>
 		if (<str_len> >= 25)
-			stringncopy string = <text> length = 24
-			text = (<new_string> + qs(0x3871eb3b))
+			StringNCopy string = <text> length = 24
+			text = (<new_string> + qs("..."))
 		endif
 	endif
 	CreateScreenElement {
 		parent = <parent>
-		Type = descinterface
+		type = DescInterface
 		desc = 'gh_music_store_item'
 		options_list_item_text_text = <text>
-		autosizedims = true
+		autoSizeDims = true
 	}
 	if GotParam \{choose_state}
 		pad_choose_script = ui_event_block
@@ -134,22 +134,22 @@ script add_music_store_purchase_item \{parent = current_menu}
 	if GotParam \{text}
 		StringLength string = <text>
 		if (<str_len> >= 25)
-			stringncopy string = <text> length = 24
-			text = (<new_string> + qs(0x3871eb3b))
+			StringNCopy string = <text> length = 24
+			text = (<new_string> + qs("..."))
 		endif
 	endif
 	music_store_determine_currency
 	if GotParam \{price}
-		formatText TextName = price_text qs(0x581d2af2) p = <price>
+		FormatText TextName = price_text qs("\L%p") p = <price>
 	endif
 	CreateScreenElement {
 		parent = <parent>
-		Type = descinterface
+		type = DescInterface
 		desc = 'gh_music_store_purchase_item'
 		options_list_item_money_texture = <money_icon>
 		options_list_item_price_text = <price_text>
 		options_list_item_text_text = <text>
-		autosizedims = true
+		autoSizeDims = true
 	}
 	if GotParam \{choose_state}
 		pad_choose_script = ui_event_block
@@ -189,16 +189,16 @@ endscript
 script add_music_store_purchase_dialogue \{parent = current_menu}
 	music_store_determine_currency
 	if GotParam \{price}
-		formatText TextName = price_text qs(0x581d2af2) p = <price>
+		FormatText TextName = price_text qs("\L%p") p = <price>
 	endif
 	CreateScreenElement {
 		parent = <parent>
-		Type = descinterface
+		type = DescInterface
 		desc = 'gh_music_store_purchase_dialogue'
 		options_list_item_text_text = <text>
 		options_list_purchase_item_options_list_item_money_texture = <money_icon>
 		options_list_purchase_item_options_list_item_price_text = <price_text>
-		autosizedims = true
+		autoSizeDims = true
 		not_focusable
 	}
 	<parent> :GetSingleTag total_length
@@ -238,13 +238,13 @@ endscript
 
 script music_store_turn_on_arrows 
 	if ScreenElementExists \{id = gh_music_store}
-		gh_music_store :se_setprops \{arrows_alpha = 0.5}
+		gh_music_store :SE_SetProps \{arrows_alpha = 0.5}
 	endif
 endscript
 
 script music_store_turn_off_arrows 
 	if ScreenElementExists \{id = gh_music_store}
-		gh_music_store :se_setprops \{arrows_alpha = 0.0}
+		gh_music_store :SE_SetProps \{arrows_alpha = 0.0}
 	endif
 endscript
 
@@ -256,21 +256,21 @@ script music_store_add_history_item
 	if GotParam \{text}
 		StringLength string = <text>
 		if (<str_len> >= 25)
-			stringncopy string = <text> length = 24
-			text = (<new_string> + qs(0x3871eb3b))
+			StringNCopy string = <text> length = 24
+			text = (<new_string> + qs("..."))
 		endif
 	endif
 	if ScreenElementExists \{id = gh_music_store}
-		if gh_music_store :desc_resolvealias \{Name = alias_menu_history_hmenu
-				param = gh_music_store_history_menu}
+		if gh_music_store :Desc_ResolveAlias \{name = alias_menu_history_hmenu
+				param = GH_Music_Store_history_menu}
 			CreateScreenElement {
-				parent = <gh_music_store_history_menu>
-				Type = TextBlockElement
-				text = qs(0xa5766a28)
+				parent = <GH_Music_Store_history_menu>
+				type = TextBlockElement
+				text = qs("\L>")
 				font = fontgrid_text_a3
 				dims = (15.0, 26.0)
-				fit_height = `scale	down	if	larger`
-				fit_width = `expand	dims`
+				fit_height = `scale down if larger`
+				fit_width = `expand dims`
 				rgba = [0 0 0 255]
 				internal_just = [left , top]
 				just = [left , center]
@@ -278,14 +278,14 @@ script music_store_add_history_item
 				z_priority = 50
 			}
 			CreateScreenElement {
-				parent = <gh_music_store_history_menu>
-				Type = TextBlockElement
-				Pos = (0.0, 0.0)
+				parent = <GH_Music_Store_history_menu>
+				type = TextBlockElement
+				pos = (0.0, 0.0)
 				text = <text>
 				font = fontgrid_text_a3
 				dims = (0.0, 26.0)
-				fit_height = `scale	down	if	larger`
-				fit_width = `expand	dims`
+				fit_height = `scale down if larger`
+				fit_width = `expand dims`
 				rgba = [0 0 0 255]
 				internal_just = [left , top]
 				just = [left , center]
@@ -295,44 +295,44 @@ script music_store_add_history_item
 			if GotParam \{animate_in}
 				hist_id = <id>
 				GetScreenElementDims id = <hist_id>
-				dims = (<width> * (1.0, 0.0) + <height> * (0.0, 1.0))
+				dims = (<width> * (1.0, 0.0) + <Height> * (0.0, 1.0))
 				CreateScreenElement {
-					Pos = (0.0, 0.0)
-					parent = <gh_music_store_history_menu>
-					Type = WindowElement
+					pos = (0.0, 0.0)
+					parent = <GH_Music_Store_history_menu>
+					type = WindowElement
 					dims = (0.0, 26.0)
 					just = [left , center]
 					pos_anchor = [left , center]
 				}
-				SetScreenElementProps id = <hist_id> parent = <id> Pos = (0.0, 0.0) just = [left , center] pos_anchor = [left , center]
+				SetScreenElementProps id = <hist_id> parent = <id> pos = (0.0, 0.0) just = [left , center] pos_anchor = [left , center]
 				SetScreenElementProps id = <id> dims = <dims>
-				SpawnScriptNow music_store_animate_new_history params = {id = <hist_id> width = <width>}
+				spawnscriptnow music_store_animate_new_history params = {id = <hist_id> width = <width>}
 			endif
 		else
-			ScriptAssert \{qs(0x41fde101)}
+			ScriptAssert \{qs("\Lmusic_store_add_history_item was unable to create GH_Music_Store_history_menu alias")}
 		endif
 	endif
 endscript
 
 script music_store_clear_history 
 	if ScreenElementExists \{id = gh_music_store}
-		if gh_music_store :desc_resolvealias \{Name = alias_menu_history_hmenu
-				param = gh_music_store_history_menu}
-			DestroyScreenElement id = <gh_music_store_history_menu> preserve_parent
+		if gh_music_store :Desc_ResolveAlias \{name = alias_menu_history_hmenu
+				param = GH_Music_Store_history_menu}
+			DestroyScreenElement id = <GH_Music_Store_history_menu> preserve_parent
 			CreateScreenElement {
-				parent = <gh_music_store_history_menu>
-				Type = TextBlockElement
-				text = qs(0x64a75b5f)
+				parent = <GH_Music_Store_history_menu>
+				type = TextBlockElement
+				text = qs("MAIN")
 				font = fontgrid_text_a3
 				dims = (0.0, 26.0)
-				fit_height = `scale	down	if	larger`
-				fit_width = `expand	dims`
+				fit_height = `scale down if larger`
+				fit_width = `expand dims`
 				rgba = [0 0 0 255]
 				internal_just = [left , top]
 				z_priority = 50
 			}
 		else
-			ScriptAssert \{qs(0xb3db4f72)}
+			ScriptAssert \{qs("\Lmusic_store_clear_history was unable to create GH_Music_Store_history_menu alias")}
 		endif
 	endif
 endscript
@@ -343,16 +343,16 @@ script music_store_add_album_info_item
 		]
 		all}
 	if ScreenElementExists \{id = gh_music_store}
-		if gh_music_store :desc_resolvealias \{Name = alias_title_info_menu
-				param = gh_music_store_album_info_menu}
+		if gh_music_store :Desc_ResolveAlias \{name = alias_title_info_menu
+				param = GH_Music_Store_album_info_menu}
 			CreateScreenElement {
-				parent = <gh_music_store_album_info_menu>
-				Type = TextBlockElement
+				parent = <GH_Music_Store_album_info_menu>
+				type = TextBlockElement
 				text = <text>
 				font = fontgrid_text_a3
 				dims = (390.0, 28.0)
-				fit_height = `scale	down	if	larger`
-				fit_width = `expand	dims`
+				fit_height = `scale down if larger`
+				fit_width = `expand dims`
 				rgba = [220 122 5 200]
 				internal_just = [center , center]
 				z_priority = 50
@@ -360,44 +360,44 @@ script music_store_add_album_info_item
 			item_id = <id>
 			GetScreenElementDims id = <item_id>
 			if (<width> > 390)
-				dims = (<width> * (1.0, 0.0) + <height> * (0.0, 1.0))
+				dims = (<width> * (1.0, 0.0) + <Height> * (0.0, 1.0))
 				CreateScreenElement {
-					parent = <gh_music_store_album_info_menu>
-					Type = ContainerElement
+					parent = <GH_Music_Store_album_info_menu>
+					type = ContainerElement
 					dims = (390.0, 28.0)
 					just = [left , center]
 				}
 				CreateScreenElement {
 					parent = <id>
-					Type = ContainerElement
+					type = ContainerElement
 					dims = (390.0, 28.0)
 					just = [left , top]
 				}
 				ticker_id = <id>
-				text = (qs(0xdea80396) + <text>)
-				SetScreenElementProps id = <item_id> parent = <ticker_id> pos_anchor = [left , center] just = [left , center] Pos = (0.0, 0.0) internal_just = [left , center] text = <text>
+				text = (qs("           ") + <text>)
+				SetScreenElementProps id = <item_id> parent = <ticker_id> pos_anchor = [left , center] just = [left , center] pos = (0.0, 0.0) internal_just = [left , center] text = <text>
 				GetScreenElementDims id = <item_id>
-				new_dims = (<width> * (1.0, 0.0) + <height> * (0.0, 1.0))
+				new_dims = (<width> * (1.0, 0.0) + <Height> * (0.0, 1.0))
 				CreateScreenElement {
 					parent = <ticker_id>
-					Type = TextBlockElement
+					type = TextBlockElement
 					text = <text>
 					font = fontgrid_text_a3
 					dims = <new_dims>
-					fit_height = `scale	down	if	larger`
-					fit_width = `expand	dims`
+					fit_height = `scale down if larger`
+					fit_width = `expand dims`
 					rgba = [220 122 5 200]
 					internal_just = [center , center]
 					z_priority = 50
 					just = [left , center]
 					pos_anchor = [left , center]
 					internal_just = [left , center]
-					Pos = (<width> * (1.0, 0.0))
+					pos = (<width> * (1.0, 0.0))
 				}
-				SpawnScriptNow music_store_scroll_album_info params = {id = <ticker_id> width = <width>}
+				spawnscriptnow music_store_scroll_album_info params = {id = <ticker_id> width = <width>}
 			endif
 		else
-			ScriptAssert \{qs(0x7593769d)}
+			ScriptAssert \{qs("\Lmusic_store_add_album_info_item was unable to create GH_Music_Store_history_menu alias")}
 		endif
 	endif
 endscript
@@ -408,31 +408,31 @@ script music_store_scroll_album_info
 			width
 		]
 		all}
-	SetSpawnInstanceLimits \{Max = 1
+	SetSpawnInstanceLimits \{max = 1
 		management = kill_oldest}
 	time = (<width> * 0.01)
 	begin
 	if ScreenElementExists id = <id>
 		new_pos = (<width> * (-1.0, 0.0))
-		<id> :se_setprops Pos = {relative <new_pos>} time = <time>
+		<id> :SE_SetProps pos = {relative <new_pos>} time = <time>
 	endif
-	Wait <time> Seconds
+	Wait <time> seconds
 	if ScreenElementExists id = <id>
-		<id> :se_setprops Pos = (0.0, 0.0)
+		<id> :SE_SetProps pos = (0.0, 0.0)
 	endif
 	repeat
 endscript
 
 script music_store_clear_album_info 
 	if ScriptIsRunning \{music_store_scroll_album_info}
-		KillSpawnedScript \{Name = music_store_scroll_album_info}
+		KillSpawnedScript \{name = music_store_scroll_album_info}
 	endif
 	if ScreenElementExists \{id = gh_music_store}
-		if gh_music_store :desc_resolvealias \{Name = alias_title_info_menu
-				param = gh_music_store_album_info_menu}
-			DestroyScreenElement id = <gh_music_store_album_info_menu> preserve_parent
+		if gh_music_store :Desc_ResolveAlias \{name = alias_title_info_menu
+				param = GH_Music_Store_album_info_menu}
+			DestroyScreenElement id = <GH_Music_Store_album_info_menu> preserve_parent
 		else
-			ScriptAssert \{qs(0x43ff3582)}
+			ScriptAssert \{qs("\Lmusic_store_clear_album_info was unable to create GH_Music_Store_history_menu alias")}
 		endif
 	endif
 endscript
@@ -446,23 +446,23 @@ script music_store_add_sort_info_item
 		alpha = 0.5
 	endif
 	if ScreenElementExists \{id = gh_music_store}
-		if gh_music_store :desc_resolvealias \{Name = alias_sort_info_hmenu
-				param = gh_music_store_sort_info_menu}
+		if gh_music_store :Desc_ResolveAlias \{name = alias_sort_info_hmenu
+				param = GH_Music_Store_sort_info_menu}
 			CreateScreenElement {
-				parent = <gh_music_store_sort_info_menu>
-				Type = TextBlockElement
+				parent = <GH_Music_Store_sort_info_menu>
+				type = TextBlockElement
 				text = <text>
 				font = fontgrid_text_a3
 				dims = (0.0, 32.0)
-				fit_height = `scale	down	if	larger`
-				fit_width = `expand	dims`
+				fit_height = `scale down if larger`
+				fit_width = `expand dims`
 				rgba = [220 122 5 200]
 				internal_just = [left , center]
 				z_priority = 50
 				alpha = <alpha>
 			}
 		else
-			ScriptAssert \{qs(0xa02af5ca)}
+			ScriptAssert \{qs("\Lmusic_store_add_sort_info_item was unable to create alias_sort_info_hmenu alias")}
 		endif
 	endif
 endscript
@@ -472,7 +472,7 @@ script music_store_add_sort_info
 			state_list
 		]
 		all}
-	SetSpawnInstanceLimits \{Max = 1
+	SetSpawnInstanceLimits \{max = 1
 		management = kill_oldest}
 	music_store_clear_sort_info
 	if ScreenElementExists \{id = current_menu}
@@ -484,15 +484,15 @@ script music_store_add_sort_info
 			replace_handlers
 		}
 	endif
-	add_user_control_helper \{text = qs(0xa3a9dad6)
-		button = yellow
+	add_user_control_helper \{text = qs("\LSORT")
+		button = Yellow
 		z = 100000}
 	if ScreenElementExists \{id = gh_music_store}
-		if gh_music_store :desc_resolvealias \{Name = alias_sort_info_hmenu
-				param = gh_music_store_sort_info_menu}
-			<gh_music_store_sort_info_menu> :se_setprops alpha = 0.0
+		if gh_music_store :Desc_ResolveAlias \{name = alias_sort_info_hmenu
+				param = GH_Music_Store_sort_info_menu}
+			<GH_Music_Store_sort_info_menu> :SE_SetProps alpha = 0.0
 			music_store_add_all_sort_items state_list = <state_list>
-			<gh_music_store_sort_info_menu> :se_setprops alpha = 1.0 time = 0.2
+			<GH_Music_Store_sort_info_menu> :SE_SetProps alpha = 1.0 time = 0.2
 		endif
 	endif
 endscript
@@ -513,29 +513,29 @@ endscript
 
 script music_store_clear_sort_info_menu 
 	if ScreenElementExists \{id = gh_music_store}
-		if gh_music_store :desc_resolvealias \{Name = alias_sort_info_hmenu
-				param = gh_music_store_sort_info_menu}
-			DestroyScreenElement id = <gh_music_store_sort_info_menu> preserve_parent
+		if gh_music_store :Desc_ResolveAlias \{name = alias_sort_info_hmenu
+				param = GH_Music_Store_sort_info_menu}
+			DestroyScreenElement id = <GH_Music_Store_sort_info_menu> preserve_parent
 		else
-			ScriptAssert \{qs(0x202243aa)}
+			ScriptAssert \{qs("\Lmusic_store_clear_sort_info was unable to create alias_sort_info_hmenu alias")}
 		endif
 	endif
 endscript
 
 script music_store_motd_callback 
 	if GotParam \{motd_text}
-		Change \{retrieved_message_of_the_day = 1}
-		Change message_of_the_day = <motd_text>
+		change \{retrieved_message_of_the_day = 1}
+		change message_of_the_day = <motd_text>
 	endif
 	if GotParam \{success}
 		if (<success> = success)
-			if GlobalExists \{Name = motd_subject}
+			if GlobalExists \{name = motd_subject}
 				music_store_set_motd text = ($motd_subject)
 				return
 			endif
 		endif
 	endif
-	music_store_set_motd \{text = qs(0x2464e74b)}
+	music_store_set_motd \{text = qs("\LCheck out NEW ARRIVALS for recently added downloadable content.")}
 endscript
 
 script music_store_set_motd 
@@ -552,9 +552,9 @@ script music_store_set_motd
 		CreateScreenElement {
 			id = temp_motd_block
 			parent = root_window
-			Type = TextBlockElement
-			fit_width = qs(0xd607fd45)
-			fit_height = qs(0xc79d7639)
+			type = TextBlockElement
+			fit_width = qs("wrap")
+			fit_height = qs("expand dims")
 			text = <text>
 			dims = (1025.0, 2000.0)
 			just = [left , top]
@@ -565,20 +565,20 @@ script music_store_set_motd
 		GetScreenElementChildren \{id = temp_motd_block}
 		if GotParam \{children}
 			GetArraySize <children>
-			if (<array_Size> > 0)
-				if gh_music_store :desc_resolvealias \{Name = alias_motd_text_1
-						param = gh_music_store_motd_1}
-					if gh_music_store :desc_resolvealias \{Name = alias_motd_text_2
-							param = gh_music_store_motd_2}
+			if (<array_size> > 0)
+				if gh_music_store :Desc_ResolveAlias \{name = alias_motd_text_1
+						param = GH_Music_Store_motd_1}
+					if gh_music_store :Desc_ResolveAlias \{name = alias_motd_text_2
+							param = GH_Music_Store_motd_2}
 						text_params = {
-							Type = TextBlockElement
+							type = TextBlockElement
 							dims = (0.0, 32.0)
 							just = [0.0 , 0.0]
 							pos_anchor = [-1.0 , -1.0]
 							z_priority = 6
 							font = fontgrid_text_a3
-							fit_width = `expand	dims`
-							fit_height = `scale	down	if	larger`
+							fit_width = `expand dims`
+							fit_height = `scale down if larger`
 							internal_just = [-1.0 , -1.0]
 							rgba = <rgba>
 						}
@@ -586,45 +586,45 @@ script music_store_set_motd
 						begin
 						if music_store_get_screen_element_text id = (<children> [<i>])
 							CreateScreenElement {
-								parent = <gh_music_store_motd_1>
+								parent = <GH_Music_Store_motd_1>
 								<text_params>
-								text = (<text> + qs(0x713755f7))
+								text = (<text> + qs("\L "))
 							}
 							CreateScreenElement {
-								parent = <gh_music_store_motd_2>
+								parent = <GH_Music_Store_motd_2>
 								<text_params>
-								text = (<text> + qs(0x713755f7))
+								text = (<text> + qs("\L "))
 							}
 						endif
 						i = (<i> + 1)
-						repeat <array_Size>
+						repeat <array_size>
 						CreateScreenElement {
-							parent = <gh_music_store_motd_1>
+							parent = <GH_Music_Store_motd_1>
 							<text_params>
-							text = qs(0xa0ee0db2)
+							text = qs("\L                 ")
 						}
 						CreateScreenElement {
-							parent = <gh_music_store_motd_2>
+							parent = <GH_Music_Store_motd_2>
 							<text_params>
-							text = qs(0xa0ee0db2)
+							text = qs("\L                 ")
 						}
-						GetScreenElementDims id = <gh_music_store_motd_1>
+						GetScreenElementDims id = <GH_Music_Store_motd_1>
 						if (<width> > 1025)
 							new_pos = (<width> * (1.0, 0.0))
-							gh_music_store :se_setprops motd_text_2_pos = {relative <new_pos>}
-							SpawnScriptNow music_store_scroll_motd params = {width = <width>}
+							gh_music_store :SE_SetProps motd_text_2_pos = {relative <new_pos>}
+							spawnscriptnow music_store_scroll_motd params = {width = <width>}
 						else
-							gh_music_store :se_setprops \{motd_text_1_internal_just = [
+							gh_music_store :SE_SetProps \{motd_text_1_internal_just = [
 									center
 									center
 								]
 								motd_text_2_alpha = 0.0}
 						endif
 					else
-						ScriptAssert \{qs(0x8ee895f0)}
+						ScriptAssert \{qs("\Lmusic_store_set_motd was unable to create alias_motd_text_2 alias")}
 					endif
 				else
-					ScriptAssert \{qs(0xf289b02b)}
+					ScriptAssert \{qs("\Lmusic_store_set_motd was unable to create alias_motd_text_1 alias")}
 				endif
 			endif
 		endif
@@ -643,51 +643,51 @@ script music_store_get_screen_element_text
 		GetScreenElementProps id = <id>
 		return true text = <text>
 	else
-		return \{FALSE}
+		return \{false}
 	endif
 endscript
 
 script music_store_turn_on_preview_bar 
 	if ScreenElementExists \{id = gh_music_store}
-		gh_music_store :se_setprops \{preview_bar_alpha = 1.0}
+		gh_music_store :SE_SetProps \{preview_bar_alpha = 1.0}
 	endif
 endscript
 
 script music_store_turn_off_preview_bar 
 	if ScreenElementExists \{id = gh_music_store}
-		gh_music_store :se_setprops \{preview_bar_alpha = 0.0}
+		gh_music_store :SE_SetProps \{preview_bar_alpha = 0.0}
 	endif
 endscript
 
 script music_store_turn_set_preview_bar 
 	RequireParams \{[
-			progress
+			Progress
 		]
 		all}
-	if (<progress> < 0)
-		progress = 0
+	if (<Progress> < 0)
+		Progress = 0
 	endif
-	if (<progress> > 1)
-		progress = 1
+	if (<Progress> > 1)
+		Progress = 1
 	endif
-	progress_scale = (<progress> * (1.0, 0.0) + (0.0, 1.0))
+	progress_scale = (<Progress> * (1.0, 0.0) + (0.0, 1.0))
 	if ScreenElementExists \{id = gh_music_store}
-		gh_music_store :se_setprops preview_bar_fill_scale = <progress_scale>
+		gh_music_store :SE_SetProps preview_bar_fill_scale = <progress_scale>
 	endif
 endscript
 
 script music_store_turn_on_loading 
 	if ScreenElementExists \{id = gh_music_store}
-		gh_music_store :se_setprops \{loading_alpha = 1.0}
-		SpawnScriptNow \{music_store_animate_loading}
+		gh_music_store :SE_SetProps \{loading_alpha = 1.0}
+		spawnscriptnow \{music_store_animate_loading}
 	endif
 endscript
 
 script music_store_turn_off_loading 
 	if ScreenElementExists \{id = gh_music_store}
-		gh_music_store :se_setprops \{loading_alpha = 0.0}
+		gh_music_store :SE_SetProps \{loading_alpha = 0.0}
 		if ScriptIsRunning \{music_store_animate_loading}
-			KillSpawnedScript \{Name = music_store_animate_loading}
+			KillSpawnedScript \{name = music_store_animate_loading}
 		endif
 	endif
 endscript
@@ -695,31 +695,31 @@ endscript
 script music_store_animate_loading 
 	begin
 	if ScreenElementExists \{id = gh_music_store}
-		gh_music_store :se_setprops \{loading_rot_angle = 0}
-		gh_music_store :se_setprops \{loading_rot_angle = 360
+		gh_music_store :SE_SetProps \{loading_rot_angle = 0}
+		gh_music_store :SE_SetProps \{loading_rot_angle = 360
 			time = 1.5}
 	endif
 	Wait \{2
-		Seconds}
+		seconds}
 	repeat
 endscript
 
 script music_store_turn_on_current_credits 
 	if ScreenElementExists \{id = gh_music_store}
-		gh_music_store :se_setprops \{credits_availible_alpha = 1.0}
+		gh_music_store :SE_SetProps \{credits_availible_alpha = 1.0}
 	endif
 endscript
 
 script music_store_turn_off_current_credits 
 	if ScreenElementExists \{id = gh_music_store}
-		gh_music_store :se_setprops \{credits_availible_alpha = 0.0}
+		gh_music_store :SE_SetProps \{credits_availible_alpha = 0.0}
 	endif
 endscript
 
 script music_store_item_focus 
 	if ScreenElementExists id = <id>
-		<id> :se_setprops options_list_item_point_alpha = 1.0
-		<id> :se_setprops options_list_item_alpha = 1.0
+		<id> :SE_SetProps options_list_item_point_alpha = 1.0
+		<id> :SE_SetProps options_list_item_alpha = 1.0
 	endif
 	if GotParam \{additional_focus_script}
 		<additional_focus_script> <additional_focus_params>
@@ -728,8 +728,8 @@ endscript
 
 script music_store_item_unfocus 
 	if ScreenElementExists id = <id>
-		<id> :se_setprops options_list_item_point_alpha = 0.0
-		<id> :se_setprops options_list_item_alpha = 0.6
+		<id> :SE_SetProps options_list_item_point_alpha = 0.0
+		<id> :SE_SetProps options_list_item_alpha = 0.6
 	endif
 	if GotParam \{additional_unfocus_script}
 		<additional_unfocus_script> <additional_unfocus_params>
@@ -737,66 +737,66 @@ script music_store_item_unfocus
 endscript
 
 script music_store_item_select_anim 
-	SetSpawnInstanceLimits \{Max = 1
+	SetSpawnInstanceLimits \{max = 1
 		management = ignore_spawn_request}
-	Change \{generic_menu_block_input = 1}
+	change \{generic_menu_block_input = 1}
 	GetScreenElementChildren id = <id>
 	GetArraySize <children>
-	if (<array_Size> > 0)
+	if (<array_size> > 0)
 		menu_item_id = (<children> [0])
 	endif
 	GetScreenElementPosition id = <menu_item_id>
 	newscreenlementpos = (<screenelementpos> + (20.0, 0.0))
 	if ScreenElementExists id = <menu_item_id>
-		SetScreenElementProps {id = <menu_item_id> Pos = <newscreenlementpos> time = 0.1}
+		SetScreenElementProps {id = <menu_item_id> pos = <newscreenlementpos> time = 0.1}
 	else
-		Change \{generic_menu_block_input = 0}
+		change \{generic_menu_block_input = 0}
 		return
 	endif
 	Wait \{0.1
-		Seconds}
+		seconds}
 	if ScreenElementExists id = <menu_item_id>
-		SetScreenElementProps {id = <menu_item_id> Pos = <screenelementpos> time = 0.1}
+		SetScreenElementProps {id = <menu_item_id> pos = <screenelementpos> time = 0.1}
 	else
-		Change \{generic_menu_block_input = 0}
+		change \{generic_menu_block_input = 0}
 		return
 	endif
 	Wait \{0.11
-		Seconds}
-	Change \{generic_menu_block_input = 0}
+		seconds}
+	change \{generic_menu_block_input = 0}
 endscript
 
 script music_store_wipe_in_options 
-	SetSpawnInstanceLimits \{Max = 1
+	SetSpawnInstanceLimits \{max = 1
 		management = ignore_spawn_request}
-	Change \{generic_menu_block_input = 1}
+	change \{generic_menu_block_input = 1}
 	if ScreenElementExists \{id = gh_music_store}
-		gh_music_store :se_setprops \{options_list_smenu_alpha = 0.0}
-		gh_music_store :se_setprops \{options_list_patch_scale = (0.0, 0.95)}
-		gh_music_store :se_setprops \{options_list_patch_scale = (0.9, 0.95)
+		gh_music_store :SE_SetProps \{options_list_smenu_alpha = 0.0}
+		gh_music_store :SE_SetProps \{options_list_patch_scale = (0.0, 0.95)}
+		gh_music_store :SE_SetProps \{options_list_patch_scale = (0.9, 0.95)
 			time = 0.2
-			anim = gentle}
+			Anim = gentle}
 	endif
 	Wait \{0.25
-		Seconds}
+		seconds}
 	if ScreenElementExists \{id = gh_music_store}
-		gh_music_store :se_setprops \{options_list_smenu_alpha = 1.0}
+		gh_music_store :SE_SetProps \{options_list_smenu_alpha = 1.0}
 	endif
 	if ScreenElementExists \{id = current_menu}
 		GetScreenElementChildren \{id = current_menu}
 		GetArraySize <children>
-		if (<array_Size> > 8)
-			array_Size = 8
+		if (<array_size> > 8)
+			array_size = 8
 		endif
-		if (<array_Size> > 0)
-			if (<array_Size> > 1)
+		if (<array_size> > 0)
+			if (<array_size> > 1)
 				i = 1
 				begin
 				if ScreenElementExists id = (<children> [<i>])
 					SetScreenElementProps {id = (<children> [<i>]) alpha = 0.0}
 				endif
 				i = (<i> + 1)
-				repeat (<array_Size> -1)
+				repeat (<array_size> -1)
 			endif
 			if ScreenElementExists id = (<children> [0])
 				SetScreenElementProps {
@@ -809,52 +809,52 @@ script music_store_wipe_in_options
 					time = 0.1
 				}
 				Wait \{0.1
-					Seconds}
+					seconds}
 			endif
-			if (<array_Size> > 1)
+			if (<array_size> > 1)
 				i = 1
 				begin
 				if ScreenElementExists id = (<children> [<i>])
 					SetScreenElementProps {id = (<children> [<i>]) alpha = 1.0 time = 0.1}
 					Wait \{0.1
-						Seconds}
+						seconds}
 				endif
 				i = (<i> + 1)
-				repeat (<array_Size> -1)
+				repeat (<array_size> -1)
 			endif
 		endif
 	endif
-	Change \{generic_menu_block_input = 0}
+	change \{generic_menu_block_input = 0}
 endscript
 
 script music_store_wipe_in_album_info 
-	SetSpawnInstanceLimits \{Max = 1
+	SetSpawnInstanceLimits \{max = 1
 		management = kill_oldest}
 	if ScreenElementExists \{id = gh_music_store}
-		gh_music_store :se_setprops \{title_info_menu_alpha = 0.0}
-		gh_music_store :se_setprops \{title_info_bg_scale = (0.0, 0.9)}
-		gh_music_store :se_setprops \{title_info_bg_scale = (1.0, 0.9)
+		gh_music_store :SE_SetProps \{title_info_menu_alpha = 0.0}
+		gh_music_store :SE_SetProps \{title_info_bg_scale = (0.0, 0.9)}
+		gh_music_store :SE_SetProps \{title_info_bg_scale = (1.0, 0.9)
 			time = 0.2
-			anim = gentle}
+			Anim = gentle}
 	endif
 	Wait \{0.25
-		Seconds}
+		seconds}
 	music_store_fade_in_album_info
 endscript
 
 script music_store_fade_in_album_info 
 	if ScreenElementExists \{id = gh_music_store}
-		gh_music_store :se_setprops \{title_info_menu_alpha = 1.0
+		gh_music_store :SE_SetProps \{title_info_menu_alpha = 1.0
 			time = 0.15
-			anim = gentle}
+			Anim = gentle}
 	endif
 endscript
 
 script music_store_fade_out_album_info 
 	if ScreenElementExists \{id = gh_music_store}
-		gh_music_store :se_setprops \{title_info_menu_alpha = 0.0
+		gh_music_store :SE_SetProps \{title_info_menu_alpha = 0.0
 			time = 0.1
-			anim = gentle}
+			Anim = gentle}
 	endif
 endscript
 
@@ -863,17 +863,17 @@ script music_store_scroll_motd
 			width
 		]
 		all}
-	SetSpawnInstanceLimits \{Max = 1
+	SetSpawnInstanceLimits \{max = 1
 		management = kill_oldest}
 	time = (<width> * 0.003)
 	begin
 	if ScreenElementExists \{id = gh_music_store}
 		new_pos = (<width> * (-1.0, 0.0))
-		gh_music_store :se_setprops motd_text_pos = {relative <new_pos>} time = <time>
+		gh_music_store :SE_SetProps motd_text_pos = {relative <new_pos>} time = <time>
 	endif
-	Wait <time> Seconds
+	Wait <time> seconds
 	if ScreenElementExists \{id = gh_music_store}
-		gh_music_store :se_setprops \{motd_text_pos = (0.0, 0.0)}
+		gh_music_store :SE_SetProps \{motd_text_pos = (0.0, 0.0)}
 	endif
 	repeat
 endscript
@@ -885,12 +885,12 @@ script music_store_set_previous_history
 		]
 		all}
 	GetArraySize <previous_history>
-	if (<array_Size> > 0)
+	if (<array_size> > 0)
 		i = 0
 		begin
 		music_store_add_history_item text = (<previous_history> [<i>])
 		i = (<i> + 1)
-		repeat <array_Size>
+		repeat <array_size>
 	endif
 	if GotParam \{do_not_animate}
 		music_store_add_history_item text = <new_entry>
@@ -907,52 +907,52 @@ script music_store_change_album_cover
 		]
 		all}
 	if ScreenElementExists \{id = gh_music_store}
-		gh_music_store :se_setprops large_album_cover_bg_texture = <texture>
+		gh_music_store :SE_SetProps large_album_cover_bg_texture = <texture>
 	endif
-	SpawnScriptNow music_store_change_album_cover_anim params = {texture = <texture>}
+	spawnscriptnow music_store_change_album_cover_anim params = {texture = <texture>}
 endscript
 
 script music_store_change_album_cover_anim 
-	SetSpawnInstanceLimits \{Max = 1
+	SetSpawnInstanceLimits \{max = 1
 		management = kill_oldest}
 	RequireParams \{[
 			texture
 		]
 		all}
 	if ScreenElementExists \{id = gh_music_store}
-		gh_music_store :se_setprops new_album_cover_image_z_priority = 30 current_album_cover_image_z_priority = 100 new_album_cover_image_texture = <texture>
-		gh_music_store :se_setprops \{new_album_cover_pos = (-100.0, 0.0)
+		gh_music_store :SE_SetProps new_album_cover_image_z_priority = 30 current_album_cover_image_z_priority = 100 new_album_cover_image_texture = <texture>
+		gh_music_store :SE_SetProps \{new_album_cover_pos = (-100.0, 0.0)
 			current_album_cover_pos = (100.0, 0.0)
 			time = 0.2
-			anim = gentle}
+			Anim = gentle}
 	endif
 	Wait \{0.25
-		Seconds}
+		seconds}
 	if ScreenElementExists \{id = gh_music_store}
-		gh_music_store :se_setprops \{new_album_cover_image_z_priority = 100
+		gh_music_store :SE_SetProps \{new_album_cover_image_z_priority = 100
 			current_album_cover_image_z_priority = 30}
-		gh_music_store :se_setprops \{new_album_cover_pos = (0.0, 0.0)
+		gh_music_store :SE_SetProps \{new_album_cover_pos = (0.0, 0.0)
 			current_album_cover_pos = (0.0, 0.0)
 			time = 0.2
-			anim = gentle}
+			Anim = gentle}
 	endif
 	Wait \{0.25
-		Seconds}
+		seconds}
 	if ScreenElementExists \{id = gh_music_store}
-		gh_music_store :se_setprops new_album_cover_image_z_priority = 30 current_album_cover_image_z_priority = 100 current_album_cover_image_texture = <texture>
+		gh_music_store :SE_SetProps new_album_cover_image_z_priority = 30 current_album_cover_image_z_priority = 100 current_album_cover_image_texture = <texture>
 	endif
 endscript
 
 script music_store_fade_in_options 
-	SetSpawnInstanceLimits \{Max = 1
+	SetSpawnInstanceLimits \{max = 1
 		management = ignore_spawn_request}
-	Change \{generic_menu_block_input = 1}
+	change \{generic_menu_block_input = 1}
 	if ScreenElementExists \{id = current_menu}
 		GetScreenElementChildren \{id = current_menu}
 		GetArraySize <children>
-		if (<array_Size> > 1)
-			if (<array_Size> > 7)
-				array_Size = 7
+		if (<array_size> > 1)
+			if (<array_size> > 7)
+				array_size = 7
 			endif
 			i = 1
 			begin
@@ -960,27 +960,27 @@ script music_store_fade_in_options
 				SetScreenElementProps {id = (<children> [<i>]) alpha = 0.0}
 			endif
 			i = (<i> + 1)
-			repeat (<array_Size> -1)
+			repeat (<array_size> -1)
 			i = 1
 			begin
 			if ScreenElementExists id = (<children> [<i>])
 				SetScreenElementProps {id = (<children> [<i>]) alpha = 1.0 time = 0.1}
 				Wait \{0.11
-					Seconds}
+					seconds}
 			endif
 			i = (<i> + 1)
-			repeat (<array_Size> -1)
+			repeat (<array_size> -1)
 		endif
 	else
 		return
 	endif
-	Change \{generic_menu_block_input = 0}
+	change \{generic_menu_block_input = 0}
 endscript
 
 script music_store_animate_main_history 
 	if ScreenElementExists id = <id>
-		<id> :se_setprops Pos = {relative (0.0, 40.0)}
-		<id> :se_setprops Pos = {relative (0.0, -40.0)} time = 0.2
+		<id> :SE_SetProps pos = {relative (0.0, 40.0)}
+		<id> :SE_SetProps pos = {relative (0.0, -40.0)} time = 0.2
 	else
 		return
 	endif
@@ -990,8 +990,8 @@ script music_store_animate_new_history
 	if ScreenElementExists id = <id>
 		GetScreenElementPosition id = <id>
 		new_relative_pos = (<width> * (-1.0, 0.0))
-		<id> :se_setprops Pos = {relative <new_relative_pos>}
-		<id> :se_setprops Pos = {relative (-1 * <new_relative_pos>)} time = 0.2
+		<id> :SE_SetProps pos = {relative <new_relative_pos>}
+		<id> :SE_SetProps pos = {relative (-1 * <new_relative_pos>)} time = 0.2
 	endif
 endscript
 
@@ -1001,12 +1001,12 @@ script music_store_rotate_sort
 			list
 		]
 		all}
-	SetSpawnInstanceLimits \{Max = 1
+	SetSpawnInstanceLimits \{max = 1
 		management = ignore_spawn_request}
 	gh_music_store :GetSingleTag \{sort_index}
 	sort_index = (<sort_index> + 1)
 	GetArraySize <state_list>
-	if (<sort_index> >= <array_Size>)
+	if (<sort_index> >= <array_size>)
 		sort_index = 0
 	endif
 	gh_music_store :SetTags sort_index = <sort_index>
@@ -1021,19 +1021,19 @@ script music_store_sort_list
 			list
 			key
 		]}
-	sortstorestructarray array = <list> key = <key>
+	SortStoreStructArray array = <list> key = <key>
 	if ScreenElementExists \{id = current_menu}
-		LaunchEvent \{Type = unfocus
+		LaunchEvent \{type = unfocus
 			target = current_menu}
 	endif
 	music_store_clear_options
 	if GotParam \{sorted_array}
 		GetArraySize <sorted_array>
-		if (<array_Size> > 0)
+		if (<array_size> > 0)
 			i = 0
 			begin
 			add_music_store_purchase_item {
-				text = ((<sorted_array> [<i>]).Name)
+				text = ((<sorted_array> [<i>]).name)
 				price = ((<sorted_array> [<i>]).price)
 				pad_choose_script = music_store_new_arrivals_decide_action
 				pad_choose_params = {previous_history = <previous_history> option_struct = (<sorted_array> [<i>]) list = <list>}
@@ -1042,13 +1042,13 @@ script music_store_sort_list
 				additional_unfocus_script = music_store_clear_album_info
 			}
 			i = (<i> + 1)
-			repeat <array_Size>
+			repeat <array_size>
 		endif
 	else
-		ScriptAssert \{qs(0xf3a30645)}
+		ScriptAssert \{qs("\Lmusic_store_sort_list was not returned a sorted array by SortStoreStructArray")}
 	endif
 	if ScreenElementExists \{id = current_menu}
-		LaunchEvent \{Type = focus
+		LaunchEvent \{type = focus
 			target = current_menu}
 	endif
 	music_store_fade_in_options
@@ -1062,28 +1062,28 @@ script music_store_get_sort_key
 	if ScreenElementExists \{id = gh_music_store}
 		gh_music_store :GetSingleTag \{sort_index}
 		GetArraySize <state_list>
-		if (<sort_index> >= <array_Size>)
+		if (<sort_index> >= <array_size>)
 			sort_index = 0
 		endif
 		if ((<state_list> [<sort_index>]) = alpha)
-			return \{key = Name}
+			return \{key = name}
 		elseif ((<state_list> [<sort_index>]) = difficulty)
 			return \{key = difficulty}
 		elseif ((<state_list> [<sort_index>]) = date)
 			return \{key = date}
 		elseif ((<state_list> [<sort_index>]) = artist)
 			return \{key = artist}
-		elseif ((<state_list> [<sort_index>]) = Type)
-			return \{key = Type}
-		elseif ((<state_list> [<sort_index>]) = Duration)
-			return \{key = Duration}
+		elseif ((<state_list> [<sort_index>]) = type)
+			return \{key = type}
+		elseif ((<state_list> [<sort_index>]) = duration)
+			return \{key = duration}
 		elseif ((<state_list> [<sort_index>]) = price)
 			return \{key = price}
 		else
-			ScriptAssert qs(0x3549825d) s = (<state_list> [<sort_index>]) donotresolve
+			ScriptAssert qs("\L\music_store_get_sort_key was unable to state %s, make sure it exists") s = (<state_list> [<sort_index>]) DoNotResolve
 		endif
 	else
-		ScriptAssert \{qs(0x7985520f)}
+		ScriptAssert \{qs("\Lmusic_store_get_sort_key was unable to find ScreenElement GH_Music_Store")}
 	endif
 endscript
 
@@ -1094,7 +1094,7 @@ script music_store_pre_sort_list
 		]}
 	if ScreenElementExists \{id = gh_music_store}
 		music_store_get_sort_key state_list = <state_list>
-		sortstorestructarray array = <list> key = <key>
+		SortStoreStructArray array = <list> key = <key>
 		list = <sorted_array>
 	endif
 	return list = <list>
@@ -1103,19 +1103,19 @@ endscript
 script music_store_get_sort_names 
 	array = []
 	GetArraySize <state_list>
-	if (<sort_index> < <array_Size>)
+	if (<sort_index> < <array_size>)
 		i = <sort_index>
 		begin
 		music_store_get_sort_state_name sort_state = (<state_list> [<i>])
-		AddArrayElement array = <array> element = <Name>
+		AddArrayElement array = <array> element = <name>
 		i = (<i> + 1)
-		repeat (<array_Size> - <sort_index>)
+		repeat (<array_size> - <sort_index>)
 	endif
 	if (<sort_index> > 0)
 		i = 0
 		begin
 		music_store_get_sort_state_name sort_state = (<state_list> [<i>])
-		AddArrayElement array = <array> element = <Name>
+		AddArrayElement array = <array> element = <name>
 		i = (<i> + 1)
 		repeat <sort_index>
 	endif
@@ -1124,21 +1124,21 @@ endscript
 
 script music_store_get_sort_state_name 
 	if (<sort_state> = alpha)
-		return \{Name = qs(0x25befb85)}
+		return \{name = qs("\LNAME")}
 	elseif (<sort_state> = difficulty)
-		return \{Name = qs(0xfe2cfc75)}
+		return \{name = qs("\LDIFFICULTY")}
 	elseif (<sort_state> = date)
-		return \{Name = qs(0x996fff58)}
+		return \{name = qs("\LDATE")}
 	elseif (<sort_state> = artist)
-		return \{Name = qs(0xff00fab4)}
-	elseif (<sort_state> = Type)
-		return \{Name = qs(0x8533d9d2)}
-	elseif (<sort_state> = Duration)
-		return \{Name = qs(0x080c48bc)}
+		return \{name = qs("\LARTIST")}
+	elseif (<sort_state> = type)
+		return \{name = qs("\LTYPE")}
+	elseif (<sort_state> = duration)
+		return \{name = qs("\LLENGTH")}
 	elseif (<sort_state> = price)
-		return \{Name = qs(0x943c433d)}
+		return \{name = qs("\LPRICE")}
 	else
-		ScriptAssert qs(0xbf0b5c0b) s = <sort_state> donotresolve
+		ScriptAssert qs("\Lmusic_store_get_sort_state_name was unable to state %s, make sure it exists") s = <sort_state> DoNotResolve
 	endif
 endscript
 
@@ -1156,22 +1156,22 @@ script music_store_add_all_sort_items
 	gh_music_store :GetSingleTag \{sort_index}
 	music_store_get_sort_names state_list = <state_list> sort_index = <sort_index>
 	if NOT GotParam \{names}
-		ScriptAssert \{qs(0x446121f9)}
+		ScriptAssert \{qs("\Lmusic_store_add_all_sort_items did not receive the sort list names.")}
 	endif
 	GetArraySize <names>
-	if (<array_Size> > 0)
-		music_store_add_sort_info_item \{text = qs(0xa3a9dad6)
+	if (<array_size> > 0)
+		music_store_add_sort_info_item \{text = qs("\LSORT")
 			focused}
-		music_store_add_sort_info_item \{text = qs(0xc4992bba)
+		music_store_add_sort_info_item \{text = qs("\L-")
 			focused}
 		music_store_add_sort_info_item text = (<names> [0]) focused
 	endif
-	if (<array_Size> > 1)
+	if (<array_size> > 1)
 		i = 1
 		begin
 		music_store_add_sort_info_item text = (<names> [<i>])
 		i = (<i> + 1)
-		repeat (<array_Size> -1)
+		repeat (<array_size> -1)
 	endif
 endscript
 
@@ -1184,10 +1184,10 @@ script music_store_filter_list
 		all}
 	array = []
 	GetArraySize <list>
-	if (<array_Size> > 0)
+	if (<array_size> > 0)
 		i = 0
 		begin
-		if StructureContains structure = (<list> [<i>]) <filter>
+		if StructureContains Structure = (<list> [<i>]) <filter>
 			if GotParam \{less_than}
 				if (((<list> [<i>]).<filter>) < <value>)
 					AddArrayElement array = <array> element = (<list> [<i>])
@@ -1211,7 +1211,7 @@ script music_store_filter_list
 			endif
 		endif
 		i = (<i> + 1)
-		repeat <array_Size>
+		repeat <array_size>
 	endif
 	return filtered_list = <array>
 endscript
@@ -1231,8 +1231,8 @@ script music_store_generate_date
 endscript
 
 script music_store_determine_currency 
-	if isps3
-		getterritory
+	if IsPs3
+		GetTerritory
 		if (<territory> = territory_us)
 			money_icon = dollar_sign
 		else
@@ -1246,16 +1246,16 @@ endscript
 
 script music_store_get_duration_string 
 	RequireParams \{[
-			Duration
+			duration
 		]
 		all}
-	original_duration = <Duration>
-	CastToInteger \{Duration}
-	minutes = (<Duration> / 60)
-	Seconds = (<original_duration> - (<minutes> * 60))
-	formatText TextName = duration_string qs(0xc2560af5) m = <minutes> s = <Seconds>
+	original_duration = <duration>
+	CastToInteger \{duration}
+	minutes = (<duration> / 60)
+	seconds = (<original_duration> - (<minutes> * 60))
+	FormatText TextName = Duration_String qs("\L%m:%s") m = <minutes> s = <seconds>
 	printstruct <...>
-	return string = <duration_string>
+	return string = <Duration_String>
 endscript
 
 script music_store_song_focus 
@@ -1287,7 +1287,7 @@ script music_store_album_unfocus
 endscript
 
 script music_store_set_song_info_items 
-	SetSpawnInstanceLimits \{Max = 1
+	SetSpawnInstanceLimits \{max = 1
 		management = kill_oldest}
 	RequireParams \{[
 			option_struct
@@ -1295,41 +1295,41 @@ script music_store_set_song_info_items
 		all}
 	music_store_clear_album_info
 	music_store_add_album_info_item text = (<option_struct>.artist)
-	if StructureContains structure = <option_struct> album
+	if StructureContains Structure = <option_struct> album
 		music_store_add_album_info_item text = (<option_struct>.album)
 	endif
-	music_store_get_duration_string Duration = (<option_struct>.Duration)
+	music_store_get_duration_string duration = (<option_struct>.duration)
 	music_store_add_album_info_item text = <string>
 endscript
 
 script music_store_set_song_info_items_alt 
-	SetSpawnInstanceLimits \{Max = 1
+	SetSpawnInstanceLimits \{max = 1
 		management = kill_oldest}
 	RequireParams \{[
 			option_struct
 		]
 		all}
 	music_store_clear_album_info
-	music_store_add_album_info_item text = (<option_struct>.Name)
+	music_store_add_album_info_item text = (<option_struct>.name)
 	music_store_add_album_info_item text = (<option_struct>.artist)
-	if StructureContains structure = <option_struct> album
+	if StructureContains Structure = <option_struct> album
 		music_store_add_album_info_item text = (<option_struct>.album)
 	endif
 endscript
 
 script music_store_set_pack_info_items 
-	SetSpawnInstanceLimits \{Max = 1
+	SetSpawnInstanceLimits \{max = 1
 		management = kill_oldest}
 	RequireParams \{[
 			option_struct
 		]
 		all}
 	music_store_clear_album_info
-	music_store_add_album_info_item text = (<option_struct>.Name)
+	music_store_add_album_info_item text = (<option_struct>.name)
 endscript
 
 script music_store_set_album_info_items 
-	SetSpawnInstanceLimits \{Max = 1
+	SetSpawnInstanceLimits \{max = 1
 		management = kill_oldest}
 	RequireParams \{[
 			option_struct
@@ -1337,7 +1337,7 @@ script music_store_set_album_info_items
 		all}
 	music_store_clear_album_info
 	music_store_add_album_info_item text = (<option_struct>.artist)
-	music_store_add_album_info_item text = (<option_struct>.Name)
+	music_store_add_album_info_item text = (<option_struct>.name)
 endscript
 
 script music_store_preview_list 
@@ -1349,103 +1349,103 @@ script music_store_preview_list
 	GetArraySize <list>
 	i = 0
 	begin
-	if (((<list> [<i>]).Type) = song)
+	if (((<list> [<i>]).type) = song)
 		music_store_song_focus option_struct = (<list> [<i>]) alt_focus
-	elseif (((<list> [<i>]).Type) = album)
+	elseif (((<list> [<i>]).type) = album)
 		music_store_album_focus option_struct = (<list> [<i>])
-	elseif (((<list> [<i>]).Type) = pack)
+	elseif (((<list> [<i>]).type) = pack)
 		music_store_pack_focus option_struct = (<list> [<i>])
 	else
-		ScriptAssert = qs(0x48869381) i = ((<list> [<i>]).Name) t = ((<list> [<i>]).Type) donotresolve
+		ScriptAssert = qs("\Lmusic_store_preview_list found an item %i with invalid type %t") i = ((<list> [<i>]).name) t = ((<list> [<i>]).type) DoNotResolve
 	endif
 	Wait \{1.5
-		Seconds}
+		seconds}
 	i = (<i> + 1)
-	repeat <array_Size>
+	repeat <array_size>
 	repeat
 endscript
 
 script music_store_end_preview_list 
 	if ScriptIsRunning \{music_store_preview_list}
-		KillSpawnedScript \{Name = music_store_preview_list}
+		KillSpawnedScript \{name = music_store_preview_list}
 	endif
 	music_store_clear_album_info
 endscript
 test_dlc_list = [
 	{
-		Name = qs(0x7b025f8c)
-		artist = qs(0xf7415580)
+		name = qs("\LSONG 1")
+		artist = qs("\LSOME ARTIST")
 		difficulty = 5
 		date = 402410
-		Type = song
-		Duration = 500
+		type = song
+		duration = 500
 		price = 200
-		album = qs(0x0be0053c)
+		album = qs("SOME ARTIST'S ALBUM")
 	}
 	{
-		Name = qs(0x502f0c4f)
-		artist = qs(0xf7415580)
+		name = qs("\LSONG 2")
+		artist = qs("\LSOME ARTIST")
 		difficulty = 2
 		date = 402410
-		Type = song
-		Duration = 200
+		type = song
+		duration = 200
 		price = 200
-		album = qs(0x0be0053c)
+		album = qs("SOME ARTIST'S ALBUM")
 	}
 	{
-		Name = qs(0xf078b275)
-		artist = qs(0x60d19940)
+		name = qs("\LSONG 3 HAS A LONGER NAME")
+		artist = qs("\LSOME OTHER ARTIST")
 		difficulty = 1
 		date = 402412
-		Type = song
-		Duration = 150
+		type = song
+		duration = 150
 		price = 200
-		album = qs(0x47ad91a3)
+		album = qs("SOME OTHER ARTIST'S ALBUM")
 	}
 	{
-		Name = qs(0x0675abc9)
-		artist = qs(0xa8b3b076)
+		name = qs("\LSONG 4")
+		artist = qs("\LUNKNOWN ARTIST")
 		difficulty = 4
 		date = 403084
-		Type = song
-		Duration = 400
+		type = song
+		duration = 400
 		price = 150
-		album = qs(0xce14d961)
+		album = qs("UNKNOWN ALBUM")
 	}
 	{
-		Name = qs(0xfe926865)
-		artist = qs(0x4e503de3)
+		name = qs("\LPACK 1")
+		artist = qs("\LMY ARTIST")
 		difficulty = 0
 		date = 403084
-		Type = pack
-		Duration = 0
+		type = pack
+		duration = 0
 		price = 500
 	}
 	{
-		Name = qs(0xd5bf3ba6)
-		artist = qs(0xa8b3b076)
+		name = qs("\LPACK 2")
+		artist = qs("\LUNKNOWN ARTIST")
 		difficulty = 0
 		date = 403085
-		Type = pack
-		Duration = 0
+		type = pack
+		duration = 0
 		price = 500
 	}
 	{
-		Name = qs(0x22903705)
-		artist = qs(0xa8b3b076)
+		name = qs("\LALBUM 1")
+		artist = qs("\LUNKNOWN ARTIST")
 		difficulty = 0
 		date = 403084
-		Type = album
-		Duration = 0
+		type = album
+		duration = 0
 		price = 1000
 	}
 	{
-		Name = qs(0x09bd64c6)
-		artist = qs(0xf7415580)
+		name = qs("\LALBUM 2")
+		artist = qs("\LSOME ARTIST")
 		difficulty = 0
 		date = 403084
-		Type = album
-		Duration = 0
+		type = album
+		duration = 0
 		price = 900
 	}
 ]

@@ -1,18 +1,18 @@
 character_head_viewport_props = {
 	viewport = character_head_viewport
-	Camera = character_head_camera
+	camera = character_head_camera
 	style = character_head_rendering
 }
 character_head_viewport_props_ps3 = {
 	viewport = character_head_viewport
-	Camera = character_head_camera
+	camera = character_head_camera
 	style = character_head_rendering_ps3
 }
 
 script begin_car_capture \{test = 0}
 	kill_car_capture
-	if cas_player_has_character_object Player = ($cas_current_player)
-		if isps3
+	if cas_player_has_character_object player = ($cas_current_player)
+		if IsPs3
 			AddParams ($character_head_viewport_props_ps3)
 		else
 			AddParams ($character_head_viewport_props)
@@ -20,35 +20,35 @@ script begin_car_capture \{test = 0}
 		if ViewportExists id = <viewport>
 			ScriptAssert \{'Viewport still hanging around'}
 		endif
-		createviewport {
-			Priority = 6
+		CreateViewport {
+			priority = 6
 			id = <viewport>
 			style = <style>
 		}
 		if (<test> = 1)
 			CreateScreenElement {
 				id = photo_test
-				Type = ViewportElement
+				type = ViewportElement
 				parent = root_window
 				texture = white
-				Scale = (128.0, 128.0)
-				Pos = (50.0, 50.0)
+				scale = (128.0, 128.0)
+				pos = (50.0, 50.0)
 				just = [left top]
 				z_priority = 15
 				existing_viewport_id = <viewport>
 			}
-			SetViewportProperties viewport = <viewport> Active = true
+			SetViewportProperties viewport = <viewport> active = true
 			SetActiveCamera id = viewer_cam viewport = <viewport>
-			viewer_cam :SetHFOV \{hfov = 45}
+			viewer_cam :SetHFov \{hfov = 45}
 		else
-			SetViewportProperties viewport = <viewport> Active = FALSE
+			SetViewportProperties viewport = <viewport> active = false
 		endif
-		fxParam = $dof_car_photo_tod_manager
+		fxParam = $DOF_CAR_Photo_tod_manager
 		ScreenFX_ClearFXInstances viewport = <viewport>
-		if StructureContains \{structure = fxParam
-				screen_FX}
+		if StructureContains \{Structure = fxParam
+				screen_fx}
 			begin
-			if GetNextArrayElement (<fxParam>.screen_FX)
+			if GetNextArrayElement (<fxParam>.screen_fx)
 				ScreenFX_AddFXInstance {
 					viewport = <viewport>
 					<element>
@@ -65,25 +65,25 @@ script kill_car_capture
 	if ScreenElementExists \{id = photo_test}
 		DestroyScreenElement \{id = photo_test}
 	endif
-	if cas_player_has_character_object Player = ($cas_current_player)
+	if cas_player_has_character_object player = ($cas_current_player)
 		AddParams ($character_head_viewport_props)
 		if ViewportExists id = <viewport>
 			ScreenFX_ClearFXInstances {
 				viewport = <viewport>
 			}
 			DestroyViewport id = <viewport>
-			KillCamAnim Name = <Camera>
+			KillCamAnim name = <camera>
 		endif
 	endif
 endscript
 
 script car_capture_place_camera 
-	if cas_player_has_character_object Player = ($cas_current_player)
+	if cas_player_has_character_object player = ($cas_current_player)
 		AddParams ($character_head_viewport_props)
 		param_sets = [
 			{
-				LockToBone = bone_head
-				Pos = (0.0, 0.34, 0.0)
+				LockToBone = Bone_Head
+				pos = (0.0, 0.34, 0.0)
 				Quat = (-0.161807, -0.16227801, -0.60744905)
 				FOV = 45
 				LookAt = <character_object>
@@ -91,8 +91,8 @@ script car_capture_place_camera
 				ScreenOffset = (0.2, -0.9)
 			}
 			{
-				LockToBone = bone_head
-				Pos = (0.0, 0.33, -0.1)
+				LockToBone = Bone_Head
+				pos = (0.0, 0.33, -0.1)
 				Quat = (-0.161807, -0.16227801, -0.60744905)
 				FOV = 45
 				LookAt = <character_object>
@@ -100,8 +100,8 @@ script car_capture_place_camera
 				ScreenOffset = (0.2, -0.9)
 			}
 			{
-				LockToBone = bone_head
-				Pos = (0.0, 0.35000002, 0.1)
+				LockToBone = Bone_Head
+				pos = (0.0, 0.35000002, 0.1)
 				Quat = (-0.161807, -0.16227801, -0.60744905)
 				FOV = 45
 				LookAt = <character_object>
@@ -109,8 +109,8 @@ script car_capture_place_camera
 				ScreenOffset = (0.0, -0.9)
 			}
 			{
-				LockToBone = bone_head
-				Pos = (0.05, 0.35000002, 0.1)
+				LockToBone = Bone_Head
+				pos = (0.05, 0.35000002, 0.1)
 				Quat = (-0.161807, -0.16227801, -0.60744905)
 				FOV = 45
 				LookAt = <character_object>
@@ -119,12 +119,12 @@ script car_capture_place_camera
 			}
 		]
 		GetArraySize <param_sets>
-		GetRandomValue a = 0 b = (<array_Size> - 1) Name = index integer
+		GetRandomValue a = 0 b = (<array_size> - 1) name = index Integer
 		chosen_param = (<param_sets> [<index>])
 		if GotParam \{do_not_modify}
 			chosen_param = {
 				LockTo = $cas_current_player_name
-				Pos = (-0.00301, 1.6, 1.2)
+				pos = (-0.00301, 1.6, 1.2)
 				Quat = (0.0051659998, -1.0, -0.01)
 				FOV = 35
 				LookAt = $cas_current_player_name
@@ -133,39 +133,39 @@ script car_capture_place_camera
 			}
 		endif
 		PlayIGCCam {
-			Name = <Camera>
+			name = <camera>
 			viewport = <viewport>
 			LockTo = <character_object>
 			<chosen_param>
-			play_hold = 1
+			Play_hold = 1
 			interrupt_current
 		}
 	endif
 endscript
 
 script do_car_capture 
-	printf \{qs(0x1bb4efa4)}
-	if cas_player_has_character_object Player = ($cas_current_player)
+	printf \{qs("\L------------------------------------------------------------CAPTURE SCREEN")}
+	if cas_player_has_character_object player = ($cas_current_player)
 		AddParams ($character_head_viewport_props)
 		car_capture_move_away_character do_not_modify = <do_not_modify>
 		Wait \{1
 			gameframes}
 		if NOT GotParam \{do_not_modify}
-			Band_PlayFacialAnim Name = <character_object> anim = gh_rocker_male_hardrockface_5
+			Band_PlayFacialAnim name = <character_object> Anim = gh_rocker_male_hardrockface_5
 		endif
 		car_capture_place_camera do_not_modify = <do_not_modify>
 		Wait \{1
 			gameframes}
 		FinishRendering
-		SetViewportProperties viewport = <viewport> Active = true
+		SetViewportProperties viewport = <viewport> active = true
 		Wait \{2
 			gameframes}
 		FinishRendering
-		SetViewportProperties viewport = <viewport> Active = FALSE
+		SetViewportProperties viewport = <viewport> active = false
 		car_capture_move_back_character do_not_modify = <do_not_modify>
 		Wait \{1
 			gameframes}
-		photo_createfromviewport Name = car viewport = <viewport> saveshot = <saveshot>
+		Photo_CreateFromViewport name = car viewport = <viewport> saveshot = <saveshot>
 	endif
 endscript
 car_capture_moved_char = 0
@@ -175,34 +175,34 @@ car_capture_moved_old_quat = (0.0, 0.0, 0.0)
 script car_capture_move_away_character 
 	pos_dir = [
 		{
-			Pos = (-2.6, 0.0, -23.0)
+			pos = (-2.6, 0.0, -23.0)
 			Quat = (-0.078807004, 0.56277496, 0.053912997)
 		}
 		{
-			Pos = (-2.94172, 0.0, -29.387184)
+			pos = (-2.94172, 0.0, -29.387184)
 			Quat = (-0.022496998, 0.540664, 0.014366)
 		}
 		{
-			Pos = (-2.9122872, 0.0, -35.93344)
+			pos = (-2.9122872, 0.0, -35.93344)
 			Quat = (0.024223, 0.53719, -0.015568)
 		}
 		{
-			Pos = (-3.139093, 0.0, -42.170322)
+			pos = (-3.139093, 0.0, -42.170322)
 			Quat = (-0.008305001, 0.53201497, 0.005087)
 		}
 	]
 	GetArraySize <pos_dir>
-	GetRandomValue a = 0 b = (<array_Size> - 1) Name = index integer
+	GetRandomValue a = 0 b = (<array_size> - 1) name = index Integer
 	chosen_pos_dir = (<pos_dir> [<index>])
 	car_capture_move_back_character do_not_modify = <do_not_modify>
-	if cas_player_has_character_object Player = ($cas_current_player)
+	if cas_player_has_character_object player = ($cas_current_player)
 		<character_object> :Obj_GetPosition
 		<character_object> :Obj_GetQuat
-		Change car_capture_moved_old_pos = <Pos>
-		Change car_capture_moved_old_quat = <Quat>
-		Change \{car_capture_moved_char = 1}
+		change car_capture_moved_old_pos = <pos>
+		change car_capture_moved_old_quat = <Quat>
+		change \{car_capture_moved_char = 1}
 		if NOT GotParam \{do_not_modify}
-			<character_object> :Obj_SetPosition position = (<chosen_pos_dir>.Pos)
+			<character_object> :Obj_SetPosition position = (<chosen_pos_dir>.pos)
 			<character_object> :Obj_SetOrientation Quat = (<chosen_pos_dir>.Quat)
 		endif
 	endif
@@ -210,19 +210,19 @@ endscript
 
 script car_capture_move_back_character 
 	if ($car_capture_moved_char = 1)
-		if cas_player_has_character_object Player = ($cas_current_player)
+		if cas_player_has_character_object player = ($cas_current_player)
 			if NOT GotParam \{do_not_modify}
 				<character_object> :Obj_SetPosition position = ($car_capture_moved_old_pos)
 				<character_object> :Obj_SetOrientation Quat = ($car_capture_moved_old_quat)
 			endif
 		endif
-		Change \{car_capture_moved_char = 0}
+		change \{car_capture_moved_char = 0}
 	endif
 endscript
 
 script show_photo_cam 
-	if cas_player_has_character_object Player = ($cas_current_player)
-		showcamoffset Name = <character_object> bone = bone_head
+	if cas_player_has_character_object player = ($cas_current_player)
+		showcamoffset name = <character_object> bone = Bone_Head
 	endif
 endscript
 
@@ -231,22 +231,22 @@ script photograb_preset_profiles
 	i = 0
 	begin
 	get_musician_profile_struct_by_index index = <i> savegame = 0
-	this_ID = (<profile_struct>.Name)
-	formatText TextName = saveshot 'photo_%d' d = <this_ID> DontAssertForChecksums donotresolve
+	this_id = (<profile_struct>.name)
+	FormatText TextName = saveshot 'photo_%d' d = <this_id> DontAssertForChecksums DoNotResolve
 	if is_selectable_profile profile_struct = <profile_struct>
-		cas_queue_new_character_profile Player = 1 id = <this_ID> savegame = 0
+		cas_queue_new_character_profile player = 1 id = <this_id> savegame = 0
 		cas_queue_wait
 		begin_car_capture
 		Wait \{2
 			gameframes}
 		do_car_capture saveshot = <saveshot>
-		photo_delete \{Name = car}
+		Photo_Delete \{name = car}
 		Wait \{2
 			gameframes}
 		kill_car_capture
 	endif
 	i = (<i> + 1)
-	repeat <array_Size>
+	repeat <array_size>
 endscript
 
 script cas_save_photo_of_car 
@@ -254,9 +254,9 @@ script cas_save_photo_of_car
 	Wait \{2
 		gameframes}
 	do_car_capture do_not_modify = <do_not_modify>
-	if cas_player_has_character_object Player = ($cas_current_player)
-		photoputinglobaltags character_name = <character_name> photo_name = car savegame = <savegame>
-		photo_delete \{Name = car}
+	if cas_player_has_character_object player = ($cas_current_player)
+		PhotoPutInGlobalTags character_name = <character_name> photo_name = car savegame = <savegame>
+		Photo_Delete \{name = car}
 	endif
 	Wait \{2
 		gameframes}

@@ -16,7 +16,7 @@ script net_create_choose_part_menu
 endscript
 
 script net_choose_part_screen_elements 
-	CreateScreenElement \{Type = VMenu
+	CreateScreenElement \{type = VMenu
 		parent = si_scrolling_menu
 		id = si_vmenu_p1
 		event_handlers = [
@@ -24,30 +24,30 @@ script net_choose_part_screen_elements
 				pad_up
 				select_instrument_scroll
 				params = {
-					Player = 1
-					Dir = up
+					player = 1
+					dir = up
 				}
 			}
 			{
 				pad_down
 				select_instrument_scroll
 				params = {
-					Player = 1
-					Dir = down
+					player = 1
+					dir = down
 				}
 			}
 			{
 				pad_choose
 				net_request_instrument
 				params = {
-					Player = 1
+					player = 1
 				}
 			}
 			{
 				pad_back
 				net_instrument_go_back
 				params = {
-					Player = 1
+					player = 1
 				}
 			}
 			{
@@ -56,63 +56,63 @@ script net_choose_part_screen_elements
 			}
 		]
 		exclusive_device = $player1_device}
-	CreateScreenElement \{Type = VMenu
+	CreateScreenElement \{type = VMenu
 		parent = si_scrolling_menu
 		id = si_vmenu_p2}
 endscript
 
 script net_request_instrument 
 	SendNetMessage {
-		Type = instrument_selection
+		type = instrument_selection
 		value = ($g_si_player1_index + 2)
 	}
 endscript
 
 script net_select_instrument 
 	if (<instrument_index> < 0)
-		select_instrument_go_back Player = <Player>
+		select_instrument_go_back player = <player>
 		return
 	endif
-	if (<Player> = 1)
+	if (<player> = 1)
 		if NOT ($g_si_player1_index = <instrument_index>)
-			Change \{g_si_player1_locked = 1}
-			Change g_si_player1_index = <instrument_index>
+			change \{g_si_player1_locked = 1}
+			change g_si_player1_index = <instrument_index>
 		endif
 	else
 		if NOT ($g_si_player2_index = <instrument_index>)
-			Change \{g_si_player2_locked = 1}
-			Change g_si_player2_index = <instrument_index>
-			force_instrument_highlight Player = <Player>
+			change \{g_si_player2_locked = 1}
+			change g_si_player2_index = <instrument_index>
+			force_instrument_highlight player = <player>
 		endif
 	endif
-	choose_part_menu_select_part Player = <Player>
+	choose_part_menu_select_part player = <player>
 endscript
 
 script force_instrument_highlight 
-	if (<Player> = 1)
+	if (<player> = 1)
 		if ($g_si_player1_index = 0)
 			SetScreenElementProps \{id = si_hilite_p1
-				Pos = $g_si_hilitep1_pos}
-			SetScreenElementProps id = si_hilite_bookend_p1a Pos = ($g_si_hilitep1_pos + (0.0, 10.0))
+				pos = $g_si_hilitep1_pos}
+			SetScreenElementProps id = si_hilite_bookend_p1a pos = ($g_si_hilitep1_pos + (0.0, 10.0))
 		else
-			SetScreenElementProps id = si_hilite_p1 Pos = ($g_si_hilitep1_pos + (0.0, 50.0))
-			SetScreenElementProps id = si_hilite_bookend_p1a Pos = ($g_si_hilitep1_pos + (0.0, 60.0))
+			SetScreenElementProps id = si_hilite_p1 pos = ($g_si_hilitep1_pos + (0.0, 50.0))
+			SetScreenElementProps id = si_hilite_bookend_p1a pos = ($g_si_hilitep1_pos + (0.0, 60.0))
 		endif
 	else
 		if ($g_si_player2_index = 0)
 			SetScreenElementProps \{id = si_hilite_p2
-				Pos = $g_si_hilitep2_pos
+				pos = $g_si_hilitep2_pos
 				flip_h}
-			SetScreenElementProps id = si_hilite_bookend_p2a Pos = ($g_si_hilitep2_pos + (0.0, 20.0))
+			SetScreenElementProps id = si_hilite_bookend_p2a pos = ($g_si_hilitep2_pos + (0.0, 20.0))
 		else
-			SetScreenElementProps id = si_hilite_p2 Pos = ($g_si_hilitep2_pos + (0.0, 50.0)) flip_h
-			SetScreenElementProps id = si_hilite_bookend_p2a Pos = ($g_si_hilitep2_pos + (0.0, 70.0))
+			SetScreenElementProps id = si_hilite_p2 pos = ($g_si_hilitep2_pos + (0.0, 50.0)) flip_h
+			SetScreenElementProps id = si_hilite_bookend_p2a pos = ($g_si_hilitep2_pos + (0.0, 70.0))
 		endif
 	endif
-	select_instrument_randomize_bookends Player = <Player>
+	select_instrument_randomize_bookends player = <player>
 endscript
 
 script net_instrument_go_back 
-	SendNetMessage \{Type = instrument_selection
+	SendNetMessage \{type = instrument_selection
 		value = 1}
 endscript

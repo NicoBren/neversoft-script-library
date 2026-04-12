@@ -1,25 +1,25 @@
-gp_fx_nyencore_sidesparksr_06 = {
-	Pos = (-3.2785947, -11.713339, 66.62047)
-	Angles = (0.0, 0.0, 0.0)
+GP_FX_NYEncore_SideSparksR_06 = {
+	pos = (-3.2785947, -11.713339, 66.62047)
+	angles = (0.0, 0.0, 0.0)
 	Class = ParticleObject
 	ParticleType = FlexParticle
-	Type = textureribbontrail
-	Active
+	type = textureribbontrail
+	active
 	CreatedAtStart
 	EmitRangeDims = (0.1, 0.1, 0.1)
-	Emit_Target = (-1.0, 0.5, 0.0)
+	emit_Target = (-1.0, 0.5, 0.0)
 	EmitAngle = (0.0, 0.0, 0.0)
-	Force = (0.0, -10.0, 0.0)
+	force = (0.0, -10.0, 0.0)
 	WindCoeff = 0.0
 	LocalWindCoeff = 0.0
 	EmitterVelocityWeight = 0.0
 	AngleSpread = 20.0
 	LifeRange = (0.6, 0.8)
-	Emit_Rate = 20.0
-	Max = 0
+	emit_rate = 20.0
+	max = 0
 	TimeSeed = 0.0
-	LifeTime = 0.0
-	EmitNum = 0
+	lifeTime = 0.0
+	emitNum = 0
 	FollowEmitter = 0.0
 	EmitFunction = constant
 	EmitPeriod = 1.0
@@ -34,16 +34,16 @@ gp_fx_nyencore_sidesparksr_06 = {
 	AlignWithPath
 	PathFollowTime = 0.3
 	History = 14
-	HistoryListCoordinateSpace = World
-	Color = -1129985
+	HistoryListCoordinateSpace = world
+	color = -1129985
 	LOD_Default
 	QuickMaterial = {
 		DiffuseTextureEnabled
 		DiffuseTexture = JOW_Spark01
 		SpecularPower = 0
-		Bloom
-		AlphaCutoff = 1
-		BlendMode = add
+		bloom
+		alphacutoff = 1
+		blendMode = Add
 		QuadAnimationFPS = 0
 	}
 	Knot = [

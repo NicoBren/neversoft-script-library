@@ -1,19 +1,19 @@
 
 script ui_create_boot_guitar 
 	if ($invite_controller != -1)
-		SpawnScriptNow \{ui_boot_guitar_follow_invite}
+		spawnscriptnow \{ui_boot_guitar_follow_invite}
 		return
 	endif
 	GetEnterButtonAssignment
 	switch <assignment>
 		case circle
-		green_button_text = qs(0xaf4d5dd2)
-		red_button_text = qs(0x182f0173)
+		green_button_text = qs("BACK")
+		red_button_text = qs("CONTINUE")
 		default
-		green_button_text = qs(0x182f0173)
-		red_button_text = qs(0xaf4d5dd2)
+		green_button_text = qs("CONTINUE")
+		red_button_text = qs("BACK")
 	endswitch
-	fadetoblack \{On
+	fadetoblack \{on
 		alpha = 1.0
 		time = 0.0
 		no_wait}
@@ -24,16 +24,16 @@ script ui_create_boot_guitar
 	else
 		desc = 'boot_usingMic_PS3'
 	endif
-	if StructureContains structure = <allowed> guitar
+	if StructureContains Structure = <allowed> guitar
 		instrument = guitar
 		desc = 'boot_usingGuitar'
 	endif
-	if StructureContains structure = <allowed> drum
+	if StructureContains Structure = <allowed> drum
 		instrument = drum
 		desc = 'boot_usingDrum'
 	endif
-	if StructureContains structure = <allowed> vocals
-		if ismicrophonepluggedin
+	if StructureContains Structure = <allowed> Vocals
+		if IsMicrophonePluggedIn
 			instrument = mic
 			if isXenon
 				desc = 'boot_usingMic_360'
@@ -52,7 +52,7 @@ script ui_create_boot_guitar
 	CreateScreenElement {
 		parent = root_window
 		id = current_menu
-		Type = descinterface
+		type = DescInterface
 		desc = <desc>
 		exclusive_device = ($primary_controller)
 		event_handlers = [
@@ -65,10 +65,10 @@ script ui_create_boot_guitar
 		green_button_text = <green_button_text>
 		red_button_text = <red_button_text>
 	}
-	if isrbdrum controller = ($primary_controller)
-		SpawnScriptNow \{create_rb_drum_notification}
+	if isRBDrum controller = ($primary_controller)
+		spawnscriptnow \{create_rb_drum_notification}
 	endif
-	add_user_control_helper \{text = qs(0x182f0173)
+	add_user_control_helper \{text = qs("CONTINUE")
 		button = green
 		z = 100000}
 endscript
@@ -77,16 +77,16 @@ script ui_boot_guitar_follow_invite
 	ui_create_mainmenu_intro_spawned
 	Wait \{1
 		gameframe}
-	SpawnScriptNow invite_accepted params = {controllerid = ($invite_controller)}
+	spawnscriptnow invite_accepted params = {controllerid = ($invite_controller)}
 endscript
 
 script create_rb_drum_notification 
 	CreateScreenElement \{parent = root_window
 		id = notification_box
-		Type = descinterface
+		type = DescInterface
 		desc = 'notification_box'}
 	Wait \{3
-		Seconds}
+		seconds}
 	DestroyScreenElement \{id = notification_box}
 endscript
 
@@ -108,9 +108,9 @@ endscript
 
 script is_regular_controller 
 	if IsGuitarController controller = <controller>
-		return \{FALSE}
-	elseif isdrumcontroller controller = <controller>
-		return \{FALSE}
+		return \{false}
+	elseif IsDrumController controller = <controller>
+		return \{false}
 	endif
 	return \{true}
 endscript

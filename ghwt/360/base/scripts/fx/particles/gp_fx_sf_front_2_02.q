@@ -1,30 +1,30 @@
-gp_fx_sf_front_2_02 = {
-	Pos = (0.345557, 0.0, 0.24266401)
-	Angles = (0.0, 0.0, 0.0)
+GP_FX_SF_Front_2_02 = {
+	pos = (0.345557, 0.0, 0.24266401)
+	angles = (0.0, 0.0, 0.0)
 	Class = ParticleObject
 	ParticleType = FlexParticle
-	Type = flat
-	Active
+	type = flat
+	active
 	CreatedAtStart
-	Attach
+	attach
 	Align
 	ApplyPositionOffset
-	AttachObject = z_fairgrounds_gfx_fx_pyrocylinder_01
+	AttachObject = Z_Fairgrounds_GFX_FX_PyroCylinder_01
 	EmitRangeDims = (0.0, 0.0, 0.0)
-	Emit_Target = (1.0, 0.0, 0.0)
+	emit_Target = (1.0, 0.0, 0.0)
 	EnableRotate
 	EmitAngle = (0.0, 0.0, 0.0)
-	Force = (0.0, -5.0, 0.0)
+	force = (0.0, -5.0, 0.0)
 	WindCoeff = 0.0
 	LocalWindCoeff = 0.0
 	EmitterVelocityWeight = 0.0
 	AngleSpread = 10.0
 	LifeRange = (1.0, 1.5)
-	Emit_Rate = 200.0
-	Max = 0
+	emit_rate = 200.0
+	max = 0
 	TimeSeed = 0.0
-	LifeTime = 3.0
-	EmitNum = 0
+	lifeTime = 3.0
+	emitNum = 0
 	FollowEmitter = 0.0
 	AlwaysEmit
 	EmitFunction = constant
@@ -40,16 +40,16 @@ gp_fx_sf_front_2_02 = {
 	AlignWithPath
 	PathFollowTime = 0.1
 	History = 10
-	HistoryListCoordinateSpace = World
-	Color = -1
+	HistoryListCoordinateSpace = world
+	color = -1
 	LOD_Default
 	QuickMaterial = {
 		DiffuseTextureEnabled
 		DiffuseTexture = JOW_Spark01
 		SpecularPower = 0
-		Bloom
-		AlphaCutoff = 1
-		BlendMode = add
+		bloom
+		alphacutoff = 1
+		blendMode = Add
 		QuadAnimationFPS = 0
 	}
 	Knot = [

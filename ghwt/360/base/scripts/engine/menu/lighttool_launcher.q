@@ -1,17 +1,17 @@
 Shadow_Volume_Settings = {
-	Intensity = 0.3
-	Type = modulate
+	intensity = 0.3
+	type = modulate
 	softness = 0.5
-	Color = [
+	color = [
 		0
 		0
 		0
 	]
 }
 White_Noise_Settings = {
-	On = 0
-	Intensity = 20
-	Color = [
+	on = 0
+	intensity = 20
+	color = [
 		128
 		128
 		128
@@ -26,7 +26,7 @@ ZoomBlur_Settings = {
 		1.5
 		0.0
 	]
-	Angles = [
+	angles = [
 		0.0
 		0.0
 	]

@@ -1,30 +1,30 @@
-gp_fx_candleglow_05 = {
-	Pos = (0.0, -3.2291958, -1.9726441)
-	Angles = (0.0, 0.0, 0.0)
+GP_FX_CandleGlow_05 = {
+	pos = (0.0, -3.2291958, -1.9726441)
+	angles = (0.0, 0.0, 0.0)
 	Class = ParticleObject
 	ParticleType = FlexParticle
-	Type = flat
-	Active
+	type = flat
+	active
 	CreatedAtStart
-	Attach
+	attach
 	Align
 	ApplyPositionOffset
-	AttachObject = z_cathedral_g_chandparent
+	AttachObject = z_cathedral_g_ChandParent
 	EmitRangeDims = (0.02, 0.02, 0.02)
-	Emit_Target = (0.0, 1.0, 0.0)
+	emit_Target = (0.0, 1.0, 0.0)
 	EnableRotate
 	EmitAngle = (0.0, 0.0, 0.0)
-	Force = (0.0, 0.0, 0.0)
+	force = (0.0, 0.0, 0.0)
 	WindCoeff = 0.0
 	LocalWindCoeff = 0.0
 	EmitterVelocityWeight = 0.0
 	AngleSpread = 45.0
 	LifeRange = (1.5, 2.0)
-	Emit_Rate = 10.0
-	Max = 1
+	emit_rate = 10.0
+	max = 1
 	TimeSeed = 0.0
-	LifeTime = 0.0
-	EmitNum = 0
+	lifeTime = 0.0
+	emitNum = 0
 	FollowEmitter = 0.0
 	EmitFunction = constant
 	EmitPeriod = 1.0
@@ -39,14 +39,14 @@ gp_fx_candleglow_05 = {
 	PathFollowTime = 0.0
 	History = 2
 	HistoryListCoordinateSpace = object
-	Color = -154308097
+	color = -154308097
 	LOD_Default
 	QuickMaterial = {
 		DiffuseTextureEnabled
-		DiffuseTexture = ph_radialglow_01
+		DiffuseTexture = PH_RadialGlow_01
 		SpecularPower = 0
-		AlphaCutoff = 1
-		BlendMode = add
+		alphacutoff = 1
+		blendMode = Add
 		SoftEdge
 		SoftedgeScale = 0.1
 		Burn

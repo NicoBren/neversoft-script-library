@@ -6,9 +6,9 @@ jam_num_frets_bass = 20
 jam_num_frets_rhythm_0 = 5
 jam_num_frets_rhythm_1 = 10
 jam_num_samples = 2
-jam_current_lead_position = NULL
-jam_current_rhythm_position = NULL
-jam_current_bass_position = NULL
+jam_current_lead_position = null
+jam_current_rhythm_position = null
+jam_current_bass_position = null
 lead_types = [
 	'pk'
 	'pk'
@@ -98,18 +98,18 @@ jam_checksum_notes = [
 	'Eb'
 ]
 jam_note_text = [
-	qs(0x69bdca15)
-	qs(0x429099d6)
-	qs(0xe0187c88)
-	qs(0x5b8ba897)
-	qs(0x58a41bed)
-	qs(0x0dd10f11)
-	qs(0x7dcf4431)
-	qs(0x26fc5cd2)
-	qs(0x3fe76d93)
-	qs(0xd7c68cba)
-	qs(0x70a6fb54)
-	qs(0x4a11b403)
+	qs("\LE")
+	qs("\LF")
+	qs("\LF#")
+	qs("\LG")
+	qs("\LG#")
+	qs("\LA")
+	qs("\LA#")
+	qs("\LB")
+	qs("\LC")
+	qs("\LC#")
+	qs("\LD")
+	qs("\LD#")
 ]
 jam_pitch_modifier = [
 	0
@@ -160,13 +160,13 @@ jam_pitch_modifier_rhythm_1 = [
 ]
 
 script jam_get_sample_checksum 
-	jamgetsamplechecksum_cfunc fret = <fret> string = <string> Type = <Type> jam_instrument = <jam_instrument> chord_type = <chord_type>
+	JamGetSampleChecksum_CFunc fret = <fret> string = <string> type = <type> jam_instrument = <jam_instrument> chord_type = <chord_type>
 	return sample_checksum = <sample_checksum> note_text = <note_text> pitch_shift = <pitch_shift> note_id = <note_id>
 endscript
 
 script jam_get_sample_checksum_unoptimized \{fret = 0
 		string = 0
-		Type = 0
+		type = 0
 		jam_instrument = 0
 		chord_type = 0}
 endscript
@@ -180,35 +180,35 @@ endscript
 
 script test_lead_samples 
 	GetArraySize \{$lead_types}
-	num_lead_types = <array_Size>
+	num_lead_types = <array_size>
 	fret = 0
 	string = 0
-	Type = 0
+	type = 0
 	sample_num = 1
 	begin
 	begin
 	begin
 	begin
-	jam_get_sample_checksum fret = <fret> string = <string> Type = <Type> sample_num = <sample_num> jam_instrument = 1
-	switch <Type>
+	jam_get_sample_checksum fret = <fret> string = <string> type = <type> sample_num = <sample_num> jam_instrument = 1
+	switch <type>
 		case 0
-		PlaySound <sample_checksum> pitch = <pitch_shift> vol = 0 buss = jammode_leadguitar
+		PlaySound <sample_checksum> pitch = <pitch_shift> vol = 0 buss = JamMode_LeadGuitar
 		case 1
-		PlaySound <sample_checksum> pitch = <pitch_shift> vol = -2 buss = jammode_leadguitar attack_time = 0.055 attack_function = flat_middle
+		PlaySound <sample_checksum> pitch = <pitch_shift> vol = -2 buss = JamMode_LeadGuitar attack_time = 0.055 attack_function = flat_middle
 		case 2
-		PlaySound <sample_checksum> pitch = <pitch_shift> vol = -3.5 buss = jammode_leadguitar attack_time = 0.07 attack_function = flat_middle
+		PlaySound <sample_checksum> pitch = <pitch_shift> vol = -3.5 buss = JamMode_LeadGuitar attack_time = 0.07 attack_function = flat_middle
 		case 3
-		PlaySound <sample_checksum> pitch = <pitch_shift> vol = 0 buss = jammode_leadguitar
+		PlaySound <sample_checksum> pitch = <pitch_shift> vol = 0 buss = JamMode_LeadGuitar
 	endswitch
 	if NOT issoundplaying <sample_checksum>
-		printf channel = jam_samples qs(0x5c186ce5) s = <sample_checksum>
+		printf channel = jam_samples qs("\LERRROR: missing sample for %s") s = <sample_checksum>
 	endif
 	Wait \{0.05
-		Seconds}
-	stopsound <sample_checksum> fade_type = linear fade_time = $jam_fade_time
-	<Type> = (<Type> + 1)
+		seconds}
+	StopSound <sample_checksum> fade_type = linear fade_time = $jam_fade_time
+	<type> = (<type> + 1)
 	repeat <num_lead_types>
-	<Type> = 0
+	<type> = 0
 	<sample_num> = (<sample_num> + 1)
 	repeat 2
 	<sample_num> = 1
@@ -218,20 +218,20 @@ script test_lead_samples
 	<string> = (<string> + 1)
 	repeat $jam_num_strings_lead
 	printf \{channel = jam_samples
-		qs(0x35747d83)}
+		qs("\LJAM LEAD, NECK SAMPLES TEST END")}
 endscript
 
 script test_rhythm_samples 
 	printf \{channel = jam_samples
-		qs(0x5dd5a3f8)}
+		qs("\LJAM RHYTHM, NECK SAMPLES TEST START")}
 	GetArraySize \{$rhythm_types}
-	num_rhythm_types = <array_Size>
+	num_rhythm_types = <array_size>
 	GetArraySize \{$rhythm_chord_types}
-	num_rhythm_chord_types = <array_Size>
+	num_rhythm_chord_types = <array_size>
 	num_frets_rhythm = $jam_num_frets_rhythm_0
 	fret = 0
 	string = 0
-	Type = 0
+	type = 0
 	chord_type = 0
 	sample_num = 1
 	begin
@@ -239,22 +239,22 @@ script test_rhythm_samples
 	begin
 	begin
 	begin
-	jam_get_sample_checksum fret = <fret> string = <string> Type = <Type> sample_num = <sample_num> jam_instrument = 0 chord_type = <chord_type>
-	switch <Type>
+	jam_get_sample_checksum fret = <fret> string = <string> type = <type> sample_num = <sample_num> jam_instrument = 0 chord_type = <chord_type>
+	switch <type>
 		case 0
-		PlaySound <sample_checksum> pitch = <pitch_shift> vol = 0 buss = jammode_rhythmguitar
+		PlaySound <sample_checksum> pitch = <pitch_shift> vol = 0 buss = JamMode_RhythmGuitar
 		case 1
-		PlaySound <sample_checksum> pitch = <pitch_shift> vol = 0 buss = jammode_rhythmguitar
+		PlaySound <sample_checksum> pitch = <pitch_shift> vol = 0 buss = JamMode_RhythmGuitar
 	endswitch
 	if NOT issoundplaying <sample_checksum>
-		printf channel = jam_samples qs(0x5c186ce5) s = <sample_checksum>
+		printf channel = jam_samples qs("\LERRROR: missing sample for %s") s = <sample_checksum>
 	endif
 	Wait \{0.1
-		Seconds}
-	stopsound <sample_checksum> fade_type = linear fade_time = $jam_fade_time
-	<Type> = (<Type> + 1)
+		seconds}
+	StopSound <sample_checksum> fade_type = linear fade_time = $jam_fade_time
+	<type> = (<type> + 1)
 	repeat <num_rhythm_types>
-	<Type> = 0
+	<type> = 0
 	<chord_type> = (<chord_type> + 1)
 	repeat <num_rhythm_chord_types>
 	chord_type = 0
@@ -270,66 +270,66 @@ script test_rhythm_samples
 	endif
 	repeat $jam_num_strings_rhythm
 	printf \{channel = jam_samples
-		qs(0x4bd64827)}
+		qs("\LJAM RHYTHM, NECK SAMPLES TEST END")}
 endscript
 
 script test_rhythm_special_samples 
 	GetArraySize \{$jam_special_chords}
 	special_chord = 0
 	begin
-	Dir = 2
+	dir = 2
 	begin
 	sample_num = 1
 	begin
-	jam_get_sample_checksum fret = 0 string = 0 Type = <Dir> sample_num = <sample_num> jam_instrument = 0 chord_type = <special_chord>
-	PlaySound <sample_checksum> pitch = <pitch_shift> vol = 0 buss = jammode_leadguitar
+	jam_get_sample_checksum fret = 0 string = 0 type = <dir> sample_num = <sample_num> jam_instrument = 0 chord_type = <special_chord>
+	PlaySound <sample_checksum> pitch = <pitch_shift> vol = 0 buss = JamMode_LeadGuitar
 	if NOT issoundplaying <sample_checksum>
-		printf channel = jam_samples qs(0x5c186ce5) s = <sample_checksum>
+		printf channel = jam_samples qs("\LERRROR: missing sample for %s") s = <sample_checksum>
 	endif
 	Wait \{0.1
-		Seconds}
-	stopsound <sample_checksum> fade_type = linear fade_time = $jam_fade_time
+		seconds}
+	StopSound <sample_checksum> fade_type = linear fade_time = $jam_fade_time
 	<sample_num> = (<sample_num> + 1)
 	repeat 2
-	<Dir> = (<Dir> + 1)
+	<dir> = (<dir> + 1)
 	repeat 2
 	<special_chord> = (<special_chord> + 1)
-	repeat <array_Size>
+	repeat <array_size>
 endscript
 
 script test_bass_samples 
 	printf \{channel = jam_samples
-		qs(0x4b907356)}
+		qs("\LJAM BASS, NECK SAMPLES TEST START")}
 	GetArraySize \{$bass_types}
-	num_bass_types = <array_Size>
+	num_bass_types = <array_size>
 	fret = 0
 	string = 0
-	Type = 0
+	type = 0
 	sample_num = 1
 	begin
 	begin
 	begin
 	begin
-	jam_get_sample_checksum fret = <fret> string = <string> Type = <Type> sample_num = <sample_num> jam_instrument = 2
-	switch <Type>
+	jam_get_sample_checksum fret = <fret> string = <string> type = <type> sample_num = <sample_num> jam_instrument = 2
+	switch <type>
 		case 0
-		PlaySound <sample_checksum> pitch = <pitch_shift> vol = 0 buss = jammode_bass
+		PlaySound <sample_checksum> pitch = <pitch_shift> vol = 0 buss = JamMode_Bass
 		case 1
-		PlaySound <sample_checksum> pitch = <pitch_shift> vol = -2 buss = jammode_bass attack_time = 0.055 attack_function = flat_middle
+		PlaySound <sample_checksum> pitch = <pitch_shift> vol = -2 buss = JamMode_Bass attack_time = 0.055 attack_function = flat_middle
 		case 2
-		PlaySound <sample_checksum> pitch = <pitch_shift> vol = -3.5 buss = jammode_bass attack_time = 0.07 attack_function = flat_middle
+		PlaySound <sample_checksum> pitch = <pitch_shift> vol = -3.5 buss = JamMode_Bass attack_time = 0.07 attack_function = flat_middle
 		case 3
-		PlaySound <sample_checksum> pitch = <pitch_shift> vol = 0 buss = jammode_bass
+		PlaySound <sample_checksum> pitch = <pitch_shift> vol = 0 buss = JamMode_Bass
 	endswitch
 	if NOT issoundplaying <sample_checksum>
-		printf channel = jam_samples qs(0x5c186ce5) s = <sample_checksum>
+		printf channel = jam_samples qs("\LERRROR: missing sample for %s") s = <sample_checksum>
 	endif
 	Wait \{0.1
-		Seconds}
-	stopsound <sample_checksum> fade_type = linear fade_time = $jam_fade_time
-	<Type> = (<Type> + 1)
+		seconds}
+	StopSound <sample_checksum> fade_type = linear fade_time = $jam_fade_time
+	<type> = (<type> + 1)
 	repeat <num_bass_types>
-	<Type> = 0
+	<type> = 0
 	<sample_num> = (<sample_num> + 1)
 	repeat 2
 	<sample_num> = 1
@@ -339,5 +339,5 @@ script test_bass_samples
 	<string> = (<string> + 1)
 	repeat $jam_num_strings_bass
 	printf \{channel = jam_samples
-		qs(0x6110f35a)}
+		qs("\LJAM BASS, NECK SAMPLES TEST END")}
 endscript

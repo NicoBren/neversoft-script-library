@@ -1,26 +1,26 @@
 
 script ui_create_leaderboard_timeout 
 	if isXenon
-		text = qs(0x417d33b3)
+		text = qs("You must be signed in to Xbox LIVE to access leaderboards.")
 	else
-		text = qs(0xcb2a97e7)
+		text = qs("You must be signed in to the PLAYSTATION®Network to access leaderboards.")
 	endif
 	if GotParam \{cable_unplugged}
-		text = (<text> + qs(0x713755f7) + qs(0x0df6659c))
+		text = (<text> + qs("\L ") + qs("Your network connection has been disconnected."))
 	elseif GotParam \{lost_lobby_connection}
-		text = (<text> + qs(0x713755f7) + qs(0x474948fe))
+		text = (<text> + qs("\L ") + qs("You have lost connection to the Lobby Server."))
 	endif
-	text = (<text> + qs(0x713755f7) + qs(0x0205395b))
+	text = (<text> + qs("\L ") + qs("Please connect and try again."))
 	create_popup_warning_menu {
 		player_device = ($lb_controller)
-		title = qs(0xaa163738)
+		title = qs("WARNING")
 		textblock = {
 			text = <text>
 		}
 		options = [
 			{
 				func = generic_event_back
-				text = qs(0x182f0173)
+				text = qs("CONTINUE")
 				sound_func = nullscript
 			}
 		]

@@ -1,9 +1,9 @@
 
 script quickplay_go_to_practice_setup 
-	Change \{came_to_practice_from = quickplay}
-	Change came_to_practice_difficulty = ($player1_status.difficulty)
+	change \{came_to_practice_from = quickplay}
+	change came_to_practice_difficulty = ($player1_status.difficulty)
 	kill_gem_scroller
-	Change \{game_mode = training}
+	change \{game_mode = training}
 endscript
 
 script quickplay_song_select_quit 
@@ -12,14 +12,14 @@ script quickplay_song_select_quit
 endscript
 
 script get_total_num_venues 
-	printf \{qs(0xd6d5303d)}
+	printf \{qs("\Lget_total_num_venues")}
 	array_entry = 0
 	begin
 	if NOT get_valid_venue_index venue_index = <array_entry>
 		break
 	endif
 	get_LevelZoneArray_checksum index = <index>
-	printf ($LevelZones.<level_checksum>.Name)
+	printf ($LevelZones.<level_checksum>.name)
 	<array_entry> = (<array_entry> + 1)
 	repeat
 	return num_venues = <array_entry>
@@ -31,7 +31,7 @@ script get_valid_venue_index
 	begin
 	get_LevelZoneArray_checksum index = <index>
 	valid = 1
-	formatText checksumName = venue_checksum 'venue_%s' s = ($LevelZones.<level_checksum>.Name)
+	FormatText checksumname = venue_checksum 'venue_%s' s = ($LevelZones.<level_checksum>.name)
 	GetGlobalTags <venue_checksum>
 	if NOT (<unlocked> = 1)
 		valid = 0
@@ -43,23 +43,23 @@ script get_valid_venue_index
 		venue_index = (<venue_index> - 1)
 	endif
 	index = (<index> + 1)
-	repeat <array_Size>
-	return \{FALSE}
+	repeat <array_size>
+	return \{false}
 endscript
 
 script quickplay_start_song \{device_num = 0}
-	printf \{qs(0x8c9f7873)}
+	printf \{qs("\Lquickplay_start_song")}
 	if ($autolaunch_startnow = 0 &&
 			$autotest_on = 0 &&
 			$end_credits = 0)
 		get_progression_globals game_mode = ($game_mode)
-		SongList = <tier_global>
-		if ($band_mode_mode = None)
+		songlist = <tier_global>
+		if ($band_mode_mode = none)
 			set_random_single_player_quickplay
 		endif
 		quickplay_choose_random_venue <...>
 	endif
-	start_song {device_num = <device_num> starttime = <starttime> uselaststarttime = <uselaststarttime>}
+	start_song {device_num = <device_num> StartTime = <StartTime> uselaststarttime = <uselaststarttime>}
 endscript
 
 script set_random_single_player_quickplay 
@@ -69,13 +69,13 @@ script set_random_single_player_quickplay
 	cas_reset_random_human_picking
 	i = 0
 	begin
-	formatText checksumName = player_status 'player%d_status' d = (<i> + 1)
+	FormatText checksumname = player_status 'player%d_status' d = (<i> + 1)
 	choice = Random (@ 0 @ 1 @ 2 )
 	controller = ($<player_status>.controller)
 	part = ($<player_status>.part)
 	get_savegame_from_controller controller = <controller>
-	if ((<choice> = 0) || (<part> = vocals))
-		character_id = randomcharacter
+	if ((<choice> = 0) || (<part> = Vocals))
+		character_id = RandomCharacter
 	elseif (<choice> = 1)
 		if NOT cas_get_random_car savegame = <savegame> controller = <controller>
 			cas_get_random_preset_character savegame = <savegame> controller = <controller> part = <part>
@@ -83,7 +83,7 @@ script set_random_single_player_quickplay
 	else
 		cas_get_random_preset_character savegame = <savegame> controller = <controller> part = <part>
 	endif
-	Change structurename = <player_status> character_id = <character_id>
+	change structurename = <player_status> character_id = <character_id>
 	i = (<i> + 1)
 	repeat $current_num_players
 	cas_reset_random_human_picking
@@ -95,19 +95,19 @@ script quickplay_choose_random_venue
 	endif
 	unlocked_levels = []
 	GetArraySize \{$LevelZoneArray}
-	level_zone_array_size = <array_Size>
+	level_zone_array_size = <array_size>
 	index = 0
 	begin
 	get_LevelZoneArray_checksum index = <index>
-	if NOT StructureContains structure = ($LevelZones.<level_checksum>) debug_only
-		formatText checksumName = venue_checksum 'venue_%s' s = ($LevelZones.<level_checksum>.Name)
+	if NOT StructureContains Structure = ($LevelZones.<level_checksum>) debug_only
+		FormatText checksumname = venue_checksum 'venue_%s' s = ($LevelZones.<level_checksum>.name)
 		GetGlobalTags <venue_checksum> param = unlocked
 		add_venue = 0
 		if (<unlocked> = 1)
 			add_venue = 1
 		endif
-		if ($cheat_unlockattballpark = 1)
-			if (<level_checksum> = load_z_ballpark)
+		if ($Cheat_UnlockATTBallpark = 1)
+			if (<level_checksum> = load_z_Ballpark)
 				add_venue = 1
 			endif
 		endif
@@ -117,14 +117,14 @@ script quickplay_choose_random_venue
 		endif
 	endif
 	<index> = (<index> + 1)
-	repeat <array_Size>
+	repeat <array_size>
 	GetArraySize <unlocked_levels>
 	if (<can_change_level> = 1)
-		if (<array_Size> != 0)
-			GetRandomValue a = 0 b = (<array_Size> - 1) integer Name = random_int
-			Change current_level = (<unlocked_levels> [<random_int>])
+		if (<array_size> != 0)
+			GetRandomValue a = 0 b = (<array_size> - 1) Integer name = random_int
+			change current_level = (<unlocked_levels> [<random_int>])
 		else
-			Change \{current_level = load_z_bayou}
+			change \{current_level = load_z_bayou}
 		endif
 	endif
 endscript

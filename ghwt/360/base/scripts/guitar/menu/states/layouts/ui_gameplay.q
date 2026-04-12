@@ -4,16 +4,16 @@ gameplay_loading_transition = 0
 script ui_create_gameplay 
 	if ($gameplay_restart_song = 1)
 		loading_transition = ($gameplay_loading_transition)
-		Change \{gameplay_loading_transition = 0}
-		SpawnScriptNow restart_song params = {loading_transition = <loading_transition>}
-		Change \{gameplay_restart_song = 0}
+		change \{gameplay_loading_transition = 0}
+		spawnscriptnow restart_song params = {loading_transition = <loading_transition>}
+		change \{gameplay_restart_song = 0}
 	endif
-	vocals_mute_all_mics \{mute = FALSE}
-	SpawnScriptNow \{ui_create_gameplay_spawned}
+	vocals_mute_all_mics \{mute = false}
+	spawnscriptnow \{ui_create_gameplay_spawned}
 	if ($is_network_game = 1)
-		gamemode_getnumplayers
+		GameMode_GetNumPlayers
 		if (4 <= <num_players>)
-			NetSessionFunc \{Obj = voice
+			NetSessionFunc \{obj = voice
 				func = turnteamtalkon}
 		endif
 	endif
@@ -24,7 +24,7 @@ script ui_destroy_gameplay
 endscript
 
 script ui_create_gameplay_spawned 
-	setscriptcannotpause
+	SetScriptCannotPause
 	spawn_player_drop_listeners \{drop_player_script = gameplay_drop_player
 		end_game_script = gameplay_end_game}
 	ui_event_wait_for_safe
@@ -41,31 +41,31 @@ script ui_create_gameplay_spawned
 		gameframe}
 	disable_pause \{nospam}
 	repeat
-	if NOT ScreenElementExists \{id = handsofgod}
+	if NOT ScreenElementExists \{id = HandsOfGod}
 		enable_pause
 	endif
 	ResumeControllerChecking
-	Change \{sysnotify_paused_controllers = [
+	change \{sysnotify_paused_controllers = [
 		]}
-	Change \{unknown_drum_type = 0}
+	change \{unknown_drum_type = 0}
 	if ($songtime_paused = 1)
 		SoftAssert \{'Hacky fix for bass pedal lockup'}
-		Change \{songtime_paused = 0}
-		StartRendering
+		change \{songtime_paused = 0}
+		startrendering
 	endif
 endscript
 
 script ui_deinit_gameplay 
 	printf \{'ui_deinit_gameplay'}
-	KillSpawnedScript \{Name = ui_create_gameplay_spawned}
-	SpawnScriptNow \{kill_gem_scroller}
-	if ScreenElementExists \{id = handsofgod}
-		KillSpawnedScript \{Name = anim_handsofgod}
-		DestroyScreenElement \{id = handsofgod}
+	KillSpawnedScript \{name = ui_create_gameplay_spawned}
+	spawnscriptnow \{kill_gem_scroller}
+	if ScreenElementExists \{id = HandsOfGod}
+		KillSpawnedScript \{name = Anim_HandsOfGod}
+		DestroyScreenElement \{id = HandsOfGod}
 	endif
 	UnPauseGame
 	disable_pause
-	if NOT ui_event_exists_in_stack \{Name = 'jam'}
+	if NOT ui_event_exists_in_stack \{name = 'jam'}
 		if ($game_mode = p1_career || $game_mode = p2_career || $band_mode_mode = career)
 			band_builder_clear_random_appearances \{cpu_only}
 		else
@@ -82,46 +82,46 @@ script animate_drop_player_msg
 		]
 		all}
 	Obj_GetID
-	<objID> :se_setprops {gamertag_alpha = 1.0 gamertag_name_text = <drop_msg> gamertag_scale = (3.0, 1.1) time = 0.1 motion = ease_out}
-	<objID> :se_waitprops
-	<objID> :se_setprops {gamertag_scale = (1.3, 1.1) time = 0.1 motion = ease_out}
-	<objID> :se_waitprops
+	<ObjID> :SE_SetProps {GamerTag_alpha = 1.0 gamertag_name_text = <drop_msg> GamerTag_scale = (3.0, 1.1) time = 0.1 motion = ease_out}
+	<ObjID> :SE_WaitProps
+	<ObjID> :SE_SetProps {GamerTag_scale = (1.3, 1.1) time = 0.1 motion = ease_out}
+	<ObjID> :SE_WaitProps
 endscript
 
 script gameplay_drop_player 
-	printf \{qs(0xbbbe3929)}
-	gamemode_gettype
+	printf \{qs("\Lgameplay_drop_player")}
+	GameMode_GetType
 	if (<is_game_over> = 0)
-		if (<Type> = career)
-			setplayerinfo <dropped_player_num> is_local_client = 0
-			setplayerinfo <dropped_player_num> net_id_first = 0
-			setplayerinfo <dropped_player_num> net_id_second = 0
-			setplayerinfo <dropped_player_num> net_obj_id = -1
-			setplayerinfo <dropped_player_num> team = 0
-			setplayerinfo <dropped_player_num> party_id = -1
-			Change net_num_players = (($net_num_players) - 1)
-			Change current_num_players = (($current_num_players) - 1)
-			Change num_players_in_band = (($num_players_in_band) - 1)
-			formatText checksumName = mode 'p%d_career' d = ($current_num_players)
-			Change game_mode = <mode>
-			Change net_dropped_players_flag = (($net_dropped_players_flag) + 1)
+		if (<type> = career)
+			SetPlayerInfo <dropped_player_num> is_local_client = 0
+			SetPlayerInfo <dropped_player_num> net_id_first = 0
+			SetPlayerInfo <dropped_player_num> net_id_second = 0
+			SetPlayerInfo <dropped_player_num> net_obj_id = -1
+			SetPlayerInfo <dropped_player_num> team = 0
+			SetPlayerInfo <dropped_player_num> party_id = -1
+			change net_num_players = (($net_num_players) - 1)
+			change current_num_players = (($current_num_players) - 1)
+			change num_players_in_band = (($num_players_in_band) - 1)
+			FormatText checksumname = mode 'p%d_career' d = ($current_num_players)
+			change game_mode = <mode>
+			change net_dropped_players_flag = (($net_dropped_players_flag) + 1)
 		else
-			printf \{qs(0x0fdb1295)}
+			printf \{qs("\Li'll let you decide what you want in here")}
 		endif
 		switch <drop_reason>
 			case net_message_player_quit
-			formatText TextName = drop_msg qs(0x567f10d8) s = <name_string>
+			FormatText TextName = drop_msg qs("%s has quit.") s = <name_string>
 			case net_message_player_dropped
 			case net_message_player_timed_out
-			formatText TextName = drop_msg qs(0xd4b272d7) s = <name_string>
+			FormatText TextName = drop_msg qs("Lost connection to %s.") s = <name_string>
 			default
-			drop_msg = qs(0x00000000)
+			drop_msg = qs("")
 		endswitch
 		if ScreenElementExists \{id = hud_root}
-			getplayerinfo <dropped_player_num> hud_parent
-			if hud_root :desc_resolvealias Name = <hud_parent> param = parent_id
+			GetPlayerInfo <dropped_player_num> hud_parent
+			if hud_root :Desc_ResolveAlias name = <hud_parent> param = parent_id
 				if ScreenElementExists id = {<parent_id> child = gamertag}
-					ResolveScreenElementID id = [
+					ResolveScreenElementId id = [
 						{id = <parent_id>}
 						{local_id = gamertag}
 					]
@@ -132,10 +132,10 @@ script gameplay_drop_player
 			endif
 		endif
 	else
-		if ((<Type> = faceoff) || (<Type> = pro_faceoff))
+		if ((<type> = faceoff) || (<type> = pro_faceoff))
 			if ($current_num_players = 2)
-				printf \{qs(0x3efb5626)}
-				Change \{structurename = player2_status
+				printf \{qs("\LZero quitting player's score")}
+				change \{structurename = player2_status
 					score = 0.0}
 			endif
 		endif
@@ -143,24 +143,24 @@ script gameplay_drop_player
 endscript
 
 script gameplay_end_game 
-	printf \{qs(0x743ca546)}
+	printf \{qs("\L---gameplay_end_game")}
 	printstruct <...>
 	destroy_popup_warning_menu
 	if ((<is_game_over> = 1) && ($net_popup_active = 0))
 		net_disable_pause
 		switch <drop_reason>
 			case net_message_player_quit
-			formatText TextName = first_msg qs(0x567f10d8) s = <name_string>
+			FormatText TextName = first_msg qs("%s has quit.") s = <name_string>
 			case net_message_player_dropped
 			case net_message_player_timed_out
-			formatText TextName = first_msg qs(0xd4b272d7) s = <name_string>
+			FormatText TextName = first_msg qs("Lost connection to %s.") s = <name_string>
 			default
-			first_msg = qs(0x00000000)
+			first_msg = qs("")
 		endswitch
-		formatText TextName = msg qs(0x78bb855f) s = <first_msg>
-		create_net_popup title = qs(0x5ca2c535) popup_text = <msg>
+		FormatText TextName = msg qs("%s\nThere are not enough players to continue.") s = <first_msg>
+		create_net_popup title = qs("GAME OVER") popup_text = <msg>
 		Wait \{3
-			Seconds}
+			seconds}
 		ui_event_get_stack
 		if (((<stack> [0].base_name) = 'connection_loss') || ((<stack> [0].base_name) = 'signin_changed'))
 			return
@@ -170,10 +170,10 @@ script gameplay_end_game
 			return
 		endif
 		if ($playing_song = 1)
-			Change \{achievements_early_quit_flag = 1}
+			change \{Achievements_early_quit_flag = 1}
 		endif
-		gamemode_gettype
-		if (<Type> = career)
+		GameMode_GetType
+		if (<type> = career)
 			if ($playing_song = 1)
 				kill_gem_scroller
 			endif
@@ -188,18 +188,18 @@ script gameplay_end_game
 				}}
 		elseif ($game_mode = p2_battle)
 			if NOT (GameIsOver)
-				Change \{structurename = player1_status
+				change \{structurename = player1_status
 					current_health = 1.0}
-				Change \{structurename = player2_status
+				change \{structurename = player2_status
 					current_health = 0.0}
 				GuitarEvent_SongWon \{battle_win = 1}
 			endif
 		else
 			if NOT (GameIsOver)
-				ExtendCrc \{song_won
+				ExtendCRC \{song_won
 					'p1'
-					out = Type}
-				broadcastevent Type = <Type>
+					out = type}
+				BroadcastEvent type = <type>
 			endif
 		endif
 	endif

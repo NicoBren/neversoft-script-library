@@ -51,65 +51,65 @@ cash_rank_thresholds = [
 	1000000
 ]
 cash_rank_blurbs = [
-	qs(0xc42bd7c8)
-	qs(0x4789261f)
-	qs(0x9411f77c)
-	qs(0x2c734df8)
-	qs(0x835b7300)
-	qs(0x14c4fcb7)
-	qs(0xacd62757)
-	qs(0x6a13d940)
-	qs(0x461b8c63)
-	qs(0x89699fcb)
-	qs(0xfd23427b)
-	qs(0x303159e6)
-	qs(0xef7a4593)
-	qs(0x7414fa86)
-	qs(0x84cdc39c)
-	qs(0x30526080)
-	qs(0x2607d454)
-	qs(0xa3051224)
-	qs(0x929bd266)
-	qs(0x2671de43)
-	qs(0x475e352b)
-	qs(0x5fc354b1)
-	qs(0xbda08f72)
-	qs(0x9bce4414)
-	qs(0x6bab463a)
-	qs(0xc40dcc34)
-	qs(0x7bb7f182)
-	qs(0xebf7eba8)
-	qs(0xfb8a6d3f)
-	qs(0x1463ac3b)
-	qs(0x9375fc6c)
-	qs(0xd071686c)
-	qs(0x723a0577)
-	qs(0xcfcc2453)
-	qs(0xf4df704a)
-	qs(0x7ea59354)
-	qs(0xe69a6d40)
-	qs(0x30f1eeac)
-	qs(0xbd57b022)
-	qs(0xf8b17490)
-	qs(0x458e2eb1)
-	qs(0xe65a6533)
-	qs(0xafaf49bd)
-	qs(0x8dbcb56f)
-	qs(0xcdee14ae)
-	qs(0x51e02d56)
-	qs(0xc40b826c)
-	qs(0x6e52cc21)
-	qs(0xf085d551)
-	qs(0xb1e7f6ac)
-	qs(0x2e0f9a9b)
-	qs(0x4a76135e)
-	qs(0x34776117)
-	qs(0x3b9ebb54)
-	qs(0xc68fb686)
+	qs("Saved some money")
+	qs("Got some kicks")
+	qs("Got a look")
+	qs("Became a rebel")
+	qs("Found your roots")
+	qs("Got a pet")
+	qs("Signed your first deal")
+	qs("Got an ego")
+	qs("Blew your dough")
+	qs("Had to show off")
+	qs("Signed an endorsement deal")
+	qs("Got some cold, hard, cash")
+	qs("Upgraded your look")
+	qs("Got fancier taste")
+	qs("Partied in Cannes")
+	qs("Vacationed in Egypt")
+	qs("Brought back a pet lion")
+	qs("'Hear me Roar' became a gold record")
+	qs("Split up the band")
+	qs("Ate only the finest")
+	qs("Bought your own island")
+	qs("Decided to go solo")
+	qs("Got richer")
+	qs("Became increasingly more reclusive.")
+	qs("Had a cameo in a hip-hop track")
+	qs("Collected rare muscle cars")
+	qs("Bought a Venus de Milo knock off")
+	qs("Built an enormous fish tank for the new pet shark")
+	qs("Won the 'Best rock performance in a Hip-Hop cameo' award")
+	qs("Wrecked your car driving home from the after party")
+	qs("Went to rehab in Palm Springs")
+	qs("Decided to move to Arizona to 'clear your head'")
+	qs("'Toms of Life' becomes a worldwide hit.")
+	qs("Did a major credit card commercial")
+	qs("Got a weekend gig in Vegas")
+	qs("Got married in Vegas")
+	qs("Leased a private jet")
+	qs("Bought a sarcophagus to sleep in")
+	qs("Imported a Bengal tiger")
+	qs("Got a star in Hollywood Blvd")
+	qs("Burned one million dollars to make a statement")
+	qs("Started your own beverage company")
+	qs("Bought a castle in France")
+	qs("Bought a guitar manufacturer")
+	qs("Demanded to get paid in gold bricks")
+	qs("Got a cult following in Norway")
+	qs("Became blinded by success")
+	qs("Bought a decommissioned submarine from Russia")
+	qs("Commissioned a self portrait")
+	qs("Replaced your butler with a robot")
+	qs("Immortalized your guitar in frozen carbonite")
+	qs("Became 'the bomb' literally")
+	qs("Got your own scent - 'Eau de Shred'")
+	qs("Performed in the space station, millions watched")
+	qs("Received the Fiddle of Gold from Lou")
 ]
 
-script cash_ranks_get_rank \{Player = 1}
-	getplayerinfo <Player> controller
+script cash_ranks_get_rank \{player = 1}
+	GetPlayerInfo <player> controller
 	get_savegame_from_controller controller = <controller>
 	get_current_band_info
 	GetGlobalTags <band_info> savegame = <savegame> param = career_earnings
@@ -142,29 +142,29 @@ script cash_ranks_get_rank \{Player = 1}
 	return rank = <rank> cash_to_next_rank = <next_rank> turnovers = <passes> career_earnings = <career_earnings>
 endscript
 
-script cash_ranks_get_patch_id \{Player = 1}
-	cash_ranks_get_rank Player = <Player>
+script cash_ranks_get_patch_id \{player = 1}
+	cash_ranks_get_rank player = <player>
 	if (<rank> < 10)
-		formatText checksumName = patch_id 'cash_milestones_patch_00%d' d = <rank>
+		FormatText checksumname = patch_id 'cash_milestones_patch_00%d' d = <rank>
 	elseif (<rank> < 51)
-		formatText checksumName = patch_id 'cash_milestones_patch_0%d' d = <rank>
+		FormatText checksumname = patch_id 'cash_milestones_patch_0%d' d = <rank>
 	else
-		formatText checksumName = patch_id 'cash_milestones_patch_05%d' d = <turnovers>
+		FormatText checksumname = patch_id 'cash_milestones_patch_05%d' d = <turnovers>
 	endif
-	printf channel = mychannel qs(0x2d115755) d = <Player>
+	printf channel = mychannel qs("\LCalled get_patch_id player = %d") d = <player>
 	return cash_patch_id = <patch_id>
 endscript
 
-script cash_ranks_get_icon_id \{Player = 1}
-	cash_ranks_get_rank Player = <Player>
+script cash_ranks_get_icon_id \{player = 1}
+	cash_ranks_get_rank player = <player>
 	if (<rank> < 10)
-		formatText checksumName = icon_id 'cash_milestone_icon_00%d' d = <rank>
+		FormatText checksumname = icon_id 'cash_milestone_icon_00%d' d = <rank>
 	elseif (<rank> < 51)
-		formatText checksumName = icon_id 'cash_milestone_icon_0%d' d = <rank>
+		FormatText checksumname = icon_id 'cash_milestone_icon_0%d' d = <rank>
 	else
-		formatText checksumName = icon_id 'cash_milestone_icon_05%d' d = <turnovers>
+		FormatText checksumname = icon_id 'cash_milestone_icon_05%d' d = <turnovers>
 	endif
-	printf channel = mychannel qs(0x9c168131) d = <Player>
+	printf channel = mychannel qs("\LCalled get_icon_id player = %d") d = <player>
 	return cash_icon_id = <icon_id>
 endscript
 
@@ -196,11 +196,11 @@ script cash_get_info_from_earnings \{earnings = 0}
 		passes = 5
 	endif
 	if (<rank> < 10)
-		formatText checksumName = icon_id 'cash_milestone_icon_00%d' d = <rank>
+		FormatText checksumname = icon_id 'cash_milestone_icon_00%d' d = <rank>
 	elseif (<rank> < 51)
-		formatText checksumName = icon_id 'cash_milestone_icon_0%d' d = <rank>
+		FormatText checksumname = icon_id 'cash_milestone_icon_0%d' d = <rank>
 	else
-		formatText checksumName = icon_id 'cash_milestone_icon_05%d' d = <passes>
+		FormatText checksumname = icon_id 'cash_milestone_icon_05%d' d = <passes>
 	endif
 	printstruct channel = mychannel <...>
 	return rank = <rank> cash_icon_id = <icon_id>

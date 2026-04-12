@@ -25,15 +25,15 @@ note_bits = [
 current_da_diff = easy
 instrument_checksums = [
 	guitar
-	bass
-	vocals
+	Bass
+	Vocals
 	drum
 ]
 instrument_text = [
-	qs(0x09048d9e)
-	qs(0xb6237ee8)
-	qs(0x879f5b50)
-	qs(0x04246759)
+	qs("guitar")
+	qs("bass")
+	qs("vocals")
+	qs("drum")
 ]
 diffchannels = [
 	diffanalyzer_guitar
@@ -44,13 +44,13 @@ diffchannels = [
 
 script difficulty_analyzer_show \{song_name = hotblooded}
 	destroy_difficulty_analyzer
-	CreateScreenElement \{Type = ContainerElement
+	CreateScreenElement \{type = ContainerElement
 		parent = root_window
 		id = diff_analyzer_container
-		Pos = (0.0, 0.0)}
-	CreateScreenElement \{Type = SpriteElement
+		pos = (0.0, 0.0)}
+	CreateScreenElement \{type = SpriteElement
 		parent = diff_analyzer_container
-		Pos = (0.0, 0.0)
+		pos = (0.0, 0.0)
 		just = [
 			left
 			top
@@ -71,16 +71,16 @@ script difficulty_analyzer_show \{song_name = hotblooded}
 	text_params = {parent = diff_analyzer_container just = [top left]}
 	displayText {
 		<text_params>
-		Type = TextBlockElement
+		type = TextBlockElement
 		id = diff_analyzer_loading_text
-		text = qs(0x5d9a8bef)
-		Pos = (230.0, 320.0)
-		Scale = 1.5
+		text = qs("\LNUMBER CRUNCHING...")
+		pos = (230.0, 320.0)
+		scale = 1.5
 		just = [left top]
 		rgba = [200 50 50 255]
 	}
 	Wait \{1
-		Frame}
+		frame}
 	if (<difficulty> = all)
 		diff_analyzer_show_all_diffs <...>
 	else
@@ -98,42 +98,42 @@ script destroy_difficulty_analyzer
 endscript
 
 script diff_analyzer_show_diff 
-	Change current_da_diff = ($difficulty_list [($difficulty_list_props.<difficulty>.index)])
+	change current_da_diff = ($difficulty_list [($difficulty_list_props.<difficulty>.index)])
 	array_index = 0
 	text_pos = (220.0, 120.0)
 	loaded_song = $current_song_qpak
 	loaded_marker = $current_song_qpak
 	if (<instrument> = guitar)
-		ExtendCrc <loaded_song> '_song_' out = loaded_song
-		ExtendCrc <loaded_marker> '_guitar_markers' out = loaded_marker
-	elseif (<instrument> = bass)
-		ExtendCrc <loaded_song> '_song_rhythm_' out = loaded_song
-		ExtendCrc <loaded_marker> '_rhythm_markers' out = loaded_marker
+		ExtendCRC <loaded_song> '_song_' out = loaded_song
+		ExtendCRC <loaded_marker> '_guitar_markers' out = loaded_marker
+	elseif (<instrument> = Bass)
+		ExtendCRC <loaded_song> '_song_rhythm_' out = loaded_song
+		ExtendCRC <loaded_marker> '_rhythm_markers' out = loaded_marker
 	elseif (<instrument> = drum)
-		ExtendCrc <loaded_song> '_song_drum_' out = loaded_song
-		ExtendCrc <loaded_marker> '_drum_markers' out = loaded_marker
-	elseif (<instrument> = vocals)
-		ExtendCrc <loaded_marker> '_vocals_markers' out = loaded_marker
+		ExtendCRC <loaded_song> '_song_drum_' out = loaded_song
+		ExtendCRC <loaded_marker> '_drum_markers' out = loaded_marker
+	elseif (<instrument> = Vocals)
+		ExtendCRC <loaded_marker> '_vocals_markers' out = loaded_marker
 	endif
-	ExtendCrc <loaded_song> ($difficulty_list_props.<difficulty>.text_nl) out = loaded_song
+	ExtendCRC <loaded_song> ($difficulty_list_props.<difficulty>.text_nl) out = loaded_song
 	displayText {
 		<text_params>
 		text = ($difficulty_list_props.<difficulty>.text)
-		Pos = (<text_pos>)
+		pos = (<text_pos>)
 	}
 	loaded_fretbar = $current_song_qpak
-	ExtendCrc <loaded_fretbar> '_fretbars' out = loaded_fretbar
+	ExtendCRC <loaded_fretbar> '_fretbars' out = loaded_fretbar
 	calc_difficulty_from_all_song_sections {
 		song_array = <loaded_song>
 		marker_array = <loaded_marker>
 		fretbar_array = <loaded_fretbar>
 		for_graph = 1
 	}
-	formatText TextName = score_text qs(0x1ac8dd83) d = <diff_score>
+	FormatText TextName = score_text qs("\LDifficulty Score: %d") d = <diff_score>
 	displayText {
 		<text_params>
 		text = <score_text>
-		Pos = (<text_pos> + (20.0, 40.0))
+		pos = (<text_pos> + (20.0, 40.0))
 		rgba = [255 255 255 255]
 	}
 endscript
@@ -142,95 +142,95 @@ script diff_analyzer_show_all_diffs
 	array_index = 0
 	text_pos = (220.0, 160.0)
 	begin
-	Change current_da_diff = ($difficulty_list [<array_index>])
+	change current_da_diff = ($difficulty_list [<array_index>])
 	loaded_song = $current_song_qpak
 	loaded_marker = $current_song_qpak
 	if (<instrument> = guitar)
-		ExtendCrc <loaded_song> '_song_' out = loaded_song
-		ExtendCrc <loaded_marker> '_guitar_markers' out = loaded_marker
-	elseif (<instrument> = bass)
-		ExtendCrc <loaded_song> '_song_rhythm_' out = loaded_song
-		ExtendCrc <loaded_marker> '_rhythm_markers' out = loaded_marker
+		ExtendCRC <loaded_song> '_song_' out = loaded_song
+		ExtendCRC <loaded_marker> '_guitar_markers' out = loaded_marker
+	elseif (<instrument> = Bass)
+		ExtendCRC <loaded_song> '_song_rhythm_' out = loaded_song
+		ExtendCRC <loaded_marker> '_rhythm_markers' out = loaded_marker
 	elseif (<instrument> = drum)
-		ExtendCrc <loaded_song> '_song_drum_' out = loaded_song
-		ExtendCrc <loaded_marker> '_drum_markers' out = loaded_marker
-	elseif (<instrument> = vocals)
-		ExtendCrc <loaded_marker> '_vocals_markers' out = loaded_marker
+		ExtendCRC <loaded_song> '_song_drum_' out = loaded_song
+		ExtendCRC <loaded_marker> '_drum_markers' out = loaded_marker
+	elseif (<instrument> = Vocals)
+		ExtendCRC <loaded_marker> '_vocals_markers' out = loaded_marker
 	endif
-	ExtendCrc <loaded_song> ($difficulty_list_props.($difficulty_list [<array_index>]).text_nl) out = loaded_song
+	ExtendCRC <loaded_song> ($difficulty_list_props.($difficulty_list [<array_index>]).text_nl) out = loaded_song
 	displayText {
 		<text_params>
 		text = ($difficulty_list_props.($difficulty_list [<array_index>]).text)
-		Pos = (<text_pos> + ((0.0, 120.0) * <array_index>))
+		pos = (<text_pos> + ((0.0, 120.0) * <array_index>))
 	}
 	loaded_fretbar = $current_song_qpak
-	ExtendCrc <loaded_fretbar> '_fretbars' out = loaded_fretbar
+	ExtendCRC <loaded_fretbar> '_fretbars' out = loaded_fretbar
 	calc_difficulty_from_all_song_sections {
 		song_array = <loaded_song>
 		marker_array = <loaded_marker>
 		fretbar_array = <loaded_fretbar>
 	}
-	formatText TextName = score_text qs(0x1ac8dd83) d = <diff_score>
+	FormatText TextName = score_text qs("\LDifficulty Score: %d") d = <diff_score>
 	displayText {
 		<text_params>
 		text = <score_text>
-		Pos = (<text_pos> + (20.0, 40.0) + ((0.0, 120.0) * <array_index>))
+		pos = (<text_pos> + (20.0, 40.0) + ((0.0, 120.0) * <array_index>))
 		rgba = [255 255 255 255]
 	}
 	<array_index> = (<array_index> + 1)
 	repeat 4
 	get_bpm_from_song loaded_fretbar = <loaded_fretbar>
 	if NOT (<avg> = 0)
-		formatText TextName = bpm_text qs(0x3f8a6bc1) a = <low> b = <high> c = <avg>
+		FormatText TextName = bpm_text qs("\LLow: %a  High: %b  Avg: %c") a = <low> b = <high> c = <avg>
 		displayText {
 			<text_params>
-			text = qs(0x0d25b360)
-			Pos = (<text_pos> + (0.0, -90.0))
+			text = qs("\LBPM")
+			pos = (<text_pos> + (0.0, -90.0))
 		}
 		displayText {
 			<text_params>
 			text = <bpm_text>
-			Pos = (<text_pos> + (20.0, -60.0))
+			pos = (<text_pos> + (20.0, -60.0))
 			rgba = [255 255 255 255]
 		}
 	endif
 endscript
 
-script calc_difficulty_from_all_song_sections \{song_array = None
-		marker_array = None
-		fretbar_array = None
+script calc_difficulty_from_all_song_sections \{song_array = none
+		marker_array = none
+		fretbar_array = none
 		for_graph = 0
 		output_section_scores = 0
 		instrument_num = 0}
 	score = 0
-	if (<marker_array> = None || <song_array> = None || <fretbar_array> = None)
+	if (<marker_array> = none || <song_array> = none || <fretbar_array> = none)
 		return diff_score = <score>
 	endif
-	if NOT GlobalExists Name = <song_array> Type = array
-		printf channel = da_errors qs(0xd8c337d0) s = ($current_song_qpak)
+	if NOT GlobalExists name = <song_array> type = array
+		printf channel = da_errors qs("\Lglobal song_array does not exist for song %s") s = ($current_song_qpak)
 		return diff_score = <score>
 	endif
-	if NOT GlobalExists Name = <fretbar_array> Type = array
-		printf channel = da_errors qs(0xac1801ac) s = ($current_song_qpak)
+	if NOT GlobalExists name = <fretbar_array> type = array
+		printf channel = da_errors qs("\Lglobal fretbar_array does not exist for song %s") s = ($current_song_qpak)
 		return diff_score = <score>
 	endif
-	if NOT GlobalExists Name = <marker_array> Type = array
-		printf channel = da_errors qs(0x4de4fd24) s = ($current_song_qpak)
+	if NOT GlobalExists name = <marker_array> type = array
+		printf channel = da_errors qs("\Lglobal marker_array does not exist for song %s") s = ($current_song_qpak)
 		return diff_score = <score>
 	endif
 	array_index = 0
 	section_index = 0
 	fretbar_index = 0
 	GetArraySize $<song_array>
-	if (<array_Size> = 0)
+	if (<array_size> = 0)
 		return diff_score = <score>
 	endif
 	GetArraySize $<fretbar_array>
-	if (<array_Size> = 0)
+	if (<array_size> = 0)
 		return diff_score = <score>
 	endif
 	GetArraySize $<marker_array>
-	if (<array_Size> = 0)
+	if (<array_size> = 0)
 		calc_difficulty_from_song_section {
 			array = <song_array>
 			fretbar_array = <fretbar_array>
@@ -241,7 +241,7 @@ script calc_difficulty_from_all_song_sections \{song_array = None
 	text_spacing = (0.0, 20.0)
 	begin
 	section_begin = ($<marker_array> [<array_index>].time)
-	if (<array_index> + 1 < <array_Size>)
+	if (<array_index> + 1 < <array_size>)
 		section_end = ($<marker_array> [(<array_index> + 1)].time)
 	else
 		section_end = 0
@@ -262,7 +262,7 @@ script calc_difficulty_from_all_song_sections \{song_array = None
 		get_song_title song = <song_checksum>
 		printf {
 			channel = ($diffchannels [<instrument_num>])
-			qs(0x65eacc04)
+			qs("\L%a; %b; %c; %d; %e")
 			a = ($difficulty_list_props.<difficulty>.text)
 			b = <song_title>
 			c = (<array_index> + 1)
@@ -271,7 +271,7 @@ script calc_difficulty_from_all_song_sections \{song_array = None
 		}
 	endif
 	if (<for_graph> = 1)
-		formatText TextName = diff_score_text qs(0xdeb87c34) n = (<array_index> + 1) d = <diff_score>
+		FormatText TextName = diff_score_text qs("\L%n  - %d") n = (<array_index> + 1) d = <diff_score>
 		if (<diff_score> < 200)
 			rgba = [50 200 50 255]
 		elseif (<diff_score> < 300)
@@ -287,42 +287,42 @@ script calc_difficulty_from_all_song_sections \{song_array = None
 		endif
 		displayText {
 			parent = diff_analyzer_container
-			Pos = (<text_pos> + (<text_spacing> * <array_index>) + <extra_text_pos>)
+			pos = (<text_pos> + (<text_spacing> * <array_index>) + <extra_text_pos>)
 			text = <diff_score_text>
 			rgba = <rgba>
-			Scale = 0.5
+			scale = 0.5
 		}
 	endif
 	<array_index> = (<array_index> + 1)
-	repeat <array_Size>
+	repeat <array_size>
 	return diff_score = <score>
 endscript
 
-script calc_difficulty_from_song_section \{array = None
+script calc_difficulty_from_song_section \{array = none
 		section_begin = 0
 		section_end = 0
 		index_begin = 0
-		fretbar_array = None
+		fretbar_array = none
 		fretbar_index = 0}
 	score = 0
-	if (<array> = None || <fretbar_array> = None)
+	if (<array> = none || <fretbar_array> = none)
 		return diff_score = <score>
 	endif
 	array_index = <index_begin>
 	GetArraySize $<fretbar_array>
-	fretbar_array_size = <array_Size>
-	if (<array_Size> = 0)
+	fretbar_array_size = <array_size>
+	if (<array_size> = 0)
 		return diff_score = <score>
 	endif
 	GetArraySize $<array>
-	if (<array_Size> = 0)
+	if (<array_size> = 0)
 		return diff_score = <score>
 	endif
-	Mod a = <array_Size> b = 2
+	Mod a = <array_size> b = 2
 	if NOT (<Mod> = 0)
 		return diff_score = <score>
 	endif
-	repeat_num = ((<array_Size> - <index_begin>) / 2)
+	repeat_num = ((<array_size> - <index_begin>) / 2)
 	in_begin = 0
 	current_note = -1
 	current_time = -1
@@ -330,7 +330,7 @@ script calc_difficulty_from_song_section \{array = None
 	last_note = -1
 	last_time = -1
 	begin
-	if (<array_index> >= <array_Size>)
+	if (<array_index> >= <array_size>)
 		return diff_score = <score> last_section_index = <array_index> last_fretbar_index = <fretbar_index>
 	endif
 	<current_time> = ($<array> [<array_index>])
@@ -488,7 +488,7 @@ script is_any_note_the_same \{note1 = 0
 	if (<note1> && <note2>)
 		return \{true}
 	endif
-	return \{FALSE}
+	return \{false}
 endscript
 
 script get_num_of_notes_in_chord \{note = 0}
@@ -519,7 +519,7 @@ script output_diff_scores
 	GetArraySize \{$instrument_checksums}
 	if GotParam \{all}
 		if (<instrument> = all)
-			instrument_size = <array_Size>
+			instrument_size = <array_size>
 		else
 			instrument_size = 1
 		endif
@@ -539,13 +539,13 @@ script output_diff_scores
 		<instrument_num> = 0
 	elseif (<instrument> = rhythm)
 		<instrument_num> = 1
-	elseif (<instrument> = vocals)
+	elseif (<instrument> = Vocals)
 		<instrument_num> = 2
 	elseif (<instrument> = drum)
 		<instrument_num> = 3
 	endif
 	begin
-	Change current_da_diff = ($difficulty_list [<difficulty>])
+	change current_da_diff = ($difficulty_list [<difficulty>])
 	array_entry = 0
 	get_songlist_size
 	begin
@@ -556,20 +556,20 @@ script output_diff_scores
 		loaded_song = $current_song_qpak
 		loaded_marker = $current_song_qpak
 		if (<instrument_to_use> = guitar)
-			ExtendCrc <loaded_song> '_song_' out = loaded_song
-			ExtendCrc <loaded_marker> '_guitar_markers' out = loaded_marker
-		elseif (<instrument_to_use> = bass)
-			ExtendCrc <loaded_song> '_song_rhythm_' out = loaded_song
-			ExtendCrc <loaded_marker> '_rhythm_markers' out = loaded_marker
+			ExtendCRC <loaded_song> '_song_' out = loaded_song
+			ExtendCRC <loaded_marker> '_guitar_markers' out = loaded_marker
+		elseif (<instrument_to_use> = Bass)
+			ExtendCRC <loaded_song> '_song_rhythm_' out = loaded_song
+			ExtendCRC <loaded_marker> '_rhythm_markers' out = loaded_marker
 		elseif (<instrument_to_use> = drum)
-			ExtendCrc <loaded_song> '_song_drum_' out = loaded_song
-			ExtendCrc <loaded_marker> '_drum_markers' out = loaded_marker
-		elseif (<instrument_to_use> = vocals)
-			ExtendCrc <loaded_marker> '_vocals_markers' out = loaded_marker
+			ExtendCRC <loaded_song> '_song_drum_' out = loaded_song
+			ExtendCRC <loaded_marker> '_drum_markers' out = loaded_marker
+		elseif (<instrument_to_use> = Vocals)
+			ExtendCRC <loaded_marker> '_vocals_markers' out = loaded_marker
 		endif
-		ExtendCrc <loaded_song> ($difficulty_list_props.($difficulty_list [<difficulty>]).text_nl) out = loaded_song
+		ExtendCRC <loaded_song> ($difficulty_list_props.($difficulty_list [<difficulty>]).text_nl) out = loaded_song
 		loaded_fretbar = $current_song_qpak
-		ExtendCrc <loaded_fretbar> '_fretbars' out = loaded_fretbar
+		ExtendCRC <loaded_fretbar> '_fretbars' out = loaded_fretbar
 		calc_difficulty_from_all_song_sections {
 			song_array = <loaded_song>
 			marker_array = <loaded_marker>
@@ -583,17 +583,17 @@ script output_diff_scores
 		get_song_title song = <song_checksum>
 		printf {
 			channel = ($diffchannels [<instrument_num>])
-			qs(0x8599ca0c)
+			qs("\L%s; %a; %x; TOTAL SCORE; %d")
 			s = ($difficulty_list_props.($difficulty_list [<difficulty>]).text)
 			a = <song_title>
-			X = 0
+			x = 0
 			d = <diff_score>
 		}
 		get_bpm_from_song loaded_fretbar = <loaded_fretbar>
 		if NOT (<avg> = 0)
 			printf {
 				channel = diffanalyzersectiontempo
-				qs(0x6496e5db)
+				qs("\L%d; %s; BPM - Low: %a; High: %b; Avg: %c;")
 				d = ($difficulty_list_props.($difficulty_list [<difficulty>]).text)
 				s = <song_title>
 				a = <low>
@@ -603,7 +603,7 @@ script output_diff_scores
 		endif
 	endif
 	<array_entry> = (<array_entry> + 1)
-	repeat <array_Size>
+	repeat <array_size>
 	if GotParam \{all}
 		<difficulty> = (<difficulty> + 1)
 	endif
@@ -612,9 +612,9 @@ script output_diff_scores
 	repeat <instrument_size>
 endscript
 
-script get_bpm_from_song \{loaded_fretbar = None}
-	if NOT GlobalExists Name = <loaded_fretbar> Type = array
-		printf channel = da_errors qs(0xd43f9817) s = ($current_song_qpak)
+script get_bpm_from_song \{loaded_fretbar = none}
+	if NOT GlobalExists name = <loaded_fretbar> type = array
+		printf channel = da_errors qs("\Lglobal loaded_fretbar does not exist for song %s") s = ($current_song_qpak)
 		return \{low = 0
 			high = 0
 			avg = 0}
@@ -636,8 +636,8 @@ script get_bpm_from_song \{loaded_fretbar = None}
 		<beattime_high> = <beattime>
 	endif
 	<array_index> = (<array_index> + 1)
-	repeat (<array_Size> - 1)
-	<beattime_avg> = (<beattime_avg> / <array_Size>)
+	repeat (<array_size> - 1)
+	<beattime_avg> = (<beattime_avg> / <array_size>)
 	return low = <beattime_low> high = <beattime_high> avg = <beattime_avg>
 endscript
 
@@ -654,43 +654,43 @@ script da_check_for_errors \{note = 0}
 	if (<is_chord>)
 		get_num_of_notes_in_chord note = <note>
 		if (<num_notes> >= 4)
-			printf channel = da_errors qs(0x72dc9073) c = <num_notes> a = $current_song_qpak b = $current_da_diff
+			printf channel = da_errors qs("\LWARNING: %c note chord found in song %a on difficulty %b") c = <num_notes> a = $current_song_qpak b = $current_da_diff
 		endif
 		if (<note> && ($note_bits [0]) && <note> && ($note_bits [3]) && <note> && ($note_bits [4]))
 			printf \{channel = da_errors
-				qs(0x097246c9)
+				qs("\LWARNING: Green, Blue, Orange chord found in song %a on difficulty %b")
 				a = $current_song_qpak
 				b = $current_da_diff}
 		elseif (<note> && ($note_bits [0]) && <note> && ($note_bits [1]) && <note> && ($note_bits [4]))
 			printf \{channel = da_errors
-				qs(0x82e91e72)
+				qs("\LWARNING: Green, Red, Orange chord found in song %a on difficulty %b")
 				a = $current_song_qpak
 				b = $current_da_diff}
 		elseif (<note> && ($note_bits [0]) && <note> && ($note_bits [2]) && <note> && ($note_bits [4]))
 			printf \{channel = da_errors
-				qs(0xb524033b)
+				qs("\LWARNING: Green, Yellow, Orange chord found in song %a on difficulty %b")
 				a = $current_song_qpak
 				b = $current_da_diff}
 		elseif (<note> && ($note_bits [0]) && <note> && ($note_bits [4]))
 			printf \{channel = da_errors
-				qs(0x587e65e2)
+				qs("\LWARNING: Green, Orange chord found in song %a on difficulty %b")
 				a = $current_song_qpak
 				b = $current_da_diff}
 		endif
 		if ($current_da_diff = easy || $current_da_diff = medium)
 			if (<note> && ($note_bits [0]) && <note> && ($note_bits [3]))
 				printf \{channel = da_errors
-					qs(0xa671041d)
+					qs("\LWARNING: Green, Blue chord found in song %a on difficulty %b")
 					a = $current_song_qpak
 					b = $current_da_diff}
 			endif
 			if (<num_notes> >= 3)
-				printf channel = da_errors qs(0x72dc9073) c = <num_notes> a = $current_song_qpak b = $current_da_diff
+				printf channel = da_errors qs("\LWARNING: %c note chord found in song %a on difficulty %b") c = <num_notes> a = $current_song_qpak b = $current_da_diff
 			endif
 			if ($current_da_diff = easy)
 				if (<note> && ($note_bits [0]) && <note> && ($note_bits [2]))
 					printf \{channel = da_errors
-						qs(0xf7b4f31a)
+						qs("\LWARNING: Green, Yellow chord found in song %a on difficulty %b")
 						a = $current_song_qpak
 						b = $current_da_diff}
 				endif
@@ -700,7 +700,7 @@ script da_check_for_errors \{note = 0}
 		if ($current_da_diff = easy || $current_da_diff = medium)
 			if (<note> && ($note_bits [4]))
 				printf \{channel = da_errors
-					qs(0x2e51dea7)
+					qs("\LWARNING: Orange note found in song %a on difficulty %b")
 					a = $current_song_qpak
 					b = $current_da_diff}
 			endif
@@ -708,7 +708,7 @@ script da_check_for_errors \{note = 0}
 		if ($current_da_diff = easy)
 			if (<note> && ($note_bits [3]))
 				printf \{channel = da_errors
-					qs(0x5c31f73e)
+					qs("\LWARNING: Blue note found in song %a on difficulty %b")
 					a = $current_song_qpak
 					b = $current_da_diff}
 			endif

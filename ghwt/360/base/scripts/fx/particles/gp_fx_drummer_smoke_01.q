@@ -1,25 +1,25 @@
-gp_fx_drummer_smoke_01 = {
-	Pos = (-0.284546, 1.4982301, -10.214177)
-	Angles = (0.0, 0.0, 0.0)
+GP_FX_Drummer_Smoke_01 = {
+	pos = (-0.284546, 1.4982301, -10.214177)
+	angles = (0.0, 0.0, 0.0)
 	Class = ParticleObject
 	ParticleType = FlexParticle
-	Type = flat
-	Active
+	type = flat
+	active
 	CreatedAtStart
 	EmitRangeDims = (0.1, 0.1, 0.1)
-	Emit_Target = (0.0, 1.0, 0.0)
+	emit_Target = (0.0, 1.0, 0.0)
 	EmitAngle = (0.0, 0.0, 0.0)
-	Force = (0.03, 0.0, 0.0)
+	force = (0.03, 0.0, 0.0)
 	WindCoeff = 0.0
 	LocalWindCoeff = 0.0
 	EmitterVelocityWeight = 0.0
 	AngleSpread = 45.0
 	LifeRange = (3.0, 5.0)
-	Emit_Rate = 7.0
-	Max = 0
+	emit_rate = 7.0
+	max = 0
 	TimeSeed = 0.0
-	LifeTime = 3.0
-	EmitNum = 0
+	lifeTime = 3.0
+	emitNum = 0
 	FollowEmitter = 0.0
 	EmitFunction = constant
 	EmitPeriod = 1.0
@@ -33,8 +33,8 @@ gp_fx_drummer_smoke_01 = {
 	EmitDelayStart = 0.0
 	PathFollowTime = 0.0
 	History = 2
-	HistoryListCoordinateSpace = World
-	Color = -1979679
+	HistoryListCoordinateSpace = world
+	color = -1979679
 	LOD_Default
 	QuickMaterial = {
 		TextureLayout = Layout2x2
@@ -42,9 +42,9 @@ gp_fx_drummer_smoke_01 = {
 		DiffuseTexture = JOW_Steam02
 		SpecularPower = 0
 		Lighting
-		fakeambientocclusion
-		AlphaCutoff = 1
-		BlendMode = blend
+		FakeAmbientOcclusion
+		alphacutoff = 1
+		blendMode = blend
 		SoftEdge
 		SoftedgeScale = 0.2
 		QuadAnimationFPS = 0

@@ -1,36 +1,36 @@
-l_guit_zakk_stillborn_anims_set = {
+L_GUIT_Zakk_Stillborn_anims_set = {
 	Stance_A = {
 		Idle = {
 			good = {
-				slow = [
+				Slow = [
 					guit_zakk_stillborn_075_01
 				]
-				med = [
+				Med = [
 					guit_zakk_stillborn_100_01
 				]
-				FAST = [
+				Fast = [
 					guit_zakk_stillborn_120
 				]
 			}
 			Normal = {
-				slow = [
+				Slow = [
 					guit_zakk_stillborn_075_01
 				]
-				med = [
+				Med = [
 					guit_zakk_stillborn_100_01
 				]
-				FAST = [
+				Fast = [
 					guit_zakk_stillborn_120
 				]
 			}
-			bad = {
-				slow = [
+			Bad = {
+				Slow = [
 					guit_zakk_stillborn_075_01
 				]
-				med = [
+				Med = [
 					guit_zakk_stillborn_100_01
 				]
-				FAST = [
+				Fast = [
 					guit_zakk_stillborn_120
 				]
 			}

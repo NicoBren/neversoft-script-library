@@ -1,6 +1,6 @@
 
 script ui_create_recording 
-	SpawnScriptNow create_jam_recording_menu params = {<...>}
+	spawnscriptnow create_jam_recording_menu params = {<...>}
 endscript
 
 script ui_destroy_recording 
@@ -10,6 +10,6 @@ script ui_destroy_recording
 endscript
 
 script ui_deinit_recording 
-	Change \{select_shift = 1}
-	Change \{debug_show_analog_options = 1}
+	change \{select_shift = 1}
+	change \{debug_show_analog_options = 1}
 endscript

@@ -1,29 +1,29 @@
-gp_fx_jet01_land_smoke_01 = {
-	Pos = (-0.06472499, 0.0, -2.6503289)
-	Angles = (0.0, 0.0, 0.0)
+GP_FX_Jet01_Land_Smoke_01 = {
+	pos = (-0.06472499, 0.0, -2.6503289)
+	angles = (0.0, 0.0, 0.0)
 	Class = ParticleObject
 	ParticleType = FlexParticle
-	Type = flat
-	Active
+	type = flat
+	active
 	CreatedAtStart
-	Attach
+	attach
 	Align
 	ApplyPositionOffset
 	EmitRangeDims = (0.1, 0.1, 0.1)
-	Emit_Target = (0.0, 0.0, -1.0)
+	emit_Target = (0.0, 0.0, -1.0)
 	EnableRotate
 	EmitAngle = (0.0, 0.0, 0.0)
-	Force = (0.0, 0.0, 0.0)
+	force = (0.0, 0.0, 0.0)
 	WindCoeff = 0.0
 	LocalWindCoeff = 0.0
 	EmitterVelocityWeight = 0.0
 	AngleSpread = 80.0
 	LifeRange = (1.0, 1.5)
-	Emit_Rate = 220.0
-	Max = 0
+	emit_rate = 220.0
+	max = 0
 	TimeSeed = 0.0
-	LifeTime = 4.0
-	EmitNum = 0
+	lifeTime = 4.0
+	emitNum = 0
 	FollowEmitter = 0.0
 	EmitFunction = constant
 	EmitPeriod = 1.0
@@ -37,16 +37,16 @@ gp_fx_jet01_land_smoke_01 = {
 	EmitDelayStart = 0.0
 	PathFollowTime = 0.0
 	History = 2
-	HistoryListCoordinateSpace = World
-	Color = -1589451
+	HistoryListCoordinateSpace = world
+	color = -1589451
 	LOD_Default
 	QuickMaterial = {
 		DiffuseTextureEnabled
-		DiffuseTexture = ph_smoke_singlepuff_blend_02
+		DiffuseTexture = PH_Smoke_SinglePuff_Blend_02
 		SpecularPower = 0
 		fillburst
-		AlphaCutoff = 1
-		BlendMode = blend
+		alphacutoff = 1
+		blendMode = blend
 		SoftEdge
 		SoftedgeScale = 0.5
 		Burn

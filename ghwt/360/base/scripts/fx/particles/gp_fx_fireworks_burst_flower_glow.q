@@ -1,25 +1,25 @@
-gp_fx_fireworks_burst_flower_glow = {
-	Pos = (-4.275053, 12.122733, -0.18284)
-	Angles = (0.0, 0.0, 0.0)
+GP_FX_Fireworks_Burst_Flower_Glow = {
+	pos = (-4.275053, 12.122733, -0.18284)
+	angles = (0.0, 0.0, 0.0)
 	Class = ParticleObject
 	ParticleType = FlexParticle
-	Type = flat
-	Active
+	type = flat
+	active
 	CreatedAtStart
 	EmitRangeDims = (0.3, 0.3, 0.3)
-	Emit_Target = (0.0, 1.0, 0.0)
+	emit_Target = (0.0, 1.0, 0.0)
 	EmitAngle = (0.0, 0.0, 0.0)
-	Force = (0.0, 0.0, 0.0)
+	force = (0.0, 0.0, 0.0)
 	WindCoeff = 0.0
 	LocalWindCoeff = 0.0
 	EmitterVelocityWeight = 0.0
 	AngleSpread = 360.0
 	LifeRange = (1.5, 2.0)
-	Emit_Rate = 0.0
-	Max = 0
+	emit_rate = 0.0
+	max = 0
 	TimeSeed = 0.0
-	LifeTime = 0.0
-	EmitNum = 1
+	lifeTime = 0.0
+	emitNum = 1
 	FollowEmitter = 0.0
 	EmitFunction = constant
 	EmitPeriod = 1.0
@@ -33,16 +33,16 @@ gp_fx_fireworks_burst_flower_glow = {
 	EmitDelayStart = 0.0
 	PathFollowTime = 0.1
 	History = 0
-	HistoryListCoordinateSpace = World
-	Color = -966116924
+	HistoryListCoordinateSpace = world
+	color = -966116924
 	LOD_Default
 	QuickMaterial = {
 		DiffuseTextureEnabled
-		DiffuseTexture = ph_radialglow_01
+		DiffuseTexture = PH_RadialGlow_01
 		SpecularPower = 0
 		fillburst
-		AlphaCutoff = 1
-		BlendMode = add
+		alphacutoff = 1
+		blendMode = Add
 		QuadAnimationFPS = 0
 	}
 	Knot = [

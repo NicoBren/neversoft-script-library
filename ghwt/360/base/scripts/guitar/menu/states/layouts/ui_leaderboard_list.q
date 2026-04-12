@@ -2,7 +2,7 @@
 script ui_create_leaderboard_list 
 	if ($current_leaderboard_group = song)
 		make_generic_menu {
-			title = qs(0xa1ae7e56)
+			title = qs("LEADERBOARDS")
 			exclusive_device = ($primary_controller)
 			scrolling
 		}
@@ -11,8 +11,8 @@ script ui_create_leaderboard_list
 	else
 		GetArraySize ($current_leaderboard_array)
 		make_menu_frontend {
-			screen = GUITARIST
-			title = qs(0xa1ae7e56)
+			screen = Guitarist
+			title = qs("LEADERBOARDS")
 			exclusive_device = ($primary_controller)
 		}
 		add_menu_script = add_menu_frontend_item
@@ -45,7 +45,7 @@ script ui_create_leaderboard_list
 		}
 		<array_entry> = (<array_entry> + 1)
 	endif
-	repeat <array_Size>
+	repeat <array_size>
 	menu_finish
 endscript
 
@@ -55,48 +55,48 @@ endscript
 
 script ui_leaderboard_list_select 
 	if ($current_leaderboard_group = song)
-		Change song_checksum = <song_checksum>
+		change song_checksum = <song_checksum>
 		get_song_prefix song = ($song_checksum)
 		switch ($current_leaderboard_instrument)
 			case guitar
 			instrument = 'guitar'
 			case backup
 			instrument = 'backup'
-			case drums
+			case Drums
 			instrument = 'drums'
 			case mic
 			instrument = 'mic'
 			case Band
 			instrument = 'band'
 		endswitch
-		formatText checksumName = leaderboard_id '%s_%i' s = <song_prefix> i = <instrument> AddToStringLookup = true
-		Change current_leaderboard_id = <leaderboard_id>
+		FormatText checksumname = leaderboard_id '%s_%i' s = <song_prefix> i = <instrument> AddToStringLookup = true
+		change current_leaderboard_id = <leaderboard_id>
 	else
-		Change song_checksum = <leaderboard_id>
-		Change current_leaderboard_id = <leaderboard_id>
+		change song_checksum = <leaderboard_id>
+		change current_leaderboard_id = <leaderboard_id>
 	endif
-	Change \{force_mainmenu_signin = 0}
-	if isps3
-		set_primary_controller device_num = <device_num> state = uistate_leaderboard_load data = {my_status = 1} require_live = 1
+	change \{force_mainmenu_signin = 0}
+	if IsPs3
+		set_primary_controller device_num = <device_num> state = UIstate_leaderboard_load data = {my_status = 1} require_live = 1
 	else
-		set_primary_controller device_num = <device_num> state = uistate_leaderboard_load data = {my_status = 1} leaderboards = 1
+		set_primary_controller device_num = <device_num> state = UIstate_leaderboard_load data = {my_status = 1} leaderboards = 1
 	endif
 endscript
 
 script ui_leaderboard_list_cash 
-	Change \{current_leaderboard_group = cash}
-	Change \{current_leaderboard_instrument = guitar}
-	Change \{song_checksum = lb_career_cash}
-	Change \{current_leaderboard_id = lb_career_cash}
+	change \{current_leaderboard_group = Cash}
+	change \{current_leaderboard_instrument = guitar}
+	change \{song_checksum = lb_career_cash}
+	change \{current_leaderboard_id = lb_career_cash}
 	if isXenon
-		Change \{current_leaderboard_array = $master_leaderboard_cash_list}
+		change \{current_leaderboard_array = $master_leaderboard_cash_list}
 	else
-		Change \{current_leaderboard_array = $master_leaderboard_cash_list_ps3}
+		change \{current_leaderboard_array = $master_leaderboard_cash_list_ps3}
 	endif
-	Change \{force_mainmenu_signin = 0}
-	if isps3
-		set_primary_controller device_num = <device_num> state = uistate_leaderboard_load data = {my_status = 1} require_live = 1
+	change \{force_mainmenu_signin = 0}
+	if IsPs3
+		set_primary_controller device_num = <device_num> state = UIstate_leaderboard_load data = {my_status = 1} require_live = 1
 	else
-		set_primary_controller device_num = <device_num> state = uistate_leaderboard_load data = {my_status = 1} leaderboards = 1
+		set_primary_controller device_num = <device_num> state = UIstate_leaderboard_load data = {my_status = 1} leaderboards = 1
 	endif
 endscript

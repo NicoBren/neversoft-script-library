@@ -1,18 +1,18 @@
 
 script OnDebuggerStartup 
-	printf \{qs(0xe606847b)}
+	printf \{qs("\LStarting up debugger scripts...")}
 	SendScriptFunctionsToDebugger
-	debuggersendmodetext
+	DebuggerSendModeText
 endscript
 
-script ondebuggerquit 
+script OnDebuggerQuit 
 endscript
 
-script debuggersendmodetext 
+script DebuggerSendModeText 
 	DebuggerGetModeText
 	RunRemoteScript {
-		objID = mouse_window
-		scriptname = SetTitle
+		ObjID = mouse_window
+		ScriptName = SetTitle
 		params = {
 			('Mouse window: ' + <mode_text>)
 		}
@@ -21,7 +21,7 @@ endscript
 
 script GetGameScriptFunctionList 
 	ScriptFunctions = [
-		{text = 'Send Camera to Clipboard' , scriptname = CopyCameraLocationToClipboard}
+		{text = 'Send Camera to Clipboard' , ScriptName = CopyCameraLocationToClipboard}
 	]
 	return <...>
 endscript
@@ -32,9 +32,9 @@ script GetAndCombineScriptFunctionLists
 		GetUserScriptFunctionList
 		if GotParam \{UserScriptFunctions}
 			return {
-				functionsets = [
-					{setname = 'User Scripts' functions = <UserScriptFunctions>}
-					{setname = 'Game Scripts' functions = <ScriptFunctions>}
+				FunctionSets = [
+					{SetName = 'User Scripts' Functions = <UserScriptFunctions>}
+					{SetName = 'Game Scripts' Functions = <ScriptFunctions>}
 				]
 				title = 'Script Function List'
 				id = scriptfuncs
@@ -43,8 +43,8 @@ script GetAndCombineScriptFunctionLists
 		endif
 	endif
 	return {
-		functionsets = [
-			{setname = 'Game Scripts' functions = <ScriptFunctions>}
+		FunctionSets = [
+			{SetName = 'Game Scripts' Functions = <ScriptFunctions>}
 		]
 		title = 'Script Function List'
 		id = scriptfuncs
@@ -54,5 +54,5 @@ endscript
 
 script SendScriptFunctionsToDebugger 
 	GetAndCombineScriptFunctionLists
-	RunRemoteScript scriptname = createfunctionlistwindow params = <...>
+	RunRemoteScript ScriptName = CreateFunctionListWindow params = <...>
 endscript

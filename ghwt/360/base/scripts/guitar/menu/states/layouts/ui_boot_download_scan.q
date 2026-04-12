@@ -1,8 +1,8 @@
 
 script ui_create_boot_download_scan 
-	Change \{menu_flow_play_sound = 0}
+	change \{menu_flow_play_sound = 0}
 	if ($downloadcontent_enabled = 0)
-		SpawnScriptNow \{ui_event_wait
+		spawnscriptnow \{ui_event_wait
 			params = {
 				event = menu_replace
 				data = {
@@ -11,26 +11,26 @@ script ui_create_boot_download_scan
 			}}
 		return
 	endif
-	Change store_respond_to_signin_changed = ($respond_to_signin_changed)
-	Change \{respond_to_signin_changed = 1}
+	change store_respond_to_signin_changed = ($respond_to_signin_changed)
+	change \{respond_to_signin_changed = 1}
 	GetPlatform
-	switch <Platform>
-		case PS3
+	switch <platform>
+		case ps3
 		create_popup_warning_menu {
 			textblock = {
-				text = qs(0x75e1afbf)
+				text = qs("Checking the HDD. Do not switch off your system.")
 			}
 			player_device = <controller>
 		}
-		case Xenon
+		case xenon
 		create_popup_warning_menu {
 			textblock = {
-				text = qs(0xeef4272c)
+				text = qs("Checking for downloadable content. Please don't turn off your Xbox 360 console.")
 			}
 			player_device = <controller>
 		}
 	endswitch
-	SpawnScriptNow boot_download_scan params = {controller = <controller> <...>}
+	spawnscriptnow boot_download_scan params = {controller = <controller> <...>}
 endscript
 
 script boot_download_scan \{event_params = {
@@ -41,14 +41,14 @@ script boot_download_scan \{event_params = {
 		}}
 	Wait \{1
 		gameframes}
-	StartRendering \{reason = menu_transition}
-	if NOT ui_event_exists_in_stack \{Name = 'mainmenu'}
-		if ControllerPressed X <controller>
+	startrendering \{reason = menu_transition}
+	if NOT ui_event_exists_in_stack \{name = 'mainmenu'}
+		if ControllerPressed x <controller>
 			if ControllerPressed circle <controller>
-				if ControllerPressed Square <controller>
-					if ControllerPressed Triangle <controller>
-						printf \{qs(0xa1f3a821)}
-						removecontentfiles \{playerid = -1
+				if ControllerPressed square <controller>
+					if ControllerPressed triangle <controller>
+						printf \{qs("\LClearing download cache")}
+						RemoveContentFiles \{playerid = -1
 							clear_cache}
 					endif
 				endif
@@ -59,7 +59,7 @@ script boot_download_scan \{event_params = {
 	Downloads_EnumContent controller = <controller>
 	get_current_first_play
 	begin
-	getelapsedtime starttime = <starttime>
+	GetElapsedTime StartTime = <StartTime>
 	if (<ElapsedTime> > 1000)
 		break
 	endif
@@ -73,7 +73,7 @@ script boot_download_scan \{event_params = {
 	if ((<event_params>.data.state) = uistate_jam)
 		create_loading_screen \{jam_mode = 1}
 	endif
-	Change respond_to_signin_changed = ($store_respond_to_signin_changed)
+	change respond_to_signin_changed = ($store_respond_to_signin_changed)
 endscript
 
 script ui_destroy_boot_download_scan 

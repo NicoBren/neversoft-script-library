@@ -29,7 +29,7 @@ menu_flow_locked = 0
 menu_flow_play_sound = 1
 
 script ui_flow_manager_respond_to_action \{device_num = 0
-		Player = 1
+		player = 1
 		create_params = {
 		}
 		destroy_params = {
@@ -42,10 +42,10 @@ script ui_flow_manager_respond_to_action \{device_num = 0
 	if ($transitions_locked = 1 || $menu_flow_locked = 1)
 		return
 	endif
-	if NOT ((<Player> = 1) || (<Player> = 2))
-		ScriptAssert \{qs(0xd9be3552)}
+	if NOT ((<player> = 1) || (<player> = 2))
+		ScriptAssert \{qs("\LPlayer must be equal to 1 or 2")}
 	endif
-	player_index = (<Player> - 1)
+	player_index = (<player> - 1)
 	current_flow_state_name = ($ui_flow_manager_state [<player_index>])
 	current_flow_state = (<current_flow_state_name>)
 	new_state_name = <current_flow_state_name>
@@ -57,7 +57,7 @@ script ui_flow_manager_respond_to_action \{device_num = 0
 	found_action = 0
 	if GotParam \{action}
 		GetArraySize (<current_flow_state>.actions)
-		action_array_size = <array_Size>
+		action_array_size = <array_size>
 		array_entry = 0
 		begin
 		if (<action> = <current_flow_state>.actions [(<array_entry>)].action)
@@ -70,38 +70,38 @@ script ui_flow_manager_respond_to_action \{device_num = 0
 					endif
 				endif
 			else
-				Change \{menu_flow_play_sound = 1}
+				change \{menu_flow_play_sound = 1}
 			endif
 			<found_action> = 1
 			spawned_func = 0
-			if StructureContains structure = (<current_flow_state>.actions [<array_entry>]) func
+			if StructureContains Structure = (<current_flow_state>.actions [<array_entry>]) func
 				action_function = (<current_flow_state>.actions [<array_entry>].func)
-				if StructureContains structure = (<current_flow_state>.actions [<array_entry>]) func_params
+				if StructureContains Structure = (<current_flow_state>.actions [<array_entry>]) func_params
 					func_params = (<current_flow_state>.actions [<array_entry>].func_params)
 				endif
-				if StructureContains structure = (<current_flow_state>.actions [<array_entry>]) spawned_func
+				if StructureContains Structure = (<current_flow_state>.actions [<array_entry>]) spawned_func
 					<spawned_func> = 1
 				endif
 			endif
-			if StructureContains structure = (<current_flow_state>.actions [<array_entry>]) use_last_flow_state
+			if StructureContains Structure = (<current_flow_state>.actions [<array_entry>]) use_last_flow_state
 				<new_state_name> = <previous_flow_state_name>
 			else
-				if StructureContains structure = ((<current_flow_state>.actions [(<array_entry>)])) flow_state
+				if StructureContains Structure = ((<current_flow_state>.actions [(<array_entry>)])) flow_state
 					<new_state_name> = ((<current_flow_state>.actions [(<array_entry>)]).flow_state)
-				elseif StructureContains structure = ((<current_flow_state>.actions [(<array_entry>)])) flow_state_func
-					if StructureContains structure = ((<current_flow_state>.actions [(<array_entry>)])) flow_state_func_params
+				elseif StructureContains Structure = ((<current_flow_state>.actions [(<array_entry>)])) flow_state_func
+					if StructureContains Structure = ((<current_flow_state>.actions [(<array_entry>)])) flow_state_func_params
 						<flow_state_func_params> = ((<current_flow_state>.actions [(<array_entry>)]).flow_state_func_params)
 					endif
-					Change \{transitions_locked = 1}
+					change \{transitions_locked = 1}
 					flow_state_func = ((<current_flow_state>.actions [(<array_entry>)]).flow_state_func)
 					<flow_state_func> <flow_state_func_params>
-					Change \{transitions_locked = 0}
+					change \{transitions_locked = 0}
 					if NOT GotParam \{flow_state}
-						ScriptAssert \{qs(0x2ef45bde)}
+						ScriptAssert \{qs("\Lflow_state_func did not return flow_state")}
 					endif
 					<new_state_name> = <flow_state>
 				else
-					ScriptAssert \{qs(0x1425075c)}
+					ScriptAssert \{qs("\LAction does not define flow_state, use_last_flow_state, or flow_state_func")}
 				endif
 			endif
 			break
@@ -112,101 +112,101 @@ script ui_flow_manager_respond_to_action \{device_num = 0
 	if (<found_action>)
 		new_state = (<new_state_name>)
 		is_popup = (0)
-		if StructureContains structure = (<new_state>) popup
+		if StructureContains Structure = (<new_state>) popup
 			<is_popup> = (1)
 		endif
 		state_destroy_params = {}
-		if StructureContains structure = (<new_state>) destroy_params
+		if StructureContains Structure = (<new_state>) destroy_params
 			state_destroy_params = (<new_state>.destroy_params)
 		endif
 		if ($playing_song = 0)
-			if StructureContains structure = (<current_flow_state>.actions [<array_entry>]) transition_screen
+			if StructureContains Structure = (<current_flow_state>.actions [<array_entry>]) transition_screen
 				transition_screen_struct = ((<current_flow_state>.actions [<array_entry>]).transition_screen)
 				transition_create_func = (<transition_screen_struct>.create)
 				<transition_create_func>
 			endif
 		endif
 		if (<is_popup>)
-			if NOT StructureContains structure = (<under_flow_state>) is_null
-				if StructureContains structure = (<current_flow_state>) Destroy
-					destroy_func = (<current_flow_state>.Destroy)
-					<destroy_func> Player = <Player> <destroy_params> <state_destroy_params>
+			if NOT StructureContains Structure = (<under_flow_state>) is_null
+				if StructureContains Structure = (<current_flow_state>) destroy
+					destroy_func = (<current_flow_state>.destroy)
+					<destroy_func> player = <player> <destroy_params> <state_destroy_params>
 				endif
 			endif
-			SetArrayElement ArrayName = ui_flow_manager_under globalarray index = (<player_index>) NewValue = <current_flow_state_name> ResolveGlobals = 0
-			LaunchEvent \{Type = unfocus
+			SetArrayElement ArrayName = ui_flow_manager_under GlobalArray index = (<player_index>) newvalue = <current_flow_state_name> ResolveGlobals = 0
+			LaunchEvent \{type = unfocus
 				target = root_window}
 		else
-			if StructureContains structure = (<current_flow_state>) Destroy
-				destroy_func = (<current_flow_state>.Destroy)
-				<destroy_func> Player = <Player> <destroy_params> <state_destroy_params>
+			if StructureContains Structure = (<current_flow_state>) destroy
+				destroy_func = (<current_flow_state>.destroy)
+				<destroy_func> player = <player> <destroy_params> <state_destroy_params>
 			endif
-			if NOT StructureContains structure = (<under_flow_state>) is_null
-				if StructureContains structure = (<under_flow_state>) Destroy
-					destroy_func = (<under_flow_state>.Destroy)
-					<destroy_func> Player = <Player> <destroy_params> <state_destroy_params>
+			if NOT StructureContains Structure = (<under_flow_state>) is_null
+				if StructureContains Structure = (<under_flow_state>) destroy
+					destroy_func = (<under_flow_state>.destroy)
+					<destroy_func> player = <player> <destroy_params> <state_destroy_params>
 				endif
-				SetArrayElement ArrayName = ui_flow_manager_under globalarray index = (<player_index>) NewValue = <null_flow_state_name> ResolveGlobals = 0
-				LaunchEvent \{Type = focus
+				SetArrayElement ArrayName = ui_flow_manager_under GlobalArray index = (<player_index>) newvalue = <null_flow_state_name> ResolveGlobals = 0
+				LaunchEvent \{type = focus
 					target = root_window}
 			endif
 		endif
-		SetArrayElement ArrayName = previous_flow_manager_state globalarray index = (<player_index>) NewValue = <current_flow_state_name> ResolveGlobals = 0
-		SetArrayElement ArrayName = ui_flow_manager_state globalarray index = (<player_index>) NewValue = <new_state_name> ResolveGlobals = 0
+		SetArrayElement ArrayName = previous_flow_manager_state GlobalArray index = (<player_index>) newvalue = <current_flow_state_name> ResolveGlobals = 0
+		SetArrayElement ArrayName = ui_flow_manager_state GlobalArray index = (<player_index>) newvalue = <new_state_name> ResolveGlobals = 0
 		if GotParam \{action_function}
 			if (<spawned_func> = 1)
-				SpawnScriptNow <action_function> params = {device_num = (<device_num>) <func_params>}
+				spawnscriptnow <action_function> params = {device_num = (<device_num>) <func_params>}
 			else
 				<action_function> device_num = (<device_num>) <func_params>
 			endif
 		endif
 		if ($playing_song = 0)
-			if StructureContains structure = (<current_flow_state>.actions [<array_entry>]) transition_screen
+			if StructureContains Structure = (<current_flow_state>.actions [<array_entry>]) transition_screen
 				transition_screen_struct = ((<current_flow_state>.actions [<array_entry>]).transition_screen)
-				transition_destroy_func = (<transition_screen_struct>.Destroy)
+				transition_destroy_func = (<transition_screen_struct>.destroy)
 				<transition_destroy_func>
 			endif
 		endif
 		state_create_params = {}
-		if StructureContains structure = (<new_state>) create_params
+		if StructureContains Structure = (<new_state>) create_params
 			state_create_params = (<new_state>.create_params)
 		endif
-		if StructureContains structure = (<new_state>) create
+		if StructureContains Structure = (<new_state>) create
 			create_func = (<new_state>.create)
-			<create_func> Player = <Player> <create_params> <state_create_params>
+			<create_func> player = <player> <create_params> <state_create_params>
 		endif
 	endif
 endscript
 
 script start_flow_manager \{flow_state = main_menu_fs
-		Player = 1
+		player = 1
 		create_params = {
 		}}
-	if NOT ((<Player> = 1) || (<Player> = 2))
-		ScriptAssert \{qs(0xd9be3552)}
+	if NOT ((<player> = 1) || (<player> = 2))
+		ScriptAssert \{qs("\LPlayer must be equal to 1 or 2")}
 	endif
-	player_index = (<Player> - 1)
-	SetArrayElement ArrayName = ui_flow_manager_state globalarray index = (<player_index>) NewValue = <flow_state> ResolveGlobals = 0
+	player_index = (<player> - 1)
+	SetArrayElement ArrayName = ui_flow_manager_state GlobalArray index = (<player_index>) newvalue = <flow_state> ResolveGlobals = 0
 	current_flow_state_name = ($ui_flow_manager_state [<player_index>])
 	current_flow_state = (<current_flow_state_name>)
-	if StructureContains structure = (<current_flow_state>) create
+	if StructureContains Structure = (<current_flow_state>) create
 		create_func = (<current_flow_state>.create)
-		<create_func> Player = <Player> <create_params>
+		<create_func> player = <player> <create_params>
 	endif
 endscript
 
-script shut_down_flow_manager \{Player = 1}
-	if NOT ((<Player> = 1) || (<Player> = 2))
-		ScriptAssert \{qs(0xd9be3552)}
+script shut_down_flow_manager \{player = 1}
+	if NOT ((<player> = 1) || (<player> = 2))
+		ScriptAssert \{qs("\LPlayer must be equal to 1 or 2")}
 	endif
-	player_index = (<Player> - 1)
+	player_index = (<player> - 1)
 	current_flow_state_name = ($ui_flow_manager_state [<player_index>])
 	current_flow_state = (<current_flow_state_name>)
-	if StructureContains structure = (<current_flow_state>) Destroy
-		destroy_func = (<current_flow_state>.Destroy)
-		<destroy_func> Player = <Player> <destroy_params>
+	if StructureContains Structure = (<current_flow_state>) destroy
+		destroy_func = (<current_flow_state>.destroy)
+		<destroy_func> player = <player> <destroy_params>
 	endif
 	if GotParam \{resetstate}
-		SetArrayElement ArrayName = ui_flow_manager_state globalarray index = (<player_index>) NewValue = null_flow_state ResolveGlobals = 0
+		SetArrayElement ArrayName = ui_flow_manager_state GlobalArray index = (<player_index>) newvalue = null_flow_state ResolveGlobals = 0
 	endif
 endscript

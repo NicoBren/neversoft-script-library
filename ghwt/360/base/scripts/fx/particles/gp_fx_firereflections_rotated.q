@@ -1,25 +1,25 @@
-gp_fx_firereflections_rotated = {
-	Pos = (0.086252, 3.072762, -5.58696)
-	Angles = (0.0, 0.0, 0.0)
+GP_FX_FireReflections_Rotated = {
+	pos = (0.086252, 3.072762, -5.58696)
+	angles = (0.0, 0.0, 0.0)
 	Class = ParticleObject
 	ParticleType = FlexParticle
-	Type = flat
-	Active
+	type = flat
+	active
 	CreatedAtStart
 	EmitRangeDims = (3.0, 3.0, 0.0)
-	Emit_Target = (0.0, 1.0, 0.0)
+	emit_Target = (0.0, 1.0, 0.0)
 	EmitAngle = (0.0, 0.0, 0.0)
-	Force = (0.0, 0.0, 0.0)
+	force = (0.0, 0.0, 0.0)
 	WindCoeff = 0.0
 	LocalWindCoeff = 0.0
 	EmitterVelocityWeight = 0.0
 	AngleSpread = 45.0
 	LifeRange = (0.4, 0.7)
-	Emit_Rate = 10.0
-	Max = 2
+	emit_rate = 10.0
+	max = 2
 	TimeSeed = 0.0
-	LifeTime = 0.0
-	EmitNum = 0
+	lifeTime = 0.0
+	emitNum = 0
 	FollowEmitter = 0.0
 	EmitFunction = constant
 	EmitPeriod = 1.0
@@ -33,16 +33,16 @@ gp_fx_firereflections_rotated = {
 	EmitDelayStart = 0.0
 	PathFollowTime = 0.0
 	History = 2
-	HistoryListCoordinateSpace = World
+	HistoryListCoordinateSpace = world
 	align_to = (0.0, 0.0, 1.0)
-	Color = -5242625
+	color = -5242625
 	LOD_Default
 	QuickMaterial = {
 		DiffuseTextureEnabled
-		DiffuseTexture = ph_firetendrils_rotated
+		DiffuseTexture = PH_FireTendrils_rotated
 		SpecularPower = 0
-		AlphaCutoff = 1
-		BlendMode = brighten
+		alphacutoff = 1
+		blendMode = brighten
 		QuadAnimationFPS = 1
 	}
 	Knot = [

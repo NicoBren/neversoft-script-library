@@ -3,9 +3,9 @@ max_num_instrument_saves = 20
 max_num_logo_saves = 30
 cas_current_player = 1
 cas_current_player_name = cas_player1
-cas_editing_new_character = FALSE
-charselect_previous_character_id = Judy
-cas_node_name = z_soundcheck_trg_waypoint_car_start
+cas_editing_new_character = false
+charselect_previous_character_id = judy
+CAS_node_name = Z_SoundCheck_TRG_Waypoint_CAR_Start
 cas_empty_heap_score = 0.25
 
 script get_section_index_from_desc_id 
@@ -14,10 +14,10 @@ script get_section_index_from_desc_id
 			target_desc_id
 		]
 		all}
-	if NOT getcasappearancepart part = <part>
-		ScriptAssert '%s not found' s = <part> donotresolve
+	if NOT GetCASAppearancePart part = <part>
+		ScriptAssert '%s not found' s = <part> DoNotResolve
 	endif
-	if NOT getactualcasoptionstruct part = <part> desc_id = <desc_id>
+	if NOT GetActualCASOptionStruct part = <part> desc_id = <desc_id>
 		ScriptAssert '%s %t not found' s = <part> t = <desc_id>
 	endif
 	if GotParam \{sections}
@@ -28,7 +28,7 @@ script get_section_index_from_desc_id
 			return section_index = <i>
 		endif
 		i = (<i> + 1)
-		repeat <array_Size>
+		repeat <array_size>
 	endif
 endscript
 
@@ -38,31 +38,31 @@ script find_bone_deform_info
 			group_name
 		]
 		all}
-	GetArraySize <deform_bones> globalarray
+	GetArraySize <deform_bones> GlobalArray
 	i = 0
 	begin
 	if (((($<deform_bones>) [<i>]).group_name) = <group_name>)
 		return true bone_deform_info = (($<deform_bones>) [<i>])
 	endif
 	i = (<i> + 1)
-	repeat <array_Size>
-	return \{FALSE}
+	repeat <array_size>
+	return \{false}
 endscript
 
 script reset_bone_deform_info 
-	setcasappearancebones part = <part> bones = {}
-	updatecurrentcasmodel \{buildscript = reskin_model_from_appearance}
+	SetCASAppearanceBones part = <part> bones = {}
+	UpdateCurrentCASModel \{buildScript = reskin_model_from_appearance}
 endscript
 
 script reset_additional_bone_deform_info 
-	setcasappearanceadditionalbones part = <part> additional_bone_transforms = []
-	updatecurrentcasmodel \{buildscript = reskin_model_from_appearance}
+	SetCASAppearanceAdditionalBones part = <part> additional_bone_transforms = []
+	UpdateCurrentCASModel \{buildScript = reskin_model_from_appearance}
 endscript
 
 script exit_to_customize_character 
 	ui_event \{event = menu_change
 		data = {
-			state = uistate_customize_character
+			state = UIstate_customize_character
 		}}
 endscript
 
@@ -74,7 +74,7 @@ script verify_genre_data
 endscript
 
 script verify_genre_data_foreach 
-	if GlobalExists Name = <part> Type = array
+	if GlobalExists name = <part> type = array
 		ForEachIn ($<part>) do = verify_genre_data_foreach_part
 	endif
 endscript
@@ -98,56 +98,56 @@ endscript
 
 script verify_genre 
 	i = 0
-	GetArraySize ($genre_list)
+	GetArraySize ($Genre_List)
 	begin
-	if (((($genre_list) [<i>]).desc_id) = <genre>)
+	if (((($Genre_List) [<i>]).desc_id) = <genre>)
 		found = 1
 		break
 	endif
 	i = (<i> + 1)
-	repeat <array_Size>
+	repeat <array_size>
 	if NOT GotParam \{found}
 		if NOT GotParam \{piece}
-			piece = None
+			piece = none
 		endif
-		SoftAssert '%p - Genre %g not found. Should match something in the cas_common_arrays.q list' p = <piece> g = <genre> donotresolve
+		SoftAssert '%p - Genre %g not found. Should match something in the cas_common_arrays.q list' p = <piece> g = <genre> DoNotResolve
 	endif
 endscript
 
-script create_cas_cache_pak \{Heap = heap_cas}
-	if NOT CompositeObjectExists \{Name = global_cas_cache}
-		CreateCompositeObject \{components = [
+script create_cas_cache_pak \{heap = heap_cas}
+	if NOT CompositeObjectExists \{name = Global_Cas_Cache}
+		CreateCompositeObject \{Components = [
 				{
-					component = modelbuilder
+					Component = ModelBuilder
 					create_cache
 				}
 			]
 			params = {
-				Name = global_cas_cache
+				name = Global_Cas_Cache
 			}}
-		global_cas_cache :modelbuilder_createdynamicpak Heap = <Heap> size = <size> vram_size = <vram_size>
+		Global_Cas_Cache :ModelBuilder_CreateDynamicPak heap = <heap> size = <size> vram_size = <vram_size>
 	else
 		printf \{'Global CAS Cache already exists'}
 	endif
 endscript
 
 script free_cas_cache_pak 
-	if CompositeObjectExists \{Name = global_cas_cache}
-		cascancelloading
-		global_cas_cache :Die
-		flushdeadobjects
+	if CompositeObjectExists \{name = Global_Cas_Cache}
+		CasCancelLoading
+		Global_Cas_Cache :Die
+		FlushDeadObjects
 	endif
 endscript
 
-script cascacheflushvram 
-	if CompositeObjectExists \{Name = global_cas_cache}
-		global_cas_cache :modelbuilder_flushdynamicpakvram
+script CASCacheFlushVRAM 
+	if CompositeObjectExists \{name = Global_Cas_Cache}
+		Global_Cas_Cache :ModelBuilder_FlushDynamicPakVRAM
 	endif
 endscript
 
-script cascachemodel \{async = 0}
-	if CompositeObjectExists \{Name = global_cas_cache}
-		global_cas_cache :modelbuilder_cache {
+script CASCacheModel \{async = 0}
+	if CompositeObjectExists \{name = Global_Cas_Cache}
+		Global_Cas_Cache :ModelBuilder_Cache {
 			appearance = <appearance>
 			buildscriptparams = {
 				<buildscriptparams>
@@ -176,30 +176,30 @@ script flush_cas_cache
 endscript
 
 script dump_cas_cache 
-	if CompositeObjectExists \{Name = global_cas_cache}
-		global_cas_cache :modelbuilder_dumpdynamicpak
+	if CompositeObjectExists \{name = Global_Cas_Cache}
+		Global_Cas_Cache :ModelBuilder_DumpDynamicPak
 	endif
 endscript
 
 script cas_artist_flush 
 	if NOT CD
-		if casartist
+		if CasArtist
 			if NOT ($cas_heap_state = in_game)
 				stars
 				printf \{'******* cas_artist_flush ********'}
 				stars
 				flush_cas_cache
 				cas_rawpak_clear
-				disablecasarchive
-				cascancelloading
-				casblockforcomposite
-				casblockforloading
+				DisableCASArchive
+				CasCancelLoading
+				CasBlockForComposite
+				CASBlockForLoading
 				cas_queue_wait
-				getcurrentcasobject
-				<cas_object> :obj_cleargeoms
+				GetCurrentCASObject
+				<cas_object> :Obj_ClearGeoms
 				FinishRendering
-				<cas_object> :modelbuilder_unload
-				rebuildcurrentcasmodel
+				<cas_object> :ModelBuilder_Unload
+				RebuildCurrentCASModel
 			endif
 		else
 			stars
@@ -215,15 +215,15 @@ script cas_edit_character_profile
 			savegame
 		]
 		all}
-	Change \{cas_current_instrument = None}
+	change \{cas_current_instrument = none}
 	get_musician_profile_struct_by_id id = <character_id> savegame = <savegame>
-	setcasappearance appearance = (<profile_struct>.appearance)
-	Change cas_current_profile = <character_id>
-	Change cas_current_savegame = <savegame>
+	SetCASAppearance appearance = (<profile_struct>.appearance)
+	change cas_current_profile = <character_id>
+	change cas_current_savegame = <savegame>
 endscript
 
 script cas_get_player_status 
-	formatText checksumName = player_status 'player%d_status' d = ($cas_current_player)
+	FormatText checksumname = player_status 'player%d_status' d = ($cas_current_player)
 	return player_status = <player_status>
 endscript
 
@@ -241,11 +241,11 @@ endscript
 
 script cas_load_and_setup_resources 
 	mark_unsafe_for_shutdown
-	caswaitforunloads \{Block}
+	CASWaitForUnloads \{Block}
 	FinishRendering
 	if NOT ((GotParam album_art) || (GotParam band_logo))
 		GetPakManCurrent \{map = zones}
-		if checksumequals a = <pak> b = z_soundcheck
+		if ChecksumEquals a = <pak> b = z_soundcheck
 			SetPakManCurrentBlock \{map = zones
 				pak = z_soundcheck_cas
 				block_scripts = 1}
@@ -263,23 +263,23 @@ script cas_load_and_setup_resources
 		restore_dummy_bg_camera
 		if NOT GotParam \{album_art}
 			PlayIGCCam \{id = cas_view_cam_id
-				Name = cas_view_cam
+				name = cas_view_cam
 				viewport = bg_viewport
-				LockTo = World
-				Pos = (2.028921, 0.879576, -0.059630997)
+				LockTo = world
+				pos = (2.028921, 0.879576, -0.059630997)
 				Quat = (-0.000911, 0.9990699, 0.027344998)
 				FOV = 72.0
-				play_hold = 1
+				Play_hold = 1
 				interrupt_current}
 		else
 			PlayIGCCam \{id = cas_view_cam_id
-				Name = cas_view_cam
+				name = cas_view_cam
 				viewport = bg_viewport
-				LockTo = World
-				Pos = (-0.536864, 2.1043458, 15.148574)
+				LockTo = world
+				pos = (-0.536864, 2.1043458, 15.148574)
 				Quat = (0.0052940003, 0.02768, -0.000218)
 				FOV = 72.0
-				play_hold = 1
+				Play_hold = 1
 				interrupt_current}
 		endif
 	endif
@@ -292,15 +292,15 @@ endscript
 script cas_free_resources \{block_scripts = 0}
 	mark_unsafe_for_shutdown
 	FinishRendering
-	casblockforloading
-	killallcompositetextures
-	castemporariesflush
-	caswaitforunloads \{Block}
+	CASBlockForLoading
+	KillAllCompositeTextures
+	CASTemporariesFlush
+	CASWaitForUnloads \{Block}
 	cas_rawpak_free
 	set_cas_heap_state \{state = in_game}
 	if NOT GotParam \{no_loading_screen}
 		printf \{'cas_free_resources - create_loading_screen'}
-		if pakfilesarecached
+		if PakFilesAreCached
 			hide_glitch \{num_frames = 3}
 		else
 			create_loading_screen <...>
@@ -313,7 +313,7 @@ script cas_free_resources \{block_scripts = 0}
 	endif
 	if ($shutdown_game_for_signin_change_flag = 0)
 		printf \{'cas_free_resources - destroy_loading_screen'}
-		if NOT pakfilesarecached
+		if NOT PakFilesAreCached
 			destroy_loading_screen
 		endif
 	endif
@@ -321,14 +321,14 @@ script cas_free_resources \{block_scripts = 0}
 		cas_fix_cameras_for_game
 	endif
 	mark_safe_for_shutdown
-	Change \{cas_free_cam_active = 0}
+	change \{cas_free_cam_active = 0}
 endscript
 
-script refreshcasprofile 
+script RefreshCASProfile 
 	if CD
 		return
 	endif
-	if NOT casartist
+	if NOT CasArtist
 		stars
 		printf \{'cas_artist=1 must be set in your personal.q file'}
 		stars
@@ -337,25 +337,25 @@ script refreshcasprofile
 	if ($cas_heap_state = in_game)
 		printf \{'Only works in CAS'}
 	endif
-	if NOT getcurrentcasobject
+	if NOT GetCurrentCASObject
 		printf \{'Only works in CAS'}
 	endif
-	cas_queue_new_character_profile id = ($cas_current_profile) Player = ($cas_current_player) savegame = ($cas_current_savegame)
+	cas_queue_new_character_profile id = ($cas_current_profile) player = ($cas_current_player) savegame = ($cas_current_savegame)
 	get_musician_profile_struct_by_id id = ($cas_current_profile) savegame = ($cas_current_savegame)
-	setcasappearance appearance = (<profile_struct>.appearance)
+	SetCASAppearance appearance = (<profile_struct>.appearance)
 endscript
 
-script createassetstoragefrombudgetblock 
+script CreateAssetStorageFromBudgetBlock 
 	if NOT GotParam \{slopheap}
-		slopheap = <Name>
+		slopheap = <name>
 	endif
-	if NOT GotParam \{AssetContext}
-		AssetContext = <Name>
+	if NOT GotParam \{assetcontext}
+		assetcontext = <name>
 	endif
-	cassetupassetstorage Name = <Name> params = {
-		allocator = budget
-		blockname = <Name>
-		AssetContext = <AssetContext>
+	CASSetupAssetStorage name = <name> params = {
+		Allocator = Budget
+		blockname = <name>
+		assetcontext = <assetcontext>
 		slopheap = <slopheap>
 	}
 endscript
@@ -367,9 +367,9 @@ script generate_random_appearance
 		]}
 	if GotParam \{new_car_character}
 		if (<is_female> = 1)
-			Change cas_current_appearance = ($default_custom_musician_profile_female.appearance)
+			change cas_current_appearance = ($default_custom_musician_profile_female.appearance)
 		else
-			Change cas_current_appearance = ($default_custom_musician_profile_male.appearance)
+			change cas_current_appearance = ($default_custom_musician_profile_male.appearance)
 		endif
 		new_car_character_flag = {new_car_character random_instruments}
 	endif
@@ -381,9 +381,9 @@ script generate_random_name
 			is_female
 		]}
 	if (<is_female> = 1)
-		getrandomarrayelement ($gh_random_car_female_names)
+		GetRandomArrayElement ($gh_random_car_female_names)
 	else
-		getrandomarrayelement ($gh_random_car_male_names)
+		GetRandomArrayElement ($gh_random_car_male_names)
 	endif
 	return random_name = <element>
 endscript
@@ -393,9 +393,9 @@ script generate_random_genre
 	if GotParam \{allow_mixed}
 		takeaway = 1
 	endif
-	GetArraySize \{$genre_list}
-	GetRandomValue a = 0 b = (<array_Size> - <takeaway>) Name = genre_index integer
-	return genre = ($genre_list [<genre_index>].desc_id)
+	GetArraySize \{$Genre_List}
+	GetRandomValue a = 0 b = (<array_size> - <takeaway>) name = genre_index Integer
+	return genre = ($Genre_List [<genre_index>].desc_id)
 endscript
 
 script cas_change_current_character_gender 
@@ -408,37 +408,37 @@ script cas_change_current_character_gender
 	else
 		modify_custom_profile_blurb id = ($cas_current_profile) savegame = ($cas_current_savegame) blurb = (($default_custom_musician_profile_female).blurb)
 	endif
-	cas_queue_add_request appearance = ($cas_current_appearance) Player = ($cas_current_player)
+	cas_queue_add_request appearance = ($cas_current_appearance) player = ($cas_current_player)
 endscript
 
 script ui_load_cas_rawpak \{async = 1}
-	cas_get_is_female Player = ($cas_current_player)
+	cas_get_is_female player = ($cas_current_player)
 	if GotParam \{instrument}
 		switch (<instrument>)
 			case guitar
 			pak = cas_guitarpak
-			case bass
+			case Bass
 			pak = cas_basspak
 			case drum
 			pak = cas_drumspak
-			case vocals
+			case Vocals
 			pak = cas_vocalspak
 			default
 			ScriptAssert 'bad instrument %s' s = <instrument>
 		endswitch
-	elseif GotParam \{finishes}
-		switch (<finishes>)
-			case cas_guitar_body
-			if NOT getcasappearancepart \{part = cas_guitar_body}
+	elseif GotParam \{Finishes}
+		switch (<Finishes>)
+			case CAS_Guitar_Body
+			if NOT GetCASAppearancePart \{part = CAS_Guitar_Body}
 				ScriptAssert \{'%s not found'
-					s = cas_guitar_body}
+					s = CAS_Guitar_Body}
 			endif
-			if NOT getactualcasoptionstruct part = cas_guitar_body desc_id = <desc_id>
-				ScriptAssert '%s %t not found' s = cas_guitar_body t = <desc_id>
+			if NOT GetActualCASOptionStruct part = CAS_Guitar_Body desc_id = <desc_id>
+				ScriptAssert '%s %t not found' s = CAS_Guitar_Body t = <desc_id>
 			endif
 			if GotParam \{pak_num}
 				if (($cas_num_finishes_pak) > <pak_num>)
-					formatText checksumName = pak_name 'CAS_GUITARPAK_FINISHES_%i' i = <pak_num>
+					FormatText checksumname = pak_name 'CAS_GUITARPAK_FINISHES_%i' i = <pak_num>
 					pak = <pak_name>
 				else
 					pak = cas_guitarpak_finishes_0
@@ -446,17 +446,17 @@ script ui_load_cas_rawpak \{async = 1}
 			else
 				pak = cas_guitarpak_finishes_0
 			endif
-			case cas_bass_body
-			if NOT getcasappearancepart \{part = cas_bass_body}
+			case CAS_Bass_Body
+			if NOT GetCASAppearancePart \{part = CAS_Bass_Body}
 				ScriptAssert \{'%s not found'
-					s = cas_bass_body}
+					s = CAS_Bass_Body}
 			endif
-			if NOT getactualcasoptionstruct part = cas_bass_body desc_id = <desc_id>
-				ScriptAssert '%s %t not found' s = cas_bass_body t = <desc_id>
+			if NOT GetActualCASOptionStruct part = CAS_Bass_Body desc_id = <desc_id>
+				ScriptAssert '%s %t not found' s = CAS_Bass_Body t = <desc_id>
 			endif
 			if GotParam \{pak_num}
 				if (($cas_num_finishes_pak) > <pak_num>)
-					formatText checksumName = pak_name 'CAS_BASSPAK_FINISHES_%i' i = <pak_num>
+					FormatText checksumname = pak_name 'CAS_BASSPAK_FINISHES_%i' i = <pak_num>
 					pak = <pak_name>
 				else
 					pak = cas_basspak_finishes_0
@@ -465,75 +465,75 @@ script ui_load_cas_rawpak \{async = 1}
 				pak = cas_basspak_finishes_0
 			endif
 			default
-			printf 'ui_load_cas_rawpak: No pak to load finish=%p' p = <finishes> donotresolve
+			printf 'ui_load_cas_rawpak: No pak to load finish=%p' p = <Finishes> DoNotResolve
 		endswitch
 	else
-		resolvebodyspecificpartinappearance part = <part>
+		ResolveBodySpecificPartInAppearance part = <part>
 		switch (<part>)
-			case cas_body
+			case CAS_Body
 			if (<is_female> = 1)
 				pak = cas_female_bodypak
 			else
 				pak = cas_male_bodypak
 			endif
-			case cas_female_hair
-			case cas_female_hat_hair
-			case cas_female_facial_hair
+			case CAS_Female_Hair
+			case CAS_Female_Hat_Hair
+			case CAS_Female_Facial_Hair
 			pak = cas_female_bodypak
-			case cas_male_hair
-			case cas_male_hat_hair
-			case cas_male_facial_hair
+			case CAS_Male_Hair
+			case CAS_Male_Hat_Hair
+			case CAS_Male_Facial_Hair
 			pak = cas_male_bodypak
-			case cas_female_hat
-			case cas_female_acc_left
-			case cas_female_acc_right
-			case cas_female_acc_face
-			case cas_female_acc_ears
+			case CAS_Female_Hat
+			case CAS_Female_Acc_Left
+			case CAS_Female_Acc_Right
+			case CAS_Female_Acc_Face
+			case CAS_Female_Acc_Ears
 			pak = cas_female_accpak
-			case cas_male_hat
-			case cas_male_acc_left
-			case cas_male_acc_right
-			case cas_male_acc_face
-			case cas_male_acc_ears
+			case CAS_Male_Hat
+			case CAS_Male_Acc_Left
+			case CAS_Male_Acc_Right
+			case CAS_Male_Acc_Face
+			case CAS_Male_Acc_Ears
 			pak = cas_male_accpak
-			case cas_female_torso
+			case CAS_Female_Torso
 			pak = cas_female_torsopak
-			case cas_male_torso
+			case CAS_Male_Torso
 			pak = cas_male_torsopak
-			case cas_female_legs
+			case CAS_Female_Legs
 			pak = cas_female_legspak
-			case cas_male_legs
+			case CAS_Male_Legs
 			pak = cas_male_legspak
-			case cas_female_shoes
+			case CAS_Female_Shoes
 			pak = cas_female_shoespak
-			case cas_male_shoes
+			case CAS_Male_Shoes
 			pak = cas_male_shoespak
-			case cas_guitar_body
-			case cas_guitar_pickguards
-			case cas_guitar_bridges
-			case cas_guitar_knobs
-			case cas_guitar_pickups
+			case CAS_Guitar_Body
+			case CAS_Guitar_Pickguards
+			case CAS_Guitar_Bridges
+			case CAS_Guitar_Knobs
+			case CAS_Guitar_Pickups
 			pak = cas_guitarpak
-			case cas_guitar_neck
-			case cas_guitar_head
+			case CAS_Guitar_Neck
+			case CAS_Guitar_Head
 			pak = cas_guitarpak_nh
-			case cas_bass_body
-			case cas_bass_pickguards
-			case cas_bass_pickups
-			case cas_bass_bridges
-			case cas_bass_knobs
+			case CAS_Bass_Body
+			case CAS_Bass_Pickguards
+			case CAS_Bass_Pickups
+			case CAS_Bass_Bridges
+			case CAS_Bass_Knobs
 			pak = cas_basspak
-			case cas_bass_neck
-			case cas_bass_head
+			case CAS_Bass_Neck
+			case CAS_Bass_Head
 			pak = cas_basspak_nh
-			case cas_drums
-			case cas_drums_sticks
+			case CAS_Drums
+			case CAS_Drums_Sticks
 			pak = cas_drumspak
-			case cas_mic
-			case cas_mic_stand
+			case CAS_Mic
+			case CAS_Mic_Stand
 			pak = cas_vocalspak
 			default
-			printf 'ui_load_cas_rawpak: No pak to load part=%p' p = <part> donotresolve
+			printf 'ui_load_cas_rawpak: No pak to load part=%p' p = <part> DoNotResolve
 		endswitch
 	endif
 	if GotParam \{pak}
@@ -542,15 +542,15 @@ script ui_load_cas_rawpak \{async = 1}
 endscript
 
 script cas_soak_test 
-	randomize \{1980}
+	Randomize \{1980}
 	begin
 	get_musician_profile_size \{savegame = 0}
 	i = 0
 	begin
 	get_musician_profile_struct_by_index index = <i> savegame = 0
-	this_ID = (<profile_struct>.Name)
+	this_id = (<profile_struct>.name)
 	if is_selectable_profile profile_struct = <profile_struct>
-		cas_queue_new_character_profile Player = RandomInteger (1.0, 4.0) id = <this_ID> savegame = 0
+		cas_queue_new_character_profile player = RandomInteger (1.0, 4.0) id = <this_id> savegame = 0
 		if (RandomInteger (0.0, 5.0) = 0)
 			cas_queue_wait
 		else
@@ -558,7 +558,7 @@ script cas_soak_test
 				frames = Random (@ 1 @ 5 @ 40 @ 100 )
 				Wait <frames> gameframes
 			endif
-			cascancelloading
+			CasCancelLoading
 		endif
 		frames = Random (@ 0 @ 1 @ 2 )
 		if (<frames> > 0)
@@ -566,28 +566,28 @@ script cas_soak_test
 		endif
 	endif
 	i = (<i> + 1)
-	repeat <array_Size>
+	repeat <array_size>
 	repeat 100
 endscript
-highway_instrument_map = {
-	guitar = cas_guitar_highway
-	bass = cas_bass_highway
-	drum = cas_drums_highway
+Highway_Instrument_map = {
+	guitar = CAS_Guitar_Highway
+	Bass = CAS_Bass_Highway
+	drum = CAS_Drums_Highway
 }
 
 script get_highway_struct_from_appearance 
-	if StructureContains structure = ($highway_instrument_map) <part>
-		highway_part = ($highway_instrument_map.<part>)
-		printf 'Highway part is %s' s = <highway_part> donotresolve
-		if StructureContains structure = <appearance> <highway_part>
-			getactualcasoptionstruct part = <highway_part> desc_id = (<appearance>.<highway_part>.desc_id)
+	if StructureContains Structure = ($Highway_Instrument_map) <part>
+		highway_part = ($Highway_Instrument_map.<part>)
+		printf 'Highway part is %s' s = <highway_part> DoNotResolve
+		if StructureContains Structure = <appearance> <highway_part>
+			GetActualCASOptionStruct part = <highway_part> desc_id = (<appearance>.<highway_part>.desc_id)
 		else
-			getactualcasoptionstruct part = <highway_part> desc_id = axelhighway
+			GetActualCASOptionStruct part = <highway_part> desc_id = AxelHighway
 		endif
 		return true frontend_img = <frontend_img> highway_pak = <highway_pak> highway_texture = <highway_texture>
 	else
-		printf 'Part %s not found in highway->inst map' s = <part> donotresolve
-		return \{FALSE}
+		printf 'Part %s not found in highway->inst map' s = <part> DoNotResolve
+		return \{false}
 	endif
 endscript
 
@@ -600,9 +600,9 @@ script cas_free_resources_camera_fix
 		Wait \{1
 			gameframe}
 		repeat
-		SpawnScriptNow task_menu_default_anim_in params = {base_name = <base_name>}
+		spawnscriptnow task_menu_default_anim_in params = {base_name = <base_name>}
 	elseif GotParam \{alwaysfix}
-		SpawnScriptNow task_menu_default_anim_in params = {base_name = <base_name>}
+		spawnscriptnow task_menu_default_anim_in params = {base_name = <base_name>}
 	endif
 endscript
 
@@ -612,13 +612,13 @@ script is_part_editable
 			desc_id
 		]
 		all}
-	getactualcasoptionstruct part = <part> desc_id = <desc_id>
+	GetActualCASOptionStruct part = <part> desc_id = <desc_id>
 	if part_has_sections part = <part> desc_id = <desc_id>
 		return \{true}
 	elseif part_has_materials part = <part> desc_id = <desc_id>
 		return \{true}
 	else
-		return \{FALSE}
+		return \{false}
 	endif
 endscript
 
@@ -628,11 +628,11 @@ script part_has_sections
 			desc_id
 		]
 		all}
-	getactualcasoptionstruct part = <part> desc_id = <desc_id>
+	GetActualCASOptionStruct part = <part> desc_id = <desc_id>
 	if GotParam \{sections}
 		return \{true}
 	endif
-	return \{FALSE}
+	return \{false}
 endscript
 
 script part_has_materials 
@@ -641,18 +641,18 @@ script part_has_materials
 			desc_id
 		]
 		all}
-	if NOT getactualcasoptionstruct part = <part> desc_id = <desc_id>
-		return \{FALSE}
+	if NOT GetActualCASOptionStruct part = <part> desc_id = <desc_id>
+		return \{false}
 	endif
 	if GotParam \{materials}
 		GetArraySize <materials>
-		if (<array_Size> > 0)
+		if (<array_size> > 0)
 			return \{true}
 		endif
 	else
 		if GotParam \{material_groups}
 			GetArraySize <material_groups>
-			if (<array_Size> > 0)
+			if (<array_size> > 0)
 				return \{true}
 			endif
 		else
@@ -661,5 +661,5 @@ script part_has_materials
 			endif
 		endif
 	endif
-	return \{FALSE}
+	return \{false}
 endscript

@@ -4,46 +4,46 @@ skater_cam_0_mode = 2
 skater_cam_1_mode = 2
 screenshotmode = 0
 disable_screenshots = 0
-arl_text = qs(0xfa6448fa)
-arr_text = qs(0x1994c5f0)
-aru_text = qs(0x30ff4bf5)
-ard_text = qs(0xb4520bf6)
-all_text = qs(0x56ec18ea)
-alr_text = qs(0xebf66988)
-alu_text = qs(0x1a0d9384)
-ald_text = qs(0x6bbf81bd)
+arl_text = qs("\LDebug Encore\b6")
+arr_text = qs("\L\b5Poor>Good")
+aru_text = qs("\LToggle 2D")
+ard_text = qs("\LProfiler")
+all_text = qs("\L\b6Profile Cams")
+alr_text = qs("\L\b5Lighting")
+alu_text = qs("\LWin Song")
+ald_text = qs("\LModel Viewer")
 root_text = {
-	arl_text = qs(0xfa6448fa)
-	arr_text = qs(0x1994c5f0)
-	aru_text = qs(0x30ff4bf5)
-	ard_text = qs(0xb4520bf6)
-	all_text = qs(0x56ec18ea)
-	alr_text = qs(0xebf66988)
-	alu_text = qs(0x1a0d9384)
-	ald_text = qs(0x6bbf81bd)
+	arl_text = qs("\LDebug Encore\b6")
+	arr_text = qs("\L\b5Poor>Good")
+	aru_text = qs("\LToggle 2D")
+	ard_text = qs("\LProfiler")
+	all_text = qs("\L\b6Profile Cams")
+	alr_text = qs("\L\b5Lighting")
+	alu_text = qs("\LWin Song")
+	ald_text = qs("\LModel Viewer")
 }
 modelviewer_text = {
-	arl_text = qs(0xfa6448fa)
-	arr_text = qs(0xe1145bb2)
-	aru_text = qs(0x30ff4bf5)
-	ard_text = qs(0xb4520bf6)
-	all_text = qs(0x21114c03)
-	alr_text = qs(0x6d6e0b45)
-	alu_text = qs(0x1a0d9384)
-	ald_text = qs(0x6bbf81bd)
+	arl_text = qs("\LDebug Encore\b6")
+	arr_text = qs("\L\b5AI Displays")
+	aru_text = qs("\LToggle 2D")
+	ard_text = qs("\LProfiler")
+	all_text = qs("\LSet Player\b6")
+	alr_text = qs("\L\b5Reset Camera")
+	alu_text = qs("\LWin Song")
+	ald_text = qs("\LModel Viewer")
 }
 select_text = root_text
 
 script set_select_text \{text = $root_text}
-	Change all_text = (<text>.all_text)
-	Change alr_text = (<text>.alr_text)
-	Change alu_text = (<text>.alu_text)
-	Change ald_text = (<text>.ald_text)
-	Change arl_text = (<text>.arl_text)
-	Change arr_text = (<text>.arr_text)
-	Change aru_text = (<text>.aru_text)
-	Change ard_text = (<text>.ard_text)
-	Change select_text = <text>
+	change all_text = (<text>.all_text)
+	change alr_text = (<text>.alr_text)
+	change alu_text = (<text>.alu_text)
+	change ald_text = (<text>.ald_text)
+	change arl_text = (<text>.arl_text)
+	change arr_text = (<text>.arr_text)
+	change aru_text = (<text>.aru_text)
+	change ard_text = (<text>.ard_text)
+	change select_text = <text>
 	refresh_analog_options
 endscript
 
@@ -67,7 +67,7 @@ script UserSelectSelect
 	endif
 	if ScreenElementExists \{id = root_window}
 		if root_window :GetSingleTag \{menu_state}
-			if (<menu_state> = On)
+			if (<menu_state> = on)
 				return
 			endif
 		endif
@@ -78,13 +78,13 @@ script UserSelectSelect
 	if ObjectExists \{id = skatercam0}
 		switch skater_cam_0_mode
 			case 1
-			Change \{skater_cam_0_mode = 2}
+			change \{skater_cam_0_mode = 2}
 			case 2
-			Change \{skater_cam_0_mode = 3}
+			change \{skater_cam_0_mode = 3}
 			case 3
-			Change \{skater_cam_0_mode = 4}
+			change \{skater_cam_0_mode = 4}
 			case 4
-			Change \{skater_cam_0_mode = 1}
+			change \{skater_cam_0_mode = 1}
 		endswitch
 		skatercam0 :sc_setmode \{mode = skater_cam_0_mode}
 	endif
@@ -105,7 +105,7 @@ script UserSelectSelect2
 	endif
 	if ScreenElementExists \{id = root_window}
 		if root_window :GetSingleTag \{menu_state}
-			if (<menu_state> = On)
+			if (<menu_state> = on)
 				return
 			endif
 		endif
@@ -113,13 +113,13 @@ script UserSelectSelect2
 	if ObjectExists \{id = skatercam1}
 		switch skater_cam_1_mode
 			case 1
-			Change \{skater_cam_1_mode = 2}
+			change \{skater_cam_1_mode = 2}
 			case 2
-			Change \{skater_cam_1_mode = 3}
+			change \{skater_cam_1_mode = 3}
 			case 3
-			Change \{skater_cam_1_mode = 4}
+			change \{skater_cam_1_mode = 4}
 			case 4
-			Change \{skater_cam_1_mode = 1}
+			change \{skater_cam_1_mode = 1}
 		endswitch
 		skatercam1 :sc_setmode \{mode = skater_cam_1_mode}
 	endif
@@ -137,11 +137,11 @@ script UserSelectTriangle
 		return
 	endif
 	if ($screenshotmode = 0)
-		Change \{screenshotmode = 1}
-		<text> = qs(0x6e88b80c)
+		change \{screenshotmode = 1}
+		<text> = qs("\LScreenShot Paused")
 	else
-		Change \{screenshotmode = 0}
-		<text> = qs(0x20ffabb3)
+		change \{screenshotmode = 0}
+		<text> = qs("\LScreenShot Unpaused")
 	endif
 	if ScreenElementExists \{id = center_tri}
 		SetScreenElementProps {
@@ -153,19 +153,19 @@ script UserSelectTriangle
 	if NotCD
 		switch $render_mode
 			case 0
-			Change \{render_mode = 1}
+			change \{render_mode = 1}
 			show_wireframe_mode
 			case 1
-			Change \{render_mode = 2}
+			change \{render_mode = 2}
 			show_wireframe_mode
 			case 2
-			Change \{render_mode = 3}
+			change \{render_mode = 3}
 			toggle_wireframe_skins
 			case 3
-			Change \{render_mode = 4}
+			change \{render_mode = 4}
 			toggle_wireframe_skins
 			case 4
-			Change \{render_mode = 0}
+			change \{render_mode = 0}
 			toggle_wireframe_skins
 		endswitch
 		if (($render_mode = 3) || ($render_mode = 4))
@@ -178,9 +178,9 @@ endscript
 viewer_taking_screenshot = 0
 
 script do_screenshot 
-	Change \{viewer_taking_screenshot = 1}
+	change \{viewer_taking_screenshot = 1}
 	hide_analog_options
-	if toggle2d \{OFF}
+	if toggle2d \{off}
 		Wait \{2
 			frames}
 		hide_analog_options
@@ -189,8 +189,8 @@ script do_screenshot
 		ScreenShot
 		Wait \{2
 			frames}
-		toggle2d \{On}
-		Change \{viewer_taking_screenshot = 0}
+		toggle2d \{on}
+		change \{viewer_taking_screenshot = 0}
 	else
 		Wait \{2
 			frames}
@@ -200,7 +200,7 @@ script do_screenshot
 		ScreenShot
 		Wait \{2
 			frames}
-		Change \{viewer_taking_screenshot = 0}
+		change \{viewer_taking_screenshot = 0}
 	endif
 endscript
 
@@ -215,19 +215,19 @@ script UserSelectCircle
 		if NotCD
 			switch wireframe_mode
 				case 0
-				Change \{wireframe_mode = 1}
+				change \{wireframe_mode = 1}
 				case 1
-				Change \{wireframe_mode = 2}
+				change \{wireframe_mode = 2}
 				case 2
-				Change \{wireframe_mode = 3}
+				change \{wireframe_mode = 3}
 				case 3
-				Change \{wireframe_mode = 4}
+				change \{wireframe_mode = 4}
 				case 4
-				Change \{wireframe_mode = 5}
+				change \{wireframe_mode = 5}
 				case 5
-				Change \{wireframe_mode = 6}
+				change \{wireframe_mode = 6}
 				case 6
-				Change \{wireframe_mode = 0}
+				change \{wireframe_mode = 0}
 			endswitch
 			setwireframemode \{mode = wireframe_mode}
 			show_wireframe_mode
@@ -237,7 +237,7 @@ endscript
 
 script UserSelectStart 
 	if NotCD
-		Change \{render_mode = 0}
+		change \{render_mode = 0}
 		setRenderMode \{mode = $render_mode}
 		TogglePass \{pass = 0}
 	endif
@@ -256,17 +256,17 @@ script show_analog_options
 	endif
 	if NOT ScreenElementExists \{id = viewer_options_anchor}
 		SetScreenElementLock \{id = root_window
-			OFF}
+			off}
 		CreateScreenElement \{id = viewer_options_anchor
-			Type = ContainerElement
+			type = ContainerElement
 			parent = root_window
-			Pos = (0.0, 0.0)
+			pos = (0.0, 0.0)
 			z_priority = 6000}
 		CreateScreenElement \{id = viewer_options_bg
-			Type = SpriteElement
+			type = SpriteElement
 			parent = viewer_options_anchor
 			dims = (1280.0, 160.0)
-			Pos = (0.0, 20.0)
+			pos = (0.0, 20.0)
 			just = [
 				left
 				top
@@ -279,21 +279,21 @@ script show_analog_options
 			]
 			alpha = 0.3}
 		CreateScreenElement \{id = left_anchor
-			Type = ContainerElement
+			type = ContainerElement
 			parent = viewer_options_anchor
-			Scale = 1.0
-			Pos = (256.0, 96.0)
+			scale = 1.0
+			pos = (256.0, 96.0)
 			just = [
 				left
 				top
 			]}
 		CreateScreenElement \{id = analog_l_l
-			Type = TextElement
+			type = TextElement
 			parent = left_anchor
 			font = debug
 			text = $all_text
-			Scale = 0.8
-			Pos = (0.0, 0.0)
+			scale = 0.8
+			pos = (0.0, 0.0)
 			just = [
 				right
 				center
@@ -305,12 +305,12 @@ script show_analog_options
 				255
 			]}
 		CreateScreenElement \{id = analog_l_r
-			Type = TextElement
+			type = TextElement
 			parent = left_anchor
 			font = debug
 			text = $alr_text
-			Scale = 0.8
-			Pos = (0.0, 0.0)
+			scale = 0.8
+			pos = (0.0, 0.0)
 			just = [
 				left
 				center
@@ -322,12 +322,12 @@ script show_analog_options
 				255
 			]}
 		CreateScreenElement \{id = analog_l_t_button
-			Type = TextElement
+			type = TextElement
 			parent = left_anchor
 			font = debug
-			text = qs(0xbb0b71dd)
-			Scale = 0.8
-			Pos = (0.0, 0.0)
+			text = qs("\L\b7")
+			scale = 0.8
+			pos = (0.0, 0.0)
 			just = [
 				center
 				bottom
@@ -339,12 +339,12 @@ script show_analog_options
 				255
 			]}
 		CreateScreenElement \{id = analog_l_t
-			Type = TextElement
+			type = TextElement
 			parent = left_anchor
 			font = debug
 			text = $alu_text
-			Scale = 0.8
-			Pos = (0.0, -28.0)
+			scale = 0.8
+			pos = (0.0, -28.0)
 			just = [
 				center
 				bottom
@@ -356,12 +356,12 @@ script show_analog_options
 				255
 			]}
 		CreateScreenElement \{id = analog_l_b_button
-			Type = TextElement
+			type = TextElement
 			parent = left_anchor
 			font = debug
-			text = qs(0x9026221e)
-			Scale = 0.8
-			Pos = (0.0, 0.0)
+			text = qs("\L\b4")
+			scale = 0.8
+			pos = (0.0, 0.0)
 			just = [
 				center
 				top
@@ -373,12 +373,12 @@ script show_analog_options
 				255
 			]}
 		CreateScreenElement \{id = analog_l_b
-			Type = TextElement
+			type = TextElement
 			parent = left_anchor
 			font = debug
 			text = $ald_text
-			Scale = 0.8
-			Pos = (0.0, 32.0)
+			scale = 0.8
+			pos = (0.0, 32.0)
 			just = [
 				center
 				top
@@ -390,21 +390,21 @@ script show_analog_options
 				255
 			]}
 		CreateScreenElement \{id = right_anchor
-			Type = ContainerElement
+			type = ContainerElement
 			parent = viewer_options_anchor
-			Scale = 1.0
-			Pos = (1024.0, 96.0)
+			scale = 1.0
+			pos = (1024.0, 96.0)
 			just = [
 				left
 				top
 			]}
 		CreateScreenElement \{id = analog_r_l
-			Type = TextElement
+			type = TextElement
 			parent = right_anchor
 			font = debug
 			text = $arl_text
-			Scale = 0.8
-			Pos = (0.0, 0.0)
+			scale = 0.8
+			pos = (0.0, 0.0)
 			just = [
 				right
 				center
@@ -416,12 +416,12 @@ script show_analog_options
 				255
 			]}
 		CreateScreenElement \{id = analog_r_r
-			Type = TextElement
+			type = TextElement
 			parent = right_anchor
 			font = debug
 			text = $arr_text
-			Scale = 0.8
-			Pos = (0.0, 0.0)
+			scale = 0.8
+			pos = (0.0, 0.0)
 			just = [
 				left
 				center
@@ -433,12 +433,12 @@ script show_analog_options
 				255
 			]}
 		CreateScreenElement \{id = analog_r_t_button
-			Type = TextElement
+			type = TextElement
 			parent = right_anchor
 			font = debug
-			text = qs(0xbb0b71dd)
-			Scale = 0.8
-			Pos = (0.0, 0.0)
+			text = qs("\L\b7")
+			scale = 0.8
+			pos = (0.0, 0.0)
 			just = [
 				center
 				bottom
@@ -450,12 +450,12 @@ script show_analog_options
 				255
 			]}
 		CreateScreenElement \{id = analog_r_t
-			Type = TextElement
+			type = TextElement
 			parent = right_anchor
 			font = debug
 			text = $aru_text
-			Scale = 0.8
-			Pos = (0.0, -28.0)
+			scale = 0.8
+			pos = (0.0, -28.0)
 			just = [
 				center
 				bottom
@@ -467,12 +467,12 @@ script show_analog_options
 				255
 			]}
 		CreateScreenElement \{id = analog_r_b_button
-			Type = TextElement
+			type = TextElement
 			parent = right_anchor
 			font = debug
-			text = qs(0x9026221e)
-			Scale = 0.8
-			Pos = (0.0, 0.0)
+			text = qs("\L\b4")
+			scale = 0.8
+			pos = (0.0, 0.0)
 			just = [
 				center
 				top
@@ -484,12 +484,12 @@ script show_analog_options
 				255
 			]}
 		CreateScreenElement \{id = analog_r_b
-			Type = TextElement
+			type = TextElement
 			parent = right_anchor
 			font = debug
 			text = $ard_text
-			Scale = 0.8
-			Pos = (0.0, 32.0)
+			scale = 0.8
+			pos = (0.0, 32.0)
 			just = [
 				center
 				top
@@ -501,21 +501,21 @@ script show_analog_options
 				255
 			]}
 		CreateScreenElement \{id = center_anchor
-			Type = ContainerElement
+			type = ContainerElement
 			parent = viewer_options_anchor
-			Scale = 1.0
-			Pos = (640.0, 96.0)
+			scale = 1.0
+			pos = (640.0, 96.0)
 			just = [
 				left
 				top
 			]}
 		CreateScreenElement \{id = center_square
-			Type = TextElement
+			type = TextElement
 			parent = center_anchor
 			font = debug
-			text = qs(0x3c0326f0)
-			Scale = 0.8
-			Pos = (-16.0, 0.0)
+			text = qs("\LScreen\b1")
+			scale = 0.8
+			pos = (-16.0, 0.0)
 			just = [
 				right
 				center
@@ -527,12 +527,12 @@ script show_analog_options
 				255
 			]}
 		CreateScreenElement \{id = center_circle
-			Type = TextElement
+			type = TextElement
 			parent = center_anchor
 			font = debug
-			text = qs(0x9bb944ae)
-			Scale = 0.8
-			Pos = (16.0, 0.0)
+			text = qs("\L\b2Drop")
+			scale = 0.8
+			pos = (16.0, 0.0)
 			just = [
 				left
 				center
@@ -544,12 +544,12 @@ script show_analog_options
 				255
 			]}
 		CreateScreenElement \{id = center_tri_button
-			Type = TextElement
+			type = TextElement
 			parent = center_anchor
 			font = debug
-			text = qs(0xf44ae71a)
-			Scale = 0.8
-			Pos = (0.0, 0.0)
+			text = qs("\L\b0")
+			scale = 0.8
+			pos = (0.0, 0.0)
 			just = [
 				center
 				bottom
@@ -561,28 +561,28 @@ script show_analog_options
 				255
 			]}
 		if ($screenshotmode = 0)
-			<text> = qs(0x20ffabb3)
+			<text> = qs("\LScreenShot Unpaused")
 		else
-			<text> = qs(0x6e88b80c)
+			<text> = qs("\LScreenShot Paused")
 		endif
 		CreateScreenElement {
 			id = center_tri
-			Type = TextElement
+			type = TextElement
 			parent = center_anchor
 			font = debug
 			text = <text>
-			Scale = 0.8
-			Pos = (0.0, -16.0)
+			scale = 0.8
+			pos = (0.0, -16.0)
 			just = [center bottom]
 			rgba = [100 100 100 255]
 		}
 		CreateScreenElement \{id = center_x_button
-			Type = TextElement
+			type = TextElement
 			parent = center_anchor
 			font = debug
-			text = qs(0xdf67b4d9)
-			Scale = 0.8
-			Pos = (0.0, 0.0)
+			text = qs("\L\b3")
+			scale = 0.8
+			pos = (0.0, 0.0)
 			just = [
 				center
 				top
@@ -594,12 +594,12 @@ script show_analog_options
 				255
 			]}
 		CreateScreenElement \{id = center_x
-			Type = TextElement
+			type = TextElement
 			parent = center_anchor
 			font = debug
-			text = qs(0x761a966f)
-			Scale = 0.8
-			Pos = (0.0, 32.0)
+			text = qs("\LViewer")
+			scale = 0.8
+			pos = (0.0, 32.0)
 			just = [
 				center
 				top
@@ -611,7 +611,7 @@ script show_analog_options
 				255
 			]}
 		SetScreenElementLock \{id = root_window
-			On}
+			on}
 	endif
 endscript
 
@@ -620,23 +620,23 @@ script hide_analog_options
 		DestroyScreenElement \{id = viewer_options_anchor}
 	endif
 endscript
-toggleviewmode_enabled = FALSE
+toggleviewmode_enabled = false
 
 script ToggleViewMode 
-	if ($toggleviewmode_enabled = FALSE)
+	if ($toggleviewmode_enabled = false)
 		return
 	endif
 	switch $view_mode
 		case 0
 		GetViewportCameraPos \{viewport = bg_viewport}
 		GetViewportCameraOrient \{viewport = bg_viewport}
-		Change \{viewercam_nofail = 1}
+		change \{viewercam_nofail = 1}
 		SetSaveZoneNameToCurrent
 		SetAnalogStickActiveForMenus \{0}
-		Change \{view_mode = 1}
+		change \{view_mode = 1}
 		SetEnableMovies \{0}
 		MakeGemsVisibleOnAllViewports
-		if NOT userviewerinfe
+		if NOT userViewerInFE
 			pausegh3
 		else
 			switch_to_obj_speed
@@ -644,24 +644,24 @@ script ToggleViewMode
 		endif
 		unpausespawnedscript \{update_crowd_model_cam}
 		disable_bg_viewport
-		enable_crowd_models_cfunc \{Active = true}
+		enable_crowd_models_cfunc \{active = true}
 		hide_hud
 		case 1
-		Change \{view_mode = 2}
+		change \{view_mode = 2}
 		case 2
-		Change \{viewercam_nofail = 0}
+		change \{viewercam_nofail = 0}
 		if NOT GotParam \{no_reload}
 			GetSaveZoneName
 			SetPakManCurrentBlock map = zones pakname = <save_zone>
 		endif
-		Change \{view_mode = 0}
+		change \{view_mode = 0}
 		SetAnalogStickActiveForMenus \{1}
-		viewer_cam :SetHFOV hfov = ($camera_fov)
+		viewer_cam :SetHFov hfov = ($camera_fov)
 		SetEnableMovies \{1}
 		show_hud
 		enable_bg_viewport
 		unpausegh3
-		if userviewerinfe
+		if userViewerInFE
 			disable_pause
 		else
 			enable_pause
@@ -671,7 +671,7 @@ script ToggleViewMode
 	if ($view_mode = 1)
 		if NOT GotParam \{viewerreload}
 			SetViewportCameraOrient viewport = bg_viewport at = <at> left = <left> up = <up>
-			SetViewportCameraPos viewport = bg_viewport Pos = <Pos>
+			SetViewportCameraPos viewport = bg_viewport pos = <pos>
 		endif
 	endif
 	if ($view_mode = 2)
@@ -688,16 +688,16 @@ script UserSelectX
 	if IsTrue \{$soft_assert_active}
 		return
 	endif
-	Change \{viewer_rotation_angle = 0}
+	change \{viewer_rotation_angle = 0}
 	ToggleViewMode
 	switch_to_env_speed
 	if ($view_mode = 1)
 		set_viewer_speed
 	endif
 	if ($show_battle_text = 1)
-		Change \{show_battle_text = 0}
+		change \{show_battle_text = 0}
 	else
-		Change \{show_battle_text = 1}
+		change \{show_battle_text = 1}
 	endif
 endscript
 
@@ -711,17 +711,17 @@ endscript
 
 script flip_crowd_debug_mode 
 	if ($crowd_debug_mode = 1)
-		Change \{crowd_debug_mode = 0}
+		change \{crowd_debug_mode = 0}
 	else
-		Change \{crowd_debug_mode = 1}
+		change \{crowd_debug_mode = 1}
 	endif
 endscript
 pak_mode = 0
 debug_encore = 0
 
 script UserSelectRightAnalogLeft 
-	Change \{current_transition = preencore}
-	Change \{debug_encore = 1}
+	change \{current_transition = preencore}
+	change \{debug_encore = 1}
 	SetGlobalTags \{Progression
 		params = {
 			encore_song = rebelyell
@@ -731,31 +731,31 @@ endscript
 toggle_nav_view_mode = 0
 
 script UserSelectRightAnalogRight 
-	Pos = (1000.0, 170.0)
-	if ($debug_forcescore = OFF)
-		Change \{debug_forcescore_dir = up}
-		Change \{debug_forcescore = poor}
-		create_panel_message text = qs(0x43c6fab9) Pos = <Pos> id = autoplay
+	pos = (1000.0, 170.0)
+	if ($debug_forcescore = off)
+		change \{debug_forcescore_dir = up}
+		change \{debug_forcescore = poor}
+		create_panel_message text = qs("\LAutoPlay: Poor") pos = <pos> id = autoplay
 	elseif ($debug_forcescore = poor &&
 			$debug_forcescore_dir = up)
-		Change \{debug_forcescore = medium}
-		create_panel_message text = qs(0x97004065) Pos = <Pos> id = autoplay
+		change \{debug_forcescore = medium}
+		create_panel_message text = qs("\LAutoPlay: Medium") pos = <pos> id = autoplay
 	elseif ($debug_forcescore = medium &&
 			$debug_forcescore_dir = up)
-		Change \{debug_forcescore = good}
-		create_panel_message text = qs(0x2920775c) Pos = <Pos> id = autoplay
+		change \{debug_forcescore = good}
+		create_panel_message text = qs("\LAutoPlay: Good") pos = <pos> id = autoplay
 	elseif ($debug_forcescore = good)
-		Change \{debug_forcescore_dir = down}
-		Change \{debug_forcescore = medium}
-		create_panel_message text = qs(0x97004065) Pos = <Pos> id = autoplay
+		change \{debug_forcescore_dir = down}
+		change \{debug_forcescore = medium}
+		create_panel_message text = qs("\LAutoPlay: Medium") pos = <pos> id = autoplay
 	elseif ($debug_forcescore = medium &&
 			$debug_forcescore_dir = down)
-		Change \{debug_forcescore = poor}
-		create_panel_message text = qs(0x43c6fab9) Pos = <Pos> id = autoplay
+		change \{debug_forcescore = poor}
+		create_panel_message text = qs("\LAutoPlay: Poor") pos = <pos> id = autoplay
 	elseif ($debug_forcescore = poor &&
 			$debug_forcescore_dir = down)
-		Change \{debug_forcescore = OFF}
-		create_panel_message text = qs(0x7234ebca) Pos = <Pos> id = autoplay
+		change \{debug_forcescore = off}
+		create_panel_message text = qs("\LAutoPlay: OFF") pos = <pos> id = autoplay
 	endif
 	CrowdIncrease \{player_status = player1_status}
 endscript
@@ -763,18 +763,18 @@ endscript
 script UserSelectLeftAnalogUp 
 	calc_songscoreinfo
 	cutoff = ($star_rating_cutoffs.star5 [0])
-	if ($debug_forcescore = OFF)
-		Change structurename = player1_status score = ($player1_status.base_score * <cutoff> + 1)
-		Change structurename = player1_status total_notes = ($player1_status.max_notes)
-		Change structurename = player1_status notes_hit = ($player1_status.total_notes)
+	if ($debug_forcescore = off)
+		change structurename = player1_status score = ($player1_status.base_score * <cutoff> + 1)
+		change structurename = player1_status total_notes = ($player1_status.max_notes)
+		change structurename = player1_status notes_hit = ($player1_status.total_notes)
 	elseif ($debug_forcescore = poor)
-		Change structurename = player1_status score = ($player1_status.base_score / 2 + 1)
+		change structurename = player1_status score = ($player1_status.base_score / 2 + 1)
 	elseif ($debug_forcescore = medium)
-		Change structurename = player1_status score = ($player1_status.base_score + 1)
+		change structurename = player1_status score = ($player1_status.base_score + 1)
 	elseif ($debug_forcescore = good)
-		Change structurename = player1_status score = ($player1_status.base_score * <cutoff> + 1)
-		Change structurename = player1_status total_notes = ($player1_status.max_notes)
-		Change structurename = player1_status notes_hit = ($player1_status.total_notes)
+		change structurename = player1_status score = ($player1_status.base_score * <cutoff> + 1)
+		change structurename = player1_status total_notes = ($player1_status.max_notes)
+		change structurename = player1_status notes_hit = ($player1_status.total_notes)
 	endif
 	if ($game_mode = training)
 		finish_practice_song
@@ -800,7 +800,7 @@ script UserSelectLeftAnalogLeft
 	if ScreenElementExists \{id = view_models_menu}
 		set_player_to_model
 	else
-		SpawnScriptNow \{profile_camera_cuts}
+		spawnscriptnow \{profile_camera_cuts}
 	endif
 endscript
 
@@ -817,28 +817,28 @@ endscript
 script UserViewerSquare 
 	if (($cas_free_cam_active) = 1)
 		if ($viewer_rotation_angle = 0)
-			Change \{viewer_rotation_angle = 1}
-			CenterCamera \{X = -10
+			change \{viewer_rotation_angle = 1}
+			CenterCamera \{x = -10
 				y = -90
-				Scale = 0.7}
+				scale = 0.7}
 		else
 			if ($viewer_rotation_angle = 1)
-				CenterCamera \{X = -10
+				CenterCamera \{x = -10
 					y = -180
-					Scale = 0.7}
-				Change \{viewer_rotation_angle = 2}
+					scale = 0.7}
+				change \{viewer_rotation_angle = 2}
 			else
 				if ($viewer_rotation_angle = 2)
-					Change \{viewer_rotation_angle = 3}
-					CenterCamera \{X = -10
+					change \{viewer_rotation_angle = 3}
+					CenterCamera \{x = -10
 						y = -270
-						Scale = 0.7}
+						scale = 0.7}
 				else
 					if ($viewer_rotation_angle = 3)
-						Change \{viewer_rotation_angle = 0}
-						CenterCamera \{X = -10
+						change \{viewer_rotation_angle = 0}
+						CenterCamera \{x = -10
 							y = 0
-							Scale = 0.7}
+							scale = 0.7}
 					endif
 				endif
 			endif
@@ -854,23 +854,23 @@ USER_VIEWER_TRIANGLE_TOD = 1
 script UserViewerTriangle 
 	if (($cas_free_cam_active) = 1)
 		if ($viewer_rotation_angle = 0)
-			Change \{viewer_rotation_angle = 1}
-			CenterCamera \{Scale = 0.5
+			change \{viewer_rotation_angle = 1}
+			CenterCamera \{scale = 0.5
 				y = -45}
 		else
 			if ($viewer_rotation_angle = 1)
-				CenterCamera \{Scale = 0.5
+				CenterCamera \{scale = 0.5
 					y = -135}
-				Change \{viewer_rotation_angle = 2}
+				change \{viewer_rotation_angle = 2}
 			else
 				if ($viewer_rotation_angle = 2)
-					Change \{viewer_rotation_angle = 3}
-					CenterCamera \{Scale = 0.5
+					change \{viewer_rotation_angle = 3}
+					CenterCamera \{scale = 0.5
 						y = -225}
 				else
 					if ($viewer_rotation_angle = 3)
-						Change \{viewer_rotation_angle = 0}
-						CenterCamera \{Scale = 0.5
+						change \{viewer_rotation_angle = 0}
+						CenterCamera \{scale = 0.5
 							y = -315}
 					endif
 				endif
@@ -880,13 +880,13 @@ script UserViewerTriangle
 endscript
 
 script switch_to_env_speed 
-	Change Viewer_move_mode = ($Env_Viewer_move_mode)
-	Change \{viewer_speed = env}
+	change Viewer_move_mode = ($Env_Viewer_move_mode)
+	change \{viewer_speed = env}
 endscript
 
 script switch_to_obj_speed 
-	Change Viewer_move_mode = ($Obj_Viewer_move_mode)
-	Change \{viewer_speed = Obj}
+	change Viewer_move_mode = ($Obj_Viewer_move_mode)
+	change \{viewer_speed = obj}
 endscript
 
 script set_viewer_speed 
@@ -895,8 +895,8 @@ script set_viewer_speed
 		SetMovementVelocity \{2.5}
 		SetRotateVelocity \{50}
 		create_panel_message \{id = viewermovemode
-			text = qs(0x4028308f)
-			Pos = (320.0, 84.0)
+			text = qs("\L1 Super Slow cam")
+			pos = (320.0, 84.0)
 			rgba = [
 				128
 				0
@@ -907,8 +907,8 @@ script set_viewer_speed
 		SetMovementVelocity \{6}
 		SetRotateVelocity \{80}
 		create_panel_message \{id = viewermovemode
-			text = qs(0xd1a924c7)
-			Pos = (320.0, 84.0)
+			text = qs("\L2 Slow cam")
+			pos = (320.0, 84.0)
 			rgba = [
 				255
 				128
@@ -919,8 +919,8 @@ script set_viewer_speed
 		SetMovementVelocity \{18}
 		SetRotateVelocity \{120}
 		create_panel_message \{id = viewermovemode
-			text = qs(0x1bc03998)
-			Pos = (320.0, 84.0)
+			text = qs("\L3 Medium cam")
+			pos = (320.0, 84.0)
 			rgba = [
 				200
 				200
@@ -931,8 +931,8 @@ script set_viewer_speed
 		SetMovementVelocity \{43}
 		SetRotateVelocity \{160}
 		create_panel_message \{id = viewermovemode
-			text = qs(0xe32ca150)
-			Pos = (320.0, 84.0)
+			text = qs("\L4 Medium Fast cam")
+			pos = (320.0, 84.0)
 			rgba = [
 				255
 				255
@@ -943,8 +943,8 @@ script set_viewer_speed
 		SetMovementVelocity \{127}
 		SetRotateVelocity \{200}
 		create_panel_message \{id = viewermovemode
-			text = qs(0xf94c0af9)
-			Pos = (320.0, 84.0)
+			text = qs("\L5 Fast cam")
+			pos = (320.0, 84.0)
 			rgba = [
 				0
 				255
@@ -953,92 +953,92 @@ script set_viewer_speed
 			]}
 	endswitch
 	if ($viewer_speed = env)
-		Change Env_Viewer_move_mode = ($Viewer_move_mode)
+		change Env_Viewer_move_mode = ($Viewer_move_mode)
 	else
-		Change Obj_Viewer_move_mode = ($Viewer_move_mode)
+		change Obj_Viewer_move_mode = ($Viewer_move_mode)
 	endif
 endscript
 
 script UserViewerL1 
-	if userviewerinfe
+	if userViewerInFE
 		return
 	endif
-	Change \{viewer_rotation_angle = 0}
+	change \{viewer_rotation_angle = 0}
 	switch $Viewer_move_mode
 		case 0
-		Change \{Viewer_move_mode = 1}
+		change \{Viewer_move_mode = 1}
 		case 1
-		Change \{Viewer_move_mode = 2}
+		change \{Viewer_move_mode = 2}
 		case 2
-		Change \{Viewer_move_mode = 3}
+		change \{Viewer_move_mode = 3}
 		case 3
-		Change \{Viewer_move_mode = 4}
+		change \{Viewer_move_mode = 4}
 		case 4
-		Change \{Viewer_move_mode = 0}
+		change \{Viewer_move_mode = 0}
 	endswitch
 	set_viewer_speed
 endscript
 
 script UserViewerL2 
-	if userviewerinfe
+	if userViewerInFE
 		return
 	endif
-	Change \{viewer_rotation_angle = 0}
+	change \{viewer_rotation_angle = 0}
 	switch $Viewer_move_mode
 		case 0
-		Change \{Viewer_move_mode = 4}
+		change \{Viewer_move_mode = 4}
 		case 1
-		Change \{Viewer_move_mode = 0}
+		change \{Viewer_move_mode = 0}
 		case 2
-		Change \{Viewer_move_mode = 1}
+		change \{Viewer_move_mode = 1}
 		case 3
-		Change \{Viewer_move_mode = 2}
+		change \{Viewer_move_mode = 2}
 		case 4
-		Change \{Viewer_move_mode = 3}
+		change \{Viewer_move_mode = 3}
 	endswitch
 	set_viewer_speed
 endscript
 
-script userviewerinfe 
+script userViewerInFE 
 	if ($cas_heap_state = in_cas)
 		return \{true}
 	endif
-	fe_asset_name = `zones/z_frontend/z_frontend.scn`
-	if isassetloaded Name = <fe_asset_name>
+	fe_asset_name = `zones/Z_Frontend/Z_Frontend.scn`
+	if IsAssetLoaded name = <fe_asset_name>
 		return \{true}
 	endif
-	return \{FALSE}
+	return \{false}
 endscript
 
 script show_wireframe_mode 
 	switch wireframe_mode
 		case 0
-		wireframe_message \{text = qs(0xdfe67166)}
+		wireframe_message \{text = qs("\LWireframe : Face Flags")}
 		case 1
-		wireframe_message \{text = qs(0xd2c77ba0)}
+		wireframe_message \{text = qs("\LWireframe : Poly Density")}
 		case 2
-		wireframe_message \{text = qs(0x005bdf57)}
+		wireframe_message \{text = qs("\LWireframe : Low Poly Highlight")}
 		case 3
-		wireframe_message \{text = qs(0x996bfb67)}
+		wireframe_message \{text = qs("\LWireframe : Unique object colors")}
 		case 4
-		wireframe_message \{text = qs(0x929d2efd)}
+		wireframe_message \{text = qs("\LWireframe : Renderable Unique MESH colors")}
 		case 5
-		wireframe_message \{text = qs(0xd914aa8a)}
+		wireframe_message \{text = qs("\LWireframe : Renderable MESH vertex density")}
 		case 6
-		wireframe_message \{text = qs(0x52b5a4d5)}
+		wireframe_message \{text = qs("\LWireframe : Occlusion Map")}
 	endswitch
 endscript
 
-script wireframe_message \{text = qs(0x3d6b48c8)}
-	create_panel_message text = <text> id = wireframe_mess rgba = [200 128 128 128] Pos = (20.0, 340.0) just = [left center] Scale = 5 style = wireframe_style
+script wireframe_message \{text = qs("\LWireframe")}
+	create_panel_message text = <text> id = wireframe_mess rgba = [200 128 128 128] pos = (20.0, 340.0) just = [left center] scale = 5 style = wireframe_style
 endscript
 
 script wireframe_style 
-	legacydomorph \{time = 0
-		Scale = (1.0, 1.0)}
-	legacydomorph \{time = 3
-		Scale = (1.0, 1.0)}
-	legacydomorph \{time = 1
+	LegacyDoMorph \{time = 0
+		scale = (1.0, 1.0)}
+	LegacyDoMorph \{time = 3
+		scale = (1.0, 1.0)}
+	LegacyDoMorph \{time = 1
 		alpha = 0}
 	Die
 endscript
@@ -1050,7 +1050,7 @@ script ViewerLeft
 		if (<hfov> > 150)
 			hfov = 150
 		endif
-		viewer_cam :SetHFOV hfov = <hfov>
+		viewer_cam :SetHFov hfov = <hfov>
 		viewer_print_debug_info
 	endif
 endscript
@@ -1062,17 +1062,17 @@ script ViewerRight
 		if (<hfov> < 5)
 			hfov = 5
 		endif
-		viewer_cam :SetHFOV hfov = <hfov>
+		viewer_cam :SetHFov hfov = <hfov>
 		viewer_print_debug_info
 	endif
 endscript
 
 script ViewerUp 
-	printf \{qs(0xe6609ef6)}
+	printf \{qs("\LViewerUp - Deprecated")}
 endscript
 
 script ViewerDown 
-	printf \{qs(0xd7ab2617)}
+	printf \{qs("\LViewerDown - Deprecated")}
 endscript
 
 script viewer_print_debug_info 

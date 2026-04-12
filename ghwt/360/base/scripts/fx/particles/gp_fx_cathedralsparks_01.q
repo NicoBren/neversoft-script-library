@@ -1,16 +1,16 @@
-gp_fx_cathedralsparks_01 = {
-	Pos = (-2.634338, 0.0, 4.5144744)
-	Angles = (0.0, 0.0, 0.0)
+GP_FX_CathedralSparks_01 = {
+	pos = (-2.634338, 0.0, 4.5144744)
+	angles = (0.0, 0.0, 0.0)
 	Class = ParticleObject
 	ParticleType = FlexParticle
-	Type = flat
-	Active
+	type = flat
+	active
 	CreatedAtStart
 	EmitRangeDims = (0.01, 0.01, 0.01)
 	DoCircularEmit
-	Emit_Target = (0.0, 1.0, 0.0)
+	emit_Target = (0.0, 1.0, 0.0)
 	EmitAngle = (0.0, 0.0, 0.0)
-	Force = (0.0, -8.0, 0.0)
+	force = (0.0, -8.0, 0.0)
 	WindCoeff = 0.0
 	LocalWindCoeff = 0.0
 	EmitterVelocityWeight = 0.0
@@ -19,11 +19,11 @@ gp_fx_cathedralsparks_01 = {
 	BounceCoeff = 0.2
 	BounceCallbackRate = 0.0
 	LifeRange = (1.5, 2.0)
-	Emit_Rate = 100.0
-	Max = 0
+	emit_rate = 100.0
+	max = 0
 	TimeSeed = 2.0
-	LifeTime = 0.3
-	EmitNum = 0
+	lifeTime = 0.3
+	emitNum = 0
 	FollowEmitter = 0.0
 	EmitFunction = constant
 	EmitPeriod = 1.0
@@ -38,17 +38,17 @@ gp_fx_cathedralsparks_01 = {
 	AlignWithPath
 	PathFollowTime = 0.05
 	History = 18
-	HistoryListCoordinateSpace = World
-	Color = -1719041
+	HistoryListCoordinateSpace = world
+	color = -1719041
 	LOD_Default
 	QuickMaterial = {
 		TextureLayout = Layout2x2
 		DiffuseTextureEnabled
-		DiffuseTexture = jow_confetti01
+		DiffuseTexture = JOW_Confetti01
 		SpecularPower = 0
-		Bloom
-		AlphaCutoff = 55
-		BlendMode = add
+		bloom
+		alphacutoff = 55
+		blendMode = Add
 		QuadAnimationFPS = 0
 	}
 	Knot = [

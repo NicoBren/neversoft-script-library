@@ -93,25 +93,25 @@ training_versus_tutorial_script = [
 	}
 ]
 
-script training_7_generic_placeholder_alert \{text_to_show = qs(0xd1bb5beb)}
+script training_7_generic_placeholder_alert \{text_to_show = qs("\Lmissing text")}
 	training_show_title title = <text_to_show>
 	Wait \{3
-		Seconds
+		seconds
 		ignoreslomo}
 	training_destroy_title \{ignoreslomo}
 endscript
 
 script training_versus_tutorial_startup 
 	training_init_session
-	LaunchEvent \{Type = unfocus
+	LaunchEvent \{type = unfocus
 		target = root_window}
 	create_training_pause_handler
 	training_create_narrator_icons
 endscript
 
 script training_versus_tutorial_show_title 
-	Change \{g_training_lessons_completed = 0}
-	training_show_title \{title = qs(0x2a84dbaf)}
+	change \{g_training_lessons_completed = 0}
+	training_show_title \{title = qs("Versus Tutorial")}
 	begin
 	if ($transitions_locked = 0)
 		break
@@ -122,40 +122,40 @@ script training_versus_tutorial_show_title
 	repeat
 	create_training_pause_handler
 	Wait \{3
-		Seconds}
+		seconds}
 	training_destroy_title
 endscript
 
 script training_7_1_show_lesson_header 
-	training_set_lesson_header_text \{number = qs(0x22ee76e7)
-		text = qs(0x1c559b95)}
+	training_set_lesson_header_text \{number = qs("\L1")
+		text = qs("Modes of Play")}
 	if ScreenElementExists \{id = lesson_header_frame}
-		lesson_header_frame :se_setprops \{alpha = 0}
+		lesson_header_frame :SE_SetProps \{alpha = 0}
 	endif
 endscript
 
 script training_7_1_show_different_gametypes 
 	CreateScreenElement \{parent = training_container
-		Type = SpriteElement
+		type = SpriteElement
 		id = tutorial_versus_menu_sprite
 		just = [
 			center
 			center
 		]
 		texture = tutorial_versus_menu
-		Pos = (610.0, 120.0)
-		Scale = (2.7, 2.7)
+		pos = (610.0, 120.0)
+		scale = (2.7, 2.7)
 		z_priority = 4}
-	CreateScreenElement \{Type = ContainerElement
+	CreateScreenElement \{type = ContainerElement
 		id = versus_fake_menu_cont
 		parent = training_container
-		Pos = (-80.0, 80.0)
+		pos = (-80.0, 80.0)
 		z_priority = 5}
 	CreateScreenElement \{parent = versus_fake_menu_cont
 		id = versus_fake_menu
-		Type = descinterface
+		type = DescInterface
 		desc = 'fake_menu'}
-	if versus_fake_menu :desc_resolvealias \{Name = alias_fake_menu_vmenu}
+	if versus_fake_menu :Desc_ResolveAlias \{name = alias_fake_menu_vmenu}
 		AssignAlias id = <resolved_id> alias = fake_menu_vmenu
 		training_7_highlight_fake_menu_item \{index = 0}
 	endif
@@ -163,13 +163,13 @@ script training_7_1_show_different_gametypes
 	training_show_lesson_header
 	training_play_sound \{Sound = 'Tut_Vs_Modes_01_BAS'}
 	Wait \{4.75
-		Second}
+		second}
 	training_7_highlight_fake_menu_item \{index = 1}
 	Wait \{1
-		Second}
+		second}
 	training_7_highlight_fake_menu_item \{index = 2}
 	Wait \{1
-		Second}
+		second}
 	training_wait_for_sound \{Sound = 'Tut_Vs_Modes_01_BAS'}
 	DestroyScreenElement \{id = versus_fake_menu}
 	training_hide_narrator
@@ -186,7 +186,7 @@ script training_7_highlight_fake_menu_item \{index = 0}
 		retail_menu_unfocus id = (<children> [<i>])
 	endif
 	<i> = (<i> + 1)
-	repeat <array_Size>
+	repeat <array_size>
 endscript
 
 script training_7_1_complete_message 
@@ -198,23 +198,23 @@ endscript
 
 script training_7_2_show_lesson_header 
 	create_training_pause_handler
-	LaunchEvent \{Type = focus
+	LaunchEvent \{type = focus
 		target = menu_tutorial}
-	training_set_lesson_header_text \{number = qs(0x09c32524)
-		text = qs(0xa6ec9fe7)}
+	training_set_lesson_header_text \{number = qs("\L2")
+		text = qs("Face-Off")}
 	if ScreenElementExists \{id = lesson_header_frame}
-		lesson_header_frame :se_setprops \{alpha = 0}
+		lesson_header_frame :SE_SetProps \{alpha = 0}
 	endif
 endscript
 
 script training_7_2_show_lead_indicator 
 	training_7_2_start_gem_scrollers
 	create_training_pause_handler
-	LaunchEvent \{Type = focus
+	LaunchEvent \{type = focus
 		target = menu_tutorial}
-	Change \{game_mode = tutorial}
+	change \{game_mode = tutorial}
 	Wait \{1
-		Second
+		second
 		ignoreslomo}
 	create_training_pause_handler
 	training_pause_gem_scroller
@@ -223,41 +223,41 @@ script training_7_2_show_lead_indicator
 	training_play_sound \{Sound = 'Tut_Vs_FaceOff_01_BAS'
 		Wait}
 	Wait \{0.5
-		Seconds
+		seconds
 		ignoreslomo}
 	training_play_sound \{Sound = 'Tut_Vs_FaceOff_02_BAS'
 		Wait}
 	Wait \{0.5
-		Seconds
+		seconds
 		ignoreslomo}
 	training_play_sound \{Sound = 'Tut_Vs_FaceOff_03_BAS'
 		Wait}
 	Wait \{0.5
-		Seconds
+		seconds
 		ignoreslomo}
 endscript
 
 script training_7_2_complete_message 
 	training_play_sound \{Sound = 'Tut_Vs_FaceOff_04_BAS'}
 	Wait \{4
-		Seconds
+		seconds
 		ignoreslomo}
 	training_add_arrow \{id = training_arrow
 		life = 4.0
-		Pos = (635.0, 250.0)
-		Scale = 0.7}
+		pos = (635.0, 250.0)
+		scale = 0.7}
 	Wait \{4
-		Seconds
+		seconds
 		ignoreslomo}
 	training_hide_narrator
 	training_generic_lesson_complete
 endscript
 
 script training_7_3_show_lesson_header 
-	training_set_lesson_header_text \{number = qs(0x10d81465)
-		text = qs(0x8cea541e)}
+	training_set_lesson_header_text \{number = qs("\L3")
+		text = qs("Battle Power")}
 	if ScreenElementExists \{id = lesson_header_frame}
-		lesson_header_frame :se_setprops \{alpha = 0}
+		lesson_header_frame :SE_SetProps \{alpha = 0}
 	endif
 endscript
 
@@ -269,14 +269,14 @@ script training_7_3_show_battle_highways
 	training_hide_lesson_header
 	training_hide_narrator
 	training_7_3_start_gem_scrollers
-	KillSpawnedScript \{Name = update_score_fast}
+	KillSpawnedScript \{name = update_score_fast}
 	Wait \{1
-		Second
+		second
 		ignoreslomo}
-	Change \{game_mode = tutorial}
-	Change \{tutorial_battle = 1}
+	change \{game_mode = tutorial}
+	change \{tutorial_battle = 1}
 	Wait \{2.5
-		Second
+		second
 		ignoreslomo}
 	create_training_pause_handler
 	training_pause_gem_scroller
@@ -285,17 +285,17 @@ script training_7_3_show_battle_highways
 endscript
 
 script training_7_3_start_hit_notes_task 
-	training_change_header_type \{Type = battle}
+	training_change_header_type \{type = battle}
 	training_hide_lesson_header
 	if ScreenElementExists \{id = lesson_header_frame}
-		lesson_header_frame :se_setprops \{alpha = 1}
+		lesson_header_frame :SE_SetProps \{alpha = 1}
 	endif
-	training_set_lesson_header_text \{number = qs(0x10d81465)
-		text = qs(0x8cea541e)}
-	training_add_lesson_body_text \{number = qs(0x22ee76e7)
-		text = qs(0x1fcef202)}
+	training_set_lesson_header_text \{number = qs("\L3")
+		text = qs("Battle Power")}
+	training_add_lesson_body_text \{number = qs("\L1")
+		text = qs("Hitting ALL of the special notes in a ROW will give you a BATTLE POWER.")}
 	training_show_lesson_header
-	training_set_task_header_body \{text = qs(0x7a0f407e)}
+	training_set_task_header_body \{text = qs("Hit all of the notes in a row.")}
 	training_show_task_header
 	training_resume_gem_scroller
 	training_7_wait_for_obtain_1_attack
@@ -306,12 +306,12 @@ script training_7_3_complete_message
 endscript
 
 script training_7_4_show_lesson_header 
-	training_change_header_type \{Type = battle}
+	training_change_header_type \{type = battle}
 	training_hide_lesson_header
-	training_set_lesson_header_text \{number = qs(0x5f9982a2)
-		text = qs(0x1259c350)}
+	training_set_lesson_header_text \{number = qs("\L4")
+		text = qs("Tilting for Battle Attack")}
 	if ScreenElementExists \{id = lesson_header_frame}
-		lesson_header_frame :se_setprops \{alpha = 1}
+		lesson_header_frame :SE_SetProps \{alpha = 1}
 	endif
 endscript
 
@@ -321,49 +321,49 @@ endscript
 
 script training_7_4_start_tilt_task 
 	Wait \{1
-		Second
+		second
 		ignoreslomo}
-	Change \{game_mode = tutorial}
-	Change \{tutorial_battle = 1}
+	change \{game_mode = tutorial}
+	change \{tutorial_battle = 1}
 	Wait \{2.5
-		Second
+		second
 		ignoreslomo}
-	EnableInput OFF controller = ($player1_status.controller)
+	EnableInput off controller = ($player1_status.controller)
 	battlemode_ready \{battle_gem = 0
 		player_status = player1_status}
-	Change \{structurename = player1_status
+	change \{structurename = player1_status
 		current_num_powerups = 0}
 	create_training_pause_handler
 	training_pause_gem_scroller
-	EnableInput OFF controller = ($player1_status.controller)
-	Change \{structurename = player1_status
+	EnableInput off controller = ($player1_status.controller)
+	change \{structurename = player1_status
 		star_power_usable = 0}
-	Change \{structurename = player1_status
+	change \{structurename = player1_status
 		last_selected_attack = -1}
 	training_play_sound \{Sound = 'Tut_Vs_BattleTilt_01_BAS'}
 	Wait \{4
-		Seconds
+		seconds
 		ignoreslomo}
 	training_add_arrow \{id = training_attack_indicator
 		life = 3
-		Pos = (350.0, 220.0)
+		pos = (350.0, 220.0)
 		rot = 90
-		Scale = 0.7
+		scale = 0.7
 		z = 60}
 	training_wait_for_sound \{Sound = 'Tut_Vs_BattleTilt_01_BAS'}
-	training_add_lesson_body_text \{number = qs(0x22ee76e7)
-		text = qs(0x413e9e92)}
+	training_add_lesson_body_text \{number = qs("\L1")
+		text = qs("To unleash a Battle Power, TILT your guitar.")}
 	training_show_lesson_header
-	training_set_task_header_body \{text = qs(0xa45d825c)}
+	training_set_task_header_body \{text = qs("Unleash an Amp Overload")}
 	training_show_task_header
 	Wait \{2
-		Seconds
+		seconds
 		ignoreslomo}
 	training_resume_gem_scroller
 	EnableInput controller = ($player1_status.controller)
-	Change \{structurename = player1_status
+	change \{structurename = player1_status
 		star_power_usable = 1}
-	Change \{structurename = player1_status
+	change \{structurename = player1_status
 		current_num_powerups = 1}
 	training_7_4_wait_for_attack
 endscript
@@ -375,12 +375,12 @@ script training_7_4_complete_message
 endscript
 
 script training_7_5_show_lesson_header 
-	training_change_header_type \{Type = battle}
+	training_change_header_type \{type = battle}
 	training_hide_lesson_header
-	training_set_lesson_header_text \{number = qs(0x4682b3e3)
-		text = qs(0xa5aa5379)}
+	training_set_lesson_header_text \{number = qs("\L5")
+		text = qs("Different Attacks")}
 	if ScreenElementExists \{id = lesson_header_frame}
-		lesson_header_frame :se_setprops \{alpha = 1}
+		lesson_header_frame :SE_SetProps \{alpha = 1}
 	endif
 endscript
 
@@ -390,12 +390,12 @@ endscript
 
 script training_7_5_start_fix_broken_string_task 
 	Wait \{1
-		Second
+		second
 		ignoreslomo}
-	Change \{game_mode = tutorial}
-	Change \{tutorial_battle = 1}
+	change \{game_mode = tutorial}
+	change \{tutorial_battle = 1}
 	Wait \{2.5
-		Second
+		second
 		ignoreslomo}
 	battlemode_ready \{battle_gem = 5
 		player_status = player2_status}
@@ -403,27 +403,27 @@ script training_7_5_start_fix_broken_string_task
 	training_pause_gem_scroller
 	training_play_sound \{Sound = 'Tut_Vs_DiffAttacks_01_BAS'}
 	Wait \{9
-		Seconds
+		seconds
 		ignoreslomo}
 	training_add_arrow \{id = training_attack_indicator
 		life = 3
-		Pos = (925.0, 220.0)
+		pos = (925.0, 220.0)
 		rot = -90
-		Scale = 0.7
+		scale = 0.7
 		z = 60}
 	training_wait_for_sound \{Sound = 'Tut_Vs_DiffAttacks_01_BAS'}
-	training_add_lesson_body_text \{number = qs(0x22ee76e7)
-		text = qs(0x9271641b)}
-	training_add_lesson_body_text \{number = qs(0x09c32524)
-		text = qs(0x1a03876e)}
-	training_add_lesson_body_text \{number = qs(0x10d81465)
-		text = qs(0xeb8d2055)}
+	training_add_lesson_body_text \{number = qs("\L1")
+		text = qs("Battle Powers CAN also be used against you.")}
+	training_add_lesson_body_text \{number = qs("\L2")
+		text = qs("When attacked, some will be FIXED over time or by performing an action.")}
+	training_add_lesson_body_text \{number = qs("\L3")
+		text = qs("To FIX a broken string, TAP the BUTTON of the broken string repeatedly.")}
 	training_show_lesson_header
-	training_set_task_header_body \{text = qs(0x38b89696)}
+	training_set_task_header_body \{text = qs("Fix your Broken String")}
 	training_show_task_header
 	training_resume_gem_scroller
 	Wait \{1
-		Seconds
+		seconds
 		ignoreslomo}
 	battle_trigger_on \{player_status = player2_status}
 	training_7_5_wait_for_attack
@@ -441,13 +441,13 @@ script training_7_5_wait_for_attack
 		gameframe}
 	repeat
 	Wait \{1
-		Second
+		second
 		ignoreslomo}
 endscript
 
 script training_7_5_complete_message 
 	training_pause_gem_scroller
-	EnableInput OFF controller = ($player1_status.controller)
+	EnableInput off controller = ($player1_status.controller)
 	training_play_sound \{Sound = 'Tut_Vs_DiffAttacks_02_BAS'
 		Wait}
 	EnableInput controller = ($player1_status.controller)
@@ -455,12 +455,12 @@ script training_7_5_complete_message
 endscript
 
 script training_7_6_show_lesson_header 
-	training_change_header_type \{Type = battle}
+	training_change_header_type \{type = battle}
 	training_hide_lesson_header
-	training_set_lesson_header_text \{number = qs(0x6dafe020)
-		text = qs(0xd9c7b22a)}
+	training_set_lesson_header_text \{number = qs("\L6")
+		text = qs("Multiple Attacks")}
 	if ScreenElementExists \{id = lesson_header_frame}
-		lesson_header_frame :se_setprops \{alpha = 1}
+		lesson_header_frame :SE_SetProps \{alpha = 1}
 	endif
 endscript
 
@@ -470,46 +470,46 @@ endscript
 
 script training_7_6_start_multiple_attacks_task 
 	Wait \{1
-		Second
+		second
 		ignoreslomo}
-	Change \{game_mode = tutorial}
-	Change \{tutorial_battle = 1}
+	change \{game_mode = tutorial}
+	change \{tutorial_battle = 1}
 	Wait \{2.5
-		Second
+		second
 		ignoreslomo}
-	EnableInput OFF controller = ($player1_status.controller)
+	EnableInput off controller = ($player1_status.controller)
 	create_training_pause_handler
 	battlemode_ready \{battle_gem = 0
 		player_status = player1_status}
 	battlemode_ready \{battle_gem = 2
 		player_status = player1_status}
-	Change \{structurename = player1_status
+	change \{structurename = player1_status
 		current_num_powerups = 0}
 	training_pause_gem_scroller
-	EnableInput OFF controller = ($player1_status.controller)
-	Change \{structurename = player1_status
+	EnableInput off controller = ($player1_status.controller)
+	change \{structurename = player1_status
 		star_power_usable = 0}
-	Change \{structurename = player1_status
+	change \{structurename = player1_status
 		last_selected_attack = -1}
 	training_play_sound \{Sound = 'Tut_Vs_Multiples_01_BAS'
 		Wait}
-	training_add_lesson_body_text \{number = qs(0x22ee76e7)
-		text = qs(0x4b38101e)}
-	training_add_lesson_body_text \{number = qs(0x09c32524)
-		text = qs(0xb963b325)}
-	training_add_lesson_body_text \{number = qs(0x10d81465)
-		text = qs(0x85081f1f)}
+	training_add_lesson_body_text \{number = qs("\L1")
+		text = qs("You can hold MORE than one Battle Power.")}
+	training_add_lesson_body_text \{number = qs("\L2")
+		text = qs("Multiple Battle Powers are FIRED off in order.")}
+	training_add_lesson_body_text \{number = qs("\L3")
+		text = qs("Tilt your guitar to fire them in sequence.")}
 	training_show_lesson_header
-	training_set_task_header_body \{text = qs(0xb9000698)}
+	training_set_task_header_body \{text = qs("Fire off multiple attacks")}
 	training_show_task_header
 	training_resume_gem_scroller
 	EnableInput controller = ($player1_status.controller)
-	Change \{structurename = player1_status
+	change \{structurename = player1_status
 		star_power_usable = 1}
-	Change \{training_star_power_active = 0}
-	Change \{lesson_complete = 0}
-	Change \{training_song_over = 0}
-	Change \{structurename = player1_status
+	change \{training_star_power_active = 0}
+	change \{LESSON_COMPLETE = 0}
+	change \{training_song_over = 0}
+	change \{structurename = player1_status
 		current_num_powerups = 2}
 	training_7_6_wait_for_attack
 	training_7_6_wait_for_attack
@@ -535,7 +535,7 @@ endscript
 
 script training_7_6_complete_message 
 	Wait \{1
-		Second
+		second
 		ignoreslomo}
 	training_hide_lesson_header
 	training_destroy_gem_scroller
@@ -547,12 +547,12 @@ script training_7_6_complete_message
 endscript
 
 script training_7_7_show_lesson_header 
-	training_change_header_type \{Type = standard}
+	training_change_header_type \{type = standard}
 	training_hide_lesson_header
-	training_set_lesson_header_text \{number = qs(0x74b4d161)
-		text = qs(0xe490cba0)}
+	training_set_lesson_header_text \{number = qs("\L7")
+		text = qs("Do-or-Die")}
 	if ScreenElementExists \{id = lesson_header_frame}
-		lesson_header_frame :se_setprops \{alpha = 0}
+		lesson_header_frame :SE_SetProps \{alpha = 0}
 	endif
 endscript
 
@@ -565,7 +565,7 @@ script training_7_7_explain_do_or_die
 	training_play_sound \{Sound = 'Tut_Vs_DoOrDie_02_BAS'
 		Wait}
 	Wait \{1
-		Seconds
+		seconds
 		ignoreslomo}
 	training_play_sound \{Sound = 'Tut_Vs_DoOrDie_03_BAS'
 		Wait}
@@ -575,14 +575,14 @@ endscript
 script training_7_7_show_powerups 
 	CreateScreenElement \{parent = training_container
 		id = tutorial_battle_header
-		Type = descinterface
+		type = DescInterface
 		desc = 'tutorial_battle_attacks'}
-	tutorial_battle_header :se_setprops {
+	tutorial_battle_header :SE_SetProps {
 		tutorial_battle_attack_cont_alpha = 0
 		tutorial_battle_attack_icon_texture = ($battlemode_powerups [0].card_texture)
 		tutorial_battle_attack_text_text = ($battlemode_powerups [0].name_text)
 	}
-	tutorial_battle_header :se_setprops \{tutorial_battle_attack_cont_alpha = 1
+	tutorial_battle_header :SE_SetProps \{tutorial_battle_attack_cont_alpha = 1
 		time = 1.0}
 	tutorial_battle_header :Obj_SpawnScriptLater \{rotate_highlight_sparkle_glow
 		params = {
@@ -590,35 +590,35 @@ script training_7_7_show_powerups
 			time = 2.5
 		}}
 	Wait \{4
-		Seconds
+		seconds
 		ignoreslomo}
 	GetArraySize \{$battlemode_powerups}
 	<i> = 1
 	begin
-	tutorial_battle_header :se_setprops \{tutorial_battle_attack_icon_alpha = 0
+	tutorial_battle_header :SE_SetProps \{tutorial_battle_attack_icon_alpha = 0
 		tutorial_battle_attack_text_alpha = 0
 		time = 1.0}
 	Wait \{1.0
-		Seconds
+		seconds
 		ignoreslomo}
 	<icon> = ($battlemode_powerups [<i>].card_texture)
 	<text> = ($battlemode_powerups [<i>].name_text)
-	tutorial_battle_header :se_setprops {
+	tutorial_battle_header :SE_SetProps {
 		tutorial_battle_attack_icon_texture = <icon>
 		tutorial_battle_attack_text_text = <text>
 	}
-	tutorial_battle_header :se_setprops \{tutorial_battle_attack_icon_alpha = 1
+	tutorial_battle_header :SE_SetProps \{tutorial_battle_attack_icon_alpha = 1
 		tutorial_battle_attack_text_alpha = 1
 		time = 1.0}
 	Wait \{4.0
-		Seconds
+		seconds
 		ignoreslomo}
 	<i> = (<i> + 1)
-	repeat (<array_Size> - 1)
-	tutorial_battle_header :se_setprops \{tutorial_battle_attack_cont_alpha = 0
+	repeat (<array_size> - 1)
+	tutorial_battle_header :SE_SetProps \{tutorial_battle_attack_cont_alpha = 0
 		time = 1.0}
 	Wait \{1.0
-		Seconds
+		seconds
 		ignoreslomo}
 	DestroyScreenElement \{id = tutorial_battle_header}
 endscript
@@ -628,28 +628,28 @@ script training_7_7_complete_message
 	training_hide_lesson_header
 	training_destroy_gem_scroller
 	SoundEvent \{event = Tutorial_Mode_Finish_Chord}
-	SpawnScriptNow \{create_exploding_text
+	spawnscriptnow \{create_exploding_text
 		id = training_spawned_script
 		params = {
 			parent = 'lesson_complete'
-			text = qs(0xb7dc8c1e)
+			text = qs("Versus Lesson")
 			text_physics = 0
 			placement = top
 		}}
-	SpawnScriptNow \{create_exploding_text
+	spawnscriptnow \{create_exploding_text
 		id = training_spawned_script
 		params = {
 			parent = 'complete_text'
-			text = qs(0x232d1eaf)
+			text = qs("Complete!")
 			text_physics = 0
 			placement = bottom
 		}}
 	Wait \{7
-		Seconds
+		seconds
 		ignoreslomo}
-	KillSpawnedScript \{Name = create_exploding_text}
+	KillSpawnedScript \{name = create_exploding_text}
 	destroy_all_exploding_text
-	Change g_training_lessons_completed = ($g_training_lessons_completed + 1)
+	change g_training_lessons_completed = ($g_training_lessons_completed + 1)
 endscript
 
 script training_versus_tutorial_end 
@@ -659,11 +659,11 @@ script training_versus_tutorial_end
 				versus_lesson = complete
 			}}
 	endif
-	Change \{tutorial_battle = 0}
+	change \{tutorial_battle = 0}
 	training_kill_session
 	tutorial_disable_botplay
 	if ScreenElementExists \{id = menu_tutorial}
-		LaunchEvent \{Type = unfocus
+		LaunchEvent \{type = unfocus
 			target = menu_tutorial}
 		destroy_menu \{menu_id = menu_tutorial}
 	endif
@@ -681,7 +681,7 @@ script training_versus_tutorial_end
 endscript
 
 script training_7_2_start_gem_scrollers 
-	Change \{game_mode = p2_faceoff}
+	change \{game_mode = p2_faceoff}
 	training_start_gem_scroller \{players = 2
 		bot_array = [
 			0
@@ -689,12 +689,12 @@ script training_7_2_start_gem_scrollers
 			0
 			0
 		]
-		song = tut_demo
+		song = Tut_Demo
 		no_score_update
 		disable_hud}
-	KillSpawnedScript \{Name = update_score_fast}
+	KillSpawnedScript \{name = update_score_fast}
 	if ScreenElementExists \{id = menu_tutorial}
-		LaunchEvent \{Type = unfocus
+		LaunchEvent \{type = unfocus
 			target = menu_tutorial}
 		destroy_menu \{menu_id = menu_tutorial}
 	endif
@@ -702,7 +702,7 @@ script training_7_2_start_gem_scrollers
 endscript
 
 script training_7_3_start_gem_scrollers 
-	Change \{game_mode = p2_battle}
+	change \{game_mode = p2_battle}
 	training_start_gem_scroller \{players = 2
 		bot_array = [
 			0
@@ -710,23 +710,23 @@ script training_7_3_start_gem_scrollers
 			0
 			0
 		]
-		song = tut_vs_battpow
+		song = Tut_VS_BattPow
 		no_score_update
 		disable_hud}
 	player_text = 'p1'
 	player_status = player1_status
-	Player = 1
-	Change \{structurename = player1_status
+	player = 1
+	change \{structurename = player1_status
 		current_health = 1.0}
 	SpawnScriptLater update_score_fast params = {<...>} id = training_spawned_script
 	player_text = 'p2'
 	player_status = player2_status
-	Player = 2
-	Change \{structurename = player2_status
+	player = 2
+	change \{structurename = player2_status
 		current_health = 1.0}
 	SpawnScriptLater update_score_fast params = {<...>} id = training_spawned_script
 	if ScreenElementExists \{id = menu_tutorial}
-		LaunchEvent \{Type = unfocus
+		LaunchEvent \{type = unfocus
 			target = menu_tutorial}
 		destroy_menu \{menu_id = menu_tutorial}
 	endif
@@ -746,7 +746,7 @@ script training_7_3_start_gem_scrollers
 endscript
 
 script training_7_4_start_gem_scrollers 
-	Change \{game_mode = p2_battle}
+	change \{game_mode = p2_battle}
 	training_start_gem_scroller \{players = 2
 		bot_array = [
 			0
@@ -754,24 +754,24 @@ script training_7_4_start_gem_scrollers
 			0
 			0
 		]
-		song = tut_vs_tilt
+		song = Tut_VS_Tilt
 		no_score_update
 		disable_hud}
-	KillSpawnedScript \{Name = update_score_fast}
+	KillSpawnedScript \{name = update_score_fast}
 	player_text = 'p1'
 	player_status = player1_status
-	Player = 1
-	Change \{structurename = player1_status
+	player = 1
+	change \{structurename = player1_status
 		current_health = 1.0}
 	SpawnScriptLater update_score_fast params = {<...>} id = training_spawned_script
 	player_text = 'p2'
 	player_status = player2_status
-	Player = 2
-	Change \{structurename = player2_status
+	player = 2
+	change \{structurename = player2_status
 		current_health = 1.0}
 	SpawnScriptLater update_score_fast params = {<...>} id = training_spawned_script
 	if ScreenElementExists \{id = menu_tutorial}
-		LaunchEvent \{Type = unfocus
+		LaunchEvent \{type = unfocus
 			target = menu_tutorial}
 		destroy_menu \{menu_id = menu_tutorial}
 	endif
@@ -791,9 +791,9 @@ script training_7_4_start_gem_scrollers
 endscript
 
 script training_7_4_wait_for_attack 
-	Change \{training_star_power_active = 0}
-	Change \{lesson_complete = 0}
-	Change \{training_song_over = 0}
+	change \{training_star_power_active = 0}
+	change \{LESSON_COMPLETE = 0}
+	change \{training_song_over = 0}
 	begin
 	if ($training_song_over = 1)
 		return
@@ -805,12 +805,12 @@ script training_7_4_wait_for_attack
 		gameframe}
 	repeat
 	Wait \{1.5
-		Seconds
+		seconds
 		ignoreslomo}
 endscript
 
 script training_7_5_start_gem_scrollers 
-	Change \{game_mode = p2_battle}
+	change \{game_mode = p2_battle}
 	training_start_gem_scroller \{players = 2
 		bot_array = [
 			0
@@ -818,24 +818,24 @@ script training_7_5_start_gem_scrollers
 			0
 			0
 		]
-		song = tut_vs_recov
+		song = Tut_VS_Recov
 		no_score_update
 		disable_hud}
-	KillSpawnedScript \{Name = update_score_fast}
+	KillSpawnedScript \{name = update_score_fast}
 	player_text = 'p1'
 	player_status = player1_status
-	Player = 1
-	Change \{structurename = player1_status
+	player = 1
+	change \{structurename = player1_status
 		current_health = 1.0}
 	SpawnScriptLater update_score_fast params = {<...>} id = training_spawned_script
 	player_text = 'p2'
 	player_status = player2_status
-	Player = 2
-	Change \{structurename = player2_status
+	player = 2
+	change \{structurename = player2_status
 		current_health = 1.0}
 	SpawnScriptLater update_score_fast params = {<...>} id = training_spawned_script
 	if ScreenElementExists \{id = menu_tutorial}
-		LaunchEvent \{Type = unfocus
+		LaunchEvent \{type = unfocus
 			target = menu_tutorial}
 		destroy_menu \{menu_id = menu_tutorial}
 	endif
@@ -855,7 +855,7 @@ script training_7_5_start_gem_scrollers
 endscript
 
 script training_7_6_start_gem_scrollers 
-	Change \{game_mode = p2_battle}
+	change \{game_mode = p2_battle}
 	training_start_gem_scroller \{players = 2
 		bot_array = [
 			0
@@ -863,24 +863,24 @@ script training_7_6_start_gem_scrollers
 			0
 			0
 		]
-		song = tut_vs_multattck
+		song = Tut_VS_MultAttck
 		no_score_update
 		disable_hud}
-	KillSpawnedScript \{Name = update_score_fast}
+	KillSpawnedScript \{name = update_score_fast}
 	player_text = 'p1'
 	player_status = player1_status
-	Player = 1
-	Change \{structurename = player1_status
+	player = 1
+	change \{structurename = player1_status
 		current_health = 1.0}
 	SpawnScriptLater update_score_fast params = {<...>} id = training_spawned_script
 	player_text = 'p2'
 	player_status = player2_status
-	Player = 2
-	Change \{structurename = player2_status
+	player = 2
+	change \{structurename = player2_status
 		current_health = 1.0}
 	SpawnScriptLater update_score_fast params = {<...>} id = training_spawned_script
 	if ScreenElementExists \{id = menu_tutorial}
-		LaunchEvent \{Type = unfocus
+		LaunchEvent \{type = unfocus
 			target = menu_tutorial}
 		destroy_menu \{menu_id = menu_tutorial}
 	endif

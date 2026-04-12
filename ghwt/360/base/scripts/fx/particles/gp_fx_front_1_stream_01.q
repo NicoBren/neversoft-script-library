@@ -1,25 +1,25 @@
-gp_fx_front_1_stream_01 = {
-	Pos = (-5.12282, 0.878575, 5.5816946)
-	Angles = (0.0, 0.0, 0.0)
+GP_FX_Front_1_Stream_01 = {
+	pos = (-5.12282, 0.878575, 5.5816946)
+	angles = (0.0, 0.0, 0.0)
 	Class = ParticleObject
 	ParticleType = FlexParticle
-	Type = flat
-	Active
+	type = flat
+	active
 	CreatedAtStart
 	EmitRangeDims = (0.0, 0.0, 0.0)
-	Emit_Target = (0.0, 1.0, 0.0)
+	emit_Target = (0.0, 1.0, 0.0)
 	EmitAngle = (0.0, 0.0, 0.0)
-	Force = (0.0, 0.0, 0.0)
+	force = (0.0, 0.0, 0.0)
 	WindCoeff = 0.0
 	LocalWindCoeff = 0.0
 	EmitterVelocityWeight = 0.0
 	AngleSpread = 1.0
 	LifeRange = (0.1, 0.2)
-	Emit_Rate = 10.0
-	Max = 2
+	emit_rate = 10.0
+	max = 2
 	TimeSeed = 0.0
-	LifeTime = 0.4
-	EmitNum = 0
+	lifeTime = 0.4
+	emitNum = 0
 	FollowEmitter = 0.0
 	EmitFunction = constant
 	EmitPeriod = 1.0
@@ -33,16 +33,16 @@ gp_fx_front_1_stream_01 = {
 	EmitDelayStart = 0.0
 	PathFollowTime = 1.0
 	History = 2
-	HistoryListCoordinateSpace = World
-	Color = -2074533123
+	HistoryListCoordinateSpace = world
+	color = -2074533123
 	LOD_Default
 	QuickMaterial = {
 		DiffuseTextureEnabled
-		DiffuseTexture = ph_radialglow_01
+		DiffuseTexture = PH_RadialGlow_01
 		SpecularPower = 0
-		Bloom
-		AlphaCutoff = 1
-		BlendMode = add
+		bloom
+		alphacutoff = 1
+		blendMode = Add
 		QuadAnimationFPS = 0
 	}
 	Knot = [

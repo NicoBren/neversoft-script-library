@@ -1,7 +1,7 @@
 
 script ui_create_pause_options 
-	ui_pausemenu_create_bg \{title_text = qs(0x976cf9e7)}
-	if pausemenu_bg :desc_resolvealias \{Name = alias_menu}
+	ui_pausemenu_create_bg \{title_text = qs("OPTIONS")}
+	if pausemenu_bg :Desc_ResolveAlias \{name = alias_menu}
 		<parent> = <resolved_id>
 	endif
 	make_menu {
@@ -10,41 +10,41 @@ script ui_create_pause_options
 		exclusive_device = <player_device>
 		extra_z = 600
 		centered
-		nobg
+		noBG
 	}
 	<show_audio_options> = 0
-	gamemode_getproperty \{prop = faceoff}
+	GameMode_GetProperty \{prop = faceoff}
 	if (<player_device> = $primary_controller)
 		<show_audio_options> = 1
 	elseif (<faceoff> = true)
-		gamemode_getnumplayers
+		GameMode_GetNumPlayers
 		if (<num_players> = 2)
-			if playerinfoequals \{1
-					part = vocals}
+			if PlayerInfoEquals \{1
+					part = Vocals}
 				<show_audio_options> = 1
 			endif
 		endif
 	endif
 	if (<show_audio_options> = 1)
 		add_menu_item {
-			text = qs(0xfd77e801)
+			text = qs("SET AUDIO")
 			choose_state = uistate_options_audio
 			choose_state_data = {device_num = <player_device>}
 		}
 	endif
 	player_index = 0
 	begin
-	getplayerinfo (<player_index> + 1) controller
+	GetPlayerInfo (<player_index> + 1) controller
 	if (<controller> = <player_device>)
-		getplayerinfo (<player_index> + 1) part
-		getplayerinfo (<player_index> + 1) lefty_flip
+		GetPlayerInfo (<player_index> + 1) part
+		GetPlayerInfo (<player_index> + 1) lefty_flip
 		break
 	endif
 	player_index = (<player_index> + 1)
 	repeat ($current_num_players)
 	if (<player_device> = $primary_controller)
 		add_menu_item {
-			text = qs(0x550b8c8e)
+			text = qs("CALIBRATE LAG")
 			choose_state = uistate_options_calibrate_lag_warning
 			choose_state_data = {controller = <player_device>}
 		}
@@ -53,33 +53,33 @@ script ui_create_pause_options
 		if NOT ($current_song = jamsession)
 		endif
 	endif
-	getplayerinfo <Player> part
-	if NOT (<part> = vocals)
+	GetPlayerInfo <player> part
+	if NOT (<part> = Vocals)
 		add_menu_item {
-			text = qs(0x2e9b1b43)
+			text = qs("LEFTY FLIP")
 			choose_state = uistate_pausemenu_lefty_flip_warning
-			choose_state_data = {Player = <Player>}
+			choose_state_data = {player = <player>}
 		}
-		getplayerinfo <Player> lefty_flip
+		GetPlayerInfo <player> lefty_flip
 		if (<lefty_flip> = 1)
 			lefty_tex = Options_Controller_Check
 		else
 			lefty_tex = Options_Controller_X
 		endif
 		CreateScreenElement {
-			Type = SpriteElement
+			type = SpriteElement
 			parent = <item_container_id>
 			texture = <lefty_tex>
-			Pos = (225.0, 0.0)
+			pos = (225.0, 0.0)
 		}
 	endif
-	if NOT ((<part> = vocals) || (<part> = drum))
+	if NOT ((<part> = Vocals) || (<part> = drum))
 		add_menu_item {
-			text = qs(0x1c739509)
+			text = qs("TILT SENSOR")
 			pad_choose_script = options_change_tilt_star_power
-			pad_choose_params = {Player = <Player>}
+			pad_choose_params = {player = <player>}
 		}
-		getplayerinfo <Player> use_tilt_for_starpower
+		GetPlayerInfo <player> use_tilt_for_starpower
 		if (<use_tilt_for_starpower> = 1)
 			tilt_tex = Options_Controller_Check
 		else
@@ -87,19 +87,19 @@ script ui_create_pause_options
 		endif
 		CreateScreenElement {
 			local_id = tilt_check
-			Type = SpriteElement
+			type = SpriteElement
 			parent = <item_container_id>
 			texture = <tilt_tex>
-			Pos = (225.0, 0.0)
+			pos = (225.0, 0.0)
 		}
 	endif
-	if NOT ((<part> = vocals) || (<part> = drum))
+	if NOT ((<part> = Vocals) || (<part> = drum))
 		add_menu_item {
-			text = qs(0xa2b47a6e)
+			text = qs("TOUCH STRIP")
 			pad_choose_script = options_change_touch_strip_option
-			pad_choose_params = {Player = <Player>}
+			pad_choose_params = {player = <player>}
 		}
-		getplayerinfo <Player> enable_touch_strip
+		GetPlayerInfo <player> enable_touch_strip
 		if (<enable_touch_strip> = 1)
 			touch_tex = Options_Controller_Check
 		else
@@ -107,21 +107,21 @@ script ui_create_pause_options
 		endif
 		CreateScreenElement {
 			local_id = touch_check
-			Type = SpriteElement
+			type = SpriteElement
 			parent = <item_container_id>
 			texture = <touch_tex>
-			Pos = (225.0, 0.0)
+			pos = (225.0, 0.0)
 		}
 	endif
 	if ($current_song != jamsession)
-		if (<part> = vocals)
+		if (<part> = Vocals)
 			if ($vocal_enable_static_view = 1)
 				add_menu_item {
-					text = qs(0x7a043839)
+					text = qs("SCROLLING VOCALS")
 					choose_state = uistate_options_vocals_view_warning
-					choose_state_data = {controller = <player_device> Player = <Player>}
+					choose_state_data = {controller = <player_device> player = <player>}
 				}
-				vocals_get_highway_view Player = <Player>
+				vocals_get_highway_view player = <player>
 				<vocals_highway_view> = <highway_view>
 				if (<vocals_highway_view> = static)
 					scroll_tex = Options_Controller_X
@@ -129,18 +129,18 @@ script ui_create_pause_options
 					scroll_tex = Options_Controller_Check
 				endif
 				CreateScreenElement {
-					Type = SpriteElement
+					type = SpriteElement
 					parent = <item_container_id>
 					texture = <scroll_tex>
-					Pos = (225.0, 0.0)
+					pos = (225.0, 0.0)
 				}
 			endif
 			add_menu_item {
-				text = qs(0x70974769)
+				text = qs("VOCALS STAR POWER CLAP")
 				pad_choose_script = options_change_vocals_sp_clap
-				pad_choose_params = {Player = <Player> checkbox_child = check check_tex = Options_Controller_Check x_tex = Options_Controller_X}
+				pad_choose_params = {player = <player> checkbox_child = check check_tex = Options_Controller_Check x_tex = Options_Controller_X}
 			}
-			getplayerinfo <Player> vocals_sp_clap
+			GetPlayerInfo <player> vocals_sp_clap
 			if (<vocals_sp_clap> = 0)
 				scroll_tex = Options_Controller_X
 			else
@@ -148,10 +148,10 @@ script ui_create_pause_options
 			endif
 			CreateScreenElement {
 				local_id = check
-				Type = SpriteElement
+				type = SpriteElement
 				parent = <item_container_id>
 				texture = <scroll_tex>
-				Pos = (225.0, 0.0)
+				pos = (225.0, 0.0)
 			}
 		endif
 	endif
@@ -161,17 +161,17 @@ script ui_create_pause_options
 	if (<unpause_count> = 1)
 		count_texture = Options_Controller_Check
 	endif
-	add_menu_item \{text = qs(0xc987ca62)
+	add_menu_item \{text = qs("COUNTDOWN")
 		pad_choose_script = ui_pause_options_choose_count
 		pad_choose_params = {
 			popup = 1
-			Player = 1
+			player = 1
 		}}
 	CreateScreenElement {
-		Type = SpriteElement
+		type = SpriteElement
 		parent = <item_container_id>
 		local_id = check
-		Pos = (225.0, 0.0)
+		pos = (225.0, 0.0)
 		just = [center center]
 		texture = <count_texture>
 	}
@@ -188,10 +188,10 @@ script ui_pause_options_choose_count
 	Obj_GetID
 	get_savegame_from_controller controller = <device_num>
 	GetGlobalTags user_options param = unpause_count savegame = <savegame>
-	if ResolveScreenElementID id = {<objID> child = check}
+	if ResolveScreenElementId id = {<ObjID> child = check}
 		if (<unpause_count> = 1)
 			<unpause_count> = 0
-			SoundEvent \{event = Checkbox_SFX}
+			SoundEvent \{event = checkbox_sfx}
 			if GotParam \{popup}
 				<resolved_id> :SetProps texture = Options_Controller_X
 			else

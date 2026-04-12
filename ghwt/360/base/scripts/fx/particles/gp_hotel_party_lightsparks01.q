@@ -1,15 +1,15 @@
-gp_hotel_party_lightsparks01 = {
-	Pos = (-1.161988, 3.2250981, 0.98400694)
-	Angles = (0.0, 0.0, 0.0)
+GP_Hotel_Party_LightSparks01 = {
+	pos = (-1.161988, 3.2250981, 0.98400694)
+	angles = (0.0, 0.0, 0.0)
 	Class = ParticleObject
 	ParticleType = FlexParticle
-	Type = flat
-	Active
+	type = flat
+	active
 	CreatedAtStart
 	EmitRangeDims = (0.1, 0.1, 0.1)
-	Emit_Target = (0.0, -0.5, 0.8)
+	emit_Target = (0.0, -0.5, 0.8)
 	EmitAngle = (0.0, 0.0, 0.0)
-	Force = (0.0, -4.0, 0.0)
+	force = (0.0, -4.0, 0.0)
 	WindCoeff = 0.0
 	LocalWindCoeff = 0.0
 	EmitterVelocityWeight = 0.0
@@ -19,11 +19,11 @@ gp_hotel_party_lightsparks01 = {
 	BounceCoeff = 0.2
 	BounceCallbackRate = 0.0
 	LifeRange = (1.0, 2.0)
-	Emit_Rate = 20.0
-	Max = 0
+	emit_rate = 20.0
+	max = 0
 	TimeSeed = 0.1
-	LifeTime = 0.0
-	EmitNum = 20
+	lifeTime = 0.0
+	emitNum = 20
 	FollowEmitter = 0.0
 	EmitFunction = constant
 	EmitPeriod = 1.0
@@ -38,16 +38,16 @@ gp_hotel_party_lightsparks01 = {
 	AlignWithPath
 	PathFollowTime = 0.07
 	History = 2
-	HistoryListCoordinateSpace = World
-	Color = -7064577
+	HistoryListCoordinateSpace = world
+	color = -7064577
 	LOD_Default
 	NoVisibilityTest
 	QuickMaterial = {
 		DiffuseTextureEnabled
 		DiffuseTexture = JOW_Spark01
 		SpecularPower = 0
-		AlphaCutoff = 16
-		BlendMode = add
+		alphacutoff = 16
+		blendMode = Add
 		QuadAnimationFPS = 0
 	}
 	Knot = [

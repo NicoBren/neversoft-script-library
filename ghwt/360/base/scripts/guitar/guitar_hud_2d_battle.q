@@ -15,7 +15,7 @@ battle_hud_2d_elements = {
 	card_3_off_p2 = (53.0, 39.0)
 	card_default_2_p2 = (188.0, 202.0)
 	card_default_3_p2 = (198.0, 238.0)
-	Scale = 0.75
+	scale = 0.75
 	z = 0
 	buttons_p2_offset = (510.0, 0.0)
 	string_offset = (200.0, 0.0)
@@ -47,7 +47,7 @@ battle_hud_2d_elements = {
 		{
 			element_id = HUD2D_rock_BG_green
 			element_parent = HUD2D_rock_container
-			texture = hud_meter_green_bg
+			texture = HUD_meter_green_bg
 			pos_off = (-28.0, -24.0)
 			dims = (320.0, 171.0)
 			zoff = 16
@@ -55,7 +55,7 @@ battle_hud_2d_elements = {
 		{
 			element_id = HUD2D_rock_BG_red
 			element_parent = HUD2D_rock_container
-			texture = hud_meter_red_bg
+			texture = HUD_meter_red_bg
 			pos_off = (-28.0, -24.0)
 			dims = (320.0, 171.0)
 			zoff = 14
@@ -63,7 +63,7 @@ battle_hud_2d_elements = {
 		{
 			element_id = HUD2D_rock_BG_yellow
 			element_parent = HUD2D_rock_container
-			texture = hud_meter_yellow_bg
+			texture = HUD_meter_yellow_bg
 			pos_off = (-28.0, -24.0)
 			dims = (320.0, 171.0)
 			zoff = 15
@@ -71,14 +71,14 @@ battle_hud_2d_elements = {
 		{
 			element_id = HUD2D_rock_lights_all
 			element_parent = HUD2D_rock_container
-			texture = band_hud_lights_all
+			texture = band_HUD_lights_all
 			pos_off = (64.0, -28.0)
 			zoff = 17
 		}
 		{
 			element_id = HUD2D_rock_lights_green
 			element_parent = HUD2D_rock_container
-			texture = band_hud_light_green
+			texture = band_HUD_light_green
 			pos_off = (118.0, 33.0)
 			zoff = 18
 			just = [
@@ -90,7 +90,7 @@ battle_hud_2d_elements = {
 		{
 			element_id = HUD2D_rock_lights_red
 			element_parent = HUD2D_rock_container
-			texture = band_hud_light_red
+			texture = band_HUD_light_red
 			pos_off = (77.0, 32.0)
 			zoff = 18
 			just = [
@@ -102,7 +102,7 @@ battle_hud_2d_elements = {
 		{
 			element_id = HUD2D_rock_lights_yellow
 			element_parent = HUD2D_rock_container
-			texture = band_hud_light_yellow
+			texture = band_HUD_light_yellow
 			pos_off = (129.0, 26.0)
 			zoff = 18
 			just = [
@@ -114,7 +114,7 @@ battle_hud_2d_elements = {
 		{
 			element_id = HUD2D_rock_needle
 			element_parent = HUD2D_rock_container
-			texture = band_hud_needle
+			texture = band_HUD_needle
 			pos_off = (139.0, 135.0)
 			dims = (32.0, 80.0)
 			zoff = 18.5

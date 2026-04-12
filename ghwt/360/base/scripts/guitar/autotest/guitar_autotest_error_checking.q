@@ -47,8 +47,8 @@ script autotest_check_song
 		return \{check_song_passed = 1}
 	endif
 	<i> = (<i> + 1)
-	repeat <array_Size>
-	SoftAssert qs(0x8a126ef5) s = <suite_num> t = <test_num>
+	repeat <array_size>
+	SoftAssert qs("\Lautotest_suite%s : test%t - Song is not recognized, check spelling") s = <suite_num> t = <test_num>
 	return \{check_song_passed = 0}
 endscript
 
@@ -62,35 +62,35 @@ script autotest_check_venue
 		return \{check_venue_passed = 1}
 	endif
 	<i> = (<i> + 1)
-	repeat <array_Size>
-	SoftAssert qs(0xdbaaaf15) s = <suite_num> t = <test_num>
+	repeat <array_size>
+	SoftAssert qs("\Lautotest_suite%s : test%t - Venue is not recognized, check spelling") s = <suite_num> t = <test_num>
 	return \{check_venue_passed = 0}
 endscript
 
 script autotest_check_part_names 
-	<Player> = 1
+	<player> = 1
 	begin
-	formatText checksumName = player_part 'p%n_part' n = <Player>
+	FormatText checksumname = player_part 'p%n_part' n = <player>
 	<part> = (<test_struct>.<player_part>)
-	if NOT StructureContains structure = $autotest_part_strings <part>
-		SoftAssert qs(0x719d7047) s = <suite_num> t = <test_num> n = <Player>
+	if NOT StructureContains Structure = $autotest_part_strings <part>
+		SoftAssert qs("\Lautotest_suite%s : test%t - p%n_part not recognized") s = <suite_num> t = <test_num> n = <player>
 		return \{check_part_names_passed = 0}
 	endif
-	<Player> = (<Player> + 1)
+	<player> = (<player> + 1)
 	repeat 4
 	return \{check_part_names_passed = 1}
 endscript
 
 script autotest_check_difficulty_names 
-	<Player> = 1
+	<player> = 1
 	begin
-	formatText checksumName = player_diff 'p%n_difficulty' n = <Player>
+	FormatText checksumname = player_diff 'p%n_difficulty' n = <player>
 	<diff> = (<test_struct>.<player_diff>)
-	if NOT StructureContains structure = $autotest_difficulty_strings <diff>
-		SoftAssert qs(0x8f5fd047) s = <suite_num> t = <test_num> n = <Player>
+	if NOT StructureContains Structure = $autotest_difficulty_strings <diff>
+		SoftAssert qs("\Lautotest_suite%s : test%t - p%n_difficulty not recognized") s = <suite_num> t = <test_num> n = <player>
 		return \{check_difficulty_names_passed = 0}
 	endif
-	<Player> = (<Player> + 1)
+	<player> = (<player> + 1)
 	repeat 4
 	return \{check_difficulty_names_passed = 1}
 endscript
@@ -99,93 +99,93 @@ script autotest_check_mode
 	<versus> = 0
 	switch (<game_mode>)
 		case p1_career
-		SoftAssert qs(0x53dd07b3) s = <suite_num> t = <test_num>
+		SoftAssert qs("\Lautotest_suite%s : test%t - Career mode currently not supported in autotesting") s = <suite_num> t = <test_num>
 		return \{check_mode_passed = 0}
 		if NOT ($current_num_players = 1)
-			SoftAssert qs(0x230cbae1) s = <suite_num> t = <test_num>
+			SoftAssert qs("\Lautotest_suite%s : test%t - Incorrect number of players for p1_career") s = <suite_num> t = <test_num>
 			return \{check_mode_passed = 0}
 		endif
 		<versus> = 0
 		case p1_quickplay
 		if NOT ($current_num_players = 1)
-			SoftAssert qs(0x76d9d246) s = <suite_num> t = <test_num>
+			SoftAssert qs("\Lautotest_suite%s : test%t - Incorrect number of players for p1_quickplay") s = <suite_num> t = <test_num>
 			return \{check_mode_passed = 0}
 		endif
 		<versus> = 0
 		case p2_battle
 		if NOT ($current_num_players = 2)
-			SoftAssert qs(0xe70f51d9) s = <suite_num> t = <test_num>
+			SoftAssert qs("\Lautotest_suite%s : test%t - Incorrect number of players for p2_battle") s = <suite_num> t = <test_num>
 			return \{check_mode_passed = 0}
 		endif
 		<versus> = 1
 		case p2_career
-		SoftAssert qs(0x53dd07b3) s = <suite_num> t = <test_num>
+		SoftAssert qs("\Lautotest_suite%s : test%t - Career mode currently not supported in autotesting") s = <suite_num> t = <test_num>
 		return \{check_mode_passed = 0}
 		if NOT ($current_num_players = 2)
-			SoftAssert qs(0x0ac40e13) s = <suite_num> t = <test_num>
+			SoftAssert qs("\Lautotest_suite%s : test%t - Incorrect number of players for p2_career") s = <suite_num> t = <test_num>
 			return \{check_mode_passed = 0}
 		endif
 		<versus> = 0
 		case p2_coop
 		if NOT ($current_num_players = 2)
-			SoftAssert qs(0x5e6f5890) s = <suite_num> t = <test_num>
+			SoftAssert qs("\Lautotest_suite%s : test%t - Incorrect number of players for p2_coop") s = <suite_num> t = <test_num>
 			return \{check_mode_passed = 0}
 		endif
 		<versus> = 0
 		case p2_faceoff
 		if NOT ($current_num_players = 2)
-			SoftAssert qs(0x87dfcd65) s = <suite_num> t = <test_num>
+			SoftAssert qs("\Lautotest_suite%s : test%t - Incorrect number of players for p2_faceoff") s = <suite_num> t = <test_num>
 			return \{check_mode_passed = 0}
 		endif
 		<versus> = 1
 		case p2_pro_faceoff
 		if NOT ($current_num_players = 2)
-			SoftAssert qs(0x18003662) s = <suite_num> t = <test_num>
+			SoftAssert qs("\Lautotest_suite%s : test%t - Incorrect number of players defined for p2_pro_faceoff") s = <suite_num> t = <test_num>
 			return \{check_mode_passed = 0}
 		endif
 		<versus> = 1
 		case p2_quickplay
 		if NOT ($current_num_players = 2)
-			SoftAssert qs(0x4fa17f06) s = <suite_num> t = <test_num>
+			SoftAssert qs("\Lautotest_suite%s : test%t - Incorrect number of players for p2_quickplay") s = <suite_num> t = <test_num>
 			return \{check_mode_passed = 0}
 		endif
 		<versus> = 0
 		case p3_career
-		SoftAssert qs(0x53dd07b3) s = <suite_num> t = <test_num>
+		SoftAssert qs("\Lautotest_suite%s : test%t - Career mode currently not supported in autotesting") s = <suite_num> t = <test_num>
 		return \{check_mode_passed = 0}
 		if NOT ($current_num_players = 3)
-			SoftAssert qs(0xa4ac9f82) s = <suite_num> t = <test_num>
+			SoftAssert qs("\Lautotest_suite%s : test%t - Incorrect number of players for p3_career") s = <suite_num> t = <test_num>
 			return \{check_mode_passed = 0}
 		endif
 		<versus> = 0
 		case p3_quickplay
 		if NOT ($current_num_players = 3)
-			SoftAssert qs(0x58891bc6) s = <suite_num> t = <test_num>
+			SoftAssert qs("\Lautotest_suite%s : test%t - Incorrect number of players for p3_quickplay") s = <suite_num> t = <test_num>
 			return \{check_mode_passed = 0}
 		endif
 		<versus> = 0
 		case p4_career
-		SoftAssert qs(0x53dd07b3) s = <suite_num> t = <test_num>
+		SoftAssert qs("\Lautotest_suite%s : test%t - Career mode currently not supported in autotesting") s = <suite_num> t = <test_num>
 		return \{check_mode_passed = 0}
 		if NOT ($current_num_players = 4)
-			SoftAssert qs(0x595567f7) s = <suite_num> t = <test_num>
+			SoftAssert qs("\Lautotest_suite%s : test%t - Incorrect number of players for p4_career") s = <suite_num> t = <test_num>
 			return \{check_mode_passed = 0}
 		endif
 		<versus> = 0
 		case p4_pro_faceoff
 		if NOT ($current_num_players = 4)
-			SoftAssert qs(0x172e9593) s = <suite_num> t = <test_num>
+			SoftAssert qs("\Lautotest_suite%s : test%t - Incorrect number of players for p4_pro_faceoff") s = <suite_num> t = <test_num>
 			return \{check_mode_passed = 0}
 		endif
 		<versus> = 1
 		case p4_quickplay
 		if NOT ($current_num_players = 4)
-			SoftAssert qs(0x3d502586) s = <suite_num> t = <test_num>
+			SoftAssert qs("\Lautotest_suite%s : test%t - Incorrect number of players for p4_quickplay") s = <suite_num> t = <test_num>
 			return \{check_mode_passed = 0}
 		endif
 		<versus> = 0
 		default
-		SoftAssert qs(0xa38dd44b) s = <suite_num> t = <test_num>
+		SoftAssert qs("\Lautotest_suite%s : test%t - Game Mode not recognized, check spelling") s = <suite_num> t = <test_num>
 		return \{check_mode_passed = 0}
 	endswitch
 	return check_mode_passed = 1 versus = <versus>
@@ -199,11 +199,11 @@ script autotest_check_part_combos
 		begin
 		autotest_get_suite suite_num = <suite_num>
 		<test_struct> = (<suite_struct>.tests [<test_num>])
-		formatText checksumName = playera_part 'p%n_part' n = <i>
-		formatText checksumName = playerb_part 'p%n_part' n = <j>
-		if NOT (<test_struct>.<playera_part> = None || <test_struct>.<playerb_part> = None)
-			if NOT ((<test_struct>.<playera_part>) = (<test_struct>.<playerb_part>))
-				SoftAssert qs(0x53365c7e) s = <suite_num> t = <test_num>
+		FormatText checksumname = playerA_part 'p%n_part' n = <i>
+		FormatText checksumname = playerB_part 'p%n_part' n = <j>
+		if NOT (<test_struct>.<playerA_part> = none || <test_struct>.<playerB_part> = none)
+			if NOT ((<test_struct>.<playerA_part>) = (<test_struct>.<playerB_part>))
+				SoftAssert qs("\Lautotest_suite%s : test%t - All player parts must be identical in faceoff/pro-faceoff modes") s = <suite_num> t = <test_num>
 				return \{check_part_combos_passed = 0}
 			endif
 		endif
@@ -219,11 +219,11 @@ script autotest_check_part_combos
 	begin
 	autotest_get_suite suite_num = <suite_num>
 	<test_struct> = (<suite_struct>.tests [<test_num>])
-	formatText checksumName = playera_part 'p%n_part' n = <i>
-	formatText checksumName = playerb_part 'p%n_part' n = <j>
-	if NOT (<test_struct>.<playera_part> = None || <test_struct>.<playerb_part> = None)
-		if ((<test_struct>.<playera_part>) = (<test_struct>.<playerb_part>))
-			SoftAssert qs(0x5c595801) s = <suite_num> t = <test_num>
+	FormatText checksumname = playerA_part 'p%n_part' n = <i>
+	FormatText checksumname = playerB_part 'p%n_part' n = <j>
+	if NOT (<test_struct>.<playerA_part> = none || <test_struct>.<playerB_part> = none)
+		if ((<test_struct>.<playerA_part>) = (<test_struct>.<playerB_part>))
+			SoftAssert qs("\Lautotest_suite%s : test%t - All player parts must be unique in quickplay/career/coop modes") s = <suite_num> t = <test_num>
 			return \{check_part_combos_passed = 0}
 		endif
 	endif
@@ -235,20 +235,20 @@ script autotest_check_part_combos
 endscript
 
 script autotest_check_start_end_times 
-	if StructureContains structure = <test_struct> start_time
+	if StructureContains Structure = <test_struct> start_time
 		if (<test_struct>.start_time < 0)
-			SoftAssert qs(0x1d63d5b9) s = <suite_num> t = <test_num>
+			SoftAssert qs("\Lautotest_suite%s : test%t - start_time must be 0 or greater") s = <suite_num> t = <test_num>
 			return \{check_start_end_times_passed = 0}
 		endif
 	endif
-	if StructureContains structure = <test_struct> end_time
+	if StructureContains Structure = <test_struct> end_time
 		if (<test_struct>.end_time < 0)
-			SoftAssert qs(0x3762b742) s = <suite_num> t = <test_num>
+			SoftAssert qs("\Lautotest_suite%s : test%t - end_time must be 0 or greater") s = <suite_num> t = <test_num>
 			return \{check_start_end_times_passed = 0}
 		endif
-		if StructureContains structure = <test_struct> start_time
+		if StructureContains Structure = <test_struct> start_time
 			if ((<test_struct>.end_time) < (<test_struct>.start_time))
-				SoftAssert qs(0xbd1e35a3) s = <suite_num> t = <test_num>
+				SoftAssert qs("\Lautotest_suite%s : test%t - start_time must not exceed end_time") s = <suite_num> t = <test_num>
 				return \{check_start_end_times_passed = 0}
 			endif
 		endif
@@ -257,12 +257,12 @@ script autotest_check_start_end_times
 endscript
 
 script autotest_check_force_score 
-	if StructureContains structure = <test_struct> force_score
-		if (<test_struct>.force_score != OFF &&
+	if StructureContains Structure = <test_struct> force_score
+		if (<test_struct>.force_score != off &&
 				<test_struct>.force_score != poor &&
 				<test_struct>.force_score != medium &&
 				<test_struct>.force_score != good)
-			SoftAssert qs(0x6bf828b7) s = <suite_num> t = <test_num>
+			SoftAssert qs("\Lautotest_suite%s : test%t - force_score value unrecognized") s = <suite_num> t = <test_num>
 			return \{check_force_score_passed = 0}
 		endif
 	endif

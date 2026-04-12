@@ -5,23 +5,23 @@ gh_songlist = [
 	antisocial
 	areyougonnagomyway
 	assassin
-	bandontherun
+	BandOnTheRun
 	beatit
 	beautifuldisaster
 	bossted
 	bosszakk
 	byob
 	crazytrain
-	dammit
-	demolitionman
-	demolitionman_perf2
+	Dammit
+	DemolitionMan
+	DemolitionMan_perf2
 	doitagain
 	escueladecalor
 	everlong
 	eyeofthetiger
-	feelthepain
-	floaton
-	freakonaleash
+	FeelthePain
+	FloatOn
+	FreakOnALeash
 	goodgod
 	goyourownway
 	hailtothefreaks
@@ -31,7 +31,7 @@ gh_songlist = [
 	hotelcalifornia
 	hotforteacher
 	kickoutthejams
-	thekill
+	TheKill
 	lvialviaquez
 	labamba
 	lazyeye
@@ -44,7 +44,7 @@ gh_songlist = [
 	monsoon
 	mountainsong
 	mrcrowley
-	nevertoolate
+	NeverTooLate
 	nosleeptillbrooklyn
 	nuvole
 	obstacle1
@@ -52,44 +52,44 @@ gh_songlist = [
 	onearmedscissor
 	onewayoranother
 	ourtruth
-	overkill
-	parabola
+	Overkill
+	Parabola
 	prettyvacant
 	prisonerofsociety
-	pullmeunder
+	PullMeUnder
 	purplehaze
-	ramblinman
+	RamblinMan
 	rebelyell
 	reedthroughlabor
 	rooftops
 	santeria
-	satchboogie
-	schism
-	screamaimfire
+	SatchBoogie
+	Schism
+	ScreamAimFire
 	shiver
 	somemightsay
-	souldoubt
+	SoulDoubt
 	spiderwebs
 	stillborn
-	stillborn_perf2
+	Stillborn_Perf2
 	stranglehold
 	sweethomealabama
 	thejoker
 	theoneilove
-	today
-	today_perf2
+	Today
+	Today_perf2
 	toyboy
 	toomuchtooyoung
 	trappedunderice
 	uparoundthebend
-	vicarious
+	Vicarious
 	vinternoll2
 	weaponofchoice
 	whativedone
 	windcriesmary
 	youregonnasayyeah
 	jamsession
-	drumstreamtest
+	DrumStreamTest
 	synctest
 	synctestplaytoaudio
 	synctestaudioandvisual
@@ -98,42 +98,42 @@ gh_songlist = [
 	elevenseconddebug
 	twelveseconddebug
 	testtones
-	tut_bass_opennote
-	tut_demo
-	tut_drum_activ
-	tut_drum_beat1
-	tut_drum_beat2
-	tut_drum_beat3
-	tut_drum_break
-	tut_drum_combos
-	tut_drum_free
-	tut_drum_kick
-	tut_drum_onehand
-	tut_drum_twohands
-	tut_gtr_chords
-	tut_gtr_combos
-	tut_gtr_diffnotes
-	tut_gtr_extsus
-	tut_gtr_hamon
-	tut_gtr_longnotes
-	tut_gtr_playnotes
-	tut_gtr_pulloff
-	tut_gtr_slide
-	tut_gtr_tilt
-	tut_gtr_wham
-	tut_vox_activ
-	tut_vox_combos
-	tut_vox_freeform
-	tut_vox_hitnotes
-	tut_vox_hype
-	tut_vox_spoken
-	tut_vs_battpow
-	tut_vs_multattck
-	tut_vs_recov
-	tut_vs_tilt
-	placeholdersong
+	Tut_Bass_OpenNote
+	Tut_Demo
+	Tut_Drum_Activ
+	Tut_Drum_Beat1
+	Tut_Drum_Beat2
+	Tut_Drum_Beat3
+	Tut_Drum_Break
+	Tut_Drum_Combos
+	Tut_Drum_Free
+	Tut_Drum_Kick
+	Tut_Drum_OneHand
+	Tut_Drum_TwoHands
+	Tut_Gtr_Chords
+	Tut_Gtr_Combos
+	Tut_Gtr_DiffNotes
+	Tut_Gtr_ExtSus
+	Tut_Gtr_HamOn
+	Tut_Gtr_LongNotes
+	Tut_Gtr_PlayNotes
+	Tut_Gtr_PullOff
+	Tut_Gtr_Slide
+	Tut_Gtr_Tilt
+	Tut_Gtr_Wham
+	Tut_Vox_Activ
+	Tut_Vox_Combos
+	Tut_Vox_Freeform
+	Tut_Vox_HitNotes
+	Tut_Vox_Hype
+	Tut_Vox_Spoken
+	Tut_VS_BattPow
+	Tut_VS_MultAttck
+	Tut_VS_Recov
+	Tut_VS_Tilt
+	PlaceHolderSong
 ]
-final_credits_song = pullmeunder
+final_credits_song = PullMeUnder
 download_songlist = [
 ]
 download_songlist_props = {
@@ -143,22 +143,22 @@ gh_songlist_props = {
 	$permanent_songlist_props
 	$jamsession_songlist_props
 }
-artist_text_by = qs(0x84df5648)
-artist_text_from = qs(0xb2c93b23)
-artist_text_as_made_famous_by = qs(0x85b4481b)
+artist_text_by = qs("BY")
+artist_text_from = qs("FROM")
+artist_text_as_made_famous_by = qs("AS MADE FAMOUS BY")
 jamsession_songlist_props = {
 	jamsession = {
 		checksum = jamsession
-		Name = 'jamsession'
-		title = qs(0xab6a4722)
-		artist = qs(0x4194c91d)
-		year = qs(0x61334b84)
+		name = 'jamsession'
+		title = qs("\LJam Session")
+		artist = qs("\LCustom")
+		year = qs("\L, 2008")
 		year_num = 2008
 		artist_text = $artist_text_by
 		original_artist = 1
 		leaderboard = 1
-		singer = male
-		genre = rock
+		singer = Male
+		genre = Rock
 		countoff = 'hihat01'
 		saved_in_globaltags = 0
 	}
@@ -166,30 +166,30 @@ jamsession_songlist_props = {
 permanent_songlist_props = {
 	aboutagirl = {
 		checksum = aboutagirl
-		Name = 'AboutAGirl'
-		title = qs(0x8c6da328)
-		artist = qs(0xc6824b55)
-		year = qs(0x190e1d29)
+		name = 'AboutAGirl'
+		title = qs("ABOUT A GIRL (UNPLUGGED)")
+		artist = qs("\LNIRVANA")
+		year = qs("\L, 1994")
 		artist_text = $artist_text_by
 		original_artist = 1
 		leaderboard = 1
-		singer = male
-		genre = `classic	rock`
+		singer = Male
+		genre = `Classic Rock`
 		countoff = 'sticks_normal'
 		drum_kit = 'classicrock'
 		overall_song_volume = -3.2
 	}
 	aggro = {
 		checksum = aggro
-		Name = 'Aggro'
-		title = qs(0x404b2fa4)
-		artist = qs(0x31953ed2)
-		year = qs(0xe6ab574b)
+		name = 'Aggro'
+		title = qs("\LAGGRO")
+		artist = qs("\LTHE ENEMY")
+		year = qs("\L, 2007")
 		artist_text = $artist_text_by
 		original_artist = 1
 		leaderboard = 1
-		singer = male
-		genre = pop
+		singer = Male
+		genre = Pop
 		countoff = 'hihat01'
 		drum_kit = 'modernrock'
 		overall_song_volume = 2.2
@@ -200,15 +200,15 @@ permanent_songlist_props = {
 	}
 	americanwoman = {
 		checksum = americanwoman
-		Name = 'AmericanWoman'
-		title = qs(0xa46ea35a)
-		artist = qs(0xe7111022)
-		year = qs(0x9dbdaf1e)
+		name = 'AmericanWoman'
+		title = qs("\LAMERICAN WOMAN")
+		artist = qs("\LTHE GUESS WHO")
+		year = qs("\L, 1970")
 		artist_text = $artist_text_by
 		original_artist = 1
 		leaderboard = 1
-		singer = male
-		genre = `classic	rock`
+		singer = Male
+		genre = `Classic Rock`
 		countoff = 'hihat01'
 		drum_kit = 'classicrock'
 		mono_drums = 1
@@ -216,15 +216,15 @@ permanent_songlist_props = {
 	}
 	antisocial = {
 		checksum = americanwoman
-		Name = 'Antisocial'
-		title = qs(0x45e384b0)
-		artist = qs(0xea035528)
-		year = qs(0xc5debf48)
+		name = 'Antisocial'
+		title = qs("\LANTISOCIAL")
+		artist = qs("\LTRUST")
+		year = qs("\L, 1980")
 		artist_text = $artist_text_by
 		original_artist = 1
 		leaderboard = 1
-		singer = male
-		genre = `heavy	metal`
+		singer = Male
+		genre = `Heavy Metal`
 		countoff = 'hihat01'
 		drum_kit = 'heavyrock'
 		overall_song_volume = -2.4
@@ -232,45 +232,45 @@ permanent_songlist_props = {
 	}
 	areyougonnagomyway = {
 		checksum = areyougonnagomyway
-		Name = 'AreYouGonnaGoMyWay'
-		title = qs(0xa032fb87)
-		artist = qs(0x0bce0c71)
-		year = qs(0x564f8bee)
+		name = 'AreYouGonnaGoMyWay'
+		title = qs("\LARE YOU GONNA GO MY WAY")
+		artist = qs("\LLENNY KRAVITZ")
+		year = qs("\L, 1993")
 		artist_text = $artist_text_by
 		original_artist = 1
 		leaderboard = 1
-		singer = male
-		genre = rock
+		singer = Male
+		genre = Rock
 		countoff = 'sticks_normal'
 		drum_kit = 'classicrock'
 		overall_song_volume = -1.2
 	}
 	assassin = {
 		checksum = assassin
-		Name = 'Assassin'
-		title = qs(0x68e2cdcf)
-		artist = qs(0x83b09c47)
-		year = qs(0xffb0660a)
+		name = 'Assassin'
+		title = qs("\LASSASSIN")
+		artist = qs("\LMUSE")
+		year = qs("\L, 2006")
 		artist_text = $artist_text_by
 		original_artist = 1
 		leaderboard = 1
-		singer = male
-		genre = pop
+		singer = Male
+		genre = Pop
 		countoff = 'sticks_normal'
 		drum_kit = 'modernrock'
 		overall_song_volume = -2.0
 	}
-	bandontherun = {
-		checksum = bandontherun
-		Name = 'BandOnTheRun'
-		title = qs(0x45698f74)
-		artist = qs(0xd9ce6701)
-		year = qs(0xb690fcdd)
+	BandOnTheRun = {
+		checksum = BandOnTheRun
+		name = 'BandOnTheRun'
+		title = qs("\LBAND ON THE RUN")
+		artist = qs("\LWINGS")
+		year = qs("\L, 1973")
 		artist_text = $artist_text_by
 		original_artist = 1
 		leaderboard = 1
-		singer = male
-		genre = `classic	rock`
+		singer = Male
+		genre = `Classic Rock`
 		countoff = 'sticks_normal'
 		drum_kit = 'classicrock'
 		overall_song_volume = -2
@@ -280,15 +280,15 @@ permanent_songlist_props = {
 	}
 	beatit = {
 		checksum = beatit
-		Name = 'beatit'
-		title = qs(0x0e0ba83d)
-		artist = qs(0xa5e68a41)
-		year = qs(0xf7e8ddca)
+		name = 'beatit'
+		title = qs("\LBEAT IT")
+		artist = qs("\LMICHAEL JACKSON")
+		year = qs("\L, 1982")
 		artist_text = $artist_text_by
 		original_artist = 1
 		leaderboard = 1
-		singer = male
-		genre = pop
+		singer = Male
+		genre = Pop
 		countoff = 'sticks_normal'
 		drum_kit = 'modernrock'
 		drum_solo = 1
@@ -300,66 +300,66 @@ permanent_songlist_props = {
 	}
 	beautifuldisaster = {
 		checksum = beautifuldisaster
-		Name = 'BeautifulDisaster'
-		title = qs(0xfd2860e7)
-		artist = qs(0xcd4bcb98)
-		year = qs(0x32234eea)
+		name = 'BeautifulDisaster'
+		title = qs("\LBEAUTIFUL DISASTER")
+		artist = qs("\L311")
+		year = qs("\L, 1997")
 		artist_text = $artist_text_by
 		original_artist = 1
 		leaderboard = 1
-		singer = male
-		genre = punk
+		singer = Male
+		genre = Punk
 		countoff = 'sticks_normal'
 		drum_kit = 'fusion'
 		overall_song_volume = -1.9
 	}
 	bossted = {
 		checksum = bossted
-		Name = 'BossTed'
-		title = qs(0x61a8cf3e)
-		artist = qs(0x3c1f79ae)
-		year = qs(0x61334b84)
+		name = 'BossTed'
+		title = qs("\LTED NUGENT GUITAR DUEL")
+		artist = qs("\LTED NUGENT")
+		year = qs("\L, 2008")
 		artist_text = $artist_text_by
 		original_artist = 1
 		leaderboard = 1
-		singer = None
-		genre = rock
+		singer = none
+		genre = Rock
 		countoff = 'sticks_normal'
 		drum_kit = 'heavyrock'
-		boss = boss_ted_props
-		Band = band_tedbossbattle
+		boss = Boss_Ted_Props
+		Band = Band_TedBossBattle
 		allowed_in_quickplay = 0
 		overall_song_volume = 3.8
 	}
 	bosszakk = {
 		checksum = bosszakk
-		Name = 'BossZakk'
-		title = qs(0xa579d1ee)
-		artist = qs(0xd48ce8bf)
-		year = qs(0x61334b84)
+		name = 'BossZakk'
+		title = qs("\LZAKK WYLDE GUITAR DUEL")
+		artist = qs("\LZAKK WYLDE")
+		year = qs("\L, 2008")
 		artist_text = $artist_text_by
 		original_artist = 1
 		leaderboard = 1
-		singer = None
-		genre = rock
+		singer = none
+		genre = Rock
 		countoff = 'sticks_normal'
 		drum_kit = 'heavyrock'
-		boss = boss_zakk_props
-		Band = band_zakkbossbattle
+		boss = Boss_Zakk_Props
+		Band = Band_ZakkBossBattle
 		allowed_in_quickplay = 0
 		overall_song_volume = 1.2
 	}
 	byob = {
 		checksum = byob
-		Name = 'BYOB'
-		title = qs(0xf830db62)
-		artist = qs(0x96cb7664)
-		year = qs(0xd49d35c9)
+		name = 'BYOB'
+		title = qs("\LB.Y.O.B.")
+		artist = qs("\LSYSTEM OF A DOWN")
+		year = qs("\L, 2005")
 		artist_text = $artist_text_by
 		original_artist = 1
 		leaderboard = 1
-		singer = male
-		genre = `black	metal`
+		singer = Male
+		genre = `Black Metal`
 		countoff = 'hihat01'
 		drum_kit = 'modernrock'
 		overall_song_volume = -3
@@ -367,208 +367,208 @@ permanent_songlist_props = {
 	}
 	crazytrain = {
 		checksum = crazytrain
-		Name = 'CrazyTrain'
-		title = qs(0x23704808)
-		artist = qs(0x45a99459)
-		year = qs(0xc5debf48)
+		name = 'CrazyTrain'
+		title = qs("\LCRAZY TRAIN")
+		artist = qs("\LOZZY OSBOURNE")
+		year = qs("\L, 1980")
 		artist_text = $artist_text_by
 		original_artist = 1
 		leaderboard = 1
-		singer = male
-		genre = `heavy	metal`
+		singer = Male
+		genre = `Heavy Metal`
 		countoff = 'hihat01'
 		drum_kit = 'classicrock'
 		drum_solo = 1
-		Band = band_crazytrain
+		Band = Band_CrazyTrain
 		overall_song_volume = -4.2
 		thin_fretbar_8note_params_low_bpm = 1
 		thin_fretbar_8note_params_high_bpm = 180
 	}
-	dammit = {
-		checksum = dammit
-		Name = 'Dammit'
-		title = qs(0x6cfb68a2)
-		artist = qs(0x241b860d)
-		year = qs(0x32234eea)
+	Dammit = {
+		checksum = Dammit
+		name = 'Dammit'
+		title = qs("\LDAMMIT")
+		artist = qs("\LBLINK-182")
+		year = qs("\L, 1997")
 		artist_text = $artist_text_by
 		original_artist = 1
 		leaderboard = 1
-		singer = male
-		genre = punk
+		singer = Male
+		genre = Punk
 		countoff = 'sticks_normal'
 		drum_kit = 'modernrock'
 		drum_solo = 1
-		Band = band_dammit
+		Band = Band_Dammit
 		overall_song_volume = -3.4
 	}
-	demolitionman = {
-		checksum = demolitionman
-		Name = 'DemolitionMan'
-		title = qs(0x0b3cc08b)
-		artist = qs(0x79384be6)
-		year = qs(0xd49d35c9)
+	DemolitionMan = {
+		checksum = DemolitionMan
+		name = 'DemolitionMan'
+		title = qs("DEMOLITION MAN (LIVE)")
+		artist = qs("\LSTING")
+		year = qs("\L, 2005")
 		artist_text = $artist_text_by
 		original_artist = 1
 		leaderboard = 1
-		singer = male
-		genre = `classic	rock`
+		singer = Male
+		genre = `Classic Rock`
 		countoff = 'sticks_normal'
 		drum_kit = 'modernrock'
 		performance = 1
 		overall_song_volume = -2.2
-		Band = band_demolitionman
+		Band = Band_DemolitionMan
 	}
-	demolitionman_perf2 = {
-		checksum = demolitionman
-		Name = 'DemolitionMan'
-		title = qs(0xb2c1df33)
-		artist = qs(0x79384be6)
-		year = qs(0xd49d35c9)
+	DemolitionMan_perf2 = {
+		checksum = DemolitionMan
+		name = 'DemolitionMan'
+		title = qs("\LDEMOLITION MAN (LIVE) (PERF_2)")
+		artist = qs("\LSTING")
+		year = qs("\L, 2005")
 		artist_text = $artist_text_by
 		original_artist = 1
 		leaderboard = 1
-		singer = male
-		genre = `classic	rock`
+		singer = Male
+		genre = `Classic Rock`
 		countoff = 'sticks_normal'
 		drum_kit = 'modernrock'
 		streamname = 'DemolitionMan'
 		performance = 2
 		overall_song_volume = -2.2
-		Band = band_demolitionman
+		Band = Band_DemolitionMan
 		never_show_in_setlist
 	}
 	doitagain = {
 		checksum = doitagain
-		Name = 'DoItAgain'
-		title = qs(0x956e2aa5)
-		artist = qs(0xb587ab8a)
-		year = qs(0xaf8bcd9c)
+		name = 'DoItAgain'
+		title = qs("\LDO IT AGAIN")
+		artist = qs("\LSTEELY DAN")
+		year = qs("\L, 1972")
 		artist_text = $artist_text_by
 		original_artist = 1
 		leaderboard = 1
-		singer = male
-		genre = `classic	rock`
+		singer = Male
+		genre = `Classic Rock`
 		countoff = 'sticks_normal'
 		drum_kit = 'modernrock'
 		overall_song_volume = -3
 	}
-	drumstreamtest = {
-		checksum = drumstreamtest
-		Name = 'DrumStreamTest'
-		title = qs(0xfc7f3df9)
-		artist = qs(0x0a932d91)
-		year = qs(0x61334b84)
+	DrumStreamTest = {
+		checksum = DrumStreamTest
+		name = 'DrumStreamTest'
+		title = qs("\LDEBUG - DRUM STREAM TEST")
+		artist = qs("\LNS")
+		year = qs("\L, 2008")
 		artist_text = $artist_text_by
 		original_artist = 1
 		leaderboard = 0
-		singer = male
-		genre = rock
+		singer = Male
+		genre = Rock
 		countoff = 'hihat01'
 		drum_kit = 'heavyrock'
 		saved_in_globaltags = -2
 	}
 	escueladecalor = {
 		checksum = escueladecalor
-		Name = 'EscuelaDeCalor'
-		title = qs(0x89806693)
-		artist = qs(0x351b9808)
-		year = qs(0xa1b27a4c)
+		name = 'EscuelaDeCalor'
+		title = qs("\LESCUELA DE CALOR")
+		artist = qs("\LRADIO FUTURA")
+		year = qs("\L, 1984")
 		artist_text = $artist_text_by
 		original_artist = 1
 		leaderboard = 1
-		singer = male
-		genre = punk
+		singer = Male
+		genre = Punk
 		countoff = 'sticks_normal'
 		drum_kit = 'modernrock'
 		overall_song_volume = -2
 	}
 	everlong = {
 		checksum = everlong
-		Name = 'Everlong'
-		title = qs(0x8a56ff45)
-		artist = qs(0x085904e7)
-		year = qs(0x32234eea)
+		name = 'Everlong'
+		title = qs("\LEVERLONG")
+		artist = qs("\LFOO FIGHTERS")
+		year = qs("\L, 1997")
 		artist_text = $artist_text_by
 		original_artist = 1
 		leaderboard = 1
-		singer = male
-		genre = punk
+		singer = Male
+		genre = Punk
 		countoff = 'sticks_normal'
 		drum_kit = 'modernrock'
 		overall_song_volume = -2.4
 	}
 	eyeofthetiger = {
 		checksum = eyeofthetiger
-		Name = 'eyeofthetiger'
-		title = qs(0x4016d900)
-		artist = qs(0xd1daf5ab)
-		year = qs(0xf7e8ddca)
+		name = 'eyeofthetiger'
+		title = qs("\LEYE OF THE TIGER")
+		artist = qs("\LSURVIVOR")
+		year = qs("\L, 1982")
 		artist_text = $artist_text_by
 		original_artist = 1
 		leaderboard = 1
-		singer = male
-		genre = `classic	rock`
+		singer = Male
+		genre = `Classic Rock`
 		countoff = 'sticks_huge'
 		drum_kit = 'heavyrock'
 		drum_solo = 1
 		overall_song_volume = -2.9
 	}
-	feelthepain = {
-		checksum = feelthepain
-		Name = 'FeelThePain'
-		title = qs(0xa741794e)
-		artist = qs(0xeb1570ee)
-		year = qs(0x190e1d29)
+	FeelthePain = {
+		checksum = FeelthePain
+		name = 'FeelThePain'
+		title = qs("\LFEEL THE PAIN")
+		artist = qs("\LDINOSAUR JR.")
+		year = qs("\L, 1994")
 		artist_text = $artist_text_by
 		original_artist = 1
 		leaderboard = 1
-		singer = male
-		genre = goth
+		singer = Male
+		genre = Goth
 		countoff = 'hihat01'
 		drum_kit = 'modernrock'
 		overall_song_volume = -2
 	}
-	floaton = {
-		checksum = floaton
-		Name = 'FloatOn'
-		title = qs(0x0e3734f7)
-		artist = qs(0xc2ffbf96)
-		year = qs(0xcd860488)
+	FloatOn = {
+		checksum = FloatOn
+		name = 'FloatOn'
+		title = qs("\LFLOAT ON")
+		artist = qs("\LMODEST MOUSE")
+		year = qs("\L, 2004")
 		artist_text = $artist_text_by
 		original_artist = 1
 		leaderboard = 1
-		singer = male
-		genre = goth
+		singer = Male
+		genre = Goth
 		countoff = 'hihat01'
 		drum_kit = 'modernrock'
 		overall_song_volume = -2.6
 	}
-	freakonaleash = {
-		checksum = freakonaleash
-		Name = 'FreakOnALeash'
-		title = qs(0x4c79afd6)
-		artist = qs(0xbcda0a93)
-		year = qs(0xb5bb5225)
+	FreakOnALeash = {
+		checksum = FreakOnALeash
+		name = 'FreakOnALeash'
+		title = qs("\LFREAK ON A LEASH")
+		artist = qs("\LKORN")
+		year = qs("\L, 1998")
 		artist_text = $artist_text_by
 		original_artist = 1
 		leaderboard = 1
-		singer = male
-		genre = `black	metal`
+		singer = Male
+		genre = `Black Metal`
 		countoff = 'Sticks_Normal'
 		drum_kit = 'modernrock'
 		overall_song_volume = -1.6
 	}
 	goodgod = {
 		checksum = goodgod
-		Name = 'GoodGod'
-		title = qs(0xfd1303fb)
-		artist = qs(0x4aec4b5f)
-		year = qs(0xe6ab574b)
+		name = 'GoodGod'
+		title = qs("\LGOOD GOD")
+		artist = qs("\LANOUK")
+		year = qs("\L, 2007")
 		artist_text = $artist_text_by
 		original_artist = 1
 		leaderboard = 1
-		singer = female
-		genre = pop
+		singer = Female
+		genre = Pop
 		countoff = 'Sticks_Normal'
 		drum_kit = 'modernrock'
 		overall_song_volume = -2
@@ -576,15 +576,15 @@ permanent_songlist_props = {
 	}
 	goyourownway = {
 		checksum = goyourownway
-		Name = 'GoYourOwnWay'
-		title = qs(0xda3545c5)
-		artist = qs(0x1ba3db7d)
-		year = qs(0xd2fc39d9)
+		name = 'GoYourOwnWay'
+		title = qs("\LGO YOUR OWN WAY")
+		artist = qs("\LFLEETWOOD MAC")
+		year = qs("\L, 1977")
 		artist_text = $artist_text_by
 		original_artist = 1
 		leaderboard = 1
-		singer = male
-		genre = `classic	rock`
+		singer = Male
+		genre = `Classic Rock`
 		countoff = 'Sticks_Normal'
 		drum_kit = 'classicrock'
 		overall_song_volume = -2
@@ -594,15 +594,15 @@ permanent_songlist_props = {
 	}
 	hailtothefreaks = {
 		checksum = hailtothefreaks
-		Name = 'HailToTheFreaks'
-		title = qs(0xb78faa32)
-		artist = qs(0x0d3e0aa4)
-		year = qs(0xe6ab574b)
+		name = 'HailToTheFreaks'
+		title = qs("\LHAIL TO THE FREAKS")
+		artist = qs("\LBEATSTEAKS")
+		year = qs("\L, 2007")
 		artist_text = $artist_text_by
 		original_artist = 1
 		leaderboard = 1
-		singer = male
-		genre = goth
+		singer = Male
+		genre = Goth
 		countoff = 'hihat01'
 		drum_kit = 'classicrock'
 		overall_song_volume = -2.5
@@ -611,15 +611,15 @@ permanent_songlist_props = {
 	}
 	heartbreaker = {
 		checksum = heartbreaker
-		Name = 'Heartbreaker'
-		title = qs(0xbd400031)
-		artist = qs(0x3607a0c6)
-		year = qs(0x4c7f1457)
+		name = 'Heartbreaker'
+		title = qs("\LHEARTBREAKER")
+		artist = qs("\LPAT BENATAR")
+		year = qs("\L, 1979")
 		artist_text = $artist_text_by
 		original_artist = 1
 		leaderboard = 1
-		singer = female
-		genre = rock
+		singer = Female
+		genre = Rock
 		countoff = 'hihat01'
 		drum_kit = 'classicrock'
 		overall_song_volume = -2.5
@@ -628,30 +628,30 @@ permanent_songlist_props = {
 	}
 	heymanniceshot = {
 		checksum = heymanniceshot
-		Name = 'HeyManNiceShot'
-		title = qs(0x5a35b867)
-		artist = qs(0x67e8fd3a)
-		year = qs(0x00152c68)
+		name = 'HeyManNiceShot'
+		title = qs("\LHEY MAN, NICE SHOT")
+		artist = qs("\LFILTER")
+		year = qs("\L, 1995")
 		artist_text = $artist_text_by
 		original_artist = 1
 		leaderboard = 1
-		singer = male
-		genre = punk
+		singer = Male
+		genre = Punk
 		countoff = 'hihat01'
 		drum_kit = 'heavyrock'
 		overall_song_volume = -1.1
 	}
 	hollywoodnights = {
 		checksum = hollywoodnights
-		Name = 'HollywoodNights'
-		title = qs(0xba3f77db)
-		artist = qs(0xfa179a34)
-		year = qs(0x55642516)
+		name = 'HollywoodNights'
+		title = qs("\LHOLLYWOOD NIGHTS")
+		artist = qs("\LBOB SEGER & THE SILVER BULLET BAND")
+		year = qs("\L, 1978")
 		artist_text = $artist_text_by
 		original_artist = 1
 		leaderboard = 1
-		singer = male
-		genre = `classic	rock`
+		singer = Male
+		genre = `Classic Rock`
 		countoff = 'hihat01'
 		drum_kit = 'classicrock'
 		overall_song_volume = -3
@@ -660,34 +660,34 @@ permanent_songlist_props = {
 	}
 	hotelcalifornia = {
 		checksum = hotelcalifornia
-		Name = 'HotelCalifornia'
-		title = qs(0xaf5861b6)
-		artist = qs(0x8144e246)
-		year = qs(0xcbe70898)
+		name = 'HotelCalifornia'
+		title = qs("\LHOTEL CALIFORNIA")
+		artist = qs("\LTHE EAGLES")
+		year = qs("\L, 1976")
 		artist_text = $artist_text_by
 		original_artist = 1
 		leaderboard = 1
-		singer = male
-		genre = `classic	rock`
+		singer = Male
+		genre = `Classic Rock`
 		countoff = 'hihat01'
 		drum_kit = 'classicrock'
 		overall_song_volume = 1.3
 		parts_with_mic = [
-			GUITARIST
-			BASSIST
+			Guitarist
+			bassist
 		]
 	}
 	hotforteacher = {
 		checksum = hotforteacher
-		Name = 'HotForTeacher'
-		title = qs(0x8989f59d)
-		artist = qs(0x6de404cf)
-		year = qs(0xa1b27a4c)
+		name = 'HotForTeacher'
+		title = qs("\LHOT FOR TEACHER")
+		artist = qs("\LVAN HALEN")
+		year = qs("\L, 1984")
 		artist_text = $artist_text_by
 		original_artist = 1
 		leaderboard = 1
-		singer = male
-		genre = `heavy	metal`
+		singer = Male
+		genre = `Heavy Metal`
 		countoff = 'Sticks_Normal'
 		drum_kit = 'heavyrock'
 		overall_song_volume = -1.3
@@ -699,15 +699,15 @@ permanent_songlist_props = {
 	}
 	kickoutthejams = {
 		checksum = kickoutthejams
-		Name = 'KickOutTheJams'
-		title = qs(0x0acf703d)
-		artist = qs(0x4bac9ab8)
-		year = qs(0x61334b84)
+		name = 'KickOutTheJams'
+		title = qs("\LKICK OUT THE JAMS")
+		artist = qs("\LMC5'S WAYNE KRAMER")
+		year = qs("\L, 2008")
 		artist_text = $artist_text_by
 		original_artist = 1
 		leaderboard = 1
-		singer = male
-		genre = rock
+		singer = Male
+		genre = Rock
 		countoff = 'sticks_normal'
 		drum_kit = 'modernrock'
 		drum_solo = 1
@@ -717,47 +717,47 @@ permanent_songlist_props = {
 		thin_fretbar_16note_params_low_bpm = 1
 		thin_fretbar_16note_params_high_bpm = 1
 	}
-	thekill = {
-		checksum = thekill
-		Name = 'TheKill'
-		title = qs(0x08ed9747)
-		artist = qs(0xa1630002)
-		year = qs(0xd49d35c9)
+	TheKill = {
+		checksum = TheKill
+		name = 'TheKill'
+		title = qs("\LTHE KILL")
+		artist = qs("\L30 SECONDS TO MARS")
+		year = qs("\L, 2005")
 		artist_text = $artist_text_by
 		original_artist = 1
 		leaderboard = 1
-		singer = male
-		genre = goth
+		singer = Male
+		genre = Goth
 		countoff = 'sticks_normal'
 		drum_kit = 'modernrock'
 		overall_song_volume = -1.7
 	}
 	lvialviaquez = {
 		checksum = lvialviaquez
-		Name = 'LViaLViaquez'
-		title = qs(0xe1534f23)
-		artist = qs(0x21f33c17)
-		year = qs(0xd49d35c9)
+		name = 'LViaLViaquez'
+		title = qs("\LL'VIA L'VIAQUEZ")
+		artist = qs("\LTHE MARS VOLTA")
+		year = qs("\L, 2005")
 		artist_text = $artist_text_by
 		original_artist = 1
 		leaderboard = 1
-		singer = male
-		genre = goth
+		singer = Male
+		genre = Goth
 		countoff = 'sticks_normal'
 		drum_kit = 'modernrock'
 		overall_song_volume = 0.7
 	}
 	labamba = {
 		checksum = labamba
-		Name = 'Labamba'
-		title = qs(0x094c5123)
-		artist = qs(0x16b27884)
-		year = qs(0x8a9f298f)
+		name = 'Labamba'
+		title = qs("\LLA BAMBA")
+		artist = qs("\LLOS LOBOS")
+		year = qs("\L, 1987")
 		artist_text = $artist_text_by
 		original_artist = 1
 		leaderboard = 1
-		singer = male
-		genre = pop
+		singer = Male
+		genre = Pop
 		countoff = 'hihat01'
 		drum_kit = 'modernrock'
 		overall_song_volume = -2.2
@@ -770,45 +770,45 @@ permanent_songlist_props = {
 	}
 	lazyeye = {
 		checksum = lazyeye
-		Name = 'LazyEye'
-		title = qs(0x0b19757b)
-		artist = qs(0xf197655f)
-		year = qs(0xffb0660a)
+		name = 'LazyEye'
+		title = qs("\LLAZY EYE")
+		artist = qs("\LSILVERSUN PICKUPS")
+		year = qs("\L, 2006")
 		artist_text = $artist_text_by
 		original_artist = 1
 		leaderboard = 1
-		singer = male
-		genre = pop
+		singer = Male
+		genre = Pop
 		countoff = 'sticks_normal'
 		drum_kit = 'classicrock'
 		overall_song_volume = -2
 	}
 	livingonaprayer = {
 		checksum = livingonaprayer
-		Name = 'LivingOnAPrayer'
-		title = qs(0xfc5c3ee0)
-		artist = qs(0xf1246ece)
-		year = qs(0x938418ce)
+		name = 'LivingOnAPrayer'
+		title = qs("\LLIVIN' ON A PRAYER")
+		artist = qs("\LBON JOVI")
+		year = qs("\L, 1986")
 		artist_text = $artist_text_by
 		original_artist = 1
 		leaderboard = 1
-		singer = male
-		genre = rock
+		singer = Male
+		genre = Rock
 		countoff = 'sticks_normal'
 		drum_kit = 'heavyrock'
 		overall_song_volume = 0.3
 	}
 	lovemetwotimes = {
 		checksum = lovemetwotimes
-		Name = 'LoveMeTwoTimes'
-		title = qs(0x059fdfd2)
-		artist = qs(0x41f3d957)
-		year = qs(0x6a405ebc)
+		name = 'LoveMeTwoTimes'
+		title = qs("\LLOVE ME TWO TIMES")
+		artist = qs("\LTHE DOORS")
+		year = qs("\L, 1967")
 		artist_text = $artist_text_by
 		original_artist = 1
 		leaderboard = 1
-		singer = male
-		genre = `classic	rock`
+		singer = Male
+		genre = `Classic Rock`
 		countoff = 'sticks_normal'
 		drum_kit = 'classicrock'
 		drum_solo = 1
@@ -816,30 +816,30 @@ permanent_songlist_props = {
 	}
 	loveremovalmachine = {
 		checksum = loveremovalmachine
-		Name = 'LoveRemovalMachine'
-		title = qs(0x7c9afc6b)
-		artist = qs(0x2d07d64b)
-		year = qs(0x8a9f298f)
+		name = 'LoveRemovalMachine'
+		title = qs("\LLOVE REMOVAL MACHINE")
+		artist = qs("\LTHE CULT")
+		year = qs("\L, 1987")
 		artist_text = $artist_text_by
 		original_artist = 1
 		leaderboard = 1
-		singer = male
-		genre = rock
+		singer = Male
+		genre = Rock
 		countoff = 'hihat01'
 		drum_kit = 'heavyrock'
 		overall_song_volume = -2.3
 	}
 	lovespreads = {
 		checksum = lovespreads
-		Name = 'LoveSpreads'
-		title = qs(0xd08f7716)
-		artist = qs(0x2da71abe)
-		year = qs(0x190e1d29)
+		name = 'LoveSpreads'
+		title = qs("\LLOVE SPREADS")
+		artist = qs("\LTHE STONE ROSES")
+		year = qs("\L, 1994")
 		artist_text = $artist_text_by
 		original_artist = 1
 		leaderboard = 1
-		singer = male
-		genre = rock
+		singer = Male
+		genre = Rock
 		countoff = 'hihat01'
 		drum_kit = 'modernrock'
 		overall_song_volume = -3
@@ -847,118 +847,118 @@ permanent_songlist_props = {
 			cents = 15
 		}
 		parts_with_mic = [
-			GUITARIST
-			BASSIST
+			Guitarist
+			bassist
 		]
 	}
 	themiddle = {
 		checksum = themiddle
-		Name = 'TheMiddle'
-		title = qs(0x97d3ab9f)
-		artist = qs(0x7ed79296)
-		year = qs(0xb0f1f0cd)
+		name = 'TheMiddle'
+		title = qs("\LTHE MIDDLE")
+		artist = qs("\LJIMMY EAT WORLD")
+		year = qs("\L, 2001")
 		artist_text = $artist_text_by
 		original_artist = 1
 		leaderboard = 1
-		singer = male
-		genre = pop
+		singer = Male
+		genre = Pop
 		countoff = 'hihat01'
 		drum_kit = 'modernrock'
 		overall_song_volume = -3.5
 	}
 	miserybusiness = {
 		checksum = miserybusiness
-		Name = 'MiseryBusiness'
-		title = qs(0x6cdd7e67)
-		artist = qs(0x451d3ec2)
-		year = qs(0xe6ab574b)
+		name = 'MiseryBusiness'
+		title = qs("\LMISERY BUSINESS")
+		artist = qs("\LPARAMORE")
+		year = qs("\L, 2007")
 		artist_text = $artist_text_by
 		original_artist = 1
 		leaderboard = 1
-		singer = female
-		genre = punk
+		singer = Female
+		genre = Punk
 		countoff = 'sticks_normal'
 		drum_kit = 'modernrock'
-		Band = band_miserybusiness
+		Band = Band_MiseryBusiness
 		overall_song_volume = -1.3
 		vocals_scroll_speed = 1.1
 	}
 	monsoon = {
 		checksum = monsoon
-		Name = 'Monsoon'
-		title = qs(0x2582beb6)
-		artist = qs(0x0b04a236)
-		year = qs(0xe6ab574b)
+		name = 'Monsoon'
+		title = qs("\LMONSOON")
+		artist = qs("\LTOKIO HOTEL")
+		year = qs("\L, 2007")
 		artist_text = $artist_text_by
 		original_artist = 1
 		leaderboard = 1
-		singer = male
-		genre = punk
+		singer = Male
+		genre = Punk
 		countoff = 'sticks_normal'
 		drum_kit = 'classicrock'
 		overall_song_volume = 1.5
 	}
 	mountainsong = {
 		checksum = mountainsong
-		Name = 'MountainSong'
-		title = qs(0x228375ab)
-		artist = qs(0xe6006bdc)
-		year = qs(0x0d073540)
+		name = 'MountainSong'
+		title = qs("\LMOUNTAIN SONG")
+		artist = qs("\LJANE'S ADDICTION")
+		year = qs("\L, 1988")
 		artist_text = $artist_text_by
 		original_artist = 1
 		leaderboard = 1
-		singer = male
-		genre = goth
+		singer = Male
+		genre = Goth
 		countoff = 'sticks_normal'
 		drum_kit = 'fusion'
 		overall_song_volume = -0.8
 	}
 	mrcrowley = {
 		checksum = mrcrowley
-		Name = 'MrCrowley'
-		title = qs(0xca32f492)
-		artist = qs(0x45a99459)
-		year = qs(0xc5debf48)
+		name = 'MrCrowley'
+		title = qs("\LMR. CROWLEY")
+		artist = qs("\LOZZY OSBOURNE")
+		year = qs("\L, 1980")
 		artist_text = $artist_text_by
 		original_artist = 1
 		leaderboard = 1
-		singer = male
-		genre = `heavy	metal`
+		singer = Male
+		genre = `Heavy Metal`
 		countoff = 'sticks_normal'
 		drum_kit = 'heavyrock'
-		Band = band_mrcrowley
+		Band = Band_MrCrowley
 		overall_song_volume = -2
 	}
-	nevertoolate = {
-		checksum = nevertoolate
-		Name = 'NeverTooLate'
-		title = qs(0xfe1fc4be)
-		artist = qs(0xfbb27e7c)
-		year = qs(0xffb0660a)
+	NeverTooLate = {
+		checksum = NeverTooLate
+		name = 'NeverTooLate'
+		title = qs("\LNEVER TOO LATE")
+		artist = qs("\LTHE ANSWER")
+		year = qs("\L, 2006")
 		artist_text = $artist_text_by
 		original_artist = 1
 		leaderboard = 1
-		singer = male
-		genre = rock
+		singer = Male
+		genre = Rock
 		countoff = 'hihat01'
 		drum_kit = 'fusion'
 		parts_with_mic = [
-			GUITARIST
-			BASSIST
+			Guitarist
+			bassist
 		]
 		overall_song_volume = -1.5
 	}
 	nosleeptillbrooklyn = {
 		checksum = nosleeptillbrooklyn
-		Name = 'NoSleepTillBrooklyn'
-		title = qs(0x52bdc42f)
-		artist = qs(0x4f982a58)
-		year = qs(0x938418ce)
+		name = 'NoSleepTillBrooklyn'
+		title = qs("\LNO SLEEP TILL BROOKLYN")
+		artist = qs("\LBEASTIE BOYS")
+		year = qs("\L, 1986")
 		artist_text = $artist_text_by
 		original_artist = 1
 		leaderboard = 1
-		singer = male
-		genre = punk
+		singer = Male
+		genre = Punk
 		countoff = 'sticks_normal'
 		drum_kit = 'hiphop'
 		overall_song_volume = -2.6
@@ -966,79 +966,79 @@ permanent_songlist_props = {
 	}
 	nuvole = {
 		checksum = nuvole
-		Name = 'Nuvole'
-		title = qs(0x7f3fb729)
-		artist = qs(0x25f1294b)
-		year = qs(0xd49d35c9)
+		name = 'Nuvole'
+		title = qs("\LNUVOLE E LENZUOLA")
+		artist = qs("\LNEGRAMARO")
+		year = qs("\L, 2005")
 		artist_text = $artist_text_by
 		original_artist = 1
 		leaderboard = 1
-		singer = male
-		genre = rock
+		singer = Male
+		genre = Rock
 		countoff = 'sticks_normal'
 		drum_kit = 'modernrock'
 		overall_song_volume = -0.8
 	}
 	obstacle1 = {
 		checksum = obstacle1
-		Name = 'Obstacle1'
-		title = qs(0x21a5d478)
-		artist = qs(0xeaa9182c)
-		year = qs(0x9bdca30e)
+		name = 'Obstacle1'
+		title = qs("\LOBSTACLE 1")
+		artist = qs("\LINTERPOL")
+		year = qs("\L, 2002")
 		artist_text = $artist_text_by
 		original_artist = 1
 		leaderboard = 1
-		singer = male
-		genre = goth
+		singer = Male
+		genre = Goth
 		countoff = 'sticks_normal'
 		drum_kit = 'fusion'
 		parts_with_mic = [
-			GUITARIST
-			BASSIST
+			Guitarist
+			bassist
 		]
 		overall_song_volume = -0.8
 	}
 	ontheroadagain = {
 		checksum = ontheroadagain
-		Name = 'OnTheRoadAgain'
-		title = qs(0x9742f17f)
-		artist = qs(0x1150393f)
-		year = qs(0xc5debf48)
+		name = 'OnTheRoadAgain'
+		title = qs("ON THE ROAD AGAIN (LIVE)")
+		artist = qs("\LWILLIE NELSON")
+		year = qs("\L, 1980")
 		artist_text = $artist_text_by
 		original_artist = 1
 		leaderboard = 1
-		singer = male
-		genre = rock
+		singer = Male
+		genre = Rock
 		countoff = 'sticks_normal'
 		drum_kit = 'classicrock'
 		overall_song_volume = 0.1
 	}
 	onearmedscissor = {
 		checksum = onearmedscissor
-		Name = 'OneArmedScissor'
-		title = qs(0x136b4ffa)
-		artist = qs(0x2b39c24a)
-		year = qs(0xa9eac18c)
+		name = 'OneArmedScissor'
+		title = qs("\LONE ARMED SCISSOR")
+		artist = qs("\LAT THE DRIVE-IN")
+		year = qs("\L, 2000")
 		artist_text = $artist_text_by
 		original_artist = 1
 		leaderboard = 1
-		singer = male
-		genre = punk
+		singer = Male
+		genre = Punk
 		countoff = 'sticks_normal'
 		drum_kit = 'modernrock'
 		overall_song_volume = -2
 	}
 	onewayoranother = {
 		checksum = onewayoranother
-		Name = 'OneWayOrAnother'
-		title = qs(0xa364cea8)
-		artist = qs(0xa0ace1a0)
-		year = qs(0x55642516)
+		name = 'OneWayOrAnother'
+		title = qs("\LONE WAY OR ANOTHER")
+		artist = qs("\LBLONDIE")
+		year = qs("\L, 1978")
 		artist_text = $artist_text_by
 		original_artist = 1
 		leaderboard = 1
-		singer = female
-		genre = pop
+		singer = Female
+		genre = Pop
 		countoff = 'Sticks_Normal'
 		drum_kit = 'modernrock'
 		drum_solo = 1
@@ -1046,46 +1046,46 @@ permanent_songlist_props = {
 	}
 	ourtruth = {
 		checksum = ourtruth
-		Name = 'OurTruth'
-		title = qs(0x90950ce3)
-		artist = qs(0xccbc1b70)
-		year = qs(0xffb0660a)
+		name = 'OurTruth'
+		title = qs("\LOUR TRUTH")
+		artist = qs("\LLACUNA COIL")
+		year = qs("\L, 2006")
 		artist_text = $artist_text_by
 		original_artist = 1
 		leaderboard = 1
-		singer = female
-		genre = `heavy	metal`
+		singer = Female
+		genre = `Heavy Metal`
 		countoff = 'hihat01'
 		drum_kit = 'fusion'
 		overall_song_volume = -3
 	}
-	overkill = {
-		checksum = overkill
-		Name = 'Overkill'
-		title = qs(0xeb84be2d)
-		artist = qs(0xfc66540e)
-		year = qs(0xe6ab574b)
+	Overkill = {
+		checksum = Overkill
+		name = 'Overkill'
+		title = qs("\LOVERKILL")
+		artist = qs("\LMOTÖRHEAD")
+		year = qs("\L, 2007")
 		artist_text = $artist_text_by
 		original_artist = 1
 		leaderboard = 1
-		singer = male
-		genre = `heavy	metal`
+		singer = Male
+		genre = `Heavy Metal`
 		countoff = 'sticks_normal'
 		drum_kit = 'heavyrock'
 		drum_solo = 1
 		overall_song_volume = -2.2
 	}
-	parabola = {
-		checksum = parabola
-		Name = 'Parabola'
-		title = qs(0x4897c9c6)
-		artist = qs(0x8904c4d4)
-		year = qs(0xb0f1f0cd)
+	Parabola = {
+		checksum = Parabola
+		name = 'Parabola'
+		title = qs("\LPARABOLA")
+		artist = qs("\LTOOL")
+		year = qs("\L, 2001")
 		artist_text = $artist_text_by
 		original_artist = 1
 		leaderboard = 1
-		singer = male
-		genre = rock
+		singer = Male
+		genre = Rock
 		countoff = 'sticks_normal'
 		drum_kit = 'heavyrock'
 		drum_solo = 1
@@ -1093,30 +1093,30 @@ permanent_songlist_props = {
 	}
 	prettyvacant = {
 		checksum = prettyvacant
-		Name = 'PrettyVacant'
-		title = qs(0xefc0feba)
-		artist = qs(0xbbd60446)
-		year = qs(0xe6ab574b)
+		name = 'PrettyVacant'
+		title = qs("\LPRETTY VACANT")
+		artist = qs("\LSEX PISTOLS")
+		year = qs("\L, 2007")
 		artist_text = $artist_text_by
 		original_artist = 1
 		leaderboard = 1
-		singer = male
-		genre = punk
+		singer = Male
+		genre = Punk
 		countoff = 'sticks_huge'
 		drum_kit = 'classicrock'
 		overall_song_volume = -0.5
 	}
 	prisonerofsociety = {
 		checksum = prisonerofsociety
-		Name = 'PrisonerOfSociety'
-		title = qs(0x9b8aa3a0)
-		artist = qs(0x5669f68c)
-		year = qs(0xaca06364)
+		name = 'PrisonerOfSociety'
+		title = qs("\LPRISONER OF SOCIETY")
+		artist = qs("\LTHE LIVING END")
+		year = qs("\L, 1999")
 		artist_text = $artist_text_by
 		original_artist = 1
 		leaderboard = 1
-		singer = male
-		genre = punk
+		singer = Male
+		genre = Punk
 		countoff = 'Sticks_Normal'
 		drum_kit = 'modernrock'
 		drum_solo = 1
@@ -1126,50 +1126,50 @@ permanent_songlist_props = {
 		thin_fretbar_16note_params_low_bpm = 1
 		thin_fretbar_16note_params_high_bpm = 1
 	}
-	pullmeunder = {
-		checksum = pullmeunder
-		Name = 'PullMeUnder'
-		title = qs(0x5aa787ea)
-		artist = qs(0xff93a700)
-		year = qs(0x4f54baaf)
+	PullMeUnder = {
+		checksum = PullMeUnder
+		name = 'PullMeUnder'
+		title = qs("\LPULL ME UNDER")
+		artist = qs("\LDREAM THEATER")
+		year = qs("\L, 1992")
 		artist_text = $artist_text_by
 		original_artist = 1
 		leaderboard = 1
-		singer = male
-		genre = `heavy	metal`
+		singer = Male
+		genre = `Heavy Metal`
 		countoff = 'sticks_huge'
 		drum_kit = 'heavyrock'
 		overall_song_volume = -2.0
 	}
 	purplehaze = {
 		checksum = purplehaze
-		Name = 'PurpleHaze'
-		title = qs(0x49144b2e)
-		artist = qs(0x30f8b6de)
-		year = qs(0xedd84273)
+		name = 'PurpleHaze'
+		title = qs("PURPLE HAZE (LIVE)")
+		artist = qs("\LTHE JIMI HENDRIX EXPERIENCE")
+		year = qs("\L, 1968")
 		artist_text = $artist_text_by
 		original_artist = 1
 		leaderboard = 1
-		singer = male
-		genre = `classic	rock`
+		singer = Male
+		genre = `Classic Rock`
 		countoff = 'HiHat01'
 		drum_kit = 'classicrock'
-		Band = band_hendrix
+		Band = Band_Hendrix
 		overall_song_volume = 1.0
 		thin_fretbar_16note_params_low_bpm = 1
 		thin_fretbar_16note_params_high_bpm = 1
 	}
-	ramblinman = {
-		checksum = ramblinman
-		Name = 'RamblinMan'
-		title = qs(0xcd281a70)
-		artist = qs(0x37412253)
-		year = qs(0xb690fcdd)
+	RamblinMan = {
+		checksum = RamblinMan
+		name = 'RamblinMan'
+		title = qs("\LRAMBLIN' MAN")
+		artist = qs("\LTHE ALLMAN BROTHERS BAND")
+		year = qs("\L, 1973")
 		artist_text = $artist_text_by
 		original_artist = 1
 		leaderboard = 1
-		singer = male
-		genre = `classic	rock`
+		singer = Male
+		genre = `Classic Rock`
 		countoff = 'sticks_normal'
 		drum_kit = 'classicrock'
 		overall_song_volume = -1.0
@@ -1180,15 +1180,15 @@ permanent_songlist_props = {
 	}
 	rebelyell = {
 		checksum = rebelyell
-		Name = 'RebelYell'
-		title = qs(0x5eabcf53)
-		artist = qs(0x1da9c31b)
-		year = qs(0xeef3ec8b)
+		name = 'RebelYell'
+		title = qs("\LREBEL YELL")
+		artist = qs("\LBILLY IDOL")
+		year = qs("\L, 1983")
 		artist_text = $artist_text_by
 		original_artist = 1
 		leaderboard = 1
-		singer = male
-		genre = punk
+		singer = Male
+		genre = Punk
 		countoff = 'Sticks_Normal'
 		drum_kit = 'modernrock'
 		drum_solo = 1
@@ -1196,15 +1196,15 @@ permanent_songlist_props = {
 	}
 	reedthroughlabor = {
 		checksum = reedthroughlabor
-		Name = 'ReEdThroughLabor'
-		title = qs(0xd5a6f368)
-		artist = qs(0x831c7478)
-		year = qs(0x61334b84)
+		name = 'ReEdThroughLabor'
+		title = qs("\LRE-EDUCATION THROUGH LABOR")
+		artist = qs("\LRISE AGAINST")
+		year = qs("\L, 2008")
 		artist_text = $artist_text_by
 		original_artist = 1
 		leaderboard = 1
-		singer = male
-		genre = punk
+		singer = Male
+		genre = Punk
 		countoff = 'sticks_normal'
 		drum_kit = 'modernrock'
 		overall_song_volume = -2.2
@@ -1215,106 +1215,106 @@ permanent_songlist_props = {
 	}
 	rooftops = {
 		checksum = rooftops
-		Name = 'Rooftops'
-		title = qs(0xd35422d4)
-		artist = qs(0x5269bd77)
-		year = qs(0xffb0660a)
+		name = 'Rooftops'
+		title = qs("\LROOFTOPS (A LIBERATION BROADCAST)")
+		artist = qs("\LLOSTPROPHETS")
+		year = qs("\L, 2006")
 		artist_text = $artist_text_by
 		original_artist = 1
 		leaderboard = 1
-		singer = male
-		genre = rock
+		singer = Male
+		genre = Rock
 		countoff = 'Sticks_Normal'
 		drum_kit = 'classicrock'
 		overall_song_volume = -0.6
 	}
 	santeria = {
 		checksum = santeria
-		Name = 'Santeria'
-		title = qs(0x2b997f8b)
-		artist = qs(0x4e87e393)
-		year = qs(0x2b387fab)
+		name = 'Santeria'
+		title = qs("\LSANTERIA")
+		artist = qs("\LSUBLIME")
+		year = qs("\L, 1996")
 		artist_text = $artist_text_by
 		original_artist = 1
 		leaderboard = 1
-		singer = male
-		genre = pop
+		singer = Male
+		genre = Pop
 		countoff = 'Sticks_Normal'
 		drum_kit = 'fusion'
 		overall_song_volume = -4
 	}
-	satchboogie = {
-		checksum = satchboogie
-		Name = 'SatchBoogie'
-		title = qs(0x04b5dad9)
-		artist = qs(0xd6a7a1bb)
-		year = qs(0x8a9f298f)
+	SatchBoogie = {
+		checksum = SatchBoogie
+		name = 'SatchBoogie'
+		title = qs("\LSATCH BOOGIE")
+		artist = qs("\LJOE SATRIANI")
+		year = qs("\L, 1987")
 		artist_text = $artist_text_by
 		original_artist = 1
 		leaderboard = 1
-		singer = None
-		genre = rock
+		singer = none
+		genre = Rock
 		countoff = 'Sticks_Normal'
 		drum_kit = 'fusion'
 		overall_song_volume = -3.1
 		doesnt_support_vocals
 	}
-	schism = {
-		checksum = schism
-		Name = 'Schism'
-		title = qs(0x675bee7d)
-		artist = qs(0x8904c4d4)
-		year = qs(0xb0f1f0cd)
+	Schism = {
+		checksum = Schism
+		name = 'Schism'
+		title = qs("\LSCHISM")
+		artist = qs("\LTOOL")
+		year = qs("\L, 2001")
 		artist_text = $artist_text_by
 		original_artist = 1
 		leaderboard = 1
-		singer = male
-		genre = rock
+		singer = Male
+		genre = Rock
 		countoff = 'Sticks_Normal'
 		drum_kit = 'fusion'
 		overall_song_volume = -1.5
 	}
-	screamaimfire = {
-		checksum = screamaimfire
-		Name = 'ScreamAimFire'
-		title = qs(0xd72f04fb)
-		artist = qs(0x2c136945)
-		year = qs(0x61334b84)
+	ScreamAimFire = {
+		checksum = ScreamAimFire
+		name = 'ScreamAimFire'
+		title = qs("\LSCREAM AIM FIRE")
+		artist = qs("\LBULLET FOR MY VALENTINE")
+		year = qs("\L, 2008")
 		artist_text = $artist_text_by
 		original_artist = 1
 		leaderboard = 1
-		singer = male
-		genre = `heavy	metal`
+		singer = Male
+		genre = `Heavy Metal`
 		countoff = 'Sticks_Normal'
 		drum_kit = 'fusion'
 		overall_song_volume = -2.9
 	}
 	shiver = {
 		checksum = shiver
-		Name = 'Shiver'
-		title = qs(0x19b9a387)
-		artist = qs(0x8798e7f0)
-		year = qs(0xa9eac18c)
+		name = 'Shiver'
+		title = qs("\LSHIVER")
+		artist = qs("\LCOLDPLAY")
+		year = qs("\L, 2000")
 		artist_text = $artist_text_by
 		original_artist = 1
 		leaderboard = 1
-		singer = male
-		genre = pop
+		singer = Male
+		genre = Pop
 		countoff = 'hihat01'
 		drum_kit = 'heavyrock'
 		overall_song_volume = -1.3
 	}
 	somemightsay = {
 		checksum = somemightsay
-		Name = 'SomeMightSay'
-		title = qs(0x541e1090)
-		artist = qs(0x61c5dbde)
-		year = qs(0x00152c68)
+		name = 'SomeMightSay'
+		title = qs("\LSOME MIGHT SAY")
+		artist = qs("\LOASIS")
+		year = qs("\L, 1995")
 		artist_text = $artist_text_by
 		original_artist = 1
 		leaderboard = 1
-		singer = male
-		genre = pop
+		singer = Male
+		genre = Pop
 		countoff = 'sticks_normal'
 		drum_kit = 'classicrock'
 		overall_song_volume = -2
@@ -1322,17 +1322,17 @@ permanent_songlist_props = {
 			cents = 50
 		}
 	}
-	souldoubt = {
+	SoulDoubt = {
 		checksum = everlong
-		Name = 'SoulDoubt'
-		title = qs(0xb25358ef)
-		artist = qs(0x37d971e8)
-		year = qs(0x4f54baaf)
+		name = 'SoulDoubt'
+		title = qs("\LSOUL DOUBT")
+		artist = qs("\LNOFX")
+		year = qs("\L, 1992")
 		artist_text = $artist_text_by
 		original_artist = 1
 		leaderboard = 1
-		singer = male
-		genre = punk
+		singer = Male
+		genre = Punk
 		countoff = 'sticks_normal'
 		drum_kit = 'modernrock'
 		overall_song_volume = -2.4
@@ -1341,15 +1341,15 @@ permanent_songlist_props = {
 	}
 	spiderwebs = {
 		checksum = spiderwebs
-		Name = 'Spiderwebs'
-		title = qs(0x615b078a)
-		artist = qs(0x85d32557)
-		year = qs(0x00152c68)
+		name = 'Spiderwebs'
+		title = qs("\LSPIDERWEBS")
+		artist = qs("\LNO DOUBT")
+		year = qs("\L, 1995")
 		artist_text = $artist_text_by
 		original_artist = 1
 		leaderboard = 1
-		singer = female
-		genre = pop
+		singer = Female
+		genre = Pop
 		countoff = 'hihat01'
 		drum_kit = 'modernrock'
 		overall_song_volume = -2.5
@@ -1360,35 +1360,35 @@ permanent_songlist_props = {
 	}
 	stillborn = {
 		checksum = stillborn
-		Name = 'Stillborn'
-		title = qs(0x91cbb7f8)
-		artist = qs(0x4a43a6b3)
-		year = qs(0x82c7924f)
+		name = 'Stillborn'
+		title = qs("\LSTILLBORN")
+		artist = qs("\LBLACK LABEL SOCIETY")
+		year = qs("\L, 2003")
 		artist_text = $artist_text_by
 		original_artist = 1
 		leaderboard = 1
-		singer = male
-		genre = `heavy	metal`
+		singer = Male
+		genre = `Heavy Metal`
 		countoff = 'hihat01'
 		drum_kit = 'modernrock'
-		Band = band_stillborn
+		Band = Band_Stillborn
 		performance = 1
 		overall_song_volume = -3
 	}
-	stillborn_perf2 = {
+	Stillborn_Perf2 = {
 		checksum = stillborn
-		Name = 'Stillborn'
-		title = qs(0x4ff69bcd)
-		artist = qs(0x4a43a6b3)
-		year = qs(0x82c7924f)
+		name = 'Stillborn'
+		title = qs("\LSTILLBORN (PERF_2)")
+		artist = qs("\LBLACK LABEL SOCIETY")
+		year = qs("\L, 2003")
 		artist_text = $artist_text_by
 		original_artist = 1
 		leaderboard = 1
-		singer = male
-		genre = `heavy	metal`
+		singer = Male
+		genre = `Heavy Metal`
 		countoff = 'hihat01'
 		drum_kit = 'modernrock'
-		Band = band_stillborn
+		Band = Band_Stillborn
 		streamname = 'Stillborn'
 		performance = 2
 		overall_song_volume = -3
@@ -1396,36 +1396,36 @@ permanent_songlist_props = {
 	}
 	stranglehold = {
 		checksum = stranglehold
-		Name = 'Stranglehold'
-		title = qs(0xebfdd4d3)
-		artist = qs(0x3c1f79ae)
-		year = qs(0xe0ca5b5b)
+		name = 'Stranglehold'
+		title = qs("\LSTRANGLEHOLD")
+		artist = qs("\LTED NUGENT")
+		year = qs("\L, 1975")
 		artist_text = $artist_text_by
 		original_artist = 1
 		leaderboard = 1
-		singer = male
-		genre = rock
+		singer = Male
+		genre = Rock
 		countoff = 'sticks_normal'
 		drum_kit = 'heavyrock'
-		Band = band_stranglehold
+		Band = Band_Stranglehold
 		overall_song_volume = -1.0
 	}
 	sweethomealabama = {
 		checksum = sweethomealabama
-		Name = 'SweetHomeAlabama'
-		title = qs(0xe979b65a)
-		artist = qs(0xfa1153ee)
-		year = qs(0xcbe70898)
+		name = 'SweetHomeAlabama'
+		title = qs("SWEET HOME ALABAMA (LIVE)")
+		artist = qs("\LLYNYRD SKYNYRD")
+		year = qs("\L, 1976")
 		artist_text = $artist_text_by
 		original_artist = 1
 		leaderboard = 1
-		singer = male
-		genre = `classic	rock`
+		singer = Male
+		genre = `Classic Rock`
 		countoff = 'sticks_normal'
 		drum_kit = 'classicrock'
 		parts_with_mic = [
-			GUITARIST
-			BASSIST
+			Guitarist
+			bassist
 		]
 		drum_solo = 1
 		overall_song_volume = -2.9
@@ -1435,10 +1435,10 @@ permanent_songlist_props = {
 	}
 	synctest = {
 		checksum = synctest
-		Name = 'synctest'
-		title = qs(0xf2094301)
-		artist = qs(0x0a932d91)
-		year = qs(0xe6ab574b)
+		name = 'synctest'
+		title = qs("\LDEBUG - VISUAL LAG TEST")
+		artist = qs("\LNS")
+		year = qs("\L, 2007")
 		artist_text = $artist_text_as_made_famous_by
 		original_artist = 0
 		leaderboard = 0
@@ -1448,24 +1448,24 @@ permanent_songlist_props = {
 	}
 	synctestplaytoaudio = {
 		checksum = synctestplaytoaudio
-		Name = 'synctestplaytoaudio'
-		title = qs(0x2d376c86)
-		artist = qs(0x0a932d91)
-		year = qs(0xe6ab574b)
+		name = 'synctestplaytoaudio'
+		title = qs("\LDEBUG - AUDIO LAG TEST")
+		artist = qs("\LNS")
+		year = qs("\L, 2007")
 		artist_text = $artist_text_as_made_famous_by
 		original_artist = 0
 		leaderboard = 0
-		exit_Script = Audio_Sync_Test_Enable_Highway
+		exit_script = Audio_Sync_Test_Enable_Highway
 		countoff = 'sticks_normal'
 		drum_kit = 'heavyrock'
 		saved_in_globaltags = 0
 	}
 	synctestaudioandvisual = {
 		checksum = synctestaudioandvisual
-		Name = 'synctestaudioandvisual'
-		title = qs(0x021f9fda)
-		artist = qs(0x0a932d91)
-		year = qs(0xe6ab574b)
+		name = 'synctestaudioandvisual'
+		title = qs("\LDEBUG - COMBINED AUDIO/VISUAL TEST")
+		artist = qs("\LNS")
+		year = qs("\L, 2007")
 		artist_text = $artist_text_as_made_famous_by
 		original_artist = 0
 		leaderboard = 0
@@ -1475,10 +1475,10 @@ permanent_songlist_props = {
 	}
 	synctestmuting = {
 		checksum = synctestmuting
-		Name = 'synctestmuting'
-		title = qs(0xa9342d6b)
-		artist = qs(0x0a932d91)
-		year = qs(0xe6ab574b)
+		name = 'synctestmuting'
+		title = qs("\LDEBUG - SYNC TEST MUTING")
+		artist = qs("\LNS")
+		year = qs("\L, 2007")
 		artist_text = $artist_text_as_made_famous_by
 		original_artist = 0
 		leaderboard = 0
@@ -1488,10 +1488,10 @@ permanent_songlist_props = {
 	}
 	tenseconddebug = {
 		checksum = tenseconddebug
-		Name = 'tenseconddebug'
-		title = qs(0x4283fd73)
-		artist = qs(0x0a932d91)
-		year = qs(0x61334b84)
+		name = 'tenseconddebug'
+		title = qs("\LDEBUG - TEN SECOND DEBUG")
+		artist = qs("\LNS")
+		year = qs("\L, 2008")
 		artist_text = $artist_text_as_made_famous_by
 		original_artist = 0
 		leaderboard = 0
@@ -1501,10 +1501,10 @@ permanent_songlist_props = {
 	}
 	elevenseconddebug = {
 		checksum = elevenseconddebug
-		Name = 'elevenseconddebug'
-		title = qs(0x77784ccb)
-		artist = qs(0x0a932d91)
-		year = qs(0x61334b84)
+		name = 'elevenseconddebug'
+		title = qs("\LDEBUG - ELEVEN")
+		artist = qs("\LNS")
+		year = qs("\L, 2008")
 		artist_text = $artist_text_as_made_famous_by
 		original_artist = 0
 		leaderboard = 0
@@ -1514,10 +1514,10 @@ permanent_songlist_props = {
 	}
 	twelveseconddebug = {
 		checksum = twelveseconddebug
-		Name = 'twelveseconddebug'
-		title = qs(0x086a524a)
-		artist = qs(0x0a932d91)
-		year = qs(0x61334b84)
+		name = 'twelveseconddebug'
+		title = qs("\LDEBUG - TWELVE SECOND DEBUG")
+		artist = qs("\LNS")
+		year = qs("\L, 2008")
 		artist_text = $artist_text_as_made_famous_by
 		original_artist = 0
 		leaderboard = 0
@@ -1527,90 +1527,90 @@ permanent_songlist_props = {
 	}
 	testtones = {
 		checksum = testtones
-		Name = 'testtones'
-		title = qs(0xc211a931)
-		artist = qs(0x0a932d91)
-		year = qs(0xe6ab574b)
+		name = 'testtones'
+		title = qs("\Ltest tones")
+		artist = qs("\LNS")
+		year = qs("\L, 2007")
 		artist_text = $artist_text_as_made_famous_by
 		original_artist = 0
 		leaderboard = 0
 		countoff = 'sticks_normal'
 		drum_kit = 'heavyrock'
-		exit_Script = testtoneexitscript
+		exit_script = TestToneExitScript
 		saved_in_globaltags = 0
 	}
 	theoneilove = {
 		checksum = theoneilove
-		Name = 'TheOneILove'
-		title = qs(0x18406502)
-		artist = qs(0xa8051f29)
-		year = qs(0x8a9f298f)
+		name = 'TheOneILove'
+		title = qs("\LTHE ONE I LOVE")
+		artist = qs("\LR.E.M.")
+		year = qs("\L, 1987")
 		artist_text = $artist_text_by
 		original_artist = 1
 		leaderboard = 1
-		singer = male
-		genre = pop
+		singer = Male
+		genre = Pop
 		countoff = 'sticks_normal'
 		drum_kit = 'fusion'
 		overall_song_volume = -2.4
 		parts_with_mic = [
-			GUITARIST
-			BASSIST
+			Guitarist
+			bassist
 		]
 	}
 	thejoker = {
 		checksum = thejoker
-		Name = 'TheJoker'
-		title = qs(0x107ef595)
-		artist = qs(0x0a1db375)
-		year = qs(0xb690fcdd)
+		name = 'TheJoker'
+		title = qs("\LTHE JOKER")
+		artist = qs("\LTHE STEVE MILLER BAND")
+		year = qs("\L, 1973")
 		artist_text = $artist_text_by
 		original_artist = 1
 		leaderboard = 1
-		singer = male
-		genre = rock
+		singer = Male
+		genre = Rock
 		countoff = 'hihat01'
 		drum_kit = 'classicrock'
 		parts_with_mic = [
-			GUITARIST
-			BASSIST
+			Guitarist
+			bassist
 		]
 		overall_song_volume = -1.5
 	}
-	today = {
-		checksum = today
-		Name = 'Today'
-		title = qs(0x8a8941b5)
-		artist = qs(0x62b6450a)
-		year = qs(0x564f8bee)
+	Today = {
+		checksum = Today
+		name = 'Today'
+		title = qs("\LTODAY")
+		artist = qs("\LTHE SMASHING PUMPKINS")
+		year = qs("\L, 1993")
 		artist_text = $artist_text_by
 		original_artist = 1
 		leaderboard = 1
-		singer = male
-		genre = goth
+		singer = Male
+		genre = Goth
 		countoff = 'sticks_normal'
 		drum_kit = 'modernrock'
 		performance = 1
-		Band = band_today
+		Band = Band_Today
 		overall_song_volume = -2
 	}
-	today_perf2 = {
-		checksum = today
-		Name = 'Today'
-		title = qs(0x4c947cfd)
-		artist = qs(0x62b6450a)
-		year = qs(0x564f8bee)
+	Today_perf2 = {
+		checksum = Today
+		name = 'Today'
+		title = qs("\LTODAY (PERF_2)")
+		artist = qs("\LTHE SMASHING PUMPKINS")
+		year = qs("\L, 1993")
 		artist_text = $artist_text_by
 		original_artist = 1
 		leaderboard = 1
-		singer = male
-		genre = goth
+		singer = Male
+		genre = Goth
 		countoff = 'sticks_normal'
 		drum_kit = 'modernrock'
-		Band = band_today
+		Band = Band_Today
 		streamname = 'today'
 		parts_with_mic = [
-			GUITARIST
+			Guitarist
 		]
 		performance = 2
 		overall_song_volume = -2
@@ -1618,30 +1618,30 @@ permanent_songlist_props = {
 	}
 	toomuchtooyoung = {
 		checksum = toomuchtooyoung
-		Name = 'TooMuchTooYoung'
-		title = qs(0xfca2bbfd)
-		artist = qs(0x4e508ba3)
-		year = qs(0xe6ab574b)
+		name = 'TooMuchTooYoung'
+		title = qs("\LTOO MUCH, TOO YOUNG, TOO FAST")
+		artist = qs("\LAIRBOURNE")
+		year = qs("\L, 2007")
 		artist_text = $artist_text_by
 		original_artist = 1
 		leaderboard = 1
-		singer = male
-		genre = rock
+		singer = Male
+		genre = Rock
 		countoff = 'sticks_normal'
 		drum_kit = 'heavyrock'
 		overall_song_volume = -4.2
 	}
 	toyboy = {
 		checksum = toyboy
-		Name = 'ToyBoy'
-		title = qs(0xb3d6e630)
-		artist = qs(0xd430cbcb)
-		year = qs(0xe6ab574b)
+		name = 'ToyBoy'
+		title = qs("\LTOY BOY")
+		artist = qs("\LSTUCK IN THE SOUND")
+		year = qs("\L, 2007")
 		artist_text = $artist_text_by
 		original_artist = 1
 		leaderboard = 1
-		singer = male
-		genre = pop
+		singer = Male
+		genre = Pop
 		countoff = 'sticks_normal'
 		drum_kit = 'fusion'
 		overall_song_volume = -2.3
@@ -1655,35 +1655,35 @@ permanent_songlist_props = {
 	}
 	trappedunderice = {
 		checksum = trappedunderice
-		Name = 'TrappedUnderIce'
-		title = qs(0x17c35034)
-		artist = qs(0x0d03c6a5)
-		year = qs(0xa1b27a4c)
+		name = 'TrappedUnderIce'
+		title = qs("\LTRAPPED UNDER ICE")
+		artist = qs("\LMETALLICA")
+		year = qs("\L, 1984")
 		artist_text = $artist_text_by
 		original_artist = 1
 		leaderboard = 1
-		singer = male
-		genre = `heavy	metal`
+		singer = Male
+		genre = `Heavy Metal`
 		countoff = 'sticks_normal'
 		drum_kit = 'heavyrock'
 		overall_song_volume = -3.8
 	}
 	youregonnasayyeah = {
 		checksum = youregonnasayyeah
-		Name = 'YoureGonnaSayYeah'
-		title = qs(0x31bbbbe7)
-		artist = qs(0x0867b6d7)
-		year = qs(0xffb0660a)
+		name = 'YoureGonnaSayYeah'
+		title = qs("\LYOU'RE GONNA SAY YEAH!")
+		artist = qs("\LHUSHPUPPIES")
+		year = qs("\L, 2006")
 		artist_text = $artist_text_by
 		original_artist = 1
 		leaderboard = 1
-		singer = male
-		genre = punk
+		singer = Male
+		genre = Punk
 		countoff = 'sticks_normal'
 		drum_kit = 'modernrock'
 		parts_with_mic = [
-			GUITARIST
-			BASSIST
+			Guitarist
+			bassist
 		]
 		thin_fretbar_8note_params_low_bpm = 1
 		thin_fretbar_8note_params_high_bpm = 1
@@ -1693,69 +1693,69 @@ permanent_songlist_props = {
 	}
 	uparoundthebend = {
 		checksum = uparoundthebend
-		Name = 'UpAroundTheBend'
-		title = qs(0x50acc6df)
-		artist = qs(0xa3779fc4)
-		year = qs(0x9dbdaf1e)
+		name = 'UpAroundTheBend'
+		title = qs("\LUP AROUND THE BEND")
+		artist = qs("\LCREEDENCE CLEARWATER REVIVAL")
+		year = qs("\L, 1970")
 		artist_text = $artist_text_by
 		original_artist = 1
 		leaderboard = 1
-		singer = male
-		genre = `classic	rock`
+		singer = Male
+		genre = `Classic Rock`
 		countoff = 'sticks_normal'
 		drum_kit = 'classicrock'
 		parts_with_mic = [
-			GUITARIST
-			BASSIST
+			Guitarist
+			bassist
 		]
 		overall_song_volume = -3.4
 	}
-	vicarious = {
-		checksum = vicarious
-		Name = 'Vicarious'
-		title = qs(0xd0728805)
-		artist = qs(0x8904c4d4)
-		year = qs(0xffb0660a)
+	Vicarious = {
+		checksum = Vicarious
+		name = 'Vicarious'
+		title = qs("\LVICARIOUS")
+		artist = qs("\LTOOL")
+		year = qs("\L, 2006")
 		artist_text = $artist_text_by
 		original_artist = 1
 		leaderboard = 1
-		singer = male
-		genre = rock
+		singer = Male
+		genre = Rock
 		countoff = 'sticks_normal'
 		drum_kit = 'modernrock'
 		overall_song_volume = -1.9
 	}
 	vinternoll2 = {
 		checksum = vinternoll2
-		Name = 'Vinternoll2'
-		title = qs(0x9e89c5f0)
-		artist = qs(0xb7a33b09)
-		year = qs(0x9bdca30e)
+		name = 'Vinternoll2'
+		title = qs("\LVINTERNOLL2")
+		artist = qs("\LKENT")
+		year = qs("\L, 2002")
 		artist_text = $artist_text_by
 		original_artist = 1
 		leaderboard = 1
-		singer = male
-		genre = pop
+		singer = Male
+		genre = Pop
 		countoff = 'sticks_normal'
 		drum_kit = 'classicrock'
 		overall_song_volume = -2
 	}
 	weaponofchoice = {
 		checksum = weaponofchoice
-		Name = 'WeaponOfChoice'
-		title = qs(0xc7011efb)
-		artist = qs(0xc46f7215)
-		year = qs(0xe6ab574b)
+		name = 'WeaponOfChoice'
+		title = qs("\LWEAPON OF CHOICE")
+		artist = qs("\LBLACK REBEL MOTORCYCLE CLUB")
+		year = qs("\L, 2007")
 		artist_text = $artist_text_by
 		original_artist = 1
 		leaderboard = 1
-		singer = male
-		genre = rock
+		singer = Male
+		genre = Rock
 		countoff = 'sticks_normal'
 		drum_kit = 'modernrock'
 		parts_with_mic = [
-			GUITARIST
-			BASSIST
+			Guitarist
+			bassist
 		]
 		overall_song_volume = -1.4
 		thin_fretbar_8note_params_low_bpm = 1
@@ -1763,582 +1763,582 @@ permanent_songlist_props = {
 	}
 	whativedone = {
 		checksum = whativedone
-		Name = 'WhatIveDone'
-		title = qs(0x99a46734)
-		artist = qs(0x7357ee4c)
-		year = qs(0xe6ab574b)
+		name = 'WhatIveDone'
+		title = qs("\LWHAT I'VE DONE")
+		artist = qs("\LLINKIN PARK")
+		year = qs("\L, 2007")
 		artist_text = $artist_text_by
 		original_artist = 1
 		leaderboard = 1
-		singer = male
-		genre = `heavy	metal`
+		singer = Male
+		genre = `Heavy Metal`
 		countoff = 'sticks_normal'
 		drum_kit = 'modernrock'
 		parts_with_mic = [
-			GUITARIST
-			BASSIST
+			Guitarist
+			bassist
 		]
 		overall_song_volume = -2
 	}
 	windcriesmary = {
 		checksum = windcriesmary
-		Name = 'WindCriesMary'
-		title = qs(0xf70e9bca)
-		artist = qs(0x04dbbb27)
-		year = qs(0x6a405ebc)
+		name = 'WindCriesMary'
+		title = qs("\LTHE WIND CRIES MARY")
+		artist = qs("\LJIMI HENDRIX")
+		year = qs("\L, 1967")
 		artist_text = $artist_text_by
 		original_artist = 1
 		leaderboard = 1
-		singer = male
-		genre = `classic	rock`
+		singer = Male
+		genre = `Classic Rock`
 		countoff = 'hihat01'
 		drum_kit = 'classicrock'
 		parts_with_mic = [
-			GUITARIST
-			BASSIST
+			Guitarist
+			bassist
 		]
-		Band = band_hendrix
+		Band = Band_Hendrix
 		overall_song_volume = -2.9
 	}
-	tut_bass_opennote = {
-		checksum = tut_bass_opennote
-		Name = 'Tut_Bass_OpenNote'
-		title = qs(0x5efee908)
-		artist = qs(0xae0e9bcf)
-		year = qs(0x61334b84)
+	Tut_Bass_OpenNote = {
+		checksum = Tut_Bass_OpenNote
+		name = 'Tut_Bass_OpenNote'
+		title = qs("\LTut_Bass_OpenNote")
+		artist = qs("\LTutorial")
+		year = qs("\L, 2008")
 		artist_text = $artist_text_by
 		original_artist = 1
 		leaderboard = 0
-		singer = male
-		genre = rock
+		singer = Male
+		genre = Rock
 		countoff = 'sticks_normal'
 		drum_kit = 'heavyrock'
 		allowed_in_quickplay = 0
 		saved_in_globaltags = 0
 	}
-	tut_demo = {
-		checksum = tut_demo
-		Name = 'Tut_Demo'
-		title = qs(0x93666f0d)
-		artist = qs(0xae0e9bcf)
-		year = qs(0x61334b84)
+	Tut_Demo = {
+		checksum = Tut_Demo
+		name = 'Tut_Demo'
+		title = qs("\LTut_Demo")
+		artist = qs("\LTutorial")
+		year = qs("\L, 2008")
 		artist_text = $artist_text_by
 		original_artist = 1
 		leaderboard = 0
-		singer = male
-		genre = rock
+		singer = Male
+		genre = Rock
 		countoff = 'sticks_normal'
 		drum_kit = 'heavyrock'
 		allowed_in_quickplay = 0
 		saved_in_globaltags = 0
 	}
-	tut_drum_activ = {
-		checksum = tut_drum_activ
-		Name = 'Tut_Drum_Activ'
-		title = qs(0x07be7d49)
-		artist = qs(0xae0e9bcf)
-		year = qs(0x61334b84)
+	Tut_Drum_Activ = {
+		checksum = Tut_Drum_Activ
+		name = 'Tut_Drum_Activ'
+		title = qs("\LTut_Drum_Activ")
+		artist = qs("\LTutorial")
+		year = qs("\L, 2008")
 		artist_text = $artist_text_by
 		original_artist = 1
 		leaderboard = 0
-		singer = male
-		genre = rock
+		singer = Male
+		genre = Rock
 		countoff = 'sticks_normal'
 		drum_kit = 'heavyrock'
 		allowed_in_quickplay = 0
 		saved_in_globaltags = 0
 	}
-	tut_drum_beat1 = {
-		checksum = tut_drum_beat1
-		Name = 'Tut_Drum_Beat1'
-		title = qs(0x64b60a65)
-		artist = qs(0xae0e9bcf)
-		year = qs(0x61334b84)
+	Tut_Drum_Beat1 = {
+		checksum = Tut_Drum_Beat1
+		name = 'Tut_Drum_Beat1'
+		title = qs("\LTut_Drum_Beat1")
+		artist = qs("\LTutorial")
+		year = qs("\L, 2008")
 		artist_text = $artist_text_by
 		original_artist = 1
 		leaderboard = 0
-		singer = male
-		genre = rock
+		singer = Male
+		genre = Rock
 		countoff = 'sticks_normal'
 		drum_kit = 'heavyrock'
 		allowed_in_quickplay = 0
 		saved_in_globaltags = 0
 	}
-	tut_drum_beat2 = {
-		checksum = tut_drum_beat2
-		Name = 'Tut_Drum_Beat2'
-		title = qs(0x4f9b59a6)
-		artist = qs(0xae0e9bcf)
-		year = qs(0x61334b84)
+	Tut_Drum_Beat2 = {
+		checksum = Tut_Drum_Beat2
+		name = 'Tut_Drum_Beat2'
+		title = qs("\LTut_Drum_Beat2")
+		artist = qs("\LTutorial")
+		year = qs("\L, 2008")
 		artist_text = $artist_text_by
 		original_artist = 1
 		leaderboard = 0
-		singer = male
-		genre = rock
+		singer = Male
+		genre = Rock
 		countoff = 'sticks_normal'
 		drum_kit = 'heavyrock'
 		allowed_in_quickplay = 0
 		saved_in_globaltags = 0
 	}
-	tut_drum_beat3 = {
-		checksum = tut_drum_beat3
-		Name = 'Tut_Drum_Beat3'
-		title = qs(0x568068e7)
-		artist = qs(0xae0e9bcf)
-		year = qs(0x61334b84)
+	Tut_Drum_Beat3 = {
+		checksum = Tut_Drum_Beat3
+		name = 'Tut_Drum_Beat3'
+		title = qs("\LTut_Drum_Beat3")
+		artist = qs("\LTutorial")
+		year = qs("\L, 2008")
 		artist_text = $artist_text_by
 		original_artist = 1
 		leaderboard = 0
-		singer = male
-		genre = rock
+		singer = Male
+		genre = Rock
 		countoff = 'sticks_normal'
 		drum_kit = 'heavyrock'
 		allowed_in_quickplay = 0
 		saved_in_globaltags = 0
 	}
-	tut_drum_break = {
-		checksum = tut_drum_break
-		Name = 'Tut_Drum_Break'
-		title = qs(0xaeca6232)
-		artist = qs(0xae0e9bcf)
-		year = qs(0x61334b84)
+	Tut_Drum_Break = {
+		checksum = Tut_Drum_Break
+		name = 'Tut_Drum_Break'
+		title = qs("\LTut_Drum_Break")
+		artist = qs("\LTutorial")
+		year = qs("\L, 2008")
 		artist_text = $artist_text_by
 		original_artist = 1
 		leaderboard = 0
-		singer = male
-		genre = rock
+		singer = Male
+		genre = Rock
 		countoff = 'sticks_normal'
 		drum_kit = 'heavyrock'
 		allowed_in_quickplay = 0
 		saved_in_globaltags = 0
 	}
-	tut_drum_combos = {
-		checksum = tut_drum_combos
-		Name = 'Tut_Drum_Combos'
-		title = qs(0xd9386881)
-		artist = qs(0xae0e9bcf)
-		year = qs(0x61334b84)
+	Tut_Drum_Combos = {
+		checksum = Tut_Drum_Combos
+		name = 'Tut_Drum_Combos'
+		title = qs("\LTut_Drum_Combos")
+		artist = qs("\LTutorial")
+		year = qs("\L, 2008")
 		artist_text = $artist_text_by
 		original_artist = 1
 		leaderboard = 0
-		singer = male
-		genre = rock
+		singer = Male
+		genre = Rock
 		countoff = 'sticks_normal'
 		drum_kit = 'heavyrock'
 		allowed_in_quickplay = 0
 		saved_in_globaltags = 0
 	}
-	tut_drum_kick = {
-		checksum = tut_drum_kick
-		Name = 'Tut_Drum_Kick'
-		title = qs(0xa007cd1b)
-		artist = qs(0xae0e9bcf)
-		year = qs(0x61334b84)
+	Tut_Drum_Kick = {
+		checksum = Tut_Drum_Kick
+		name = 'Tut_Drum_Kick'
+		title = qs("\LTut_Drum_Kick")
+		artist = qs("\LTutorial")
+		year = qs("\L, 2008")
 		artist_text = $artist_text_by
 		original_artist = 1
 		leaderboard = 0
-		singer = male
-		genre = rock
+		singer = Male
+		genre = Rock
 		countoff = 'sticks_normal'
 		drum_kit = 'heavyrock'
 		allowed_in_quickplay = 0
 		saved_in_globaltags = 0
 	}
-	tut_drum_free = {
-		checksum = tut_drum_free
-		Name = 'Tut_Drum_Free'
-		title = qs(0xe9fb58c0)
-		artist = qs(0xae0e9bcf)
-		year = qs(0x61334b84)
+	Tut_Drum_Free = {
+		checksum = Tut_Drum_Free
+		name = 'Tut_Drum_Free'
+		title = qs("\LTut_Drum_Free")
+		artist = qs("\LTutorial")
+		year = qs("\L, 2008")
 		artist_text = $artist_text_by
 		original_artist = 1
 		leaderboard = 0
-		singer = male
-		genre = rock
+		singer = Male
+		genre = Rock
 		countoff = 'sticks_normal'
 		drum_kit = 'heavyrock'
 		allowed_in_quickplay = 0
 		saved_in_globaltags = 0
 	}
-	tut_drum_onehand = {
-		checksum = tut_drum_onehand
-		Name = 'Tut_Drum_OneHand'
-		title = qs(0x32283ae1)
-		artist = qs(0xae0e9bcf)
-		year = qs(0x61334b84)
+	Tut_Drum_OneHand = {
+		checksum = Tut_Drum_OneHand
+		name = 'Tut_Drum_OneHand'
+		title = qs("\LTut_Drum_OneHand")
+		artist = qs("\LTutorial")
+		year = qs("\L, 2008")
 		artist_text = $artist_text_by
 		original_artist = 1
 		leaderboard = 0
-		singer = male
-		genre = rock
+		singer = Male
+		genre = Rock
 		countoff = 'sticks_normal'
 		drum_kit = 'heavyrock'
 		allowed_in_quickplay = 0
 		saved_in_globaltags = 0
 	}
-	tut_drum_twohands = {
-		checksum = tut_drum_twohands
-		Name = 'Tut_Drum_TwoHands'
-		title = qs(0x1b543d6c)
-		artist = qs(0xae0e9bcf)
-		year = qs(0x61334b84)
+	Tut_Drum_TwoHands = {
+		checksum = Tut_Drum_TwoHands
+		name = 'Tut_Drum_TwoHands'
+		title = qs("\LTut_Drum_TwoHands")
+		artist = qs("\LTutorial")
+		year = qs("\L, 2008")
 		artist_text = $artist_text_by
 		original_artist = 1
 		leaderboard = 0
-		singer = male
-		genre = rock
+		singer = Male
+		genre = Rock
 		countoff = 'sticks_normal'
 		drum_kit = 'heavyrock'
 		allowed_in_quickplay = 0
 		saved_in_globaltags = 0
 	}
-	tut_gtr_chords = {
-		checksum = tut_gtr_chords
-		Name = 'Tut_Gtr_Chords'
-		title = qs(0xa59ba6c7)
-		artist = qs(0xae0e9bcf)
-		year = qs(0x61334b84)
+	Tut_Gtr_Chords = {
+		checksum = Tut_Gtr_Chords
+		name = 'Tut_Gtr_Chords'
+		title = qs("\LTut_Gtr_Chords")
+		artist = qs("\LTutorial")
+		year = qs("\L, 2008")
 		artist_text = $artist_text_by
 		original_artist = 1
 		leaderboard = 0
-		singer = male
-		genre = rock
+		singer = Male
+		genre = Rock
 		countoff = 'sticks_normal'
 		drum_kit = 'heavyrock'
 		allowed_in_quickplay = 0
 		saved_in_globaltags = 0
 	}
-	tut_gtr_combos = {
-		checksum = tut_gtr_combos
-		Name = 'Tut_Gtr_Combos'
-		title = qs(0xd1b53f59)
-		artist = qs(0xae0e9bcf)
-		year = qs(0x61334b84)
+	Tut_Gtr_Combos = {
+		checksum = Tut_Gtr_Combos
+		name = 'Tut_Gtr_Combos'
+		title = qs("\LTut_Gtr_Combos")
+		artist = qs("\LTutorial")
+		year = qs("\L, 2008")
 		artist_text = $artist_text_by
 		original_artist = 1
 		leaderboard = 0
-		singer = male
-		genre = rock
+		singer = Male
+		genre = Rock
 		countoff = 'sticks_normal'
 		drum_kit = 'heavyrock'
 		allowed_in_quickplay = 0
 		saved_in_globaltags = 0
 	}
-	tut_gtr_diffnotes = {
-		checksum = tut_gtr_diffnotes
-		Name = 'Tut_Gtr_DiffNotes'
-		title = qs(0x4344da8c)
-		artist = qs(0xae0e9bcf)
-		year = qs(0x61334b84)
+	Tut_Gtr_DiffNotes = {
+		checksum = Tut_Gtr_DiffNotes
+		name = 'Tut_Gtr_DiffNotes'
+		title = qs("\LTut_Gtr_DiffNotes")
+		artist = qs("\LTutorial")
+		year = qs("\L, 2008")
 		artist_text = $artist_text_by
 		original_artist = 1
 		leaderboard = 0
-		singer = male
-		genre = rock
+		singer = Male
+		genre = Rock
 		countoff = 'sticks_normal'
 		drum_kit = 'heavyrock'
 		allowed_in_quickplay = 0
 		saved_in_globaltags = 0
 	}
-	tut_gtr_extsus = {
-		checksum = tut_gtr_extsus
-		Name = 'Tut_Gtr_ExtSus'
-		title = qs(0x688c49db)
-		artist = qs(0xae0e9bcf)
-		year = qs(0x61334b84)
+	Tut_Gtr_ExtSus = {
+		checksum = Tut_Gtr_ExtSus
+		name = 'Tut_Gtr_ExtSus'
+		title = qs("\LTut_Gtr_ExtSus")
+		artist = qs("\LTutorial")
+		year = qs("\L, 2008")
 		artist_text = $artist_text_by
 		original_artist = 1
 		leaderboard = 0
-		singer = male
-		genre = rock
+		singer = Male
+		genre = Rock
 		countoff = 'sticks_normal'
 		drum_kit = 'heavyrock'
 		allowed_in_quickplay = 0
 		saved_in_globaltags = 0
 	}
-	tut_gtr_hamon = {
-		checksum = tut_gtr_hamon
-		Name = 'Tut_Gtr_HamOn'
-		title = qs(0x2509391c)
-		artist = qs(0xae0e9bcf)
-		year = qs(0x61334b84)
+	Tut_Gtr_HamOn = {
+		checksum = Tut_Gtr_HamOn
+		name = 'Tut_Gtr_HamOn'
+		title = qs("\LTut_Gtr_HamOn")
+		artist = qs("\LTutorial")
+		year = qs("\L, 2008")
 		artist_text = $artist_text_by
 		original_artist = 1
 		leaderboard = 0
-		singer = male
-		genre = rock
+		singer = Male
+		genre = Rock
 		countoff = 'sticks_normal'
 		drum_kit = 'heavyrock'
 		allowed_in_quickplay = 0
 		saved_in_globaltags = 0
 	}
-	tut_gtr_longnotes = {
-		checksum = tut_gtr_longnotes
-		Name = 'Tut_Gtr_LongNotes'
-		title = qs(0xaf784f3d)
-		artist = qs(0xae0e9bcf)
-		year = qs(0x61334b84)
+	Tut_Gtr_LongNotes = {
+		checksum = Tut_Gtr_LongNotes
+		name = 'Tut_Gtr_LongNotes'
+		title = qs("\LTut_Gtr_LongNotes")
+		artist = qs("\LTutorial")
+		year = qs("\L, 2008")
 		artist_text = $artist_text_by
 		original_artist = 1
 		leaderboard = 0
-		singer = male
-		genre = rock
+		singer = Male
+		genre = Rock
 		countoff = 'sticks_normal'
 		drum_kit = 'heavyrock'
 		allowed_in_quickplay = 0
 		saved_in_globaltags = 0
 	}
-	tut_gtr_playnotes = {
-		checksum = tut_gtr_playnotes
-		Name = 'Tut_Gtr_PlayNotes'
-		title = qs(0x075754c9)
-		artist = qs(0xae0e9bcf)
-		year = qs(0x61334b84)
+	Tut_Gtr_PlayNotes = {
+		checksum = Tut_Gtr_PlayNotes
+		name = 'Tut_Gtr_PlayNotes'
+		title = qs("\LTut_Gtr_PlayNotes")
+		artist = qs("\LTutorial")
+		year = qs("\L, 2008")
 		artist_text = $artist_text_by
 		original_artist = 1
 		leaderboard = 0
-		singer = male
-		genre = rock
+		singer = Male
+		genre = Rock
 		countoff = 'sticks_normal'
 		drum_kit = 'heavyrock'
 		allowed_in_quickplay = 0
 		saved_in_globaltags = 0
 	}
-	tut_gtr_pulloff = {
-		checksum = tut_gtr_pulloff
-		Name = 'Tut_Gtr_PullOff'
-		title = qs(0x88671109)
-		artist = qs(0xae0e9bcf)
-		year = qs(0x61334b84)
+	Tut_Gtr_PullOff = {
+		checksum = Tut_Gtr_PullOff
+		name = 'Tut_Gtr_PullOff'
+		title = qs("\LTut_Gtr_PullOff")
+		artist = qs("\LTutorial")
+		year = qs("\L, 2008")
 		artist_text = $artist_text_by
 		original_artist = 1
 		leaderboard = 0
-		singer = male
-		genre = rock
+		singer = Male
+		genre = Rock
 		countoff = 'sticks_normal'
 		drum_kit = 'heavyrock'
 		allowed_in_quickplay = 0
 		saved_in_globaltags = 0
 	}
-	tut_gtr_slide = {
-		checksum = tut_gtr_slide
-		Name = 'Tut_Gtr_Slide'
-		title = qs(0x6e14e530)
-		artist = qs(0xae0e9bcf)
-		year = qs(0x61334b84)
+	Tut_Gtr_Slide = {
+		checksum = Tut_Gtr_Slide
+		name = 'Tut_Gtr_Slide'
+		title = qs("\LTut_Gtr_Slide")
+		artist = qs("\LTutorial")
+		year = qs("\L, 2008")
 		artist_text = $artist_text_by
 		original_artist = 1
 		leaderboard = 0
-		singer = male
-		genre = rock
+		singer = Male
+		genre = Rock
 		countoff = 'sticks_normal'
 		drum_kit = 'heavyrock'
 		allowed_in_quickplay = 0
 		saved_in_globaltags = 0
 	}
-	tut_gtr_tilt = {
-		checksum = tut_gtr_tilt
-		Name = 'Tut_Gtr_Tilt'
-		title = qs(0xaece56e0)
-		artist = qs(0xae0e9bcf)
-		year = qs(0x61334b84)
+	Tut_Gtr_Tilt = {
+		checksum = Tut_Gtr_Tilt
+		name = 'Tut_Gtr_Tilt'
+		title = qs("\LTut_Gtr_Tilt")
+		artist = qs("\LTutorial")
+		year = qs("\L, 2008")
 		artist_text = $artist_text_by
 		original_artist = 1
 		leaderboard = 0
-		singer = male
-		genre = rock
+		singer = Male
+		genre = Rock
 		countoff = 'sticks_normal'
 		drum_kit = 'heavyrock'
 		allowed_in_quickplay = 0
 		saved_in_globaltags = 0
 	}
-	tut_gtr_wham = {
-		checksum = tut_gtr_wham
-		Name = 'Tut_Gtr_Wham'
-		title = qs(0x8277f363)
-		artist = qs(0xae0e9bcf)
-		year = qs(0x61334b84)
+	Tut_Gtr_Wham = {
+		checksum = Tut_Gtr_Wham
+		name = 'Tut_Gtr_Wham'
+		title = qs("\LTut_Gtr_Wham")
+		artist = qs("\LTutorial")
+		year = qs("\L, 2008")
 		artist_text = $artist_text_by
 		original_artist = 1
 		leaderboard = 0
-		singer = male
-		genre = rock
+		singer = Male
+		genre = Rock
 		countoff = 'sticks_normal'
 		drum_kit = 'heavyrock'
 		allowed_in_quickplay = 0
 		saved_in_globaltags = 0
 	}
-	tut_vox_activ = {
-		checksum = tut_vox_activ
-		Name = 'Tut_Vox_Activ'
-		title = qs(0x17980b02)
-		artist = qs(0xae0e9bcf)
-		year = qs(0x61334b84)
+	Tut_Vox_Activ = {
+		checksum = Tut_Vox_Activ
+		name = 'Tut_Vox_Activ'
+		title = qs("\LTut_Vox_Activ")
+		artist = qs("\LTutorial")
+		year = qs("\L, 2008")
 		artist_text = $artist_text_by
 		original_artist = 1
 		leaderboard = 0
-		singer = male
-		genre = rock
+		singer = Male
+		genre = Rock
 		countoff = 'sticks_normal'
 		drum_kit = 'heavyrock'
 		allowed_in_quickplay = 0
 		saved_in_globaltags = 0
 	}
-	tut_vox_combos = {
-		checksum = tut_vox_combos
-		Name = 'Tut_Vox_Combos'
-		title = qs(0x73d33a60)
-		artist = qs(0xae0e9bcf)
-		year = qs(0x61334b84)
+	Tut_Vox_Combos = {
+		checksum = Tut_Vox_Combos
+		name = 'Tut_Vox_Combos'
+		title = qs("\LTut_Vox_Combos")
+		artist = qs("\LTutorial")
+		year = qs("\L, 2008")
 		artist_text = $artist_text_by
 		original_artist = 1
 		leaderboard = 0
-		singer = male
-		genre = rock
+		singer = Male
+		genre = Rock
 		countoff = 'sticks_normal'
 		drum_kit = 'heavyrock'
 		allowed_in_quickplay = 0
 		saved_in_globaltags = 0
 	}
-	tut_vox_freeform = {
-		checksum = tut_vox_freeform
-		Name = 'Tut_Vox_Freeform'
-		title = qs(0x443c798f)
-		artist = qs(0xae0e9bcf)
-		year = qs(0x61334b84)
+	Tut_Vox_Freeform = {
+		checksum = Tut_Vox_Freeform
+		name = 'Tut_Vox_Freeform'
+		title = qs("\LTut_Vox_Freeform")
+		artist = qs("\LTutorial")
+		year = qs("\L, 2008")
 		artist_text = $artist_text_by
 		original_artist = 1
 		leaderboard = 0
-		singer = male
-		genre = rock
+		singer = Male
+		genre = Rock
 		countoff = 'sticks_normal'
 		drum_kit = 'heavyrock'
 		allowed_in_quickplay = 0
 		saved_in_globaltags = 0
 	}
-	tut_vox_hitnotes = {
-		checksum = tut_vox_hitnotes
-		Name = 'Tut_Vox_HitNotes'
-		title = qs(0x02e5689b)
-		artist = qs(0xae0e9bcf)
-		year = qs(0x61334b84)
+	Tut_Vox_HitNotes = {
+		checksum = Tut_Vox_HitNotes
+		name = 'Tut_Vox_HitNotes'
+		title = qs("\LTut_Vox_HitNotes")
+		artist = qs("\LTutorial")
+		year = qs("\L, 2008")
 		artist_text = $artist_text_by
 		original_artist = 1
 		leaderboard = 0
-		singer = male
-		genre = rock
+		singer = Male
+		genre = Rock
 		countoff = 'sticks_normal'
 		drum_kit = 'heavyrock'
 		allowed_in_quickplay = 0
 		saved_in_globaltags = 0
 	}
-	tut_vox_hype = {
-		checksum = tut_vox_hype
-		Name = 'Tut_Vox_Hype'
-		title = qs(0x44e8fbc7)
-		artist = qs(0xae0e9bcf)
-		year = qs(0x61334b84)
+	Tut_Vox_Hype = {
+		checksum = Tut_Vox_Hype
+		name = 'Tut_Vox_Hype'
+		title = qs("\LTut_Vox_Hype")
+		artist = qs("\LTutorial")
+		year = qs("\L, 2008")
 		artist_text = $artist_text_by
 		original_artist = 1
 		leaderboard = 0
-		singer = male
-		genre = rock
+		singer = Male
+		genre = Rock
 		countoff = 'sticks_normal'
 		drum_kit = 'heavyrock'
 		allowed_in_quickplay = 0
 		saved_in_globaltags = 0
 	}
-	tut_vox_spoken = {
-		checksum = tut_vox_spoken
-		Name = 'Tut_Vox_Spoken'
-		title = qs(0x5c95d734)
-		artist = qs(0xae0e9bcf)
-		year = qs(0x61334b84)
+	Tut_Vox_Spoken = {
+		checksum = Tut_Vox_Spoken
+		name = 'Tut_Vox_Spoken'
+		title = qs("\LTut_Vox_Spoken")
+		artist = qs("\LTutorial")
+		year = qs("\L, 2008")
 		artist_text = $artist_text_by
 		original_artist = 1
 		leaderboard = 0
-		singer = male
-		genre = rock
+		singer = Male
+		genre = Rock
 		countoff = 'sticks_normal'
 		drum_kit = 'heavyrock'
 		allowed_in_quickplay = 0
 		saved_in_globaltags = 0
 	}
-	tut_vs_battpow = {
-		checksum = tut_vs_battpow
-		Name = 'Tut_VS_BattPow'
-		title = qs(0x422f1ea7)
-		artist = qs(0xae0e9bcf)
-		year = qs(0x61334b84)
+	Tut_VS_BattPow = {
+		checksum = Tut_VS_BattPow
+		name = 'Tut_VS_BattPow'
+		title = qs("\LTut_VS_BattPow")
+		artist = qs("\LTutorial")
+		year = qs("\L, 2008")
 		artist_text = $artist_text_by
 		original_artist = 1
 		leaderboard = 0
-		singer = male
-		genre = rock
+		singer = Male
+		genre = Rock
 		countoff = 'sticks_normal'
 		drum_kit = 'heavyrock'
 		allowed_in_quickplay = 0
 		saved_in_globaltags = 0
 	}
-	tut_vs_multattck = {
-		checksum = tut_vs_multattck
-		Name = 'Tut_VS_MultAttck'
-		title = qs(0x1dfb1cb8)
-		artist = qs(0xae0e9bcf)
-		year = qs(0x61334b84)
+	Tut_VS_MultAttck = {
+		checksum = Tut_VS_MultAttck
+		name = 'Tut_VS_MultAttck'
+		title = qs("\LTut_VS_MultAttck")
+		artist = qs("\LTutorial")
+		year = qs("\L, 2008")
 		artist_text = $artist_text_by
 		original_artist = 1
 		leaderboard = 0
-		singer = male
-		genre = rock
+		singer = Male
+		genre = Rock
 		countoff = 'sticks_normal'
 		drum_kit = 'heavyrock'
 		allowed_in_quickplay = 0
 		saved_in_globaltags = 0
 	}
-	tut_vs_recov = {
-		checksum = tut_vs_recov
-		Name = 'Tut_VS_Recov'
-		title = qs(0xf537c7b8)
-		artist = qs(0xae0e9bcf)
-		year = qs(0x61334b84)
+	Tut_VS_Recov = {
+		checksum = Tut_VS_Recov
+		name = 'Tut_VS_Recov'
+		title = qs("\LTut_VS_Recov")
+		artist = qs("\LTutorial")
+		year = qs("\L, 2008")
 		artist_text = $artist_text_by
 		original_artist = 1
 		leaderboard = 0
-		singer = male
-		genre = rock
+		singer = Male
+		genre = Rock
 		countoff = 'sticks_normal'
 		drum_kit = 'heavyrock'
 		allowed_in_quickplay = 0
 		saved_in_globaltags = 0
 	}
-	tut_vs_tilt = {
-		checksum = tut_vs_tilt
-		Name = 'Tut_VS_Tilt'
-		title = qs(0x9bd581e4)
-		artist = qs(0xae0e9bcf)
-		year = qs(0x61334b84)
+	Tut_VS_Tilt = {
+		checksum = Tut_VS_Tilt
+		name = 'Tut_VS_Tilt'
+		title = qs("\LTut_VS_Tilt")
+		artist = qs("\LTutorial")
+		year = qs("\L, 2008")
 		artist_text = $artist_text_by
 		original_artist = 1
 		leaderboard = 0
-		singer = male
-		genre = rock
+		singer = Male
+		genre = Rock
 		countoff = 'sticks_normal'
 		drum_kit = 'heavyrock'
 		allowed_in_quickplay = 0
 		saved_in_globaltags = 0
 	}
-	placeholdersong = {
+	PlaceHolderSong = {
 		checksum = tenseconddebug
-		Name = 'tenseconddebug'
-		title = qs(0x53c97f91)
-		artist = qs(0xe88aeb6f)
-		year = qs(0x61334b84)
+		name = 'tenseconddebug'
+		title = qs("\LTHE PLACE-HOLDER SONG")
+		artist = qs("\LTHE PLACE-HOLDERS")
+		year = qs("\L, 2008")
 		artist_text = $artist_text_by
 		original_artist = 1
 		leaderboard = 0
-		singer = male
-		genre = rock
+		singer = Male
+		genre = Rock
 		countoff = 'sticks_normal'
 		drum_kit = 'heavyrock'
 		never_show_in_setlist
@@ -2346,40 +2346,40 @@ permanent_songlist_props = {
 }
 
 script get_song_original_artist \{song = invalid}
-	if StructureContains structure = $gh_songlist_props <song>
+	if StructureContains Structure = $gh_songlist_props <song>
 		return original_artist = ($gh_songlist_props.<song>.original_artist)
 	endif
 	printstruct <...>
-	ScriptAssert \{qs(0x0ebc33db)}
+	ScriptAssert \{qs("\LSong not found")}
 endscript
 
 script get_song_title \{song = invalid}
-	if StructureContains structure = $gh_songlist_props <song>
+	if StructureContains Structure = $gh_songlist_props <song>
 		return song_title = ($gh_songlist_props.<song>.title)
 	endif
 	printstruct <...>
-	ScriptAssert \{qs(0x0ebc33db)}
+	ScriptAssert \{qs("\LSong not found")}
 endscript
 
 script get_song_prefix \{song = invalid}
-	if StructureContains structure = $gh_songlist_props <song>
-		return song_prefix = ($gh_songlist_props.<song>.Name)
+	if StructureContains Structure = $gh_songlist_props <song>
+		return song_prefix = ($gh_songlist_props.<song>.name)
 	endif
 	printstruct <...>
-	ScriptAssert \{qs(0x0ebc33db)}
+	ScriptAssert \{qs("\LSong not found")}
 endscript
 
 script get_song_name \{song = invalid}
-	if StructureContains structure = $gh_songlist_props <song>
-		return song_name = ($gh_songlist_props.<song>.Name)
+	if StructureContains Structure = $gh_songlist_props <song>
+		return song_name = ($gh_songlist_props.<song>.name)
 	endif
 	printstruct <...>
-	ScriptAssert \{qs(0x0ebc33db)}
+	ScriptAssert \{qs("\LSong not found")}
 endscript
 
 script get_song_artist \{song = invalid
 		with_year = 1}
-	if StructureContains structure = $gh_songlist_props <song>
+	if StructureContains Structure = $gh_songlist_props <song>
 		if (<with_year>)
 			return song_artist = (($gh_songlist_props.<song>.artist) + ($gh_songlist_props.<song>.year))
 		else
@@ -2387,113 +2387,113 @@ script get_song_artist \{song = invalid
 		endif
 	endif
 	printstruct <...>
-	ScriptAssert \{qs(0x0ebc33db)}
+	ScriptAssert \{qs("\LSong not found")}
 endscript
 
 script get_song_artist_text \{song = invalid}
-	if StructureContains structure = $gh_songlist_props <song>
+	if StructureContains Structure = $gh_songlist_props <song>
 		return song_artist_text = ($gh_songlist_props.<song>.artist_text)
 	endif
 	printstruct <...>
-	ScriptAssert \{qs(0x0ebc33db)}
+	ScriptAssert \{qs("\LSong not found")}
 endscript
-perf2_settings = [
+Perf2_Settings = [
 	{
 		song = stillborn
 		mode = p1_career
 		char_type = vocalist
-		char_id = zakkwylde
+		char_id = ZakkWylde
 	}
 	{
-		song = today
+		song = Today
 		mode = p1_career
 		char_type = vocalist
-		char_id = billy
+		char_id = Billy
 	}
 	{
-		song = demolitionman
+		song = DemolitionMan
 		mode = p1_career
 		char_type = vocalist
-		char_id = randomcharacter
+		char_id = RandomCharacter
 	}
 	{
 		song = stillborn
 		mode = p1_career
-		char_type = bass
-		char_id = randomcharacter
+		char_type = Bass
+		char_id = RandomCharacter
 	}
 	{
 		song = stillborn
 		mode = p2_career
 		char_type = vocalist
-		char_id = zakkwylde
+		char_id = ZakkWylde
 	}
 	{
-		song = today
+		song = Today
 		mode = p2_career
 		char_type = vocalist
-		char_id = billy
+		char_id = Billy
 	}
 	{
-		song = demolitionman
+		song = DemolitionMan
 		mode = p2_career
 		char_type = vocalist
-		char_id = randomcharacter
+		char_id = RandomCharacter
 	}
 	{
 		song = stillborn
 		mode = p2_career
-		char_type = bass
-		char_id = randomcharacter
+		char_type = Bass
+		char_id = RandomCharacter
 	}
 	{
 		song = stillborn
 		mode = p3_career
 		char_type = vocalist
-		char_id = zakkwylde
+		char_id = ZakkWylde
 	}
 	{
-		song = today
+		song = Today
 		mode = p3_career
 		char_type = vocalist
-		char_id = billy
+		char_id = Billy
 	}
 	{
-		song = demolitionman
+		song = DemolitionMan
 		mode = p3_career
 		char_type = vocalist
-		char_id = randomcharacter
+		char_id = RandomCharacter
 	}
 	{
 		song = stillborn
 		mode = p3_career
-		char_type = bass
-		char_id = randomcharacter
+		char_type = Bass
+		char_id = RandomCharacter
 	}
 ]
 
 script get_song_performance 
-	if StructureContains structure = $gh_songlist_props <song>
-		if StructureContains structure = ($gh_songlist_props.<song>) performance
+	if StructureContains Structure = $gh_songlist_props <song>
+		if StructureContains Structure = ($gh_songlist_props.<song>) performance
 			if ($gh_songlist_props.<song>.performance = 1)
 				performance = 0
 				get_band_name song = <song>
-				singing_guitarist = FALSE
+				singing_guitarist = false
 				if has_singing_guitarist Band = <Band>
 					singing_guitarist = true
 				elseif has_singing_bassist Band = <Band>
 					singing_guitarist = true
 				endif
 				if (<singing_guitarist> = true)
-					if (($<Band>.vocalist = jimi) && ($current_num_players = 1))
+					if (($<Band>.vocalist = Jimi) && ($current_num_players = 1))
 						performance = 1
 					else
-						if NOT is_any_player_on_part \{part = vocals}
+						if NOT is_any_player_on_part \{part = Vocals}
 							performance = 1
 						endif
 					endif
 				endif
-				printf channel = Band qs(0x013e6ebe) a = (<performance> + 1)
+				printf channel = Band qs("\Lusing performance %a") a = (<performance> + 1)
 				return song_performance = <performance>
 			else
 				return song_performance = ($gh_songlist_props.<song>.performance - 1)
@@ -2503,60 +2503,60 @@ script get_song_performance
 		endif
 	endif
 	printstruct <...>
-	ScriptAssert \{qs(0x0ebc33db)}
+	ScriptAssert \{qs("\LSong not found")}
 endscript
 
 script is_any_player_on_part 
-	gamemode_getnumplayersshown
-	Player = 1
+	GameMode_GetNumPlayersShown
+	player = 1
 	begin
-	formatText checksumName = player_status 'player%i_status' i = <Player> AddToStringLookup
+	FormatText checksumname = player_status 'player%i_status' i = <player> AddToStringLookup
 	if ($<player_status>.part = <part>)
 		return \{true}
 	endif
-	Player = (<Player> + 1)
+	player = (<player> + 1)
 	repeat <num_players_shown>
-	return \{FALSE}
+	return \{false}
 endscript
 
 script get_song_struct \{song = invalid}
-	if StructureContains structure = $gh_songlist_props <song>
+	if StructureContains Structure = $gh_songlist_props <song>
 		return song_struct = ($gh_songlist_props.<song>)
 	endif
 	printstruct <...>
-	ScriptAssert \{qs(0x0ebc33db)}
+	ScriptAssert \{qs("\LSong not found")}
 endscript
 
 script get_songlist_size 
 	GetArraySize \{$gh_songlist}
-	size = (<array_Size>)
-	if GlobalExists \{Name = gh4_download_songlist
-			Type = array}
-		GetArraySize \{$gh4_download_songlist}
-		size = (<array_Size> + <size>)
+	size = (<array_size>)
+	if GlobalExists \{name = GH4_download_songlist
+			type = array}
+		GetArraySize \{$GH4_download_songlist}
+		size = (<array_size> + <size>)
 	endif
-	return array_Size = <size>
+	return array_size = <size>
 endscript
 
 script get_songlist_checksum 
 	GetArraySize \{$gh_songlist}
-	if (<index> < <array_Size>)
+	if (<index> < <array_size>)
 		return song_checksum = ($gh_songlist [<index>])
 	else
-		return song_checksum = ($gh4_download_songlist [(<index> - <array_Size>)])
+		return song_checksum = ($GH4_download_songlist [(<index> - <array_size>)])
 	endif
 endscript
 
 script is_song_downloaded \{song_checksum = schoolsout}
-	if StructureContains structure = ($download_songlist_props) <song_checksum>
-		formatText TextName = FileName 'a%s_song.pak' s = (($download_songlist_props.<song_checksum>).Name)
-		GetContentFolderIndexFromFile <FileName>
+	if StructureContains Structure = ($download_songlist_props) <song_checksum>
+		FormatText TextName = filename 'a%s_song.pak' s = (($download_songlist_props.<song_checksum>).name)
+		GetContentFolderIndexFromFile <filename>
 		if (<device> = content)
 			return \{download = 1
 				true}
 		else
 			return \{download = 1
-				FALSE}
+				false}
 		endif
 	else
 		return \{download = 0
@@ -2565,52 +2565,52 @@ script is_song_downloaded \{song_checksum = schoolsout}
 endscript
 
 script get_song_rhythm_track \{song = invalid}
-	if StructureContains structure = $gh_songlist_props <song>
-		if StructureContains structure = ($gh_songlist_props.<song>) rhythm_track
+	if StructureContains Structure = $gh_songlist_props <song>
+		if StructureContains Structure = ($gh_songlist_props.<song>) rhythm_track
 			return rhythm_track = ($gh_songlist_props.<song>.rhythm_track)
 		else
 			return \{rhythm_track = 0}
 		endif
 	endif
 	printstruct <...>
-	ScriptAssert \{qs(0x0ebc33db)}
+	ScriptAssert \{qs("\LSong not found")}
 endscript
 
 script get_song_saved_in_globaltags \{song = invalid}
-	if StructureContains structure = $gh_songlist_props <song>
-		if StructureContains structure = ($gh_songlist_props.<song>) saved_in_globaltags
+	if StructureContains Structure = $gh_songlist_props <song>
+		if StructureContains Structure = ($gh_songlist_props.<song>) saved_in_globaltags
 			return saved_in_globaltags = ($gh_songlist_props.<song>.saved_in_globaltags)
 		else
 			return \{saved_in_globaltags = 1}
 		endif
 	endif
 	printstruct <...>
-	ScriptAssert \{qs(0x0ebc33db)}
+	ScriptAssert \{qs("\LSong not found")}
 endscript
 
 script get_song_allowed_in_quickplay \{song = invalid}
-	if StructureContains structure = $gh_songlist_props <song>
-		if StructureContains structure = ($gh_songlist_props.<song>) allowed_in_quickplay
+	if StructureContains Structure = $gh_songlist_props <song>
+		if StructureContains Structure = ($gh_songlist_props.<song>) allowed_in_quickplay
 			return allowed_in_quickplay = ($gh_songlist_props.<song>.allowed_in_quickplay)
 		else
 			return \{allowed_in_quickplay = 1}
 		endif
 	endif
 	printstruct <...>
-	ScriptAssert \{qs(0x0ebc33db)}
+	ScriptAssert \{qs("\LSong not found")}
 endscript
 current_song_version = gh4
 
 script get_song_version \{song = invalid}
-	if StructureContains structure = $gh_songlist_props <song>
-		if StructureContains structure = ($gh_songlist_props.<song>) version
+	if StructureContains Structure = $gh_songlist_props <song>
+		if StructureContains Structure = ($gh_songlist_props.<song>) version
 			return song_version = ($gh_songlist_props.<song>.version)
 		else
 			return song_version = ($current_song_version)
 		endif
 	endif
 	printstruct <...>
-	ScriptAssert \{qs(0x0ebc33db)}
+	ScriptAssert \{qs("\LSong not found")}
 endscript
 drum_kit_types = {
 	heavyrock = 0
@@ -2621,7 +2621,7 @@ script get_song_drum_kit_index \{song = invalid}
 	if ($current_song = jamsession)
 		return drum_kit_type = ($drum_kits [0].string_id) drum_kit_index = 0
 	endif
-	if StructureContains structure = $gh_songlist_props <song>
+	if StructureContains Structure = $gh_songlist_props <song>
 		drum_kit_type = ($gh_songlist_props.<song>.drum_kit)
 		GetArraySize ($drum_kits)
 		drum_kit_index = 0
@@ -2630,13 +2630,13 @@ script get_song_drum_kit_index \{song = invalid}
 			break
 		endif
 		drum_kit_index = (<drum_kit_index> + 1)
-		repeat <array_Size>
-		if (<drum_kit_index> >= <array_Size>)
-			printscriptinfo \{qs(0x7712eea5)}
-			ScriptAssert \{qs(0x547595c8)}
+		repeat <array_size>
+		if (<drum_kit_index> >= <array_size>)
+			printscriptinfo \{qs("get_song_drum_kit_index")}
+			ScriptAssert \{qs("\LDrum Kit Type not found")}
 		endif
 		return drum_kit_type = <drum_kit_type> drum_kit_index = <drum_kit_index>
 	endif
 	printstruct <...>
-	ScriptAssert \{qs(0x0ebc33db)}
+	ScriptAssert \{qs("\LSong not found")}
 endscript

@@ -1,26 +1,26 @@
-gp_fx_bp_encorerocket_bbg_01 = {
-	Pos = (-28.35589, 25.340385, 49.74093)
-	Angles = (0.0, 0.0, 0.0)
+GP_FX_BP_EncoreRocket_BBG_01 = {
+	pos = (-28.35589, 25.340385, 49.74093)
+	angles = (0.0, 0.0, 0.0)
 	Class = ParticleObject
 	ParticleType = FlexParticle
-	Type = flat
-	Active
+	type = flat
+	active
 	CreatedAtStart
 	EmitRangeDims = (0.2, 0.2, 0.2)
-	Emit_Target = (0.0, 1.0, 0.0)
+	emit_Target = (0.0, 1.0, 0.0)
 	EmitAngle = (0.0, 0.0, 0.0)
-	Force = (0.0, -7.0, 0.0)
+	force = (0.0, -7.0, 0.0)
 	WindCoeff = 0.0
 	LocalWindCoeff = 0.0
 	EmitterVelocityWeight = 0.0
 	Radiate
 	AngleSpread = 20.0
 	LifeRange = (0.8, 1.0)
-	Emit_Rate = 40.0
-	Max = 0
+	emit_rate = 40.0
+	max = 0
 	TimeSeed = 0.0
-	LifeTime = 1.0
-	EmitNum = 0
+	lifeTime = 1.0
+	emitNum = 0
 	FollowEmitter = 0.0
 	AlwaysEmit
 	EmitFunction = constant
@@ -35,16 +35,16 @@ gp_fx_bp_encorerocket_bbg_01 = {
 	EmitDelayStart = 0.0
 	PathFollowTime = 0.0
 	History = 2
-	HistoryListCoordinateSpace = World
-	Color = -1981697
+	HistoryListCoordinateSpace = world
+	color = -1981697
 	LOD_Default
 	QuickMaterial = {
 		DiffuseTextureEnabled
-		DiffuseTexture = ph_radialglow_01
+		DiffuseTexture = PH_RadialGlow_01
 		SpecularPower = 0
-		Bloom
-		AlphaCutoff = 1
-		BlendMode = add
+		bloom
+		alphacutoff = 1
+		blendMode = Add
 		QuadAnimationFPS = 0
 	}
 	Knot = [

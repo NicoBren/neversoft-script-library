@@ -11,35 +11,35 @@ script ui_create_online
 	endif
 	i = (<i> + 1)
 	if (<i> = 4)
-		SpawnScriptNow \{sysnotify_handle_connection_loss}
+		spawnscriptnow \{sysnotify_handle_connection_loss}
 		return
 	endif
 	repeat 4
-	Change \{rich_presence_context = presence_gigboard_and_setlist}
-	Change \{game_mode = p2_pro_faceoff}
-	Change \{respond_to_signin_changed = 1}
-	Change \{respond_to_signin_changed_all_players = 0}
-	Change \{respond_to_signin_changed_func = None}
-	if NetSessionFunc \{Obj = party
+	change \{rich_presence_context = presence_gigboard_and_setlist}
+	change \{game_mode = p2_pro_faceoff}
+	change \{respond_to_signin_changed = 1}
+	change \{respond_to_signin_changed_all_players = 0}
+	change \{respond_to_signin_changed_func = none}
+	if NetSessionFunc \{obj = party
 			func = is_host}
-		NetSessionFunc \{Obj = party
+		NetSessionFunc \{obj = party
 			func = set_party_joinable
 			params = {
 				joinable = 1
 			}}
 	endif
-	fadetoblack \{OFF
+	fadetoblack \{off
 		no_wait}
-	SpawnScriptNow create_net_matchmaking_menu params = <...>
-	broadcastevent \{Type = online_menu_created}
+	spawnscriptnow create_net_matchmaking_menu params = <...>
+	BroadcastEvent \{type = online_menu_created}
 endscript
 
 script ui_destroy_online 
-	KillSpawnedScript \{Name = create_net_matchmaking_menu}
+	KillSpawnedScript \{name = create_net_matchmaking_menu}
 	destroy_net_matchmaking_menu
-	if NetSessionFunc \{Obj = party
+	if NetSessionFunc \{obj = party
 			func = is_host}
-		NetSessionFunc \{Obj = party
+		NetSessionFunc \{obj = party
 			func = set_party_joinable
 			params = {
 				joinable = 0
@@ -48,7 +48,7 @@ script ui_destroy_online
 endscript
 
 script ui_deinit_online 
-	KillSpawnedScript \{Name = set_net_ui_to_finished_searching}
+	KillSpawnedScript \{name = set_net_ui_to_finished_searching}
 endscript
 
 script ui_return_online 

@@ -2,7 +2,7 @@
 script main_menu_temp_flow 
 	ui_event \{event = menu_choose
 		data = {
-			state = uistate_mainmenu
+			state = UIstate_mainmenu
 			clear_previous_stack
 		}}
 	Wait \{5
@@ -20,17 +20,17 @@ script main_menu_career_flow_state_func
 endscript
 
 script main_menu_get_any_band_names_exist 
-	formatText checksumName = bandname_id 'band_info' i = <band_index>
+	FormatText checksumname = bandname_id 'band_info' i = <band_index>
 	GetGlobalTags \{band_info
-		param = Name}
-	if NOT (<Name> = qs(0x03ac90f0))
+		param = name}
+	if NOT (<name> = qs("\L"))
 		return \{name_exists = 1}
 	endif
 	return \{name_exists = 0}
 endscript
 
 script controller_disconnect_quit_warning_decider 
-	fs = None
+	fs = none
 	switch ($game_mode)
 		case p1_career
 		<fs> = career_quit_warning_fs
@@ -46,7 +46,7 @@ script controller_disconnect_quit_warning_decider
 		<fs> = mp_faceoff_quit_warning_fs
 	endswitch
 	if ($end_credits = 1)
-		Change \{end_credits = 0}
+		change \{end_credits = 0}
 		Progression_EndCredits_Done
 		career_song_ended_select_quit
 		return \{flow_state = main_menu_fs}

@@ -1,73 +1,73 @@
 
 script ui_create_band_difficulty 
 	xenon_singleplayer_session_begin_uninit
-	SpawnScriptNow \{xenon_singleplayer_session_complete_uninit
+	spawnscriptnow \{xenon_singleplayer_session_complete_uninit
 		params = {
 			song_failed
 		}}
-	SpawnScriptNow \{task_menu_default_anim_in
+	spawnscriptnow \{task_menu_default_anim_in
 		params = {
 			base_name = 'band_hub'
 		}}
 	if GotParam \{p2}
-		cas_set_object_node_pos \{Player = 1
-			node = z_soundcheck_trg_waypoint_player1_start}
-		cas_set_object_node_pos \{Player = 2
-			node = z_soundcheck_trg_waypoint_player4_start}
+		cas_set_object_node_pos \{player = 1
+			node = z_Soundcheck_TRG_Waypoint_Player1_Start}
+		cas_set_object_node_pos \{player = 2
+			node = z_Soundcheck_TRG_Waypoint_Player4_Start}
 		get_savegame_from_controller controller = ($player1_status.controller)
-		cas_queue_new_character_profile id = ($player1_status.character_id) Player = 1 savegame = <savegame>
+		cas_queue_new_character_profile id = ($player1_status.character_id) player = 1 savegame = <savegame>
 		printf 'requesting %s for %d' s = <character_id> d = 1
 		get_savegame_from_controller controller = ($player2_status.controller)
-		cas_queue_new_character_profile id = ($player2_status.character_id) Player = 2 savegame = <savegame>
+		cas_queue_new_character_profile id = ($player2_status.character_id) player = 2 savegame = <savegame>
 		printf 'requesting %s for %d' s = <character_id> d = 2
 	else
-		cas_set_object_node_pos \{Player = 1
-			node = z_soundcheck_trg_waypoint_player1_start}
-		cas_set_object_node_pos \{Player = 2
-			node = z_soundcheck_trg_waypoint_player2_start}
-		cas_set_object_node_pos \{Player = 3
-			node = z_soundcheck_trg_waypoint_player3_start}
-		cas_set_object_node_pos \{Player = 4
-			node = z_soundcheck_trg_waypoint_player4_start}
+		cas_set_object_node_pos \{player = 1
+			node = z_Soundcheck_TRG_Waypoint_Player1_Start}
+		cas_set_object_node_pos \{player = 2
+			node = z_Soundcheck_TRG_Waypoint_Player2_Start}
+		cas_set_object_node_pos \{player = 3
+			node = z_Soundcheck_TRG_Waypoint_Player3_Start}
+		cas_set_object_node_pos \{player = 4
+			node = z_Soundcheck_TRG_Waypoint_Player4_Start}
 		i = 0
 		begin
 		controller = ($band_mode_actual_devices [<i>])
-		setplayerinfo (<i> + 1) controller = <controller>
+		SetPlayerInfo (<i> + 1) controller = <controller>
 		if (<controller> < 4)
-			getplayerinfo (<i> + 1) is_local_client
+			GetPlayerInfo (<i> + 1) is_local_client
 			if (<is_local_client> = 1)
-				getplayerinfo (<i> + 1) character_id
+				GetPlayerInfo (<i> + 1) character_id
 				get_savegame_from_controller controller = <controller>
-				cas_queue_new_character_profile id = <character_id> Player = (<controller> + 1) savegame = <savegame>
+				cas_queue_new_character_profile id = <character_id> player = (<controller> + 1) savegame = <savegame>
 				printf 'requesting %s for %d' s = <character_id> d = (<controller> + 1)
 			endif
 		endif
 		i = (<i> + 1)
 		repeat ($current_num_players)
 	endif
-	Change \{respond_to_signin_changed_all_players = 1}
+	change \{respond_to_signin_changed_all_players = 1}
 	set_focus_color
 	set_unfocus_color
 	CreateScreenElement {
 		parent = root_window
-		id = myinterfaceelement
-		Type = descinterface
+		id = MyInterfaceElement
+		type = DescInterface
 		desc = 'band_play'
 		tags = {continue_data = <continue_data>}
 	}
-	myinterfaceelement :se_getprops
-	if myinterfaceelement :desc_resolvealias \{Name = alias_hmenu}
+	MyInterfaceElement :SE_GetProps
+	if MyInterfaceElement :Desc_ResolveAlias \{name = alias_hmenu}
 		band_hmenu = <resolved_id>
 	endif
 	if GotParam \{p2}
-		<band_hmenu> :se_setprops spacing_between = 400
+		<band_hmenu> :SE_SetProps spacing_between = 400
 	endif
 	menu_array = []
 	desc_array = []
 	i = 0
 	j = 1
 	begin
-	ResolveScreenElementID id = [
+	ResolveScreenElementId id = [
 		{id = <band_hmenu>}
 		{index = <i>}
 	]
@@ -81,10 +81,10 @@ script ui_create_band_difficulty
 		curr_desc = <resolved_id>
 		AddArrayElement array = <desc_array> element = <resolved_id>
 		desc_array = <array>
-		<resolved_id> :desc_resolvealias Name = alias_menu
+		<resolved_id> :Desc_ResolveAlias name = alias_menu
 		continue = 0
 		begin
-		getplayerinfo <j> controller
+		GetPlayerInfo <j> controller
 		if GotParam \{p2}
 			<cont_check> = 0
 			begin
@@ -116,16 +116,16 @@ script ui_create_band_difficulty
 			else
 				switch ($g_head_to_head_instrument_type)
 					case guitar
-					allowed = {guitar bass}
-					case drums
+					allowed = {guitar Bass}
+					case Drums
 					allowed = {drum}
-					case vocals
-					gamemode_gettype
-					if (<Type> != battle)
+					case Vocals
+					GameMode_GetType
+					if (<type> != battle)
 						if ($allow_controller_for_all_instruments = 0)
-							allowed = {vocals}
+							allowed = {Vocals}
 						else
-							allowed = {guitar bass drum vocals}
+							allowed = {guitar Bass drum Vocals}
 						endif
 					else
 						allowed = {}
@@ -135,8 +135,8 @@ script ui_create_band_difficulty
 			if GotParam \{p2}
 				<resolved_id> :SetTags {
 					menu = instrument
-					instrument = None
-					difficulty = None
+					instrument = none
+					difficulty = none
 					controller = <controller>
 					allowed = <allowed>
 					index = <i>
@@ -144,8 +144,8 @@ script ui_create_band_difficulty
 			else
 				<resolved_id> :SetTags {
 					menu = instrument
-					instrument = None
-					difficulty = None
+					instrument = none
+					difficulty = none
 					controller = <i>
 					allowed = <allowed>
 					index = <i>
@@ -153,7 +153,7 @@ script ui_create_band_difficulty
 				controller = <i>
 			endif
 			if (<controller> = $band_mode_current_leader)
-				<curr_desc> :se_setprops leader_indicator_alpha = 1
+				<curr_desc> :SE_SetProps leader_indicator_alpha = 1
 			endif
 			<resolved_id> :SetTags {index = <i>}
 			<resolved_id> :SetProps event_handlers = [
@@ -163,14 +163,14 @@ script ui_create_band_difficulty
 			AddArrayElement array = <menu_array> element = <resolved_id>
 			menu_array = <array>
 		else
-			<resolved_id> :se_getparentid
-			<parent_id> :se_setprops not_focusable alpha = 0.0
-			<curr_desc> :se_setprops reposition_pos = (0.0, 500.0)
+			<resolved_id> :SE_GetParentId
+			<parent_id> :SE_SetProps not_focusable alpha = 0.0
+			<curr_desc> :SE_SetProps reposition_pos = (0.0, 500.0)
 		endif
 	endif
 	i = (<i> + 1)
 	repeat 4
-	myinterfaceelement :SetTags {menus = <menu_array> descs = <desc_array>}
+	MyInterfaceElement :SetTags {menus = <menu_array> descs = <desc_array>}
 	GetArraySize <menu_array>
 	i = 0
 	begin
@@ -182,19 +182,19 @@ script ui_create_band_difficulty
 	else
 		RunScriptOnScreenElement id = <resolved_id> ui_band_mode_create_menu
 	endif
-	Name = qs(0x03ac90f0)
+	name = qs("\L")
 	NetSessionFunc func = get_gamertag params = {controller = <controller>}
-	if GotParam \{Name}
-		band_gamertag_rename gamertag = <Name> index = <index>
+	if GotParam \{name}
+		band_gamertag_rename gamertag = <name> index = <index>
 	endif
 	<resolved_id> :Obj_SpawnScriptNow ui_band_instrument_check_controllers
 	i = (<i> + 1)
-	repeat <array_Size>
+	repeat <array_size>
 	if (($game_mode = p2_battle) || ($game_mode = p2_faceoff) || ($game_mode = p2_pro_faceoff))
-		myinterfaceelement :se_setprops \{ticker_alpha = 0.0}
+		MyInterfaceElement :SE_SetProps \{ticker_alpha = 0.0}
 	endif
-	LaunchEvent \{Type = focus
-		target = myinterfaceelement}
+	LaunchEvent \{type = focus
+		target = MyInterfaceElement}
 	ui_band_mode_helper_text
 endscript
 
@@ -204,7 +204,7 @@ script ui_band_instrument_check_controllers
 	begin
 	if (<menu> = instrument)
 		ui_get_controller_parts_allowed controller = <controller> filter_by_character
-		if NOT comparestructs struct1 = <allowed> struct2 = <my_allowed>
+		if NOT CompareStructs struct1 = <allowed> struct2 = <my_allowed>
 			SetTags allowed = <allowed>
 			<my_allowed> = <allowed>
 			ui_band_mode_update_menu
@@ -218,17 +218,17 @@ script ui_band_instrument_check_controllers
 endscript
 
 script ui_destroy_band_difficulty 
-	DestroyScreenElement \{id = myinterfaceelement}
+	DestroyScreenElement \{id = MyInterfaceElement}
 	generic_ui_destroy
 endscript
 
 script ui_band_difficulty_continue 
-	if is_ui_event_running
+	if Is_ui_event_running
 		return
 	endif
 	GetTags
 	num_ready = 0
-	Player = 1
+	player = 1
 	temp_parts = [arse , arse , arse , arse]
 	GetArraySize <menus>
 	i = 0
@@ -238,18 +238,18 @@ script ui_band_difficulty_continue
 	if (<menu> = ready2)
 		<num_ready> = (<num_ready> + 1)
 		get_player_num_from_controller controller_index = <controller>
-		SetArrayElement ArrayName = temp_parts index = (<player_num> -1) NewValue = <instrument>
-		setplayerinfo <player_num> difficulty = <difficulty>
+		SetArrayElement ArrayName = temp_parts index = (<player_num> -1) newvalue = <instrument>
+		SetPlayerInfo <player_num> difficulty = <difficulty>
 	endif
 	i = (<i> + 1)
-	repeat <array_Size>
-	gamemode_getproperty \{prop = faceoff}
+	repeat <array_size>
+	GameMode_GetProperty \{prop = faceoff}
 	if (<faceoff> = true)
-		if (<instrument> = vocals)
+		if (<instrument> = Vocals)
 			if NOT vocals_mic_distribution_is_valid
-				getplayerinfo <invalid_mic_player> controller
+				GetPlayerInfo <invalid_mic_player> controller
 				printf 'ui_band_difficulty_continue: Player %p (controller %c) is missing their mic.' p = <invalid_mic_player> c = <controller>
-				generic_event_choose state = uistate_select_instrument_warning data = {instrument = vocals controller = <controller>}
+				generic_event_choose state = uistate_select_instrument_warning data = {instrument = Vocals controller = <controller>}
 				return
 			endif
 		endif
@@ -257,25 +257,25 @@ script ui_band_difficulty_continue
 	if NOT (<num_ready> = $current_num_players)
 		return
 	else
-		register_new_progression_atoms \{career_band}
+		register_new_progression_atoms \{Career_Band}
 	endif
 	printstruct <...>
-	<Player> = 1
+	<player> = 1
 	begin
-	part = (<temp_parts> [(<Player> - 1)])
+	part = (<temp_parts> [(<player> - 1)])
 	if (<part> = arse)
 		ScriptAssert \{'Yes, something is very wrong here'}
 	endif
-	setplayerinfo <Player> part = <part>
-	Player = (<Player> + 1)
+	SetPlayerInfo <player> part = <part>
+	player = (<player> + 1)
 	repeat <num_ready>
 	cas_destroy_all_characters
-	if (<faceoff> = FALSE)
+	if (<faceoff> = false)
 		vocals_distribute_mics
 	endif
 	if NOT vocals_mic_distribution_is_valid
-		getplayerinfo <invalid_mic_player> controller
-		generic_event_choose state = uistate_select_instrument_warning data = {instrument = vocals controller = <controller>}
+		GetPlayerInfo <invalid_mic_player> controller
+		generic_event_choose state = uistate_select_instrument_warning data = {instrument = Vocals controller = <controller>}
 		return
 	endif
 	if GotParam \{continue_data}

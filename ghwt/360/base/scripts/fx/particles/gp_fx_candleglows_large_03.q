@@ -1,29 +1,29 @@
-gp_fx_candleglows_large_03 = {
-	Pos = (0.0, -2.344086, -0.0)
-	Angles = (0.0, 0.0, 0.0)
+GP_FX_CandleGlows_Large_03 = {
+	pos = (0.0, -2.344086, -0.0)
+	angles = (0.0, 0.0, 0.0)
 	Class = ParticleObject
 	ParticleType = FlexParticle
-	Type = flat
-	Active
+	type = flat
+	active
 	CreatedAtStart
-	Attach
+	attach
 	Align
 	ApplyPositionOffset
 	EmitRangeDims = (0.0, 0.0, 0.0)
-	Emit_Target = (0.0, 1.0, 0.0)
+	emit_Target = (0.0, 1.0, 0.0)
 	EnableRotate
 	EmitAngle = (0.0, 0.0, 0.0)
-	Force = (0.0, 0.0, 0.0)
+	force = (0.0, 0.0, 0.0)
 	WindCoeff = 0.0
 	LocalWindCoeff = 0.0
 	EmitterVelocityWeight = 0.0
 	AngleSpread = 45.0
 	LifeRange = (0.5, 0.8)
-	Emit_Rate = 4.0
-	Max = 3
+	emit_rate = 4.0
+	max = 3
 	TimeSeed = 0.0
-	LifeTime = 0.0
-	EmitNum = 0
+	lifeTime = 0.0
+	emitNum = 0
 	FollowEmitter = 0.0
 	EmitFunction = constant
 	EmitPeriod = 1.0
@@ -37,16 +37,16 @@ gp_fx_candleglows_large_03 = {
 	EmitDelayStart = 0.0
 	PathFollowTime = 0.0
 	History = 2
-	HistoryListCoordinateSpace = World
-	Color = 1228808959
+	HistoryListCoordinateSpace = world
+	color = 1228808959
 	LOD_Default
 	QuickMaterial = {
 		DiffuseTextureEnabled
-		DiffuseTexture = ph_radialglow_01
+		DiffuseTexture = PH_RadialGlow_01
 		SpecularPower = 0
 		fillburst
-		AlphaCutoff = 1
-		BlendMode = add
+		alphacutoff = 1
+		blendMode = Add
 		QuadAnimationFPS = 1
 	}
 	Knot = [

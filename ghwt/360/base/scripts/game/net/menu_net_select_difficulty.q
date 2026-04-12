@@ -5,11 +5,11 @@ endscript
 
 script net_difficulty_go_back 
 	if ($g_sd_p1_ready = 1)
-		SendNetMessage \{Type = difficulty_selection
+		SendNetMessage \{type = difficulty_selection
 			difficulty = 2
 			index = 15}
 	else
-		SendNetMessage \{Type = difficulty_selection
+		SendNetMessage \{type = difficulty_selection
 			difficulty = 0
 			index = 0}
 	endif
@@ -17,7 +17,7 @@ endscript
 
 script net_sd_highlight_menuitem 
 	SendNetMessage {
-		Type = difficulty_selection
+		type = difficulty_selection
 		difficulty = 2
 		index = <index>
 	}
@@ -28,7 +28,7 @@ script net_request_difficulty
 		return
 	endif
 	if ScreenElementExists \{id = vmenu_select_difficulty}
-		LaunchEvent \{Type = unfocus
+		LaunchEvent \{type = unfocus
 			target = vmenu_select_difficulty}
 	endif
 	switch <diff>
@@ -42,7 +42,7 @@ script net_request_difficulty
 		<diff_index> = 6
 	endswitch
 	SendNetMessage {
-		Type = difficulty_selection
+		type = difficulty_selection
 		difficulty = <diff_index>
 		index = 0
 	}
@@ -51,45 +51,45 @@ endscript
 script net_select_difficulty 
 	switch <difficulty_index>
 		case 0
-		menu_sd_back_up Player = <Player>
+		menu_sd_back_up player = <player>
 		return
 		case 1
 		return
 		case 2
 		if ((<index> > -1) && (<index> < 8))
-			if (<Player> = 2)
+			if (<player> = 2)
 				<diff_index> = (<index> + 4)
 				<index> = (<index> + 4)
 			else
 				<diff_index> = <index>
 			endif
-			sd_highlight_menuitem Player = <Player> index = <index> difficulty_index = <diff_index>
+			sd_highlight_menuitem player = <player> index = <index> difficulty_index = <diff_index>
 			return
 		else
-			menu_sd_back_up Player = <Player>
+			menu_sd_back_up player = <player>
 			return
 		endif
 		case 3
 		if ScreenElementExists \{id = vmenu_select_difficulty}
-			temp_selected_difficulty Player = <Player> diff = easy
+			temp_selected_difficulty player = <player> diff = easy
 		endif
 		case 4
 		if ScreenElementExists \{id = vmenu_select_difficulty}
-			temp_selected_difficulty Player = <Player> diff = medium
+			temp_selected_difficulty player = <player> diff = medium
 		endif
 		case 5
 		if ScreenElementExists \{id = vmenu_select_difficulty}
-			temp_selected_difficulty Player = <Player> diff = hard
+			temp_selected_difficulty player = <player> diff = hard
 		endif
 		case 6
 		if ScreenElementExists \{id = vmenu_select_difficulty}
-			temp_selected_difficulty Player = <Player> diff = expert
+			temp_selected_difficulty player = <player> diff = expert
 		endif
 	endswitch
-	if (<Player> = 1)
+	if (<player> = 1)
 		if NOT (($g_sd_p1_ready = 1) && ($g_sd_p2_ready = 1))
 			if ScreenElementExists \{id = vmenu_select_difficulty}
-				LaunchEvent \{Type = focus
+				LaunchEvent \{type = focus
 					target = vmenu_select_difficulty}
 			endif
 		endif

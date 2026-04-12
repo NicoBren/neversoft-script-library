@@ -1,74 +1,74 @@
-gh4_download_songs_guitar = {
+GH4_Download_Songs_Guitar = {
 	prefix = 'download_guitar'
 	num_tiers = 1
 	tier1 = {
-		title = qs(0xe2838441)
+		title = qs("Downloaded songs")
 		songs = [
 		]
 		defaultunlocked = 4
-		level = load_z_frathouse
+		level = load_z_Frathouse
 	}
 }
-gh4_download_songlist = [
+GH4_download_songlist = [
 ]
-gh4_download_songs_bass = {
+GH4_Download_Songs_Bass = {
 	prefix = 'download_bass'
 	num_tiers = 1
 	tier1 = {
-		title = qs(0xe2838441)
+		title = qs("Downloaded songs")
 		songs = [
 		]
 		defaultunlocked = 4
-		level = load_z_frathouse
+		level = load_z_Frathouse
 	}
 }
-gh4_download_songs_drums = {
+GH4_Download_Songs_Drums = {
 	prefix = 'download_drums'
 	num_tiers = 1
 	tier1 = {
-		title = qs(0xe2838441)
+		title = qs("Downloaded songs")
 		songs = [
 		]
 		defaultunlocked = 4
-		level = load_z_frathouse
+		level = load_z_Frathouse
 	}
 }
-gh4_download_songs_vocals = {
+GH4_Download_Songs_Vocals = {
 	prefix = 'download_vocals'
 	num_tiers = 1
 	tier1 = {
-		title = qs(0xe2838441)
+		title = qs("Downloaded songs")
 		songs = [
 		]
 		defaultunlocked = 4
-		level = load_z_frathouse
+		level = load_z_Frathouse
 	}
 }
-gh4_download_songs_band = {
+GH4_Download_Songs_Band = {
 	prefix = 'download_band'
 	num_tiers = 1
 	tier1 = {
-		title = qs(0xe2838441)
+		title = qs("Downloaded songs")
 		songs = [
 		]
 		defaultunlocked = 4
-		level = load_z_frathouse
+		level = load_z_Frathouse
 	}
 }
 
 script scan_globaltag_downloads 
-	printf \{qs(0xd96ce4ee)}
-	lockglobaltags \{OFF}
-	printstruct ($gh4_download_songlist)
+	printf \{qs("\Lscan_globaltag_downloads")}
+	LockGlobalTags \{off}
+	printstruct ($GH4_download_songlist)
 	get_num_globaltag_sets
 	if (<num_globaltag_sets> > 0)
 		savegame = 0
 		begin
-		setup_setlisttags savegame = <savegame> SetList_Songs = gh4_download_songs_guitar part = guitar SongList = gh4_download_songlist download = 1
-		setup_setlisttags savegame = <savegame> SetList_Songs = gh4_download_songs_bass part = bass SongList = gh4_download_songlist download = 1
-		setup_setlisttags savegame = <savegame> SetList_Songs = gh4_download_songs_drums part = drum SongList = gh4_download_songlist download = 1
-		setup_setlisttags savegame = <savegame> SetList_Songs = gh4_download_songs_vocals part = vocals SongList = gh4_download_songlist download = 1
-		setup_setlisttags savegame = <savegame> SetList_Songs = gh4_download_songs_band part = Band SongList = gh4_download_songlist download = 1
+		setup_setlisttags savegame = <savegame> SetList_Songs = GH4_Download_Songs_Guitar part = guitar songlist = GH4_download_songlist download = 1
+		setup_setlisttags savegame = <savegame> SetList_Songs = GH4_Download_Songs_Bass part = Bass songlist = GH4_download_songlist download = 1
+		setup_setlisttags savegame = <savegame> SetList_Songs = GH4_Download_Songs_Drums part = drum songlist = GH4_download_songlist download = 1
+		setup_setlisttags savegame = <savegame> SetList_Songs = GH4_Download_Songs_Vocals part = Vocals songlist = GH4_download_songlist download = 1
+		setup_setlisttags savegame = <savegame> SetList_Songs = GH4_Download_Songs_Band part = Band songlist = GH4_download_songlist download = 1
 		setupsongtags savegame = <savegame> globaltag_checksum = <globaltag_checksum> part = 'guitar'
 		setupsongtags savegame = <savegame> globaltag_checksum = <globaltag_checksum> part = 'bass'
 		setupsongtags savegame = <savegame> globaltag_checksum = <globaltag_checksum> part = 'drum'
@@ -77,13 +77,13 @@ script scan_globaltag_downloads
 		<savegame> = (<savegame> + 1)
 		repeat (<num_globaltag_sets>)
 	endif
-	lockglobaltags
+	LockGlobalTags
 endscript
 global_content_index_pak = 'none'
 global_content_index_pak_language = 'none'
 
 script Downloads_EnumContent controller = ($primary_controller)
-	removecontentfiles playerid = <controller>
+	RemoveContentFiles playerid = <controller>
 	Downloads_UnloadContent
 	mark_unsafe_for_shutdown
 	if EnumContentFiles download dofiles playerid = <controller>
@@ -91,7 +91,7 @@ script Downloads_EnumContent controller = ($primary_controller)
 		if EnumContentFilesFinished
 			break
 		else
-			printf \{qs(0xd10f5883)}
+			printf \{qs("\LWaiting for Download Contend Enumeration")}
 			Wait \{1
 				gameframe}
 		endif
@@ -102,10 +102,10 @@ script Downloads_EnumContent controller = ($primary_controller)
 		destroy_popup_warning_menu
 		create_popup_warning_menu \{create_popup_warning_menu
 			textblock = {
-				text = qs(0xa08469f7)
+				text = qs("A content package appears damaged or unreadable. Please re-download the content package.")
 				Wait
 				3
-				Seconds
+				seconds
 			}
 			menu_pos = (640.0, 490.0)
 			options = [
@@ -113,11 +113,11 @@ script Downloads_EnumContent controller = ($primary_controller)
 					func = {
 						Downloads_Enumcontentfiles_Continue
 					}
-					text = qs(0x182f0173)
-					Scale = (1.0, 1.0)
+					text = qs("CONTINUE")
+					scale = (1.0, 1.0)
 				}
 			]}
-		Change \{Downloads_Enumcontentfiles_Continue_Flag = 0}
+		change \{Downloads_Enumcontentfiles_Continue_Flag = 0}
 		begin
 		if ($Downloads_Enumcontentfiles_Continue_Flag = 1)
 			break
@@ -129,27 +129,27 @@ script Downloads_EnumContent controller = ($primary_controller)
 	if ($shutdown_game_for_signin_change_flag = 1)
 		return
 	endif
-	setsearchallcontentfolders
+	SetSearchAllContentFolders
 	if GetLatestContentIndexFile
-		printf \{qs(0xf1fa201d)}
+		printf \{qs("\LFound latest content index file:")}
 		printstruct <...>
 		mark_unsafe_for_shutdown
-		EnableDuplicateSymbolWarning \{OFF}
-		if NOT LoadPakAsync pak_name = <FileName> Heap = heap_downloads async = 1
+		EnableDuplicateSymbolWarning \{off}
+		if NOT LoadPakAsync pak_name = <filename> heap = heap_downloads async = 1
 			EnableDuplicateSymbolWarning
 			mark_safe_for_shutdown
 			DownloadContentLost
-			setsearchallcontentfolders \{OFF}
+			SetSearchAllContentFolders \{off}
 			return
 		endif
 		EnableDuplicateSymbolWarning
-		Change global_content_index_pak = <FileName>
+		change global_content_index_pak = <filename>
 		Downloads_LoadLanguageContent <...>
 		mark_safe_for_shutdown
 	else
-		printf \{qs(0x62e8594a)}
+		printf \{qs("\LFound no latest content index file")}
 	endif
-	setsearchallcontentfolders \{OFF}
+	SetSearchAllContentFolders \{off}
 	if ScriptExists \{Downloads_Startup}
 		Downloads_Startup
 	endif
@@ -157,40 +157,40 @@ script Downloads_EnumContent controller = ($primary_controller)
 endscript
 
 script destroy_downloads_EnumContent 
-	KillSpawnedScript \{Name = Downloads_EnumContent}
-	KillSpawnedScript \{Name = boot_download_scan}
-	Downloads_CloseContentFolder \{Force = 1}
+	KillSpawnedScript \{name = Downloads_EnumContent}
+	KillSpawnedScript \{name = boot_download_scan}
+	Downloads_CloseContentFolder \{force = 1}
 endscript
 
 script Downloads_LoadLanguageContent 
-	formatText TextName = pakname '%s_text.pak' s = <stem>
+	FormatText TextName = pakname '%s_text.pak' s = <stem>
 	if English
-		formatText TextName = pakname '%s_text.pak' s = <stem>
+		FormatText TextName = pakname '%s_text.pak' s = <stem>
 	elseif French
-		formatText TextName = pakname '%s_text_f.pak' s = <stem>
+		FormatText TextName = pakname '%s_text_f.pak' s = <stem>
 	elseif Italian
-		formatText TextName = pakname '%s_text_i.pak' s = <stem>
+		FormatText TextName = pakname '%s_text_i.pak' s = <stem>
 	elseif German
-		formatText TextName = pakname '%s_text_g.pak' s = <stem>
+		FormatText TextName = pakname '%s_text_g.pak' s = <stem>
 	elseif Spanish
-		formatText TextName = pakname '%s_text_s.pak' s = <stem>
+		FormatText TextName = pakname '%s_text_s.pak' s = <stem>
 	endif
 	GetContentFolderIndexFromFile <pakname>
 	if (<device> = content)
-		printf qs(0x6af97d82) s = <pakname>
+		printf qs("\LDownload Language Content found %s") s = <pakname>
 		mark_unsafe_for_shutdown
-		EnableDuplicateSymbolWarning \{OFF}
-		if NOT LoadPakAsync pak_name = <pakname> Heap = heap_downloads async = 1
+		EnableDuplicateSymbolWarning \{off}
+		if NOT LoadPakAsync pak_name = <pakname> heap = heap_downloads async = 1
 			EnableDuplicateSymbolWarning
 			mark_safe_for_shutdown
 			DownloadContentLost
 			return
 		endif
 		EnableDuplicateSymbolWarning
-		Change global_content_index_pak_language = <pakname>
+		change global_content_index_pak_language = <pakname>
 		mark_safe_for_shutdown
 	else
-		printf qs(0x3906d03d) s = <pakname>
+		printf qs("\LDownload Language Content no found %s") s = <pakname>
 	endif
 endscript
 
@@ -200,23 +200,23 @@ endscript
 Downloads_Enumcontentfiles_Continue_Flag = 0
 
 script Downloads_Enumcontentfiles_Continue 
-	Change \{Downloads_Enumcontentfiles_Continue_Flag = 1}
+	change \{Downloads_Enumcontentfiles_Continue_Flag = 1}
 endscript
 
 script Downloads_UnloadContent 
-	setsearchallcontentfolders \{OFF}
-	KillSpawnedScript \{Name = Downloads_OpenContentFolder}
-	Change \{downloadcontentfolder_lock = 0}
-	if ScriptExists \{downloads_shutdown}
-		downloads_shutdown
+	SetSearchAllContentFolders \{off}
+	KillSpawnedScript \{name = Downloads_OpenContentFolder}
+	change \{downloadcontentfolder_lock = 0}
+	if ScriptExists \{Downloads_Shutdown}
+		Downloads_Shutdown
 	endif
 	if NOT ($global_content_index_pak = 'none')
-		UnLoadPak ($global_content_index_pak)
-		Change \{global_content_index_pak = 'none'}
+		UnloadPak ($global_content_index_pak)
+		change \{global_content_index_pak = 'none'}
 	endif
 	if NOT ($global_content_index_pak_language = 'none')
-		UnLoadPak ($global_content_index_pak_language)
-		Change \{global_content_index_pak_language = 'none'}
+		UnloadPak ($global_content_index_pak_language)
+		change \{global_content_index_pak_language = 'none'}
 	endif
 endscript
 downloadcontentfolder_lock = 0
@@ -231,24 +231,24 @@ script Downloads_OpenContentFolder
 		break
 	endif
 	if ($downloadcontentfolder_index = <content_index>)
-		Change downloadcontentfolder_count = ($downloadcontentfolder_count + 1)
+		change downloadcontentfolder_count = ($downloadcontentfolder_count + 1)
 		mark_safe_for_shutdown
 		return \{true}
 	endif
 	Wait \{1
 		gameframe}
 	repeat
-	Change \{downloadcontentfolder_lock = 1}
+	change \{downloadcontentfolder_lock = 1}
 	if NOT OpenContentFolder content_index = <content_index>
 		mark_safe_for_shutdown
-		return \{FALSE}
+		return \{false}
 	endif
 	begin
 	GetContentFolderState
 	if (<contentfolderstate> = failed)
-		Change \{downloadcontentfolder_lock = 0}
+		change \{downloadcontentfolder_lock = 0}
 		mark_safe_for_shutdown
-		return \{FALSE}
+		return \{false}
 	endif
 	if (<contentfolderstate> = opened)
 		break
@@ -256,38 +256,38 @@ script Downloads_OpenContentFolder
 	Wait \{1
 		gameframe}
 	repeat
-	Change downloadcontentfolder_count = ($downloadcontentfolder_count + 1)
-	Change downloadcontentfolder_index = <content_index>
+	change downloadcontentfolder_count = ($downloadcontentfolder_count + 1)
+	change downloadcontentfolder_index = <content_index>
 	mark_safe_for_shutdown
 	return \{true}
 endscript
 
-script Downloads_CloseContentFolder \{Force = 0}
+script Downloads_CloseContentFolder \{force = 0}
 	mark_unsafe_for_shutdown
-	if (<Force> = 1)
+	if (<force> = 1)
 		if ($downloadcontentfolder_index = -1)
 			mark_safe_for_shutdown
 			return
 		endif
 	endif
-	if (<Force> = 1)
-		Change \{downloadcontentfolder_count = 0}
+	if (<force> = 1)
+		change \{downloadcontentfolder_count = 0}
 	else
-		Change downloadcontentfolder_count = ($downloadcontentfolder_count - 1)
+		change downloadcontentfolder_count = ($downloadcontentfolder_count - 1)
 		if ($downloadcontentfolder_count > 0)
 			mark_safe_for_shutdown
 			return \{true}
 		endif
 	endif
-	if (<Force> = 1)
+	if (<force> = 1)
 		content_index = ($downloadcontentfolder_index)
 	else
-		Change \{downloadcontentfolder_index = -1}
+		change \{downloadcontentfolder_index = -1}
 	endif
 	if NOT CloseContentFolder content_index = <content_index>
-		Change \{downloadcontentfolder_lock = 0}
+		change \{downloadcontentfolder_lock = 0}
 		mark_safe_for_shutdown
-		return \{FALSE}
+		return \{false}
 	endif
 	begin
 	GetContentFolderState
@@ -297,14 +297,14 @@ script Downloads_CloseContentFolder \{Force = 0}
 	Wait \{1
 		gameframe}
 	repeat
-	Change \{downloadcontentfolder_lock = 0}
+	change \{downloadcontentfolder_lock = 0}
 	mark_safe_for_shutdown
 	return \{true}
 endscript
 
 script find_instrument_index 
 	return \{index = 0
-		FALSE}
+		false}
 endscript
 
 script store_select_downloads 
@@ -314,18 +314,18 @@ script store_select_downloads
 endscript
 
 script fmod_diskejected_event 
-	printf \{qs(0x71a1ceda)}
+	printf \{qs("\Lfmod_diskejected_event")}
 	DownloadContentLost
 endscript
 
 script DownloadContentLost 
-	Change \{is_changing_levels = 0}
-	Change \{practice_songpreview_changing = 0}
-	printscriptinfo \{qs(0xca95b489)}
-	SpawnScriptNow \{noqbid
+	change \{is_changing_levels = 0}
+	change \{practice_songpreview_changing = 0}
+	printscriptinfo \{qs("DownloadContentLost")}
+	spawnscriptnow \{noqbid
 		DownloadContentLost_Spawned}
-	KillSpawnedScript \{Name = setlist_choose_song}
-	KillSpawnedScript \{Name = DownloadContentLost}
+	KillSpawnedScript \{name = setlist_choose_song}
+	KillSpawnedScript \{name = DownloadContentLost}
 endscript
 
 script DownloadContentLost_Spawned 
@@ -335,40 +335,40 @@ script DownloadContentLost_Spawned
 	if ($respond_to_signin_changed = 0)
 		return
 	endif
-	Change \{respond_to_signin_changed = 0}
-	printf \{qs(0x8a0f6c71)}
+	change \{respond_to_signin_changed = 0}
+	printf \{qs("\LDownloadContentLost_Spawned")}
 	disable_pause
 	create_loading_screen \{no_bink}
 	ui_event_block \{event = menu_back
 		data = {
-			state = uistate_null
+			state = UIstate_Null
 		}}
 	shutdown_game_for_signin_change
-	removecontentfiles \{playerid = -1
+	RemoveContentFiles \{playerid = -1
 		clear_cache}
 	ui_event_block \{event = menu_change
 		data = {
 			state = uistate_signin_changed
 			clear_previous_stack
 		}}
-	destroy_loading_screen \{Force = 1}
-	LaunchEvent \{Type = unfocus
+	destroy_loading_screen \{force = 1}
+	LaunchEvent \{type = unfocus
 		target = root_window}
 	create_downloadcontentlost_menu
-	StartRendering
+	startrendering
 	SetButtonEventMappings \{unblock_menu_input}
-	printf \{qs(0xc68e2781)}
+	printf \{qs("\LDownloadContentLost")}
 endscript
 
 script create_downloadcontentlost_menu 
 	destroy_popup_warning_menu
-	create_popup_warning_menu \{title = qs(0x10facad3)
+	create_popup_warning_menu \{title = qs("CONTENT CHANGED")
 		title_props = {
-			Scale = 1.0
+			scale = 1.0
 		}
 		textblock = {
-			text = qs(0x75e38f5b)
-			Pos = (640.0, 380.0)
+			text = qs("The downloadable content has changed. As a result, the game has restarted.")
+			pos = (640.0, 380.0)
 		}
 		menu_pos = (640.0, 490.0)
 		options = [
@@ -376,23 +376,23 @@ script create_downloadcontentlost_menu
 				func = {
 					downloadcontentlost_reboot
 				}
-				text = qs(0x182f0173)
-				Scale = (1.0, 1.0)
+				text = qs("CONTINUE")
+				scale = (1.0, 1.0)
 			}
 		]}
 endscript
 
 script downloadcontentlost_reboot 
-	printf \{qs(0x1858183e)}
+	printf \{qs("\Ldownloadcontentlost_reboot")}
 	destroy_downloadcontentlost_menu
 	Wait \{5
 		gameframes}
 	ui_event \{event = menu_change
 		data = {
-			state = uistate_boot_iis
+			state = UIstate_boot_iis
 			clear_previous_stack
 		}}
-	printf \{qs(0x0f1c1713)}
+	printf \{qs("\Ldownloadcontentlost_reboot end")}
 endscript
 
 script destroy_downloadcontentlost_menu 
@@ -404,26 +404,26 @@ script recreate_downloadcontentlost_menu
 	create_downloadcontentlost_menu
 endscript
 net_checksum_packet = [
-	None
-	None
-	None
-	None
-	None
-	None
-	None
-	None
-	None
-	None
-	None
-	None
-	None
-	None
-	None
-	None
-	None
-	None
-	None
-	None
+	none
+	none
+	none
+	none
+	none
+	none
+	none
+	none
+	none
+	none
+	none
+	none
+	none
+	none
+	none
+	none
+	none
+	none
+	none
+	none
 ]
 num_net_checksum_packet = 0
 total_num_net_checksum_packet = 0
@@ -432,16 +432,16 @@ net_match_available_items_request_finished = 0
 net_match_dlc_sync_finished = 0
 
 script net_match_send_available_items 
-	printf \{qs(0xdf3f3534)}
+	printf \{qs("\Lnet_match_send_available_items")}
 	disable_pause
-	Change \{net_match_dlc_sync_finished = 0}
+	change \{net_match_dlc_sync_finished = 0}
 	if IsHost
 		net_match_send_available_items_host
 	else
 		net_match_send_available_items_client
 	endif
-	Change \{net_match_dlc_sync_finished = 1}
-	printf \{qs(0x7e7258ae)}
+	change \{net_match_dlc_sync_finished = 1}
+	printf \{qs("\Lnet_match_send_available_items end")}
 endscript
 
 script net_match_send_available_items_host 
@@ -450,7 +450,7 @@ script net_match_send_available_items_host
 		data_to_send = {
 			for_host = 0
 		}}
-	getnumremoteconnections
+	GetNumRemoteConnections
 	wait_for_net_match_available_items num_finished = <num_connections>
 	net_match_calc_available_items
 	net_match_download_items_send \{for_host = 1}
@@ -468,12 +468,12 @@ script net_match_clear_available_items
 	song_count = 0
 	begin
 	get_songlist_checksum index = <song_count>
-	if globaltagexists <song_checksum> noassert = 1
+	if GlobalTagExists <song_checksum> noassert = 1
 		SetGlobalTags <song_checksum> params = {available_on_other_client = 0}
 	endif
 	song_count = (<song_count> + 1)
-	repeat <array_Size>
-	printf qs(0xb1f247c3) i = <array_Size>
+	repeat <array_size>
+	printf qs("\LLocal total songs = %i") i = <array_size>
 	return \{true}
 endscript
 
@@ -482,23 +482,23 @@ script net_match_set_available_items
 	song_count = 0
 	begin
 	get_songlist_checksum index = <song_count>
-	if globaltagexists <song_checksum> noassert = 1
+	if GlobalTagExists <song_checksum> noassert = 1
 		SetGlobalTags <song_checksum> params = {available_on_other_client = 1}
 	endif
 	song_count = (<song_count> + 1)
-	repeat <array_Size>
-	printf qs(0xb1f247c3) i = <array_Size>
+	repeat <array_size>
+	printf qs("\LLocal total songs = %i") i = <array_size>
 	return \{true}
 endscript
 
 script net_match_calc_available_items 
-	printf \{qs(0x7e77d368)}
-	getnumremoteconnections
+	printf \{qs("\Lnet_match_calc_available_items")}
+	GetNumRemoteConnections
 	get_songlist_size
 	song_count = 0
 	begin
 	get_songlist_checksum index = <song_count>
-	if globaltagexists <song_checksum> noassert = 1
+	if GlobalTagExists <song_checksum> noassert = 1
 		if is_song_downloaded song_checksum = <song_checksum>
 			GetGlobalTags <song_checksum>
 			if (<available_on_other_client> >= <num_connections>)
@@ -511,13 +511,13 @@ script net_match_calc_available_items
 		endif
 	endif
 	song_count = (<song_count> + 1)
-	repeat <array_Size>
-	printf \{qs(0xb2c7132d)}
+	repeat <array_size>
+	printf \{qs("\Lnet_match_calc_available_items end")}
 	return \{true}
 endscript
 
 script clear_wait_for_net_match_available_items 
-	Change \{net_match_available_items_request_finished = 0}
+	change \{net_match_available_items_request_finished = 0}
 endscript
 
 script wait_for_net_match_available_items \{num_finished = 1}
@@ -538,16 +538,16 @@ script net_match_verify_host
 		is_host = 0
 	endif
 	if NOT (<is_host> = <for_host>)
-		printf \{qs(0xe518c972)}
+		printf \{qs("\Lnet_match_download_items_send non-fatal shouldn't be on host")}
 		printstruct <...>
-		return \{FALSE}
+		return \{false}
 	else
 		return \{true}
 	endif
 endscript
 
 script net_match_download_items_send 
-	printf \{qs(0x8dbce89d)}
+	printf \{qs("\Lnet_match_download_items_send")}
 	if NOT net_match_verify_host for_host = <for_host>
 		return
 	endif
@@ -559,7 +559,7 @@ script net_match_download_items_send
 	song_count = 0
 	begin
 	get_songlist_checksum index = <song_count>
-	if globaltagexists <song_checksum> noassert = 1
+	if GlobalTagExists <song_checksum> noassert = 1
 		if IsHost
 			GetGlobalTags <song_checksum>
 			if (<available_on_other_client> = 1)
@@ -572,28 +572,28 @@ script net_match_download_items_send
 		endif
 	endif
 	song_count = (<song_count> + 1)
-	repeat <array_Size>
+	repeat <array_size>
 	net_match_send_items
 	Wait \{1
 		gameframe}
 	net_match_init_items for_host = (1 - <for_host>)
 	net_match_send_items \{final = 1}
-	printf \{qs(0xdb933c51)}
+	printf \{qs("\Lnet_match_download_items_send end")}
 endscript
 
 script net_match_init_items 
-	Change \{num_net_checksum_packet = 0}
-	Change \{total_num_net_checksum_packet = 0}
-	Change net_checksum_packet_for_host = <for_host>
+	change \{num_net_checksum_packet = 0}
+	change \{total_num_net_checksum_packet = 0}
+	change net_checksum_packet_for_host = <for_host>
 endscript
 
 script net_match_add_item 
-	SetArrayElement ArrayName = net_checksum_packet globalarray index = ($num_net_checksum_packet) NewValue = <item>
-	Change num_net_checksum_packet = ($num_net_checksum_packet + 1)
+	SetArrayElement ArrayName = net_checksum_packet GlobalArray index = ($num_net_checksum_packet) newvalue = <item>
+	change num_net_checksum_packet = ($num_net_checksum_packet + 1)
 	if ($num_net_checksum_packet = 20)
-		Change total_num_net_checksum_packet = ($total_num_net_checksum_packet + 1)
+		change total_num_net_checksum_packet = ($total_num_net_checksum_packet + 1)
 		net_match_send_items
-		Change \{num_net_checksum_packet = 0}
+		change \{num_net_checksum_packet = 0}
 	else
 		return message_struct = <message_struct>
 	endif
@@ -612,7 +612,7 @@ script net_match_send_items \{final = 0
 endscript
 
 script net_match_download_items_send_callback 
-	printf \{qs(0x9f21d497)}
+	printf \{qs("\Lnet_match_download_items_send_callback")}
 	printstruct <...>
 	if NOT net_match_verify_host for_host = <for_host>
 		return
@@ -620,7 +620,7 @@ script net_match_download_items_send_callback
 	if (<num_valid> > 0)
 		index = 0
 		begin
-		if globaltagexists (<net_items> [<index>]) noassert = 1
+		if GlobalTagExists (<net_items> [<index>]) noassert = 1
 			available_on_other_client = 0
 			GetGlobalTags (<net_items> [<index>])
 			available_on_other_client = (<available_on_other_client> + 1)
@@ -630,6 +630,6 @@ script net_match_download_items_send_callback
 		repeat <num_valid>
 	endif
 	if (<final> = 1)
-		Change net_match_available_items_request_finished = (($net_match_available_items_request_finished) + 1)
+		change net_match_available_items_request_finished = (($net_match_available_items_request_finished) + 1)
 	endif
 endscript

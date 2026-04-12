@@ -1,7 +1,7 @@
 
 script check_if_part_deformable 
-	if getcasappearancepart part = <part>
-		getactualcasoptionstruct part = <part> desc_id = <desc_id>
+	if GetCASAppearancePart part = <part>
+		GetActualCASOptionStruct part = <part> desc_id = <desc_id>
 		if GotParam \{deform_bones}
 			return \{is_enabled = 1}
 		endif
@@ -14,57 +14,57 @@ script is_part_capable
 			part
 		]
 		all}
-	if getcasappearancepart part = <part>
-		getactualcasoptionstruct part = <part> desc_id = <desc_id>
+	if GetCASAppearancePart part = <part>
+		GetActualCASOptionStruct part = <part> desc_id = <desc_id>
 		if GotParam \{sections}
 			return \{true}
 		endif
 	endif
-	return \{FALSE}
+	return \{false}
 endscript
 
 script check_if_part_editable 
-	<retval> = 0
+	<retVal> = 0
 	if GotParam \{part}
-		if getcasappearancepart part = <part>
-			if (<desc_id> = None)
-				<retval> = 0
+		if GetCASAppearancePart part = <part>
+			if (<desc_id> = none)
+				<retVal> = 0
 			else
-				<retval> = 1
+				<retVal> = 1
 			endif
 		endif
 	endif
-	if (<retval>)
+	if (<retVal>)
 		if GotParam \{extra_script}
 			<extra_script> <extra_script_params> part = <part>
-			<retval> = <is_enabled>
+			<retVal> = <is_enabled>
 		endif
 	endif
-	return is_enabled = <retval>
+	return is_enabled = <retVal>
 endscript
 
 script check_if_parts_editable 
-	<retval> = 0
+	<retVal> = 0
 	if GotParam \{parts}
 		GetArraySize <parts>
 		<index> = 0
 		begin
-		if getcasappearancepart part = (<parts> [<index>])
-			if (<desc_id> = None)
-				<retval> = 0
+		if GetCASAppearancePart part = (<parts> [<index>])
+			if (<desc_id> = none)
+				<retVal> = 0
 			else
-				<retval> = 1
+				<retVal> = 1
 				break
 			endif
 		endif
 		<index> = (<index> + 1)
-		repeat <array_Size>
+		repeat <array_size>
 	endif
-	return is_enabled = <retval>
+	return is_enabled = <retVal>
 endscript
 
 script check_if_part_logoable 
-	<retval> = 0
+	<retVal> = 0
 	if GotParam \{extra_script}
 		<extra_script> <extra_script_params>
 		if (<is_enabled> = 0)
@@ -76,20 +76,20 @@ script check_if_part_logoable
 		<index> = 0
 		begin
 		character_part = (<parts> [<index>])
-		if getcasappearancepart part = <character_part>
-			getactualcasoptionstruct part = <character_part> desc_id = <desc_id>
+		if GetCASAppearancePart part = <character_part>
+			GetActualCASOptionStruct part = <character_part> desc_id = <desc_id>
 			if GotParam \{supports_logo}
-				<retval> = 1
+				<retVal> = 1
 				break
 			else
-				<retval> = 0
+				<retVal> = 0
 				break
 			endif
 		endif
 		<index> = (<index> + 1)
-		repeat <array_Size>
+		repeat <array_size>
 	endif
-	return is_enabled = <retval>
+	return is_enabled = <retVal>
 endscript
 
 script check_if_part_front_logoable 
@@ -106,14 +106,14 @@ script check_if_part_front_logoable
 			<index> = 0
 			begin
 			character_part = (<parts> [<index>])
-			if getcasappearancepart part = <character_part>
-				getactualcasoptionstruct part = <character_part> desc_id = <desc_id>
+			if GetCASAppearancePart part = <character_part>
+				GetActualCASOptionStruct part = <character_part> desc_id = <desc_id>
 				if GotParam \{no_front_logo}
 					return \{is_enabled = 0}
 				endif
 			endif
 			<index> = (<index> + 1)
-			repeat <array_Size>
+			repeat <array_size>
 		endif
 	endif
 	return is_enabled = <is_enabled>
@@ -133,14 +133,14 @@ script check_if_part_back_logoable
 			<index> = 0
 			begin
 			character_part = (<parts> [<index>])
-			if getcasappearancepart part = <character_part>
-				getactualcasoptionstruct part = <character_part> desc_id = <desc_id>
+			if GetCASAppearancePart part = <character_part>
+				GetActualCASOptionStruct part = <character_part> desc_id = <desc_id>
 				if GotParam \{no_back_logo}
 					return \{is_enabled = 0}
 				endif
 			endif
 			<index> = (<index> + 1)
-			repeat <array_Size>
+			repeat <array_size>
 		endif
 	endif
 	return is_enabled = <is_enabled>
@@ -166,24 +166,24 @@ endscript
 
 script check_if_part_logo_adjustable 
 	GetArraySize \{parts}
-	if NOT (<array_Size> = 1)
+	if NOT (<array_size> = 1)
 		ScriptAssert \{'check_if_part_logo_adjustable assumes parts=[] list has one entry'}
 	endif
-	if getcasappearancepart part = <logo_part>
-		if (<desc_id> = None)
+	if GetCASAppearancePart part = <logo_part>
+		if (<desc_id> = none)
 			return \{is_enabled = 0}
 		endif
 	else
 		return \{is_enabled = 0}
 	endif
 	character_part = (<parts> [0])
-	if getcasappearancepart part = <character_part>
-		getactualcasoptionstruct part = <character_part> desc_id = <desc_id>
-		ExtendCrc <logo_part> '_Adjust' out = adjustcrc
+	if GetCASAppearancePart part = <character_part>
+		GetActualCASOptionStruct part = <character_part> desc_id = <desc_id>
+		ExtendCRC <logo_part> '_Adjust' out = adjustcrc
 		if GotParam <adjustcrc>
-			if NOT StructureContains structure = <adjustcrc> material
+			if NOT StructureContains Structure = <adjustcrc> material
 				SoftAssert '%s should contain a material and pass' s = <adjustcrc>
-			elseif NOT StructureContains structure = <adjustcrc> pass
+			elseif NOT StructureContains Structure = <adjustcrc> pass
 				SoftAssert '%s should contain a material and pass' s = <adjustcrc>
 			endif
 			return \{is_enabled = 1}
@@ -193,17 +193,17 @@ script check_if_part_logo_adjustable
 endscript
 
 script check_if_has_belt 
-	<retval> = 0
-	if getcasappearancepart \{part = cas_belt}
-		if NOT (<desc_id> = None)
-			<retval> = 1
+	<retVal> = 0
+	if GetCASAppearancePart \{part = CAS_Belt}
+		if NOT (<desc_id> = none)
+			<retVal> = 1
 		endif
 	endif
-	return is_enabled = <retval>
+	return is_enabled = <retVal>
 endscript
 
 script check_if_part_colorable 
-	<retval> = 0
+	<retVal> = 0
 	if GotParam \{extra_script}
 		<extra_script> <extra_script_params>
 		if (<is_enabled> = 0)
@@ -215,25 +215,25 @@ script check_if_part_colorable
 		<index> = 0
 		begin
 		character_part = (<parts> [<index>])
-		if getcasappearancepart part = <character_part>
-			if (<desc_id> = None)
-				<retval> = 0
+		if GetCASAppearancePart part = <character_part>
+			if (<desc_id> = none)
+				<retVal> = 0
 				break
 			else
-				if getactualcasoptionstruct part = <character_part> desc_id = <desc_id> dont_assert
+				if GetActualCASOptionStruct part = <character_part> desc_id = <desc_id> dont_assert
 					if GotParam \{modify_all_materials}
-						<retval> = 1
+						<retVal> = 1
 						break
 					else
 						if GotParam \{materials}
 							GetArraySize <materials>
-							if (<array_Size> > 0)
-								<retval> = 1
+							if (<array_size> > 0)
+								<retVal> = 1
 							else
-								<retval> = 0
+								<retVal> = 0
 							endif
 						else
-							<retval> = 0
+							<retVal> = 0
 						endif
 						break
 					endif
@@ -241,9 +241,9 @@ script check_if_part_colorable
 			endif
 		endif
 		<index> = (<index> + 1)
-		repeat <array_Size>
+		repeat <array_size>
 	endif
-	return is_enabled = <retval>
+	return is_enabled = <retVal>
 endscript
 
 script check_if_secondary_colorable 
@@ -256,51 +256,51 @@ script check_if_secondary_colorable
 		<index> = 0
 		begin
 		character_part = (<parts> [<index>])
-		if getcasappearancepart part = <character_part>
-			getactualcasoptionstruct part = <character_part> desc_id = <desc_id>
+		if GetCASAppearancePart part = <character_part>
+			GetActualCASOptionStruct part = <character_part> desc_id = <desc_id>
 			if GotParam \{modify_all_materials}
-				<retval> = 0
+				<retVal> = 0
 				break
 			endif
 			if GotParam \{materials}
 				GetArraySize <materials>
-				if (<array_Size> > 1)
-					<retval> = 1
+				if (<array_size> > 1)
+					<retVal> = 1
 				else
-					<retval> = 0
+					<retVal> = 0
 				endif
 			else
-				<retval> = 0
+				<retVal> = 0
 			endif
 			break
 		endif
 		<index> = (<index> + 1)
-		repeat <array_Size>
+		repeat <array_size>
 	endif
-	return is_enabled = <retval>
+	return is_enabled = <retVal>
 endscript
 
 script cas_item_is_visible 
 	if IsTrue \{$worst_case_cas_debug}
 		return \{true}
 	endif
-	if StructureContains structure = ($<part> [<part_index>]) hidden
-		return \{FALSE}
+	if StructureContains Structure = ($<part> [<part_index>]) hidden
+		return \{false}
 	endif
 	return \{true}
 endscript
 
 script cas_item_rebuild 
-	if NOT getcasappearancepart part = <part>
-		ScriptAssert '%s not found' s = <part> donotresolve
+	if NOT GetCASAppearancePart part = <part>
+		ScriptAssert '%s not found' s = <part> DoNotResolve
 	endif
-	if NOT getactualcasoptionstruct part = <part> desc_id = <desc_id>
+	if NOT GetActualCASOptionStruct part = <part> desc_id = <desc_id>
 		ScriptAssert '%s %t not found' s = <part> t = <desc_id>
 	endif
 	if NOT GotParam \{no_rebuild}
 		return \{true}
 	else
-		return \{FALSE}
+		return \{false}
 	endif
 endscript
 
@@ -308,13 +308,13 @@ script cas_item_matches_genre
 endscript
 
 script get_part_current_desc_id 
-	if getcasappearancepart part = <part>
+	if GetCASAppearancePart part = <part>
 		if GotParam \{desc_id}
 			return true current_desc_id = <desc_id>
 		endif
 	endif
-	return \{FALSE
-		current_desc_id = None}
+	return \{false
+		current_desc_id = none}
 endscript
 
 script get_is_wearing_cas_item 
@@ -323,7 +323,7 @@ script get_is_wearing_cas_item
 			return \{true}
 		endif
 	endif
-	return \{FALSE}
+	return \{false}
 endscript
 
 script get_key_from_appearance 
@@ -331,70 +331,70 @@ script get_key_from_appearance
 	i = 0
 	begin
 	part_name = ((($master_editable_list) [<i>]).part)
-	if StructureContains structure = <appearance> <part_name>
-		if StructureContains structure = (<appearance>.<part_name>) desc_id
-			if getactualcasoptionstruct part = <part_name> desc_id = ((<appearance>.<part_name>).desc_id)
+	if StructureContains Structure = <appearance> <part_name>
+		if StructureContains Structure = (<appearance>.<part_name>) desc_id
+			if GetActualCASOptionStruct part = <part_name> desc_id = ((<appearance>.<part_name>).desc_id)
 				if GotParam <key>
 					ret_struct = {}
-					updatestructelement struct = <ret_struct> element = <key> value = ((<...>).<key>)
+					UpdateStructElement struct = <ret_struct> element = <key> value = ((<...>).<key>)
 					return true {<newstruct>}
 				endif
 			endif
 		endif
 	endif
 	i = (<i> + 1)
-	repeat <array_Size>
-	return \{FALSE}
+	repeat <array_size>
+	return \{false}
 endscript
 
 script get_part_key_from_appearance 
-	if StructureContains structure = <appearance> <part>
-		if StructureContains structure = (<appearance>.<part>) desc_id
-			if getactualcasoptionstruct part = <part> desc_id = ((<appearance>.<part>).desc_id)
+	if StructureContains Structure = <appearance> <part>
+		if StructureContains Structure = (<appearance>.<part>) desc_id
+			if GetActualCASOptionStruct part = <part> desc_id = ((<appearance>.<part>).desc_id)
 				if GotParam <key>
 					ret_struct = {}
-					updatestructelement struct = <ret_struct> element = <key> value = ((<...>).<key>)
+					UpdateStructElement struct = <ret_struct> element = <key> value = ((<...>).<key>)
 					return true {<newstruct>}
 				endif
 			endif
 		endif
 	endif
-	return \{FALSE}
+	return \{false}
 endscript
 
 script get_body_key_from_appearance 
-	if StructureContains structure = <appearance> cas_body
-		getactualcasoptionstruct part = cas_body desc_id = (<appearance>.cas_body.desc_id)
+	if StructureContains Structure = <appearance> CAS_Body
+		GetActualCASOptionStruct part = CAS_Body desc_id = (<appearance>.CAS_Body.desc_id)
 		if GotParam <key>
 			ret_struct = {}
-			updatestructelement struct = <ret_struct> element = <key> value = ((<...>).<key>)
+			UpdateStructElement struct = <ret_struct> element = <key> value = ((<...>).<key>)
 			return true {<newstruct>}
 		endif
-	elseif StructureContains structure = <appearance> cas_full_body
-		getactualcasoptionstruct part = cas_full_body desc_id = (<appearance>.cas_full_body.desc_id)
+	elseif StructureContains Structure = <appearance> CAS_Full_Body
+		GetActualCASOptionStruct part = CAS_Full_Body desc_id = (<appearance>.CAS_Full_Body.desc_id)
 		if GotParam <key>
 			ret_struct = {}
-			updatestructelement struct = <ret_struct> element = <key> value = ((<...>).<key>)
+			UpdateStructElement struct = <ret_struct> element = <key> value = ((<...>).<key>)
 			return true {<newstruct>}
 		endif
 	else
 		ScriptAssert \{'No body part in appearance'}
 	endif
-	return \{FALSE}
+	return \{false}
 endscript
 
-script findfrontenddescfromchecksum 
+script FindFrontEndDescFromChecksum 
 	part_struct = ($<part>)
 	GetArraySize <part_struct>
 	<i> = 0
 	begin
 	if ((<part_struct> [<i>].desc_id) = <desc_id>)
-		if StructureContains structure = (<part_struct> [<i>]) frontend_desc
+		if StructureContains Structure = (<part_struct> [<i>]) frontend_desc
 			<return_val> = (<part_struct> [<i>].frontend_desc)
 		endif
 	endif
 	<i> = (<i> + 1)
-	repeat <array_Size>
+	repeat <array_size>
 	ScriptAssert \{'frontend_desc not found'}
 endscript
 
@@ -409,18 +409,18 @@ script cas_add_item_to_appearance
 		desc_id = <new_desc_id>
 		printf 'Disqualification told us to use this instead: %d' d = <desc_id>
 	endif
-	editcasappearance target = setpart targetparams = {part = <part> desc_id = <desc_id>}
+	EditCASAppearance target = SetPart targetParams = {part = <part> desc_id = <desc_id>}
 	if NOT GotParam \{no_rebuild}
 		if GotParam \{incremental}
-			rebuildcurrentcasmodel \{buildscriptparams = {
+			RebuildCurrentCASModel \{buildscriptparams = {
 					build_incremental
 				}}
 		else
-			rebuildcurrentcasmodel
+			RebuildCurrentCASModel
 		endif
 	endif
 	if IsTrue \{$cas_debug}
-		Dumpheaps
+		DumpHeaps
 	endif
 endscript
 
@@ -434,11 +434,11 @@ script cas_find_tex_swap_parts \{tex_swap_parts = [
 	GetArraySize <part_list>
 	i = 0
 	begin
-	if StructureContains structure = (<part_list> [<i>]) part
+	if StructureContains Structure = (<part_list> [<i>]) part
 		part_name = (<part_list> [<i>].part)
-		if StructureContains structure = <appearance> <part_name>
+		if StructureContains Structure = <appearance> <part_name>
 			part_desc = ((<appearance>).<part_name>)
-			if StructureContains structure = <part_desc> desc_id
+			if StructureContains Structure = <part_desc> desc_id
 				if cas_has_tex_replace part = <part_name> desc_id = ((<part_desc>).desc_id)
 					if NOT ArrayContains array = <tex_swap_parts> contains = <part_name>
 						ve_convert_checksum_to_array checksum = <part_name>
@@ -447,7 +447,7 @@ script cas_find_tex_swap_parts \{tex_swap_parts = [
 				endif
 			endif
 		endif
-		if StructureContains structure = (<part_list> [<i>]) desc_id
+		if StructureContains Structure = (<part_list> [<i>]) desc_id
 			if cas_has_tex_replace part = <part_name> desc_id = ((<part_list> [<i>]).desc_id)
 				if NOT ArrayContains array = <tex_swap_parts> contains = <part_name>
 					ve_convert_checksum_to_array checksum = <part_name>
@@ -457,22 +457,22 @@ script cas_find_tex_swap_parts \{tex_swap_parts = [
 		endif
 	endif
 	i = (<i> + 1)
-	repeat <array_Size>
+	repeat <array_size>
 	return tex_swap_parts = <tex_swap_parts>
 endscript
 
 script cas_has_tex_replace 
-	getactualcasoptionstruct part = <part> desc_id = <desc_id>
+	GetActualCASOptionStruct part = <part> desc_id = <desc_id>
 	if ((GotParam replace) || (GotParam replace1) || (GotParam replace2) || (GotParam replace3))
 		return \{true}
 	endif
-	return \{FALSE}
+	return \{false}
 endscript
 
-script cas_desc_id_is_excluded \{part_name = None
-		part_desc_id = None}
-	if checksumequals a = <part_desc_id> b = None
-		return \{FALSE}
+script cas_desc_id_is_excluded \{part_name = none
+		part_desc_id = none}
+	if ChecksumEquals a = <part_desc_id> b = none
+		return \{false}
 	endif
 	if cas_part_is_excluded part_name = <part_name>
 		return true conflict_part = <conflict_part>
@@ -481,24 +481,24 @@ script cas_desc_id_is_excluded \{part_name = None
 	i = 0
 	begin
 	list_part_name = ((($master_editable_list) [<i>]).part)
-	if NOT checksumequals a = <list_part_name> b = <part_name>
+	if NOT ChecksumEquals a = <list_part_name> b = <part_name>
 		if cas_desc_id_is_excluded_part list_part_name = <list_part_name> change_part_name = <part_name> change_part_desc_id = <part_desc_id>
 			return true conflict_part = <conflict_part>
 		endif
 	endif
 	i = (<i> + 1)
-	repeat <array_Size>
-	return \{FALSE}
+	repeat <array_size>
+	return \{false}
 endscript
 
 script cas_desc_id_is_excluded_part 
-	if getcasappearancepart part = <list_part_name>
-		if getactualcasoptionstruct part = <list_part_name> desc_id = <desc_id>
+	if GetCASAppearancePart part = <list_part_name>
+		if GetActualCASOptionStruct part = <list_part_name> desc_id = <desc_id>
 			if GotParam \{exclusions}
 				conflict_part = {part = <list_part_name> desc_id = <desc_id>}
-				if StructureContains structure = <exclusions> <change_part_name>
+				if StructureContains Structure = <exclusions> <change_part_name>
 					exclusion = (<exclusions>.<change_part_name>)
-					if NOT StructureContains structure = <exclusion> reverse
+					if NOT StructureContains Structure = <exclusion> reverse
 						if cas_disq_matches_change_from exclusion = <exclusion> desc_id = <change_part_desc_id>
 							return true conflict_part = <conflict_part>
 						endif
@@ -507,33 +507,33 @@ script cas_desc_id_is_excluded_part
 			endif
 		endif
 	endif
-	return \{FALSE}
+	return \{false}
 endscript
 
-script cas_part_is_excluded \{part_name = None}
+script cas_part_is_excluded \{part_name = none}
 	GetArraySize ($master_editable_list)
 	i = 0
 	begin
 	list_part_name = ((($master_editable_list) [<i>]).part)
-	if NOT checksumequals a = <list_part_name> b = <part_name>
+	if NOT ChecksumEquals a = <list_part_name> b = <part_name>
 		if cas_part_is_excluded_part list_part_name = <list_part_name> change_part_name = <part_name> change_part_desc_id = <part_desc_id>
 			return true conflict_part = <conflict_part>
 		endif
 	endif
 	i = (<i> + 1)
-	repeat <array_Size>
-	return \{FALSE}
+	repeat <array_size>
+	return \{false}
 endscript
 
 script cas_part_is_excluded_part 
-	if getcasappearancepart part = <list_part_name>
-		if getactualcasoptionstruct part = <list_part_name> desc_id = <desc_id>
+	if GetCASAppearancePart part = <list_part_name>
+		if GetActualCASOptionStruct part = <list_part_name> desc_id = <desc_id>
 			conflict_part = {part = <list_part_name> desc_id = <desc_id>}
 			if GotParam \{exclusions}
-				if StructureContains structure = <exclusions> <change_part_name>
+				if StructureContains Structure = <exclusions> <change_part_name>
 					exclusion = (<exclusions>.<change_part_name>)
-					if NOT StructureContains structure = <exclusion> reverse
-						if NOT StructureContains structure = <exclusion> change_from
+					if NOT StructureContains Structure = <exclusion> reverse
+						if NOT StructureContains Structure = <exclusion> change_from
 							return true conflict_part = <conflict_part>
 						endif
 					endif
@@ -542,40 +542,40 @@ script cas_part_is_excluded_part
 			if GotParam \{hide_parts}
 				i = 0
 				GetArraySize <hide_parts>
-				if (<array_Size> > 0)
+				if (<array_size> > 0)
 					begin
-					if checksumequals a = (<hide_parts> [<i>]) b = <change_part_name>
+					if ChecksumEquals a = (<hide_parts> [<i>]) b = <change_part_name>
 						return true conflict_part = <conflict_part>
 					endif
 					i = (<i> + 1)
-					repeat <array_Size>
+					repeat <array_size>
 				endif
 			endif
 		endif
 	endif
-	return \{FALSE}
+	return \{false}
 endscript
 
-script cas_part_will_conflict \{part_name = None
-		part_desc_id = None}
-	if checksumequals a = <part_desc_id> b = None
-		return \{FALSE}
+script cas_part_will_conflict \{part_name = none
+		part_desc_id = none}
+	if ChecksumEquals a = <part_desc_id> b = none
+		return \{false}
 	endif
-	if checksumequals a = <part_name> b = None
-		return \{FALSE}
+	if ChecksumEquals a = <part_name> b = none
+		return \{false}
 	endif
-	getactualcasoptionstruct part = <part_name> desc_id = <part_desc_id>
+	GetActualCASOptionStruct part = <part_name> desc_id = <part_desc_id>
 	change_parts = []
-	conflict = FALSE
+	conflict = false
 	if GotParam \{inclusion}
 		GetArraySize \{inclusion}
-		inclusion_size = <array_Size>
+		inclusion_size = <array_size>
 		if (<inclusion_size> > 0)
 			i = 0
 			begin
-			if getcasappearancepart part = (<inclusion> [<i>].part)
+			if GetCASAppearancePart part = (<inclusion> [<i>].part)
 				valid = (<inclusion> [<i>].valid)
-				if NOT ((checksumequals a = <desc_id> b = None) || (ArrayContains array = <valid> contains = <desc_id>))
+				if NOT ((ChecksumEquals a = <desc_id> b = none) || (ArrayContains array = <valid> contains = <desc_id>))
 					GetArraySize <valid>
 					j = 0
 					begin
@@ -585,12 +585,12 @@ script cas_part_will_conflict \{part_name = None
 						conflict = true
 						break
 					else
-						if ((<j> + 1) = <array_Size>)
-							ScriptAssert qs(0xfa3c9e8a) p = <part_name> d = <part_desc_id> s = (<inclusion> [<i>].part) donotresolve
+						if ((<j> + 1) = <array_size>)
+							ScriptAssert qs("\LThe %p %d doesn't have an entry in its valid list for %s that is both purchased and unlocked.") p = <part_name> d = <part_desc_id> s = (<inclusion> [<i>].part) DoNotResolve
 						endif
 					endif
 					j = (<j> + 1)
-					repeat <array_Size>
+					repeat <array_size>
 				endif
 			endif
 			i = (<i> + 1)
@@ -598,7 +598,7 @@ script cas_part_will_conflict \{part_name = None
 		endif
 	endif
 	GetArraySize \{change_parts}
-	if (<array_Size> > 0)
+	if (<array_size> > 0)
 		return change_parts = <change_parts>
 	else
 		return
@@ -609,19 +609,19 @@ script cas_in_inclusion_list
 	if GotParam \{inclusion}
 		GetArraySize \{inclusion}
 		matched_part = 0
-		if (<array_Size> > 0)
+		if (<array_size> > 0)
 			i = 0
 			begin
 			inc_part = (<inclusion> [<i>].part)
-			if (checksumequals a = <inc_part> b = <part_name>)
+			if (ChecksumEquals a = <inc_part> b = <part_name>)
 				matched_part = 1
 				if ArrayContains array = (<inclusion> [<i>].valid) contains = <part_desc_id>
-					printf \{qs(0xc4069ea6)}
+					printf \{qs("\LIn Inclusion List")}
 					return \{true}
 				endif
 			endif
 			i = (<i> + 1)
-			repeat <array_Size>
+			repeat <array_size>
 			if (<matched_part> = 0)
 				return \{true}
 			endif
@@ -629,7 +629,7 @@ script cas_in_inclusion_list
 	else
 		return \{true}
 	endif
-	return \{FALSE}
+	return \{false}
 endscript
 
 script is_part_unlocked 
@@ -639,19 +639,19 @@ script is_part_unlocked
 			savegame
 		]
 		all}
-	if NOT getactualcasoptionstruct part = <part> desc_id = <desc_id>
+	if NOT GetActualCASOptionStruct part = <part> desc_id = <desc_id>
 		ScriptAssert '%s %t not found' s = <part> t = <desc_id>
 	endif
 	if GotParam \{locked}
 		get_current_band_part_flags part = <part> desc_id = <desc_id> savegame = <savegame>
 		if GotParam \{part_flags}
-			if StructureContains structure = <part_flags> unlocked
+			if StructureContains Structure = <part_flags> unlocked
 				return \{true}
 			else
-				return \{FALSE}
+				return \{false}
 			endif
 		else
-			return \{FALSE}
+			return \{false}
 		endif
 	else
 		return \{true}
@@ -665,19 +665,19 @@ script is_part_purchased
 			savegame
 		]
 		all}
-	if NOT getactualcasoptionstruct part = <part> desc_id = <desc_id>
+	if NOT GetActualCASOptionStruct part = <part> desc_id = <desc_id>
 		ScriptAssert '%s %t not found' s = <part> t = <desc_id>
 	endif
 	if GotParam \{price}
 		get_current_band_part_flags part = <part> desc_id = <desc_id> savegame = <savegame>
 		if GotParam \{part_flags}
-			if StructureContains structure = <part_flags> purchased
+			if StructureContains Structure = <part_flags> purchased
 				return \{true}
 			else
-				return \{FALSE}
+				return \{false}
 			endif
 		else
-			return \{FALSE}
+			return \{false}
 		endif
 	else
 		return \{true}
@@ -696,5 +696,5 @@ script is_part_unlocked_purchased
 			return \{true}
 		endif
 	endif
-	return \{FALSE}
+	return \{false}
 endscript

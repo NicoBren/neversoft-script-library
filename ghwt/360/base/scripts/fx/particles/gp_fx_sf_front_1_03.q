@@ -1,25 +1,25 @@
-gp_fx_sf_front_1_03 = {
-	Pos = (-2.1901488, 0.600961, 4.490232)
-	Angles = (0.0, 0.0, 0.0)
+GP_FX_SF_Front_1_03 = {
+	pos = (-2.1901488, 0.600961, 4.490232)
+	angles = (0.0, 0.0, 0.0)
 	Class = ParticleObject
 	ParticleType = FlexParticle
-	Type = flat
-	Active
+	type = flat
+	active
 	CreatedAtStart
 	EmitRangeDims = (0.2, 0.0, 0.0)
-	Emit_Target = (0.0, 1.0, 0.0)
+	emit_Target = (0.0, 1.0, 0.0)
 	EmitAngle = (0.0, 0.0, 0.0)
-	Force = (0.0, 0.0, 0.0)
+	force = (0.0, 0.0, 0.0)
 	WindCoeff = 0.0
 	LocalWindCoeff = 0.0
 	EmitterVelocityWeight = 0.0
 	AngleSpread = 20.0
 	LifeRange = (2.0, 2.3)
-	Emit_Rate = 40.0
-	Max = 0
+	emit_rate = 40.0
+	max = 0
 	TimeSeed = 0.0
-	LifeTime = 1.0
-	EmitNum = 0
+	lifeTime = 1.0
+	emitNum = 0
 	FollowEmitter = 0.0
 	EmitFunction = constant
 	EmitPeriod = 1.0
@@ -33,16 +33,16 @@ gp_fx_sf_front_1_03 = {
 	EmitDelayStart = 0.3
 	PathFollowTime = 0.0
 	History = 2
-	HistoryListCoordinateSpace = World
-	Color = -113
+	HistoryListCoordinateSpace = world
+	color = -113
 	LOD_Default
 	QuickMaterial = {
 		DiffuseTextureEnabled
-		DiffuseTexture = ph_smoke_singlepuff_blend_02
+		DiffuseTexture = PH_Smoke_SinglePuff_Blend_02
 		SpecularPower = 0
-		fakeambientocclusion
-		AlphaCutoff = 1
-		BlendMode = blend
+		FakeAmbientOcclusion
+		alphacutoff = 1
+		blendMode = blend
 		SoftEdge
 		SoftedgeScale = 0.2
 		Burn

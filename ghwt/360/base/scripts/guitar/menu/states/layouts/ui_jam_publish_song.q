@@ -1,6 +1,6 @@
 
 script ui_create_jam_publish_song 
-	SpawnScriptNow create_jam_publish_song_menu params = {<...>}
+	spawnscriptnow create_jam_publish_song_menu params = {<...>}
 endscript
 
 script ui_destroy_jam_publish_song 
@@ -8,7 +8,7 @@ script ui_destroy_jam_publish_song
 endscript
 
 script ui_deinit_jam_publish_song 
-	Change \{cas_override_object = None}
-	KillCamAnim \{Name = cas_view_cam}
-	SpawnScriptNow \{jam_publish_reinit_band_logo}
+	change \{cas_override_object = none}
+	KillCamAnim \{name = cas_view_cam}
+	spawnscriptnow \{jam_publish_reinit_band_logo}
 endscript

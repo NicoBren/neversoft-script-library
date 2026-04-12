@@ -5,26 +5,26 @@ script ui_create_online_quit_warning player_device = ($primary_controller)
 	endif
 	DestroyScreenElement \{id = popup_warning_container}
 	create_popup_warning_menu {
-		title = qs(0xaa163738)
+		title = qs("WARNING")
 		textblock = {
-			text = qs(0x3be02ff6)
+			text = qs("Are you sure you want to quit the game?")
 		}
 		parent = root_window
 		no_background
 		options = [
 			{
 				func = generic_event_back
-				text = qs(0xf7723015)
+				text = qs("CANCEL")
 			}
 			{
 				func = <confirm_script>
-				text = qs(0x67d9c56d)
+				text = qs("QUIT")
 			}
 		]
 		player_device = <player_device>
 	}
 	AssignAlias id = <menu_id> alias = online_quit_menu
-	LaunchEvent \{Type = focus
+	LaunchEvent \{type = focus
 		target = online_quit_menu}
 	if GotParam \{callback}
 		online_quit_menu :SetTags {callback = <callback>}
@@ -42,43 +42,43 @@ script confirm_quit_online
 	online_quit_menu :GetTags
 	if GotParam \{callback}
 		if GotParam \{callback_params}
-			SpawnScriptNow <callback> params = <callback_params>
+			spawnscriptnow <callback> params = <callback_params>
 		else
-			SpawnScriptNow <callback>
+			spawnscriptnow <callback>
 		endif
 	endif
-	if NetSessionFunc \{Obj = party
+	if NetSessionFunc \{obj = party
 			func = is_host}
 		if ($playing_song = 0)
-			NetSessionFunc \{Obj = party
+			NetSessionFunc \{obj = party
 				func = leave_game}
 		else
-			NetSessionFunc \{Obj = party
+			NetSessionFunc \{obj = party
 				func = disband_party_session}
 		endif
 	else
-		NetSessionFunc \{Obj = party
+		NetSessionFunc \{obj = party
 			func = leave_party}
 	endif
-	gamemode_gettype
-	if (<Type> = career)
+	GameMode_GetType
+	if (<type> = career)
 		if (($net_band_mode_menu = HOST) || ($net_band_mode_menu = invite))
 			generic_event_back \{state = uistate_group_play}
 			return
 		else
 			if IsHost
-				Change \{net_band_mode_menu = HOST}
+				change \{net_band_mode_menu = HOST}
 			else
-				Change \{net_band_mode_menu = join}
+				change \{net_band_mode_menu = join}
 			endif
 		endif
 	else
-		Change \{net_new_matchmaking_ui_flag = 0}
+		change \{net_new_matchmaking_ui_flag = 0}
 	endif
 	net_clear_all_remote_player_status
 	quit_network_game_early
-	Change \{net_pause = 0}
-	if (<Type> = career)
+	change \{net_pause = 0}
+	if (<type> = career)
 		quit_career_back_to_lobby
 	else
 		UnPauseGame
@@ -87,11 +87,11 @@ script confirm_quit_online
 endscript
 
 script quit_career_back_to_lobby 
-	Change \{num_players_in_band = 0}
-	Change \{net_band_members = [
+	change \{num_players_in_band = 0}
+	change \{net_band_members = [
 		]}
-	Change \{net_num_joiners = 0}
-	Change \{career_matchmaking_complete = 0}
+	change \{net_num_joiners = 0}
+	change \{career_matchmaking_complete = 0}
 	found_state = 0
 	ui_event_get_stack
 	i = 0
@@ -103,29 +103,29 @@ script quit_career_back_to_lobby
 	i = (<i> + 1)
 	repeat <stack_size>
 	if (<found_state> = 1)
-		NetSessionFunc \{Obj = party
+		NetSessionFunc \{obj = party
 			func = set_party_joinable
 			params = {
 				joinable = 1
 			}}
 		generic_event_back data = {num_states = (<i> + 1)}
 	else
-		generic_event_back \{state = uistate_mainmenu}
+		generic_event_back \{state = UIstate_mainmenu}
 	endif
 	UnPauseGame
 endscript
 
 script net_career_host_disband_party 
-	printf \{qs(0x810fcf45)}
+	printf \{qs("\L--- net_career_host_disband_party ---")}
 	hide_glitch \{num_frames = 2}
-	NetSessionFunc \{Obj = party
+	NetSessionFunc \{obj = party
 		func = disband_party_session}
 	generic_event_back \{state = uistate_group_play}
 endscript
 
 script net_career_leave_party_confirm 
-	printf \{qs(0xcf553d16)}
-	NetSessionFunc \{Obj = party
+	printf \{qs("\L--- net_career_leave_party_confirm ---")}
+	NetSessionFunc \{obj = party
 		func = leave_party}
 	generic_event_back \{state = uistate_group_play}
 endscript

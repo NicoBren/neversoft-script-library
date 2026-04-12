@@ -1,24 +1,24 @@
-gp_fx_sparkfountain_sparks_01 = {
-	Pos = (-6.6185994, 0.58740205, -2.0856233)
-	Angles = (0.0, 0.0, 0.0)
+GP_FX_SparkFountain_Sparks_01 = {
+	pos = (-6.6185994, 0.58740205, -2.0856233)
+	angles = (0.0, 0.0, 0.0)
 	Class = ParticleObject
 	ParticleType = FlexParticle
-	Type = textureribbontrail
-	Active
+	type = textureribbontrail
+	active
 	EmitRangeDims = (0.1, 0.1, 0.1)
-	Emit_Target = (0.0, 1.0, 0.0)
+	emit_Target = (0.0, 1.0, 0.0)
 	EmitAngle = (0.0, 0.0, 0.0)
-	Force = (0.0, -10.0, 0.0)
+	force = (0.0, -10.0, 0.0)
 	WindCoeff = 0.0
 	LocalWindCoeff = 0.0
 	EmitterVelocityWeight = 0.0
 	AngleSpread = 45.0
 	LifeRange = (0.4, 0.8)
-	Emit_Rate = 100.0
-	Max = 0
+	emit_rate = 100.0
+	max = 0
 	TimeSeed = 0.0
-	LifeTime = 0.0
-	EmitNum = 20
+	lifeTime = 0.0
+	emitNum = 20
 	FollowEmitter = 0.0
 	EmitFunction = constant
 	EmitPeriod = 1.0
@@ -32,15 +32,15 @@ gp_fx_sparkfountain_sparks_01 = {
 	EmitDelayStart = 0.0
 	PathFollowTime = 0.03
 	History = 2
-	HistoryListCoordinateSpace = World
-	Color = -4882945
+	HistoryListCoordinateSpace = world
+	color = -4882945
 	LOD_Default
 	QuickMaterial = {
 		DiffuseTextureEnabled
 		DiffuseTexture = JOW_Spark01
 		SpecularPower = 0
-		AlphaCutoff = 1
-		BlendMode = add
+		alphacutoff = 1
+		blendMode = Add
 		QuadAnimationFPS = 0
 	}
 	Knot = [

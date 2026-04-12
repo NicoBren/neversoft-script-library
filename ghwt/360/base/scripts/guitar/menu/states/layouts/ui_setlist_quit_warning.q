@@ -2,9 +2,9 @@
 script ui_create_setlist_quit_warning 
 	printstruct <...>
 	create_popup_warning_menu \{textblock = {
-			text = qs(0x43eb4df5)
+			text = qs("Are you sure you want to exit the set list? Any songs you have selected will be reset.")
 			dims = (800.0, 400.0)
-			Scale = 0.55
+			scale = 0.55
 		}
 		use_all_controllers
 		no_background
@@ -12,11 +12,11 @@ script ui_create_setlist_quit_warning
 		options = [
 			{
 				func = setlist_quit_warning_select_no
-				text = qs(0xf7723015)
+				text = qs("CANCEL")
 			}
 			{
 				func = setlist_quit_warning_select_yes
-				text = qs(0x23b6e962)
+				text = qs("EXIT")
 			}
 		]}
 endscript

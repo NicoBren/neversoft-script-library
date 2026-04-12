@@ -2,11 +2,11 @@ Splat_Critical_Remaining_Polys_Pcnt = 0.5
 Splat_Alpha_Degen_Rate = 8
 
 script PreAllocSplats 
-	printf \{qs(0xb538e49f)}
-	PreAllocTextureSplat \{Name = 'JOW_Grit01'
+	printf \{qs("\LInitializing SplatHeap")}
+	PreAllocTextureSplat \{name = 'JOW_Grit01'
 		material = sys_BloodSplat01_sys_BloodSplat01}
-	PreAllocTextureSplat \{Name = 'JOW_Puff01'
+	PreAllocTextureSplat \{name = 'JOW_Puff01'
 		material = sys_BloodSplat02_sys_BloodSplat02}
-	PreAllocTextureSplat \{Name = 'skidtrail'
+	PreAllocTextureSplat \{name = 'skidtrail'
 		material = sys_skidmark_sys_skidmark}
 endscript

@@ -1,1253 +1,1253 @@
 cas_male_hair_random_colors = [
 	{
-		Color = carblack_1
+		color = carblack_1
 		random_weight = 1.0
 	}
 	{
-		Color = hairorange_3
+		color = hairorange_3
 		random_weight = 1.0
 		genre = [
-			rock
-			pop
-			`glam	rock`
-			`classic	rock`
+			Rock
+			Pop
+			`Glam Rock`
+			`Classic Rock`
 		]
 	}
 	{
-		Color = hairred_orange_3
+		color = hairred_orange_3
 		random_weight = 1.0
 		genre = [
-			rock
-			pop
-			`glam	rock`
-			`classic	rock`
+			Rock
+			Pop
+			`Glam Rock`
+			`Classic Rock`
 		]
 	}
 	{
-		Color = yellow_4
+		color = yellow_4
 		random_weight = 1.0
 		genre = [
-			punk
-			`heavy	metal`
-			`glam	rock`
-			pop
-			rock
-			`classic	rock`
-			`black	metal`
+			Punk
+			`Heavy Metal`
+			`Glam Rock`
+			Pop
+			Rock
+			`Classic Rock`
+			`Black Metal`
 		]
 	}
 	{
-		Color = yellow_2
+		color = yellow_2
 		random_weight = 1.0
 		genre = [
-			punk
-			`heavy	metal`
-			`glam	rock`
-			pop
-			rock
-			`classic	rock`
+			Punk
+			`Heavy Metal`
+			`Glam Rock`
+			Pop
+			Rock
+			`Classic Rock`
 		]
 	}
 	{
-		Color = red_2
+		color = red_2
 		random_weight = 1.0
 		genre = [
-			punk
-			goth
-			rock
+			Punk
+			Goth
+			Rock
 		]
 	}
 	{
-		Color = brown_4
+		color = brown_4
 		random_weight = 1.0
 		genre = [
-			punk
-			`heavy	metal`
-			`glam	rock`
-			pop
-			rock
-			`classic	rock`
+			Punk
+			`Heavy Metal`
+			`Glam Rock`
+			Pop
+			Rock
+			`Classic Rock`
 		]
 	}
 	{
-		Color = brown_3
+		color = brown_3
 		random_weight = 1.0
 		genre = [
-			punk
-			`heavy	metal`
-			`glam	rock`
-			pop
-			rock
-			`classic	rock`
+			Punk
+			`Heavy Metal`
+			`Glam Rock`
+			Pop
+			Rock
+			`Classic Rock`
 		]
 	}
 	{
-		Color = brown_2
+		color = brown_2
 		random_weight = 1.0
 		genre = [
-			punk
-			`heavy	metal`
-			`glam	rock`
-			pop
-			rock
-			`classic	rock`
+			Punk
+			`Heavy Metal`
+			`Glam Rock`
+			Pop
+			Rock
+			`Classic Rock`
 		]
 	}
 	{
-		Color = blue_3
+		color = blue_3
 		random_weight = 1.0
 		genre = [
-			punk
-			goth
+			Punk
+			Goth
 		]
 	}
 	{
-		Color = blue_1
+		color = blue_1
 		random_weight = 1.0
 		genre = [
-			punk
-			goth
+			Punk
+			Goth
 		]
 	}
 	{
-		Color = teal_3
+		color = teal_3
 		random_weight = 0.5
 		genre = [
-			punk
-			goth
+			Punk
+			Goth
 		]
 	}
 	{
-		Color = green_1
+		color = green_1
 		random_weight = 0.5
 		genre = [
-			punk
-			goth
+			Punk
+			Goth
 		]
 	}
 	{
-		Color = grey_5
+		color = grey_5
 		random_weight = 0.5
 		genre = [
-			`black	metal`
+			`Black Metal`
 		]
 	}
 ]
-cas_male_hair_common_settings = {
+CAS_Male_Hair_Common_Settings = {
 	modify_all_materials
 	shader = $cas_shader_hair
 	random_colors = $cas_male_hair_random_colors
 }
-cas_male_hair_common_settings_skinshader = {
+CAS_Male_Hair_Common_Settings_SkinShader = {
 	modify_all_materials
 	shader = $cas_shader_skin
 	random_colors = $cas_male_hair_random_colors
 }
-cas_male_hair = [
+CAS_Male_Hair = [
 	{
-		desc_id = None
-		frontend_desc = qs(0x9c1b5214)
+		desc_id = none
+		frontend_desc = qs("None")
 		random_weight = 0.0
 	}
 	{
 		desc_id = m_clsc_hair_george
-		frontend_desc = qs(0xcf536075)
+		frontend_desc = qs("\LNo Fuss")
 		mesh = 'models/CAR/Male/M_Clsc_Hair_George.skin'
 		deform_mesh = 'models/CAR/Male/M_Clsc_Hair_George_Def.skin'
-		$cas_male_hair_common_settings
+		$CAS_Male_Hair_Common_Settings
 		hat_hair = m_clsc_hathair_george
-		acc_skeleton = skel_m_clsc_hair_george
-		acc_ragdoll = rag_m_clsc_hair_george
+		acc_skeleton = Skel_M_Clsc_Hair_George
+		acc_ragdoll = Rag_M_Clsc_Hair_George
 		acc_bones = [
-			bone_acc_head_01
-			bone_acc_head_02
-			bone_acc_head_03
-			bone_acc_head_04
-			bone_acc_head_05
-			bone_acc_head_06
-			bone_acc_head_07
-			bone_acc_head_08
-			bone_acc_head_09
+			Bone_ACC_Head_01
+			Bone_ACC_Head_02
+			Bone_ACC_Head_03
+			Bone_ACC_Head_04
+			Bone_ACC_Head_05
+			Bone_ACC_Head_06
+			Bone_ACC_Head_07
+			Bone_ACC_Head_08
+			Bone_ACC_Head_09
 		]
 		genre = [
-			`classic	rock`
-			rock
-			pop
+			`Classic Rock`
+			Rock
+			Pop
 		]
 	}
 	{
-		desc_id = m_clsc_hair_contest
-		frontend_desc = qs(0x0bb644b3)
+		desc_id = M_Clsc_Hair_Contest
+		frontend_desc = qs("\LContest Winner")
 		mesh = 'models/CAR/Male/M_Clsc_Hair_Contest.skin'
 		deform_mesh = 'models/CAR/Male/M_Clsc_Hair_Contest_Def.skin'
-		$cas_male_hair_common_settings
-		hat_hair = m_clsc_hathair_contest
+		$CAS_Male_Hair_Common_Settings
+		hat_hair = M_Clsc_HatHair_Contest
 		random_weight = 0.0
 		hidden
 	}
 	{
 		desc_id = m_bmtl_hair_lars
-		frontend_desc = qs(0x295bdc1d)
+		frontend_desc = qs("\LStraight Comb")
 		mesh = 'models/CAR/Male/M_Bmtl_Hair_Lars.skin'
 		deform_mesh = 'models/CAR/Male/M_Bmtl_Hair_Lars_Def.skin'
-		$cas_male_hair_common_settings
+		$CAS_Male_Hair_Common_Settings
 		hat_hair = m_bmtl_hathair_lars
-		acc_skeleton = skel_m_bmtl_hair_lars
-		acc_ragdoll = rag_m_bmtl_hair_lars
+		acc_skeleton = Skel_M_Bmtl_Hair_Lars
+		acc_ragdoll = Rag_M_Bmtl_Hair_Lars
 		acc_bones = [
-			bone_acc_head_02
-			bone_acc_head_03
-			bone_acc_head_04
-			bone_acc_head_05
-			bone_acc_head_06
-			bone_acc_head_07
-			bone_acc_head_08
-			bone_acc_head_09
+			Bone_ACC_Head_02
+			Bone_ACC_Head_03
+			Bone_ACC_Head_04
+			Bone_ACC_Head_05
+			Bone_ACC_Head_06
+			Bone_ACC_Head_07
+			Bone_ACC_Head_08
+			Bone_ACC_Head_09
 		]
 		genre = [
-			`black	metal`
+			`Black Metal`
 		]
 	}
 	{
 		desc_id = m_bmtl_hair_dread
-		frontend_desc = qs(0x3d5f28b1)
+		frontend_desc = qs("\LDreads")
 		mesh = 'models/CAR/Male/M_Bmtl_Hair_Dread.skin'
 		deform_mesh = 'models/CAR/Male/M_Bmtl_Hair_Dread_Def.skin'
-		$cas_male_hair_common_settings
+		$CAS_Male_Hair_Common_Settings
 		hat_hair = m_bmtl_hathair_dread
-		acc_skeleton = skel_m_bmtl_hair_dread
-		acc_ragdoll = rag_m_bmtl_hair_dread
+		acc_skeleton = Skel_M_Bmtl_Hair_Dread
+		acc_ragdoll = Rag_M_Bmtl_Hair_Dread
 		acc_bones = [
-			bone_acc_head_02
-			bone_acc_head_03
-			bone_acc_head_04
-			bone_acc_head_05
-			bone_acc_head_06
-			bone_acc_head_07
-			bone_acc_head_08
-			bone_acc_head_09
+			Bone_ACC_Head_02
+			Bone_ACC_Head_03
+			Bone_ACC_Head_04
+			Bone_ACC_Head_05
+			Bone_ACC_Head_06
+			Bone_ACC_Head_07
+			Bone_ACC_Head_08
+			Bone_ACC_Head_09
 		]
 		genre = [
-			`black	metal`
+			`Black Metal`
 		]
 	}
 	{
-		desc_id = m_clsc_hair_country
-		frontend_desc = qs(0x479d7f40)
+		desc_id = M_Clsc_Hair_Country
+		frontend_desc = qs("\LSeattle's Finest")
 		mesh = 'models/CAR/Male/M_Clsc_hair_Country.skin'
 		deform_mesh = 'models/CAR/Male/M_Clsc_hair_Country_def.skin'
-		$cas_male_hair_common_settings
+		$CAS_Male_Hair_Common_Settings
 		hat_hair = m_clsc_hathair_country
 		materials = [
-			m_clsc_hair_country_hair
+			M_Clsc_Hair_Country_hair
 		]
-		acc_skeleton = skel_m_clsc_hair_country
-		acc_ragdoll = rag_m_clsc_hair_country
+		acc_skeleton = Skel_M_Clsc_hair_Country
+		acc_ragdoll = Rag_M_Clsc_hair_Country
 		acc_bones = [
-			bone_acc_head_01
-			bone_acc_head_02
-			bone_acc_head_03
-			bone_acc_head_04
-			bone_acc_head_05
-			bone_acc_head_06
-			bone_acc_head_07
-			bone_acc_head_08
+			Bone_ACC_Head_01
+			Bone_ACC_Head_02
+			Bone_ACC_Head_03
+			Bone_ACC_Head_04
+			Bone_ACC_Head_05
+			Bone_ACC_Head_06
+			Bone_ACC_Head_07
+			Bone_ACC_Head_08
 		]
 		genre = [
-			`classic	rock`
-			rock
+			`Classic Rock`
+			Rock
 		]
 	}
 	{
 		desc_id = m_clsc_hair_messy
-		frontend_desc = qs(0x925e89e6)
+		frontend_desc = qs("\LHansel")
 		mesh = 'models/CAR/Male/M_Clsc_Hair_Messy.skin'
 		deform_mesh = 'models/CAR/Male/M_Clsc_Hair_Messy_Def.skin'
-		$cas_male_hair_common_settings
+		$CAS_Male_Hair_Common_Settings
 		hat_hair = m_clsc_hathair_messy
-		acc_skeleton = skel_m_clsc_hair_messy
-		acc_ragdoll = rag_m_clsc_hair_messy
+		acc_skeleton = Skel_M_Clsc_Hair_Messy
+		acc_ragdoll = Rag_M_Clsc_Hair_Messy
 		acc_bones = [
-			bone_acc_head_01
-			bone_acc_head_02
-			bone_acc_head_03
-			bone_acc_head_04
-			bone_acc_head_05
-			bone_acc_head_06
-			bone_acc_head_07
-			bone_acc_head_08
-			bone_acc_head_09
+			Bone_ACC_Head_01
+			Bone_ACC_Head_02
+			Bone_ACC_Head_03
+			Bone_ACC_Head_04
+			Bone_ACC_Head_05
+			Bone_ACC_Head_06
+			Bone_ACC_Head_07
+			Bone_ACC_Head_08
+			Bone_ACC_Head_09
 		]
 		genre = [
-			`classic	rock`
+			`Classic Rock`
 		]
 		random_weight = 0.0
 	}
 	{
 		desc_id = m_clsc_hair_afro
-		frontend_desc = qs(0xcb1a231a)
+		frontend_desc = qs("\LBig Cloud")
 		mesh = 'models/CAR/Male/M_Clsc_Hair_Afro.skin'
 		deform_mesh = 'models/CAR/Male/M_Clsc_Hair_Afro_def.skin'
-		cas_male_hair_common_settings_skinshader
+		CAS_Male_Hair_Common_Settings_SkinShader
 		hat_hair = m_clsc_hathair_afro
 		materials = [
-			m_clsc_hair_afro_primary
+			M_Clsc_Hair_Afro_Primary
 		]
-		acc_skeleton = skel_m_clsc_hair_afro
-		acc_ragdoll = rag_m_clsc_hair_afro
+		acc_skeleton = Skel_M_Clsc_Hair_Afro
+		acc_ragdoll = Rag_M_Clsc_Hair_Afro
 		acc_bones = [
-			bone_acc_head_01
-			bone_acc_head_02
-			bone_acc_head_03
-			bone_acc_head_04
-			bone_acc_head_05
-			bone_acc_head_06
-			bone_acc_head_07
-			bone_acc_head_08
-			bone_acc_head_09
+			Bone_ACC_Head_01
+			Bone_ACC_Head_02
+			Bone_ACC_Head_03
+			Bone_ACC_Head_04
+			Bone_ACC_Head_05
+			Bone_ACC_Head_06
+			Bone_ACC_Head_07
+			Bone_ACC_Head_08
+			Bone_ACC_Head_09
 		]
 		genre = [
-			`classic	rock`
+			`Classic Rock`
 		]
 	}
 	{
 		desc_id = m_clsc_hair_jimi
-		frontend_desc = qs(0xd3f52ad2)
+		frontend_desc = qs("\LLove Child")
 		mesh = 'models/CAR/Male/M_Clsc_Hair_Jimi.skin'
 		deform_mesh = 'models/CAR/Male/M_Clsc_Hair_Jimi_Def.skin'
-		cas_male_hair_common_settings_skinshader
+		CAS_Male_Hair_Common_Settings_SkinShader
 		hat_hair = m_clsc_hathair_jimi
-		acc_skeleton = skel_m_clsc_hair_jimi
-		acc_ragdoll = rag_m_clsc_hair_jimi
+		acc_skeleton = Skel_M_Clsc_Hair_Jimi
+		acc_ragdoll = Rag_M_Clsc_Hair_Jimi
 		acc_bones = [
-			bone_acc_head_01
-			bone_acc_head_02
-			bone_acc_head_03
-			bone_acc_head_04
-			bone_acc_head_05
-			bone_acc_head_06
-			bone_acc_head_07
-			bone_acc_head_08
-			bone_acc_head_09
+			Bone_ACC_Head_01
+			Bone_ACC_Head_02
+			Bone_ACC_Head_03
+			Bone_ACC_Head_04
+			Bone_ACC_Head_05
+			Bone_ACC_Head_06
+			Bone_ACC_Head_07
+			Bone_ACC_Head_08
+			Bone_ACC_Head_09
 		]
 		materials = [
-			m_clsc_hair_jimi_primary
-			m_clsc_hair_jimi_secondary
+			M_Clsc_Hair_Jimi_Primary
+			M_Clsc_Hair_Jimi_Secondary
 		]
 		genre = [
-			`classic	rock`
+			`Classic Rock`
 		]
 		random_weight = 0.25
 	}
 	{
-		desc_id = m_glam_hair_lapalms
-		frontend_desc = qs(0xbd135a6c)
+		desc_id = M_Glam_Hair_LaPalms
+		frontend_desc = qs("\LPalmae")
 		mesh = 'models/CAR/Male/M_Glam_Hair_LaPalms.skin'
 		deform_mesh = 'models/CAR/Male/M_Glam_Hair_LaPalms_Def.skin'
-		$cas_male_hair_common_settings
+		$CAS_Male_Hair_Common_Settings
 		hat_hair = m_glam_hathair_lapalms
-		acc_skeleton = skel_m_glam_hair_lapalms
-		acc_ragdoll = rag_m_glam_hair_lapalms
+		acc_skeleton = Skel_M_Glam_Hair_LaPalms
+		acc_ragdoll = Rag_M_Glam_Hair_LaPalms
 		acc_bones = [
-			bone_acc_head_01
-			bone_acc_head_02
-			bone_acc_head_03
-			bone_acc_head_04
-			bone_acc_head_05
-			bone_acc_head_06
-			bone_acc_head_07
-			bone_acc_head_08
+			Bone_ACC_Head_01
+			Bone_ACC_Head_02
+			Bone_ACC_Head_03
+			Bone_ACC_Head_04
+			Bone_ACC_Head_05
+			Bone_ACC_Head_06
+			Bone_ACC_Head_07
+			Bone_ACC_Head_08
 		]
 		genre = [
-			`glam	rock`
+			`Glam Rock`
 		]
 		random_weight = 0.25
 	}
 	{
-		desc_id = m_glam_hair_seagull
-		frontend_desc = qs(0x75a88322)
+		desc_id = M_Glam_Hair_Seagull
+		frontend_desc = qs("\LSeagull")
 		mesh = 'models/CAR/Male/M_Glam_Hair_Seagull.skin'
 		deform_mesh = 'models/CAR/Male/M_Glam_Hair_Seagull_Def.skin'
-		$cas_male_hair_common_settings
+		$CAS_Male_Hair_Common_Settings
 		hat_hair = m_glam_hathair_seagull
-		acc_skeleton = skel_m_glam_hair_seagull
-		acc_ragdoll = rag_m_glam_hair_seagull
+		acc_skeleton = Skel_M_Glam_Hair_Seagull
+		acc_ragdoll = Rag_M_Glam_Hair_Seagull
 		acc_bones = [
-			bone_acc_head_01
-			bone_acc_head_02
-			bone_acc_head_03
-			bone_acc_head_04
-			bone_acc_head_05
-			bone_acc_head_06
-			bone_acc_head_07
-			bone_acc_head_08
-			bone_acc_head_09
+			Bone_ACC_Head_01
+			Bone_ACC_Head_02
+			Bone_ACC_Head_03
+			Bone_ACC_Head_04
+			Bone_ACC_Head_05
+			Bone_ACC_Head_06
+			Bone_ACC_Head_07
+			Bone_ACC_Head_08
+			Bone_ACC_Head_09
 		]
 		genre = [
-			`glam	rock`
+			`Glam Rock`
 		]
 	}
 	{
 		desc_id = m_glam_hair_gold
-		frontend_desc = qs(0xb8f4def5)
+		frontend_desc = qs("\LLate 70's")
 		mesh = 'models/CAR/Male/M_Glam_Hair_Gold.skin'
 		deform_mesh = 'models/CAR/Male/M_Glam_Hair_Gold_Def.skin'
-		$cas_male_hair_common_settings
+		$CAS_Male_Hair_Common_Settings
 		hat_hair = m_glam_hathair_gold
-		acc_skeleton = skel_m_glam_hair_gold
-		acc_ragdoll = rag_m_glam_hair_gold
+		acc_skeleton = Skel_M_Glam_Hair_Gold
+		acc_ragdoll = Rag_M_Glam_Hair_Gold
 		acc_bones = [
-			bone_acc_head_01
-			bone_acc_head_02
-			bone_acc_head_03
-			bone_acc_head_04
-			bone_acc_head_05
-			bone_acc_head_06
-			bone_acc_head_07
-			bone_acc_head_08
-			bone_acc_head_09
+			Bone_ACC_Head_01
+			Bone_ACC_Head_02
+			Bone_ACC_Head_03
+			Bone_ACC_Head_04
+			Bone_ACC_Head_05
+			Bone_ACC_Head_06
+			Bone_ACC_Head_07
+			Bone_ACC_Head_08
+			Bone_ACC_Head_09
 		]
 		genre = [
-			`glam	rock`
+			`Glam Rock`
 		]
 	}
 	{
-		desc_id = m_goth_hair_remedy
-		frontend_desc = qs(0xcafba8c1)
+		desc_id = M_Goth_Hair_Remedy
+		frontend_desc = qs("\LThe Remedy")
 		mesh = 'models/CAR/Male/M_Goth_Hair_Remedy.skin'
 		deform_mesh = 'models/CAR/Male/M_Goth_Hair_Remedy_def.skin'
-		$cas_male_hair_common_settings
+		$CAS_Male_Hair_Common_Settings
 		hat_hair = m_goth_hathair_remedy
-		acc_skeleton = skel_m_goth_hair_remedy
-		acc_ragdoll = rag_m_goth_hair_remedy
+		acc_skeleton = Skel_M_Goth_Hair_Remedy
+		acc_ragdoll = Rag_M_Goth_Hair_Remedy
 		acc_bones = [
-			bone_acc_head_01
-			bone_acc_head_02
-			bone_acc_head_03
-			bone_acc_head_04
-			bone_acc_head_05
-			bone_acc_head_06
-			bone_acc_head_07
+			Bone_ACC_Head_01
+			Bone_ACC_Head_02
+			Bone_ACC_Head_03
+			Bone_ACC_Head_04
+			Bone_ACC_Head_05
+			Bone_ACC_Head_06
+			Bone_ACC_Head_07
 		]
 		genre = [
-			goth
+			Goth
 		]
 	}
 	{
 		desc_id = m_goth_hair_dreads
-		frontend_desc = qs(0x4f27cb2e)
+		frontend_desc = qs("\LGoth Dreads")
 		mesh = 'models/CAR/Male/M_Goth_Hair_Dreads.skin'
 		deform_mesh = 'models/CAR/Male/M_Goth_Hair_Dreads_def.skin'
-		cas_male_hair_common_settings_skinshader
+		CAS_Male_Hair_Common_Settings_SkinShader
 		hat_hair = m_goth_hathair_dreads
 		materials = [
-			m_goth_hair_dreads_primary
+			M_Goth_Hair_Dreads_Primary
 		]
-		acc_skeleton = skel_m_goth_hair_dreads
-		acc_ragdoll = rag_m_goth_hair_dreads
+		acc_skeleton = Skel_M_Goth_Hair_Dreads
+		acc_ragdoll = Rag_M_Goth_Hair_Dreads
 		acc_bones = [
-			bone_acc_head_01
-			bone_acc_head_02
-			bone_acc_head_03
-			bone_acc_head_04
-			bone_acc_head_05
-			bone_acc_head_06
-			bone_acc_head_07
-			bone_acc_head_08
-			bone_acc_head_09
+			Bone_ACC_Head_01
+			Bone_ACC_Head_02
+			Bone_ACC_Head_03
+			Bone_ACC_Head_04
+			Bone_ACC_Head_05
+			Bone_ACC_Head_06
+			Bone_ACC_Head_07
+			Bone_ACC_Head_08
+			Bone_ACC_Head_09
 		]
 		genre = [
-			goth
+			Goth
 		]
 	}
 	{
 		desc_id = m_goth_hair_devilock
-		frontend_desc = qs(0x959ee9ad)
+		frontend_desc = qs("\LDevilock")
 		mesh = 'models/CAR/Male/M_Goth_Hair_Devilock.skin'
 		deform_mesh = 'models/CAR/Male/M_Goth_Hair_Devilock_def.skin'
-		cas_male_hair_common_settings
+		CAS_Male_Hair_Common_Settings
 		hat_hair = m_goth_hathair_devilock
-		acc_skeleton = skel_m_goth_hair_devilock
-		acc_ragdoll = rag_m_goth_hair_devilock
+		acc_skeleton = Skel_M_Goth_Hair_Devilock
+		acc_ragdoll = Rag_M_Goth_Hair_Devilock
 		acc_bones = [
-			bone_acc_head_01
-			bone_acc_head_03
-			bone_acc_head_05
-			bone_acc_head_07
-			bone_acc_head_08
-			bone_acc_head_09
+			Bone_ACC_Head_01
+			Bone_ACC_Head_03
+			Bone_ACC_Head_05
+			Bone_ACC_Head_07
+			Bone_ACC_Head_08
+			Bone_ACC_Head_09
 		]
 		genre = [
-			goth
-			punk
+			Goth
+			Punk
 		]
 		material_groups = [
 			{
 				materials = [
-					m_goth_hair_devilock_hair
-					m_goth_hair_devilock_hairtop
+					M_Goth_Hair_Devilock_hair
+					M_Goth_Hair_Devilock_hairtop
 				]
 				shader = $cas_shader_hair
 			}
 		]
 	}
 	{
-		desc_id = m_metl_hair_axel
-		frontend_desc = qs(0x361d7224)
+		desc_id = M_Metl_Hair_Axel
+		frontend_desc = qs("\LHeadbanger's Mop")
 		mesh = 'models/CAR/Male/M_Metl_Hair_Axel.skin'
 		deform_mesh = 'models/CAR/Male/M_Metl_Hair_Axel_def.skin'
-		$cas_male_hair_common_settings
+		$CAS_Male_Hair_Common_Settings
 		hat_hair = m_metl_hathair_axel
-		acc_skeleton = skel_m_metl_hair_axel
-		acc_ragdoll = rag_m_metl_hair_axel
+		acc_skeleton = Skel_M_Metl_Hair_Axel
+		acc_ragdoll = Rag_M_Metl_Hair_Axel
 		acc_bones = [
-			bone_acc_head_01
-			bone_acc_head_02
-			bone_acc_head_03
-			bone_acc_head_04
-			bone_acc_head_05
-			bone_acc_head_06
-			bone_acc_head_07
-			bone_acc_head_08
-			bone_acc_head_09
+			Bone_ACC_Head_01
+			Bone_ACC_Head_02
+			Bone_ACC_Head_03
+			Bone_ACC_Head_04
+			Bone_ACC_Head_05
+			Bone_ACC_Head_06
+			Bone_ACC_Head_07
+			Bone_ACC_Head_08
+			Bone_ACC_Head_09
 		]
 		genre = [
-			`heavy	metal`
-			rock
+			`Heavy Metal`
+			Rock
 		]
 	}
 	{
-		desc_id = m_metl_hair_midhigh
-		frontend_desc = qs(0xded47344)
+		desc_id = M_Metl_Hair_MidHigh
+		frontend_desc = qs("\LSix Gun")
 		mesh = 'models/CAR/Male/M_Metl_Hair_MidHigh.skin'
 		deform_mesh = 'models/CAR/Male/M_Metl_Hair_MidHigh_def.skin'
-		$cas_male_hair_common_settings
+		$CAS_Male_Hair_Common_Settings
 		hat_hair = m_metl_hathair_midhigh
-		acc_skeleton = skel_m_metl_hair_midhigh
-		acc_ragdoll = rag_m_metl_hair_midhigh
+		acc_skeleton = Skel_M_Metl_Hair_MidHigh
+		acc_ragdoll = Rag_M_Metl_Hair_MidHigh
 		acc_bones = [
-			bone_acc_head_01
-			bone_acc_head_02
-			bone_acc_head_03
-			bone_acc_head_04
-			bone_acc_head_05
-			bone_acc_head_06
-			bone_acc_head_07
-			bone_acc_head_08
-			bone_acc_head_09
+			Bone_ACC_Head_01
+			Bone_ACC_Head_02
+			Bone_ACC_Head_03
+			Bone_ACC_Head_04
+			Bone_ACC_Head_05
+			Bone_ACC_Head_06
+			Bone_ACC_Head_07
+			Bone_ACC_Head_08
+			Bone_ACC_Head_09
 		]
 		genre = [
-			`heavy	metal`
-			`glam	rock`
+			`Heavy Metal`
+			`Glam Rock`
 		]
 	}
 	{
-		desc_id = m_pop_hair_buzz
-		frontend_desc = qs(0x28da4eed)
+		desc_id = M_Pop_Hair_Buzz
+		frontend_desc = qs("\LBuzz Saw")
 		mesh = 'models/CAR/Male/M_Pop_Hair_Buzz.skin'
 		deform_mesh = 'models/CAR/Male/M_Pop_Hair_Buzz_def.skin'
-		$cas_male_hair_common_settings_skinshader
+		$CAS_Male_Hair_Common_Settings_SkinShader
 		hat_hair = m_pop_hathair_buzz
 		genre = [
-			pop
+			Pop
 		]
 		random_weight = 0.25
 	}
 	{
-		desc_id = m_pop_hair_emo1
-		frontend_desc = qs(0x8024e99c)
+		desc_id = M_Pop_Hair_Emo1
+		frontend_desc = qs("\LEmodoo")
 		mesh = 'models/CAR/Male/M_Pop_Hair_Emo1.skin'
 		deform_mesh = 'models/CAR/Male/M_Pop_Hair_Emo1_def.skin'
-		$cas_male_hair_common_settings
+		$CAS_Male_Hair_Common_Settings
 		hat_hair = m_pop_hathair_emo1
-		acc_skeleton = skel_m_pop_hair_emo1
-		acc_ragdoll = rag_m_pop_hair_emo1
+		acc_skeleton = Skel_M_Pop_Hair_Emo1
+		acc_ragdoll = Rag_M_Pop_Hair_Emo1
 		acc_bones = [
-			bone_acc_head_01
-			bone_acc_head_02
-			bone_acc_head_03
-			bone_acc_head_04
+			Bone_ACC_Head_01
+			Bone_ACC_Head_02
+			Bone_ACC_Head_03
+			Bone_ACC_Head_04
 		]
 		genre = [
-			pop
-			rock
+			Pop
+			Rock
 		]
 	}
 	{
-		desc_id = m_pop_hair_pomp
-		frontend_desc = qs(0xd965807d)
+		desc_id = M_Pop_Hair_Pomp
+		frontend_desc = qs("\LPompadour")
 		mesh = 'models/CAR/Male/M_Pop_Hair_Pomp.skin'
 		deform_mesh = 'models/CAR/Male/M_Pop_Hair_Pomp_def.skin'
-		$cas_male_hair_common_settings
+		$CAS_Male_Hair_Common_Settings
 		hat_hair = m_pop_hathair_pomp
-		acc_skeleton = skel_m_pop_hair_pomp
-		acc_ragdoll = rag_m_pop_hair_pomp
+		acc_skeleton = Skel_M_Pop_Hair_Pomp
+		acc_ragdoll = Rag_M_Pop_Hair_Pomp
 		acc_bones = [
-			bone_acc_head_01
-			bone_acc_head_02
-			bone_acc_head_03
-			bone_acc_head_04
-			bone_acc_head_05
-			bone_acc_head_06
-			bone_acc_head_07
-			bone_acc_head_08
+			Bone_ACC_Head_01
+			Bone_ACC_Head_02
+			Bone_ACC_Head_03
+			Bone_ACC_Head_04
+			Bone_ACC_Head_05
+			Bone_ACC_Head_06
+			Bone_ACC_Head_07
+			Bone_ACC_Head_08
 		]
 		genre = [
-			pop
-			rock
+			Pop
+			Rock
 		]
 	}
 	{
-		desc_id = m_pop_hair_eddieknox
-		frontend_desc = qs(0x51aae246)
+		desc_id = M_Pop_Hair_EddieKnox
+		frontend_desc = qs("\LEddieKnox")
 		mesh = 'models/CAR/Male/M_Pop_Hair_EddieKnox.skin'
 		deform_mesh = 'models/CAR/Male/M_Pop_Hair_EddieKnox_def.skin'
-		$cas_male_hair_common_settings
+		$CAS_Male_Hair_Common_Settings
 		hat_hair = m_pop_hathair_pomp
-		acc_skeleton = skel_m_pop_hair_pomp
-		acc_ragdoll = rag_m_pop_hair_pomp
+		acc_skeleton = Skel_M_Pop_Hair_Pomp
+		acc_ragdoll = Rag_M_Pop_Hair_Pomp
 		acc_bones = [
-			bone_acc_head_01
-			bone_acc_head_02
-			bone_acc_head_03
-			bone_acc_head_04
-			bone_acc_head_05
-			bone_acc_head_06
-			bone_acc_head_07
-			bone_acc_head_08
+			Bone_ACC_Head_01
+			Bone_ACC_Head_02
+			Bone_ACC_Head_03
+			Bone_ACC_Head_04
+			Bone_ACC_Head_05
+			Bone_ACC_Head_06
+			Bone_ACC_Head_07
+			Bone_ACC_Head_08
 		]
 		hidden
 	}
 	{
-		desc_id = m_bbkid_hair_beanie
-		frontend_desc = qs(0x10d142d6)
+		desc_id = M_BBKid_Hair_Beanie
+		frontend_desc = qs("\LBBKid_Hair_Beanie")
 		mesh = 'models/CAR/Male/M_BBKid_Hair_Beanie.skin'
 		deform_mesh = 'models/CAR/Male/M_BBKid_Hair_Beanie_def.skin'
-		hat_hair = None
+		hat_hair = none
 		hidden
 		random_weight = 0.0
-		acc_skeleton = skel_m_clsc_hair_country
-		acc_ragdoll = rag_m_clsc_hair_country
+		acc_skeleton = Skel_M_Clsc_hair_Country
+		acc_ragdoll = Rag_M_Clsc_hair_Country
 		acc_bones = [
-			bone_acc_head_01
-			bone_acc_head_02
-			bone_acc_head_03
-			bone_acc_head_04
-			bone_acc_head_05
+			Bone_ACC_Head_01
+			Bone_ACC_Head_02
+			Bone_ACC_Head_03
+			Bone_ACC_Head_04
+			Bone_ACC_Head_05
 		]
 	}
 	{
 		desc_id = m_punk_hair_hawk
-		frontend_desc = qs(0x29146d81)
+		frontend_desc = qs("\LMohawk")
 		mesh = 'models/CAR/Male/M_Punk_Hair_Hawk.skin'
 		deform_mesh = 'models/CAR/Male/M_Punk_Hair_Hawk_Def.skin'
-		$cas_male_hair_common_settings
-		hat_hair = None
-		acc_skeleton = skel_m_punk_hair_hawk
-		acc_ragdoll = rag_m_punk_hair_hawk
+		$CAS_Male_Hair_Common_Settings
+		hat_hair = none
+		acc_skeleton = Skel_M_Punk_Hair_Hawk
+		acc_ragdoll = Rag_M_Punk_Hair_Hawk
 		acc_bones = [
-			bone_acc_head_02
-			bone_acc_head_03
-			bone_acc_head_04
-			bone_acc_head_05
-			bone_acc_head_06
-			bone_acc_head_07
-			bone_acc_head_08
-			bone_acc_head_09
+			Bone_ACC_Head_02
+			Bone_ACC_Head_03
+			Bone_ACC_Head_04
+			Bone_ACC_Head_05
+			Bone_ACC_Head_06
+			Bone_ACC_Head_07
+			Bone_ACC_Head_08
+			Bone_ACC_Head_09
 		]
 		genre = [
-			punk
+			Punk
 		]
 	}
 	{
-		desc_id = m_punk_hair_lspike
-		frontend_desc = qs(0x4a5273e4)
+		desc_id = M_Punk_Hair_LSpike
+		frontend_desc = qs("\LLiberty Spikes")
 		mesh = 'models/CAR/Male/M_Punk_Hair_LSpike.skin'
 		deform_mesh = 'models/CAR/Male/M_Punk_Hair_LSpike_Def.skin'
-		$cas_male_hair_common_settings
-		hat_hair = None
-		acc_skeleton = skel_m_punk_hair_lspike
-		acc_ragdoll = rag_m_punk_hair_lspike
+		$CAS_Male_Hair_Common_Settings
+		hat_hair = none
+		acc_skeleton = Skel_M_Punk_Hair_LSpike
+		acc_ragdoll = Rag_M_Punk_Hair_LSpike
 		acc_bones = [
-			bone_acc_head_01
-			bone_acc_head_02
-			bone_acc_head_03
-			bone_acc_head_04
-			bone_acc_head_05
-			bone_acc_head_06
-			bone_acc_head_07
-			bone_acc_head_08
-			bone_acc_head_09
+			Bone_ACC_Head_01
+			Bone_ACC_Head_02
+			Bone_ACC_Head_03
+			Bone_ACC_Head_04
+			Bone_ACC_Head_05
+			Bone_ACC_Head_06
+			Bone_ACC_Head_07
+			Bone_ACC_Head_08
+			Bone_ACC_Head_09
 		]
 		genre = [
-			punk
+			Punk
 		]
 	}
 	{
 		desc_id = m_punk_hair_spike
-		frontend_desc = qs(0xf7e9c00c)
+		frontend_desc = qs("\LEggs Whites n Suga")
 		mesh = 'models/CAR/Male/M_Punk_Hair_Spike.skin'
 		deform_mesh = 'models/CAR/Male/M_Punk_Hair_Spike_Def.skin'
-		$cas_male_hair_common_settings
+		$CAS_Male_Hair_Common_Settings
 		hat_hair = m_punk_hathair_spike
-		acc_skeleton = skel_m_punk_hair_spike
-		acc_ragdoll = rag_m_punk_hair_spike
+		acc_skeleton = Skel_M_Punk_Hair_Spike
+		acc_ragdoll = Rag_M_Punk_Hair_Spike
 		acc_bones = [
-			bone_acc_head_01
-			bone_acc_head_02
-			bone_acc_head_03
-			bone_acc_head_04
-			bone_acc_head_05
-			bone_acc_head_06
-			bone_acc_head_07
-			bone_acc_head_08
-			bone_acc_head_09
+			Bone_ACC_Head_01
+			Bone_ACC_Head_02
+			Bone_ACC_Head_03
+			Bone_ACC_Head_04
+			Bone_ACC_Head_05
+			Bone_ACC_Head_06
+			Bone_ACC_Head_07
+			Bone_ACC_Head_08
+			Bone_ACC_Head_09
 		]
 		genre = [
-			punk
+			Punk
 		]
 		random_weight = 0.25
 	}
 	{
-		desc_id = m_rock_hair_drummer
-		frontend_desc = qs(0x7a5a66fa)
+		desc_id = M_Rock_Hair_Drummer
+		frontend_desc = qs("\LWind Tunnel Tested")
 		mesh = 'models/CAR/Male/M_Rock_Hair_Drummer.skin'
 		deform_mesh = 'models/CAR/Male/M_Rock_Hair_Drummer_def.skin'
-		$cas_male_hair_common_settings
+		$CAS_Male_Hair_Common_Settings
 		hat_hair = m_rock_hathair_drummer
-		acc_skeleton = skel_m_rock_hair_drummer
-		acc_ragdoll = rag_m_rock_hair_drummer
+		acc_skeleton = Skel_M_Rock_Hair_Drummer
+		acc_ragdoll = Rag_M_Rock_Hair_Drummer
 		acc_bones = [
-			bone_acc_head_01
-			bone_acc_head_03
-			bone_acc_head_05
-			bone_acc_head_07
+			Bone_ACC_Head_01
+			Bone_ACC_Head_03
+			Bone_ACC_Head_05
+			Bone_ACC_Head_07
 		]
 		genre = [
-			rock
+			Rock
 		]
 	}
 	{
-		desc_id = m_rock_hair_guitarist
-		frontend_desc = qs(0x5bccca2d)
+		desc_id = M_Rock_Hair_Guitarist
+		frontend_desc = qs("\LKingsley")
 		mesh = 'models/CAR/Male/M_Rock_Hair_Guitarist.skin'
 		deform_mesh = 'models/CAR/Male/M_Rock_Hair_Guitarist_def.skin'
-		$cas_male_hair_common_settings
+		$CAS_Male_Hair_Common_Settings
 		hat_hair = m_rock_hathair_guitarist
-		acc_skeleton = skel_m_rock_hair_guitarist
-		acc_ragdoll = rag_m_rock_hair_guitarist
+		acc_skeleton = Skel_M_Rock_Hair_Guitarist
+		acc_ragdoll = Rag_M_Rock_Hair_Guitarist
 		acc_bones = [
-			bone_acc_head_02
-			bone_acc_head_03
-			bone_acc_head_04
-			bone_acc_head_05
-			bone_acc_head_06
-			bone_acc_head_07
-			bone_acc_head_08
-			bone_acc_head_09
+			Bone_ACC_Head_02
+			Bone_ACC_Head_03
+			Bone_ACC_Head_04
+			Bone_ACC_Head_05
+			Bone_ACC_Head_06
+			Bone_ACC_Head_07
+			Bone_ACC_Head_08
+			Bone_ACC_Head_09
 		]
 		genre = [
-			rock
-			`heavy	metal`
+			Rock
+			`Heavy Metal`
 		]
 		random_weight = 0.1
 	}
 	{
-		desc_id = m_rock_hair_midpart
-		frontend_desc = qs(0xb8b238cc)
+		desc_id = M_Rock_Hair_MidPart
+		frontend_desc = qs("\LWhoa!")
 		mesh = 'models/CAR/Male/M_Rock_Hair_MidPart.skin'
 		deform_mesh = 'models/CAR/Male/M_Rock_Hair_MidPart_def.skin'
-		$cas_male_hair_common_settings
+		$CAS_Male_Hair_Common_Settings
 		hat_hair = m_rock_hathair_midpart
-		acc_skeleton = skel_m_rock_hair_midpart
-		acc_ragdoll = rag_m_rock_hair_midpart
+		acc_skeleton = Skel_M_Rock_Hair_MidPart
+		acc_ragdoll = Rag_M_Rock_Hair_MidPart
 		acc_bones = [
-			bone_acc_head_01
-			bone_acc_head_02
-			bone_acc_head_03
-			bone_acc_head_04
-			bone_acc_head_05
-			bone_acc_head_06
-			bone_acc_head_07
+			Bone_ACC_Head_01
+			Bone_ACC_Head_02
+			Bone_ACC_Head_03
+			Bone_ACC_Head_04
+			Bone_ACC_Head_05
+			Bone_ACC_Head_06
+			Bone_ACC_Head_07
 		]
 		genre = [
-			rock
+			Rock
 		]
 	}
 	{
 		desc_id = m_rock_hair_slash
-		frontend_desc = qs(0xdaa3e182)
+		frontend_desc = qs("\LCurly Cue")
 		mesh = 'models/CAR/Male/M_Rock_Hair_Slash.skin'
 		deform_mesh = 'models/CAR/Male/M_Rock_Hair_Slash_def.skin'
-		$cas_male_hair_common_settings
+		$CAS_Male_Hair_Common_Settings
 		hat_hair = m_rock_hathair_slash
-		acc_skeleton = skel_m_rock_hair_slash
-		acc_ragdoll = rag_m_rock_hair_slash
+		acc_skeleton = Skel_M_Rock_Hair_Slash
+		acc_ragdoll = Rag_M_Rock_Hair_Slash
 		acc_bones = [
-			bone_acc_head_01
-			bone_acc_head_02
-			bone_acc_head_03
-			bone_acc_head_04
-			bone_acc_head_05
-			bone_acc_head_06
-			bone_acc_head_07
-			bone_acc_head_08
-			bone_acc_head_09
+			Bone_ACC_Head_01
+			Bone_ACC_Head_02
+			Bone_ACC_Head_03
+			Bone_ACC_Head_04
+			Bone_ACC_Head_05
+			Bone_ACC_Head_06
+			Bone_ACC_Head_07
+			Bone_ACC_Head_08
+			Bone_ACC_Head_09
 		]
 		genre = [
-			rock
-			`heavy	metal`
+			Rock
+			`Heavy Metal`
 		]
 		random_weight = 0.0
 	}
 ]
-cas_male_hat_hair_common_settings = {
+CAS_Male_Hat_Hair_Common_Settings = {
 	modify_all_materials
 	shader = $cas_shader_hair
 }
-cas_male_hat_hair_common_settings_skinshader = {
+CAS_Male_Hat_Hair_Common_Settings_SkinShader = {
 	modify_all_materials
 	shader = $cas_shader_skin
 }
-cas_male_hat_hair = [
+CAS_Male_Hat_Hair = [
 	{
-		desc_id = None
-		frontend_desc = qs(0x9c1b5214)
+		desc_id = none
+		frontend_desc = qs("None")
 	}
 	{
 		desc_id = m_bmtl_hathair_lars
 		mesh = 'models/CAR/Male/M_Bmtl_HatHair_Lars.skin'
 		deform_mesh = 'models/CAR/Male/M_Bmtl_HatHair_Lars_def.skin'
-		$cas_male_hat_hair_common_settings
-		acc_skeleton = skel_m_bmtl_hair_lars
-		acc_ragdoll = rag_m_bmtl_hair_lars
+		$CAS_Male_Hat_Hair_Common_Settings
+		acc_skeleton = Skel_M_Bmtl_Hair_Lars
+		acc_ragdoll = Rag_M_Bmtl_Hair_Lars
 		acc_bones = [
-			bone_acc_head_02
-			bone_acc_head_03
-			bone_acc_head_04
-			bone_acc_head_05
-			bone_acc_head_06
-			bone_acc_head_07
-			bone_acc_head_08
-			bone_acc_head_09
+			Bone_ACC_Head_02
+			Bone_ACC_Head_03
+			Bone_ACC_Head_04
+			Bone_ACC_Head_05
+			Bone_ACC_Head_06
+			Bone_ACC_Head_07
+			Bone_ACC_Head_08
+			Bone_ACC_Head_09
 		]
 	}
 	{
 		desc_id = m_bmtl_hathair_dread
 		mesh = 'models/CAR/Male/M_Bmtl_HatHair_Dread.skin'
 		deform_mesh = 'models/CAR/Male/M_Bmtl_HatHair_Dread_def.skin'
-		$cas_male_hat_hair_common_settings
-		acc_skeleton = skel_m_bmtl_hair_dread
-		acc_ragdoll = rag_m_bmtl_hair_dread
+		$CAS_Male_Hat_Hair_Common_Settings
+		acc_skeleton = Skel_M_Bmtl_Hair_Dread
+		acc_ragdoll = Rag_M_Bmtl_Hair_Dread
 		acc_bones = [
-			bone_acc_head_02
-			bone_acc_head_03
-			bone_acc_head_04
-			bone_acc_head_05
-			bone_acc_head_06
-			bone_acc_head_07
-			bone_acc_head_08
-			bone_acc_head_09
+			Bone_ACC_Head_02
+			Bone_ACC_Head_03
+			Bone_ACC_Head_04
+			Bone_ACC_Head_05
+			Bone_ACC_Head_06
+			Bone_ACC_Head_07
+			Bone_ACC_Head_08
+			Bone_ACC_Head_09
 		]
 	}
 	{
 		desc_id = m_clsc_hathair_messy
 		mesh = 'models/CAR/Male/M_Clsc_HatHair_Messy.skin'
 		deform_mesh = 'models/CAR/Male/M_Clsc_HatHair_Messy_def.skin'
-		$cas_male_hat_hair_common_settings
-		acc_skeleton = skel_m_clsc_hair_messy
-		acc_ragdoll = rag_m_clsc_hair_messy
+		$CAS_Male_Hat_Hair_Common_Settings
+		acc_skeleton = Skel_M_Clsc_Hair_Messy
+		acc_ragdoll = Rag_M_Clsc_Hair_Messy
 		acc_bones = [
-			bone_acc_head_01
-			bone_acc_head_02
-			bone_acc_head_03
-			bone_acc_head_04
-			bone_acc_head_05
-			bone_acc_head_06
-			bone_acc_head_07
-			bone_acc_head_08
-			bone_acc_head_09
+			Bone_ACC_Head_01
+			Bone_ACC_Head_02
+			Bone_ACC_Head_03
+			Bone_ACC_Head_04
+			Bone_ACC_Head_05
+			Bone_ACC_Head_06
+			Bone_ACC_Head_07
+			Bone_ACC_Head_08
+			Bone_ACC_Head_09
 		]
 	}
 	{
 		desc_id = m_clsc_hathair_country
 		mesh = 'models/CAR/Male/M_Clsc_Hathair_Country.skin'
 		deform_mesh = 'models/CAR/Male/M_Clsc_Hathair_Country_def.skin'
-		$cas_male_hat_hair_common_settings
+		$CAS_Male_Hat_Hair_Common_Settings
 		materials = [
-			m_clsc_hair_country_hair
+			M_Clsc_Hair_Country_hair
 		]
-		acc_skeleton = skel_m_clsc_hair_messy
-		acc_ragdoll = rag_m_clsc_hair_messy
+		acc_skeleton = Skel_M_Clsc_Hair_Messy
+		acc_ragdoll = Rag_M_Clsc_Hair_Messy
 		acc_bones = [
-			bone_acc_head_01
-			bone_acc_head_02
-			bone_acc_head_03
-			bone_acc_head_04
-			bone_acc_head_05
-			bone_acc_head_06
-			bone_acc_head_07
-			bone_acc_head_08
-			bone_acc_head_09
+			Bone_ACC_Head_01
+			Bone_ACC_Head_02
+			Bone_ACC_Head_03
+			Bone_ACC_Head_04
+			Bone_ACC_Head_05
+			Bone_ACC_Head_06
+			Bone_ACC_Head_07
+			Bone_ACC_Head_08
+			Bone_ACC_Head_09
 		]
 	}
 	{
 		desc_id = m_clsc_hathair_george
 		mesh = 'models/CAR/Male/M_Clsc_HatHair_George.skin'
 		deform_mesh = 'models/CAR/Male/M_Clsc_HatHair_George_def.skin'
-		$cas_male_hat_hair_common_settings
-		acc_skeleton = skel_m_clsc_hair_george
-		acc_ragdoll = rag_m_clsc_hair_george
+		$CAS_Male_Hat_Hair_Common_Settings
+		acc_skeleton = Skel_M_Clsc_Hair_George
+		acc_ragdoll = Rag_M_Clsc_Hair_George
 		acc_bones = [
-			bone_acc_head_01
-			bone_acc_head_02
-			bone_acc_head_03
-			bone_acc_head_04
-			bone_acc_head_05
-			bone_acc_head_06
-			bone_acc_head_07
-			bone_acc_head_08
-			bone_acc_head_09
+			Bone_ACC_Head_01
+			Bone_ACC_Head_02
+			Bone_ACC_Head_03
+			Bone_ACC_Head_04
+			Bone_ACC_Head_05
+			Bone_ACC_Head_06
+			Bone_ACC_Head_07
+			Bone_ACC_Head_08
+			Bone_ACC_Head_09
 		]
 	}
 	{
-		desc_id = m_clsc_hathair_contest
+		desc_id = M_Clsc_HatHair_Contest
 		mesh = 'models/CAR/Male/M_Clsc_HatHair_Contest.skin'
 		deform_mesh = 'models/CAR/Male/M_Clsc_HatHair_Contest_def.skin'
-		$cas_male_hat_hair_common_settings
+		$CAS_Male_Hat_Hair_Common_Settings
 	}
 	{
 		desc_id = m_clsc_hathair_jimi
 		mesh = 'models/CAR/Male/M_Clsc_HatHair_Jimi.skin'
 		deform_mesh = 'models/CAR/Male/M_Clsc_HatHair_Jimi_def.skin'
-		cas_male_hair_common_settings_skinshader
+		CAS_Male_Hair_Common_Settings_SkinShader
 		materials = [
-			m_clsc_hair_jimi_primary
-			m_clsc_hair_jimi_secondary
+			M_Clsc_Hair_Jimi_Primary
+			M_Clsc_Hair_Jimi_Secondary
 		]
-		acc_skeleton = skel_m_clsc_hair_george
-		acc_ragdoll = rag_m_clsc_hair_george
+		acc_skeleton = Skel_M_Clsc_Hair_George
+		acc_ragdoll = Rag_M_Clsc_Hair_George
 		acc_bones = [
-			bone_acc_head_01
-			bone_acc_head_02
-			bone_acc_head_03
-			bone_acc_head_04
-			bone_acc_head_05
-			bone_acc_head_06
-			bone_acc_head_07
-			bone_acc_head_08
-			bone_acc_head_09
+			Bone_ACC_Head_01
+			Bone_ACC_Head_02
+			Bone_ACC_Head_03
+			Bone_ACC_Head_04
+			Bone_ACC_Head_05
+			Bone_ACC_Head_06
+			Bone_ACC_Head_07
+			Bone_ACC_Head_08
+			Bone_ACC_Head_09
 		]
 	}
 	{
 		desc_id = m_clsc_hathair_afro
 		mesh = 'models/CAR/Male/M_Clsc_HatHair_Afro.skin'
 		deform_mesh = 'models/CAR/Male/M_Clsc_HatHair_Afro_def.skin'
-		cas_male_hair_common_settings_skinshader
+		CAS_Male_Hair_Common_Settings_SkinShader
 		materials = [
-			m_clsc_hair_afro_primary
+			M_Clsc_Hair_Afro_Primary
 		]
-		acc_skeleton = skel_m_clsc_hair_afro
-		acc_ragdoll = rag_m_clsc_hair_afro
+		acc_skeleton = Skel_M_Clsc_Hair_Afro
+		acc_ragdoll = Rag_M_Clsc_Hair_Afro
 		acc_bones = [
-			bone_acc_head_01
-			bone_acc_head_02
-			bone_acc_head_03
-			bone_acc_head_04
-			bone_acc_head_05
-			bone_acc_head_06
-			bone_acc_head_07
-			bone_acc_head_08
-			bone_acc_head_09
+			Bone_ACC_Head_01
+			Bone_ACC_Head_02
+			Bone_ACC_Head_03
+			Bone_ACC_Head_04
+			Bone_ACC_Head_05
+			Bone_ACC_Head_06
+			Bone_ACC_Head_07
+			Bone_ACC_Head_08
+			Bone_ACC_Head_09
 		]
 	}
 	{
 		desc_id = m_glam_hathair_lapalms
 		mesh = 'models/CAR/Male/M_Glam_HatHair_LaPalms.skin'
 		deform_mesh = 'models/CAR/Male/M_Glam_HatHair_LaPalms_def.skin'
-		$cas_male_hat_hair_common_settings
-		acc_skeleton = skel_m_glam_hair_lapalms
-		acc_ragdoll = rag_m_glam_hair_lapalms
+		$CAS_Male_Hat_Hair_Common_Settings
+		acc_skeleton = Skel_M_Glam_Hair_LaPalms
+		acc_ragdoll = Rag_M_Glam_Hair_LaPalms
 		acc_bones = [
-			bone_acc_head_01
-			bone_acc_head_02
-			bone_acc_head_03
-			bone_acc_head_04
-			bone_acc_head_05
-			bone_acc_head_06
-			bone_acc_head_07
-			bone_acc_head_08
+			Bone_ACC_Head_01
+			Bone_ACC_Head_02
+			Bone_ACC_Head_03
+			Bone_ACC_Head_04
+			Bone_ACC_Head_05
+			Bone_ACC_Head_06
+			Bone_ACC_Head_07
+			Bone_ACC_Head_08
 		]
 	}
 	{
 		desc_id = m_glam_hathair_seagull
 		mesh = 'models/CAR/Male/M_Glam_HatHair_Seagull.skin'
 		deform_mesh = 'models/CAR/Male/M_Glam_HatHair_Seagull_def.skin'
-		$cas_male_hat_hair_common_settings
-		acc_skeleton = skel_m_glam_hair_seagull
-		acc_ragdoll = rag_m_glam_hair_seagull
+		$CAS_Male_Hat_Hair_Common_Settings
+		acc_skeleton = Skel_M_Glam_Hair_Seagull
+		acc_ragdoll = Rag_M_Glam_Hair_Seagull
 		acc_bones = [
-			bone_acc_head_01
-			bone_acc_head_02
-			bone_acc_head_03
-			bone_acc_head_04
-			bone_acc_head_05
-			bone_acc_head_06
-			bone_acc_head_07
-			bone_acc_head_08
-			bone_acc_head_09
+			Bone_ACC_Head_01
+			Bone_ACC_Head_02
+			Bone_ACC_Head_03
+			Bone_ACC_Head_04
+			Bone_ACC_Head_05
+			Bone_ACC_Head_06
+			Bone_ACC_Head_07
+			Bone_ACC_Head_08
+			Bone_ACC_Head_09
 		]
 	}
 	{
 		desc_id = m_glam_hathair_gold
 		mesh = 'models/CAR/Male/M_Glam_HatHair_Gold.skin'
 		deform_mesh = 'models/CAR/Male/M_Glam_HatHair_Gold_def.skin'
-		$cas_male_hat_hair_common_settings
-		acc_skeleton = skel_m_glam_hair_gold
-		acc_ragdoll = rag_m_glam_hair_gold
+		$CAS_Male_Hat_Hair_Common_Settings
+		acc_skeleton = Skel_M_Glam_Hair_Gold
+		acc_ragdoll = Rag_M_Glam_Hair_Gold
 		acc_bones = [
-			bone_acc_head_01
-			bone_acc_head_02
-			bone_acc_head_03
-			bone_acc_head_04
-			bone_acc_head_05
-			bone_acc_head_06
-			bone_acc_head_07
-			bone_acc_head_08
-			bone_acc_head_09
+			Bone_ACC_Head_01
+			Bone_ACC_Head_02
+			Bone_ACC_Head_03
+			Bone_ACC_Head_04
+			Bone_ACC_Head_05
+			Bone_ACC_Head_06
+			Bone_ACC_Head_07
+			Bone_ACC_Head_08
+			Bone_ACC_Head_09
 		]
 	}
 	{
 		desc_id = m_metl_hathair_axel
 		mesh = 'models/CAR/Male/M_Metl_HatHair_Axel.skin'
 		deform_mesh = 'models/CAR/Male/M_Metl_HatHair_Axel_def.skin'
-		$cas_male_hat_hair_common_settings
-		acc_skeleton = skel_m_metl_hair_axel
-		acc_ragdoll = rag_m_metl_hair_axel
+		$CAS_Male_Hat_Hair_Common_Settings
+		acc_skeleton = Skel_M_Metl_Hair_Axel
+		acc_ragdoll = Rag_M_Metl_Hair_Axel
 		acc_bones = [
-			bone_acc_head_01
-			bone_acc_head_02
-			bone_acc_head_03
-			bone_acc_head_04
-			bone_acc_head_05
-			bone_acc_head_06
-			bone_acc_head_07
-			bone_acc_head_08
-			bone_acc_head_09
+			Bone_ACC_Head_01
+			Bone_ACC_Head_02
+			Bone_ACC_Head_03
+			Bone_ACC_Head_04
+			Bone_ACC_Head_05
+			Bone_ACC_Head_06
+			Bone_ACC_Head_07
+			Bone_ACC_Head_08
+			Bone_ACC_Head_09
 		]
 	}
 	{
 		desc_id = m_metl_hathair_midhigh
 		mesh = 'models/CAR/Male/M_Metl_HatHair_MidHigh.skin'
 		deform_mesh = 'models/CAR/Male/M_Metl_HatHair_MidHigh_def.skin'
-		$cas_male_hat_hair_common_settings
-		acc_skeleton = skel_m_metl_hair_midhigh
-		acc_ragdoll = rag_m_metl_hair_midhigh
+		$CAS_Male_Hat_Hair_Common_Settings
+		acc_skeleton = Skel_M_Metl_Hair_MidHigh
+		acc_ragdoll = Rag_M_Metl_Hair_MidHigh
 		acc_bones = [
-			bone_acc_head_01
-			bone_acc_head_02
-			bone_acc_head_03
-			bone_acc_head_04
-			bone_acc_head_05
-			bone_acc_head_06
-			bone_acc_head_07
-			bone_acc_head_08
-			bone_acc_head_09
+			Bone_ACC_Head_01
+			Bone_ACC_Head_02
+			Bone_ACC_Head_03
+			Bone_ACC_Head_04
+			Bone_ACC_Head_05
+			Bone_ACC_Head_06
+			Bone_ACC_Head_07
+			Bone_ACC_Head_08
+			Bone_ACC_Head_09
 		]
 	}
 	{
 		desc_id = m_pop_hathair_buzz
 		mesh = 'models/CAR/Male/M_Pop_HatHair_Buzz.skin'
 		deform_mesh = 'models/CAR/Male/M_Pop_HatHair_Buzz_def.skin'
-		$cas_male_hair_common_settings_skinshader
+		$CAS_Male_Hair_Common_Settings_SkinShader
 	}
 	{
 		desc_id = m_pop_hathair_pomp
 		mesh = 'models/CAR/Male/M_Pop_HatHair_Pomp.skin'
 		deform_mesh = 'models/CAR/Male/M_Pop_HatHair_Pomp_def.skin'
-		$cas_male_hair_common_settings
-		acc_skeleton = skel_m_pop_hair_pomp
-		acc_ragdoll = rag_m_pop_hair_pomp
+		$CAS_Male_Hair_Common_Settings
+		acc_skeleton = Skel_M_Pop_Hair_Pomp
+		acc_ragdoll = Rag_M_Pop_Hair_Pomp
 		acc_bones = [
-			bone_acc_head_01
-			bone_acc_head_02
-			bone_acc_head_03
-			bone_acc_head_04
-			bone_acc_head_05
-			bone_acc_head_06
-			bone_acc_head_07
-			bone_acc_head_08
+			Bone_ACC_Head_01
+			Bone_ACC_Head_02
+			Bone_ACC_Head_03
+			Bone_ACC_Head_04
+			Bone_ACC_Head_05
+			Bone_ACC_Head_06
+			Bone_ACC_Head_07
+			Bone_ACC_Head_08
 		]
 	}
 	{
 		desc_id = m_pop_hathair_emo1
 		mesh = 'models/CAR/Male/M_Pop_HatHair_Emo1.skin'
 		deform_mesh = 'models/CAR/Male/M_Pop_HatHair_Emo1_def.skin'
-		$cas_male_hair_common_settings
-		acc_skeleton = skel_m_pop_hair_emo1
-		acc_ragdoll = rag_m_pop_hair_emo1
+		$CAS_Male_Hair_Common_Settings
+		acc_skeleton = Skel_M_Pop_Hair_Emo1
+		acc_ragdoll = Rag_M_Pop_Hair_Emo1
 		acc_bones = [
-			bone_acc_head_01
-			bone_acc_head_02
-			bone_acc_head_03
-			bone_acc_head_04
+			Bone_ACC_Head_01
+			Bone_ACC_Head_02
+			Bone_ACC_Head_03
+			Bone_ACC_Head_04
 		]
 	}
 	{
 		desc_id = m_punk_hathair_spike
 		mesh = 'models/CAR/Male/M_Punk_Hathair_Spike.skin'
 		deform_mesh = 'models/CAR/Male/M_Punk_Hathair_Spike_Def.skin'
-		$cas_male_hair_common_settings
-		acc_skeleton = skel_m_punk_hair_spike
-		acc_ragdoll = rag_m_punk_hair_spike
+		$CAS_Male_Hair_Common_Settings
+		acc_skeleton = Skel_M_Punk_Hair_Spike
+		acc_ragdoll = Rag_M_Punk_Hair_Spike
 		acc_bones = [
-			bone_acc_head_01
-			bone_acc_head_02
-			bone_acc_head_03
-			bone_acc_head_04
-			bone_acc_head_05
-			bone_acc_head_06
-			bone_acc_head_07
-			bone_acc_head_08
-			bone_acc_head_09
+			Bone_ACC_Head_01
+			Bone_ACC_Head_02
+			Bone_ACC_Head_03
+			Bone_ACC_Head_04
+			Bone_ACC_Head_05
+			Bone_ACC_Head_06
+			Bone_ACC_Head_07
+			Bone_ACC_Head_08
+			Bone_ACC_Head_09
 		]
 	}
 	{
 		desc_id = m_rock_hathair_drummer
 		mesh = 'models/CAR/Male/M_Rock_HatHair_Drummer.skin'
 		deform_mesh = 'models/CAR/Male/M_Rock_HatHair_Drummer_def.skin'
-		$cas_male_hat_hair_common_settings
-		acc_skeleton = skel_m_rock_hair_drummer
-		acc_ragdoll = rag_m_rock_hair_drummer
+		$CAS_Male_Hat_Hair_Common_Settings
+		acc_skeleton = Skel_M_Rock_Hair_Drummer
+		acc_ragdoll = Rag_M_Rock_Hair_Drummer
 		acc_bones = [
-			bone_acc_head_01
-			bone_acc_head_03
-			bone_acc_head_05
-			bone_acc_head_07
+			Bone_ACC_Head_01
+			Bone_ACC_Head_03
+			Bone_ACC_Head_05
+			Bone_ACC_Head_07
 		]
 	}
 	{
 		desc_id = m_rock_hathair_midpart
 		mesh = 'models/CAR/Male/M_Rock_HatHair_MidPart.skin'
 		deform_mesh = 'models/CAR/Male/M_Rock_HatHair_MidPart_def.skin'
-		$cas_male_hat_hair_common_settings
-		acc_skeleton = skel_m_rock_hair_midpart
-		acc_ragdoll = rag_m_rock_hair_midpart
+		$CAS_Male_Hat_Hair_Common_Settings
+		acc_skeleton = Skel_M_Rock_Hair_MidPart
+		acc_ragdoll = Rag_M_Rock_Hair_MidPart
 		acc_bones = [
-			bone_acc_head_01
-			bone_acc_head_02
-			bone_acc_head_03
-			bone_acc_head_04
-			bone_acc_head_05
-			bone_acc_head_06
-			bone_acc_head_07
+			Bone_ACC_Head_01
+			Bone_ACC_Head_02
+			Bone_ACC_Head_03
+			Bone_ACC_Head_04
+			Bone_ACC_Head_05
+			Bone_ACC_Head_06
+			Bone_ACC_Head_07
 		]
 	}
 	{
 		desc_id = m_rock_hathair_slash
 		mesh = 'models/CAR/Male/M_Rock_HatHair_Slash.skin'
-		$cas_male_hat_hair_common_settings
-		acc_skeleton = skel_m_rock_hair_slash
-		acc_ragdoll = rag_m_rock_hair_slash
+		$CAS_Male_Hat_Hair_Common_Settings
+		acc_skeleton = Skel_M_Rock_Hair_Slash
+		acc_ragdoll = Rag_M_Rock_Hair_Slash
 		acc_bones = [
-			bone_acc_head_01
-			bone_acc_head_02
-			bone_acc_head_03
-			bone_acc_head_04
-			bone_acc_head_05
-			bone_acc_head_06
-			bone_acc_head_07
-			bone_acc_head_08
-			bone_acc_head_09
+			Bone_ACC_Head_01
+			Bone_ACC_Head_02
+			Bone_ACC_Head_03
+			Bone_ACC_Head_04
+			Bone_ACC_Head_05
+			Bone_ACC_Head_06
+			Bone_ACC_Head_07
+			Bone_ACC_Head_08
+			Bone_ACC_Head_09
 		]
 	}
 	{
 		desc_id = m_rock_hathair_guitarist
 		mesh = 'models/CAR/Male/M_Rock_HatHair_Guitarist.skin'
 		deform_mesh = 'models/CAR/Male/M_Rock_HatHair_Guitarist_def.skin'
-		$cas_male_hair_common_settings
-		acc_skeleton = skel_m_rock_hair_guitarist
-		acc_ragdoll = rag_m_rock_hair_guitarist
+		$CAS_Male_Hair_Common_Settings
+		acc_skeleton = Skel_M_Rock_Hair_Guitarist
+		acc_ragdoll = Rag_M_Rock_Hair_Guitarist
 		acc_bones = [
-			bone_acc_head_02
-			bone_acc_head_03
-			bone_acc_head_04
-			bone_acc_head_05
-			bone_acc_head_06
-			bone_acc_head_07
-			bone_acc_head_08
-			bone_acc_head_09
+			Bone_ACC_Head_02
+			Bone_ACC_Head_03
+			Bone_ACC_Head_04
+			Bone_ACC_Head_05
+			Bone_ACC_Head_06
+			Bone_ACC_Head_07
+			Bone_ACC_Head_08
+			Bone_ACC_Head_09
 		]
 	}
 	{
 		desc_id = m_goth_hathair_devilock
 		mesh = 'models/CAR/Male/M_Goth_HatHair_Devilock.skin'
 		deform_mesh = 'models/CAR/Male/M_Goth_HatHair_Devilock_def.skin'
-		$cas_male_hat_hair_common_settings
-		acc_skeleton = skel_m_goth_hair_devilock
-		acc_ragdoll = rag_m_goth_hair_devilock
+		$CAS_Male_Hat_Hair_Common_Settings
+		acc_skeleton = Skel_M_Goth_Hair_Devilock
+		acc_ragdoll = Rag_M_Goth_Hair_Devilock
 		acc_bones = [
-			bone_acc_head_01
-			bone_acc_head_03
-			bone_acc_head_05
-			bone_acc_head_07
-			bone_acc_head_08
-			bone_acc_head_09
+			Bone_ACC_Head_01
+			Bone_ACC_Head_03
+			Bone_ACC_Head_05
+			Bone_ACC_Head_07
+			Bone_ACC_Head_08
+			Bone_ACC_Head_09
 		]
 	}
 	{
 		desc_id = m_goth_hathair_dreads
 		mesh = 'models/CAR/Male/M_Goth_HatHair_Dreads.skin'
 		deform_mesh = 'models/CAR/Male/M_Goth_HatHair_Dreads_def.skin'
-		cas_male_hair_common_settings_skinshader
+		CAS_Male_Hair_Common_Settings_SkinShader
 		materials = [
-			m_goth_hair_dreads_primary
+			M_Goth_Hair_Dreads_Primary
 		]
-		acc_skeleton = skel_m_goth_hair_dreads
-		acc_ragdoll = rag_m_goth_hair_dreads
+		acc_skeleton = Skel_M_Goth_Hair_Dreads
+		acc_ragdoll = Rag_M_Goth_Hair_Dreads
 		acc_bones = [
-			bone_acc_head_01
-			bone_acc_head_02
-			bone_acc_head_03
-			bone_acc_head_04
-			bone_acc_head_05
-			bone_acc_head_06
-			bone_acc_head_07
-			bone_acc_head_08
-			bone_acc_head_09
+			Bone_ACC_Head_01
+			Bone_ACC_Head_02
+			Bone_ACC_Head_03
+			Bone_ACC_Head_04
+			Bone_ACC_Head_05
+			Bone_ACC_Head_06
+			Bone_ACC_Head_07
+			Bone_ACC_Head_08
+			Bone_ACC_Head_09
 		]
 	}
 	{
 		desc_id = m_goth_hathair_remedy
 		mesh = 'models/CAR/Male/M_Goth_HatHair_Remedy.skin'
 		deform_mesh = 'models/CAR/Male/M_Goth_HatHair_Remedy_def.skin'
-		$cas_male_hair_common_settings
-		acc_skeleton = skel_m_goth_hair_remedy
-		acc_ragdoll = rag_m_goth_hair_remedy
+		$CAS_Male_Hair_Common_Settings
+		acc_skeleton = Skel_M_Goth_Hair_Remedy
+		acc_ragdoll = Rag_M_Goth_Hair_Remedy
 		acc_bones = [
-			bone_acc_head_01
-			bone_acc_head_02
-			bone_acc_head_03
-			bone_acc_head_04
-			bone_acc_head_05
-			bone_acc_head_06
-			bone_acc_head_07
+			Bone_ACC_Head_01
+			Bone_ACC_Head_02
+			Bone_ACC_Head_03
+			Bone_ACC_Head_04
+			Bone_ACC_Head_05
+			Bone_ACC_Head_06
+			Bone_ACC_Head_07
 		]
 	}
 ]
-cas_male_hat = [
+CAS_Male_Hat = [
 	{
-		desc_id = None
-		frontend_desc = qs(0x9c1b5214)
+		desc_id = none
+		frontend_desc = qs("None")
 		random_weight = 4.0
 	}
 	{
 		desc_id = m_clsc_hat_cowboy
-		frontend_desc = qs(0xffaea878)
+		frontend_desc = qs("\LColton")
 		mesh = 'models/CAR/Male/M_Clsc_Hat_Cowboy.skin'
 		deform_mesh = 'models/CAR/Male/M_Clsc_Hat_Cowboy_def.skin'
 		genre = [
-			`classic	rock`
+			`Classic Rock`
 		]
 		price = 200
 		random_weight = 0.25
@@ -1256,25 +1256,25 @@ cas_male_hat = [
 	}
 	{
 		desc_id = m_punk_hat_helmet
-		frontend_desc = qs(0xef1f656a)
+		frontend_desc = qs("\LRoad Fury")
 		mesh = 'models/CAR/Male/M_Punk_Hat_Helmet.skin'
 		deform_mesh = 'models/CAR/Male/M_Punk_Hat_Helmet_def.skin'
 		genre = [
-			punk
+			Punk
 		]
 		random_weight = 0.8
 		price = 450
 	}
 	{
 		desc_id = m_clsc_hat_cptn
-		frontend_desc = qs(0xeb12864d)
+		frontend_desc = qs("\LCaptain Nemo")
 		mesh = 'models/CAR/Male/M_Clsc_Hat_Cptn.skin'
 		materials = [
 			m_clsc_hat_cptn_primary
 		]
 		deform_mesh = 'models/CAR/Male/M_Clsc_Hat_Cptn_def.skin'
 		genre = [
-			`classic	rock`
+			`Classic Rock`
 		]
 		price = 300
 		random_weight = 0.1
@@ -1283,105 +1283,105 @@ cas_male_hat = [
 	}
 	{
 		desc_id = m_punk_hat_kfc
-		frontend_desc = qs(0xd6595358)
+		frontend_desc = qs("\LI Can't See")
 		mesh = 'models/CAR/Male/M_Punk_Hat_KFC.skin'
 		deform_mesh = 'models/CAR/Male/M_Punk_Hat_KFC_def.skin'
-		hat_hair = None
+		hat_hair = none
 		price = 800
 		locked
 		random_weight = 0.0
 	}
 	{
-		desc_id = m_fun_hat_eyeball
-		frontend_desc = qs(0x3b86ba16)
+		desc_id = M_Fun_Hat_EyeBall
+		frontend_desc = qs("\LEyeball")
 		mesh = 'models/CAR/Male/M_Fun_Hat_EyeBall.skin'
 		deform_mesh = 'models/CAR/Male/M_Fun_Hat_EyeBall_def.skin'
-		hat_hair = None
+		hat_hair = none
 		price = 150000
-		polaroid = p_m_fun_hat_eyeball
+		polaroid = P_M_Fun_Hat_EyeBall
 		locked
 		random_weight = 0.0
 	}
 	{
 		desc_id = m_clsc_hat_triangle
-		frontend_desc = qs(0xa1bdcefb)
+		frontend_desc = qs("\LArr Me Matey")
 		mesh = 'models/CAR/Male/M_Clsc_Hat_Triangle.skin'
 		materials = [
-			m_clsc_hat_triangle_primary
-			m_clsc_hat_triangle_secondary
+			M_Clsc_Hat_Triangle_Primary
+			M_Clsc_Hat_Triangle_Secondary
 		]
 		genre = [
-			`classic	rock`
+			`Classic Rock`
 		]
 		price = 500
 		random_weight = 0.0
 		locked
-		polaroid = p_m_clsc_hat_triangle
+		polaroid = P_M_Clsc_Hat_Triangle
 	}
 	{
 		desc_id = m_pop_hat_bucket
-		frontend_desc = qs(0xff1d662e)
+		frontend_desc = qs("\LFedora Spunk")
 		mesh = 'models/CAR/Male/M_Pop_Hat_Bucket.skin'
 		deform_mesh = 'models/CAR/Male/M_Pop_Hat_Bucket_def.skin'
 		materials = [
-			m_pop_hat_bucket_primary
-			m_pop_hat_bucket_secondary
+			M_Pop_Hat_Bucket_Primary
+			M_Pop_Hat_Bucket_Secondary
 		]
 		genre = [
-			pop
+			Pop
 		]
 		price = 125
 		random_weight = 0.5
 	}
 	{
 		desc_id = m_pop_hat_bucket2
-		frontend_desc = qs(0x520453e4)
+		frontend_desc = qs("\LGoin' Fishin'")
 		mesh = 'models/CAR/Male/M_Pop_Hat_Bucket2.skin'
 		deform_mesh = 'models/CAR/Male/M_Pop_Hat_Bucket2_def.skin'
 		materials = [
-			m_pop_hat_bucket2_primary
-			m_pop_hat_bucket2_secondary
+			M_Pop_Hat_Bucket2_Primary
+			M_Pop_Hat_Bucket2_Secondary
 		]
 		genre = [
-			pop
+			Pop
 		]
 		price = 125
 		random_weight = 0.5
 	}
 	{
-		desc_id = m_pop_head_gasmask
-		frontend_desc = qs(0x0039dd19)
+		desc_id = M_Pop_Head_GasMask
+		frontend_desc = qs("\LGas Mask")
 		mesh = 'models/CAR/Male/M_Pop_Head_GasMask.skin'
 		deform_mesh = 'models/CAR/Male/M_Pop_Head_GasMask_def.skin'
 		materials = [
-			m_pop_head_gasmask_mask
+			M_Pop_Head_Gasmask_Mask
 		]
-		hat_hair = None
+		hat_hair = none
 		price = 5000
-		polaroid = p_f_pop_head_gasmask
+		polaroid = P_F_Pop_Head_GasMask
 		locked
 		random_weight = 0.0
 	}
 	{
-		desc_id = m_pop_head_ww2helm
-		frontend_desc = qs(0xa1ed9a95)
+		desc_id = M_Pop_Head_WW2Helm
+		frontend_desc = qs("\LCorporal Rawk")
 		mesh = 'models/CAR/Male/M_Pop_Head_WW2Helm.skin'
 		deform_mesh = 'models/CAR/Male/M_Pop_Head_WW2Helm_def.skin'
 		price = 800
 		random_weight = 0.0
 		locked
-		polaroid = p_m_pop_hat_ww2helm
+		polaroid = P_M_Pop_Hat_WW2Helm
 	}
 	{
 		desc_id = m_rock_hat_starpin
-		frontend_desc = qs(0x4be7facb)
+		frontend_desc = qs("\LStar Pin")
 		mesh = 'models/CAR/Male/M_Rock_Hat_Starpin.skin'
 		deform_mesh = 'models/CAR/Male/M_Rock_Hat_Starpin_def.skin'
 		materials = [
-			m_rock_hat_starpin_primary
+			M_Rock_Hat_Starpin_Primary
 		]
 		genre = [
-			rock
+			Rock
 		]
 		price = 175
 		random_weight = 0.25
@@ -1390,56 +1390,56 @@ cas_male_hat = [
 	}
 	{
 		desc_id = m_rock_hat_cowboy
-		frontend_desc = qs(0x2e4734b1)
+		frontend_desc = qs("\LStinking Bandana")
 		mesh = 'models/CAR/Male/M_Rock_Hat_Cowboy.skin'
 		deform_mesh = 'models/CAR/Male/M_Rock_Hat_Cowboy_def.skin'
 		materials = [
-			m_rock_hat_cowboy_primary
-			m_rock_hat_cowboy_secondary
+			M_Rock_Hat_Cowboy_Primary
+			M_Rock_Hat_Cowboy_Secondary
 		]
 		genre = [
-			rock
+			Rock
 		]
 		price = 250
 		random_weight = 0.25
 	}
 	{
 		desc_id = m_metl_hat_zakk
-		frontend_desc = qs(0xf8ed58a5)
+		frontend_desc = qs("\LOC")
 		mesh = 'models/CAR/Male/M_Metl_Hat_Zakk.skin'
 		deform_mesh = 'models/CAR/Male/M_Metl_Hat_Zakk_def.skin'
 		genre = [
-			`heavy	metal`
+			`Heavy Metal`
 		]
 		price = 400
 		random_weight = 0.25
 	}
 	{
 		desc_id = m_metl_hat_axel2
-		frontend_desc = qs(0xc2879778)
+		frontend_desc = qs("\LPride")
 		mesh = 'models/CAR/Male/M_Metl_Hat_Axel2.skin'
 		deform_mesh = 'models/CAR/Male/M_Metl_Hat_Axel2_def.skin'
 		genre = [
-			`heavy	metal`
+			`Heavy Metal`
 		]
 		price = 150
 		random_weight = 0.4
 	}
 	{
-		desc_id = m_metl_hat_studs
-		frontend_desc = qs(0x3e025606)
+		desc_id = M_Metl_Hat_Studs
+		frontend_desc = qs("\LBiker Cruise")
 		mesh = 'models/CAR/Male/M_Metl_Hat_Studs.skin'
 		deform_mesh = 'models/CAR/Male/M_Metl_Hat_Studs_def.skin'
 		genre = [
-			`heavy	metal`
+			`Heavy Metal`
 		]
 		price = 400
 		locked
 		random_weight = 0.0
 	}
 	{
-		desc_id = m_metl_horn
-		frontend_desc = qs(0x6fea43c1)
+		desc_id = M_Metl_Horn
+		frontend_desc = qs("\LLonghorns")
 		mesh = 'models/CAR/Male/M_Metl_acc_Horn.skin'
 		deform_mesh = 'models/CAR/Male/M_Metl_acc_Horn_def.skin'
 		materials = [
@@ -1448,7 +1448,7 @@ cas_male_hat = [
 		]
 		hat_hair = original_hair
 		genre = [
-			`heavy	metal`
+			`Heavy Metal`
 		]
 		random_weight = 0.0
 		locked
@@ -1456,36 +1456,36 @@ cas_male_hat = [
 	}
 	{
 		desc_id = m_bmtl_hat_chicken
-		frontend_desc = qs(0x5db621d5)
+		frontend_desc = qs("\LOver Easy")
 		mesh = 'models/CAR/Male/M_Bmtl_Hat_Chicken.skin'
 		materials = [
-			m_bmtl_hat_chicken_primary
-			m_bmtl_hat_chicken_secondary
+			M_Bmtl_Hat_Chicken_Primary
+			M_Bmtl_Hat_Chicken_Secondary
 		]
-		hat_hair = None
+		hat_hair = none
 		price = 500000
-		polaroid = p_m_bmtl_hat_chicken
+		polaroid = P_M_Bmtl_Hat_Chicken
 		locked
 		random_weight = 0.0
 	}
 	{
-		desc_id = m_bmtl_hat_viking
-		frontend_desc = qs(0xbbf00af8)
+		desc_id = M_Bmtl_Hat_Viking
+		frontend_desc = qs("\LFriedrich's Helm")
 		mesh = 'models/CAR/Male/M_Bmtl_Hat_Viking.skin'
 		deform_mesh = 'models/CAR/Male/M_Bmtl_Hat_Viking_def.skin'
 		genre = [
-			`black	metal`
+			`Black Metal`
 		]
-		hat_hair = None
+		hat_hair = none
 		price = 25000
 		random_weight = 0.25
 		random_weight_cpu = 0.0
 		locked
-		polaroid = p_f_bmtl_hat_viking
+		polaroid = P_F_Bmtl_Hat_Viking
 	}
 	{
-		desc_id = m_bmtl_hat_skullhelmet
-		frontend_desc = qs(0xea89ff84)
+		desc_id = M_Bmtl_Hat_SkullHelmet
+		frontend_desc = qs("\LSkullgorth")
 		mesh = 'models/CAR/Male/M_Bmtl_Hat_SkullHelmet.skin'
 		materials = [
 			m_bmtl_hat_skullhelmet_primary
@@ -1493,22 +1493,22 @@ cas_male_hat = [
 		]
 		deform_mesh = 'models/CAR/Male/M_Bmtl_Hat_SkullHelmet_def.skin'
 		genre = [
-			`black	metal`
+			`Black Metal`
 		]
-		hat_hair = None
+		hat_hair = none
 		price = 6066
 		random_weight = 0.5
 		random_weight_cpu = 0.1
 		locked
-		polaroid = p_m_bmtl_hat_skullhelmet
+		polaroid = P_M_Bmtl_Hat_SkullHelmet
 	}
 	{
-		desc_id = m_bmtl_hat_brain
-		frontend_desc = qs(0xe5baded2)
+		desc_id = M_Bmtl_Hat_Brain
+		frontend_desc = qs("\LCortex")
 		mesh = 'models/CAR/Male/M_Bmtl_Hat_Brain.skin'
 		deform_mesh = 'models/CAR/Male/M_Bmtl_Hat_Brain_def.skin'
 		genre = [
-			`black	metal`
+			`Black Metal`
 		]
 		material_groups = [
 			{
@@ -1519,63 +1519,63 @@ cas_male_hat = [
 			}
 			{
 				materials = [
-					m_bmtl_hat_brain_secondary
+					M_Bmtl_Hat_Brain_Secondary
 				]
 				shader = $cas_shader_skin
 			}
 		]
-		hat_hair = None
+		hat_hair = none
 		price = 100000
 		random_weight = 0.0
 	}
 	{
 		desc_id = m_goth_hat_tophat
-		frontend_desc = qs(0xd9f3b456)
+		frontend_desc = qs("\LTop Hat")
 		mesh = 'models/CAR/Male/M_Goth_Hat_TopHat.skin'
 		deform_mesh = 'models/CAR/Male/M_Goth_Hat_TopHat_def.skin'
-		$cas_male_hair_common_settings
+		$CAS_Male_Hair_Common_Settings
 		material_groups = [
 			{
 				materials = [
-					m_goth_acc_tophat_primary
+					M_Goth_Acc_TopHat_Primary
 				]
 				shader = $cas_shader_hair
 			}
 			{
 				materials = [
-					m_goth_acc_tophat_secondary
+					M_Goth_Acc_TopHat_Secondary
 				]
 				shader = $cas_shader_skin
 			}
 		]
 		genre = [
-			goth
+			Goth
 		]
 		price = 450
 		random_weight = 0.25
 		random_weight_cpu = 0.0
 		locked
-		polaroid = p_m_goth_hat_tophat
+		polaroid = P_M_Goth_Hat_TopHat
 	}
 	{
-		desc_id = m_hat_ninja_c1
-		frontend_desc = qs(0x97d60449)
+		desc_id = M_Hat_Ninja_c1
+		frontend_desc = qs("\LNinja Mask")
 		mesh = 'models/CAR/Male/M_Hat_Ninja_c1.skin'
 		deform_mesh = 'models/CAR/Male/M_Hat_Ninja_c1_def.skin'
 		materials = [
-			m_hat_ninja_c1_primary
-			m_hat_ninja_c1_secondary
+			M_Hat_Ninja_c1_Primary
+			M_Hat_Ninja_c1_Secondary
 		]
-		hat_hair = None
+		hat_hair = none
 		price = 500
 		random_weight = 0.0
 	}
 	{
-		desc_id = m_hat_gorilla
-		frontend_desc = qs(0x6d95532b)
+		desc_id = M_Hat_Gorilla
+		frontend_desc = qs("\LSimian")
 		mesh = 'models/CAR/Male/M_Hat_Gorilla.skin'
 		deform_mesh = 'models/CAR/Male/M_Hat_Gorilla_def.skin'
-		hat_hair = None
+		hat_hair = none
 		materials = [
 			m_hat_gorilla_primary
 		]
@@ -1583,8 +1583,8 @@ cas_male_hat = [
 		random_weight = 0.0
 	}
 	{
-		desc_id = m_hat_pimp
-		frontend_desc = qs(0xd8a55f8a)
+		desc_id = M_Hat_Pimp
+		frontend_desc = qs("\L8 Track Playa")
 		mesh = 'models/CAR/Male/M_Hat_Pimp.skin'
 		deform_mesh = 'models/CAR/Male/M_Hat_Pimp_def.skin'
 		materials = [
@@ -1598,137 +1598,137 @@ cas_male_hat = [
 		random_weight = 0.0
 	}
 ]
-cas_male_facial_hair_common_settings = {
+CAS_Male_Facial_Hair_Common_Settings = {
 	modify_all_materials
 	shader = $cas_shader_hair
 	random_weight = 0.0
 }
-cas_male_facial_hair = [
+CAS_Male_Facial_Hair = [
 	{
-		desc_id = None
-		frontend_desc = qs(0x9c1b5214)
+		desc_id = none
+		frontend_desc = qs("None")
 		random_weight = 25.0
 	}
 	{
-		desc_id = m_rock_fhair_stub
-		frontend_desc = qs(0x4371be74)
+		desc_id = M_Rock_Fhair_Stub
+		frontend_desc = qs("\LFive O'Clock")
 		mesh = 'models/CAR/Male/M_Rock_Fhair_Stub.skin'
 		deform_mesh = 'models/CAR/Male/M_Rock_Fhair_Stub_def.skin'
-		$cas_male_hair_common_settings_skinshader
+		$CAS_Male_Hair_Common_Settings_SkinShader
 		random_weight = 0.0
 	}
 	{
 		desc_id = m_clsc_fhair_soulpatch
-		frontend_desc = qs(0x507ad5bb)
+		frontend_desc = qs("\LSoul Patch")
 		mesh = 'models/CAR/Male/M_Clsc_FHair_Soulpatch.skin'
 		deform_mesh = 'models/CAR/Male/M_Clsc_FHair_Soulpatch_def.skin'
-		$cas_male_hair_common_settings_skinshader
+		$CAS_Male_Hair_Common_Settings_SkinShader
 		materials = [
-			m_clsc_fhair_soulpatch_primary
+			M_Clsc_FHair_Soulpatch_Primary
 		]
 		random_weight = 0.0
 	}
 	{
-		desc_id = m_rock_fhair_goatee03
-		frontend_desc = qs(0x963b21da)
+		desc_id = M_Rock_Fhair_Goatee03
+		frontend_desc = qs("\LRock Bottom")
 		mesh = 'models/CAR/Male/M_Rock_Fhair_Goatee03.skin'
 		deform_mesh = 'models/CAR/Male/M_Rock_Fhair_Goatee03_def.skin'
-		$cas_male_hair_common_settings
+		$CAS_Male_Hair_Common_Settings
 		random_weight = 1.0
 	}
 	{
-		desc_id = m_rock_fhair_goatee01
-		frontend_desc = qs(0x51861c55)
+		desc_id = M_Rock_Fhair_Goatee01
+		frontend_desc = qs("\LGoatee Lish")
 		mesh = 'models/CAR/Male/M_Rock_Fhair_Goatee01.skin'
 		deform_mesh = 'models/CAR/Male/M_Rock_Fhair_Goatee01_def.skin'
-		$cas_male_hair_common_settings
+		$CAS_Male_Hair_Common_Settings
 		random_weight = 1.0
 	}
 	{
 		desc_id = m_rock_fhair_goatee02
-		frontend_desc = qs(0x3ffb7e3d)
+		frontend_desc = qs("\LFine Goatee")
 		mesh = 'models/CAR/Male/M_Rock_Fhair_Goatee02.skin'
 		deform_mesh = 'models/CAR/Male/M_Rock_Fhair_Goatee02_def.skin'
-		$cas_male_hair_common_settings
+		$CAS_Male_Hair_Common_Settings
 		random_weight = 1.0
 	}
 	{
-		desc_id = m_clsc_fhair_stache01
-		frontend_desc = qs(0xb4651acf)
+		desc_id = M_Clsc_Fhair_Stache01
+		frontend_desc = qs("\LThe Stache")
 		mesh = 'models/CAR/Male/M_Clsc_Fhair_Stache01.skin'
 		deform_mesh = 'models/CAR/Male/M_Clsc_Fhair_Stache01_def.skin'
-		$cas_male_hair_common_settings
+		$CAS_Male_Hair_Common_Settings
 		random_weight = 0.0
 	}
 	{
-		desc_id = m_clsc_fhair_stache04
-		frontend_desc = qs(0xe1760794)
+		desc_id = M_Clsc_Fhair_Stache04
+		frontend_desc = qs("\LBiker Stache")
 		mesh = 'models/CAR/Male/M_Clsc_Fhair_Stache02.skin'
 		deform_mesh = 'models/CAR/Male/M_Clsc_Fhair_Stache02_def.skin'
-		$cas_male_hair_common_settings
+		$CAS_Male_Hair_Common_Settings
 		random_weight = 0.0
 	}
 	{
-		desc_id = m_clsc_fhair_burns01
-		frontend_desc = qs(0xeb07e68a)
+		desc_id = M_Clsc_Fhair_Burns01
+		frontend_desc = qs("\LMetal Chops")
 		mesh = 'models/CAR/Male/M_Rock_Fhair_Burns01.skin'
 		deform_mesh = 'models/CAR/Male/M_Rock_Fhair_Burns01_def.skin'
-		$cas_male_hair_common_settings
+		$CAS_Male_Hair_Common_Settings
 		random_weight = 0.0
 	}
 	{
 		desc_id = m_bmtl_fhair_beard
-		frontend_desc = qs(0xecf78185)
+		frontend_desc = qs("\LBeardy")
 		mesh = 'models/CAR/Male/M_Bmtl_FHair_Beard.skin'
 		deform_mesh = 'models/CAR/Male/M_Bmtl_FHair_Beard_def.skin'
-		$cas_male_hair_common_settings
+		$CAS_Male_Hair_Common_Settings
 		random_weight = 0.0
 	}
 	{
-		desc_id = m_clsc_fhair_country
-		frontend_desc = qs(0xddb9e702)
+		desc_id = M_Clsc_Fhair_Country
+		frontend_desc = qs("\LRural Beardness")
 		mesh = 'models/CAR/Male/M_Clsc_Fhair_Country.skin'
 		deform_mesh = 'models/CAR/Male/M_Clsc_Fhair_Country_def.skin'
-		$cas_male_hair_common_settings
+		$CAS_Male_Hair_Common_Settings
 		random_weight = 0.0
 	}
 ]
-cas_male_age = [
+CAS_Male_Age = [
 	{
-		desc_id = car_male_teen
-		frontend_desc = qs(0xe40e025b)
+		desc_id = CAR_Male_Teen
+		frontend_desc = qs("Teen")
 	}
 	{
-		desc_id = car_male_mature
+		desc_id = CAR_Male_Mature
 		replace = 'tex/models/Characters/car/male/car_male_head_n.dds'
 		with = 'tex/models/Characters/Layers/CAR/Male/Age/CAR_Male_Age03_N.dds'
 		replace2 = 'tex/models/Characters/car/male/car_male_head_d.dds'
 		with2 = 'tex/models/Characters/Layers/CAR/Male/Age/CAR_male_Age03_D.dds'
-		frontend_desc = qs(0xbe8a142d)
-		in = cas_body
-		in2 = cas_body
+		frontend_desc = qs("Mature")
+		in = CAS_Body
+		in2 = CAS_Body
 		random_weight = 0.25
 	}
 	{
-		desc_id = car_male_aged
+		desc_id = CAR_Male_Aged
 		replace = 'tex/models/Characters/car/male/car_male_head_n.dds'
 		with = 'tex/models/Characters/Layers/CAR/Male/Age/CAR_Male_Age04_N.dds'
 		replace2 = 'tex/models/Characters/car/male/car_male_head_d.dds'
 		with2 = 'tex/models/Characters/Layers/CAR/Male/Age/CAR_male_Age04_D.dds'
-		frontend_desc = qs(0x67727495)
-		in = cas_body
-		in2 = cas_body
+		frontend_desc = qs("Aged")
+		in = CAS_Body
+		in2 = CAS_Body
 		random_weight = 0.0
 	}
 	{
-		desc_id = car_male_old
+		desc_id = CAR_Male_Old
 		replace = 'tex/models/Characters/car/male/car_male_head_n.dds'
 		with = 'tex/models/Characters/Layers/CAR/Male/Age/CAR_Male_Age05_N.dds'
 		replace2 = 'tex/models/Characters/car/male/car_male_head_d.dds'
 		with2 = 'tex/models/Characters/Layers/CAR/Male/Age/CAR_male_Age05_D.dds'
-		frontend_desc = qs(0xc05200fd)
-		in = cas_body
-		in2 = cas_body
+		frontend_desc = qs("Old")
+		in = CAS_Body
+		in2 = CAS_Body
 		random_weight = 0.0
 	}
 ]

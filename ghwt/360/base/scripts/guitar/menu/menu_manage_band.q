@@ -12,14 +12,14 @@ script menu_manage_band_delete_band
 endscript
 
 script menu_manage_band_edit_logo_focus 
-	SpawnScriptNow \{task_menu_default_anim_in
+	spawnscriptnow \{task_menu_default_anim_in
 		params = {
 			base_name = 'options_manage_band_logo'
 		}}
 endscript
 
 script menu_manage_band_edit_logo_unfocus 
-	SpawnScriptNow \{task_menu_default_anim_in
+	spawnscriptnow \{task_menu_default_anim_in
 		params = {
 			base_name = 'character_hub'
 		}}

@@ -1,111 +1,111 @@
-l_drum_loops_notempo_anims_set = {
+L_DRUM_Loops_NoTempo_anims_set = {
 	Stance_A = {
 		Idle = {
 			good = {
-				slow = [
-					drum_andy_standardlp_notempo
+				Slow = [
+					Drum_Andy_StandardLP_NoTempo
 				]
-				med = [
-					drum_andy_standardlp_notempo
+				Med = [
+					Drum_Andy_StandardLP_NoTempo
 				]
-				FAST = [
-					drum_andy_standardlp_notempo
+				Fast = [
+					Drum_Andy_StandardLP_NoTempo
 				]
 			}
 			Normal = {
-				slow = [
-					drum_andy_standardlp_notempo
+				Slow = [
+					Drum_Andy_StandardLP_NoTempo
 				]
-				med = [
-					drum_andy_standardlp_notempo
+				Med = [
+					Drum_Andy_StandardLP_NoTempo
 				]
-				FAST = [
-					drum_andy_standardlp_notempo
+				Fast = [
+					Drum_Andy_StandardLP_NoTempo
 				]
 			}
-			bad = {
-				slow = [
-					drum_andy_standardlp_notempo
+			Bad = {
+				Slow = [
+					Drum_Andy_StandardLP_NoTempo
 				]
-				med = [
-					drum_andy_standardlp_notempo
+				Med = [
+					Drum_Andy_StandardLP_NoTempo
 				]
-				FAST = [
-					drum_andy_standardlp_notempo
+				Fast = [
+					Drum_Andy_StandardLP_NoTempo
 				]
 			}
 		}
 	}
-	Stance_B = {
+	stance_b = {
 		Idle = {
 			good = {
-				slow = [
-					drum_andy_standardlp_notempo
+				Slow = [
+					Drum_Andy_StandardLP_NoTempo
 				]
-				med = [
-					drum_andy_standardlp_notempo
+				Med = [
+					Drum_Andy_StandardLP_NoTempo
 				]
-				FAST = [
-					drum_andy_standardlp_notempo
+				Fast = [
+					Drum_Andy_StandardLP_NoTempo
 				]
 			}
 			Normal = {
-				slow = [
-					drum_andy_standardlp_notempo
+				Slow = [
+					Drum_Andy_StandardLP_NoTempo
 				]
-				med = [
-					drum_andy_standardlp_notempo
+				Med = [
+					Drum_Andy_StandardLP_NoTempo
 				]
-				FAST = [
-					drum_andy_standardlp_notempo
+				Fast = [
+					Drum_Andy_StandardLP_NoTempo
 				]
 			}
-			bad = {
-				slow = [
-					drum_andy_standardlp_notempo
+			Bad = {
+				Slow = [
+					Drum_Andy_StandardLP_NoTempo
 				]
-				med = [
-					drum_andy_standardlp_notempo
+				Med = [
+					Drum_Andy_StandardLP_NoTempo
 				]
-				FAST = [
-					drum_andy_standardlp_notempo
+				Fast = [
+					Drum_Andy_StandardLP_NoTempo
 				]
 			}
 		}
 	}
-	Stance_C = {
+	stance_c = {
 		Idle = {
 			good = {
-				slow = [
-					drum_andy_standardlp_notempo
+				Slow = [
+					Drum_Andy_StandardLP_NoTempo
 				]
-				med = [
-					drum_andy_standardlp_notempo
+				Med = [
+					Drum_Andy_StandardLP_NoTempo
 				]
-				FAST = [
-					drum_andy_standardlp_notempo
+				Fast = [
+					Drum_Andy_StandardLP_NoTempo
 				]
 			}
 			Normal = {
-				slow = [
-					drum_andy_standardlp_notempo
+				Slow = [
+					Drum_Andy_StandardLP_NoTempo
 				]
-				med = [
-					drum_andy_standardlp_notempo
+				Med = [
+					Drum_Andy_StandardLP_NoTempo
 				]
-				FAST = [
-					drum_andy_standardlp_notempo
+				Fast = [
+					Drum_Andy_StandardLP_NoTempo
 				]
 			}
-			bad = {
-				slow = [
-					drum_andy_standardlp_notempo
+			Bad = {
+				Slow = [
+					Drum_Andy_StandardLP_NoTempo
 				]
-				med = [
-					drum_andy_standardlp_notempo
+				Med = [
+					Drum_Andy_StandardLP_NoTempo
 				]
-				FAST = [
-					drum_andy_standardlp_notempo
+				Fast = [
+					Drum_Andy_StandardLP_NoTempo
 				]
 			}
 		}
@@ -113,184 +113,184 @@ l_drum_loops_notempo_anims_set = {
 	stance_d = {
 		Idle = {
 			good = {
-				slow = [
-					drum_andy_standardlp_notempo
+				Slow = [
+					Drum_Andy_StandardLP_NoTempo
 				]
-				med = [
-					drum_andy_standardlp_notempo
+				Med = [
+					Drum_Andy_StandardLP_NoTempo
 				]
-				FAST = [
-					drum_andy_standardlp_notempo
+				Fast = [
+					Drum_Andy_StandardLP_NoTempo
 				]
 			}
 			Normal = {
-				slow = [
-					drum_andy_standardlp_notempo
+				Slow = [
+					Drum_Andy_StandardLP_NoTempo
 				]
-				med = [
-					drum_andy_standardlp_notempo
+				Med = [
+					Drum_Andy_StandardLP_NoTempo
 				]
-				FAST = [
-					drum_andy_standardlp_notempo
+				Fast = [
+					Drum_Andy_StandardLP_NoTempo
 				]
 			}
-			bad = {
-				slow = [
-					drum_andy_standardlp_notempo
+			Bad = {
+				Slow = [
+					Drum_Andy_StandardLP_NoTempo
 				]
-				med = [
-					drum_andy_standardlp_notempo
+				Med = [
+					Drum_Andy_StandardLP_NoTempo
 				]
-				FAST = [
-					drum_andy_standardlp_notempo
+				Fast = [
+					Drum_Andy_StandardLP_NoTempo
 				]
 			}
 		}
 	}
-	stance_e = {
+	stance_E = {
 		Idle = {
 			good = {
-				slow = [
-					drum_andy_standardlp_notempo
+				Slow = [
+					Drum_Andy_StandardLP_NoTempo
 				]
-				med = [
-					drum_andy_standardlp_notempo
+				Med = [
+					Drum_Andy_StandardLP_NoTempo
 				]
-				FAST = [
-					drum_andy_standardlp_notempo
+				Fast = [
+					Drum_Andy_StandardLP_NoTempo
 				]
 			}
 			Normal = {
-				slow = [
-					drum_andy_standardlp_notempo
+				Slow = [
+					Drum_Andy_StandardLP_NoTempo
 				]
-				med = [
-					drum_andy_standardlp_notempo
+				Med = [
+					Drum_Andy_StandardLP_NoTempo
 				]
-				FAST = [
-					drum_andy_standardlp_notempo
+				Fast = [
+					Drum_Andy_StandardLP_NoTempo
 				]
 			}
-			bad = {
-				slow = [
-					drum_andy_standardlp_notempo
+			Bad = {
+				Slow = [
+					Drum_Andy_StandardLP_NoTempo
 				]
-				med = [
-					drum_andy_standardlp_notempo
+				Med = [
+					Drum_Andy_StandardLP_NoTempo
 				]
-				FAST = [
-					drum_andy_standardlp_notempo
+				Fast = [
+					Drum_Andy_StandardLP_NoTempo
 				]
 			}
 		}
 	}
-	stance_f = {
+	Stance_F = {
 		Idle = {
 			good = {
-				slow = [
-					drum_andy_standardlp_notempo
+				Slow = [
+					Drum_Andy_StandardLP_NoTempo
 				]
-				med = [
-					drum_andy_standardlp_notempo
+				Med = [
+					Drum_Andy_StandardLP_NoTempo
 				]
-				FAST = [
-					drum_andy_standardlp_notempo
+				Fast = [
+					Drum_Andy_StandardLP_NoTempo
 				]
 			}
 			Normal = {
-				slow = [
-					drum_andy_standardlp_notempo
+				Slow = [
+					Drum_Andy_StandardLP_NoTempo
 				]
-				med = [
-					drum_andy_standardlp_notempo
+				Med = [
+					Drum_Andy_StandardLP_NoTempo
 				]
-				FAST = [
-					drum_andy_standardlp_notempo
+				Fast = [
+					Drum_Andy_StandardLP_NoTempo
 				]
 			}
-			bad = {
-				slow = [
-					drum_andy_standardlp_notempo
+			Bad = {
+				Slow = [
+					Drum_Andy_StandardLP_NoTempo
 				]
-				med = [
-					drum_andy_standardlp_notempo
+				Med = [
+					Drum_Andy_StandardLP_NoTempo
 				]
-				FAST = [
-					drum_andy_standardlp_notempo
+				Fast = [
+					Drum_Andy_StandardLP_NoTempo
 				]
 			}
 		}
 	}
-	stance_g = {
+	Stance_G = {
 		Idle = {
 			good = {
-				slow = [
-					drum_andy_standardlp_notempo
+				Slow = [
+					Drum_Andy_StandardLP_NoTempo
 				]
-				med = [
-					drum_andy_standardlp_notempo
+				Med = [
+					Drum_Andy_StandardLP_NoTempo
 				]
-				FAST = [
-					drum_andy_standardlp_notempo
+				Fast = [
+					Drum_Andy_StandardLP_NoTempo
 				]
 			}
 			Normal = {
-				slow = [
-					drum_andy_standardlp_notempo
+				Slow = [
+					Drum_Andy_StandardLP_NoTempo
 				]
-				med = [
-					drum_andy_standardlp_notempo
+				Med = [
+					Drum_Andy_StandardLP_NoTempo
 				]
-				FAST = [
-					drum_andy_standardlp_notempo
+				Fast = [
+					Drum_Andy_StandardLP_NoTempo
 				]
 			}
-			bad = {
-				slow = [
-					drum_andy_standardlp_notempo
+			Bad = {
+				Slow = [
+					Drum_Andy_StandardLP_NoTempo
 				]
-				med = [
-					drum_andy_standardlp_notempo
+				Med = [
+					Drum_Andy_StandardLP_NoTempo
 				]
-				FAST = [
-					drum_andy_standardlp_notempo
+				Fast = [
+					Drum_Andy_StandardLP_NoTempo
 				]
 			}
 		}
 	}
-	hth_notempo = {
+	HTH_NoTempo = {
 		Idle = {
 			good = {
-				slow = [
-					drum_hth_loop_notempo
+				Slow = [
+					Drum_HTH_Loop_NoTempo
 				]
-				med = [
-					drum_hth_loop_notempo
+				Med = [
+					Drum_HTH_Loop_NoTempo
 				]
-				FAST = [
-					drum_hth_loop_notempo
+				Fast = [
+					Drum_HTH_Loop_NoTempo
 				]
 			}
 			Normal = {
-				slow = [
-					drum_hth_loop_notempo
+				Slow = [
+					Drum_HTH_Loop_NoTempo
 				]
-				med = [
-					drum_hth_loop_notempo
+				Med = [
+					Drum_HTH_Loop_NoTempo
 				]
-				FAST = [
-					drum_hth_loop_notempo
+				Fast = [
+					Drum_HTH_Loop_NoTempo
 				]
 			}
-			bad = {
-				slow = [
-					drum_hth_loop_notempo
+			Bad = {
+				Slow = [
+					Drum_HTH_Loop_NoTempo
 				]
-				med = [
-					drum_hth_loop_notempo
+				Med = [
+					Drum_HTH_Loop_NoTempo
 				]
-				FAST = [
-					drum_hth_loop_notempo
+				Fast = [
+					Drum_HTH_Loop_NoTempo
 				]
 			}
 		}

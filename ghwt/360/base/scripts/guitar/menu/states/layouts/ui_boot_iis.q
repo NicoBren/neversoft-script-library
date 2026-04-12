@@ -4,10 +4,10 @@ invalid_controller_lock = 0
 
 script ui_init_boot_iis 
 	ReAcquireControllers
-	Change \{primary_controller_assigned = 0}
-	Change \{respond_to_signin_changed = 0}
-	SoundEvent \{event = menu_guitar_lick_sfx}
-	SpawnScriptNow \{menu_music_on
+	change \{primary_controller_assigned = 0}
+	change \{respond_to_signin_changed = 0}
+	SoundEvent \{event = Menu_Guitar_Lick_SFX}
+	spawnscriptnow \{menu_music_on
 		params = {
 			waitforguitarlick = 1
 		}}
@@ -17,10 +17,10 @@ endscript
 script ui_create_boot_iis 
 	clean_up_user_control_helpers
 	dumpcompactpoolprofile \{0}
-	CreateScreenElement \{Type = ContainerElement
+	CreateScreenElement \{type = ContainerElement
 		parent = root_window
 		id = current_menu
-		Pos = (0.0, 0.0)
+		pos = (0.0, 0.0)
 		just = [
 			left
 			center
@@ -28,22 +28,22 @@ script ui_create_boot_iis
 		z_priority = 0
 		event_handlers = [
 		]}
-	CreateScreenElement \{Type = SpriteElement
+	CreateScreenElement \{type = SpriteElement
 		parent = current_menu
-		id = bg
+		id = bG
 		texture = boot_copyright_bg_1
-		Pos = (0.0, 0.0)
+		pos = (0.0, 0.0)
 		dims = (1280.0, 720.0)
 		just = [
 			left
 			top
 		]
 		z_priority = 0}
-	CreateScreenElement \{Type = SpriteElement
+	CreateScreenElement \{type = SpriteElement
 		parent = current_menu
 		id = bg2
 		texture = boot_copyright_bg_2
-		Pos = (0.0, 0.0)
+		pos = (0.0, 0.0)
 		dims = (1280.0, 720.0)
 		just = [
 			left
@@ -52,12 +52,12 @@ script ui_create_boot_iis
 		z_priority = 0.5
 		alpha = 1}
 	RunScriptOnScreenElement boot_bg_swap id = <id>
-	CreateScreenElement \{Type = TextBlockElement
+	CreateScreenElement \{type = TextBlockElement
 		parent = current_menu
 		font = fontgrid_text_a6
-		text = qs(0x71da7fc7)
+		text = qs("PRESS ANY BUTTON TO ROCK...")
 		dims = (450.0, 240.0)
-		Pos = (755.0, 450.0)
+		pos = (755.0, 450.0)
 		just = [
 			left
 			top
@@ -72,10 +72,10 @@ script ui_create_boot_iis
 			220
 			255
 		]
-		Scale = 0.6
+		scale = 0.6
 		fit_width = wrap
-		fit_height = `scale	down	if	larger`}
-	fadetoblack \{OFF
+		fit_height = `scale down if larger`}
+	fadetoblack \{off
 		time = 0.0
 		no_wait}
 	if ($attract_disabled = 0)
@@ -88,19 +88,19 @@ endscript
 
 script boot_bg_swap 
 	begin
-	se_setprops \{alpha = 0
+	SE_SetProps \{alpha = 0
 		time = 0}
 	Wait \{0.25
-		Seconds}
-	se_setprops \{alpha = 1
+		seconds}
+	SE_SetProps \{alpha = 1
 		time = 0}
 	Wait \{0.4
-		Seconds}
+		seconds}
 	repeat
 endscript
 
 script ui_destroy_boot_iis 
-	fadetoblack \{On
+	fadetoblack \{on
 		alpha = 1.0
 		time = 0.0
 		z_priority = -100
@@ -114,12 +114,12 @@ endscript
 script ui_boot_iis_attract_wait 
 	wait_time = ($attract_wait_time)
 	begin
-	printf qs(0x1ef1103f) i = <wait_time> channel = attract
+	printf qs("\LWait_time for begin attract %i") i = <wait_time> channel = attract
 	if (<wait_time> = 0)
 		break
 	endif
 	Wait \{1
-		Second
+		second
 		ignoreslomo}
 	wait_time = (<wait_time> - 1)
 	repeat
@@ -132,10 +132,10 @@ script ui_boot_iis_attract_wait
 			gameframe}
 		repeat
 	endif
-	KillSpawnedScript \{Name = ui_boot_iis_input}
+	KillSpawnedScript \{name = ui_boot_iis_input}
 	ui_event \{event = menu_change
 		data = {
-			state = uistate_boot_attract
+			state = UIstate_boot_attract
 		}}
 endscript
 
@@ -156,18 +156,18 @@ script ui_boot_iis_input \{button1 = {
 endscript
 
 script ui_boot_iis_continue 
-	SetSpawnInstanceLimits \{Max = 1
+	SetSpawnInstanceLimits \{max = 1
 		management = ignore_spawn_request}
 	if ($invalid_controller_lock = 0)
-		StopSoundEvent \{menu_guitar_lick_sfx}
+		StopSoundEvent \{Menu_Guitar_Lick_SFX}
 		generic_menu_pad_choose_sound
 		get_handlers_for_all_buttons
 		current_menu :SetProps event_handlers = <event_handlers> replace_handlers
-		KillSpawnedScript \{Name = ui_boot_iis_input}
+		KillSpawnedScript \{name = ui_boot_iis_input}
 		frontend_load_soundcheck \{loadingscreen
 			async = 0}
-		z_soundcheck_uiresetpos
-		z_soundcheck_uianimationpre
+		z_soundcheck_UIResetPos
+		z_soundcheck_UIAnimationPre
 		ui_event event = menu_replace data = {state = uistate_signin device_num = <device_num> boot = 1}
 	endif
 endscript

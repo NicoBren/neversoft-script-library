@@ -3,7 +3,7 @@ script ui_init_jam_select_song
 endscript
 
 script ui_create_jam_select_song 
-	SpawnScriptNow create_jam_song_select_menu params = <...>
+	spawnscriptnow create_jam_song_select_menu params = <...>
 endscript
 
 script ui_destroy_jam_select_song 
